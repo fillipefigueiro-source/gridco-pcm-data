@@ -1,25 +1,25 @@
 {
-  "geradoEm": "2026-06-14T02:31:02Z",
+  "geradoEm": "2026-06-14T13:07:06Z",
   "fonte": "BD_Relatorio Semanal.xlsx -> Semanal (classificado por palavra-chave)",
   "totalLinhasBD": 18000,
-  "totalEmAberto": 12,
+  "totalEmAberto": 13,
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 51,
-        "emAberto": 5,
-        "atrasadas": 0,
-        "concluidas30d": 46,
-        "concluidas7d": 46,
-        "naSemanaCorrente": 51
+        "total": 54,
+        "emAberto": 6,
+        "atrasadas": 4,
+        "concluidas30d": 48,
+        "concluidas7d": 48,
+        "naSemanaCorrente": 54
       },
       "mttr": {
         "horas": null,
         "label": "",
-        "amostra": 46
+        "amostra": 48
       },
       "tendencia4Semanas": [
         {
@@ -40,22 +40,22 @@
         {
           "semana": "W24",
           "criadas": 0,
-          "finalizadas": 46
+          "finalizadas": 48
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 51,
-            "emAberto": 5
+            "total": 54,
+            "emAberto": 6
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 20,
-            "emAberto": 0
+            "total": 22,
+            "emAberto": 1
           },
           {
             "nome": "Felipe Silva",
@@ -79,41 +79,25 @@
           }
         ]
       },
-      "total": 5,
-      "atrasadas": 0,
+      "total": 6,
+      "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 5,
-        "emProgresso": 0,
+        "naoIniciada": 4,
+        "emProgresso": 2,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 5
+        "(sem equipe)": 6
       },
       "oss": [
-        {
-          "osId": "7816",
-          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "supervisor": "Railson Gomes ",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento de usina",
-          "criticidade": "",
-          "dataProgramada": "2026-06-13",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
         {
           "osId": "7809",
           "ativo": "Cabine 1  Ipixuna  Pará Brasil { IPX100-CABN1 }",
           "equipe": "",
           "responsavel": "Wesllen  Castro",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento UFV Ipixuna 1",
           "criticidade": "",
           "dataProgramada": "2026-06-13",
@@ -121,7 +105,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "7802",
@@ -137,7 +121,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "remoto",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "7800",
@@ -153,7 +137,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "7794",
@@ -169,15 +153,47 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "7819",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Não Iniciada",
+          "tarefa": "religamento da usina de CPP100",
+          "criticidade": "",
+          "dataProgramada": "2026-06-14",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "7817",
+          "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "supervisor": "Janderson Miranda ",
+          "status": "IN_PROGRESS",
+          "tarefa": "Religamento de usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-14",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
           "atrasada": false
         }
       ],
       "subClassificacao": {
         "remoto": 14,
-        "local": 37,
+        "local": 40,
         "remotoEmAberto": 1,
-        "localEmAberto": 4,
-        "pctRemoto": 27,
+        "localEmAberto": 5,
+        "pctRemoto": 26,
         "alerta": true
       }
     },
