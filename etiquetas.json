@@ -1,20 +1,20 @@
 {
-  "geradoEm": "2026-06-14T18:15:58Z",
+  "geradoEm": "2026-06-14T18:20:57Z",
   "fonte": "BD_Relatorio Semanal.xlsx -> Semanal (classificado por palavra-chave)",
   "totalLinhasBD": 18000,
-  "totalEmAberto": 13,
+  "totalEmAberto": 14,
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 57,
-        "emAberto": 7,
+        "total": 58,
+        "emAberto": 8,
         "atrasadas": 4,
         "concluidas30d": 50,
         "concluidas7d": 50,
-        "naSemanaCorrente": 57
+        "naSemanaCorrente": 58
       },
       "mttr": {
         "horas": null,
@@ -47,8 +47,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 57,
-            "emAberto": 7
+            "total": 58,
+            "emAberto": 8
           }
         ],
         "responsaveis": [
@@ -68,27 +68,27 @@
             "emAberto": 0
           },
           {
-            "nome": "Renato  Julien",
+            "nome": "Marcos  Camargo",
             "total": 3,
             "emAberto": 1
           },
           {
-            "nome": "Janderson Miranda",
-            "total": 2,
+            "nome": "Renato  Julien",
+            "total": 3,
             "emAberto": 1
           }
         ]
       },
-      "total": 7,
+      "total": 8,
       "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 4,
+        "naoIniciada": 5,
         "emProgresso": 3,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 7
+        "(sem equipe)": 8
       },
       "oss": [
         {
@@ -156,6 +156,22 @@
           "atrasada": true
         },
         {
+          "osId": "7824",
+          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "supervisor": "Marcos  Camargo",
+          "status": "Não Iniciada",
+          "tarefa": "UFVMD01 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+          "criticidade": "",
+          "dataProgramada": "2026-06-14",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
           "osId": "7823",
           "ativo": "Axis - Petrolina 3 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL300 }",
           "equipe": "",
@@ -205,11 +221,11 @@
         }
       ],
       "subClassificacao": {
-        "remoto": 15,
+        "remoto": 16,
         "local": 42,
-        "remotoEmAberto": 2,
+        "remotoEmAberto": 3,
         "localEmAberto": 5,
-        "pctRemoto": 26,
+        "pctRemoto": 28,
         "alerta": true
       }
     },
