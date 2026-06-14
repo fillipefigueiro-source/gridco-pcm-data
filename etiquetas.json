@@ -1,25 +1,25 @@
 {
-  "geradoEm": "2026-06-14T14:31:18Z",
+  "geradoEm": "2026-06-14T14:35:55Z",
   "fonte": "BD_Relatorio Semanal.xlsx -> Semanal (classificado por palavra-chave)",
-  "totalLinhasBD": 18000,
-  "totalEmAberto": 13,
+  "totalLinhasBD": 10,
+  "totalEmAberto": 3,
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 56,
-        "emAberto": 7,
-        "atrasadas": 4,
-        "concluidas30d": 49,
-        "concluidas7d": 49,
-        "naSemanaCorrente": 56
+        "total": 9,
+        "emAberto": 3,
+        "atrasadas": 0,
+        "concluidas30d": 6,
+        "concluidas7d": 6,
+        "naSemanaCorrente": 9
       },
       "mttr": {
         "horas": null,
         "label": "",
-        "amostra": 49
+        "amostra": 6
       },
       "tendencia4Semanas": [
         {
@@ -40,121 +40,57 @@
         {
           "semana": "W24",
           "criadas": 0,
-          "finalizadas": 49
+          "finalizadas": 6
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 56,
-            "emAberto": 7
+            "total": 9,
+            "emAberto": 3
           }
         ],
         "responsaveis": [
           {
-            "nome": "Raphael Vitoriano",
-            "total": 22,
-            "emAberto": 1
-          },
-          {
             "nome": "Felipe Silva",
-            "total": 11,
-            "emAberto": 0
-          },
-          {
-            "nome": "Gilson Souza",
-            "total": 6,
-            "emAberto": 0
-          },
-          {
-            "nome": "Renato  Julien",
             "total": 3,
-            "emAberto": 1
+            "emAberto": 0
           },
           {
             "nome": "Janderson Miranda",
             "total": 2,
             "emAberto": 1
+          },
+          {
+            "nome": "Raphael Vitoriano",
+            "total": 2,
+            "emAberto": 1
+          },
+          {
+            "nome": "Carlos  Godoi",
+            "total": 1,
+            "emAberto": 1
+          },
+          {
+            "nome": "Railson Gomes",
+            "total": 1,
+            "emAberto": 0
           }
         ]
       },
-      "total": 7,
-      "atrasadas": 4,
+      "total": 3,
+      "atrasadas": 0,
       "porStatus": {
-        "naoIniciada": 6,
-        "emProgresso": 1,
+        "naoIniciada": 3,
+        "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 7
+        "(sem equipe)": 3
       },
       "oss": [
-        {
-          "osId": "7809",
-          "ativo": "Cabine 1  Ipixuna  Pará Brasil { IPX100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "supervisor": "Wesllen  Castro",
-          "status": "IN_PROGRESS",
-          "tarefa": "Religamento UFV Ipixuna 1",
-          "criticidade": "",
-          "dataProgramada": "2026-06-13",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "7802",
-          "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
-          "equipe": "",
-          "responsavel": "Renato  Julien",
-          "supervisor": "Renato  Julien",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento da Usina remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-06-13",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "remoto",
-          "atrasada": true
-        },
-        {
-          "osId": "7800",
-          "ativo": "Cabine 1  Boa Esperança do Sul  São Paulo Brasil { BES100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Rodolfo  Oliveira",
-          "supervisor": "Rodolfo  Oliveira",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento UFV Boa Esperança A",
-          "criticidade": "",
-          "dataProgramada": "2026-06-13",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "7794",
-          "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
-          "equipe": "",
-          "responsavel": "Eduardo Souza",
-          "supervisor": "Eduardo Souza",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento de usina",
-          "criticidade": "",
-          "dataProgramada": "2026-06-13",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
         {
           "osId": "7822",
           "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
@@ -205,11 +141,11 @@
         }
       ],
       "subClassificacao": {
-        "remoto": 15,
-        "local": 41,
-        "remotoEmAberto": 2,
-        "localEmAberto": 5,
-        "pctRemoto": 27,
+        "remoto": 4,
+        "local": 5,
+        "remotoEmAberto": 1,
+        "localEmAberto": 2,
+        "pctRemoto": 44,
         "alerta": true
       }
     },
@@ -218,8 +154,8 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 3,
-        "emAberto": 3,
+        "total": 0,
+        "emAberto": 0,
         "atrasadas": 0,
         "concluidas30d": 0,
         "concluidas7d": 0,
@@ -253,92 +189,27 @@
         }
       ],
       "topOfensores": {
-        "clusters": [
-          {
-            "nome": "(sem equipe)",
-            "total": 3,
-            "emAberto": 3
-          }
-        ],
-        "responsaveis": [
-          {
-            "nome": "Bruno Vinícius Pupo",
-            "total": 2,
-            "emAberto": 2
-          },
-          {
-            "nome": "Renato  Julien",
-            "total": 1,
-            "emAberto": 1
-          }
-        ]
+        "clusters": [],
+        "responsaveis": []
       },
-      "total": 3,
+      "total": 0,
       "atrasadas": 0,
       "porStatus": {
-        "naoIniciada": 3,
+        "naoIniciada": 0,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
-      "porEquipe": {
-        "(sem equipe)": 3
-      },
-      "oss": [
-        {
-          "osId": "7776",
-          "ativo": "Estrutura Trackers  Ibirapuã  Bahia Brasil { IBI200-ETKR1 }",
-          "equipe": "",
-          "responsavel": "Renato  Julien",
-          "supervisor": "Renato  Julien",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPA - Tracker",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "7782",
-          "ativo": "Cabine 5 Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB200-CABN5 }",
-          "equipe": "",
-          "responsavel": "Bruno Vinícius Pupo",
-          "supervisor": "Bruno Vinícius Pupo",
-          "status": "Não Iniciada",
-          "tarefa": "[Athon] - MPA - Cabine",
-          "criticidade": "",
-          "dataProgramada": "2026-06-22",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "7781",
-          "ativo": "Transformador 1 COMTRAFO     { MAB100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Bruno Vinícius Pupo",
-          "supervisor": "Bruno Vinícius Pupo",
-          "status": "Não Iniciada",
-          "tarefa": "[Athon] - MPA - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-06-22",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        }
-      ]
+      "porEquipe": {},
+      "oss": []
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
       "icone": "ti-shield-check",
       "cor": "#ef4444",
       "kpis": {
-        "total": 3,
-        "emAberto": 3,
+        "total": 0,
+        "emAberto": 0,
         "atrasadas": 0,
         "concluidas30d": 0,
         "concluidas7d": 0,
@@ -372,84 +243,19 @@
         }
       ],
       "topOfensores": {
-        "clusters": [
-          {
-            "nome": "(sem equipe)",
-            "total": 3,
-            "emAberto": 3
-          }
-        ],
-        "responsaveis": [
-          {
-            "nome": "Luiz  Silva",
-            "total": 2,
-            "emAberto": 2
-          },
-          {
-            "nome": "Cláudio  Silva",
-            "total": 1,
-            "emAberto": 1
-          }
-        ]
+        "clusters": [],
+        "responsaveis": []
       },
-      "total": 3,
+      "total": 0,
       "atrasadas": 0,
       "porStatus": {
-        "naoIniciada": 2,
+        "naoIniciada": 0,
         "emProgresso": 0,
-        "pausada": 1,
+        "pausada": 0,
         "verificacao": 0
       },
-      "porEquipe": {
-        "(sem equipe)": 3
-      },
-      "oss": [
-        {
-          "osId": "7758",
-          "ativo": "Inversor 1.3 Sungrow SG250HX-20    { PRL100-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Silva",
-          "supervisor": "Cláudio  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[THOPEN] Testes de Garantia Inversor 3 - Parelhas",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "7752",
-          "ativo": "Inversor 1.7 Huawei     { TIM100-INVR1.7 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "supervisor": "Luiz  Silva",
-          "status": "pausado",
-          "tarefa": "Abertura de chamado para garantia [Testes em campo Inversor 1.7]",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "7751",
-          "ativo": "Inversor 1.1 Huawei     { TIM200-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "Abertura de chamado para garantia [Testes em campo Inversor 1.1]",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        }
-      ]
+      "porEquipe": {},
+      "oss": []
     },
     "performance": {
       "label": "Performance",
