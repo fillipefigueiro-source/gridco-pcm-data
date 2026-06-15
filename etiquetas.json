@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-06-15T13:03:28Z",
+  "geradoEm": "2026-06-15T13:08:50Z",
   "fonte": "BD_Relatorio Semanal.xlsx -> Semanal (classificado por palavra-chave)",
   "totalLinhasBD": 17999,
-  "totalEmAberto": 353,
+  "totalEmAberto": 352,
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
@@ -4958,16 +4958,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 579,
-        "emAberto": 161,
+        "emAberto": 160,
         "atrasadas": 136,
-        "concluidas30d": 90,
-        "concluidas7d": 20,
+        "concluidas30d": 91,
+        "concluidas7d": 21,
         "naSemanaCorrente": 12
       },
       "mttr": {
         "horas": null,
         "label": "",
-        "amostra": 90
+        "amostra": 91
       },
       "tendencia4Semanas": [
         {
@@ -4988,7 +4988,7 @@
         {
           "semana": "W25",
           "criadas": 0,
-          "finalizadas": 0
+          "finalizadas": 1
         }
       ],
       "topOfensores": {
@@ -4996,7 +4996,7 @@
           {
             "nome": "(sem equipe)",
             "total": 579,
-            "emAberto": 161
+            "emAberto": 160
           }
         ],
         "responsaveis": [
@@ -5027,16 +5027,16 @@
           }
         ]
       },
-      "total": 161,
+      "total": 160,
       "atrasadas": 136,
       "porStatus": {
-        "naoIniciada": 148,
+        "naoIniciada": 147,
         "emProgresso": 2,
         "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 161
+        "(sem equipe)": 160
       },
       "oss": [
         {
@@ -7110,21 +7110,6 @@
           "atrasada": false
         },
         {
-          "osId": "7380",
-          "ativo": "Infraestrutura Civil Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR200-INFC1 }",
-          "equipe": "",
-          "responsavel": "Leonardo  Dias",
-          "supervisor": "Leonardo  Dias",
-          "status": "Não Iniciada",
-          "tarefa": "[GreenYellow] - MPT - Infraestrutura",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "7318",
           "ativo": "Ar Condicionado      { CLD200-SOEM1-ARCD }",
           "equipe": "",
@@ -7456,6 +7441,21 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "7380",
+          "ativo": "Infraestrutura Civil Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR200-INFC1 }",
+          "equipe": "",
+          "responsavel": "Leonardo  Dias",
+          "supervisor": "Leonardo  Dias",
+          "status": "Finalizados",
+          "tarefa": "[GreenYellow] - MPT - Infraestrutura",
+          "criticidade": "",
+          "dataProgramada": "2026-06-15",
+          "dataCriacao": "",
+          "dataFinal": "2026-06-15",
+          "linkFracttal": "",
+          "atrasada": false
+        },
         {
           "osId": "6817",
           "ativo": "Infraestrutura Civil Estrada Mun. Norimar Aparecida Brieda Piracicaba  São Paulo Brasil { PRB100-INFC1 }",
@@ -9690,24 +9690,9 @@
           "dataFinal": "2026-04-07",
           "linkFracttal": "",
           "atrasada": false
-        },
-        {
-          "osId": "5174",
-          "ativo": "Ar Condicionado      { BLN100-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
-          "supervisor": "Cláudio  Ferreira",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-04-07",
-          "dataCriacao": "",
-          "dataFinal": "2026-04-07",
-          "linkFracttal": "",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 231
+      "historicoTotal": 232
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9787,8 +9772,8 @@
       "total": 19,
       "atrasadas": 17,
       "porStatus": {
-        "naoIniciada": 16,
-        "emProgresso": 1,
+        "naoIniciada": 15,
+        "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
@@ -10012,7 +9997,7 @@
           "equipe": "",
           "responsavel": "Francisco  Santos",
           "supervisor": "Francisco  Santos",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Abertura de chamado para garantia [Levantamento de Informações]",
           "criticidade": "",
           "dataProgramada": "2026-06-11",
