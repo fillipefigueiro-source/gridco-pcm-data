@@ -844,11 +844,22 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
           </select>
         </div>
         <div class="tip-filter">
-          <span class="tip-filter-lbl">Status:</span>
+          <span class="tip-filter-lbl">Atraso:</span>
           <select id="tip-f-atraso" onchange="renderTipologiaAtual()">
             <option value="">Todas</option>
             <option value="atrasada">Apenas atrasadas</option>
             <option value="noprazo">No prazo</option>
+          </select>
+        </div>
+        <div class="tip-filter">
+          <span class="tip-filter-lbl">Status:</span>
+          <select id="tip-f-status" onchange="renderTipologiaAtual()">
+            <option value="">Todos</option>
+            <option value="naoIniciada">N&atilde;o Iniciada</option>
+            <option value="emProcesso">Em Processo</option>
+            <option value="emVerificacao">Em Verifica&ccedil;&atilde;o</option>
+            <option value="pausada">Pausada</option>
+            <option value="finalizada">Finalizados</option>
           </select>
         </div>
         <div class="tip-filter">
@@ -984,6 +995,15 @@ const lsS = (k,v)  => { try { localStorage.setItem(k,JSON.stringify(v)); } catch
 const DEF_PWDS = JSON.parse(document.getElementById('gc-pwds').textContent);
 
 // Helper global: escapa HTML (usado em varios geradores de strings)
+function fmtMTTR(h){
+  // Aceita horas como número (ex: 0.0625) e devolve hh:mm
+  if(h==null || isNaN(h)) return '--';
+  const totalMin = Math.round(Number(h) * 60);
+  const hh = Math.floor(totalMin/60);
+  const mm = totalMin % 60;
+  return hh + ':' + (mm<10?'0':'') + mm;
+}
+
 function esc(s){
   return String(s==null?'':s)
     .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
@@ -1184,6 +1204,17 @@ function launch(label,isAdmin) {
     sel.innerHTML='<option value="">Todos os clientes</option>'+cls.map(c=>{const e=String(c||'').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');return '<option value="'+e+'">'+e+'</option>';}).join('');
     sel.value=S.viewCli||'';
   } else sw.style.display='none';
+  // Task #130: esconder abas restritas pra não-admin
+  const adminOnly = ['religamentos','emVerificacao','sugestoesIA'];
+  adminOnly.forEach(slug=>{
+    const btn = document.querySelector('.tip-tab[data-topv="'+slug+'"]');
+    if(btn) btn.style.display = isAdmin ? '' : 'none';
+  });
+  // Se user não-admin estava em aba restrita, volta pra Programação Semanal
+  if(!isAdmin && adminOnly.indexOf(S.topView)>=0){
+    S.topView = 'semana';
+    try{localStorage.setItem('gc_topv','semana');}catch(e){}
+  }
   show('s-briefing');
   buildWeekChips(); buildFilters(); render();
   // Auto-refresh a cada CONFIG.REFRESH_MS (5 min) - dispara depois do login
@@ -1408,6 +1439,11 @@ function atualizarContadoresTopNav(){
   const n=tipNumOSs();
   Object.keys(n).forEach(k=>{const el=document.getElementById('tcnt-'+k);if(el)el.textContent=n[k];});
 }
+// Task #133: badge da aba ativa recalcula com filtros
+function atualizarBadgeAba(slug, n){
+  const el=document.getElementById('tcnt-'+slug);
+  if(el) el.textContent=n;
+}
 function setTipMode(modo){
   S.tipMode = (modo==='historico'?'historico':'abertas');
   renderTipologiaAtual();
@@ -1452,6 +1488,7 @@ function renderTipologiaAtual(){
   const fEq=selEq.value;
   const fCr=document.getElementById('tip-f-crit').value;
   const fAt=document.getElementById('tip-f-atraso').value;
+  const fSt=document.getElementById('tip-f-status')?.value||'';
   const fDi=document.getElementById('tip-f-dini')?.value||'';
   const fDf=document.getElementById('tip-f-dfim')?.value||'';
   const filt=oss.filter(o=>{
@@ -1459,6 +1496,18 @@ function renderTipologiaAtual(){
     if(fCr&&(o.criticidade||'').toLowerCase().indexOf(fCr.toLowerCase())<0)return false;
     if(fAt==='atrasada'&&!o.atrasada)return false;
     if(fAt==='noprazo'&&o.atrasada)return false;
+    if(fSt){
+      const st=(o.status||'').toLowerCase();
+      const map={
+        naoIniciada: ['iniciada','nao iniciada','não iniciada'],
+        emProcesso: ['progress','progresso','execu','andamento','processo'],
+        emVerificacao: ['verifica'],
+        pausada: ['paus'],
+        finalizada: ['finaliz','conclu']
+      };
+      const terms=map[fSt]||[];
+      if(!terms.some(t=>st.indexOf(t)>=0)) return false;
+    }
     // Filtro de data programada
     const dp=(o.dataProgramada||'').slice(0,10);
     if(fDi && dp && dp<fDi) return false;
@@ -1466,7 +1515,9 @@ function renderTipologiaAtual(){
     return true;
   });
   // Resumo executivo recebe filt (task #122)
-  renderExecResumo(data, slug, filt, !!(fEq||fCr||fAt||fDi||fDf));
+  renderExecResumo(data, slug, filt, !!(fEq||fCr||fAt||fDi||fDf||fSt));
+  // Task #133: badge da aba mostra contagem filtrada
+  atualizarBadgeAba(slug, filt.length);
   // Distribui por coluna
   const byCol={naoiniciada:[],emProgresso:[],pausada:[]};
   filt.forEach(o=>{
@@ -1505,7 +1556,7 @@ function renderTipologiaAtual(){
 
 
 function limparFiltrosTip(){
-  ['tip-f-equipe','tip-f-crit','tip-f-atraso','tip-f-dini','tip-f-dfim'].forEach(id=>{
+  ['tip-f-equipe','tip-f-crit','tip-f-atraso','tip-f-status','tip-f-dini','tip-f-dfim'].forEach(id=>{
     const el=document.getElementById(id);
     if(el) el.value='';
   });
@@ -2364,6 +2415,21 @@ function openMod(usina, dia, os_id){
       }
     }
   }
+  // Task #134: enriquece osRow do PCM com dataCriacao/dataFinal/criadoPor/horasAteFechar das etiquetas
+  if(osRow && os_id && ETIQUETAS_DB && ETIQUETAS_DB.tipologias){
+    for(const slug in ETIQUETAS_DB.tipologias){
+      const tp = ETIQUETAS_DB.tipologias[slug];
+      const o = (tp.oss||[]).find(x=>String(x.osId)===String(os_id))
+             || (tp.ossHistorico||[]).find(x=>String(x.osId)===String(os_id));
+      if(o){
+        ['dataCriacao','dataProgramada','dataFinal','dataInicial','criadoPor',
+         'horasAteAbrir','horasAteFechar','modalidade'].forEach(k=>{
+          if(!osRow[k] && o[k]!=null) osRow[k] = o[k];
+        });
+        break;
+      }
+    }
+  }
   // ENRIQUECIMENTO: quando osRow veio das etiquetas/verificação (poucos campos),
   // procura a MESMA OS no banco_dados.json pra trazer MTTR/relatório/timeline/outras tarefas
   if(osRow && os_id && DB && DB.semanas){
@@ -2445,8 +2511,18 @@ function openMod(usina, dia, os_id){
   if(osRow.modalidade) html += '<span class="mpill modalidade-'+osRow.modalidade+'">'+osRow.modalidade.toUpperCase()+'</span>';
   html += '  </div>';
   html += '</div>';
-  // SEÇÃO 2: Datas
-  html += '<div class="msec"><div class="msec-t">🗓 Datas</div>';
+  // SEÇÃO 2: Datas (com MTTR quando OS finalizada — task #131 + #134)
+  let mttrLabel = '';
+  if(osRow.mttr_h!=null && Number(osRow.mttr_h)>0){
+    mttrLabel = fmtMTTR(osRow.mttr_h);
+  } else if(osRow.horasAteFechar!=null && Number(osRow.horasAteFechar)>0){
+    mttrLabel = fmtMTTR(osRow.horasAteFechar);
+  }
+  html += '<div class="msec"><div class="msec-t" style="display:flex;justify-content:space-between;align-items:center">🗓 Datas';
+  if(mttrLabel){
+    html += '<span style="background:#dcfce7;color:#166534;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:8px;letter-spacing:.3px">⏱ MTTR ' + mttrLabel + '</span>';
+  }
+  html += '</div>';
   html += '  <div class="mdates">';
   html += '    <div class="mdate"><div class="mdate-l">Criada</div><div class="mdate-v">'+fmtDt(dCria)+'</div></div>';
   html += '    <div class="mdate '+dProgClass+'"><div class="mdate-l">Programada</div><div class="mdate-v">'+fmtDt(dProg)+(dProgClass==='atraso'?' ⚠':'')+'</div></div>';
