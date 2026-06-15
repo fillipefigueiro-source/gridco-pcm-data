@@ -828,49 +828,27 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 
       <div class="tip-filters">
         <div class="tip-filter">
-          <span class="tip-filter-lbl">Equipe:</span>
-          <select id="tip-f-equipe" onchange="renderTipologiaAtual()"><option value="">Todas</option></select>
-        </div>
-        <div class="tip-filter">
-          <span class="tip-filter-lbl">Criticidade:</span>
-          <select id="tip-f-crit" onchange="renderTipologiaAtual()">
-            <option value="">Todas</option>
-            <option value="Muito alta">Muito alta</option>
-            <option value="Muito alto">Muito alto</option>
-            <option value="Alta">Alta</option>
-            <option value="Alto">Alto</option>
-            <option value="Media">M&eacute;dia</option>
-            <option value="Baixa">Baixa</option>
+          <span class="tip-filter-lbl">Per&iacute;odo:</span>
+          <select id="tip-f-periodo" onchange="onPeriodoChange()">
+            <option value="30">&Uacute;ltimos 30 dias</option>
+            <option value="7">&Uacute;ltimos 7 dias</option>
+            <option value="90">&Uacute;ltimos 90 dias</option>
+            <option value="ano">Este ano</option>
+            <option value="todos">Todos</option>
+            <option value="custom">Personalizado&hellip;</option>
           </select>
         </div>
-        <div class="tip-filter">
-          <span class="tip-filter-lbl">Atraso:</span>
-          <select id="tip-f-atraso" onchange="renderTipologiaAtual()">
-            <option value="">Todas</option>
-            <option value="atrasada">Apenas atrasadas</option>
-            <option value="noprazo">No prazo</option>
-          </select>
-        </div>
-        <div class="tip-filter">
-          <span class="tip-filter-lbl">Status:</span>
-          <select id="tip-f-status" onchange="renderTipologiaAtual()">
-            <option value="">Todos</option>
-            <option value="naoIniciada">N&atilde;o Iniciada</option>
-            <option value="emProcesso">Em Processo</option>
-            <option value="emVerificacao">Em Verifica&ccedil;&atilde;o</option>
-            <option value="pausada">Pausada</option>
-            <option value="finalizada">Finalizados</option>
-          </select>
-        </div>
-        <div class="tip-filter">
+        <div class="tip-filter" id="tip-f-periodo-custom" style="display:none">
           <span class="tip-filter-lbl">De:</span>
           <input type="date" id="tip-f-dini" onchange="renderTipologiaAtual()" style="font-size:11px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;font-family:inherit;color:var(--ink);background:#fff;cursor:pointer">
-        </div>
-        <div class="tip-filter">
-          <span class="tip-filter-lbl">Até:</span>
+          <span class="tip-filter-lbl" style="margin-left:8px">At&eacute;:</span>
           <input type="date" id="tip-f-dfim" onchange="renderTipologiaAtual()" style="font-size:11px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;font-family:inherit;color:var(--ink);background:#fff;cursor:pointer">
         </div>
-        <button onclick="limparFiltrosTip()" style="font-size:11px;padding:5px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer;color:var(--ink2);font-family:inherit;font-weight:600">↻ Limpar</button>
+        <div class="tip-filter">
+          <span class="tip-filter-lbl">OS #:</span>
+          <input type="text" id="tip-f-os" placeholder="ex: 7862" oninput="renderTipologiaAtual()" style="font-size:11px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;font-family:inherit;color:var(--ink);background:#fff;width:90px">
+        </div>
+        <button onclick="limparFiltrosTip()" style="font-size:11px;padding:5px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer;color:var(--ink2);font-family:inherit;font-weight:600">&#8635; Limpar</button>
       </div>
 
       <div class="kanban" id="tip-kanban">
@@ -904,12 +882,15 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="filter-group"><span class="filter-lbl">Status</span>
           <select class="fsel" id="f-status" onchange="onStatusChange()">
             <option value="">Todos</option>
-            <option value="exec">Em execução</option>
-            <option value="fin">Finalizadas</option>
-            <option value="ni">Não iniciadas</option>
-            <option value="pau">Pausadas</option>
-            <option value="prog">Em progresso</option>
+            <option value="ni">N&atilde;o Iniciada</option>
+            <option value="prog">Em Processo</option>
+            <option value="exec">Em Verifica&ccedil;&atilde;o</option>
+            <option value="pau">Pausada</option>
+            <option value="fin">Finalizados</option>
           </select></div>
+        <div class="filter-sep"></div>
+        <div class="filter-group"><span class="filter-lbl">OS #</span>
+          <input class="fsel" type="text" id="f-os" placeholder="ex: 7862" oninput="onOSChange()" style="width:90px;font-size:11px"/></div>
         <div class="filter-sep"></div>
         <div class="filter-group"><span class="filter-lbl">Tipo de OS</span>
           <div class="chips" id="tipo-chips"></div></div>
@@ -1093,7 +1074,7 @@ async function manualRefresh(){
 function show(id){document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));document.getElementById(id).classList.add('on');}
 function goAdmin(){buildAdmin();show('s-admin');}
 function goLogin(){updateLoginWeek();show('s-login');}
-function doLogout(){S.user=null;S.isAdmin=false;S.viewCli=null;S.fEquipe='';S.fTipo='';S.fUsina='';S.fSupervisor='';S.fStatus='';S.fStatus='';goLogin();}
+function doLogout(){S.user=null;S.isAdmin=false;S.viewCli=null;S.fEquipe='';S.fTipo='';S.fUsina='';S.fSupervisor='';S.fStatus='';S.fOS='';S.fStatus='';goLogin();}
 function updateLoginWeek(){ const w=AW(); document.getElementById('l-week').textContent=w?.label||'Carregando...'; }
 
 // ── ADMIN ─────────────────────────────────────────────────────────────────────
@@ -1137,7 +1118,7 @@ const allRowsAllWeeks=()=>{
   return rows;
 };
 const AC=()=>{ const b=allRows(); let r=b; if(S.fEquipe) r=r.filter(x=>x.cluster===S.fEquipe); if(S.fSupervisor) r=r.filter(x=>getSupervisor(x)===S.fSupervisor||x.cluster===S.fSupervisor); return r; };
-const GD=()=>AC().filter(r=>(!S.fTipo||r.tipo===S.fTipo)&&(!S.fUsina||r.usina===S.fUsina)&&(!S.fStatus||statusKey(r)===S.fStatus));
+const GD=()=>AC().filter(r=>(!S.fTipo||r.tipo===S.fTipo)&&(!S.fUsina||r.usina===S.fUsina)&&(!S.fStatus||statusKey(r)===S.fStatus)&&(!S.fOS||String(r.os_id||'').indexOf(S.fOS)>=0));
 const isExec=r=>r.status_bd&&/(execu|progresso|andamento)/i.test(r.status_bd)&&!/verifica/i.test(r.status_bd);
 const isNova=r=>r.nova_os&&r.nova_os.toString().trim()!==''&&r.nova_os.toString().toLowerCase()!=='não'&&r.nova_os.toString().toLowerCase()!=='nao';
 const isFinalizada=r=>{const s=(r.status_bd||r.status||'').toString().toLowerCase();return s.includes('finaliz')||s.includes('conclu');};
@@ -1222,7 +1203,7 @@ function launch(label,isAdmin) {
 }
 function onAdminClientChange(){
   S.viewCli=document.getElementById('admin-client-sel').value||null;
-  S.fEquipe='';S.fTipo='';S.fUsina='';S.fSupervisor='';S.fStatus='';
+  S.fEquipe='';S.fTipo='';S.fUsina='';S.fSupervisor='';S.fStatus='';S.fOS='';
   const lbl=S.viewCli||'Todos os Clientes';
   document.getElementById('ab-client').textContent='Admin \u2014 '+lbl;
   document.getElementById('ph-c').textContent='Grid Co. \u2014 '+lbl;
@@ -1293,6 +1274,7 @@ function onEquipeChange(){S.fEquipe=document.getElementById('f-equipe').value;S.
 function onUsinaChange(){S.fUsina=document.getElementById('f-usina').value;S.fTipo='';buildTipoChips();render();updateFCount();}
 function onSupChange(){S.fSupervisor=document.getElementById('f-sup').value;buildFilters();render();updateFCount();}
 function onStatusChange(){S.fStatus=document.getElementById('f-status').value;render();updateFCount();}
+function onOSChange(){S.fOS=document.getElementById('f-os').value.trim();render();updateFCount();}
 function buildTipoChips(){
   const base=AC(),tipos={};
   base.forEach(r=>{if(r.tipo)tipos[r.tipo]=(tipos[r.tipo]||0)+1;});
@@ -1478,44 +1460,46 @@ function renderTipologiaAtual(){
       +'<button class="tip-tg-btn'+(S.tipMode==='historico'?' on':'')+'" onclick="setTipMode(\'historico\')">📚 Histórico <span class="tip-tg-n">'+nHist+'</span></button>'
     +'</div>'
   ].join('');
-  // RESUMO EXECUTIVO movido pra DEPOIS do filt (task #122)
-  const oss = (S.tipMode === 'historico') ? (data.ossHistorico||[]) : (data.oss||[]);
-  const equipes=[...new Set(oss.map(o=>o.equipe).filter(Boolean))].sort();
-  const selEq=document.getElementById('tip-f-equipe');
-  const eqAtual=selEq.value;
-  selEq.innerHTML='<option value="">Todas</option>'+equipes.map(e=>'<option value="'+esc(e)+'"'+(e===eqAtual?' selected':'')+'>'+e+'</option>').join('');
-  // Aplica filtros
-  const fEq=selEq.value;
-  const fCr=document.getElementById('tip-f-crit').value;
-  const fAt=document.getElementById('tip-f-atraso').value;
-  const fSt=document.getElementById('tip-f-status')?.value||'';
+  // RESUMO EXECUTIVO movido pra DEPOIS do filt (task #122/136)
+  // UNE: em aberto + histórico (ignora o toggle pro cálculo do filtro de período)
+  const oss = [].concat(data.oss||[]).concat(data.ossHistorico||[]);
+  // Filtros simplificados (task #136): Período + OS#
+  const fPer=document.getElementById('tip-f-periodo')?.value||'30';
+  const fOS=(document.getElementById('tip-f-os')?.value||'').trim();
   const fDi=document.getElementById('tip-f-dini')?.value||'';
   const fDf=document.getElementById('tip-f-dfim')?.value||'';
+  // Calcula range do período (opção C: usa dataFinal se finalizada, senão dataCriacao)
+  let dIni=null, dFim=null;
+  const hojeY=new Date(); hojeY.setHours(23,59,59,999);
+  if(fPer==='7'||fPer==='30'||fPer==='90'){
+    dFim=hojeY;
+    dIni=new Date(hojeY); dIni.setDate(dIni.getDate()-parseInt(fPer,10)); dIni.setHours(0,0,0,0);
+  } else if(fPer==='ano'){
+    dFim=hojeY;
+    dIni=new Date(hojeY.getFullYear(),0,1);
+  } else if(fPer==='custom'){
+    if(fDi){dIni=new Date(fDi+'T00:00:00');}
+    if(fDf){dFim=new Date(fDf+'T23:59:59');}
+  }
   const filt=oss.filter(o=>{
-    if(fEq&&o.equipe!==fEq)return false;
-    if(fCr&&(o.criticidade||'').toLowerCase().indexOf(fCr.toLowerCase())<0)return false;
-    if(fAt==='atrasada'&&!o.atrasada)return false;
-    if(fAt==='noprazo'&&o.atrasada)return false;
-    if(fSt){
-      const st=(o.status||'').toLowerCase();
-      const map={
-        naoIniciada: ['iniciada','nao iniciada','não iniciada'],
-        emProcesso: ['progress','progresso','execu','andamento','processo'],
-        emVerificacao: ['verifica'],
-        pausada: ['paus'],
-        finalizada: ['finaliz','conclu']
-      };
-      const terms=map[fSt]||[];
-      if(!terms.some(t=>st.indexOf(t)>=0)) return false;
+    // Filtro OS#: busca parcial
+    if(fOS && String(o.osId||'').indexOf(fOS)<0) return false;
+    // Filtro Período (opção C): dataFinal se finalizada, senão dataCriacao
+    if(dIni || dFim){
+      const isFinaliz=(o.status||'').toLowerCase().indexOf('finaliz')>=0
+                  ||(o.status||'').toLowerCase().indexOf('conclu')>=0;
+      const refStr = (isFinaliz && o.dataFinal) ? o.dataFinal : o.dataCriacao;
+      if(!refStr) return false;
+      const ref=new Date(refStr);
+      if(isNaN(ref)) return false;
+      if(dIni && ref<dIni) return false;
+      if(dFim && ref>dFim) return false;
     }
-    // Filtro de data programada
-    const dp=(o.dataProgramada||'').slice(0,10);
-    if(fDi && dp && dp<fDi) return false;
-    if(fDf && dp && dp>fDf) return false;
     return true;
   });
-  // Resumo executivo recebe filt (task #122)
-  renderExecResumo(data, slug, filt, !!(fEq||fCr||fAt||fDi||fDf||fSt));
+  // Resumo executivo recebe filt
+  const filtroAtivo = !!(fOS || dIni || dFim);
+  renderExecResumo(data, slug, filt, filtroAtivo);
   // Task #133: badge da aba mostra contagem filtrada
   atualizarBadgeAba(slug, filt.length);
   // Distribui por coluna
@@ -1556,10 +1540,17 @@ function renderTipologiaAtual(){
 
 
 function limparFiltrosTip(){
-  ['tip-f-equipe','tip-f-crit','tip-f-atraso','tip-f-status','tip-f-dini','tip-f-dfim'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el) el.value='';
+  ['tip-f-os','tip-f-dini','tip-f-dfim'].forEach(id=>{
+    const el=document.getElementById(id); if(el) el.value='';
   });
+  const sel=document.getElementById('tip-f-periodo'); if(sel) sel.value='30';
+  const cw=document.getElementById('tip-f-periodo-custom'); if(cw) cw.style.display='none';
+  renderTipologiaAtual();
+}
+function onPeriodoChange(){
+  const v=document.getElementById('tip-f-periodo').value;
+  const cw=document.getElementById('tip-f-periodo-custom');
+  if(cw) cw.style.display = v==='custom' ? '' : 'none';
   renderTipologiaAtual();
 }
 
