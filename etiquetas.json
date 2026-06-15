@@ -1,25 +1,25 @@
 {
-  "geradoEm": "2026-06-15T00:55:25Z",
+  "geradoEm": "2026-06-15T01:00:23Z",
   "fonte": "BD_Relatorio Semanal.xlsx -> Semanal (classificado por palavra-chave)",
-  "totalLinhasBD": 100,
-  "totalEmAberto": 12,
+  "totalLinhasBD": 300,
+  "totalEmAberto": 28,
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 61,
-        "emAberto": 6,
-        "atrasadas": 4,
-        "concluidas30d": 55,
-        "concluidas7d": 55,
-        "naSemanaCorrente": 61
+        "total": 136,
+        "emAberto": 17,
+        "atrasadas": 15,
+        "concluidas30d": 119,
+        "concluidas7d": 119,
+        "naSemanaCorrente": 136
       },
       "mttr": {
         "horas": null,
         "label": "",
-        "amostra": 55
+        "amostra": 119
       },
       "tendencia4Semanas": [
         {
@@ -40,57 +40,233 @@
         {
           "semana": "W24",
           "criadas": 0,
-          "finalizadas": 55
+          "finalizadas": 119
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 61,
-            "emAberto": 6
+            "total": 136,
+            "emAberto": 17
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 25,
+            "total": 33,
             "emAberto": 1
           },
           {
             "nome": "Felipe Silva",
-            "total": 11,
+            "total": 30,
             "emAberto": 0
           },
           {
             "nome": "Gilson Souza",
-            "total": 6,
-            "emAberto": 0
+            "total": 11,
+            "emAberto": 3
           },
           {
             "nome": "Marcos  Camargo",
-            "total": 3,
-            "emAberto": 0
+            "total": 5,
+            "emAberto": 1
           },
           {
-            "nome": "Renato  Julien",
-            "total": 3,
+            "nome": "Wesllen  Castro",
+            "total": 5,
             "emAberto": 1
           }
         ]
       },
-      "total": 6,
-      "atrasadas": 4,
+      "total": 17,
+      "atrasadas": 15,
       "porStatus": {
-        "naoIniciada": 4,
+        "naoIniciada": 15,
         "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 6
+        "(sem equipe)": 17
       },
       "oss": [
+        {
+          "osId": "7644",
+          "ativo": "Thopen - Sorocaba 1 - SP Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "UFV SOROCABA - Verificação e religamento da usina. Não foi possível realizar comando remoto. Relé trip 67B e 86",
+          "criticidade": "",
+          "dataProgramada": "2026-06-10",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": true
+        },
+        {
+          "osId": "7634",
+          "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "supervisor": "Marcos  Camargo",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-10",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "7613",
+          "ativo": "Thopen - Embu Guaçu 1 - SP Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento de usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-10",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "7722",
+          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da cabine",
+          "criticidade": "",
+          "dataProgramada": "2026-06-11",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "7721",
+          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da cabine remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-06-11",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": true
+        },
+        {
+          "osId": "7708",
+          "ativo": "RenoGrid - Colíder 2 - MT Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { RNGD-CLD200 }",
+          "equipe": "",
+          "responsavel": "Deivity Jhon Cunha Saugo ",
+          "supervisor": "Deivity Jhon Cunha Saugo ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento UFV Colíder 2",
+          "criticidade": "",
+          "dataProgramada": "2026-06-11",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "7705",
+          "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-11",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "7703",
+          "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-11",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "7744",
+          "ativo": "RenoGrid - Nova Xavantina 2 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso Brasil { RNGD-NVX200 }",
+          "equipe": "",
+          "responsavel": "Gabriel Oliveira ",
+          "supervisor": "Gabriel Oliveira ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-12",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "7737",
+          "ativo": "RenoGrid - Colíder 1 - MT Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { RNGD-CLD100 }",
+          "equipe": "",
+          "responsavel": "Deivity Jhon Cunha Saugo ",
+          "supervisor": "Deivity Jhon Cunha Saugo ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-12",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "7733",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento de usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-12",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
         {
           "osId": "7809",
           "ativo": "Cabine 1  Ipixuna  Pará Brasil { IPX100-CABN1 }",
@@ -189,11 +365,11 @@
         }
       ],
       "subClassificacao": {
-        "remoto": 16,
-        "local": 45,
-        "remotoEmAberto": 2,
-        "localEmAberto": 4,
-        "pctRemoto": 26,
+        "remoto": 33,
+        "local": 103,
+        "remotoEmAberto": 4,
+        "localEmAberto": 13,
+        "pctRemoto": 24,
         "alerta": true
       }
     },
@@ -202,12 +378,12 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 3,
-        "emAberto": 3,
-        "atrasadas": 0,
+        "total": 8,
+        "emAberto": 8,
+        "atrasadas": 1,
         "concluidas30d": 0,
         "concluidas7d": 0,
-        "naSemanaCorrente": 0
+        "naSemanaCorrente": 1
       },
       "mttr": {
         "horas": null,
@@ -240,11 +416,16 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3,
-            "emAberto": 3
+            "total": 8,
+            "emAberto": 8
           }
         ],
         "responsaveis": [
+          {
+            "nome": "Walter Santos",
+            "total": 4,
+            "emAberto": 4
+          },
           {
             "nome": "Bruno Vinícius Pupo",
             "total": 2,
@@ -252,23 +433,38 @@
           },
           {
             "nome": "Renato  Julien",
-            "total": 1,
-            "emAberto": 1
+            "total": 2,
+            "emAberto": 2
           }
         ]
       },
-      "total": 3,
-      "atrasadas": 0,
+      "total": 8,
+      "atrasadas": 1,
       "porStatus": {
-        "naoIniciada": 3,
+        "naoIniciada": 8,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 3
+        "(sem equipe)": 8
       },
       "oss": [
+        {
+          "osId": "7651",
+          "ativo": "Cabine 1 Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "supervisor": "Walter Santos ",
+          "status": "Não Iniciada",
+          "tarefa": "[SEMP] - MPM - Cabine",
+          "criticidade": "",
+          "dataProgramada": "2026-06-11",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
         {
           "osId": "7776",
           "ativo": "Estrutura Trackers  Ibirapuã  Bahia Brasil { IBI200-ETKR1 }",
@@ -279,6 +475,21 @@
           "tarefa": "[Grid Co.] - MPA - Tracker",
           "criticidade": "",
           "dataProgramada": "2026-06-15",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "7665",
+          "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "supervisor": "Walter Santos ",
+          "status": "Não Iniciada",
+          "tarefa": "[SEMP] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-06-16",
           "dataCriacao": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -309,6 +520,51 @@
           "tarefa": "[Athon] - MPA - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-06-22",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "7670",
+          "ativo": "Cabine 1 Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN200-CABN1 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "supervisor": "Walter Santos ",
+          "status": "Não Iniciada",
+          "tarefa": "[SEMP] - MPQ - Cabine",
+          "criticidade": "",
+          "dataProgramada": "2026-06-22",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "7660",
+          "ativo": "Cabine 1 Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "supervisor": "Walter Santos ",
+          "status": "Não Iniciada",
+          "tarefa": "[SEMP] - MPQ - Cabine",
+          "criticidade": "",
+          "dataProgramada": "2026-06-23",
+          "dataCriacao": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "7745",
+          "ativo": "Módulo Fotovoltaico Canadian CS7N-660MB-AG    { PTB100-MDFV }",
+          "equipe": "",
+          "responsavel": "Renato  Julien",
+          "supervisor": "Renato  Julien",
+          "status": "Não Iniciada",
+          "tarefa": "[Axis] - MPA - Módulos Fotovoltaicos",
+          "criticidade": "",
+          "dataProgramada": "2026-06-25",
           "dataCriacao": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -440,17 +696,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 0,
+        "total": 1,
         "emAberto": 0,
         "atrasadas": 0,
-        "concluidas30d": 0,
-        "concluidas7d": 0,
-        "naSemanaCorrente": 0
+        "concluidas30d": 1,
+        "concluidas7d": 1,
+        "naSemanaCorrente": 1
       },
       "mttr": {
         "horas": null,
         "label": "",
-        "amostra": 0
+        "amostra": 1
       },
       "tendencia4Semanas": [
         {
@@ -471,12 +727,24 @@
         {
           "semana": "W24",
           "criadas": 0,
-          "finalizadas": 0
+          "finalizadas": 1
         }
       ],
       "topOfensores": {
-        "clusters": [],
-        "responsaveis": []
+        "clusters": [
+          {
+            "nome": "(sem equipe)",
+            "total": 1,
+            "emAberto": 0
+          }
+        ],
+        "responsaveis": [
+          {
+            "nome": "Frank  Melo",
+            "total": 1,
+            "emAberto": 0
+          }
+        ]
       },
       "total": 0,
       "atrasadas": 0,
