@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-15T20:23:31Z",
+  "geradoEm": "2026-06-15T20:28:32Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2509,
-        "emAberto": 8,
+        "total": 2510,
+        "emAberto": 7,
         "atrasadas": 5,
-        "concluidas30d": 537,
-        "concluidas7d": 171,
-        "naSemanaCorrente": 17
+        "concluidas30d": 539,
+        "concluidas7d": 173,
+        "naSemanaCorrente": 18
       },
       "mttr": {
-        "horas": 3.37,
-        "label": "3h 22min",
-        "amostra": 537
+        "horas": 3.36,
+        "label": "3h 21min",
+        "amostra": 539
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W25",
-          "criadas": 15,
-          "finalizadas": 14
+          "criadas": 16,
+          "finalizadas": 16
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2509,
-            "emAberto": 8
+            "total": 2510,
+            "emAberto": 7
           }
         ],
         "responsaveis": [
@@ -63,7 +63,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 179,
+            "total": 180,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 8,
+      "total": 7,
       "atrasadas": 5,
       "porStatus": {
         "naoIniciada": 4,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 8
+        "(sem equipe)": 7
       },
       "oss": [
         {
@@ -183,25 +183,6 @@
           "atrasada": true
         },
         {
-          "osId": "7858",
-          "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
-          "equipe": "",
-          "responsavel": "Renato  Julien",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Renato  Julien",
-          "status": "IN_PROGRESS",
-          "tarefa": "Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "2026-06-15",
-          "dataInicial": "2026-06-15",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "7537",
           "ativo": "Infraestrutura Civil FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-INFC1 }",
           "equipe": "",
@@ -240,6 +221,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "7866",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da Usina remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-06-15",
+          "dataCriacao": "2026-06-15",
+          "dataInicial": "2026-06-15",
+          "dataFinal": "2026-06-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "7862",
           "ativo": "Thopen - Araçoiaba da Serra 1- SP  Araçoiaba  São Paulo Brasil { THPN-ADS100 }",
@@ -289,6 +290,26 @@
           "supervisor": "James Chaves ",
           "status": "Finalizada",
           "tarefa": "Religamento do inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-06-15",
+          "dataCriacao": "2026-06-15",
+          "dataInicial": "2026-06-15",
+          "dataFinal": "2026-06-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "7858",
+          "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
+          "equipe": "",
+          "responsavel": "Renato  Julien",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Renato  Julien",
+          "status": "Finalizados",
+          "tarefa": "Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-06-15",
           "dataCriacao": "2026-06-15",
@@ -2841,26 +2862,6 @@
           "atrasada": false
         },
         {
-          "osId": "7581",
-          "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Juliana Cândido ",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[ATHO] Religamento e Parametrização das Cabines - SMP100",
-          "criticidade": "",
-          "dataProgramada": "2026-06-09",
-          "dataCriacao": "2026-06-09",
-          "dataInicial": "2026-06-09",
-          "dataFinal": "2026-06-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "7632",
           "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
           "equipe": "",
@@ -3219,34 +3220,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "7568",
-          "ativo": "RenoGrid - Colíder 2 - MT Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { RNGD-CLD200 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da usina",
-          "criticidade": "",
-          "dataProgramada": "2026-06-09",
-          "dataCriacao": "2026-06-09",
-          "dataInicial": "2026-06-09",
-          "dataFinal": "2026-06-09",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1526,
+      "historicoTotal": 1528,
       "subClassificacao": {
-        "remoto": 511,
+        "remoto": 512,
         "local": 1998,
         "remotoEmAberto": 3,
-        "localEmAberto": 5,
+        "localEmAberto": 4,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3417,8 +3398,8 @@
         ],
         "medHorasAbrir": 3.4,
         "medHorasFechar": 3.4,
-        "amostraAbrir": 505,
-        "amostraFechar": 503,
+        "amostraAbrir": 506,
+        "amostraFechar": 504,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3426,7 +3407,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 107
+            "total": 108
           },
           {
             "nome": "Raphael Vitoriano",
@@ -3469,16 +3450,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 400,
-        "emAberto": 46,
-        "atrasadas": 28,
-        "concluidas30d": 93,
-        "concluidas7d": 23,
+        "emAberto": 45,
+        "atrasadas": 27,
+        "concluidas30d": 94,
+        "concluidas7d": 24,
         "naSemanaCorrente": 12
       },
       "mttr": {
-        "horas": 186.84,
-        "label": "7d 18h",
-        "amostra": 93
+        "horas": 191.74,
+        "label": "7d 23h",
+        "amostra": 94
       },
       "tendencia4Semanas": [
         {
@@ -3499,7 +3480,7 @@
         {
           "semana": "W25",
           "criadas": 2,
-          "finalizadas": 3
+          "finalizadas": 4
         }
       ],
       "topOfensores": {
@@ -3507,7 +3488,7 @@
           {
             "nome": "(sem equipe)",
             "total": 400,
-            "emAberto": 46
+            "emAberto": 45
           }
         ],
         "responsaveis": [
@@ -3538,16 +3519,16 @@
           }
         ]
       },
-      "total": 46,
-      "atrasadas": 28,
+      "total": 45,
+      "atrasadas": 27,
       "porStatus": {
         "naoIniciada": 37,
-        "emProgresso": 3,
+        "emProgresso": 2,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 46
+        "(sem equipe)": 45
       },
       "oss": [
         {
@@ -3707,24 +3688,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "6798",
-          "ativo": "Infraestrutura Civil  Ibaté  São Paulo Brasil { IBT200-INFC1 }",
-          "equipe": "",
-          "responsavel": "Rodolfo  Oliveira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Rodolfo  Oliveira",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-05-25",
-          "dataCriacao": "2026-05-19",
-          "dataInicial": "2026-06-12",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 576.0,
           "atrasada": true
         },
         {
@@ -4379,6 +4342,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 288.0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "6798",
+          "ativo": "Infraestrutura Civil  Ibaté  São Paulo Brasil { IBT200-INFC1 }",
+          "equipe": "",
+          "responsavel": "Rodolfo  Oliveira",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Rodolfo  Oliveira",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-05-25",
+          "dataCriacao": "2026-05-19",
+          "dataInicial": "2026-06-12",
+          "dataFinal": "2026-06-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 576.0,
+          "horasAteFechar": 72.0,
           "atrasada": false
         },
         {
@@ -7023,25 +7005,6 @@
           "atrasada": false
         },
         {
-          "osId": "5195",
-          "ativo": "Transformador 1  seco    { VRG100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Marcos Duarte ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-04-16",
-          "dataCriacao": "2026-04-07",
-          "dataInicial": "2026-04-17",
-          "dataFinal": "2026-04-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "5431",
           "ativo": "SPDA Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-SPDA1 }",
           "equipe": "",
@@ -7194,7 +7157,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 234
+      "historicoTotal": 235
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -7202,16 +7165,16 @@
       "cor": "#ef4444",
       "kpis": {
         "total": 123,
-        "emAberto": 8,
+        "emAberto": 7,
         "atrasadas": 6,
-        "concluidas30d": 29,
-        "concluidas7d": 10,
+        "concluidas30d": 30,
+        "concluidas7d": 11,
         "naSemanaCorrente": 4
       },
       "mttr": {
-        "horas": 99.31,
-        "label": "4d 3h",
-        "amostra": 29
+        "horas": 96.0,
+        "label": "4d 0h",
+        "amostra": 30
       },
       "tendencia4Semanas": [
         {
@@ -7232,7 +7195,7 @@
         {
           "semana": "W25",
           "criadas": 1,
-          "finalizadas": 3
+          "finalizadas": 4
         }
       ],
       "topOfensores": {
@@ -7240,7 +7203,7 @@
           {
             "nome": "(sem equipe)",
             "total": 123,
-            "emAberto": 8
+            "emAberto": 7
           }
         ],
         "responsaveis": [
@@ -7271,16 +7234,16 @@
           }
         ]
       },
-      "total": 8,
+      "total": 7,
       "atrasadas": 6,
       "porStatus": {
         "naoIniciada": 4,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 8
+        "(sem equipe)": 7
       },
       "oss": [
         {
@@ -7388,24 +7351,6 @@
           "atrasada": true
         },
         {
-          "osId": "7838",
-          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STN100-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Juliana Cândido ",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "IN_PROGRESS",
-          "tarefa": "Inversor 06 - Substituição do Inversor em garantia",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "2026-06-15",
-          "dataInicial": "2026-06-15",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "atrasada": false
-        },
-        {
           "osId": "7758",
           "ativo": "Inversor 1.3 Sungrow SG250HX-20    { PRL100-INVR1.3 }",
           "equipe": "",
@@ -7425,6 +7370,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "7838",
+          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STN100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Juliana Cândido ",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "Inversor 06 - Substituição do Inversor em garantia",
+          "criticidade": "",
+          "dataProgramada": "2026-06-15",
+          "dataCriacao": "2026-06-15",
+          "dataInicial": "2026-06-15",
+          "dataFinal": "2026-06-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "7752",
           "ativo": "Inversor 1.7 Huawei     { TIM100-INVR1.7 }",
@@ -9250,7 +9214,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 96
+      "historicoTotal": 97
     },
     "performance": {
       "label": "Performance",
@@ -9946,24 +9910,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "7858",
-      "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
-      "equipe": "",
-      "responsavel": "Renato  Julien",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Renato  Julien",
-      "status": "IN_PROGRESS",
-      "tarefa": "Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-15",
-      "dataCriacao": "2026-06-15",
-      "dataInicial": "2026-06-15",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "7841",
       "ativo": "Ar Condicionado      { NVX100-SOEM1-ARCD }",
       "equipe": "",
@@ -9978,23 +9924,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "7838",
-      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STN100-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Juliana Cândido ",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "IN_PROGRESS",
-      "tarefa": "Inversor 06 - Substituição do Inversor em garantia",
-      "criticidade": "",
-      "dataProgramada": "2026-06-15",
-      "dataCriacao": "2026-06-15",
-      "dataInicial": "2026-06-15",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
     },
     {
       "osId": "7833",
@@ -10715,23 +10644,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "6798",
-      "ativo": "Infraestrutura Civil  Ibaté  São Paulo Brasil { IBT200-INFC1 }",
-      "equipe": "",
-      "responsavel": "Rodolfo  Oliveira",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Rodolfo  Oliveira",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-05-25",
-      "dataCriacao": "2026-05-19",
-      "dataInicial": "2026-06-12",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 576.0
-    },
-    {
       "osId": "6793",
       "ativo": "Infraestrutura Civil 2ª Seção Colônia Tapejara, Lote N 152-Re, 153 e 154 Cidade Gaúcha  Paraná Brasil { THPN-CGH100-INFC1 }",
       "equipe": "",
@@ -11031,6 +10943,26 @@
   ],
   "ossHistorico": [
     {
+      "osId": "7866",
+      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da Usina remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-06-15",
+      "dataCriacao": "2026-06-15",
+      "dataInicial": "2026-06-15",
+      "dataFinal": "2026-06-15",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
       "osId": "7865",
       "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
       "equipe": "",
@@ -11099,6 +11031,26 @@
       "supervisor": "James Chaves ",
       "status": "Finalizada",
       "tarefa": "Religamento do inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-06-15",
+      "dataCriacao": "2026-06-15",
+      "dataInicial": "2026-06-15",
+      "dataFinal": "2026-06-15",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "7858",
+      "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
+      "equipe": "",
+      "responsavel": "Renato  Julien",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Renato  Julien",
+      "status": "Finalizados",
+      "tarefa": "Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-06-15",
       "dataCriacao": "2026-06-15",
@@ -11268,6 +11220,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "7838",
+      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STN100-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Juliana Cândido ",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Finalizados",
+      "tarefa": "Inversor 06 - Substituição do Inversor em garantia",
+      "criticidade": "",
+      "dataProgramada": "2026-06-15",
+      "dataCriacao": "2026-06-15",
+      "dataInicial": "2026-06-15",
+      "dataFinal": "2026-06-15",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -13966,70 +13937,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7590",
-      "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizados",
-      "tarefa": "Religamento da cabine",
-      "criticidade": "",
-      "dataProgramada": "2026-06-09",
-      "dataCriacao": "2026-06-09",
-      "dataInicial": "2026-06-09",
-      "dataFinal": "2026-06-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "7589",
-      "ativo": "Infraestrutura Civil  Santarém  Pará Brasil { STR100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Júlio Willers ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Júlio Willers ",
-      "status": "Finalizados",
-      "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-06-16",
-      "dataCriacao": "2026-06-09",
-      "dataInicial": "2026-06-10",
-      "dataFinal": "2026-06-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
-    },
-    {
-      "osId": "7587",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "religamento remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-06-09",
-      "dataCriacao": "2026-06-09",
-      "dataInicial": "2026-06-09",
-      "dataFinal": "2026-06-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1879,
-  "totalGeral": 3078,
+  "historicoTotal": 1883,
+  "totalGeral": 3079,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
