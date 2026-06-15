@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-06-15T13:54:19Z",
+  "geradoEm": "2026-06-15T13:59:19Z",
   "fonte": "BD_Relatorio Semanal.xlsx -> Semanal (classificado por palavra-chave)",
   "totalLinhasBD": 18024,
-  "totalEmAberto": 354,
+  "totalEmAberto": 353,
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
@@ -10,16 +10,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3005,
-        "emAberto": 153,
-        "atrasadas": 151,
-        "concluidas30d": 526,
-        "concluidas7d": 159,
+        "emAberto": 152,
+        "atrasadas": 150,
+        "concluidas30d": 527,
+        "concluidas7d": 160,
         "naSemanaCorrente": 6
       },
       "mttr": {
         "horas": null,
         "label": "",
-        "amostra": 526
+        "amostra": 527
       },
       "tendencia4Semanas": [
         {
@@ -35,7 +35,7 @@
         {
           "semana": "W24",
           "criadas": 0,
-          "finalizadas": 154
+          "finalizadas": 155
         },
         {
           "semana": "W25",
@@ -48,7 +48,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3005,
-            "emAberto": 153
+            "emAberto": 152
           }
         ],
         "responsaveis": [
@@ -60,7 +60,7 @@
           {
             "nome": "Raphael Vitoriano",
             "total": 221,
-            "emAberto": 1
+            "emAberto": 0
           },
           {
             "nome": "Felipe Silva",
@@ -79,16 +79,16 @@
           }
         ]
       },
-      "total": 153,
-      "atrasadas": 151,
+      "total": 152,
+      "atrasadas": 150,
       "porStatus": {
-        "naoIniciada": 149,
+        "naoIniciada": 148,
         "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 153
+        "(sem equipe)": 152
       },
       "oss": [
         {
@@ -2492,22 +2492,6 @@
           "atrasada": true
         },
         {
-          "osId": "7819",
-          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Não Iniciada",
-          "tarefa": "religamento da usina de CPP100",
-          "criticidade": "",
-          "dataProgramada": "2026-06-14",
-          "dataCriacao": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "7537",
           "ativo": "Infraestrutura Civil FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-INFC1 }",
           "equipe": "",
@@ -2725,6 +2709,22 @@
           "supervisor": "Raphael Vitoriano ",
           "status": "Finalizados",
           "tarefa": "Religamento da usina de Marialva",
+          "criticidade": "",
+          "dataProgramada": "2026-06-14",
+          "dataCriacao": "",
+          "dataFinal": "2026-06-14",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "7819",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizados",
+          "tarefa": "religamento da usina de CPP100",
           "criticidade": "",
           "dataProgramada": "2026-06-14",
           "dataCriacao": "",
@@ -4924,30 +4924,14 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "7545",
-          "ativo": "Thopen - Guaratingueta 5 - SP  Guaratinguetá  São Paulo Brasil { THPN-GTA500 }",
-          "equipe": "",
-          "responsavel": "Henri Almeida ",
-          "supervisor": "Henri Almeida ",
-          "status": "Finalizados",
-          "tarefa": "UFV GUARATINGUETA - Verificação e religamento da usina. Não foi possível realizar comando remoto. SEM TRIP",
-          "criticidade": "",
-          "dataProgramada": "2026-06-08",
-          "dataCriacao": "",
-          "dataFinal": "2026-06-08",
-          "linkFracttal": "",
-          "modalidade": "remoto",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1523,
+      "historicoTotal": 1524,
       "subClassificacao": {
         "remoto": 549,
         "local": 2456,
         "remotoEmAberto": 28,
-        "localEmAberto": 125,
+        "localEmAberto": 124,
         "pctRemoto": 18,
         "alerta": true
       }
