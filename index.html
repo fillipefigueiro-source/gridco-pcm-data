@@ -2463,8 +2463,16 @@ function openMod(usina, dia, os_id){
     s = String(s).trim();
     // 1. ISO completa "2026-05-28T20:44:50.049389+00:00" → parse direto
     if(/^\d{4}-\d{2}-\d{2}T/.test(s)){
-      const d = new Date(s);
+      let str = s;
+      // Trunca microsegundos pra 3 dígitos (alguns browsers falham com 6)
+      str = str.replace(/(\.\d{3})\d+/, '$1');
+      // Se não tem timezone, adiciona Z (assume UTC)
+      if(!/[Z+-]\d{2}:?\d{2}$|Z$/.test(str)) str += 'Z';
+      const d = new Date(str);
       if(!isNaN(d)) return d;
+      // Fallback: extrai só a parte da data
+      const m = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+      if(m) return new Date(parseInt(m[1]), parseInt(m[2])-1, parseInt(m[3]));
     }
     // 2. YYYY-MM-DD
     const m2 = s.match(/(\d{4})-(\d{2})-(\d{2})/);
@@ -2487,16 +2495,25 @@ function openMod(usina, dia, os_id){
   // mas mantém card kanban com status da subtarefa
   const statusPaiRaw = (osRow.statusPai||'').toString().toLowerCase();
   const statusRaw = (osRow.status_bd||osRow.status||'').toString().toLowerCase();
-  if(statusPaiRaw.indexOf('verifica')>=0 && statusRaw.indexOf('finaliz')<0){
+  // Se OS pai está em Verificação, modal mostra "Em Verificação" SEMPRE
+  if(statusPaiRaw.indexOf('verifica')>=0){
     osRow.status_bd = 'Em Verificação';
-  }
-  // Heurística: status diz "Finalizada" mas dataFinal vazia → "Em Verificação"
-  const pareceFinaliz = statusRaw.indexOf('finaliz')>=0 || statusRaw.indexOf('conclu')>=0;
-  if(pareceFinaliz && !dFim){
+  } else if((statusRaw.indexOf('finaliz')>=0||statusRaw.indexOf('conclu')>=0) && !dFim){
+    // Heurística fallback: "Finalizada" sem dataFinal → "Em Verificação"
     osRow.status_bd = 'Em Verificação';
   }
   const dProgClass = dProg && dProg < hoje && !dFim ? 'atraso' : (dFim ? 'ok' : '');
   function fmtDt(d){if(!d)return '--'; return ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2);}
+  function fmtDtH(d){
+    if(!d) return '--';
+    const dd = ('0'+d.getDate()).slice(-2);
+    const mm = ('0'+(d.getMonth()+1)).slice(-2);
+    const hh = ('0'+d.getHours()).slice(-2);
+    const mn = ('0'+d.getMinutes()).slice(-2);
+    // Se hora=00:00 não mostra (provavelmente date-only)
+    if(hh==='00' && mn==='00') return dd+'/'+mm;
+    return dd+'/'+mm+' às '+hh+':'+mn;
+  }
   let html = '';
   html += '<div class="mtop2">';
   html += '  <button class="mtop2-close" onclick="closeMod()">✕</button>';
@@ -2514,24 +2531,13 @@ function openMod(usina, dia, os_id){
   if(osRow.modalidade) html += '<span class="mpill modalidade-'+osRow.modalidade+'">'+osRow.modalidade.toUpperCase()+'</span>';
   html += '  </div>';
   html += '</div>';
-  // SEÇÃO 2: Datas (com MTTR quando OS finalizada — task #131 + #134)
+  // SEÇÃO 2 removida — Datas agora ficam na timeline (task #146)
   let mttrLabel = '';
   if(osRow.mttr_h!=null && Number(osRow.mttr_h)>0){
     mttrLabel = fmtMTTR(osRow.mttr_h);
   } else if(osRow.horasAteFechar!=null && Number(osRow.horasAteFechar)>0){
     mttrLabel = fmtMTTR(osRow.horasAteFechar);
   }
-  html += '<div class="msec"><div class="msec-t" style="display:flex;justify-content:space-between;align-items:center">🗓 Datas';
-  if(mttrLabel){
-    html += '<span style="background:#dcfce7;color:#166534;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:8px;letter-spacing:.3px">⏱ MTTR ' + mttrLabel + '</span>';
-  }
-  html += '</div>';
-  html += '  <div class="mdates">';
-  html += '    <div class="mdate"><div class="mdate-l">Criada</div><div class="mdate-v">'+fmtDt(dCria)+'</div></div>';
-  html += '    <div class="mdate '+dProgClass+'"><div class="mdate-l">Programada</div><div class="mdate-v">'+fmtDt(dProg)+(dProgClass==='atraso'?' ⚠':'')+'</div></div>';
-  html += '    <div class="mdate '+(dFim?'ok':'')+'"><div class="mdate-l">Finalizada</div><div class="mdate-v">'+fmtDt(dFim)+'</div></div>';
-  html += '  </div>';
-  html += '</div>';
   // SEÇÃO 2.5: Relatório de execução (subtarefa preenchida pelo executor)
   if(osRow.relatorio && String(osRow.relatorio).trim()){
     const rel = String(osRow.relatorio);
@@ -2574,7 +2580,9 @@ function openMod(usina, dia, os_id){
       if(t.indexOf('PROGRESS')>=0 || t.indexOf('RUN')>=0) totalRun += (parseInt(a.seg)||0);
       else if(t.indexOf('PAUSED')>=0) totalPau += (parseInt(a.seg)||0);
     });
-    html += '<div class="msec"><div class="msec-t">🕐 Timeline de execução</div>';
+    html += '<div class="msec"><div class="msec-t" style="display:flex;justify-content:space-between;align-items:center">🕐 Timeline de execução';
+    if(mttrLabel) html += '<span style="background:#dcfce7;color:#166534;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:8px;letter-spacing:.3px">⏱ MTTR ' + mttrLabel + '</span>';
+    html += '</div>';
     html += '  <div class="mtl-resumo"><b>'+_fmtDurTL(totalRun)+'</b> ativos · <b>'+_fmtDurTL(totalPau)+'</b> em pausas · <b>'+osRow.historico.length+'</b> evento'+(osRow.historico.length!==1?'s':'')+'</div>';
     html += '  <div class="mtimeline">';
     osRow.historico.forEach(a=>{
@@ -2588,6 +2596,44 @@ function openMod(usina, dia, os_id){
     });
     html += '  </div>';
     html += '</div>';
+  } else {
+    // Task #146: Timeline visual a partir das datas básicas (criada/programada/iniciada/finalizada)
+    const dIni = parseDt(osRow.dataInicial||osRow.data_inicial);
+    const eventos = [];
+    if(dCria) eventos.push({d:dCria, label:'Criada', icone:'➕', cls:'run'});
+    if(dProg) eventos.push({d:dProg, label:'Programada', icone:'📅', cls:'run'});
+    if(dIni)  eventos.push({d:dIni,  label:'Iniciada',   icone:'▶', cls:'run'});
+    if(dFim)  eventos.push({d:dFim,  label:'Finalizada', icone:'✔', cls:'fim'});
+    if(osRow.statusPai && /verifica/i.test(osRow.statusPai) && !dFim){
+      eventos.push({d:new Date(), label:'Em Verificação', icone:'⏳', cls:'pau', pendente:true});
+    }
+    if(eventos.length){
+      eventos.sort((a,b)=>a.d-b.d);
+      function _fmtDur(ms){
+        const s=Math.floor(ms/1000); if(s<60)return s+'s';
+        const m=Math.floor(s/60); if(m<60)return m+'min';
+        const h=Math.floor(m/60); if(h<24)return h+'h '+(m%60)+'min';
+        return Math.floor(h/24)+'d '+(h%24)+'h';
+      }
+      function _fmtIso(d){
+        if(!d) return '';
+        return ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+' '+('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2);
+      }
+      html += '<div class="msec"><div class="msec-t" style="display:flex;justify-content:space-between;align-items:center">🕐 Linha do tempo';
+      if(mttrLabel) html += '<span style="background:#dcfce7;color:#166534;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:8px;letter-spacing:.3px">⏱ MTTR ' + mttrLabel + '</span>';
+      html += '</div>';
+      html += '  <div class="mtimeline">';
+      eventos.forEach((e,i)=>{
+        const delta = i>0 ? ' <span style="color:#94a3b8">(+'+_fmtDur(e.d - eventos[i-1].d)+')</span>' : '';
+        html += '<div class="mtl-item">';
+        html += '  <div class="mtl-dot '+e.cls+'"></div>';
+        html += '  <div class="mtl-t '+e.cls+'">'+e.icone+' '+e.label+(e.pendente?' (aguardando)':'')+'</div>';
+        html += '  <div class="mtl-d">'+_fmtIso(e.d)+delta+'</div>';
+        html += '</div>';
+      });
+      html += '  </div>';
+      html += '</div>';
+    }
   }
   // SEÇÃO 3: Detalhes operacionais
   html += '<div class="msec"><div class="msec-t">⚙ Detalhes operacionais</div>';
