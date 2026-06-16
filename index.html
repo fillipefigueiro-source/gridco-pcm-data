@@ -2483,9 +2483,14 @@ function openMod(usina, dia, os_id){
   const dCria = parseDt(osRow.dataCriacao||osRow.data_criacao);
   const dProg = parseDt(osRow.dataProgramada||osRow.data_prog||osRow.dia);
   const dFim = parseDt(osRow.dataFinal||osRow.data_final);
-  // Heurística: se status diz "Finalizada" mas dataFinal está vazia,
-  // é provável que seja "Em Verificação" (subtarefa terminou, OS pai aguarda)
+  // FIX #143: Modal mostra status PAI se "Em Verificação" (OS pai aguarda aprovação)
+  // mas mantém card kanban com status da subtarefa
+  const statusPaiRaw = (osRow.statusPai||'').toString().toLowerCase();
   const statusRaw = (osRow.status_bd||osRow.status||'').toString().toLowerCase();
+  if(statusPaiRaw.indexOf('verifica')>=0 && statusRaw.indexOf('finaliz')<0){
+    osRow.status_bd = 'Em Verificação';
+  }
+  // Heurística: status diz "Finalizada" mas dataFinal vazia → "Em Verificação"
   const pareceFinaliz = statusRaw.indexOf('finaliz')>=0 || statusRaw.indexOf('conclu')>=0;
   if(pareceFinaliz && !dFim){
     osRow.status_bd = 'Em Verificação';
