@@ -883,8 +883,8 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
           <select class="fsel" id="f-status" onchange="onStatusChange()">
             <option value="">Todos</option>
             <option value="ni">N&atilde;o Iniciada</option>
-            <option value="prog">Em Processo</option>
-            <option value="exec">Em Verifica&ccedil;&atilde;o</option>
+            <option value="exec">Em Processo</option>
+            <option value="verif">Em Verifica&ccedil;&atilde;o</option>
             <option value="pau">Pausada</option>
             <option value="fin">Finalizados</option>
           </select></div>
@@ -1125,16 +1125,16 @@ const isFinalizada=r=>{const s=(r.status_bd||r.status||'').toString().toLowerCas
 // Resolve nome do supervisor tentando múltiplos campos possíveis na JSON
 const getSupervisor=r=>(r.responsavel||r.supervisor||r['Responsável']||r['Responsavel']||r.responsavel_om||r.resp||r.responsable||'').toString().trim();
 const statusKey=r=>{
-  if(isExec(r)) return 'exec';
   const s=(r.status_bd||r.status||'').toString().toLowerCase();
+  if(s.includes('verifica')) return 'verif';
+  if(isExec(r)) return 'exec';
   if(s.includes('finaliz')||s.includes('conclu')) return 'fin';
   if(s.includes('pausad')) return 'pau';
-  if(s.includes('progress')) return 'prog';
   if(s.includes('iniciada')||s.includes('iniciado')||s==='não iniciada'||s==='nao iniciada') return 'ni';
   return 'ni';
 };
-const statusLabel=k=>({exec:'Em execução',fin:'Finalizada',ni:'Não iniciada',pau:'Pausada',prog:'Em progresso'})[k]||'--';
-const statusColor=k=>({exec:'#8a4cf9',fin:'#a9db21',ni:'#9ca3af',pau:'#f59e0b',prog:'#3b82f6'})[k]||'#9ca3af';
+const statusLabel=k=>({exec:'Em Processo',fin:'Finalizada',ni:'Não Iniciada',pau:'Pausada',verif:'Em Verificação'})[k]||'--';
+const statusColor=k=>({exec:'#8a4cf9',fin:'#a9db21',ni:'#9ca3af',pau:'#f59e0b',verif:'#3b82f6'})[k]||'#9ca3af';
 function taxaFinalizacaoPreventiva(rows, cat){
   const subset=rows.filter(r=>r.tipo&&(r.tipo===cat||r.tipo.startsWith(cat+'-')));
   if(!subset.length) return {tx:0, total:0, fin:0};
@@ -2481,8 +2481,15 @@ function openMod(usina, dia, os_id){
     return null;
   }
   const dCria = parseDt(osRow.dataCriacao||osRow.data_criacao);
-  const dProg = parseDt(osRow.dia||osRow.dataProgramada||osRow.data_prog);
+  const dProg = parseDt(osRow.dataProgramada||osRow.data_prog||osRow.dia);
   const dFim = parseDt(osRow.dataFinal||osRow.data_final);
+  // Heurística: se status diz "Finalizada" mas dataFinal está vazia,
+  // é provável que seja "Em Verificação" (subtarefa terminou, OS pai aguarda)
+  const statusRaw = (osRow.status_bd||osRow.status||'').toString().toLowerCase();
+  const pareceFinaliz = statusRaw.indexOf('finaliz')>=0 || statusRaw.indexOf('conclu')>=0;
+  if(pareceFinaliz && !dFim){
+    osRow.status_bd = 'Em Verificação';
+  }
   const dProgClass = dProg && dProg < hoje && !dFim ? 'atraso' : (dFim ? 'ok' : '');
   function fmtDt(d){if(!d)return '--'; return ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2);}
   let html = '';
