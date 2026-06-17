@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-17T12:32:51Z",
+  "geradoEm": "2026-06-17T12:37:48Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 11,
       "atrasadas": 6,
       "porStatus": {
-        "naoIniciada": 11,
-        "emProgresso": 0,
+        "naoIniciada": 10,
+        "emProgresso": 1,
         "pausada": 0,
         "verificacao": 0
       },
@@ -130,17 +130,18 @@
           "osId": "7913",
           "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
           "equipe": "",
-          "responsavel": "Gilson Souza ",
+          "responsavel": "Frank  Melo",
           "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "supervisor": "Frank  Melo",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da usina de CPP100",
           "criticidade": "",
           "dataProgramada": "2026-06-16",
           "dataCriacao": "2026-06-16",
-          "dataInicial": "",
+          "dataInicial": "2026-06-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -3518,17 +3519,17 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 403,
-        "emAberto": 45,
-        "atrasadas": 33,
-        "concluidas30d": 97,
-        "concluidas7d": 16,
-        "naSemanaCorrente": 14
+        "total": 405,
+        "emAberto": 46,
+        "atrasadas": 32,
+        "concluidas30d": 98,
+        "concluidas7d": 17,
+        "naSemanaCorrente": 15
       },
       "mttr": {
-        "horas": 198.19,
-        "label": "8d 6h",
-        "amostra": 97
+        "horas": 206.69,
+        "label": "8d 14h",
+        "amostra": 98
       },
       "tendencia4Semanas": [
         {
@@ -3548,16 +3549,16 @@
         },
         {
           "semana": "W25",
-          "criadas": 5,
-          "finalizadas": 7
+          "criadas": 7,
+          "finalizadas": 8
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 403,
-            "emAberto": 45
+            "total": 405,
+            "emAberto": 46
           }
         ],
         "responsaveis": [
@@ -3588,16 +3589,16 @@
           }
         ]
       },
-      "total": 45,
-      "atrasadas": 33,
+      "total": 46,
+      "atrasadas": 32,
       "porStatus": {
-        "naoIniciada": 32,
-        "emProgresso": 3,
+        "naoIniciada": 34,
+        "emProgresso": 2,
         "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 45
+        "(sem equipe)": 46
       },
       "oss": [
         {
@@ -3825,24 +3826,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "6258",
-          "ativo": "Infraestrutura Civil    São Paulo Brasil { SPP300-INFC1 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Eduardo  Mendes",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-05-28",
-          "dataCriacao": "2026-05-05",
-          "dataInicial": "2026-06-17",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 1032.0,
           "atrasada": true
         },
         {
@@ -4173,6 +4156,23 @@
           "atrasada": true
         },
         {
+          "osId": "7929",
+          "ativo": "Ar Condicionado      { PCN100-SOEM1-ARCD }",
+          "equipe": "",
+          "responsavel": "Pedro  Oliveira",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Pedro  Oliveira",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
+          "criticidade": "",
+          "dataProgramada": "2026-06-17",
+          "dataCriacao": "2026-06-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "7924",
           "ativo": "Módulo Fotovoltaico Risen RSM132-8-660BMDG    { IBI100-MDFV }",
           "equipe": "",
@@ -4377,6 +4377,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": false
+        },
+        {
+          "osId": "7928",
+          "ativo": "Infraestrutura Civil  Poconé  Mato Grosso Brasil { PCN100-INFC1 }",
+          "equipe": "",
+          "responsavel": "Pedro  Oliveira",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Pedro  Oliveira",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-06-30",
+          "dataCriacao": "2026-06-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -4415,6 +4432,25 @@
           "dataFinal": "2026-06-17",
           "linkFracttal": "",
           "horasAteAbrir": 696.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "6258",
+          "ativo": "Infraestrutura Civil    São Paulo Brasil { SPP300-INFC1 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-05-28",
+          "dataCriacao": "2026-05-05",
+          "dataInicial": "2026-06-17",
+          "dataFinal": "2026-06-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 1032.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -7210,28 +7246,9 @@
           "horasAteAbrir": 96.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "5240",
-          "ativo": "Preventiva Grupo de Inversores      { ATHN-CPP100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Hermano Barbosa",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Athon] - MPS - Inversores",
-          "criticidade": "",
-          "dataProgramada": "2026-04-09",
-          "dataCriacao": "2026-04-08",
-          "dataInicial": "2026-04-10",
-          "dataFinal": "2026-04-11",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 24.0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 228
+      "historicoTotal": 229
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9932,6 +9949,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "7929",
+      "ativo": "Ar Condicionado      { PCN100-SOEM1-ARCD }",
+      "equipe": "",
+      "responsavel": "Pedro  Oliveira",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Pedro  Oliveira",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
+      "criticidade": "",
+      "dataProgramada": "2026-06-17",
+      "dataCriacao": "2026-06-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "7928",
+      "ativo": "Infraestrutura Civil  Poconé  Mato Grosso Brasil { PCN100-INFC1 }",
+      "equipe": "",
+      "responsavel": "Pedro  Oliveira",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Pedro  Oliveira",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Spare Parts",
+      "criticidade": "",
+      "dataProgramada": "2026-06-30",
+      "dataCriacao": "2026-06-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "7927",
       "ativo": "Cabine 1 Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN200-CABN1 }",
       "equipe": "",
@@ -10019,17 +10068,18 @@
       "osId": "7913",
       "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
       "equipe": "",
-      "responsavel": "Gilson Souza ",
+      "responsavel": "Frank  Melo",
       "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "supervisor": "Frank  Melo",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da usina de CPP100",
       "criticidade": "",
       "dataProgramada": "2026-06-16",
       "dataCriacao": "2026-06-16",
-      "dataInicial": "",
+      "dataInicial": "2026-06-17",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -10881,23 +10931,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "6258",
-      "ativo": "Infraestrutura Civil    São Paulo Brasil { SPP300-INFC1 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Eduardo  Mendes",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-05-28",
-      "dataCriacao": "2026-05-05",
-      "dataInicial": "2026-06-17",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 1032.0
     },
     {
       "osId": "6254",
@@ -13982,8 +14015,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 1871,
-  "totalGeral": 3115,
+  "historicoTotal": 1872,
+  "totalGeral": 3117,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
