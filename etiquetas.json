@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-17T18:10:44Z",
+  "geradoEm": "2026-06-17T18:16:47Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2544,
-        "emAberto": 9,
+        "total": 2545,
+        "emAberto": 8,
         "atrasadas": 4,
-        "concluidas30d": 541,
-        "concluidas7d": 167,
-        "naSemanaCorrente": 52
+        "concluidas30d": 543,
+        "concluidas7d": 169,
+        "naSemanaCorrente": 53
       },
       "mttr": {
-        "horas": 4.13,
-        "label": "4h 8min",
-        "amostra": 541
+        "horas": 4.11,
+        "label": "4h 7min",
+        "amostra": 543
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W25",
-          "criadas": 51,
-          "finalizadas": 47
+          "criadas": 52,
+          "finalizadas": 49
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2544,
-            "emAberto": 9
+            "total": 2545,
+            "emAberto": 8
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 9,
+      "total": 8,
       "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 7,
-        "emProgresso": 2,
+        "naoIniciada": 5,
+        "emProgresso": 3,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 9
+        "(sem equipe)": 8
       },
       "oss": [
         {
@@ -97,14 +97,15 @@
           "responsavel": "Deivity Jhon Cunha Saugo ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento UFV Colíder 2",
           "criticidade": "",
           "dataProgramada": "2026-06-11",
           "dataCriacao": "2026-06-11",
-          "dataInicial": "",
+          "dataInicial": "2026-06-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -162,24 +163,6 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
-        },
-        {
-          "osId": "7940",
-          "ativo": "SKID 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-SKID4 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento da usina",
-          "criticidade": "",
-          "dataProgramada": "2026-06-17",
-          "dataCriacao": "2026-06-17",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
         },
         {
           "osId": "7930",
@@ -256,6 +239,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "7941",
+          "ativo": "teste1  teste  teste teste { THPN-TESTE }",
+          "equipe": "",
+          "responsavel": "Juliana Cândido ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Juliana Cândido ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
+          "criticidade": "",
+          "dataProgramada": "2026-06-17",
+          "dataCriacao": "2026-06-17",
+          "dataInicial": "2026-06-17",
+          "dataFinal": "2026-06-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "7940",
+          "ativo": "SKID 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-SKID4 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Ricardo Silva ",
+          "status": "Finalizados",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-17",
+          "dataCriacao": "2026-06-17",
+          "dataInicial": "2026-06-17",
+          "dataFinal": "2026-06-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "7923",
           "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
@@ -3215,54 +3238,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "7639",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da usina de Marialva",
-          "criticidade": "",
-          "dataProgramada": "2026-06-10",
-          "dataCriacao": "2026-06-10",
-          "dataInicial": "2026-06-10",
-          "dataFinal": "2026-06-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "7638",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da usina de Marialva",
-          "criticidade": "",
-          "dataProgramada": "2026-06-10",
-          "dataCriacao": "2026-06-10",
-          "dataInicial": "2026-06-10",
-          "dataFinal": "2026-06-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1526,
+      "historicoTotal": 1528,
       "subClassificacao": {
-        "remoto": 517,
+        "remoto": 518,
         "local": 2027,
         "remotoEmAberto": 1,
-        "localEmAberto": 8,
+        "localEmAberto": 7,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3433,8 +3416,8 @@
         ],
         "medHorasAbrir": 3.4,
         "medHorasFechar": 3.4,
-        "amostraAbrir": 511,
-        "amostraFechar": 511,
+        "amostraAbrir": 512,
+        "amostraFechar": 512,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3454,7 +3437,7 @@
           },
           {
             "nome": "Juliana Cândido",
-            "total": 15
+            "total": 16
           },
           {
             "nome": "LuelySantos",
@@ -3485,16 +3468,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 405,
-        "emAberto": 45,
+        "emAberto": 44,
         "atrasadas": 32,
-        "concluidas30d": 99,
-        "concluidas7d": 18,
+        "concluidas30d": 100,
+        "concluidas7d": 19,
         "naSemanaCorrente": 15
       },
       "mttr": {
-        "horas": 204.85,
-        "label": "8d 12h",
-        "amostra": 99
+        "horas": 202.8,
+        "label": "8d 10h",
+        "amostra": 100
       },
       "tendencia4Semanas": [
         {
@@ -3515,7 +3498,7 @@
         {
           "semana": "W25",
           "criadas": 7,
-          "finalizadas": 9
+          "finalizadas": 10
         }
       ],
       "topOfensores": {
@@ -3523,7 +3506,7 @@
           {
             "nome": "(sem equipe)",
             "total": 405,
-            "emAberto": 45
+            "emAberto": 44
           }
         ],
         "responsaveis": [
@@ -3554,16 +3537,16 @@
           }
         ]
       },
-      "total": 45,
+      "total": 44,
       "atrasadas": 32,
       "porStatus": {
         "naoIniciada": 32,
-        "emProgresso": 3,
+        "emProgresso": 2,
         "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 45
+        "(sem equipe)": 44
       },
       "oss": [
         {
@@ -4121,24 +4104,6 @@
           "atrasada": true
         },
         {
-          "osId": "7929",
-          "ativo": "Ar Condicionado      { PCN100-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Pedro  Oliveira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Pedro  Oliveira",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-06-17",
-          "dataCriacao": "2026-06-17",
-          "dataInicial": "2026-06-17",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "atrasada": false
-        },
-        {
           "osId": "7924",
           "ativo": "Módulo Fotovoltaico Risen RSM132-8-660BMDG    { IBI100-MDFV }",
           "equipe": "",
@@ -4346,6 +4311,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "7929",
+          "ativo": "Ar Condicionado      { PCN100-SOEM1-ARCD }",
+          "equipe": "",
+          "responsavel": "Pedro  Oliveira",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Pedro  Oliveira",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
+          "criticidade": "",
+          "dataProgramada": "2026-06-17",
+          "dataCriacao": "2026-06-17",
+          "dataInicial": "2026-06-17",
+          "dataFinal": "2026-06-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "7877",
           "ativo": "Ar Condicionado      { MTO100-SOEM1-ARCD }",
@@ -7045,25 +7029,6 @@
           "atrasada": false
         },
         {
-          "osId": "5244",
-          "ativo": "Ar Condicionado      { MTO100-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Eduardo Souza",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Eduardo Souza",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-04-22",
-          "dataCriacao": "2026-04-08",
-          "dataInicial": "2026-04-22",
-          "dataFinal": "2026-04-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "5347",
           "ativo": "Cabine 1 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN1 }",
           "equipe": "",
@@ -7197,7 +7162,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 230
+      "historicoTotal": 231
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9899,23 +9864,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "7940",
-      "ativo": "SKID 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-SKID4 }",
-      "equipe": "",
-      "responsavel": "Ricardo Silva ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
-      "tarefa": "Religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-17",
-      "dataCriacao": "2026-06-17",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "7930",
       "ativo": "Thopen - Ceilândia 1 - DF BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100 }",
       "equipe": "",
@@ -9932,23 +9880,6 @@
       "linkFracttal": "",
       "horasAteAbrir": 0,
       "modalidade": "local"
-    },
-    {
-      "osId": "7929",
-      "ativo": "Ar Condicionado      { PCN100-SOEM1-ARCD }",
-      "equipe": "",
-      "responsavel": "Pedro  Oliveira",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Pedro  Oliveira",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
-      "criticidade": "",
-      "dataProgramada": "2026-06-17",
-      "dataCriacao": "2026-06-17",
-      "dataInicial": "2026-06-17",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
     },
     {
       "osId": "7928",
@@ -10190,14 +10121,15 @@
       "responsavel": "Deivity Jhon Cunha Saugo ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Deivity Jhon Cunha Saugo ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento UFV Colíder 2",
       "criticidade": "",
       "dataProgramada": "2026-06-11",
       "dataCriacao": "2026-06-11",
-      "dataInicial": "",
+      "dataInicial": "2026-06-17",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 144.0,
       "modalidade": "local"
     },
     {
@@ -10903,6 +10835,65 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "7941",
+      "ativo": "teste1  teste  teste teste { THPN-TESTE }",
+      "equipe": "",
+      "responsavel": "Juliana Cândido ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Juliana Cândido ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
+      "criticidade": "",
+      "dataProgramada": "2026-06-17",
+      "dataCriacao": "2026-06-17",
+      "dataInicial": "2026-06-17",
+      "dataFinal": "2026-06-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "7940",
+      "ativo": "SKID 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-SKID4 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Ricardo Silva ",
+      "status": "Finalizados",
+      "tarefa": "Religamento da usina",
+      "criticidade": "",
+      "dataProgramada": "2026-06-17",
+      "dataCriacao": "2026-06-17",
+      "dataInicial": "2026-06-17",
+      "dataFinal": "2026-06-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "7929",
+      "ativo": "Ar Condicionado      { PCN100-SOEM1-ARCD }",
+      "equipe": "",
+      "responsavel": "Pedro  Oliveira",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Pedro  Oliveira",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
+      "criticidade": "",
+      "dataProgramada": "2026-06-17",
+      "dataCriacao": "2026-06-17",
+      "dataInicial": "2026-06-17",
+      "dataFinal": "2026-06-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
     {
       "osId": "7923",
       "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
@@ -13837,70 +13828,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7661",
-      "ativo": "Athon - Jacundá 1 - PA Estrada da Areia Branca, s/n Jacundá  Pará Brasil { ATHN-JCD100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-10",
-      "dataCriacao": "2026-06-10",
-      "dataInicial": "2026-06-10",
-      "dataFinal": "2026-06-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "7652",
-      "ativo": "SKID 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID2 }",
-      "equipe": "",
-      "responsavel": "Italo  Lustosa",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Italo  Lustosa",
-      "status": "Finalizada",
-      "tarefa": "UFV JUNCO 2.1 - Religamento remoto da usina. Relé trip 78 E 81.",
-      "criticidade": "",
-      "dataProgramada": "2026-06-10",
-      "dataCriacao": "2026-06-10",
-      "dataInicial": "2026-06-10",
-      "dataFinal": "2026-06-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
-    },
-    {
-      "osId": "7650",
-      "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Frank  Melo",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina de CPP100",
-      "criticidade": "",
-      "dataProgramada": "2026-06-10",
-      "dataCriacao": "2026-06-10",
-      "dataInicial": "2026-06-10",
-      "dataFinal": "2026-06-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1877,
-  "totalGeral": 3118,
+  "historicoTotal": 1880,
+  "totalGeral": 3119,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
