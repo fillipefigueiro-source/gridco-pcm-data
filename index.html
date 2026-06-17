@@ -2600,15 +2600,16 @@ function openMod(usina, dia, os_id){
     // Task #146: Timeline visual a partir das datas básicas (criada/programada/iniciada/finalizada)
     const dIni = parseDt(osRow.dataInicial||osRow.data_inicial);
     const eventos = [];
-    if(dCria) eventos.push({d:dCria, label:'Criada', icone:'➕', cls:'run'});
-    if(dProg) eventos.push({d:dProg, label:'Programada', icone:'📅', cls:'run'});
-    if(dIni)  eventos.push({d:dIni,  label:'Iniciada',   icone:'▶', cls:'run'});
-    if(dFim)  eventos.push({d:dFim,  label:'Finalizada', icone:'✔', cls:'fim'});
+    // Ordem semântica fixa (task #150) — independe da data
+    if(dCria) eventos.push({d:dCria, label:'Criada', icone:'➕', cls:'run', ord:1});
+    if(dProg) eventos.push({d:dProg, label:'Programada', icone:'📅', cls:'run', ord:2});
+    if(dIni)  eventos.push({d:dIni,  label:'Iniciada',   icone:'▶', cls:'run', ord:3});
     if(osRow.statusPai && /verifica/i.test(osRow.statusPai) && !dFim){
-      eventos.push({d:new Date(), label:'Em Verificação', icone:'⏳', cls:'pau', pendente:true});
+      eventos.push({d:new Date(), label:'Em Verificação', icone:'⏳', cls:'pau', pendente:true, ord:4});
     }
+    if(dFim)  eventos.push({d:dFim,  label:'Finalizada', icone:'✔', cls:'fim', ord:5});
     if(eventos.length){
-      eventos.sort((a,b)=>a.d-b.d);
+      eventos.sort((a,b)=>a.ord-b.ord);
       function _fmtDur(ms){
         const s=Math.floor(ms/1000); if(s<60)return s+'s';
         const m=Math.floor(s/60); if(m<60)return m+'min';
@@ -2638,8 +2639,8 @@ function openMod(usina, dia, os_id){
   // SEÇÃO 3: Detalhes operacionais
   html += '<div class="msec"><div class="msec-t">⚙ Detalhes operacionais</div>';
   html += '  <div class="mgrid">';
-  if(osRow.h_ini) html += '<div class="mkv"><span class="mkv-k">Hora Início</span><span class="mkv-v">'+_esc(osRow.h_ini)+'</span></div>';
-  if(osRow.h_fim) html += '<div class="mkv"><span class="mkv-k">Hora Fim</span><span class="mkv-v">'+_esc(osRow.h_fim)+'</span></div>';
+  if(osRow.h_ini) html += '<div class="mkv"><span class="mkv-k">Início Previsto</span><span class="mkv-v">'+_esc(osRow.h_ini)+'</span></div>';
+  if(osRow.h_fim) html += '<div class="mkv"><span class="mkv-k">Fim Previsto</span><span class="mkv-v">'+_esc(osRow.h_fim)+'</span></div>';
   if(osRow.duracao) html += '<div class="mkv"><span class="mkv-k">Duração</span><span class="mkv-v">'+osRow.duracao+'h</span></div>';
   if(osRow.completed_pct!=null || osRow.completed_percentage!=null) html += '<div class="mkv"><span class="mkv-k">% Concluída</span><span class="mkv-v">'+(osRow.completed_pct||osRow.completed_percentage||0)+'%</span></div>';
   if(osRow.reprog) html += '<div class="mkv"><span class="mkv-k">Reprogramada</span><span class="mkv-v">'+_esc(osRow.reprog)+'</span></div>';
