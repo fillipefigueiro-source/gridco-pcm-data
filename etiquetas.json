@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-17T11:37:23Z",
+  "geradoEm": "2026-06-17T11:41:44Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -3500,17 +3500,17 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 402,
+        "total": 403,
         "emAberto": 46,
-        "atrasadas": 35,
-        "concluidas30d": 95,
-        "concluidas7d": 14,
-        "naSemanaCorrente": 13
+        "atrasadas": 34,
+        "concluidas30d": 96,
+        "concluidas7d": 15,
+        "naSemanaCorrente": 14
       },
       "mttr": {
-        "horas": 191.49,
-        "label": "7d 23h",
-        "amostra": 95
+        "horas": 193.0,
+        "label": "8d 1h",
+        "amostra": 96
       },
       "tendencia4Semanas": [
         {
@@ -3530,23 +3530,23 @@
         },
         {
           "semana": "W25",
-          "criadas": 4,
-          "finalizadas": 5
+          "criadas": 5,
+          "finalizadas": 6
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 402,
+            "total": 403,
             "emAberto": 46
           }
         ],
         "responsaveis": [
           {
             "nome": "Renato  Julien",
-            "total": 21,
-            "emAberto": 5
+            "total": 22,
+            "emAberto": 6
           },
           {
             "nome": "James Chaves",
@@ -3571,10 +3571,10 @@
         ]
       },
       "total": 46,
-      "atrasadas": 35,
+      "atrasadas": 34,
       "porStatus": {
-        "naoIniciada": 34,
-        "emProgresso": 2,
+        "naoIniciada": 33,
+        "emProgresso": 3,
         "pausada": 10,
         "verificacao": 0
       },
@@ -3834,14 +3834,15 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-05-28",
           "dataCriacao": "2026-05-05",
-          "dataInicial": "",
+          "dataInicial": "2026-06-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 1032.0,
           "atrasada": true
         },
         {
@@ -3894,23 +3895,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 360.0,
-          "atrasada": true
-        },
-        {
-          "osId": "7392",
-          "ativo": "Cabine 1  Marialva  Paraná Brasil { MRV100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Marcos  Camargo",
-          "status": "Não Iniciada",
-          "tarefa": "[Axis] - MPM - Cabine de Média Tensão",
-          "criticidade": "",
-          "dataProgramada": "2026-06-09",
-          "dataCriacao": "2026-06-03",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
           "atrasada": true
         },
         {
@@ -4189,6 +4173,23 @@
           "atrasada": true
         },
         {
+          "osId": "7924",
+          "ativo": "Módulo Fotovoltaico Risen RSM132-8-660BMDG    { IBI100-MDFV }",
+          "equipe": "",
+          "responsavel": "Renato  Julien",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Renato  Julien",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPA - String e Conjunto de Módulos",
+          "criticidade": "",
+          "dataProgramada": "2026-06-17",
+          "dataCriacao": "2026-06-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "7877",
           "ativo": "Ar Condicionado      { MTO100-SOEM1-ARCD }",
           "equipe": "",
@@ -4378,6 +4379,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "7392",
+          "ativo": "Cabine 1  Marialva  Paraná Brasil { MRV100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Marcos  Camargo",
+          "status": "Finalizados",
+          "tarefa": "[Axis] - MPM - Cabine de Média Tensão",
+          "criticidade": "",
+          "dataProgramada": "2026-06-09",
+          "dataCriacao": "2026-06-03",
+          "dataInicial": "2026-06-17",
+          "dataFinal": "2026-06-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 336.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "7573",
           "ativo": "Transformador 1 COMTRAFO     { MTS200-TRFR1 }",
@@ -7058,25 +7078,6 @@
           "atrasada": false
         },
         {
-          "osId": "5234",
-          "ativo": "Ar Condicionado      { ADT100-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-04-14",
-          "dataCriacao": "2026-04-08",
-          "dataInicial": "2026-04-17",
-          "dataFinal": "2026-04-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 216.0,
-          "horasAteFechar": 24.0,
-          "atrasada": false
-        },
-        {
           "osId": "5440",
           "ativo": "Cabine 1 Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS200-CABN1 }",
           "equipe": "",
@@ -7197,7 +7198,7 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Hermano Barbosa",
           "supervisor": "James Chaves ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "Realizar testes da Preventiva Semestral",
           "criticidade": "",
           "dataProgramada": "2026-04-14",
@@ -7229,7 +7230,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 226
+      "historicoTotal": 227
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -7309,8 +7310,8 @@
       "total": 4,
       "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 3,
-        "emProgresso": 0,
+        "naoIniciada": 2,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
@@ -7360,14 +7361,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Abertura de chamado para garantia [Testes]",
           "criticidade": "",
           "dataProgramada": "2026-06-10",
           "dataCriacao": "2026-06-08",
-          "dataInicial": "",
+          "dataInicial": "2026-06-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 216.0,
           "atrasada": true
         },
         {
@@ -9778,7 +9780,7 @@
           "responsavel": "Renato  Julien",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Renato  Julien",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "Manutenção Preventiva Anual GRID CO. – Cabine ",
           "criticidade": "",
           "dataProgramada": "2026-02-11",
@@ -9854,7 +9856,7 @@
           "responsavel": "Renato  Julien",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Renato  Julien",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "Manutenção Preventiva Anual GRID CO. – Cabine ",
           "criticidade": "",
           "dataProgramada": "2026-01-30",
@@ -9928,6 +9930,22 @@
     }
   },
   "ossPublicas": [
+    {
+      "osId": "7924",
+      "ativo": "Módulo Fotovoltaico Risen RSM132-8-660BMDG    { IBI100-MDFV }",
+      "equipe": "",
+      "responsavel": "Renato  Julien",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Renato  Julien",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPA - String e Conjunto de Módulos",
+      "criticidade": "",
+      "dataProgramada": "2026-06-17",
+      "dataCriacao": "2026-06-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
     {
       "osId": "7923",
       "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
@@ -10459,14 +10477,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Abertura de chamado para garantia [Testes]",
       "criticidade": "",
       "dataProgramada": "2026-06-10",
       "dataCriacao": "2026-06-08",
-      "dataInicial": "",
+      "dataInicial": "2026-06-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 216.0
     },
     {
       "osId": "7493",
@@ -10496,22 +10515,6 @@
       "criticidade": "",
       "dataProgramada": "2026-06-10",
       "dataCriacao": "2026-06-05",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "7392",
-      "ativo": "Cabine 1  Marialva  Paraná Brasil { MRV100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Marcos  Camargo",
-      "status": "Não Iniciada",
-      "tarefa": "[Axis] - MPM - Cabine de Média Tensão",
-      "criticidade": "",
-      "dataProgramada": "2026-06-09",
-      "dataCriacao": "2026-06-03",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
@@ -10884,14 +10887,15 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
       "dataProgramada": "2026-05-28",
       "dataCriacao": "2026-05-05",
-      "dataInicial": "",
+      "dataInicial": "2026-06-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 1032.0
     },
     {
       "osId": "6254",
@@ -13976,8 +13980,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 1869,
-  "totalGeral": 3113,
+  "historicoTotal": 1870,
+  "totalGeral": 3114,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
