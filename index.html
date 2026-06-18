@@ -175,7 +175,10 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .dname{font-size:9px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.12em}
 .dnum{font-size:28px;font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1.05}
 .dmeta{font-size:9px;color:rgba(255,255,255,.36);margin-top:3px}
-.dtasks{padding:7px;display:flex;flex-direction:column;gap:4px;flex:1}
+.dtasks{padding:7px;display:flex;flex-direction:column;gap:4px;flex:1;max-height:780px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#cbd5e1 transparent}
+.dtasks::-webkit-scrollbar{width:6px}
+.dtasks::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+.dtasks::-webkit-scrollbar-thumb:hover{background:#94a3b8}
 .dempty{padding:16px 8px;text-align:center;color:var(--ink3);font-size:11px;font-style:italic}
 .osc{border-radius:7px;padding:8px 9px;cursor:pointer;border-left:3px solid;transition:transform .12s,box-shadow .12s}
 .osc:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(25,21,40,.13)}
@@ -892,6 +895,12 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="filter-group"><span class="filter-lbl">OS #</span>
           <input class="fsel" type="text" id="f-os" placeholder="ex: 7862" oninput="onOSChange()" style="width:90px;font-size:11px"/></div>
         <div class="filter-sep"></div>
+        <div class="filter-group"><span class="filter-lbl">SS #</span>
+          <input class="fsel" type="text" id="f-ss" placeholder="ex: 2657" oninput="onSSChange()" style="width:90px;font-size:11px" title="Número da Solicitação de Serviço que originou a OS"/></div>
+        <div class="filter-sep"></div>
+        <div class="filter-group"><span class="filter-lbl">Etiqueta</span>
+          <select class="fsel" id="f-etq" onchange="onEtqChange()" style="max-width:180px"><option value="">Todas</option></select></div>
+        <div class="filter-sep"></div>
         <div class="filter-group"><span class="filter-lbl">Tipo de OS</span>
           <div class="chips" id="tipo-chips"></div></div>
         <div class="filter-sep"></div>
@@ -959,12 +968,14 @@ const CONFIG = {
   JSON_URL: "banco_dados.json",
   SUGESTOES_URL: "sugestoes.json",
   ETIQUETAS_URL: "etiquetas.json",
+  SUPERVISORES_URL: "supervisores.json",
   REFRESH_MS: 300000,
   // Painel local (Streamlit) — botão "Aceitar" abre essa URL com ?ss=NUMERO
   PAINEL_LOCAL_URL: "http://localhost:8501",
 };
 let SUGESTOES_DB=[];
 let ETIQUETAS_DB=null;
+let SUPERVISORES_DB={porCluster:{},lista:[]};
 
 async function sha256(str) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
@@ -998,7 +1009,7 @@ let S = {
   pwds:    DEF_PWDS,
   active:  lsG(LS.A, ''),
   user:    null, isAdmin:false, viewCli:null,
-  fEquipe:'', fTipo:'', fUsina:'', fSupervisor:'', fStatus:'',
+  fEquipe:'', fTipo:'', fUsina:'', fSupervisor:'', fStatus:'', fSS:'', fEtq:'',
   view:    lsG(LS.V, 'semana'), // 'semana' | 'mes'
   topView: (function(){try{return localStorage.getItem('gc_topv')||'semana';}catch(e){return 'semana';}})(),
 };
@@ -1047,6 +1058,19 @@ async function loadSugestoes(){
     return false;
   }
 }
+async function loadSupervisores(){
+  // FIX #159: carrega mapa cluster -> supervisor (gerado por gerar_supervisores_json.py)
+  try{
+    const res=await fetch(CONFIG.SUPERVISORES_URL+'?t='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(10000)});
+    if(!res.ok){SUPERVISORES_DB={porCluster:{},lista:[]}; return false;}
+    const j=await res.json();
+    SUPERVISORES_DB={porCluster:j.porCluster||{}, lista:j.lista||[]};
+    return true;
+  }catch(e){
+    SUPERVISORES_DB={porCluster:{},lista:[]};
+    return false;
+  }
+}
 function setStatus(msg,type) {
   const el=document.getElementById('refresh-status'); if(!el) return;
   const cols={loading:'#A9DB21',ok:'#22c55e',warn:'#f59e0b'};
@@ -1054,7 +1078,7 @@ function setStatus(msg,type) {
 }
 function startTimer() {
   if(timer) clearInterval(timer);
-  timer=setInterval(async()=>{ const ok=await loadDB(true); await loadSugestoes(); if(ok&&S.user){buildWeekChips();render();renderSugestoes();} },CONFIG.REFRESH_MS);
+  timer=setInterval(async()=>{ const ok=await loadDB(true); await loadSugestoes(); await loadSupervisores(); if(ok&&S.user){buildWeekChips();render();renderSugestoes();} },CONFIG.REFRESH_MS);
   const el=document.getElementById('refresh-badge'); if(el) el.textContent='Auto-refresh '+Math.round(CONFIG.REFRESH_MS/60000)+'min';
 }
 
@@ -1063,6 +1087,7 @@ async function manualRefresh(){
   setStatus('Atualizando...','loading');
   const ok = await loadDB();
   await loadSugestoes();
+  await loadSupervisores();
   if(typeof loadEtiquetas==='function') await loadEtiquetas();
   if(ok && S.user){
     buildWeekChips();
@@ -1076,7 +1101,7 @@ async function manualRefresh(){
 function show(id){document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));document.getElementById(id).classList.add('on');}
 function goAdmin(){buildAdmin();show('s-admin');}
 function goLogin(){updateLoginWeek();show('s-login');}
-function doLogout(){S.user=null;S.isAdmin=false;S.viewCli=null;S.fEquipe='';S.fTipo='';S.fUsina='';S.fSupervisor='';S.fStatus='';S.fOS='';S.fStatus='';goLogin();}
+function doLogout(){S.user=null;S.isAdmin=false;S.viewCli=null;S.fEquipe='';S.fTipo='';S.fUsina='';S.fSupervisor='';S.fStatus='';S.fOS='';S.fSS='';S.fEtq='';goLogin();}
 function updateLoginWeek(){ const w=AW(); document.getElementById('l-week').textContent=w?.label||'Carregando...'; }
 
 // ── ADMIN ─────────────────────────────────────────────────────────────────────
@@ -1120,13 +1145,36 @@ const allRowsAllWeeks=()=>{
   return rows;
 };
 const AC=()=>{ const b=allRows(); let r=b; if(S.fEquipe) r=r.filter(x=>x.cluster===S.fEquipe); if(S.fSupervisor) r=r.filter(x=>getSupervisor(x)===S.fSupervisor||x.cluster===S.fSupervisor); return r; };
-const GD=()=>AC().filter(r=>(!S.fTipo||r.tipo===S.fTipo)&&(!S.fUsina||r.usina===S.fUsina)&&(!S.fStatus||statusKey(r)===S.fStatus)&&(!S.fOS||String(r.os_id||'').indexOf(S.fOS)>=0));
+// Helper #160: extrai descriptions da etiqueta (vem como JSON-string do Fracttal)
+const _etqDesc=v=>{
+  if(!v) return '';
+  const s=String(v).trim();
+  if(!s || s==='nan') return '';
+  try{
+    const j=JSON.parse(s);
+    if(Array.isArray(j)) return j.map(o=>(o&&o.description)||'').filter(Boolean).join(' | ');
+    if(j&&j.description) return j.description;
+  }catch(e){}
+  return s;
+};
+const GD=()=>AC().filter(r=>(!S.fTipo||r.tipo===S.fTipo)&&(!S.fUsina||r.usina===S.fUsina)&&(!S.fStatus||statusKey(r)===S.fStatus)&&(!S.fOS||String(r.os_id||'').indexOf(S.fOS)>=0)&&(!S.fSS||String(r.solic_orig||'').indexOf(S.fSS)>=0)&&(!S.fEtq||_etqDesc(r.etiquetas).toLowerCase().indexOf(S.fEtq.toLowerCase())>=0));
 const isExec=r=>r.status_bd&&/(execu|progresso|andamento)/i.test(r.status_bd)&&!/verifica/i.test(r.status_bd);
 const isNova=r=>r.nova_os&&r.nova_os.toString().trim()!==''&&r.nova_os.toString().toLowerCase()!=='não'&&r.nova_os.toString().toLowerCase()!=='nao';
 const isFinalizada=r=>{const s=(r.status_bd||r.status||'').toString().toLowerCase();return s.includes('finaliz')||s.includes('conclu');};
 // Resolve nome do supervisor tentando múltiplos campos possíveis na JSON
-const getSupervisor=r=>(r.responsavel||r.supervisor||r['Responsável']||r['Responsavel']||r.responsavel_om||r.resp||r.responsable||'').toString().trim();
+const getSupervisor=r=>{
+  // FIX #159: tenta campos na row; senão cai no mapa cluster -> supervisor (supervisores.json)
+  const direto=(r.responsavel||r.supervisor||r['Responsável']||r['Responsavel']||r.responsavel_om||r.resp||r.responsable||'').toString().trim();
+  if(direto) return direto;
+  const c=(r.cluster||'').toString().trim();
+  if(c && SUPERVISORES_DB && SUPERVISORES_DB.porCluster && SUPERVISORES_DB.porCluster[c]) return SUPERVISORES_DB.porCluster[c];
+  return '';
+};
 const statusKey=r=>{
+  // FIX #158: Status PAI tem prioridade se for "Em Verificação"
+  // (kanban deve refletir mesmo status do modal — sem divergência)
+  const sp=(r.statusPai||'').toString().toLowerCase();
+  if(sp.includes('verifica')) return 'verif';
   const s=(r.status_bd||r.status||'').toString().toLowerCase();
   if(s.includes('verifica')) return 'verif';
   if(isExec(r)) return 'exec';
@@ -1265,6 +1313,18 @@ function buildFilters() {
   }
   const fst=document.getElementById('f-status');
   if(fst) fst.value=S.fStatus||'';
+  // FIX #160: popula filtro Etiqueta (descriptions únicas)
+  const fEtq=document.getElementById('f-etq');
+  if(fEtq){
+    const etqs=[...new Set(base.map(r=>_etqDesc(r.etiquetas)).filter(Boolean))].sort();
+    fEtq.innerHTML='<option value="">Todas</option>'+etqs.map(e=>'<option value="'+esc(e)+'">'+(e.length>40?e.substring(0,38)+'..':e)+'</option>').join('');
+    fEtq.value=S.fEtq||'';
+  }
+  // FIX #161: restaura valor do filtro SS
+  const fSS=document.getElementById('f-ss');
+  if(fSS) fSS.value=S.fSS||'';
+  const fOS=document.getElementById('f-os');
+  if(fOS) fOS.value=S.fOS||'';
   const baseE=S.fEquipe?base.filter(r=>r.cluster===S.fEquipe):base;
   const usinas=[...new Set(baseE.map(r=>r.usina))].filter(Boolean).sort();
   const fu=document.getElementById('f-usina');
@@ -1277,6 +1337,8 @@ function onUsinaChange(){S.fUsina=document.getElementById('f-usina').value;S.fTi
 function onSupChange(){S.fSupervisor=document.getElementById('f-sup').value;buildFilters();render();updateFCount();}
 function onStatusChange(){S.fStatus=document.getElementById('f-status').value;render();updateFCount();}
 function onOSChange(){S.fOS=document.getElementById('f-os').value.trim();render();updateFCount();}
+function onSSChange(){S.fSS=document.getElementById('f-ss').value.trim();render();updateFCount();}
+function onEtqChange(){S.fEtq=document.getElementById('f-etq').value;render();updateFCount();}
 function buildTipoChips(){
   const base=AC(),tipos={};
   base.forEach(r=>{if(r.tipo)tipos[r.tipo]=(tipos[r.tipo]||0)+1;});
@@ -1288,7 +1350,11 @@ function buildTipoChips(){
     ).join('');
 }
 function setTipo(t){S.fTipo=S.fTipo===t?'':t;document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c.dataset.t===S.fTipo));render();updateFCount();}
-function resetFilters(){S.fEquipe='';S.fTipo='';S.fUsina='';document.getElementById('f-equipe').value='';document.getElementById('f-usina').value='';const fs=document.getElementById('f-sup');if(fs)fs.value='';const fst=document.getElementById('f-status');if(fst)fst.value='';buildTipoChips();render();updateFCount();}
+function resetFilters(){
+  S.fEquipe='';S.fTipo='';S.fUsina='';S.fSupervisor='';S.fStatus='';S.fOS='';S.fSS='';S.fEtq='';
+  ['f-equipe','f-usina','f-sup','f-status','f-os','f-ss','f-etq'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  buildTipoChips();render();updateFCount();
+}
 function updateFCount(){const el=document.getElementById('f-count');const active=S.fEquipe||S.fTipo||S.fUsina;el.style.display=active?'inline-flex':'none';if(active)el.textContent=GD().length+' de '+allRows().length+' OS';}
 
 // ── RENDER ────────────────────────────────────────────────────────────────────
@@ -1982,14 +2048,15 @@ const STATUS_CORES={
   'Outros':'#cbd5e1'
 };
 function statusCanonico(s){
+  // FIX #157: fallback "Não Iniciada" (não "Outros") + reconhecer "Em processo" do Fracttal
   const x=(s||'').toString().toLowerCase().trim();
-  if(!x) return 'Outros';
+  if(!x) return 'Não Iniciada';
   if(x.indexOf('verifica')>=0) return 'Verificação';
   if(x.indexOf('paus')>=0) return 'Pausada';
-  if(x.indexOf('progresso')>=0||x.indexOf('andamento')>=0||x.indexOf('execu')>=0) return 'Em progresso';
-  if(x.indexOf('iniciada')>=0||x.indexOf('aberta')>=0) return 'Não Iniciada';
+  if(x.indexOf('progresso')>=0||x.indexOf('andamento')>=0||x.indexOf('execu')>=0||x.indexOf('processo')>=0) return 'Em progresso';
+  if(x.indexOf('iniciada')>=0||x.indexOf('iniciado')>=0||x.indexOf('aberta')>=0) return 'Não Iniciada';
   if(x.indexOf('finaliz')>=0||x.indexOf('conclu')>=0) return 'Finalizada';
-  return 'Outros';
+  return 'Não Iniciada';
 }
 function renderStatusChart(d){
   const counts={};
@@ -2157,7 +2224,8 @@ function renderCal(d){
       if(b.tipo==='Corretiva'&&a.tipo!=='Corretiva')return 1;
       return (a.h_ini||'').localeCompare(b.h_ini||'');
     });
-    const MAX=9,vis=gs.slice(0,MAX),ovf=gs.length-MAX;
+    // FIX #156: mostrar TODAS as OS — coluna agora é scrollável (.dtasks max-height)
+    const vis=gs,ovf=0;
     const nos=new Set(dd.map(r=>r.os_id)).size,hd=dd.reduce((a,b)=>a+(b.duracao||0),0);
     const cards=vis.map(g=>{
       const col=TC[g.tipo]||'#999',cls=TK[g.tipo]||'tOUT';
@@ -2693,4 +2761,19 @@ function openMod(usina, dia, os_id){
     html += '<div class="mactions"><a href="'+link+'" target="_blank" rel="noopener" class="mbtn mbtn-prim" style="text-decoration:none">🔗 Abrir no Fracttal</a></div>';
   }
   mbox.innerHTML = html;
-  document.getElementById('modal').classList.add
+  document.getElementById('modal').classList.add('open');
+}
+
+function closeMod(){
+  document.getElementById('modal').classList.remove('open');
+}
+
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape') closeMod();
+});
+
+// FIX #159: carrega supervisores.json no boot
+loadSupervisores().then(()=>{ if(typeof buildFilters==='function' && S.user) buildFilters(); });
+</script>
+</body>
+</html>
