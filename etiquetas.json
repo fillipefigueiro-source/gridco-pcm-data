@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-18T21:35:54Z",
+  "geradoEm": "2026-06-18T21:41:27Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2581,
-        "emAberto": 10,
+        "total": 2582,
+        "emAberto": 11,
         "atrasadas": 4,
         "concluidas30d": 554,
         "concluidas7d": 178,
-        "naSemanaCorrente": 87
+        "naSemanaCorrente": 88
       },
       "mttr": {
         "horas": 4.2,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W25",
-          "criadas": 88,
+          "criadas": 89,
           "finalizadas": 83
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2581,
-            "emAberto": 10
+            "total": 2582,
+            "emAberto": 11
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 10,
+      "total": 11,
       "atrasadas": 4,
       "porStatus": {
         "naoIniciada": 8,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 10
+        "(sem equipe)": 11
       },
       "oss": [
         {
@@ -165,6 +165,24 @@
           "atrasada": true
         },
         {
+          "osId": "8001",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "UFV: Capitão Poço| Proteção: 27 | Ação: Religamento Local | Falha: Usina desligada",
+          "criticidade": "",
+          "dataProgramada": "2026-06-18",
+          "dataCriacao": "2026-06-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "7999",
           "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
           "equipe": "",
@@ -189,14 +207,15 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "UFV SITIO 1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
           "criticidade": "",
           "dataProgramada": "2026-06-18",
           "dataCriacao": "2026-06-18",
-          "dataInicial": "",
+          "dataInicial": "2026-06-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "remoto",
           "atrasada": false
         },
@@ -3278,9 +3297,9 @@
       "historicoTotal": 1546,
       "subClassificacao": {
         "remoto": 523,
-        "local": 2058,
+        "local": 2059,
         "remotoEmAberto": 4,
-        "localEmAberto": 6,
+        "localEmAberto": 7,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3451,7 +3470,7 @@
         ],
         "medHorasAbrir": 3.4,
         "medHorasFechar": 3.4,
-        "amostraAbrir": 514,
+        "amostraAbrir": 515,
         "amostraFechar": 514,
         "topAbridores": [
           {
@@ -9845,6 +9864,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "8001",
+      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "UFV: Capitão Poço| Proteção: 27 | Ação: Religamento Local | Falha: Usina desligada",
+      "criticidade": "",
+      "dataProgramada": "2026-06-18",
+      "dataCriacao": "2026-06-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "7999",
       "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
       "equipe": "",
@@ -9884,14 +9920,15 @@
       "responsavel": "Janderson Miranda ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "UFV SITIO 1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
       "criticidade": "",
       "dataProgramada": "2026-06-18",
       "dataCriacao": "2026-06-18",
-      "dataInicial": "",
+      "dataInicial": "2026-06-18",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "remoto"
     },
     {
@@ -13811,7 +13848,7 @@
     }
   ],
   "historicoTotal": 1899,
-  "totalGeral": 3157,
+  "totalGeral": 3158,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
