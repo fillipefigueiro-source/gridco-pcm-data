@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-18T21:06:44Z",
+  "geradoEm": "2026-06-18T21:11:33Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2579,
-        "emAberto": 13,
+        "total": 2581,
+        "emAberto": 15,
         "atrasadas": 4,
         "concluidas30d": 549,
         "concluidas7d": 173,
-        "naSemanaCorrente": 85
+        "naSemanaCorrente": 87
       },
       "mttr": {
         "horas": 4.24,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W25",
-          "criadas": 86,
+          "criadas": 88,
           "finalizadas": 78
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2579,
-            "emAberto": 13
+            "total": 2581,
+            "emAberto": 15
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 13,
+      "total": 15,
       "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 10,
-        "emProgresso": 2,
+        "naoIniciada": 9,
+        "emProgresso": 5,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -165,6 +165,42 @@
           "atrasada": true
         },
         {
+          "osId": "8000",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da usina de CPP100",
+          "criticidade": "",
+          "dataProgramada": "2026-06-18",
+          "dataCriacao": "2026-06-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "7999",
+          "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
+          "equipe": "",
+          "responsavel": "Gilson  Milhomem",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Gilson  Milhomem",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-18",
+          "dataCriacao": "2026-06-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "7995",
           "ativo": "Cabine 1 Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100-CABN1 }",
           "equipe": "",
@@ -189,14 +225,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da cabine 4 CPP100",
           "criticidade": "",
           "dataProgramada": "2026-06-18",
           "dataCriacao": "2026-06-18",
-          "dataInicial": "",
+          "dataInicial": "2026-06-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -207,14 +244,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da cabine 6 de CPP100",
           "criticidade": "",
           "dataProgramada": "2026-06-18",
           "dataCriacao": "2026-06-18",
-          "dataInicial": "",
+          "dataInicial": "2026-06-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -225,14 +263,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da cabine 5 de CPP100",
           "criticidade": "",
           "dataProgramada": "2026-06-18",
           "dataCriacao": "2026-06-18",
-          "dataInicial": "",
+          "dataInicial": "2026-06-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3333,9 +3372,9 @@
       "historicoTotal": 1541,
       "subClassificacao": {
         "remoto": 523,
-        "local": 2056,
+        "local": 2058,
         "remotoEmAberto": 4,
-        "localEmAberto": 9,
+        "localEmAberto": 11,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -9900,6 +9939,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "8000",
+      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento da usina de CPP100",
+      "criticidade": "",
+      "dataProgramada": "2026-06-18",
+      "dataCriacao": "2026-06-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "7999",
+      "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
+      "equipe": "",
+      "responsavel": "Gilson  Milhomem",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Gilson  Milhomem",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento da usina",
+      "criticidade": "",
+      "dataProgramada": "2026-06-18",
+      "dataCriacao": "2026-06-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "7996",
       "ativo": "Inversor 1.1 Huawei SUN-250KTL-H1    { MRV100-INVR1.1 }",
       "equipe": "",
@@ -9956,14 +10029,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Raphael Vitoriano ",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da cabine 4 CPP100",
       "criticidade": "",
       "dataProgramada": "2026-06-18",
       "dataCriacao": "2026-06-18",
-      "dataInicial": "",
+      "dataInicial": "2026-06-18",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -9973,14 +10047,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Raphael Vitoriano ",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da cabine 6 de CPP100",
       "criticidade": "",
       "dataProgramada": "2026-06-18",
       "dataCriacao": "2026-06-18",
-      "dataInicial": "",
+      "dataInicial": "2026-06-18",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -9990,14 +10065,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Raphael Vitoriano ",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da cabine 5 de CPP100",
       "criticidade": "",
       "dataProgramada": "2026-06-18",
       "dataCriacao": "2026-06-18",
-      "dataInicial": "",
+      "dataInicial": "2026-06-18",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -13918,7 +13994,7 @@
     }
   ],
   "historicoTotal": 1894,
-  "totalGeral": 3155,
+  "totalGeral": 3157,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
