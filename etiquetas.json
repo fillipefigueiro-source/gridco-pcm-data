@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-18T21:17:27Z",
+  "geradoEm": "2026-06-18T21:21:31Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 2581,
-        "emAberto": 15,
+        "emAberto": 14,
         "atrasadas": 4,
-        "concluidas30d": 549,
-        "concluidas7d": 173,
+        "concluidas30d": 550,
+        "concluidas7d": 174,
         "naSemanaCorrente": 87
       },
       "mttr": {
-        "horas": 4.24,
+        "horas": 4.23,
         "label": "4h 14min",
-        "amostra": 549
+        "amostra": 550
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W25",
           "criadas": 88,
-          "finalizadas": 78
+          "finalizadas": 79
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 2581,
-            "emAberto": 15
+            "emAberto": 14
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 15,
+      "total": 14,
       "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 9,
+        "naoIniciada": 8,
         "emProgresso": 5,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 15
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -171,14 +171,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da usina de CPP100",
           "criticidade": "",
           "dataProgramada": "2026-06-18",
           "dataCriacao": "2026-06-18",
-          "dataInicial": "",
+          "dataInicial": "2026-06-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -290,25 +291,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "7961",
-          "ativo": "Cabine 1  Campos dos Goytacazes  Rio de Janeiro Brasil { GYT100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "IN_PROGRESS",
-          "tarefa": "Desligamento e religamento da usina para remoção de grades da Cabine, Transformador e QGBT",
-          "criticidade": "",
-          "dataProgramada": "2026-06-18",
-          "dataCriacao": "2026-06-18",
-          "dataInicial": "2026-06-18",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -637,6 +619,26 @@
           "supervisor": "Ailton Leal ",
           "status": "Finalizados",
           "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-18",
+          "dataCriacao": "2026-06-18",
+          "dataInicial": "2026-06-18",
+          "dataFinal": "2026-06-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "7961",
+          "ativo": "Cabine 1  Campos dos Goytacazes  Rio de Janeiro Brasil { GYT100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "Desligamento e religamento da usina para remoção de grades da Cabine, Transformador e QGBT",
           "criticidade": "",
           "dataProgramada": "2026-06-18",
           "dataCriacao": "2026-06-18",
@@ -3347,34 +3349,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "7715",
-          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizada",
-          "tarefa": "religamento da cabine",
-          "criticidade": "",
-          "dataProgramada": "2026-06-11",
-          "dataCriacao": "2026-06-11",
-          "dataInicial": "2026-06-11",
-          "dataFinal": "2026-06-11",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1541,
+      "historicoTotal": 1542,
       "subClassificacao": {
         "remoto": 523,
         "local": 2058,
         "remotoEmAberto": 4,
-        "localEmAberto": 11,
+        "localEmAberto": 10,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -9945,14 +9927,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Raphael Vitoriano ",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da usina de CPP100",
       "criticidade": "",
       "dataProgramada": "2026-06-18",
       "dataCriacao": "2026-06-18",
-      "dataInicial": "",
+      "dataInicial": "2026-06-18",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -10124,24 +10107,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "7961",
-      "ativo": "Cabine 1  Campos dos Goytacazes  Rio de Janeiro Brasil { GYT100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "IN_PROGRESS",
-      "tarefa": "Desligamento e religamento da usina para remoção de grades da Cabine, Transformador e QGBT",
-      "criticidade": "",
-      "dataProgramada": "2026-06-18",
-      "dataCriacao": "2026-06-18",
-      "dataInicial": "2026-06-18",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -11268,6 +11233,26 @@
       "supervisor": "Ailton Leal ",
       "status": "Finalizados",
       "tarefa": "Religamento da usina",
+      "criticidade": "",
+      "dataProgramada": "2026-06-18",
+      "dataCriacao": "2026-06-18",
+      "dataInicial": "2026-06-18",
+      "dataFinal": "2026-06-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "7961",
+      "ativo": "Cabine 1  Campos dos Goytacazes  Rio de Janeiro Brasil { GYT100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Finalizados",
+      "tarefa": "Desligamento e religamento da usina para remoção de grades da Cabine, Transformador e QGBT",
       "criticidade": "",
       "dataProgramada": "2026-06-18",
       "dataCriacao": "2026-06-18",
@@ -13971,29 +13956,9 @@
       "horasAteFechar": 24.0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7727",
-      "ativo": "Thopen - Nova Londrina 2 - PR Estrada Mané Correia S/N Nova Londrina  Paraná Brasil { THPN-NVL200 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Finalizada",
-      "tarefa": "Religamento UFV Nova Londrina 2",
-      "criticidade": "",
-      "dataProgramada": "2026-06-11",
-      "dataCriacao": "2026-06-11",
-      "dataInicial": "2026-06-11",
-      "dataFinal": "2026-06-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1894,
+  "historicoTotal": 1895,
   "totalGeral": 3157,
   "verificacao": {
     "total": 0,
