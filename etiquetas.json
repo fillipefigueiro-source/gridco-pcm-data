@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-18T13:01:12Z",
+  "geradoEm": "2026-06-18T13:08:17Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2560,
+        "total": 2561,
         "emAberto": 13,
-        "atrasadas": 9,
-        "concluidas30d": 530,
-        "concluidas7d": 154,
-        "naSemanaCorrente": 68
+        "atrasadas": 8,
+        "concluidas30d": 531,
+        "concluidas7d": 155,
+        "naSemanaCorrente": 69
       },
       "mttr": {
-        "horas": 4.25,
-        "label": "4h 15min",
-        "amostra": 530
+        "horas": 4.29,
+        "label": "4h 18min",
+        "amostra": 531
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W25",
-          "criadas": 67,
-          "finalizadas": 59
+          "criadas": 68,
+          "finalizadas": 60
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2560,
+            "total": 2561,
             "emAberto": 13
           }
         ],
@@ -79,10 +79,10 @@
         ]
       },
       "total": 13,
-      "atrasadas": 9,
+      "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 9,
-        "emProgresso": 3,
+        "naoIniciada": 8,
+        "emProgresso": 4,
         "pausada": 1,
         "verificacao": 0
       },
@@ -134,14 +134,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-06-17",
           "dataCriacao": "2026-06-17",
-          "dataInicial": "",
+          "dataInicial": "2026-06-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -152,26 +153,8 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
-          "tarefa": "religamento da usina",
-          "criticidade": "",
-          "dataProgramada": "2026-06-17",
-          "dataCriacao": "2026-06-17",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "7952",
-          "ativo": "Cabine 4  Capitão Poço  Pará Brasil { CPP100-CABN4 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Gilson Souza ",
           "status": "IN_PROGRESS",
-          "tarefa": "Religamento da Usina",
+          "tarefa": "religamento da usina",
           "criticidade": "",
           "dataProgramada": "2026-06-17",
           "dataCriacao": "2026-06-17",
@@ -255,6 +238,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "7966",
+          "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Ailton Leal ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-18",
+          "dataCriacao": "2026-06-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "7964",
@@ -366,6 +367,26 @@
           "dataFinal": "2026-06-18",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "7952",
+          "ativo": "Cabine 4  Capitão Poço  Pará Brasil { CPP100-CABN4 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-17",
+          "dataCriacao": "2026-06-17",
+          "dataInicial": "2026-06-18",
+          "dataFinal": "2026-06-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3291,26 +3312,6 @@
           "atrasada": false
         },
         {
-          "osId": "7674",
-          "ativo": "Thopen - Embu Guaçu 1 - SP Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "DavidNascimento",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizada",
-          "tarefa": "UFV: Embu Guaçu| Proteção: 27 | Ação: Religamento Local | Falha: Usina desligada e offline",
-          "criticidade": "",
-          "dataProgramada": "2026-06-11",
-          "dataCriacao": "2026-06-11",
-          "dataInicial": "2026-06-10",
-          "dataFinal": "2026-06-11",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "7709",
           "ativo": "Thopen - Sorocaba 1 - SP Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100 }",
           "equipe": "",
@@ -3331,10 +3332,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1522,
+      "historicoTotal": 1523,
       "subClassificacao": {
         "remoto": 518,
-        "local": 2042,
+        "local": 2043,
         "remotoEmAberto": 1,
         "localEmAberto": 12,
         "pctRemoto": 20,
@@ -9920,6 +9921,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "7966",
+      "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Ailton Leal ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento da usina",
+      "criticidade": "",
+      "dataProgramada": "2026-06-18",
+      "dataCriacao": "2026-06-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "7964",
       "ativo": "Inversor 1.4 SOLAREDGE     { ELF100-INVR1.4 }",
       "equipe": "",
@@ -9977,14 +9995,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-06-17",
       "dataCriacao": "2026-06-17",
-      "dataInicial": "",
+      "dataInicial": "2026-06-18",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -9994,25 +10013,8 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
-      "tarefa": "religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-17",
-      "dataCriacao": "2026-06-17",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "7952",
-      "ativo": "Cabine 4  Capitão Poço  Pará Brasil { CPP100-CABN4 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Gilson Souza ",
       "status": "IN_PROGRESS",
-      "tarefa": "Religamento da Usina",
+      "tarefa": "religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-06-17",
       "dataCriacao": "2026-06-17",
@@ -10998,6 +11000,26 @@
       "dataFinal": "2026-06-18",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "7952",
+      "ativo": "Cabine 4  Capitão Poço  Pará Brasil { CPP100-CABN4 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-06-17",
+      "dataCriacao": "2026-06-17",
+      "dataInicial": "2026-06-18",
+      "dataFinal": "2026-06-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -13934,30 +13956,10 @@
       "horasAteFechar": 0,
       "modalidade": "remoto",
       "atrasada": false
-    },
-    {
-      "osId": "7681",
-      "ativo": "SKID 3 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID3 }",
-      "equipe": "",
-      "responsavel": "Juliana Rogério ",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Juliana Rogério ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da UFV Junco 2.2",
-      "criticidade": "",
-      "dataProgramada": "2026-06-11",
-      "dataCriacao": "2026-06-11",
-      "dataInicial": "2026-06-11",
-      "dataFinal": "2026-06-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1872,
-  "totalGeral": 3134,
+  "historicoTotal": 1873,
+  "totalGeral": 3135,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
