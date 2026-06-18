@@ -1352,7 +1352,9 @@ function renderSugestoes(){
     const scoreCls=Number(score)>=150?'high':'';
     let actions='';
     if(acao==='aceita'){
-      actions='<div class="sug-actions-aceita">\u2713 Aceita</div><button class="sug-btn sug-btn-os" onclick="abrirPainelLocal(\''+num+'\')" title="Abre o painel local Streamlit pra criar a OS no Fracttal">\u{1F4E4} Abrir no Painel</button>';
+      actions='<div class="sug-actions-aceita">\u2713 Aceita</div>'+
+              '<button class="sug-btn sug-btn-os" onclick="abrirPainelLocal(\''+num+'\')" title="Abre o painel local Streamlit pra criar a OS no Fracttal">\u{1F4E4} Abrir no Painel</button>'+
+              '<button class="sug-btn sug-btn-no" onclick="setSugAcao(\''+num+'\',null)" title="Voltar pra pendente (cancela o aceite)" style="margin-left:4px">\u21a9 Reverter</button>';
     }else if(acao==='rejeitada'){
       actions='<button class="sug-btn sug-btn-no" onclick="setSugAcao(\''+num+'\',null)">Reverter</button>';
     }else{
@@ -2691,16 +2693,4 @@ function openMod(usina, dia, os_id){
     html += '<div class="mactions"><a href="'+link+'" target="_blank" rel="noopener" class="mbtn mbtn-prim" style="text-decoration:none">🔗 Abrir no Fracttal</a></div>';
   }
   mbox.innerHTML = html;
-  document.getElementById('modal').classList.add('open');
-}
-
-function closeMod(){
-  document.getElementById('modal').classList.remove('open');
-}
-
-document.addEventListener('keydown', e=>{
-  if(e.key==='Escape') closeMod();
-});
-</script>
-</body>
-</html>
+  document.getElementById('modal').classList.add
