@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-18T13:51:05Z",
+  "geradoEm": "2026-06-18T13:55:58Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 12,
       "atrasadas": 6,
       "porStatus": {
-        "naoIniciada": 9,
-        "emProgresso": 2,
+        "naoIniciada": 8,
+        "emProgresso": 3,
         "pausada": 1,
         "verificacao": 0
       },
@@ -208,14 +208,15 @@
           "responsavel": "Adão Neto ",
           "criadoPor": "LuelySantos",
           "supervisor": "Adão Neto ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da usina",
           "criticidade": "",
           "dataProgramada": "2026-06-18",
           "dataCriacao": "2026-06-18",
-          "dataInicial": "",
+          "dataInicial": "2026-06-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3540,16 +3541,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 405,
-        "emAberto": 42,
-        "atrasadas": 32,
-        "concluidas30d": 101,
-        "concluidas7d": 18,
+        "emAberto": 41,
+        "atrasadas": 31,
+        "concluidas30d": 102,
+        "concluidas7d": 19,
         "naSemanaCorrente": 15
       },
       "mttr": {
-        "horas": 205.31,
-        "label": "8d 13h",
-        "amostra": 101
+        "horas": 208.0,
+        "label": "8d 16h",
+        "amostra": 102
       },
       "tendencia4Semanas": [
         {
@@ -3570,7 +3571,7 @@
         {
           "semana": "W25",
           "criadas": 7,
-          "finalizadas": 12
+          "finalizadas": 13
         }
       ],
       "topOfensores": {
@@ -3578,7 +3579,7 @@
           {
             "nome": "(sem equipe)",
             "total": 405,
-            "emAberto": 42
+            "emAberto": 41
           }
         ],
         "responsaveis": [
@@ -3609,16 +3610,16 @@
           }
         ]
       },
-      "total": 42,
-      "atrasadas": 32,
+      "total": 41,
+      "atrasadas": 31,
       "porStatus": {
         "naoIniciada": 30,
-        "emProgresso": 3,
+        "emProgresso": 2,
         "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 42
+        "(sem equipe)": 41
       },
       "oss": [
         {
@@ -4142,24 +4143,6 @@
           "atrasada": true
         },
         {
-          "osId": "7190",
-          "ativo": "Ar Condicionado      { 2C-IPX100-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Wesllen  Castro",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-06-16",
-          "dataCriacao": "2026-05-29",
-          "dataInicial": "2026-06-16",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 432.0,
-          "atrasada": true
-        },
-        {
           "osId": "7924",
           "ativo": "Módulo Fotovoltaico Risen RSM132-8-660BMDG    { IBI100-MDFV }",
           "equipe": "",
@@ -4366,6 +4349,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 408.0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "7190",
+          "ativo": "Ar Condicionado      { 2C-IPX100-SOEM1-ARCD }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Wesllen  Castro",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
+          "criticidade": "",
+          "dataProgramada": "2026-06-16",
+          "dataCriacao": "2026-05-29",
+          "dataInicial": "2026-06-16",
+          "dataFinal": "2026-06-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 432.0,
+          "horasAteFechar": 48.0,
           "atrasada": false
         },
         {
@@ -7179,28 +7181,9 @@
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "5351",
-          "ativo": "Cabine 1 Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Francisco  Santos",
-          "criadoPor": "Hermano Barbosa",
-          "supervisor": "Francisco  Santos",
-          "status": "Finalizados",
-          "tarefa": "[Athon] - MPS - Chaves e Disjuntores",
-          "criticidade": "",
-          "dataProgramada": "2026-04-11",
-          "dataCriacao": "2026-04-10",
-          "dataInicial": "2026-04-14",
-          "dataFinal": "2026-04-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 231
+      "historicoTotal": 232
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9889,14 +9872,15 @@
       "responsavel": "Adão Neto ",
       "criadoPor": "LuelySantos",
       "supervisor": "Adão Neto ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-06-18",
       "dataCriacao": "2026-06-18",
-      "dataInicial": "",
+      "dataInicial": "2026-06-18",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -10539,23 +10523,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "7190",
-      "ativo": "Ar Condicionado      { 2C-IPX100-SOEM1-ARCD }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Wesllen  Castro",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
-      "criticidade": "",
-      "dataProgramada": "2026-06-16",
-      "dataCriacao": "2026-05-29",
-      "dataInicial": "2026-06-16",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 432.0
     },
     {
       "osId": "7104",
@@ -13884,7 +13851,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 1880,
+  "historicoTotal": 1881,
   "totalGeral": 3140,
   "verificacao": {
     "total": 0,
