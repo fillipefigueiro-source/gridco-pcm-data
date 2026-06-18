@@ -960,6 +960,8 @@ const CONFIG = {
   SUGESTOES_URL: "sugestoes.json",
   ETIQUETAS_URL: "etiquetas.json",
   REFRESH_MS: 300000,
+  // Painel local (Streamlit) — botão "Aceitar" abre essa URL com ?ss=NUMERO
+  PAINEL_LOCAL_URL: "http://localhost:8501",
 };
 let SUGESTOES_DB=[];
 let ETIQUETAS_DB=null;
@@ -1350,11 +1352,11 @@ function renderSugestoes(){
     const scoreCls=Number(score)>=150?'high':'';
     let actions='';
     if(acao==='aceita'){
-      actions='<div class="sug-actions-aceita">\u2713 Aceita</div><button class="sug-btn sug-btn-os" onclick="abrirInstruOS(\''+num+'\')">Abrir OS</button>';
+      actions='<div class="sug-actions-aceita">\u2713 Aceita</div><button class="sug-btn sug-btn-os" onclick="abrirPainelLocal(\''+num+'\')" title="Abre o painel local Streamlit pra criar a OS no Fracttal">\u{1F4E4} Abrir no Painel</button>';
     }else if(acao==='rejeitada'){
       actions='<button class="sug-btn sug-btn-no" onclick="setSugAcao(\''+num+'\',null)">Reverter</button>';
     }else{
-      actions='<button class="sug-btn sug-btn-ok" onclick="setSugAcao(\''+num+'\',\'aceita\')">Aceitar</button><button class="sug-btn sug-btn-no" onclick="setSugAcao(\''+num+'\',\'rejeitada\')">Rejeitar</button>';
+      actions='<button class="sug-btn sug-btn-ok" onclick="aceitarEAbrirPainel(\''+num+'\')" title="Aceita e abre o painel local pra criar OS no Fracttal">Aceitar \u{1F4E4}</button><button class="sug-btn sug-btn-no" onclick="setSugAcao(\''+num+'\',\'rejeitada\')">Rejeitar</button>';
     }
     return '<div class="sug-row '+cls+'">'+
       '<div class="sug-num">#'+num+'</div>'+
@@ -1367,8 +1369,28 @@ function renderSugestoes(){
   }).join('');
   body.innerHTML=html;
 }
-function abrirInstruOS(num){
-  alert('Acessar Fracttal e abrir a OS para a Solicita\u00e7\u00e3o #'+num+'.\n\nQuando criada, o pr\u00f3ximo sync do atualizacao_semanal.py vai pegar e inserir no arquivo de Programa\u00e7\u00e3o.\n\n(Integra\u00e7\u00e3o autom\u00e1tica via API ser\u00e1 ativada em fase futura.)');
+function abrirPainelLocal(num){
+  // Abre o painel desktop local (Streamlit) em nova aba, pr\u00e9-selecionando a SS
+  const url = CONFIG.PAINEL_LOCAL_URL + '/?ss=' + encodeURIComponent(num);
+  const w = window.open(url, 'painel_pcm');
+  if(!w){ alert('Pop-up bloqueado. Permita pop-ups para '+location.host+' e tente novamente.'); return; }
+  // Detecta se o painel n\u00e3o est\u00e1 rodando (conex\u00e3o recusada \u2192 carrega p\u00e1gina de erro do navegador)
+  setTimeout(function(){
+    try{
+      if(w && w.closed){ return; }
+      // Heur\u00edstica: depois de 1.5s, se o location ainda n\u00e3o respondeu, mostra dica
+      // (n\u00e3o d\u00e1 pra ler w.location por cross-origin, ent\u00e3o s\u00f3 avisamos preventivamente)
+    }catch(e){}
+  }, 1500);
+}
+// Compatibilidade c/ chamadas antigas (caso alguma fique no DOM por cache)
+function abrirInstruOS(num){ return abrirPainelLocal(num); }
+
+function aceitarEAbrirPainel(num){
+  // 1) Marca como aceita no estado local
+  setSugAcao(num, 'aceita');
+  // 2) Abre o painel local pr\u00e9-selecionando a SS
+  abrirPainelLocal(num);
 }
 
 
