@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-18T15:25:57Z",
+  "geradoEm": "2026-06-18T15:36:31Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -3503,16 +3503,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 405,
-        "emAberto": 41,
-        "atrasadas": 31,
-        "concluidas30d": 102,
-        "concluidas7d": 19,
+        "emAberto": 40,
+        "atrasadas": 30,
+        "concluidas30d": 103,
+        "concluidas7d": 20,
         "naSemanaCorrente": 15
       },
       "mttr": {
-        "horas": 208.0,
-        "label": "8d 16h",
-        "amostra": 102
+        "horas": 209.94,
+        "label": "8d 17h",
+        "amostra": 103
       },
       "tendencia4Semanas": [
         {
@@ -3533,7 +3533,7 @@
         {
           "semana": "W25",
           "criadas": 7,
-          "finalizadas": 13
+          "finalizadas": 14
         }
       ],
       "topOfensores": {
@@ -3541,7 +3541,7 @@
           {
             "nome": "(sem equipe)",
             "total": 405,
-            "emAberto": 41
+            "emAberto": 40
           }
         ],
         "responsaveis": [
@@ -3572,16 +3572,16 @@
           }
         ]
       },
-      "total": 41,
-      "atrasadas": 31,
+      "total": 40,
+      "atrasadas": 30,
       "porStatus": {
         "naoIniciada": 29,
-        "emProgresso": 3,
+        "emProgresso": 2,
         "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 41
+        "(sem equipe)": 40
       },
       "oss": [
         {
@@ -3826,24 +3826,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "7255",
-          "ativo": "Ar Condicionado      { MNG100-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Marcos  Camargo",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-06-08",
-          "dataCriacao": "2026-06-01",
-          "dataInicial": "2026-06-18",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 408.0,
           "atrasada": true
         },
         {
@@ -4295,6 +4277,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "7255",
+          "ativo": "Ar Condicionado      { MNG100-SOEM1-ARCD }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Marcos  Camargo",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
+          "criticidade": "",
+          "dataProgramada": "2026-06-08",
+          "dataCriacao": "2026-06-01",
+          "dataInicial": "2026-06-18",
+          "dataFinal": "2026-06-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 408.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "7250",
           "ativo": "Ar Condicionado      { CXB100-SOEM1-ARCD }",
@@ -7125,28 +7126,9 @@
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "5430",
-          "ativo": "Cabine 1  Santa Maria do Pará  Pará Brasil { SMP100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Hermano Barbosa",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Athon] - MPS - Chaves e Disjuntores",
-          "criticidade": "",
-          "dataProgramada": "2026-04-14",
-          "dataCriacao": "2026-04-14",
-          "dataInicial": "2026-04-14",
-          "dataFinal": "2026-04-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 232
+      "historicoTotal": 233
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -10467,23 +10449,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "7255",
-      "ativo": "Ar Condicionado      { MNG100-SOEM1-ARCD }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Marcos  Camargo",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
-      "criticidade": "",
-      "dataProgramada": "2026-06-08",
-      "dataCriacao": "2026-06-01",
-      "dataInicial": "2026-06-18",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 408.0
     },
     {
       "osId": "7104",
@@ -13812,7 +13777,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 1883,
+  "historicoTotal": 1884,
   "totalGeral": 3141,
   "verificacao": {
     "total": 0,
