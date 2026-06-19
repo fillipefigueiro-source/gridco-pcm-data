@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-19T11:36:36Z",
+  "geradoEm": "2026-06-19T11:43:25Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2592,
-        "emAberto": 15,
+        "total": 2594,
+        "emAberto": 17,
         "atrasadas": 6,
         "concluidas30d": 539,
         "concluidas7d": 157,
-        "naSemanaCorrente": 98
+        "naSemanaCorrente": 100
       },
       "mttr": {
         "horas": 4.45,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W25",
-          "criadas": 99,
+          "criadas": 101,
           "finalizadas": 89
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2592,
-            "emAberto": 15
+            "total": 2594,
+            "emAberto": 17
           }
         ],
         "responsaveis": [
@@ -63,8 +63,8 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 184,
-            "emAberto": 2
+            "total": 185,
+            "emAberto": 3
           },
           {
             "nome": "James Chaves",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 15,
+      "total": 17,
       "atrasadas": 6,
       "porStatus": {
-        "naoIniciada": 12,
-        "emProgresso": 3,
+        "naoIniciada": 13,
+        "emProgresso": 4,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 15
+        "(sem equipe)": 17
       },
       "oss": [
         {
@@ -198,6 +198,42 @@
           "linkFracttal": "",
           "modalidade": "remoto",
           "atrasada": true
+        },
+        {
+          "osId": "8019",
+          "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID1 }",
+          "equipe": "",
+          "responsavel": "Deivity Jhon Cunha Saugo ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Deivity Jhon Cunha Saugo ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da cabine",
+          "criticidade": "",
+          "dataProgramada": "2026-06-19",
+          "dataCriacao": "2026-06-19",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8018",
+          "ativo": "Cabine 7  Capitão Poço  Pará Brasil { CPP100-CABN7 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da cabine remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-06-19",
+          "dataCriacao": "2026-06-19",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
         },
         {
           "osId": "8017",
@@ -316,14 +352,15 @@
           "responsavel": "Francisco  Santos",
           "criadoPor": "DavidNascimento",
           "supervisor": "Francisco  Santos",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "UFV: Matões 100 | Proteção: -- | Ação: Religamento Local | Falha: Cabine 5 desligada",
           "criticidade": "",
           "dataProgramada": "2026-06-19",
           "dataCriacao": "2026-06-19",
-          "dataInicial": "",
+          "dataInicial": "2026-06-19",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3368,10 +3405,10 @@
       ],
       "historicoTotal": 1529,
       "subClassificacao": {
-        "remoto": 526,
-        "local": 2066,
-        "remotoEmAberto": 5,
-        "localEmAberto": 10,
+        "remoto": 527,
+        "local": 2067,
+        "remotoEmAberto": 6,
+        "localEmAberto": 11,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3551,7 +3588,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 112
+            "total": 113
           },
           {
             "nome": "Raphael Vitoriano",
@@ -9918,6 +9955,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "8019",
+      "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID1 }",
+      "equipe": "",
+      "responsavel": "Deivity Jhon Cunha Saugo ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Deivity Jhon Cunha Saugo ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento da cabine",
+      "criticidade": "",
+      "dataProgramada": "2026-06-19",
+      "dataCriacao": "2026-06-19",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "8018",
+      "ativo": "Cabine 7  Capitão Poço  Pará Brasil { CPP100-CABN7 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento da cabine remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-06-19",
+      "dataCriacao": "2026-06-19",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
       "osId": "8017",
       "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
       "equipe": "",
@@ -10028,14 +10099,15 @@
       "responsavel": "Francisco  Santos",
       "criadoPor": "DavidNascimento",
       "supervisor": "Francisco  Santos",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "UFV: Matões 100 | Proteção: -- | Ação: Religamento Local | Falha: Cabine 5 desligada",
       "criticidade": "",
       "dataProgramada": "2026-06-19",
       "dataCriacao": "2026-06-19",
-      "dataInicial": "",
+      "dataInicial": "2026-06-19",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -13955,7 +14027,7 @@
     }
   ],
   "historicoTotal": 1881,
-  "totalGeral": 3168,
+  "totalGeral": 3170,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
