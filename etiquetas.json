@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-19T13:47:32Z",
+  "geradoEm": "2026-06-19T13:52:15Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -3593,8 +3593,8 @@
       "atrasadas": 30,
       "porStatus": {
         "naoIniciada": 29,
-        "emProgresso": 1,
-        "pausada": 9,
+        "emProgresso": 2,
+        "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
@@ -3608,7 +3608,7 @@
           "responsavel": "Henri Almeida ",
           "criadoPor": "Hermano Barbosa",
           "supervisor": "Henri Almeida ",
-          "status": "pausado",
+          "status": "IN_PROGRESS",
           "tarefa": "Manutenção Preventiva Trimestral GRID CO. - Supressão Vegetal",
           "criticidade": "",
           "dataProgramada": "2026-01-14",
@@ -9547,12 +9547,12 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 13,
-        "emAberto": 3,
-        "atrasadas": 3,
+        "total": 14,
+        "emAberto": 4,
+        "atrasadas": 4,
         "concluidas30d": 2,
         "concluidas7d": 0,
-        "naSemanaCorrente": 0
+        "naSemanaCorrente": 1
       },
       "mttr": {
         "horas": 1536.0,
@@ -9577,7 +9577,7 @@
         },
         {
           "semana": "W25",
-          "criadas": 0,
+          "criadas": 1,
           "finalizadas": 0
         }
       ],
@@ -9585,8 +9585,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 13,
-            "emAberto": 3
+            "total": 14,
+            "emAberto": 4
           }
         ],
         "responsaveis": [
@@ -9611,22 +9611,22 @@
             "emAberto": 0
           },
           {
-            "nome": "Paulo  Ribeiro",
+            "nome": "Wesllen  Castro",
             "total": 1,
             "emAberto": 1
           }
         ]
       },
-      "total": 3,
-      "atrasadas": 3,
+      "total": 4,
+      "atrasadas": 4,
       "porStatus": {
         "naoIniciada": 0,
         "emProgresso": 1,
-        "pausada": 2,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 3
+        "(sem equipe)": 4
       },
       "oss": [
         {
@@ -9681,6 +9681,24 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 336.0,
+          "atrasada": true
+        },
+        {
+          "osId": "7886",
+          "ativo": "Relé da Cabine 1      { 2C-IPX100-RELE1 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Wesllen  Castro",
+          "status": "pausado",
+          "tarefa": "[2C/Ipixuna do Pará] - Parametrização das sinalizações das proteções",
+          "criticidade": "",
+          "dataProgramada": "2026-06-16",
+          "dataCriacao": "2026-06-16",
+          "dataInicial": "2026-06-17",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": true
         }
       ],
@@ -10094,6 +10112,23 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
+    },
+    {
+      "osId": "7886",
+      "ativo": "Relé da Cabine 1      { 2C-IPX100-RELE1 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Wesllen  Castro",
+      "status": "pausado",
+      "tarefa": "[2C/Ipixuna do Pará] - Parametrização das sinalizações das proteções",
+      "criticidade": "",
+      "dataProgramada": "2026-06-16",
+      "dataCriacao": "2026-06-16",
+      "dataInicial": "2026-06-17",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "7841",
@@ -10837,7 +10872,7 @@
       "responsavel": "Henri Almeida ",
       "criadoPor": "Hermano Barbosa",
       "supervisor": "Henri Almeida ",
-      "status": "pausado",
+      "status": "IN_PROGRESS",
       "tarefa": "Manutenção Preventiva Trimestral GRID CO. - Supressão Vegetal",
       "criticidade": "",
       "dataProgramada": "2026-01-14",
@@ -13847,7 +13882,7 @@
     }
   ],
   "historicoTotal": 1890,
-  "totalGeral": 3174,
+  "totalGeral": 3175,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
