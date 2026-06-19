@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-19T17:51:24Z",
+  "geradoEm": "2026-06-19T17:56:30Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2604,
-        "emAberto": 12,
+        "total": 2606,
+        "emAberto": 13,
         "atrasadas": 5,
-        "concluidas30d": 554,
-        "concluidas7d": 172,
-        "naSemanaCorrente": 108
+        "concluidas30d": 555,
+        "concluidas7d": 173,
+        "naSemanaCorrente": 110
       },
       "mttr": {
-        "horas": 4.33,
-        "label": "4h 20min",
-        "amostra": 554
+        "horas": 4.32,
+        "label": "4h 19min",
+        "amostra": 555
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W25",
-          "criadas": 111,
-          "finalizadas": 104
+          "criadas": 113,
+          "finalizadas": 105
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2604,
-            "emAberto": 12
+            "total": 2606,
+            "emAberto": 13
           }
         ],
         "responsaveis": [
@@ -63,8 +63,8 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 188,
-            "emAberto": 1
+            "total": 190,
+            "emAberto": 2
           },
           {
             "nome": "James Chaves",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 12,
+      "total": 13,
       "atrasadas": 5,
       "porStatus": {
-        "naoIniciada": 11,
+        "naoIniciada": 12,
         "emProgresso": 1,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 12
+        "(sem equipe)": 13
       },
       "oss": [
         {
@@ -182,8 +182,26 @@
           "atrasada": true
         },
         {
-          "osId": "8021",
+          "osId": "8054",
           "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da cabine remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-06-19",
+          "dataCriacao": "2026-06-19",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "8053",
+          "ativo": "Cabine 4  Capitão Poço  Pará Brasil { CPP100-CABN4 }",
           "equipe": "",
           "responsavel": "Felipe Silva ",
           "criadoPor": "Felipe Silva ",
@@ -427,6 +445,26 @@
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8021",
+          "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizados",
+          "tarefa": "religamento da cabine remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-06-19",
+          "dataCriacao": "2026-06-19",
+          "dataInicial": "2026-06-19",
+          "dataFinal": "2026-06-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
           "atrasada": false
         },
         {
@@ -3288,33 +3326,13 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "7771",
-          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine",
-          "criticidade": "",
-          "dataProgramada": "2026-06-12",
-          "dataCriacao": "2026-06-12",
-          "dataInicial": "2026-06-12",
-          "dataFinal": "2026-06-12",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1544,
+      "historicoTotal": 1545,
       "subClassificacao": {
-        "remoto": 531,
+        "remoto": 533,
         "local": 2073,
-        "remotoEmAberto": 5,
+        "remotoEmAberto": 6,
         "localEmAberto": 7,
         "pctRemoto": 20,
         "alerta": true
@@ -3486,8 +3504,8 @@
         ],
         "medHorasAbrir": 3.3,
         "medHorasFechar": 3.4,
-        "amostraAbrir": 521,
-        "amostraFechar": 521,
+        "amostraAbrir": 522,
+        "amostraFechar": 522,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3495,7 +3513,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 116
+            "total": 118
           },
           {
             "nome": "Raphael Vitoriano",
@@ -9848,6 +9866,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "8054",
+      "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento da cabine remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-06-19",
+      "dataCriacao": "2026-06-19",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
+      "osId": "8053",
+      "ativo": "Cabine 4  Capitão Poço  Pará Brasil { CPP100-CABN4 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "religamento da cabine remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-06-19",
+      "dataCriacao": "2026-06-19",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
       "osId": "8040",
       "ativo": "Disjuntor do Transformador 1      { PTL300-DTRF1 }",
       "equipe": "",
@@ -9896,23 +9948,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "8021",
-      "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Não Iniciada",
-      "tarefa": "religamento da cabine remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-06-19",
-      "dataCriacao": "2026-06-19",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "remoto"
     },
     {
       "osId": "8020",
@@ -10922,6 +10957,26 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "8021",
+      "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizados",
+      "tarefa": "religamento da cabine remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-06-19",
+      "dataCriacao": "2026-06-19",
+      "dataInicial": "2026-06-19",
+      "dataFinal": "2026-06-19",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
       "atrasada": false
     },
     {
@@ -13777,30 +13832,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7779",
-      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizada",
-      "tarefa": "UFV MD - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-      "criticidade": "",
-      "dataProgramada": "2026-06-12",
-      "dataCriacao": "2026-06-12",
-      "dataInicial": "2026-06-12",
-      "dataFinal": "2026-06-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1900,
-  "totalGeral": 3182,
+  "historicoTotal": 1901,
+  "totalGeral": 3184,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
