@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-19T08:15:57Z",
+  "geradoEm": "2026-06-19T08:20:38Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2582,
-        "emAberto": 8,
+        "total": 2585,
+        "emAberto": 11,
         "atrasadas": 6,
         "concluidas30d": 536,
         "concluidas7d": 154,
-        "naSemanaCorrente": 88
+        "naSemanaCorrente": 91
       },
       "mttr": {
         "horas": 4.48,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W25",
-          "criadas": 89,
+          "criadas": 92,
           "finalizadas": 86
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2582,
-            "emAberto": 8
+            "total": 2585,
+            "emAberto": 11
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 8,
+      "total": 11,
       "atrasadas": 6,
       "porStatus": {
-        "naoIniciada": 7,
+        "naoIniciada": 10,
         "emProgresso": 1,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 8
+        "(sem equipe)": 11
       },
       "oss": [
         {
@@ -198,6 +198,60 @@
           "linkFracttal": "",
           "modalidade": "remoto",
           "atrasada": true
+        },
+        {
+          "osId": "8004",
+          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "UFV: CPP 100 | Proteção: -- | Ação: Religamento Local | Falha: Cabine 6 desligada",
+          "criticidade": "",
+          "dataProgramada": "2026-06-19",
+          "dataCriacao": "2026-06-19",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8003",
+          "ativo": "Cabine 5 Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-CABN5 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Francisco  Santos",
+          "status": "Não Iniciada",
+          "tarefa": "UFV: Matões 100 | Proteção: -- | Ação: Religamento Local | Falha: Cabine 5 desligada",
+          "criticidade": "",
+          "dataProgramada": "2026-06-19",
+          "dataCriacao": "2026-06-19",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8002",
+          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Railson Gomes ",
+          "status": "Não Iniciada",
+          "tarefa": "UFV: Crateus | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
+          "criticidade": "",
+          "dataProgramada": "2026-06-19",
+          "dataCriacao": "2026-06-19",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "7994",
@@ -3241,9 +3295,9 @@
       "historicoTotal": 1526,
       "subClassificacao": {
         "remoto": 523,
-        "local": 2059,
+        "local": 2062,
         "remotoEmAberto": 3,
-        "localEmAberto": 5,
+        "localEmAberto": 8,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -9808,6 +9862,57 @@
   },
   "ossPublicas": [
     {
+      "osId": "8004",
+      "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "UFV: CPP 100 | Proteção: -- | Ação: Religamento Local | Falha: Cabine 6 desligada",
+      "criticidade": "",
+      "dataProgramada": "2026-06-19",
+      "dataCriacao": "2026-06-19",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "8003",
+      "ativo": "Cabine 5 Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-CABN5 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Francisco  Santos",
+      "status": "Não Iniciada",
+      "tarefa": "UFV: Matões 100 | Proteção: -- | Ação: Religamento Local | Falha: Cabine 5 desligada",
+      "criticidade": "",
+      "dataProgramada": "2026-06-19",
+      "dataCriacao": "2026-06-19",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "8002",
+      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Railson Gomes ",
+      "status": "Não Iniciada",
+      "tarefa": "UFV: Crateus | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
+      "criticidade": "",
+      "dataProgramada": "2026-06-19",
+      "dataCriacao": "2026-06-19",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "7999",
       "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
       "equipe": "",
@@ -13739,7 +13844,7 @@
     }
   ],
   "historicoTotal": 1877,
-  "totalGeral": 3158,
+  "totalGeral": 3161,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
