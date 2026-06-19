@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-19T10:55:41Z",
+  "geradoEm": "2026-06-19T11:00:42Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2589,
-        "emAberto": 12,
+        "total": 2590,
+        "emAberto": 13,
         "atrasadas": 6,
         "concluidas30d": 539,
         "concluidas7d": 157,
-        "naSemanaCorrente": 95
+        "naSemanaCorrente": 96
       },
       "mttr": {
         "horas": 4.45,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W25",
-          "criadas": 96,
+          "criadas": 97,
           "finalizadas": 89
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2589,
-            "emAberto": 12
+            "total": 2590,
+            "emAberto": 13
           }
         ],
         "responsaveis": [
@@ -67,27 +67,27 @@
             "emAberto": 0
           },
           {
-            "nome": "Italo  Lustosa",
+            "nome": "James Chaves",
             "total": 113,
-            "emAberto": 0
+            "emAberto": 1
           },
           {
-            "nome": "James Chaves",
-            "total": 112,
+            "nome": "Italo  Lustosa",
+            "total": 113,
             "emAberto": 0
           }
         ]
       },
-      "total": 12,
+      "total": 13,
       "atrasadas": 6,
       "porStatus": {
         "naoIniciada": 10,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 12
+        "(sem equipe)": 13
       },
       "oss": [
         {
@@ -200,20 +200,39 @@
           "atrasada": true
         },
         {
-          "osId": "8009",
-          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+          "osId": "8010",
+          "ativo": "Inversor 2.9 Huawei     { MAB200-INVR2.9 }",
           "equipe": "",
-          "responsavel": "Wesllen  Castro",
+          "responsavel": "James Chaves ",
           "criadoPor": "Felipe Silva ",
-          "supervisor": "Wesllen  Castro",
+          "supervisor": "James Chaves ",
           "status": "Não Iniciada",
-          "tarefa": "Religamento da Usina",
+          "tarefa": "Religamento do inversor",
           "criticidade": "",
           "dataProgramada": "2026-06-19",
           "dataCriacao": "2026-06-19",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8009",
+          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Wesllen  Castro",
+          "status": "IN_PROGRESS",
+          "tarefa": "Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-19",
+          "dataCriacao": "2026-06-19",
+          "dataInicial": "2026-06-19",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3314,9 +3333,9 @@
       "historicoTotal": 1529,
       "subClassificacao": {
         "remoto": 524,
-        "local": 2065,
+        "local": 2066,
         "remotoEmAberto": 3,
-        "localEmAberto": 9,
+        "localEmAberto": 10,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -9863,20 +9882,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "8009",
-      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+      "osId": "8010",
+      "ativo": "Inversor 2.9 Huawei     { MAB200-INVR2.9 }",
       "equipe": "",
-      "responsavel": "Wesllen  Castro",
+      "responsavel": "James Chaves ",
       "criadoPor": "Felipe Silva ",
-      "supervisor": "Wesllen  Castro",
+      "supervisor": "James Chaves ",
       "status": "Não Iniciada",
-      "tarefa": "Religamento da Usina",
+      "tarefa": "Religamento do inversor",
       "criticidade": "",
       "dataProgramada": "2026-06-19",
       "dataCriacao": "2026-06-19",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "8009",
+      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Wesllen  Castro",
+      "status": "IN_PROGRESS",
+      "tarefa": "Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-06-19",
+      "dataCriacao": "2026-06-19",
+      "dataInicial": "2026-06-19",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -13848,7 +13885,7 @@
     }
   ],
   "historicoTotal": 1881,
-  "totalGeral": 3165,
+  "totalGeral": 3166,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
