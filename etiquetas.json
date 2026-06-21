@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-21T14:06:17Z",
+  "geradoEm": "2026-06-21T14:11:26Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-15 .. 2026-06-21",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2632,
+        "total": 2633,
         "emAberto": 14,
-        "atrasadas": 7,
-        "concluidas30d": 542,
-        "concluidas7d": 142,
-        "naSemanaCorrente": 136
+        "atrasadas": 6,
+        "concluidas30d": 543,
+        "concluidas7d": 143,
+        "naSemanaCorrente": 137
       },
       "mttr": {
-        "horas": 4.66,
-        "label": "4h 39min",
-        "amostra": 542
+        "horas": 4.69,
+        "label": "4h 42min",
+        "amostra": 543
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W25",
-          "criadas": 139,
-          "finalizadas": 130
+          "criadas": 140,
+          "finalizadas": 131
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2632,
+            "total": 2633,
             "emAberto": 14
           }
         ],
@@ -79,7 +79,7 @@
         ]
       },
       "total": 14,
-      "atrasadas": 7,
+      "atrasadas": 6,
       "porStatus": {
         "naoIniciada": 11,
         "emProgresso": 3,
@@ -200,23 +200,23 @@
           "atrasada": true
         },
         {
-          "osId": "8076",
-          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+          "osId": "8104",
+          "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
           "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Frank  Melo",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Janderson Miranda ",
           "status": "IN_PROGRESS",
-          "tarefa": "Religamento da usina de IPX 2C",
+          "tarefa": "UFV SITIO - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
           "criticidade": "",
-          "dataProgramada": "2026-06-20",
-          "dataCriacao": "2026-06-20",
+          "dataProgramada": "2026-06-21",
+          "dataCriacao": "2026-06-21",
           "dataInicial": "2026-06-21",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "modalidade": "local",
-          "atrasada": true
+          "horasAteAbrir": 0,
+          "modalidade": "remoto",
+          "atrasada": false
         },
         {
           "osId": "8100",
@@ -536,6 +536,26 @@
           "supervisor": "Adriano  Moraes",
           "status": "Finalizados",
           "tarefa": "Religamento da usina de Araputanga",
+          "criticidade": "",
+          "dataProgramada": "2026-06-20",
+          "dataCriacao": "2026-06-20",
+          "dataInicial": "2026-06-21",
+          "dataFinal": "2026-06-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8076",
+          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+          "equipe": "",
+          "responsavel": "Frank  Melo",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Frank  Melo",
+          "status": "Finalizados",
+          "tarefa": "Religamento da usina de IPX 2C",
           "criticidade": "",
           "dataProgramada": "2026-06-20",
           "dataCriacao": "2026-06-20",
@@ -3308,26 +3328,6 @@
           "atrasada": false
         },
         {
-          "osId": "7804",
-          "ativo": "Utragaz - Ibirapuã 2 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI200 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da Usina remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-06-13",
-          "dataCriacao": "2026-06-13",
-          "dataInicial": "2026-06-13",
-          "dataFinal": "2026-06-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "7865",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
           "equipe": "",
@@ -3348,12 +3348,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1539,
+      "historicoTotal": 1540,
       "subClassificacao": {
-        "remoto": 540,
+        "remoto": 541,
         "local": 2092,
-        "remotoEmAberto": 5,
-        "localEmAberto": 9,
+        "remotoEmAberto": 6,
+        "localEmAberto": 8,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -3524,12 +3524,12 @@
         ],
         "medHorasAbrir": 3.3,
         "medHorasFechar": 3.4,
-        "amostraAbrir": 530,
+        "amostraAbrir": 531,
         "amostraFechar": 530,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
-            "total": 255
+            "total": 256
           },
           {
             "nome": "Felipe Silva",
@@ -9919,6 +9919,24 @@
   },
   "ossPublicas": [
     {
+      "osId": "8104",
+      "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Janderson Miranda ",
+      "status": "IN_PROGRESS",
+      "tarefa": "UFV SITIO - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+      "criticidade": "",
+      "dataProgramada": "2026-06-21",
+      "dataCriacao": "2026-06-21",
+      "dataInicial": "2026-06-21",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "remoto"
+    },
+    {
       "osId": "8100",
       "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
       "equipe": "",
@@ -9985,24 +10003,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "8076",
-      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Frank  Melo",
-      "status": "IN_PROGRESS",
-      "tarefa": "Religamento da usina de IPX 2C",
-      "criticidade": "",
-      "dataProgramada": "2026-06-20",
-      "dataCriacao": "2026-06-20",
-      "dataInicial": "2026-06-21",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "modalidade": "local"
     },
     {
       "osId": "8062",
@@ -11158,6 +11158,26 @@
       "dataFinal": "2026-06-20",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "8076",
+      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+      "equipe": "",
+      "responsavel": "Frank  Melo",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Frank  Melo",
+      "status": "Finalizados",
+      "tarefa": "Religamento da usina de IPX 2C",
+      "criticidade": "",
+      "dataProgramada": "2026-06-20",
+      "dataCriacao": "2026-06-20",
+      "dataInicial": "2026-06-21",
+      "dataFinal": "2026-06-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -13915,30 +13935,10 @@
       "horasAteFechar": 0,
       "modalidade": "remoto",
       "atrasada": false
-    },
-    {
-      "osId": "7810",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da Usina remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-06-13",
-      "dataCriacao": "2026-06-13",
-      "dataInicial": "2026-06-13",
-      "dataFinal": "2026-06-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1896,
-  "totalGeral": 3213,
+  "historicoTotal": 1897,
+  "totalGeral": 3214,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
