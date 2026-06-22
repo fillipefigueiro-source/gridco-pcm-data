@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-22T17:01:35Z",
+  "geradoEm": "2026-06-22T17:11:37Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 2648,
-        "emAberto": 12,
+        "emAberto": 11,
         "atrasadas": 6,
-        "concluidas30d": 539,
-        "concluidas7d": 148,
+        "concluidas30d": 540,
+        "concluidas7d": 149,
         "naSemanaCorrente": 13
       },
       "mttr": {
-        "horas": 4.82,
+        "horas": 4.81,
         "label": "4h 49min",
-        "amostra": 539
+        "amostra": 540
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W26",
           "criadas": 9,
-          "finalizadas": 11
+          "finalizadas": 12
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 2648,
-            "emAberto": 12
+            "emAberto": 11
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 12,
+      "total": 11,
       "atrasadas": 6,
       "porStatus": {
         "naoIniciada": 9,
-        "emProgresso": 3,
+        "emProgresso": 2,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 12
+        "(sem equipe)": 11
       },
       "oss": [
         {
@@ -201,25 +201,6 @@
           "atrasada": true
         },
         {
-          "osId": "8137",
-          "ativo": "Thopen - Parelhas 1 - RN Rodovia RN 088, nº 01, Zona Rural Parelhas  Rio Grande do Norte Brasil { THPN-PRL100 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Silva",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Cláudio  Silva",
-          "status": "IN_PROGRESS",
-          "tarefa": "UFV PARELHAS - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-          "criticidade": "",
-          "dataProgramada": "2026-06-22",
-          "dataCriacao": "2026-06-22",
-          "dataInicial": "2026-06-22",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "8118",
           "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { STN100-INVR1.3 }",
           "equipe": "",
@@ -311,6 +292,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8137",
+          "ativo": "Thopen - Parelhas 1 - RN Rodovia RN 088, nº 01, Zona Rural Parelhas  Rio Grande do Norte Brasil { THPN-PRL100 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Silva",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Cláudio  Silva",
+          "status": "Finalizados",
+          "tarefa": "UFV PARELHAS - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+          "criticidade": "",
+          "dataProgramada": "2026-06-22",
+          "dataCriacao": "2026-06-22",
+          "dataInicial": "2026-06-22",
+          "dataFinal": "2026-06-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "8136",
           "ativo": "SKID 3 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID3 }",
@@ -3272,26 +3273,6 @@
           "atrasada": false
         },
         {
-          "osId": "7824",
-          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizada",
-          "tarefa": "UFVMD01 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-          "criticidade": "",
-          "dataProgramada": "2026-06-14",
-          "dataCriacao": "2026-06-14",
-          "dataInicial": "2026-06-14",
-          "dataFinal": "2026-06-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "7865",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
           "equipe": "",
@@ -3312,11 +3293,11 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1543,
+      "historicoTotal": 1544,
       "subClassificacao": {
         "remoto": 547,
         "local": 2101,
-        "remotoEmAberto": 5,
+        "remotoEmAberto": 4,
         "localEmAberto": 7,
         "pctRemoto": 21,
         "alerta": true
@@ -3489,7 +3470,7 @@
         "medHorasAbrir": 3.3,
         "medHorasFechar": 3.3,
         "amostraAbrir": 538,
-        "amostraFechar": 537,
+        "amostraFechar": 538,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3612,8 +3593,8 @@
       "total": 36,
       "atrasadas": 27,
       "porStatus": {
-        "naoIniciada": 26,
-        "emProgresso": 2,
+        "naoIniciada": 25,
+        "emProgresso": 3,
         "pausada": 8,
         "verificacao": 0
       },
@@ -4096,14 +4077,15 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
           "criticidade": "",
           "dataProgramada": "2026-06-22",
           "dataCriacao": "2026-06-19",
-          "dataInicial": "",
+          "dataInicial": "2026-06-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 72.0,
           "atrasada": false
         },
         {
@@ -9809,24 +9791,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "8137",
-      "ativo": "Thopen - Parelhas 1 - RN Rodovia RN 088, nº 01, Zona Rural Parelhas  Rio Grande do Norte Brasil { THPN-PRL100 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Silva",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Cláudio  Silva",
-      "status": "IN_PROGRESS",
-      "tarefa": "UFV PARELHAS - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-      "criticidade": "",
-      "dataProgramada": "2026-06-22",
-      "dataCriacao": "2026-06-22",
-      "dataInicial": "2026-06-22",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "remoto"
-    },
-    {
       "osId": "8126",
       "ativo": "Cabine 1  Araputanga  Mato Grosso Brasil { APG100-CABN1 }",
       "equipe": "",
@@ -9917,14 +9881,15 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
       "criticidade": "",
       "dataProgramada": "2026-06-22",
       "dataCriacao": "2026-06-19",
-      "dataInicial": "",
+      "dataInicial": "2026-06-22",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0
     },
     {
       "osId": "8060",
@@ -10800,6 +10765,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "8137",
+      "ativo": "Thopen - Parelhas 1 - RN Rodovia RN 088, nº 01, Zona Rural Parelhas  Rio Grande do Norte Brasil { THPN-PRL100 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Silva",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Cláudio  Silva",
+      "status": "Finalizados",
+      "tarefa": "UFV PARELHAS - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+      "criticidade": "",
+      "dataProgramada": "2026-06-22",
+      "dataCriacao": "2026-06-22",
+      "dataInicial": "2026-06-22",
+      "dataFinal": "2026-06-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "8136",
       "ativo": "SKID 3 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID3 }",
@@ -13773,29 +13758,9 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "7831",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da Usina remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-06-15",
-      "dataCriacao": "2026-06-15",
-      "dataInicial": "2026-06-15",
-      "dataFinal": "2026-06-15",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1895,
+  "historicoTotal": 1896,
   "totalGeral": 3230,
   "verificacao": {
     "total": 0,
