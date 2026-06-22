@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-22T12:46:17Z",
+  "geradoEm": "2026-06-22T12:52:01Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2644,
-        "emAberto": 14,
-        "atrasadas": 7,
+        "total": 2645,
+        "emAberto": 15,
+        "atrasadas": 6,
         "concluidas30d": 533,
         "concluidas7d": 142,
-        "naSemanaCorrente": 8
+        "naSemanaCorrente": 10
       },
       "mttr": {
         "horas": 4.87,
@@ -33,12 +33,12 @@
         },
         {
           "semana": "W25",
-          "criadas": 147,
+          "criadas": 146,
           "finalizadas": 137
         },
         {
           "semana": "W26",
-          "criadas": 4,
+          "criadas": 6,
           "finalizadas": 5
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2644,
-            "emAberto": 14
+            "total": 2645,
+            "emAberto": 15
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
-      "atrasadas": 7,
+      "total": 15,
+      "atrasadas": 6,
       "porStatus": {
         "naoIniciada": 12,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -139,24 +139,6 @@
           "criticidade": "",
           "dataProgramada": "2026-06-17",
           "dataCriacao": "2026-06-17",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "7964",
-          "ativo": "Inversor 1.4 SOLAREDGE     { ELF100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento do inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-06-18",
-          "dataCriacao": "2026-06-18",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -217,6 +199,43 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "8126",
+          "ativo": "Cabine 1  Araputanga  Mato Grosso Brasil { APG100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Adriano  Moraes",
+          "status": "Não Iniciada",
+          "tarefa": "Inspeção técnica do comando remoto de religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-22",
+          "dataCriacao": "2026-06-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "8124",
+          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Wesllen  Castro",
+          "status": "IN_PROGRESS",
+          "tarefa": "UFV IPX 01 E 02- Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+          "criticidade": "",
+          "dataProgramada": "2026-06-22",
+          "dataCriacao": "2026-06-22",
+          "dataInicial": "2026-06-22",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "remoto",
+          "atrasada": false
         },
         {
           "osId": "8118",
@@ -3349,10 +3368,10 @@
       ],
       "historicoTotal": 1537,
       "subClassificacao": {
-        "remoto": 543,
-        "local": 2101,
-        "remotoEmAberto": 5,
-        "localEmAberto": 9,
+        "remoto": 545,
+        "local": 2100,
+        "remotoEmAberto": 7,
+        "localEmAberto": 8,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -3523,12 +3542,12 @@
         ],
         "medHorasAbrir": 3.3,
         "medHorasFechar": 3.3,
-        "amostraAbrir": 533,
+        "amostraAbrir": 534,
         "amostraFechar": 533,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
-            "total": 258
+            "total": 259
           },
           {
             "nome": "Felipe Silva",
@@ -3544,7 +3563,7 @@
           },
           {
             "nome": "Juliana Cândido",
-            "total": 19
+            "total": 20
           },
           {
             "nome": "LuelySantos",
@@ -9843,6 +9862,41 @@
   },
   "ossPublicas": [
     {
+      "osId": "8126",
+      "ativo": "Cabine 1  Araputanga  Mato Grosso Brasil { APG100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Adriano  Moraes",
+      "status": "Não Iniciada",
+      "tarefa": "Inspeção técnica do comando remoto de religamento da usina",
+      "criticidade": "",
+      "dataProgramada": "2026-06-22",
+      "dataCriacao": "2026-06-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
+      "osId": "8124",
+      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Wesllen  Castro",
+      "status": "IN_PROGRESS",
+      "tarefa": "UFV IPX 01 E 02- Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+      "criticidade": "",
+      "dataProgramada": "2026-06-22",
+      "dataCriacao": "2026-06-22",
+      "dataInicial": "2026-06-22",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "remoto"
+    },
+    {
       "osId": "8120",
       "ativo": "Inversor 2.8 Huawei     { MAB200-INVR2.8 }",
       "equipe": "",
@@ -10075,23 +10129,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "7964",
-      "ativo": "Inversor 1.4 SOLAREDGE     { ELF100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
-      "tarefa": "Religamento do inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-06-18",
-      "dataCriacao": "2026-06-18",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "7943",
@@ -13862,7 +13899,7 @@
     }
   ],
   "historicoTotal": 1888,
-  "totalGeral": 3225,
+  "totalGeral": 3226,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
