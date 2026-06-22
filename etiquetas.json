@@ -1,7 +1,7 @@
 {
-  "geradoEm": "2026-06-22T02:58:15Z",
+  "geradoEm": "2026-06-22T03:06:09Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
-  "semana": "2026-06-15 .. 2026-06-21",
+  "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
@@ -10,22 +10,17 @@
       "kpis": {
         "total": 2640,
         "emAberto": 14,
-        "atrasadas": 6,
-        "concluidas30d": 550,
-        "concluidas7d": 150,
-        "naSemanaCorrente": 144
+        "atrasadas": 10,
+        "concluidas30d": 529,
+        "concluidas7d": 138,
+        "naSemanaCorrente": 4
       },
       "mttr": {
-        "horas": 4.63,
-        "label": "4h 38min",
-        "amostra": 550
+        "horas": 4.73,
+        "label": "4h 44min",
+        "amostra": 529
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W22",
-          "criadas": 112,
-          "finalizadas": 107
-        },
         {
           "semana": "W23",
           "criadas": 91,
@@ -40,6 +35,11 @@
           "semana": "W25",
           "criadas": 147,
           "finalizadas": 138
+        },
+        {
+          "semana": "W26",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -79,7 +79,7 @@
         ]
       },
       "total": 14,
-      "atrasadas": 6,
+      "atrasadas": 10,
       "porStatus": {
         "naoIniciada": 12,
         "emProgresso": 1,
@@ -215,7 +215,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "8110",
@@ -234,7 +234,7 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "8093",
@@ -252,7 +252,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "remoto",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "8092",
@@ -270,7 +270,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "8035",
@@ -3347,7 +3347,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1547,
+      "historicoTotal": 1533,
       "subClassificacao": {
         "remoto": 542,
         "local": 2098,
@@ -3577,21 +3577,16 @@
         "total": 407,
         "emAberto": 37,
         "atrasadas": 28,
-        "concluidas30d": 88,
+        "concluidas30d": 84,
         "concluidas7d": 19,
-        "naSemanaCorrente": 15
+        "naSemanaCorrente": 10
       },
       "mttr": {
-        "horas": 263.73,
-        "label": "10d 23h",
-        "amostra": 88
+        "horas": 269.14,
+        "label": "11d 5h",
+        "amostra": 84
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W22",
-          "criadas": 10,
-          "finalizadas": 20
-        },
         {
           "semana": "W23",
           "criadas": 29,
@@ -3606,6 +3601,11 @@
           "semana": "W25",
           "criadas": 9,
           "finalizadas": 19
+        },
+        {
+          "semana": "W26",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -7146,7 +7146,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 236
+      "historicoTotal": 234
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -7156,21 +7156,16 @@
         "total": 123,
         "emAberto": 3,
         "atrasadas": 3,
-        "concluidas30d": 28,
+        "concluidas30d": 24,
         "concluidas7d": 8,
-        "naSemanaCorrente": 4
+        "naSemanaCorrente": 0
       },
       "mttr": {
-        "horas": 183.43,
-        "label": "7d 15h",
-        "amostra": 28
+        "horas": 201.0,
+        "label": "8d 9h",
+        "amostra": 24
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W22",
-          "criadas": 7,
-          "finalizadas": 4
-        },
         {
           "semana": "W23",
           "criadas": 2,
@@ -7185,6 +7180,11 @@
           "semana": "W25",
           "criadas": 1,
           "finalizadas": 8
+        },
+        {
+          "semana": "W26",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -9074,66 +9074,9 @@
           "horasAteAbrir": 96.0,
           "horasAteFechar": 192.0,
           "atrasada": false
-        },
-        {
-          "osId": "4122",
-          "ativo": "Estrutura Trackers Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "João  Neves",
-          "criadoPor": "Juliana Cândido ",
-          "supervisor": "João  Neves",
-          "status": "Finalizados",
-          "tarefa": "Abertura de chamado para garantia [Correção Local do Sentido do Giro]",
-          "criticidade": "",
-          "dataProgramada": "2026-03-13",
-          "dataCriacao": "2026-03-13",
-          "dataInicial": "2026-03-13",
-          "dataFinal": "2026-03-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 240.0,
-          "atrasada": false
-        },
-        {
-          "osId": "3900",
-          "ativo": "Estrutura Trackers  Araçoiaba  São Paulo Brasil { ADS100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizados",
-          "tarefa": "Abertura de chamado para garantia [Alinhar o ângulo da fileira motora e movida]",
-          "criticidade": "",
-          "dataProgramada": "2026-03-11",
-          "dataCriacao": "2026-03-10",
-          "dataInicial": "2026-03-23",
-          "dataFinal": "2026-03-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 312.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "3899",
-          "ativo": "Estrutura Trackers  Araçoiaba  São Paulo Brasil { ADS200-ETKR1 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizados",
-          "tarefa": "\"Abertura de chamado para garantia [Teste 01]\"",
-          "criticidade": "",
-          "dataProgramada": "2026-03-11",
-          "dataCriacao": "2026-03-10",
-          "dataInicial": "2026-03-17",
-          "dataFinal": "2026-03-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
-          "horasAteFechar": 144.0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 97
+      "historicoTotal": 94
     },
     "performance": {
       "label": "Performance",
@@ -9145,7 +9088,7 @@
         "atrasadas": 3,
         "concluidas30d": 3,
         "concluidas7d": 1,
-        "naSemanaCorrente": 3
+        "naSemanaCorrente": 0
       },
       "mttr": {
         "horas": 16.0,
@@ -9153,11 +9096,6 @@
         "amostra": 3
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W22",
-          "criadas": 1,
-          "finalizadas": 0
-        },
         {
           "semana": "W23",
           "criadas": 0,
@@ -9172,6 +9110,11 @@
           "semana": "W25",
           "criadas": 3,
           "finalizadas": 1
+        },
+        {
+          "semana": "W26",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -9540,28 +9483,9 @@
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "4501",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizada",
-          "tarefa": "Perda de comunicação na usina",
-          "criticidade": "",
-          "dataProgramada": "2026-03-22",
-          "dataCriacao": "2026-03-22",
-          "dataInicial": "2026-03-22",
-          "dataFinal": "2026-03-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 15
+      "historicoTotal": 14
     },
     "engenharia": {
       "label": "Engenharia",
@@ -9573,7 +9497,7 @@
         "atrasadas": 4,
         "concluidas30d": 2,
         "concluidas7d": 0,
-        "naSemanaCorrente": 1
+        "naSemanaCorrente": 0
       },
       "mttr": {
         "horas": 1536.0,
@@ -9581,11 +9505,6 @@
         "amostra": 2
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W22",
-          "criadas": 0,
-          "finalizadas": 1
-        },
         {
           "semana": "W23",
           "criadas": 2,
@@ -9599,6 +9518,11 @@
         {
           "semana": "W25",
           "criadas": 1,
+          "finalizadas": 0
+        },
+        {
+          "semana": "W26",
+          "criadas": 0,
           "finalizadas": 0
         }
       ],
@@ -13902,7 +13826,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 1904,
+  "historicoTotal": 1884,
   "totalGeral": 3220,
   "verificacao": {
     "total": 0,
