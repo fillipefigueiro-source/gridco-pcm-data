@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-22T20:06:42Z",
+  "geradoEm": "2026-06-22T20:11:46Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -82,8 +82,8 @@
       "atrasadas": 6,
       "porStatus": {
         "naoIniciada": 9,
-        "emProgresso": 2,
-        "pausada": 0,
+        "emProgresso": 1,
+        "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
@@ -170,7 +170,7 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "LuelySantos",
           "supervisor": "Rodrigo  Silva",
-          "status": "IN_PROGRESS",
+          "status": "pausado",
           "tarefa": "Religamento da usina",
           "criticidade": "",
           "dataProgramada": "2026-06-19",
@@ -619,16 +619,16 @@
           "responsavel": "Marcos Duarte ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Marcos Duarte ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "UFV VARGEM  - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
           "criticidade": "",
           "dataProgramada": "2026-06-21",
           "dataCriacao": "2026-06-21",
-          "dataInicial": "2026-06-22",
+          "dataInicial": "2026-06-20",
           "dataFinal": "2026-06-22",
           "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
+          "horasAteAbrir": 0,
+          "horasAteFechar": 48.0,
           "modalidade": "remoto",
           "atrasada": false
         },
@@ -3435,6 +3435,14 @@
             "linkFracttal": ""
           },
           {
+            "osId": "8093",
+            "ativo": "Thopen - Vargem Grande 1 - ES  Vargem Grande  Espirito Santo Brasil { THPN-VRG100 }",
+            "criadoPor": "ItaloLustosa",
+            "responsavel": "Marcos Duarte ",
+            "horas": 48.0,
+            "linkFracttal": ""
+          },
+          {
             "osId": "6456",
             "ativo": "Cabine 1  Ipixuna  Pará Brasil { IPX100-CABN1 }",
             "criadoPor": "ItaloLustosa",
@@ -3457,18 +3465,10 @@
             "responsavel": "Leandro Cruz ",
             "horas": 48.0,
             "linkFracttal": ""
-          },
-          {
-            "osId": "8095",
-            "ativo": "Cabine 1 Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-CABN1 }",
-            "criadoPor": "Felipe Silva ",
-            "responsavel": "Felipe Silva ",
-            "horas": 24.0,
-            "linkFracttal": ""
           }
         ],
-        "medHorasAbrir": 3.3,
-        "medHorasFechar": 3.3,
+        "medHorasAbrir": 3.2,
+        "medHorasFechar": 3.4,
         "amostraAbrir": 538,
         "amostraFechar": 538,
         "topAbridores": [
@@ -10010,7 +10010,7 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "LuelySantos",
       "supervisor": "Rodrigo  Silva",
-      "status": "IN_PROGRESS",
+      "status": "pausado",
       "tarefa": "Religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-06-19",
@@ -11482,16 +11482,16 @@
       "responsavel": "Marcos Duarte ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Marcos Duarte ",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "UFV VARGEM  - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
       "criticidade": "",
       "dataProgramada": "2026-06-21",
       "dataCriacao": "2026-06-21",
-      "dataInicial": "2026-06-22",
+      "dataInicial": "2026-06-20",
       "dataFinal": "2026-06-22",
       "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
+      "horasAteAbrir": 0,
+      "horasAteFechar": 48.0,
       "modalidade": "remoto",
       "atrasada": false
     },
