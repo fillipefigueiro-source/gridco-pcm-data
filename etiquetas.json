@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-22T21:10:59Z",
+  "geradoEm": "2026-06-22T21:16:08Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 2657,
-        "emAberto": 11,
+        "emAberto": 10,
         "atrasadas": 6,
-        "concluidas30d": 549,
-        "concluidas7d": 158,
+        "concluidas30d": 550,
+        "concluidas7d": 159,
         "naSemanaCorrente": 22
       },
       "mttr": {
-        "horas": 4.73,
-        "label": "4h 44min",
-        "amostra": 549
+        "horas": 4.72,
+        "label": "4h 43min",
+        "amostra": 550
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W26",
           "criadas": 18,
-          "finalizadas": 18
+          "finalizadas": 19
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 2657,
-            "emAberto": 11
+            "emAberto": 10
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 11,
+      "total": 10,
       "atrasadas": 6,
       "porStatus": {
-        "naoIniciada": 9,
+        "naoIniciada": 8,
         "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 11
+        "(sem equipe)": 10
       },
       "oss": [
         {
@@ -199,24 +199,6 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
-        },
-        {
-          "osId": "8118",
-          "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { STN100-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento do inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-06-22",
-          "dataCriacao": "2026-06-22",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
         },
         {
           "osId": "8040",
@@ -573,6 +555,26 @@
           "atrasada": false
         },
         {
+          "osId": "8118",
+          "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { STN100-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "Religamento do inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-06-22",
+          "dataCriacao": "2026-06-22",
+          "dataInicial": "2026-06-22",
+          "dataFinal": "2026-06-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "8116",
           "ativo": "RenoGrid - Nova Xavantina 1 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso  { RNGD-NVX100 }",
           "equipe": "",
@@ -759,7 +761,7 @@
           "responsavel": "Frank  Melo",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Frank  Melo",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-06-21",
@@ -779,7 +781,7 @@
           "responsavel": "Frank  Melo",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Frank  Melo",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "UFV IPX - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
           "criticidade": "",
           "dataProgramada": "2026-06-21",
@@ -3233,26 +3235,6 @@
           "atrasada": false
         },
         {
-          "osId": "7846",
-          "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da Usina remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "2026-06-15",
-          "dataInicial": "2026-06-15",
-          "dataFinal": "2026-06-15",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "7894",
           "ativo": "Axis - Petrolina 3 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL300 }",
           "equipe": "",
@@ -3293,12 +3275,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1553,
+      "historicoTotal": 1554,
       "subClassificacao": {
         "remoto": 548,
         "local": 2109,
         "remotoEmAberto": 5,
-        "localEmAberto": 6,
+        "localEmAberto": 5,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -10087,23 +10069,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "8118",
-      "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { STN100-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
-      "tarefa": "Religamento do inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-06-22",
-      "dataCriacao": "2026-06-22",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "8092",
       "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
       "equipe": "",
@@ -11277,6 +11242,26 @@
       "atrasada": false
     },
     {
+      "osId": "8118",
+      "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { STN100-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Finalizados",
+      "tarefa": "Religamento do inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-06-22",
+      "dataCriacao": "2026-06-22",
+      "dataInicial": "2026-06-22",
+      "dataFinal": "2026-06-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "8116",
       "ativo": "RenoGrid - Nova Xavantina 1 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso  { RNGD-NVX100 }",
       "equipe": "",
@@ -11423,7 +11408,7 @@
       "responsavel": "Frank  Melo",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Frank  Melo",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-06-21",
@@ -11443,7 +11428,7 @@
       "responsavel": "Frank  Melo",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Frank  Melo",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "UFV IPX - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
       "criticidade": "",
       "dataProgramada": "2026-06-21",
@@ -13969,29 +13954,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7860",
-      "ativo": "Inversor 2.8 Huawei     { MAB200-INVR2.8 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "James Chaves ",
-      "status": "Finalizada",
-      "tarefa": "Religamento do inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-06-15",
-      "dataCriacao": "2026-06-15",
-      "dataInicial": "2026-06-15",
-      "dataFinal": "2026-06-15",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1906,
+  "historicoTotal": 1907,
   "totalGeral": 3247,
   "verificacao": {
     "total": 0,
