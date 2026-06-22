@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-22T12:16:40Z",
+  "geradoEm": "2026-06-22T12:22:16Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2643,
-        "emAberto": 17,
-        "atrasadas": 10,
-        "concluidas30d": 529,
-        "concluidas7d": 138,
-        "naSemanaCorrente": 7
+        "total": 2644,
+        "emAberto": 16,
+        "atrasadas": 9,
+        "concluidas30d": 531,
+        "concluidas7d": 140,
+        "naSemanaCorrente": 8
       },
       "mttr": {
-        "horas": 4.73,
-        "label": "4h 44min",
-        "amostra": 529
+        "horas": 4.75,
+        "label": "4h 45min",
+        "amostra": 531
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W26",
-          "criadas": 3,
-          "finalizadas": 0
+          "criadas": 4,
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2643,
-            "emAberto": 17
+            "total": 2644,
+            "emAberto": 16
           }
         ],
         "responsaveis": [
@@ -73,21 +73,21 @@
           },
           {
             "nome": "Italo  Lustosa",
-            "total": 114,
+            "total": 115,
             "emAberto": 0
           }
         ]
       },
-      "total": 17,
-      "atrasadas": 10,
+      "total": 16,
+      "atrasadas": 9,
       "porStatus": {
-        "naoIniciada": 14,
+        "naoIniciada": 13,
         "emProgresso": 2,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 17
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -206,14 +206,15 @@
           "responsavel": "Gilson  Milhomem",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Gilson  Milhomem",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da UFV Céu Azul",
           "criticidade": "",
           "dataProgramada": "2026-06-21",
           "dataCriacao": "2026-06-21",
-          "dataInicial": "",
+          "dataInicial": "2026-06-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -234,25 +235,6 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "8093",
-          "ativo": "Thopen - Vargem Grande 1 - ES  Vargem Grande  Espirito Santo Brasil { THPN-VRG100 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Marcos Duarte ",
-          "status": "IN_PROGRESS",
-          "tarefa": "UFV VARGEM  - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-          "criticidade": "",
-          "dataProgramada": "2026-06-21",
-          "dataCriacao": "2026-06-21",
-          "dataInicial": "2026-06-22",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "modalidade": "remoto",
           "atrasada": true
         },
         {
@@ -401,6 +383,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8121",
+          "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
+          "equipe": "",
+          "responsavel": "Italo  Lustosa",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Italo  Lustosa",
+          "status": "Finalizados",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-22",
+          "dataCriacao": "2026-06-22",
+          "dataInicial": "2026-06-22",
+          "dataFinal": "2026-06-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8093",
+          "ativo": "Thopen - Vargem Grande 1 - ES  Vargem Grande  Espirito Santo Brasil { THPN-VRG100 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Marcos Duarte ",
+          "status": "Finalizados",
+          "tarefa": "UFV VARGEM  - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+          "criticidade": "",
+          "dataProgramada": "2026-06-21",
+          "dataCriacao": "2026-06-21",
+          "dataInicial": "2026-06-22",
+          "dataFinal": "2026-06-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "8113",
           "ativo": "SKID 1 LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { CAZ100-SKID1 }",
@@ -3342,46 +3364,6 @@
           "atrasada": false
         },
         {
-          "osId": "7813",
-          "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da Usina remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-06-13",
-          "dataCriacao": "2026-06-13",
-          "dataInicial": "2026-06-13",
-          "dataFinal": "2026-06-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
-          "osId": "7812",
-          "ativo": "Cabine 7  Capitão Poço  Pará Brasil { CPP100-CABN7 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da Usina remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-06-13",
-          "dataCriacao": "2026-06-13",
-          "dataInicial": "2026-06-13",
-          "dataFinal": "2026-06-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "7865",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
           "equipe": "",
@@ -3402,11 +3384,11 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1533,
+      "historicoTotal": 1535,
       "subClassificacao": {
         "remoto": 543,
-        "local": 2100,
-        "remotoEmAberto": 6,
+        "local": 2101,
+        "remotoEmAberto": 5,
         "localEmAberto": 11,
         "pctRemoto": 21,
         "alerta": true
@@ -3579,7 +3561,7 @@
         "medHorasAbrir": 3.3,
         "medHorasFechar": 3.3,
         "amostraAbrir": 533,
-        "amostraFechar": 532,
+        "amostraFechar": 533,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -9970,14 +9952,15 @@
       "responsavel": "Gilson  Milhomem",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Gilson  Milhomem",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da UFV Céu Azul",
       "criticidade": "",
       "dataProgramada": "2026-06-21",
       "dataCriacao": "2026-06-21",
-      "dataInicial": "",
+      "dataInicial": "2026-06-22",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -9997,24 +9980,6 @@
       "linkFracttal": "",
       "horasAteAbrir": 0,
       "modalidade": "local"
-    },
-    {
-      "osId": "8093",
-      "ativo": "Thopen - Vargem Grande 1 - ES  Vargem Grande  Espirito Santo Brasil { THPN-VRG100 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Marcos Duarte ",
-      "status": "IN_PROGRESS",
-      "tarefa": "UFV VARGEM  - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-      "criticidade": "",
-      "dataProgramada": "2026-06-21",
-      "dataCriacao": "2026-06-21",
-      "dataInicial": "2026-06-22",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "modalidade": "remoto"
     },
     {
       "osId": "8092",
@@ -10972,6 +10937,26 @@
   ],
   "ossHistorico": [
     {
+      "osId": "8121",
+      "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
+      "equipe": "",
+      "responsavel": "Italo  Lustosa",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Italo  Lustosa",
+      "status": "Finalizados",
+      "tarefa": "Religamento da usina",
+      "criticidade": "",
+      "dataProgramada": "2026-06-22",
+      "dataCriacao": "2026-06-22",
+      "dataInicial": "2026-06-22",
+      "dataFinal": "2026-06-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "8113",
       "ativo": "SKID 1 LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { CAZ100-SKID1 }",
       "equipe": "",
@@ -11249,6 +11234,26 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "8093",
+      "ativo": "Thopen - Vargem Grande 1 - ES  Vargem Grande  Espirito Santo Brasil { THPN-VRG100 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Marcos Duarte ",
+      "status": "Finalizados",
+      "tarefa": "UFV VARGEM  - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+      "criticidade": "",
+      "dataProgramada": "2026-06-21",
+      "dataCriacao": "2026-06-21",
+      "dataInicial": "2026-06-22",
+      "dataFinal": "2026-06-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
       "atrasada": false
     },
     {
@@ -13924,50 +13929,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7820",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina de Marialva",
-      "criticidade": "",
-      "dataProgramada": "2026-06-14",
-      "dataCriacao": "2026-06-14",
-      "dataInicial": "2026-06-14",
-      "dataFinal": "2026-06-14",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "7819",
-      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "religamento da usina de CPP100",
-      "criticidade": "",
-      "dataProgramada": "2026-06-14",
-      "dataCriacao": "2026-06-14",
-      "dataInicial": "2026-06-13",
-      "dataFinal": "2026-06-14",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1884,
-  "totalGeral": 3224,
+  "historicoTotal": 1886,
+  "totalGeral": 3225,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
