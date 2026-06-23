@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-23T20:55:51Z",
+  "geradoEm": "2026-06-23T21:00:39Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 2680,
-        "emAberto": 10,
+        "emAberto": 9,
         "atrasadas": 4,
-        "concluidas30d": 550,
-        "concluidas7d": 163,
+        "concluidas30d": 551,
+        "concluidas7d": 164,
         "naSemanaCorrente": 45
       },
       "mttr": {
-        "horas": 5.04,
+        "horas": 5.03,
         "label": "5h 2min",
-        "amostra": 550
+        "amostra": 551
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W26",
           "criadas": 42,
-          "finalizadas": 41
+          "finalizadas": 42
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 2680,
-            "emAberto": 10
+            "emAberto": 9
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 10,
+      "total": 9,
       "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 8,
-        "emProgresso": 2,
+        "naoIniciada": 6,
+        "emProgresso": 3,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 10
+        "(sem equipe)": 9
       },
       "oss": [
         {
@@ -170,14 +170,15 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "LuelySantos",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da usina",
           "criticidade": "",
           "dataProgramada": "2026-06-23",
           "dataCriacao": "2026-06-23",
-          "dataInicial": "",
+          "dataInicial": "2026-06-23",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -188,26 +189,8 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "LuelySantos",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento da usina",
-          "criticidade": "",
-          "dataProgramada": "2026-06-23",
-          "dataCriacao": "2026-06-23",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "8188",
-          "ativo": "Cabine 1 Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { STN100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
           "status": "IN_PROGRESS",
-          "tarefa": "Desligamento e religamento da usina para remoção de grades do Transformador e Cabine",
+          "tarefa": "Religamento da usina",
           "criticidade": "",
           "dataProgramada": "2026-06-23",
           "dataCriacao": "2026-06-23",
@@ -563,6 +546,26 @@
           "supervisor": "Juliana Rogério ",
           "status": "Finalizada",
           "tarefa": "Religamento da UFV Junco",
+          "criticidade": "",
+          "dataProgramada": "2026-06-23",
+          "dataCriacao": "2026-06-23",
+          "dataInicial": "2026-06-23",
+          "dataFinal": "2026-06-23",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8188",
+          "ativo": "Cabine 1 Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { STN100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "Desligamento e religamento da usina para remoção de grades do Transformador e Cabine",
           "criticidade": "",
           "dataProgramada": "2026-06-23",
           "dataCriacao": "2026-06-23",
@@ -3253,34 +3256,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "7898",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da usina de Marialva",
-          "criticidade": "",
-          "dataProgramada": "2026-06-16",
-          "dataCriacao": "2026-06-16",
-          "dataInicial": "2026-06-16",
-          "dataFinal": "2026-06-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1559,
+      "historicoTotal": 1560,
       "subClassificacao": {
         "remoto": 553,
         "local": 2127,
         "remotoEmAberto": 4,
-        "localEmAberto": 6,
+        "localEmAberto": 5,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -10151,14 +10134,15 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "LuelySantos",
       "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-06-23",
       "dataCriacao": "2026-06-23",
-      "dataInicial": "",
+      "dataInicial": "2026-06-23",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -10168,25 +10152,8 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "LuelySantos",
       "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "Religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-23",
-      "dataCriacao": "2026-06-23",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "8188",
-      "ativo": "Cabine 1 Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { STN100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
       "status": "IN_PROGRESS",
-      "tarefa": "Desligamento e religamento da usina para remoção de grades do Transformador e Cabine",
+      "tarefa": "Religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-06-23",
       "dataCriacao": "2026-06-23",
@@ -11233,6 +11200,26 @@
       "supervisor": "Juliana Rogério ",
       "status": "Finalizada",
       "tarefa": "Religamento da UFV Junco",
+      "criticidade": "",
+      "dataProgramada": "2026-06-23",
+      "dataCriacao": "2026-06-23",
+      "dataInicial": "2026-06-23",
+      "dataFinal": "2026-06-23",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "8188",
+      "ativo": "Cabine 1 Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { STN100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Finalizados",
+      "tarefa": "Desligamento e religamento da usina para remoção de grades do Transformador e Cabine",
       "criticidade": "",
       "dataProgramada": "2026-06-23",
       "dataCriacao": "2026-06-23",
@@ -13897,29 +13884,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7905",
-      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina de CPP100",
-      "criticidade": "",
-      "dataProgramada": "2026-06-16",
-      "dataCriacao": "2026-06-16",
-      "dataInicial": "2026-06-16",
-      "dataFinal": "2026-06-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1914,
+  "historicoTotal": 1915,
   "totalGeral": 3279,
   "verificacao": {
     "total": 0,
