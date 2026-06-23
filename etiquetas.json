@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-23T19:07:39Z",
+  "geradoEm": "2026-06-23T19:11:42Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 14,
       "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 13,
-        "emProgresso": 1,
+        "naoIniciada": 11,
+        "emProgresso": 3,
         "pausada": 0,
         "verificacao": 0
       },
@@ -170,14 +170,15 @@
           "responsavel": "Cleiton  Farias",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Cleiton  Farias",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "religamento do inversor",
           "criticidade": "",
           "dataProgramada": "2026-06-23",
           "dataCriacao": "2026-06-23",
-          "dataInicial": "",
+          "dataInicial": "2026-06-23",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -188,14 +189,15 @@
           "responsavel": "Marcos Duarte ",
           "criadoPor": "LuelySantos",
           "supervisor": "Marcos Duarte ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da usina",
           "criticidade": "",
           "dataProgramada": "2026-06-23",
           "dataCriacao": "2026-06-23",
-          "dataInicial": "",
+          "dataInicial": "2026-06-23",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -432,7 +434,7 @@
           "responsavel": "Marcos Duarte ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Marcos Duarte ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "Religamento UFV Primavera 2",
           "criticidade": "",
           "dataProgramada": "2026-06-23",
@@ -3573,8 +3575,8 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 411,
-        "emAberto": 33,
+        "total": 412,
+        "emAberto": 34,
         "atrasadas": 25,
         "concluidas30d": 92,
         "concluidas7d": 23,
@@ -3603,7 +3605,7 @@
         },
         {
           "semana": "W26",
-          "criadas": 4,
+          "criadas": 5,
           "finalizadas": 8
         }
       ],
@@ -3611,8 +3613,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 411,
-            "emAberto": 33
+            "total": 412,
+            "emAberto": 34
           }
         ],
         "responsaveis": [
@@ -3643,16 +3645,16 @@
           }
         ]
       },
-      "total": 33,
+      "total": 34,
       "atrasadas": 25,
       "porStatus": {
-        "naoIniciada": 22,
+        "naoIniciada": 23,
         "emProgresso": 4,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 33
+        "(sem equipe)": 34
       },
       "oss": [
         {
@@ -4154,6 +4156,23 @@
           "criticidade": "",
           "dataProgramada": "2026-06-26",
           "dataCriacao": "2026-06-09",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8238",
+          "ativo": "Cabine 1  Araçoiaba  São Paulo Brasil { ADS200-CABN1 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-06-23",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -9858,20 +9877,37 @@
   },
   "ossPublicas": [
     {
+      "osId": "8238",
+      "ativo": "Cabine 1  Araçoiaba  São Paulo Brasil { ADS200-CABN1 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-06-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "8237",
       "ativo": "Inversor 1.4 Huawei SUN2000-215KTL-H3    { MCB100-INVR1.4 }",
       "equipe": "",
       "responsavel": "Cleiton  Farias",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Cleiton  Farias",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "religamento do inversor",
       "criticidade": "",
       "dataProgramada": "2026-06-23",
       "dataCriacao": "2026-06-23",
-      "dataInicial": "",
+      "dataInicial": "2026-06-23",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -9945,14 +9981,15 @@
       "responsavel": "Marcos Duarte ",
       "criadoPor": "LuelySantos",
       "supervisor": "Marcos Duarte ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-06-23",
       "dataCriacao": "2026-06-23",
-      "dataInicial": "",
+      "dataInicial": "2026-06-23",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -11000,7 +11037,7 @@
       "responsavel": "Marcos Duarte ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Marcos Duarte ",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "Religamento UFV Primavera 2",
       "criticidade": "",
       "dataProgramada": "2026-06-23",
@@ -13910,7 +13947,7 @@
     }
   ],
   "historicoTotal": 1903,
-  "totalGeral": 3268,
+  "totalGeral": 3269,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
