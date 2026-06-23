@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-23T07:40:52Z",
+  "geradoEm": "2026-06-23T07:45:53Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2660,
-        "emAberto": 11,
+        "total": 2661,
+        "emAberto": 12,
         "atrasadas": 5,
         "concluidas30d": 529,
         "concluidas7d": 142,
-        "naSemanaCorrente": 25
+        "naSemanaCorrente": 26
       },
       "mttr": {
         "horas": 4.77,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W26",
-          "criadas": 21,
+          "criadas": 22,
           "finalizadas": 21
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2660,
-            "emAberto": 11
+            "total": 2661,
+            "emAberto": 12
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 11,
+      "total": 12,
       "atrasadas": 5,
       "porStatus": {
-        "naoIniciada": 9,
+        "naoIniciada": 10,
         "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 11
+        "(sem equipe)": 12
       },
       "oss": [
         {
@@ -181,6 +181,24 @@
           "horasAteAbrir": 72.0,
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "8178",
+          "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "UFV: CPP100 | Proteção: -- | Ação: Religamento Local | Falha: Desligamento da cabine 5, que está sem comunicação impossibilitando comando remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-06-23",
+          "dataCriacao": "2026-06-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
         },
         {
           "osId": "8177",
@@ -3295,9 +3313,9 @@
       ],
       "historicoTotal": 1538,
       "subClassificacao": {
-        "remoto": 549,
+        "remoto": 550,
         "local": 2111,
-        "remotoEmAberto": 5,
+        "remotoEmAberto": 6,
         "localEmAberto": 6,
         "pctRemoto": 21,
         "alerta": true
@@ -3498,7 +3516,7 @@
           },
           {
             "nome": "DavidNascimento",
-            "total": 8
+            "total": 9
           },
           {
             "nome": "Juliana Rogério",
@@ -9836,6 +9854,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "8178",
+      "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "UFV: CPP100 | Proteção: -- | Ação: Religamento Local | Falha: Desligamento da cabine 5, que está sem comunicação impossibilitando comando remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-06-23",
+      "dataCriacao": "2026-06-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
       "osId": "8177",
       "ativo": "RenoGrid - Nova Xavantina 1 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso  { RNGD-NVX100 }",
       "equipe": "",
@@ -13883,7 +13918,7 @@
     }
   ],
   "historicoTotal": 1885,
-  "totalGeral": 3250,
+  "totalGeral": 3251,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
