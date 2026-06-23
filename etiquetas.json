@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-23T20:11:34Z",
+  "geradoEm": "2026-06-23T20:21:32Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2679,
+        "total": 2680,
         "emAberto": 10,
         "atrasadas": 4,
-        "concluidas30d": 549,
-        "concluidas7d": 162,
-        "naSemanaCorrente": 44
+        "concluidas30d": 550,
+        "concluidas7d": 163,
+        "naSemanaCorrente": 45
       },
       "mttr": {
-        "horas": 5.09,
-        "label": "5h 6min",
-        "amostra": 549
+        "horas": 5.04,
+        "label": "5h 2min",
+        "amostra": 550
       },
       "tendencia4Semanas": [
         {
@@ -34,11 +34,11 @@
         {
           "semana": "W25",
           "criadas": 145,
-          "finalizadas": 140
+          "finalizadas": 141
         },
         {
           "semana": "W26",
-          "criadas": 41,
+          "criadas": 42,
           "finalizadas": 41
         }
       ],
@@ -46,7 +46,7 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2679,
+            "total": 2680,
             "emAberto": 10
           }
         ],
@@ -63,7 +63,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 201,
+            "total": 202,
             "emAberto": 0
           },
           {
@@ -81,8 +81,8 @@
       "total": 10,
       "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 9,
-        "emProgresso": 1,
+        "naoIniciada": 8,
+        "emProgresso": 2,
         "pausada": 0,
         "verificacao": 0
       },
@@ -206,14 +206,15 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Desligamento e religamento da usina para remoção de grades do Transformador e Cabine",
           "criticidade": "",
           "dataProgramada": "2026-06-23",
           "dataCriacao": "2026-06-23",
-          "dataInicial": "",
+          "dataInicial": "2026-06-23",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -273,6 +274,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8254",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da Usina remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-06-23",
+          "dataCriacao": "2026-06-23",
+          "dataInicial": "2026-06-23",
+          "dataFinal": "2026-06-23",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "8243",
           "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
@@ -1054,26 +1075,6 @@
           "atrasada": false
         },
         {
-          "osId": "8092",
-          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "DavidNascimento",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "UFV:Mandaguaçu | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
-          "criticidade": "",
-          "dataProgramada": "2026-06-21",
-          "dataCriacao": "2026-06-21",
-          "dataInicial": "2026-06-22",
-          "dataFinal": "2026-06-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "8035",
           "ativo": "Cabine 1 Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { STN100-CABN1 }",
           "equipe": "",
@@ -1402,6 +1403,26 @@
           "supervisor": "James Chaves ",
           "status": "Finalizada",
           "tarefa": "Religamento do inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-06-21",
+          "dataCriacao": "2026-06-21",
+          "dataInicial": "2026-06-21",
+          "dataFinal": "2026-06-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8092",
+          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Marcos  Camargo",
+          "status": "Finalizados",
+          "tarefa": "UFV:Mandaguaçu | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
           "criticidade": "",
           "dataProgramada": "2026-06-21",
           "dataCriacao": "2026-06-21",
@@ -3252,31 +3273,11 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "7896",
-          "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
-          "equipe": "",
-          "responsavel": "Italo  Lustosa",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Italo  Lustosa",
-          "status": "Finalizada",
-          "tarefa": "UFV COLORADO 2 - Religamento remoto da usina. Relé sem trip",
-          "criticidade": "",
-          "dataProgramada": "2026-06-16",
-          "dataCriacao": "2026-06-16",
-          "dataInicial": "2026-06-16",
-          "dataFinal": "2026-06-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1558,
+      "historicoTotal": 1559,
       "subClassificacao": {
-        "remoto": 552,
+        "remoto": 553,
         "local": 2127,
         "remotoEmAberto": 4,
         "localEmAberto": 6,
@@ -3450,8 +3451,8 @@
         ],
         "medHorasAbrir": 3.4,
         "medHorasFechar": 3.4,
-        "amostraAbrir": 543,
-        "amostraFechar": 543,
+        "amostraAbrir": 544,
+        "amostraFechar": 544,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3459,7 +3460,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 125
+            "total": 126
           },
           {
             "nome": "Raphael Vitoriano",
@@ -3501,17 +3502,17 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 417,
-        "emAberto": 39,
-        "atrasadas": 25,
-        "concluidas30d": 92,
-        "concluidas7d": 23,
+        "total": 419,
+        "emAberto": 40,
+        "atrasadas": 24,
+        "concluidas30d": 93,
+        "concluidas7d": 24,
         "naSemanaCorrente": 10
       },
       "mttr": {
-        "horas": 269.48,
-        "label": "11d 5h",
-        "amostra": 92
+        "horas": 270.19,
+        "label": "11d 6h",
+        "amostra": 93
       },
       "tendencia4Semanas": [
         {
@@ -3531,16 +3532,16 @@
         },
         {
           "semana": "W26",
-          "criadas": 10,
-          "finalizadas": 8
+          "criadas": 12,
+          "finalizadas": 9
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 417,
-            "emAberto": 39
+            "total": 419,
+            "emAberto": 40
           }
         ],
         "responsaveis": [
@@ -3562,7 +3563,7 @@
           {
             "nome": "Francisco  Santos",
             "total": 19,
-            "emAberto": 1
+            "emAberto": 0
           },
           {
             "nome": "Gilson Souza",
@@ -3571,16 +3572,16 @@
           }
         ]
       },
-      "total": 39,
-      "atrasadas": 25,
+      "total": 40,
+      "atrasadas": 24,
       "porStatus": {
-        "naoIniciada": 28,
-        "emProgresso": 4,
-        "pausada": 7,
+        "naoIniciada": 30,
+        "emProgresso": 2,
+        "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 39
+        "(sem equipe)": 40
       },
       "oss": [
         {
@@ -3853,25 +3854,7 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Luiz  Silva",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Athon] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-06-11",
-          "dataCriacao": "2026-06-09",
-          "dataInicial": "2026-06-23",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "atrasada": true
-        },
-        {
-          "osId": "7570",
-          "ativo": "Transformador 6 COMTRAFO     { MTS100-TRFR6 }",
-          "equipe": "",
-          "responsavel": "Francisco  Santos",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Francisco  Santos",
-          "status": "IN_PROGRESS",
+          "status": "pausado",
           "tarefa": "[Athon] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-06-11",
@@ -4256,6 +4239,40 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": false
+        },
+        {
+          "osId": "8253",
+          "ativo": "Cabine 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Ailton Leal ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-07-27",
+          "dataCriacao": "2026-06-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8252",
+          "ativo": "Cabine 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Ailton Leal ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-07-27",
+          "dataCriacao": "2026-06-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -4351,6 +4368,25 @@
           "dataFinal": "2026-06-23",
           "linkFracttal": "",
           "horasAteAbrir": 312.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "7570",
+          "ativo": "Transformador 6 COMTRAFO     { MTS100-TRFR6 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Francisco  Santos",
+          "status": "Finalizados",
+          "tarefa": "[Athon] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-06-11",
+          "dataCriacao": "2026-06-09",
+          "dataInicial": "2026-06-23",
+          "dataFinal": "2026-06-23",
+          "linkFracttal": "",
+          "horasAteAbrir": 336.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -7089,28 +7125,9 @@
           "horasAteAbrir": 120.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "5828",
-          "ativo": "Transformador 2 COMTRAFO     { SMP100-TRFR2 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Juliana Cândido ",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Athon] - MPS - Transformadores",
-          "criticidade": "",
-          "dataProgramada": "2026-04-23",
-          "dataCriacao": "2026-04-23",
-          "dataInicial": "2026-04-23",
-          "dataFinal": "2026-04-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 237
+      "historicoTotal": 238
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9890,6 +9907,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "8253",
+      "ativo": "Cabine 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Ailton Leal ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-07-27",
+      "dataCriacao": "2026-06-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8252",
+      "ativo": "Cabine 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Ailton Leal ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-07-27",
+      "dataCriacao": "2026-06-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "8251",
       "ativo": "Cabine 1 Rodovia João Carlos Stuqui S/N Fernandópolis  São Paulo Brasil { FRN100-CABN1 }",
       "equipe": "",
@@ -10170,14 +10219,15 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Desligamento e religamento da usina para remoção de grades do Transformador e Cabine",
       "criticidade": "",
       "dataProgramada": "2026-06-23",
       "dataCriacao": "2026-06-23",
-      "dataInicial": "",
+      "dataInicial": "2026-06-23",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -10467,24 +10517,7 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Luiz  Silva",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Athon] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-06-11",
-      "dataCriacao": "2026-06-09",
-      "dataInicial": "2026-06-23",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 336.0
-    },
-    {
-      "osId": "7570",
-      "ativo": "Transformador 6 COMTRAFO     { MTS100-TRFR6 }",
-      "equipe": "",
-      "responsavel": "Francisco  Santos",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Francisco  Santos",
-      "status": "IN_PROGRESS",
+      "status": "pausado",
       "tarefa": "[Athon] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-06-11",
@@ -10957,6 +10990,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "8254",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da Usina remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-06-23",
+      "dataCriacao": "2026-06-23",
+      "dataInicial": "2026-06-23",
+      "dataFinal": "2026-06-23",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "8247",
       "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
@@ -12087,10 +12140,10 @@
       "criticidade": "",
       "dataProgramada": "2026-06-21",
       "dataCriacao": "2026-06-21",
-      "dataInicial": "2026-06-22",
-      "dataFinal": "2026-06-22",
+      "dataInicial": "2026-06-21",
+      "dataFinal": "2026-06-21",
       "linkFracttal": "",
-      "horasAteAbrir": 24.0,
+      "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -13930,30 +13983,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7903",
-      "ativo": "SKID 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID2 }",
-      "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Ailton Leal ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-16",
-      "dataCriacao": "2026-06-16",
-      "dataInicial": "2026-06-16",
-      "dataFinal": "2026-06-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1912,
-  "totalGeral": 3278,
+  "historicoTotal": 1914,
+  "totalGeral": 3281,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
