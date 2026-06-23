@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-23T17:21:38Z",
+  "geradoEm": "2026-06-23T17:31:56Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 16,
       "atrasadas": 5,
       "porStatus": {
-        "naoIniciada": 12,
-        "emProgresso": 4,
+        "naoIniciada": 11,
+        "emProgresso": 5,
         "pausada": 0,
         "verificacao": 0
       },
@@ -189,14 +189,15 @@
           "responsavel": "Marcos Duarte ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Marcos Duarte ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento UFV Primavera 2",
           "criticidade": "",
           "dataProgramada": "2026-06-23",
           "dataCriacao": "2026-06-23",
-          "dataInicial": "",
+          "dataInicial": "2026-06-23",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -9001,12 +9002,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 39,
-        "emAberto": 6,
+        "total": 43,
+        "emAberto": 10,
         "atrasadas": 5,
         "concluidas30d": 3,
         "concluidas7d": 1,
-        "naSemanaCorrente": 3
+        "naSemanaCorrente": 7
       },
       "mttr": {
         "horas": 16.0,
@@ -9031,7 +9032,7 @@
         },
         {
           "semana": "W26",
-          "criadas": 3,
+          "criadas": 7,
           "finalizadas": 0
         }
       ],
@@ -9039,11 +9040,16 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 39,
-            "emAberto": 6
+            "total": 43,
+            "emAberto": 10
           }
         ],
         "responsaveis": [
+          {
+            "nome": "Roger Lélis",
+            "total": 7,
+            "emAberto": 7
+          },
           {
             "nome": "James Chaves",
             "total": 6,
@@ -9060,27 +9066,22 @@
             "emAberto": 0
           },
           {
-            "nome": "Roger Lélis",
-            "total": 3,
-            "emAberto": 3
-          },
-          {
             "nome": "Gabriela Dias",
             "total": 2,
             "emAberto": 2
           }
         ]
       },
-      "total": 6,
+      "total": 10,
       "atrasadas": 5,
       "porStatus": {
-        "naoIniciada": 6,
+        "naoIniciada": 10,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 6
+        "(sem equipe)": 10
       },
       "oss": [
         {
@@ -9167,6 +9168,74 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "8218",
+          "ativo": "Inversor 8.1 Sungrow     { JCD100-INVR8.1 }",
+          "equipe": "",
+          "responsavel": "Roger Lélis  ",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Roger Lélis  ",
+          "status": "Não Iniciada",
+          "tarefa": "Análise de módulos e string",
+          "criticidade": "",
+          "dataProgramada": "2026-06-23",
+          "dataCriacao": "2026-06-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8217",
+          "ativo": "Inversor 7.1 Sungrow     { JCD100-INVR7.1 }",
+          "equipe": "",
+          "responsavel": "Roger Lélis  ",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Roger Lélis  ",
+          "status": "Não Iniciada",
+          "tarefa": "Análise de módulos e string",
+          "criticidade": "",
+          "dataProgramada": "2026-06-23",
+          "dataCriacao": "2026-06-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8216",
+          "ativo": "Inversor 6.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR6.2 }",
+          "equipe": "",
+          "responsavel": "Roger Lélis  ",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Roger Lélis  ",
+          "status": "Não Iniciada",
+          "tarefa": "Análise de módulos e string",
+          "criticidade": "",
+          "dataProgramada": "2026-06-23",
+          "dataCriacao": "2026-06-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8215",
+          "ativo": "Inversor 3.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR3.2 }",
+          "equipe": "",
+          "responsavel": "Roger Lélis  ",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Roger Lélis  ",
+          "status": "Não Iniciada",
+          "tarefa": "Análise de módulos e string",
+          "criticidade": "",
+          "dataProgramada": "2026-06-23",
+          "dataCriacao": "2026-06-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "8214",
@@ -9793,6 +9862,70 @@
   },
   "ossPublicas": [
     {
+      "osId": "8218",
+      "ativo": "Inversor 8.1 Sungrow     { JCD100-INVR8.1 }",
+      "equipe": "",
+      "responsavel": "Roger Lélis  ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Roger Lélis  ",
+      "status": "Não Iniciada",
+      "tarefa": "Análise de módulos e string",
+      "criticidade": "",
+      "dataProgramada": "2026-06-23",
+      "dataCriacao": "2026-06-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8217",
+      "ativo": "Inversor 7.1 Sungrow     { JCD100-INVR7.1 }",
+      "equipe": "",
+      "responsavel": "Roger Lélis  ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Roger Lélis  ",
+      "status": "Não Iniciada",
+      "tarefa": "Análise de módulos e string",
+      "criticidade": "",
+      "dataProgramada": "2026-06-23",
+      "dataCriacao": "2026-06-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8216",
+      "ativo": "Inversor 6.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR6.2 }",
+      "equipe": "",
+      "responsavel": "Roger Lélis  ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Roger Lélis  ",
+      "status": "Não Iniciada",
+      "tarefa": "Análise de módulos e string",
+      "criticidade": "",
+      "dataProgramada": "2026-06-23",
+      "dataCriacao": "2026-06-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8215",
+      "ativo": "Inversor 3.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR3.2 }",
+      "equipe": "",
+      "responsavel": "Roger Lélis  ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Roger Lélis  ",
+      "status": "Não Iniciada",
+      "tarefa": "Análise de módulos e string",
+      "criticidade": "",
+      "dataProgramada": "2026-06-23",
+      "dataCriacao": "2026-06-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "8214",
       "ativo": "Inversor 2.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR2.2 }",
       "equipe": "",
@@ -9815,14 +9948,15 @@
       "responsavel": "Marcos Duarte ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Marcos Duarte ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento UFV Primavera 2",
       "criticidade": "",
       "dataProgramada": "2026-06-23",
       "dataCriacao": "2026-06-23",
-      "dataInicial": "",
+      "dataInicial": "2026-06-23",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -13781,7 +13915,7 @@
     }
   ],
   "historicoTotal": 1895,
-  "totalGeral": 3256,
+  "totalGeral": 3260,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
