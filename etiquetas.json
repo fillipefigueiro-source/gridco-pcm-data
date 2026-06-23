@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-23T16:46:11Z",
+  "geradoEm": "2026-06-23T16:51:15Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 15,
       "atrasadas": 5,
       "porStatus": {
-        "naoIniciada": 12,
-        "emProgresso": 3,
+        "naoIniciada": 11,
+        "emProgresso": 4,
         "pausada": 0,
         "verificacao": 0
       },
@@ -316,14 +316,15 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
           "criticidade": "",
           "dataProgramada": "2026-06-23",
           "dataCriacao": "2026-06-18",
-          "dataInicial": "",
+          "dataInicial": "2026-06-23",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 120.0,
           "modalidade": "remoto",
           "atrasada": false
         },
@@ -3410,6 +3411,14 @@
             "linkFracttal": ""
           },
           {
+            "osId": "7994",
+            "ativo": "Infraestrutura Civil Recanto do Ratinho, s/n Paranavaí  Paraná Brasil { THPN-PRV100-INFC1 }",
+            "criadoPor": "Juliana Cândido",
+            "responsavel": "Ronaldo  Silva",
+            "horas": 120.0,
+            "linkFracttal": ""
+          },
+          {
             "osId": "5321",
             "ativo": "Athon - Matões  2 - MA Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { ATHN-MTS200 }",
             "criadoPor": "Juliana Cândido",
@@ -3446,14 +3455,6 @@
             "ativo": "2C - Sete Lagoas 2 - MG  Sete Lagoas  Minas Gerais Brasil { 2C-SLG200 }",
             "criadoPor": "Juliana Cândido",
             "responsavel": "Daniel de Paula ",
-            "horas": 48.0,
-            "linkFracttal": ""
-          },
-          {
-            "osId": "7276",
-            "ativo": "Thopen - Parelhas 1 - RN Rodovia RN 088, nº 01, Zona Rural Parelhas  Rio Grande do Norte Brasil { THPN-PRL100 }",
-            "criadoPor": "Juliana Cândido",
-            "responsavel": "Cláudio  Silva",
             "horas": 48.0,
             "linkFracttal": ""
           }
@@ -3540,9 +3541,9 @@
             "linkFracttal": ""
           }
         ],
-        "medHorasAbrir": 3.2,
+        "medHorasAbrir": 3.4,
         "medHorasFechar": 3.4,
-        "amostraAbrir": 540,
+        "amostraAbrir": 541,
         "amostraFechar": 539,
         "topAbridores": [
           {
@@ -3594,16 +3595,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 408,
-        "emAberto": 33,
-        "atrasadas": 28,
-        "concluidas30d": 89,
-        "concluidas7d": 20,
+        "emAberto": 32,
+        "atrasadas": 27,
+        "concluidas30d": 90,
+        "concluidas7d": 21,
         "naSemanaCorrente": 11
       },
       "mttr": {
-        "horas": 269.39,
-        "label": "11d 5h",
-        "amostra": 89
+        "horas": 268.53,
+        "label": "11d 4h",
+        "amostra": 90
       },
       "tendencia4Semanas": [
         {
@@ -3624,7 +3625,7 @@
         {
           "semana": "W26",
           "criadas": 1,
-          "finalizadas": 5
+          "finalizadas": 6
         }
       ],
       "topOfensores": {
@@ -3632,14 +3633,14 @@
           {
             "nome": "(sem equipe)",
             "total": 408,
-            "emAberto": 33
+            "emAberto": 32
           }
         ],
         "responsaveis": [
           {
             "nome": "Renato  Julien",
             "total": 22,
-            "emAberto": 4
+            "emAberto": 3
           },
           {
             "nome": "James Chaves",
@@ -3663,16 +3664,16 @@
           }
         ]
       },
-      "total": 33,
-      "atrasadas": 28,
+      "total": 32,
+      "atrasadas": 27,
       "porStatus": {
         "naoIniciada": 23,
-        "emProgresso": 3,
+        "emProgresso": 2,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 33
+        "(sem equipe)": 32
       },
       "oss": [
         {
@@ -4023,24 +4024,6 @@
           "atrasada": true
         },
         {
-          "osId": "7833",
-          "ativo": "QGBT 1  Ponto Belo  Espírito Santo Brasil { PTB100-QGBT1 }",
-          "equipe": "",
-          "responsavel": "Renato  Julien",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Renato  Julien",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Axis] - MPA - QGBT/QDMT/QSFV/QSA",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "2026-06-15",
-          "dataInicial": "2026-06-22",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
-          "atrasada": true
-        },
-        {
           "osId": "7104",
           "ativo": "Cabine 1  Petrolina  Pernambuco Brasil { PTL300-CABN1 }",
           "equipe": "",
@@ -4265,6 +4248,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 48.0,
           "horasAteFechar": 144.0,
+          "atrasada": false
+        },
+        {
+          "osId": "7833",
+          "ativo": "QGBT 1  Ponto Belo  Espírito Santo Brasil { PTB100-QGBT1 }",
+          "equipe": "",
+          "responsavel": "Renato  Julien",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Renato  Julien",
+          "status": "Finalizados",
+          "tarefa": "[Axis] - MPA - QGBT/QDMT/QSFV/QSA",
+          "criticidade": "",
+          "dataProgramada": "2026-06-15",
+          "dataCriacao": "2026-06-15",
+          "dataInicial": "2026-06-22",
+          "dataFinal": "2026-06-23",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 24.0,
           "atrasada": false
         },
         {
@@ -7061,25 +7063,6 @@
           "atrasada": false
         },
         {
-          "osId": "5783",
-          "ativo": "Infraestrutura Civil LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Hermano Barbosa",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Athon] - MPA - Infraestrutura",
-          "criticidade": "",
-          "dataProgramada": "2026-04-24",
-          "dataCriacao": "2026-04-22",
-          "dataInicial": "2026-04-27",
-          "dataFinal": "2026-04-27",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "5828",
           "ativo": "Transformador 2 COMTRAFO     { SMP100-TRFR2 }",
           "equipe": "",
@@ -7099,7 +7082,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 234
+      "historicoTotal": 235
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -10049,14 +10032,15 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
       "criticidade": "",
       "dataProgramada": "2026-06-23",
       "dataCriacao": "2026-06-18",
-      "dataInicial": "",
+      "dataInicial": "2026-06-23",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 120.0,
       "modalidade": "remoto"
     },
     {
@@ -10142,23 +10126,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "7833",
-      "ativo": "QGBT 1  Ponto Belo  Espírito Santo Brasil { PTB100-QGBT1 }",
-      "equipe": "",
-      "responsavel": "Renato  Julien",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Renato  Julien",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Axis] - MPA - QGBT/QDMT/QSFV/QSA",
-      "criticidade": "",
-      "dataProgramada": "2026-06-15",
-      "dataCriacao": "2026-06-15",
-      "dataInicial": "2026-06-22",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0
     },
     {
       "osId": "7782",
@@ -13778,7 +13745,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 1893,
+  "historicoTotal": 1894,
   "totalGeral": 3254,
   "verificacao": {
     "total": 0,
