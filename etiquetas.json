@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-23T12:26:00Z",
+  "geradoEm": "2026-06-23T12:31:56Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -7071,16 +7071,16 @@
       "cor": "#ef4444",
       "kpis": {
         "total": 124,
-        "emAberto": 4,
+        "emAberto": 3,
         "atrasadas": 3,
-        "concluidas30d": 24,
-        "concluidas7d": 4,
+        "concluidas30d": 25,
+        "concluidas7d": 5,
         "naSemanaCorrente": 1
       },
       "mttr": {
-        "horas": 201.0,
-        "label": "8d 9h",
-        "amostra": 24
+        "horas": 193.92,
+        "label": "8d 1h",
+        "amostra": 25
       },
       "tendencia4Semanas": [
         {
@@ -7101,7 +7101,7 @@
         {
           "semana": "W26",
           "criadas": 1,
-          "finalizadas": 0
+          "finalizadas": 1
         }
       ],
       "topOfensores": {
@@ -7109,7 +7109,7 @@
           {
             "nome": "(sem equipe)",
             "total": 124,
-            "emAberto": 4
+            "emAberto": 3
           }
         ],
         "responsaveis": [
@@ -7140,16 +7140,16 @@
           }
         ]
       },
-      "total": 4,
+      "total": 3,
       "atrasadas": 3,
       "porStatus": {
-        "naoIniciada": 3,
+        "naoIniciada": 2,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 4
+        "(sem equipe)": 3
       },
       "oss": [
         {
@@ -7203,7 +7203,9 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "8172",
           "ativo": "Estrutura Trackers  Santarém  Pará Brasil { STR100-ETKR1 }",
@@ -7211,18 +7213,18 @@
           "responsavel": "Júlio Willers ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Júlio Willers ",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "Abertura de chamado para garantia [Testes em campo Motor do tracker 101]",
           "criticidade": "",
           "dataProgramada": "2026-06-23",
           "dataCriacao": "2026-06-22",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-06-23",
+          "dataFinal": "2026-06-23",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "7507",
           "ativo": "Inversor 7.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR7.1 }",
@@ -8972,7 +8974,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 92
+      "historicoTotal": 93
     },
     "performance": {
       "label": "Performance",
@@ -9821,22 +9823,6 @@
       "linkFracttal": "",
       "horasAteAbrir": 0,
       "modalidade": "remoto"
-    },
-    {
-      "osId": "8172",
-      "ativo": "Estrutura Trackers  Santarém  Pará Brasil { STR100-ETKR1 }",
-      "equipe": "",
-      "responsavel": "Júlio Willers ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Júlio Willers ",
-      "status": "Não Iniciada",
-      "tarefa": "Abertura de chamado para garantia [Testes em campo Motor do tracker 101]",
-      "criticidade": "",
-      "dataProgramada": "2026-06-23",
-      "dataCriacao": "2026-06-22",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
     },
     {
       "osId": "8168",
@@ -10787,6 +10773,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "8172",
+      "ativo": "Estrutura Trackers  Santarém  Pará Brasil { STR100-ETKR1 }",
+      "equipe": "",
+      "responsavel": "Júlio Willers ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Júlio Willers ",
+      "status": "Finalizados",
+      "tarefa": "Abertura de chamado para garantia [Testes em campo Motor do tracker 101]",
+      "criticidade": "",
+      "dataProgramada": "2026-06-23",
+      "dataCriacao": "2026-06-22",
+      "dataInicial": "2026-06-23",
+      "dataFinal": "2026-06-23",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -13701,29 +13706,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7869",
-      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Railson Gomes ",
-      "status": "Finalizada",
-      "tarefa": "Religamento de usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-15",
-      "dataCriacao": "2026-06-15",
-      "dataInicial": "2026-06-15",
-      "dataFinal": "2026-06-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1888,
+  "historicoTotal": 1889,
   "totalGeral": 3248,
   "verificacao": {
     "total": 0,
