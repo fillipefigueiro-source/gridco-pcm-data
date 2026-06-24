@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-24T12:39:21Z",
+  "geradoEm": "2026-06-24T12:44:24Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 2688,
-        "emAberto": 10,
-        "atrasadas": 7,
-        "concluidas30d": 549,
-        "concluidas7d": 147,
+        "emAberto": 9,
+        "atrasadas": 6,
+        "concluidas30d": 550,
+        "concluidas7d": 148,
         "naSemanaCorrente": 53
       },
       "mttr": {
-        "horas": 4.96,
-        "label": "4h 58min",
-        "amostra": 549
+        "horas": 5.0,
+        "label": "4h 60min",
+        "amostra": 550
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W26",
           "criadas": 50,
-          "finalizadas": 49
+          "finalizadas": 50
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 2688,
-            "emAberto": 10
+            "emAberto": 9
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 10,
-      "atrasadas": 7,
+      "total": 9,
+      "atrasadas": 6,
       "porStatus": {
-        "naoIniciada": 8,
+        "naoIniciada": 7,
         "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 10
+        "(sem equipe)": 9
       },
       "oss": [
         {
@@ -164,25 +164,6 @@
           "atrasada": true
         },
         {
-          "osId": "8261",
-          "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Gilson Souza ",
-          "status": "IN_PROGRESS",
-          "tarefa": "Religamento cabine 05",
-          "criticidade": "",
-          "dataProgramada": "2026-06-23",
-          "dataCriacao": "2026-06-23",
-          "dataInicial": "2026-06-24",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "8040",
           "ativo": "Disjuntor do Transformador 1      { PTL300-DTRF1 }",
           "equipe": "",
@@ -243,14 +224,15 @@
           "responsavel": "Gilson  Milhomem",
           "criadoPor": "GerdesonAraújo",
           "supervisor": "Gilson  Milhomem",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento de usina",
           "criticidade": "",
           "dataProgramada": "2026-06-24",
           "dataCriacao": "2026-06-24",
-          "dataInicial": "",
+          "dataInicial": "2026-06-24",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -370,6 +352,26 @@
           "dataFinal": "2026-06-24",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8261",
+          "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "Religamento cabine 05",
+          "criticidade": "",
+          "dataProgramada": "2026-06-23",
+          "dataCriacao": "2026-06-23",
+          "dataInicial": "2026-06-24",
+          "dataFinal": "2026-06-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3253,34 +3255,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "7908",
-          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine 6",
-          "criticidade": "",
-          "dataProgramada": "2026-06-16",
-          "dataCriacao": "2026-06-16",
-          "dataInicial": "2026-06-16",
-          "dataFinal": "2026-06-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1546,
+      "historicoTotal": 1547,
       "subClassificacao": {
         "remoto": 553,
         "local": 2135,
         "remotoEmAberto": 4,
-        "localEmAberto": 6,
+        "localEmAberto": 5,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -9161,12 +9143,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 41,
-        "emAberto": 7,
+        "total": 36,
+        "emAberto": 2,
         "atrasadas": 2,
         "concluidas30d": 4,
         "concluidas7d": 2,
-        "naSemanaCorrente": 6
+        "naSemanaCorrente": 1
       },
       "mttr": {
         "horas": 12.0,
@@ -9191,7 +9173,7 @@
         },
         {
           "semana": "W26",
-          "criadas": 6,
+          "criadas": 1,
           "finalizadas": 1
         }
       ],
@@ -9199,8 +9181,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 41,
-            "emAberto": 7
+            "total": 36,
+            "emAberto": 2
           }
         ],
         "responsaveis": [
@@ -9215,11 +9197,6 @@
             "emAberto": 0
           },
           {
-            "nome": "Levi Maia",
-            "total": 5,
-            "emAberto": 5
-          },
-          {
             "nome": "Henri Almeida",
             "total": 5,
             "emAberto": 0
@@ -9228,19 +9205,24 @@
             "nome": "Marcos  Camargo",
             "total": 2,
             "emAberto": 0
+          },
+          {
+            "nome": "Paulo  Ribeiro",
+            "total": 2,
+            "emAberto": 0
           }
         ]
       },
-      "total": 7,
+      "total": 2,
       "atrasadas": 2,
       "porStatus": {
-        "naoIniciada": 7,
+        "naoIniciada": 2,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 7
+        "(sem equipe)": 2
       },
       "oss": [
         {
@@ -9276,91 +9258,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
-        },
-        {
-          "osId": "8299",
-          "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
-          "equipe": "",
-          "responsavel": "Levi Maia ",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Levi Maia ",
-          "status": "Não Iniciada",
-          "tarefa": "TESTE - RELIGAR CABINE",
-          "criticidade": "",
-          "dataProgramada": "2026-06-24",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "8298",
-          "ativo": "Cabine 4  Capitão Poço  Pará Brasil { CPP100-CABN4 }",
-          "equipe": "",
-          "responsavel": "Levi Maia ",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Levi Maia ",
-          "status": "Não Iniciada",
-          "tarefa": "TESTE - RELIGAR CABINE",
-          "criticidade": "",
-          "dataProgramada": "2026-06-24",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "8297",
-          "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
-          "equipe": "",
-          "responsavel": "Levi Maia ",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Levi Maia ",
-          "status": "Não Iniciada",
-          "tarefa": "TESTE - RELIGAR CABINE",
-          "criticidade": "",
-          "dataProgramada": "2026-06-24",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "8296",
-          "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Levi Maia ",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Levi Maia ",
-          "status": "Não Iniciada",
-          "tarefa": "TESTE - RELIGAR CABINE",
-          "criticidade": "",
-          "dataProgramada": "2026-06-24",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "8295",
-          "ativo": "Cabine 1  Capitão Poço  Pará Brasil { CPP100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Levi Maia ",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Levi Maia ",
-          "status": "Não Iniciada",
-          "tarefa": "TESTE - RELIGAR CABINE",
-          "criticidade": "",
-          "dataProgramada": "2026-06-24",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -10005,86 +9902,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "8299",
-      "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
-      "equipe": "",
-      "responsavel": "Levi Maia ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Levi Maia ",
-      "status": "Não Iniciada",
-      "tarefa": "TESTE - RELIGAR CABINE",
-      "criticidade": "",
-      "dataProgramada": "2026-06-24",
-      "dataCriacao": "2026-06-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "8298",
-      "ativo": "Cabine 4  Capitão Poço  Pará Brasil { CPP100-CABN4 }",
-      "equipe": "",
-      "responsavel": "Levi Maia ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Levi Maia ",
-      "status": "Não Iniciada",
-      "tarefa": "TESTE - RELIGAR CABINE",
-      "criticidade": "",
-      "dataProgramada": "2026-06-24",
-      "dataCriacao": "2026-06-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "8297",
-      "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
-      "equipe": "",
-      "responsavel": "Levi Maia ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Levi Maia ",
-      "status": "Não Iniciada",
-      "tarefa": "TESTE - RELIGAR CABINE",
-      "criticidade": "",
-      "dataProgramada": "2026-06-24",
-      "dataCriacao": "2026-06-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "8296",
-      "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Levi Maia ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Levi Maia ",
-      "status": "Não Iniciada",
-      "tarefa": "TESTE - RELIGAR CABINE",
-      "criticidade": "",
-      "dataProgramada": "2026-06-24",
-      "dataCriacao": "2026-06-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "8295",
-      "ativo": "Cabine 1  Capitão Poço  Pará Brasil { CPP100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Levi Maia ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Levi Maia ",
-      "status": "Não Iniciada",
-      "tarefa": "TESTE - RELIGAR CABINE",
-      "criticidade": "",
-      "dataProgramada": "2026-06-24",
-      "dataCriacao": "2026-06-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "8290",
       "ativo": "Cabine 1  Poconé  Mato Grosso Brasil { PCN100-CABN1 }",
       "equipe": "",
@@ -10156,32 +9973,15 @@
       "responsavel": "Gilson  Milhomem",
       "criadoPor": "GerdesonAraújo",
       "supervisor": "Gilson  Milhomem",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento de usina",
       "criticidade": "",
       "dataProgramada": "2026-06-24",
       "dataCriacao": "2026-06-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "8261",
-      "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Gilson Souza ",
-      "status": "IN_PROGRESS",
-      "tarefa": "Religamento cabine 05",
-      "criticidade": "",
-      "dataProgramada": "2026-06-23",
-      "dataCriacao": "2026-06-23",
       "dataInicial": "2026-06-24",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 24.0,
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -11263,6 +11063,26 @@
       "dataFinal": "2026-06-24",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "8261",
+      "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "Religamento cabine 05",
+      "criticidade": "",
+      "dataProgramada": "2026-06-23",
+      "dataCriacao": "2026-06-23",
+      "dataInicial": "2026-06-24",
+      "dataFinal": "2026-06-24",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -14140,30 +13960,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7914",
-      "ativo": "Thopen - Campos dos Goytacazes 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-GYT100 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-16",
-      "dataCriacao": "2026-06-16",
-      "dataInicial": "2026-06-16",
-      "dataFinal": "2026-06-17",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1901,
-  "totalGeral": 3296,
+  "historicoTotal": 1902,
+  "totalGeral": 3291,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
