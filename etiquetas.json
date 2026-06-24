@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-24T15:04:05Z",
+  "geradoEm": "2026-06-24T15:08:59Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2694,
-        "emAberto": 9,
+        "total": 2696,
+        "emAberto": 10,
         "atrasadas": 6,
-        "concluidas30d": 556,
-        "concluidas7d": 154,
-        "naSemanaCorrente": 59
+        "concluidas30d": 557,
+        "concluidas7d": 155,
+        "naSemanaCorrente": 60
       },
       "mttr": {
-        "horas": 4.94,
+        "horas": 4.93,
         "label": "4h 56min",
-        "amostra": 556
+        "amostra": 557
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W26",
-          "criadas": 56,
-          "finalizadas": 56
+          "criadas": 58,
+          "finalizadas": 57
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2694,
-            "emAberto": 9
+            "total": 2696,
+            "emAberto": 10
           }
         ],
         "responsaveis": [
@@ -58,7 +58,7 @@
           },
           {
             "nome": "Raphael Vitoriano",
-            "total": 241,
+            "total": 242,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 9,
+      "total": 10,
       "atrasadas": 6,
       "porStatus": {
         "naoIniciada": 8,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 9
+        "(sem equipe)": 10
       },
       "oss": [
         {
@@ -206,14 +206,15 @@
           "responsavel": "Rodolfo  Oliveira",
           "criadoPor": "LuelySantos",
           "supervisor": "Rodolfo  Oliveira",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento do inversor",
           "criticidade": "",
           "dataProgramada": "2026-06-24",
           "dataCriacao": "2026-06-24",
-          "dataInicial": "",
+          "dataInicial": "2026-06-24",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -252,9 +253,47 @@
           "linkFracttal": "",
           "modalidade": "remoto",
           "atrasada": false
+        },
+        {
+          "osId": "8321",
+          "ativo": "Infraestrutura Civil Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-INFC1 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Ricardo Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-06-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8320",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizados",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-24",
+          "dataCriacao": "2026-06-24",
+          "dataInicial": "2026-06-24",
+          "dataFinal": "2026-06-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "8319",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3234,33 +3273,13 @@
           "horasAteFechar": 0,
           "modalidade": "remoto",
           "atrasada": false
-        },
-        {
-          "osId": "7917",
-          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "DavidNascimento",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizada",
-          "tarefa": "UFV: Araputanga| Proteção: 50 e 67| Ação: Religamento Local | Falha: Usina desligada",
-          "criticidade": "",
-          "dataProgramada": "2026-06-17",
-          "dataCriacao": "2026-06-17",
-          "dataInicial": "2026-06-17",
-          "dataFinal": "2026-06-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1553,
+      "historicoTotal": 1554,
       "subClassificacao": {
-        "remoto": 553,
-        "local": 2141,
-        "remotoEmAberto": 4,
+        "remoto": 554,
+        "local": 2142,
+        "remotoEmAberto": 5,
         "localEmAberto": 5,
         "pctRemoto": 21,
         "alerta": true
@@ -3453,7 +3472,7 @@
           },
           {
             "nome": "Juliana Cândido",
-            "total": 20
+            "total": 21
           },
           {
             "nome": "LuelySantos",
@@ -9210,12 +9229,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 37,
-        "emAberto": 3,
+        "total": 38,
+        "emAberto": 4,
         "atrasadas": 2,
         "concluidas30d": 4,
         "concluidas7d": 2,
-        "naSemanaCorrente": 2
+        "naSemanaCorrente": 3
       },
       "mttr": {
         "horas": 12.0,
@@ -9240,7 +9259,7 @@
         },
         {
           "semana": "W26",
-          "criadas": 2,
+          "criadas": 3,
           "finalizadas": 1
         }
       ],
@@ -9248,15 +9267,15 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 37,
-            "emAberto": 3
+            "total": 38,
+            "emAberto": 4
           }
         ],
         "responsaveis": [
           {
             "nome": "James Chaves",
-            "total": 7,
-            "emAberto": 1
+            "total": 8,
+            "emAberto": 2
           },
           {
             "nome": "Luiz  Silva",
@@ -9280,16 +9299,16 @@
           }
         ]
       },
-      "total": 3,
+      "total": 4,
       "atrasadas": 2,
       "porStatus": {
-        "naoIniciada": 3,
+        "naoIniciada": 4,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 3
+        "(sem equipe)": 4
       },
       "oss": [
         {
@@ -9325,6 +9344,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "8310",
+          "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Juliana Cândido ",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[MAB100] - Trackers com atraso",
+          "criticidade": "",
+          "dataProgramada": "2026-06-24",
+          "dataCriacao": "2026-06-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "8304",
@@ -9970,6 +10006,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "8321",
+      "ativo": "Infraestrutura Civil Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-INFC1 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Ricardo Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-06-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
       "osId": "8317",
       "ativo": "Infraestrutura Civil  Vargem Grande  Espirito Santo Brasil { VRG100-INFC1 }",
       "equipe": "",
@@ -9996,6 +10049,22 @@
       "tarefa": "[Grid Co.] - MPM - Caixa d'água",
       "criticidade": "",
       "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-06-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8310",
+      "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Juliana Cândido ",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[MAB100] - Trackers com atraso",
+      "criticidade": "",
+      "dataProgramada": "2026-06-24",
       "dataCriacao": "2026-06-24",
       "dataInicial": "",
       "dataFinal": "",
@@ -10040,14 +10109,15 @@
       "responsavel": "Rodolfo  Oliveira",
       "criadoPor": "LuelySantos",
       "supervisor": "Rodolfo  Oliveira",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento do inversor",
       "criticidade": "",
       "dataProgramada": "2026-06-24",
       "dataCriacao": "2026-06-24",
-      "dataInicial": "",
+      "dataInicial": "2026-06-24",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -11130,6 +11200,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "8320",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizados",
+      "tarefa": "Religamento da usina",
+      "criticidade": "",
+      "dataProgramada": "2026-06-24",
+      "dataCriacao": "2026-06-24",
+      "dataInicial": "2026-06-24",
+      "dataFinal": "2026-06-24",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "8319",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -14104,30 +14194,10 @@
       "horasAteFechar": 144.0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7941",
-      "ativo": "teste1  teste  teste teste { THPN-TESTE }",
-      "equipe": "",
-      "responsavel": "Juliana Cândido ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Juliana Cândido ",
-      "status": "Finalizada",
-      "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
-      "criticidade": "",
-      "dataProgramada": "2026-06-17",
-      "dataCriacao": "2026-06-17",
-      "dataInicial": "2026-06-17",
-      "dataFinal": "2026-06-17",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1909,
-  "totalGeral": 3303,
+  "historicoTotal": 1910,
+  "totalGeral": 3306,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
