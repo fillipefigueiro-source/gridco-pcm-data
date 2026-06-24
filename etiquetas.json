@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-24T19:28:26Z",
+  "geradoEm": "2026-06-24T19:33:22Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -3502,16 +3502,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 431,
-        "emAberto": 50,
+        "emAberto": 49,
         "atrasadas": 23,
-        "concluidas30d": 95,
-        "concluidas7d": 25,
+        "concluidas30d": 96,
+        "concluidas7d": 26,
         "naSemanaCorrente": 11
       },
       "mttr": {
-        "horas": 268.04,
-        "label": "11d 4h",
-        "amostra": 95
+        "horas": 266.5,
+        "label": "11d 2h",
+        "amostra": 96
       },
       "tendencia4Semanas": [
         {
@@ -3532,7 +3532,7 @@
         {
           "semana": "W26",
           "criadas": 25,
-          "finalizadas": 11
+          "finalizadas": 12
         }
       ],
       "topOfensores": {
@@ -3540,7 +3540,7 @@
           {
             "nome": "(sem equipe)",
             "total": 431,
-            "emAberto": 50
+            "emAberto": 49
           }
         ],
         "responsaveis": [
@@ -3571,16 +3571,16 @@
           }
         ]
       },
-      "total": 50,
+      "total": 49,
       "atrasadas": 23,
       "porStatus": {
-        "naoIniciada": 41,
+        "naoIniciada": 40,
         "emProgresso": 2,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 50
+        "(sem equipe)": 49
       },
       "oss": [
         {
@@ -3989,32 +3989,15 @@
           "responsavel": "Marcos Duarte ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Marcos Duarte ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "[Primavera 1] - Regularizar inspeção na RSU (Regularização MPS)",
           "criticidade": "",
           "dataProgramada": "2026-06-24",
           "dataCriacao": "2026-06-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "8060",
-          "ativo": "Ar Condicionado      { SPP300-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Eduardo  Mendes",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-06-25",
-          "dataCriacao": "2026-06-19",
           "dataInicial": "2026-06-24",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 120.0,
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -4460,6 +4443,25 @@
           "dataFinal": "2026-06-24",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "8060",
+          "ativo": "Ar Condicionado      { SPP300-SOEM1-ARCD }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
+          "criticidade": "",
+          "dataProgramada": "2026-06-25",
+          "dataCriacao": "2026-06-19",
+          "dataInicial": "2026-06-24",
+          "dataFinal": "2026-06-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -6972,25 +6974,6 @@
           "atrasada": false
         },
         {
-          "osId": "6038",
-          "ativo": "Infraestrutura Civil Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-INFC1 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Infraestrutura",
-          "criticidade": "",
-          "dataProgramada": "2026-05-04",
-          "dataCriacao": "2026-04-29",
-          "dataInicial": "2026-05-08",
-          "dataFinal": "2026-05-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 216.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "6284",
           "ativo": "Transformador 1      { SNE100-TRFR1 }",
           "equipe": "",
@@ -7295,7 +7278,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 240
+      "historicoTotal": 241
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -10223,14 +10206,15 @@
       "responsavel": "Marcos Duarte ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Marcos Duarte ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "[Primavera 1] - Regularizar inspeção na RSU (Regularização MPS)",
       "criticidade": "",
       "dataProgramada": "2026-06-24",
       "dataCriacao": "2026-06-24",
-      "dataInicial": "",
+      "dataInicial": "2026-06-24",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "8259",
@@ -10554,23 +10538,6 @@
       "linkFracttal": "",
       "horasAteAbrir": 72.0,
       "modalidade": "local"
-    },
-    {
-      "osId": "8060",
-      "ativo": "Ar Condicionado      { SPP300-SOEM1-ARCD }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Eduardo  Mendes",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
-      "criticidade": "",
-      "dataProgramada": "2026-06-25",
-      "dataCriacao": "2026-06-19",
-      "dataInicial": "2026-06-24",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0
     },
     {
       "osId": "8040",
@@ -13157,6 +13124,25 @@
       "atrasada": false
     },
     {
+      "osId": "8060",
+      "ativo": "Ar Condicionado      { SPP300-SOEM1-ARCD }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
+      "criticidade": "",
+      "dataProgramada": "2026-06-25",
+      "dataCriacao": "2026-06-19",
+      "dataInicial": "2026-06-24",
+      "dataFinal": "2026-06-24",
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "8055",
       "ativo": "Cabine 7  Capitão Poço  Pará Brasil { CPP100-CABN7 }",
       "equipe": "",
@@ -14174,29 +14160,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7953",
-      "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizados",
-      "tarefa": "religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-17",
-      "dataCriacao": "2026-06-17",
-      "dataInicial": "2026-06-18",
-      "dataFinal": "2026-06-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1918,
+  "historicoTotal": 1919,
   "totalGeral": 3314,
   "verificacao": {
     "total": 0,
