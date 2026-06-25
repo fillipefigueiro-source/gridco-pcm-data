@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-25T13:13:53Z",
+  "geradoEm": "2026-06-25T13:23:42Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 12,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 11,
-        "emProgresso": 0,
+        "naoIniciada": 10,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
@@ -97,14 +97,15 @@
           "responsavel": "Gabriel Oliveira ",
           "criadoPor": "LuelySantos",
           "supervisor": "Gabriel Oliveira ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da usina",
           "criticidade": "",
           "dataProgramada": "2026-06-12",
           "dataCriacao": "2026-06-12",
-          "dataInicial": "",
+          "dataInicial": "2026-06-25",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 312.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -3538,16 +3539,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 442,
-        "emAberto": 59,
+        "emAberto": 58,
         "atrasadas": 23,
-        "concluidas30d": 95,
-        "concluidas7d": 21,
+        "concluidas30d": 96,
+        "concluidas7d": 22,
         "naSemanaCorrente": 22
       },
       "mttr": {
-        "horas": 263.49,
-        "label": "10d 23h",
-        "amostra": 95
+        "horas": 260.75,
+        "label": "10d 20h",
+        "amostra": 96
       },
       "tendencia4Semanas": [
         {
@@ -3568,7 +3569,7 @@
         {
           "semana": "W26",
           "criadas": 36,
-          "finalizadas": 13
+          "finalizadas": 14
         }
       ],
       "topOfensores": {
@@ -3576,7 +3577,7 @@
           {
             "nome": "(sem equipe)",
             "total": 442,
-            "emAberto": 59
+            "emAberto": 58
           }
         ],
         "responsaveis": [
@@ -3593,7 +3594,7 @@
           {
             "nome": "Francisco  Santos",
             "total": 21,
-            "emAberto": 2
+            "emAberto": 1
           },
           {
             "nome": "Luiz  Silva",
@@ -3607,16 +3608,16 @@
           }
         ]
       },
-      "total": 59,
+      "total": 58,
       "atrasadas": 23,
       "porStatus": {
         "naoIniciada": 50,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 59
+        "(sem equipe)": 58
       },
       "oss": [
         {
@@ -4138,24 +4139,6 @@
           "atrasada": false
         },
         {
-          "osId": "8384",
-          "ativo": "Infraestrutura Civil Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS200-INFC1 }",
-          "equipe": "",
-          "responsavel": "Francisco  Santos",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Francisco  Santos",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-06-25",
-          "dataCriacao": "2026-06-25",
-          "dataInicial": "2026-06-25",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8383",
           "ativo": "Infraestrutura Civil LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-INFC1 }",
           "equipe": "",
@@ -4633,6 +4616,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8384",
+          "ativo": "Infraestrutura Civil Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS200-INFC1 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Francisco  Santos",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-06-25",
+          "dataCriacao": "2026-06-25",
+          "dataInicial": "2026-06-25",
+          "dataFinal": "2026-06-25",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "8290",
           "ativo": "Cabine 1  Poconé  Mato Grosso Brasil { PCN100-CABN1 }",
@@ -7047,25 +7049,6 @@
           "atrasada": false
         },
         {
-          "osId": "6042",
-          "ativo": "Infraestrutura Civil Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Almoxarifado",
-          "criticidade": "",
-          "dataProgramada": "2026-05-15",
-          "dataCriacao": "2026-04-29",
-          "dataInicial": "2026-05-14",
-          "dataFinal": "2026-05-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 360.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "6346",
           "ativo": "Nobreak 1      { MRO100-NBRK1 }",
           "equipe": "",
@@ -7484,7 +7467,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 241
+      "historicoTotal": 242
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9436,8 +9419,8 @@
       "atrasadas": 4,
       "porStatus": {
         "naoIniciada": 4,
-        "emProgresso": 1,
-        "pausada": 0,
+        "emProgresso": 0,
+        "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
@@ -9451,7 +9434,7 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Janderson Miranda ",
-          "status": "IN_PROGRESS",
+          "status": "pausado",
           "tarefa": "[Ceilândia 1][Inversor 4.2] - Mapeamento de baixa performance",
           "criticidade": "",
           "dataProgramada": "2026-05-28",
@@ -10285,23 +10268,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "8384",
-      "ativo": "Infraestrutura Civil Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS200-INFC1 }",
-      "equipe": "",
-      "responsavel": "Francisco  Santos",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Francisco  Santos",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-06-25",
-      "dataCriacao": "2026-06-25",
-      "dataInicial": "2026-06-25",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
-    },
-    {
       "osId": "8383",
       "ativo": "Infraestrutura Civil LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-INFC1 }",
       "equipe": "",
@@ -11023,14 +10989,15 @@
       "responsavel": "Gabriel Oliveira ",
       "criadoPor": "LuelySantos",
       "supervisor": "Gabriel Oliveira ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-06-12",
       "dataCriacao": "2026-06-12",
-      "dataInicial": "",
+      "dataInicial": "2026-06-25",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 312.0,
       "modalidade": "local"
     },
     {
@@ -11270,7 +11237,7 @@
       "responsavel": "Janderson Miranda ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Janderson Miranda ",
-      "status": "IN_PROGRESS",
+      "status": "pausado",
       "tarefa": "[Ceilândia 1][Inversor 4.2] - Mapeamento de baixa performance",
       "criticidade": "",
       "dataProgramada": "2026-05-28",
@@ -11547,6 +11514,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "8384",
+      "ativo": "Infraestrutura Civil Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS200-INFC1 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Francisco  Santos",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Spare Parts",
+      "criticidade": "",
+      "dataProgramada": "2026-06-25",
+      "dataCriacao": "2026-06-25",
+      "dataInicial": "2026-06-25",
+      "dataFinal": "2026-06-25",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -14501,29 +14487,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "7978",
-      "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizados",
-      "tarefa": "Religamento da cabine 5 de CPP100",
-      "criticidade": "",
-      "dataProgramada": "2026-06-18",
-      "dataCriacao": "2026-06-18",
-      "dataInicial": "2026-06-18",
-      "dataFinal": "2026-06-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1907,
+  "historicoTotal": 1908,
   "totalGeral": 3338,
   "verificacao": {
     "total": 0,
