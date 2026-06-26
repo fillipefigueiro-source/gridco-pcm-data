@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-26T12:24:36Z",
+  "geradoEm": "2026-06-26T12:33:16Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2735,
-        "emAberto": 11,
-        "atrasadas": 5,
-        "concluidas30d": 556,
-        "concluidas7d": 149,
-        "naSemanaCorrente": 98
+        "total": 2737,
+        "emAberto": 12,
+        "atrasadas": 7,
+        "concluidas30d": 557,
+        "concluidas7d": 150,
+        "naSemanaCorrente": 100
       },
       "mttr": {
-        "horas": 5.36,
+        "horas": 5.35,
         "label": "5h 21min",
-        "amostra": 556
+        "amostra": 557
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W26",
-          "criadas": 97,
-          "finalizadas": 95
+          "criadas": 99,
+          "finalizadas": 96
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2735,
-            "emAberto": 11
+            "total": 2737,
+            "emAberto": 12
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 11,
-      "atrasadas": 5,
+      "total": 12,
+      "atrasadas": 7,
       "porStatus": {
-        "naoIniciada": 7,
-        "emProgresso": 4,
+        "naoIniciada": 9,
+        "emProgresso": 3,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 11
+        "(sem equipe)": 12
       },
       "oss": [
         {
@@ -182,6 +182,42 @@
           "atrasada": true
         },
         {
+          "osId": "8502",
+          "ativo": "Inversor 1.1 Huawei     { TESTE100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Levi Maia ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Levi Maia ",
+          "status": "Não Iniciada",
+          "tarefa": "RELIGAMENTO REMOTO - TESTE",
+          "criticidade": "",
+          "dataProgramada": "2026-06-24",
+          "dataCriacao": "2026-06-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": true
+        },
+        {
+          "osId": "8503",
+          "ativo": "Inversor 1.1 Huawei     { TESTE100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Levi Maia ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Levi Maia ",
+          "status": "Não Iniciada",
+          "tarefa": "RELIGAMENTO REMOTO - TESTE",
+          "criticidade": "",
+          "dataProgramada": "2026-06-25",
+          "dataCriacao": "2026-06-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": true
+        },
+        {
           "osId": "8495",
           "ativo": "Inversor 1.7 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.7 }",
           "equipe": "",
@@ -238,25 +274,6 @@
           "atrasada": false
         },
         {
-          "osId": "8491",
-          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Railson Gomes ",
-          "status": "IN_PROGRESS",
-          "tarefa": "Religamento da usina",
-          "criticidade": "",
-          "dataProgramada": "2026-06-26",
-          "dataCriacao": "2026-06-26",
-          "dataInicial": "2026-06-26",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "8350",
           "ativo": "Infraestrutura Civil Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100-INFC1 }",
           "equipe": "",
@@ -294,6 +311,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8491",
+          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Railson Gomes ",
+          "status": "Finalizados",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-26",
+          "dataCriacao": "2026-06-26",
+          "dataInicial": "2026-06-26",
+          "dataFinal": "2026-06-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "8490",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3273,34 +3310,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "7999",
-          "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
-          "equipe": "",
-          "responsavel": "Gilson  Milhomem",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Gilson  Milhomem",
-          "status": "Finalizada",
-          "tarefa": "Religamento da usina",
-          "criticidade": "",
-          "dataProgramada": "2026-06-18",
-          "dataCriacao": "2026-06-18",
-          "dataInicial": "2026-06-18",
-          "dataFinal": "2026-06-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1557,
+      "historicoTotal": 1558,
       "subClassificacao": {
-        "remoto": 562,
+        "remoto": 564,
         "local": 2173,
-        "remotoEmAberto": 5,
-        "localEmAberto": 6,
+        "remotoEmAberto": 7,
+        "localEmAberto": 5,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -3507,12 +3524,12 @@
             "total": 8
           },
           {
-            "nome": "Glaydson Souza",
+            "nome": "Levi Maia",
             "total": 2
           },
           {
-            "nome": "Fabricio Barreto",
-            "total": 1
+            "nome": "Glaydson Souza",
+            "total": 2
           }
         ]
       }
@@ -10225,6 +10242,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "8503",
+      "ativo": "Inversor 1.1 Huawei     { TESTE100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Levi Maia ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Levi Maia ",
+      "status": "Não Iniciada",
+      "tarefa": "RELIGAMENTO REMOTO - TESTE",
+      "criticidade": "",
+      "dataProgramada": "2026-06-25",
+      "dataCriacao": "2026-06-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
+      "osId": "8502",
+      "ativo": "Inversor 1.1 Huawei     { TESTE100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Levi Maia ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Levi Maia ",
+      "status": "Não Iniciada",
+      "tarefa": "RELIGAMENTO REMOTO - TESTE",
+      "criticidade": "",
+      "dataProgramada": "2026-06-24",
+      "dataCriacao": "2026-06-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
       "osId": "8495",
       "ativo": "Inversor 1.7 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.7 }",
       "equipe": "",
@@ -10275,24 +10326,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "8491",
-      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Railson Gomes ",
-      "status": "IN_PROGRESS",
-      "tarefa": "Religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-26",
-      "dataCriacao": "2026-06-26",
-      "dataInicial": "2026-06-26",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -11679,6 +11712,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "8491",
+      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Railson Gomes ",
+      "status": "Finalizados",
+      "tarefa": "Religamento da usina",
+      "criticidade": "",
+      "dataProgramada": "2026-06-26",
+      "dataCriacao": "2026-06-26",
+      "dataInicial": "2026-06-26",
+      "dataFinal": "2026-06-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "8490",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -14650,30 +14703,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "8008",
-      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Wesllen  Castro",
-      "status": "Finalizada",
-      "tarefa": "Religamento UFV Ipixuna",
-      "criticidade": "",
-      "dataProgramada": "2026-06-19",
-      "dataCriacao": "2026-06-19",
-      "dataInicial": "2026-06-19",
-      "dataFinal": "2026-06-19",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1911,
-  "totalGeral": 3367,
+  "historicoTotal": 1912,
+  "totalGeral": 3369,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
