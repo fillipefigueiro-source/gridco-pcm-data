@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-27T12:21:19Z",
+  "geradoEm": "2026-06-27T12:26:19Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-22 .. 2026-06-28",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2748,
-        "emAberto": 15,
+        "total": 2749,
+        "emAberto": 16,
         "atrasadas": 9,
         "concluidas30d": 551,
         "concluidas7d": 135,
-        "naSemanaCorrente": 109
+        "naSemanaCorrente": 110
       },
       "mttr": {
         "horas": 5.85,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W26",
-          "criadas": 110,
+          "criadas": 111,
           "finalizadas": 104
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2748,
-            "emAberto": 15
+            "total": 2749,
+            "emAberto": 16
           }
         ],
         "responsaveis": [
@@ -63,8 +63,8 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 211,
-            "emAberto": 0
+            "total": 212,
+            "emAberto": 1
           },
           {
             "nome": "Italo  Lustosa",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 15,
+      "total": 16,
       "atrasadas": 9,
       "porStatus": {
         "naoIniciada": 12,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 15
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -256,20 +256,39 @@
           "atrasada": true
         },
         {
-          "osId": "8568",
-          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+          "osId": "8569",
+          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
           "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Wesllen  Castro",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
           "status": "Não Iniciada",
-          "tarefa": "Religamento UFV Ipixuna",
+          "tarefa": "Religamento da Usina remoto",
           "criticidade": "",
           "dataProgramada": "2026-06-27",
           "dataCriacao": "2026-06-27",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "8568",
+          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Wesllen  Castro",
+          "status": "IN_PROGRESS",
+          "tarefa": "Religamento UFV Ipixuna",
+          "criticidade": "",
+          "dataProgramada": "2026-06-27",
+          "dataCriacao": "2026-06-27",
+          "dataInicial": "2026-06-27",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3368,9 +3387,9 @@
       ],
       "historicoTotal": 1557,
       "subClassificacao": {
-        "remoto": 567,
+        "remoto": 568,
         "local": 2181,
-        "remotoEmAberto": 7,
+        "remotoEmAberto": 8,
         "localEmAberto": 8,
         "pctRemoto": 21,
         "alerta": true
@@ -3551,7 +3570,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 135
+            "total": 136
           },
           {
             "nome": "Raphael Vitoriano",
@@ -10501,20 +10520,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "8568",
-      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+      "osId": "8569",
+      "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
       "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Wesllen  Castro",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
       "status": "Não Iniciada",
-      "tarefa": "Religamento UFV Ipixuna",
+      "tarefa": "Religamento da Usina remoto",
       "criticidade": "",
       "dataProgramada": "2026-06-27",
       "dataCriacao": "2026-06-27",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
+      "osId": "8568",
+      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Wesllen  Castro",
+      "status": "IN_PROGRESS",
+      "tarefa": "Religamento UFV Ipixuna",
+      "criticidade": "",
+      "dataProgramada": "2026-06-27",
+      "dataCriacao": "2026-06-27",
+      "dataInicial": "2026-06-27",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15170,7 +15207,7 @@
     }
   ],
   "historicoTotal": 1919,
-  "totalGeral": 3398,
+  "totalGeral": 3399,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
