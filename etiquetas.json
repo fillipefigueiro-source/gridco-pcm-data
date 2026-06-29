@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-29T20:47:44Z",
+  "geradoEm": "2026-06-29T20:52:51Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -9745,16 +9745,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 44,
-        "emAberto": 7,
-        "atrasadas": 7,
-        "concluidas30d": 7,
-        "concluidas7d": 4,
+        "emAberto": 6,
+        "atrasadas": 6,
+        "concluidas30d": 8,
+        "concluidas7d": 5,
         "naSemanaCorrente": 1
       },
       "mttr": {
-        "horas": 13.71,
-        "label": "13h 43min",
-        "amostra": 7
+        "horas": 114.0,
+        "label": "4d 18h",
+        "amostra": 8
       },
       "tendencia4Semanas": [
         {
@@ -9775,7 +9775,7 @@
         {
           "semana": "W27",
           "criadas": 1,
-          "finalizadas": 1
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
@@ -9783,7 +9783,7 @@
           {
             "nome": "(sem equipe)",
             "total": 44,
-            "emAberto": 7
+            "emAberto": 6
           }
         ],
         "responsaveis": [
@@ -9814,36 +9814,18 @@
           }
         ]
       },
-      "total": 7,
-      "atrasadas": 7,
+      "total": 6,
+      "atrasadas": 6,
       "porStatus": {
         "naoIniciada": 6,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 7
+        "(sem equipe)": 6
       },
       "oss": [
-        {
-          "osId": "7093",
-          "ativo": "Inversor 4.2 Sungrow SG125HV    { THPN-CLN100-INVR4.2 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Janderson Miranda ",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Ceilândia 1][Inversor 4.2] - Mapeamento de baixa performance",
-          "criticidade": "",
-          "dataProgramada": "2026-05-28",
-          "dataCriacao": "2026-05-26",
-          "dataInicial": "2026-06-24",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 696.0,
-          "atrasada": true
-        },
         {
           "osId": "8025",
           "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { BES100-INVR1.8 }",
@@ -9965,6 +9947,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "7093",
+          "ativo": "Inversor 4.2 Sungrow SG125HV    { THPN-CLN100-INVR4.2 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "[Ceilândia 1][Inversor 4.2] - Mapeamento de baixa performance",
+          "criticidade": "",
+          "dataProgramada": "2026-05-28",
+          "dataCriacao": "2026-05-26",
+          "dataInicial": "2026-06-24",
+          "dataFinal": "2026-06-29",
+          "linkFracttal": "",
+          "horasAteAbrir": 696.0,
+          "horasAteFechar": 120.0,
           "atrasada": false
         },
         {
@@ -10291,7 +10292,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 18
+      "historicoTotal": 19
     },
     "engenharia": {
       "label": "Engenharia",
@@ -12249,23 +12250,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 360.0
-    },
-    {
-      "osId": "7093",
-      "ativo": "Inversor 4.2 Sungrow SG125HV    { THPN-CLN100-INVR4.2 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Janderson Miranda ",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Ceilândia 1][Inversor 4.2] - Mapeamento de baixa performance",
-      "criticidade": "",
-      "dataProgramada": "2026-05-28",
-      "dataCriacao": "2026-05-26",
-      "dataInicial": "2026-06-24",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 696.0
     },
     {
       "osId": "6792",
@@ -15454,7 +15438,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 1923,
+  "historicoTotal": 1924,
   "totalGeral": 3451,
   "verificacao": {
     "total": 0,
