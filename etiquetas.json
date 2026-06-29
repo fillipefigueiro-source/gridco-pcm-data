@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-29T14:18:05Z",
+  "geradoEm": "2026-06-29T14:27:35Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2778,
-        "emAberto": 15,
+        "total": 2779,
+        "emAberto": 16,
         "atrasadas": 9,
         "concluidas30d": 552,
         "concluidas7d": 134,
-        "naSemanaCorrente": 11
+        "naSemanaCorrente": 12
       },
       "mttr": {
         "horas": 7.13,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W27",
-          "criadas": 11,
+          "criadas": 12,
           "finalizadas": 12
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2778,
-            "emAberto": 15
+            "total": 2779,
+            "emAberto": 16
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 15,
+      "total": 16,
       "atrasadas": 9,
       "porStatus": {
-        "naoIniciada": 15,
+        "naoIniciada": 16,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 15
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -251,6 +251,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "8624",
+          "ativo": "Inversor 5.3 CANANDIAN SOLAR     { MTS100-INVR5.3 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Francisco  Santos",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento do inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-06-29",
+          "dataCriacao": "2026-06-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "8600",
@@ -1069,7 +1087,7 @@
           "responsavel": "Paulo  Ribeiro",
           "criadoPor": "LuelySantos",
           "supervisor": "Paulo  Ribeiro",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "Religamento da usina",
           "criticidade": "",
           "dataProgramada": "2026-06-26",
@@ -1089,7 +1107,7 @@
           "responsavel": "Railson Gomes ",
           "criadoPor": "LuelySantos",
           "supervisor": "Railson Gomes ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "Religamento da usina",
           "criticidade": "",
           "dataProgramada": "2026-06-26",
@@ -1154,11 +1172,11 @@
           "criticidade": "",
           "dataProgramada": "2026-06-26",
           "dataCriacao": "2026-06-26",
-          "dataInicial": "2026-06-26",
+          "dataInicial": "2026-06-25",
           "dataFinal": "2026-06-26",
           "linkFracttal": "",
           "horasAteAbrir": 0,
-          "horasAteFechar": 0,
+          "horasAteFechar": 24.0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3366,9 +3384,9 @@
       "historicoTotal": 1551,
       "subClassificacao": {
         "remoto": 585,
-        "local": 2193,
+        "local": 2194,
         "remotoEmAberto": 9,
-        "localEmAberto": 6,
+        "localEmAberto": 7,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -5004,8 +5022,8 @@
           "atrasada": false
         },
         {
-          "osId": "8623",
-          "ativo": "Transformador 1      { MTO100-TRFR1 }",
+          "osId": "8625",
+          "ativo": "Transformador 1 WEG     { THPN-TPZ100-TRFR1 }",
           "equipe": "",
           "responsavel": "Juliana Cândido ",
           "criadoPor": "Juliana Cândido",
@@ -9767,8 +9785,8 @@
       "total": 8,
       "atrasadas": 7,
       "porStatus": {
-        "naoIniciada": 7,
-        "emProgresso": 0,
+        "naoIniciada": 6,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
@@ -9903,14 +9921,15 @@
           "responsavel": "Daniel de Paula ",
           "criadoPor": "Levi Maia",
           "supervisor": "Daniel de Paula ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "[2C][Sete Lagoas] - Realizar reset no tracker",
           "criticidade": "",
           "dataProgramada": "2026-06-29",
           "dataCriacao": "2026-06-29",
-          "dataInicial": "",
+          "dataInicial": "2026-06-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         }
       ],
@@ -10597,8 +10616,8 @@
   },
   "ossPublicas": [
     {
-      "osId": "8623",
-      "ativo": "Transformador 1      { MTO100-TRFR1 }",
+      "osId": "8625",
+      "ativo": "Transformador 1 WEG     { THPN-TPZ100-TRFR1 }",
       "equipe": "",
       "responsavel": "Juliana Cândido ",
       "criadoPor": "Juliana Cândido",
@@ -10613,20 +10632,38 @@
       "linkFracttal": ""
     },
     {
+      "osId": "8624",
+      "ativo": "Inversor 5.3 CANANDIAN SOLAR     { MTS100-INVR5.3 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Francisco  Santos",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento do inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-06-29",
+      "dataCriacao": "2026-06-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "8622",
       "ativo": "Tracker 51.200 STI STI-H250 Bi-linha    { SLG200-ETKR51.200 }",
       "equipe": "",
       "responsavel": "Daniel de Paula ",
       "criadoPor": "Levi Maia",
       "supervisor": "Daniel de Paula ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "[2C][Sete Lagoas] - Realizar reset no tracker",
       "criticidade": "",
       "dataProgramada": "2026-06-29",
       "dataCriacao": "2026-06-29",
-      "dataInicial": "",
+      "dataInicial": "2026-06-29",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "8621",
@@ -13089,7 +13126,7 @@
       "responsavel": "Paulo  Ribeiro",
       "criadoPor": "LuelySantos",
       "supervisor": "Paulo  Ribeiro",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "Religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-06-26",
@@ -13109,7 +13146,7 @@
       "responsavel": "Railson Gomes ",
       "criadoPor": "LuelySantos",
       "supervisor": "Railson Gomes ",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "Religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-06-26",
@@ -13174,11 +13211,11 @@
       "criticidade": "",
       "dataProgramada": "2026-06-26",
       "dataCriacao": "2026-06-26",
-      "dataInicial": "2026-06-26",
+      "dataInicial": "2026-06-25",
       "dataFinal": "2026-06-26",
       "linkFracttal": "",
       "horasAteAbrir": 0,
-      "horasAteFechar": 0,
+      "horasAteFechar": 24.0,
       "modalidade": "local",
       "atrasada": false
     },
@@ -15373,7 +15410,7 @@
     }
   ],
   "historicoTotal": 1914,
-  "totalGeral": 3440,
+  "totalGeral": 3441,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
