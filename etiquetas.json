@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-29T15:27:32Z",
+  "geradoEm": "2026-06-29T15:33:15Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -9763,16 +9763,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 44,
-        "emAberto": 8,
+        "emAberto": 7,
         "atrasadas": 7,
-        "concluidas30d": 6,
-        "concluidas7d": 3,
+        "concluidas30d": 7,
+        "concluidas7d": 4,
         "naSemanaCorrente": 1
       },
       "mttr": {
-        "horas": 16.0,
-        "label": "16h 0min",
-        "amostra": 6
+        "horas": 13.71,
+        "label": "13h 43min",
+        "amostra": 7
       },
       "tendencia4Semanas": [
         {
@@ -9793,7 +9793,7 @@
         {
           "semana": "W27",
           "criadas": 1,
-          "finalizadas": 0
+          "finalizadas": 1
         }
       ],
       "topOfensores": {
@@ -9801,7 +9801,7 @@
           {
             "nome": "(sem equipe)",
             "total": 44,
-            "emAberto": 8
+            "emAberto": 7
           }
         ],
         "responsaveis": [
@@ -9832,16 +9832,16 @@
           }
         ]
       },
-      "total": 8,
+      "total": 7,
       "atrasadas": 7,
       "porStatus": {
         "naoIniciada": 6,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 8
+        "(sem equipe)": 7
       },
       "oss": [
         {
@@ -9963,7 +9963,9 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "8622",
           "ativo": "Tracker 51.200 STI STI-H250 Bi-linha    { SLG200-ETKR51.200 }",
@@ -9971,19 +9973,18 @@
           "responsavel": "Daniel de Paula ",
           "criadoPor": "Levi Maia",
           "supervisor": "Daniel de Paula ",
-          "status": "IN_PROGRESS",
+          "status": "Finalizados",
           "tarefa": "[2C][Sete Lagoas] - Realizar reset no tracker",
           "criticidade": "",
           "dataProgramada": "2026-06-29",
           "dataCriacao": "2026-06-29",
           "dataInicial": "2026-06-29",
-          "dataFinal": "",
+          "dataFinal": "2026-06-29",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "8487",
           "ativo": "Tracker 2.100 STI Norland STI Norland Array    { 2C-IPX100-ETKR2.100 }",
@@ -10308,7 +10309,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 17
+      "historicoTotal": 18
     },
     "engenharia": {
       "label": "Engenharia",
@@ -10778,23 +10779,6 @@
       "linkFracttal": "",
       "horasAteAbrir": 0,
       "modalidade": "local"
-    },
-    {
-      "osId": "8622",
-      "ativo": "Tracker 51.200 STI STI-H250 Bi-linha    { SLG200-ETKR51.200 }",
-      "equipe": "",
-      "responsavel": "Daniel de Paula ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Daniel de Paula ",
-      "status": "IN_PROGRESS",
-      "tarefa": "[2C][Sete Lagoas] - Realizar reset no tracker",
-      "criticidade": "",
-      "dataProgramada": "2026-06-29",
-      "dataCriacao": "2026-06-29",
-      "dataInicial": "2026-06-29",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
     },
     {
       "osId": "8621",
@@ -12517,6 +12501,25 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "8622",
+      "ativo": "Tracker 51.200 STI STI-H250 Bi-linha    { SLG200-ETKR51.200 }",
+      "equipe": "",
+      "responsavel": "Daniel de Paula ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Daniel de Paula ",
+      "status": "Finalizados",
+      "tarefa": "[2C][Sete Lagoas] - Realizar reset no tracker",
+      "criticidade": "",
+      "dataProgramada": "2026-06-29",
+      "dataCriacao": "2026-06-29",
+      "dataInicial": "2026-06-29",
+      "dataFinal": "2026-06-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
     {
       "osId": "8603",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -15484,29 +15487,9 @@
       "horasAteFechar": 0,
       "modalidade": "remoto",
       "atrasada": false
-    },
-    {
-      "osId": "8104",
-      "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizada",
-      "tarefa": "UFV SITIO - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-      "criticidade": "",
-      "dataProgramada": "2026-06-21",
-      "dataCriacao": "2026-06-21",
-      "dataInicial": "2026-06-21",
-      "dataFinal": "2026-06-21",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1916,
+  "historicoTotal": 1917,
   "totalGeral": 3446,
   "verificacao": {
     "total": 0,
