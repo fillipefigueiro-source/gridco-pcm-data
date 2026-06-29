@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-29T12:55:51Z",
+  "geradoEm": "2026-06-29T13:03:34Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 2777,
-        "emAberto": 17,
-        "atrasadas": 12,
-        "concluidas30d": 549,
-        "concluidas7d": 131,
+        "emAberto": 15,
+        "atrasadas": 10,
+        "concluidas30d": 551,
+        "concluidas7d": 133,
         "naSemanaCorrente": 11
       },
       "mttr": {
-        "horas": 6.9,
-        "label": "6h 54min",
-        "amostra": 549
+        "horas": 7.15,
+        "label": "7h 9min",
+        "amostra": 551
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W27",
           "criadas": 10,
-          "finalizadas": 9
+          "finalizadas": 11
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 2777,
-            "emAberto": 17
+            "emAberto": 15
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 17,
-      "atrasadas": 12,
+      "total": 15,
+      "atrasadas": 10,
       "porStatus": {
-        "naoIniciada": 15,
-        "emProgresso": 2,
+        "naoIniciada": 14,
+        "emProgresso": 1,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 17
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -181,44 +181,6 @@
           "atrasada": true
         },
         {
-          "osId": "8495",
-          "ativo": "Inversor 1.7 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.7 }",
-          "equipe": "",
-          "responsavel": "Rodolfo  Oliveira",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Rodolfo  Oliveira",
-          "status": "IN_PROGRESS",
-          "tarefa": "Religamento do inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-06-26",
-          "dataCriacao": "2026-06-26",
-          "dataInicial": "2026-06-26",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "8494",
-          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Rodolfo  Oliveira",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Rodolfo  Oliveira",
-          "status": "IN_PROGRESS",
-          "tarefa": "Religamento do inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-06-26",
-          "dataCriacao": "2026-06-26",
-          "dataInicial": "2026-06-26",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "8578",
           "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
           "equipe": "",
@@ -261,14 +223,15 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "UFV SITIO  - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
           "criticidade": "",
           "dataProgramada": "2026-06-28",
           "dataCriacao": "2026-06-28",
-          "dataInicial": "",
+          "dataInicial": "2026-06-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "remoto",
           "atrasada": true
         },
@@ -537,6 +500,46 @@
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8495",
+          "ativo": "Inversor 1.7 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.7 }",
+          "equipe": "",
+          "responsavel": "Rodolfo  Oliveira",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Rodolfo  Oliveira",
+          "status": "Finalizados",
+          "tarefa": "Religamento do inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-06-26",
+          "dataCriacao": "2026-06-26",
+          "dataInicial": "2026-06-26",
+          "dataFinal": "2026-06-29",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 72.0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8494",
+          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Rodolfo  Oliveira",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Rodolfo  Oliveira",
+          "status": "Finalizados",
+          "tarefa": "Religamento do inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-06-26",
+          "dataCriacao": "2026-06-26",
+          "dataInicial": "2026-06-26",
+          "dataFinal": "2026-06-29",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 72.0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3321,26 +3324,6 @@
           "atrasada": false
         },
         {
-          "osId": "8074",
-          "ativo": "Cabine 4 BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100-CABN4 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizada",
-          "tarefa": "Religamento UFV Ceilândia 1.3",
-          "criticidade": "",
-          "dataProgramada": "2026-06-20",
-          "dataCriacao": "2026-06-20",
-          "dataInicial": "2026-06-20",
-          "dataFinal": "2026-06-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "8077",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -3349,26 +3332,6 @@
           "supervisor": "Raphael Vitoriano ",
           "status": "Finalizada",
           "tarefa": "Religamento da usina de Marialva",
-          "criticidade": "",
-          "dataProgramada": "2026-06-20",
-          "dataCriacao": "2026-06-20",
-          "dataInicial": "2026-06-20",
-          "dataFinal": "2026-06-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "8075",
-          "ativo": "RenoGrid - Colíder 1 - MT Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { RNGD-CLD100 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Finalizados",
-          "tarefa": "Religamento UFV Colíder 1",
           "criticidade": "",
           "dataProgramada": "2026-06-20",
           "dataCriacao": "2026-06-20",
@@ -3401,12 +3364,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1548,
+      "historicoTotal": 1550,
       "subClassificacao": {
         "remoto": 584,
         "local": 2193,
         "remotoEmAberto": 9,
-        "localEmAberto": 8,
+        "localEmAberto": 6,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -3577,7 +3540,7 @@
         ],
         "medHorasAbrir": 3.5,
         "medHorasFechar": 3.2,
-        "amostraAbrir": 570,
+        "amostraAbrir": 571,
         "amostraFechar": 570,
         "topAbridores": [
           {
@@ -3628,17 +3591,17 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 472,
+        "total": 473,
         "emAberto": 76,
         "atrasadas": 25,
-        "concluidas30d": 90,
-        "concluidas7d": 26,
+        "concluidas30d": 91,
+        "concluidas7d": 27,
         "naSemanaCorrente": 23
       },
       "mttr": {
-        "horas": 284.0,
-        "label": "11d 20h",
-        "amostra": 90
+        "horas": 281.67,
+        "label": "11d 17h",
+        "amostra": 91
       },
       "tendencia4Semanas": [
         {
@@ -3658,15 +3621,15 @@
         },
         {
           "semana": "W27",
-          "criadas": 7,
-          "finalizadas": 2
+          "criadas": 8,
+          "finalizadas": 3
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 472,
+            "total": 473,
             "emAberto": 76
           }
         ],
@@ -3701,8 +3664,8 @@
       "total": 76,
       "atrasadas": 25,
       "porStatus": {
-        "naoIniciada": 69,
-        "emProgresso": 2,
+        "naoIniciada": 70,
+        "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
@@ -4770,6 +4733,23 @@
           "atrasada": false
         },
         {
+          "osId": "8613",
+          "ativo": "Transformador 4 GAZQUEZ     { THPN-SDN100-TRFR4 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Janderson Miranda ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-07-17",
+          "dataCriacao": "2026-06-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "8612",
           "ativo": "Preventiva Grupo de Inversores      { THPN-STN100-PGINVR1 }",
           "equipe": "",
@@ -4940,24 +4920,6 @@
           "atrasada": false
         },
         {
-          "osId": "8530",
-          "ativo": "Cabine 1  Araputanga  Mato Grosso Brasil { APG100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Adriano  Moraes",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-07-17",
-          "dataCriacao": "2026-06-26",
-          "dataInicial": "2026-06-29",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "atrasada": false
-        },
-        {
           "osId": "8466",
           "ativo": "Cabine 1 Estrada Jussara S/N Mandaguaçu  Paraná Brasil { MNG100-CABN1 }",
           "equipe": "",
@@ -5011,6 +4973,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8530",
+          "ativo": "Cabine 1  Araputanga  Mato Grosso Brasil { APG100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Adriano  Moraes",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-07-17",
+          "dataCriacao": "2026-06-26",
+          "dataInicial": "2026-06-29",
+          "dataFinal": "2026-06-29",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "8256",
           "ativo": "Cabine 1 Estrada Pedreira, S/N Matão  São Paulo Brasil { MTO100-CABN1 }",
@@ -7824,25 +7805,6 @@
           "atrasada": false
         },
         {
-          "osId": "6165",
-          "ativo": "Estação Meteorológica  Demerval Lobão  Piauí Brasil { DML100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ailton Leal ",
-          "status": "Finalizados",
-          "tarefa": "[GreenYellow] - MPM - Estação Meteorológica",
-          "criticidade": "",
-          "dataProgramada": "2026-05-06",
-          "dataCriacao": "2026-05-04",
-          "dataInicial": "2026-05-06",
-          "dataFinal": "2026-05-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "6175",
           "ativo": "Ar Condicionado      { GTA500-SOEM1-ARCD }",
           "equipe": "",
@@ -7862,7 +7824,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 247
+      "historicoTotal": 248
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -10569,6 +10531,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "8613",
+      "ativo": "Transformador 4 GAZQUEZ     { THPN-SDN100-TRFR4 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Janderson Miranda ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-07-17",
+      "dataCriacao": "2026-06-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "8612",
       "ativo": "Preventiva Grupo de Inversores      { THPN-STN100-PGINVR1 }",
       "equipe": "",
@@ -10721,14 +10699,15 @@
       "responsavel": "Janderson Miranda ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "UFV SITIO  - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
       "criticidade": "",
       "dataProgramada": "2026-06-28",
       "dataCriacao": "2026-06-28",
-      "dataInicial": "",
+      "dataInicial": "2026-06-29",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "remoto"
     },
     {
@@ -10926,23 +10905,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "8530",
-      "ativo": "Cabine 1  Araputanga  Mato Grosso Brasil { APG100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Adriano  Moraes",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-07-17",
-      "dataCriacao": "2026-06-26",
-      "dataInicial": "2026-06-29",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0
     },
     {
       "osId": "8529",
@@ -11155,42 +11117,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "modalidade": "remoto"
-    },
-    {
-      "osId": "8495",
-      "ativo": "Inversor 1.7 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.7 }",
-      "equipe": "",
-      "responsavel": "Rodolfo  Oliveira",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Rodolfo  Oliveira",
-      "status": "IN_PROGRESS",
-      "tarefa": "Religamento do inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-06-26",
-      "dataCriacao": "2026-06-26",
-      "dataInicial": "2026-06-26",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
-      "osId": "8494",
-      "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Rodolfo  Oliveira",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Rodolfo  Oliveira",
-      "status": "IN_PROGRESS",
-      "tarefa": "Religamento do inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-06-26",
-      "dataCriacao": "2026-06-26",
-      "dataInicial": "2026-06-26",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
     },
     {
       "osId": "8484",
@@ -12870,6 +12796,25 @@
       "atrasada": false
     },
     {
+      "osId": "8530",
+      "ativo": "Cabine 1  Araputanga  Mato Grosso Brasil { APG100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Adriano  Moraes",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-07-17",
+      "dataCriacao": "2026-06-26",
+      "dataInicial": "2026-06-29",
+      "dataFinal": "2026-06-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "8519",
       "ativo": "SKID 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID2 }",
       "equipe": "",
@@ -12946,6 +12891,46 @@
       "linkFracttal": "",
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "8495",
+      "ativo": "Inversor 1.7 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.7 }",
+      "equipe": "",
+      "responsavel": "Rodolfo  Oliveira",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Rodolfo  Oliveira",
+      "status": "Finalizados",
+      "tarefa": "Religamento do inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-06-26",
+      "dataCriacao": "2026-06-26",
+      "dataInicial": "2026-06-26",
+      "dataFinal": "2026-06-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 72.0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "8494",
+      "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Rodolfo  Oliveira",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Rodolfo  Oliveira",
+      "status": "Finalizados",
+      "tarefa": "Religamento do inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-06-26",
+      "dataCriacao": "2026-06-26",
+      "dataInicial": "2026-06-26",
+      "dataFinal": "2026-06-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 72.0,
       "modalidade": "local",
       "atrasada": false
     },
@@ -15257,70 +15242,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "8098",
-      "ativo": "Cabine 6 Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-CABN6 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da cabine remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-06-21",
-      "dataCriacao": "2026-06-21",
-      "dataInicial": "2026-06-21",
-      "dataFinal": "2026-06-21",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
-    },
-    {
-      "osId": "8097",
-      "ativo": "Cabine 3 Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-CABN3 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da cabine remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-06-21",
-      "dataCriacao": "2026-06-21",
-      "dataInicial": "2026-06-21",
-      "dataFinal": "2026-06-21",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
-    },
-    {
-      "osId": "8096",
-      "ativo": "Cabine 2 Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da cabine remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-06-21",
-      "dataCriacao": "2026-06-21",
-      "dataInicial": "2026-06-21",
-      "dataFinal": "2026-06-21",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1909,
-  "totalGeral": 3433,
+  "historicoTotal": 1912,
+  "totalGeral": 3434,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
