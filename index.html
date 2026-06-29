@@ -975,7 +975,7 @@ const CONFIG = {
 };
 let SUGESTOES_DB=[];
 let ETIQUETAS_DB=null;
-let SUPERVISORES_DB={porCluster:{},lista:[]};
+let SUPERVISORES_DB={porCluster:{},porEquipe:{},lista:[]};
 
 async function sha256(str) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
@@ -1062,12 +1062,12 @@ async function loadSupervisores(){
   // FIX #159: carrega mapa cluster -> supervisor (gerado por gerar_supervisores_json.py)
   try{
     const res=await fetch(CONFIG.SUPERVISORES_URL+'?t='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(10000)});
-    if(!res.ok){SUPERVISORES_DB={porCluster:{},lista:[]}; return false;}
+    if(!res.ok){SUPERVISORES_DB={porCluster:{},porEquipe:{},lista:[]}; return false;}
     const j=await res.json();
-    SUPERVISORES_DB={porCluster:j.porCluster||{}, lista:j.lista||[]};
+    SUPERVISORES_DB={porCluster:j.porCluster||{}, porEquipe:j.porEquipe||{}, lista:j.lista||[]};
     return true;
   }catch(e){
-    SUPERVISORES_DB={porCluster:{},lista:[]};
+    SUPERVISORES_DB={porCluster:{},porEquipe:{},lista:[]};
     return false;
   }
 }
@@ -1163,11 +1163,15 @@ const isNova=r=>r.nova_os&&r.nova_os.toString().trim()!==''&&r.nova_os.toString(
 const isFinalizada=r=>{const s=(r.status_bd||r.status||'').toString().toLowerCase();return s.includes('finaliz')||s.includes('conclu');};
 // Resolve nome do supervisor tentando múltiplos campos possíveis na JSON
 const getSupervisor=r=>{
-  // FIX #159: tenta campos na row; senão cai no mapa cluster -> supervisor (supervisores.json)
+  // Tenta campos diretos na row primeiro
   const direto=(r.responsavel||r.supervisor||r['Responsável']||r['Responsavel']||r.responsavel_om||r.resp||r.responsable||'').toString().trim();
   if(direto) return direto;
   const c=(r.cluster||'').toString().trim();
-  if(c && SUPERVISORES_DB && SUPERVISORES_DB.porCluster && SUPERVISORES_DB.porCluster[c]) return SUPERVISORES_DB.porCluster[c];
+  if(!c||!SUPERVISORES_DB) return '';
+  // Tenta porEquipe primeiro (chave completa: "SP Leste 05") — match exato
+  if(SUPERVISORES_DB.porEquipe&&SUPERVISORES_DB.porEquipe[c]) return SUPERVISORES_DB.porEquipe[c];
+  // Fallback: porCluster (chave curta: "SP Leste")
+  if(SUPERVISORES_DB.porCluster&&SUPERVISORES_DB.porCluster[c]) return SUPERVISORES_DB.porCluster[c];
   return '';
 };
 const statusKey=r=>{
