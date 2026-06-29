@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-29T14:47:38Z",
+  "geradoEm": "2026-06-29T14:52:29Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 14,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 14,
-        "emProgresso": 0,
+        "naoIniciada": 13,
+        "emProgresso": 1,
         "pausada": 0,
         "verificacao": 0
       },
@@ -241,14 +241,15 @@
           "responsavel": "Francisco  Santos",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Francisco  Santos",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento do inversor",
           "criticidade": "",
           "dataProgramada": "2026-06-29",
           "dataCriacao": "2026-06-29",
-          "dataInicial": "",
+          "dataInicial": "2026-06-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -771,7 +772,7 @@
           "responsavel": "Felipe Silva ",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Felipe Silva ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "Religamento da Usina remoto",
           "criticidade": "",
           "dataProgramada": "2026-06-27",
@@ -791,7 +792,7 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "CíceroWillian",
           "supervisor": "Wesllen  Castro",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "Religamento UFV Ipixuna",
           "criticidade": "",
           "dataProgramada": "2026-06-27",
@@ -3572,8 +3573,8 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 477,
-        "emAberto": 79,
+        "total": 478,
+        "emAberto": 80,
         "atrasadas": 24,
         "concluidas30d": 92,
         "concluidas7d": 28,
@@ -3602,7 +3603,7 @@
         },
         {
           "semana": "W27",
-          "criadas": 12,
+          "criadas": 13,
           "finalizadas": 4
         }
       ],
@@ -3610,8 +3611,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 477,
-            "emAberto": 79
+            "total": 478,
+            "emAberto": 80
           }
         ],
         "responsaveis": [
@@ -3642,16 +3643,16 @@
           }
         ]
       },
-      "total": 79,
+      "total": 80,
       "atrasadas": 24,
       "porStatus": {
-        "naoIniciada": 74,
+        "naoIniciada": 75,
         "emProgresso": 0,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 79
+        "(sem equipe)": 80
       },
       "oss": [
         {
@@ -4983,6 +4984,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 144.0,
+          "atrasada": false
+        },
+        {
+          "osId": "8628",
+          "ativo": "Transformador 1      { GYT100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPA - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-07-24",
+          "dataCriacao": "2026-06-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
           "atrasada": false
         },
         {
@@ -10580,6 +10598,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "8628",
+      "ativo": "Transformador 1      { GYT100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPA - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-07-24",
+      "dataCriacao": "2026-06-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "8626",
       "ativo": "Transformador 1 WEG     { THPN-TPZ100-TRFR1 }",
       "equipe": "",
@@ -10602,14 +10636,15 @@
       "responsavel": "Francisco  Santos",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Francisco  Santos",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento do inversor",
       "criticidade": "",
       "dataProgramada": "2026-06-29",
       "dataCriacao": "2026-06-29",
-      "dataInicial": "",
+      "dataInicial": "2026-06-29",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -12717,7 +12752,7 @@
       "responsavel": "Felipe Silva ",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Felipe Silva ",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "Religamento da Usina remoto",
       "criticidade": "",
       "dataProgramada": "2026-06-27",
@@ -12737,7 +12772,7 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "CíceroWillian",
       "supervisor": "Wesllen  Castro",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "Religamento UFV Ipixuna",
       "criticidade": "",
       "dataProgramada": "2026-06-27",
@@ -15340,7 +15375,7 @@
     }
   ],
   "historicoTotal": 1916,
-  "totalGeral": 3441,
+  "totalGeral": 3442,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
