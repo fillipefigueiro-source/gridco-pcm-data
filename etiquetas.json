@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-29T14:08:08Z",
+  "geradoEm": "2026-06-29T14:18:05Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -8,16 +8,16 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2777,
-        "emAberto": 14,
+        "total": 2778,
+        "emAberto": 15,
         "atrasadas": 9,
         "concluidas30d": 552,
         "concluidas7d": 134,
         "naSemanaCorrente": 11
       },
       "mttr": {
-        "horas": 7.18,
-        "label": "7h 11min",
+        "horas": 7.13,
+        "label": "7h 8min",
         "amostra": 552
       },
       "tendencia4Semanas": [
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W27",
-          "criadas": 10,
+          "criadas": 11,
           "finalizadas": 12
         }
       ],
@@ -46,15 +46,15 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2777,
-            "emAberto": 14
+            "total": 2778,
+            "emAberto": 15
           }
         ],
         "responsaveis": [
           {
             "nome": "Marcos  Camargo",
-            "total": 421,
-            "emAberto": 0
+            "total": 422,
+            "emAberto": 1
           },
           {
             "nome": "Raphael Vitoriano",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
+      "total": 15,
       "atrasadas": 9,
       "porStatus": {
-        "naoIniciada": 14,
+        "naoIniciada": 15,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -340,6 +340,24 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8621",
+          "ativo": "Infraestrutura Civil Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200-INFC1 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Marcos  Camargo",
+          "status": "Não Iniciada",
+          "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-07",
+          "dataCriacao": "2026-06-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
           "atrasada": false
         }
       ],
@@ -956,31 +974,11 @@
           "criticidade": "",
           "dataProgramada": "2026-06-26",
           "dataCriacao": "2026-06-26",
-          "dataInicial": "2026-06-27",
+          "dataInicial": "2026-06-26",
           "dataFinal": "2026-06-27",
           "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "8509",
-          "ativo": "Thopen - Aparecida do Taboado 1 e 2 - MS  Aparecida do Taboado  Mato Grosso do Sul Brasil { THPN-ADT100 }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Finalizados",
-          "tarefa": "Religamento da usina",
-          "criticidade": "",
-          "dataProgramada": "2026-06-26",
-          "dataCriacao": "2026-06-26",
-          "dataInicial": "2026-06-27",
-          "dataFinal": "2026-06-27",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
+          "horasAteAbrir": 0,
+          "horasAteFechar": 24.0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -991,7 +989,7 @@
           "responsavel": "Italo  Lustosa",
           "criadoPor": "LuelySantos",
           "supervisor": "Italo  Lustosa",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "Religamento da usina",
           "criticidade": "",
           "dataProgramada": "2026-06-26",
@@ -1042,6 +1040,26 @@
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "8509",
+          "ativo": "Thopen - Aparecida do Taboado 1 e 2 - MS  Aparecida do Taboado  Mato Grosso do Sul Brasil { THPN-ADT100 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Finalizada",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-06-26",
+          "dataCriacao": "2026-06-26",
+          "dataInicial": "2026-06-26",
+          "dataFinal": "2026-06-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
           "atrasada": false
         },
         {
@@ -3347,9 +3365,9 @@
       ],
       "historicoTotal": 1551,
       "subClassificacao": {
-        "remoto": 584,
+        "remoto": 585,
         "local": 2193,
-        "remotoEmAberto": 8,
+        "remotoEmAberto": 9,
         "localEmAberto": 6,
         "pctRemoto": 21,
         "alerta": true
@@ -3542,7 +3560,7 @@
           },
           {
             "nome": "Juliana Cândido",
-            "total": 22
+            "total": 23
           },
           {
             "nome": "DavidNascimento",
@@ -3572,8 +3590,8 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 476,
-        "emAberto": 78,
+        "total": 477,
+        "emAberto": 79,
         "atrasadas": 24,
         "concluidas30d": 92,
         "concluidas7d": 28,
@@ -3602,7 +3620,7 @@
         },
         {
           "semana": "W27",
-          "criadas": 11,
+          "criadas": 12,
           "finalizadas": 4
         }
       ],
@@ -3610,8 +3628,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 476,
-            "emAberto": 78
+            "total": 477,
+            "emAberto": 79
           }
         ],
         "responsaveis": [
@@ -3642,16 +3660,16 @@
           }
         ]
       },
-      "total": 78,
+      "total": 79,
       "atrasadas": 24,
       "porStatus": {
-        "naoIniciada": 73,
+        "naoIniciada": 74,
         "emProgresso": 0,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 78
+        "(sem equipe)": 79
       },
       "oss": [
         {
@@ -4980,6 +4998,23 @@
           "criticidade": "",
           "dataProgramada": "2026-07-27",
           "dataCriacao": "2026-06-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8623",
+          "ativo": "Transformador 1      { MTO100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Juliana Cândido ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Juliana Cândido ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPA - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-07-29",
+          "dataCriacao": "2026-06-29",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -9659,12 +9694,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 43,
-        "emAberto": 7,
+        "total": 44,
+        "emAberto": 8,
         "atrasadas": 7,
         "concluidas30d": 6,
         "concluidas7d": 3,
-        "naSemanaCorrente": 0
+        "naSemanaCorrente": 1
       },
       "mttr": {
         "horas": 16.0,
@@ -9689,7 +9724,7 @@
         },
         {
           "semana": "W27",
-          "criadas": 0,
+          "criadas": 1,
           "finalizadas": 0
         }
       ],
@@ -9697,8 +9732,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 43,
-            "emAberto": 7
+            "total": 44,
+            "emAberto": 8
           }
         ],
         "responsaveis": [
@@ -9729,16 +9764,16 @@
           }
         ]
       },
-      "total": 7,
+      "total": 8,
       "atrasadas": 7,
       "porStatus": {
-        "naoIniciada": 6,
+        "naoIniciada": 7,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 7
+        "(sem equipe)": 8
       },
       "oss": [
         {
@@ -9860,6 +9895,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "8622",
+          "ativo": "Tracker 51.200 STI STI-H250 Bi-linha    { SLG200-ETKR51.200 }",
+          "equipe": "",
+          "responsavel": "Daniel de Paula ",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Daniel de Paula ",
+          "status": "Não Iniciada",
+          "tarefa": "[2C][Sete Lagoas] - Realizar reset no tracker",
+          "criticidade": "",
+          "dataProgramada": "2026-06-29",
+          "dataCriacao": "2026-06-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -10544,6 +10596,55 @@
     }
   },
   "ossPublicas": [
+    {
+      "osId": "8623",
+      "ativo": "Transformador 1      { MTO100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Juliana Cândido ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Juliana Cândido ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPA - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-07-29",
+      "dataCriacao": "2026-06-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8622",
+      "ativo": "Tracker 51.200 STI STI-H250 Bi-linha    { SLG200-ETKR51.200 }",
+      "equipe": "",
+      "responsavel": "Daniel de Paula ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Daniel de Paula ",
+      "status": "Não Iniciada",
+      "tarefa": "[2C][Sete Lagoas] - Realizar reset no tracker",
+      "criticidade": "",
+      "dataProgramada": "2026-06-29",
+      "dataCriacao": "2026-06-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8621",
+      "ativo": "Infraestrutura Civil Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200-INFC1 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Marcos  Camargo",
+      "status": "Não Iniciada",
+      "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-07",
+      "dataCriacao": "2026-06-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
     {
       "osId": "8618",
       "ativo": "Transformador 1 WEG     { THPN-VRT200-TRFR1 }",
@@ -12834,11 +12935,11 @@
       "criticidade": "",
       "dataProgramada": "2026-06-26",
       "dataCriacao": "2026-06-26",
-      "dataInicial": "2026-06-27",
+      "dataInicial": "2026-06-26",
       "dataFinal": "2026-06-27",
       "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
+      "horasAteAbrir": 0,
+      "horasAteFechar": 24.0,
       "modalidade": "local",
       "atrasada": false
     },
@@ -12868,7 +12969,7 @@
       "responsavel": "Italo  Lustosa",
       "criadoPor": "LuelySantos",
       "supervisor": "Italo  Lustosa",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "Religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-06-26",
@@ -12928,15 +13029,15 @@
       "responsavel": "Paulo  Ribeiro",
       "criadoPor": "LuelySantos",
       "supervisor": "Paulo  Ribeiro",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "Religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-06-26",
       "dataCriacao": "2026-06-26",
-      "dataInicial": "2026-06-27",
-      "dataFinal": "2026-06-27",
+      "dataInicial": "2026-06-26",
+      "dataFinal": "2026-06-26",
       "linkFracttal": "",
-      "horasAteAbrir": 24.0,
+      "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -15272,7 +15373,7 @@
     }
   ],
   "historicoTotal": 1914,
-  "totalGeral": 3437,
+  "totalGeral": 3440,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
