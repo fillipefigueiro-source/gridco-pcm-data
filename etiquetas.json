@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-30T19:55:33Z",
+  "geradoEm": "2026-06-30T20:01:19Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -9844,12 +9844,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 62,
-        "emAberto": 22,
+        "total": 63,
+        "emAberto": 23,
         "atrasadas": 5,
         "concluidas30d": 10,
         "concluidas7d": 6,
-        "naSemanaCorrente": 19
+        "naSemanaCorrente": 20
       },
       "mttr": {
         "horas": 110.4,
@@ -9874,7 +9874,7 @@
         },
         {
           "semana": "W27",
-          "criadas": 19,
+          "criadas": 20,
           "finalizadas": 4
         }
       ],
@@ -9882,8 +9882,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 62,
-            "emAberto": 22
+            "total": 63,
+            "emAberto": 23
           }
         ],
         "responsaveis": [
@@ -9894,8 +9894,8 @@
           },
           {
             "nome": "James Chaves",
-            "total": 8,
-            "emAberto": 2
+            "total": 9,
+            "emAberto": 3
           },
           {
             "nome": "Luiz  Silva",
@@ -9914,16 +9914,16 @@
           }
         ]
       },
-      "total": 22,
+      "total": 23,
       "atrasadas": 5,
       "porStatus": {
-        "naoIniciada": 22,
+        "naoIniciada": 23,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 22
+        "(sem equipe)": 23
       },
       "oss": [
         {
@@ -10294,6 +10294,23 @@
           "tarefa": "[INV_1.8 - Ipixuna do Pará - 2C] Foi identificado via performance que esse inversor está com a performance inferior aos demais. Ao analisar as curvas de corrente, foi constatado que a PV21 e a PV27 es",
           "criticidade": "",
           "dataProgramada": "2026-06-30",
+          "dataCriacao": "2026-06-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8714",
+          "ativo": "Tracker 11.101 STI Norland     { MAB100-ETKR11.101 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "Tracker parado, realizar comando de reset. Caso não retorne, coloque o tracker na posição de 0° e registre uma foto panorâmica inicial focando na placa de identificação (número de série) da TCU, NCU o",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
           "dataCriacao": "2026-06-30",
           "dataInicial": "",
           "dataFinal": "",
@@ -11078,6 +11095,22 @@
     }
   },
   "ossPublicas": [
+    {
+      "osId": "8714",
+      "ativo": "Tracker 11.101 STI Norland     { MAB100-ETKR11.101 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "Tracker parado, realizar comando de reset. Caso não retorne, coloque o tracker na posição de 0° e registre uma foto panorâmica inicial focando na placa de identificação (número de série) da TCU, NCU o",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-06-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
     {
       "osId": "8709",
       "ativo": "Cabine 1 Sítio Rio Quartel, Zona Rural Linhares  Espírito Santo Brasil { AXIS-LHN100-CABN1 }",
@@ -16247,7 +16280,7 @@
     }
   ],
   "historicoTotal": 1921,
-  "totalGeral": 3488,
+  "totalGeral": 3489,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
