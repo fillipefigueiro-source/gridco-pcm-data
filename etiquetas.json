@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-30T19:35:27Z",
+  "geradoEm": "2026-06-30T19:45:40Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 2790,
-        "emAberto": 15,
+        "emAberto": 14,
         "atrasadas": 9,
-        "concluidas30d": 552,
-        "concluidas7d": 126,
+        "concluidas30d": 553,
+        "concluidas7d": 127,
         "naSemanaCorrente": 23
       },
       "mttr": {
-        "horas": 6.86,
-        "label": "6h 52min",
-        "amostra": 552
+        "horas": 6.85,
+        "label": "6h 51min",
+        "amostra": 553
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W27",
           "criadas": 23,
-          "finalizadas": 19
+          "finalizadas": 20
         }
       ],
       "topOfensores": {
@@ -47,14 +47,14 @@
           {
             "nome": "(sem equipe)",
             "total": 2790,
-            "emAberto": 15
+            "emAberto": 14
           }
         ],
         "responsaveis": [
           {
             "nome": "Marcos  Camargo",
             "total": 423,
-            "emAberto": 2
+            "emAberto": 1
           },
           {
             "nome": "Raphael Vitoriano",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 15,
+      "total": 14,
       "atrasadas": 9,
       "porStatus": {
-        "naoIniciada": 14,
+        "naoIniciada": 13,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 15
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -254,24 +254,6 @@
           "atrasada": true
         },
         {
-          "osId": "8669",
-          "ativo": "Thopen - Alto Paraná 1 - PR Sítio Olho D'água s/n Alto Paraná  Paraná Brasil { THPN-APR100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Marcos  Camargo",
-          "status": "Não Iniciada",
-          "tarefa": "UFV ALTO 1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-          "criticidade": "",
-          "dataProgramada": "2026-06-30",
-          "dataCriacao": "2026-06-30",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "8650",
           "ativo": "Thopen - Aparecida 3 - SP  Aparecida  São Paulo Brasil { THPN-APR300 }",
           "equipe": "",
@@ -363,6 +345,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8669",
+          "ativo": "Thopen - Alto Paraná 1 - PR Sítio Olho D'água s/n Alto Paraná  Paraná Brasil { THPN-APR100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Marcos  Camargo",
+          "status": "Finalizados",
+          "tarefa": "UFV ALTO 1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+          "criticidade": "",
+          "dataProgramada": "2026-06-30",
+          "dataCriacao": "2026-06-30",
+          "dataInicial": "2026-06-30",
+          "dataFinal": "2026-06-30",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "8660",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3324,26 +3326,6 @@
           "atrasada": false
         },
         {
-          "osId": "8100",
-          "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizada",
-          "tarefa": "Religamento da UFV Nova Londrina 1",
-          "criticidade": "",
-          "dataProgramada": "2026-06-21",
-          "dataCriacao": "2026-06-21",
-          "dataInicial": "2026-06-21",
-          "dataFinal": "2026-06-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "8247",
           "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
           "equipe": "",
@@ -3364,11 +3346,11 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1549,
+      "historicoTotal": 1550,
       "subClassificacao": {
         "remoto": 590,
         "local": 2200,
-        "remotoEmAberto": 9,
+        "remotoEmAberto": 8,
         "localEmAberto": 6,
         "pctRemoto": 21,
         "alerta": true
@@ -3540,8 +3522,8 @@
         ],
         "medHorasAbrir": 3.4,
         "medHorasFechar": 3.2,
-        "amostraAbrir": 576,
-        "amostraFechar": 576,
+        "amostraAbrir": 577,
+        "amostraFechar": 577,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3591,8 +3573,8 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 494,
-        "emAberto": 91,
+        "total": 493,
+        "emAberto": 90,
         "atrasadas": 23,
         "concluidas30d": 97,
         "concluidas7d": 30,
@@ -3621,7 +3603,7 @@
         },
         {
           "semana": "W27",
-          "criadas": 29,
+          "criadas": 28,
           "finalizadas": 9
         }
       ],
@@ -3629,8 +3611,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 494,
-            "emAberto": 91
+            "total": 493,
+            "emAberto": 90
           }
         ],
         "responsaveis": [
@@ -3650,27 +3632,27 @@
             "emAberto": 5
           },
           {
-            "nome": "Gilson Souza",
-            "total": 21,
-            "emAberto": 4
-          },
-          {
             "nome": "Francisco  Santos",
             "total": 21,
             "emAberto": 0
+          },
+          {
+            "nome": "Luiz  Silva",
+            "total": 21,
+            "emAberto": 2
           }
         ]
       },
-      "total": 91,
+      "total": 90,
       "atrasadas": 23,
       "porStatus": {
-        "naoIniciada": 86,
+        "naoIniciada": 85,
         "emProgresso": 0,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 91
+        "(sem equipe)": 90
       },
       "oss": [
         {
@@ -5155,23 +5137,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 144.0,
-          "atrasada": false
-        },
-        {
-          "osId": "8712",
-          "ativo": "Transformador 7 COMTRAFO     { CPP100-TRFR7 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
-          "tarefa": "[Athon] - MPS - Transformadores",
-          "criticidade": "",
-          "dataProgramada": "2026-07-23",
-          "dataCriacao": "2026-06-30",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
           "atrasada": false
         },
         {
@@ -11114,22 +11079,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "8712",
-      "ativo": "Transformador 7 COMTRAFO     { CPP100-TRFR7 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
-      "tarefa": "[Athon] - MPS - Transformadores",
-      "criticidade": "",
-      "dataProgramada": "2026-07-23",
-      "dataCriacao": "2026-06-30",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "8709",
       "ativo": "Cabine 1 Sítio Rio Quartel, Zona Rural Linhares  Espírito Santo Brasil { AXIS-LHN100-CABN1 }",
       "equipe": "",
@@ -11480,23 +11429,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "8669",
-      "ativo": "Thopen - Alto Paraná 1 - PR Sítio Olho D'água s/n Alto Paraná  Paraná Brasil { THPN-APR100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Marcos  Camargo",
-      "status": "Não Iniciada",
-      "tarefa": "UFV ALTO 1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-      "criticidade": "",
-      "dataProgramada": "2026-06-30",
-      "dataCriacao": "2026-06-30",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "remoto"
     },
     {
       "osId": "8668",
@@ -13333,6 +13265,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "8669",
+      "ativo": "Thopen - Alto Paraná 1 - PR Sítio Olho D'água s/n Alto Paraná  Paraná Brasil { THPN-APR100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Marcos  Camargo",
+      "status": "Finalizados",
+      "tarefa": "UFV ALTO 1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+      "criticidade": "",
+      "dataProgramada": "2026-06-30",
+      "dataCriacao": "2026-06-30",
+      "dataInicial": "2026-06-30",
+      "dataFinal": "2026-06-30",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "8660",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -16292,30 +16244,10 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "8144",
-      "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
-      "equipe": "",
-      "responsavel": "Italo  Lustosa",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Italo  Lustosa",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-22",
-      "dataCriacao": "2026-06-22",
-      "dataInicial": "2026-06-22",
-      "dataFinal": "2026-06-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1920,
-  "totalGeral": 3489,
+  "historicoTotal": 1921,
+  "totalGeral": 3488,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
