@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-01T11:30:15Z",
+  "geradoEm": "2026-07-01T11:39:52Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2791,
-        "emAberto": 12,
+        "total": 2797,
+        "emAberto": 15,
         "atrasadas": 9,
-        "concluidas30d": 543,
-        "concluidas7d": 106,
-        "naSemanaCorrente": 24
+        "concluidas30d": 546,
+        "concluidas7d": 109,
+        "naSemanaCorrente": 30
       },
       "mttr": {
-        "horas": 7.15,
-        "label": "7h 9min",
-        "amostra": 543
+        "horas": 7.11,
+        "label": "7h 7min",
+        "amostra": 546
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W27",
-          "criadas": 24,
-          "finalizadas": 23
+          "criadas": 30,
+          "finalizadas": 26
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2791,
-            "emAberto": 12
+            "total": 2797,
+            "emAberto": 15
           }
         ],
         "responsaveis": [
@@ -63,7 +63,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 221,
+            "total": 223,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 12,
+      "total": 15,
       "atrasadas": 9,
       "porStatus": {
-        "naoIniciada": 10,
-        "emProgresso": 0,
+        "naoIniciada": 12,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 12
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -255,6 +255,61 @@
           "atrasada": true
         },
         {
+          "osId": "8722",
+          "ativo": "Inversor 4.6 Huawei     { TIM100-INVR4.6 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Luiz  Silva",
+          "status": "IN_PROGRESS",
+          "tarefa": "religamento de inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-07-01",
+          "dataInicial": "2026-07-01",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8721",
+          "ativo": "Inversor 2.8 Huawei     { MAB200-INVR2.8 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "religamento de inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-07-01",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8720",
+          "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Ailton Leal ",
+          "status": "Não Iniciada",
+          "tarefa": "UFV: Junco 1 | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-07-01",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "8321",
           "ativo": "Infraestrutura Civil Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-INFC1 }",
           "equipe": "",
@@ -310,6 +365,66 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8724",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da Usina remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-07-01",
+          "dataInicial": "2026-07-01",
+          "dataFinal": "2026-07-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "8723",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da Usina remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-07-01",
+          "dataInicial": "2026-07-01",
+          "dataFinal": "2026-07-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "8719",
+          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Railson Gomes ",
+          "status": "Finalizados",
+          "tarefa": "UFV: Crateus | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-07-01",
+          "dataInicial": "2026-07-01",
+          "dataFinal": "2026-07-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "8716",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3231,66 +3346,6 @@
           "atrasada": false
         },
         {
-          "osId": "8110",
-          "ativo": "Cabine 6 Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-CABN6 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "James Chaves ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine",
-          "criticidade": "",
-          "dataProgramada": "2026-06-21",
-          "dataCriacao": "2026-06-21",
-          "dataInicial": "2026-06-21",
-          "dataFinal": "2026-06-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "8109",
-          "ativo": "Cabine 4 Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-CABN4 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "James Chaves ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine",
-          "criticidade": "",
-          "dataProgramada": "2026-06-21",
-          "dataCriacao": "2026-06-21",
-          "dataInicial": "2026-06-21",
-          "dataFinal": "2026-06-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "8106",
-          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
-          "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Frank  Melo",
-          "status": "Finalizada",
-          "tarefa": "Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-06-21",
-          "dataCriacao": "2026-06-21",
-          "dataInicial": "2026-06-21",
-          "dataFinal": "2026-06-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "8247",
           "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
           "equipe": "",
@@ -3311,12 +3366,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1535,
+      "historicoTotal": 1538,
       "subClassificacao": {
-        "remoto": 590,
-        "local": 2201,
+        "remoto": 592,
+        "local": 2205,
         "remotoEmAberto": 7,
-        "localEmAberto": 5,
+        "localEmAberto": 8,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -3486,9 +3541,9 @@
           }
         ],
         "medHorasAbrir": 3.4,
-        "medHorasFechar": 3.2,
-        "amostraAbrir": 578,
-        "amostraFechar": 578,
+        "medHorasFechar": 3.1,
+        "amostraAbrir": 580,
+        "amostraFechar": 580,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3496,7 +3551,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 146
+            "total": 148
           },
           {
             "nome": "Raphael Vitoriano",
@@ -3538,17 +3593,17 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 493,
+        "total": 494,
         "emAberto": 90,
-        "atrasadas": 23,
-        "concluidas30d": 97,
-        "concluidas7d": 23,
+        "atrasadas": 24,
+        "concluidas30d": 98,
+        "concluidas7d": 24,
         "naSemanaCorrente": 25
       },
       "mttr": {
-        "horas": 295.67,
-        "label": "12d 7h",
-        "amostra": 97
+        "horas": 293.88,
+        "label": "12d 5h",
+        "amostra": 98
       },
       "tendencia4Semanas": [
         {
@@ -3568,15 +3623,15 @@
         },
         {
           "semana": "W27",
-          "criadas": 28,
-          "finalizadas": 9
+          "criadas": 29,
+          "finalizadas": 10
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 493,
+            "total": 494,
             "emAberto": 90
           }
         ],
@@ -3597,22 +3652,22 @@
             "emAberto": 5
           },
           {
+            "nome": "Gilson Souza",
+            "total": 21,
+            "emAberto": 4
+          },
+          {
             "nome": "Francisco  Santos",
             "total": 21,
             "emAberto": 0
-          },
-          {
-            "nome": "Luiz  Silva",
-            "total": 21,
-            "emAberto": 2
           }
         ]
       },
       "total": 90,
-      "atrasadas": 23,
+      "atrasadas": 24,
       "porStatus": {
-        "naoIniciada": 85,
-        "emProgresso": 0,
+        "naoIniciada": 84,
+        "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
@@ -3840,6 +3895,23 @@
           "criticidade": "",
           "dataProgramada": "2026-06-22",
           "dataCriacao": "2026-06-12",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "8725",
+          "ativo": "Módulo Fotovoltaico Risen RSM132-8-640BMDG-660BMDG    { CPP100-MDFV }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Athon] - MPS - String Box",
+          "criticidade": "",
+          "dataProgramada": "2026-06-25",
+          "dataCriacao": "2026-07-01",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -4124,14 +4196,15 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
           "criticidade": "",
           "dataProgramada": "2026-07-01",
           "dataCriacao": "2026-06-25",
-          "dataInicial": "",
+          "dataInicial": "2026-07-01",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": false
         },
         {
@@ -4226,23 +4299,6 @@
           "responsavel": "Olimpio Lima ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Olimpio Lima ",
-          "status": "Não Iniciada",
-          "tarefa": "[GreenYellow] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-03",
-          "dataCriacao": "2026-06-26",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "8523",
-          "ativo": "Preventiva Grupo de Inversores      { CDR100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Leonardo  Dias",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Leonardo  Dias",
           "status": "Não Iniciada",
           "tarefa": "[GreenYellow] - MPM - Inversor",
           "criticidade": "",
@@ -5157,6 +5213,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8523",
+          "ativo": "Preventiva Grupo de Inversores      { CDR100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Leonardo  Dias",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Leonardo  Dias",
+          "status": "Finalizados",
+          "tarefa": "[GreenYellow] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-06-26",
+          "dataInicial": "2026-07-01",
+          "dataFinal": "2026-07-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "8610",
           "ativo": "Transformador 1 WEG     { THPN-RDR100-TRFR1 }",
@@ -7248,25 +7323,6 @@
           "atrasada": false
         },
         {
-          "osId": "6227",
-          "ativo": "Ar Condicionado      { SBT500-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Adão Neto ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Adão Neto ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-05-05",
-          "dataCriacao": "2026-05-05",
-          "dataInicial": "2026-05-26",
-          "dataFinal": "2026-05-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 504.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "6794",
           "ativo": "Infraestrutura Civil Zona Rural s/n Campos dos Goytacazes  Rio de Janeiro Brasil { FZL100-INFC1 }",
           "equipe": "",
@@ -8008,7 +8064,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 252
+      "historicoTotal": 253
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9863,8 +9919,8 @@
       "total": 23,
       "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 23,
-        "emProgresso": 0,
+        "naoIniciada": 21,
+        "emProgresso": 2,
         "pausada": 0,
         "verificacao": 0
       },
@@ -9947,14 +10003,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Levi Maia",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "[Ipixuna do Pará][Tracker 2.63] - Tracker parado",
           "criticidade": "",
           "dataProgramada": "2026-06-29",
           "dataCriacao": "2026-06-30",
-          "dataInicial": "",
+          "dataInicial": "2026-07-01",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": true
         },
         {
@@ -10236,14 +10293,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Juliana Cândido ",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "[INV_1.8 - Ipixuna do Pará - 2C] Foi identificado via performance que esse inversor está com a performance inferior aos demais. Ao analisar as curvas de corrente, foi constatado que a PV21 e a PV27 es",
           "criticidade": "",
           "dataProgramada": "2026-06-30",
           "dataCriacao": "2026-06-30",
-          "dataInicial": "",
+          "dataInicial": "2026-07-01",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": true
         },
         {
@@ -11042,6 +11100,74 @@
   },
   "ossPublicas": [
     {
+      "osId": "8725",
+      "ativo": "Módulo Fotovoltaico Risen RSM132-8-640BMDG-660BMDG    { CPP100-MDFV }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Athon] - MPS - String Box",
+      "criticidade": "",
+      "dataProgramada": "2026-06-25",
+      "dataCriacao": "2026-07-01",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8722",
+      "ativo": "Inversor 4.6 Huawei     { TIM100-INVR4.6 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Luiz  Silva",
+      "status": "IN_PROGRESS",
+      "tarefa": "religamento de inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-07-01",
+      "dataInicial": "2026-07-01",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
+      "osId": "8721",
+      "ativo": "Inversor 2.8 Huawei     { MAB200-INVR2.8 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "religamento de inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-07-01",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "8720",
+      "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Ailton Leal ",
+      "status": "Não Iniciada",
+      "tarefa": "UFV: Junco 1 | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-07-01",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "8714",
       "ativo": "Tracker 11.101 STI Norland     { MAB100-ETKR11.101 }",
       "equipe": "",
@@ -11400,14 +11526,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Juliana Cândido ",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "[INV_1.8 - Ipixuna do Pará - 2C] Foi identificado via performance que esse inversor está com a performance inferior aos demais. Ao analisar as curvas de corrente, foi constatado que a PV21 e a PV27 es",
       "criticidade": "",
       "dataProgramada": "2026-06-30",
       "dataCriacao": "2026-06-30",
-      "dataInicial": "",
+      "dataInicial": "2026-07-01",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "8668",
@@ -11512,14 +11639,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Levi Maia",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "[Ipixuna do Pará][Tracker 2.63] - Tracker parado",
       "criticidade": "",
       "dataProgramada": "2026-06-29",
       "dataCriacao": "2026-06-30",
-      "dataInicial": "",
+      "dataInicial": "2026-07-01",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "8657",
@@ -12057,22 +12185,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "8523",
-      "ativo": "Preventiva Grupo de Inversores      { CDR100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Leonardo  Dias",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Leonardo  Dias",
-      "status": "Não Iniciada",
-      "tarefa": "[GreenYellow] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-07-03",
-      "dataCriacao": "2026-06-26",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "8516",
       "ativo": "Cabine 1  Campos dos Goytacazes  Rio de Janeiro Brasil { FZL100-CABN1 }",
       "equipe": "",
@@ -12242,14 +12354,15 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
       "criticidade": "",
       "dataProgramada": "2026-07-01",
       "dataCriacao": "2026-06-25",
-      "dataInicial": "",
+      "dataInicial": "2026-07-01",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "8392",
@@ -13212,6 +13325,66 @@
   ],
   "ossHistorico": [
     {
+      "osId": "8724",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da Usina remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-07-01",
+      "dataInicial": "2026-07-01",
+      "dataFinal": "2026-07-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "8723",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da Usina remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-07-01",
+      "dataInicial": "2026-07-01",
+      "dataFinal": "2026-07-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "8719",
+      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Railson Gomes ",
+      "status": "Finalizados",
+      "tarefa": "UFV: Crateus | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-07-01",
+      "dataInicial": "2026-07-01",
+      "dataFinal": "2026-07-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "8716",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -14163,6 +14336,25 @@
       "dataFinal": "2026-06-30",
       "linkFracttal": "",
       "horasAteAbrir": 96.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "8523",
+      "ativo": "Preventiva Grupo de Inversores      { CDR100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Leonardo  Dias",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Leonardo  Dias",
+      "status": "Finalizados",
+      "tarefa": "[GreenYellow] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-06-26",
+      "dataInicial": "2026-07-01",
+      "dataFinal": "2026-07-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -16112,89 +16304,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "8166",
-      "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-22",
-      "dataCriacao": "2026-06-22",
-      "dataInicial": "2026-06-22",
-      "dataFinal": "2026-06-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "8163",
-      "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da cabine 5  de CPP100",
-      "criticidade": "",
-      "dataProgramada": "2026-06-22",
-      "dataCriacao": "2026-06-22",
-      "dataInicial": "2026-06-22",
-      "dataFinal": "2026-06-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "8159",
-      "ativo": "Relé da Cabine 2      { PRL100-RELE2 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Silva",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Cláudio  Silva",
-      "status": "Finalizados",
-      "tarefa": "[THOPEN] Verificação da não atuação do Relé - Parelhas",
-      "criticidade": "",
-      "dataProgramada": "2026-06-22",
-      "dataCriacao": "2026-06-22",
-      "dataInicial": "2026-06-26",
-      "dataFinal": "2026-06-26",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "8151",
-      "ativo": "Cabine 7  Capitão Poço  Pará Brasil { CPP100-CABN7 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da cabine 7 de CPP100",
-      "criticidade": "",
-      "dataProgramada": "2026-06-22",
-      "dataCriacao": "2026-06-22",
-      "dataInicial": "2026-06-22",
-      "dataFinal": "2026-06-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1903,
-  "totalGeral": 3490,
+  "historicoTotal": 1907,
+  "totalGeral": 3497,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
