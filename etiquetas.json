@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-01T14:45:21Z",
+  "geradoEm": "2026-07-01T14:50:28Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2797,
-        "emAberto": 12,
-        "atrasadas": 8,
-        "concluidas30d": 549,
-        "concluidas7d": 112,
-        "naSemanaCorrente": 30
+        "total": 2798,
+        "emAberto": 11,
+        "atrasadas": 7,
+        "concluidas30d": 551,
+        "concluidas7d": 114,
+        "naSemanaCorrente": 31
       },
       "mttr": {
-        "horas": 7.05,
-        "label": "7h 3min",
-        "amostra": 549
+        "horas": 7.2,
+        "label": "7h 12min",
+        "amostra": 551
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W27",
-          "criadas": 32,
-          "finalizadas": 29
+          "criadas": 33,
+          "finalizadas": 31
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2797,
-            "emAberto": 12
+            "total": 2798,
+            "emAberto": 11
           }
         ],
         "responsaveis": [
@@ -74,20 +74,20 @@
           {
             "nome": "Wesllen  Castro",
             "total": 121,
-            "emAberto": 1
+            "emAberto": 0
           }
         ]
       },
-      "total": 12,
-      "atrasadas": 8,
+      "total": 11,
+      "atrasadas": 7,
       "porStatus": {
-        "naoIniciada": 11,
+        "naoIniciada": 10,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 12
+        "(sem equipe)": 11
       },
       "oss": [
         {
@@ -178,24 +178,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "remoto",
-          "atrasada": true
-        },
-        {
-          "osId": "8564",
-          "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "DavidNascimento",
-          "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
-          "tarefa": "UFV: Santa Maria do Pará | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
-          "criticidade": "",
-          "dataProgramada": "2026-06-27",
-          "dataCriacao": "2026-06-27",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
           "atrasada": true
         },
         {
@@ -309,6 +291,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8751",
+          "ativo": "SKID 3 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID3 }",
+          "equipe": "",
+          "responsavel": "Cícero  Willian",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Cícero  Willian",
+          "status": "Finalizada",
+          "tarefa": "Religamento da UFV Junco",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-07-01",
+          "dataInicial": "2026-07-01",
+          "dataFinal": "2026-07-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "8740",
           "ativo": "teste1  teste  teste teste { THPN-TESTE }",
@@ -425,6 +427,26 @@
           "dataFinal": "2026-07-01",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "8564",
+          "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Wesllen  Castro",
+          "status": "Finalizados",
+          "tarefa": "UFV: Santa Maria do Pará | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
+          "criticidade": "",
+          "dataProgramada": "2026-06-27",
+          "dataCriacao": "2026-06-27",
+          "dataInicial": "2026-07-01",
+          "dataFinal": "2026-07-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3250,46 +3272,6 @@
           "atrasada": false
         },
         {
-          "osId": "8116",
-          "ativo": "RenoGrid - Nova Xavantina 1 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso  { RNGD-NVX100 }",
-          "equipe": "",
-          "responsavel": "Gabriel Oliveira ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Gabriel Oliveira ",
-          "status": "Finalizada",
-          "tarefa": "UFV NX1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-          "criticidade": "",
-          "dataProgramada": "2026-06-22",
-          "dataCriacao": "2026-06-22",
-          "dataInicial": "2026-06-22",
-          "dataFinal": "2026-06-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
-          "osId": "8115",
-          "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizada",
-          "tarefa": "Religamento cabine 05",
-          "criticidade": "",
-          "dataProgramada": "2026-06-22",
-          "dataCriacao": "2026-06-22",
-          "dataInicial": "2026-06-22",
-          "dataFinal": "2026-06-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "8247",
           "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
           "equipe": "",
@@ -3310,12 +3292,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1541,
+      "historicoTotal": 1543,
       "subClassificacao": {
         "remoto": 591,
-        "local": 2206,
+        "local": 2207,
         "remotoEmAberto": 7,
-        "localEmAberto": 5,
+        "localEmAberto": 4,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -3537,12 +3519,12 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 492,
-        "emAberto": 85,
+        "total": 495,
+        "emAberto": 88,
         "atrasadas": 24,
         "concluidas30d": 101,
         "concluidas7d": 27,
-        "naSemanaCorrente": 25
+        "naSemanaCorrente": 26
       },
       "mttr": {
         "horas": 289.9,
@@ -3567,7 +3549,7 @@
         },
         {
           "semana": "W27",
-          "criadas": 27,
+          "criadas": 30,
           "finalizadas": 13
         }
       ],
@@ -3575,8 +3557,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 492,
-            "emAberto": 85
+            "total": 495,
+            "emAberto": 88
           }
         ],
         "responsaveis": [
@@ -3607,16 +3589,16 @@
           }
         ]
       },
-      "total": 85,
+      "total": 88,
       "atrasadas": 24,
       "porStatus": {
-        "naoIniciada": 80,
+        "naoIniciada": 83,
         "emProgresso": 0,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 85
+        "(sem equipe)": 88
       },
       "oss": [
         {
@@ -4185,6 +4167,23 @@
           "atrasada": false
         },
         {
+          "osId": "8747",
+          "ativo": "Transformador 1      { SEMP-TCN100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Walter Santos ",
+          "status": "Não Iniciada",
+          "tarefa": "[SEMP] - MPQ - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-07-01",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "8709",
           "ativo": "Cabine 1 Sítio Rio Quartel, Zona Rural Linhares  Espírito Santo Brasil { AXIS-LHN100-CABN1 }",
           "equipe": "",
@@ -4746,6 +4745,23 @@
           "atrasada": false
         },
         {
+          "osId": "8748",
+          "ativo": "Transformador 1      { SEMP-TCN100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Walter Santos ",
+          "status": "Não Iniciada",
+          "tarefa": "[SEMP] - MPQ - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-07-17",
+          "dataCriacao": "2026-07-01",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "8739",
           "ativo": "QGBT 1 Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR100-QGBT1 }",
           "equipe": "",
@@ -5064,6 +5080,23 @@
           "criticidade": "",
           "dataProgramada": "2026-07-27",
           "dataCriacao": "2026-06-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8749",
+          "ativo": "Transformador 1      { SEMP-TCN100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Walter Santos ",
+          "status": "Não Iniciada",
+          "tarefa": "[SEMP] - MPQ - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-07-31",
+          "dataCriacao": "2026-07-01",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -5591,7 +5624,7 @@
           "responsavel": "Walter Santos ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Walter Santos ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[SEMP] - MPQ - Cabine",
           "criticidade": "",
           "dataProgramada": "2026-06-22",
@@ -5610,7 +5643,7 @@
           "responsavel": "Walter Santos ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Walter Santos ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[SEMP] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-06-16",
@@ -9688,16 +9721,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 63,
-        "emAberto": 22,
-        "atrasadas": 21,
-        "concluidas30d": 11,
-        "concluidas7d": 7,
+        "emAberto": 21,
+        "atrasadas": 20,
+        "concluidas30d": 12,
+        "concluidas7d": 8,
         "naSemanaCorrente": 20
       },
       "mttr": {
-        "horas": 102.55,
-        "label": "4d 6h",
-        "amostra": 11
+        "horas": 96.0,
+        "label": "4d 0h",
+        "amostra": 12
       },
       "tendencia4Semanas": [
         {
@@ -9718,7 +9751,7 @@
         {
           "semana": "W27",
           "criadas": 20,
-          "finalizadas": 5
+          "finalizadas": 6
         }
       ],
       "topOfensores": {
@@ -9726,7 +9759,7 @@
           {
             "nome": "(sem equipe)",
             "total": 63,
-            "emAberto": 22
+            "emAberto": 21
           }
         ],
         "responsaveis": [
@@ -9748,7 +9781,7 @@
           {
             "nome": "Wesllen  Castro",
             "total": 5,
-            "emAberto": 1
+            "emAberto": 0
           },
           {
             "nome": "Henri Almeida",
@@ -9757,16 +9790,16 @@
           }
         ]
       },
-      "total": 22,
-      "atrasadas": 21,
+      "total": 21,
+      "atrasadas": 20,
       "porStatus": {
         "naoIniciada": 21,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 22
+        "(sem equipe)": 21
       },
       "oss": [
         {
@@ -10110,24 +10143,6 @@
           "atrasada": true
         },
         {
-          "osId": "8676",
-          "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR1.8 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Juliana Cândido ",
-          "supervisor": "Wesllen  Castro",
-          "status": "IN_PROGRESS",
-          "tarefa": "[INV_1.8 - Ipixuna do Pará - 2C] Foi identificado via performance que esse inversor está com a performance inferior aos demais. Ao analisar as curvas de corrente, foi constatado que a PV21 e a PV27 es",
-          "criticidade": "",
-          "dataProgramada": "2026-06-30",
-          "dataCriacao": "2026-06-30",
-          "dataInicial": "2026-07-01",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "atrasada": true
-        },
-        {
           "osId": "8714",
           "ativo": "Tracker 11.101 STI Norland     { MAB100-ETKR11.101 }",
           "equipe": "",
@@ -10146,6 +10161,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8676",
+          "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR1.8 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Juliana Cândido ",
+          "supervisor": "Wesllen  Castro",
+          "status": "Finalizados",
+          "tarefa": "[INV_1.8 - Ipixuna do Pará - 2C] Foi identificado via performance que esse inversor está com a performance inferior aos demais. Ao analisar as curvas de corrente, foi constatado que a PV21 e a PV27 es",
+          "criticidade": "",
+          "dataProgramada": "2026-06-30",
+          "dataCriacao": "2026-06-30",
+          "dataInicial": "2026-07-01",
+          "dataFinal": "2026-07-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "8658",
           "ativo": "Tracker 63.100 STI Norland STI Norland Array    { 2C-IPX100-ETKR63.100 }",
@@ -10565,7 +10599,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 22
+      "historicoTotal": 23
     },
     "engenharia": {
       "label": "Engenharia",
@@ -10941,6 +10975,54 @@
     }
   },
   "ossPublicas": [
+    {
+      "osId": "8749",
+      "ativo": "Transformador 1      { SEMP-TCN100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Walter Santos ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Walter Santos ",
+      "status": "Não Iniciada",
+      "tarefa": "[SEMP] - MPQ - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-07-31",
+      "dataCriacao": "2026-07-01",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8748",
+      "ativo": "Transformador 1      { SEMP-TCN100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Walter Santos ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Walter Santos ",
+      "status": "Não Iniciada",
+      "tarefa": "[SEMP] - MPQ - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-07-17",
+      "dataCriacao": "2026-07-01",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8747",
+      "ativo": "Transformador 1      { SEMP-TCN100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Walter Santos ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Walter Santos ",
+      "status": "Não Iniciada",
+      "tarefa": "[SEMP] - MPQ - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-07-01",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
     {
       "osId": "8741",
       "ativo": "Transformador 1      { SEMP-TCN100-TRFR1 }",
@@ -11343,23 +11425,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "8676",
-      "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR1.8 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Juliana Cândido ",
-      "supervisor": "Wesllen  Castro",
-      "status": "IN_PROGRESS",
-      "tarefa": "[INV_1.8 - Ipixuna do Pará - 2C] Foi identificado via performance que esse inversor está com a performance inferior aos demais. Ao analisar as curvas de corrente, foi constatado que a PV21 e a PV27 es",
-      "criticidade": "",
-      "dataProgramada": "2026-06-30",
-      "dataCriacao": "2026-06-30",
-      "dataInicial": "2026-07-01",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0
-    },
-    {
       "osId": "8668",
       "ativo": "Transformador 1      { PTB100-TRFR1 }",
       "equipe": "",
@@ -11710,23 +11775,6 @@
       "criticidade": "",
       "dataProgramada": "2026-06-28",
       "dataCriacao": "2026-06-28",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "8564",
-      "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "DavidNascimento",
-      "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
-      "tarefa": "UFV: Santa Maria do Pará | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
-      "criticidade": "",
-      "dataProgramada": "2026-06-27",
-      "dataCriacao": "2026-06-27",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
@@ -13000,6 +13048,26 @@
   ],
   "ossHistorico": [
     {
+      "osId": "8751",
+      "ativo": "SKID 3 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID3 }",
+      "equipe": "",
+      "responsavel": "Cícero  Willian",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Cícero  Willian",
+      "status": "Finalizada",
+      "tarefa": "Religamento da UFV Junco",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-07-01",
+      "dataInicial": "2026-07-01",
+      "dataFinal": "2026-07-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "8740",
       "ativo": "teste1  teste  teste teste { THPN-TESTE }",
       "equipe": "",
@@ -13197,6 +13265,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "8676",
+      "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR1.8 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Juliana Cândido ",
+      "supervisor": "Wesllen  Castro",
+      "status": "Finalizados",
+      "tarefa": "[INV_1.8 - Ipixuna do Pará - 2C] Foi identificado via performance que esse inversor está com a performance inferior aos demais. Ao analisar as curvas de corrente, foi constatado que a PV21 e a PV27 es",
+      "criticidade": "",
+      "dataProgramada": "2026-06-30",
+      "dataCriacao": "2026-06-30",
+      "dataInicial": "2026-07-01",
+      "dataFinal": "2026-07-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -14014,6 +14101,26 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "8564",
+      "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Wesllen  Castro",
+      "status": "Finalizados",
+      "tarefa": "UFV: Santa Maria do Pará | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
+      "criticidade": "",
+      "dataProgramada": "2026-06-27",
+      "dataCriacao": "2026-06-27",
+      "dataInicial": "2026-07-01",
+      "dataFinal": "2026-07-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -15916,70 +16023,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "8206",
-      "ativo": "SKID 3 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID3 }",
-      "equipe": "",
-      "responsavel": "Juliana Rogério ",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Juliana Rogério ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da UFV Junco",
-      "criticidade": "",
-      "dataProgramada": "2026-06-23",
-      "dataCriacao": "2026-06-23",
-      "dataInicial": "2026-06-23",
-      "dataFinal": "2026-06-23",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "8205",
-      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-23",
-      "dataCriacao": "2026-06-23",
-      "dataInicial": "2026-06-23",
-      "dataFinal": "2026-06-23",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "8188",
-      "ativo": "Cabine 1 Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { STN100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Finalizada",
-      "tarefa": "Desligamento e religamento da usina para remoção de grades do Transformador e Cabine",
-      "criticidade": "",
-      "dataProgramada": "2026-06-23",
-      "dataCriacao": "2026-06-23",
-      "dataInicial": "2026-06-23",
-      "dataFinal": "2026-06-23",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1914,
-  "totalGeral": 3494,
+  "historicoTotal": 1917,
+  "totalGeral": 3498,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
