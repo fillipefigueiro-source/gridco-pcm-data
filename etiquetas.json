@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-01T12:15:24Z",
+  "geradoEm": "2026-07-01T12:24:57Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -3557,16 +3557,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 494,
-        "emAberto": 90,
+        "emAberto": 89,
         "atrasadas": 24,
-        "concluidas30d": 98,
-        "concluidas7d": 24,
+        "concluidas30d": 99,
+        "concluidas7d": 25,
         "naSemanaCorrente": 25
       },
       "mttr": {
-        "horas": 293.88,
-        "label": "12d 5h",
-        "amostra": 98
+        "horas": 292.36,
+        "label": "12d 4h",
+        "amostra": 99
       },
       "tendencia4Semanas": [
         {
@@ -3587,7 +3587,7 @@
         {
           "semana": "W27",
           "criadas": 29,
-          "finalizadas": 10
+          "finalizadas": 11
         }
       ],
       "topOfensores": {
@@ -3595,7 +3595,7 @@
           {
             "nome": "(sem equipe)",
             "total": 494,
-            "emAberto": 90
+            "emAberto": 89
           }
         ],
         "responsaveis": [
@@ -3626,16 +3626,16 @@
           }
         ]
       },
-      "total": 90,
+      "total": 89,
       "atrasadas": 24,
       "porStatus": {
-        "naoIniciada": 84,
+        "naoIniciada": 83,
         "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 90
+        "(sem equipe)": 89
       },
       "oss": [
         {
@@ -4153,24 +4153,6 @@
           "atrasada": false
         },
         {
-          "osId": "8397",
-          "ativo": "Ar Condicionado      { FZL100-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-01",
-          "dataCriacao": "2026-06-25",
-          "dataInicial": "2026-07-01",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "atrasada": false
-        },
-        {
           "osId": "8308",
           "ativo": "Cabine 1  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-CABN1 }",
           "equipe": "",
@@ -4415,14 +4397,15 @@
           "responsavel": "Hélio Silva ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Hélio Silva ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-07-07",
           "dataCriacao": "2026-06-23",
-          "dataInicial": "",
+          "dataInicial": "2026-07-01",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "atrasada": false
         },
         {
@@ -5192,6 +5175,25 @@
           "dataFinal": "2026-07-01",
           "linkFracttal": "",
           "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "8397",
+          "ativo": "Ar Condicionado      { FZL100-SOEM1-ARCD }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-06-25",
+          "dataInicial": "2026-07-01",
+          "dataFinal": "2026-07-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -7799,25 +7801,6 @@
           "atrasada": false
         },
         {
-          "osId": "6248",
-          "ativo": "Transformador 1 GAZQUEZ     { THPN-NVL100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-05-11",
-          "dataCriacao": "2026-05-05",
-          "dataInicial": "2026-05-15",
-          "dataFinal": "2026-05-15",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "6417",
           "ativo": "Transformador 3 Romagnoli     { ELF100-TRFR3 }",
           "equipe": "",
@@ -8027,7 +8010,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 253
+      "historicoTotal": 254
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -12276,23 +12259,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "8397",
-      "ativo": "Ar Condicionado      { FZL100-SOEM1-ARCD }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
-      "criticidade": "",
-      "dataProgramada": "2026-07-01",
-      "dataCriacao": "2026-06-25",
-      "dataInicial": "2026-07-01",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
-    },
-    {
       "osId": "8392",
       "ativo": "SPDA BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM100-SPDA1 }",
       "equipe": "",
@@ -12653,14 +12619,15 @@
       "responsavel": "Hélio Silva ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Hélio Silva ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-07-07",
       "dataCriacao": "2026-06-23",
-      "dataInicial": "",
+      "dataInicial": "2026-07-01",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 192.0
     },
     {
       "osId": "8253",
@@ -14902,6 +14869,25 @@
       "atrasada": false
     },
     {
+      "osId": "8397",
+      "ativo": "Ar Condicionado      { FZL100-SOEM1-ARCD }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-06-25",
+      "dataInicial": "2026-07-01",
+      "dataFinal": "2026-07-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "8393",
       "ativo": "Cabine 7  Capitão Poço  Pará Brasil { CPP100-CABN7 }",
       "equipe": "",
@@ -16213,28 +16199,9 @@
       "horasAteFechar": 0,
       "modalidade": "remoto",
       "atrasada": false
-    },
-    {
-      "osId": "8172",
-      "ativo": "Estrutura Trackers  Santarém  Pará Brasil { STR100-ETKR1 }",
-      "equipe": "",
-      "responsavel": "Júlio Willers ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Júlio Willers ",
-      "status": "Finalizados",
-      "tarefa": "Abertura de chamado para garantia [Testes em campo Motor do tracker 101]",
-      "criticidade": "",
-      "dataProgramada": "2026-06-23",
-      "dataCriacao": "2026-06-22",
-      "dataInicial": "2026-06-23",
-      "dataFinal": "2026-06-23",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1908,
+  "historicoTotal": 1909,
   "totalGeral": 3496,
   "verificacao": {
     "total": 0,
