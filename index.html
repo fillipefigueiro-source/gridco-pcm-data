@@ -730,7 +730,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
     <div class="tip-nav np" id="tip-nav">
       <button class="tip-tab on" data-topv="semana" onclick="setTopView('semana')">&#128197; Programa&ccedil;&atilde;o Semanal</button>
       <button class="tip-tab" data-topv="religamentos" onclick="setTopView('religamentos')">&#9889; Religamentos <span class="tip-tab-cnt" id="tcnt-religamentos">0</span></button>
-      <button class="tip-tab" data-topv="manutencoesPreventivas" onclick="setTopView('manutencoesPreventivas')">&#128295; Manut. Preventivas <span class="tip-tab-cnt" id="tcnt-manutencoesPreventivas">0</span></button>
+      <button class="tip-tab" data-topv="gestaoPcm" onclick="setTopView('gestaoPcm')">&#128203; Gest&atilde;o PCM <span class="tip-tab-cnt" id="tcnt-gestaoPcm">0</span></button>
       <button class="tip-tab" data-topv="chamadosGarantia" onclick="setTopView('chamadosGarantia')">&#128737; Garantia <span class="tip-tab-cnt" id="tcnt-chamadosGarantia">0</span></button>
       <button class="tip-tab" data-topv="performance" onclick="setTopView('performance')">&#128200; Performance <span class="tip-tab-cnt" id="tcnt-performance">0</span></button>
       <button class="tip-tab" data-topv="engenharia" onclick="setTopView('engenharia')">&#9881; Engenharia <span class="tip-tab-cnt" id="tcnt-engenharia">0</span></button>
@@ -871,6 +871,112 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       </div>
     </div>
 
+    <!-- GESTÃO PCM (via API Fracttal) -->
+    <style>
+    #s-gestaopcm{display:none}
+    #s-gestaopcm.on{display:block}
+    .gp-hero{background:var(--navy,#191528);border-radius:12px;padding:16px 20px;margin-bottom:12px;border-bottom:3px solid #a9db21}
+    .gp-hero-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .gp-hero h2{color:#fff;font-size:18px;font-weight:800;letter-spacing:.3px;margin:0}
+    .gp-hero .gp-sub{color:#a9db21;font-size:11px;margin-top:2px}
+    .gp-kpis{display:flex;gap:10px;flex-wrap:wrap}
+    .gp-kpi{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:8px 14px;text-align:center;min-width:76px}
+    .gp-kpi .v{font-size:20px;font-weight:800;color:#a9db21;line-height:1}
+    .gp-kpi.warn .v{color:#f87171}
+    .gp-kpi .l{font-size:9px;color:#aaa;margin-top:2px;text-transform:uppercase;letter-spacing:.4px}
+    .gp-toolbar{background:#fff;border:1px solid var(--line,#e6e6ee);border-radius:10px;padding:10px 12px;margin-bottom:12px;display:flex;gap:8px 12px;flex-wrap:wrap;align-items:flex-end}
+    .gp-fg{display:flex;flex-direction:column;gap:3px}
+    .gp-fg label{font-size:9px;font-weight:700;color:#8a8a9a;text-transform:uppercase;letter-spacing:.4px}
+    .gp-fg select,.gp-fg input{font-size:11.5px;padding:5px 8px;border:1px solid var(--line,#d6d6e0);border-radius:6px;font-family:inherit;color:var(--ink,#191528);background:#fff;min-width:120px}
+    .gp-fg input{min-width:90px}
+    .gp-fg input[type=date]{min-width:0;cursor:pointer}
+    .gp-clear{font-size:11px;padding:6px 12px;border:1px solid var(--line,#d6d6e0);border-radius:6px;background:#fff;cursor:pointer;color:#555;font-family:inherit;font-weight:600;height:29px}
+    .gp-clear:hover{background:#f3f3f7}
+    .gp-nores{text-align:center;padding:36px;color:#888;font-size:13px}
+    /* Cliente */
+    .gp-cli{margin-bottom:8px;border-radius:9px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+    .gp-cli-h{background:var(--navy,#191528);display:flex;align-items:center;justify-content:space-between;padding:11px 16px;cursor:pointer;user-select:none}
+    .gp-cli-h:hover{background:#241f3a}
+    .gp-cli-h .nm{color:#fff;font-size:14px;font-weight:700}
+    .gp-badge{background:#a9db21;color:#191528;border-radius:20px;padding:2px 9px;font-size:11px;font-weight:800}
+    .gp-chev{color:#a9db21;font-size:13px;transition:transform .2s}
+    .gp-open>.gp-cli-h .gp-chev,.gp-open>.gp-usi-h .gp-chev,.gp-open>.gp-tip-h .gp-chev{transform:rotate(180deg)}
+    .gp-cli-b,.gp-usi-b,.gp-tip-b{display:none}
+    .gp-open>.gp-cli-b,.gp-open>.gp-usi-b,.gp-open>.gp-tip-b{display:block}
+    .gp-cli-b{background:#fff;padding:10px}
+    /* Usina */
+    .gp-usi{margin-bottom:6px;border:1px solid #e4e4ee;border-radius:8px;overflow:hidden}
+    .gp-usi-h{background:#f1f1f8;display:flex;align-items:center;justify-content:space-between;padding:9px 13px;cursor:pointer;user-select:none}
+    .gp-usi-h:hover{background:#e7e7f2}
+    .gp-usi-h .nm{color:#191528;font-size:12.5px;font-weight:700}
+    .gp-usi-h .meta{font-size:10px;color:#7a7a8c;font-weight:600;margin-left:8px}
+    .gp-badge-d{background:#191528;color:#fff;border-radius:13px;padding:2px 8px;font-size:10px;font-weight:700}
+    .gp-chev-s{color:#7a7a8c;font-size:11px;transition:transform .2s}
+    .gp-open>.gp-usi-h .gp-chev-s,.gp-open>.gp-tip-h .gp-chev-s{transform:rotate(180deg)}
+    .gp-usi-b{padding:8px}
+    /* Tipo */
+    .gp-tip{margin-bottom:5px;border:1px solid #ececf2;border-radius:7px;overflow:hidden}
+    .gp-tip-h{display:flex;align-items:center;justify-content:space-between;padding:7px 11px;cursor:pointer;user-select:none}
+    .gp-tip-h .nm{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.3px}
+    .gp-tip-h .gp-badge-t{border-radius:11px;padding:2px 8px;font-size:10px;font-weight:800}
+    .t-preventiva .gp-tip-h{background:#a9db21}.t-preventiva .nm,.t-preventiva .gp-chev-s{color:#191528}.t-preventiva .gp-badge-t{background:rgba(0,0,0,.15);color:#191528}
+    .t-corretiva .gp-tip-h{background:#d94f3d}.t-corretiva .nm,.t-corretiva .gp-chev-s{color:#fff}.t-corretiva .gp-badge-t{background:rgba(255,255,255,.25);color:#fff}
+    .t-emergencial .gp-tip-h{background:#9b1a0a}.t-emergencial .nm,.t-emergencial .gp-chev-s{color:#fff}.t-emergencial .gp-badge-t{background:rgba(255,255,255,.25);color:#fff}
+    .t-handover .gp-tip-h{background:#2e7bc4}.t-handover .nm,.t-handover .gp-chev-s{color:#fff}.t-handover .gp-badge-t{background:rgba(255,255,255,.25);color:#fff}
+    .t-religamento .gp-tip-h{background:#e8a020}.t-religamento .nm,.t-religamento .gp-chev-s{color:#fff}.t-religamento .gp-badge-t{background:rgba(255,255,255,.25);color:#fff}
+    .t-inspecao .gp-tip-h{background:#00a896}.t-inspecao .nm,.t-inspecao .gp-chev-s{color:#fff}.t-inspecao .gp-badge-t{background:rgba(255,255,255,.25);color:#fff}
+    .t-preditiva .gp-tip-h{background:#7c5cbf}.t-preditiva .nm,.t-preditiva .gp-chev-s{color:#fff}.t-preditiva .gp-badge-t{background:rgba(255,255,255,.25);color:#fff}
+    .t-administrativa .gp-tip-h,.t-outra .gp-tip-h{background:#64748b}.t-administrativa .nm,.t-administrativa .gp-chev-s,.t-outra .nm,.t-outra .gp-chev-s{color:#fff}.t-administrativa .gp-badge-t,.t-outra .gp-badge-t{background:rgba(255,255,255,.25);color:#fff}
+    .gp-tip-b{padding:0}
+    .gp-tbl{width:100%;border-collapse:collapse;font-size:11.5px}
+    .gp-tbl thead th{background:#f4f4f8;color:#7a7a8c;padding:6px 10px;text-align:left;font-size:9px;text-transform:uppercase;letter-spacing:.3px;font-weight:700}
+    .gp-tbl tbody tr{border-bottom:1px solid #f2f2f6}
+    .gp-tbl tbody tr:hover{background:#f8f8fc}
+    .gp-tbl td{padding:6px 10px;vertical-align:middle}
+    .gp-os{font-weight:700;color:#191528;background:#eeeef5;border-radius:5px;padding:2px 7px;font-size:10px;white-space:nowrap;display:inline-block}
+    .gp-tarefa a{color:#1a4f8a;text-decoration:none;font-weight:600}
+    .gp-tarefa a:hover{text-decoration:underline}
+    .gp-pill{font-size:10px;font-weight:700;border-radius:9px;padding:2px 7px;white-space:nowrap}
+    .gp-e-ni{background:#e8eaf0;color:#333}.gp-e-em{background:#dce8f8;color:#1a4f8a}.gp-e-pau{background:#fff3dc;color:#9a5e00}.gp-e-fin{background:#e2f4e0;color:#2c7a1f}
+    .gp-etqs{display:flex;gap:3px;flex-wrap:wrap}
+    .gp-etq{font-size:9px;font-weight:600;padding:1px 6px;border-radius:9px;background:#eef;color:#445;white-space:nowrap}
+    .gp-data{color:#7a7a8c;font-size:10.5px;white-space:nowrap}
+    .gp-dias{font-size:10.5px;font-weight:800;white-space:nowrap;text-align:center}
+    .gp-dias.red{color:#fff;background:#d94f3d;border-radius:9px;padding:2px 7px}
+    .gp-dias.amber{color:#9a5e00}
+    .gp-dias.ok{color:#7a7a8c}
+    </style>
+    <div class="tip-screen np" id="s-gestaopcm">
+      <div class="gp-hero">
+        <div class="gp-hero-top">
+          <div>
+            <h2>&#128203; Gest&atilde;o PCM</h2>
+            <div class="gp-sub" id="gp-sub">Carregando tarefas da API do Fracttal&hellip;</div>
+          </div>
+          <div class="gp-kpis">
+            <div class="gp-kpi"><div class="v" id="gp-k-vis">0</div><div class="l">Vis&iacute;veis</div></div>
+            <div class="gp-kpi"><div class="v" id="gp-k-ab">0</div><div class="l">Em aberto</div></div>
+            <div class="gp-kpi warn"><div class="v" id="gp-k-atr">0</div><div class="l">Atrasadas</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="gp-toolbar" id="gp-toolbar">
+        <div class="gp-fg"><label>Cliente</label><select id="gp-f-cliente" onchange="gpOnFilter()"><option value="">Todos</option></select></div>
+        <div class="gp-fg"><label>Usina</label><select id="gp-f-usina" onchange="gpOnFilter()"><option value="">Todas</option></select></div>
+        <div class="gp-fg"><label>Equipe Cluster</label><select id="gp-f-cluster" onchange="gpOnFilter()"><option value="">Todos</option></select></div>
+        <div class="gp-fg"><label>Respons&aacute;vel O&amp;M</label><select id="gp-f-resp" onchange="gpOnFilter()"><option value="">Todos</option></select></div>
+        <div class="gp-fg"><label>Tipo</label><select id="gp-f-tipo" onchange="gpOnFilter()"><option value="">Todos</option></select></div>
+        <div class="gp-fg"><label>Etiqueta</label><select id="gp-f-etq" onchange="gpOnFilter()"><option value="">Todas</option></select></div>
+        <div class="gp-fg"><label>Estado</label><select id="gp-f-estado" onchange="gpOnFilter()"><option value="">Todos</option></select></div>
+        <div class="gp-fg"><label>OS #</label><input type="text" id="gp-f-os" placeholder="ex: 8856" oninput="gpOnFilter()"></div>
+        <div class="gp-fg"><label>Solicita&ccedil;&atilde;o #</label><input type="text" id="gp-f-ss" placeholder="ex: 2946" oninput="gpOnFilter()"></div>
+        <div class="gp-fg"><label>Data Prog. de</label><input type="date" id="gp-f-dini" onchange="gpOnFilter()"></div>
+        <div class="gp-fg"><label>at&eacute;</label><input type="date" id="gp-f-dfim" onchange="gpOnFilter()"></div>
+        <button class="gp-clear" onclick="gpClear()">&#8635; Limpar</button>
+      </div>
+      <div id="gp-tree"><div class="gp-nores">Carregando&hellip;</div></div>
+    </div>
+
     <!-- FILTER BAR -->
     <div class="filter-wrap np">
       <div class="filter-row">
@@ -969,6 +1075,10 @@ const CONFIG = {
   JSON_URL: "banco_dados.json",
   SUGESTOES_URL: "sugestoes.json",
   ETIQUETAS_URL: "etiquetas.json",
+  GESTAO_URL: "gestao_pcm.json",
+  // Link p/ abrir a OT no Fracttal. {id}=id_work_order interno, {folio}=número curto.
+  // Ajuste aqui quando confirmar o formato que o Fracttal aceita.
+  GESTAO_WO_URL: "https://one.fracttal.com/tasks/wo/{id}",
   SUPERVISORES_URL: "supervisores.json",
   REFRESH_MS: 300000,
   // Painel local (Streamlit) — botão "Aceitar" abre essa URL com ?ss=NUMERO
@@ -1081,7 +1191,7 @@ function setStatus(msg,type) {
 }
 function startTimer() {
   if(timer) clearInterval(timer);
-  timer=setInterval(async()=>{ const ok=await loadDB(true); await loadSugestoes(); await loadSupervisores(); if(ok&&S.user){buildWeekChips();render();renderSugestoes();} },CONFIG.REFRESH_MS);
+  timer=setInterval(async()=>{ const ok=await loadDB(true); await loadSugestoes(); await loadSupervisores(); if(S.topView==='gestaoPcm'){await loadGestao();} if(ok&&S.user){buildWeekChips();render();renderSugestoes();if(S.topView==='gestaoPcm')renderGestao();} },CONFIG.REFRESH_MS);
   const el=document.getElementById('refresh-badge'); if(el) el.textContent='Auto-refresh '+Math.round(CONFIG.REFRESH_MS/60000)+'min';
 }
 
@@ -1092,11 +1202,13 @@ async function manualRefresh(){
   await loadSugestoes();
   await loadSupervisores();
   if(typeof loadEtiquetas==='function') await loadEtiquetas();
+  if(typeof loadGestao==='function') await loadGestao();
   if(ok && S.user){
     buildWeekChips();
     if(typeof render==='function') render();
     if(typeof renderSugestoes==='function') renderSugestoes();
     if(typeof atualizarContadoresTopNav==='function') atualizarContadoresTopNav();
+    if(typeof renderGestao==='function' && S.topView==='gestaoPcm') renderGestao();
   }
 }
 
@@ -1475,7 +1587,6 @@ function aceitarEAbrirPainel(num){
 // ── TIPOLOGIA ─────────────────────────────────────────────────────────────────
 const TIP_SLUG_MAP={
   religamentos:{label:'Religamentos',icon:'⚡',color:'#f59e0b'},
-  manutencoesPreventivas:{label:'Manut. Preventivas',icon:'\u{1F527}',color:'#10b981'},
   chamadosGarantia:{label:'Chamados em Garantia',icon:'\u{1F6E1}',color:'#ef4444'},
   performance:{label:'Performance',icon:'\u{1F4C8}',color:'#8b5cf6'},
   engenharia:{label:'Engenharia',icon:'⚙',color:'#3b82f6'}
@@ -1492,6 +1603,7 @@ async function loadEtiquetas(){
   }catch(e){ETIQUETAS_DB=null;return false;}
 }
 function setTopView(v){
+  if(v==='manutencoesPreventivas') v='gestaoPcm';  // slug antigo -> nova aba Gestão PCM
   S.topView=v;
   try{localStorage.setItem(TOPV_KEY,v);}catch(e){}
   // tabs
@@ -1501,7 +1613,7 @@ function setTopView(v){
   const isSem=(v==='semana');
   // procura por id, className ou tag — abordagem simplificada: cria lista de seletores
   // Lista de seletores das seções da view "semana"
-  const selsSemana=['.week-chips-wrap','.krow','.irow','#exec-panel','.filter-wrap','.bottom-grid','#wk-tab','.cal','.mcal','.mes-wrap','#exec-detail','.exec-detail','.reprog-card','.hh-card'];
+  const selsSemana=['.week-chips-wrap','.krow','.irow','#exec-panel','.filter-wrap','.bottom-grid','#wk-tab','#view-semana','.cal','.mcal','.mes-wrap','#exec-detail','.exec-detail','.reprog-card','.hh-card'];
   // O #sug-card é tratado separado pois ele só aparece na aba "sugestoesIA"
   const isSugIA=(v==='sugestoesIA');
   // Se for tipologia ou sugestoesIA: esconde TUDO da semana
@@ -1513,9 +1625,15 @@ function setTopView(v){
   const verifScreen=document.getElementById('s-verificacao');
   if(verifScreen){verifScreen.classList.toggle('on',isVerif);verifScreen.style.display=isVerif?'block':'none';}
   if(isVerif){renderVerificacao();}
+  // s-gestaopcm só visível na aba gestaoPcm (via API Fracttal)
+  const isGestao=(v==='gestaoPcm');
+  const gestaoScreen=document.getElementById('s-gestaopcm');
+  if(gestaoScreen){gestaoScreen.classList.toggle('on',isGestao);gestaoScreen.style.display=isGestao?'block':'none';}
   const tipScreen=document.getElementById('s-tipologias');
-  if(tipScreen){const showKanban=(!isSem && !isSugIA && !isVerif);tipScreen.classList.toggle('on',showKanban);tipScreen.style.display=showKanban?'block':'none';}
-  if(!isSem){renderTipologiaAtual();}
+  if(tipScreen){const showKanban=(!isSem && !isSugIA && !isVerif && !isGestao);tipScreen.classList.toggle('on',showKanban);tipScreen.style.display=showKanban?'block':'none';}
+  if(isGestao){
+    if(!GESTAO_DB){loadGestao().then(()=>renderGestao());} else {renderGestao();}
+  } else if(!isSem){renderTipologiaAtual();}
 }
 function atualizarContadoresTopNav(){
   const n=tipNumOSs();
@@ -2782,8 +2900,159 @@ document.addEventListener('keydown', e=>{
   if(e.key==='Escape') closeMod();
 });
 
+// ── GESTÃO PCM (via API Fracttal — gestao_pcm.json) ───────────────────────────
+let GESTAO_DB=null;
+const GP={};            // estado dos filtros/dados renderizados
+let GP_TIP_DATA=[];     // tarefas por nó de tipo (lazy render)
+
+async function loadGestao(){
+  try{
+    const res=await fetch(CONFIG.GESTAO_URL,{cache:'no-store'});
+    if(!res.ok){GESTAO_DB=null;return false;}
+    GESTAO_DB=await res.json();
+    return true;
+  }catch(e){GESTAO_DB=null;return false;}
+}
+function gpEsc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function gpFmtData(iso){if(!iso)return '—';const p=String(iso).split('-');return p.length===3?p[2]+'/'+p[1]+'/'+p[0]:iso;}
+function gpWoUrl(t){const tpl=CONFIG.GESTAO_WO_URL||'';if(!tpl)return t.url||'';
+  return tpl.replace('{id}',t.idWO!=null?t.idWO:'').replace('{folio}',t.os!=null?t.os:'');}
+function gpTipoClass(t){const x=(t||'').toLowerCase();
+  if(x.indexOf('emergencial')>=0)return 't-emergencial';
+  if(x.indexOf('corretiva')>=0)return 't-corretiva';
+  if(x.indexOf('preventiva')>=0)return 't-preventiva';
+  if(x.indexOf('handover')>=0)return 't-handover';
+  if(x.indexOf('religa')>=0)return 't-religamento';
+  if(x.indexOf('inspe')>=0)return 't-inspecao';
+  if(x.indexOf('predit')>=0)return 't-preditiva';
+  if(x.indexOf('admin')>=0)return 't-administrativa';
+  return 't-outra';}
+function gpEstadoPill(e){const x=(e||'').toLowerCase();
+  let c='gp-e-ni';
+  if(x.indexOf('progress')>=0)c='gp-e-em';
+  else if(x.indexOf('paus')>=0)c='gp-e-pau';
+  else if(x.indexOf('finaliz')>=0)c='gp-e-fin';
+  return '<span class="gp-pill '+c+'">'+gpEsc(e||'—')+'</span>';}
+function gpDiasCell(t){
+  if(!t.aberta||t.dias==null||t.dias<0)return '<span class="gp-dias ok">—</span>';
+  const cls=t.dias>(GESTAO_DB.diasAlerta||10)?'red':(t.dias>=5?'amber':'ok');
+  return '<span class="gp-dias '+cls+'">'+t.dias+'d</span>';}
+// respeita o escopo: não-admin vê só o próprio cliente
+function gpScopedTarefas(){
+  const all=(GESTAO_DB&&GESTAO_DB.tarefas)||[];
+  if(S.isAdmin||!S.user)return all;
+  return all.filter(t=>t.cliente===S.user);
+}
+function gpFillSelect(id,vals,label){
+  const el=document.getElementById(id);if(!el)return;
+  const cur=el.value;
+  el.innerHTML='<option value="">'+label+'</option>'+vals.map(v=>'<option value="'+gpEsc(v)+'">'+gpEsc(v)+'</option>').join('');
+  if(vals.indexOf(cur)>=0)el.value=cur;
+}
+function gpPopulateFilters(){
+  const arr=gpScopedTarefas();
+  const uniq=(f)=>{const s=new Set();arr.forEach(t=>{const v=t[f];if(Array.isArray(v))v.forEach(x=>x&&s.add(x));else if(v)s.add(v);});
+    return [...s].sort((a,b)=>a.localeCompare(b,'pt-BR'));};
+  gpFillSelect('gp-f-cliente',uniq('cliente'),'Todos');
+  gpFillSelect('gp-f-usina',uniq('usina'),'Todas');
+  gpFillSelect('gp-f-cluster',uniq('cluster'),'Todos');
+  gpFillSelect('gp-f-resp',uniq('responsavel'),'Todos');
+  gpFillSelect('gp-f-tipo',uniq('tipo'),'Todos');
+  gpFillSelect('gp-f-etq',uniq('etiquetas'),'Todas');
+  gpFillSelect('gp-f-estado',uniq('estado'),'Todos');
+}
+function gpVal(id){const el=document.getElementById(id);return el?el.value.trim():'';}
+function gpFilteredTarefas(){
+  const fCli=gpVal('gp-f-cliente'),fUsi=gpVal('gp-f-usina'),fClu=gpVal('gp-f-cluster'),
+        fResp=gpVal('gp-f-resp'),fTipo=gpVal('gp-f-tipo'),fEtq=gpVal('gp-f-etq'),
+        fEst=gpVal('gp-f-estado'),fOS=gpVal('gp-f-os').toLowerCase(),fSS=gpVal('gp-f-ss').toLowerCase(),
+        dIni=gpVal('gp-f-dini'),dFim=gpVal('gp-f-dfim');
+  return gpScopedTarefas().filter(t=>{
+    if(fCli&&t.cliente!==fCli)return false;
+    if(fUsi&&t.usina!==fUsi)return false;
+    if(fClu&&t.cluster!==fClu)return false;
+    if(fResp&&t.responsavel!==fResp)return false;
+    if(fTipo&&t.tipo!==fTipo)return false;
+    if(fEst&&t.estado!==fEst)return false;
+    if(fEtq&&!(t.etiquetas||[]).includes(fEtq))return false;
+    if(fOS&&String(t.os).toLowerCase().indexOf(fOS)<0)return false;
+    if(fSS&&String(t.ss).toLowerCase().indexOf(fSS)<0)return false;
+    if(dIni&&(!t.dataProg||t.dataProg<dIni))return false;
+    if(dFim&&(!t.dataProg||t.dataProg>dFim))return false;
+    return true;
+  });
+}
+function renderGestao(){
+  const box=document.getElementById('gp-tree');
+  if(!box)return;
+  if(!GESTAO_DB){box.innerHTML='<div class="gp-nores">Não foi possível carregar gestao_pcm.json.</div>';
+    document.getElementById('gp-sub').textContent='Falha ao carregar';return;}
+  gpPopulateFilters();
+  document.getElementById('gp-sub').textContent='Atualizado: '+new Date(GESTAO_DB.geradoEm||Date.now()).toLocaleString('pt-BR')+' · corte '+gpFmtData(GESTAO_DB.corteData)+' · fonte: API Fracttal';
+  const arr=gpFilteredTarefas();
+  const ab=arr.filter(t=>t.aberta), atr=ab.filter(t=>t.atrasado);
+  document.getElementById('gp-k-vis').textContent=arr.length;
+  document.getElementById('gp-k-ab').textContent=ab.length;
+  document.getElementById('gp-k-atr').textContent=atr.length;
+  const badge=document.getElementById('tcnt-gestaoPcm');if(badge)badge.textContent=ab.length;
+  if(!arr.length){box.innerHTML='<div class="gp-nores">Nenhuma tarefa para os filtros selecionados.</div>';return;}
+  // árvore Cliente ▸ Usina ▸ Tipo
+  const tree={};
+  arr.forEach(t=>{
+    (((tree[t.cliente]=tree[t.cliente]||{usinas:{},n:0}).usinas[t.usina]=tree[t.cliente].usinas[t.usina]||{tipos:{},n:0}).tipos[t.tipo]=tree[t.cliente].usinas[t.usina].tipos[t.tipo]||[]).push(t);
+    tree[t.cliente].n++;tree[t.cliente].usinas[t.usina].n++;
+  });
+  const autoOpen=arr.length<=60;
+  GP_TIP_DATA=[];
+  const cntAtr=(list)=>list.filter(t=>t.atrasado).length;
+  const chipAtr=(k)=>k>0?' <span class="gp-badge-t" style="background:#d94f3d;color:#fff">⏱ '+k+'</span>':'';
+  let html='';
+  Object.keys(tree).sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(cli=>{
+    const C=tree[cli];
+    html+='<div class="gp-cli'+(autoOpen?' gp-open':'')+'"><div class="gp-cli-h" onclick="gpTog(this)"><span class="nm">'+gpEsc(cli)+'</span><span style="display:flex;align-items:center;gap:8px"><span class="gp-badge">'+C.n+'</span><span class="gp-chev">▾</span></span></div><div class="gp-cli-b">';
+    Object.keys(C.usinas).sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(usi=>{
+      const U=C.usinas[usi];
+      html+='<div class="gp-usi'+(autoOpen?' gp-open':'')+'"><div class="gp-usi-h" onclick="gpTog(this)"><span class="nm">'+gpEsc(usi)+'</span><span style="display:flex;align-items:center;gap:8px"><span class="gp-badge-d">'+U.n+'</span><span class="gp-chev-s">▾</span></span></div><div class="gp-usi-b">';
+      Object.keys(U.tipos).sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(tp=>{
+        const list=U.tipos[tp].slice().sort((a,b)=>{const da=(a.aberta&&a.dias!=null)?a.dias:-1e9,db=(b.aberta&&b.dias!=null)?b.dias:-1e9;return db-da;});
+        const idx=GP_TIP_DATA.push(list)-1;
+        html+='<div class="gp-tip '+gpTipoClass(tp)+(autoOpen?' gp-open':'')+'"><div class="gp-tip-h" onclick="gpTogTip(this,'+idx+')"><span class="nm">'+gpEsc(tp)+'</span><span style="display:flex;align-items:center;gap:6px"><span class="gp-badge-t">'+list.length+'</span>'+chipAtr(cntAtr(list))+'<span class="gp-chev-s">▾</span></span></div><div class="gp-tip-b" data-filled="0" data-idx="'+idx+'"></div></div>';
+      });
+      html+='</div></div>';
+    });
+    html+='</div></div>';
+  });
+  box.innerHTML=html;
+  if(autoOpen){box.querySelectorAll('.gp-tip-b').forEach(el=>gpFillTable(el));}
+}
+function gpTableHTML(list){
+  let h='<table class="gp-tbl"><thead><tr><th>OS ID</th><th>Tarefa</th><th>Estado</th><th>Etiquetas</th><th>Data Prog.</th><th>Dias</th></tr></thead><tbody>';
+  list.forEach(t=>{
+    const etq=(t.etiquetas||[]).slice(0,3).map(e=>'<span class="gp-etq">'+gpEsc(e)+'</span>').join('')+((t.etiquetas||[]).length>3?'<span class="gp-etq">+'+((t.etiquetas.length-3))+'</span>':'');
+    const _u=gpWoUrl(t);
+    const tarefa=_u?('<a href="'+gpEsc(_u)+'" target="_blank" rel="noopener" title="Abrir no Fracttal">'+gpEsc(t.tarefa||'—')+'</a>'):gpEsc(t.tarefa||'—');
+    h+='<tr><td><span class="gp-os">#'+gpEsc(t.os)+'</span></td><td class="gp-tarefa">'+tarefa+'</td><td>'+gpEstadoPill(t.estado)+'</td><td><div class="gp-etqs">'+(etq||'<span class="gp-data">—</span>')+'</div></td><td class="gp-data">'+gpFmtData(t.dataProg)+'</td><td>'+gpDiasCell(t)+'</td></tr>';
+  });
+  return h+'</tbody></table>';
+}
+function gpFillTable(bodyEl){
+  if(!bodyEl||bodyEl.getAttribute('data-filled')==='1')return;
+  const idx=parseInt(bodyEl.getAttribute('data-idx'),10);
+  bodyEl.innerHTML=gpTableHTML(GP_TIP_DATA[idx]||[]);
+  bodyEl.setAttribute('data-filled','1');
+}
+function gpTog(h){h.parentElement.classList.toggle('gp-open');}
+function gpTogTip(h,idx){
+  const blk=h.parentElement;const willOpen=!blk.classList.contains('gp-open');
+  blk.classList.toggle('gp-open');
+  if(willOpen)gpFillTable(blk.querySelector('.gp-tip-b'));
+}
+function gpOnFilter(){renderGestao();}
+function gpClear(){['gp-f-cliente','gp-f-usina','gp-f-cluster','gp-f-resp','gp-f-tipo','gp-f-etq','gp-f-estado','gp-f-os','gp-f-ss','gp-f-dini','gp-f-dfim'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});renderGestao();}
+
 // FIX #159: carrega supervisores.json no boot
 loadSupervisores().then(()=>{ if(typeof buildFilters==='function' && S.user) buildFilters(); });
+loadGestao().then(()=>{ if(S.user && S.topView==='gestaoPcm') renderGestao(); });
 </script>
 </body>
 </html>
