@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-02T19:40:33Z",
+  "geradoEm": "2026-07-02T19:55:25Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2819,
-        "emAberto": 9,
+        "total": 2821,
+        "emAberto": 10,
         "atrasadas": 7,
-        "concluidas30d": 557,
-        "concluidas7d": 111,
-        "naSemanaCorrente": 51
+        "concluidas30d": 558,
+        "concluidas7d": 112,
+        "naSemanaCorrente": 52
       },
       "mttr": {
-        "horas": 7.35,
-        "label": "7h 21min",
-        "amostra": 557
+        "horas": 7.33,
+        "label": "7h 20min",
+        "amostra": 558
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W27",
-          "criadas": 54,
-          "finalizadas": 54
+          "criadas": 56,
+          "finalizadas": 55
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2819,
-            "emAberto": 9
+            "total": 2821,
+            "emAberto": 10
           }
         ],
         "responsaveis": [
@@ -58,7 +58,7 @@
           },
           {
             "nome": "Raphael Vitoriano",
-            "total": 264,
+            "total": 265,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 9,
+      "total": 10,
       "atrasadas": 7,
       "porStatus": {
-        "naoIniciada": 9,
+        "naoIniciada": 10,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 9
+        "(sem equipe)": 10
       },
       "oss": [
         {
@@ -217,6 +217,24 @@
           "atrasada": true
         },
         {
+          "osId": "8848",
+          "ativo": "Thopen - Aparecida do Taboado 1 e 2 - MS  Aparecida do Taboado  Mato Grosso do Sul Brasil { THPN-ADT100 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Não Iniciada",
+          "tarefa": "Testes de Religamento remoto - UFV Aparecida  do taboado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-07",
+          "dataCriacao": "2026-07-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
           "osId": "8621",
           "ativo": "Infraestrutura Civil Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200-INFC1 }",
           "equipe": "",
@@ -254,6 +272,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8849",
+          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da cabine 5 de TIM200",
+          "criticidade": "",
+          "dataProgramada": "2026-07-02",
+          "dataCriacao": "2026-07-02",
+          "dataInicial": "2026-07-02",
+          "dataFinal": "2026-07-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "8846",
           "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
@@ -3215,26 +3253,6 @@
           "atrasada": false
         },
         {
-          "osId": "8207",
-          "ativo": "Thopen - Nova Londrina 2 - PR Estrada Mané Correia S/N Nova Londrina  Paraná Brasil { THPN-NVL200 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizada",
-          "tarefa": "Religamento da usina",
-          "criticidade": "",
-          "dataProgramada": "2026-06-23",
-          "dataCriacao": "2026-06-23",
-          "dataInicial": "2026-06-23",
-          "dataFinal": "2026-06-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "8247",
           "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
           "equipe": "",
@@ -3255,11 +3273,11 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1539,
+      "historicoTotal": 1540,
       "subClassificacao": {
-        "remoto": 604,
-        "local": 2215,
-        "remotoEmAberto": 8,
+        "remoto": 605,
+        "local": 2216,
+        "remotoEmAberto": 9,
         "localEmAberto": 1,
         "pctRemoto": 21,
         "alerta": true
@@ -3452,7 +3470,7 @@
           },
           {
             "nome": "Juliana Cândido",
-            "total": 25
+            "total": 26
           },
           {
             "nome": "DavidNascimento",
@@ -3483,16 +3501,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 509,
-        "emAberto": 93,
-        "atrasadas": 27,
-        "concluidas30d": 105,
-        "concluidas7d": 33,
+        "emAberto": 91,
+        "atrasadas": 25,
+        "concluidas30d": 107,
+        "concluidas7d": 35,
         "naSemanaCorrente": 28
       },
       "mttr": {
-        "horas": 295.31,
-        "label": "12d 7h",
-        "amostra": 105
+        "horas": 301.23,
+        "label": "12d 13h",
+        "amostra": 107
       },
       "tendencia4Semanas": [
         {
@@ -3513,7 +3531,7 @@
         {
           "semana": "W27",
           "criadas": 44,
-          "finalizadas": 22
+          "finalizadas": 24
         }
       ],
       "topOfensores": {
@@ -3521,7 +3539,7 @@
           {
             "nome": "(sem equipe)",
             "total": 509,
-            "emAberto": 93
+            "emAberto": 91
           }
         ],
         "responsaveis": [
@@ -3538,7 +3556,7 @@
           {
             "nome": "Luiz  Silva",
             "total": 23,
-            "emAberto": 4
+            "emAberto": 3
           },
           {
             "nome": "Francisco  Santos",
@@ -3552,16 +3570,16 @@
           }
         ]
       },
-      "total": 93,
-      "atrasadas": 27,
+      "total": 91,
+      "atrasadas": 25,
       "porStatus": {
         "naoIniciada": 85,
-        "emProgresso": 3,
+        "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 93
+        "(sem equipe)": 91
       },
       "oss": [
         {
@@ -3615,24 +3633,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 528.0,
-          "atrasada": true
-        },
-        {
-          "osId": "6791",
-          "ativo": "Infraestrutura Civil BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Janderson Miranda ",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-05-25",
-          "dataCriacao": "2026-05-19",
-          "dataInicial": "2026-07-02",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 1056.0,
           "atrasada": true
         },
         {
@@ -3874,24 +3874,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "8383",
-          "ativo": "Infraestrutura Civil LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Luiz  Silva",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-06-25",
-          "dataCriacao": "2026-06-25",
-          "dataInicial": "2026-07-02",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
           "atrasada": true
         },
         {
@@ -5156,6 +5138,25 @@
       ],
       "ossHistorico": [
         {
+          "osId": "8383",
+          "ativo": "Infraestrutura Civil LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-INFC1 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Luiz  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-06-25",
+          "dataCriacao": "2026-06-25",
+          "dataInicial": "2026-07-02",
+          "dataFinal": "2026-07-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "8309",
           "ativo": "Cabine 1  Santo Inácio  São Paulo Brasil { STI100-CABN1 }",
           "equipe": "",
@@ -5215,6 +5216,25 @@
         {
           "osId": "6792",
           "ativo": "Infraestrutura Civil Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-INFC1 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-05-25",
+          "dataCriacao": "2026-05-19",
+          "dataInicial": "2026-07-02",
+          "dataFinal": "2026-07-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 1056.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "6791",
+          "ativo": "Infraestrutura Civil BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100-INFC1 }",
           "equipe": "",
           "responsavel": "Janderson Miranda ",
           "criadoPor": "Juliana Cândido",
@@ -7512,25 +7532,6 @@
           "atrasada": false
         },
         {
-          "osId": "6348",
-          "ativo": "Nobreak 1      { TIM100-NBRK1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Hermano Barbosa",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
-          "criticidade": "",
-          "dataProgramada": "2026-05-11",
-          "dataCriacao": "2026-05-06",
-          "dataInicial": "2026-05-22",
-          "dataFinal": "2026-05-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 384.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "6828",
           "ativo": "Infraestrutura Civil Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { SNE100-INFC1 }",
           "equipe": "",
@@ -7949,25 +7950,6 @@
           "atrasada": false
         },
         {
-          "osId": "6346",
-          "ativo": "Nobreak 1      { MRO100-NBRK1 }",
-          "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Hermano Barbosa",
-          "supervisor": "Frank  Melo",
-          "status": "Finalizada",
-          "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
-          "criticidade": "",
-          "dataProgramada": "2026-05-11",
-          "dataCriacao": "2026-05-06",
-          "dataInicial": "2026-05-11",
-          "dataFinal": "2026-05-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "horasAteFechar": 48.0,
-          "atrasada": false
-        },
-        {
           "osId": "6392",
           "ativo": "Infraestrutura Civil Rodovia SP 334 S/N Batatais  São Paulo Brasil { BWK100-INFC1 }",
           "equipe": "",
@@ -8006,7 +7988,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 261
+      "historicoTotal": 263
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9772,17 +9754,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 63,
-        "emAberto": 21,
-        "atrasadas": 21,
-        "concluidas30d": 12,
-        "concluidas7d": 8,
-        "naSemanaCorrente": 20
+        "total": 67,
+        "emAberto": 24,
+        "atrasadas": 20,
+        "concluidas30d": 13,
+        "concluidas7d": 9,
+        "naSemanaCorrente": 24
       },
       "mttr": {
-        "horas": 100.0,
-        "label": "4d 4h",
-        "amostra": 12
+        "horas": 107.08,
+        "label": "4d 11h",
+        "amostra": 13
       },
       "tendencia4Semanas": [
         {
@@ -9802,28 +9784,28 @@
         },
         {
           "semana": "W27",
-          "criadas": 20,
-          "finalizadas": 6
+          "criadas": 24,
+          "finalizadas": 7
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 63,
-            "emAberto": 21
+            "total": 67,
+            "emAberto": 24
           }
         ],
         "responsaveis": [
           {
             "nome": "Gilson Souza",
             "total": 17,
-            "emAberto": 17
+            "emAberto": 16
           },
           {
             "nome": "James Chaves",
-            "total": 9,
-            "emAberto": 3
+            "total": 13,
+            "emAberto": 7
           },
           {
             "nome": "Luiz  Silva",
@@ -9842,16 +9824,16 @@
           }
         ]
       },
-      "total": 21,
-      "atrasadas": 21,
+      "total": 24,
+      "atrasadas": 20,
       "porStatus": {
-        "naoIniciada": 20,
-        "emProgresso": 1,
+        "naoIniciada": 24,
+        "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 21
+        "(sem equipe)": 24
       },
       "oss": [
         {
@@ -9903,24 +9885,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "8341",
-          "ativo": "Inversor 4.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR4.2 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Gilson Souza ",
-          "status": "IN_PROGRESS",
-          "tarefa": "[CPP100][Inversor 4.2] - Strings com corrente nula",
-          "criticidade": "",
-          "dataProgramada": "2026-06-26",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "2026-07-02",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 192.0,
           "atrasada": true
         },
         {
@@ -10211,9 +10175,96 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "8853",
+          "ativo": "Tracker 81.105 STI Norland     { MAB200-ETKR81.105 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[MAB200][TR-81(ID SunOP)]",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-07-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8852",
+          "ativo": "Tracker 42.103 STI Norland     { MAB200-ETKR42.103 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[MAB200][TR-42(ID SunOP)]",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-07-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8851",
+          "ativo": "Tracker 12.101 STI Norland     { MAB200-ETKR12.101 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[MAB200][TR-12(ID SunOP)]",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-07-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8850",
+          "ativo": "Tracker 09.101 STI Norland     { MAB200-ETKR9.101 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[MAB200][TR-12(ID SunOP)]",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-07-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8341",
+          "ativo": "Inversor 4.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR4.2 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[CPP100][Inversor 4.2] - Strings com corrente nula",
+          "criticidade": "",
+          "dataProgramada": "2026-06-26",
+          "dataCriacao": "2026-06-24",
+          "dataInicial": "2026-07-02",
+          "dataFinal": "2026-07-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 192.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "8676",
           "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR1.8 }",
@@ -10652,7 +10703,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 23
+      "historicoTotal": 24
     },
     "engenharia": {
       "label": "Engenharia",
@@ -11028,6 +11079,87 @@
     }
   },
   "ossPublicas": [
+    {
+      "osId": "8853",
+      "ativo": "Tracker 81.105 STI Norland     { MAB200-ETKR81.105 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[MAB200][TR-81(ID SunOP)]",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-07-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8852",
+      "ativo": "Tracker 42.103 STI Norland     { MAB200-ETKR42.103 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[MAB200][TR-42(ID SunOP)]",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-07-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8851",
+      "ativo": "Tracker 12.101 STI Norland     { MAB200-ETKR12.101 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[MAB200][TR-12(ID SunOP)]",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-07-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8850",
+      "ativo": "Tracker 09.101 STI Norland     { MAB200-ETKR9.101 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[MAB200][TR-12(ID SunOP)]",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-07-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8848",
+      "ativo": "Thopen - Aparecida do Taboado 1 e 2 - MS  Aparecida do Taboado  Mato Grosso do Sul Brasil { THPN-ADT100 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Não Iniciada",
+      "tarefa": "Testes de Religamento remoto - UFV Aparecida  do taboado",
+      "criticidade": "",
+      "dataProgramada": "2026-07-07",
+      "dataCriacao": "2026-07-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
     {
       "osId": "8829",
       "ativo": "Infraestrutura Civil Sítio Olho D'água s/n Alto Paraná  Paraná Brasil { THPN-APR100-INFC1 }",
@@ -12442,23 +12574,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "8383",
-      "ativo": "Infraestrutura Civil LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Luiz  Silva",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-06-25",
-      "dataCriacao": "2026-06-25",
-      "dataInicial": "2026-07-02",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0
-    },
-    {
       "osId": "8382",
       "ativo": "Infraestrutura Civil Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB200-INFC1 }",
       "equipe": "",
@@ -12473,23 +12588,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "8341",
-      "ativo": "Inversor 4.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR4.2 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Gilson Souza ",
-      "status": "IN_PROGRESS",
-      "tarefa": "[CPP100][Inversor 4.2] - Strings com corrente nula",
-      "criticidade": "",
-      "dataProgramada": "2026-06-26",
-      "dataCriacao": "2026-06-24",
-      "dataInicial": "2026-07-02",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 192.0
     },
     {
       "osId": "8321",
@@ -12964,23 +13062,6 @@
       "horasAteAbrir": 360.0
     },
     {
-      "osId": "6791",
-      "ativo": "Infraestrutura Civil BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Janderson Miranda ",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-05-25",
-      "dataCriacao": "2026-05-19",
-      "dataInicial": "2026-07-02",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 1056.0
-    },
-    {
       "osId": "6789",
       "ativo": "Infraestrutura Civil  Boa Esperança do Sul  São Paulo Brasil { BES100-INFC1 }",
       "equipe": "",
@@ -13132,6 +13213,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "8849",
+      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da cabine 5 de TIM200",
+      "criticidade": "",
+      "dataProgramada": "2026-07-02",
+      "dataCriacao": "2026-07-02",
+      "dataInicial": "2026-07-02",
+      "dataFinal": "2026-07-02",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "8846",
       "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
@@ -15475,6 +15576,25 @@
       "atrasada": false
     },
     {
+      "osId": "8383",
+      "ativo": "Infraestrutura Civil LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-INFC1 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Luiz  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Spare Parts",
+      "criticidade": "",
+      "dataProgramada": "2026-06-25",
+      "dataCriacao": "2026-06-25",
+      "dataInicial": "2026-07-02",
+      "dataFinal": "2026-07-02",
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "8377",
       "ativo": "Cabine 7  Capitão Poço  Pará Brasil { CPP100-CABN7 }",
       "equipe": "",
@@ -15774,6 +15894,25 @@
       "atrasada": false
     },
     {
+      "osId": "8341",
+      "ativo": "Inversor 4.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR4.2 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "[CPP100][Inversor 4.2] - Strings com corrente nula",
+      "criticidade": "",
+      "dataProgramada": "2026-06-26",
+      "dataCriacao": "2026-06-24",
+      "dataInicial": "2026-07-02",
+      "dataFinal": "2026-07-02",
+      "linkFracttal": "",
+      "horasAteAbrir": 192.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "8336",
       "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
       "equipe": "",
@@ -16049,69 +16188,10 @@
       "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "8306",
-      "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Rodolfo  Oliveira",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Rodolfo  Oliveira",
-      "status": "Finalizada",
-      "tarefa": "Religamento do inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-06-24",
-      "dataCriacao": "2026-06-24",
-      "dataInicial": "2026-06-24",
-      "dataFinal": "2026-06-24",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "8292",
-      "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-23",
-      "dataCriacao": "2026-06-24",
-      "dataInicial": "2026-06-23",
-      "dataFinal": "2026-06-24",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "8290",
-      "ativo": "Cabine 1  Poconé  Mato Grosso Brasil { PCN100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Adriano  Moraes",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-07-09",
-      "dataCriacao": "2026-06-24",
-      "dataInicial": "2026-06-24",
-      "dataFinal": "2026-06-24",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1919,
-  "totalGeral": 3533,
+  "historicoTotal": 1923,
+  "totalGeral": 3539,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
