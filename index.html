@@ -2940,8 +2940,10 @@ function gpDiasCell(t){
 // respeita o escopo: não-admin vê só o próprio cliente
 function gpScopedTarefas(){
   const all=(GESTAO_DB&&GESTAO_DB.tarefas)||[];
-  if(S.isAdmin||!S.user)return all;
-  return all.filter(t=>t.cliente===S.user);
+  // esconde tarefas sem Classificação 1 (ativos "TESTE"/não classificados)
+  let arr=all.filter(t=>t.usina && t.usina!=='(sem usina)' && t.cliente && t.cliente!=='(sem cliente)');
+  if(S.isAdmin||!S.user)return arr;
+  return arr.filter(t=>t.cliente===S.user);
 }
 function gpFillSelect(id,vals,label){
   const el=document.getElementById(id);if(!el)return;
