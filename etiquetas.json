@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-02T20:15:37Z",
+  "geradoEm": "2026-07-02T20:30:37Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -3574,8 +3574,8 @@
       "atrasadas": 25,
       "porStatus": {
         "naoIniciada": 85,
-        "emProgresso": 1,
-        "pausada": 5,
+        "emProgresso": 0,
+        "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
@@ -3642,7 +3642,7 @@
           "responsavel": "Rodolfo  Oliveira",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Rodolfo  Oliveira",
-          "status": "IN_PROGRESS",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-05-25",
@@ -9754,12 +9754,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 67,
-        "emAberto": 24,
+        "total": 70,
+        "emAberto": 27,
         "atrasadas": 20,
         "concluidas30d": 13,
         "concluidas7d": 9,
-        "naSemanaCorrente": 24
+        "naSemanaCorrente": 27
       },
       "mttr": {
         "horas": 107.08,
@@ -9784,7 +9784,7 @@
         },
         {
           "semana": "W27",
-          "criadas": 24,
+          "criadas": 27,
           "finalizadas": 7
         }
       ],
@@ -9792,8 +9792,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 67,
-            "emAberto": 24
+            "total": 70,
+            "emAberto": 27
           }
         ],
         "responsaveis": [
@@ -9804,8 +9804,8 @@
           },
           {
             "nome": "James Chaves",
-            "total": 13,
-            "emAberto": 7
+            "total": 16,
+            "emAberto": 10
           },
           {
             "nome": "Luiz  Silva",
@@ -9824,16 +9824,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 27,
       "atrasadas": 20,
       "porStatus": {
-        "naoIniciada": 24,
+        "naoIniciada": 27,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 27
       },
       "oss": [
         {
@@ -10175,6 +10175,57 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "8859",
+          "ativo": "Tracker 95.105 STI Norland     { MAB200-ETKR95.105 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[MAB200][TR-95(ID SunOP)]",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-07-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8858",
+          "ativo": "Tracker 93.105 STI Norland     { MAB200-ETKR93.105 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[MAB200][TR-93(ID SunOP)]",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-07-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8857",
+          "ativo": "Tracker 91.105 STI Norland     { MAB200-ETKR91.105 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[MAB200][TR-91(ID SunOP)]",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-07-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "8853",
@@ -11079,6 +11130,54 @@
     }
   },
   "ossPublicas": [
+    {
+      "osId": "8859",
+      "ativo": "Tracker 95.105 STI Norland     { MAB200-ETKR95.105 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[MAB200][TR-95(ID SunOP)]",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-07-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8858",
+      "ativo": "Tracker 93.105 STI Norland     { MAB200-ETKR93.105 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[MAB200][TR-93(ID SunOP)]",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-07-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "8857",
+      "ativo": "Tracker 91.105 STI Norland     { MAB200-ETKR91.105 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[MAB200][TR-91(ID SunOP)]",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-07-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
     {
       "osId": "8853",
       "ativo": "Tracker 81.105 STI Norland     { MAB200-ETKR81.105 }",
@@ -13068,7 +13167,7 @@
       "responsavel": "Rodolfo  Oliveira",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Rodolfo  Oliveira",
-      "status": "IN_PROGRESS",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
       "dataProgramada": "2026-05-25",
@@ -16191,7 +16290,7 @@
     }
   ],
   "historicoTotal": 1923,
-  "totalGeral": 3539,
+  "totalGeral": 3542,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
