@@ -637,7 +637,8 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 </style>
 </head>
 <body>
-<script type="application/json" id="gc-pwds">{"admin": "7397da07e9c3be6a330e343f632a5d3a2ff0569ff7822b0656066347f73bed7f", "thopen": "b324a9e10fa84ed949a1167bebc040730f2d875bf7412ef35814da7c809b37ee", "athon": "1e0acf4c9635d2cf9a8e9d80d4e8e705ad005ae79be153293fa8550c9f301163", "2c": "0ea16c090bb3f0ff1b0b17d5c195cc41f0a628ec94854cdf7a4350a2cac21413", "renogrid": "c0cfc76958c88a774082781ed2c6fcc2b1cf5ec531d5d7ebcfd31c76d46c46bc", "greenyellow": "58a6b9871a8d0a3c8bd9747b2528e2dbda56845b164b28aa7dc884727bbd8b73", "axis": "3ba4b61f597751ac131132dfc0f4ef07e4591a0b87de0894bc9ef61d9d875b33", "semp": "dd61e93912d27d12de8972aa3de9bd25cb0984561185ca79f5575f5451e64690", "utragaz": "8a565c982238e3a4c63ac7994c1a2f1ae69e1f415fd940ae012b31d92db95e42"}</script>
+<script type="application/json" id="gc-pwds">{"admin": "7397da07e9c3be6a330e343f632a5d3a2ff0569ff7822b0656066347f73bed7f", "thopen": "b324a9e10fa84ed949a1167bebc040730f2d875bf7412ef35814da7c809b37ee", "athon": "1e0acf4c9635d2cf9a8e9d80d4e8e705ad005ae79be153293fa8550c9f301163", "2c": "0ea16c090bb3f0ff1b0b17d5c195cc41f0a628ec94854cdf7a4350a2cac21413", "renogrid": "c0cfc76958c88a774082781ed2c6fcc2b1cf5ec531d5d7ebcfd31c76d46c46bc", "greenyellow": "58a6b9871a8d0a3c8bd9747b2528e2dbda56845b164b28aa7dc884727bbd8b73", "axis": "3ba4b61f597751ac131132dfc0f4ef07e4591a0b87de0894bc9ef61d9d875b33", "semp": "dd61e93912d27d12de8972aa3de9bd25cb0984561185ca79f5575f5451e64690", "utragaz": "8a565c982238e3a4c63ac7994c1a2f1ae69e1f415fd940ae012b31d92db95e42", "gdenergy": "767a2f83fa2b563848a910975c85385c90f4033e4db7a435bc8d836fc9423e82", "alveslima": "112f8098131a02a634d4c4c6afb34564a27738ef6239cd08d127b0e4ad9360d1"}</script>
+<script type="application/json" id="gc-aliases">{"gdenergy": "GD Energy", "alveslima": "Alves Lima"}</script>
 <div class="toast" id="toast"></div>
 
 <!-- LOGIN -->
@@ -987,6 +988,8 @@ const lsG = (k,fb) => { try { const v=localStorage.getItem(k); return v?JSON.par
 const lsS = (k,v)  => { try { localStorage.setItem(k,JSON.stringify(v)); } catch {} };
 
 const DEF_PWDS = JSON.parse(document.getElementById('gc-pwds').textContent);
+// Mapa login → nome real do cliente no banco (para logins sem espaço como "gdenergy" → "GD Energy")
+const LOGIN_ALIASES = JSON.parse(document.getElementById('gc-aliases')?.textContent || '{}');
 
 // Helper global: escapa HTML (usado em varios geradores de strings)
 function fmtMTTR(h){
@@ -1218,7 +1221,10 @@ async function doLogin() {
   if(S.isAdmin){S.user='Admin';launch('Grid Co. \u2014 Todos os Clientes',true);}
   else {
     const rows=AW()?.rows||[];
-    const found=[...new Set(rows.map(r=>r.cliente))].filter(Boolean).find(x=>x.toLowerCase()===key);
+    const aliasName=LOGIN_ALIASES[key]||null;
+    const found=aliasName
+      ? ([...new Set(rows.map(r=>r.cliente))].filter(Boolean).find(x=>x===aliasName) || aliasName)
+      : ([...new Set(rows.map(r=>r.cliente))].filter(Boolean).find(x=>x.toLowerCase()===key));
     if(!found){err.style.display='block';err.textContent='Cliente n\u00e3o encontrado nesta semana.';return;}
     S.user=found; launch(found,false);
   }
