@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-02T18:15:39Z",
+  "geradoEm": "2026-07-02T19:40:33Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -3483,16 +3483,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 509,
-        "emAberto": 94,
-        "atrasadas": 28,
-        "concluidas30d": 104,
-        "concluidas7d": 32,
+        "emAberto": 93,
+        "atrasadas": 27,
+        "concluidas30d": 105,
+        "concluidas7d": 33,
         "naSemanaCorrente": 28
       },
       "mttr": {
-        "horas": 288.0,
-        "label": "12d 0h",
-        "amostra": 104
+        "horas": 295.31,
+        "label": "12d 7h",
+        "amostra": 105
       },
       "tendencia4Semanas": [
         {
@@ -3513,7 +3513,7 @@
         {
           "semana": "W27",
           "criadas": 44,
-          "finalizadas": 21
+          "finalizadas": 22
         }
       ],
       "topOfensores": {
@@ -3521,7 +3521,7 @@
           {
             "nome": "(sem equipe)",
             "total": 509,
-            "emAberto": 94
+            "emAberto": 93
           }
         ],
         "responsaveis": [
@@ -3552,16 +3552,16 @@
           }
         ]
       },
-      "total": 94,
-      "atrasadas": 28,
+      "total": 93,
+      "atrasadas": 27,
       "porStatus": {
-        "naoIniciada": 86,
+        "naoIniciada": 85,
         "emProgresso": 3,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 94
+        "(sem equipe)": 93
       },
       "oss": [
         {
@@ -3615,24 +3615,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 528.0,
-          "atrasada": true
-        },
-        {
-          "osId": "6792",
-          "ativo": "Infraestrutura Civil Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-INFC1 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Janderson Miranda ",
-          "status": "IN_PROGRESS",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-05-25",
-          "dataCriacao": "2026-05-19",
-          "dataInicial": "2026-07-02",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 1056.0,
           "atrasada": true
         },
         {
@@ -3901,14 +3883,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-06-25",
           "dataCriacao": "2026-06-25",
-          "dataInicial": "",
+          "dataInicial": "2026-07-02",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 168.0,
           "atrasada": true
         },
         {
@@ -5226,6 +5209,25 @@
           "dataFinal": "2026-07-02",
           "linkFracttal": "",
           "horasAteAbrir": 216.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "6792",
+          "ativo": "Infraestrutura Civil Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-INFC1 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-05-25",
+          "dataCriacao": "2026-05-19",
+          "dataInicial": "2026-07-02",
+          "dataFinal": "2026-07-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 1056.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -7358,25 +7360,6 @@
           "atrasada": false
         },
         {
-          "osId": "6344",
-          "ativo": "Nobreak 1      { SMP100-NBRK1 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Hermano Barbosa",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizada",
-          "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
-          "criticidade": "",
-          "dataProgramada": "2026-05-13",
-          "dataCriacao": "2026-05-06",
-          "dataInicial": "2026-05-27",
-          "dataFinal": "2026-05-27",
-          "linkFracttal": "",
-          "horasAteAbrir": 504.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "6652",
           "ativo": "Ar Condicionado      { VRG100-SOEM1-ARCD }",
           "equipe": "",
@@ -8023,7 +8006,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 260
+      "historicoTotal": 261
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -12465,14 +12448,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
       "dataProgramada": "2026-06-25",
       "dataCriacao": "2026-06-25",
-      "dataInicial": "",
+      "dataInicial": "2026-07-02",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0
     },
     {
       "osId": "8382",
@@ -12978,23 +12962,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 360.0
-    },
-    {
-      "osId": "6792",
-      "ativo": "Infraestrutura Civil Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-INFC1 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Janderson Miranda ",
-      "status": "IN_PROGRESS",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-05-25",
-      "dataCriacao": "2026-05-19",
-      "dataInicial": "2026-07-02",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 1056.0
     },
     {
       "osId": "6791",
@@ -16143,7 +16110,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 1918,
+  "historicoTotal": 1919,
   "totalGeral": 3533,
   "verificacao": {
     "total": 0,
