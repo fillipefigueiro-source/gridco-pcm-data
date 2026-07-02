@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-02T11:35:15Z",
+  "geradoEm": "2026-07-02T11:41:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -3521,16 +3521,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 509,
-        "emAberto": 96,
+        "emAberto": 97,
         "atrasadas": 28,
-        "concluidas30d": 102,
-        "concluidas7d": 30,
+        "concluidas30d": 101,
+        "concluidas7d": 29,
         "naSemanaCorrente": 28
       },
       "mttr": {
-        "horas": 289.65,
-        "label": "12d 1h",
-        "amostra": 102
+        "horas": 290.38,
+        "label": "12d 2h",
+        "amostra": 101
       },
       "tendencia4Semanas": [
         {
@@ -3551,7 +3551,7 @@
         {
           "semana": "W27",
           "criadas": 44,
-          "finalizadas": 19
+          "finalizadas": 18
         }
       ],
       "topOfensores": {
@@ -3559,7 +3559,7 @@
           {
             "nome": "(sem equipe)",
             "total": 509,
-            "emAberto": 96
+            "emAberto": 97
           }
         ],
         "responsaveis": [
@@ -3590,16 +3590,16 @@
           }
         ]
       },
-      "total": 96,
+      "total": 97,
       "atrasadas": 28,
       "porStatus": {
-        "naoIniciada": 91,
-        "emProgresso": 0,
+        "naoIniciada": 90,
+        "emProgresso": 2,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 96
+        "(sem equipe)": 97
       },
       "oss": [
         {
@@ -4208,14 +4208,15 @@
           "responsavel": "Hélio Silva ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Hélio Silva ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-07-03",
           "dataCriacao": "2026-06-24",
-          "dataInicial": "",
+          "dataInicial": "2026-07-02",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "atrasada": false
         },
         {
@@ -4301,6 +4302,24 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "8250",
+          "ativo": "Cabine 1 2ª Seção Colônia Tapejara, Lote N 152-Re, 153 e 154 Cidade Gaúcha  Paraná Brasil { THPN-CGH100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Ronaldo  Silva",
+          "status": "IN_PROGRESS",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-07-07",
+          "dataCriacao": "2026-06-23",
+          "dataInicial": "2026-07-02",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 216.0,
           "atrasada": false
         },
         {
@@ -5241,25 +5260,6 @@
         }
       ],
       "ossHistorico": [
-        {
-          "osId": "8250",
-          "ativo": "Cabine 1 2ª Seção Colônia Tapejara, Lote N 152-Re, 153 e 154 Cidade Gaúcha  Paraná Brasil { THPN-CGH100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-07-07",
-          "dataCriacao": "2026-06-23",
-          "dataInicial": "2026-07-02",
-          "dataFinal": "2026-07-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 216.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
         {
           "osId": "8786",
           "ativo": "Transformador 2 COMTRAFO     { MAB200-TRFR2 }",
@@ -8090,9 +8090,28 @@
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "atrasada": false
+        },
+        {
+          "osId": "6306",
+          "ativo": "Transformador 1      { PTL300-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Rodrigo  Silva",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Rodrigo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Axis] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-05-14",
+          "dataCriacao": "2026-05-06",
+          "dataInicial": "2026-05-06",
+          "dataFinal": "2026-05-06",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
         }
       ],
-      "historicoTotal": 258
+      "historicoTotal": 257
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -12666,14 +12685,15 @@
       "responsavel": "Hélio Silva ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Hélio Silva ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-07-03",
       "dataCriacao": "2026-06-24",
-      "dataInicial": "",
+      "dataInicial": "2026-07-02",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 192.0
     },
     {
       "osId": "8304",
@@ -12786,6 +12806,23 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
+    },
+    {
+      "osId": "8250",
+      "ativo": "Cabine 1 2ª Seção Colônia Tapejara, Lote N 152-Re, 153 e 154 Cidade Gaúcha  Paraná Brasil { THPN-CGH100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Ronaldo  Silva",
+      "status": "IN_PROGRESS",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-07-07",
+      "dataCriacao": "2026-06-23",
+      "dataInicial": "2026-07-02",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 216.0
     },
     {
       "osId": "8248",
@@ -16274,7 +16311,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 1908,
+  "historicoTotal": 1907,
   "totalGeral": 3527,
   "verificacao": {
     "total": 0,
