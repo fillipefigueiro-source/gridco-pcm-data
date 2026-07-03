@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-03T20:06:21Z",
+  "geradoEm": "2026-07-03T20:11:19Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 2850,
-        "emAberto": 14,
+        "emAberto": 12,
         "atrasadas": 7,
-        "concluidas30d": 568,
-        "concluidas7d": 116,
+        "concluidas30d": 570,
+        "concluidas7d": 118,
         "naSemanaCorrente": 80
       },
       "mttr": {
-        "horas": 7.18,
-        "label": "7h 11min",
-        "amostra": 568
+        "horas": 7.16,
+        "label": "7h 9min",
+        "amostra": 570
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W27",
           "criadas": 85,
-          "finalizadas": 80
+          "finalizadas": 82
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 2850,
-            "emAberto": 14
+            "emAberto": 12
           }
         ],
         "responsaveis": [
@@ -64,7 +64,7 @@
           {
             "nome": "Felipe Silva",
             "total": 250,
-            "emAberto": 2
+            "emAberto": 0
           },
           {
             "nome": "James Chaves",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
+      "total": 12,
       "atrasadas": 7,
       "porStatus": {
-        "naoIniciada": 14,
+        "naoIniciada": 11,
         "emProgresso": 0,
-        "pausada": 0,
+        "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 12
       },
       "oss": [
         {
@@ -217,56 +217,21 @@
           "atrasada": true
         },
         {
-          "osId": "8949",
-          "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "Felipe Silva ",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento da cabine remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-07-03",
-          "dataCriacao": "2026-07-03",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
-          "osId": "8948",
-          "ativo": "Cabine 1  Capitão Poço  Pará Brasil { CPP100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "Felipe Silva ",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento da cabine remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-07-03",
-          "dataCriacao": "2026-07-03",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "8925",
           "ativo": "SKID 2  Santarém  Pará Brasil { STR100-SKID2 }",
           "equipe": "",
           "responsavel": "Júlio Willers ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Júlio Willers ",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "Religamento UFV Santarém 1B",
           "criticidade": "",
           "dataProgramada": "2026-07-03",
           "dataCriacao": "2026-07-03",
-          "dataInicial": "",
+          "dataInicial": "2026-07-03",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -344,6 +309,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8949",
+          "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizados",
+          "tarefa": "Religamento da cabine remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-07-03",
+          "dataInicial": "2026-07-03",
+          "dataFinal": "2026-07-03",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "8948",
+          "ativo": "Cabine 1  Capitão Poço  Pará Brasil { CPP100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizados",
+          "tarefa": "Religamento da cabine remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-07-03",
+          "dataInicial": "2026-07-03",
+          "dataFinal": "2026-07-03",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "8946",
           "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
@@ -3303,53 +3308,13 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "8315",
-          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine 6 de CPP100",
-          "criticidade": "",
-          "dataProgramada": "2026-06-24",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "2026-06-24",
-          "dataFinal": "2026-06-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "8313",
-          "ativo": "Cabine 7  Capitão Poço  Pará Brasil { CPP100-CABN7 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine 7 de CPP100",
-          "criticidade": "",
-          "dataProgramada": "2026-06-24",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "2026-06-24",
-          "dataFinal": "2026-06-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1554,
+      "historicoTotal": 1556,
       "subClassificacao": {
         "remoto": 620,
         "local": 2230,
-        "remotoEmAberto": 11,
+        "remotoEmAberto": 9,
         "localEmAberto": 3,
         "pctRemoto": 22,
         "alerta": true
@@ -3519,10 +3484,10 @@
             "linkFracttal": ""
           }
         ],
-        "medHorasAbrir": 3.3,
+        "medHorasAbrir": 3.2,
         "medHorasFechar": 3.0,
-        "amostraAbrir": 604,
-        "amostraFechar": 604,
+        "amostraAbrir": 606,
+        "amostraFechar": 606,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -11069,54 +11034,21 @@
   },
   "ossPublicas": [
     {
-      "osId": "8949",
-      "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Felipe Silva ",
-      "status": "Não Iniciada",
-      "tarefa": "Religamento da cabine remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-07-03",
-      "dataCriacao": "2026-07-03",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "remoto"
-    },
-    {
-      "osId": "8948",
-      "ativo": "Cabine 1  Capitão Poço  Pará Brasil { CPP100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Felipe Silva ",
-      "status": "Não Iniciada",
-      "tarefa": "Religamento da cabine remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-07-03",
-      "dataCriacao": "2026-07-03",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "remoto"
-    },
-    {
       "osId": "8925",
       "ativo": "SKID 2  Santarém  Pará Brasil { STR100-SKID2 }",
       "equipe": "",
       "responsavel": "Júlio Willers ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Júlio Willers ",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "Religamento UFV Santarém 1B",
       "criticidade": "",
       "dataProgramada": "2026-07-03",
       "dataCriacao": "2026-07-03",
-      "dataInicial": "",
+      "dataInicial": "2026-07-03",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -13174,6 +13106,46 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "8949",
+      "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizados",
+      "tarefa": "Religamento da cabine remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-07-03",
+      "dataInicial": "2026-07-03",
+      "dataFinal": "2026-07-03",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "8948",
+      "ativo": "Cabine 1  Capitão Poço  Pará Brasil { CPP100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizados",
+      "tarefa": "Religamento da cabine remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-07-03",
+      "dataInicial": "2026-07-03",
+      "dataFinal": "2026-07-03",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "8946",
       "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
@@ -16111,48 +16083,9 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "8383",
-      "ativo": "Infraestrutura Civil LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Luiz  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-06-25",
-      "dataCriacao": "2026-06-25",
-      "dataInicial": "2026-07-02",
-      "dataFinal": "2026-07-02",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "8377",
-      "ativo": "Cabine 7  Capitão Poço  Pará Brasil { CPP100-CABN7 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-06-25",
-      "dataCriacao": "2026-06-25",
-      "dataInicial": "2026-06-25",
-      "dataFinal": "2026-06-25",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1945,
+  "historicoTotal": 1947,
   "totalGeral": 3570,
   "verificacao": {
     "total": 0,
