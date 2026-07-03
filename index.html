@@ -1097,9 +1097,10 @@ const CONFIG = {
   SUGESTOES_URL: "sugestoes.json",
   ETIQUETAS_URL: "etiquetas.json",
   GESTAO_URL: "gestao_pcm.json",
-  // Link p/ abrir a OT no Fracttal. {id}=id_work_order interno, {folio}=número curto.
-  // Ajuste aqui quando confirmar o formato que o Fracttal aceita.
-  GESTAO_WO_URL: "https://one.fracttal.com/tasks/wo/{id}",
+  // Link p/ abrir a OT no Fracttal. O Fracttal One NÃO tem deep-link por OT
+  // (a URL colapsa p/ /tasks/wo). Decisão: abrir o módulo de OS; usuário busca
+  // o número (mostrado no card). Suporta {id}/{folio} se um dia houver deep-link.
+  GESTAO_WO_URL: "https://one.fracttal.com/tasks/wo",
   SUPERVISORES_URL: "supervisores.json",
   REFRESH_MS: 300000,
   // Painel local (Streamlit) — botão "Aceitar" abre essa URL com ?ss=NUMERO
