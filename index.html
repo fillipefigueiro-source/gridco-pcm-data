@@ -960,14 +960,35 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
           </div>
         </div>
       </div>
+      <style>
+      .gp-ms{position:relative;width:100%}
+      .gp-ms-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:6px;padding:7px 9px;border:1px solid #d0d0d8;border-radius:7px;background:#fff;font-size:12px;font-family:inherit;color:#191528;cursor:pointer;text-align:left}
+      .gp-ms-btn:hover{border-color:#191528}
+      .gp-ms-lbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+      .gp-ms-lbl.sel{font-weight:700}
+      .gp-ms-cv{color:#8a8a94;font-size:10px;flex:none}
+      .gp-ms-pop{display:none;position:absolute;top:calc(100% + 4px);left:0;min-width:100%;max-width:300px;background:#fff;border:1px solid #d0d0d8;border-radius:8px;box-shadow:0 6px 22px rgba(0,0,0,.16);z-index:80;padding:6px}
+      .gp-ms.open .gp-ms-pop{display:block}
+      .gp-ms-top{display:flex;flex-direction:column;gap:5px;padding-bottom:6px;border-bottom:1px solid #eee;margin-bottom:5px}
+      .gp-ms-search{width:100%;padding:5px 7px;border:1px solid #d8d8e0;border-radius:6px;font-size:11px;font-family:inherit;outline:none}
+      .gp-ms-acts{display:flex;gap:12px}
+      .gp-ms-acts a{font-size:10px;color:#2e7bc4;cursor:pointer;font-weight:700;text-transform:uppercase;letter-spacing:.3px}
+      .gp-ms-acts a:hover{text-decoration:underline}
+      .gp-ms-opts{max-height:230px;overflow-y:auto;display:flex;flex-direction:column}
+      .gp-ms-opt{display:flex;align-items:center;gap:7px;padding:4px 5px;font-size:12px;color:#333;cursor:pointer;border-radius:5px}
+      .gp-ms-opt:hover{background:#f2f2f7}
+      .gp-ms-opt input{cursor:pointer;flex:none;accent-color:#191528}
+      .gp-ms-opt span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+      .gp-ms-empty{padding:8px;color:#999;font-size:11px;text-align:center}
+      </style>
       <div class="gp-toolbar" id="gp-toolbar">
-        <div class="gp-fg"><label>Cliente</label><select id="gp-f-cliente" onchange="gpOnFilter()"><option value="">Todos</option></select></div>
-        <div class="gp-fg"><label>Usina</label><select id="gp-f-usina" onchange="gpOnFilter()"><option value="">Todas</option></select></div>
-        <div class="gp-fg"><label>Equipe Cluster</label><select id="gp-f-cluster" onchange="gpOnFilter()"><option value="">Todos</option></select></div>
-        <div class="gp-fg"><label>Respons&aacute;vel O&amp;M</label><select id="gp-f-resp" onchange="gpOnFilter()"><option value="">Todos</option></select></div>
-        <div class="gp-fg"><label>Tipo</label><select id="gp-f-tipo" onchange="gpOnFilter()"><option value="">Todos</option></select></div>
-        <div class="gp-fg"><label>Etiqueta</label><select id="gp-f-etq" onchange="gpOnFilter()"><option value="">Todas</option></select></div>
-        <div class="gp-fg"><label>Estado</label><select id="gp-f-estado" onchange="gpOnFilter()"><option value="">Todos</option></select></div>
+        <div class="gp-fg"><label>Cliente</label><div class="gp-ms" id="gp-ms-cliente"><button type="button" class="gp-ms-btn" onclick="gpMsToggle('cliente')"><span class="gp-ms-lbl" id="gp-ms-lbl-cliente">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="gp-ms-pop-cliente"></div></div></div>
+        <div class="gp-fg"><label>Usina</label><div class="gp-ms" id="gp-ms-usina"><button type="button" class="gp-ms-btn" onclick="gpMsToggle('usina')"><span class="gp-ms-lbl" id="gp-ms-lbl-usina">Todas</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="gp-ms-pop-usina"></div></div></div>
+        <div class="gp-fg"><label>Equipe Cluster</label><div class="gp-ms" id="gp-ms-cluster"><button type="button" class="gp-ms-btn" onclick="gpMsToggle('cluster')"><span class="gp-ms-lbl" id="gp-ms-lbl-cluster">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="gp-ms-pop-cluster"></div></div></div>
+        <div class="gp-fg"><label>Respons&aacute;vel O&amp;M</label><div class="gp-ms" id="gp-ms-resp"><button type="button" class="gp-ms-btn" onclick="gpMsToggle('resp')"><span class="gp-ms-lbl" id="gp-ms-lbl-resp">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="gp-ms-pop-resp"></div></div></div>
+        <div class="gp-fg"><label>Tipo</label><div class="gp-ms" id="gp-ms-tipo"><button type="button" class="gp-ms-btn" onclick="gpMsToggle('tipo')"><span class="gp-ms-lbl" id="gp-ms-lbl-tipo">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="gp-ms-pop-tipo"></div></div></div>
+        <div class="gp-fg"><label>Etiqueta</label><div class="gp-ms" id="gp-ms-etq"><button type="button" class="gp-ms-btn" onclick="gpMsToggle('etq')"><span class="gp-ms-lbl" id="gp-ms-lbl-etq">Todas</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="gp-ms-pop-etq"></div></div></div>
+        <div class="gp-fg"><label>Estado</label><div class="gp-ms" id="gp-ms-estado"><button type="button" class="gp-ms-btn" onclick="gpMsToggle('estado')"><span class="gp-ms-lbl" id="gp-ms-lbl-estado">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="gp-ms-pop-estado"></div></div></div>
         <div class="gp-fg"><label>OS #</label><input type="text" id="gp-f-os" placeholder="ex: 8856" oninput="gpOnFilter()"></div>
         <div class="gp-fg"><label>Solicita&ccedil;&atilde;o #</label><input type="text" id="gp-f-ss" placeholder="ex: 2946" oninput="gpOnFilter()"></div>
         <div class="gp-fg"><label>Data Prog. de</label><input type="date" id="gp-f-dini" onchange="gpOnFilter()"></div>
@@ -2941,42 +2962,59 @@ function gpDiasCell(t){
 function gpScopedTarefas(){
   const all=(GESTAO_DB&&GESTAO_DB.tarefas)||[];
   // esconde tarefas sem Classificação 1 (ativos "TESTE"/não classificados)
-  let arr=all.filter(t=>t.usina && t.usina!=='(sem usina)' && t.cliente && t.cliente!=='(sem cliente)');
+  let arr=all.filter(t=>t.usina && t.usina!=='(sem usina)' && t.cliente && t.cliente!=='(sem cliente)' && (t.cliente||'').toLowerCase()!=='usina teste');
   if(S.isAdmin||!S.user)return arr;
   return arr.filter(t=>t.cliente===S.user);
 }
-function gpFillSelect(id,vals,label){
-  const el=document.getElementById(id);if(!el)return;
-  const cur=el.value;
-  el.innerHTML='<option value="">'+label+'</option>'+vals.map(v=>'<option value="'+gpEsc(v)+'">'+gpEsc(v)+'</option>').join('');
-  if(vals.indexOf(cur)>=0)el.value=cur;
+// ── Filtros multi-seleção (checkboxes) ────────────────────────────────────
+// key -> {f: campo da tarefa, lbl: rótulo "vazio"}
+const GP_MS={cliente:{f:'cliente',lbl:'Todos'},usina:{f:'usina',lbl:'Todas'},
+  cluster:{f:'cluster',lbl:'Todos'},resp:{f:'responsavel',lbl:'Todos'},
+  tipo:{f:'tipo',lbl:'Todos'},etq:{f:'etiquetas',lbl:'Todas'},estado:{f:'estado',lbl:'Todos'}};
+const GP_SEL={cliente:new Set(),usina:new Set(),cluster:new Set(),resp:new Set(),tipo:new Set(),etq:new Set(),estado:new Set()};
+function gpMsOptions(key){
+  const fld=GP_MS[key].f,s=new Set();
+  gpScopedTarefas().forEach(t=>{const v=t[fld];if(Array.isArray(v))v.forEach(x=>x&&s.add(x));else if(v)s.add(v);});
+  [...GP_SEL[key]].forEach(v=>{if(!s.has(v))GP_SEL[key].delete(v);}); // limpa selecionados que sumiram
+  return [...s].sort((a,b)=>a.localeCompare(b,'pt-BR'));
 }
-function gpPopulateFilters(){
-  const arr=gpScopedTarefas();
-  const uniq=(f)=>{const s=new Set();arr.forEach(t=>{const v=t[f];if(Array.isArray(v))v.forEach(x=>x&&s.add(x));else if(v)s.add(v);});
-    return [...s].sort((a,b)=>a.localeCompare(b,'pt-BR'));};
-  gpFillSelect('gp-f-cliente',uniq('cliente'),'Todos');
-  gpFillSelect('gp-f-usina',uniq('usina'),'Todas');
-  gpFillSelect('gp-f-cluster',uniq('cluster'),'Todos');
-  gpFillSelect('gp-f-resp',uniq('responsavel'),'Todos');
-  gpFillSelect('gp-f-tipo',uniq('tipo'),'Todos');
-  gpFillSelect('gp-f-etq',uniq('etiquetas'),'Todas');
-  gpFillSelect('gp-f-estado',uniq('estado'),'Todos');
+function gpMsLabel(key){
+  const s=GP_SEL[key],el=document.getElementById('gp-ms-lbl-'+key);if(!el)return;
+  if(s.size===0){el.textContent=GP_MS[key].lbl;el.classList.remove('sel');}
+  else if(s.size===1){el.textContent=[...s][0];el.classList.add('sel');}
+  else{el.textContent=s.size+' selecionados';el.classList.add('sel');}
 }
+function gpBuildPop(key){
+  const pop=document.getElementById('gp-ms-pop-'+key);if(!pop)return;
+  const opts=gpMsOptions(key);
+  let h='<div class="gp-ms-top"><input class="gp-ms-search" placeholder="buscar…" oninput="gpMsSearch(\''+key+'\',this.value)">'
+      +'<div class="gp-ms-acts"><a onclick="gpMsAll(\''+key+'\')">Todos</a><a onclick="gpMsNone(\''+key+'\')">Limpar</a></div></div><div class="gp-ms-opts">';
+  h+=opts.map(v=>{const e=gpEsc(v);return '<label class="gp-ms-opt"><input type="checkbox"'+(GP_SEL[key].has(v)?' checked':'')+' value="'+e+'" onchange="gpMsCheck(\''+key+'\',this)"><span>'+e+'</span></label>';}).join('')||'<div class="gp-ms-empty">—</div>';
+  return pop.innerHTML=h+'</div>';
+}
+function gpPopulateFilters(){Object.keys(GP_MS).forEach(k=>{gpBuildPop(k);gpMsLabel(k);});}
+function gpMsToggle(key){
+  const box=document.getElementById('gp-ms-'+key),open=box.classList.contains('open');
+  document.querySelectorAll('.gp-ms.open').forEach(b=>b.classList.remove('open'));
+  if(!open){gpBuildPop(key);box.classList.add('open');}
+}
+function gpMsCheck(key,cb){if(cb.checked)GP_SEL[key].add(cb.value);else GP_SEL[key].delete(cb.value);gpMsLabel(key);renderGestao(false);}
+function gpMsAll(key){gpMsOptions(key).forEach(v=>GP_SEL[key].add(v));gpBuildPop(key);gpMsLabel(key);renderGestao(false);}
+function gpMsNone(key){GP_SEL[key].clear();gpBuildPop(key);gpMsLabel(key);renderGestao(false);}
+function gpMsSearch(key,q){q=(q||'').toLowerCase();document.querySelectorAll('#gp-ms-pop-'+key+' .gp-ms-opt').forEach(l=>{l.style.display=l.textContent.toLowerCase().indexOf(q)>=0?'':'none';});}
+document.addEventListener('click',e=>{if(!e.target.closest('.gp-ms'))document.querySelectorAll('.gp-ms.open').forEach(b=>b.classList.remove('open'));});
 function gpVal(id){const el=document.getElementById(id);return el?el.value.trim():'';}
 function gpFilteredTarefas(){
-  const fCli=gpVal('gp-f-cliente'),fUsi=gpVal('gp-f-usina'),fClu=gpVal('gp-f-cluster'),
-        fResp=gpVal('gp-f-resp'),fTipo=gpVal('gp-f-tipo'),fEtq=gpVal('gp-f-etq'),
-        fEst=gpVal('gp-f-estado'),fOS=gpVal('gp-f-os').toLowerCase(),fSS=gpVal('gp-f-ss').toLowerCase(),
+  const S1=GP_SEL,fOS=gpVal('gp-f-os').toLowerCase(),fSS=gpVal('gp-f-ss').toLowerCase(),
         dIni=gpVal('gp-f-dini'),dFim=gpVal('gp-f-dfim');
   return gpScopedTarefas().filter(t=>{
-    if(fCli&&t.cliente!==fCli)return false;
-    if(fUsi&&t.usina!==fUsi)return false;
-    if(fClu&&t.cluster!==fClu)return false;
-    if(fResp&&t.responsavel!==fResp)return false;
-    if(fTipo&&t.tipo!==fTipo)return false;
-    if(fEst&&t.estado!==fEst)return false;
-    if(fEtq&&!(t.etiquetas||[]).includes(fEtq))return false;
+    if(S1.cliente.size&&!S1.cliente.has(t.cliente))return false;
+    if(S1.usina.size&&!S1.usina.has(t.usina))return false;
+    if(S1.cluster.size&&!S1.cluster.has(t.cluster))return false;
+    if(S1.resp.size&&!S1.resp.has(t.responsavel))return false;
+    if(S1.tipo.size&&!S1.tipo.has(t.tipo))return false;
+    if(S1.estado.size&&!S1.estado.has(t.estado))return false;
+    if(S1.etq.size&&!(t.etiquetas||[]).some(e=>S1.etq.has(e)))return false;
     if(fOS&&String(t.os).toLowerCase().indexOf(fOS)<0)return false;
     if(fSS&&String(t.ss).toLowerCase().indexOf(fSS)<0)return false;
     if(dIni&&(!t.dataProg||t.dataProg<dIni))return false;
@@ -2984,12 +3022,12 @@ function gpFilteredTarefas(){
     return true;
   });
 }
-function renderGestao(){
+function renderGestao(rebuildFilters){
   const box=document.getElementById('gp-tree');
   if(!box)return;
   if(!GESTAO_DB){box.innerHTML='<div class="gp-nores">Não foi possível carregar gestao_pcm.json.</div>';
     document.getElementById('gp-sub').textContent='Falha ao carregar';return;}
-  gpPopulateFilters();
+  if(rebuildFilters!==false)gpPopulateFilters();else Object.keys(GP_MS).forEach(gpMsLabel);
   document.getElementById('gp-sub').textContent='Atualizado: '+new Date(GESTAO_DB.geradoEm||Date.now()).toLocaleString('pt-BR')+' · corte '+gpFmtData(GESTAO_DB.corteData)+' · fonte: API Fracttal';
   const arr=gpFilteredTarefas();
   const ab=arr.filter(t=>t.aberta), atr=ab.filter(t=>t.atrasado);
@@ -3050,7 +3088,7 @@ function gpTogTip(h,idx){
   if(willOpen)gpFillTable(blk.querySelector('.gp-tip-b'));
 }
 function gpOnFilter(){renderGestao();}
-function gpClear(){['gp-f-cliente','gp-f-usina','gp-f-cluster','gp-f-resp','gp-f-tipo','gp-f-etq','gp-f-estado','gp-f-os','gp-f-ss','gp-f-dini','gp-f-dfim'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});renderGestao();}
+function gpClear(){Object.keys(GP_SEL).forEach(k=>GP_SEL[k].clear());['gp-f-os','gp-f-ss','gp-f-dini','gp-f-dfim'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});renderGestao(true);}
 
 // FIX #159: carrega supervisores.json no boot
 loadSupervisores().then(()=>{ if(typeof buildFilters==='function' && S.user) buildFilters(); });
