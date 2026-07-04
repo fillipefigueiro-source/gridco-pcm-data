@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-04T18:32:49Z",
+  "geradoEm": "2026-07-04T18:38:13Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2863,
-        "emAberto": 17,
+        "total": 2865,
+        "emAberto": 18,
         "atrasadas": 13,
-        "concluidas30d": 564,
-        "concluidas7d": 115,
-        "naSemanaCorrente": 93
+        "concluidas30d": 565,
+        "concluidas7d": 116,
+        "naSemanaCorrente": 95
       },
       "mttr": {
-        "horas": 7.24,
-        "label": "7h 14min",
-        "amostra": 564
+        "horas": 7.22,
+        "label": "7h 13min",
+        "amostra": 565
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W27",
-          "criadas": 98,
-          "finalizadas": 90
+          "criadas": 100,
+          "finalizadas": 91
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2863,
-            "emAberto": 17
+            "total": 2865,
+            "emAberto": 18
           }
         ],
         "responsaveis": [
@@ -68,26 +68,26 @@
           },
           {
             "nome": "James Chaves",
-            "total": 126,
-            "emAberto": 0
+            "total": 127,
+            "emAberto": 1
           },
           {
-            "nome": "Wesllen  Castro",
-            "total": 123,
+            "nome": "Italo  Lustosa",
+            "total": 124,
             "emAberto": 0
           }
         ]
       },
-      "total": 17,
+      "total": 18,
       "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 16,
+        "naoIniciada": 17,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 17
+        "(sem equipe)": 18
       },
       "oss": [
         {
@@ -326,6 +326,24 @@
           "atrasada": true
         },
         {
+          "osId": "8967",
+          "ativo": "Athon - Jacundá 1 - PA Estrada da Areia Branca, s/n Jacundá  Pará Brasil { ATHN-JCD100 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da usina de JCD100",
+          "criticidade": "",
+          "dataProgramada": "2026-07-04",
+          "dataCriacao": "2026-07-04",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "8922",
           "ativo": "Cabine 1  Santo Inácio  São Paulo Brasil { STI100-CABN1 }",
           "equipe": "",
@@ -399,6 +417,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8966",
+          "ativo": "Thopen - Brodowski 1 - SP Rodovia SP 334 S/N Batatais  São Paulo Brasil { THPN-BWK100 }",
+          "equipe": "",
+          "responsavel": "Italo  Lustosa",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Italo  Lustosa",
+          "status": "Finalizada",
+          "tarefa": "UFV BRODOWSKI - Religamento remoto da usina. Relé trip 47 E 86.",
+          "criticidade": "",
+          "dataProgramada": "2026-07-04",
+          "dataCriacao": "2026-07-04",
+          "dataInicial": "2026-07-04",
+          "dataFinal": "2026-07-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "8965",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3378,34 +3416,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "8344",
-          "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine",
-          "criticidade": "",
-          "dataProgramada": "2026-06-24",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "2026-06-24",
-          "dataFinal": "2026-06-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1544,
+      "historicoTotal": 1545,
       "subClassificacao": {
-        "remoto": 627,
-        "local": 2236,
+        "remoto": 628,
+        "local": 2237,
         "remotoEmAberto": 14,
-        "localEmAberto": 3,
+        "localEmAberto": 4,
         "pctRemoto": 22,
         "alerta": true
       },
@@ -3576,12 +3594,12 @@
         ],
         "medHorasAbrir": 3.2,
         "medHorasFechar": 3.0,
-        "amostraAbrir": 608,
-        "amostraFechar": 608,
+        "amostraAbrir": 609,
+        "amostraFechar": 609,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
-            "total": 273
+            "total": 274
           },
           {
             "nome": "Felipe Silva",
@@ -11126,6 +11144,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "8967",
+      "ativo": "Athon - Jacundá 1 - PA Estrada da Areia Branca, s/n Jacundá  Pará Brasil { ATHN-JCD100 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento da usina de JCD100",
+      "criticidade": "",
+      "dataProgramada": "2026-07-04",
+      "dataCriacao": "2026-07-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "8954",
       "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
       "equipe": "",
@@ -13267,6 +13302,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "8966",
+      "ativo": "Thopen - Brodowski 1 - SP Rodovia SP 334 S/N Batatais  São Paulo Brasil { THPN-BWK100 }",
+      "equipe": "",
+      "responsavel": "Italo  Lustosa",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Italo  Lustosa",
+      "status": "Finalizada",
+      "tarefa": "UFV BRODOWSKI - Religamento remoto da usina. Relé trip 47 E 86.",
+      "criticidade": "",
+      "dataProgramada": "2026-07-04",
+      "dataCriacao": "2026-07-04",
+      "dataInicial": "2026-07-04",
+      "dataFinal": "2026-07-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "8965",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -16228,30 +16283,10 @@
       "horasAteFechar": 0,
       "modalidade": "remoto",
       "atrasada": false
-    },
-    {
-      "osId": "8457",
-      "ativo": "Cabine 7  Capitão Poço  Pará Brasil { CPP100-CABN7 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da Usina remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-06-25",
-      "dataCriacao": "2026-06-25",
-      "dataInicial": "2026-06-25",
-      "dataFinal": "2026-06-25",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1936,
-  "totalGeral": 3583,
+  "historicoTotal": 1937,
+  "totalGeral": 3585,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
