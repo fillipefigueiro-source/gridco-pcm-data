@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-05T18:22:36Z",
+  "geradoEm": "2026-07-05T18:27:48Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 2883,
-        "emAberto": 24,
+        "emAberto": 23,
         "atrasadas": 15,
-        "concluidas30d": 567,
-        "concluidas7d": 116,
+        "concluidas30d": 568,
+        "concluidas7d": 117,
         "naSemanaCorrente": 113
       },
       "mttr": {
-        "horas": 6.89,
+        "horas": 6.88,
         "label": "6h 53min",
-        "amostra": 567
+        "amostra": 568
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W27",
           "criadas": 118,
-          "finalizadas": 103
+          "finalizadas": 104
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 2883,
-            "emAberto": 24
+            "emAberto": 23
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 23,
       "atrasadas": 15,
       "porStatus": {
         "naoIniciada": 21,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 23
       },
       "oss": [
         {
@@ -363,25 +363,6 @@
           "atrasada": true
         },
         {
-          "osId": "8986",
-          "ativo": "Disjuntor de Média Tensão 1      { IRC100-DJMT1 }",
-          "equipe": "",
-          "responsavel": "Olimpio Lima ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Olimpio Lima ",
-          "status": "IN_PROGRESS",
-          "tarefa": "Religamento da usina",
-          "criticidade": "",
-          "dataProgramada": "2026-07-05",
-          "dataCriacao": "2026-07-05",
-          "dataInicial": "2026-07-05",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "8985",
           "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
           "equipe": "",
@@ -527,6 +508,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8986",
+          "ativo": "Disjuntor de Média Tensão 1      { IRC100-DJMT1 }",
+          "equipe": "",
+          "responsavel": "Olimpio Lima ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Olimpio Lima ",
+          "status": "Finalizados",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-05",
+          "dataCriacao": "2026-07-05",
+          "dataInicial": "2026-07-05",
+          "dataFinal": "2026-07-05",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "8981",
           "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
@@ -3488,26 +3489,6 @@
           "atrasada": false
         },
         {
-          "osId": "8377",
-          "ativo": "Cabine 7  Capitão Poço  Pará Brasil { CPP100-CABN7 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da usina remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-06-25",
-          "dataCriacao": "2026-06-25",
-          "dataInicial": "2026-06-25",
-          "dataFinal": "2026-06-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "8443",
           "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
           "equipe": "",
@@ -3528,12 +3509,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1540,
+      "historicoTotal": 1541,
       "subClassificacao": {
         "remoto": 635,
         "local": 2248,
         "remotoEmAberto": 18,
-        "localEmAberto": 6,
+        "localEmAberto": 5,
         "pctRemoto": 22,
         "alerta": true
       },
@@ -11254,24 +11235,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "8986",
-      "ativo": "Disjuntor de Média Tensão 1      { IRC100-DJMT1 }",
-      "equipe": "",
-      "responsavel": "Olimpio Lima ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Olimpio Lima ",
-      "status": "IN_PROGRESS",
-      "tarefa": "Religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-05",
-      "dataCriacao": "2026-07-05",
-      "dataInicial": "2026-07-05",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "8985",
       "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
       "equipe": "",
@@ -13516,6 +13479,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "8986",
+      "ativo": "Disjuntor de Média Tensão 1      { IRC100-DJMT1 }",
+      "equipe": "",
+      "responsavel": "Olimpio Lima ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Olimpio Lima ",
+      "status": "Finalizados",
+      "tarefa": "Religamento da usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-05",
+      "dataCriacao": "2026-07-05",
+      "dataInicial": "2026-07-05",
+      "dataFinal": "2026-07-05",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "8981",
       "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
@@ -16480,29 +16463,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "8489",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina de Marialva",
-      "criticidade": "",
-      "dataProgramada": "2026-06-26",
-      "dataCriacao": "2026-06-26",
-      "dataInicial": "2026-06-26",
-      "dataFinal": "2026-06-26",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1932,
+  "historicoTotal": 1933,
   "totalGeral": 3603,
   "verificacao": {
     "total": 0,
