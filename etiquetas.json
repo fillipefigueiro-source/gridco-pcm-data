@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-05T16:22:35Z",
+  "geradoEm": "2026-07-05T16:28:19Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 2883,
-        "emAberto": 25,
+        "emAberto": 24,
         "atrasadas": 15,
-        "concluidas30d": 566,
-        "concluidas7d": 115,
+        "concluidas30d": 567,
+        "concluidas7d": 116,
         "naSemanaCorrente": 113
       },
       "mttr": {
-        "horas": 6.9,
-        "label": "6h 54min",
-        "amostra": 566
+        "horas": 6.89,
+        "label": "6h 53min",
+        "amostra": 567
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W27",
           "criadas": 118,
-          "finalizadas": 102
+          "finalizadas": 103
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 2883,
-            "emAberto": 25
+            "emAberto": 24
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 25,
+      "total": 24,
       "atrasadas": 15,
       "porStatus": {
-        "naoIniciada": 22,
+        "naoIniciada": 21,
         "emProgresso": 2,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 25
+        "(sem equipe)": 24
       },
       "oss": [
         {
@@ -369,14 +369,15 @@
           "responsavel": "Olimpio Lima ",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Olimpio Lima ",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da usina",
           "criticidade": "",
           "dataProgramada": "2026-07-05",
           "dataCriacao": "2026-07-05",
-          "dataInicial": "",
+          "dataInicial": "2026-07-05",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -453,25 +454,6 @@
           "atrasada": false
         },
         {
-          "osId": "8981",
-          "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Renato  Julien",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Renato  Julien",
-          "status": "IN_PROGRESS",
-          "tarefa": "Religamento do inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-05",
-          "dataCriacao": "2026-07-05",
-          "dataInicial": "2026-07-05",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "8922",
           "ativo": "Cabine 1  Santo Inácio  São Paulo Brasil { STI100-CABN1 }",
           "equipe": "",
@@ -545,6 +527,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8981",
+          "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Renato  Julien",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Renato  Julien",
+          "status": "Finalizados",
+          "tarefa": "Religamento do inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-05",
+          "dataCriacao": "2026-07-05",
+          "dataInicial": "2026-07-05",
+          "dataFinal": "2026-07-05",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "8980",
           "ativo": "Cabine 1 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN1 }",
@@ -3506,26 +3508,6 @@
           "atrasada": false
         },
         {
-          "osId": "8358",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da Usina remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-06-25",
-          "dataCriacao": "2026-06-25",
-          "dataInicial": "2026-06-25",
-          "dataFinal": "2026-06-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "8443",
           "ativo": "Cabine 5  Capitão Poço  Pará Brasil { CPP100-CABN5 }",
           "equipe": "",
@@ -3546,12 +3528,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1539,
+      "historicoTotal": 1540,
       "subClassificacao": {
         "remoto": 635,
         "local": 2248,
         "remotoEmAberto": 18,
-        "localEmAberto": 7,
+        "localEmAberto": 6,
         "pctRemoto": 22,
         "alerta": true
       },
@@ -11278,14 +11260,15 @@
       "responsavel": "Olimpio Lima ",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Olimpio Lima ",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-07-05",
       "dataCriacao": "2026-07-05",
-      "dataInicial": "",
+      "dataInicial": "2026-07-05",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -11355,24 +11338,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "modalidade": "remoto"
-    },
-    {
-      "osId": "8981",
-      "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Renato  Julien",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Renato  Julien",
-      "status": "IN_PROGRESS",
-      "tarefa": "Religamento do inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-07-05",
-      "dataCriacao": "2026-07-05",
-      "dataInicial": "2026-07-05",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
     },
     {
       "osId": "8975",
@@ -13551,6 +13516,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "8981",
+      "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Renato  Julien",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Renato  Julien",
+      "status": "Finalizados",
+      "tarefa": "Religamento do inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-07-05",
+      "dataCriacao": "2026-07-05",
+      "dataInicial": "2026-07-05",
+      "dataFinal": "2026-07-05",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "8980",
       "ativo": "Cabine 1 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN1 }",
@@ -16515,29 +16500,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "8488",
-      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizada",
-      "tarefa": "Religamento de usina",
-      "criticidade": "",
-      "dataProgramada": "2026-06-26",
-      "dataCriacao": "2026-06-26",
-      "dataInicial": "2026-06-25",
-      "dataFinal": "2026-06-26",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1931,
+  "historicoTotal": 1932,
   "totalGeral": 3603,
   "verificacao": {
     "total": 0,
