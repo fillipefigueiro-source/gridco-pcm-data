@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-05T18:42:35Z",
+  "geradoEm": "2026-07-05T18:47:50Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-06-29 .. 2026-07-05",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 20,
       "atrasadas": 15,
       "porStatus": {
-        "naoIniciada": 18,
-        "emProgresso": 1,
+        "naoIniciada": 17,
+        "emProgresso": 2,
         "pausada": 1,
         "verificacao": 0
       },
@@ -369,14 +369,15 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Adriano  Moraes",
-          "status": "Não Iniciada",
+          "status": "IN_PROGRESS",
           "tarefa": "Religamento da usina",
           "criticidade": "",
           "dataProgramada": "2026-07-05",
           "dataCriacao": "2026-07-05",
-          "dataInicial": "",
+          "dataInicial": "2026-07-05",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3683,16 +3684,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 511,
-        "emAberto": 86,
-        "atrasadas": 31,
-        "concluidas30d": 98,
-        "concluidas7d": 31,
+        "emAberto": 85,
+        "atrasadas": 30,
+        "concluidas30d": 99,
+        "concluidas7d": 32,
         "naSemanaCorrente": 28
       },
       "mttr": {
-        "horas": 332.57,
-        "label": "13d 20h",
-        "amostra": 98
+        "horas": 331.64,
+        "label": "13d 19h",
+        "amostra": 99
       },
       "tendencia4Semanas": [
         {
@@ -3713,7 +3714,7 @@
         {
           "semana": "W27",
           "criadas": 46,
-          "finalizadas": 31
+          "finalizadas": 32
         }
       ],
       "topOfensores": {
@@ -3721,7 +3722,7 @@
           {
             "nome": "(sem equipe)",
             "total": 511,
-            "emAberto": 86
+            "emAberto": 85
           }
         ],
         "responsaveis": [
@@ -3738,7 +3739,7 @@
           {
             "nome": "Luiz  Silva",
             "total": 23,
-            "emAberto": 3
+            "emAberto": 2
           },
           {
             "nome": "Francisco  Santos",
@@ -3752,16 +3753,16 @@
           }
         ]
       },
-      "total": 86,
-      "atrasadas": 31,
+      "total": 85,
+      "atrasadas": 30,
       "porStatus": {
         "naoIniciada": 80,
         "emProgresso": 0,
-        "pausada": 6,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 86
+        "(sem equipe)": 85
       },
       "oss": [
         {
@@ -4021,24 +4022,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "8385",
-          "ativo": "Infraestrutura Civil LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-INFC1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Luiz  Silva",
-          "status": "pausado",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-06-25",
-          "dataCriacao": "2026-06-25",
-          "dataInicial": "2026-07-03",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 192.0,
           "atrasada": true
         },
         {
@@ -5234,6 +5217,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8385",
+          "ativo": "Infraestrutura Civil LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-INFC1 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Luiz  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-06-25",
+          "dataCriacao": "2026-06-25",
+          "dataInicial": "2026-07-03",
+          "dataFinal": "2026-07-05",
+          "linkFracttal": "",
+          "horasAteAbrir": 192.0,
+          "horasAteFechar": 48.0,
+          "atrasada": false
+        },
         {
           "osId": "8532",
           "ativo": "Cabine 1  Sete Lagoas  Minas Gerais Brasil { SLG200-CABN1 }",
@@ -7629,25 +7631,6 @@
           "atrasada": false
         },
         {
-          "osId": "6410",
-          "ativo": "Transformador 1      { MRJ100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Hélio Silva ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Hélio Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-05-26",
-          "dataCriacao": "2026-05-08",
-          "dataInicial": "2026-05-26",
-          "dataFinal": "2026-05-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 432.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "6794",
           "ativo": "Infraestrutura Civil Zona Rural s/n Campos dos Goytacazes  Rio de Janeiro Brasil { FZL100-INFC1 }",
           "equipe": "",
@@ -8085,7 +8068,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 270
+      "historicoTotal": 271
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -11187,14 +11170,15 @@
       "responsavel": "Adriano  Moraes",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Adriano  Moraes",
-      "status": "Não Iniciada",
+      "status": "IN_PROGRESS",
       "tarefa": "Religamento da usina",
       "criticidade": "",
       "dataProgramada": "2026-07-05",
       "dataCriacao": "2026-07-05",
-      "dataInicial": "",
+      "dataInicial": "2026-07-05",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -12797,23 +12781,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "8385",
-      "ativo": "Infraestrutura Civil LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-INFC1 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Luiz  Silva",
-      "status": "pausado",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-06-25",
-      "dataCriacao": "2026-06-25",
-      "dataInicial": "2026-07-03",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 192.0
     },
     {
       "osId": "8382",
@@ -16360,7 +16327,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 1937,
+  "historicoTotal": 1938,
   "totalGeral": 3604,
   "verificacao": {
     "total": 0,
