@@ -904,6 +904,15 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
     .gp-cli-b,.gp-usi-b,.gp-tip-b{display:none}
     .gp-open>.gp-cli-b,.gp-open>.gp-usi-b,.gp-open>.gp-tip-b{display:block}
     .gp-cli-b{background:#fff;padding:10px}
+    .gp-nf{margin-bottom:12px;border-radius:9px;overflow:hidden;border:1.5px solid #e8a020;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+    .gp-nf-h{background:#fbe8cf;display:flex;align-items:center;justify-content:space-between;padding:11px 16px;cursor:pointer;user-select:none}
+    .gp-nf-h:hover{background:#f8ddb8}
+    .gp-nf-h .nm{color:#8a5300;font-size:14px;font-weight:800}
+    .gp-nf-h .gp-chev{color:#8a5300;font-size:14px;transition:transform .2s}
+    .gp-nf-badge{background:#e8a020;color:#fff;border-radius:20px;padding:2px 9px;font-size:11px;font-weight:800}
+    .gp-nf-b{display:none;background:#fff;padding:10px}
+    .gp-nf.gp-open>.gp-nf-b{display:block}
+    .gp-nf.gp-open>.gp-nf-h .gp-chev{transform:rotate(180deg)}
     /* Usina */
     .gp-usi{margin-bottom:6px;border:1px solid #e4e4ee;border-radius:8px;overflow:hidden}
     .gp-usi-h{background:#f1f1f8;display:flex;align-items:center;justify-content:space-between;padding:9px 13px;cursor:pointer;user-select:none}
@@ -3023,28 +3032,17 @@ function gpFilteredTarefas(){
     return true;
   });
 }
-function renderGestao(rebuildFilters){
-  const box=document.getElementById('gp-tree');
-  if(!box)return;
-  if(!GESTAO_DB){box.innerHTML='<div class="gp-nores">Não foi possível carregar gestao_pcm.json.</div>';
-    document.getElementById('gp-sub').textContent='Falha ao carregar';return;}
-  if(rebuildFilters!==false)gpPopulateFilters();else Object.keys(GP_MS).forEach(gpMsLabel);
-  document.getElementById('gp-sub').textContent='Atualizado: '+new Date(GESTAO_DB.geradoEm||Date.now()).toLocaleString('pt-BR')+' · corte '+gpFmtData(GESTAO_DB.corteData)+' · fonte: API Fracttal';
-  const arr=gpFilteredTarefas();
-  const ab=arr.filter(t=>t.aberta), atr=ab.filter(t=>t.atrasado);
-  document.getElementById('gp-k-vis').textContent=arr.length;
-  document.getElementById('gp-k-ab').textContent=ab.length;
-  document.getElementById('gp-k-atr').textContent=atr.length;
-  const badge=document.getElementById('tcnt-gestaoPcm');if(badge)badge.textContent=ab.length;
-  if(!arr.length){box.innerHTML='<div class="gp-nores">Nenhuma tarefa para os filtros selecionados.</div>';return;}
-  // árvore Cliente ▸ Usina ▸ Tipo
+// Tarefa "não finalizada no período": OS já finalizada, mas a tarefa ficou
+// com estado em aberto (Não Iniciada / Em progresso / Pausada).
+function gpNaoFin(t){ return t.osStatus==='Finalizados' && t.aberta; }
+// Monta a árvore Cliente ▸ Usina ▸ Tipo (reutilizável p/ árvore principal e p/
+// o dropdown "Não Finalizadas no Período"). Empilha as listas em GP_TIP_DATA.
+function gpTreeHTML(arr, autoOpen){
   const tree={};
   arr.forEach(t=>{
     (((tree[t.cliente]=tree[t.cliente]||{usinas:{},n:0}).usinas[t.usina]=tree[t.cliente].usinas[t.usina]||{tipos:{},n:0}).tipos[t.tipo]=tree[t.cliente].usinas[t.usina].tipos[t.tipo]||[]).push(t);
     tree[t.cliente].n++;tree[t.cliente].usinas[t.usina].n++;
   });
-  const autoOpen=arr.length<=60;
-  GP_TIP_DATA=[];
   const cntAtr=(list)=>list.filter(t=>t.atrasado).length;
   const chipAtr=(k)=>k>0?' <span class="gp-badge-t" style="background:#d94f3d;color:#fff">⏱ '+k+'</span>':'';
   let html='';
@@ -3063,8 +3061,37 @@ function renderGestao(rebuildFilters){
     });
     html+='</div></div>';
   });
+  return html;
+}
+function renderGestao(rebuildFilters){
+  const box=document.getElementById('gp-tree');
+  if(!box)return;
+  if(!GESTAO_DB){box.innerHTML='<div class="gp-nores">Não foi possível carregar gestao_pcm.json.</div>';
+    document.getElementById('gp-sub').textContent='Falha ao carregar';return;}
+  if(rebuildFilters!==false)gpPopulateFilters();else Object.keys(GP_MS).forEach(gpMsLabel);
+  document.getElementById('gp-sub').textContent='Atualizado: '+new Date(GESTAO_DB.geradoEm||Date.now()).toLocaleString('pt-BR')+' · corte '+gpFmtData(GESTAO_DB.corteData)+' · fonte: API Fracttal';
+  const all=gpFilteredTarefas();
+  const nf=all.filter(gpNaoFin);                 // não finalizadas no período (à parte)
+  const arr=all.filter(t=>!gpNaoFin(t));         // árvore principal
+  const ab=arr.filter(t=>t.aberta), atr=ab.filter(t=>t.atrasado);
+  document.getElementById('gp-k-vis').textContent=arr.length;
+  document.getElementById('gp-k-ab').textContent=ab.length;
+  document.getElementById('gp-k-atr').textContent=atr.length;
+  const badge=document.getElementById('tcnt-gestaoPcm');if(badge)badge.textContent=ab.length;
+  if(!all.length){box.innerHTML='<div class="gp-nores">Nenhuma tarefa para os filtros selecionados.</div>';return;}
+  GP_TIP_DATA=[];
+  let html='';
+  // Dropdown separado: "Não Finalizadas no Período"
+  if(nf.length){
+    html+='<div class="gp-nf"><div class="gp-nf-h" onclick="gpTog(this)"><span class="nm">&#9888;&#65039; Não Finalizadas no Per&iacute;odo</span>'
+      +'<span style="display:flex;align-items:center;gap:8px"><span class="gp-nf-badge">'+nf.length+'</span><span class="gp-chev">▾</span></span></div>'
+      +'<div class="gp-nf-b">'+gpTreeHTML(nf,false)+'</div></div>';
+  }
+  // Árvore principal
+  const mainHtml=gpTreeHTML(arr, arr.length<=60);
+  html+= mainHtml || (nf.length? '<div class="gp-nores" style="padding:18px">Sem tarefas na visão principal (só há não finalizadas no período).</div>' : '');
   box.innerHTML=html;
-  if(autoOpen){box.querySelectorAll('.gp-tip-b').forEach(el=>gpFillTable(el));}
+  box.querySelectorAll('.gp-tip.gp-open>.gp-tip-b').forEach(el=>gpFillTable(el));
 }
 function gpTableHTML(list){
   let h='<table class="gp-tbl"><thead><tr><th>OS ID</th><th>Tarefa</th><th>Estado</th><th>Etiquetas</th><th>Data Prog.</th><th>Dias</th></tr></thead><tbody>';
