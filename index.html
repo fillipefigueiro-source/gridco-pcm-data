@@ -1010,9 +1010,9 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="filter-group"><span class="filter-lbl">Usina</span>
           <select class="fsel" id="f-usina" onchange="onUsinaChange()"><option value="">Todas</option></select></div>
         <div class="filter-sep"></div>
-        <div class="filter-group filter-admin-only" id="g-sup" style="display:none"><span class="filter-lbl">Supervisor</span>
+        <div class="filter-group" id="g-sup"><span class="filter-lbl">Respons&aacute;vel O&amp;M</span>
           <select class="fsel" id="f-sup" onchange="onSupChange()"><option value="">Todos</option></select></div>
-        <div class="filter-sep filter-admin-only" id="sep-sup" style="display:none"></div>
+        <div class="filter-sep" id="sep-sup"></div>
         <div class="filter-group"><span class="filter-lbl">Status</span>
           <select class="fsel" id="f-status" onchange="onStatusChange()">
             <option value="">Todos</option>
@@ -1284,7 +1284,7 @@ const allRowsAllWeeks=()=>{
   });
   return rows;
 };
-const AC=()=>{ const b=allRows(); let r=b; if(S.fEquipe) r=r.filter(x=>x.cluster===S.fEquipe); if(S.fSupervisor) r=r.filter(x=>getSupervisor(x)===S.fSupervisor||x.cluster===S.fSupervisor); return r; };
+const AC=()=>{ const b=allRows(); let r=b; if(S.fEquipe) r=r.filter(x=>x.cluster===S.fEquipe); if(S.fSupervisor) r=r.filter(x=>x.responsavel===S.fSupervisor); return r; };
 // Helper #160: extrai descriptions da etiqueta (vem como JSON-string do Fracttal)
 const _etqDesc=v=>{
   if(!v) return '';
@@ -1459,20 +1459,11 @@ function buildFilters() {
   const fe=document.getElementById('f-equipe');
   fe.innerHTML='<option value="">Todas as equipes</option>'+equipes.map(e=>'<option value="'+esc(e)+'">'+e+'</option>').join('');
   fe.value=S.fEquipe||'';
-  // Popula supervisores únicos
-  const sups=[...new Set(base.map(getSupervisor).filter(Boolean))].sort();
+  // Popula Responsável O&M únicos (do AUXILIAR - FABRICIO, via banco_dados; sem Supervisor/BD_Operacoes)
+  const sups=[...new Set(base.map(r=>r.responsavel).filter(Boolean))].sort();
   const fs=document.getElementById('f-sup');
-  const gSup=document.getElementById('g-sup');
-  const sepSup=document.getElementById('sep-sup');
-  // Filtro Supervisor: visível APENAS para admin
-  if(gSup) gSup.style.display=S.isAdmin?'flex':'none';
-  if(sepSup) sepSup.style.display=S.isAdmin?'block':'none';
   if(fs){
-    if(sups.length===0){
-      fs.innerHTML='<option value="">(sem dados de supervisor — verificar JSON)</option>';
-    } else {
-      fs.innerHTML='<option value="">Todos os supervisores</option>'+sups.map(s=>'<option value="'+esc(s)+'">'+s+'</option>').join('');
-    }
+    fs.innerHTML='<option value="">Todos</option>'+sups.map(s=>'<option value="'+esc(s)+'">'+s+'</option>').join('');
     fs.value=S.fSupervisor||'';
   }
   const fst=document.getElementById('f-status');
