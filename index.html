@@ -1004,37 +1004,28 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
     <!-- FILTER BAR -->
     <div class="filter-wrap np">
       <div class="filter-row">
-        <div class="filter-group"><span class="filter-lbl">Equipe</span>
-          <select class="fsel" id="f-equipe" onchange="onEquipeChange()"><option value="">Todas</option></select></div>
-        <div class="filter-sep"></div>
+        <div class="filter-group"><span class="filter-lbl">Cliente</span>
+          <div class="gp-ms" style="min-width:120px" id="sm-ms-cliente"><button type="button" class="gp-ms-btn" onclick="semMsToggle('cliente')"><span class="gp-ms-lbl" id="sm-ms-lbl-cliente">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="sm-ms-pop-cliente"></div></div></div>
         <div class="filter-group"><span class="filter-lbl">Usina</span>
-          <select class="fsel" id="f-usina" onchange="onUsinaChange()"><option value="">Todas</option></select></div>
-        <div class="filter-sep"></div>
-        <div class="filter-group" id="g-sup"><span class="filter-lbl">Respons&aacute;vel O&amp;M</span>
-          <select class="fsel" id="f-sup" onchange="onSupChange()"><option value="">Todos</option></select></div>
-        <div class="filter-sep" id="sep-sup"></div>
-        <div class="filter-group"><span class="filter-lbl">Status</span>
-          <select class="fsel" id="f-status" onchange="onStatusChange()">
-            <option value="">Todos</option>
-            <option value="ni">N&atilde;o Iniciada</option>
-            <option value="exec">Em Processo</option>
-            <option value="verif">Em Verifica&ccedil;&atilde;o</option>
-            <option value="pau">Pausada</option>
-            <option value="fin">Finalizados</option>
-          </select></div>
-        <div class="filter-sep"></div>
-        <div class="filter-group"><span class="filter-lbl">OS #</span>
-          <input class="fsel" type="text" id="f-os" placeholder="ex: 7862" oninput="onOSChange()" style="width:90px;font-size:11px"/></div>
-        <div class="filter-sep"></div>
-        <div class="filter-group"><span class="filter-lbl">SS #</span>
-          <input class="fsel" type="text" id="f-ss" placeholder="ex: 2657" oninput="onSSChange()" style="width:90px;font-size:11px" title="Número da Solicitação de Serviço que originou a OS"/></div>
-        <div class="filter-sep"></div>
+          <div class="gp-ms" style="min-width:150px" id="sm-ms-usina"><button type="button" class="gp-ms-btn" onclick="semMsToggle('usina')"><span class="gp-ms-lbl" id="sm-ms-lbl-usina">Todas</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="sm-ms-pop-usina"></div></div></div>
+        <div class="filter-group"><span class="filter-lbl">Equipe Cluster</span>
+          <div class="gp-ms" style="min-width:130px" id="sm-ms-cluster"><button type="button" class="gp-ms-btn" onclick="semMsToggle('cluster')"><span class="gp-ms-lbl" id="sm-ms-lbl-cluster">Todas</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="sm-ms-pop-cluster"></div></div></div>
+        <div class="filter-group"><span class="filter-lbl">Respons&aacute;vel O&amp;M</span>
+          <div class="gp-ms" style="min-width:140px" id="sm-ms-resp"><button type="button" class="gp-ms-btn" onclick="semMsToggle('resp')"><span class="gp-ms-lbl" id="sm-ms-lbl-resp">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="sm-ms-pop-resp"></div></div></div>
+        <div class="filter-group"><span class="filter-lbl">Tipo</span>
+          <div class="gp-ms" style="min-width:120px" id="sm-ms-tipo"><button type="button" class="gp-ms-btn" onclick="semMsToggle('tipo')"><span class="gp-ms-lbl" id="sm-ms-lbl-tipo">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="sm-ms-pop-tipo"></div></div></div>
         <div class="filter-group"><span class="filter-lbl">Etiqueta</span>
-          <select class="fsel" id="f-etq" onchange="onEtqChange()" style="max-width:180px"><option value="">Todas</option></select></div>
-        <div class="filter-sep"></div>
-        <div class="filter-group"><span class="filter-lbl">Tipo de OS</span>
-          <div class="chips" id="tipo-chips"></div></div>
-        <div class="filter-sep"></div>
+          <div class="gp-ms" style="min-width:140px" id="sm-ms-etq"><button type="button" class="gp-ms-btn" onclick="semMsToggle('etq')"><span class="gp-ms-lbl" id="sm-ms-lbl-etq">Todas</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="sm-ms-pop-etq"></div></div></div>
+        <div class="filter-group"><span class="filter-lbl">Estado</span>
+          <div class="gp-ms" style="min-width:120px" id="sm-ms-estado"><button type="button" class="gp-ms-btn" onclick="semMsToggle('estado')"><span class="gp-ms-lbl" id="sm-ms-lbl-estado">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="sm-ms-pop-estado"></div></div></div>
+        <div class="filter-group"><span class="filter-lbl">OS #</span>
+          <input class="fsel" type="text" id="f-os" placeholder="ex: 7862" oninput="onOSChange()" style="width:80px;font-size:11px"/></div>
+        <div class="filter-group"><span class="filter-lbl">SS #</span>
+          <input class="fsel" type="text" id="f-ss" placeholder="ex: 2657" oninput="onSSChange()" style="width:80px;font-size:11px" title="Número da Solicitação de Serviço"/></div>
+        <div class="filter-group"><span class="filter-lbl">Data Prog. de</span>
+          <input class="fsel" type="date" id="f-dini" onchange="onDataChange()" style="font-size:11px"/></div>
+        <div class="filter-group"><span class="filter-lbl">at&eacute;</span>
+          <input class="fsel" type="date" id="f-dfim" onchange="onDataChange()" style="font-size:11px"/></div>
         <button class="f-reset" onclick="resetFilters()">&#8634; Limpar</button>
         <div class="f-count" id="f-count"></div>
       </div>
@@ -1284,7 +1275,7 @@ const allRowsAllWeeks=()=>{
   });
   return rows;
 };
-const AC=()=>{ const b=allRows(); let r=b; if(S.fEquipe) r=r.filter(x=>x.cluster===S.fEquipe); if(S.fSupervisor) r=r.filter(x=>x.responsavel===S.fSupervisor); return r; };
+const AC=()=>allRows();  // escopo por cliente/semana; filtros agora são multi-seleção em GD()
 // Helper #160: extrai descriptions da etiqueta (vem como JSON-string do Fracttal)
 const _etqDesc=v=>{
   if(!v) return '';
@@ -1297,7 +1288,39 @@ const _etqDesc=v=>{
   }catch(e){}
   return s;
 };
-const GD=()=>AC().filter(r=>(!S.fTipo||r.tipo===S.fTipo)&&(!S.fUsina||r.usina===S.fUsina)&&(!S.fStatus||statusKey(r)===S.fStatus)&&(!S.fOS||String(r.os_id||'').indexOf(S.fOS)>=0)&&(!S.fSS||String(r.solic_orig||'').indexOf(S.fSS)>=0)&&(!S.fEtq||_etqDesc(r.etiquetas).toLowerCase().indexOf(S.fEtq.toLowerCase())>=0));
+// ── Multi-seleção dos filtros (Programação Semanal) — reusa CSS .gp-ms ──────
+const SEM_MS={cliente:{lbl:'Todos'},usina:{lbl:'Todas'},cluster:{lbl:'Todas'},resp:{lbl:'Todos'},tipo:{lbl:'Todos'},etq:{lbl:'Todas'},estado:{lbl:'Todos'}};
+const SEM_SEL={cliente:new Set(),usina:new Set(),cluster:new Set(),resp:new Set(),tipo:new Set(),etq:new Set(),estado:new Set()};
+function _semVal(r,key){
+  if(key==='etq'){const e=_etqDesc(r.etiquetas);return e?[e]:[];}
+  if(key==='estado')return [estadoTarefaInfo(r).l];
+  const v=r[key==='resp'?'responsavel':key];return v?[String(v)]:[];
+}
+function semMsOptions(key){const s=new Set();allRows().forEach(r=>_semVal(r,key).forEach(v=>v&&s.add(v)));[...SEM_SEL[key]].forEach(v=>{if(!s.has(v))SEM_SEL[key].delete(v);});return [...s].sort((a,b)=>a.localeCompare(b,'pt-BR'));}
+function semMsLabel(key){const s=SEM_SEL[key],el=document.getElementById('sm-ms-lbl-'+key);if(!el)return;if(s.size===0){el.textContent=SEM_MS[key].lbl;el.classList.remove('sel');}else if(s.size===1){el.textContent=[...s][0];el.classList.add('sel');}else{el.textContent=s.size+' selecionados';el.classList.add('sel');}}
+function semBuildPop(key){const pop=document.getElementById('sm-ms-pop-'+key);if(!pop)return;const opts=semMsOptions(key);let h='<div class="gp-ms-top"><input class="gp-ms-search" placeholder="buscar…" oninput="semMsSearch(\''+key+'\',this.value)"><div class="gp-ms-acts"><a onclick="semMsAll(\''+key+'\')">Todos</a><a onclick="semMsNone(\''+key+'\')">Limpar</a></div></div><div class="gp-ms-opts">';h+=opts.map(v=>{const e=esc(v);return '<label class="gp-ms-opt"><input type="checkbox"'+(SEM_SEL[key].has(v)?' checked':'')+' value="'+e+'" onchange="semMsCheck(\''+key+'\',this)"><span>'+e+'</span></label>';}).join('')||'<div class="gp-ms-empty">—</div>';pop.innerHTML=h+'</div>';}
+function semPopulateFilters(){Object.keys(SEM_MS).forEach(k=>{semBuildPop(k);semMsLabel(k);});}
+function semMsToggle(key){const box=document.getElementById('sm-ms-'+key),open=box.classList.contains('open');document.querySelectorAll('.gp-ms.open').forEach(b=>b.classList.remove('open'));if(!open){semBuildPop(key);box.classList.add('open');}}
+function semMsCheck(key,cb){if(cb.checked)SEM_SEL[key].add(cb.value);else SEM_SEL[key].delete(cb.value);semMsLabel(key);render();updateFCount();}
+function semMsAll(key){semMsOptions(key).forEach(v=>SEM_SEL[key].add(v));semBuildPop(key);semMsLabel(key);render();updateFCount();}
+function semMsNone(key){SEM_SEL[key].clear();semBuildPop(key);semMsLabel(key);render();updateFCount();}
+function semMsSearch(key,q){q=(q||'').toLowerCase();document.querySelectorAll('#sm-ms-pop-'+key+' .gp-ms-opt').forEach(l=>{l.style.display=l.textContent.toLowerCase().indexOf(q)>=0?'':'none';});}
+function onDataChange(){S.fDIni=document.getElementById('f-dini').value;S.fDFim=document.getElementById('f-dfim').value;render();updateFCount();}
+const GD=()=>{const Q=SEM_SEL;return allRows().filter(r=>{
+  if(Q.cliente.size&&!Q.cliente.has(r.cliente))return false;
+  if(Q.usina.size&&!Q.usina.has(r.usina))return false;
+  if(Q.cluster.size&&!Q.cluster.has(r.cluster))return false;
+  if(Q.resp.size&&!Q.resp.has(r.responsavel))return false;
+  if(Q.tipo.size&&!Q.tipo.has(r.tipo))return false;
+  if(Q.estado.size&&!Q.estado.has(estadoTarefaInfo(r).l))return false;
+  if(Q.etq.size){const e=_etqDesc(r.etiquetas);if(!e||!Q.etq.has(e))return false;}
+  if(S.fOS&&String(r.os_id||'').indexOf(S.fOS)<0)return false;
+  if(S.fSS&&String(r.solic_orig||'').indexOf(S.fSS)<0)return false;
+  const dp=(r.dataProgramada||'').slice(0,10);
+  if(S.fDIni&&(!dp||dp<S.fDIni))return false;
+  if(S.fDFim&&(!dp||dp>S.fDFim))return false;
+  return true;
+});};
 const isExec=r=>r.status_bd&&/(execu|progresso|andamento)/i.test(r.status_bd)&&!/verifica/i.test(r.status_bd);
 const isNova=r=>r.nova_os&&r.nova_os.toString().trim()!==''&&r.nova_os.toString().toLowerCase()!=='não'&&r.nova_os.toString().toLowerCase()!=='nao';
 const isFinalizada=r=>{const s=(r.status_bd||r.status||'').toString().toLowerCase();return s.includes('finaliz')||s.includes('conclu');};
@@ -1454,63 +1477,24 @@ function setView(v) {
 
 // ── FILTERS ───────────────────────────────────────────────────────────────────
 function buildFilters() {
-  const base=allRows();
-  const equipes=[...new Set(base.map(r=>r.cluster))].filter(Boolean).sort();
-  const fe=document.getElementById('f-equipe');
-  fe.innerHTML='<option value="">Todas as equipes</option>'+equipes.map(e=>'<option value="'+esc(e)+'">'+e+'</option>').join('');
-  fe.value=S.fEquipe||'';
-  // Popula Responsável O&M únicos (do AUXILIAR - FABRICIO, via banco_dados; sem Supervisor/BD_Operacoes)
-  const sups=[...new Set(base.map(r=>r.responsavel).filter(Boolean))].sort();
-  const fs=document.getElementById('f-sup');
-  if(fs){
-    fs.innerHTML='<option value="">Todos</option>'+sups.map(s=>'<option value="'+esc(s)+'">'+s+'</option>').join('');
-    fs.value=S.fSupervisor||'';
-  }
-  const fst=document.getElementById('f-status');
-  if(fst) fst.value=S.fStatus||'';
-  // FIX #160: popula filtro Etiqueta (descriptions únicas)
-  const fEtq=document.getElementById('f-etq');
-  if(fEtq){
-    const etqs=[...new Set(base.map(r=>_etqDesc(r.etiquetas)).filter(Boolean))].sort();
-    fEtq.innerHTML='<option value="">Todas</option>'+etqs.map(e=>'<option value="'+esc(e)+'">'+(e.length>40?e.substring(0,38)+'..':e)+'</option>').join('');
-    fEtq.value=S.fEtq||'';
-  }
-  // FIX #161: restaura valor do filtro SS
-  const fSS=document.getElementById('f-ss');
-  if(fSS) fSS.value=S.fSS||'';
-  const fOS=document.getElementById('f-os');
-  if(fOS) fOS.value=S.fOS||'';
-  const baseE=S.fEquipe?base.filter(r=>r.cluster===S.fEquipe):base;
-  const usinas=[...new Set(baseE.map(r=>r.usina))].filter(Boolean).sort();
-  const fu=document.getElementById('f-usina');
-  fu.innerHTML='<option value="">Todas as usinas</option>'+usinas.map(u=>'<option value="'+esc(u)+'">'+u.split(' - ').slice(-2).join(' - ')+'</option>').join('');
-  fu.value=S.fUsina||'';
-  buildTipoChips();
+  semPopulateFilters();   // multi-seleção (Cliente/Usina/Cluster/Responsável/Tipo/Etiqueta/Estado)
+  const fSS=document.getElementById('f-ss');if(fSS)fSS.value=S.fSS||'';
+  const fOS=document.getElementById('f-os');if(fOS)fOS.value=S.fOS||'';
+  const fdi=document.getElementById('f-dini');if(fdi)fdi.value=S.fDIni||'';
+  const fdf=document.getElementById('f-dfim');if(fdf)fdf.value=S.fDFim||'';
 }
-function onEquipeChange(){S.fEquipe=document.getElementById('f-equipe').value;S.fTipo='';S.fUsina='';buildFilters();render();updateFCount();}
-function onUsinaChange(){S.fUsina=document.getElementById('f-usina').value;S.fTipo='';buildTipoChips();render();updateFCount();}
-function onSupChange(){S.fSupervisor=document.getElementById('f-sup').value;buildFilters();render();updateFCount();}
-function onStatusChange(){S.fStatus=document.getElementById('f-status').value;render();updateFCount();}
 function onOSChange(){S.fOS=document.getElementById('f-os').value.trim();render();updateFCount();}
 function onSSChange(){S.fSS=document.getElementById('f-ss').value.trim();render();updateFCount();}
 function onEtqChange(){S.fEtq=document.getElementById('f-etq').value;render();updateFCount();}
-function buildTipoChips(){
-  const base=AC(),tipos={};
-  base.forEach(r=>{if(r.tipo)tipos[r.tipo]=(tipos[r.tipo]||0)+1;});
-  document.getElementById('tipo-chips').innerHTML=
-    '<div class="chip '+(!S.fTipo?'on':'')+'" data-t="" onclick="setTipo(\'\')">Todos <span class="chip-cnt">'+base.length+'</span></div>'
-    +Object.entries(tipos).sort((a,b)=>b[1]-a[1]).map(([t,n])=>
-      '<div class="chip '+(S.fTipo===t?'on':'')+'" data-t="'+esc(t)+'" onclick="setTipo(\''+esc(t)+'\')">'
-      +'<span class="chip-dot" style="background:'+(TC[t]||'#999')+'"></span>'+(TL[t]||t)+' <span class="chip-cnt">'+n+'</span></div>'
-    ).join('');
-}
-function setTipo(t){S.fTipo=S.fTipo===t?'':t;document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c.dataset.t===S.fTipo));render();updateFCount();}
+function buildTipoChips(){}   // chips de Tipo removidos (virou multi-seleção)
+function setTipo(t){SEM_SEL.tipo.clear();if(t)SEM_SEL.tipo.add(t);semMsLabel('tipo');render();updateFCount();}
 function resetFilters(){
-  S.fEquipe='';S.fTipo='';S.fUsina='';S.fSupervisor='';S.fStatus='';S.fOS='';S.fSS='';S.fEtq='';
-  ['f-equipe','f-usina','f-sup','f-status','f-os','f-ss','f-etq'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-  buildTipoChips();render();updateFCount();
+  Object.keys(SEM_SEL).forEach(k=>SEM_SEL[k].clear());
+  S.fOS='';S.fSS='';S.fDIni='';S.fDFim='';
+  ['f-os','f-ss','f-dini','f-dfim'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  semPopulateFilters();render();updateFCount();
 }
-function updateFCount(){const el=document.getElementById('f-count');const active=S.fEquipe||S.fTipo||S.fUsina;el.style.display=active?'inline-flex':'none';if(active)el.textContent=GD().length+' de '+allRows().length+' OS';}
+function updateFCount(){const el=document.getElementById('f-count');if(!el)return;const anyMs=Object.values(SEM_SEL).some(s=>s.size);const active=anyMs||S.fOS||S.fSS||S.fDIni||S.fDFim;el.style.display=active?'inline-flex':'none';if(active)el.textContent=GD().length+' de '+allRows().length+' OS';}
 
 // ── RENDER ────────────────────────────────────────────────────────────────────
 function render(){const d=GD();renderKPIs(d);renderIns(d);renderCal(d);renderBottom(d);renderSugestoes();}
@@ -2556,7 +2540,7 @@ function renderUsinaTable(d){
       +'<td><div class="ut-bw"><div class="ut-b" style="width:'+Math.round(info.h/maxH*100)+'%"></div></div></td></tr>';
   }).join('');
 }
-function filterByUsina(u){S.fUsina=S.fUsina===u?'':u;S.fTipo='';document.getElementById('f-usina').value=S.fUsina;buildTipoChips();render();updateFCount();if(S.fUsina)toast('Filtrado: '+u.split(' - ').slice(-1)[0]);}
+function filterByUsina(u){const s=SEM_SEL.usina;if(s.has(u))s.delete(u);else s.add(u);semMsLabel('usina');render();updateFCount();if(s.size)toast('Filtrado: '+u.split(' - ').slice(-1)[0]);}
 
 function renderStats(d){
   const n=d.length||1;
