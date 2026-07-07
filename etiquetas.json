@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-07T23:05:30Z",
+  "geradoEm": "2026-07-07T23:10:33Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-06 .. 2026-07-12",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 8,
-        "emAberto": 0,
+        "total": 9,
+        "emAberto": 1,
         "atrasadas": 0,
         "concluidas30d": 8,
         "concluidas7d": 8,
-        "naSemanaCorrente": 7
+        "naSemanaCorrente": 8
       },
       "mttr": {
         "horas": 0.0,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W28",
-          "criadas": 8,
+          "criadas": 9,
           "finalizadas": 7
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 8,
-            "emAberto": 0
+            "total": 9,
+            "emAberto": 1
           }
         ],
         "responsaveis": [
@@ -55,6 +55,11 @@
             "nome": "Felipe Silva",
             "total": 4,
             "emAberto": 0
+          },
+          {
+            "nome": "Railson Gomes",
+            "total": 1,
+            "emAberto": 1
           },
           {
             "nome": "Paulo  Ribeiro",
@@ -70,24 +75,40 @@
             "nome": "Cláudio  Silva",
             "total": 1,
             "emAberto": 0
-          },
-          {
-            "nome": "Raphael Vitoriano",
-            "total": 1,
-            "emAberto": 0
           }
         ]
       },
-      "total": 0,
+      "total": 1,
       "atrasadas": 0,
       "porStatus": {
-        "naoIniciada": 0,
+        "naoIniciada": 1,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
-      "porEquipe": {},
-      "oss": [],
+      "porEquipe": {
+        "(sem equipe)": 1
+      },
+      "oss": [
+        {
+          "osId": "9124",
+          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Railson Gomes ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento de usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-07",
+          "dataCriacao": "2026-07-07",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        }
+      ],
       "ossHistorico": [
         {
           "osId": "9122",
@@ -253,11 +274,11 @@
       "historicoTotal": 8,
       "subClassificacao": {
         "remoto": 4,
-        "local": 4,
+        "local": 5,
         "remotoEmAberto": 0,
-        "localEmAberto": 0,
-        "pctRemoto": 50,
-        "alerta": false
+        "localEmAberto": 1,
+        "pctRemoto": 44,
+        "alerta": true
       },
       "rankingDemora": {
         "topAbrir": [
@@ -1503,6 +1524,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "9124",
+      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Railson Gomes ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento de usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-07",
+      "dataCriacao": "2026-07-07",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "9119",
       "ativo": "SKID 3 Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso Brasil { NVX200-SKID3 }",
       "equipe": "",
@@ -2470,7 +2508,7 @@
     }
   ],
   "historicoTotal": 9,
-  "totalGeral": 58,
+  "totalGeral": 59,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
