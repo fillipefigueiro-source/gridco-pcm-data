@@ -593,8 +593,8 @@ function wireFilters(){
 }
 
 var _wired=false;
-function openDash(){document.getElementById('dashview').style.display='block';window.__dashOpen=true;if(!_wired){wireFilters();var _c=document.getElementById('dvclose');if(_c)_c.onclick=closeDash;_wired=true;}fillFilters();render();}
-function closeDash(){document.getElementById('dashview').style.display='none';window.__dashOpen=false;}
+function openDash(){document.getElementById('dashview').style.display='block';window.__dashOpen=true;var _lb=document.getElementById('livebadge');if(_lb)_lb.style.display='none';if(!_wired){wireFilters();var _c=document.getElementById('dvclose');if(_c)_c.onclick=closeDash;_wired=true;}fillFilters();render();}
+function closeDash(){document.getElementById('dashview').style.display='none';window.__dashOpen=false;var _lb=document.getElementById('livebadge');if(_lb)_lb.style.display='';}
 window.openDash=openDash;window.closeDash=closeDash;window.dRender=render;
 })();
 update();
