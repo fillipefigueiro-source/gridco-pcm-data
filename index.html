@@ -750,17 +750,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
     <div class="krow" id="krow"></div>
     <div class="irow" id="irow"></div>
 
-    <!-- OS EM EXECUÇÃO -->
-    <div class="exec-panel np" id="exec-panel">
-      <div class="exec-hdr">
-        <span class="exec-dot"></span>
-        <span class="exec-title">&#9889; OS em Execu&ccedil;&atilde;o</span>
-        <span class="exec-cnt" id="exec-cnt">0 em andamento</span>
-      </div>
-      <div class="exec-body" id="exec-body">
-        <div class="exec-empty">Nenhuma OS em execu&ccedil;&atilde;o no momento.</div>
-      </div>
-    </div>
+    <!-- OS EM EXECUÇÃO — removido (2026-07-07, a pedido do PCM) -->
 
     <!-- SOLICITACOES & IA -->
     <div class="sug-card np" id="sug-card">
@@ -1532,7 +1522,7 @@ function resetFilters(){
 function updateFCount(){const el=document.getElementById('f-count');const active=S.fEquipe||S.fTipo||S.fUsina;el.style.display=active?'inline-flex':'none';if(active)el.textContent=GD().length+' de '+allRows().length+' OS';}
 
 // ── RENDER ────────────────────────────────────────────────────────────────────
-function render(){const d=GD();renderKPIs(d);renderIns(d);renderExec(d);renderCal(d);renderBottom(d);renderSugestoes();}
+function render(){const d=GD();renderKPIs(d);renderIns(d);renderCal(d);renderBottom(d);renderSugestoes();}
 
 // === SUGESTOES PCM ===
 const SUG_KEY='gc_sug_state';
