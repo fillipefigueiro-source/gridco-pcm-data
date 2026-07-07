@@ -409,7 +409,7 @@ document.getElementById('tgUsinas').onchange=e=>{showUsinas=e.target.checked; up
 document.getElementById('tgBases').onchange=e=>{showBases=e.target.checked; update(true);};
 document.getElementById('tgColab').onchange=e=>{showColab=e.target.checked; update(true);};
 document.getElementById('tgFin').onchange=e=>{showFin=e.target.checked; update(true);};
-document.getElementById('tgRoster').onclick=toggleRoster; var _bm=document.getElementById('tgManage'); if(_bm)_bm.onclick=openDash; var _bc=document.getElementById('tgCfg'); if(_bc)_bc.onclick=openCfg;
+document.getElementById('tgRoster').onclick=toggleRoster; var _bm=document.getElementById('tgManage'); if(_bm)_bm.onclick=function(){if(window.openDash)window.openDash();}; var _bc=document.getElementById('tgCfg'); if(_bc)_bc.onclick=openCfg;
 document.getElementById('rosterclose').onclick=toggleRoster;
 document.getElementById('rostersearch').oninput=e=>{rosterQ=e.target.value; renderRosterList();};
 document.getElementById('editbtn').onclick=()=>{ editMode=!editMode; document.getElementById('editbtn').classList.toggle('on',editMode); document.getElementById('editbar').classList.toggle('hidden',!editMode); renderInfo(); renderList(); };
