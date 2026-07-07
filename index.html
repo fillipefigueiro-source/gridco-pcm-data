@@ -318,6 +318,10 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .stp.pausada{background:#fef3c7;color:#a16207}
 .stp.finalizada{background:#dcfce7;color:#166534}
 .stp.cancelada{background:#fee2e2;color:#991b1b}
+.osc-osstatus{display:inline-flex;align-items:center;padding:1px 6px;border-radius:4px;font-size:8.5px;font-weight:800;text-transform:uppercase;letter-spacing:.2px;border:1px solid currentColor;background:#fff;white-space:nowrap}
+.osc-osstatus.verificacao{color:#b45309}
+.osc-osstatus.emProgresso{color:#1e40af}
+.osc-osstatus.finalizada{color:#166534}
 .stp-dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0}
 /* Borda esquerda do card baseada em status */
 .exec-row,.kan-card,.verif-row{border-left:4px solid #cbd5e1!important}
@@ -1335,6 +1339,23 @@ const statusKey=r=>{
 };
 const statusLabel=k=>({exec:'Em Processo',fin:'Finalizada',ni:'Não Iniciada',pau:'Pausada',verif:'Em Verificação'})[k]||'--';
 const statusColor=k=>({exec:'#8a4cf9',fin:'#a9db21',ni:'#9ca3af',pau:'#f59e0b',verif:'#3b82f6'})[k]||'#9ca3af';
+// ── Estado da TAREFA (puro) vs Status da OS — sempre separados (diretriz do PCM)
+// Estado da Tarefa: badge principal do card. NÃO usa statusPai.
+function estadoTarefaInfo(r){
+  const s=(r.status_bd||r.status||'').toString().toLowerCase();
+  if(s.includes('finaliz')||s.includes('conclu')) return {k:'finalizada',l:'Finalizada'};
+  if(s.includes('pausad')) return {k:'pausada',l:'Pausada'};
+  if(s.includes('progress')||s.includes('execu')||s.includes('andamento')) return {k:'emProgresso',l:'Em progresso'};
+  return {k:'naoIniciada',l:'Não Iniciada'};
+}
+// Status da OS (statusPai): selo separado. Retorna null se vazio.
+function statusOsInfo(r){
+  const sp=(r.statusPai||'').toString().toLowerCase();
+  if(sp.includes('verifica')) return {k:'verificacao',l:'Verificação'};
+  if(sp.includes('finaliz'))  return {k:'finalizada',l:'Finalizados'};
+  if(sp.includes('process'))  return {k:'emProgresso',l:'Em processo'};
+  return null;
+}
 function taxaFinalizacaoPreventiva(rows, cat){
   const subset=rows.filter(r=>r.tipo&&(r.tipo===cat||r.tipo.startsWith(cat+'-')));
   if(!subset.length) return {tx:0, total:0, fin:0};
@@ -2392,17 +2413,19 @@ function renderCal(d){
       const hora=g.h_ini&&g.h_fim?g.h_ini+'\u2013'+g.h_fim:'';
       const dur=g.dur>0?(g.dur===Math.floor(g.dur)?g.dur+'h':g.dur.toFixed(1)+'h'):'';
       const sh=g.usina.split(' - ').slice(-2).join(' - ');
-      // Status agregado: pega o mais avançado das tasks do card
-      const stKeys=g.tasks.map(statusKey);
-      let st='ni';
-      if(stKeys.includes('exec'))st='exec';
-      else if(stKeys.includes('prog'))st='prog';
-      else if(stKeys.includes('pau'))st='pau';
-      else if(stKeys.every(k=>k==='fin'))st='fin';
-      const stCol=statusColor(st),stLbl=statusLabel(st);
+      // ESTADO DA TAREFA (badge principal): mais "avançado" das tasks, SEM statusPai
+      const ests=g.tasks.map(estadoTarefaInfo);
+      let estK='naoIniciada',estL='Não Iniciada';
+      if(ests.some(e=>e.k==='emProgresso')){estK='emProgresso';estL='Em progresso';}
+      else if(ests.some(e=>e.k==='pausada')){estK='pausada';estL='Pausada';}
+      else if(ests.length&&ests.every(e=>e.k==='finalizada')){estK='finalizada';estL='Finalizada';}
+      // STATUS DA OS (selo separado): prioriza Verificação; senão o primeiro não-vazio
+      const soss=g.tasks.map(statusOsInfo);
+      const sos=soss.find(x=>x&&x.k==='verificacao')||soss.find(Boolean)||null;
       return '<div class="osc '+cls+'" onclick="openMod(\''+esc(g.usina)+'\',\''+esc(day)+'\',\''+esc(g.os)+'\')">'
         +'<div class="osc-top"><span class="osc-num">OS #'+g.os+'</span>'
-        +'<span class="osc-status-badge" style="background:'+stCol+'22;color:'+stCol+';border:1px solid '+stCol+'66">'+stLbl+'</span>'
+        +'<span class="stp '+estK+'"><span class="stp-dot"></span>'+estL+'</span>'
+        +(sos?'<span class="osc-osstatus '+sos.k+'" title="Status da OS">'+sos.l+'</span>':'')
         +'<span class="osc-badge" style="background:'+col+'1a;color:'+col+'">'+(TL[g.tipo]||g.tipo)+'</span></div>'
         +'<div class="osc-usina" style="color:'+col+'">'+sh+'</div>'
         +'<div class="osc-tasks">'+ut.join(' \u00b7 ')+'</div>'
