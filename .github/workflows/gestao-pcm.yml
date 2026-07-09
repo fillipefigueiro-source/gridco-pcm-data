@@ -1,0 +1,63 @@
+name: Atualiza Gestão PCM (a cada 15 min)
+
+# Roda na nuvem do GitHub, sem depender de PC ligado.
+# Regenera o gestao_pcm.json a partir da API Fracttal e publica no próprio repo
+# (que já é servido pelo GitHub Pages). Só publica quando os dados mudam.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # a cada 15 min (horário UTC; o GitHub pode atrasar em picos)
+  workflow_dispatch: {}        # permite rodar na mão pelo botão "Run workflow"
+
+permissions:
+  contents: write              # necessário para o robô commitar o JSON de volta
+
+concurrency:
+  group: gestao-pcm            # evita duas execuções simultâneas
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install --quiet pandas requests openpyxl
+
+      - name: Gerar gestao_pcm.json (via API Fracttal)
+        env:
+          FRACTTAL_CLIENT_ID: ${{ secrets.FRACTTAL_CLIENT_ID }}
+          FRACTTAL_CLIENT_SECRET: ${{ secrets.FRACTTAL_CLIENT_SECRET }}
+          FRACTTAL_BASE_URL: https://app.fracttal.com/api/
+          PCM_PROG_DIR: ${{ github.workspace }}
+          GESTAO_AUXILIAR_PATH: ${{ github.workspace }}/AUXILIAR_gestao.xlsx
+        run: python gerar_gestao_pcm_json.py
+
+      - name: Publicar só se os dados mudaram (anti-churn)
+        run: |
+          NEW_HASH=$(python -c "import json;print(json.load(open('gestao_pcm.json',encoding='utf-8')).get('dataHash',''))")
+          OLD_HASH=$(cat _gestao_pcm_published_hash.txt 2>/dev/null || echo "")
+          if [ -n "$NEW_HASH" ] && [ "$NEW_HASH" = "$OLD_HASH" ]; then
+            echo "Dados sem mudança (hash $NEW_HASH) — nada a publicar."
+            exit 0
+          fi
+          echo "$NEW_HASH" > _gestao_pcm_published_hash.txt
+          git config user.name  "gestao-pcm-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add gestao_pcm.json _gestao_pcm_published_hash.txt
+          git commit -m "chore: refresh gestao_pcm.json [auto ${NEW_HASH:0:8}]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main || true
+            if git push; then
+              echo "Publicado (tentativa $i)."; exit 0
+            fi
+            echo "Push colidiu — nova tentativa em 5s ($i/5)..."; sleep 5
+          done
+          echo "Falhou após 5 tentativas."; exit 1
