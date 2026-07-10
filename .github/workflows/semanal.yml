@@ -1,0 +1,61 @@
+name: Atualiza Programação Semanal (a cada 15 min)
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: semanal
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install --quiet pandas requests openpyxl python-calamine
+
+      - name: Restaurar insumos sensíveis (dos Secrets — RPN e Confiabilidade)
+        run: |
+          printf '%s' "${{ secrets.LISTA_PRIORIDADES_B64 }}" | base64 -d > "Lista_Prioridades_GridCo.xlsx"
+          printf '%s' "${{ secrets.CONFIABILIDADE_B64 }}"    | base64 -d > "Planilha Confiabilidade R00.xlsx"
+
+      - name: Rodar o motor semanal
+        env:
+          FRACTTAL_CLIENT_ID: ${{ secrets.FRACTTAL_CLIENT_ID }}
+          FRACTTAL_CLIENT_SECRET: ${{ secrets.FRACTTAL_CLIENT_SECRET }}
+          FRACTTAL_BASE_URL: https://app.fracttal.com/api/
+          PCM_PROG_DIR: ${{ github.workspace }}
+        run: |
+          python atualizacao_semanal.py
+          python gerar_pcm_json.py
+          python gerar_etiquetas_json.py --bd "AUXILIAR - FABRICIO.xlsx"
+
+      - name: Publicar banco_dados.json + etiquetas.json
+        run: |
+          rm -f "Lista_Prioridades_GridCo.xlsx" "Planilha Confiabilidade R00.xlsx"
+          git config user.name  "semanal-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add banco_dados.json etiquetas.json
+          if git diff --cached --quiet; then
+            echo "Sem mudancas nos JSONs."; exit 0
+          fi
+          git commit -m "chore: refresh Programacao Semanal [auto]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main || true
+            if git push; then echo "Publicado (tentativa $i)."; exit 0; fi
+            echo "Push colidiu — nova tentativa em 5s ($i/5)..."; sleep 5
+          done
+          echo "Falhou apos 5 tentativas."; exit 1
