@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-11T08:34:10Z",
+  "geradoEm": "2026-07-11T10:08:32Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-06 .. 2026-07-12",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2953,
-        "emAberto": 14,
+        "total": 2956,
+        "emAberto": 17,
         "atrasadas": 11,
         "concluidas30d": 546,
         "concluidas7d": 101,
-        "naSemanaCorrente": 71
+        "naSemanaCorrente": 74
       },
       "mttr": {
         "horas": 7.22,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W28",
-          "criadas": 69,
+          "criadas": 72,
           "finalizadas": 67
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2953,
-            "emAberto": 14
+            "total": 2956,
+            "emAberto": 17
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
+      "total": 17,
       "atrasadas": 11,
       "porStatus": {
-        "naoIniciada": 13,
-        "emProgresso": 0,
+        "naoIniciada": 15,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 17
       },
       "oss": [
         {
@@ -290,20 +290,75 @@
           "atrasada": true
         },
         {
-          "osId": "9285",
-          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+          "osId": "9288",
+          "ativo": "Thopen - Campos dos Goytacazes 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-GYT100 }",
           "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "DavidNascimento",
-          "supervisor": "Railson Gomes ",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
           "status": "Não Iniciada",
-          "tarefa": "UFV: Crateus | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
+          "tarefa": "Religamento da UFV Goytacazes",
           "criticidade": "",
           "dataProgramada": "2026-07-11",
           "dataCriacao": "2026-07-11",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "9287",
+          "ativo": "RenoGrid - Colíder 1 - MT Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { RNGD-CLD100 }",
+          "equipe": "",
+          "responsavel": "Deivity Jhon Cunha Saugo ",
+          "criadoPor": "LucasNascimento",
+          "supervisor": "Deivity Jhon Cunha Saugo ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento de usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-11",
+          "dataCriacao": "2026-07-11",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "9286",
+          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "LucasNascimento",
+          "supervisor": "Railson Gomes ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento de usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-11",
+          "dataCriacao": "2026-07-11",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "9285",
+          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Railson Gomes ",
+          "status": "Em progresso",
+          "tarefa": "UFV: Crateus | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
+          "criticidade": "",
+          "dataProgramada": "2026-07-11",
+          "dataCriacao": "2026-07-11",
+          "dataInicial": "2026-07-11",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3349,9 +3404,9 @@
       "historicoTotal": 1508,
       "subClassificacao": {
         "remoto": 652,
-        "local": 2301,
+        "local": 2304,
         "remotoEmAberto": 10,
-        "localEmAberto": 4,
+        "localEmAberto": 7,
         "pctRemoto": 22,
         "alerta": true
       },
@@ -11881,20 +11936,72 @@
   },
   "ossPublicas": [
     {
-      "osId": "9285",
-      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+      "osId": "9288",
+      "ativo": "Thopen - Campos dos Goytacazes 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-GYT100 }",
       "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "DavidNascimento",
-      "supervisor": "Railson Gomes ",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
       "status": "Não Iniciada",
-      "tarefa": "UFV: Crateus | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
+      "tarefa": "Religamento da UFV Goytacazes",
       "criticidade": "",
       "dataProgramada": "2026-07-11",
       "dataCriacao": "2026-07-11",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "9287",
+      "ativo": "RenoGrid - Colíder 1 - MT Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { RNGD-CLD100 }",
+      "equipe": "",
+      "responsavel": "Deivity Jhon Cunha Saugo ",
+      "criadoPor": "LucasNascimento",
+      "supervisor": "Deivity Jhon Cunha Saugo ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento de usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-11",
+      "dataCriacao": "2026-07-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "9286",
+      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "LucasNascimento",
+      "supervisor": "Railson Gomes ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento de usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-11",
+      "dataCriacao": "2026-07-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "9285",
+      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Railson Gomes ",
+      "status": "Em progresso",
+      "tarefa": "UFV: Crateus | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
+      "criticidade": "",
+      "dataProgramada": "2026-07-11",
+      "dataCriacao": "2026-07-11",
+      "dataInicial": "2026-07-11",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -17483,7 +17590,7 @@
     }
   ],
   "historicoTotal": 1920,
-  "totalGeral": 3775,
+  "totalGeral": 3778,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
