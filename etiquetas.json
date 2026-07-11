@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-11T17:22:12Z",
+  "geradoEm": "2026-07-11T18:32:23Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-06 .. 2026-07-12",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2961,
-        "emAberto": 13,
+        "total": 2963,
+        "emAberto": 14,
         "atrasadas": 11,
-        "concluidas30d": 555,
-        "concluidas7d": 110,
-        "naSemanaCorrente": 79
+        "concluidas30d": 556,
+        "concluidas7d": 111,
+        "naSemanaCorrente": 81
       },
       "mttr": {
-        "horas": 7.1,
-        "label": "7h 6min",
-        "amostra": 555
+        "horas": 7.08,
+        "label": "7h 5min",
+        "amostra": 556
       },
       "tendencia4Semanas": [
         {
@@ -38,23 +38,23 @@
         },
         {
           "semana": "W28",
-          "criadas": 77,
-          "finalizadas": 76
+          "criadas": 79,
+          "finalizadas": 77
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2961,
-            "emAberto": 13
+            "total": 2963,
+            "emAberto": 14
           }
         ],
         "responsaveis": [
           {
             "nome": "Marcos  Camargo",
-            "total": 424,
-            "emAberto": 2
+            "total": 423,
+            "emAberto": 1
           },
           {
             "nome": "Raphael Vitoriano",
@@ -63,8 +63,8 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 264,
-            "emAberto": 0
+            "total": 267,
+            "emAberto": 2
           },
           {
             "nome": "James Chaves",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 13,
+      "total": 14,
       "atrasadas": 11,
       "porStatus": {
-        "naoIniciada": 12,
+        "naoIniciada": 13,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -290,21 +290,39 @@
           "atrasada": true
         },
         {
-          "osId": "9289",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "osId": "9296",
+          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
           "equipe": "",
-          "responsavel": "Marcos  Camargo",
+          "responsavel": "Felipe Silva ",
           "criadoPor": "Felipe Silva ",
-          "supervisor": "Marcos  Camargo",
+          "supervisor": "Felipe Silva ",
           "status": "Não Iniciada",
-          "tarefa": "Religamento da Usina",
+          "tarefa": "Religamento da cabine remoto",
           "criticidade": "",
           "dataProgramada": "2026-07-11",
           "dataCriacao": "2026-07-11",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "9295",
+          "ativo": "Cabine 1  Capitão Poço  Pará Brasil { CPP100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da cabine remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-11",
+          "dataCriacao": "2026-07-11",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
           "atrasada": false
         },
         {
@@ -327,6 +345,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9294",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da usina remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-11",
+          "dataCriacao": "2026-07-11",
+          "dataInicial": "2026-07-11",
+          "dataFinal": "2026-07-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "9293",
           "ativo": "Inversor 1.2 Sofar 250KTL-HV-PRO    { IBI200-INVR1.2 }",
@@ -3306,34 +3344,14 @@
           "horasAteFechar": 0,
           "modalidade": "remoto",
           "atrasada": false
-        },
-        {
-          "osId": "8801",
-          "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizados",
-          "tarefa": "Religamento da cabine remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-07-01",
-          "dataCriacao": "2026-07-01",
-          "dataInicial": "2026-07-01",
-          "dataFinal": "2026-07-01",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1517,
+      "historicoTotal": 1518,
       "subClassificacao": {
-        "remoto": 652,
-        "local": 2309,
-        "remotoEmAberto": 10,
-        "localEmAberto": 3,
+        "remoto": 655,
+        "local": 2308,
+        "remotoEmAberto": 12,
+        "localEmAberto": 2,
         "pctRemoto": 22,
         "alerta": true
       },
@@ -3503,9 +3521,9 @@
           }
         ],
         "medHorasAbrir": 3.1,
-        "medHorasFechar": 3.1,
-        "amostraAbrir": 637,
-        "amostraFechar": 637,
+        "medHorasFechar": 3.0,
+        "amostraAbrir": 638,
+        "amostraFechar": 638,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3513,7 +3531,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 193
+            "total": 196
           },
           {
             "nome": "Raphael Vitoriano",
@@ -11863,21 +11881,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "9289",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "osId": "9296",
+      "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
       "equipe": "",
-      "responsavel": "Marcos  Camargo",
+      "responsavel": "Felipe Silva ",
       "criadoPor": "Felipe Silva ",
-      "supervisor": "Marcos  Camargo",
+      "supervisor": "Felipe Silva ",
       "status": "Não Iniciada",
-      "tarefa": "Religamento da Usina",
+      "tarefa": "Religamento da cabine remoto",
       "criticidade": "",
       "dataProgramada": "2026-07-11",
       "dataCriacao": "2026-07-11",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
+      "modalidade": "remoto"
+    },
+    {
+      "osId": "9295",
+      "ativo": "Cabine 1  Capitão Poço  Pará Brasil { CPP100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento da cabine remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-11",
+      "dataCriacao": "2026-07-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
     },
     {
       "osId": "9283",
@@ -14483,6 +14518,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "9294",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da usina remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-11",
+      "dataCriacao": "2026-07-11",
+      "dataInicial": "2026-07-11",
+      "dataFinal": "2026-07-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "9293",
       "ativo": "Inversor 1.2 Sofar 250KTL-HV-PRO    { IBI200-INVR1.2 }",
@@ -17427,30 +17482,10 @@
       "horasAteFechar": 0,
       "modalidade": "remoto",
       "atrasada": false
-    },
-    {
-      "osId": "8931",
-      "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da cabine remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-07-03",
-      "dataCriacao": "2026-07-03",
-      "dataInicial": "2026-07-03",
-      "dataFinal": "2026-07-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1929,
-  "totalGeral": 3783,
+  "historicoTotal": 1930,
+  "totalGeral": 3785,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
