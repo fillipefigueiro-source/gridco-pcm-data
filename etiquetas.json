@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-12T09:32:23Z",
+  "geradoEm": "2026-07-12T11:01:25Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-06 .. 2026-07-12",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 2971,
-        "emAberto": 14,
+        "total": 2972,
+        "emAberto": 15,
         "atrasadas": 12,
         "concluidas30d": 537,
         "concluidas7d": 98,
-        "naSemanaCorrente": 89
+        "naSemanaCorrente": 90
       },
       "mttr": {
         "horas": 7.3,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W28",
-          "criadas": 87,
+          "criadas": 88,
           "finalizadas": 85
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 2971,
-            "emAberto": 14
+            "total": 2972,
+            "emAberto": 15
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
+      "total": 15,
       "atrasadas": 12,
       "porStatus": {
         "naoIniciada": 13,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -308,20 +308,39 @@
           "atrasada": true
         },
         {
-          "osId": "9310",
-          "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
+          "osId": "9314",
+          "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
           "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Ricardo Silva ",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Janderson Miranda ",
           "status": "Não Iniciada",
-          "tarefa": "Religamento de usina",
+          "tarefa": "UFV CEI II - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
           "criticidade": "",
           "dataProgramada": "2026-07-12",
           "dataCriacao": "2026-07-12",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "9310",
+          "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Ricardo Silva ",
+          "status": "Em progresso",
+          "tarefa": "Religamento de usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-12",
+          "dataCriacao": "2026-07-12",
+          "dataInicial": "2026-07-12",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3348,9 +3367,9 @@
       ],
       "historicoTotal": 1512,
       "subClassificacao": {
-        "remoto": 657,
+        "remoto": 658,
         "local": 2314,
-        "remotoEmAberto": 10,
+        "remotoEmAberto": 11,
         "localEmAberto": 4,
         "pctRemoto": 22,
         "alerta": true
@@ -3527,7 +3546,7 @@
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
-            "total": 283
+            "total": 284
           },
           {
             "nome": "Felipe Silva",
@@ -11899,20 +11918,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "9310",
-      "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
+      "osId": "9314",
+      "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
       "equipe": "",
-      "responsavel": "Ricardo Silva ",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Ricardo Silva ",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Janderson Miranda ",
       "status": "Não Iniciada",
-      "tarefa": "Religamento de usina",
+      "tarefa": "UFV CEI II - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
       "criticidade": "",
       "dataProgramada": "2026-07-12",
       "dataCriacao": "2026-07-12",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
+      "osId": "9310",
+      "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Ricardo Silva ",
+      "status": "Em progresso",
+      "tarefa": "Religamento de usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-12",
+      "dataCriacao": "2026-07-12",
+      "dataInicial": "2026-07-12",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -17520,7 +17557,7 @@
     }
   ],
   "historicoTotal": 1924,
-  "totalGeral": 3794,
+  "totalGeral": 3795,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
