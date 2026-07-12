@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-12T14:02:04Z",
+  "geradoEm": "2026-07-12T15:06:10Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-06 .. 2026-07-12",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 2974,
-        "emAberto": 15,
+        "emAberto": 14,
         "atrasadas": 12,
-        "concluidas30d": 539,
-        "concluidas7d": 100,
+        "concluidas30d": 540,
+        "concluidas7d": 101,
         "naSemanaCorrente": 92
       },
       "mttr": {
-        "horas": 7.27,
-        "label": "7h 16min",
-        "amostra": 539
+        "horas": 7.25,
+        "label": "7h 15min",
+        "amostra": 540
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W28",
           "criadas": 90,
-          "finalizadas": 87
+          "finalizadas": 88
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 2974,
-            "emAberto": 15
+            "emAberto": 14
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 15,
+      "total": 14,
       "atrasadas": 12,
       "porStatus": {
         "naoIniciada": 12,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 15
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -308,25 +308,6 @@
           "atrasada": true
         },
         {
-          "osId": "9318",
-          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
-          "tarefa": "UFV IPX1 E 2 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-          "criticidade": "",
-          "dataProgramada": "2026-07-12",
-          "dataCriacao": "2026-07-12",
-          "dataInicial": "2026-07-12",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "9314",
           "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
           "equipe": "",
@@ -365,6 +346,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9318",
+          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Wesllen  Castro",
+          "status": "Finalizados",
+          "tarefa": "UFV IPX1 E 2 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+          "criticidade": "",
+          "dataProgramada": "2026-07-12",
+          "dataCriacao": "2026-07-12",
+          "dataInicial": "2026-07-12",
+          "dataFinal": "2026-07-12",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "9317",
           "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
@@ -3344,33 +3345,13 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "8845",
-          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine 5 de TIM200",
-          "criticidade": "",
-          "dataProgramada": "2026-07-02",
-          "dataCriacao": "2026-07-02",
-          "dataInicial": "2026-07-02",
-          "dataFinal": "2026-07-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1514,
+      "historicoTotal": 1515,
       "subClassificacao": {
         "remoto": 660,
         "local": 2314,
-        "remotoEmAberto": 12,
+        "remotoEmAberto": 11,
         "localEmAberto": 3,
         "pctRemoto": 22,
         "alerta": true
@@ -3543,7 +3524,7 @@
         "medHorasAbrir": 3.1,
         "medHorasFechar": 3.0,
         "amostraAbrir": 645,
-        "amostraFechar": 643,
+        "amostraFechar": 644,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -11919,24 +11900,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "9318",
-      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
-      "tarefa": "UFV IPX1 E 2 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-      "criticidade": "",
-      "dataProgramada": "2026-07-12",
-      "dataCriacao": "2026-07-12",
-      "dataInicial": "2026-07-12",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "remoto"
-    },
-    {
       "osId": "9314",
       "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
       "equipe": "",
@@ -14592,6 +14555,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "9318",
+      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Wesllen  Castro",
+      "status": "Finalizados",
+      "tarefa": "UFV IPX1 E 2 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+      "criticidade": "",
+      "dataProgramada": "2026-07-12",
+      "dataCriacao": "2026-07-12",
+      "dataInicial": "2026-07-12",
+      "dataFinal": "2026-07-12",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "9317",
       "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
@@ -17536,29 +17519,9 @@
       "horasAteFechar": 24.0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "8954",
-      "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da cabine remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-07-03",
-      "dataCriacao": "2026-07-03",
-      "dataInicial": "2026-07-03",
-      "dataFinal": "2026-07-04",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1926,
+  "historicoTotal": 1927,
   "totalGeral": 3797,
   "verificacao": {
     "total": 0,
