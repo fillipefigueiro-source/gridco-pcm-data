@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-14T15:17:58Z",
+  "geradoEm": "2026-07-14T16:45:38Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-13 .. 2026-07-19",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3022,
-        "emAberto": 14,
-        "atrasadas": 11,
-        "concluidas30d": 532,
-        "concluidas7d": 131,
+        "emAberto": 12,
+        "atrasadas": 10,
+        "concluidas30d": 534,
+        "concluidas7d": 133,
         "naSemanaCorrente": 39
       },
       "mttr": {
-        "horas": 7.57,
-        "label": "7h 34min",
-        "amostra": 532
+        "horas": 8.09,
+        "label": "8h 6min",
+        "amostra": 534
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W29",
           "criadas": 39,
-          "finalizadas": 34
+          "finalizadas": 36
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3022,
-            "emAberto": 14
+            "emAberto": 12
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
-      "atrasadas": 11,
+      "total": 12,
+      "atrasadas": 10,
       "porStatus": {
-        "naoIniciada": 11,
+        "naoIniciada": 9,
         "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 12
       },
       "oss": [
         {
@@ -199,25 +199,6 @@
           "atrasada": true
         },
         {
-          "osId": "8829",
-          "ativo": "Infraestrutura Civil Sítio Olho D'água s/n Alto Paraná  Paraná Brasil { THPN-APR100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Em progresso",
-          "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-07-08",
-          "dataCriacao": "2026-07-02",
-          "dataInicial": "2026-07-14",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 288.0,
-          "modalidade": "remoto",
-          "atrasada": true
-        },
-        {
           "osId": "9207",
           "ativo": "Thopen - Salto Pirapora 3 - SP    São Paulo Brasil { THPN-SPP300 }",
           "equipe": "",
@@ -298,32 +279,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "UFV IPX01 E 02 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
           "criticidade": "",
           "dataProgramada": "2026-07-14",
           "dataCriacao": "2026-07-14",
-          "dataInicial": "",
+          "dataInicial": "2026-07-14",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
-          "osId": "9421",
-          "ativo": "Cabine 1 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Não Iniciada",
-          "tarefa": "UFV TANABI 1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-          "criticidade": "",
-          "dataProgramada": "2026-07-14",
-          "dataCriacao": "2026-07-14",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "remoto",
           "atrasada": false
         },
@@ -365,6 +329,26 @@
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "9421",
+          "ativo": "Cabine 1 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Finalizados",
+          "tarefa": "UFV TANABI 1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+          "criticidade": "",
+          "dataProgramada": "2026-07-14",
+          "dataCriacao": "2026-07-14",
+          "dataInicial": "2026-07-14",
+          "dataFinal": "2026-07-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
           "atrasada": false
         },
         {
@@ -3326,33 +3310,13 @@
           "horasAteFechar": 0,
           "modalidade": "remoto",
           "atrasada": false
-        },
-        {
-          "osId": "8970",
-          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da usina de CPP100",
-          "criticidade": "",
-          "dataProgramada": "2026-07-04",
-          "dataCriacao": "2026-07-04",
-          "dataInicial": "2026-07-04",
-          "dataFinal": "2026-07-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1536,
+      "historicoTotal": 1538,
       "subClassificacao": {
         "remoto": 679,
         "local": 2343,
-        "remotoEmAberto": 10,
+        "remotoEmAberto": 8,
         "localEmAberto": 4,
         "pctRemoto": 22,
         "alerta": true
@@ -3524,8 +3488,8 @@
         ],
         "medHorasAbrir": 3.4,
         "medHorasFechar": 2.9,
-        "amostraAbrir": 665,
-        "amostraFechar": 664,
+        "amostraAbrir": 667,
+        "amostraFechar": 666,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -12061,31 +12025,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "UFV IPX01 E 02 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
       "criticidade": "",
       "dataProgramada": "2026-07-14",
       "dataCriacao": "2026-07-14",
-      "dataInicial": "",
+      "dataInicial": "2026-07-14",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "remoto"
-    },
-    {
-      "osId": "9421",
-      "ativo": "Cabine 1 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Paulo  Ribeiro",
-      "status": "Não Iniciada",
-      "tarefa": "UFV TANABI 1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-      "criticidade": "",
-      "dataProgramada": "2026-07-14",
-      "dataCriacao": "2026-07-14",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "remoto"
     },
     {
@@ -13654,24 +13602,6 @@
       "modalidade": "remoto"
     },
     {
-      "osId": "8829",
-      "ativo": "Infraestrutura Civil Sítio Olho D'água s/n Alto Paraná  Paraná Brasil { THPN-APR100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Em progresso",
-      "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-07-08",
-      "dataCriacao": "2026-07-02",
-      "dataInicial": "2026-07-14",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 288.0,
-      "modalidade": "remoto"
-    },
-    {
       "osId": "8799",
       "ativo": "QGBT 1 Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR200-QGBT1 }",
       "equipe": "",
@@ -14731,6 +14661,26 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "9421",
+      "ativo": "Cabine 1 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Finalizados",
+      "tarefa": "UFV TANABI 1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+      "criticidade": "",
+      "dataProgramada": "2026-07-14",
+      "dataCriacao": "2026-07-14",
+      "dataInicial": "2026-07-14",
+      "dataFinal": "2026-07-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
       "atrasada": false
     },
     {
@@ -17667,28 +17617,9 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "9097",
-      "ativo": "SKID 2 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD100-SKID2 }",
-      "equipe": "",
-      "responsavel": "Deivity Jhon Cunha Saugo ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Deivity Jhon Cunha Saugo ",
-      "status": "Finalizados",
-      "tarefa": "[Colíder 01][Skid 02] - Verificação de Temperatura",
-      "criticidade": "",
-      "dataProgramada": "2026-07-07",
-      "dataCriacao": "2026-07-07",
-      "dataInicial": "2026-07-10",
-      "dataFinal": "2026-07-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 72.0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1953,
+  "historicoTotal": 1955,
   "totalGeral": 3864,
   "verificacao": {
     "total": 0,
