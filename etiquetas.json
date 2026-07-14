@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-14T08:24:11Z",
+  "geradoEm": "2026-07-14T10:22:33Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-13 .. 2026-07-19",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3006,
-        "emAberto": 14,
-        "atrasadas": 13,
-        "concluidas30d": 516,
-        "concluidas7d": 115,
-        "naSemanaCorrente": 23
+        "total": 3007,
+        "emAberto": 13,
+        "atrasadas": 12,
+        "concluidas30d": 518,
+        "concluidas7d": 117,
+        "naSemanaCorrente": 24
       },
       "mttr": {
-        "horas": 7.68,
-        "label": "7h 41min",
-        "amostra": 516
+        "horas": 7.7,
+        "label": "7h 42min",
+        "amostra": 518
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W29",
-          "criadas": 23,
-          "finalizadas": 18
+          "criadas": 24,
+          "finalizadas": 20
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3006,
-            "emAberto": 14
+            "total": 3007,
+            "emAberto": 13
           }
         ],
         "responsaveis": [
@@ -67,27 +67,27 @@
             "emAberto": 0
           },
           {
-            "nome": "James Chaves",
-            "total": 132,
+            "nome": "Italo  Lustosa",
+            "total": 133,
             "emAberto": 0
           },
           {
-            "nome": "Italo  Lustosa",
+            "nome": "James Chaves",
             "total": 132,
             "emAberto": 0
           }
         ]
       },
-      "total": 14,
-      "atrasadas": 13,
+      "total": 13,
+      "atrasadas": 12,
       "porStatus": {
-        "naoIniciada": 11,
+        "naoIniciada": 10,
         "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 13
       },
       "oss": [
         {
@@ -241,24 +241,6 @@
           "responsavel": "Renato  Julien",
           "criadoPor": "LucasNascimento",
           "supervisor": "Renato  Julien",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento de usina",
-          "criticidade": "",
-          "dataProgramada": "2026-07-13",
-          "dataCriacao": "2026-07-13",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "9396",
-          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Railson Gomes ",
           "status": "Em progresso",
           "tarefa": "Religamento de usina",
           "criticidade": "",
@@ -347,6 +329,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9398",
+          "ativo": "Thopen - Sorocaba 1 - SP Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100 }",
+          "equipe": "",
+          "responsavel": "Italo  Lustosa",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Italo  Lustosa",
+          "status": "Finalizada",
+          "tarefa": "UFV SOROCABA - Religamento remoto da usina. Relé trip 59N.",
+          "criticidade": "",
+          "dataProgramada": "2026-07-14",
+          "dataCriacao": "2026-07-14",
+          "dataInicial": "2026-07-14",
+          "dataFinal": "2026-07-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "9396",
+          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Railson Gomes ",
+          "status": "Finalizados",
+          "tarefa": "Religamento de usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-13",
+          "dataCriacao": "2026-07-13",
+          "dataInicial": "2026-07-14",
+          "dataFinal": "2026-07-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "9394",
           "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
@@ -3306,54 +3328,14 @@
           "horasAteFechar": 24.0,
           "modalidade": "remoto",
           "atrasada": false
-        },
-        {
-          "osId": "8952",
-          "ativo": "Cabine 4  Capitão Poço  Pará Brasil { CPP100-CABN4 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-07-03",
-          "dataCriacao": "2026-07-03",
-          "dataInicial": "2026-07-03",
-          "dataFinal": "2026-07-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
-          "osId": "8951",
-          "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-07-03",
-          "dataCriacao": "2026-07-03",
-          "dataInicial": "2026-07-03",
-          "dataFinal": "2026-07-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "remoto",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1520,
+      "historicoTotal": 1522,
       "subClassificacao": {
-        "remoto": 674,
+        "remoto": 675,
         "local": 2332,
         "remotoEmAberto": 8,
-        "localEmAberto": 6,
+        "localEmAberto": 5,
         "pctRemoto": 22,
         "alerta": true
       },
@@ -3524,12 +3506,12 @@
         ],
         "medHorasAbrir": 3.0,
         "medHorasFechar": 2.9,
-        "amostraAbrir": 661,
-        "amostraFechar": 661,
+        "amostraAbrir": 662,
+        "amostraFechar": 662,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
-            "total": 289
+            "total": 290
           },
           {
             "nome": "Felipe Silva",
@@ -12021,23 +12003,6 @@
       "responsavel": "Renato  Julien",
       "criadoPor": "LucasNascimento",
       "supervisor": "Renato  Julien",
-      "status": "Não Iniciada",
-      "tarefa": "Religamento de usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-13",
-      "dataCriacao": "2026-07-13",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "9396",
-      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Railson Gomes ",
       "status": "Em progresso",
       "tarefa": "Religamento de usina",
       "criticidade": "",
@@ -14689,6 +14654,46 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "9398",
+      "ativo": "Thopen - Sorocaba 1 - SP Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100 }",
+      "equipe": "",
+      "responsavel": "Italo  Lustosa",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Italo  Lustosa",
+      "status": "Finalizada",
+      "tarefa": "UFV SOROCABA - Religamento remoto da usina. Relé trip 59N.",
+      "criticidade": "",
+      "dataProgramada": "2026-07-14",
+      "dataCriacao": "2026-07-14",
+      "dataInicial": "2026-07-14",
+      "dataFinal": "2026-07-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "9396",
+      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Railson Gomes ",
+      "status": "Finalizados",
+      "tarefa": "Religamento de usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-13",
+      "dataCriacao": "2026-07-13",
+      "dataInicial": "2026-07-14",
+      "dataFinal": "2026-07-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "9394",
       "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
@@ -17613,48 +17618,10 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "9033",
-      "ativo": "Inversor 1.6 Sungrow SG125-20-1500VDC    { MNG100-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizados",
-      "tarefa": "[Mandaguaçu][Inversor 1.6] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-07-01",
-      "dataCriacao": "2026-07-06",
-      "dataInicial": "2026-07-10",
-      "dataFinal": "2026-07-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "9032",
-      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { THPN-APR200-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizados",
-      "tarefa": "[Alto Paraná 2][Inversor 1.6] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-07-04",
-      "dataCriacao": "2026-07-06",
-      "dataInicial": "2026-07-07",
-      "dataFinal": "2026-07-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1933,
-  "totalGeral": 3845,
+  "historicoTotal": 1935,
+  "totalGeral": 3846,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
