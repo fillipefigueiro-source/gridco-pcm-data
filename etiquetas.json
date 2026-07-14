@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-14T12:00:18Z",
+  "geradoEm": "2026-07-14T13:49:46Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-13 .. 2026-07-19",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3018,
-        "emAberto": 12,
+        "total": 3020,
+        "emAberto": 13,
         "atrasadas": 11,
-        "concluidas30d": 530,
-        "concluidas7d": 129,
-        "naSemanaCorrente": 35
+        "concluidas30d": 531,
+        "concluidas7d": 130,
+        "naSemanaCorrente": 37
       },
       "mttr": {
-        "horas": 7.6,
-        "label": "7h 36min",
-        "amostra": 530
+        "horas": 7.58,
+        "label": "7h 35min",
+        "amostra": 531
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W29",
-          "criadas": 35,
-          "finalizadas": 32
+          "criadas": 37,
+          "finalizadas": 33
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3018,
-            "emAberto": 12
+            "total": 3020,
+            "emAberto": 13
           }
         ],
         "responsaveis": [
@@ -68,7 +68,7 @@
           },
           {
             "nome": "Italo  Lustosa",
-            "total": 134,
+            "total": 135,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 12,
+      "total": 13,
       "atrasadas": 11,
       "porStatus": {
         "naoIniciada": 10,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 12
+        "(sem equipe)": 13
       },
       "oss": [
         {
@@ -205,14 +205,15 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
           "criticidade": "",
           "dataProgramada": "2026-07-08",
           "dataCriacao": "2026-07-02",
-          "dataInicial": "",
+          "dataInicial": "2026-07-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 288.0,
           "modalidade": "remoto",
           "atrasada": true
         },
@@ -291,6 +292,24 @@
           "atrasada": true
         },
         {
+          "osId": "9421",
+          "ativo": "Cabine 1 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Não Iniciada",
+          "tarefa": "UFV TANABI 1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+          "criticidade": "",
+          "dataProgramada": "2026-07-14",
+          "dataCriacao": "2026-07-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
           "osId": "9263",
           "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
           "equipe": "",
@@ -310,6 +329,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9416",
+          "ativo": "Cabine 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-CABN4 }",
+          "equipe": "",
+          "responsavel": "Italo  Lustosa",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Italo  Lustosa",
+          "status": "Finalizada",
+          "tarefa": "UFV OB4 - Religamento remoto da usina. Relé trip SEM.",
+          "criticidade": "",
+          "dataProgramada": "2026-07-14",
+          "dataCriacao": "2026-07-14",
+          "dataInicial": "2026-07-14",
+          "dataFinal": "2026-07-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "9411",
           "ativo": "SKID 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID2 }",
@@ -3289,33 +3328,13 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "8968",
-          "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
-          "equipe": "",
-          "responsavel": "Italo  Lustosa",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Italo  Lustosa",
-          "status": "Finalizada",
-          "tarefa": "UFV CEI II - Religamento remoto da usina. Relé trip 27ABC.",
-          "criticidade": "",
-          "dataProgramada": "2026-07-04",
-          "dataCriacao": "2026-07-04",
-          "dataInicial": "2026-07-04",
-          "dataFinal": "2026-07-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1534,
+      "historicoTotal": 1535,
       "subClassificacao": {
-        "remoto": 676,
+        "remoto": 678,
         "local": 2342,
-        "remotoEmAberto": 8,
+        "remotoEmAberto": 9,
         "localEmAberto": 4,
         "pctRemoto": 22,
         "alerta": true
@@ -3328,6 +3347,14 @@
             "criadoPor": "Juliana Cândido",
             "responsavel": "Wesllen  Castro",
             "horas": 336.0,
+            "linkFracttal": ""
+          },
+          {
+            "osId": "8829",
+            "ativo": "Infraestrutura Civil Sítio Olho D'água s/n Alto Paraná  Paraná Brasil { THPN-APR100-INFC1 }",
+            "criadoPor": "Juliana Cândido",
+            "responsavel": "Ronaldo  Silva",
+            "horas": 288.0,
             "linkFracttal": ""
           },
           {
@@ -3392,14 +3419,6 @@
             "criadoPor": "Juliana Cândido",
             "responsavel": "Adriano  Moraes",
             "horas": 96.0,
-            "linkFracttal": ""
-          },
-          {
-            "osId": "5697",
-            "ativo": "2C - Tupi Paulista 1 e 2 - SP  Tupi Paulista  São Paulo Brasil { 2C-TPP100 }",
-            "criadoPor": "Juliana Cândido",
-            "responsavel": "Carlos  Godoi",
-            "horas": 72.0,
             "linkFracttal": ""
           }
         ],
@@ -3485,14 +3504,14 @@
             "linkFracttal": ""
           }
         ],
-        "medHorasAbrir": 3.0,
+        "medHorasAbrir": 3.4,
         "medHorasFechar": 2.9,
-        "amostraAbrir": 663,
-        "amostraFechar": 663,
+        "amostraAbrir": 665,
+        "amostraFechar": 664,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
-            "total": 291
+            "total": 293
           },
           {
             "nome": "Felipe Silva",
@@ -3539,16 +3558,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 533,
-        "emAberto": 66,
+        "emAberto": 65,
         "atrasadas": 26,
-        "concluidas30d": 116,
-        "concluidas7d": 32,
+        "concluidas30d": 117,
+        "concluidas7d": 33,
         "naSemanaCorrente": 51
       },
       "mttr": {
-        "horas": 317.79,
-        "label": "13d 5h",
-        "amostra": 116
+        "horas": 318.77,
+        "label": "13d 6h",
+        "amostra": 117
       },
       "tendencia4Semanas": [
         {
@@ -3569,7 +3588,7 @@
         {
           "semana": "W29",
           "criadas": 9,
-          "finalizadas": 3
+          "finalizadas": 4
         }
       ],
       "topOfensores": {
@@ -3577,7 +3596,7 @@
           {
             "nome": "(sem equipe)",
             "total": 533,
-            "emAberto": 66
+            "emAberto": 65
           }
         ],
         "responsaveis": [
@@ -3608,16 +3627,16 @@
           }
         ]
       },
-      "total": 66,
+      "total": 65,
       "atrasadas": 26,
       "porStatus": {
-        "naoIniciada": 59,
+        "naoIniciada": 58,
         "emProgresso": 0,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 66
+        "(sem equipe)": 65
       },
       "oss": [
         {
@@ -4459,23 +4478,6 @@
           "atrasada": false
         },
         {
-          "osId": "8535",
-          "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-07-17",
-          "dataCriacao": "2026-06-26",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "8466",
           "ativo": "Cabine 1 Estrada Jussara S/N Mandaguaçu  Paraná Brasil { MNG100-CABN1 }",
           "equipe": "",
@@ -4751,6 +4753,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "8535",
+          "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-07-17",
+          "dataCriacao": "2026-06-26",
+          "dataInicial": "2026-07-14",
+          "dataFinal": "2026-07-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 432.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "8709",
           "ativo": "Cabine 1 Sítio Rio Quartel, Zona Rural Linhares  Espírito Santo Brasil { AXIS-LHN100-CABN1 }",
@@ -7564,25 +7585,6 @@
           "atrasada": false
         },
         {
-          "osId": "6828",
-          "ativo": "Infraestrutura Civil Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { SNE100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Cleiton  Farias",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Cleiton  Farias",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-05-25",
-          "dataCriacao": "2026-05-19",
-          "dataInicial": "2026-05-21",
-          "dataFinal": "2026-05-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "6831",
           "ativo": "Infraestrutura Civil  Vargem Grande  Espirito Santo Brasil { VRG100-INFC1 }",
           "equipe": "",
@@ -7602,7 +7604,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 274
+      "historicoTotal": 275
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9098,17 +9100,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 154,
+        "total": 156,
         "emAberto": 77,
         "atrasadas": 77,
-        "concluidas30d": 44,
-        "concluidas7d": 33,
+        "concluidas30d": 46,
+        "concluidas7d": 35,
         "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 81.82,
-        "label": "3d 9h",
-        "amostra": 44
+        "horas": 82.43,
+        "label": "3d 10h",
+        "amostra": 46
       },
       "tendencia4Semanas": [
         {
@@ -9128,15 +9130,15 @@
         },
         {
           "semana": "W29",
-          "criadas": 6,
-          "finalizadas": 11
+          "criadas": 8,
+          "finalizadas": 13
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 154,
+            "total": 156,
             "emAberto": 77
           }
         ],
@@ -9164,7 +9166,7 @@
           {
             "nome": "Felipe  Lima",
             "total": 6,
-            "emAberto": 1
+            "emAberto": 0
           }
         ]
       },
@@ -9180,6 +9182,23 @@
         "(sem equipe)": 77
       },
       "oss": [
+        {
+          "osId": "9418",
+          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STR100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Júlio Willers ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Júlio Willers ",
+          "status": "Não Iniciada",
+          "tarefa": "[Santarém 1 e 2][Inversor 1.6] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-04-29",
+          "dataCriacao": "2026-07-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
         {
           "osId": "8025",
           "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { BES100-INVR1.8 }",
@@ -9226,6 +9245,23 @@
           "criticidade": "",
           "dataProgramada": "2026-06-24",
           "dataCriacao": "2026-06-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "9420",
+          "ativo": "Inversor 1.5 Huawei SUN2000-250KTL-H1    { STR100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Júlio Willers ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Júlio Willers ",
+          "status": "Não Iniciada",
+          "tarefa": "[Santarém 1 e 2][Inversor 1.5] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-07-14",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -9769,23 +9805,6 @@
           "supervisor": "Gabriel Oliveira ",
           "status": "Não Iniciada",
           "tarefa": "[Nova Xavantina 01][Skid 01] - Verificação de temperatura",
-          "criticidade": "",
-          "dataProgramada": "2026-07-07",
-          "dataCriacao": "2026-07-07",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9099",
-          "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID1 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Não Iniciada",
-          "tarefa": "[Colíder 02][Skid 01] - Verificação de temperatura",
           "criticidade": "",
           "dataProgramada": "2026-07-07",
           "dataCriacao": "2026-07-07",
@@ -10426,23 +10445,6 @@
           "atrasada": true
         },
         {
-          "osId": "9387",
-          "ativo": "Inversor 1.11 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.11 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
-          "tarefa": "[Piracicaba 1][Inversor 1.11] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-07-11",
-          "dataCriacao": "2026-07-13",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "9307",
           "ativo": "Inversor 1.10 Huawei     { TESTE100-INVR1.10 }",
           "equipe": "",
@@ -10496,6 +10498,44 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9387",
+          "ativo": "Inversor 1.11 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.11 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[Piracicaba 1][Inversor 1.11] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-07-11",
+          "dataCriacao": "2026-07-13",
+          "dataInicial": "2026-07-14",
+          "dataFinal": "2026-07-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "9099",
+          "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID1 }",
+          "equipe": "",
+          "responsavel": "Deivity Jhon Cunha Saugo ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Deivity Jhon Cunha Saugo ",
+          "status": "Finalizados",
+          "tarefa": "[Colíder 02][Skid 01] - Verificação de temperatura",
+          "criticidade": "",
+          "dataProgramada": "2026-07-07",
+          "dataCriacao": "2026-07-07",
+          "dataInicial": "2026-07-14",
+          "dataFinal": "2026-07-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "9351",
           "ativo": "Inversor 1.5 Huawei     { THPN-NVL200-INVR1.5 }",
@@ -11523,7 +11563,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 54
+      "historicoTotal": 56
     },
     "engenharia": {
       "label": "Engenharia",
@@ -11995,6 +12035,55 @@
   },
   "ossPublicas": [
     {
+      "osId": "9421",
+      "ativo": "Cabine 1 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Não Iniciada",
+      "tarefa": "UFV TANABI 1 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+      "criticidade": "",
+      "dataProgramada": "2026-07-14",
+      "dataCriacao": "2026-07-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
+      "osId": "9420",
+      "ativo": "Inversor 1.5 Huawei SUN2000-250KTL-H1    { STR100-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Júlio Willers ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Júlio Willers ",
+      "status": "Não Iniciada",
+      "tarefa": "[Santarém 1 e 2][Inversor 1.5] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-07-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9418",
+      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STR100-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Júlio Willers ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Júlio Willers ",
+      "status": "Não Iniciada",
+      "tarefa": "[Santarém 1 e 2][Inversor 1.6] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-04-29",
+      "dataCriacao": "2026-07-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "9412",
       "ativo": "Transformador 1      { THPN-CLR200-TRFR1 }",
       "equipe": "",
@@ -12054,22 +12143,6 @@
       "tarefa": "[TR-3.39][Tupi Paulista] - Problema de seguimento de ângulo alvo",
       "criticidade": "",
       "dataProgramada": "2026-07-13",
-      "dataCriacao": "2026-07-13",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "9387",
-      "ativo": "Inversor 1.11 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.11 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
-      "tarefa": "[Piracicaba 1][Inversor 1.11] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-07-11",
       "dataCriacao": "2026-07-13",
       "dataInicial": "",
       "dataFinal": "",
@@ -12735,22 +12808,6 @@
       "supervisor": "Gabriel Oliveira ",
       "status": "Não Iniciada",
       "tarefa": "[Nova Xavantina 01][Skid 01] - Verificação de temperatura",
-      "criticidade": "",
-      "dataProgramada": "2026-07-07",
-      "dataCriacao": "2026-07-07",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "9099",
-      "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID1 }",
-      "equipe": "",
-      "responsavel": "Deivity Jhon Cunha Saugo ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Deivity Jhon Cunha Saugo ",
-      "status": "Não Iniciada",
-      "tarefa": "[Colíder 02][Skid 01] - Verificação de temperatura",
       "criticidade": "",
       "dataProgramada": "2026-07-07",
       "dataCriacao": "2026-07-07",
@@ -13582,14 +13639,15 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
       "criticidade": "",
       "dataProgramada": "2026-07-08",
       "dataCriacao": "2026-07-02",
-      "dataInicial": "",
+      "dataInicial": "2026-07-14",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 288.0,
       "modalidade": "remoto"
     },
     {
@@ -13981,22 +14039,6 @@
     {
       "osId": "8536",
       "ativo": "Transformador 4 WTS     { THPN-CLN200-TRFR4 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-07-17",
-      "dataCriacao": "2026-06-26",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "8535",
-      "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
       "equipe": "",
       "responsavel": "Janderson Miranda ",
       "criadoPor": "Juliana Cândido",
@@ -14651,6 +14693,26 @@
   ],
   "ossHistorico": [
     {
+      "osId": "9416",
+      "ativo": "Cabine 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-CABN4 }",
+      "equipe": "",
+      "responsavel": "Italo  Lustosa",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Italo  Lustosa",
+      "status": "Finalizada",
+      "tarefa": "UFV OB4 - Religamento remoto da usina. Relé trip SEM.",
+      "criticidade": "",
+      "dataProgramada": "2026-07-14",
+      "dataCriacao": "2026-07-14",
+      "dataInicial": "2026-07-14",
+      "dataFinal": "2026-07-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
       "osId": "9411",
       "ativo": "SKID 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID2 }",
       "equipe": "",
@@ -14988,6 +15050,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "9387",
+      "ativo": "Inversor 1.11 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.11 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Felipe  Lima",
+      "status": "Finalizados",
+      "tarefa": "[Piracicaba 1][Inversor 1.11] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-07-11",
+      "dataCriacao": "2026-07-13",
+      "dataInicial": "2026-07-14",
+      "dataFinal": "2026-07-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -17490,6 +17571,25 @@
       "atrasada": false
     },
     {
+      "osId": "9099",
+      "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID1 }",
+      "equipe": "",
+      "responsavel": "Deivity Jhon Cunha Saugo ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Deivity Jhon Cunha Saugo ",
+      "status": "Finalizados",
+      "tarefa": "[Colíder 02][Skid 01] - Verificação de temperatura",
+      "criticidade": "",
+      "dataProgramada": "2026-07-07",
+      "dataCriacao": "2026-07-07",
+      "dataInicial": "2026-07-14",
+      "dataFinal": "2026-07-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "9098",
       "ativo": "SKID 3 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD100-SKID3 }",
       "equipe": "",
@@ -17564,68 +17664,10 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "9092",
-      "ativo": "Tracker 19.100 Axial 1V bilinha (um eixo de rotação horizontal)    { CAZ100-ETKR19.100 }",
-      "equipe": "",
-      "responsavel": "Gilson  Milhomem",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Gilson  Milhomem",
-      "status": "Finalizados",
-      "tarefa": "[Céu Azul][TR-19-Skid 01] - Tracker com problema de seguimento de ângulo alvo",
-      "criticidade": "",
-      "dataProgramada": "2026-07-07",
-      "dataCriacao": "2026-07-07",
-      "dataInicial": "2026-07-13",
-      "dataFinal": "2026-07-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "9078",
-      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Wesllen  Castro",
-      "status": "Finalizada",
-      "tarefa": "religamento da usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-07",
-      "dataCriacao": "2026-07-07",
-      "dataInicial": "2026-07-07",
-      "dataFinal": "2026-07-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "9075",
-      "ativo": "Inversor 4.2 Sungrow SG250HX    { THPN-SDN100-INVR4.2 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "[Sitio dos Nogueiras][Inversor 4.2] - Recomposição de strings furtadas",
-      "criticidade": "",
-      "dataProgramada": "2026-07-04",
-      "dataCriacao": "2026-07-07",
-      "dataInicial": "2026-07-07",
-      "dataFinal": "2026-07-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1947,
-  "totalGeral": 3858,
+  "historicoTotal": 1951,
+  "totalGeral": 3862,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
