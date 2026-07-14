@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-14T13:49:46Z",
+  "geradoEm": "2026-07-14T15:17:58Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-13 .. 2026-07-19",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3020,
-        "emAberto": 13,
+        "total": 3022,
+        "emAberto": 14,
         "atrasadas": 11,
-        "concluidas30d": 531,
-        "concluidas7d": 130,
-        "naSemanaCorrente": 37
+        "concluidas30d": 532,
+        "concluidas7d": 131,
+        "naSemanaCorrente": 39
       },
       "mttr": {
-        "horas": 7.58,
-        "label": "7h 35min",
-        "amostra": 531
+        "horas": 7.57,
+        "label": "7h 34min",
+        "amostra": 532
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W29",
-          "criadas": 37,
-          "finalizadas": 33
+          "criadas": 39,
+          "finalizadas": 34
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3020,
-            "emAberto": 13
+            "total": 3022,
+            "emAberto": 14
           }
         ],
         "responsaveis": [
@@ -58,7 +58,7 @@
           },
           {
             "nome": "Raphael Vitoriano",
-            "total": 319,
+            "total": 320,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 13,
+      "total": 14,
       "atrasadas": 11,
       "porStatus": {
-        "naoIniciada": 10,
+        "naoIniciada": 11,
         "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -292,6 +292,24 @@
           "atrasada": true
         },
         {
+          "osId": "9422",
+          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Wesllen  Castro",
+          "status": "Não Iniciada",
+          "tarefa": "UFV IPX01 E 02 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+          "criticidade": "",
+          "dataProgramada": "2026-07-14",
+          "dataCriacao": "2026-07-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
           "osId": "9421",
           "ativo": "Cabine 1 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN1 }",
           "equipe": "",
@@ -329,6 +347,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9423",
+          "ativo": "Axis - Petrolina 2 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL200 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizada",
+          "tarefa": "Inspeção e religamento da usina de PE2",
+          "criticidade": "",
+          "dataProgramada": "2026-07-14",
+          "dataCriacao": "2026-07-14",
+          "dataInicial": "2026-07-14",
+          "dataFinal": "2026-07-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "9416",
           "ativo": "Cabine 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-CABN4 }",
@@ -3308,33 +3346,13 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "8969",
-          "ativo": "Athon -  Timon 1 - MA LOT Sucessão O, ROD. MA 040, S/N, Jóia  Timon  Maranhão Brasil { ATHN-TIM100 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "Religamento da usina de TIM100",
-          "criticidade": "",
-          "dataProgramada": "2026-07-04",
-          "dataCriacao": "2026-07-04",
-          "dataInicial": "2026-07-04",
-          "dataFinal": "2026-07-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1535,
+      "historicoTotal": 1536,
       "subClassificacao": {
-        "remoto": 678,
-        "local": 2342,
-        "remotoEmAberto": 9,
+        "remoto": 679,
+        "local": 2343,
+        "remotoEmAberto": 10,
         "localEmAberto": 4,
         "pctRemoto": 22,
         "alerta": true
@@ -3511,7 +3529,7 @@
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
-            "total": 293
+            "total": 294
           },
           {
             "nome": "Felipe Silva",
@@ -9101,16 +9119,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 156,
-        "emAberto": 77,
-        "atrasadas": 77,
-        "concluidas30d": 46,
-        "concluidas7d": 35,
+        "emAberto": 76,
+        "atrasadas": 76,
+        "concluidas30d": 47,
+        "concluidas7d": 36,
         "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 82.43,
-        "label": "3d 10h",
-        "amostra": 46
+        "horas": 80.68,
+        "label": "3d 8h",
+        "amostra": 47
       },
       "tendencia4Semanas": [
         {
@@ -9131,7 +9149,7 @@
         {
           "semana": "W29",
           "criadas": 8,
-          "finalizadas": 13
+          "finalizadas": 14
         }
       ],
       "topOfensores": {
@@ -9139,7 +9157,7 @@
           {
             "nome": "(sem equipe)",
             "total": 156,
-            "emAberto": 77
+            "emAberto": 76
           }
         ],
         "responsaveis": [
@@ -9170,35 +9188,18 @@
           }
         ]
       },
-      "total": 77,
-      "atrasadas": 77,
+      "total": 76,
+      "atrasadas": 76,
       "porStatus": {
-        "naoIniciada": 72,
+        "naoIniciada": 71,
         "emProgresso": 2,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 77
+        "(sem equipe)": 76
       },
       "oss": [
-        {
-          "osId": "9418",
-          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STR100-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Júlio Willers ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Júlio Willers ",
-          "status": "Não Iniciada",
-          "tarefa": "[Santarém 1 e 2][Inversor 1.6] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-04-29",
-          "dataCriacao": "2026-07-14",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
         {
           "osId": "8025",
           "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { BES100-INVR1.8 }",
@@ -10499,6 +10500,25 @@
       ],
       "ossHistorico": [
         {
+          "osId": "9418",
+          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STR100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Júlio Willers ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Júlio Willers ",
+          "status": "Finalizados",
+          "tarefa": "[Santarém 1 e 2][Inversor 1.6] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-04-29",
+          "dataCriacao": "2026-07-14",
+          "dataInicial": "2026-07-14",
+          "dataFinal": "2026-07-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "9387",
           "ativo": "Inversor 1.11 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.11 }",
           "equipe": "",
@@ -11563,7 +11583,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 56
+      "historicoTotal": 57
     },
     "engenharia": {
       "label": "Engenharia",
@@ -12035,6 +12055,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "9422",
+      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Wesllen  Castro",
+      "status": "Não Iniciada",
+      "tarefa": "UFV IPX01 E 02 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+      "criticidade": "",
+      "dataProgramada": "2026-07-14",
+      "dataCriacao": "2026-07-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
       "osId": "9421",
       "ativo": "Cabine 1 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN1 }",
       "equipe": "",
@@ -12062,22 +12099,6 @@
       "tarefa": "[Santarém 1 e 2][Inversor 1.5] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-07-01",
-      "dataCriacao": "2026-07-14",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "9418",
-      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STR100-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Júlio Willers ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Júlio Willers ",
-      "status": "Não Iniciada",
-      "tarefa": "[Santarém 1 e 2][Inversor 1.6] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-04-29",
       "dataCriacao": "2026-07-14",
       "dataInicial": "",
       "dataFinal": "",
@@ -14692,6 +14713,45 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "9423",
+      "ativo": "Axis - Petrolina 2 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL200 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizada",
+      "tarefa": "Inspeção e religamento da usina de PE2",
+      "criticidade": "",
+      "dataProgramada": "2026-07-14",
+      "dataCriacao": "2026-07-14",
+      "dataInicial": "2026-07-14",
+      "dataFinal": "2026-07-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "9418",
+      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STR100-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Júlio Willers ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Júlio Willers ",
+      "status": "Finalizados",
+      "tarefa": "[Santarém 1 e 2][Inversor 1.6] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-04-29",
+      "dataCriacao": "2026-07-14",
+      "dataInicial": "2026-07-14",
+      "dataFinal": "2026-07-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
     {
       "osId": "9416",
       "ativo": "Cabine 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-CABN4 }",
@@ -17626,48 +17686,10 @@
       "horasAteAbrir": 72.0,
       "horasAteFechar": 72.0,
       "atrasada": false
-    },
-    {
-      "osId": "9096",
-      "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD100-SKID1 }",
-      "equipe": "",
-      "responsavel": "Deivity Jhon Cunha Saugo ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Deivity Jhon Cunha Saugo ",
-      "status": "Finalizados",
-      "tarefa": "[Colíder 01][Skid 01] - Verificação de Temperatura",
-      "criticidade": "",
-      "dataProgramada": "2026-07-07",
-      "dataCriacao": "2026-07-07",
-      "dataInicial": "2026-07-13",
-      "dataFinal": "2026-07-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "9093",
-      "ativo": "Infraestrutura Elétrica  Ponto Belo  Espírito Santo Brasil { PTB100-INFE1 }",
-      "equipe": "",
-      "responsavel": "Renato  Julien",
-      "criadoPor": "Juliana Cândido ",
-      "supervisor": "Renato  Julien",
-      "status": "Finalizados",
-      "tarefa": "[UFV-Ponto Belo] - Readequação de Solo Caixas de Passagens",
-      "criticidade": "",
-      "dataProgramada": "2026-07-07",
-      "dataCriacao": "2026-07-07",
-      "dataInicial": "2026-07-07",
-      "dataFinal": "2026-07-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1951,
-  "totalGeral": 3862,
+  "historicoTotal": 1953,
+  "totalGeral": 3864,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
