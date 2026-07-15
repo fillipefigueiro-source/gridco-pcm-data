@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-15T14:35:20Z",
+  "geradoEm": "2026-07-15T16:13:11Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-13 .. 2026-07-19",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3039,
-        "emAberto": 11,
+        "total": 3041,
+        "emAberto": 12,
         "atrasadas": 7,
-        "concluidas30d": 540,
-        "concluidas7d": 142,
-        "naSemanaCorrente": 54
+        "concluidas30d": 541,
+        "concluidas7d": 143,
+        "naSemanaCorrente": 56
       },
       "mttr": {
-        "horas": 8.34,
-        "label": "8h 20min",
-        "amostra": 540
+        "horas": 8.32,
+        "label": "8h 19min",
+        "amostra": 541
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W29",
-          "criadas": 56,
-          "finalizadas": 52
+          "criadas": 58,
+          "finalizadas": 53
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3039,
-            "emAberto": 11
+            "total": 3041,
+            "emAberto": 12
           }
         ],
         "responsaveis": [
@@ -73,21 +73,21 @@
           },
           {
             "nome": "James Chaves",
-            "total": 132,
-            "emAberto": 0
+            "total": 133,
+            "emAberto": 1
           }
         ]
       },
-      "total": 11,
+      "total": 12,
       "atrasadas": 7,
       "porStatus": {
-        "naoIniciada": 11,
+        "naoIniciada": 12,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 11
+        "(sem equipe)": 12
       },
       "oss": [
         {
@@ -217,6 +217,24 @@
           "atrasada": true
         },
         {
+          "osId": "9473",
+          "ativo": "Athon - Marabá 2 - PA Rua Bom Jesus, S/N Marabá  Pará Brasil { ATHN-MAB200 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "Testes de Religamento remoto UFV - MAB200",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
           "osId": "9470",
           "ativo": "Inversor 2.1 Huawei SUN2000-215KTL-H3    { DML100-INVR2.1 }",
           "equipe": "",
@@ -290,6 +308,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9475",
+          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Adriano  Moraes",
+          "status": "Finalizados",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "2026-07-15",
+          "dataFinal": "2026-07-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "9460",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3211,26 +3249,6 @@
           "atrasada": false
         },
         {
-          "osId": "8994",
-          "ativo": "Cabine 1 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Italo  Lustosa",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Italo  Lustosa",
-          "status": "Finalizada",
-          "tarefa": "UFV JUNCO 1 - Religamento remoto da usina. Relé trip 27ABC.",
-          "criticidade": "",
-          "dataProgramada": "2026-07-06",
-          "dataCriacao": "2026-07-06",
-          "dataInicial": "2026-07-06",
-          "dataFinal": "2026-07-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "9431",
           "ativo": "Inversor 1.6 Huawei     { TESTE100-INVR1.6 }",
           "equipe": "",
@@ -3291,11 +3309,11 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1538,
+      "historicoTotal": 1539,
       "subClassificacao": {
-        "remoto": 683,
-        "local": 2356,
-        "remotoEmAberto": 7,
+        "remoto": 684,
+        "local": 2357,
+        "remotoEmAberto": 8,
         "localEmAberto": 4,
         "pctRemoto": 22,
         "alerta": true
@@ -3488,7 +3506,7 @@
           },
           {
             "nome": "Juliana Cândido",
-            "total": 27
+            "total": 28
           },
           {
             "nome": "DavidNascimento",
@@ -8937,12 +8955,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 169,
-        "emAberto": 65,
+        "total": 170,
+        "emAberto": 66,
         "atrasadas": 64,
         "concluidas30d": 71,
         "concluidas7d": 58,
-        "naSemanaCorrente": 6
+        "naSemanaCorrente": 7
       },
       "mttr": {
         "horas": 111.89,
@@ -8967,7 +8985,7 @@
         },
         {
           "semana": "W29",
-          "criadas": 12,
+          "criadas": 13,
           "finalizadas": 38
         }
       ],
@@ -8975,8 +8993,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 169,
-            "emAberto": 65
+            "total": 170,
+            "emAberto": 66
           }
         ],
         "responsaveis": [
@@ -9007,16 +9025,16 @@
           }
         ]
       },
-      "total": 65,
+      "total": 66,
       "atrasadas": 64,
       "porStatus": {
-        "naoIniciada": 58,
+        "naoIniciada": 59,
         "emProgresso": 2,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 65
+        "(sem equipe)": 66
       },
       "oss": [
         {
@@ -10113,6 +10131,23 @@
           "linkFracttal": "",
           "horasAteAbrir": 96.0,
           "atrasada": true
+        },
+        {
+          "osId": "9476",
+          "ativo": "Inversor 1.5 Huawei     { THPN-NVL200-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Nova Londrina 2][Inversor 1.5] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "9468",
@@ -12127,6 +12162,39 @@
     }
   },
   "ossPublicas": [
+    {
+      "osId": "9476",
+      "ativo": "Inversor 1.5 Huawei     { THPN-NVL200-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Nova Londrina 2][Inversor 1.5] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9473",
+      "ativo": "Athon - Marabá 2 - PA Rua Bom Jesus, S/N Marabá  Pará Brasil { ATHN-MAB200 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "Testes de Religamento remoto UFV - MAB200",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
     {
       "osId": "9470",
       "ativo": "Inversor 2.1 Huawei SUN2000-215KTL-H3    { DML100-INVR2.1 }",
@@ -14461,6 +14529,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "9475",
+      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Adriano  Moraes",
+      "status": "Finalizados",
+      "tarefa": "Religamento da usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-15",
+      "dataInicial": "2026-07-15",
+      "dataFinal": "2026-07-15",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "9460",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -17425,30 +17513,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "9144",
-      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da cabine 5 de TIM200",
-      "criticidade": "",
-      "dataProgramada": "2026-07-08",
-      "dataCriacao": "2026-07-08",
-      "dataInicial": "2026-07-08",
-      "dataFinal": "2026-07-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1978,
-  "totalGeral": 3894,
+  "historicoTotal": 1979,
+  "totalGeral": 3897,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
