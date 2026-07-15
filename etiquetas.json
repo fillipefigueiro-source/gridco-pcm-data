@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-15T18:51:30Z",
+  "geradoEm": "2026-07-15T20:15:33Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-13 .. 2026-07-19",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3044,
-        "emAberto": 14,
+        "total": 3047,
+        "emAberto": 15,
         "atrasadas": 7,
-        "concluidas30d": 542,
-        "concluidas7d": 144,
-        "naSemanaCorrente": 59
+        "concluidas30d": 544,
+        "concluidas7d": 146,
+        "naSemanaCorrente": 62
       },
       "mttr": {
-        "horas": 8.3,
-        "label": "8h 18min",
-        "amostra": 542
+        "horas": 8.27,
+        "label": "8h 16min",
+        "amostra": 544
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W29",
-          "criadas": 61,
-          "finalizadas": 54
+          "criadas": 64,
+          "finalizadas": 56
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3044,
-            "emAberto": 14
+            "total": 3047,
+            "emAberto": 15
           }
         ],
         "responsaveis": [
@@ -63,7 +63,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 283,
+            "total": 285,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
+      "total": 15,
       "atrasadas": 7,
       "porStatus": {
         "naoIniciada": 14,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -217,6 +217,24 @@
           "atrasada": true
         },
         {
+          "osId": "9495",
+          "ativo": "Athon - Matões 1 - MA Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { ATHN-MTS100 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Francisco  Santos",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "9480",
           "ativo": "Grid Co. - Emergências e outros pontos      { GRID }",
           "equipe": "",
@@ -295,14 +313,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Religamento do inversor",
           "criticidade": "",
           "dataProgramada": "2026-07-15",
           "dataCriacao": "2026-07-15",
-          "dataInicial": "",
+          "dataInicial": "2026-07-15",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -344,6 +363,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9496",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da Usina remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "2026-07-15",
+          "dataFinal": "2026-07-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "9493",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da Usina remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "2026-07-15",
+          "dataFinal": "2026-07-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "9475",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
@@ -3265,26 +3324,6 @@
           "atrasada": false
         },
         {
-          "osId": "9047",
-          "ativo": "Thopen - Parelhas 1 - RN Rodovia RN 088, nº 01, Zona Rural Parelhas  Rio Grande do Norte Brasil { THPN-PRL100 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Silva",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Cláudio  Silva",
-          "status": "Finalizada",
-          "tarefa": "Religamento da UFV Parelhas",
-          "criticidade": "",
-          "dataProgramada": "2026-07-07",
-          "dataCriacao": "2026-07-07",
-          "dataInicial": "2026-07-07",
-          "dataFinal": "2026-07-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9431",
           "ativo": "Inversor 1.6 Huawei     { TESTE100-INVR1.6 }",
           "equipe": "",
@@ -3298,26 +3337,6 @@
           "dataCriacao": "2026-07-14",
           "dataInicial": "2026-07-05",
           "dataFinal": "2026-07-05",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "9046",
-          "ativo": "Athon - Matões 1 - MA Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { ATHN-MTS100 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da UFV - Matões 100",
-          "criticidade": "",
-          "dataProgramada": "2026-07-04",
-          "dataCriacao": "2026-07-06",
-          "dataInicial": "2026-07-04",
-          "dataFinal": "2026-07-04",
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
@@ -3345,13 +3364,13 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1540,
+      "historicoTotal": 1542,
       "subClassificacao": {
-        "remoto": 684,
-        "local": 2360,
+        "remoto": 686,
+        "local": 2361,
         "remotoEmAberto": 8,
-        "localEmAberto": 6,
-        "pctRemoto": 22,
+        "localEmAberto": 7,
+        "pctRemoto": 23,
         "alerta": true
       },
       "rankingDemora": {
@@ -3521,8 +3540,8 @@
         ],
         "medHorasAbrir": 3.4,
         "medHorasFechar": 2.9,
-        "amostraAbrir": 671,
-        "amostraFechar": 671,
+        "amostraAbrir": 673,
+        "amostraFechar": 673,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3530,7 +3549,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 212
+            "total": 214
           },
           {
             "nome": "Raphael Vitoriano",
@@ -9025,12 +9044,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 172,
-        "emAberto": 66,
+        "total": 178,
+        "emAberto": 72,
         "atrasadas": 63,
         "concluidas30d": 72,
         "concluidas7d": 59,
-        "naSemanaCorrente": 8
+        "naSemanaCorrente": 14
       },
       "mttr": {
         "horas": 113.0,
@@ -9055,7 +9074,7 @@
         },
         {
           "semana": "W29",
-          "criadas": 15,
+          "criadas": 21,
           "finalizadas": 39
         }
       ],
@@ -9063,8 +9082,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 172,
-            "emAberto": 66
+            "total": 178,
+            "emAberto": 72
           }
         ],
         "responsaveis": [
@@ -9095,16 +9114,16 @@
           }
         ]
       },
-      "total": 66,
+      "total": 72,
       "atrasadas": 63,
       "porStatus": {
-        "naoIniciada": 59,
-        "emProgresso": 2,
+        "naoIniciada": 64,
+        "emProgresso": 3,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 66
+        "(sem equipe)": 72
       },
       "oss": [
         {
@@ -9746,14 +9765,15 @@
           "responsavel": "Gabriel Oliveira ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Gabriel Oliveira ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Nova Xavantina 01][Skid 03] - Verificação de temperatura",
           "criticidade": "",
           "dataProgramada": "2026-07-07",
           "dataCriacao": "2026-07-07",
-          "dataInicial": "",
+          "dataInicial": "2026-07-15",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "atrasada": true
         },
         {
@@ -10184,6 +10204,108 @@
           "linkFracttal": "",
           "horasAteAbrir": 96.0,
           "atrasada": true
+        },
+        {
+          "osId": "9503",
+          "ativo": "Tracker 48.100 STI STI-H250    { THPN-VRT200-ETKR48.100 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Vertentes 2][Tracker 48.100] - Verificação de Tracker com Problema",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9502",
+          "ativo": "Tracker 46.100 STI STI-H250    { THPN-VRT200-ETKR46.100 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Vertentes 2][Tracker 46.100] - Verificação de Tracker com Problema",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9501",
+          "ativo": "Tracker 44.100 STI STI-H250    { THPN-VRT200-ETKR44.100 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Vertentes 2][Tracker 44.100] - Verificação de Tracker com Problema",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9500",
+          "ativo": "Tracker 42.100 STI STI-H250    { THPN-VRT200-ETKR42.100 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Vertentes 2][Tracker 42.100] - Verificação de Tracker com Problema",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9499",
+          "ativo": "Tracker 40.100 STI STI-H250    { THPN-VRT200-ETKR40.100 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Vertentes 2][Tracker 40.100] - Verificação de Tracker com Problema",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9498",
+          "ativo": "Tracker 35.100 STI STI-H250    { THPN-VRT200-ETKR35.100 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Vertentes 2][Tracker 35.100] - Verificação de Tracker com Problema",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "9485",
@@ -12271,6 +12393,119 @@
   },
   "ossPublicas": [
     {
+      "osId": "9503",
+      "ativo": "Tracker 48.100 STI STI-H250    { THPN-VRT200-ETKR48.100 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Vertentes 2][Tracker 48.100] - Verificação de Tracker com Problema",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9502",
+      "ativo": "Tracker 46.100 STI STI-H250    { THPN-VRT200-ETKR46.100 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Vertentes 2][Tracker 46.100] - Verificação de Tracker com Problema",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9501",
+      "ativo": "Tracker 44.100 STI STI-H250    { THPN-VRT200-ETKR44.100 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Vertentes 2][Tracker 44.100] - Verificação de Tracker com Problema",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9500",
+      "ativo": "Tracker 42.100 STI STI-H250    { THPN-VRT200-ETKR42.100 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Vertentes 2][Tracker 42.100] - Verificação de Tracker com Problema",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9499",
+      "ativo": "Tracker 40.100 STI STI-H250    { THPN-VRT200-ETKR40.100 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Vertentes 2][Tracker 40.100] - Verificação de Tracker com Problema",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9498",
+      "ativo": "Tracker 35.100 STI STI-H250    { THPN-VRT200-ETKR35.100 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Vertentes 2][Tracker 35.100] - Verificação de Tracker com Problema",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9495",
+      "ativo": "Athon - Matões 1 - MA Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { ATHN-MTS100 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Francisco  Santos",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento da usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "9487",
       "ativo": "Transformador 1 WEG     { PRB100-TRFR1 }",
       "equipe": "",
@@ -12425,14 +12660,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Religamento do inversor",
       "criticidade": "",
       "dataProgramada": "2026-07-15",
       "dataCriacao": "2026-07-15",
-      "dataInicial": "",
+      "dataInicial": "2026-07-15",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -13090,14 +13326,15 @@
       "responsavel": "Gabriel Oliveira ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Gabriel Oliveira ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Nova Xavantina 01][Skid 03] - Verificação de temperatura",
       "criticidade": "",
       "dataProgramada": "2026-07-07",
       "dataCriacao": "2026-07-07",
-      "dataInicial": "",
+      "dataInicial": "2026-07-15",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 192.0
     },
     {
       "osId": "9113",
@@ -14703,6 +14940,46 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "9496",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da Usina remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-15",
+      "dataInicial": "2026-07-15",
+      "dataFinal": "2026-07-15",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "9493",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da Usina remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-15",
+      "dataInicial": "2026-07-15",
+      "dataFinal": "2026-07-15",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "9475",
       "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
@@ -17647,50 +17924,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "9150",
-      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da cabine 5 Timon 200",
-      "criticidade": "",
-      "dataProgramada": "2026-07-08",
-      "dataCriacao": "2026-07-08",
-      "dataInicial": "2026-07-08",
-      "dataFinal": "2026-07-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "9146",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina de Marialva",
-      "criticidade": "",
-      "dataProgramada": "2026-07-08",
-      "dataCriacao": "2026-07-08",
-      "dataInicial": "2026-07-08",
-      "dataFinal": "2026-07-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 1982,
-  "totalGeral": 3904,
+  "historicoTotal": 1984,
+  "totalGeral": 3913,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
