@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-16T15:16:48Z",
+  "geradoEm": "2026-07-16T16:47:45Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-13 .. 2026-07-19",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 14,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 13,
-        "emProgresso": 0,
+        "naoIniciada": 12,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
@@ -295,14 +295,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "UFV IPX01 E 2 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
           "criticidade": "",
           "dataProgramada": "2026-07-16",
           "dataCriacao": "2026-07-16",
-          "dataInicial": "",
+          "dataInicial": "2026-07-16",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "remoto",
           "atrasada": false
         },
@@ -3522,7 +3523,7 @@
         ],
         "medHorasAbrir": 3.3,
         "medHorasFechar": 2.9,
-        "amostraAbrir": 676,
+        "amostraAbrir": 677,
         "amostraFechar": 676,
         "topAbridores": [
           {
@@ -8993,17 +8994,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 180,
-        "emAberto": 71,
-        "atrasadas": 71,
-        "concluidas30d": 75,
+        "total": 192,
+        "emAberto": 81,
+        "atrasadas": 72,
+        "concluidas30d": 77,
         "concluidas7d": 53,
-        "naSemanaCorrente": 14
+        "naSemanaCorrente": 23
       },
       "mttr": {
-        "horas": 114.24,
-        "label": "4d 18h",
-        "amostra": 75
+        "horas": 113.14,
+        "label": "4d 17h",
+        "amostra": 77
       },
       "tendencia4Semanas": [
         {
@@ -9013,8 +9014,8 @@
         },
         {
           "semana": "W27",
-          "criadas": 23,
-          "finalizadas": 7
+          "criadas": 25,
+          "finalizadas": 9
         },
         {
           "semana": "W28",
@@ -9023,7 +9024,7 @@
         },
         {
           "semana": "W29",
-          "criadas": 23,
+          "criadas": 33,
           "finalizadas": 42
         }
       ],
@@ -9031,8 +9032,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 180,
-            "emAberto": 71
+            "total": 192,
+            "emAberto": 81
           }
         ],
         "responsaveis": [
@@ -9052,27 +9053,27 @@
             "emAberto": 14
           },
           {
+            "nome": "Cláudio  Ferreira",
+            "total": 9,
+            "emAberto": 9
+          },
+          {
             "nome": "Wesllen  Castro",
             "total": 9,
             "emAberto": 1
-          },
-          {
-            "nome": "Luiz  Silva",
-            "total": 8,
-            "emAberto": 2
           }
         ]
       },
-      "total": 71,
-      "atrasadas": 71,
+      "total": 81,
+      "atrasadas": 72,
       "porStatus": {
-        "naoIniciada": 63,
-        "emProgresso": 2,
+        "naoIniciada": 72,
+        "emProgresso": 3,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 71
+        "(sem equipe)": 81
       },
       "oss": [
         {
@@ -9121,6 +9122,23 @@
           "criticidade": "",
           "dataProgramada": "2026-05-06",
           "dataCriacao": "2026-05-06",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "9539",
+          "ativo": "Inversor 5.4 Sungrow SG75CX    { THPN-ORB100-INVR5.4 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Ricardo Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Ouro Branco 1][Inversor 5.4] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-05-18",
+          "dataCriacao": "2026-07-16",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -10280,15 +10298,169 @@
           "responsavel": "Eduardo Souza",
           "criadoPor": "Roger Lélis",
           "supervisor": "Eduardo Souza",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Matão 02-Topázio][Cabos CC] - Verificar quantidade de strings por inversor",
           "criticidade": "",
           "dataProgramada": "2026-07-15",
           "dataCriacao": "2026-07-15",
+          "dataInicial": "2026-07-16",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "atrasada": true
+        },
+        {
+          "osId": "9548",
+          "ativo": "Inversor 1.5 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Não Iniciada",
+          "tarefa": "[Sol do Norte 1][Inversor 1.5] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-16",
+          "dataCriacao": "2026-07-16",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
+          "atrasada": false
+        },
+        {
+          "osId": "9547",
+          "ativo": "Inversor 1.4 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Não Iniciada",
+          "tarefa": "[Sol do Norte 1][Inversor 1.4] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-16",
+          "dataCriacao": "2026-07-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9546",
+          "ativo": "Inversor 1.3 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Não Iniciada",
+          "tarefa": "[Sol do Norte 1][Inversor 1.3] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-16",
+          "dataCriacao": "2026-07-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9545",
+          "ativo": "Inversor 1.2 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Não Iniciada",
+          "tarefa": "[Sol do Norte 1][Inversor 1.2] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-16",
+          "dataCriacao": "2026-07-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9544",
+          "ativo": "Inversor 1.1 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Não Iniciada",
+          "tarefa": "[Sol do Norte 1][Inversor 1.1] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-16",
+          "dataCriacao": "2026-07-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9543",
+          "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Não Iniciada",
+          "tarefa": "[Guajirú 1][Inversor 1.4] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-16",
+          "dataCriacao": "2026-07-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9542",
+          "ativo": "Inversor 1.3 Sungrow SG250HX    { GDEN-GJR100-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Não Iniciada",
+          "tarefa": "[Guajirú 1][Inversor 1.3] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-16",
+          "dataCriacao": "2026-07-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9541",
+          "ativo": "Inversor 1.2 Sungrow SG250HX    { GDEN-GJR100-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Não Iniciada",
+          "tarefa": "[Guajirú 1][Inversor 1.2] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-16",
+          "dataCriacao": "2026-07-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9540",
+          "ativo": "Inversor 1.1 Sungrow SG250HX    { GDEN-GJR100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Não Iniciada",
+          "tarefa": "[Guajirú 1][Inversor 1.1] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-16",
+          "dataCriacao": "2026-07-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -11509,6 +11681,44 @@
           "atrasada": false
         },
         {
+          "osId": "8678",
+          "ativo": "Inversor 1.4 Huawei SUN-330KTL-H1    { CXB100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Juliana Cândido ",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizada",
+          "tarefa": "[Caxambu] [Inversor 4] - Análise Geral do Inversor e Regularização",
+          "criticidade": "",
+          "dataProgramada": "2026-06-30",
+          "dataCriacao": "2026-06-30",
+          "dataInicial": "2026-07-03",
+          "dataFinal": "2026-07-03",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "8677",
+          "ativo": "Inversor 1.5 Huawei SUN-330KTL-H1    { CXB100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Juliana Cândido ",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizada",
+          "tarefa": "[Caxambu] [Inversor 1.5] - Análise Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-06-30",
+          "dataCriacao": "2026-06-30",
+          "dataInicial": "2026-07-03",
+          "dataFinal": "2026-07-03",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "8341",
           "ativo": "Inversor 4.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR4.2 }",
           "equipe": "",
@@ -11927,7 +12137,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 86
+      "historicoTotal": 88
     },
     "engenharia": {
       "label": "Engenharia",
@@ -12382,6 +12592,166 @@
   },
   "ossPublicas": [
     {
+      "osId": "9548",
+      "ativo": "Inversor 1.5 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Não Iniciada",
+      "tarefa": "[Sol do Norte 1][Inversor 1.5] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-16",
+      "dataCriacao": "2026-07-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9547",
+      "ativo": "Inversor 1.4 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Não Iniciada",
+      "tarefa": "[Sol do Norte 1][Inversor 1.4] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-16",
+      "dataCriacao": "2026-07-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9546",
+      "ativo": "Inversor 1.3 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Não Iniciada",
+      "tarefa": "[Sol do Norte 1][Inversor 1.3] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-16",
+      "dataCriacao": "2026-07-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9545",
+      "ativo": "Inversor 1.2 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.2 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Não Iniciada",
+      "tarefa": "[Sol do Norte 1][Inversor 1.2] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-16",
+      "dataCriacao": "2026-07-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9544",
+      "ativo": "Inversor 1.1 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Não Iniciada",
+      "tarefa": "[Sol do Norte 1][Inversor 1.1] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-16",
+      "dataCriacao": "2026-07-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9543",
+      "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Não Iniciada",
+      "tarefa": "[Guajirú 1][Inversor 1.4] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-16",
+      "dataCriacao": "2026-07-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9542",
+      "ativo": "Inversor 1.3 Sungrow SG250HX    { GDEN-GJR100-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Não Iniciada",
+      "tarefa": "[Guajirú 1][Inversor 1.3] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-16",
+      "dataCriacao": "2026-07-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9541",
+      "ativo": "Inversor 1.2 Sungrow SG250HX    { GDEN-GJR100-INVR1.2 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Não Iniciada",
+      "tarefa": "[Guajirú 1][Inversor 1.2] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-16",
+      "dataCriacao": "2026-07-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9540",
+      "ativo": "Inversor 1.1 Sungrow SG250HX    { GDEN-GJR100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Não Iniciada",
+      "tarefa": "[Guajirú 1][Inversor 1.1] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-16",
+      "dataCriacao": "2026-07-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9539",
+      "ativo": "Inversor 5.4 Sungrow SG75CX    { THPN-ORB100-INVR5.4 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Ricardo Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Ouro Branco 1][Inversor 5.4] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-05-18",
+      "dataCriacao": "2026-07-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "9537",
       "ativo": "Inversor 1.2 Huawei     { TESTE100-INVR1.2 }",
       "equipe": "",
@@ -12455,14 +12825,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "UFV IPX01 E 2 - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
       "criticidade": "",
       "dataProgramada": "2026-07-16",
       "dataCriacao": "2026-07-16",
-      "dataInicial": "",
+      "dataInicial": "2026-07-16",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "remoto"
     },
     {
@@ -12667,14 +13038,15 @@
       "responsavel": "Eduardo Souza",
       "criadoPor": "Roger Lélis",
       "supervisor": "Eduardo Souza",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Matão 02-Topázio][Cabos CC] - Verificar quantidade de strings por inversor",
       "criticidade": "",
       "dataProgramada": "2026-07-15",
       "dataCriacao": "2026-07-15",
-      "dataInicial": "",
+      "dataInicial": "2026-07-16",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "9451",
@@ -17850,8 +18222,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 1982,
-  "totalGeral": 3928,
+  "historicoTotal": 1984,
+  "totalGeral": 3940,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
