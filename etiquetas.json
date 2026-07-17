@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-17T19:39:06Z",
+  "geradoEm": "2026-07-17T20:39:52Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-13 .. 2026-07-19",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3078,
-        "emAberto": 10,
+        "total": 3079,
+        "emAberto": 9,
         "atrasadas": 8,
-        "concluidas30d": 537,
-        "concluidas7d": 141,
-        "naSemanaCorrente": 93
+        "concluidas30d": 539,
+        "concluidas7d": 143,
+        "naSemanaCorrente": 94
       },
       "mttr": {
-        "horas": 7.76,
-        "label": "7h 45min",
-        "amostra": 537
+        "horas": 7.73,
+        "label": "7h 44min",
+        "amostra": 539
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W29",
-          "criadas": 95,
-          "finalizadas": 92
+          "criadas": 96,
+          "finalizadas": 94
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3078,
-            "emAberto": 10
+            "total": 3079,
+            "emAberto": 9
           }
         ],
         "responsaveis": [
@@ -63,7 +63,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 289,
+            "total": 290,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 10,
+      "total": 9,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 9,
+        "naoIniciada": 8,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 10
+        "(sem equipe)": 9
       },
       "oss": [
         {
@@ -236,24 +236,6 @@
           "atrasada": true
         },
         {
-          "osId": "9616",
-          "ativo": "Cabine 4 Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB200-CABN4 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
-          "tarefa": "Testes de religamento remoto cabine 04 MAB200",
-          "criticidade": "",
-          "dataProgramada": "2026-07-17",
-          "dataCriacao": "2026-07-17",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "9263",
           "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
           "equipe": "",
@@ -273,6 +255,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9644",
+          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da cabine remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-17",
+          "dataCriacao": "2026-07-17",
+          "dataInicial": "2026-07-17",
+          "dataFinal": "2026-07-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "9633",
           "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
@@ -342,6 +344,26 @@
           "supervisor": "Felipe Silva ",
           "status": "Finalizada",
           "tarefa": "Religamento da usina remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-17",
+          "dataCriacao": "2026-07-17",
+          "dataInicial": "2026-07-17",
+          "dataFinal": "2026-07-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "9616",
+          "ativo": "Cabine 4 Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB200-CABN4 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "Testes de religamento remoto cabine 04 MAB200",
           "criticidade": "",
           "dataProgramada": "2026-07-17",
           "dataCriacao": "2026-07-17",
@@ -1670,26 +1692,6 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "9207",
-          "ativo": "Thopen - Salto Pirapora 3 - SP    São Paulo Brasil { THPN-SPP300 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizada",
-          "tarefa": "Teste de religamento UFV  -Salto de Pirapora 3",
-          "criticidade": "",
-          "dataProgramada": "2026-07-10",
-          "dataCriacao": "2026-07-09",
-          "dataInicial": "2026-07-14",
-          "dataFinal": "2026-07-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3214,26 +3216,6 @@
           "atrasada": false
         },
         {
-          "osId": "9222",
-          "ativo": "Cabine 1 Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Luely  Santos",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizados",
-          "tarefa": "[Sítio dos Nogueiras] - Religamento da cabine",
-          "criticidade": "",
-          "dataProgramada": "2026-07-09",
-          "dataCriacao": "2026-07-09",
-          "dataInicial": "2026-07-09",
-          "dataFinal": "2026-07-09",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9431",
           "ativo": "Inversor 1.6 Huawei     { TESTE100-INVR1.6 }",
           "equipe": "",
@@ -3274,11 +3256,11 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1548,
+      "historicoTotal": 1550,
       "subClassificacao": {
-        "remoto": 695,
+        "remoto": 696,
         "local": 2383,
-        "remotoEmAberto": 8,
+        "remotoEmAberto": 7,
         "localEmAberto": 2,
         "pctRemoto": 23,
         "alerta": true
@@ -3449,9 +3431,9 @@
           }
         ],
         "medHorasAbrir": 3.3,
-        "medHorasFechar": 2.9,
-        "amostraAbrir": 682,
-        "amostraFechar": 682,
+        "medHorasFechar": 2.8,
+        "amostraAbrir": 684,
+        "amostraFechar": 684,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3459,7 +3441,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 217
+            "total": 218
           },
           {
             "nome": "Raphael Vitoriano",
@@ -8928,17 +8910,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 233,
-        "emAberto": 74,
-        "atrasadas": 74,
-        "concluidas30d": 120,
-        "concluidas7d": 89,
-        "naSemanaCorrente": 49
+        "total": 235,
+        "emAberto": 75,
+        "atrasadas": 73,
+        "concluidas30d": 121,
+        "concluidas7d": 90,
+        "naSemanaCorrente": 51
       },
       "mttr": {
-        "horas": 102.4,
-        "label": "4d 6h",
-        "amostra": 120
+        "horas": 101.55,
+        "label": "4d 5h",
+        "amostra": 121
       },
       "tendencia4Semanas": [
         {
@@ -8958,16 +8940,16 @@
         },
         {
           "semana": "W29",
-          "criadas": 61,
-          "finalizadas": 77
+          "criadas": 63,
+          "finalizadas": 78
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 233,
-            "emAberto": 74
+            "total": 235,
+            "emAberto": 75
           }
         ],
         "responsaveis": [
@@ -8998,16 +8980,16 @@
           }
         ]
       },
-      "total": 74,
-      "atrasadas": 74,
+      "total": 75,
+      "atrasadas": 73,
       "porStatus": {
-        "naoIniciada": 66,
-        "emProgresso": 4,
+        "naoIniciada": 68,
+        "emProgresso": 3,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 74
+        "(sem equipe)": 75
       },
       "oss": [
         {
@@ -9162,24 +9144,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9614",
-          "ativo": "Inversor 1.9 Sungrow     { BWK100-INVR1.9 }",
-          "equipe": "",
-          "responsavel": "Luis  Moura",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Luis  Moura",
-          "status": "Em progresso",
-          "tarefa": "[Brodowski 1][Inversor 1.9] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-07-01",
-          "dataCriacao": "2026-07-17",
-          "dataInicial": "2026-07-17",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "atrasada": true
         },
         {
@@ -10275,9 +10239,62 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "9643",
+          "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Capitão Poço 1][Inversor 7.2] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-17",
+          "dataCriacao": "2026-07-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "9642",
+          "ativo": "Inversor 7.1 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.1 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Capitão Poço 1][Inversor 7.1] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-17",
+          "dataCriacao": "2026-07-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9614",
+          "ativo": "Inversor 1.9 Sungrow     { BWK100-INVR1.9 }",
+          "equipe": "",
+          "responsavel": "Luis  Moura",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Luis  Moura",
+          "status": "Finalizados",
+          "tarefa": "[Brodowski 1][Inversor 1.9] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-07-17",
+          "dataInicial": "2026-07-17",
+          "dataFinal": "2026-07-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "9582",
           "ativo": "Inversor 1.10 Sungrow     { MTO100-INVR1.10 }",
@@ -12806,7 +12823,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 133
+      "historicoTotal": 134
     },
     "engenharia": {
       "label": "Engenharia",
@@ -13243,6 +13260,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "9643",
+      "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Capitão Poço 1][Inversor 7.2] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-17",
+      "dataCriacao": "2026-07-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9642",
+      "ativo": "Inversor 7.1 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.1 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Capitão Poço 1][Inversor 7.1] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-17",
+      "dataCriacao": "2026-07-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "9625",
       "ativo": "Inversor 12.1 Huawei SUN2000-75KTL-M1    { THPN-SDI100-INVR12.1 }",
       "equipe": "",
@@ -13273,40 +13322,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "9616",
-      "ativo": "Cabine 4 Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB200-CABN4 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
-      "tarefa": "Testes de religamento remoto cabine 04 MAB200",
-      "criticidade": "",
-      "dataProgramada": "2026-07-17",
-      "dataCriacao": "2026-07-17",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "remoto"
-    },
-    {
-      "osId": "9614",
-      "ativo": "Inversor 1.9 Sungrow     { BWK100-INVR1.9 }",
-      "equipe": "",
-      "responsavel": "Luis  Moura",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Luis  Moura",
-      "status": "Em progresso",
-      "tarefa": "[Brodowski 1][Inversor 1.9] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-07-01",
-      "dataCriacao": "2026-07-17",
-      "dataInicial": "2026-07-17",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
     },
     {
       "osId": "9602",
@@ -15661,6 +15676,26 @@
   ],
   "ossHistorico": [
     {
+      "osId": "9644",
+      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da cabine remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-17",
+      "dataCriacao": "2026-07-17",
+      "dataInicial": "2026-07-17",
+      "dataFinal": "2026-07-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
       "osId": "9633",
       "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
       "equipe": "",
@@ -15738,6 +15773,45 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "9616",
+      "ativo": "Cabine 4 Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB200-CABN4 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "James Chaves ",
+      "status": "Finalizados",
+      "tarefa": "Testes de religamento remoto cabine 04 MAB200",
+      "criticidade": "",
+      "dataProgramada": "2026-07-17",
+      "dataCriacao": "2026-07-17",
+      "dataInicial": "2026-07-17",
+      "dataFinal": "2026-07-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "9614",
+      "ativo": "Inversor 1.9 Sungrow     { BWK100-INVR1.9 }",
+      "equipe": "",
+      "responsavel": "Luis  Moura",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Luis  Moura",
+      "status": "Finalizados",
+      "tarefa": "[Brodowski 1][Inversor 1.9] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-07-17",
+      "dataInicial": "2026-07-17",
+      "dataFinal": "2026-07-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -18557,70 +18631,10 @@
       "horasAteFechar": 0,
       "modalidade": "remoto",
       "atrasada": false
-    },
-    {
-      "osId": "9314",
-      "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizada",
-      "tarefa": "UFV CEI II - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-      "criticidade": "",
-      "dataProgramada": "2026-07-12",
-      "dataCriacao": "2026-07-12",
-      "dataInicial": "2026-07-12",
-      "dataFinal": "2026-07-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
-    },
-    {
-      "osId": "9310",
-      "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
-      "equipe": "",
-      "responsavel": "Ricardo Silva ",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Ricardo Silva ",
-      "status": "Finalizada",
-      "tarefa": "Religamento de usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-12",
-      "dataCriacao": "2026-07-12",
-      "dataInicial": "2026-07-11",
-      "dataFinal": "2026-07-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "9303",
-      "ativo": "Grid Co. - Emergências e outros pontos      { GRID }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Marcos Duarte ",
-      "status": "Finalizados",
-      "tarefa": "Religamento e Suporte para a Equipe Thopen - Córrego do Sapucaia 2",
-      "criticidade": "",
-      "dataProgramada": "2026-07-11",
-      "dataCriacao": "2026-07-11",
-      "dataInicial": "2026-07-11",
-      "dataFinal": "2026-07-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2044,
-  "totalGeral": 4004,
+  "historicoTotal": 2047,
+  "totalGeral": 4007,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
