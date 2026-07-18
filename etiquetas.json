@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-18T19:37:17Z",
+  "geradoEm": "2026-07-18T20:34:51Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-13 .. 2026-07-19",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3095,
-        "emAberto": 10,
+        "total": 3097,
+        "emAberto": 11,
         "atrasadas": 7,
-        "concluidas30d": 539,
-        "concluidas7d": 144,
-        "naSemanaCorrente": 110
+        "concluidas30d": 540,
+        "concluidas7d": 145,
+        "naSemanaCorrente": 112
       },
       "mttr": {
-        "horas": 7.83,
-        "label": "7h 50min",
-        "amostra": 539
+        "horas": 7.82,
+        "label": "7h 49min",
+        "amostra": 540
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W29",
-          "criadas": 112,
-          "finalizadas": 109
+          "criadas": 114,
+          "finalizadas": 110
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3095,
-            "emAberto": 10
+            "total": 3097,
+            "emAberto": 11
           }
         ],
         "responsaveis": [
@@ -58,7 +58,7 @@
           },
           {
             "nome": "Raphael Vitoriano",
-            "total": 329,
+            "total": 330,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 10,
+      "total": 11,
       "atrasadas": 7,
       "porStatus": {
-        "naoIniciada": 10,
+        "naoIniciada": 11,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 10
+        "(sem equipe)": 11
       },
       "oss": [
         {
@@ -217,6 +217,24 @@
           "atrasada": true
         },
         {
+          "osId": "9682",
+          "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
+          "equipe": "",
+          "responsavel": "Henri Almeida ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Henri Almeida ",
+          "status": "Não Iniciada",
+          "tarefa": "UFV SANTO INACIO  - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+          "criticidade": "",
+          "dataProgramada": "2026-07-18",
+          "dataCriacao": "2026-07-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
           "osId": "9675",
           "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
           "equipe": "",
@@ -272,6 +290,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9683",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da usina de Marialva",
+          "criticidade": "",
+          "dataProgramada": "2026-07-18",
+          "dataCriacao": "2026-07-18",
+          "dataInicial": "2026-07-18",
+          "dataFinal": "2026-07-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "9681",
           "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
@@ -3213,26 +3251,6 @@
           "atrasada": false
         },
         {
-          "osId": "9261",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da usina de Marialva",
-          "criticidade": "",
-          "dataProgramada": "2026-07-10",
-          "dataCriacao": "2026-07-10",
-          "dataInicial": "2026-07-10",
-          "dataFinal": "2026-07-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9431",
           "ativo": "Inversor 1.6 Huawei     { TESTE100-INVR1.6 }",
           "equipe": "",
@@ -3273,11 +3291,11 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1557,
+      "historicoTotal": 1558,
       "subClassificacao": {
-        "remoto": 701,
-        "local": 2394,
-        "remotoEmAberto": 8,
+        "remoto": 702,
+        "local": 2395,
+        "remotoEmAberto": 9,
         "localEmAberto": 2,
         "pctRemoto": 23,
         "alerta": true
@@ -3454,7 +3472,7 @@
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
-            "total": 304
+            "total": 305
           },
           {
             "nome": "Felipe Silva",
@@ -13278,6 +13296,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "9682",
+      "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
+      "equipe": "",
+      "responsavel": "Henri Almeida ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Henri Almeida ",
+      "status": "Não Iniciada",
+      "tarefa": "UFV SANTO INACIO  - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+      "criticidade": "",
+      "dataProgramada": "2026-07-18",
+      "dataCriacao": "2026-07-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
       "osId": "9675",
       "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
       "equipe": "",
@@ -15692,6 +15727,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "9683",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da usina de Marialva",
+      "criticidade": "",
+      "dataProgramada": "2026-07-18",
+      "dataCriacao": "2026-07-18",
+      "dataInicial": "2026-07-18",
+      "dataFinal": "2026-07-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "9681",
       "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
@@ -18627,30 +18682,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "9333",
-      "ativo": "Inversor 2.8 Huawei     { MAB200-INVR2.8 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "James Chaves ",
-      "status": "Finalizada",
-      "tarefa": "Religamento do inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-07-13",
-      "dataCriacao": "2026-07-13",
-      "dataInicial": "2026-07-13",
-      "dataFinal": "2026-07-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2054,
-  "totalGeral": 4023,
+  "historicoTotal": 2055,
+  "totalGeral": 4025,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
