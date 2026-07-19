@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-19T17:48:53Z",
+  "geradoEm": "2026-07-19T18:46:17Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-13 .. 2026-07-19",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3104,
-        "emAberto": 12,
+        "total": 3107,
+        "emAberto": 13,
         "atrasadas": 10,
-        "concluidas30d": 517,
-        "concluidas7d": 131,
-        "naSemanaCorrente": 119
+        "concluidas30d": 519,
+        "concluidas7d": 133,
+        "naSemanaCorrente": 122
       },
       "mttr": {
-        "horas": 7.7,
-        "label": "7h 42min",
-        "amostra": 517
+        "horas": 7.67,
+        "label": "7h 40min",
+        "amostra": 519
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W29",
-          "criadas": 121,
-          "finalizadas": 116
+          "criadas": 124,
+          "finalizadas": 118
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3104,
-            "emAberto": 12
+            "total": 3107,
+            "emAberto": 13
           }
         ],
         "responsaveis": [
@@ -63,7 +63,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 293,
+            "total": 295,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 12,
+      "total": 13,
       "atrasadas": 10,
       "porStatus": {
         "naoIniciada": 12,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 12
+        "(sem equipe)": 13
       },
       "oss": [
         {
@@ -271,20 +271,39 @@
           "atrasada": true
         },
         {
-          "osId": "9691",
-          "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
+          "osId": "9693",
+          "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
           "equipe": "",
-          "responsavel": "Ricardo Silva ",
+          "responsavel": "Hélio Silva ",
           "criadoPor": "CíceroWillian",
-          "supervisor": "Ricardo Silva ",
+          "supervisor": "Hélio Silva ",
           "status": "Não Iniciada",
-          "tarefa": "Religamento UFV Santana do Ipanema",
+          "tarefa": "Religamento UFV Santo Inácio",
           "criticidade": "",
           "dataProgramada": "2026-07-19",
           "dataCriacao": "2026-07-19",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "9691",
+          "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ricardo Silva ",
+          "status": "Em progresso",
+          "tarefa": "Religamento UFV Santana do Ipanema",
+          "criticidade": "",
+          "dataProgramada": "2026-07-19",
+          "dataCriacao": "2026-07-19",
+          "dataInicial": "2026-07-19",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -308,6 +327,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9694",
+          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da cabine remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-19",
+          "dataCriacao": "2026-07-19",
+          "dataInicial": "2026-07-19",
+          "dataFinal": "2026-07-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "9692",
+          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da cabine remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-19",
+          "dataCriacao": "2026-07-19",
+          "dataInicial": "2026-07-19",
+          "dataFinal": "2026-07-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "9690",
           "ativo": "Axis - Petrolina 2 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL200 }",
@@ -3229,46 +3288,6 @@
           "atrasada": false
         },
         {
-          "osId": "9285",
-          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "DavidNascimento",
-          "supervisor": "Railson Gomes ",
-          "status": "Finalizada",
-          "tarefa": "UFV: Crateus | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
-          "criticidade": "",
-          "dataProgramada": "2026-07-11",
-          "dataCriacao": "2026-07-11",
-          "dataInicial": "2026-07-10",
-          "dataFinal": "2026-07-11",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "9284",
-          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "DavidNascimento",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizada",
-          "tarefa": "UFV: Araputanga | Proteção: 59 | Ação: Religamento Local | Falha: Usina desligada e offline",
-          "criticidade": "",
-          "dataProgramada": "2026-07-11",
-          "dataCriacao": "2026-07-11",
-          "dataInicial": "2026-07-10",
-          "dataFinal": "2026-07-11",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9431",
           "ativo": "Inversor 1.6 Huawei     { TESTE100-INVR1.6 }",
           "equipe": "",
@@ -3309,12 +3328,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1539,
+      "historicoTotal": 1541,
       "subClassificacao": {
-        "remoto": 703,
-        "local": 2401,
+        "remoto": 705,
+        "local": 2402,
         "remotoEmAberto": 9,
-        "localEmAberto": 3,
+        "localEmAberto": 4,
         "pctRemoto": 23,
         "alerta": true
       },
@@ -3485,8 +3504,8 @@
         ],
         "medHorasAbrir": 3.3,
         "medHorasFechar": 2.8,
-        "amostraAbrir": 689,
-        "amostraFechar": 689,
+        "amostraAbrir": 691,
+        "amostraFechar": 691,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3494,7 +3513,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 221
+            "total": 223
           },
           {
             "nome": "Raphael Vitoriano",
@@ -13314,20 +13333,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "9691",
-      "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
+      "osId": "9693",
+      "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
       "equipe": "",
-      "responsavel": "Ricardo Silva ",
+      "responsavel": "Hélio Silva ",
       "criadoPor": "CíceroWillian",
-      "supervisor": "Ricardo Silva ",
+      "supervisor": "Hélio Silva ",
       "status": "Não Iniciada",
-      "tarefa": "Religamento UFV Santana do Ipanema",
+      "tarefa": "Religamento UFV Santo Inácio",
       "criticidade": "",
       "dataProgramada": "2026-07-19",
       "dataCriacao": "2026-07-19",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "9691",
+      "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Ricardo Silva ",
+      "status": "Em progresso",
+      "tarefa": "Religamento UFV Santana do Ipanema",
+      "criticidade": "",
+      "dataProgramada": "2026-07-19",
+      "dataCriacao": "2026-07-19",
+      "dataInicial": "2026-07-19",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15762,6 +15799,46 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "9694",
+      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da cabine remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-19",
+      "dataCriacao": "2026-07-19",
+      "dataInicial": "2026-07-19",
+      "dataFinal": "2026-07-19",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "9692",
+      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da cabine remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-19",
+      "dataCriacao": "2026-07-19",
+      "dataInicial": "2026-07-19",
+      "dataFinal": "2026-07-19",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "9690",
       "ativo": "Axis - Petrolina 2 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL200 }",
@@ -18679,48 +18756,10 @@
       "horasAteAbrir": 96.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "9351",
-      "ativo": "Inversor 1.5 Huawei     { THPN-NVL200-INVR1.5 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Nova Londrina 2][Inversor 1.5] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-07-13",
-      "dataCriacao": "2026-07-13",
-      "dataInicial": "2026-07-13",
-      "dataFinal": "2026-07-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "9347",
-      "ativo": "Nobreak 1      { GYT100-NBRK1 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Finalizada",
-      "tarefa": "NOBREAK - medição de corrente de cada circuito do nobreak para avaliação da adequação da carga",
-      "criticidade": "",
-      "dataProgramada": "2026-07-14",
-      "dataCriacao": "2026-07-13",
-      "dataInicial": "2026-07-14",
-      "dataFinal": "2026-07-15",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 24.0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2035,
-  "totalGeral": 4032,
+  "historicoTotal": 2037,
+  "totalGeral": 4035,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
