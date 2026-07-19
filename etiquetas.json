@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-19T15:45:40Z",
+  "geradoEm": "2026-07-19T16:42:27Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-13 .. 2026-07-19",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3103,
-        "emAberto": 12,
+        "emAberto": 11,
         "atrasadas": 10,
-        "concluidas30d": 516,
-        "concluidas7d": 130,
+        "concluidas30d": 517,
+        "concluidas7d": 131,
         "naSemanaCorrente": 118
       },
       "mttr": {
-        "horas": 7.71,
-        "label": "7h 43min",
-        "amostra": 516
+        "horas": 7.7,
+        "label": "7h 42min",
+        "amostra": 517
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W29",
           "criadas": 120,
-          "finalizadas": 115
+          "finalizadas": 116
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3103,
-            "emAberto": 12
+            "emAberto": 11
           }
         ],
         "responsaveis": [
@@ -63,7 +63,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 292,
+            "total": 293,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 12,
+      "total": 11,
       "atrasadas": 10,
       "porStatus": {
-        "naoIniciada": 12,
+        "naoIniciada": 11,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 12
+        "(sem equipe)": 11
       },
       "oss": [
         {
@@ -271,24 +271,6 @@
           "atrasada": true
         },
         {
-          "osId": "9689",
-          "ativo": "Axis - Petrolina 2 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL200 }",
-          "equipe": "",
-          "responsavel": "Rodrigo  Silva",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Rodrigo  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-07-19",
-          "dataCriacao": "2026-07-19",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9263",
           "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
           "equipe": "",
@@ -308,6 +290,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9690",
+          "ativo": "Axis - Petrolina 2 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL200 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "Religamento da Usina remoto",
+          "criticidade": "",
+          "dataProgramada": "2026-07-19",
+          "dataCriacao": "2026-07-19",
+          "dataInicial": "2026-07-19",
+          "dataFinal": "2026-07-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "9688",
           "ativo": "SKID 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID2 }",
@@ -3249,26 +3251,6 @@
           "atrasada": false
         },
         {
-          "osId": "9279",
-          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine de TIM200",
-          "criticidade": "",
-          "dataProgramada": "2026-07-10",
-          "dataCriacao": "2026-07-10",
-          "dataInicial": "2026-07-10",
-          "dataFinal": "2026-07-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9431",
           "ativo": "Inversor 1.6 Huawei     { TESTE100-INVR1.6 }",
           "equipe": "",
@@ -3309,12 +3291,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1538,
+      "historicoTotal": 1539,
       "subClassificacao": {
-        "remoto": 702,
-        "local": 2401,
+        "remoto": 703,
+        "local": 2400,
         "remotoEmAberto": 9,
-        "localEmAberto": 3,
+        "localEmAberto": 2,
         "pctRemoto": 23,
         "alerta": true
       },
@@ -3485,8 +3467,8 @@
         ],
         "medHorasAbrir": 3.3,
         "medHorasFechar": 2.8,
-        "amostraAbrir": 688,
-        "amostraFechar": 688,
+        "amostraAbrir": 689,
+        "amostraFechar": 689,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3494,7 +3476,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 220
+            "total": 221
           },
           {
             "nome": "Raphael Vitoriano",
@@ -13314,23 +13296,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "9689",
-      "ativo": "Axis - Petrolina 2 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL200 }",
-      "equipe": "",
-      "responsavel": "Rodrigo  Silva",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Rodrigo  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-19",
-      "dataCriacao": "2026-07-19",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "9682",
       "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
       "equipe": "",
@@ -15762,6 +15727,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "9690",
+      "ativo": "Axis - Petrolina 2 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL200 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizada",
+      "tarefa": "Religamento da Usina remoto",
+      "criticidade": "",
+      "dataProgramada": "2026-07-19",
+      "dataCriacao": "2026-07-19",
+      "dataInicial": "2026-07-19",
+      "dataFinal": "2026-07-19",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "9688",
       "ativo": "SKID 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID2 }",
@@ -18697,29 +18682,9 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 24.0,
       "atrasada": false
-    },
-    {
-      "osId": "9339",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da Usina remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-07-13",
-      "dataCriacao": "2026-07-13",
-      "dataInicial": "2026-07-13",
-      "dataFinal": "2026-07-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2034,
+  "historicoTotal": 2035,
   "totalGeral": 4031,
   "verificacao": {
     "total": 0,
