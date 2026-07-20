@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-20T18:35:37Z",
+  "geradoEm": "2026-07-20T20:16:05Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-20 .. 2026-07-26",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3125,
-        "emAberto": 11,
+        "total": 3126,
+        "emAberto": 12,
         "atrasadas": 9,
         "concluidas30d": 516,
         "concluidas7d": 138,
-        "naSemanaCorrente": 14
+        "naSemanaCorrente": 15
       },
       "mttr": {
         "horas": 7.79,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W30",
-          "criadas": 13,
+          "criadas": 14,
           "finalizadas": 13
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3125,
-            "emAberto": 11
+            "total": 3126,
+            "emAberto": 12
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 11,
+      "total": 12,
       "atrasadas": 9,
       "porStatus": {
-        "naoIniciada": 11,
+        "naoIniciada": 12,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 11
+        "(sem equipe)": 12
       },
       "oss": [
         {
@@ -251,6 +251,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "9750",
+          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Railson Gomes ",
+          "status": "Não Iniciada",
+          "tarefa": "UFV CRATEUS  - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
         },
         {
           "osId": "9728",
@@ -3293,9 +3311,9 @@
       ],
       "historicoTotal": 1537,
       "subClassificacao": {
-        "remoto": 714,
+        "remoto": 715,
         "local": 2411,
-        "remotoEmAberto": 9,
+        "remotoEmAberto": 10,
         "localEmAberto": 2,
         "pctRemoto": 23,
         "alerta": true
@@ -3472,7 +3490,7 @@
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
-            "total": 309
+            "total": 310
           },
           {
             "nome": "Felipe Silva",
@@ -3591,9 +3609,9 @@
       "total": 57,
       "atrasadas": 42,
       "porStatus": {
-        "naoIniciada": 47,
+        "naoIniciada": 46,
         "emProgresso": 1,
-        "pausada": 9,
+        "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4073,14 +4091,15 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Carlos  Godoi",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Tupi Paulista] - Investigação de anomalia térmica na Cabine 01 (Pendências MPS)",
           "criticidade": "",
           "dataProgramada": "2026-07-15",
           "dataCriacao": "2026-07-13",
-          "dataInicial": "",
+          "dataInicial": "2026-07-20",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 168.0,
           "atrasada": true
         },
         {
@@ -8892,17 +8911,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 238,
-        "emAberto": 71,
-        "atrasadas": 71,
-        "concluidas30d": 127,
-        "concluidas7d": 85,
+        "total": 240,
+        "emAberto": 69,
+        "atrasadas": 69,
+        "concluidas30d": 131,
+        "concluidas7d": 89,
         "naSemanaCorrente": 0
       },
       "mttr": {
-        "horas": 103.18,
-        "label": "4d 7h",
-        "amostra": 127
+        "horas": 109.01,
+        "label": "4d 13h",
+        "amostra": 131
       },
       "tendencia4Semanas": [
         {
@@ -8922,16 +8941,16 @@
         },
         {
           "semana": "W30",
-          "criadas": 2,
-          "finalizadas": 5
+          "criadas": 4,
+          "finalizadas": 9
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 238,
-            "emAberto": 71
+            "total": 240,
+            "emAberto": 69
           }
         ],
         "responsaveis": [
@@ -8943,7 +8962,7 @@
           {
             "nome": "Paulo  Ribeiro",
             "total": 25,
-            "emAberto": 13
+            "emAberto": 10
           },
           {
             "nome": "Gilson  Milhomem",
@@ -8956,22 +8975,22 @@
             "emAberto": 15
           },
           {
-            "nome": "Marcos Duarte",
+            "nome": "Luiz  Silva",
             "total": 11,
-            "emAberto": 0
+            "emAberto": 5
           }
         ]
       },
-      "total": 71,
-      "atrasadas": 71,
+      "total": 69,
+      "atrasadas": 69,
       "porStatus": {
-        "naoIniciada": 62,
+        "naoIniciada": 60,
         "emProgresso": 4,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 71
+        "(sem equipe)": 69
       },
       "oss": [
         {
@@ -9126,24 +9145,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9584",
-          "ativo": "Inversor 2.12 Sungrow     { BWK100-INVR2.12 }",
-          "equipe": "",
-          "responsavel": "Luis  Moura",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Luis  Moura",
-          "status": "Em progresso",
-          "tarefa": "[Brodowski 1][Inversor 2.12] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-01",
-          "dataCriacao": "2026-07-16",
-          "dataInicial": "2026-07-20",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
           "atrasada": true
         },
         {
@@ -9501,58 +9502,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9003",
-          "ativo": "Inversor 2.15 Sungrow SG125HV    { THPN-TNB100-INVR2.15 }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Não Iniciada",
-          "tarefa": "[Tanabi][Inversor 2.15] - String com corrente nula",
-          "criticidade": "",
-          "dataProgramada": "2026-07-06",
-          "dataCriacao": "2026-07-06",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9001",
-          "ativo": "Inversor 2.18 Sungrow SG125HV    { THPN-TNB100-INVR2.18 }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Não Iniciada",
-          "tarefa": "[Tanabi][Inversor 2.18] - String com corrente nula",
-          "criticidade": "",
-          "dataProgramada": "2026-07-06",
-          "dataCriacao": "2026-07-06",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "8920",
-          "ativo": "Thopen - Tanabi 1 - SP Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100 }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Em progresso",
-          "tarefa": "[Tanabi] [Usina] - Coleta de Geração Junho",
-          "criticidade": "",
-          "dataProgramada": "2026-07-08",
-          "dataCriacao": "2026-07-03",
-          "dataInicial": "2026-07-20",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 408.0,
           "atrasada": true
         },
         {
@@ -10174,6 +10123,42 @@
           "atrasada": true
         },
         {
+          "osId": "9745",
+          "ativo": "Tracker 105.100 STI Norland     { TIM100-ETKR105.100 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Luiz  Silva",
+          "status": "Em progresso",
+          "tarefa": "[Timon 1][Tracker 105.100] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-18",
+          "dataCriacao": "2026-07-20",
+          "dataInicial": "2026-07-20",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "atrasada": true
+        },
+        {
+          "osId": "9744",
+          "ativo": "Tracker 05.100 STI Norland     { TIM100-ETKR05.100 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Luiz  Silva",
+          "status": "Em progresso",
+          "tarefa": "[Timon 1][Tracker 05.100] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-18",
+          "dataCriacao": "2026-07-20",
+          "dataInicial": "2026-07-20",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "atrasada": true
+        },
+        {
           "osId": "9739",
           "ativo": "Inversor 2.4 Huawei     { TIM200-INVR2.4 }",
           "equipe": "",
@@ -10250,6 +10235,25 @@
           "atrasada": false
         },
         {
+          "osId": "9584",
+          "ativo": "Inversor 2.12 Sungrow     { BWK100-INVR2.12 }",
+          "equipe": "",
+          "responsavel": "Luis  Moura",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Luis  Moura",
+          "status": "Finalizados",
+          "tarefa": "[Brodowski 1][Inversor 2.12] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-07-16",
+          "dataInicial": "2026-07-20",
+          "dataFinal": "2026-07-20",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "9583",
           "ativo": "Inversor 1.13 Sungrow     { BWK100-INVR1.13 }",
           "equipe": "",
@@ -10265,6 +10269,63 @@
           "dataFinal": "2026-07-20",
           "linkFracttal": "",
           "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "9003",
+          "ativo": "Inversor 2.15 Sungrow SG125HV    { THPN-TNB100-INVR2.15 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Finalizados",
+          "tarefa": "[Tanabi][Inversor 2.15] - String com corrente nula",
+          "criticidade": "",
+          "dataProgramada": "2026-07-06",
+          "dataCriacao": "2026-07-06",
+          "dataInicial": "2026-07-20",
+          "dataFinal": "2026-07-20",
+          "linkFracttal": "",
+          "horasAteAbrir": 336.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "9001",
+          "ativo": "Inversor 2.18 Sungrow SG125HV    { THPN-TNB100-INVR2.18 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Finalizados",
+          "tarefa": "[Tanabi][Inversor 2.18] - String com corrente nula",
+          "criticidade": "",
+          "dataProgramada": "2026-07-06",
+          "dataCriacao": "2026-07-06",
+          "dataInicial": "2026-07-20",
+          "dataFinal": "2026-07-20",
+          "linkFracttal": "",
+          "horasAteAbrir": 336.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "8920",
+          "ativo": "Thopen - Tanabi 1 - SP Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Finalizados",
+          "tarefa": "[Tanabi] [Usina] - Coleta de Geração Junho",
+          "criticidade": "",
+          "dataProgramada": "2026-07-08",
+          "dataCriacao": "2026-07-03",
+          "dataInicial": "2026-07-20",
+          "dataFinal": "2026-07-20",
+          "linkFracttal": "",
+          "horasAteAbrir": 408.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -12853,7 +12914,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 140
+      "historicoTotal": 144
     },
     "engenharia": {
       "label": "Engenharia",
@@ -13347,6 +13408,57 @@
   },
   "ossPublicas": [
     {
+      "osId": "9750",
+      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Railson Gomes ",
+      "status": "Não Iniciada",
+      "tarefa": "UFV CRATEUS  - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+      "criticidade": "",
+      "dataProgramada": "2026-07-20",
+      "dataCriacao": "2026-07-20",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
+      "osId": "9745",
+      "ativo": "Tracker 105.100 STI Norland     { TIM100-ETKR105.100 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Luiz  Silva",
+      "status": "Em progresso",
+      "tarefa": "[Timon 1][Tracker 105.100] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-07-18",
+      "dataCriacao": "2026-07-20",
+      "dataInicial": "2026-07-20",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0
+    },
+    {
+      "osId": "9744",
+      "ativo": "Tracker 05.100 STI Norland     { TIM100-ETKR05.100 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Luiz  Silva",
+      "status": "Em progresso",
+      "tarefa": "[Timon 1][Tracker 05.100] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-07-18",
+      "dataCriacao": "2026-07-20",
+      "dataInicial": "2026-07-20",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0
+    },
+    {
       "osId": "9739",
       "ativo": "Inversor 2.4 Huawei     { TIM200-INVR2.4 }",
       "equipe": "",
@@ -13494,23 +13606,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 0
-    },
-    {
-      "osId": "9584",
-      "ativo": "Inversor 2.12 Sungrow     { BWK100-INVR2.12 }",
-      "equipe": "",
-      "responsavel": "Luis  Moura",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Luis  Moura",
-      "status": "Em progresso",
-      "tarefa": "[Brodowski 1][Inversor 2.12] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-07-01",
-      "dataCriacao": "2026-07-16",
-      "dataInicial": "2026-07-20",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0
     },
     {
       "osId": "9576",
@@ -13891,14 +13986,15 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Carlos  Godoi",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Tupi Paulista] - Investigação de anomalia térmica na Cabine 01 (Pendências MPS)",
       "criticidade": "",
       "dataProgramada": "2026-07-15",
       "dataCriacao": "2026-07-13",
-      "dataInicial": "",
+      "dataInicial": "2026-07-20",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0
     },
     {
       "osId": "9358",
@@ -14384,38 +14480,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "9003",
-      "ativo": "Inversor 2.15 Sungrow SG125HV    { THPN-TNB100-INVR2.15 }",
-      "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Paulo  Ribeiro",
-      "status": "Não Iniciada",
-      "tarefa": "[Tanabi][Inversor 2.15] - String com corrente nula",
-      "criticidade": "",
-      "dataProgramada": "2026-07-06",
-      "dataCriacao": "2026-07-06",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "9001",
-      "ativo": "Inversor 2.18 Sungrow SG125HV    { THPN-TNB100-INVR2.18 }",
-      "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Paulo  Ribeiro",
-      "status": "Não Iniciada",
-      "tarefa": "[Tanabi][Inversor 2.18] - String com corrente nula",
-      "criticidade": "",
-      "dataProgramada": "2026-07-06",
-      "dataCriacao": "2026-07-06",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "8993",
       "ativo": "Transformador 1 Blutrafo     { ADT100-TRFR1 }",
       "equipe": "",
@@ -14430,23 +14494,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "8920",
-      "ativo": "Thopen - Tanabi 1 - SP Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100 }",
-      "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Paulo  Ribeiro",
-      "status": "Em progresso",
-      "tarefa": "[Tanabi] [Usina] - Coleta de Geração Junho",
-      "criticidade": "",
-      "dataProgramada": "2026-07-08",
-      "dataCriacao": "2026-07-03",
-      "dataInicial": "2026-07-20",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 408.0
     },
     {
       "osId": "8881",
@@ -17034,6 +17081,25 @@
       "atrasada": false
     },
     {
+      "osId": "9584",
+      "ativo": "Inversor 2.12 Sungrow     { BWK100-INVR2.12 }",
+      "equipe": "",
+      "responsavel": "Luis  Moura",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Luis  Moura",
+      "status": "Finalizados",
+      "tarefa": "[Brodowski 1][Inversor 2.12] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-07-01",
+      "dataCriacao": "2026-07-16",
+      "dataInicial": "2026-07-20",
+      "dataFinal": "2026-07-20",
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "9583",
       "ativo": "Inversor 1.13 Sungrow     { BWK100-INVR1.13 }",
       "equipe": "",
@@ -18638,30 +18704,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "9405",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "Religamento da usina de Marialva",
-      "criticidade": "",
-      "dataProgramada": "2026-07-14",
-      "dataCriacao": "2026-07-14",
-      "dataInicial": "2026-07-14",
-      "dataFinal": "2026-07-14",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2039,
-  "totalGeral": 4057,
+  "historicoTotal": 2043,
+  "totalGeral": 4060,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
