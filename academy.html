@@ -278,11 +278,58 @@ function submitExam(){const E=D.recrut[window._exam.k];const ok=grade(E.q);const
  $('qres').innerHTML='<div class="result '+cls+'">'+v+' — '+Math.round(sc*100)+'% (corte '+Math.round(corte*100)+'%)</div><div class="row" style="margin-top:10px"><button class="gbtn" style="max-width:240px" onclick=\'dl('+JSON.stringify(JSON.stringify(rec,null,2))+',"prova_"+'+JSON.stringify(window._exam.cand.replace(/\s+/g,"_"))+'+".json","application/json")\'>⬇ Exportar resultado</button><button class="gbtn" style="max-width:200px;background:#e6e9ee;color:var(--navy)" onclick="showRecrut()">Nova prova</button></div>';}
 // GESTOR
 function showGestor(){$('uname').textContent='👤 Gestor';$('dash').classList.add('hide');$('view').classList.remove('hide');window.scrollTo(0,0);
- $('view').innerHTML='<div class="panel"><h2 style="color:var(--navy)">📊 Painel do Gestor</h2><p style="color:var(--gray);font-size:13px">Importe os arquivos de resultado (.json) que os colaboradores exportarem.</p><input type="file" id="imp" accept=".json" multiple/> <button class="gbtn" style="width:auto;padding:8px 16px;font-size:13px" onclick="exportCSV()">⬇ Exportar CSV</button><button class="gbtn" style="width:auto;padding:8px 16px;font-size:13px;background:#12467e;color:#fff;border:none" onclick="showConfig()">⚙ Material dos módulos</button><div id="gsum" style="margin-top:14px"></div><div id="gtab" style="margin-top:10px;overflow:auto"></div></div>';
+ window._gf=window._gf||{t:'',s:'',q:''};
+ $('view').innerHTML='<div class="panel">'
+ +'<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px"><h2 style="color:var(--navy);margin:0">📊 Painel do Gestor</h2><div style="display:flex;gap:6px;flex-wrap:wrap">'
+ +'<button class="gbtn" style="width:auto;padding:8px 14px;font-size:13px" onclick="exportCSV()">⬇ CSV</button>'
+ +'<button class="gbtn" style="width:auto;padding:8px 14px;font-size:13px" onclick="showGestorCloud()">↻ Atualizar</button>'
+ +'<button class="gbtn" style="width:auto;padding:8px 14px;font-size:13px;background:#12467e;color:#fff;border:none" onclick="showConfig()">⚙ Material dos módulos</button>'
+ +'</div></div>'
+ +'<p style="color:var(--gray);font-size:12.5px;margin:10px 0 0">Dados carregados da nuvem no login do gestor. Sem acesso à nuvem, importe os .json exportados pelos colaboradores: <input type="file" id="imp" accept=".json" multiple style="font-size:12px"/></p>'
+ +'<div id="gsum"></div>'
+ +'<div id="gkpi" style="margin-top:14px"></div>'
+ +'<div id="gviz" style="margin-top:12px"></div>'
+ +'<div id="gfil" style="margin-top:12px"></div>'
+ +'<div id="gtab" style="margin-top:8px;overflow:auto"></div>'
+ +'</div>';
  $('imp').onchange=impFiles;window._recs=window._recs||[];renderG();}
 function impFiles(e){const files=[...e.target.files];let left=files.length;files.forEach(f=>{const r=new FileReader();r.onload=()=>{try{window._recs.push(JSON.parse(r.result));}catch(x){}if(--left===0)renderG();};r.readAsText(f);});}
-function renderG(){const recs=window._recs||[];let rows=recs.map(r=>{const dn=(r.modulos||[]).filter(m=>m.pass).length,tt=(r.modulos||[]).length;const ap=r.final&&r.final.pass;const aptos=(r.modulos||[]).filter(m=>m.apto&&m.pass).map(m=>m.apto).join(', ');return '<tr><td>'+r.nome+'</td><td>'+(r.trilhaNome||r.trilha)+'</td><td>'+dn+'/'+tt+'</td><td>'+(r.final?Math.round(r.final.total*100)+'%':'—')+'</td><td>'+(aptos||'—')+'</td><td><span class="tag '+(ap?'ap':'re')+'">'+(ap?'Aprovado':(r.final?'Reprovado':'Em curso'))+'</span></td><td>'+new Date(r.data).toLocaleDateString('pt-BR')+'</td></tr>';}).join('');
- const ap=recs.filter(r=>r.final&&r.final.pass).length;$('gsum').innerHTML='<div class="row"><span class="pill" style="background:#191528">Colaboradores: <b>'+recs.length+'</b></span><span class="pill" style="background:#191528">Aprovados: <b>'+ap+'</b></span></div>';
- $('gtab').innerHTML=recs.length?'<table><tr><th>Nome</th><th>Trilha</th><th>Módulos</th><th>Final</th><th>Habilitações</th><th>Status</th><th>Data</th></tr>'+rows+'</table>':'<p style="color:var(--gray)">Nenhum resultado importado ainda.</p>';}
+function _gDays(iso){if(!iso)return null;var d=new Date(iso);if(isNaN(d.getTime()))return null;return Math.floor((Date.now()-d.getTime())/86400000);}
+function _gStatus(r){var idle=_gDays(r.data);if(r.final&&r.final.pass)return{k:'ap',t:'Aprovado',bg:'#e1f5ee',fg:'#0f6e56'};if(r.final)return{k:'re',t:'Reprovado',bg:'#fcebeb',fg:'#a32d2d'};if(idle!=null&&idle>=14)return{k:'pa',t:'Parado '+idle+'d',bg:'#faeeda',fg:'#854f0b'};return{k:'ec',t:'Em curso',bg:'#e6f1fb',fg:'#185fa5'};}
+function _gWhen(r){var d=_gDays(r.data);if(d==null)return '—';if(d<=0)return 'hoje';if(d===1)return 'ontem';if(d<30)return 'há '+d+'d';return new Date(r.data).toLocaleDateString('pt-BR');}
+function _gPct(r){var tt=(r.modulos||[]).length;if(!tt)return 0;return (r.modulos||[]).filter(function(m){return m.pass;}).length/tt;}
+function renderG(){var recs=window._recs||[];
+ var people={};recs.forEach(function(r){var k=((r.email||r.nome||'')+'').toLowerCase();if(!k)return;var d=_gDays(r.data);if(!(k in people))people[k]=null;if(d!=null&&(people[k]==null||d<people[k]))people[k]=d;});
+ var nP=Object.keys(people).length;
+ var avg=recs.length?Math.round(100*recs.map(_gPct).reduce(function(a,b){return a+b;},0)/recs.length):0;
+ var ap=recs.filter(function(r){return r.final&&r.final.pass;}).length;
+ var idle=Object.keys(people).filter(function(k){return people[k]!=null&&people[k]>=14;}).length;
+ function card(l,v,c){return '<div style="flex:1;min-width:130px;background:#f4f6f9;border-radius:10px;padding:10px 12px"><div style="font-size:12px;color:var(--gray)">'+l+'</div><div style="font-size:22px;font-weight:600;color:'+(c||'var(--navy)')+'">'+v+'</div></div>';}
+ $('gkpi').innerHTML='<div style="display:flex;gap:10px;flex-wrap:wrap">'+card('Colaboradores',nP)+card('Conclusão média (por trilha)',avg+'%')+card('Aprovados na final',ap)+card('Parados há 14+ dias',idle,idle?'#b7791f':'var(--navy)')+'</div>';
+ var byT={};recs.forEach(function(r){var t=r.trilha||'?';var o=byT[t]||(byT[t]={n:0,s:0,nome:r.trilhaNome||t,pp:{}});o.n++;o.s+=_gPct(r);var k=((r.email||r.nome||'')+'').toLowerCase();if(k)o.pp[k]=1;});
+ var tH=Object.keys(byT).map(function(t){var o=byT[t];var p=Math.round(100*o.s/o.n);var c=p>=60?'#1d9e75':'#ef9f27';return '<div style="display:flex;align-items:center;gap:8px;font-size:12.5px;margin-bottom:6px"><span style="width:120px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+esc(o.nome)+'</span><div style="flex:1;height:8px;background:#eef1f5;border-radius:4px"><div style="width:'+p+'%;height:8px;background:'+c+';border-radius:4px"></div></div><span style="color:var(--gray);width:90px;text-align:right">'+p+'% · '+Object.keys(o.pp).length+' pes.</span></div>';}).join('');
+ var mods={};recs.forEach(function(r){(r.modulos||[]).forEach(function(m){if(m.score==null)return;var o=mods[m.id]||(mods[m.id]={t:m.titulo||m.id,n:0,p:0,s:0});o.n++;if(m.pass)o.p++;o.s+=m.score;});});
+ var crit=Object.keys(mods).map(function(k){var o=mods[k];return{t:o.t,n:o.n,pr:Math.round(100*o.p/o.n),avg:Math.round(o.s/o.n)};}).sort(function(a,b){return a.pr-b.pr||a.avg-b.avg;}).slice(0,5);
+ var cH=crit.length?crit.map(function(o){var c=o.pr<60?'#a32d2d':(o.pr<80?'#854f0b':'#0f6e56');return '<div style="display:flex;justify-content:space-between;gap:8px;font-size:12.5px;margin-bottom:6px"><span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+esc(o.t)+'</span><span style="color:'+c+';font-weight:600;white-space:nowrap">'+o.pr+'% · nota '+o.avg+' · '+o.n+' aval.</span></div>';}).join(''):'<p style="color:var(--gray);font-size:12.5px">Sem avaliações registradas ainda.</p>';
+ $('gviz').innerHTML='<div style="display:flex;gap:12px;flex-wrap:wrap"><div style="flex:1;min-width:260px;border:1px solid #e3e8ef;border-radius:10px;padding:10px 12px"><div style="font-size:12px;color:var(--gray);margin-bottom:8px">Progresso por trilha</div>'+(tH||'<p style="color:var(--gray);font-size:12.5px">Sem dados.</p>')+'</div><div style="flex:1;min-width:260px;border:1px solid #e3e8ef;border-radius:10px;padding:10px 12px"><div style="font-size:12px;color:var(--gray);margin-bottom:8px">Módulos críticos (menor aprovação)</div>'+cH+'</div></div>';
+ var tOpts='<option value="">Trilha: todas</option>'+Object.keys(byT).map(function(t){return '<option value="'+t+'">'+esc(byT[t].nome)+'</option>';}).join('');
+ $('gfil').innerHTML='<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><select id="gft" style="font-size:12.5px;padding:6px 8px;border-radius:8px;border:1px solid #cfd8e3">'+tOpts+'</select><select id="gfs" style="font-size:12.5px;padding:6px 8px;border-radius:8px;border:1px solid #cfd8e3"><option value="">Status: todos</option><option value="ap">Aprovado</option><option value="ec">Em curso</option><option value="pa">Parado 14+ d</option><option value="re">Reprovado</option></select><input id="gfq" placeholder="buscar nome…" style="font-size:12.5px;padding:6px 10px;border-radius:8px;border:1px solid #cfd8e3;flex:1;min-width:140px"/></div>';
+ $('gft').value=window._gf.t;$('gfs').value=window._gf.s;$('gfq').value=window._gf.q;
+ $('gft').onchange=function(){window._gf.t=this.value;_gTable();};
+ $('gfs').onchange=function(){window._gf.s=this.value;_gTable();};
+ $('gfq').oninput=function(){window._gf.q=this.value;_gTable();};
+ _gTable();}
+function _gTable(){var recs=window._recs||[];var f=window._gf||{t:'',s:'',q:''};var q=(f.q||'').toLowerCase();
+ var list=recs.map(function(r,i){return{r:r,i:i};}).filter(function(x){var r=x.r;if(f.t&&r.trilha!==f.t)return false;if(f.s&&_gStatus(r).k!==f.s)return false;if(q&&((((r.nome||'')+' '+(r.email||''))+'').toLowerCase().indexOf(q)<0))return false;return true;});
+ list.sort(function(a,b){return (((a.r.nome||'')+'')).localeCompare(((b.r.nome||'')+''));});
+ var rows=list.map(function(x){var r=x.r;var st=_gStatus(r);var dn=(r.modulos||[]).filter(function(m){return m.pass;}).length,tt=(r.modulos||[]).length;
+  var det=(r.modulos||[]).map(function(m){var ok=m.pass;var sc=(m.score==null?'—':m.score);return '<span style="display:inline-block;margin:2px 4px 2px 0;padding:3px 8px;border-radius:6px;font-size:11.5px;background:'+(ok?'#e1f5ee':(m.score==null?'#eef1f5':'#fcebeb'))+';color:'+(ok?'#0f6e56':(m.score==null?'#5b6b7d':'#a32d2d'))+'">'+esc(m.titulo||m.id)+' · '+sc+(m.score!=null?(ok?' ✓':' ✗'):'')+'</span>';}).join('');
+  var rec=(r.modulos||[]).reduce(function(a,m){return a+(m.recic||0);},0);
+  var cen=r.cenarios?Object.keys(r.cenarios).length:0;
+  var apt=(r.modulos||[]).filter(function(m){return m.apto&&m.pass;}).map(function(m){return esc(m.apto);}).join(', ');
+  return '<tr style="cursor:pointer" onclick="gTgl('+x.i+')"><td>▸ '+esc(r.nome||'—')+'</td><td>'+esc(r.trilhaNome||r.trilha||'—')+'</td><td>'+dn+'/'+tt+'</td><td>'+(r.final?Math.round(r.final.total*100)+'%':'—')+'</td><td><span style="padding:3px 10px;border-radius:12px;font-size:11.5px;white-space:nowrap;background:'+st.bg+';color:'+st.fg+'">'+st.t+'</span></td><td style="white-space:nowrap">'+_gWhen(r)+'</td></tr>'
+  +'<tr id="gdet'+x.i+'" style="display:none"><td colspan="6" style="background:#f7f9fb;font-size:12px;color:#41506a">'+(r.email?('<b>'+esc(r.email)+'</b> · '):'')+'reciclagens: '+rec+' · cenários: '+cen+(apt?(' · habilitações: '+apt):'')+'<div style="margin-top:6px">'+(det||'Sem módulos registrados.')+'</div></td></tr>';}).join('');
+ $('gtab').innerHTML=list.length?'<table><tr><th>Nome</th><th>Trilha</th><th>Módulos</th><th>Final</th><th>Status</th><th>Últ. atividade</th></tr>'+rows+'</table>':'<p style="color:var(--gray)">Nenhum registro'+(recs.length?' com esses filtros':' importado ainda')+'.</p>';}
+function gTgl(i){var el=document.getElementById('gdet'+i);if(el)el.style.display=el.style.display==='none'?'':'none';}
 function exportCSV(){const recs=window._recs||[];if(!recs.length)return;let csv='Nome;Trilha;Modulos;Final;Habilitacoes;Status;Data\n';recs.forEach(r=>{const dn=(r.modulos||[]).filter(m=>m.pass).length;const aptos=(r.modulos||[]).filter(m=>m.apto&&m.pass).map(m=>m.apto).join('|');csv+=[r.nome,r.trilhaNome||r.trilha,dn+'/'+(r.modulos||[]).length,r.final?Math.round(r.final.total*100)+'%':'',aptos,r.final&&r.final.pass?'Aprovado':(r.final?'Reprovado':'Em curso'),new Date(r.data).toLocaleDateString('pt-BR')].join(';')+'\n';});dl(csv,'consolidado_academy.csv','text/csv');}
 </script></body></html>
