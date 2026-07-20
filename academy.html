@@ -333,3 +333,4 @@ function _gTable(){var recs=window._recs||[];var f=window._gf||{t:'',s:'',q:''};
 function gTgl(i){var el=document.getElementById('gdet'+i);if(el)el.style.display=el.style.display==='none'?'':'none';}
 function exportCSV(){const recs=window._recs||[];if(!recs.length)return;let csv='Nome;Trilha;Modulos;Final;Habilitacoes;Status;Data\n';recs.forEach(r=>{const dn=(r.modulos||[]).filter(m=>m.pass).length;const aptos=(r.modulos||[]).filter(m=>m.apto&&m.pass).map(m=>m.apto).join('|');csv+=[r.nome,r.trilhaNome||r.trilha,dn+'/'+(r.modulos||[]).length,r.final?Math.round(r.final.total*100)+'%':'',aptos,r.final&&r.final.pass?'Aprovado':(r.final?'Reprovado':'Em curso'),new Date(r.data).toLocaleDateString('pt-BR')].join(';')+'\n';});dl(csv,'consolidado_academy.csv','text/csv');}
 </script></body></html>
+<!-- build 2026-07-20 gestor-panel -->
