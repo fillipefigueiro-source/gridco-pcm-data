@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-22T08:53:58Z",
+  "geradoEm": "2026-07-22T11:16:15Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-20 .. 2026-07-26",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3157,
-        "emAberto": 13,
-        "atrasadas": 12,
-        "concluidas30d": 513,
-        "concluidas7d": 116,
-        "naSemanaCorrente": 46
+        "total": 3162,
+        "emAberto": 16,
+        "atrasadas": 13,
+        "concluidas30d": 515,
+        "concluidas7d": 118,
+        "naSemanaCorrente": 51
       },
       "mttr": {
-        "horas": 7.2,
-        "label": "7h 12min",
-        "amostra": 513
+        "horas": 7.17,
+        "label": "7h 10min",
+        "amostra": 515
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W30",
-          "criadas": 45,
-          "finalizadas": 38
+          "criadas": 50,
+          "finalizadas": 40
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3157,
-            "emAberto": 13
+            "total": 3162,
+            "emAberto": 16
           }
         ],
         "responsaveis": [
@@ -68,8 +68,8 @@
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 142,
-            "emAberto": 1
+            "total": 143,
+            "emAberto": 2
           },
           {
             "nome": "Italo  Lustosa",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 13,
-      "atrasadas": 12,
+      "total": 16,
+      "atrasadas": 13,
       "porStatus": {
         "naoIniciada": 12,
-        "emProgresso": 0,
+        "emProgresso": 3,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -217,20 +217,39 @@
           "atrasada": true
         },
         {
+          "osId": "9826",
+          "ativo": "Cabine 8 Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-CABN8 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[Jacundá 1][Cabine 8] - Religamento da Cabine 8",
+          "criticidade": "",
+          "dataProgramada": "2026-07-21",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "9821",
           "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
           "equipe": "",
           "responsavel": "Wesllen  Castro",
           "criadoPor": "GerdesonAraújo",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Religamento de usina",
           "criticidade": "",
           "dataProgramada": "2026-07-21",
           "dataCriacao": "2026-07-21",
-          "dataInicial": "",
+          "dataInicial": "2026-07-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -308,6 +327,44 @@
           "atrasada": true
         },
         {
+          "osId": "9825",
+          "ativo": "Inversor 2.4 Huawei     { TIM200-INVR2.4 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Luiz  Silva",
+          "status": "Em progresso",
+          "tarefa": "[Timon 2][Inversor 2.4] - Religamento do Inversor 2.4",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "2026-07-22",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "9824",
+          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Wesllen  Castro",
+          "status": "Em progresso",
+          "tarefa": "Religamento da usina de IPX 2C",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "2026-07-22",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "9263",
           "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
           "equipe": "",
@@ -327,6 +384,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9823",
+          "ativo": "Cabine 1  Marialva  Paraná Brasil { MRV100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Lucas  Nascimento",
+          "criadoPor": "LucasNascimento",
+          "supervisor": "Lucas  Nascimento",
+          "status": "Finalizada",
+          "tarefa": "[Marialva 1][Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "2026-07-22",
+          "dataFinal": "2026-07-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "9822",
+          "ativo": "Cabine 1  Marialva  Paraná Brasil { MRV100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Lucas  Nascimento",
+          "criadoPor": "LucasNascimento",
+          "supervisor": "Lucas  Nascimento",
+          "status": "Finalizada",
+          "tarefa": "[Marialva 1][Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "2026-07-22",
+          "dataFinal": "2026-07-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "9815",
           "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
@@ -3248,46 +3345,6 @@
           "atrasada": false
         },
         {
-          "osId": "9389",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da Usina remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-07-13",
-          "dataCriacao": "2026-07-13",
-          "dataInicial": "2026-07-13",
-          "dataFinal": "2026-07-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
-          "osId": "9386",
-          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizada",
-          "tarefa": "Religamento UFV Ipixuna 1 e 2",
-          "criticidade": "",
-          "dataProgramada": "2026-07-13",
-          "dataCriacao": "2026-07-13",
-          "dataInicial": "2026-07-13",
-          "dataFinal": "2026-07-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9431",
           "ativo": "Inversor 1.6 Huawei     { TESTE100-INVR1.6 }",
           "equipe": "",
@@ -3328,12 +3385,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1538,
+      "historicoTotal": 1540,
       "subClassificacao": {
         "remoto": 720,
-        "local": 2437,
+        "local": 2442,
         "remotoEmAberto": 8,
-        "localEmAberto": 5,
+        "localEmAberto": 8,
         "pctRemoto": 23,
         "alerta": true
       },
@@ -8916,8 +8973,8 @@
       "total": 85,
       "atrasadas": 85,
       "porStatus": {
-        "naoIniciada": 81,
-        "emProgresso": 1,
+        "naoIniciada": 80,
+        "emProgresso": 2,
         "pausada": 3,
         "verificacao": 0
       },
@@ -9954,14 +10011,15 @@
           "responsavel": "Daniel de Paula ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Daniel de Paula ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Sete Lagoas 2][Tracker 38.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-07-17",
           "dataCriacao": "2026-07-20",
-          "dataInicial": "",
+          "dataInicial": "2026-07-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -13740,20 +13798,74 @@
   },
   "ossPublicas": [
     {
+      "osId": "9826",
+      "ativo": "Cabine 8 Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-CABN8 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[Jacundá 1][Cabine 8] - Religamento da Cabine 8",
+      "criticidade": "",
+      "dataProgramada": "2026-07-21",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "9825",
+      "ativo": "Inversor 2.4 Huawei     { TIM200-INVR2.4 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Luiz  Silva",
+      "status": "Em progresso",
+      "tarefa": "[Timon 2][Inversor 2.4] - Religamento do Inversor 2.4",
+      "criticidade": "",
+      "dataProgramada": "2026-07-22",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "2026-07-22",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
+      "osId": "9824",
+      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Wesllen  Castro",
+      "status": "Em progresso",
+      "tarefa": "Religamento da usina de IPX 2C",
+      "criticidade": "",
+      "dataProgramada": "2026-07-22",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "2026-07-22",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
       "osId": "9821",
       "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
       "equipe": "",
       "responsavel": "Wesllen  Castro",
       "criadoPor": "GerdesonAraújo",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Religamento de usina",
       "criticidade": "",
       "dataProgramada": "2026-07-21",
       "dataCriacao": "2026-07-21",
-      "dataInicial": "",
+      "dataInicial": "2026-07-22",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -14265,14 +14377,15 @@
       "responsavel": "Daniel de Paula ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Daniel de Paula ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Sete Lagoas 2][Tracker 38.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-07-17",
       "dataCriacao": "2026-07-20",
-      "dataInicial": "",
+      "dataInicial": "2026-07-22",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "9728",
@@ -16267,6 +16380,46 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "9823",
+      "ativo": "Cabine 1  Marialva  Paraná Brasil { MRV100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Lucas  Nascimento",
+      "criadoPor": "LucasNascimento",
+      "supervisor": "Lucas  Nascimento",
+      "status": "Finalizada",
+      "tarefa": "[Marialva 1][Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-07-22",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "2026-07-22",
+      "dataFinal": "2026-07-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "9822",
+      "ativo": "Cabine 1  Marialva  Paraná Brasil { MRV100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Lucas  Nascimento",
+      "criadoPor": "LucasNascimento",
+      "supervisor": "Lucas  Nascimento",
+      "status": "Finalizada",
+      "tarefa": "[Marialva 1][Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-07-22",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "2026-07-22",
+      "dataFinal": "2026-07-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "9815",
       "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
@@ -19184,48 +19337,10 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "9485",
-      "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { BES100-INVR1.8 }",
-      "equipe": "",
-      "responsavel": "Rodolfo  Oliveira",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Rodolfo  Oliveira",
-      "status": "Finalizada",
-      "tarefa": "[Boa Esperança do Sul 1 e 2][Inversor 1.8] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-07-15",
-      "dataCriacao": "2026-07-15",
-      "dataInicial": "2026-07-16",
-      "dataFinal": "2026-07-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "9484",
-      "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { BES100-INVR1.9 }",
-      "equipe": "",
-      "responsavel": "Rodolfo  Oliveira",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Rodolfo  Oliveira",
-      "status": "Finalizada",
-      "tarefa": "[Boa Esperança do Sul 1 e 2][Inversor 1.9] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-07-11",
-      "dataCriacao": "2026-07-15",
-      "dataInicial": "2026-07-16",
-      "dataFinal": "2026-07-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2057,
-  "totalGeral": 4119,
+  "historicoTotal": 2059,
+  "totalGeral": 4124,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
