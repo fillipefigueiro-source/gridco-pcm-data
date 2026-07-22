@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-22T15:10:48Z",
+  "geradoEm": "2026-07-22T16:51:54Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-20 .. 2026-07-26",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3167,
-        "emAberto": 15,
+        "total": 3170,
+        "emAberto": 17,
         "atrasadas": 13,
-        "concluidas30d": 521,
-        "concluidas7d": 124,
-        "naSemanaCorrente": 56
+        "concluidas30d": 522,
+        "concluidas7d": 125,
+        "naSemanaCorrente": 59
       },
       "mttr": {
-        "horas": 7.08,
-        "label": "7h 5min",
-        "amostra": 521
+        "horas": 7.07,
+        "label": "7h 4min",
+        "amostra": 522
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W30",
-          "criadas": 55,
-          "finalizadas": 46
+          "criadas": 58,
+          "finalizadas": 47
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3167,
-            "emAberto": 15
+            "total": 3170,
+            "emAberto": 17
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 15,
+      "total": 17,
       "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 12,
+        "naoIniciada": 14,
         "emProgresso": 2,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 15
+        "(sem equipe)": 17
       },
       "oss": [
         {
@@ -327,6 +327,42 @@
           "atrasada": true
         },
         {
+          "osId": "9866",
+          "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "embu 3 - Verificação e religamento da usina. Não foi possível realizar comando remoto. Relé trip 67ABC  E 86",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "9860",
+          "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "UFV EMBU 3 - Verificação e religamento da usina. Não foi possível realizar comando remoto. TRIP 67ABC E 86",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
           "osId": "9848",
           "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
           "equipe": "",
@@ -366,13 +402,53 @@
       ],
       "ossHistorico": [
         {
+          "osId": "9862",
+          "ativo": "Grid Co. - Emergências e outros pontos      { GRID }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Marcos Duarte ",
+          "status": "Finalizados",
+          "tarefa": "UFV Corregó Sapucaia -  Equipe Grid apoiando a thopen no religamento de algumas UFVs. Relé trip  27ABC, 59A, 67B e 86.",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "2026-07-22",
+          "dataFinal": "2026-07-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "9859",
+          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Adriano  Moraes",
+          "status": "Finalizada",
+          "tarefa": "[Araputanga] - Inspeção e religamento da usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "2026-07-22",
+          "dataFinal": "2026-07-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "9832",
           "ativo": "RenoGrid - Nobres 1 - MT Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { RNGD-NBS100 }",
           "equipe": "",
           "responsavel": "Valmir  Júnior",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Valmir  Júnior",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "UFV NOBRES - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
           "criticidade": "",
           "dataProgramada": "2026-07-22",
@@ -386,33 +462,13 @@
           "atrasada": false
         },
         {
-          "osId": "9831",
-          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizados",
-          "tarefa": "[Araputanga 1][2C -] - Religamento do 2C -",
-          "criticidade": "",
-          "dataProgramada": "2026-07-22",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-07-22",
-          "dataFinal": "2026-07-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9830",
           "ativo": "Thopen - Linhares 1 - ES Sítio São Francisco, Barro Novo Linhares  Espírito Santo  { THPN-LNH100 }",
           "equipe": "",
           "responsavel": "Marcos Duarte ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Marcos Duarte ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "UFV LINHARES - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
           "criticidade": "",
           "dataProgramada": "2026-07-22",
@@ -912,16 +968,16 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "DavidNascimento",
           "supervisor": "Eduardo  Mendes",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "UFV: Sorocaba | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
           "criticidade": "",
           "dataProgramada": "2026-07-21",
           "dataCriacao": "2026-07-21",
-          "dataInicial": "2026-07-21",
+          "dataInicial": "2026-07-20",
           "dataFinal": "2026-07-21",
           "linkFracttal": "",
           "horasAteAbrir": 0,
-          "horasAteFechar": 0,
+          "horasAteFechar": 24.0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3306,26 +3362,6 @@
           "atrasada": false
         },
         {
-          "osId": "9399",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da usina de Marialva",
-          "criticidade": "",
-          "dataProgramada": "2026-07-13",
-          "dataCriacao": "2026-07-14",
-          "dataInicial": "2026-07-13",
-          "dataFinal": "2026-07-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9431",
           "ativo": "Inversor 1.6 Huawei     { TESTE100-INVR1.6 }",
           "equipe": "",
@@ -3366,11 +3402,11 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1546,
+      "historicoTotal": 1547,
       "subClassificacao": {
-        "remoto": 723,
-        "local": 2444,
-        "remotoEmAberto": 8,
+        "remoto": 725,
+        "local": 2445,
+        "remotoEmAberto": 10,
         "localEmAberto": 7,
         "pctRemoto": 23,
         "alerta": true
@@ -3547,7 +3583,7 @@
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
-            "total": 313
+            "total": 315
           },
           {
             "nome": "Felipe Silva",
@@ -8883,17 +8919,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 262,
-        "emAberto": 81,
-        "atrasadas": 72,
-        "concluidas30d": 141,
-        "concluidas7d": 78,
+        "total": 265,
+        "emAberto": 83,
+        "atrasadas": 74,
+        "concluidas30d": 142,
+        "concluidas7d": 79,
         "naSemanaCorrente": 21
       },
       "mttr": {
-        "horas": 109.45,
-        "label": "4d 13h",
-        "amostra": 141
+        "horas": 108.85,
+        "label": "4d 12h",
+        "amostra": 142
       },
       "tendencia4Semanas": [
         {
@@ -8913,16 +8949,16 @@
         },
         {
           "semana": "W30",
-          "criadas": 27,
-          "finalizadas": 19
+          "criadas": 30,
+          "finalizadas": 20
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 262,
-            "emAberto": 81
+            "total": 265,
+            "emAberto": 83
           }
         ],
         "responsaveis": [
@@ -8953,16 +8989,16 @@
           }
         ]
       },
-      "total": 81,
-      "atrasadas": 72,
+      "total": 83,
+      "atrasadas": 74,
       "porStatus": {
-        "naoIniciada": 72,
-        "emProgresso": 6,
-        "pausada": 3,
+        "naoIniciada": 75,
+        "emProgresso": 1,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 81
+        "(sem equipe)": 83
       },
       "oss": [
         {
@@ -9988,6 +10024,57 @@
           "atrasada": true
         },
         {
+          "osId": "9865",
+          "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { THPN-VRT200-INVR1.9 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Vertentes 2][Inversor 1.9] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-19",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "9864",
+          "ativo": "Inversor 1.7 Huawei SUN2000-250KTL-H1    { THPN-VRT200-INVR1.7 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Vertentes 2][Inversor 1.7] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-19",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "9863",
+          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { THPN-VRT200-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Vertentes 2][Inversor 1.6] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-19",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
           "osId": "9818",
           "ativo": "Inversor 1.9 Sungrow     { BWK100-INVR1.9 }",
           "equipe": "",
@@ -10002,24 +10089,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9817",
-          "ativo": "Inversor 1.11 Sungrow     { BWK100-INVR1.11 }",
-          "equipe": "",
-          "responsavel": "Luis  Moura",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Luis  Moura",
-          "status": "Em progresso",
-          "tarefa": "[Brodowski 1][Inversor 1.11] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "2026-07-22",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
           "atrasada": true
         },
         {
@@ -10115,7 +10184,7 @@
           "responsavel": "Rodolfo  Oliveira",
           "criadoPor": "Roger Lélis",
           "supervisor": "Rodolfo  Oliveira",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Ibaté 1][Inversor 1.6] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-07-21",
@@ -10133,7 +10202,7 @@
           "responsavel": "Rodolfo  Oliveira",
           "criadoPor": "Roger Lélis",
           "supervisor": "Rodolfo  Oliveira",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Ibaté 1][Inversor 1.5] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-07-21",
@@ -10151,7 +10220,7 @@
           "responsavel": "Rodolfo  Oliveira",
           "criadoPor": "Roger Lélis",
           "supervisor": "Rodolfo  Oliveira",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Ibaté 1][Inversor 1.3] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-07-21",
@@ -10169,7 +10238,7 @@
           "responsavel": "Rodolfo  Oliveira",
           "criadoPor": "Roger Lélis",
           "supervisor": "Rodolfo  Oliveira",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Ibaté 1][Inversor 1.12] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-07-21",
@@ -10353,6 +10422,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9817",
+          "ativo": "Inversor 1.11 Sungrow     { BWK100-INVR1.11 }",
+          "equipe": "",
+          "responsavel": "Luis  Moura",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Luis  Moura",
+          "status": "Finalizados",
+          "tarefa": "[Brodowski 1][Inversor 1.11] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-21",
+          "dataInicial": "2026-07-22",
+          "dataFinal": "2026-07-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "9539",
           "ativo": "Inversor 5.4 Sungrow SG75CX    { THPN-ORB100-INVR5.4 }",
@@ -13183,40 +13271,21 @@
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "6100",
-          "ativo": "Greenyellow - Cedro 1 - CE Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { GY-CDR100 }",
-          "equipe": "",
-          "responsavel": "Leonardo  Dias",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Leonardo  Dias",
-          "status": "Finalizada",
-          "tarefa": "Perda de comunicação na usina de Cedro",
-          "criticidade": "",
-          "dataProgramada": "2026-05-01",
-          "dataCriacao": "2026-05-01",
-          "dataInicial": "2026-05-01",
-          "dataFinal": "2026-05-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 154
+      "historicoTotal": 155
     },
     "engenharia": {
       "label": "Engenharia",
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 26,
-        "emAberto": 2,
+        "total": 27,
+        "emAberto": 3,
         "atrasadas": 2,
         "concluidas30d": 11,
         "concluidas7d": 3,
-        "naSemanaCorrente": 0
+        "naSemanaCorrente": 1
       },
       "mttr": {
         "horas": 159.27,
@@ -13241,7 +13310,7 @@
         },
         {
           "semana": "W30",
-          "criadas": 0,
+          "criadas": 1,
           "finalizadas": 0
         }
       ],
@@ -13249,8 +13318,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 26,
-            "emAberto": 2
+            "total": 27,
+            "emAberto": 3
           }
         ],
         "responsaveis": [
@@ -13281,16 +13350,16 @@
           }
         ]
       },
-      "total": 2,
+      "total": 3,
       "atrasadas": 2,
       "porStatus": {
-        "naoIniciada": 0,
+        "naoIniciada": 1,
         "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 2
+        "(sem equipe)": 3
       },
       "oss": [
         {
@@ -13328,6 +13397,23 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "atrasada": true
+        },
+        {
+          "osId": "9861",
+          "ativo": "Inversor 1.1 Huawei SUN2000-215KTL-H0    { STI100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "João Vieira ",
+          "status": "Não Iniciada",
+          "tarefa": "[Santo Inácio 1 e 2][Inversor 1.1] - Coleta de Dados de Geração CLP",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -13717,6 +13803,104 @@
   },
   "ossPublicas": [
     {
+      "osId": "9866",
+      "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "embu 3 - Verificação e religamento da usina. Não foi possível realizar comando remoto. Relé trip 67ABC  E 86",
+      "criticidade": "",
+      "dataProgramada": "2026-07-22",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
+      "osId": "9865",
+      "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { THPN-VRT200-INVR1.9 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Vertentes 2][Inversor 1.9] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-07-19",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9864",
+      "ativo": "Inversor 1.7 Huawei SUN2000-250KTL-H1    { THPN-VRT200-INVR1.7 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Vertentes 2][Inversor 1.7] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-07-19",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9863",
+      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { THPN-VRT200-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Vertentes 2][Inversor 1.6] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-07-19",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9861",
+      "ativo": "Inversor 1.1 Huawei SUN2000-215KTL-H0    { STI100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "João Vieira ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "João Vieira ",
+      "status": "Não Iniciada",
+      "tarefa": "[Santo Inácio 1 e 2][Inversor 1.1] - Coleta de Dados de Geração CLP",
+      "criticidade": "",
+      "dataProgramada": "2026-07-22",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9860",
+      "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "UFV EMBU 3 - Verificação e religamento da usina. Não foi possível realizar comando remoto. TRIP 67ABC E 86",
+      "criticidade": "",
+      "dataProgramada": "2026-07-22",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
       "osId": "9849",
       "ativo": "Inversor 3.4 SOLAREDGE     { CLD200-INVR3.4 }",
       "equipe": "",
@@ -13930,23 +14114,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "9817",
-      "ativo": "Inversor 1.11 Sungrow     { BWK100-INVR1.11 }",
-      "equipe": "",
-      "responsavel": "Luis  Moura",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Luis  Moura",
-      "status": "Em progresso",
-      "tarefa": "[Brodowski 1][Inversor 1.11] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-07-20",
-      "dataCriacao": "2026-07-21",
-      "dataInicial": "2026-07-22",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0
-    },
-    {
       "osId": "9810",
       "ativo": "Transformador 1      { SJE100-TRFR1 }",
       "equipe": "",
@@ -14066,7 +14233,7 @@
       "responsavel": "Rodolfo  Oliveira",
       "criadoPor": "Roger Lélis",
       "supervisor": "Rodolfo  Oliveira",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Ibaté 1][Inversor 1.6] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-07-21",
@@ -14083,7 +14250,7 @@
       "responsavel": "Rodolfo  Oliveira",
       "criadoPor": "Roger Lélis",
       "supervisor": "Rodolfo  Oliveira",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Ibaté 1][Inversor 1.5] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-07-21",
@@ -14100,7 +14267,7 @@
       "responsavel": "Rodolfo  Oliveira",
       "criadoPor": "Roger Lélis",
       "supervisor": "Rodolfo  Oliveira",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Ibaté 1][Inversor 1.3] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-07-21",
@@ -14117,7 +14284,7 @@
       "responsavel": "Rodolfo  Oliveira",
       "criadoPor": "Roger Lélis",
       "supervisor": "Rodolfo  Oliveira",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Ibaté 1][Inversor 1.12] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-07-21",
@@ -16224,13 +16391,53 @@
   ],
   "ossHistorico": [
     {
+      "osId": "9862",
+      "ativo": "Grid Co. - Emergências e outros pontos      { GRID }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Marcos Duarte ",
+      "status": "Finalizados",
+      "tarefa": "UFV Corregó Sapucaia -  Equipe Grid apoiando a thopen no religamento de algumas UFVs. Relé trip  27ABC, 59A, 67B e 86.",
+      "criticidade": "",
+      "dataProgramada": "2026-07-22",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "2026-07-22",
+      "dataFinal": "2026-07-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "9859",
+      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Adriano  Moraes",
+      "status": "Finalizada",
+      "tarefa": "[Araputanga] - Inspeção e religamento da usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-22",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "2026-07-22",
+      "dataFinal": "2026-07-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "9832",
       "ativo": "RenoGrid - Nobres 1 - MT Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { RNGD-NBS100 }",
       "equipe": "",
       "responsavel": "Valmir  Júnior",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Valmir  Júnior",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "UFV NOBRES - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
       "criticidade": "",
       "dataProgramada": "2026-07-22",
@@ -16244,33 +16451,13 @@
       "atrasada": false
     },
     {
-      "osId": "9831",
-      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Adriano  Moraes",
-      "status": "Finalizados",
-      "tarefa": "[Araputanga 1][2C -] - Religamento do 2C -",
-      "criticidade": "",
-      "dataProgramada": "2026-07-22",
-      "dataCriacao": "2026-07-22",
-      "dataInicial": "2026-07-22",
-      "dataFinal": "2026-07-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
       "osId": "9830",
       "ativo": "Thopen - Linhares 1 - ES Sítio São Francisco, Barro Novo Linhares  Espírito Santo  { THPN-LNH100 }",
       "equipe": "",
       "responsavel": "Marcos Duarte ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Marcos Duarte ",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "UFV LINHARES - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
       "criticidade": "",
       "dataProgramada": "2026-07-22",
@@ -16381,6 +16568,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "9817",
+      "ativo": "Inversor 1.11 Sungrow     { BWK100-INVR1.11 }",
+      "equipe": "",
+      "responsavel": "Luis  Moura",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Luis  Moura",
+      "status": "Finalizados",
+      "tarefa": "[Brodowski 1][Inversor 1.11] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-07-20",
+      "dataCriacao": "2026-07-21",
+      "dataInicial": "2026-07-22",
+      "dataFinal": "2026-07-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -16829,16 +17035,16 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "DavidNascimento",
       "supervisor": "Eduardo  Mendes",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "UFV: Sorocaba | Proteção: -- | Ação: Religamento Local | Falha: Usina offline",
       "criticidade": "",
       "dataProgramada": "2026-07-21",
       "dataCriacao": "2026-07-21",
-      "dataInicial": "2026-07-21",
+      "dataInicial": "2026-07-20",
       "dataFinal": "2026-07-21",
       "linkFracttal": "",
       "horasAteAbrir": 0,
-      "horasAteFechar": 0,
+      "horasAteFechar": 24.0,
       "modalidade": "local",
       "atrasada": false
     },
@@ -19145,48 +19351,10 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "9499",
-      "ativo": "Tracker 40.100 STI STI-H250    { THPN-VRT200-ETKR40.100 }",
-      "equipe": "",
-      "responsavel": "Matheus Leite ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Matheus Leite ",
-      "status": "Finalizados",
-      "tarefa": "[Vertentes 2][Tracker 40.100] - Verificação de Tracker com Problema",
-      "criticidade": "",
-      "dataProgramada": "2026-07-15",
-      "dataCriacao": "2026-07-15",
-      "dataInicial": "2026-07-17",
-      "dataFinal": "2026-07-17",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "9498",
-      "ativo": "Tracker 35.100 STI STI-H250    { THPN-VRT200-ETKR35.100 }",
-      "equipe": "",
-      "responsavel": "Matheus Leite ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Matheus Leite ",
-      "status": "Finalizados",
-      "tarefa": "[Vertentes 2][Tracker 35.100] - Verificação de Tracker com Problema",
-      "criticidade": "",
-      "dataProgramada": "2026-07-15",
-      "dataCriacao": "2026-07-15",
-      "dataInicial": "2026-07-17",
-      "dataFinal": "2026-07-17",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2065,
-  "totalGeral": 4125,
+  "historicoTotal": 2067,
+  "totalGeral": 4132,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
