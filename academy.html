@@ -184,13 +184,16 @@ function mhBody(){var id=_mh.id,m=D.mod[id],v=document.getElementById('mhview');
  else if(_mh.tab==='casos'){if(!D.modcase[id]){v.innerHTML='<p style="color:#5b6b7d">Sem casos específicos deste módulo.</p>';return;}mcPlay();}
  else if(_mh.tab==='aval'){mhEval();}}
 var _mc;
-function mcPlay(){var cs=D.modcase[_mh.id];_mc={cs:cs,cur:cs.start,score:0,max:Object.keys(cs.nodes).filter(function(k){return !cs.nodes[k].fim;}).length};mcNode();}
+function mcPlay(){var cs=D.modcase[_mh.id];_mc={cs:cs,cur:cs.start,score:0,state:{},max:Object.keys(cs.nodes).filter(function(k){return !cs.nodes[k].fim;}).length};mcNode();}
+function _mcSev(){var n=0,k;for(k in _mc.state){if(_mc.state[k])n++;}return n>=2?2:(n?1:0);}
+function _mcSit(){var s=_mcSev(),lbl=['sob controle','comprometida','crítica'][s],col=['#1f7a3d','#b8860b','#c0392b'][s],bg=['#e3f3ea','#f7edd7','#f7e4e1'][s];return '<div style="display:inline-block;font-size:11.5px;padding:3px 10px;border-radius:999px;background:'+bg+';color:'+col+';margin-bottom:10px">Situação: <b>'+lbl+'</b></div>';}
+function _mcLock(o){if(o.block){for(var i=0;i<o.block.length;i++){if(_mc.state[o.block[i]])return o.lockMsg||'Indisponível por uma decisão anterior.';}}if(o.req){for(var j=0;j<o.req.length;j++){if(!_mc.state[o.req[j]])return o.lockMsg||'Indisponível por uma decisão anterior.';}}return '';}
 function mcNode(){var n=_mc.cs.nodes[_mc.cur],v=document.getElementById('mhview');
- if(n.fim){var pct=Math.round(_mc.score/(_mc.max*2)*100);_setSec(_mh.id,'casos');
-   v.innerHTML='<div class="cen-fb '+(pct>=60?'good':'bad')+'"><b>'+n.tit+'</b><br>'+n.txt+'<br>Julgamento: '+pct+'%</div><button class="gbtn" onclick="_mh.tab=\'aval\';mhRender()">Ir para a Avaliação →</button> <button class="gbtn" style="background:#eef2f7;color:#0f2f5c;margin-left:6px" onclick="mcPlay()">↻ Refazer</button>';return;}
- var h='<p style="font-size:12.5px;color:#5b6b7d">'+_mc.cs.ctx+'</p><div class="cen-sit">'+n.s+'</div>';
- n.o.forEach(function(o,i){h+='<button class="cen-opt" data-i="'+i+'">'+o.t+'</button>';});h+='<div id="mcfb"></div>';v.innerHTML=h;
- v.querySelectorAll('.cen-opt').forEach(function(b){b.onclick=function(){var o=n.o[parseInt(b.dataset.i)];v.querySelectorAll('.cen-opt').forEach(function(e){e.disabled=true;e.style.opacity=.55;});b.style.opacity=1;b.style.borderColor=(o.q==='good'?'#1f7a3d':o.q==='bad'?'#c0392b':'#b8860b');_mc.score+=({good:2,ok:1,bad:0})[o.q];
+ if(n.fim){var pct=Math.round(_mc.score/(_mc.max*2)*100);var crit=_mcSev()>=2;_setSec(_mh.id,'casos');
+   v.innerHTML='<div class="cen-fb '+(pct>=60?'good':'bad')+'"><b>'+n.tit+'</b><br>'+n.txt+(crit?'<br><span style="color:#c0392b;font-size:12.5px">⚠ As decisões erradas foram fechando as saídas: no fim, faltavam registros e prazos para resolver bem.</span>':'')+'<br>Julgamento: '+pct+'%</div><button class="gbtn" onclick="_mh.tab=\'aval\';mhRender()">Ir para a Avaliação →</button> <button class="gbtn" style="background:#eef2f7;color:#0f2f5c;margin-left:6px" onclick="mcPlay()">↻ Refazer</button>';return;}
+ var h=_mcSit()+'<p style="font-size:12.5px;color:#5b6b7d">'+_mc.cs.ctx+'</p><div class="cen-sit">'+n.s+'</div>';
+ n.o.forEach(function(o,i){var why=_mcLock(o);if(why){h+='<div class="cen-opt" style="opacity:.6;cursor:not-allowed;border-style:dashed"><span style="margin-right:5px">🔒</span>'+o.t+'<div style="font-size:11px;color:#b8860b;margin-top:4px">'+why+'</div></div>';}else{h+='<button class="cen-opt" data-i="'+i+'">'+o.t+'</button>';}});h+='<div id="mcfb"></div>';v.innerHTML=h;
+ v.querySelectorAll('button.cen-opt').forEach(function(b){b.onclick=function(){var o=n.o[parseInt(b.dataset.i)];v.querySelectorAll('.cen-opt').forEach(function(e){e.disabled=true;e.style.opacity=.55;});b.style.opacity=1;b.style.borderColor=(o.q==='good'?'#1f7a3d':o.q==='bad'?'#c0392b':'#b8860b');_mc.score+=({good:2,ok:1,bad:0})[o.q];if(o.set){o.set.forEach(function(f){_mc.state[f]=true;});}
    document.getElementById('mcfb').innerHTML='<div class="cen-fb '+o.q+'">'+o.fb+'<br><button class="gbtn" style="font-size:13px;margin-top:6px" onclick="_mc.cur=\''+o.to+'\';mcNode()">Continuar ›</button></div>';};});}
 function mhEval(){var id=_mh.id,v=document.getElementById('mhview');if(!_evalUnlocked(id)){v.innerHTML='<div class="lockmsg">🔒 Conclua Conteúdo, Biblioteca e Casos para liberar a avaliação.</div>';return;}
  var m=D.mod[id],set=(D.modeval[id]&&D.modeval[id].length)?D.modeval[id]:m.quiz;window._cur={id:id,thr:0.7,recycling:false,n:set.length};window._set=set;window._ans={};
@@ -204,7 +207,9 @@ function submitModEval(){var c=window._cur,ok=grade(window._set),sc=ok/window._s
 
 var _cfgMat={};var _cfgSel=null;
 function applyConfig(){Object.keys(_cfgMat).forEach(function(m){if(D.mod[m])D.modlib[m]=_cfgMat[m];});}
-async function cloudLoadConfig(){try{var fb=await acadFB();var snap=await fb.fs.getDoc(fb.fs.doc(fb.db,"academy_config","material"));if(snap.exists()){var d=snap.data();if(d&&d.mat){_cfgMat=d.mat;applyConfig();}}}catch(e){console.warn("cfgLoad",e);}}
+var _cfgQ={};function applyPerguntas(){try{if(_cfgQ.modeval)Object.keys(_cfgQ.modeval).forEach(function(m){D.modeval[m]=_cfgQ.modeval[m];});if(_cfgQ.modcase)Object.keys(_cfgQ.modcase).forEach(function(m){D.modcase[m]=_cfgQ.modcase[m];});if(_cfgQ.quiz)Object.keys(_cfgQ.quiz).forEach(function(m){if(D.mod[m])D.mod[m].quiz=_cfgQ.quiz[m];});if(_cfgQ.finais)Object.keys(_cfgQ.finais).forEach(function(t){D.finais[t]=_cfgQ.finais[t];});}catch(e){console.warn('applyPerguntas',e);}}
+async function saveBanco(){try{var fb=await acadFB();await fb.fs.setDoc(fb.fs.doc(fb.db,"academy_config","perguntas"),{q:_cfgQ,updatedAt:Date.now()});applyPerguntas();alert("Banco de perguntas salvo e compartilhado com a equipe.");}catch(e){alert("Erro ao salvar: "+(e&&e.message));}}
+async function cloudLoadConfig(){try{var fb=await acadFB();var snap=await fb.fs.getDoc(fb.fs.doc(fb.db,"academy_config","material"));if(snap.exists()){var d=snap.data();if(d&&d.mat){_cfgMat=d.mat;applyConfig();}}var snq=await fb.fs.getDoc(fb.fs.doc(fb.db,"academy_config","perguntas"));if(snq.exists()){var dq=snq.data();if(dq&&dq.q){_cfgQ=dq.q;applyPerguntas();}}}catch(e){console.warn("cfgLoad",e);}}
 async function saveConfig(){try{var fb=await acadFB();await fb.fs.setDoc(fb.fs.doc(fb.db,"academy_config","material"),{mat:_cfgMat,updatedAt:Date.now()});applyConfig();alert("Material salvo e compartilhado com a equipe.");}catch(e){alert("Erro ao salvar: "+e.message);}}
 function _ytid(u){u=u||'';var m=u.match(/[?&]v=([\w-]{11})/)||u.match(/youtu\.be\/([\w-]{11})/)||u.match(/embed\/([\w-]{11})/)||u.match(/^([\w-]{11})$/);return m?m[1]:null;}
 function _ensure(m){if(!_cfgMat[m])_cfgMat[m]=JSON.parse(JSON.stringify(D.modlib[m]||{vids:[],docs:[]}));_cfgMat[m].vids=_cfgMat[m].vids||[];_cfgMat[m].docs=_cfgMat[m].docs||[];return _cfgMat[m];}
@@ -276,6 +281,81 @@ function submitExam(){const E=D.recrut[window._exam.k];const ok=grade(E.q);const
  const by={tecnico:[0,0],processos:[0,0],cultura:[0,0]};E.q.forEach((q,i)=>{by[q.e][1]++;if(window._ans[i]===q.c)by[q.e][0]++;});
  const rec={candidato:window._exam.cand,prova:E.nome,nota:Math.round(sc*100),corte:Math.round(corte*100),resultado:v.replace(/[✓⚠✗]\s?/,''),por_eixo:{tecnico:by.tecnico[1]?Math.round(by.tecnico[0]/by.tecnico[1]*100):null,processos:by.processos[1]?Math.round(by.processos[0]/by.processos[1]*100):null,cultura:by.cultura[1]?Math.round(by.cultura[0]/by.cultura[1]*100):null},data:new Date().toISOString()};
  $('qres').innerHTML='<div class="result '+cls+'">'+v+' — '+Math.round(sc*100)+'% (corte '+Math.round(corte*100)+'%)</div><div class="row" style="margin-top:10px"><button class="gbtn" style="max-width:240px" onclick=\'dl('+JSON.stringify(JSON.stringify(rec,null,2))+',"prova_"+'+JSON.stringify(window._exam.cand.replace(/\s+/g,"_"))+'+".json","application/json")\'>⬇ Exportar resultado</button><button class="gbtn" style="max-width:200px;background:#e6e9ee;color:var(--navy)" onclick="showRecrut()">Nova prova</button></div>';}
+// BANCO DE PERGUNTAS (editor do gestor)
+var _bk={sel:null,tab:'aval',fin:null};
+function _bkEnsure(kind,key,src){_cfgQ[kind]=_cfgQ[kind]||{};if(!_cfgQ[kind][key])_cfgQ[kind][key]=JSON.parse(JSON.stringify(src||[]));return _cfgQ[kind][key];}
+function _qArr(kind,key){return _cfgQ[kind]&&_cfgQ[kind][key];}
+function _qSet(kind,key,qi,f,val){_qArr(kind,key)[qi][f]=val;}
+function _qSetOpt(kind,key,qi,oi,val){_qArr(kind,key)[qi].o[oi]=val;}
+function _qCorrect(kind,key,qi,oi){_qArr(kind,key)[qi].c=oi;bkBody();}
+function _qAddOpt(kind,key,qi){_qArr(kind,key)[qi].o.push('Nova alternativa');bkBody();}
+function _qDelOpt(kind,key,qi,oi){var a=_qArr(kind,key)[qi];if(a.o.length<=2){alert('Mínimo de 2 alternativas.');return;}a.o.splice(oi,1);if(a.c>=a.o.length)a.c=0;bkBody();}
+function _qAdd(kind,key,tipo){var q={q:'Nova pergunta',o:['Alternativa 1','Alternativa 2','Alternativa 3','Alternativa 4'],c:0,e:''};if(tipo)q.tipo='conceito';_qArr(kind,key).push(q);bkBody();}
+function _qDel(kind,key,qi){if(!confirm('Excluir esta questão?'))return;_qArr(kind,key).splice(qi,1);bkBody();}
+function _qList(kind,key,opt){var a=_qArr(kind,key)||[];var h='';a.forEach(function(q,qi){
+ h+='<div class="bk-q">';
+ h+='<div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#5b6b7d;margin-bottom:2px"><span>Questão '+(qi+1)+'</span>'+(opt.tipo?'<select class="bk-mini" onchange="_qSet(\''+kind+'\',\''+key+'\','+qi+',\'tipo\',this.value)"><option value="conceito"'+(q.tipo==='conceito'?' selected':'')+'>conceito</option><option value="caso"'+(q.tipo==='caso'?' selected':'')+'>caso</option></select>':'')+'</div>';
+ h+='<textarea class="bk-in" oninput="_qSet(\''+kind+'\',\''+key+'\','+qi+',\'q\',this.value)">'+esc(q.q||'')+'</textarea>';
+ (q.o||[]).forEach(function(op,oi){h+='<div class="bk-opt"><input type="radio" name="bk_'+kind+'_'+qi+'" '+(q.c===oi?'checked':'')+' title="marcar como correta" onchange="_qCorrect(\''+kind+'\',\''+key+'\','+qi+','+oi+')"><input class="bk-in" value="'+esc(op)+'" oninput="_qSetOpt(\''+kind+'\',\''+key+'\','+qi+','+oi+',this.value)"><button class="bk-x" title="remover" onclick="_qDelOpt(\''+kind+'\',\''+key+'\','+qi+','+oi+')">✕</button></div>';});
+ h+='<div style="margin-top:5px;display:flex;gap:6px;align-items:center;flex-wrap:wrap"><button class="bk-sm" onclick="_qAddOpt(\''+kind+'\',\''+key+'\','+qi+')">+ alternativa</button><button class="bk-sm bk-del" onclick="_qDel(\''+kind+'\',\''+key+'\','+qi+')">excluir questão</button><span style="font-size:11px;color:#1f7a3d">✓ correta: alternativa '+((q.c||0)+1)+'</span></div>';
+ h+='</div>';});
+ h+='<button class="bk-sm" style="margin-top:4px" onclick="_qAdd(\''+kind+'\',\''+key+'\','+(opt.tipo?'true':'false')+')">+ adicionar questão</button>';
+ return h;}
+// --- editor de ramificações ---
+function _cCase(key){return _cfgQ.modcase&&_cfgQ.modcase[key];}
+function _cSet(key,f,v){_cCase(key)[f]=v;}
+function _nSet(key,nk,f,v){_cCase(key).nodes[nk][f]=v;}
+function _oSet(key,nk,oi,f,v){_cCase(key).nodes[nk].o[oi][f]=v;}
+function _oFlags(key,nk,oi,f,v){var arr=v.split(',').map(function(s){return s.trim();}).filter(Boolean);var o=_cCase(key).nodes[nk].o[oi];if(arr.length)o[f]=arr;else delete o[f];}
+function _oAdd(key,nk){var first=Object.keys(_cCase(key).nodes)[0];_cCase(key).nodes[nk].o.push({t:'Nova alternativa',q:'ok',fb:'',to:first});bkBody();}
+function _oDel(key,nk,oi){var n=_cCase(key).nodes[nk];if(n.o.length<=2){alert('Mínimo de 2 alternativas.');return;}n.o.splice(oi,1);bkBody();}
+function _nDel(key,nk){var cs=_cCase(key);if(cs.start===nk){alert('Não dá para excluir o nó inicial.');return;}if(!confirm('Excluir o nó '+nk+'?'))return;delete cs.nodes[nk];bkBody();}
+function _nAdd(key){var cs=_cCase(key);var nk=prompt('Id do novo nó (ex: d):');if(!nk)return;nk=nk.trim();if(!nk||cs.nodes[nk]){alert('Id inválido ou já existe.');return;}var first=Object.keys(cs.nodes)[0];cs.nodes[nk]={s:'Nova situação',o:[{t:'Alternativa 1',q:'good',fb:'',to:first},{t:'Alternativa 2',q:'bad',fb:'',to:first}]};bkBody();}
+function _nAddFim(key){var cs=_cCase(key);var nk=prompt('Id do desfecho (ex: f_novo):');if(!nk)return;nk=nk.trim();if(!nk||cs.nodes[nk]){alert('Id inválido ou já existe.');return;}cs.nodes[nk]={fim:1,tit:'Novo desfecho',txt:''};bkBody();}
+function _nodeSelect(cs,cur,handler){var h='<select class="bk-mini" onchange="'+handler+'">';Object.keys(cs.nodes).forEach(function(k){h+='<option value="'+k+'"'+(k===cur?' selected':'')+'>'+k+(cs.nodes[k].fim?' (desfecho)':'')+'</option>';});return h+'</select>';}
+function _sel(arr,cur,handler){var h='<select class="bk-mini" onchange="'+handler+'">';arr.forEach(function(x){h+='<option'+(x===cur?' selected':'')+'>'+x+'</option>';});return h+'</select>';}
+function _caseFlags(cs){var s={};Object.keys(cs.nodes).forEach(function(k){var n=cs.nodes[k];if(n.o)n.o.forEach(function(o){(o.set||[]).forEach(function(f){s[f]=1;});(o.block||[]).forEach(function(f){s[f]=1;});(o.req||[]).forEach(function(f){s[f]=1;});});});return Object.keys(s);}
+function _caseEditor(kind,key){var cs=_cCase(key);if(!cs)return '<p style="color:#5b6b7d">Sem caso de decisão neste módulo.</p>';
+ var h='<div class="bk-q"><div style="font-size:11px;color:#5b6b7d">Título do caso</div><input class="bk-in" value="'+esc(cs.tit||'')+'" oninput="_cSet(\''+key+'\',\'tit\',this.value)">';
+ h+='<div style="font-size:11px;color:#5b6b7d;margin-top:4px">Contexto (aparece em todos os nós)</div><textarea class="bk-in" oninput="_cSet(\''+key+'\',\'ctx\',this.value)">'+esc(cs.ctx||'')+'</textarea>';
+ h+='<div style="font-size:11px;color:#5b6b7d;margin-top:4px">Nó inicial</div>'+_nodeSelect(cs,cs.start,'_cSet(\''+key+'\',\'start\',this.value)')+'</div>';
+ var flags=_caseFlags(cs);
+ h+='<div style="font-size:11.5px;color:#41506a;margin:8px 0 6px;background:#eef4d9;border-radius:8px;padding:8px 10px">Estados de consequência em uso: '+(flags.length?flags.map(function(f){return '<code style="background:#fff;padding:1px 5px;border-radius:4px">'+esc(f)+'</code>';}).join(' '):'<i>nenhum ainda — use "define estado" numa escolha errada</i>')+'</div>';
+ Object.keys(cs.nodes).forEach(function(nk){var n=cs.nodes[nk];
+  if(n.fim){h+='<div class="bk-node bk-fim"><div style="font-weight:600;font-size:12.5px">🏁 Desfecho — '+esc(nk)+'</div><input class="bk-in" value="'+esc(n.tit||'')+'" placeholder="título" oninput="_nSet(\''+key+'\',\''+nk+'\',\'tit\',this.value)"><textarea class="bk-in" placeholder="texto do desfecho" oninput="_nSet(\''+key+'\',\''+nk+'\',\'txt\',this.value)">'+esc(n.txt||'')+'</textarea></div>';return;}
+  h+='<div class="bk-node"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:600;font-size:12.5px">Nó '+esc(nk)+(cs.start===nk?' · inicial':'')+'</span><button class="bk-sm bk-del" onclick="_nDel(\''+key+'\',\''+nk+'\')">excluir nó</button></div>';
+  h+='<textarea class="bk-in" placeholder="pergunta do nó" oninput="_nSet(\''+key+'\',\''+nk+'\',\'s\',this.value)">'+esc(n.s||'')+'</textarea>';
+  (n.o||[]).forEach(function(o,oi){
+   h+='<div class="bk-optbox">';
+   h+='<div class="bk-opt"><input class="bk-in" value="'+esc(o.t||'')+'" placeholder="texto da alternativa" oninput="_oSet(\''+key+'\',\''+nk+'\','+oi+',\'t\',this.value)"><button class="bk-x" onclick="_oDel(\''+key+'\',\''+nk+'\','+oi+')">✕</button></div>';
+   h+='<div class="bk-row"><label>qualidade '+_sel(['good','ok','bad'],o.q,'_oSet(\''+key+'\',\''+nk+'\','+oi+',\'q\',this.value)')+'</label><label>vai para '+_nodeSelect(cs,o.to,'_oSet(\''+key+'\',\''+nk+'\','+oi+',\'to\',this.value)')+'</label></div>';
+   h+='<textarea class="bk-in" placeholder="feedback ao aluno" oninput="_oSet(\''+key+'\',\''+nk+'\','+oi+',\'fb\',this.value)">'+esc(o.fb||'')+'</textarea>';
+   h+='<div class="bk-row"><label>define estado <input class="bk-in" value="'+esc((o.set||[]).join(', '))+'" placeholder="ex: garantia_perdida" oninput="_oFlags(\''+key+'\',\''+nk+'\','+oi+',\'set\',this.value)"></label></div>';
+   h+='<div class="bk-row"><label>bloqueia se estado <input class="bk-in" value="'+esc((o.block||[]).join(', '))+'" placeholder="ex: garantia_perdida" oninput="_oFlags(\''+key+'\',\''+nk+'\','+oi+',\'block\',this.value)"></label><label>requer estado <input class="bk-in" value="'+esc((o.req||[]).join(', '))+'" oninput="_oFlags(\''+key+'\',\''+nk+'\','+oi+',\'req\',this.value)"></label></div>';
+   h+='<div class="bk-row"><label>motivo do bloqueio (mostrado ao aluno) <input class="bk-in" value="'+esc(o.lockMsg||'')+'" placeholder="ex: o prazo já estourou por decisão anterior" oninput="_oSet(\''+key+'\',\''+nk+'\','+oi+',\'lockMsg\',this.value)"></label></div>';
+   h+='</div>';
+  });
+  h+='<button class="bk-sm" onclick="_oAdd(\''+key+'\',\''+nk+'\')">+ alternativa</button></div>';
+ });
+ h+='<div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap"><button class="bk-sm" onclick="_nAdd(\''+key+'\')">+ nó de decisão</button><button class="bk-sm" onclick="_nAddFim(\''+key+'\')">+ desfecho</button></div>';
+ return h;}
+function bkBody(){var v=$('bkbody');if(!v)return;var t=_bk.tab;
+ if(t==='aval'){_bkEnsure('modeval',_bk.sel,D.modeval[_bk.sel]);v.innerHTML=_qList('modeval',_bk.sel,{tipo:1});}
+ else if(t==='quiz'){_bkEnsure('quiz',_bk.sel,(D.mod[_bk.sel]||{}).quiz||[]);v.innerHTML=_qList('quiz',_bk.sel,{});}
+ else if(t==='fin'){_bkEnsure('finais',_bk.fin,D.finais[_bk.fin]);v.innerHTML=_qList('finais',_bk.fin,{tipo:1});}
+ else if(t==='ram'){_bkEnsure('modcase',_bk.sel,D.modcase[_bk.sel]);v.innerHTML=_caseEditor('modcase',_bk.sel);}}
+var _BKCSS='<style>.bk-tab{font-size:13px;padding:6px 12px;border:1px solid #cfd8e3;background:#fff;border-radius:8px;cursor:pointer}.bk-tab.on{background:#12467e;color:#fff;border-color:#12467e}.bk-q{border:1px solid #e3e8ef;border-radius:10px;padding:10px 12px;margin-bottom:10px}.bk-in{width:100%;border:1px solid #cfd8e3;border-radius:6px;padding:6px 8px;font-size:12.5px;font-family:inherit;margin:3px 0;box-sizing:border-box}textarea.bk-in{min-height:40px;resize:vertical}.bk-mini{font-size:12px;padding:4px 6px;border:1px solid #cfd8e3;border-radius:6px}.bk-opt{display:flex;align-items:center;gap:6px;margin:3px 0}.bk-opt .bk-in{margin:0}.bk-x{border:none;background:#f2d7d5;color:#a33;border-radius:6px;width:28px;height:30px;cursor:pointer;flex:0 0 auto}.bk-sm{font-size:12px;padding:5px 10px;border:1px solid #cfd8e3;background:#f4f6f9;border-radius:7px;cursor:pointer}.bk-sm.bk-del{color:#a33;border-color:#e6b8b3}.bk-node{border:1px solid #dce3ec;border-left:3px solid #12467e;border-radius:8px;padding:10px 12px;margin:8px 0;background:#fbfcfe}.bk-node.bk-fim{border-left-color:#1f7a3d}.bk-optbox{border:1px dashed #d5deea;border-radius:8px;padding:8px;margin:6px 0}.bk-row{display:flex;gap:10px;flex-wrap:wrap;font-size:11.5px;color:#41506a;margin:3px 0;align-items:center}.bk-row label{display:flex;gap:5px;align-items:center;flex:1;min-width:130px}</style>';
+function showBanco(){$('dash').classList.add('hide');$('view').classList.remove('hide');window.scrollTo(0,0);
+ if(!isManager()){$('view').innerHTML='<div class="panel"><p>Acesso restrito ao gestor.</p><button class="back" onclick="renderDash()">Voltar</button></div>';return;}
+ if(!_bk.sel)_bk.sel=Object.keys(D.mod)[0];if(!_bk.fin)_bk.fin=Object.keys(D.finais)[0];
+ var mopts=Object.keys(D.mod).map(function(m){return '<option value="'+m+'"'+(m===_bk.sel?' selected':'')+'>'+esc(D.mod[m].titulo)+'</option>';}).join('');
+ var topts=Object.keys(D.finais).map(function(t){return '<option value="'+t+'"'+(t===_bk.fin?' selected':'')+'>'+esc((D.trilhas[t]||{}).nome||t)+'</option>';}).join('');
+ var tabs=[['aval','Avaliação'],['ram','Ramificações'],['quiz','Quiz rápido'],['fin','Provas finais']];
+ var tabH=tabs.map(function(t){return '<button class="bk-tab'+(_bk.tab===t[0]?' on':'')+'" onclick="_bk.tab=\''+t[0]+'\';showBanco()">'+t[1]+'</button>';}).join('');
+ var picker=(_bk.tab==='fin')?('<label style="font-size:12.5px;color:#5b6b7d">Trilha <select class="bk-mini" onchange="_bk.fin=this.value;bkBody()">'+topts+'</select></label>'):('<label style="font-size:12.5px;color:#5b6b7d">Módulo <select class="bk-mini" onchange="_bk.sel=this.value;bkBody()">'+mopts+'</select></label>');
+ $('view').innerHTML=_BKCSS+'<button class="back" onclick="showGestor()">← Voltar ao painel</button><div class="panel"><div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px"><h2 style="color:var(--navy);margin:0">🗂️ Banco de perguntas</h2><button class="gbtn" style="width:auto;padding:8px 16px;font-size:13px;background:#0f6e56;color:#fff;border:none" onclick="saveBanco()">☁ Salvar e compartilhar</button></div><p style="color:#5b6b7d;font-size:12.5px;margin:8px 0">Edite e salve — vale para todos na hora, sem republicar. As mudanças ficam na nuvem; só o gestor edita.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">'+tabH+'</div><div style="margin-bottom:10px">'+picker+'</div><div id="bkbody"></div></div>';
+ bkBody();}
+
 // GESTOR
 function showGestor(){if(!S.user||S.user.nome==='Gestor')$('uname').textContent='👤 Gestor';$('dash').classList.add('hide');$('view').classList.remove('hide');window.scrollTo(0,0);
  window._gf=window._gf||{t:'',s:'',q:''};
@@ -285,6 +365,7 @@ function showGestor(){if(!S.user||S.user.nome==='Gestor')$('uname').textContent=
  +'<button class="gbtn" style="width:auto;padding:8px 14px;font-size:13px" onclick="exportCSV()">⬇ CSV</button>'
  +'<button class="gbtn" style="width:auto;padding:8px 14px;font-size:13px" onclick="showGestorCloud()">↻ Atualizar</button>'
  +'<button class="gbtn" style="width:auto;padding:8px 14px;font-size:13px;background:#12467e;color:#fff;border:none" onclick="showConfig()">⚙ Material dos módulos</button>'
+ +'<button class="gbtn" style="width:auto;padding:8px 14px;font-size:13px;background:#0f6e56;color:#fff;border:none" onclick="showBanco()">🗂️ Banco de perguntas</button>'
  +'</div></div>'
  +'<p style="color:var(--gray);font-size:12.5px;margin:10px 0 0">Dados carregados da nuvem no login do gestor. Sem acesso à nuvem, importe os .json exportados pelos colaboradores: <input type="file" id="imp" accept=".json" multiple style="font-size:12px"/></p>'
  +'<div id="gsum"></div>'
@@ -334,4 +415,4 @@ function _gTable(){var recs=window._recs||[];var f=window._gf||{t:'',s:'',q:''};
 function gTgl(i){var el=document.getElementById('gdet'+i);if(el)el.style.display=el.style.display==='none'?'':'none';}
 function exportCSV(){const recs=window._recs||[];if(!recs.length)return;let csv='Nome;Trilha;Modulos;Final;Habilitacoes;Status;Data\n';recs.forEach(r=>{const dn=(r.modulos||[]).filter(m=>m.pass).length;const aptos=(r.modulos||[]).filter(m=>m.apto&&m.pass).map(m=>m.apto).join('|');csv+=[r.nome,r.trilhaNome||r.trilha,dn+'/'+(r.modulos||[]).length,r.final?Math.round(r.final.total*100)+'%':'',aptos,r.final&&r.final.pass?'Aprovado':(r.final?'Reprovado':'Em curso'),new Date(r.data).toLocaleDateString('pt-BR')].join(';')+'\n';});dl(csv,'consolidado_academy.csv','text/csv');}
 </script></body></html>
-<!-- build 2026-07-20b gestor-btn+logout-fix -->
+<!-- build 2026-07-20c banco-perguntas+consequencias -->
