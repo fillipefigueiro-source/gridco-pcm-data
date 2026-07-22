@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-22T11:16:15Z",
+  "geradoEm": "2026-07-22T12:52:48Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-20 .. 2026-07-26",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3162,
+        "total": 3164,
         "emAberto": 16,
         "atrasadas": 13,
-        "concluidas30d": 515,
-        "concluidas7d": 118,
-        "naSemanaCorrente": 51
+        "concluidas30d": 517,
+        "concluidas7d": 120,
+        "naSemanaCorrente": 53
       },
       "mttr": {
-        "horas": 7.17,
-        "label": "7h 10min",
-        "amostra": 515
+        "horas": 7.14,
+        "label": "7h 8min",
+        "amostra": 517
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W30",
-          "criadas": 50,
-          "finalizadas": 40
+          "criadas": 52,
+          "finalizadas": 42
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3162,
+            "total": 3164,
             "emAberto": 16
           }
         ],
@@ -69,11 +69,11 @@
           {
             "nome": "Wesllen  Castro",
             "total": 143,
-            "emAberto": 2
+            "emAberto": 1
           },
           {
             "nome": "Italo  Lustosa",
-            "total": 141,
+            "total": 142,
             "emAberto": 0
           }
         ]
@@ -81,8 +81,8 @@
       "total": 16,
       "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 12,
-        "emProgresso": 3,
+        "naoIniciada": 13,
+        "emProgresso": 2,
         "pausada": 1,
         "verificacao": 0
       },
@@ -327,6 +327,24 @@
           "atrasada": true
         },
         {
+          "osId": "9830",
+          "ativo": "Thopen - Linhares 1 - ES Sítio São Francisco, Barro Novo Linhares  Espírito Santo  { THPN-LNH100 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "UFV LINHARES - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
           "osId": "9825",
           "ativo": "Inversor 2.4 Huawei     { TIM200-INVR2.4 }",
           "equipe": "",
@@ -335,25 +353,6 @@
           "supervisor": "Luiz  Silva",
           "status": "Em progresso",
           "tarefa": "[Timon 2][Inversor 2.4] - Religamento do Inversor 2.4",
-          "criticidade": "",
-          "dataProgramada": "2026-07-22",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-07-22",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "9824",
-          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
-          "tarefa": "Religamento da usina de IPX 2C",
           "criticidade": "",
           "dataProgramada": "2026-07-22",
           "dataCriacao": "2026-07-22",
@@ -384,6 +383,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9827",
+          "ativo": "SKID 3 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID3 }",
+          "equipe": "",
+          "responsavel": "Italo  Lustosa",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Italo  Lustosa",
+          "status": "Finalizada",
+          "tarefa": "UFV Junco 2.2 - Religamento remoto da usina. Relé trip 81.",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "2026-07-22",
+          "dataFinal": "2026-07-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "9824",
+          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Wesllen  Castro",
+          "status": "Finalizados",
+          "tarefa": "Religamento da usina de IPX 2C",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "2026-07-22",
+          "dataFinal": "2026-07-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "9823",
           "ativo": "Cabine 1  Marialva  Paraná Brasil { MRV100-CABN1 }",
@@ -3305,46 +3344,6 @@
           "atrasada": false
         },
         {
-          "osId": "9394",
-          "ativo": "Cabine 2  Capitão Poço  Pará Brasil { CPP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-07-13",
-          "dataCriacao": "2026-07-13",
-          "dataInicial": "2026-07-13",
-          "dataFinal": "2026-07-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
-          "osId": "9393",
-          "ativo": "Cabine 1  Capitão Poço  Pará Brasil { CPP100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "Religamento da cabine remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-07-13",
-          "dataCriacao": "2026-07-13",
-          "dataInicial": "2026-07-13",
-          "dataFinal": "2026-07-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "9431",
           "ativo": "Inversor 1.6 Huawei     { TESTE100-INVR1.6 }",
           "equipe": "",
@@ -3385,12 +3384,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1540,
+      "historicoTotal": 1542,
       "subClassificacao": {
-        "remoto": 720,
+        "remoto": 722,
         "local": 2442,
-        "remotoEmAberto": 8,
-        "localEmAberto": 8,
+        "remotoEmAberto": 9,
+        "localEmAberto": 7,
         "pctRemoto": 23,
         "alerta": true
       },
@@ -3561,12 +3560,12 @@
         ],
         "medHorasAbrir": 3.2,
         "medHorasFechar": 2.8,
-        "amostraAbrir": 705,
-        "amostraFechar": 705,
+        "amostraAbrir": 706,
+        "amostraFechar": 706,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
-            "total": 310
+            "total": 312
           },
           {
             "nome": "Felipe Silva",
@@ -3685,8 +3684,8 @@
       "total": 52,
       "atrasadas": 39,
       "porStatus": {
-        "naoIniciada": 43,
-        "emProgresso": 0,
+        "naoIniciada": 41,
+        "emProgresso": 2,
         "pausada": 9,
         "verificacao": 0
       },
@@ -3824,14 +3823,15 @@
           "responsavel": "Renato  Julien",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Renato  Julien",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPA - String e Conjunto de Módulos",
           "criticidade": "",
           "dataProgramada": "2026-06-17",
           "dataCriacao": "2026-06-17",
-          "dataInicial": "",
+          "dataInicial": "2026-07-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 840.0,
           "atrasada": true
         },
         {
@@ -4081,14 +4081,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-07-13",
           "dataCriacao": "2026-06-26",
-          "dataInicial": "",
+          "dataInicial": "2026-07-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 624.0,
           "atrasada": true
         },
         {
@@ -8900,17 +8901,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 266,
-        "emAberto": 85,
-        "atrasadas": 85,
-        "concluidas30d": 141,
-        "concluidas7d": 78,
-        "naSemanaCorrente": 24
+        "total": 259,
+        "emAberto": 79,
+        "atrasadas": 79,
+        "concluidas30d": 140,
+        "concluidas7d": 77,
+        "naSemanaCorrente": 17
       },
       "mttr": {
-        "horas": 108.43,
-        "label": "4d 12h",
-        "amostra": 141
+        "horas": 109.2,
+        "label": "4d 13h",
+        "amostra": 140
       },
       "tendencia4Semanas": [
         {
@@ -8930,16 +8931,16 @@
         },
         {
           "semana": "W30",
-          "criadas": 30,
-          "finalizadas": 19
+          "criadas": 23,
+          "finalizadas": 18
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 266,
-            "emAberto": 85
+            "total": 259,
+            "emAberto": 79
           }
         ],
         "responsaveis": [
@@ -8954,14 +8955,14 @@
             "emAberto": 11
           },
           {
-            "nome": "Luiz  Silva",
-            "total": 23,
-            "emAberto": 15
-          },
-          {
             "nome": "Gilson  Milhomem",
             "total": 21,
             "emAberto": 0
+          },
+          {
+            "nome": "Luiz  Silva",
+            "total": 16,
+            "emAberto": 8
           },
           {
             "nome": "Cláudio  Ferreira",
@@ -8970,16 +8971,16 @@
           }
         ]
       },
-      "total": 85,
-      "atrasadas": 85,
+      "total": 79,
+      "atrasadas": 79,
       "porStatus": {
-        "naoIniciada": 80,
-        "emProgresso": 2,
-        "pausada": 3,
+        "naoIniciada": 72,
+        "emProgresso": 5,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 85
+        "(sem equipe)": 79
       },
       "oss": [
         {
@@ -9023,14 +9024,15 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Ouro Branco 1][Inversor 5.4] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-05-18",
           "dataCriacao": "2026-07-16",
-          "dataInicial": "",
+          "dataInicial": "2026-07-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -10193,125 +10195,6 @@
           "atrasada": true
         },
         {
-          "osId": "9796",
-          "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[União 1][Inversor 2.1] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-07-21",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9795",
-          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[União 1][Inversor 1.6] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-07-21",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9794",
-          "ativo": "Inversor 1.5 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.5 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[União 1][Inversor 1.5] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-07-21",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9793",
-          "ativo": "Inversor 1.4 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[União 1][Inversor 1.4] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-07-21",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9792",
-          "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[União 1][Inversor 1.3] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-07-21",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9791",
-          "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[União 1][Inversor 1.2] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-07-21",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9790",
-          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[União 1][Inversor 1.1] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-07-21",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "9789",
           "ativo": "Inversor 4.2 Sungrow SG250HX    { THPN-SDN100-INVR4.2 }",
           "equipe": "",
@@ -10343,6 +10226,24 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "9781",
+          "ativo": "Inversor 1.8 Huawei SUN2000-215KTL-H0    { IBT100-INVR1.8 }",
+          "equipe": "",
+          "responsavel": "Rodolfo  Oliveira",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Rodolfo  Oliveira",
+          "status": "Em progresso",
+          "tarefa": "[Ibaté 1][Inversor 1.8] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-21",
+          "dataCriacao": "2026-07-21",
+          "dataInicial": "2026-07-22",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": true
         },
         {
@@ -10386,7 +10287,7 @@
           "responsavel": "Rodolfo  Oliveira",
           "criadoPor": "Roger Lélis",
           "supervisor": "Rodolfo  Oliveira",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Ibaté 1][Inversor 1.3] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-07-21",
@@ -10434,25 +10335,6 @@
         }
       ],
       "ossHistorico": [
-        {
-          "osId": "9781",
-          "ativo": "Inversor 1.8 Huawei SUN2000-215KTL-H0    { IBT100-INVR1.8 }",
-          "equipe": "",
-          "responsavel": "Rodolfo  Oliveira",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Rodolfo  Oliveira",
-          "status": "Finalizados",
-          "tarefa": "[Ibaté 1][Inversor 1.8] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-21",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "2026-07-21",
-          "dataFinal": "2026-07-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
         {
           "osId": "9752",
           "ativo": "Tracker 13.100 Brametal XD110    { THPN-INP100-ETKR13.100 }",
@@ -13266,6 +13148,25 @@
           "atrasada": false
         },
         {
+          "osId": "5966",
+          "ativo": "Inversor 2.14 Sungrow SG60KTL    { ADT100-INVR2.14 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Finalizados",
+          "tarefa": "[Aparecida do Taboado][Inversor 2.14] - Análise de baixa performance",
+          "criticidade": "",
+          "dataProgramada": "2026-05-07",
+          "dataCriacao": "2026-04-28",
+          "dataInicial": "2026-05-06",
+          "dataFinal": "2026-05-06",
+          "linkFracttal": "",
+          "horasAteAbrir": 192.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "6100",
           "ativo": "Greenyellow - Cedro 1 - CE Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { GY-CDR100 }",
           "equipe": "",
@@ -13285,7 +13186,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 154
+      "historicoTotal": 153
     },
     "engenharia": {
       "label": "Engenharia",
@@ -13798,6 +13699,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "9830",
+      "ativo": "Thopen - Linhares 1 - ES Sítio São Francisco, Barro Novo Linhares  Espírito Santo  { THPN-LNH100 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "UFV LINHARES - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
+      "criticidade": "",
+      "dataProgramada": "2026-07-22",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
       "osId": "9826",
       "ativo": "Cabine 8 Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-CABN8 }",
       "equipe": "",
@@ -13823,24 +13741,6 @@
       "supervisor": "Luiz  Silva",
       "status": "Em progresso",
       "tarefa": "[Timon 2][Inversor 2.4] - Religamento do Inversor 2.4",
-      "criticidade": "",
-      "dataProgramada": "2026-07-22",
-      "dataCriacao": "2026-07-22",
-      "dataInicial": "2026-07-22",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
-      "osId": "9824",
-      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
-      "tarefa": "Religamento da usina de IPX 2C",
       "criticidade": "",
       "dataProgramada": "2026-07-22",
       "dataCriacao": "2026-07-22",
@@ -14029,118 +13929,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "9796",
-      "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[União 1][Inversor 2.1] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-07-21",
-      "dataCriacao": "2026-07-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "9795",
-      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[União 1][Inversor 1.6] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-07-21",
-      "dataCriacao": "2026-07-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "9794",
-      "ativo": "Inversor 1.5 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.5 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[União 1][Inversor 1.5] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-07-21",
-      "dataCriacao": "2026-07-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "9793",
-      "ativo": "Inversor 1.4 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[União 1][Inversor 1.4] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-07-21",
-      "dataCriacao": "2026-07-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "9792",
-      "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[União 1][Inversor 1.3] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-07-21",
-      "dataCriacao": "2026-07-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "9791",
-      "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.2 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[União 1][Inversor 1.2] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-07-21",
-      "dataCriacao": "2026-07-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "9790",
-      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[União 1][Inversor 1.1] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-07-21",
-      "dataCriacao": "2026-07-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "9789",
       "ativo": "Inversor 4.2 Sungrow SG250HX    { THPN-SDN100-INVR4.2 }",
       "equipe": "",
@@ -14189,6 +13977,23 @@
       "linkFracttal": ""
     },
     {
+      "osId": "9781",
+      "ativo": "Inversor 1.8 Huawei SUN2000-215KTL-H0    { IBT100-INVR1.8 }",
+      "equipe": "",
+      "responsavel": "Rodolfo  Oliveira",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Rodolfo  Oliveira",
+      "status": "Em progresso",
+      "tarefa": "[Ibaté 1][Inversor 1.8] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-07-21",
+      "dataCriacao": "2026-07-21",
+      "dataInicial": "2026-07-22",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
+    },
+    {
       "osId": "9780",
       "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT100-INVR1.6 }",
       "equipe": "",
@@ -14227,7 +14032,7 @@
       "responsavel": "Rodolfo  Oliveira",
       "criadoPor": "Roger Lélis",
       "supervisor": "Rodolfo  Oliveira",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Ibaté 1][Inversor 1.3] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-07-21",
@@ -14684,14 +14489,15 @@
       "responsavel": "Ricardo Silva ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Ouro Branco 1][Inversor 5.4] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-05-18",
       "dataCriacao": "2026-07-16",
-      "dataInicial": "",
+      "dataInicial": "2026-07-22",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "9531",
@@ -15796,14 +15602,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-07-13",
       "dataCriacao": "2026-06-26",
-      "dataInicial": "",
+      "dataInicial": "2026-07-22",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 624.0
     },
     {
       "osId": "8529",
@@ -16105,14 +15912,15 @@
       "responsavel": "Renato  Julien",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Renato  Julien",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPA - String e Conjunto de Módulos",
       "criticidade": "",
       "dataProgramada": "2026-06-17",
       "dataCriacao": "2026-06-17",
-      "dataInicial": "",
+      "dataInicial": "2026-07-22",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 840.0
     },
     {
       "osId": "7757",
@@ -16381,6 +16189,46 @@
   ],
   "ossHistorico": [
     {
+      "osId": "9827",
+      "ativo": "SKID 3 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID3 }",
+      "equipe": "",
+      "responsavel": "Italo  Lustosa",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Italo  Lustosa",
+      "status": "Finalizada",
+      "tarefa": "UFV Junco 2.2 - Religamento remoto da usina. Relé trip 81.",
+      "criticidade": "",
+      "dataProgramada": "2026-07-22",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "2026-07-22",
+      "dataFinal": "2026-07-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "9824",
+      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Wesllen  Castro",
+      "status": "Finalizados",
+      "tarefa": "Religamento da usina de IPX 2C",
+      "criticidade": "",
+      "dataProgramada": "2026-07-22",
+      "dataCriacao": "2026-07-22",
+      "dataInicial": "2026-07-22",
+      "dataFinal": "2026-07-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "9823",
       "ativo": "Cabine 1  Marialva  Paraná Brasil { MRV100-CABN1 }",
       "equipe": "",
@@ -16618,25 +16466,6 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "9781",
-      "ativo": "Inversor 1.8 Huawei SUN2000-215KTL-H0    { IBT100-INVR1.8 }",
-      "equipe": "",
-      "responsavel": "Rodolfo  Oliveira",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Rodolfo  Oliveira",
-      "status": "Finalizados",
-      "tarefa": "[Ibaté 1][Inversor 1.8] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-07-21",
-      "dataCriacao": "2026-07-21",
-      "dataInicial": "2026-07-21",
-      "dataFinal": "2026-07-21",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -19318,29 +19147,10 @@
       "horasAteAbrir": 120.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "9486",
-      "ativo": "Inversor 1.4 Huawei SUN2000-250KTL-H1    { SPP300-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Eduardo  Mendes",
-      "status": "Finalizada",
-      "tarefa": "[Salto Pirapora] [Inversor 1.4] - Análise Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-07-16",
-      "dataCriacao": "2026-07-15",
-      "dataInicial": "2026-07-17",
-      "dataFinal": "2026-07-17",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2059,
-  "totalGeral": 4124,
+  "historicoTotal": 2060,
+  "totalGeral": 4119,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
