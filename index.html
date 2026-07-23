@@ -1358,16 +1358,18 @@ function saveAdminGo(){lsS(LS.A,S.active);toast('Salvo!');setTimeout(goLogin,600
 
 // ── DATA ─────────────────────────────────────────────────────────────────────
 const AW=()=>DB?.semanas?.find(w=>w.week===S.active)||DB?.semanas?.[DB.semanas.length-1]||null;
+// Comparação de cliente case-insensitive (grafias divergem entre fontes: Semp/SEMP etc.)
+const _cliEq=(a,b)=>(a||'').toLowerCase()===(b||'').toLowerCase();
 const allRows=()=>{
   const w=AW(); if(!w) return [];
   if(S.isAdmin) return S.viewCli?w.rows.filter(r=>r.cliente===S.viewCli):w.rows;
-  return w.rows.filter(r=>r.cliente===S.user);
+  return w.rows.filter(r=>_cliEq(r.cliente,S.user));
 };
 const allRowsAllWeeks=()=>{
   if(!DB?.semanas) return [];
   const rows=[];
   DB.semanas.forEach(w=>{
-    const wr=S.isAdmin?(S.viewCli?w.rows.filter(r=>r.cliente===S.viewCli):w.rows):w.rows.filter(r=>r.cliente===S.user);
+    const wr=S.isAdmin?(S.viewCli?w.rows.filter(r=>r.cliente===S.viewCli):w.rows):w.rows.filter(r=>_cliEq(r.cliente,S.user));
     rows.push(...wr);
   });
   return rows;
@@ -1494,12 +1496,14 @@ async function doLogin() {
   S.isAdmin=key===ADMIN_ID; S.fEquipe=''; S.fTipo=''; S.fUsina=''; S.fSupervisor=''; S.fStatus=''; S.viewCli=null;
   if(S.isAdmin){S.user='Admin';launch('Grid Co. \u2014 Todos os Clientes',true);}
   else {
-    const rows=AW()?.rows||[];
     const aliasName=LOGIN_ALIASES[key]||null;
-    const found=aliasName
-      ? ([...new Set(rows.map(r=>r.cliente))].filter(Boolean).find(x=>x===aliasName) || aliasName)
-      : ([...new Set(rows.map(r=>r.cliente))].filter(Boolean).find(x=>x.toLowerCase()===key));
-    if(!found){err.style.display='block';err.textContent='Cliente n\u00e3o encontrado nesta semana.';return;}
+    // Cliente cadastrado (senha correta) SEMPRE acessa, mesmo sem obra na semana atual.
+    // Procura o nome can\u00f4nico em QUALQUER semana; sen\u00e3o usa o alias ou o nome digitado.
+    const allCli=[...new Set((DB.semanas||[]).flatMap(w=>(w.rows||[]).map(r=>r.cliente)))].filter(Boolean);
+    let found=aliasName
+      ? (allCli.find(x=>x===aliasName)||aliasName)
+      : (allCli.find(x=>x.toLowerCase()===key)||null);
+    if(!found) found=aliasName||(c.charAt(0).toUpperCase()+c.slice(1));
     S.user=found; launch(found,false);
   }
 }
@@ -3059,7 +3063,7 @@ function gpScopedTarefas(){
   // esconde tarefas sem Classificação 1 (ativos "TESTE"/não classificados)
   let arr=all.filter(t=>t.usina && t.usina!=='(sem usina)' && t.cliente && t.cliente!=='(sem cliente)' && (t.cliente||'').toLowerCase()!=='usina teste');
   if(S.isAdmin||!S.user)return arr;
-  return arr.filter(t=>t.cliente===S.user);
+  return arr.filter(t=>_cliEq(t.cliente,S.user));
 }
 // ── Filtros multi-seleção (checkboxes) ────────────────────────────────────
 // key -> {f: campo da tarefa, lbl: rótulo "vazio"}
