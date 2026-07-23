@@ -1050,6 +1050,24 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       .cf-d{font-weight:700}
       .cf-d.hi{color:#a9e6c0}.cf-d.mid{color:#f0c48a}.cf-d.lo{color:#f0a898}
       .cf-na{color:#5a5570}
+      /* drill-down: tarefas do ativo */
+      table.cf-tbl tr.cf-a-row{cursor:pointer}
+      table.cf-tbl tr.cf-a-row:hover td{background:#221d33}
+      .cf-a-cv{display:inline-block;color:#7a7490;transition:transform .15s;font-size:9px;margin-right:4px}
+      table.cf-tbl tr.cf-a-row.open .cf-a-cv{transform:rotate(90deg);color:#a9db21}
+      table.cf-tbl tr.cf-a-det{display:none}
+      table.cf-tbl tr.cf-a-det.open{display:table-row}
+      table.cf-tbl tr.cf-a-det>td{padding:0;background:#100e19}
+      .cf-a-det-in{padding:6px 6px 10px 22px}
+      .cf-tk-list{font-size:11px;font-variant-numeric:tabular-nums}
+      .cf-tk-hd,.cf-tk-row{display:grid;grid-template-columns:64px minmax(150px,1fr) 116px 84px 84px 56px;gap:8px;padding:4px 8px;align-items:start}
+      .cf-tk-hd{color:#7a7490;font-size:9.5px;text-transform:uppercase;letter-spacing:.03em;font-weight:700;border-bottom:1px solid #2a2740}
+      .cf-tk-row{border-bottom:1px solid #1c1830;color:#cfc9de}
+      .cf-tk-row:last-child{border-bottom:none}
+      .cf-tk-row:hover{background:#181426}
+      .cf-tk-row .os{font-family:Consolas,monospace;color:#bcd2ff;white-space:nowrap}
+      .cf-tk-row .cf-tk{color:#eee;overflow-wrap:anywhere}
+      .cf-tk-row .hh,.cf-tk-hd .hh{text-align:right;color:#f0c48a;white-space:nowrap}
       </style>
       <div class="gp-toolbar" id="gp-toolbar">
         <div class="gp-fg"><label>Cliente</label><div class="gp-ms" id="gp-ms-cliente"><button type="button" class="gp-ms-btn" onclick="gpMsToggle('cliente')"><span class="gp-ms-lbl" id="gp-ms-lbl-cliente">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="gp-ms-pop-cliente"></div></div></div>
@@ -3177,16 +3195,34 @@ function cfChips(u){
     +'<span class="cf-chip cf-mttr"><span class="k">MTTR</span>'+cfNum(u.mttr,2)+'h</span>'
     +'<span class="cf-chip cf-disp'+(lo?' warn':'')+'"><span class="k">Disp</span>'+cfDispTxt(u.disp)+'</span>';
 }
+function cfTaskRows(a){
+  if(!a.tarefas||!a.tarefas.length)return '<div class="cf-tk-row cf-na">Sem tarefas.</div>';
+  return a.tarefas.map(t=>
+    '<div class="cf-tk-row"><span class="os">#'+gpEsc(t.os)+'</span><span class="cf-tk">'+gpEsc(t.tarefa||'—')+'</span>'
+    +'<span>'+gpEsc(t.tipo||'—')+'</span><span>'+gpFmtData(t.inicio)+'</span><span>'+gpFmtData(t.fim)+'</span>'
+    +'<span class="hh">'+(t.horas==null?'—':String(t.horas).replace('.',',')+'h')+'</span></div>').join('');
+}
 function cfUsiHTML(u){
-  const rows=(u.ativos||[]).map(a=>
-    '<tr><td>'+gpEsc(a.ativo)+'</td><td>'+cfNum(a.mtbf,0)+'</td><td>'+cfNum(a.mttr,2)+'</td>'
-    +'<td class="cf-d '+cfDispCls(a.disp)+'">'+(a.disp==null?'<span class="cf-na">—</span>':cfDispTxt(a.disp))+'</td>'
-    +'<td>'+a.n+'</td></tr>').join('');
+  const rows=(u.ativos||[]).map(a=>{
+    const main='<tr class="cf-a-row" onclick="cfTogAtivo(this)"><td><span class="cf-a-cv">&#9656;</span>'
+      +gpEsc(a.ativo)+'</td><td>'+cfNum(a.mtbf,0)+'</td><td>'+cfNum(a.mttr,2)+'</td>'
+      +'<td class="cf-d '+cfDispCls(a.disp)+'">'+(a.disp==null?'<span class="cf-na">—</span>':cfDispTxt(a.disp))+'</td>'
+      +'<td>'+a.n+'</td></tr>';
+    const det='<tr class="cf-a-det"><td colspan="5"><div class="cf-a-det-in"><div class="cf-tk-list">'
+      +'<div class="cf-tk-hd"><span>OS</span><span>Tarefa</span><span>Tipo</span>'
+      +'<span>Início</span><span>Fim</span><span class="hh">Horas</span></div>'
+      +cfTaskRows(a)+'</div></div></td></tr>';
+    return main+det;
+  }).join('');
   return '<div class="cf-usi"><div class="cf-usi-h" onclick="cfTogUsi(this)">'
     +'<span class="nm">'+gpEsc(u.usina)+'</span>'
     +'<span class="cf-metrics">'+cfChips(u)+'<span class="cf-chev-s">&#9662;</span></span></div>'
     +'<div class="cf-usi-b"><table class="cf-tbl"><thead><tr><th>Ativo</th><th>MTBF (h)</th>'
     +'<th>MTTR (h)</th><th>Disp. Inerente</th><th>Falhas</th></tr></thead><tbody>'+rows+'</tbody></table></div></div>';
+}
+function cfTogAtivo(tr){
+  const det=tr.nextElementSibling;
+  if(det&&det.classList.contains('cf-a-det')){tr.classList.toggle('open');det.classList.toggle('open');}
 }
 function renderConfiab(){
   const box=document.getElementById('gp-confiab');if(!box)return;
