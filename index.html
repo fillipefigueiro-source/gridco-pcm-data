@@ -169,7 +169,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .sec::after{content:'';flex:1;height:1px;background:var(--line)}
 
 /* CALENDAR SEMANAL */
-.cal{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+.cal{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
 .dcol{background:var(--white);border-radius:var(--r);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--sh)}
 .dhdr{padding:11px 13px 9px;background:var(--navy)}
 .dname{font-size:9px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.12em}
@@ -180,7 +180,9 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .dtasks::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
 .dtasks::-webkit-scrollbar-thumb:hover{background:#94a3b8}
 .dempty{padding:16px 8px;text-align:center;color:var(--ink3);font-size:11px;font-style:italic}
-.osc{border-radius:7px;padding:8px 9px;cursor:pointer;border-left:3px solid;transition:transform .12s,box-shadow .12s}
+.osc{border-radius:7px;padding:8px 9px;cursor:pointer;border-left:3px solid;transition:transform .12s,box-shadow .12s;overflow:hidden;min-width:0}
+.osc *{min-width:0}
+.osc-usina{overflow-wrap:anywhere}
 .osc:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(25,21,40,.13)}
 .osc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:4px;margin-bottom:3px}
 .osc-num{font-family:monospace;font-size:9px;opacity:.44}
@@ -2510,9 +2512,12 @@ function renderCal(d){
         +'<span class="osc-n">'+g.tasks.length+'t</span></div></div>';
     }).join('');
     const ovfBtn=ovf>0?'<div class="more-pill" onclick="openMod(\'\',\''+esc(day)+'\',\'\')">+'+ovf+' OS</div>':'';
-    const foraN=gs.filter(g=>g.fora).length, planG=gs.filter(g=>!g.fora);
-    const feitasN=planG.filter(g=>{const e=g.tasks.map(estadoTarefaInfo);return e.length&&e.every(x=>x.k==='finalizada');}).length;
-    const meta='Plano '+planG.length+(feitasN?' \u00b7 \u2705'+feitasN:'')+(foraN?' \u00b7 \u26a1'+foraN:'')+' \u00b7 '+hd.toFixed(0)+'h';
+    const foraG=gs.filter(g=>g.fora), planG=gs.filter(g=>!g.fora);
+    const _fin=g=>{const e=g.tasks.map(estadoTarefaInfo);return e.length&&e.every(x=>x.k==='finalizada');};
+    const feitasN=planG.filter(_fin).length, foraN=foraG.length, foraFeitas=foraG.filter(_fin).length;
+    const meta=planG.length+' no plano'+(feitasN?' \u00b7 \u2705'+feitasN+' feitas':'')
+      +(foraN?' \u00b7 \u26a1'+foraN+' fora do plano'+(foraFeitas?' ('+foraFeitas+' feitas)':''):'')
+      +' \u00b7 '+hd.toFixed(0)+'h';
     return '<div class="dcol"><div class="dhdr"><div class="dname">'+DSHORT[day]+'</div>'
       +'<div class="dnum">'+(dn[di]||'')+'</div><div class="dmeta">'+meta+'</div></div>'
       +'<div class="dtasks">'+(dd.length?cards+ovfBtn:'<div class="dempty">Sem atividades</div>')+'</div></div>';
