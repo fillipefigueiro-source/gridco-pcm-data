@@ -1006,6 +1006,42 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       .gp-flat .dd.amber{color:#c9761a}
       .gp-flat a{color:#2e7bc4;text-decoration:none}
       .gp-flat a:hover{text-decoration:underline}
+      /* Confiabilidade (MTBF/MTTR/Disponibilidade) */
+      .cf-wrap{margin-top:14px}
+      .cf-master{border:1px solid #2a2740;border-radius:12px;overflow:hidden;background:#14121e}
+      .cf-master-h{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 18px;cursor:pointer;background:linear-gradient(90deg,#1c1930,#14121e)}
+      .cf-master-h .ttl{font-weight:700;color:#fff;font-size:15px}
+      .cf-master-h .desc{font-size:11.5px;color:#9a94ab;font-weight:400;margin-top:2px}
+      .cf-master-b{display:none;padding:10px 12px 14px}
+      .cf-master.open .cf-master-b{display:block}
+      .cf-master.open .cf-master-h .cf-chev{transform:rotate(180deg)}
+      .cf-chev{color:#a9db21;transition:transform .15s}
+      .cf-usi{border:1px solid #262238;border-radius:9px;margin:7px 0;overflow:hidden;background:#191527}
+      .cf-usi-h{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;cursor:pointer}
+      .cf-usi-h:hover{background:#1e1a30}
+      .cf-usi-h .nm{font-weight:600;color:#eee;font-size:13px}
+      .cf-usi-h .cli{color:#8a84a0;font-weight:400;font-size:11px;margin-left:6px}
+      .cf-metrics{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+      .cf-chip{font-size:11px;font-weight:700;border-radius:6px;padding:2px 8px;white-space:nowrap;font-variant-numeric:tabular-nums}
+      .cf-chip .k{font-weight:400;opacity:.7;margin-right:3px}
+      .cf-mtbf{background:#20305a;color:#bcd2ff}
+      .cf-mttr{background:#3a2b18;color:#f0c48a}
+      .cf-disp{background:#1e3a2a;color:#a9e6c0}
+      .cf-disp.warn{background:#4a2018;color:#f0a898}
+      .cf-usi-b{display:none;padding:0 12px 12px}
+      .cf-usi.open .cf-usi-b{display:block}
+      .cf-usi.open .cf-usi-h .cf-chev-s{transform:rotate(180deg)}
+      .cf-chev-s{color:#7a7490;font-size:11px;transition:transform .15s;flex:none}
+      table.cf-tbl{width:100%;border-collapse:collapse;font-size:12px}
+      table.cf-tbl th{text-align:right;color:#8a84a0;font-size:10px;text-transform:uppercase;letter-spacing:.04em;padding:6px 10px;border-bottom:1px solid #2a2740;font-weight:700}
+      table.cf-tbl th:first-child{text-align:left}
+      table.cf-tbl td{padding:6px 10px;border-bottom:1px solid #221e33;color:#ddd;text-align:right;font-variant-numeric:tabular-nums}
+      table.cf-tbl td:first-child{text-align:left;color:#eee}
+      table.cf-tbl tr:last-child td{border-bottom:none}
+      table.cf-tbl tr:hover td{background:#1d1930}
+      .cf-d{font-weight:700}
+      .cf-d.hi{color:#a9e6c0}.cf-d.mid{color:#f0c48a}.cf-d.lo{color:#f0a898}
+      .cf-na{color:#5a5570}
       </style>
       <div class="gp-toolbar" id="gp-toolbar">
         <div class="gp-fg"><label>Cliente</label><div class="gp-ms" id="gp-ms-cliente"><button type="button" class="gp-ms-btn" onclick="gpMsToggle('cliente')"><span class="gp-ms-lbl" id="gp-ms-lbl-cliente">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="gp-ms-pop-cliente"></div></div></div>
@@ -1025,6 +1061,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <button class="gp-clear" onclick="gpClear()">&#8635; Limpar</button>
       </div>
       <div id="gp-tree"><div class="gp-nores">Carregando&hellip;</div></div>
+      <div id="gp-confiab"></div>
     </div>
 
     <!-- FILTER BAR -->
@@ -1113,6 +1150,7 @@ const CONFIG = {
   SUGESTOES_URL: "sugestoes.json",
   ETIQUETAS_URL: "etiquetas.json",
   GESTAO_URL: "gestao_pcm.json",
+  CONFIAB_URL: "confiabilidade.json",
   // Link p/ abrir a OT no Fracttal. O Fracttal One NÃO tem deep-link por OT
   // (a URL colapsa p/ /tasks/wo). Decisão: abrir o módulo de OS; usuário busca
   // o número (mostrado no card). Suporta {id}/{folio} se um dia houver deep-link.
@@ -1229,7 +1267,7 @@ function setStatus(msg,type) {
 }
 function startTimer() {
   if(timer) clearInterval(timer);
-  timer=setInterval(async()=>{ const ok=await loadDB(true); await loadSugestoes(); await loadSupervisores(); if(S.topView==='gestaoPcm'){await loadGestao();} if(ok&&S.user){buildWeekChips();render();renderSugestoes();if(S.topView==='gestaoPcm')renderGestao();} },CONFIG.REFRESH_MS);
+  timer=setInterval(async()=>{ const ok=await loadDB(true); await loadSugestoes(); await loadSupervisores(); if(S.topView==='gestaoPcm'){await loadGestao();await loadConfiab();} if(ok&&S.user){buildWeekChips();render();renderSugestoes();if(S.topView==='gestaoPcm')renderGestao();} },CONFIG.REFRESH_MS);
   const el=document.getElementById('refresh-badge'); if(el) el.textContent='Auto-refresh '+Math.round(CONFIG.REFRESH_MS/60000)+'min';
 }
 
@@ -1241,6 +1279,7 @@ async function manualRefresh(){
   await loadSupervisores();
   if(typeof loadEtiquetas==='function') await loadEtiquetas();
   if(typeof loadGestao==='function') await loadGestao();
+  if(typeof loadConfiab==='function') await loadConfiab();
   if(ok && S.user){
     buildWeekChips();
     if(typeof render==='function') render();
@@ -1671,7 +1710,7 @@ function setTopView(v){
   const tipScreen=document.getElementById('s-tipologias');
   if(tipScreen){const showKanban=(!isSem && !isSugIA && !isVerif && !isGestao);tipScreen.classList.toggle('on',showKanban);tipScreen.style.display=showKanban?'block':'none';}
   if(isGestao){
-    if(!GESTAO_DB){loadGestao().then(()=>renderGestao());} else {renderGestao();}
+    if(!GESTAO_DB){Promise.all([loadGestao(),loadConfiab()]).then(()=>renderGestao());} else {if(!CONFIAB_DB)loadConfiab().then(()=>renderConfiab());renderGestao();}
   } else if(!isSem){renderTipologiaAtual();}
 }
 function atualizarContadoresTopNav(){
@@ -3096,6 +3135,7 @@ function renderGestao(rebuildFilters){
   // Sincroniza visual do modo "só atrasadas"
   const _tg=document.getElementById('gp-atr-toggle');if(_tg)_tg.classList.toggle('on',!!GP.soAtrasadas);
   const _kp=document.getElementById('gp-kpi-atr');if(_kp)_kp.classList.toggle('active',!!GP.soAtrasadas);
+  renderConfiab();   // dropdown de confiabilidade (independente do modo da árvore)
   // Modo "só atrasadas": lista plana ordenada por dias em aberto (mais velhas no topo)
   if(GP.soAtrasadas){box.innerHTML=gpFlatHTML(atr);return;}
   if(!all.length){box.innerHTML='<div class="gp-nores">Nenhuma tarefa para os filtros selecionados.</div>';return;}
@@ -3113,6 +3153,55 @@ function renderGestao(rebuildFilters){
   box.innerHTML=html;
   box.querySelectorAll('.gp-tip.gp-open>.gp-tip-b').forEach(el=>gpFillTable(el));
 }
+// ── CONFIABILIDADE (MTBF/MTTR/Disponibilidade por ativo) ─────────────────────
+let CONFIAB_DB=null;
+async function loadConfiab(){
+  try{const r=await fetch(CONFIG.CONFIAB_URL,{cache:'no-store'});
+    if(!r.ok){CONFIAB_DB=null;return false;}CONFIAB_DB=await r.json();return true;
+  }catch(e){CONFIAB_DB=null;return false;}
+}
+function cfNum(v,dec){return v==null?'—':Number(v).toLocaleString('pt-BR',{minimumFractionDigits:dec||0,maximumFractionDigits:dec||0});}
+function cfDispCls(d){if(d==null)return 'cf-na';const p=d*100;return p>=95?'hi':(p>=90?'mid':'lo');}
+function cfDispTxt(d){return d==null?'—':(d*100).toFixed(2)+'%';}
+function cfChips(u){
+  const lo=cfDispCls(u.disp)==='lo';
+  return '<span class="cf-chip cf-mtbf"><span class="k">MTBF</span>'+cfNum(u.mtbf,0)+'h</span>'
+    +'<span class="cf-chip cf-mttr"><span class="k">MTTR</span>'+cfNum(u.mttr,2)+'h</span>'
+    +'<span class="cf-chip cf-disp'+(lo?' warn':'')+'"><span class="k">Disp</span>'+cfDispTxt(u.disp)+'</span>';
+}
+function renderConfiab(){
+  const box=document.getElementById('gp-confiab');if(!box)return;
+  if(!CONFIAB_DB||!CONFIAB_DB.usinas){box.innerHTML='';return;}
+  let us=CONFIAB_DB.usinas.slice();
+  if(!S.isAdmin&&S.user)us=us.filter(u=>u.cliente===S.user);      // escopo do usuário
+  if(GP_SEL.cliente.size)us=us.filter(u=>GP_SEL.cliente.has(u.cliente));
+  if(GP_SEL.usina.size)us=us.filter(u=>GP_SEL.usina.has(u.usina));
+  const byCli={};us.forEach(u=>{(byCli[u.cliente]=byCli[u.cliente]||[]).push(u);});
+  const wasOpen=(document.getElementById('cf-master')||{}).classList&&document.getElementById('cf-master').classList.contains('open');
+  let inner='';
+  Object.keys(byCli).sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(cli=>{
+    byCli[cli].sort((a,b)=>a.usina.localeCompare(b.usina,'pt-BR')).forEach(u=>{
+      const rows=(u.ativos||[]).map(a=>
+        '<tr><td>'+gpEsc(a.ativo)+'</td><td>'+cfNum(a.mtbf,0)+'</td><td>'+cfNum(a.mttr,2)+'</td>'
+        +'<td class="cf-d '+cfDispCls(a.disp)+'">'+(a.disp==null?'<span class="cf-na">—</span>':cfDispTxt(a.disp))+'</td>'
+        +'<td>'+a.n+'</td></tr>').join('');
+      inner+='<div class="cf-usi"><div class="cf-usi-h" onclick="cfTogUsi(this)">'
+        +'<span class="nm">'+gpEsc(u.usina)+'<span class="cli">'+gpEsc(u.cliente)+'</span></span>'
+        +'<span class="cf-metrics">'+cfChips(u)+'<span class="cf-chev-s">&#9662;</span></span></div>'
+        +'<div class="cf-usi-b"><table class="cf-tbl"><thead><tr><th>Ativo</th><th>MTBF (h)</th>'
+        +'<th>MTTR (h)</th><th>Disp. Inerente</th><th>Falhas</th></tr></thead><tbody>'+rows+'</tbody></table></div></div>';
+    });
+  });
+  if(!inner){box.innerHTML='';return;}
+  const upd=CONFIAB_DB.geradoEm?new Date(CONFIAB_DB.geradoEm).toLocaleString('pt-BR'):'';
+  box.innerHTML='<div class="cf-wrap"><div class="cf-master'+(wasOpen?' open':'')+'" id="cf-master">'
+    +'<div class="cf-master-h" onclick="cfTogMaster()"><div><div class="ttl">&#128202; Confiabilidade por ativo</div>'
+    +'<div class="desc">MTBF &middot; MTTR &middot; Disponibilidade Inerente &mdash; por tarefa &middot; base: '+(CONFIAB_DB.tiposFalha||[]).join(', ')+' &middot; atualizado '+upd+'</div></div>'
+    +'<span class="cf-chev">&#9662;</span></div><div class="cf-master-b">'+inner+'</div></div></div>';
+}
+function cfTogMaster(){const m=document.getElementById('cf-master');if(m)m.classList.toggle('open');}
+function cfTogUsi(h){h.parentElement.classList.toggle('open');}
+
 // Lista plana das atrasadas, ordenada por dias em aberto (mais velhas no topo).
 function gpFlatHTML(list){
   const lim=(GESTAO_DB&&GESTAO_DB.diasAlerta)||10;
@@ -3163,7 +3252,7 @@ function gpClear(){GP.soAtrasadas=false;Object.keys(GP_SEL).forEach(k=>GP_SEL[k]
 
 // FIX #159: carrega supervisores.json no boot
 loadSupervisores().then(()=>{ if(typeof buildFilters==='function' && S.user) buildFilters(); });
-loadGestao().then(()=>{ if(S.user && S.topView==='gestaoPcm') renderGestao(); });
+Promise.all([loadGestao(),loadConfiab()]).then(()=>{ if(S.user && S.topView==='gestaoPcm') renderGestao(); });
 </script>
 </body>
 </html>
