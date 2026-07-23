@@ -1016,6 +1016,14 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       .cf-master.open .cf-master-b{display:block}
       .cf-master.open .cf-master-h .cf-chev{transform:rotate(180deg)}
       .cf-chev{color:#a9db21;transition:transform .15s}
+      .cf-cli{border:1px solid #2a2740;border-radius:10px;margin:8px 0;overflow:hidden;background:#171426}
+      .cf-cli-h{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 16px;cursor:pointer;background:#1a1730}
+      .cf-cli-h:hover{background:#201c38}
+      .cf-cli-h .cnm{font-weight:700;color:#fff;font-size:14px}
+      .cf-cli-b{display:none;padding:4px 10px 10px}
+      .cf-cli.open .cf-cli-b{display:block}
+      .cf-cli.open .cf-cli-h .cf-chev-s{transform:rotate(180deg)}
+      .cf-chip.cf-count{background:#241f33;color:#b8b3c8;font-weight:600}
       .cf-usi{border:1px solid #262238;border-radius:9px;margin:7px 0;overflow:hidden;background:#191527}
       .cf-usi-h{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;cursor:pointer}
       .cf-usi-h:hover{background:#1e1a30}
@@ -3169,28 +3177,38 @@ function cfChips(u){
     +'<span class="cf-chip cf-mttr"><span class="k">MTTR</span>'+cfNum(u.mttr,2)+'h</span>'
     +'<span class="cf-chip cf-disp'+(lo?' warn':'')+'"><span class="k">Disp</span>'+cfDispTxt(u.disp)+'</span>';
 }
+function cfUsiHTML(u){
+  const rows=(u.ativos||[]).map(a=>
+    '<tr><td>'+gpEsc(a.ativo)+'</td><td>'+cfNum(a.mtbf,0)+'</td><td>'+cfNum(a.mttr,2)+'</td>'
+    +'<td class="cf-d '+cfDispCls(a.disp)+'">'+(a.disp==null?'<span class="cf-na">—</span>':cfDispTxt(a.disp))+'</td>'
+    +'<td>'+a.n+'</td></tr>').join('');
+  return '<div class="cf-usi"><div class="cf-usi-h" onclick="cfTogUsi(this)">'
+    +'<span class="nm">'+gpEsc(u.usina)+'</span>'
+    +'<span class="cf-metrics">'+cfChips(u)+'<span class="cf-chev-s">&#9662;</span></span></div>'
+    +'<div class="cf-usi-b"><table class="cf-tbl"><thead><tr><th>Ativo</th><th>MTBF (h)</th>'
+    +'<th>MTTR (h)</th><th>Disp. Inerente</th><th>Falhas</th></tr></thead><tbody>'+rows+'</tbody></table></div></div>';
+}
 function renderConfiab(){
   const box=document.getElementById('gp-confiab');if(!box)return;
-  if(!CONFIAB_DB||!CONFIAB_DB.usinas){box.innerHTML='';return;}
-  let us=CONFIAB_DB.usinas.slice();
-  if(!S.isAdmin&&S.user)us=us.filter(u=>u.cliente===S.user);      // escopo do usuário
-  if(GP_SEL.cliente.size)us=us.filter(u=>GP_SEL.cliente.has(u.cliente));
-  if(GP_SEL.usina.size)us=us.filter(u=>GP_SEL.usina.has(u.usina));
-  const byCli={};us.forEach(u=>{(byCli[u.cliente]=byCli[u.cliente]||[]).push(u);});
+  if(!CONFIAB_DB||!CONFIAB_DB.clientes){box.innerHTML='';return;}
+  let cls=CONFIAB_DB.clientes.slice();
+  if(!S.isAdmin&&S.user)cls=cls.filter(c=>c.cliente===S.user);          // escopo do usuário
+  if(GP_SEL.cliente.size)cls=cls.filter(c=>GP_SEL.cliente.has(c.cliente));
   const wasOpen=(document.getElementById('cf-master')||{}).classList&&document.getElementById('cf-master').classList.contains('open');
   let inner='';
-  Object.keys(byCli).sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(cli=>{
-    byCli[cli].sort((a,b)=>a.usina.localeCompare(b.usina,'pt-BR')).forEach(u=>{
-      const rows=(u.ativos||[]).map(a=>
-        '<tr><td>'+gpEsc(a.ativo)+'</td><td>'+cfNum(a.mtbf,0)+'</td><td>'+cfNum(a.mttr,2)+'</td>'
-        +'<td class="cf-d '+cfDispCls(a.disp)+'">'+(a.disp==null?'<span class="cf-na">—</span>':cfDispTxt(a.disp))+'</td>'
-        +'<td>'+a.n+'</td></tr>').join('');
-      inner+='<div class="cf-usi"><div class="cf-usi-h" onclick="cfTogUsi(this)">'
-        +'<span class="nm">'+gpEsc(u.usina)+'<span class="cli">'+gpEsc(u.cliente)+'</span></span>'
-        +'<span class="cf-metrics">'+cfChips(u)+'<span class="cf-chev-s">&#9662;</span></span></div>'
-        +'<div class="cf-usi-b"><table class="cf-tbl"><thead><tr><th>Ativo</th><th>MTBF (h)</th>'
-        +'<th>MTTR (h)</th><th>Disp. Inerente</th><th>Falhas</th></tr></thead><tbody>'+rows+'</tbody></table></div></div>';
-    });
+  cls.sort((a,b)=>a.cliente.localeCompare(b.cliente,'pt-BR')).forEach(c=>{
+    let usinas=(c.usinas||[]).slice();
+    if(GP_SEL.usina.size)usinas=usinas.filter(u=>GP_SEL.usina.has(u.usina));
+    if(!usinas.length)return;
+    usinas.sort((a,b)=>a.usina.localeCompare(b.usina,'pt-BR'));
+    const totFalhas=usinas.reduce((s,u)=>s+(u.n||0),0);
+    const usiHtml=usinas.map(cfUsiHTML).join('');
+    inner+='<div class="cf-cli"><div class="cf-cli-h" onclick="cfTogCli(this)">'
+      +'<span class="cnm">'+gpEsc(c.cliente)+'</span>'
+      +'<span class="cf-metrics"><span class="cf-chip cf-count">'+usinas.length+' usinas</span>'
+      +'<span class="cf-chip cf-count">'+totFalhas.toLocaleString('pt-BR')+' falhas</span>'
+      +'<span class="cf-chev-s">&#9662;</span></span></div>'
+      +'<div class="cf-cli-b">'+usiHtml+'</div></div>';
   });
   if(!inner){box.innerHTML='';return;}
   const upd=CONFIAB_DB.geradoEm?new Date(CONFIAB_DB.geradoEm).toLocaleString('pt-BR'):'';
@@ -3200,6 +3218,7 @@ function renderConfiab(){
     +'<span class="cf-chev">&#9662;</span></div><div class="cf-master-b">'+inner+'</div></div></div>';
 }
 function cfTogMaster(){const m=document.getElementById('cf-master');if(m)m.classList.toggle('open');}
+function cfTogCli(h){h.parentElement.classList.toggle('open');}
 function cfTogUsi(h){h.parentElement.classList.toggle('open');}
 
 // Lista plana das atrasadas, ordenada por dias em aberto (mais velhas no topo).
