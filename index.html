@@ -1068,6 +1068,15 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       .cf-tk-row .os{font-family:Consolas,monospace;color:#bcd2ff;white-space:nowrap}
       .cf-tk-row .cf-tk{color:#eee;overflow-wrap:anywhere}
       .cf-tk-row .hh,.cf-tk-hd .hh{text-align:right;color:#f0c48a;white-space:nowrap}
+      /* MTTR por Equipe Cluster */
+      .mc-list{font-size:11.5px;font-variant-numeric:tabular-nums}
+      .mc-hd,.mc-row{display:grid;grid-template-columns:minmax(150px,1fr) 96px 66px;gap:8px;padding:5px 8px;align-items:center}
+      .mc-hd{color:#7a7490;font-size:9.5px;text-transform:uppercase;letter-spacing:.03em;font-weight:700;border-bottom:1px solid #2a2740}
+      .mc-row{border-bottom:1px solid #1c1830;color:#cfc9de}
+      .mc-row:last-child{border-bottom:none}
+      .mc-row:hover{background:#181426}
+      .mc-row .cf-d{font-weight:700}
+      .mc-hd .hh,.mc-row .hh{text-align:right;color:#9a94ab}
       </style>
       <div class="gp-toolbar" id="gp-toolbar">
         <div class="gp-fg"><label>Cliente</label><div class="gp-ms" id="gp-ms-cliente"><button type="button" class="gp-ms-btn" onclick="gpMsToggle('cliente')"><span class="gp-ms-lbl" id="gp-ms-lbl-cliente">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="gp-ms-pop-cliente"></div></div></div>
@@ -1088,6 +1097,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       </div>
       <div id="gp-tree"><div class="gp-nores">Carregando&hellip;</div></div>
       <div id="gp-confiab"></div>
+      <div id="gp-mttr-cluster"></div>
     </div>
 
     <!-- FILTER BAR -->
@@ -3162,6 +3172,7 @@ function renderGestao(rebuildFilters){
   const _tg=document.getElementById('gp-atr-toggle');if(_tg)_tg.classList.toggle('on',!!GP.soAtrasadas);
   const _kp=document.getElementById('gp-kpi-atr');if(_kp)_kp.classList.toggle('active',!!GP.soAtrasadas);
   renderConfiab();   // dropdown de confiabilidade (independente do modo da árvore)
+  renderMttrCluster();   // dropdown de MTTR por equipe cluster
   // Modo "só atrasadas": lista plana ordenada por dias em aberto (mais velhas no topo)
   if(GP.soAtrasadas){box.innerHTML=gpFlatHTML(atr);return;}
   if(!all.length){box.innerHTML='<div class="gp-nores">Nenhuma tarefa para os filtros selecionados.</div>';return;}
@@ -3256,6 +3267,39 @@ function renderConfiab(){
 function cfTogMaster(){const m=document.getElementById('cf-master');if(m)m.classList.toggle('open');}
 function cfTogCli(h){h.parentElement.classList.toggle('open');}
 function cfTogUsi(h){h.parentElement.classList.toggle('open');}
+
+// ── MTTR por Equipe Cluster ──────────────────────────────────────────────────
+function cfMttrCls(m){if(m==null)return 'cf-na';return m<=24?'hi':(m<=72?'mid':'lo');}
+function renderMttrCluster(){
+  const box=document.getElementById('gp-mttr-cluster');if(!box)return;
+  if(!CONFIAB_DB||!CONFIAB_DB.clusters){box.innerHTML='';return;}
+  let cs=CONFIAB_DB.clusters.slice();
+  if(!S.isAdmin&&S.user)cs=cs.filter(c=>c.cliente===S.user);
+  if(GP_SEL.cliente.size)cs=cs.filter(c=>GP_SEL.cliente.has(c.cliente));
+  if(GP_SEL.cluster.size)cs=cs.filter(c=>GP_SEL.cluster.has(c.cluster));
+  const wasOpen=(document.getElementById('mc-master')||{}).classList&&document.getElementById('mc-master').classList.contains('open');
+  let inner='';
+  cs.forEach(c=>{
+    const rows=(c.usinas||[]).map(u=>
+      '<div class="mc-row"><span class="cf-tk">'+gpEsc(u.usina)+'</span>'
+      +'<span class="cf-d '+cfMttrCls(u.mttr)+'">'+(u.mttr==null?'—':cfNum(u.mttr,2)+'h')+'</span>'
+      +'<span class="hh">'+u.n+'</span></div>').join('');
+    inner+='<div class="cf-usi"><div class="cf-usi-h" onclick="cfTogUsi(this)">'
+      +'<span class="nm">'+gpEsc(c.cluster)+'<span class="cli">'+gpEsc(c.cliente)+'</span></span>'
+      +'<span class="cf-metrics"><span class="cf-chip cf-mttr"><span class="k">MTTR</span>'+(c.mttr==null?'—':cfNum(c.mttr,2)+'h')+'</span>'
+      +'<span class="cf-chip cf-count">'+(c.n||0).toLocaleString('pt-BR')+' falhas</span>'
+      +'<span class="cf-chev-s">&#9662;</span></span></div>'
+      +'<div class="cf-usi-b"><div class="mc-list"><div class="mc-hd"><span>Usina</span><span>MTTR</span>'
+      +'<span class="hh">Falhas</span></div>'+rows+'</div></div></div>';
+  });
+  if(!inner){box.innerHTML='';return;}
+  const upd=CONFIAB_DB.geradoEm?new Date(CONFIAB_DB.geradoEm).toLocaleString('pt-BR'):'';
+  box.innerHTML='<div class="cf-wrap"><div class="cf-master'+(wasOpen?' open':'')+'" id="mc-master">'
+    +'<div class="cf-master-h" onclick="mcTogMaster()"><div><div class="ttl">&#128295; Tempo médio de reparo por Equipe Cluster</div>'
+    +'<div class="desc">MTTR por cluster (equipe) &mdash; piores no topo &middot; por tarefa &middot; verde &le;24h, amarelo &le;72h, vermelho &gt;72h &middot; atualizado '+upd+'</div></div>'
+    +'<span class="cf-chev">&#9662;</span></div><div class="cf-master-b">'+inner+'</div></div></div>';
+}
+function mcTogMaster(){const m=document.getElementById('mc-master');if(m)m.classList.toggle('open');}
 
 // Lista plana das atrasadas, ordenada por dias em aberto (mais velhas no topo).
 function gpFlatHTML(list){
