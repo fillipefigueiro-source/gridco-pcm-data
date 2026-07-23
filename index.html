@@ -959,7 +959,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
           <div class="gp-kpis">
             <div class="gp-kpi"><div class="v" id="gp-k-vis">0</div><div class="l">Vis&iacute;veis</div></div>
             <div class="gp-kpi"><div class="v" id="gp-k-ab">0</div><div class="l">Em aberto</div></div>
-            <div class="gp-kpi warn"><div class="v" id="gp-k-atr">0</div><div class="l">Atrasadas</div></div>
+            <div class="gp-kpi warn gp-kpi-click" id="gp-kpi-atr" onclick="gpToggleAtrasadas()" title="Clique para ver só as atrasadas"><div class="v" id="gp-k-atr">0</div><div class="l">Atrasadas</div></div>
           </div>
         </div>
       </div>
@@ -983,6 +983,29 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       .gp-ms-opt input{cursor:pointer;flex:none;accent-color:#191528}
       .gp-ms-opt span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
       .gp-ms-empty{padding:8px;color:#999;font-size:11px;text-align:center}
+      /* Foco nas atrasadas */
+      .gp-kpi-click{cursor:pointer;transition:transform .1s ease,box-shadow .15s ease}
+      .gp-kpi-click:hover{transform:translateY(-1px);box-shadow:0 5px 16px rgba(217,79,61,.35)}
+      .gp-kpi.warn.active{outline:2px solid #ffd0c8;outline-offset:1px;box-shadow:0 0 0 3px rgba(217,79,61,.28)}
+      .gp-atr-toggle{padding:7px 12px;border:1px solid #d94f3d;border-radius:7px;background:#fff;color:#d94f3d;font-size:12px;font-weight:700;font-family:inherit;cursor:pointer;white-space:nowrap}
+      .gp-atr-toggle:hover{background:#fff2f0}
+      .gp-atr-toggle.on{background:#d94f3d;color:#fff}
+      .gp-flat-hd{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:4px 0 12px;font-weight:700;color:#191528;font-size:14px}
+      .gp-flat-hd .cnt{background:#d94f3d;color:#fff;border-radius:12px;padding:2px 11px;font-size:12px}
+      .gp-flat-hd .hint{font-weight:400;color:#8a8a94;font-size:12px}
+      table.gp-flat{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+      table.gp-flat th{background:#191528;color:#fff;text-align:left;padding:9px 11px;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+      table.gp-flat td{padding:8px 11px;border-bottom:1px solid #ececf2;vertical-align:middle}
+      table.gp-flat tr:last-child td{border-bottom:none}
+      table.gp-flat tr:hover td{background:#faf7f5}
+      table.gp-flat tr.crit td{background:#fff4f2}
+      table.gp-flat tr.crit td:first-child{box-shadow:inset 3px 0 0 #d94f3d}
+      .gp-flat .os{font-family:Consolas,monospace;font-weight:700;white-space:nowrap}
+      .gp-flat .dd{text-align:right;font-weight:800;white-space:nowrap}
+      .gp-flat .dd.red{color:#d94f3d}
+      .gp-flat .dd.amber{color:#c9761a}
+      .gp-flat a{color:#2e7bc4;text-decoration:none}
+      .gp-flat a:hover{text-decoration:underline}
       </style>
       <div class="gp-toolbar" id="gp-toolbar">
         <div class="gp-fg"><label>Cliente</label><div class="gp-ms" id="gp-ms-cliente"><button type="button" class="gp-ms-btn" onclick="gpMsToggle('cliente')"><span class="gp-ms-lbl" id="gp-ms-lbl-cliente">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="gp-ms-pop-cliente"></div></div></div>
@@ -998,6 +1021,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="gp-fg"><label>at&eacute;</label><input type="date" id="gp-f-dfim" onchange="gpOnFilter()"></div>
         <div class="gp-fg"><label>Data Final de</label><input type="date" id="gp-f-fini" onchange="gpOnFilter()"></div>
         <div class="gp-fg"><label>at&eacute;</label><input type="date" id="gp-f-ffim" onchange="gpOnFilter()"></div>
+        <button class="gp-atr-toggle" id="gp-atr-toggle" onclick="gpToggleAtrasadas()">&#9201; S&oacute; atrasadas</button>
         <button class="gp-clear" onclick="gpClear()">&#8635; Limpar</button>
       </div>
       <div id="gp-tree"><div class="gp-nores">Carregando&hellip;</div></div>
@@ -3069,6 +3093,11 @@ function renderGestao(rebuildFilters){
   document.getElementById('gp-k-ab').textContent=ab.length;
   document.getElementById('gp-k-atr').textContent=atr.length;
   const badge=document.getElementById('tcnt-gestaoPcm');if(badge)badge.textContent=ab.length;
+  // Sincroniza visual do modo "só atrasadas"
+  const _tg=document.getElementById('gp-atr-toggle');if(_tg)_tg.classList.toggle('on',!!GP.soAtrasadas);
+  const _kp=document.getElementById('gp-kpi-atr');if(_kp)_kp.classList.toggle('active',!!GP.soAtrasadas);
+  // Modo "só atrasadas": lista plana ordenada por dias em aberto (mais velhas no topo)
+  if(GP.soAtrasadas){box.innerHTML=gpFlatHTML(atr);return;}
   if(!all.length){box.innerHTML='<div class="gp-nores">Nenhuma tarefa para os filtros selecionados.</div>';return;}
   GP_TIP_DATA=[];
   let html='';
@@ -3084,6 +3113,29 @@ function renderGestao(rebuildFilters){
   box.innerHTML=html;
   box.querySelectorAll('.gp-tip.gp-open>.gp-tip-b').forEach(el=>gpFillTable(el));
 }
+// Lista plana das atrasadas, ordenada por dias em aberto (mais velhas no topo).
+function gpFlatHTML(list){
+  const lim=(GESTAO_DB&&GESTAO_DB.diasAlerta)||10;
+  const arr=list.slice().sort((a,b)=>((b.dias||0)-(a.dias||0)));
+  if(!arr.length)return '<div class="gp-nores" style="padding:22px">&#127881; Nenhuma tarefa atrasada nos filtros atuais.</div>';
+  let h='<div class="gp-flat-hd">&#9201; Atrasadas <span class="cnt">'+arr.length+'</span>'
+      +'<span class="hint">ordenadas por tempo em aberto &middot; vermelho = mais de '+lim+' dias</span></div>';
+  h+='<table class="gp-flat"><thead><tr><th>Dias</th><th>OS</th><th>Cliente</th><th>Usina</th>'
+     +'<th>Tarefa</th><th>Tipo</th><th>Estado</th><th>Data Prog.</th></tr></thead><tbody>';
+  arr.forEach(t=>{
+    const d=(t.dias!=null?t.dias:0);
+    const cls=d>lim?'red':(d>=5?'amber':'');
+    const crit=d>lim?' class="crit"':'';
+    const _u=gpWoUrl(t);
+    const tar=_u?('<a href="'+gpEsc(_u)+'" target="_blank" rel="noopener" title="Abrir no Fracttal">'+gpEsc(t.tarefa||'—')+'</a>'):gpEsc(t.tarefa||'—');
+    h+='<tr'+crit+'><td class="dd '+cls+'">'+d+'d</td><td class="os">#'+gpEsc(t.os)+'</td>'
+      +'<td>'+gpEsc(t.cliente)+'</td><td>'+gpEsc(t.usina)+'</td><td>'+tar+'</td>'
+      +'<td>'+gpEsc(t.tipo||'—')+'</td><td>'+gpEstadoPill(t.estado)+'</td>'
+      +'<td class="gp-data">'+gpFmtData(t.dataProg)+'</td></tr>';
+  });
+  return h+'</tbody></table>';
+}
+function gpToggleAtrasadas(){GP.soAtrasadas=!GP.soAtrasadas;renderGestao(false);}
 function gpTableHTML(list){
   let h='<table class="gp-tbl"><thead><tr><th>OS ID</th><th>Tarefa</th><th>Estado</th><th>Etiquetas</th><th>Data Prog.</th><th>Data Final</th><th>Dias</th></tr></thead><tbody>';
   list.forEach(t=>{
@@ -3107,7 +3159,7 @@ function gpTogTip(h,idx){
   if(willOpen)gpFillTable(blk.querySelector('.gp-tip-b'));
 }
 function gpOnFilter(){renderGestao();}
-function gpClear(){Object.keys(GP_SEL).forEach(k=>GP_SEL[k].clear());['gp-f-os','gp-f-ss','gp-f-dini','gp-f-dfim','gp-f-fini','gp-f-ffim'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});renderGestao(true);}
+function gpClear(){GP.soAtrasadas=false;Object.keys(GP_SEL).forEach(k=>GP_SEL[k].clear());['gp-f-os','gp-f-ss','gp-f-dini','gp-f-dfim','gp-f-fini','gp-f-ffim'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});renderGestao(true);}
 
 // FIX #159: carrega supervisores.json no boot
 loadSupervisores().then(()=>{ if(typeof buildFilters==='function' && S.user) buildFilters(); });
