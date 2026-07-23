@@ -174,7 +174,9 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .dhdr{padding:11px 13px 9px;background:var(--navy)}
 .dname{font-size:9px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.12em}
 .dnum{font-size:28px;font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1.05}
-.dmeta{font-size:9px;color:rgba(255,255,255,.36);margin-top:3px}
+.dmeta{font-size:10px;color:rgba(255,255,255,.82);margin-top:4px;font-weight:600;line-height:1.5}
+.dmeta .mfeitas{color:#a9db21}
+.dmeta .mfora{color:#f0a24a}
 .dtasks{padding:7px;display:flex;flex-direction:column;gap:4px;flex:1;max-height:780px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#cbd5e1 transparent}
 .dtasks::-webkit-scrollbar{width:6px}
 .dtasks::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
@@ -2515,8 +2517,9 @@ function renderCal(d){
     const foraG=gs.filter(g=>g.fora), planG=gs.filter(g=>!g.fora);
     const _fin=g=>{const e=g.tasks.map(estadoTarefaInfo);return e.length&&e.every(x=>x.k==='finalizada');};
     const feitasN=planG.filter(_fin).length, foraN=foraG.length, foraFeitas=foraG.filter(_fin).length;
-    const meta=planG.length+' no plano'+(feitasN?' \u00b7 \u2705'+feitasN+' feitas':'')
-      +(foraN?' \u00b7 \u26a1'+foraN+' fora do plano'+(foraFeitas?' ('+foraFeitas+' feitas)':''):'')
+    const meta=planG.length+' no plano'
+      +(feitasN?' \u00b7 <span class="mfeitas">\u2705'+feitasN+' feitas</span>':'')
+      +(foraN?' \u00b7 <span class="mfora">\u26a1'+foraN+' fora do plano'+(foraFeitas?' ('+foraFeitas+' feitas)':'')+'</span>':'')
       +' \u00b7 '+hd.toFixed(0)+'h';
     return '<div class="dcol"><div class="dhdr"><div class="dname">'+DSHORT[day]+'</div>'
       +'<div class="dnum">'+(dn[di]||'')+'</div><div class="dmeta">'+meta+'</div></div>'
