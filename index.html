@@ -3239,8 +3239,11 @@ function renderConfiab(){
   const box=document.getElementById('gp-confiab');if(!box)return;
   if(!CONFIAB_DB||!CONFIAB_DB.clientes){box.innerHTML='';return;}
   let cls=CONFIAB_DB.clientes.slice();
-  if(!S.isAdmin&&S.user)cls=cls.filter(c=>c.cliente===S.user);          // escopo do usuário
-  if(GP_SEL.cliente.size)cls=cls.filter(c=>GP_SEL.cliente.has(c.cliente));
+  // Comparação case-insensitive: a grafia do cliente diverge entre fontes
+  // (Gestão usa "Greenyellow/RenoGrid/Semp", AUXILIAR usa "GreenYellow/Renogrid/SEMP").
+  const _selCli=new Set([...GP_SEL.cliente].map(x=>x.toLowerCase()));
+  if(!S.isAdmin&&S.user)cls=cls.filter(c=>(c.cliente||'').toLowerCase()===S.user.toLowerCase());
+  if(GP_SEL.cliente.size)cls=cls.filter(c=>_selCli.has((c.cliente||'').toLowerCase()));
   const wasOpen=(document.getElementById('cf-master')||{}).classList&&document.getElementById('cf-master').classList.contains('open');
   let inner='';
   cls.sort((a,b)=>a.cliente.localeCompare(b.cliente,'pt-BR')).forEach(c=>{
@@ -3274,8 +3277,9 @@ function renderMttrCluster(){
   const box=document.getElementById('gp-mttr-cluster');if(!box)return;
   if(!CONFIAB_DB||!CONFIAB_DB.clusters){box.innerHTML='';return;}
   let cs=CONFIAB_DB.clusters.slice();
-  if(!S.isAdmin&&S.user)cs=cs.filter(c=>c.cliente===S.user);
-  if(GP_SEL.cliente.size)cs=cs.filter(c=>GP_SEL.cliente.has(c.cliente));
+  const _selCli=new Set([...GP_SEL.cliente].map(x=>x.toLowerCase()));   // grafia diverge entre fontes
+  if(!S.isAdmin&&S.user)cs=cs.filter(c=>(c.cliente||'').toLowerCase()===S.user.toLowerCase());
+  if(GP_SEL.cliente.size)cs=cs.filter(c=>_selCli.has((c.cliente||'').toLowerCase()));
   if(GP_SEL.cluster.size)cs=cs.filter(c=>GP_SEL.cluster.has(c.cluster));
   const wasOpen=(document.getElementById('mc-master')||{}).classList&&document.getElementById('mc-master').classList.contains('open');
   let inner='';
