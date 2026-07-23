@@ -456,6 +456,73 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
     }
 
 
+_DIA_FULL = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira']
+
+
+def _iso_dt(v):
+    try:
+        if v is None or (v != v):
+            return ""
+        return v.isoformat() if hasattr(v, "isoformat") else str(v)
+    except Exception:
+        return str(v) if v else ""
+
+
+def linhas_fora_do_plano(df, mon: dt.date, plan_keys: set) -> list:
+    """Tarefas EXECUTADAS (Data final) na semana [seg..sex] que NÃO estavam no plano.
+    Placa cada uma no dia em que foi concluída. Retorna linhas no mesmo schema do plano,
+    com foraDoPlano=True. Casa por (os_id, código) para não colidir com tarefas planejadas."""
+    import pandas as pd
+    d0, d1 = pd.Timestamp(mon), pd.Timestamp(mon) + pd.Timedelta(days=5)  # seg 00h → sáb 00h
+    dfin = pd.to_datetime(df.get('Data final'), errors='coerce')
+    di = pd.to_datetime(df.get('Data inicial'), errors='coerce')
+    out = []
+    for i, r in enumerate(df.to_dict("records")):
+        if str(r.get('Status') or '').strip() == 'Cancelado':
+            continue
+        fim = dfin.iat[i]
+        if pd.isna(fim) or not (d0 <= fim < d1):        # executada nesta semana útil
+            continue
+        try:
+            os_id = str(int(float(str(r.get('OSs ID')).strip())))
+        except (ValueError, TypeError):
+            continue
+        cod = str(r.get('Código') or '').strip()
+        if (os_id, cod) in plan_keys or os_id in plan_keys:   # já está no plano
+            continue
+        usina = str(r.get('Ativo Classificação 1') or '').strip()
+        if not usina or usina.lower() == 'nan' or 'teste' in usina.lower():
+            continue
+        ini = di.iat[i]
+        # duração real de execução (cap 24h: spans multi-dia são tempo de OS aberta, não trabalho)
+        dur = round((fim - ini).total_seconds() / 3600.0, 2) if (pd.notna(ini) and fim >= ini) else 0.0
+        if dur > 24:
+            dur = 0.0
+        estado = str(r.get('Estado da Tarefa') or '').strip()
+        out.append({
+            "cliente": _extrair_cliente(usina), "usina": usina,
+            "cluster": str(r.get('Ativo Classificação 2') or '').strip(),
+            "tipo": str(r.get('Tipo de tarefa') or '').strip(),
+            "dia": _DIA_FULL[fim.weekday()], "os_id": os_id, "codigo": cod,
+            "tarefa": str(r.get('Tarefa') or ''), "responsavel": "",
+            "criticidade": str(r.get('Tarefa -> Criticidade') or ''),
+            "etiquetas": str(r.get('Etiquetas') or ''),
+            "status_bd": estado, "status": estado,
+            "duracao": dur,
+            "h_ini": ini.strftime('%H:%M') if pd.notna(ini) else '',
+            "h_fim": fim.strftime('%H:%M') if pd.notna(fim) else '',
+            "desloc": 0, "reprog": "", "vezes": 0, "termo": "", "paralelo": "",
+            "nova_os": "", "solic_orig": "", "relatorio": "", "historico": [],
+            "mttr_s": 0, "mttr_h": 0.0, "tempo_total_s": 0, "pausado_s": 0,
+            "dataCriacao": _iso_dt(r.get('Data de Criação da OS')),
+            "dataFinal": _iso_dt(r.get('Data final')),
+            "dataProgramada": _iso_dt(r.get('Data Programada')),
+            "statusPai": str(r.get('Status') or '').strip(),
+            "foraDoPlano": True,
+        })
+    return out
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--semana", type=int, help="semana ISO ativa (default: semana corrente)")
@@ -498,6 +565,14 @@ def main():
     n_hist = sum(1 for v in mapa_extras.values() if v.get("historico"))
     _log(f"  → Mapa Extras: {len(mapa_extras)} OSs / {n_rel} c/relatório / {n_hist} c/histórico")
 
+    # API (cacheada — mapa_extras já chamou) p/ derivar as executadas fora do plano
+    try:
+        import fonte_bd_api
+        _df_api = fonte_bd_api.df_semanal()
+    except Exception as e:
+        _df_api = None
+        _log(f"  ! Fora-do-plano desativado (sem API): {e}")
+
     semanas_json = []
     for n, arq in sorted(disponiveis, key=lambda x: x[0], reverse=True):
         if n not in nums_incluir:
@@ -505,6 +580,14 @@ def main():
         mon = dt.date.fromisocalendar(ano_hoje, n, 1)
         semana = ler_planilha(arq, mon, mapa_extras)
         if semana:
+            if _df_api is not None:
+                plan_keys = set()
+                for _r in semana["rows"]:
+                    plan_keys.add((str(_r.get("os_id", "")), str(_r.get("codigo", ""))))
+                    plan_keys.add(str(_r.get("os_id", "")))
+                extra = linhas_fora_do_plano(_df_api, mon, plan_keys)
+                semana["rows"].extend(extra)
+                _log(f"    + {len(extra)} executadas FORA do plano ({semana['week']})")
             semanas_json.append(semana)
 
     if not semanas_json:
