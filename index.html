@@ -193,6 +193,8 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .osc-rep{font-size:7.5px;font-weight:700;color:var(--danger);background:#fff5f5;padding:1px 5px;border-radius:3px;border:1px solid rgba(229,62,62,.2)}
 .osc-exec{font-size:7.5px;font-weight:700;color:#7c3aed;background:#f5f3ff;padding:1px 5px;border-radius:3px;border:1px solid rgba(124,58,237,.2)}
 .osc-nova{font-size:7.5px;font-weight:700;color:#0ea5e9;background:#f0f9ff;padding:1px 5px;border-radius:3px;border:1px solid rgba(14,165,233,.2)}
+.osc-fora{font-size:7.5px;font-weight:800;color:#c2691a;background:#fff6ec;padding:1px 5px;border-radius:3px;border:1px solid rgba(224,138,43,.3)}
+.osc.fora-plano{border-left-color:#e08a2b!important;background:linear-gradient(90deg,rgba(224,138,43,.07),transparent)}
 .osc-n{font-size:8px;opacity:.3;margin-left:auto}
 .more-pill{text-align:center;padding:5px;font-size:10px;font-weight:700;color:var(--gd);cursor:pointer;border-radius:6px;border:1px dashed rgba(169,219,33,.38);margin-top:2px;transition:all .15s}
 .more-pill:hover{background:var(--gl);border-color:var(--green)}
@@ -2386,7 +2388,7 @@ function renderIns(d){
   const n=d.length||1,corr=d.filter(r=>r.tipo==='Corretiva').length;
   const prev=d.filter(r=>['MPM','MPS','MPA','MPM-Mod/Tracker','MPM-Inversor'].includes(r.tipo)).length;
   const rep=d.filter(r=>r.reprog==='Sim').length,v3=d.filter(r=>r.vezes>=3).length;
-  const h=d.reduce((a,b)=>a+(b.duracao||0),0);
+  const h=d.filter(r=>!r.foraDoPlano).reduce((a,b)=>a+(b.duracao||0),0);
   const novas=d.filter(isNova).length;
   const exec=d.filter(isExec).length;
   const dc={}; DAYS.forEach(x=>dc[x]=d.filter(r=>r.dia===x).length);
@@ -2396,7 +2398,11 @@ function renderIns(d){
   const totalDisp=equipes.length*HH_DISP,totalUtil=h;
   const utilPct=totalDisp?Math.round(totalUtil/totalDisp*100):0;
   const overloaded=equipes.filter(cl=>(resumo[cl]?.hh_util||0)>HH_DISP);
+  const planRows=d.filter(r=>!r.foraDoPlano),planFin=planRows.filter(isFinalizada).length;
+  const ader=planRows.length?Math.round(planFin/planRows.length*100):0;
+  const foraTot=d.filter(r=>r.foraDoPlano).length;
   document.getElementById('irow').innerHTML=[
+    {cls:ader>=80?'ok':ader>=50?'w':'d',ico:'&#128203;',val:ader+'%',lbl:'Ader\u00eancia ao plano',desc:planFin+' de '+planRows.length+' tarefas do plano feitas'+(foraTot?' \u00b7 <strong>'+foraTot+' fora do plano</strong>':'')},
     {cls:corr===0?'ok':corr/n>.15?'d':'w',ico:'&#128295;',val:(prev/n*100).toFixed(0)+'%',lbl:'Preventivas',desc:corr===0?'Portf\u00f3lio saud\u00e1vel.':corr+' corretiva'+(corr>1?'s':'')+' ('+(corr/n*100).toFixed(0)+'%).'},
     {cls:rep===0?'ok':rep/n>.6?'d':'w',ico:'&#128260;',val:(rep/n*100).toFixed(0)+'%',lbl:'Reprogramadas',desc:rep===0?'Todas OS novas.':rep+' postergadas'+(v3?', '+v3+' na 3\u00aa+ tentativa':'')+'.'},
     {cls:utilPct>100?'d':utilPct<50?'w':'ok',ico:'&#9202;',val:utilPct+'%',lbl:'Hora Homem',desc:h.toFixed(0)+'h de '+totalDisp+'h.'+(overloaded.length?' '+overloaded.length+' equipe'+(overloaded.length>1?'s':'')+' sobrecarregada'+(overloaded.length>1?'s':'')+'!':'')},
@@ -2458,11 +2464,12 @@ function renderCal(d){
     const dd=d.filter(r=>r.dia===day),om={};
     dd.forEach(r=>{
       const k=r.os_id+'||'+r.usina;
-      if(!om[k])om[k]={os:r.os_id,usina:r.usina,tipo:r.tipo,tasks:[],cluster:r.cluster,h_ini:r.h_ini,h_fim:r.h_fim,dur:0,rep:false,exec:false,nova:false};
+      if(!om[k])om[k]={os:r.os_id,usina:r.usina,tipo:r.tipo,tasks:[],cluster:r.cluster,h_ini:r.h_ini,h_fim:r.h_fim,dur:0,rep:false,exec:false,nova:false,fora:false};
       om[k].tasks.push(r);om[k].dur+=r.duracao||0;
       if(r.reprog==='Sim')om[k].rep=true;
       if(isExec(r))om[k].exec=true;
       if(isNova(r))om[k].nova=true;
+      if(r.foraDoPlano)om[k].fora=true;
     });
     const gs=Object.values(om).sort((a,b)=>{
       if(a.exec&&!b.exec)return -1;if(b.exec&&!a.exec)return 1;
@@ -2472,7 +2479,7 @@ function renderCal(d){
     });
     // FIX #156: mostrar TODAS as OS — coluna agora é scrollável (.dtasks max-height)
     const vis=gs,ovf=0;
-    const nos=new Set(dd.map(r=>r.os_id)).size,hd=dd.reduce((a,b)=>a+(b.duracao||0),0);
+    const nos=new Set(dd.map(r=>r.os_id)).size,hd=dd.filter(r=>!r.foraDoPlano).reduce((a,b)=>a+(b.duracao||0),0);
     const cards=vis.map(g=>{
       const col=TC[g.tipo]||'#999',cls=TK[g.tipo]||'tOUT';
       const ut=[...new Set(g.tasks.map(t=>t.tarefa))];
@@ -2488,7 +2495,7 @@ function renderCal(d){
       // STATUS DA OS (selo separado): prioriza Verificação; senão o primeiro não-vazio
       const soss=g.tasks.map(statusOsInfo);
       const sos=soss.find(x=>x&&x.k==='verificacao')||soss.find(Boolean)||null;
-      return '<div class="osc '+cls+'" onclick="openMod(\''+esc(g.usina)+'\',\''+esc(day)+'\',\''+esc(g.os)+'\')">'
+      return '<div class="osc '+cls+(g.fora?' fora-plano':'')+'" onclick="openMod(\''+esc(g.usina)+'\',\''+esc(day)+'\',\''+esc(g.os)+'\')">'
         +'<div class="osc-top"><span class="osc-num">OS #'+g.os+'</span>'
         +'<span class="stp '+estK+'"><span class="stp-dot"></span>'+estL+'</span>'
         +(sos?'<span class="osc-osstatus '+sos.k+'" title="Status da OS">'+sos.l+'</span>':'')
@@ -2496,14 +2503,18 @@ function renderCal(d){
         +'<div class="osc-usina" style="color:'+col+'">'+sh+'</div>'
         +'<div class="osc-tasks">'+ut.join(' \u00b7 ')+'</div>'
         +'<div class="osc-foot">'+(hora?'<span class="osc-time">'+hora+'</span>':'')+(dur?'<span class="osc-dur">'+dur+'</span>':'')
+        +(g.fora?'<span class="osc-fora">&#9889; Fora do plano</span>':'')
         +(g.exec?'<span class="osc-exec">&#9889; Em exec.</span>':'')
         +(g.nova?'<span class="osc-nova">&#43; N\u00e3o prog.</span>':'')
         +(g.rep?'<span class="osc-rep">&#8635; Reprog.</span>':'')
         +'<span class="osc-n">'+g.tasks.length+'t</span></div></div>';
     }).join('');
     const ovfBtn=ovf>0?'<div class="more-pill" onclick="openMod(\'\',\''+esc(day)+'\',\'\')">+'+ovf+' OS</div>':'';
+    const foraN=gs.filter(g=>g.fora).length, planG=gs.filter(g=>!g.fora);
+    const feitasN=planG.filter(g=>{const e=g.tasks.map(estadoTarefaInfo);return e.length&&e.every(x=>x.k==='finalizada');}).length;
+    const meta='Plano '+planG.length+(feitasN?' \u00b7 \u2705'+feitasN:'')+(foraN?' \u00b7 \u26a1'+foraN:'')+' \u00b7 '+hd.toFixed(0)+'h';
     return '<div class="dcol"><div class="dhdr"><div class="dname">'+DSHORT[day]+'</div>'
-      +'<div class="dnum">'+(dn[di]||'')+'</div><div class="dmeta">'+nos+' OS \u00b7 '+hd.toFixed(0)+'h</div></div>'
+      +'<div class="dnum">'+(dn[di]||'')+'</div><div class="dmeta">'+meta+'</div></div>'
       +'<div class="dtasks">'+(dd.length?cards+ovfBtn:'<div class="dempty">Sem atividades</div>')+'</div></div>';
   }).join('');
 }
