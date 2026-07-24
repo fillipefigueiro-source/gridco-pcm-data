@@ -3091,10 +3091,16 @@ const GP_MS={cliente:{f:'cliente',lbl:'Todos'},usina:{f:'usina',lbl:'Todas'},
   tipo:{f:'tipo',lbl:'Todos'},etq:{f:'etiquetas',lbl:'Todas'},estado:{f:'estado',lbl:'Todos'}};
 const GP_SEL={cliente:new Set(),usina:new Set(),cluster:new Set(),resp:new Set(),tipo:new Set(),etq:new Set(),estado:new Set()};
 function gpMsOptions(key){
-  const fld=GP_MS[key].f,s=new Set();
-  gpScopedTarefas().forEach(t=>{const v=t[fld];if(Array.isArray(v))v.forEach(x=>x&&s.add(x));else if(v)s.add(v);});
-  [...GP_SEL[key]].forEach(v=>{if(!s.has(v))GP_SEL[key].delete(v);}); // limpa selecionados que sumiram
-  return [...s].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+  const fld=GP_MS[key].f, byLk=new Map();   // lowercase -> Map(grafia->contagem)
+  gpScopedTarefas().forEach(t=>{const v=t[fld];
+    (Array.isArray(v)?v:[v]).forEach(x=>{if(x){const s=String(x),lk=s.toLowerCase();
+      let m=byLk.get(lk);if(!m){m=new Map();byLk.set(lk,m);} m.set(s,(m.get(s)||0)+1);}});});
+  // dedupe case-insensitive: mantém a grafia MAIS FREQUENTE (ex.: PA Norte 01 vs PA NORTE 01)
+  const canon=new Map();
+  byLk.forEach((m,lk)=>{let best=null,bn=-1;m.forEach((n,s)=>{if(n>bn){bn=n;best=s;}});canon.set(lk,best);});
+  const validLk=new Set(canon.keys());
+  [...GP_SEL[key]].forEach(v=>{if(!validLk.has(String(v).toLowerCase()))GP_SEL[key].delete(v);});
+  return [...canon.values()].sort((a,b)=>a.localeCompare(b,'pt-BR'));
 }
 function gpMsLabel(key){
   const s=GP_SEL[key],el=document.getElementById('gp-ms-lbl-'+key);if(!el)return;
@@ -3126,14 +3132,17 @@ function gpFilteredTarefas(){
   const S1=GP_SEL,fOS=gpVal('gp-f-os').toLowerCase(),fSS=gpVal('gp-f-ss').toLowerCase(),
         dIni=gpVal('gp-f-dini'),dFim=gpVal('gp-f-dfim'),
         fIni=gpVal('gp-f-fini'),fFim=gpVal('gp-f-ffim');
+  // Matches case-insensitive (grafias divergem no Fracttal: "PA NORTE 01" vs "PA Norte 01")
+  const _L=s=>new Set([...s].map(x=>String(x).toLowerCase())), _in=(set,v)=>set.has(String(v||'').toLowerCase());
+  const Lcli=_L(S1.cliente),Lusi=_L(S1.usina),Lclu=_L(S1.cluster),Lres=_L(S1.resp),Ltip=_L(S1.tipo),Lest=_L(S1.estado),Letq=_L(S1.etq);
   return gpScopedTarefas().filter(t=>{
-    if(S1.cliente.size&&!S1.cliente.has(t.cliente))return false;
-    if(S1.usina.size&&!S1.usina.has(t.usina))return false;
-    if(S1.cluster.size&&!S1.cluster.has(t.cluster))return false;
-    if(S1.resp.size&&!S1.resp.has(t.responsavel))return false;
-    if(S1.tipo.size&&!S1.tipo.has(t.tipo))return false;
-    if(S1.estado.size&&!S1.estado.has(t.estado))return false;
-    if(S1.etq.size&&!(t.etiquetas||[]).some(e=>S1.etq.has(e)))return false;
+    if(S1.cliente.size&&!_in(Lcli,t.cliente))return false;
+    if(S1.usina.size&&!_in(Lusi,t.usina))return false;
+    if(S1.cluster.size&&!_in(Lclu,t.cluster))return false;
+    if(S1.resp.size&&!_in(Lres,t.responsavel))return false;
+    if(S1.tipo.size&&!_in(Ltip,t.tipo))return false;
+    if(S1.estado.size&&!_in(Lest,t.estado))return false;
+    if(S1.etq.size&&!(t.etiquetas||[]).some(e=>_in(Letq,e)))return false;
     if(fOS&&String(t.os).toLowerCase().indexOf(fOS)<0)return false;
     if(fSS&&String(t.ss).toLowerCase().indexOf(fSS)<0)return false;
     if(dIni&&(!t.dataProg||t.dataProg<dIni))return false;
@@ -3301,9 +3310,10 @@ function renderMttrCluster(){
   if(!CONFIAB_DB||!CONFIAB_DB.clusters){box.innerHTML='';return;}
   let cs=CONFIAB_DB.clusters.slice();
   const _selCli=new Set([...GP_SEL.cliente].map(x=>x.toLowerCase()));   // grafia diverge entre fontes
+  const _selClu=new Set([...GP_SEL.cluster].map(x=>x.toLowerCase()));
   if(!S.isAdmin&&S.user)cs=cs.filter(c=>(c.cliente||'').toLowerCase()===S.user.toLowerCase());
   if(GP_SEL.cliente.size)cs=cs.filter(c=>_selCli.has((c.cliente||'').toLowerCase()));
-  if(GP_SEL.cluster.size)cs=cs.filter(c=>GP_SEL.cluster.has(c.cluster));
+  if(GP_SEL.cluster.size)cs=cs.filter(c=>_selClu.has((c.cluster||'').toLowerCase()));
   const wasOpen=(document.getElementById('mc-master')||{}).classList&&document.getElementById('mc-master').classList.contains('open');
   let inner='';
   cs.forEach(c=>{
