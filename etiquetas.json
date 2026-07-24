@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-24T11:48:44Z",
+  "geradoEm": "2026-07-24T13:14:26Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-20 .. 2026-07-26",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3216,
-        "emAberto": 13,
+        "total": 3221,
+        "emAberto": 17,
         "atrasadas": 13,
-        "concluidas30d": 528,
-        "concluidas7d": 148,
-        "naSemanaCorrente": 105
+        "concluidas30d": 529,
+        "concluidas7d": 149,
+        "naSemanaCorrente": 110
       },
       "mttr": {
-        "horas": 8.09,
-        "label": "8h 6min",
-        "amostra": 528
+        "horas": 8.08,
+        "label": "8h 5min",
+        "amostra": 529
       },
       "tendencia4Semanas": [
         {
@@ -38,23 +38,23 @@
         },
         {
           "semana": "W30",
-          "criadas": 104,
-          "finalizadas": 97
+          "criadas": 109,
+          "finalizadas": 98
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3216,
-            "emAberto": 13
+            "total": 3221,
+            "emAberto": 17
           }
         ],
         "responsaveis": [
           {
             "nome": "Marcos  Camargo",
-            "total": 427,
-            "emAberto": 1
+            "total": 428,
+            "emAberto": 2
           },
           {
             "nome": "Raphael Vitoriano",
@@ -68,7 +68,7 @@
           },
           {
             "nome": "Italo  Lustosa",
-            "total": 145,
+            "total": 146,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 13,
+      "total": 17,
       "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 12,
-        "emProgresso": 0,
+        "naoIniciada": 14,
+        "emProgresso": 2,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 17
       },
       "oss": [
         {
@@ -324,9 +324,103 @@
           "linkFracttal": "",
           "modalidade": "remoto",
           "atrasada": true
+        },
+        {
+          "osId": "10011",
+          "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Marcos  Camargo",
+          "status": "Em progresso",
+          "tarefa": "[Colorado 2][Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-24",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "2026-07-24",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "9997",
+          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Rodolfo  Oliveira",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Rodolfo  Oliveira",
+          "status": "Não Iniciada",
+          "tarefa": "[Ibaté 2][Inversor 1.6] - Religamento do Inversor 1.6",
+          "criticidade": "",
+          "dataProgramada": "2026-07-24",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "9995",
+          "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Eduardo Souza",
+          "status": "Não Iniciada",
+          "tarefa": "[Matão 1][Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-24",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "9993",
+          "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Em progresso",
+          "tarefa": "[Nova Londrina 1][Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-24",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "2026-07-24",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9996",
+          "ativo": "SKID 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID2 }",
+          "equipe": "",
+          "responsavel": "Italo  Lustosa",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Italo  Lustosa",
+          "status": "Finalizada",
+          "tarefa": "[Junco 1][SKID 2] - Religamento do SKID 2",
+          "criticidade": "",
+          "dataProgramada": "2026-07-24",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "2026-07-24",
+          "dataFinal": "2026-07-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "9992",
           "ativo": "Thopen - Marajoara 1 - SP  Caçapava  São Paulo Brasil { THPN-MRJ100 }",
@@ -3306,34 +3400,14 @@
           "horasAteFechar": 0,
           "modalidade": "remoto",
           "atrasada": false
-        },
-        {
-          "osId": "9557",
-          "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
-          "equipe": "",
-          "responsavel": "Italo  Lustosa",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Italo  Lustosa",
-          "status": "Finalizada",
-          "tarefa": "UFV CEU AZUL  - Religamento remoto da usina. Relé trip 27ABC.",
-          "criticidade": "",
-          "dataProgramada": "2026-07-16",
-          "dataCriacao": "2026-07-16",
-          "dataInicial": "2026-07-16",
-          "dataFinal": "2026-07-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1566,
+      "historicoTotal": 1567,
       "subClassificacao": {
         "remoto": 728,
-        "local": 2488,
+        "local": 2493,
         "remotoEmAberto": 7,
-        "localEmAberto": 6,
+        "localEmAberto": 10,
         "pctRemoto": 23,
         "alerta": true
       },
@@ -3555,8 +3629,8 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 538,
-        "emAberto": 41,
+        "total": 539,
+        "emAberto": 42,
         "atrasadas": 31,
         "concluidas30d": 115,
         "concluidas7d": 22,
@@ -3585,7 +3659,7 @@
         },
         {
           "semana": "W30",
-          "criadas": 5,
+          "criadas": 6,
           "finalizadas": 18
         }
       ],
@@ -3593,8 +3667,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 538,
-            "emAberto": 41
+            "total": 539,
+            "emAberto": 42
           }
         ],
         "responsaveis": [
@@ -3625,16 +3699,16 @@
           }
         ]
       },
-      "total": 41,
+      "total": 42,
       "atrasadas": 31,
       "porStatus": {
-        "naoIniciada": 32,
+        "naoIniciada": 33,
         "emProgresso": 2,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 41
+        "(sem equipe)": 42
       },
       "oss": [
         {
@@ -4287,6 +4361,23 @@
           "criticidade": "",
           "dataProgramada": "2026-07-27",
           "dataCriacao": "2026-06-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10010",
+          "ativo": "Cabine 1 CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { ELF100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Hélio Silva ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Hélio Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-07-28",
+          "dataCriacao": "2026-07-24",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -6195,7 +6286,7 @@
           "responsavel": "Paulo  Ribeiro",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Paulo  Ribeiro",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
           "criticidade": "",
           "dataProgramada": "2026-06-10",
@@ -6309,7 +6400,7 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Anderson  Parente",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
           "criticidade": "",
           "dataProgramada": "2026-06-02",
@@ -6898,7 +6989,7 @@
           "responsavel": "Ailton Leal ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Ailton Leal ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
           "criticidade": "",
           "dataProgramada": "2026-06-09",
@@ -8599,12 +8690,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 300,
-        "emAberto": 94,
-        "atrasadas": 94,
+        "total": 309,
+        "emAberto": 103,
+        "atrasadas": 101,
         "concluidas30d": 164,
         "concluidas7d": 75,
-        "naSemanaCorrente": 52
+        "naSemanaCorrente": 61
       },
       "mttr": {
         "horas": 107.27,
@@ -8629,7 +8720,7 @@
         },
         {
           "semana": "W30",
-          "criadas": 65,
+          "criadas": 76,
           "finalizadas": 44
         }
       ],
@@ -8637,8 +8728,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 300,
-            "emAberto": 94
+            "total": 309,
+            "emAberto": 103
           }
         ],
         "responsaveis": [
@@ -8663,41 +8754,24 @@
             "emAberto": 9
           },
           {
-            "nome": "Luiz  Silva",
+            "nome": "Rodolfo  Oliveira",
             "total": 18,
-            "emAberto": 10
+            "emAberto": 11
           }
         ]
       },
-      "total": 94,
-      "atrasadas": 94,
+      "total": 103,
+      "atrasadas": 101,
       "porStatus": {
-        "naoIniciada": 84,
+        "naoIniciada": 92,
         "emProgresso": 3,
-        "pausada": 7,
+        "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 94
+        "(sem equipe)": 103
       },
       "oss": [
-        {
-          "osId": "6304",
-          "ativo": "Estrutura Trackers LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-ETKR1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Juliana Cândido ",
-          "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[TIM200] [Trackers] Verificação dos trackers com diferença de ângulo",
-          "criticidade": "",
-          "dataProgramada": "2026-05-06",
-          "dataCriacao": "2026-05-06",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
         {
           "osId": "9625",
           "ativo": "Inversor 12.1 Huawei SUN2000-75KTL-M1    { THPN-SDI100-INVR12.1 }",
@@ -8766,23 +8840,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 168.0,
-          "atrasada": true
-        },
-        {
-          "osId": "7753",
-          "ativo": "NCU 1      { CPP100-NCU1 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
-          "tarefa": "[CPP100][NCU] - Parametrização de ângulo",
-          "criticidade": "",
-          "dataProgramada": "2026-06-18",
-          "dataCriacao": "2026-06-12",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
           "atrasada": true
         },
         {
@@ -9466,6 +9523,40 @@
           "atrasada": true
         },
         {
+          "osId": "10009",
+          "ativo": "Inversor 3.2 Sungrow SG250HX    { THPN-SDN100-INVR3.2 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Janderson Miranda ",
+          "status": "Não Iniciada",
+          "tarefa": "[Sítio dos Nogueiras 1][Inversor 3.2] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "10008",
+          "ativo": "Inversor 3.1 Sungrow SG250HX    { THPN-SDN100-INVR3.1 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Janderson Miranda ",
+          "status": "Não Iniciada",
+          "tarefa": "[Sítio dos Nogueiras 1][Inversor 3.1] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-15",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
           "osId": "9782",
           "ativo": "Inversor 2.18 Sungrow SG125HV    { THPN-TNB100-INVR2.18 }",
           "equipe": "",
@@ -9579,6 +9670,125 @@
           "criticidade": "",
           "dataProgramada": "2026-07-19",
           "dataCriacao": "2026-07-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "10004",
+          "ativo": "Tracker 08.107 Brametal Bi-motor    { CPP100-ETKR8.107 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Capitão Poço 1][Tracker 08.107] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "10003",
+          "ativo": "Tracker 07.107 Brametal Bi-motor    { CPP100-ETKR7.107 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Capitão Poço 1][Tracker 07.107] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "10002",
+          "ativo": "Tracker 07.106 Brametal Bi-motor    { CPP100-ETKR7.106 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Capitão Poço 1][Tracker 07.106] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "10001",
+          "ativo": "Tracker 07.103 Brametal Bi-motor    { CPP100-ETKR7.103 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Capitão Poço 1][Tracker 07.103] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "10000",
+          "ativo": "Tracker 06.104 Brametal Bi-motor    { CPP100-ETKR6.104 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Capitão Poço 1][Tracker 06.104] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "9999",
+          "ativo": "Tracker 05.106 Brametal Bi-motor    { CPP100-ETKR5.106 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Capitão Poço 1][Tracker 05.106] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "9998",
+          "ativo": "Tracker 02.105 Brametal Bi-motor    { CPP100-ETKR2.105 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Capitão Poço 1][Tracker 02.105] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -10279,15 +10489,50 @@
           "responsavel": "Adão Neto ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Adão Neto ",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "INVERSOR 10 - Verificação de performance",
           "criticidade": "",
           "dataProgramada": "2026-07-23",
           "dataCriacao": "2026-07-22",
+          "dataInicial": "2026-07-24",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "atrasada": true
+        },
+        {
+          "osId": "10006",
+          "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Capitão Poço 1][Inversor 7.2] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-24",
+          "dataCriacao": "2026-07-24",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
+          "atrasada": false
+        },
+        {
+          "osId": "10005",
+          "ativo": "Inversor 7.1 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.1 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Capitão Poço 1][Inversor 7.1] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-07-24",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -12407,7 +12652,7 @@
           "responsavel": "Daniel de Paula ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Daniel de Paula ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Inversor 1.10][Sete Lagoas] - Avaliação de sombreamento",
           "criticidade": "",
           "dataProgramada": "2026-07-14",
@@ -13672,6 +13917,268 @@
   },
   "ossPublicas": [
     {
+      "osId": "10011",
+      "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Marcos  Camargo",
+      "status": "Em progresso",
+      "tarefa": "[Colorado 2][Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-24",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "2026-07-24",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
+      "osId": "10010",
+      "ativo": "Cabine 1 CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { ELF100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Hélio Silva ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Hélio Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-07-28",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10009",
+      "ativo": "Inversor 3.2 Sungrow SG250HX    { THPN-SDN100-INVR3.2 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Janderson Miranda ",
+      "status": "Não Iniciada",
+      "tarefa": "[Sítio dos Nogueiras 1][Inversor 3.2] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10008",
+      "ativo": "Inversor 3.1 Sungrow SG250HX    { THPN-SDN100-INVR3.1 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Janderson Miranda ",
+      "status": "Não Iniciada",
+      "tarefa": "[Sítio dos Nogueiras 1][Inversor 3.1] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-07-15",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10006",
+      "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Capitão Poço 1][Inversor 7.2] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-24",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10005",
+      "ativo": "Inversor 7.1 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.1 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Capitão Poço 1][Inversor 7.1] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-07-24",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10004",
+      "ativo": "Tracker 08.107 Brametal Bi-motor    { CPP100-ETKR8.107 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Capitão Poço 1][Tracker 08.107] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-07-20",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10003",
+      "ativo": "Tracker 07.107 Brametal Bi-motor    { CPP100-ETKR7.107 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Capitão Poço 1][Tracker 07.107] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-07-20",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10002",
+      "ativo": "Tracker 07.106 Brametal Bi-motor    { CPP100-ETKR7.106 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Capitão Poço 1][Tracker 07.106] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-07-20",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10001",
+      "ativo": "Tracker 07.103 Brametal Bi-motor    { CPP100-ETKR7.103 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Capitão Poço 1][Tracker 07.103] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-07-20",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10000",
+      "ativo": "Tracker 06.104 Brametal Bi-motor    { CPP100-ETKR6.104 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Capitão Poço 1][Tracker 06.104] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-07-20",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9999",
+      "ativo": "Tracker 05.106 Brametal Bi-motor    { CPP100-ETKR5.106 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Capitão Poço 1][Tracker 05.106] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-07-20",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9998",
+      "ativo": "Tracker 02.105 Brametal Bi-motor    { CPP100-ETKR2.105 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Capitão Poço 1][Tracker 02.105] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-07-20",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "9997",
+      "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Rodolfo  Oliveira",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Rodolfo  Oliveira",
+      "status": "Não Iniciada",
+      "tarefa": "[Ibaté 2][Inversor 1.6] - Religamento do Inversor 1.6",
+      "criticidade": "",
+      "dataProgramada": "2026-07-24",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "9995",
+      "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
+      "equipe": "",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Eduardo Souza",
+      "status": "Não Iniciada",
+      "tarefa": "[Matão 1][Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-24",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "9993",
+      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Em progresso",
+      "tarefa": "[Nova Londrina 1][Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-24",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "2026-07-24",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
       "osId": "9982",
       "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
       "equipe": "",
@@ -14262,14 +14769,15 @@
       "responsavel": "Adão Neto ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Adão Neto ",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "INVERSOR 10 - Verificação de performance",
       "criticidade": "",
       "dataProgramada": "2026-07-23",
       "dataCriacao": "2026-07-22",
-      "dataInicial": "",
+      "dataInicial": "2026-07-24",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "9865",
@@ -16022,22 +16530,6 @@
       "horasAteAbrir": 168.0
     },
     {
-      "osId": "7753",
-      "ativo": "NCU 1      { CPP100-NCU1 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
-      "tarefa": "[CPP100][NCU] - Parametrização de ângulo",
-      "criticidade": "",
-      "dataProgramada": "2026-06-18",
-      "dataCriacao": "2026-06-12",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "7597",
       "ativo": "Infraestrutura Civil Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-INFC1 }",
       "equipe": "",
@@ -16170,25 +16662,29 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 528.0
-    },
-    {
-      "osId": "6304",
-      "ativo": "Estrutura Trackers LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-ETKR1 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Juliana Cândido ",
-      "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[TIM200] [Trackers] Verificação dos trackers com diferença de ângulo",
-      "criticidade": "",
-      "dataProgramada": "2026-05-06",
-      "dataCriacao": "2026-05-06",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "9996",
+      "ativo": "SKID 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-SKID2 }",
+      "equipe": "",
+      "responsavel": "Italo  Lustosa",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Italo  Lustosa",
+      "status": "Finalizada",
+      "tarefa": "[Junco 1][SKID 2] - Religamento do SKID 2",
+      "criticidade": "",
+      "dataProgramada": "2026-07-24",
+      "dataCriacao": "2026-07-24",
+      "dataInicial": "2026-07-24",
+      "dataFinal": "2026-07-24",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "9992",
       "ativo": "Thopen - Marajoara 1 - SP  Caçapava  São Paulo Brasil { THPN-MRJ100 }",
@@ -19149,29 +19645,10 @@
       "horasAteFechar": 0,
       "modalidade": "remoto",
       "atrasada": false
-    },
-    {
-      "osId": "9643",
-      "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizada",
-      "tarefa": "[Capitão Poço 1][Inversor 7.2] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-07-17",
-      "dataCriacao": "2026-07-17",
-      "dataInicial": "2026-07-20",
-      "dataFinal": "2026-07-20",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2110,
-  "totalGeral": 4216,
+  "historicoTotal": 2111,
+  "totalGeral": 4231,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
