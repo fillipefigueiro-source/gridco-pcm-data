@@ -177,6 +177,27 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .dmeta{font-size:10px;color:rgba(255,255,255,.82);margin-top:4px;font-weight:600;line-height:1.5}
 .dmeta .mfeitas{color:#a9db21}
 .dmeta .mfora{color:#f0a24a}
+/* Pendentes (não couberam) */
+.pend-wrap{margin:14px 0 8px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.pend-master-h{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 18px;cursor:pointer;background:linear-gradient(90deg,#fff6ec,#fff)}
+.pend-master-h:hover{background:#fff2e2}
+.pend-ttl{font-size:15px;font-weight:800;color:#b45309}
+.pend-badge{background:#e08a2b;color:#fff;border-radius:12px;padding:1px 10px;font-size:12px;margin-left:6px}
+.pend-desc{font-size:12px;color:#9a8a76;margin-top:3px}
+.pend-chev{color:#c2691a;transition:transform .15s;font-size:12px}
+.pend-body{display:none;padding:6px 12px 12px}
+.pend-wrap.open .pend-body{display:block}
+.pend-wrap.open .pend-chev{transform:rotate(180deg)}
+.pend-usi{border:1px solid var(--line);border-radius:9px;margin:7px 0;overflow:hidden}
+.pend-usi-h{background:#faf7f2;padding:8px 12px;font-weight:700;font-size:13px;color:#191528}
+.pend-cnt{background:#f0e3d3;color:#8a5a1a;border-radius:10px;padding:1px 8px;font-size:11px;margin-left:4px}
+.pend-row{display:grid;grid-template-columns:64px 1fr 110px 1.1fr;gap:10px;padding:7px 12px;border-top:1px solid #f0ece6;font-size:12.5px;cursor:pointer;align-items:center}
+.pend-row:hover{background:#fffaf3}
+.pend-os{font-family:monospace;font-weight:700;color:#b45309}
+.pend-tar{color:#191528;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pend-tipo{color:#6b7280;font-size:11.5px}
+.pend-mot{color:#c2691a;font-size:11.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:700px){.pend-row{grid-template-columns:56px 1fr}.pend-tipo,.pend-mot{display:none}}
 .dtasks{padding:7px;display:flex;flex-direction:column;gap:4px;flex:1;max-height:780px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#cbd5e1 transparent}
 .dtasks::-webkit-scrollbar{width:6px}
 .dtasks::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
@@ -1136,6 +1157,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
     <div id="view-semana">
       <div class="sec">&#128197; Programa&ccedil;&atilde;o Semanal</div>
       <div class="cal" id="cal"></div>
+      <div id="pendentes"></div>
     </div>
 
     <!-- BOTTOM PANELS -->
@@ -1616,7 +1638,41 @@ function resetFilters(){
 function updateFCount(){const el=document.getElementById('f-count');if(!el)return;const anyMs=Object.values(SEM_SEL).some(s=>s.size);const active=anyMs||S.fOS||S.fSS||S.fDIni||S.fDFim;el.style.display=active?'inline-flex':'none';if(active)el.textContent=GD().length+' de '+allRows().length+' OS';}
 
 // ── RENDER ────────────────────────────────────────────────────────────────────
-function render(){const d=GD();renderKPIs(d);renderIns(d);renderCal(d);renderBottom(d);renderSugestoes();}
+function render(){const d=GD();renderKPIs(d);renderIns(d);renderCal(d);renderPendentes();renderBottom(d);renderSugestoes();}
+function togPend(){const w=document.getElementById('pend-wrap');if(w)w.classList.toggle('open');}
+function renderPendentes(){
+  const box=document.getElementById('pendentes');if(!box)return;
+  const w=AW();let pend=(w&&Array.isArray(w.pendentes))?w.pendentes.slice():[];
+  if(!S.isAdmin&&S.user)pend=pend.filter(p=>_cliEq(p.cliente,S.user));
+  else if(S.viewCli)pend=pend.filter(p=>_cliEq(p.cliente,S.viewCli));
+  // mesmos filtros multi-seleção do calendário (case-insensitive)
+  const Q=SEM_SEL,_L=s=>new Set([...s].map(x=>String(x).toLowerCase())),_in=(set,v)=>set.has(String(v||'').toLowerCase());
+  const Lcli=_L(Q.cliente),Lusi=_L(Q.usina),Lclu=_L(Q.cluster),Ltip=_L(Q.tipo);
+  pend=pend.filter(p=>{
+    if(Q.cliente.size&&!_in(Lcli,p.cliente))return false;
+    if(Q.usina.size&&!_in(Lusi,p.usina))return false;
+    if(Q.cluster.size&&!_in(Lclu,p.cluster))return false;
+    if(Q.tipo.size&&!_in(Ltip,p.tipo))return false;
+    if(S.fOS&&String(p.os_id||'').indexOf(S.fOS)<0)return false;
+    return true;
+  });
+  if(!pend.length){box.innerHTML='';return;}
+  const wasOpen=(document.getElementById('pend-wrap')||{}).classList&&document.getElementById('pend-wrap').classList.contains('open');
+  const byU={};pend.forEach(p=>{(byU[p.usina]=byU[p.usina]||[]).push(p);});
+  let inner='';
+  Object.keys(byU).sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(u=>{
+    const sh=u.split(' - ').slice(-2).join(' - ')||u;
+    inner+='<div class="pend-usi"><div class="pend-usi-h">'+esc(sh)+'<span class="pend-cnt">'+byU[u].length+'</span></div>';
+    byU[u].forEach(p=>{inner+='<div class="pend-row" onclick="openMod(\''+esc(u)+'\',\'\',\''+esc(p.os_id)+'\')">'
+      +'<span class="pend-os">#'+esc(p.os_id)+'</span><span class="pend-tar">'+esc(p.tarefa||'—')+'</span>'
+      +'<span class="pend-tipo">'+esc(p.tipo||'')+'</span><span class="pend-mot">'+esc(p.motivo||'')+'</span></div>';});
+    inner+='</div>';
+  });
+  box.innerHTML='<div class="pend-wrap'+(wasOpen?' open':'')+'" id="pend-wrap">'
+    +'<div class="pend-master-h" onclick="togPend()"><div><div class="pend-ttl">&#9203; N&atilde;o couberam na semana <span class="pend-badge">'+pend.length+'</span></div>'
+    +'<div class="pend-desc">OS planejadas que estouraram a capacidade do dia — reprograme pra outro dia ou aceite como pendente.</div></div>'
+    +'<span class="pend-chev">&#9662;</span></div><div class="pend-body">'+inner+'</div></div>';
+}
 
 // === SUGESTOES PCM ===
 const SUG_KEY='gc_sug_state';
