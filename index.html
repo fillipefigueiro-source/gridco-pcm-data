@@ -2514,10 +2514,10 @@ function renderCal(d){
         +'<span class="osc-n">'+g.tasks.length+'t</span></div></div>';
     }).join('');
     const ovfBtn=ovf>0?'<div class="more-pill" onclick="openMod(\'\',\''+esc(day)+'\',\'\')">+'+ovf+' OS</div>':'';
-    const foraG=gs.filter(g=>g.fora), planG=gs.filter(g=>!g.fora);
-    const _fin=g=>{const e=g.tasks.map(estadoTarefaInfo);return e.length&&e.every(x=>x.k==='finalizada');};
-    const feitasN=planG.filter(_fin).length, foraN=foraG.length, foraFeitas=foraG.filter(_fin).length;
-    const meta=planG.length+' no plano'
+    // Contagem por TAREFA (mesma unidade dos KPIs de cima) — soma dos dias = total da semana
+    const planT=dd.filter(r=>!r.foraDoPlano), foraT=dd.filter(r=>r.foraDoPlano);
+    const feitasN=planT.filter(isFinalizada).length, foraN=foraT.length, foraFeitas=foraT.filter(isFinalizada).length;
+    const meta=planT.length+' no plano'
       +(feitasN?' \u00b7 <span class="mfeitas">\u2705'+feitasN+' feitas</span>':'')
       +(foraN?' \u00b7 <span class="mfora">\u26a1'+foraN+' fora do plano'+(foraFeitas?' ('+foraFeitas+' feitas)':'')+'</span>':'')
       +' \u00b7 '+hd.toFixed(0)+'h';
