@@ -1401,7 +1401,16 @@ function _semVal(r,key){
   if(key==='estado')return [estadoTarefaInfo(r).l];
   const v=r[key==='resp'?'responsavel':key];return v?[String(v)]:[];
 }
-function semMsOptions(key){const s=new Set();allRows().forEach(r=>_semVal(r,key).forEach(v=>v&&s.add(v)));[...SEM_SEL[key]].forEach(v=>{if(!s.has(v))SEM_SEL[key].delete(v);});return [...s].sort((a,b)=>a.localeCompare(b,'pt-BR'));}
+function semMsOptions(key){
+  const byLk=new Map();   // grafias divergem no Fracttal (ex.: "PA NORTE 01" vs "PA Norte 01")
+  allRows().forEach(r=>_semVal(r,key).forEach(v=>{if(v){const s=String(v),lk=s.toLowerCase();
+    let m=byLk.get(lk);if(!m){m=new Map();byLk.set(lk,m);} m.set(s,(m.get(s)||0)+1);}}));
+  const canon=new Map();
+  byLk.forEach((m,lk)=>{let best=null,bn=-1;m.forEach((n,s)=>{if(n>bn){bn=n;best=s;}});canon.set(lk,best);});
+  const validLk=new Set(canon.keys());
+  [...SEM_SEL[key]].forEach(v=>{if(!validLk.has(String(v).toLowerCase()))SEM_SEL[key].delete(v);});
+  return [...canon.values()].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+}
 function semMsLabel(key){const s=SEM_SEL[key],el=document.getElementById('sm-ms-lbl-'+key);if(!el)return;if(s.size===0){el.textContent=SEM_MS[key].lbl;el.classList.remove('sel');}else if(s.size===1){el.textContent=[...s][0];el.classList.add('sel');}else{el.textContent=s.size+' selecionados';el.classList.add('sel');}}
 function semBuildPop(key){const pop=document.getElementById('sm-ms-pop-'+key);if(!pop)return;const opts=semMsOptions(key);let h='<div class="gp-ms-top"><input class="gp-ms-search" placeholder="buscar…" oninput="semMsSearch(\''+key+'\',this.value)"><div class="gp-ms-acts"><a onclick="semMsAll(\''+key+'\')">Todos</a><a onclick="semMsNone(\''+key+'\')">Limpar</a></div></div><div class="gp-ms-opts">';h+=opts.map(v=>{const e=esc(v);return '<label class="gp-ms-opt"><input type="checkbox"'+(SEM_SEL[key].has(v)?' checked':'')+' value="'+e+'" onchange="semMsCheck(\''+key+'\',this)"><span>'+e+'</span></label>';}).join('')||'<div class="gp-ms-empty">—</div>';pop.innerHTML=h+'</div>';}
 function semPopulateFilters(){Object.keys(SEM_MS).forEach(k=>{semBuildPop(k);semMsLabel(k);});}
@@ -1411,14 +1420,17 @@ function semMsAll(key){semMsOptions(key).forEach(v=>SEM_SEL[key].add(v));semBuil
 function semMsNone(key){SEM_SEL[key].clear();semBuildPop(key);semMsLabel(key);render();updateFCount();}
 function semMsSearch(key,q){q=(q||'').toLowerCase();document.querySelectorAll('#sm-ms-pop-'+key+' .gp-ms-opt').forEach(l=>{l.style.display=l.textContent.toLowerCase().indexOf(q)>=0?'':'none';});}
 function onDataChange(){S.fDIni=document.getElementById('f-dini').value;S.fDFim=document.getElementById('f-dfim').value;render();updateFCount();}
-const GD=()=>{const Q=SEM_SEL;return allRows().filter(r=>{
-  if(Q.cliente.size&&!Q.cliente.has(r.cliente))return false;
-  if(Q.usina.size&&!Q.usina.has(r.usina))return false;
-  if(Q.cluster.size&&!Q.cluster.has(r.cluster))return false;
-  if(Q.resp.size&&!Q.resp.has(r.responsavel))return false;
-  if(Q.tipo.size&&!Q.tipo.has(r.tipo))return false;
-  if(Q.estado.size&&!Q.estado.has(estadoTarefaInfo(r).l))return false;
-  if(Q.etq.size){const e=_etqDesc(r.etiquetas);if(!e||!Q.etq.has(e))return false;}
+const GD=()=>{const Q=SEM_SEL;
+  const _L=s=>new Set([...s].map(x=>String(x).toLowerCase())),_in=(set,v)=>set.has(String(v||'').toLowerCase());
+  const Lcli=_L(Q.cliente),Lusi=_L(Q.usina),Lclu=_L(Q.cluster),Lres=_L(Q.resp),Ltip=_L(Q.tipo),Lest=_L(Q.estado),Letq=_L(Q.etq);
+  return allRows().filter(r=>{
+  if(Q.cliente.size&&!_in(Lcli,r.cliente))return false;
+  if(Q.usina.size&&!_in(Lusi,r.usina))return false;
+  if(Q.cluster.size&&!_in(Lclu,r.cluster))return false;
+  if(Q.resp.size&&!_in(Lres,r.responsavel))return false;
+  if(Q.tipo.size&&!_in(Ltip,r.tipo))return false;
+  if(Q.estado.size&&!_in(Lest,estadoTarefaInfo(r).l))return false;
+  if(Q.etq.size){const e=_etqDesc(r.etiquetas);if(!e||!_in(Letq,e))return false;}
   if(S.fOS&&String(r.os_id||'').indexOf(S.fOS)<0)return false;
   if(S.fSS&&String(r.solic_orig||'').indexOf(S.fSS)<0)return false;
   const dp=(r.dataProgramada||'').slice(0,10);
