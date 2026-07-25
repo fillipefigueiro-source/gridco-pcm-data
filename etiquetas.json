@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-25T10:33:13Z",
+  "geradoEm": "2026-07-25T11:52:02Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-20 .. 2026-07-26",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3243,
-        "emAberto": 14,
+        "total": 3242,
+        "emAberto": 13,
         "atrasadas": 8,
         "concluidas30d": 528,
         "concluidas7d": 154,
-        "naSemanaCorrente": 131
+        "naSemanaCorrente": 130
       },
       "mttr": {
         "horas": 8.97,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W30",
-          "criadas": 131,
+          "criadas": 130,
           "finalizadas": 123
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3243,
-            "emAberto": 14
+            "total": 3242,
+            "emAberto": 13
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
+      "total": 13,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 14,
-        "emProgresso": 0,
+        "naoIniciada": 12,
+        "emProgresso": 1,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 13
       },
       "oss": [
         {
@@ -205,14 +205,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Timon 1][Cabine 3] - Religamento da Cabine 3",
           "criticidade": "",
           "dataProgramada": "2026-07-23",
           "dataCriacao": "2026-07-25",
-          "dataInicial": "",
+          "dataInicial": "2026-07-25",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -315,24 +316,6 @@
           "supervisor": "Marcos  Camargo",
           "status": "Não Iniciada",
           "tarefa": "[Mandaguaçu 1][Cabine 1] - Religamento da Cabine 1",
-          "criticidade": "",
-          "dataProgramada": "2026-07-25",
-          "dataCriacao": "2026-07-25",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "10061",
-          "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Cláudio  Ferreira",
-          "status": "Não Iniciada",
-          "tarefa": "[Morada Nova 1][Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-07-25",
           "dataCriacao": "2026-07-25",
@@ -3348,9 +3331,9 @@
       "historicoTotal": 1579,
       "subClassificacao": {
         "remoto": 728,
-        "local": 2515,
+        "local": 2514,
         "remotoEmAberto": 5,
-        "localEmAberto": 9,
+        "localEmAberto": 8,
         "pctRemoto": 22,
         "alerta": true
       },
@@ -13808,37 +13791,21 @@
       "modalidade": "local"
     },
     {
-      "osId": "10061",
-      "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Não Iniciada",
-      "tarefa": "[Morada Nova 1][Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-25",
-      "dataCriacao": "2026-07-25",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "10057",
       "ativo": "Cabine 3 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN3 }",
       "equipe": "",
       "responsavel": "Luiz  Silva",
       "criadoPor": "Lucas  Nascimento",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Timon 1][Cabine 3] - Religamento da Cabine 3",
       "criticidade": "",
       "dataProgramada": "2026-07-23",
       "dataCriacao": "2026-07-25",
-      "dataInicial": "",
+      "dataInicial": "2026-07-25",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -19240,7 +19207,7 @@
     }
   ],
   "historicoTotal": 2140,
-  "totalGeral": 4264,
+  "totalGeral": 4263,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
