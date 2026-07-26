@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-26T12:44:15Z",
+  "geradoEm": "2026-07-26T14:21:43Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-20 .. 2026-07-26",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3268,
-        "emAberto": 19,
+        "total": 3270,
+        "emAberto": 20,
         "atrasadas": 15,
-        "concluidas30d": 527,
-        "concluidas7d": 158,
-        "naSemanaCorrente": 156
+        "concluidas30d": 528,
+        "concluidas7d": 159,
+        "naSemanaCorrente": 158
       },
       "mttr": {
-        "horas": 8.52,
-        "label": "8h 31min",
-        "amostra": 527
+        "horas": 8.5,
+        "label": "8h 30min",
+        "amostra": 528
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W30",
-          "criadas": 156,
-          "finalizadas": 143
+          "criadas": 158,
+          "finalizadas": 144
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3268,
-            "emAberto": 19
+            "total": 3270,
+            "emAberto": 20
           }
         ],
         "responsaveis": [
@@ -68,8 +68,8 @@
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 148,
-            "emAberto": 0
+            "total": 149,
+            "emAberto": 1
           },
           {
             "nome": "Italo  Lustosa",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 19,
+      "total": 20,
       "atrasadas": 15,
       "porStatus": {
-        "naoIniciada": 17,
-        "emProgresso": 1,
+        "naoIniciada": 16,
+        "emProgresso": 3,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 19
+        "(sem equipe)": 20
       },
       "oss": [
         {
@@ -363,6 +363,25 @@
           "atrasada": true
         },
         {
+          "osId": "10102",
+          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Wesllen  Castro",
+          "status": "Em progresso",
+          "tarefa": "[Ipixuna do Pará 1][Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-26",
+          "dataCriacao": "2026-07-26",
+          "dataInicial": "2026-07-26",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "10100",
           "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
           "equipe": "",
@@ -405,14 +424,15 @@
           "responsavel": "Cleiton  Farias",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Cleiton  Farias",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Senador Elói 1][Inversor 1.4] - Religamento do Inversor 1.4",
           "criticidade": "",
           "dataProgramada": "2026-07-26",
           "dataCriacao": "2026-07-26",
-          "dataInicial": "",
+          "dataInicial": "2026-07-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -436,6 +456,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10101",
+          "ativo": "RenoGrid - Nova Xavantina 2 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso Brasil { RNGD-NVX200 }",
+          "equipe": "",
+          "responsavel": "Gabriel Oliveira ",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Gabriel Oliveira ",
+          "status": "Finalizados",
+          "tarefa": "[Nova Xavantina 2][Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-26",
+          "dataCriacao": "2026-07-26",
+          "dataInicial": "2026-07-26",
+          "dataFinal": "2026-07-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "10095",
           "ativo": "Thopen - Campos dos Goytacazes 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-GYT100 }",
@@ -3415,34 +3455,14 @@
           "horasAteFechar": 0,
           "modalidade": "remoto",
           "atrasada": false
-        },
-        {
-          "osId": "9691",
-          "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Ricardo Silva ",
-          "status": "Finalizada",
-          "tarefa": "Religamento UFV Santana do Ipanema",
-          "criticidade": "",
-          "dataProgramada": "2026-07-19",
-          "dataCriacao": "2026-07-19",
-          "dataInicial": "2026-07-19",
-          "dataFinal": "2026-07-19",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1590,
+      "historicoTotal": 1591,
       "subClassificacao": {
         "remoto": 733,
-        "local": 2535,
+        "local": 2537,
         "remotoEmAberto": 5,
-        "localEmAberto": 14,
+        "localEmAberto": 15,
         "pctRemoto": 22,
         "alerta": true
       },
@@ -13815,6 +13835,24 @@
   },
   "ossPublicas": [
     {
+      "osId": "10102",
+      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Wesllen  Castro",
+      "status": "Em progresso",
+      "tarefa": "[Ipixuna do Pará 1][Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-26",
+      "dataCriacao": "2026-07-26",
+      "dataInicial": "2026-07-26",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
       "osId": "10100",
       "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
       "equipe": "",
@@ -13855,14 +13893,15 @@
       "responsavel": "Cleiton  Farias",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Cleiton  Farias",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Senador Elói 1][Inversor 1.4] - Religamento do Inversor 1.4",
       "criticidade": "",
       "dataProgramada": "2026-07-26",
       "dataCriacao": "2026-07-26",
-      "dataInicial": "",
+      "dataInicial": "2026-07-26",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16449,6 +16488,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "10101",
+      "ativo": "RenoGrid - Nova Xavantina 2 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso Brasil { RNGD-NVX200 }",
+      "equipe": "",
+      "responsavel": "Gabriel Oliveira ",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Gabriel Oliveira ",
+      "status": "Finalizados",
+      "tarefa": "[Nova Xavantina 2][Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-26",
+      "dataCriacao": "2026-07-26",
+      "dataInicial": "2026-07-26",
+      "dataFinal": "2026-07-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "10095",
       "ativo": "Thopen - Campos dos Goytacazes 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-GYT100 }",
@@ -19401,30 +19460,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "9756",
-      "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "DavidNascimento",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "UFV: Ceilândia 2| Proteção: -- | Ação: Religamento Local | Falha: Usina Ceilândia 2 - Atena offline",
-      "criticidade": "",
-      "dataProgramada": "2026-07-21",
-      "dataCriacao": "2026-07-21",
-      "dataInicial": "2026-07-24",
-      "dataFinal": "2026-07-24",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2151,
-  "totalGeral": 4289,
+  "historicoTotal": 2152,
+  "totalGeral": 4291,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
