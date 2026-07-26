@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-26T09:53:15Z",
+  "geradoEm": "2026-07-26T11:25:30Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-20 .. 2026-07-26",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3262,
-        "emAberto": 14,
-        "atrasadas": 14,
+        "total": 3264,
+        "emAberto": 16,
+        "atrasadas": 15,
         "concluidas30d": 526,
         "concluidas7d": 157,
-        "naSemanaCorrente": 150
+        "naSemanaCorrente": 152
       },
       "mttr": {
         "horas": 8.53,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W30",
-          "criadas": 150,
+          "criadas": 152,
           "finalizadas": 142
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3262,
-            "emAberto": 14
+            "total": 3264,
+            "emAberto": 16
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
-      "atrasadas": 14,
+      "total": 16,
+      "atrasadas": 15,
       "porStatus": {
-        "naoIniciada": 13,
+        "naoIniciada": 15,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -192,6 +192,24 @@
           "criticidade": "",
           "dataProgramada": "2026-07-15",
           "dataCriacao": "2026-07-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "10096",
+          "ativo": "Thopen - Alto Paraná 2 - PR Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Alto Paraná 2][Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-25",
+          "dataCriacao": "2026-07-26",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -342,6 +360,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "10095",
+          "ativo": "Thopen - Campos dos Goytacazes 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-GYT100 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Não Iniciada",
+          "tarefa": "[Campos dos Goytacazes 1][Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-26",
+          "dataCriacao": "2026-07-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -3349,9 +3385,9 @@
       "historicoTotal": 1589,
       "subClassificacao": {
         "remoto": 733,
-        "local": 2529,
+        "local": 2531,
         "remotoEmAberto": 5,
-        "localEmAberto": 9,
+        "localEmAberto": 11,
         "pctRemoto": 22,
         "alerta": true
       },
@@ -13724,6 +13760,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "10096",
+      "ativo": "Thopen - Alto Paraná 2 - PR Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Alto Paraná 2][Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-25",
+      "dataCriacao": "2026-07-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "10095",
+      "ativo": "Thopen - Campos dos Goytacazes 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-GYT100 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Não Iniciada",
+      "tarefa": "[Campos dos Goytacazes 1][Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-26",
+      "dataCriacao": "2026-07-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "10092",
       "ativo": "Thopen - Alto Paraná 2 - PR Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200 }",
       "equipe": "",
@@ -19247,7 +19317,7 @@
     }
   ],
   "historicoTotal": 2150,
-  "totalGeral": 4283,
+  "totalGeral": 4285,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
