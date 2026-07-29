@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-29T00:12:25Z",
+  "geradoEm": "2026-07-29T03:47:27Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-27 .. 2026-08-02",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3317,
-        "emAberto": 13,
-        "atrasadas": 12,
+        "total": 3319,
+        "emAberto": 15,
+        "atrasadas": 14,
         "concluidas30d": 546,
         "concluidas7d": 160,
-        "naSemanaCorrente": 38
+        "naSemanaCorrente": 40
       },
       "mttr": {
         "horas": 9.77,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W31",
-          "criadas": 38,
+          "criadas": 40,
           "finalizadas": 45
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3317,
-            "emAberto": 13
+            "total": 3319,
+            "emAberto": 15
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 13,
-      "atrasadas": 12,
+      "total": 15,
+      "atrasadas": 14,
       "porStatus": {
-        "naoIniciada": 12,
-        "emProgresso": 1,
-        "pausada": 0,
+        "naoIniciada": 14,
+        "emProgresso": 0,
+        "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -253,6 +253,42 @@
           "atrasada": true
         },
         {
+          "osId": "10313",
+          "ativo": "Cabine 6  Santa Maria do Pará  Pará Brasil { SMP100-CABN6 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Lucas  Nascimento",
+          "supervisor": "Luiz  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Cabine 6] - Religamento da Cabine 6",
+          "criticidade": "",
+          "dataProgramada": "2026-07-28",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "10312",
+          "ativo": "Athon -  Timon 1 - MA LOT Sucessão O, ROD. MA 040, S/N, Jóia  Timon  Maranhão Brasil { ATHN-TIM100 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Lucas  Nascimento",
+          "supervisor": "Luiz  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-28",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "10311",
           "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
           "equipe": "",
@@ -277,7 +313,7 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "Religamento da Cabine Geral",
           "criticidade": "",
           "dataProgramada": "2026-07-28",
@@ -3331,9 +3367,9 @@
       "historicoTotal": 1588,
       "subClassificacao": {
         "remoto": 734,
-        "local": 2583,
+        "local": 2585,
         "remotoEmAberto": 5,
-        "localEmAberto": 8,
+        "localEmAberto": 10,
         "pctRemoto": 22,
         "alerta": true
       },
@@ -14758,6 +14794,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "10313",
+      "ativo": "Cabine 6  Santa Maria do Pará  Pará Brasil { SMP100-CABN6 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Lucas  Nascimento",
+      "supervisor": "Luiz  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Cabine 6] - Religamento da Cabine 6",
+      "criticidade": "",
+      "dataProgramada": "2026-07-28",
+      "dataCriacao": "2026-07-28",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "10312",
+      "ativo": "Athon -  Timon 1 - MA LOT Sucessão O, ROD. MA 040, S/N, Jóia  Timon  Maranhão Brasil { ATHN-TIM100 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Lucas  Nascimento",
+      "supervisor": "Luiz  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-28",
+      "dataCriacao": "2026-07-28",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "10311",
       "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
       "equipe": "",
@@ -14829,7 +14899,7 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "Religamento da Cabine Geral",
       "criticidade": "",
       "dataProgramada": "2026-07-28",
@@ -21254,7 +21324,7 @@
     }
   ],
   "historicoTotal": 2161,
-  "totalGeral": 4429,
+  "totalGeral": 4431,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
