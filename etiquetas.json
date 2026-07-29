@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-29T11:47:09Z",
+  "geradoEm": "2026-07-29T13:32:18Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-27 .. 2026-08-02",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3321,
-        "emAberto": 13,
-        "atrasadas": 12,
-        "concluidas30d": 550,
-        "concluidas7d": 164,
+        "emAberto": 12,
+        "atrasadas": 11,
+        "concluidas30d": 551,
+        "concluidas7d": 165,
         "naSemanaCorrente": 42
       },
       "mttr": {
-        "horas": 9.79,
-        "label": "9h 47min",
-        "amostra": 550
+        "horas": 9.81,
+        "label": "9h 49min",
+        "amostra": 551
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W31",
           "criadas": 42,
-          "finalizadas": 49
+          "finalizadas": 50
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3321,
-            "emAberto": 13
+            "emAberto": 12
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 13,
-      "atrasadas": 12,
+      "total": 12,
+      "atrasadas": 11,
       "porStatus": {
-        "naoIniciada": 12,
-        "emProgresso": 0,
-        "pausada": 1,
+        "naoIniciada": 11,
+        "emProgresso": 1,
+        "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 12
       },
       "oss": [
         {
@@ -97,14 +97,15 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
           "criticidade": "",
           "dataProgramada": "2026-06-18",
           "dataCriacao": "2026-06-09",
-          "dataInicial": "",
+          "dataInicial": "2026-07-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 1200.0,
           "modalidade": "remoto",
           "atrasada": true
         },
@@ -271,25 +272,6 @@
           "atrasada": true
         },
         {
-          "osId": "10307",
-          "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Gilson Souza ",
-          "status": "pausado",
-          "tarefa": "Religamento da Cabine Geral",
-          "criticidade": "",
-          "dataProgramada": "2026-07-28",
-          "dataCriacao": "2026-07-28",
-          "dataInicial": "2026-07-28",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "10258",
           "ativo": "SKID 2 Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100-SKID2 }",
           "equipe": "",
@@ -404,6 +386,26 @@
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10307",
+          "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "Religamento da Cabine Geral",
+          "criticidade": "",
+          "dataProgramada": "2026-07-28",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "2026-07-28",
+          "dataFinal": "2026-07-29",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 24.0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3306,39 +3308,27 @@
           "horasAteFechar": 0,
           "modalidade": "remoto",
           "atrasada": false
-        },
-        {
-          "osId": "9830",
-          "ativo": "Thopen - Linhares 1 - ES Sítio São Francisco, Barro Novo Linhares  Espírito Santo  { THPN-LNH100 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Marcos Duarte ",
-          "status": "Finalizada",
-          "tarefa": "UFV LINHARES - Verificação e religamento da usina. Não foi possível realizar comando remoto.",
-          "criticidade": "",
-          "dataProgramada": "2026-07-22",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-07-22",
-          "dataFinal": "2026-07-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1592,
+      "historicoTotal": 1593,
       "subClassificacao": {
         "remoto": 734,
         "local": 2587,
         "remotoEmAberto": 5,
-        "localEmAberto": 8,
+        "localEmAberto": 7,
         "pctRemoto": 22,
         "alerta": true
       },
       "rankingDemora": {
         "topAbrir": [
+          {
+            "osId": "7597",
+            "ativo": "Infraestrutura Civil Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-INFC1 }",
+            "criadoPor": "Juliana Cândido",
+            "responsavel": "Janderson Miranda ",
+            "horas": 1200.0,
+            "linkFracttal": ""
+          },
           {
             "osId": "8621",
             "ativo": "Infraestrutura Civil Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200-INFC1 }",
@@ -3408,14 +3398,6 @@
             "ativo": "Infraestrutura Civil Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100-INFC1 }",
             "criadoPor": "Juliana Cândido",
             "responsavel": "Cláudio  Ferreira",
-            "horas": 120.0,
-            "linkFracttal": ""
-          },
-          {
-            "osId": "7994",
-            "ativo": "Infraestrutura Civil Recanto do Ratinho, s/n Paranavaí  Paraná Brasil { THPN-PRV100-INFC1 }",
-            "criadoPor": "Juliana Cândido",
-            "responsavel": "Ronaldo  Silva",
             "horas": 120.0,
             "linkFracttal": ""
           }
@@ -3502,9 +3484,9 @@
             "linkFracttal": ""
           }
         ],
-        "medHorasAbrir": 5.7,
+        "medHorasAbrir": 7.3,
         "medHorasFechar": 2.7,
-        "amostraAbrir": 722,
+        "amostraAbrir": 723,
         "amostraFechar": 722,
         "topAbridores": [
           {
@@ -3555,16 +3537,16 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 628,
-        "emAberto": 125,
+        "total": 635,
+        "emAberto": 132,
         "atrasadas": 37,
         "concluidas30d": 109,
         "concluidas7d": 16,
         "naSemanaCorrente": 15
       },
       "mttr": {
-        "horas": 310.9,
-        "label": "12d 22h",
+        "horas": 309.58,
+        "label": "12d 21h",
         "amostra": 109
       },
       "tendencia4Semanas": [
@@ -3581,27 +3563,27 @@
         {
           "semana": "W30",
           "criadas": 7,
-          "finalizadas": 20
+          "finalizadas": 19
         },
         {
           "semana": "W31",
-          "criadas": 88,
-          "finalizadas": 5
+          "criadas": 95,
+          "finalizadas": 6
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 628,
-            "emAberto": 125
+            "total": 635,
+            "emAberto": 132
           }
         ],
         "responsaveis": [
           {
             "nome": "Marcos Duarte",
             "total": 30,
-            "emAberto": 6
+            "emAberto": 5
           },
           {
             "nome": "Renato  Julien",
@@ -3625,16 +3607,16 @@
           }
         ]
       },
-      "total": 125,
+      "total": 132,
       "atrasadas": 37,
       "porStatus": {
-        "naoIniciada": 116,
-        "emProgresso": 0,
+        "naoIniciada": 119,
+        "emProgresso": 4,
         "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 125
+        "(sem equipe)": 132
       },
       "oss": [
         {
@@ -3749,14 +3731,15 @@
           "responsavel": "Renato  Julien",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Renato  Julien",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Axis] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-07-07",
           "dataCriacao": "2026-06-30",
-          "dataInicial": "",
+          "dataInicial": "2026-07-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 696.0,
           "atrasada": true
         },
         {
@@ -4293,6 +4276,24 @@
           "atrasada": false
         },
         {
+          "osId": "9576",
+          "ativo": "Transformador 9      { THPN-ORB100-TRFR9 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Ricardo Silva ",
+          "status": "Em progresso",
+          "tarefa": "[Grid Co.] - MPM - Transformador Aéreo",
+          "criticidade": "",
+          "dataProgramada": "2026-07-29",
+          "dataCriacao": "2026-07-16",
+          "dataInicial": "2026-07-29",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 312.0,
+          "atrasada": false
+        },
+        {
           "osId": "8785",
           "ativo": "Sistema de Segurança Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-SSEG1 }",
           "equipe": "",
@@ -4304,23 +4305,6 @@
           "criticidade": "",
           "dataProgramada": "2026-07-30",
           "dataCriacao": "2026-07-01",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "10316",
-          "ativo": "Estrutura Trackers BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200-ETKR1 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Marcos Duarte ",
-          "status": "Não Iniciada",
-          "tarefa": "[Primavera 2] - Execução de rotinas pendentes pós-roçagem nas estruturas dos Trackers (Pendências MPS)",
-          "criticidade": "",
-          "dataProgramada": "2026-07-31",
-          "dataCriacao": "2026-07-29",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -4514,6 +4498,74 @@
           "atrasada": false
         },
         {
+          "osId": "10348",
+          "ativo": "Preventiva Grupo de Inversores      { GY-MCB100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Cleiton  Farias",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Cleiton  Farias",
+          "status": "Não Iniciada",
+          "tarefa": "[GreenYellow] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-05",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10347",
+          "ativo": "Preventiva Grupo de Inversores      { GY-IRC100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Olimpio Lima ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Olimpio Lima ",
+          "status": "Não Iniciada",
+          "tarefa": "[GreenYellow] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-05",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10345",
+          "ativo": "Infraestrutura Civil  Demerval Lobão  Piauí Brasil { DML100-INFC1 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Ailton Leal ",
+          "status": "Não Iniciada",
+          "tarefa": "[GreenYellow] - MPM - Infraestrutura",
+          "criticidade": "",
+          "dataProgramada": "2026-08-05",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10342",
+          "ativo": "Preventiva Grupo de Inversores      { CDR100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Leonardo  Dias",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Leonardo  Dias",
+          "status": "Não Iniciada",
+          "tarefa": "[GreenYellow] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-05",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "10308",
           "ativo": "Transformador 9      { THPN-ORB100-TRFR9 }",
           "equipe": "",
@@ -4684,6 +4736,40 @@
           "atrasada": false
         },
         {
+          "osId": "10354",
+          "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Walter Santos ",
+          "status": "Não Iniciada",
+          "tarefa": "[SEMP] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10344",
+          "ativo": "Preventiva Grupo de Inversores      { CDR200-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Leonardo  Dias",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Leonardo  Dias",
+          "status": "Não Iniciada",
+          "tarefa": "[GreenYellow] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "10301",
           "ativo": "Transformador 1 WEG     { THPN-TPZ100-TRFR1 }",
           "equipe": "",
@@ -4741,14 +4827,15 @@
           "responsavel": "Cláudio  Silva",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Cláudio  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-07-28",
-          "dataInicial": "",
+          "dataInicial": "2026-07-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": false
         },
         {
@@ -4840,9 +4927,9 @@
           "osId": "10321",
           "ativo": "Transformador 1      { GDEN-GJR100-TRFR1 }",
           "equipe": "",
-          "responsavel": "Davi Damasceno ",
+          "responsavel": "Cláudio  Ferreira",
           "criadoPor": "Davi Damasceno",
-          "supervisor": "Davi Damasceno ",
+          "supervisor": "Cláudio  Ferreira",
           "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
@@ -5001,6 +5088,23 @@
           "criticidade": "",
           "dataProgramada": "2026-08-14",
           "dataCriacao": "2026-07-27",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10353",
+          "ativo": "Fossa Séptica      { SEMP-TCN100-FSEP }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Walter Santos ",
+          "status": "Não Iniciada",
+          "tarefa": "[SEMP] - MPM - Fossa Séptica",
+          "criticidade": "",
+          "dataProgramada": "2026-08-15",
+          "dataCriacao": "2026-07-29",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -5724,17 +5828,18 @@
           "osId": "10132",
           "ativo": "Cabine 1 CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { ELF100-CABN1 }",
           "equipe": "",
-          "responsavel": "Hélio Silva ",
+          "responsavel": "Felipe  Lima",
           "criadoPor": "Davi Damasceno",
-          "supervisor": "Hélio Silva ",
-          "status": "Não Iniciada",
+          "supervisor": "Felipe  Lima",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
           "dataCriacao": "2026-07-27",
-          "dataInicial": "",
+          "dataInicial": "2026-07-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": false
         },
         {
@@ -5773,6 +5878,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10316",
+          "ativo": "Estrutura Trackers BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200-ETKR1 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Marcos Duarte ",
+          "status": "Finalizados",
+          "tarefa": "[Primavera 2] - Execução de rotinas pendentes pós-roçagem nas estruturas dos Trackers (Pendências MPS)",
+          "criticidade": "",
+          "dataProgramada": "2026-07-31",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "2026-07-29",
+          "dataFinal": "2026-07-29",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "8401",
           "ativo": "Ar Condicionado      { ADS100-SOEM1-ARCD }",
@@ -6018,25 +6142,6 @@
           "linkFracttal": "",
           "horasAteAbrir": 168.0,
           "horasAteFechar": 504.0,
-          "atrasada": false
-        },
-        {
-          "osId": "9576",
-          "ativo": "Transformador 9      { THPN-ORB100-TRFR9 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ricardo Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Transformador Aéreo",
-          "criticidade": "",
-          "dataProgramada": "2026-07-29",
-          "dataCriacao": "2026-07-16",
-          "dataInicial": "2026-07-22",
-          "dataFinal": "2026-07-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -6673,7 +6778,7 @@
           "responsavel": "Ailton Leal ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Ailton Leal ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-07-06",
@@ -6920,7 +7025,7 @@
           "responsavel": "Cleiton  Farias",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Cleiton  Farias",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-07-06",
@@ -7110,7 +7215,7 @@
           "responsavel": "Olimpio Lima ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Olimpio Lima ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-07-06",
@@ -7148,7 +7253,7 @@
           "responsavel": "Leonardo  Dias",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Leonardo  Dias",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-07-06",
@@ -10025,12 +10130,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 334,
-        "emAberto": 88,
+        "total": 338,
+        "emAberto": 92,
         "atrasadas": 73,
         "concluidas30d": 198,
         "concluidas7d": 69,
-        "naSemanaCorrente": 13
+        "naSemanaCorrente": 17
       },
       "mttr": {
         "horas": 127.15,
@@ -10055,7 +10160,7 @@
         },
         {
           "semana": "W31",
-          "criadas": 26,
+          "criadas": 30,
           "finalizadas": 31
         }
       ],
@@ -10063,8 +10168,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 334,
-            "emAberto": 88
+            "total": 338,
+            "emAberto": 92
           }
         ],
         "responsaveis": [
@@ -10095,16 +10200,16 @@
           }
         ]
       },
-      "total": 88,
+      "total": 92,
       "atrasadas": 73,
       "porStatus": {
-        "naoIniciada": 82,
-        "emProgresso": 0,
-        "pausada": 6,
+        "naoIniciada": 84,
+        "emProgresso": 1,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 88
+        "(sem equipe)": 92
       },
       "oss": [
         {
@@ -11275,14 +11380,15 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.3] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-07-27",
           "dataCriacao": "2026-07-27",
-          "dataInicial": "",
+          "dataInicial": "2026-07-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -11386,6 +11492,75 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10341",
+          "ativo": "Inversor 2.2 Sungrow SG125-20-1500VDC    { MNG100-INVR2.2 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Marcos  Camargo",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 2.2] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-07-30",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10340",
+          "ativo": "Inversor 4.7 CANANDIAN SOLAR     { MTS100-INVR4.7 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Francisco  Santos",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 4.7] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-07-30",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10339",
+          "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR2.1 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 2.1] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-07-30",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10338",
+          "ativo": "Inversor 1.5 Sungrow 250HX-20    { THPN-TPZ100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Eduardo Souza",
+          "status": "pausado",
+          "tarefa": "[Inversor 1.5] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-07-30",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "2026-07-29",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -15081,6 +15256,183 @@
   },
   "ossPublicas": [
     {
+      "osId": "10354",
+      "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Walter Santos ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Walter Santos ",
+      "status": "Não Iniciada",
+      "tarefa": "[SEMP] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-08-10",
+      "dataCriacao": "2026-07-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10353",
+      "ativo": "Fossa Séptica      { SEMP-TCN100-FSEP }",
+      "equipe": "",
+      "responsavel": "Walter Santos ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Walter Santos ",
+      "status": "Não Iniciada",
+      "tarefa": "[SEMP] - MPM - Fossa Séptica",
+      "criticidade": "",
+      "dataProgramada": "2026-08-15",
+      "dataCriacao": "2026-07-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10348",
+      "ativo": "Preventiva Grupo de Inversores      { GY-MCB100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Cleiton  Farias",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Cleiton  Farias",
+      "status": "Não Iniciada",
+      "tarefa": "[GreenYellow] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-05",
+      "dataCriacao": "2026-07-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10347",
+      "ativo": "Preventiva Grupo de Inversores      { GY-IRC100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Olimpio Lima ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Olimpio Lima ",
+      "status": "Não Iniciada",
+      "tarefa": "[GreenYellow] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-05",
+      "dataCriacao": "2026-07-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10345",
+      "ativo": "Infraestrutura Civil  Demerval Lobão  Piauí Brasil { DML100-INFC1 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Ailton Leal ",
+      "status": "Não Iniciada",
+      "tarefa": "[GreenYellow] - MPM - Infraestrutura",
+      "criticidade": "",
+      "dataProgramada": "2026-08-05",
+      "dataCriacao": "2026-07-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10344",
+      "ativo": "Preventiva Grupo de Inversores      { CDR200-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Leonardo  Dias",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Leonardo  Dias",
+      "status": "Não Iniciada",
+      "tarefa": "[GreenYellow] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-10",
+      "dataCriacao": "2026-07-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10342",
+      "ativo": "Preventiva Grupo de Inversores      { CDR100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Leonardo  Dias",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Leonardo  Dias",
+      "status": "Não Iniciada",
+      "tarefa": "[GreenYellow] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-05",
+      "dataCriacao": "2026-07-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10341",
+      "ativo": "Inversor 2.2 Sungrow SG125-20-1500VDC    { MNG100-INVR2.2 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Marcos  Camargo",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 2.2] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-07-30",
+      "dataCriacao": "2026-07-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10340",
+      "ativo": "Inversor 4.7 CANANDIAN SOLAR     { MTS100-INVR4.7 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Francisco  Santos",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 4.7] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-07-30",
+      "dataCriacao": "2026-07-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10339",
+      "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR2.1 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 2.1] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-07-30",
+      "dataCriacao": "2026-07-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10338",
+      "ativo": "Inversor 1.5 Sungrow 250HX-20    { THPN-TPZ100-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Eduardo Souza",
+      "status": "pausado",
+      "tarefa": "[Inversor 1.5] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-07-30",
+      "dataCriacao": "2026-07-29",
+      "dataInicial": "2026-07-29",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0
+    },
+    {
       "osId": "10337",
       "ativo": "Transformador 1      { GDEN-SON200-TRFR1 }",
       "equipe": "",
@@ -15340,9 +15692,9 @@
       "osId": "10321",
       "ativo": "Transformador 1      { GDEN-GJR100-TRFR1 }",
       "equipe": "",
-      "responsavel": "Davi Damasceno ",
+      "responsavel": "Cláudio  Ferreira",
       "criadoPor": "Davi Damasceno",
-      "supervisor": "Davi Damasceno ",
+      "supervisor": "Cláudio  Ferreira",
       "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
@@ -15379,22 +15731,6 @@
       "tarefa": "[Grid Co.] - MPA - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
-      "dataCriacao": "2026-07-29",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "10316",
-      "ativo": "Estrutura Trackers BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200-ETKR1 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Marcos Duarte ",
-      "status": "Não Iniciada",
-      "tarefa": "[Primavera 2] - Execução de rotinas pendentes pós-roçagem nas estruturas dos Trackers (Pendências MPS)",
-      "criticidade": "",
-      "dataProgramada": "2026-07-31",
       "dataCriacao": "2026-07-29",
       "dataInicial": "",
       "dataFinal": "",
@@ -15448,24 +15784,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "10307",
-      "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Gilson Souza ",
-      "status": "pausado",
-      "tarefa": "Religamento da Cabine Geral",
-      "criticidade": "",
-      "dataProgramada": "2026-07-28",
-      "dataCriacao": "2026-07-28",
-      "dataInicial": "2026-07-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
     },
     {
       "osId": "10306",
@@ -16020,14 +16338,15 @@
       "responsavel": "Cláudio  Silva",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Cláudio  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
       "dataCriacao": "2026-07-28",
-      "dataInicial": "",
+      "dataInicial": "2026-07-29",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "10250",
@@ -16357,14 +16676,15 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.3] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-07-27",
       "dataCriacao": "2026-07-27",
-      "dataInicial": "",
+      "dataInicial": "2026-07-29",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "10203",
@@ -16866,17 +17186,18 @@
       "osId": "10132",
       "ativo": "Cabine 1 CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { ELF100-CABN1 }",
       "equipe": "",
-      "responsavel": "Hélio Silva ",
+      "responsavel": "Felipe  Lima",
       "criadoPor": "Davi Damasceno",
-      "supervisor": "Hélio Silva ",
-      "status": "Não Iniciada",
+      "supervisor": "Felipe  Lima",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-08-28",
       "dataCriacao": "2026-07-27",
-      "dataInicial": "",
+      "dataInicial": "2026-07-29",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "10130",
@@ -17705,6 +18026,23 @@
       "horasAteAbrir": 72.0
     },
     {
+      "osId": "9576",
+      "ativo": "Transformador 9      { THPN-ORB100-TRFR9 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Ricardo Silva ",
+      "status": "Em progresso",
+      "tarefa": "[Grid Co.] - MPM - Transformador Aéreo",
+      "criticidade": "",
+      "dataProgramada": "2026-07-29",
+      "dataCriacao": "2026-07-16",
+      "dataInicial": "2026-07-29",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 312.0
+    },
+    {
       "osId": "9451",
       "ativo": "teste1  teste  teste teste { THPN-TESTE }",
       "equipe": "",
@@ -18451,14 +18789,15 @@
       "responsavel": "Renato  Julien",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Renato  Julien",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Axis] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-07-07",
       "dataCriacao": "2026-06-30",
-      "dataInicial": "",
+      "dataInicial": "2026-07-29",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 696.0
     },
     {
       "osId": "8657",
@@ -18777,14 +19116,15 @@
       "responsavel": "Janderson Miranda ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
       "criticidade": "",
       "dataProgramada": "2026-06-18",
       "dataCriacao": "2026-06-09",
-      "dataInicial": "",
+      "dataInicial": "2026-07-29",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 1200.0,
       "modalidade": "remoto"
     },
     {
@@ -18907,6 +19247,25 @@
   ],
   "ossHistorico": [
     {
+      "osId": "10316",
+      "ativo": "Estrutura Trackers BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200-ETKR1 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Marcos Duarte ",
+      "status": "Finalizados",
+      "tarefa": "[Primavera 2] - Execução de rotinas pendentes pós-roçagem nas estruturas dos Trackers (Pendências MPS)",
+      "criticidade": "",
+      "dataProgramada": "2026-07-31",
+      "dataCriacao": "2026-07-29",
+      "dataInicial": "2026-07-29",
+      "dataFinal": "2026-07-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "10315",
       "ativo": "Thopen - Parelhas 1 - RN Rodovia RN 088, nº 01, Zona Rural Parelhas  Rio Grande do Norte Brasil { THPN-PRL100 }",
       "equipe": "",
@@ -18983,6 +19342,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "10307",
+      "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "Religamento da Cabine Geral",
+      "criticidade": "",
+      "dataProgramada": "2026-07-28",
+      "dataCriacao": "2026-07-28",
+      "dataInicial": "2026-07-28",
+      "dataFinal": "2026-07-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 24.0,
       "modalidade": "local",
       "atrasada": false
     },
@@ -21839,49 +22218,10 @@
       "horasAteFechar": 0,
       "modalidade": "remoto",
       "atrasada": false
-    },
-    {
-      "osId": "9911",
-      "ativo": "Estação Meteorológica Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { SNE100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Cleiton  Farias",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Cleiton  Farias",
-      "status": "Finalizados",
-      "tarefa": "Verificação do sensor POA- Senador Elói",
-      "criticidade": "",
-      "dataProgramada": "2026-07-24",
-      "dataCriacao": "2026-07-23",
-      "dataInicial": "2026-07-24",
-      "dataFinal": "2026-07-24",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "9909",
-      "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Eduardo  Mendes",
-      "status": "Finalizados",
-      "tarefa": "Religamento da UFV Embu Guaçu",
-      "criticidade": "",
-      "dataProgramada": "2026-07-23",
-      "dataCriacao": "2026-07-23",
-      "dataInicial": "2026-07-23",
-      "dataFinal": "2026-07-24",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2165,
-  "totalGeral": 4452,
+  "historicoTotal": 2166,
+  "totalGeral": 4463,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
