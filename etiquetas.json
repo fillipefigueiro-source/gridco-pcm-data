@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-30T21:42:08Z",
+  "geradoEm": "2026-07-30T22:53:49Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-27 .. 2026-08-02",
   "tipologias": {
@@ -3685,8 +3685,8 @@
       "total": 126,
       "atrasadas": 34,
       "porStatus": {
-        "naoIniciada": 115,
-        "emProgresso": 1,
+        "naoIniciada": 114,
+        "emProgresso": 2,
         "pausada": 10,
         "verificacao": 0
       },
@@ -4169,14 +4169,15 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPA - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-07-24",
           "dataCriacao": "2026-06-29",
-          "dataInicial": "",
+          "dataInicial": "2026-07-30",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 744.0,
           "atrasada": true
         },
         {
@@ -10101,8 +10102,8 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 355,
-        "emAberto": 86,
+        "total": 367,
+        "emAberto": 98,
         "atrasadas": 62,
         "concluidas30d": 219,
         "concluidas7d": 75,
@@ -10131,7 +10132,7 @@
         },
         {
           "semana": "W31",
-          "criadas": 47,
+          "criadas": 59,
           "finalizadas": 55
         }
       ],
@@ -10139,11 +10140,16 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 355,
-            "emAberto": 86
+            "total": 367,
+            "emAberto": 98
           }
         ],
         "responsaveis": [
+          {
+            "nome": "Marcos Duarte",
+            "total": 31,
+            "emAberto": 10
+          },
           {
             "nome": "James Chaves",
             "total": 30,
@@ -10160,27 +10166,22 @@
             "emAberto": 8
           },
           {
-            "nome": "Marcos Duarte",
-            "total": 21,
-            "emAberto": 0
-          },
-          {
             "nome": "Gilson  Milhomem",
             "total": 21,
             "emAberto": 0
           }
         ]
       },
-      "total": 86,
+      "total": 98,
       "atrasadas": 62,
       "porStatus": {
-        "naoIniciada": 80,
+        "naoIniciada": 91,
         "emProgresso": 0,
-        "pausada": 6,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 86
+        "(sem equipe)": 98
       },
       "oss": [
         {
@@ -10838,14 +10839,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Capitão Poço 1][Tracker 07.103] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-07-20",
           "dataCriacao": "2026-07-24",
-          "dataInicial": "",
+          "dataInicial": "2026-07-30",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -11407,6 +11409,210 @@
           "tarefa": "[Inversor 12.2] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-07-31",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10442",
+          "ativo": "Inversor 1.9 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.9 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.9] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10441",
+          "ativo": "Inversor 1.8 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.8 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.8] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10440",
+          "ativo": "Inversor 1.7 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.7 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.7] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10439",
+          "ativo": "Inversor 1.6 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.6] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10438",
+          "ativo": "Inversor 1.5 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.5] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10437",
+          "ativo": "Inversor 1.4 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.4] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10436",
+          "ativo": "Inversor 1.3 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.3] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10435",
+          "ativo": "Inversor 1.2 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.2] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10434",
+          "ativo": "Inversor 1.10 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.10 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.10] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10433",
+          "ativo": "Inversor 1.1 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.1] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10432",
+          "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 7.2] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10431",
+          "ativo": "Inversor 7.1 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.1 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 7.1] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
           "dataCriacao": "2026-07-30",
           "dataInicial": "",
           "dataFinal": "",
@@ -14511,8 +14717,8 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 35,
-        "emAberto": 7,
+        "total": 36,
+        "emAberto": 8,
         "atrasadas": 4,
         "concluidas30d": 12,
         "concluidas7d": 4,
@@ -14541,7 +14747,7 @@
         },
         {
           "semana": "W31",
-          "criadas": 6,
+          "criadas": 7,
           "finalizadas": 2
         }
       ],
@@ -14549,8 +14755,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 35,
-            "emAberto": 7
+            "total": 36,
+            "emAberto": 8
           }
         ],
         "responsaveis": [
@@ -14581,16 +14787,16 @@
           }
         ]
       },
-      "total": 7,
+      "total": 8,
       "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 6,
+        "naoIniciada": 7,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 7
+        "(sem equipe)": 8
       },
       "oss": [
         {
@@ -14708,6 +14914,23 @@
           "criticidade": "",
           "dataProgramada": "2026-07-31",
           "dataCriacao": "2026-07-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10443",
+          "ativo": "Estação Meteorológica Sítio Rio Quartel, Zona Rural Linhares  Espírito Santo Brasil { AXIS-LHN100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-30",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -15138,6 +15361,214 @@
     }
   },
   "ossPublicas": [
+    {
+      "osId": "10443",
+      "ativo": "Estação Meteorológica Sítio Rio Quartel, Zona Rural Linhares  Espírito Santo Brasil { AXIS-LHN100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[ETM] - Coleta e análise de dados",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10442",
+      "ativo": "Inversor 1.9 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.9 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.9] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10441",
+      "ativo": "Inversor 1.8 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.8 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.8] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10440",
+      "ativo": "Inversor 1.7 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.7 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.7] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10439",
+      "ativo": "Inversor 1.6 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.6] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10438",
+      "ativo": "Inversor 1.5 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.5] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10437",
+      "ativo": "Inversor 1.4 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.4] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10436",
+      "ativo": "Inversor 1.3 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.3] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10435",
+      "ativo": "Inversor 1.2 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.2 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.2] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10434",
+      "ativo": "Inversor 1.10 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.10 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.10] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10433",
+      "ativo": "Inversor 1.1 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.1] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10432",
+      "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 7.2] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10431",
+      "ativo": "Inversor 7.1 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.1 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 7.1] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
     {
       "osId": "10427",
       "ativo": "Transformador 1      { THPN-CLR200-TRFR1 }",
@@ -17451,14 +17882,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Capitão Poço 1][Tracker 07.103] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-07-20",
       "dataCriacao": "2026-07-24",
-      "dataInicial": "",
+      "dataInicial": "2026-07-30",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10000",
@@ -18646,14 +19078,15 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPA - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-07-24",
       "dataCriacao": "2026-06-29",
-      "dataInicial": "",
+      "dataInicial": "2026-07-30",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 744.0
     },
     {
       "osId": "8626",
@@ -21988,7 +22421,7 @@
     }
   ],
   "historicoTotal": 2201,
-  "totalGeral": 4512,
+  "totalGeral": 4525,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
