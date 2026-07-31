@@ -292,6 +292,7 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
     rows = []
     resumo = defaultdict(lambda: {"hh_util": 0.0, "hh_disp": HH_DISP, "pend": 0})
     pendentes_total = 0
+    pendentes = []   # linhas da aba _Pendentes (não couberam) → mostradas no dashboard
 
     # FAST: usa iter_rows (values_only) que é ordens de magnitude mais rápido
     # que ws.cell() linha por linha em arquivo grande.
@@ -307,15 +308,28 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
                 rows_p = list(ws_p.iter_rows(values_only=True))
                 if len(rows_p) >= 2:
                     header_p = list(rows_p[0])
-                    idx_equipe_p = header_p.index("Equipe") if "Equipe" in header_p else None
+                    def _gp(n): return header_p.index(n) if n in header_p else None
+                    ie, io_, ia = _gp("Equipe"), _gp("OSs ID"), _gp("Ativo")
+                    it, itp, idur, imot = _gp("Tarefa"), _gp("Tipo"), _gp("Duração (h)"), _gp("Motivo")
                     for r in rows_p[1:]:
-                        if idx_equipe_p is not None and idx_equipe_p < len(r):
-                            eq = r[idx_equipe_p]
-                            eq = (eq or "(sem equipe)").strip() if isinstance(eq, str) else "(sem equipe)"
-                        else:
-                            eq = "(sem equipe)"
+                        def _v(i): return (r[i] if (i is not None and i < len(r)) else None)
+                        eq = _v(ie)
+                        eq = eq.strip() if (isinstance(eq, str) and eq.strip()) else "(sem equipe)"
                         resumo[eq]["pend"] += 1
                         pendentes_total += 1
+                        if io_ is None or _v(io_) is None:
+                            continue
+                        _usina = str(_v(ia) or "").strip()
+                        pendentes.append({
+                            "os_id":   str(_v(io_)).split(".")[0].strip(),
+                            "usina":   _usina,
+                            "cliente": _extrair_cliente(_usina) if _usina else "",
+                            "cluster": eq,
+                            "tarefa":  str(_v(it) or "").strip(),
+                            "tipo":    str(_v(itp) or "").strip(),
+                            "duracao": _safe_float(_v(idur)),
+                            "motivo":  str(_v(imot) or "").strip(),
+                        })
             continue
 
         ws = wb[sheet_name]
@@ -453,6 +467,7 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
         "dates":  _dates_dict(mon),
         "resumo": resumo_final,
         "rows":   rows,
+        "pendentes": pendentes,
     }
 
 
