@@ -191,13 +191,26 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .pend-usi{border:1px solid var(--line);border-radius:9px;margin:7px 0;overflow:hidden}
 .pend-usi-h{background:#faf7f2;padding:8px 12px;font-weight:700;font-size:13px;color:#191528}
 .pend-cnt{background:#f0e3d3;color:#8a5a1a;border-radius:10px;padding:1px 8px;font-size:11px;margin-left:4px}
-.pend-row{display:grid;grid-template-columns:64px 1fr 110px 1.1fr;gap:10px;padding:7px 12px;border-top:1px solid #f0ece6;font-size:12.5px;cursor:pointer;align-items:center}
+.pend-row{display:grid;grid-template-columns:64px 1fr 96px 1fr auto;gap:10px;padding:7px 12px;border-top:1px solid #f0ece6;font-size:12.5px;cursor:pointer;align-items:center}
 .pend-row:hover{background:#fffaf3}
+.pend-row.rp-on{background:#f3f9e8}
 .pend-os{font-family:monospace;font-weight:700;color:#b45309}
 .pend-tar{color:#191528;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pend-tipo{color:#6b7280;font-size:11.5px}
 .pend-mot{color:#c2691a;font-size:11.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-@media(max-width:700px){.pend-row{grid-template-columns:56px 1fr}.pend-tipo,.pend-mot{display:none}}
+/* --- reprogramação rápida (gera linhas p/ Observacoes_Semana.txt) --- */
+.rp-box{display:flex;gap:4px;align-items:center;cursor:default}
+.rp-box select{font-size:11px;padding:3px 4px;border:1px solid #e2d9cc;border-radius:6px;background:#fff;color:#191528;cursor:pointer}
+.rp-add{font-size:11px;font-weight:700;padding:4px 9px;border:1px solid #A2CA40;border-radius:6px;background:#A2CA40;color:#1C1F3B;cursor:pointer;white-space:nowrap}
+.rp-add:hover{filter:brightness(1.06)}
+.rp-add.on{background:#5E8C1A;border-color:#5E8C1A;color:#fff}
+.rp-bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:#f3f9e8;border:1px solid #cfe3a5;border-radius:9px;padding:8px 12px;margin:8px 0}
+.rp-bar-t{font-weight:700;font-size:12.5px;color:#3f5c12;flex:1}
+.rp-btn{font-size:11.5px;font-weight:700;padding:5px 11px;border-radius:7px;cursor:pointer;border:1px solid #5E8C1A;background:#5E8C1A;color:#fff}
+.rp-btn.sec{background:#fff;color:#5E8C1A}
+.rp-btn:hover{filter:brightness(1.07)}
+.rp-prev{width:100%;font-family:monospace;font-size:11px;color:#3f5c12;background:#fff;border:1px solid #cfe3a5;border-radius:7px;padding:7px 9px;max-height:132px;overflow:auto;white-space:pre-wrap;word-break:break-all}
+@media(max-width:700px){.pend-row{grid-template-columns:56px 1fr}.pend-tipo,.pend-mot{display:none}.rp-box{grid-column:1/-1}}
 .dtasks{padding:7px;display:flex;flex-direction:column;gap:4px;flex:1;max-height:780px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#cbd5e1 transparent}
 .dtasks::-webkit-scrollbar{width:6px}
 .dtasks::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
@@ -1640,6 +1653,74 @@ function updateFCount(){const el=document.getElementById('f-count');if(!el)retur
 // ── RENDER ────────────────────────────────────────────────────────────────────
 function render(){const d=GD();renderKPIs(d);renderIns(d);renderCal(d);renderPendentes();renderBottom(d);renderSugestoes();}
 function togPend(){const w=document.getElementById('pend-wrap');if(w)w.classList.toggle('open');}
+
+// ===== REPROGRAMAÇÃO RÁPIDA =====================================================
+// Monta linhas no formato de Observacoes_Semana.txt a partir dos pendentes.
+// O painel NÃO altera a programação: gera o texto para colar no PCM_Painel
+// (aba "Observações" = próxima semana | "Semana Atual" = semana em andamento).
+const RP_KEY='gc_reprog_v1';
+let RP=[];                                  // [{os,tarefa,tipo,dia,turno}]
+try{RP=JSON.parse(localStorage.getItem(RP_KEY)||'[]');}catch(e){RP=[];}
+const RP_SIGLAS=['MPA','MPS','MPT','MPM','MPQ','HANDOVER'];
+function rpSave(){try{localStorage.setItem(RP_KEY,JSON.stringify(RP));}catch(e){}}
+function rpKey(os,tar){return String(os)+'||'+String(tar||'');}
+function rpIdx(os,tar){return RP.findIndex(r=>rpKey(r.os,r.tarefa)===rpKey(os,tar));}
+
+// Modo A (bloco por sigla) precisa de "só:" p/ isolar a tarefa; Modo B usa o nome.
+function rpSigla(tipo){
+  const t=String(tipo||'').toUpperCase().replace(/-.*$/,'').trim();
+  return RP_SIGLAS.indexOf(t)>=0 ? (t==='HANDOVER'?'Handover':t) : null;
+}
+// "[Grid Co.] - MPA - Caixa d'água" -> "Caixa d'água" | "Handover – Inversores" -> "Inversores"
+function rpChave(tarefa){
+  let s=String(tarefa||'').split(/\s[-–]\s/).pop().trim();
+  s=s.split(',')[0].split(';')[0].trim();     // vírgula/; quebrariam o parser
+  return s;
+}
+function rpLinha(r){
+  const sig=rpSigla(r.tipo), tur=r.turno||'';
+  if(sig){
+    const ch=rpChave(r.tarefa);
+    return [r.os, r.dia, sig, tur, ch?('só: '+ch):''].filter((v,i)=>i<3||v).join('; ');
+  }
+  const nome=String(r.tarefa||'').split(',')[0].split(';')[0].trim();
+  return [r.os, r.dia, nome, tur].filter((v,i)=>i<3||v).join('; ');
+}
+function rpToggle(ev,os,tarefa,tipo){
+  ev.stopPropagation();
+  const row=ev.target.closest('.pend-row');
+  const dia=row.querySelector('.rp-dia').value;
+  const turno=row.querySelector('.rp-turno').value;
+  const i=rpIdx(os,tarefa);
+  if(i>=0){RP.splice(i,1);} else {
+    if(!dia){toast('Escolha o dia primeiro');return;}
+    RP.push({os:String(os),tarefa:tarefa,tipo:tipo,dia:dia,turno:turno});
+  }
+  rpSave();renderPendentes();
+}
+function rpTexto(){
+  // agrupa por OS mantendo a ordem de inclusão
+  return RP.map(rpLinha).join('\n');
+}
+function rpCopiar(){
+  const txt=rpTexto();
+  if(!txt){toast('Nenhuma reprogramação na fila');return;}
+  const done=()=>toast('✓ '+RP.length+' linha(s) copiada(s) — cole no PCM_Painel');
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(done).catch(()=>{rpFallback(txt);});
+  } else rpFallback(txt);
+}
+function rpFallback(txt){
+  const ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');toast('✓ Copiado');}catch(e){toast('Selecione e copie o texto abaixo');}
+  document.body.removeChild(ta);
+}
+function rpLimpar(){
+  if(!RP.length)return;
+  if(!confirm('Limpar as '+RP.length+' reprogramações da fila?'))return;
+  RP=[];rpSave();renderPendentes();
+}
 function renderPendentes(){
   const box=document.getElementById('pendentes');if(!box)return;
   const w=AW();let pend=(w&&Array.isArray(w.pendentes))?w.pendentes.slice():[];
@@ -1663,15 +1744,36 @@ function renderPendentes(){
   Object.keys(byU).sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(u=>{
     const sh=u.split(' - ').slice(-2).join(' - ')||u;
     inner+='<div class="pend-usi"><div class="pend-usi-h">'+esc(sh)+'<span class="pend-cnt">'+byU[u].length+'</span></div>';
-    byU[u].forEach(p=>{inner+='<div class="pend-row" onclick="openMod(\''+esc(u)+'\',\'\',\''+esc(p.os_id)+'\')">'
+    byU[u].forEach(p=>{
+      const _t=(p.tarefa||'').replace(/'/g,"\\'"), _ti=(p.tipo||'').replace(/'/g,"\\'");
+      const ix=rpIdx(p.os_id,p.tarefa), on=ix>=0, cur=on?RP[ix]:null;
+      const dias=[['','dia…'],['seg','seg'],['ter','ter'],['qua','qua'],['qui','qui'],['sex','sex']];
+      const turnos=[['','turno…'],['manhã','manhã'],['tarde','tarde'],['noite','noite']];
+      const sel=(cls,opts,val)=>'<select class="'+cls+'" onclick="event.stopPropagation()">'
+        +opts.map(o=>'<option value="'+o[0]+'"'+((val||'')===o[0]?' selected':'')+'>'+o[1]+'</option>').join('')+'</select>';
+      inner+='<div class="pend-row'+(on?' rp-on':'')+'" onclick="openMod(\''+esc(u)+'\',\'\',\''+esc(p.os_id)+'\')">'
       +'<span class="pend-os">#'+esc(p.os_id)+'</span><span class="pend-tar">'+esc(p.tarefa||'—')+'</span>'
-      +'<span class="pend-tipo">'+esc(p.tipo||'')+'</span><span class="pend-mot">'+esc(p.motivo||'')+'</span></div>';});
+      +'<span class="pend-tipo">'+esc(p.tipo||'')+'</span><span class="pend-mot">'+esc(p.motivo||'')+'</span>'
+      +'<span class="rp-box" onclick="event.stopPropagation()">'
+        +sel('rp-dia',dias,cur&&cur.dia)+sel('rp-turno',turnos,cur&&cur.turno)
+        +'<button class="rp-add'+(on?' on':'')+'" onclick="rpToggle(event,\''+esc(p.os_id)+'\',\''+esc(_t)+'\',\''+esc(_ti)+'\')">'
+        +(on?'✓ na fila':'+ Inserir')+'</button>'
+      +'</span></div>';});
     inner+='</div>';
   });
+  // barra da fila de reprogramação
+  let rpBar='';
+  if(RP.length){
+    rpBar='<div class="rp-bar"><span class="rp-bar-t">📋 '+RP.length+' reprogramação(ões) na fila</span>'
+      +'<button class="rp-btn" onclick="event.stopPropagation();rpCopiar()">Copiar tudo</button>'
+      +'<button class="rp-btn sec" onclick="event.stopPropagation();rpLimpar()">Limpar</button>'
+      +'<div class="rp-prev">'+esc(rpTexto())+'</div>'
+      +'<span class="pend-desc" style="width:100%">Cole no <b>PCM_Painel</b> → aba <b>Observações</b> (próxima semana) ou <b>Semana Atual</b> (semana em andamento), e gere a programação.</span></div>';
+  }
   box.innerHTML='<div class="pend-wrap'+(wasOpen?' open':'')+'" id="pend-wrap">'
     +'<div class="pend-master-h" onclick="togPend()"><div><div class="pend-ttl">&#9203; N&atilde;o couberam na semana <span class="pend-badge">'+pend.length+'</span></div>'
-    +'<div class="pend-desc">OS planejadas que estouraram a capacidade do dia — reprograme pra outro dia ou aceite como pendente.</div></div>'
-    +'<span class="pend-chev">&#9662;</span></div><div class="pend-body">'+inner+'</div></div>';
+    +'<div class="pend-desc">OS planejadas que estouraram a capacidade do dia — escolha dia/turno e clique <b>+ Inserir</b> para montar as observações.</div></div>'
+    +'<span class="pend-chev">&#9662;</span></div><div class="pend-body">'+rpBar+inner+'</div></div>';
 }
 
 // === SUGESTOES PCM ===
