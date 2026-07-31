@@ -192,6 +192,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .pend-usi-h{background:#faf7f2;padding:8px 12px;font-weight:700;font-size:13px;color:#191528}
 .pend-cnt{background:#f0e3d3;color:#8a5a1a;border-radius:10px;padding:1px 8px;font-size:11px;margin-left:4px}
 .pend-row{display:grid;grid-template-columns:64px 1fr 96px 1fr auto;gap:10px;padding:7px 12px;border-top:1px solid #f0ece6;font-size:12.5px;cursor:pointer;align-items:center}
+.pend-row.no-rp{grid-template-columns:64px 1fr 110px 1.1fr}   /* cliente: sem coluna de ação */
 .pend-row:hover{background:#fffaf3}
 .pend-row.rp-on{background:#f3f9e8}
 .pend-os{font-family:monospace;font-weight:700;color:#b45309}
@@ -1661,6 +1662,9 @@ function togPend(){const w=document.getElementById('pend-wrap');if(w)w.classList
 const RP_KEY='gc_reprog_v1';
 let RP=[];                                  // [{os,tarefa,tipo,dia,turno}]
 try{RP=JSON.parse(localStorage.getItem(RP_KEY)||'[]');}catch(e){RP=[];}
+// Reprogramar é ação de PCM. Cliente enxerga a lista de pendentes (só as dele),
+// mas NÃO vê os controles nem a fila — quem decide a programação é a Grid Co.
+Object.defineProperty(window,'RP_OK',{get:()=>!!(typeof S!=='undefined'&&S.isAdmin)});
 const RP_SIGLAS=['MPA','MPS','MPT','MPM','MPQ','HANDOVER'];
 function rpSave(){try{localStorage.setItem(RP_KEY,JSON.stringify(RP));}catch(e){}}
 function rpKey(os,tar){return String(os)+'||'+String(tar||'');}
@@ -1688,6 +1692,7 @@ function rpLinha(r){
 }
 function rpToggle(ev,os,tarefa,tipo){
   ev.stopPropagation();
+  if(!RP_OK)return;                          // guarda: só PCM/admin reprograma
   const row=ev.target.closest('.pend-row');
   const dia=row.querySelector('.rp-dia').value;
   const turno=row.querySelector('.rp-turno').value;
@@ -1703,6 +1708,7 @@ function rpTexto(){
   return RP.map(rpLinha).join('\n');
 }
 function rpCopiar(){
+  if(!RP_OK)return;
   const txt=rpTexto();
   if(!txt){toast('Nenhuma reprogramação na fila');return;}
   const done=()=>toast('✓ '+RP.length+' linha(s) copiada(s) — cole no PCM_Painel');
@@ -1717,6 +1723,7 @@ function rpFallback(txt){
   document.body.removeChild(ta);
 }
 function rpLimpar(){
+  if(!RP_OK)return;
   if(!RP.length)return;
   if(!confirm('Limpar as '+RP.length+' reprogramações da fila?'))return;
   RP=[];rpSave();renderPendentes();
@@ -1746,24 +1753,25 @@ function renderPendentes(){
     inner+='<div class="pend-usi"><div class="pend-usi-h">'+esc(sh)+'<span class="pend-cnt">'+byU[u].length+'</span></div>';
     byU[u].forEach(p=>{
       const _t=(p.tarefa||'').replace(/'/g,"\\'"), _ti=(p.tipo||'').replace(/'/g,"\\'");
-      const ix=rpIdx(p.os_id,p.tarefa), on=ix>=0, cur=on?RP[ix]:null;
+      const ix=rpIdx(p.os_id,p.tarefa), on=RP_OK&&ix>=0, cur=on?RP[ix]:null;
       const dias=[['','dia…'],['seg','seg'],['ter','ter'],['qua','qua'],['qui','qui'],['sex','sex']];
       const turnos=[['','turno…'],['manhã','manhã'],['tarde','tarde'],['noite','noite']];
       const sel=(cls,opts,val)=>'<select class="'+cls+'" onclick="event.stopPropagation()">'
         +opts.map(o=>'<option value="'+o[0]+'"'+((val||'')===o[0]?' selected':'')+'>'+o[1]+'</option>').join('')+'</select>';
-      inner+='<div class="pend-row'+(on?' rp-on':'')+'" onclick="openMod(\''+esc(u)+'\',\'\',\''+esc(p.os_id)+'\')">'
-      +'<span class="pend-os">#'+esc(p.os_id)+'</span><span class="pend-tar">'+esc(p.tarefa||'—')+'</span>'
-      +'<span class="pend-tipo">'+esc(p.tipo||'')+'</span><span class="pend-mot">'+esc(p.motivo||'')+'</span>'
-      +'<span class="rp-box" onclick="event.stopPropagation()">'
+      // Reprogramar é ação de PCM: só admin vê os controles (cliente vê a lista, sem editar)
+      const ctrl = RP_OK ? ('<span class="rp-box" onclick="event.stopPropagation()">'
         +sel('rp-dia',dias,cur&&cur.dia)+sel('rp-turno',turnos,cur&&cur.turno)
         +'<button class="rp-add'+(on?' on':'')+'" onclick="rpToggle(event,\''+esc(p.os_id)+'\',\''+esc(_t)+'\',\''+esc(_ti)+'\')">'
-        +(on?'✓ na fila':'+ Inserir')+'</button>'
-      +'</span></div>';});
+        +(on?'✓ na fila':'+ Inserir')+'</button></span>') : '';
+      inner+='<div class="pend-row'+(RP_OK?'':' no-rp')+(on?' rp-on':'')+'" onclick="openMod(\''+esc(u)+'\',\'\',\''+esc(p.os_id)+'\')">'
+      +'<span class="pend-os">#'+esc(p.os_id)+'</span><span class="pend-tar">'+esc(p.tarefa||'—')+'</span>'
+      +'<span class="pend-tipo">'+esc(p.tipo||'')+'</span><span class="pend-mot">'+esc(p.motivo||'')+'</span>'
+      +ctrl+'</div>';});
     inner+='</div>';
   });
-  // barra da fila de reprogramação
+  // barra da fila de reprogramação (somente admin)
   let rpBar='';
-  if(RP.length){
+  if(RP_OK&&RP.length){
     rpBar='<div class="rp-bar"><span class="rp-bar-t">📋 '+RP.length+' reprogramação(ões) na fila</span>'
       +'<button class="rp-btn" onclick="event.stopPropagation();rpCopiar()">Copiar tudo</button>'
       +'<button class="rp-btn sec" onclick="event.stopPropagation();rpLimpar()">Limpar</button>'
@@ -1772,7 +1780,9 @@ function renderPendentes(){
   }
   box.innerHTML='<div class="pend-wrap'+(wasOpen?' open':'')+'" id="pend-wrap">'
     +'<div class="pend-master-h" onclick="togPend()"><div><div class="pend-ttl">&#9203; N&atilde;o couberam na semana <span class="pend-badge">'+pend.length+'</span></div>'
-    +'<div class="pend-desc">OS planejadas que estouraram a capacidade do dia — escolha dia/turno e clique <b>+ Inserir</b> para montar as observações.</div></div>'
+    +'<div class="pend-desc">'+(RP_OK
+        ?'OS planejadas que estouraram a capacidade do dia — escolha dia/turno e clique <b>+ Inserir</b> para montar as observações.'
+        :'OS planejadas que não couberam na capacidade da semana — serão reprogramadas pela equipe de PCM da Grid Co.')+'</div></div>'
     +'<span class="pend-chev">&#9662;</span></div><div class="pend-body">'+rpBar+inner+'</div></div>';
 }
 
