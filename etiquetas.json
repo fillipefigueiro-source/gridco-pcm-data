@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-31T09:40:24Z",
+  "geradoEm": "2026-07-31T11:55:22Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-27 .. 2026-08-02",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3353,
-        "emAberto": 18,
-        "atrasadas": 16,
-        "concluidas30d": 554,
-        "concluidas7d": 137,
+        "emAberto": 14,
+        "atrasadas": 14,
+        "concluidas30d": 558,
+        "concluidas7d": 141,
         "naSemanaCorrente": 74
       },
       "mttr": {
-        "horas": 10.6,
-        "label": "10h 36min",
-        "amostra": 554
+        "horas": 10.52,
+        "label": "10h 31min",
+        "amostra": 558
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W31",
           "criadas": 74,
-          "finalizadas": 76
+          "finalizadas": 80
         }
       ],
       "topOfensores": {
@@ -47,14 +47,14 @@
           {
             "nome": "(sem equipe)",
             "total": 3353,
-            "emAberto": 18
+            "emAberto": 14
           }
         ],
         "responsaveis": [
           {
             "nome": "Marcos  Camargo",
             "total": 434,
-            "emAberto": 5
+            "emAberto": 4
           },
           {
             "nome": "Raphael Vitoriano",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 18,
-      "atrasadas": 16,
+      "total": 14,
+      "atrasadas": 14,
       "porStatus": {
-        "naoIniciada": 16,
+        "naoIniciada": 12,
         "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 18
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -290,42 +290,6 @@
           "atrasada": true
         },
         {
-          "osId": "10449",
-          "ativo": "RenoGrid - Nobres 1 - MT Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { RNGD-NBS100 }",
-          "equipe": "",
-          "responsavel": "Valmir  Júnior",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Valmir  Júnior",
-          "status": "Não Iniciada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-07-30",
-          "dataCriacao": "2026-07-31",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "10446",
-          "ativo": "Cabine 1 Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-CABN1 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
-          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
-          "criticidade": "",
-          "dataProgramada": "2026-07-30",
-          "dataCriacao": "2026-07-31",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "10405",
           "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
           "equipe": "",
@@ -379,7 +343,9 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "10450",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -387,14 +353,36 @@
           "responsavel": "Marcos  Camargo",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Marcos  Camargo",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-07-31",
           "dataCriacao": "2026-07-31",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-07-31",
+          "dataFinal": "2026-07-31",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10449",
+          "ativo": "RenoGrid - Nobres 1 - MT Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { RNGD-NBS100 }",
+          "equipe": "",
+          "responsavel": "Valmir  Júnior",
+          "criadoPor": "Lucas  Nascimento",
+          "supervisor": "Valmir  Júnior",
+          "status": "Finalizados",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-07-30",
+          "dataCriacao": "2026-07-31",
+          "dataInicial": "2026-07-31",
+          "dataFinal": "2026-07-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -405,19 +393,39 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Anderson  Parente",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-07-31",
           "dataCriacao": "2026-07-31",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-07-31",
+          "dataFinal": "2026-07-31",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
+        {
+          "osId": "10446",
+          "ativo": "Cabine 1 Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-CABN1 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Lucas  Nascimento",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-07-30",
+          "dataCriacao": "2026-07-31",
+          "dataInicial": "2026-07-31",
+          "dataFinal": "2026-07-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "10430",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3059,26 +3067,6 @@
           "atrasada": false
         },
         {
-          "osId": "9909",
-          "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizados",
-          "tarefa": "Religamento da UFV Embu Guaçu",
-          "criticidade": "",
-          "dataProgramada": "2026-07-23",
-          "dataCriacao": "2026-07-23",
-          "dataInicial": "2026-07-23",
-          "dataFinal": "2026-07-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9971",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -3339,66 +3327,6 @@
           "atrasada": false
         },
         {
-          "osId": "9938",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Marialva 1][Axis -] - Religamento do Axis -",
-          "criticidade": "",
-          "dataProgramada": "2026-07-23",
-          "dataCriacao": "2026-07-23",
-          "dataInicial": "2026-07-23",
-          "dataFinal": "2026-07-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "9937",
-          "ativo": "Cabine 2 Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizados",
-          "tarefa": "Religamento da cabine remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-07-23",
-          "dataCriacao": "2026-07-23",
-          "dataInicial": "2026-07-23",
-          "dataFinal": "2026-07-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
-          "osId": "9904",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "religamento da usina remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-07-23",
-          "dataCriacao": "2026-07-23",
-          "dataInicial": "2026-07-23",
-          "dataFinal": "2026-07-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
           "osId": "10014",
           "ativo": "GD Energy - Guajirú 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-GJR100 }",
           "equipe": "",
@@ -3419,12 +3347,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1590,
+      "historicoTotal": 1594,
       "subClassificacao": {
         "remoto": 734,
         "local": 2619,
         "remotoEmAberto": 4,
-        "localEmAberto": 14,
+        "localEmAberto": 10,
         "pctRemoto": 22,
         "alerta": true
       },
@@ -3719,8 +3647,8 @@
       "total": 126,
       "atrasadas": 35,
       "porStatus": {
-        "naoIniciada": 114,
-        "emProgresso": 1,
+        "naoIniciada": 113,
+        "emProgresso": 2,
         "pausada": 11,
         "verificacao": 0
       },
@@ -5107,14 +5035,15 @@
           "responsavel": "Valmir  Júnior",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valmir  Júnior",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-08-14",
           "dataCriacao": "2026-07-27",
-          "dataInicial": "",
+          "dataInicial": "2026-07-31",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "atrasada": false
         },
         {
@@ -14757,16 +14686,16 @@
       "cor": "#3b82f6",
       "kpis": {
         "total": 38,
-        "emAberto": 10,
-        "atrasadas": 6,
-        "concluidas30d": 12,
-        "concluidas7d": 3,
+        "emAberto": 9,
+        "atrasadas": 5,
+        "concluidas30d": 13,
+        "concluidas7d": 4,
         "naSemanaCorrente": 7
       },
       "mttr": {
-        "horas": 326.0,
-        "label": "13d 14h",
-        "amostra": 12
+        "horas": 448.62,
+        "label": "18d 16h",
+        "amostra": 13
       },
       "tendencia4Semanas": [
         {
@@ -14787,7 +14716,7 @@
         {
           "semana": "W31",
           "criadas": 9,
-          "finalizadas": 2
+          "finalizadas": 3
         }
       ],
       "topOfensores": {
@@ -14795,7 +14724,7 @@
           {
             "nome": "(sem equipe)",
             "total": 38,
-            "emAberto": 10
+            "emAberto": 9
           }
         ],
         "responsaveis": [
@@ -14826,36 +14755,18 @@
           }
         ]
       },
-      "total": 10,
-      "atrasadas": 6,
+      "total": 9,
+      "atrasadas": 5,
       "porStatus": {
         "naoIniciada": 9,
         "emProgresso": 0,
-        "pausada": 1,
+        "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 10
+        "(sem equipe)": 9
       },
       "oss": [
-        {
-          "osId": "6553",
-          "ativo": "Relé da Cabine 1      { ADS200-RELE1 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Eduardo  Mendes",
-          "status": "pausado",
-          "tarefa": "Análise do Relé",
-          "criticidade": "",
-          "dataProgramada": "2026-05-12",
-          "dataCriacao": "2026-05-12",
-          "dataInicial": "2026-05-12",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "atrasada": true
-        },
         {
           "osId": "10156",
           "ativo": "Estação Meteorológica Rodovia SP 334 S/N Batatais  São Paulo Brasil { BWK100-ESTM1 }",
@@ -15011,6 +14922,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "6553",
+          "ativo": "Relé da Cabine 1      { ADS200-RELE1 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Finalizados",
+          "tarefa": "Análise do Relé",
+          "criticidade": "",
+          "dataProgramada": "2026-05-12",
+          "dataCriacao": "2026-05-12",
+          "dataInicial": "2026-05-12",
+          "dataFinal": "2026-07-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 1920.0,
+          "atrasada": false
+        },
         {
           "osId": "6419",
           "ativo": "Relé da Cabine 1      { ADS100-RELE1 }",
@@ -15430,78 +15360,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 22
+      "historicoTotal": 23
     }
   },
   "ossPublicas": [
-    {
-      "osId": "10450",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Marcos  Camargo",
-      "status": "Não Iniciada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-31",
-      "dataCriacao": "2026-07-31",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "10449",
-      "ativo": "RenoGrid - Nobres 1 - MT Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { RNGD-NBS100 }",
-      "equipe": "",
-      "responsavel": "Valmir  Júnior",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Valmir  Júnior",
-      "status": "Não Iniciada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-30",
-      "dataCriacao": "2026-07-31",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "10448",
-      "ativo": "Thopen - Altair 1 - SP Fazenda Cresciuma S/N Altair  São Paulo Brasil { THPN-ALT100 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Anderson  Parente",
-      "status": "Não Iniciada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-31",
-      "dataCriacao": "2026-07-31",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "10446",
-      "ativo": "Cabine 1 Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-CABN1 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
-      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
-      "criticidade": "",
-      "dataProgramada": "2026-07-30",
-      "dataCriacao": "2026-07-31",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
     {
       "osId": "10445",
       "ativo": "Estação Meteorológica  Campos dos Goytacazes  Rio de Janeiro Brasil { GYT100-ESTM1 }",
@@ -17742,14 +17604,15 @@
       "responsavel": "Valmir  Júnior",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valmir  Júnior",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-08-14",
       "dataCriacao": "2026-07-27",
-      "dataInicial": "",
+      "dataInicial": "2026-07-31",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0
     },
     {
       "osId": "10134",
@@ -19543,23 +19406,6 @@
       "horasAteAbrir": 360.0
     },
     {
-      "osId": "6553",
-      "ativo": "Relé da Cabine 1      { ADS200-RELE1 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Eduardo  Mendes",
-      "status": "pausado",
-      "tarefa": "Análise do Relé",
-      "criticidade": "",
-      "dataProgramada": "2026-05-12",
-      "dataCriacao": "2026-05-12",
-      "dataInicial": "2026-05-12",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
-    },
-    {
       "osId": "6364",
       "ativo": "Inversor 3.3 Sungrow     { MAB100-INVR3.3 }",
       "equipe": "",
@@ -19594,6 +19440,86 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "10450",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Lucas  Nascimento",
+      "supervisor": "Marcos  Camargo",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-31",
+      "dataCriacao": "2026-07-31",
+      "dataInicial": "2026-07-31",
+      "dataFinal": "2026-07-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "10449",
+      "ativo": "RenoGrid - Nobres 1 - MT Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { RNGD-NBS100 }",
+      "equipe": "",
+      "responsavel": "Valmir  Júnior",
+      "criadoPor": "Lucas  Nascimento",
+      "supervisor": "Valmir  Júnior",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-30",
+      "dataCriacao": "2026-07-31",
+      "dataInicial": "2026-07-31",
+      "dataFinal": "2026-07-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "10448",
+      "ativo": "Thopen - Altair 1 - SP Fazenda Cresciuma S/N Altair  São Paulo Brasil { THPN-ALT100 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "Lucas  Nascimento",
+      "supervisor": "Anderson  Parente",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-07-31",
+      "dataCriacao": "2026-07-31",
+      "dataInicial": "2026-07-31",
+      "dataFinal": "2026-07-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "10446",
+      "ativo": "Cabine 1 Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-CABN1 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "Lucas  Nascimento",
+      "supervisor": "Janderson Miranda ",
+      "status": "Finalizados",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-07-30",
+      "dataCriacao": "2026-07-31",
+      "dataInicial": "2026-07-31",
+      "dataFinal": "2026-07-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "10430",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -22484,87 +22410,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10014",
-      "ativo": "GD Energy - Guajirú 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-GJR100 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Finalizada",
-      "tarefa": "[Guajirú 1][Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-18",
-      "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-07-18",
-      "dataFinal": "2026-07-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 96.0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "10011",
-      "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Italo  Lustosa",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizada",
-      "tarefa": "[Colorado 2][Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-24",
-      "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-07-24",
-      "dataFinal": "2026-07-24",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "10010",
-      "ativo": "Cabine 1 CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { ELF100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Felipe  Lima",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-07-28",
-      "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-07-30",
-      "dataFinal": "2026-07-30",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10009",
-      "ativo": "Inversor 3.2 Sungrow SG250HX    { THPN-SDN100-INVR3.2 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "[Sítio dos Nogueiras 1][Inversor 3.2] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-07-15",
-      "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-07-27",
-      "dataFinal": "2026-07-27",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2192,
+  "historicoTotal": 2197,
   "totalGeral": 4531,
   "verificacao": {
     "total": 0,
