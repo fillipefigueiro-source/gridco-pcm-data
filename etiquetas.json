@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-07-31T00:08:34Z",
+  "geradoEm": "2026-07-31T03:56:54Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-07-27 .. 2026-08-02",
   "tipologias": {
@@ -3648,8 +3648,8 @@
       "atrasadas": 35,
       "porStatus": {
         "naoIniciada": 114,
-        "emProgresso": 2,
-        "pausada": 10,
+        "emProgresso": 1,
+        "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4131,7 +4131,7 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPA - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-07-24",
@@ -14684,12 +14684,12 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 36,
-        "emAberto": 8,
+        "total": 38,
+        "emAberto": 10,
         "atrasadas": 6,
         "concluidas30d": 12,
         "concluidas7d": 3,
-        "naSemanaCorrente": 5
+        "naSemanaCorrente": 7
       },
       "mttr": {
         "horas": 326.0,
@@ -14714,7 +14714,7 @@
         },
         {
           "semana": "W31",
-          "criadas": 7,
+          "criadas": 9,
           "finalizadas": 2
         }
       ],
@@ -14722,15 +14722,15 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 36,
-            "emAberto": 8
+            "total": 38,
+            "emAberto": 10
           }
         ],
         "responsaveis": [
           {
             "nome": "João Vieira",
-            "total": 7,
-            "emAberto": 6
+            "total": 9,
+            "emAberto": 8
           },
           {
             "nome": "Carlos Bruno  Pessanha Pereira",
@@ -14754,16 +14754,16 @@
           }
         ]
       },
-      "total": 8,
+      "total": 10,
       "atrasadas": 6,
       "porStatus": {
-        "naoIniciada": 7,
+        "naoIniciada": 9,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 8
+        "(sem equipe)": 10
       },
       "oss": [
         {
@@ -14868,6 +14868,40 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "10445",
+          "ativo": "Estação Meteorológica  Campos dos Goytacazes  Rio de Janeiro Brasil { GYT100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "João Vieira ",
+          "status": "Não Iniciada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-07-31",
+          "dataCriacao": "2026-07-31",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10444",
+          "ativo": "Estação Meteorológica Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "João Vieira ",
+          "status": "Não Iniciada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-07-31",
+          "dataCriacao": "2026-07-31",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "10383",
@@ -15328,6 +15362,38 @@
     }
   },
   "ossPublicas": [
+    {
+      "osId": "10445",
+      "ativo": "Estação Meteorológica  Campos dos Goytacazes  Rio de Janeiro Brasil { GYT100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "João Vieira ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "João Vieira ",
+      "status": "Não Iniciada",
+      "tarefa": "[ETM] - Coleta e análise de dados",
+      "criticidade": "",
+      "dataProgramada": "2026-07-31",
+      "dataCriacao": "2026-07-31",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "10444",
+      "ativo": "Estação Meteorológica Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "João Vieira ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "João Vieira ",
+      "status": "Não Iniciada",
+      "tarefa": "[ETM] - Coleta e análise de dados",
+      "criticidade": "",
+      "dataProgramada": "2026-07-31",
+      "dataCriacao": "2026-07-31",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
     {
       "osId": "10443",
       "ativo": "Estação Meteorológica Sítio Rio Quartel, Zona Rural Linhares  Espírito Santo Brasil { AXIS-LHN100-ESTM1 }",
@@ -19014,7 +19080,7 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - MPA - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-07-24",
@@ -22359,7 +22425,7 @@
     }
   ],
   "historicoTotal": 2192,
-  "totalGeral": 4525,
+  "totalGeral": 4527,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
