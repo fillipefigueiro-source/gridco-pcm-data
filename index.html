@@ -211,6 +211,12 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .rp-btn.sec{background:#fff;color:#5E8C1A}
 .rp-btn:hover{filter:brightness(1.07)}
 .rp-prev{width:100%;font-family:monospace;font-size:11px;color:#3f5c12;background:#fff;border:1px solid #cfe3a5;border-radius:7px;padding:7px 9px;max-height:132px;overflow:auto;white-space:pre-wrap;word-break:break-all}
+/* reprogramar dentro do modal da OS */
+.rpm-box{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.rpm-box select{font-size:12px;padding:5px 7px;border:1px solid #e2d9cc;border-radius:7px;background:#fff;color:#191528;cursor:pointer;max-width:100%}
+.rpm-box #rpm-alvo{flex:1 1 100%;min-width:0}
+.rpm-status{font-size:11.5px;color:#6b7280;margin-top:7px;line-height:1.45}
+.rpm-status code{background:#f3f9e8;color:#3f5c12;padding:1px 5px;border-radius:4px;font-size:11px;word-break:break-all}
 @media(max-width:700px){.pend-row{grid-template-columns:56px 1fr}.pend-tipo,.pend-mot{display:none}.rp-box{grid-column:1/-1}}
 .dtasks{padding:7px;display:flex;flex-direction:column;gap:4px;flex:1;max-height:780px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#cbd5e1 transparent}
 .dtasks::-webkit-scrollbar{width:6px}
@@ -1682,13 +1688,36 @@ function rpChave(tarefa){
   return s;
 }
 function rpLinha(r){
-  const sig=rpSigla(r.tipo), tur=r.turno||'';
+  const tur=r.turno||'';
+  // OS inteira (tarefa vazia) → "OS; dia" ou "OS; dia; ; turno" (tarefas=None no motor)
+  if(!r.tarefa) return tur ? (r.os+'; '+r.dia+'; ; '+tur) : (r.os+'; '+r.dia);
+  const sig=rpSigla(r.tipo);
   if(sig){
     const ch=rpChave(r.tarefa);
     return [r.os, r.dia, sig, tur, ch?('só: '+ch):''].filter((v,i)=>i<3||v).join('; ');
   }
   const nome=String(r.tarefa||'').split(',')[0].split(';')[0].trim();
   return [r.os, r.dia, nome, tur].filter((v,i)=>i<3||v).join('; ');
+}
+// Reprogramar a partir do modal da OS (serve p/ qualquer OS já programada)
+function rpAddModal(os_id){
+  if(!RP_OK)return;
+  const dia=document.getElementById('rpm-dia').value;
+  const turno=document.getElementById('rpm-turno').value;
+  const alvo=document.getElementById('rpm-alvo');
+  if(!dia){toast('Escolha o dia primeiro');return;}
+  const tarefa=(alvo&&alvo.value)||'';        // '' = OS inteira
+  // atenção: com 1 tarefa o alvo é <input hidden> (não tem selectedOptions)
+  const opt=(alvo&&alvo.selectedOptions)?alvo.selectedOptions[0]:null;
+  const tipo=(opt&&opt.dataset&&opt.dataset.tipo)||(alvo&&alvo.dataset&&alvo.dataset.tipo)||'';
+  const i=rpIdx(os_id,tarefa);
+  if(i>=0)RP.splice(i,1);
+  RP.push({os:String(os_id),tarefa:tarefa,tipo:tipo,dia:dia,turno:turno});
+  rpSave();
+  toast('✓ '+(tarefa?'Tarefa':'OS #'+os_id)+' → '+dia+(turno?' ('+turno+')':'')+' · '+RP.length+' na fila');
+  const st=document.getElementById('rpm-status');
+  if(st)st.innerHTML='<b>'+RP.length+'</b> na fila — linha: <code>'+esc(rpLinha(RP[RP.length-1]))+'</code>';
+  renderPendentes();
 }
 function rpToggle(ev,os,tarefa,tipo){
   ev.stopPropagation();
@@ -3201,6 +3230,28 @@ function openMod(usina, dia, os_id){
         + '</div>';
     });
     html += '</div>';
+  }
+  // --- Reprogramar (somente PCM/admin) — vale p/ OS já programada ---
+  if(RP_OK && osRow.os_id){
+    const _oid=String(osRow.os_id);
+    const _tks=(osLista&&osLista.length?osLista:[osRow]);
+    const _dias=[['','dia…'],['seg','seg'],['ter','ter'],['qua','qua'],['qui','qui'],['sex','sex']];
+    const _tur=[['','turno…'],['manhã','manhã'],['tarde','tarde'],['noite','noite']];
+    const _op=(o)=>o.map(x=>'<option value="'+x[0]+'">'+x[1]+'</option>').join('');
+    html += '<div class="msec"><div class="msec-t">🔄 Reprogramar</div>';
+    html += '<div class="rpm-box">';
+    if(_tks.length>1){
+      html += '<select id="rpm-alvo"><option value="" data-tipo="">A OS inteira ('+_tks.length+' tarefas)</option>'
+           + _tks.map(t=>'<option value="'+_esc(String(t.tarefa||'').replace(/"/g,'&quot;'))+'" data-tipo="'+_esc(t.tipo||'')+'">'
+             + _esc(String(t.tarefa||'').slice(0,52))+'</option>').join('') + '</select>';
+    } else {
+      html += '<input type="hidden" id="rpm-alvo" value="">';
+    }
+    html += '<select id="rpm-dia">'+_op(_dias)+'</select>'
+         +  '<select id="rpm-turno">'+_op(_tur)+'</select>'
+         +  '<button class="rp-add" onclick="rpAddModal(\''+_esc(_oid)+'\')">+ Inserir</button>';
+    html += '</div><div class="rpm-status" id="rpm-status">Escolha o dia e clique <b>+ Inserir</b>. '
+         +  'A linha entra na fila; copie na seção <b>“Não couberam na semana”</b> e cole no PCM_Painel.</div></div>';
   }
   // Ações
   const link = osRow.linkFracttal || (osRow.os_id ? ('https://app.fracttal.com/oneview/general/items?folio='+osRow.os_id) : '');
