@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-04T12:25:59Z",
+  "geradoEm": "2026-08-04T15:11:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-03 .. 2026-08-09",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3422,
-        "emAberto": 9,
-        "atrasadas": 6,
-        "concluidas30d": 550,
-        "concluidas7d": 130,
-        "naSemanaCorrente": 28
+        "total": 3428,
+        "emAberto": 10,
+        "atrasadas": 5,
+        "concluidas30d": 555,
+        "concluidas7d": 135,
+        "naSemanaCorrente": 34
       },
       "mttr": {
-        "horas": 10.75,
-        "label": "10h 45min",
-        "amostra": 550
+        "horas": 10.69,
+        "label": "10h 41min",
+        "amostra": 555
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W32",
-          "criadas": 28,
-          "finalizadas": 28
+          "criadas": 34,
+          "finalizadas": 33
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3422,
-            "emAberto": 9
+            "total": 3428,
+            "emAberto": 10
           }
         ],
         "responsaveis": [
@@ -58,7 +58,7 @@
           },
           {
             "nome": "Raphael Vitoriano",
-            "total": 382,
+            "total": 384,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 9,
-      "atrasadas": 6,
+      "total": 10,
+      "atrasadas": 5,
       "porStatus": {
         "naoIniciada": 7,
-        "emProgresso": 1,
-        "pausada": 1,
+        "emProgresso": 0,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 9
+        "(sem equipe)": 10
       },
       "oss": [
         {
@@ -182,22 +182,41 @@
           "atrasada": true
         },
         {
-          "osId": "10544",
-          "ativo": "Inversor 1.3 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.3 }",
+          "osId": "10617",
+          "ativo": "Cabine 2 Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100-CABN2 }",
           "equipe": "",
           "responsavel": "Railson Gomes ",
           "criadoPor": "Raphael Vitoriano",
           "supervisor": "Railson Gomes ",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
+          "status": "pausado",
+          "tarefa": "[Cabine 2] - Religamento da Cabine 2",
           "criticidade": "",
-          "dataProgramada": "2026-08-03",
-          "dataCriacao": "2026-08-03",
+          "dataProgramada": "2026-08-04",
+          "dataCriacao": "2026-08-04",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10612",
+          "ativo": "Thopen - Ouro Branco 1 - AL FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ricardo Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento UFV Ouro Branco 3",
+          "criticidade": "",
+          "dataProgramada": "2026-08-04",
+          "dataCriacao": "2026-08-04",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": true
+          "atrasada": false
         },
         {
           "osId": "10611",
@@ -242,7 +261,7 @@
           "responsavel": "Olimpio Lima ",
           "criadoPor": "Raphael Vitoriano",
           "supervisor": "Olimpio Lima ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-04",
@@ -273,6 +292,86 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 24.0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10626",
+          "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-04",
+          "dataCriacao": "2026-08-04",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10623",
+          "ativo": "Thopen - Córrego do Sapucaia 1 - ES Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Marcos Duarte ",
+          "status": "Finalizados",
+          "tarefa": "Religamento UFV Córrego do Sapucaia 2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-04",
+          "dataCriacao": "2026-08-04",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10616",
+          "ativo": "Cabine 2 Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizada",
+          "tarefa": "[Cabine 2] - Religamento da Cabine 2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-04",
+          "dataCriacao": "2026-08-04",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10615",
+          "ativo": "Cabine 1 Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizada",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-04",
+          "dataCriacao": "2026-08-04",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -332,6 +431,26 @@
           "dataFinal": "2026-08-04",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10544",
+          "ativo": "Inversor 1.3 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Railson Gomes ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-08-03",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3155,114 +3274,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10104",
-          "ativo": "Thopen - Santarém 1 e 2 - PA  Santarém  Pará Brasil { THPN-STR100 }",
-          "equipe": "",
-          "responsavel": "Italo  Lustosa",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Italo  Lustosa",
-          "status": "Finalizada",
-          "tarefa": "[Santarém 1 e 2][Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-07-26",
-          "dataCriacao": "2026-07-26",
-          "dataInicial": "2026-07-26",
-          "dataFinal": "2026-07-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "10103",
-          "ativo": "Cabine 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Junco 1][Cabine 2] - Religamento da Cabine 2",
-          "criticidade": "",
-          "dataProgramada": "2026-07-26",
-          "dataCriacao": "2026-07-26",
-          "dataInicial": "2026-07-26",
-          "dataFinal": "2026-07-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "10102",
-          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizada",
-          "tarefa": "[Ipixuna do Pará 1][Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-07-26",
-          "dataCriacao": "2026-07-26",
-          "dataInicial": "2026-07-26",
-          "dataFinal": "2026-07-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "10101",
-          "ativo": "RenoGrid - Nova Xavantina 2 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso Brasil { RNGD-NVX200 }",
-          "equipe": "",
-          "responsavel": "Gabriel Oliveira ",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Gabriel Oliveira ",
-          "status": "Finalizada",
-          "tarefa": "[Nova Xavantina 2][Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-07-26",
-          "dataCriacao": "2026-07-26",
-          "dataInicial": "2026-07-26",
-          "dataFinal": "2026-07-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "10100",
-          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Rodolfo  Oliveira",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Rodolfo  Oliveira",
-          "status": "Finalizada",
-          "tarefa": "[Ibaté 2][Inversor 1.6] - Religamento do Inversor 1.6",
-          "criticidade": "",
-          "dataProgramada": "2026-07-26",
-          "dataCriacao": "2026-07-26",
-          "dataInicial": "2026-07-26",
-          "dataFinal": "2026-07-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1622,
+      "historicoTotal": 1627,
       "subClassificacao": {
         "remoto": 734,
-        "local": 2688,
+        "local": 2694,
         "remotoEmAberto": 3,
-        "localEmAberto": 6,
+        "localEmAberto": 7,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -3485,16 +3504,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 621,
-        "emAberto": 110,
-        "atrasadas": 43,
-        "concluidas30d": 105,
-        "concluidas7d": 29,
+        "emAberto": 107,
+        "atrasadas": 42,
+        "concluidas30d": 108,
+        "concluidas7d": 32,
         "naSemanaCorrente": 27
       },
       "mttr": {
-        "horas": 290.06,
-        "label": "12d 2h",
-        "amostra": 105
+        "horas": 291.56,
+        "label": "12d 3h",
+        "amostra": 108
       },
       "tendencia4Semanas": [
         {
@@ -3515,7 +3534,7 @@
         {
           "semana": "W32",
           "criadas": 0,
-          "finalizadas": 11
+          "finalizadas": 14
         }
       ],
       "topOfensores": {
@@ -3523,7 +3542,7 @@
           {
             "nome": "(sem equipe)",
             "total": 621,
-            "emAberto": 110
+            "emAberto": 107
           }
         ],
         "responsaveis": [
@@ -3554,16 +3573,16 @@
           }
         ]
       },
-      "total": 110,
-      "atrasadas": 43,
+      "total": 107,
+      "atrasadas": 42,
       "porStatus": {
-        "naoIniciada": 96,
+        "naoIniciada": 94,
         "emProgresso": 2,
-        "pausada": 12,
+        "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 110
+        "(sem equipe)": 107
       },
       "oss": [
         {
@@ -3944,24 +3963,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9023",
-          "ativo": "Infraestrutura Civil Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Railson Gomes ",
-          "status": "pausado",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-07-24",
-          "dataCriacao": "2026-07-06",
-          "dataInicial": "2026-07-21",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 360.0,
           "atrasada": true
         },
         {
@@ -4639,14 +4640,15 @@
           "responsavel": "Cláudio  Ferreira",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Cláudio  Ferreira",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-13",
           "dataCriacao": "2026-07-29",
-          "dataInicial": "",
+          "dataInicial": "2026-08-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": false
         },
         {
@@ -4718,23 +4720,6 @@
           "atrasada": false
         },
         {
-          "osId": "10237",
-          "ativo": "Transformador 1      { MRJ100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Hélio Silva ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Hélio Silva ",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPS - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-14",
-          "dataCriacao": "2026-07-28",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "10207",
           "ativo": "Cabine 1  Guaratinguetá  São Paulo Brasil { GTA500-CABN1 }",
           "equipe": "",
@@ -4784,24 +4769,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "10272",
-          "ativo": "Transformador 1 Gázquez     { THPN-SCB100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-15",
-          "dataCriacao": "2026-07-28",
-          "dataInicial": "2026-08-04",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
           "atrasada": false
         },
         {
@@ -5472,6 +5439,25 @@
           "atrasada": false
         },
         {
+          "osId": "10272",
+          "ativo": "Transformador 1 Gázquez     { THPN-SCB100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-15",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "10270",
           "ativo": "Caixa d'água      { SNE100-CXDA1 }",
           "equipe": "",
@@ -5510,6 +5496,25 @@
           "atrasada": false
         },
         {
+          "osId": "10237",
+          "ativo": "Transformador 1      { MRJ100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Hélio Silva ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Hélio Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPS - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "10181",
           "ativo": "Transformador 1      { THPN-APR200-TRFR1 }",
           "equipe": "",
@@ -5526,6 +5531,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 192.0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "9023",
+          "ativo": "Infraestrutura Civil Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100-INFC1 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Railson Gomes ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-07-24",
+          "dataCriacao": "2026-07-06",
+          "dataInicial": "2026-07-21",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 360.0,
+          "horasAteFechar": 336.0,
           "atrasada": false
         },
         {
@@ -8094,25 +8118,6 @@
           "atrasada": false
         },
         {
-          "osId": "7575",
-          "ativo": "Transformador 5 COMTRAFO     { TIM200-TRFR5 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Athon] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-06-11",
-          "dataCriacao": "2026-06-09",
-          "dataInicial": "2026-06-23",
-          "dataFinal": "2026-06-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8061",
           "ativo": "Ar Condicionado      { ADS200-SOEM1-ARCD }",
           "equipe": "",
@@ -8128,25 +8133,6 @@
           "dataFinal": "2026-06-22",
           "linkFracttal": "",
           "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "7576",
-          "ativo": "Cabine 4 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN4 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Athon] - MPM - Cabine",
-          "criticidade": "",
-          "dataProgramada": "2026-06-10",
-          "dataCriacao": "2026-06-09",
-          "dataInicial": "2026-06-22",
-          "dataFinal": "2026-06-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 312.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -8265,25 +8251,6 @@
           "atrasada": false
         },
         {
-          "osId": "7579",
-          "ativo": "Ar Condicionado      { THPN-CGH100-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-06-09",
-          "dataCriacao": "2026-06-09",
-          "dataInicial": "2026-06-10",
-          "dataFinal": "2026-06-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "7582",
           "ativo": "Ar Condicionado      { THPN-NVL100-SOEM1-ARCD }",
           "equipe": "",
@@ -8303,24 +8270,24 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 272
+      "historicoTotal": 275
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
       "icone": "ti-shield-check",
       "cor": "#ef4444",
       "kpis": {
-        "total": 136,
+        "total": 137,
         "emAberto": 4,
         "atrasadas": 4,
-        "concluidas30d": 10,
-        "concluidas7d": 1,
-        "naSemanaCorrente": 0
+        "concluidas30d": 11,
+        "concluidas7d": 2,
+        "naSemanaCorrente": 1
       },
       "mttr": {
-        "horas": 110.4,
-        "label": "4d 14h",
-        "amostra": 10
+        "horas": 100.36,
+        "label": "4d 4h",
+        "amostra": 11
       },
       "tendencia4Semanas": [
         {
@@ -8340,15 +8307,15 @@
         },
         {
           "semana": "W32",
-          "criadas": 0,
-          "finalizadas": 0
+          "criadas": 1,
+          "finalizadas": 1
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 136,
+            "total": 137,
             "emAberto": 4
           }
         ],
@@ -8463,6 +8430,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10618",
+          "ativo": "NCU 2      { TESTE100-NCU2 }",
+          "equipe": "",
+          "responsavel": "Levi Maia ",
+          "criadoPor": "FillipeFigueiró",
+          "supervisor": "Levi Maia ",
+          "status": "Finalizados",
+          "tarefa": "[TESTE Levi] NCU sem comunicacao - fluxo de chamado de garantia",
+          "criticidade": "",
+          "dataProgramada": "2026-08-04",
+          "dataCriacao": "2026-08-04",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "10012",
           "ativo": "Inversor 1.3 Huaweii SUN2000-330KTL-H3    { GYT100-INVR1.3 }",
@@ -9661,7 +9647,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 63
+      "historicoTotal": 64
     },
     "performance": {
       "label": "Performance",
@@ -9669,16 +9655,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 380,
-        "emAberto": 76,
-        "atrasadas": 72,
-        "concluidas30d": 244,
-        "concluidas7d": 71,
+        "emAberto": 75,
+        "atrasadas": 71,
+        "concluidas30d": 245,
+        "concluidas7d": 72,
         "naSemanaCorrente": 38
       },
       "mttr": {
-        "horas": 126.98,
+        "horas": 126.86,
         "label": "5d 6h",
-        "amostra": 244
+        "amostra": 245
       },
       "tendencia4Semanas": [
         {
@@ -9699,7 +9685,7 @@
         {
           "semana": "W32",
           "criadas": 3,
-          "finalizadas": 8
+          "finalizadas": 9
         }
       ],
       "topOfensores": {
@@ -9707,7 +9693,7 @@
           {
             "nome": "(sem equipe)",
             "total": 380,
-            "emAberto": 76
+            "emAberto": 75
           }
         ],
         "responsaveis": [
@@ -9738,16 +9724,16 @@
           }
         ]
       },
-      "total": 76,
-      "atrasadas": 72,
+      "total": 75,
+      "atrasadas": 71,
       "porStatus": {
-        "naoIniciada": 56,
-        "emProgresso": 0,
-        "pausada": 20,
+        "naoIniciada": 53,
+        "emProgresso": 8,
+        "pausada": 14,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 76
+        "(sem equipe)": 75
       },
       "oss": [
         {
@@ -10306,7 +10292,7 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Gilson Souza ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Capitão Poço 1][Tracker 08.107] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-07-20",
@@ -10324,14 +10310,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Capitão Poço 1][Tracker 07.107] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-07-20",
           "dataCriacao": "2026-07-24",
-          "dataInicial": "",
+          "dataInicial": "2026-08-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 264.0,
           "atrasada": true
         },
         {
@@ -10341,7 +10328,7 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Gilson Souza ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Capitão Poço 1][Tracker 07.106] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-07-20",
@@ -10359,7 +10346,7 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Gilson Souza ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Capitão Poço 1][Tracker 07.103] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-07-20",
@@ -10377,7 +10364,7 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Gilson Souza ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Capitão Poço 1][Tracker 06.104] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-07-20",
@@ -10395,7 +10382,7 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Gilson Souza ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Capitão Poço 1][Tracker 05.106] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-07-20",
@@ -10413,7 +10400,7 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Gilson Souza ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Capitão Poço 1][Tracker 02.105] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-07-20",
@@ -10927,37 +10914,21 @@
           "atrasada": true
         },
         {
-          "osId": "10500",
-          "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
-          "equipe": "",
-          "responsavel": "Eduardo Souza",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Eduardo Souza",
-          "status": "Não Iniciada",
-          "tarefa": "[Usina] - Coleta e análise de dados de geração",
-          "criticidade": "",
-          "dataProgramada": "2026-08-03",
-          "dataCriacao": "2026-07-31",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "10499",
           "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
           "equipe": "",
           "responsavel": "Anderson  Parente",
           "criadoPor": "Levi Maia ",
           "supervisor": "Anderson  Parente",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Coleta e análise de dados de geração",
           "criticidade": "",
           "dataProgramada": "2026-08-03",
           "dataCriacao": "2026-07-31",
-          "dataInicial": "",
+          "dataInicial": "2026-08-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "atrasada": true
         },
         {
@@ -11064,6 +11035,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10500",
+          "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Eduardo Souza",
+          "status": "Finalizados",
+          "tarefa": "[Usina] - Coleta e análise de dados de geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-31",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "10502",
           "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
@@ -13820,25 +13810,6 @@
           "atrasada": false
         },
         {
-          "osId": "9438",
-          "ativo": "Inversor 1.3 Sungrow SG125HV    { THPN-CGH100-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Cidade Gaúcha 1][Inversor 1.3] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-13",
-          "dataCriacao": "2026-07-14",
-          "dataInicial": "2026-07-17",
-          "dataFinal": "2026-07-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9503",
           "ativo": "Tracker 48.100 STI STI-H250    { THPN-VRT200-ETKR48.100 }",
           "equipe": "",
@@ -13915,7 +13886,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 269
+      "historicoTotal": 270
     },
     "engenharia": {
       "label": "Engenharia",
@@ -13923,16 +13894,16 @@
       "cor": "#3b82f6",
       "kpis": {
         "total": 59,
-        "emAberto": 7,
-        "atrasadas": 6,
-        "concluidas30d": 16,
-        "concluidas7d": 7,
+        "emAberto": 4,
+        "atrasadas": 3,
+        "concluidas30d": 19,
+        "concluidas7d": 10,
         "naSemanaCorrente": 2
       },
       "mttr": {
-        "horas": 394.5,
-        "label": "16d 10h",
-        "amostra": 16
+        "horas": 361.26,
+        "label": "15d 1h",
+        "amostra": 19
       },
       "tendencia4Semanas": [
         {
@@ -13953,7 +13924,7 @@
         {
           "semana": "W32",
           "criadas": 1,
-          "finalizadas": 2
+          "finalizadas": 5
         }
       ],
       "topOfensores": {
@@ -13961,14 +13932,14 @@
           {
             "nome": "(sem equipe)",
             "total": 59,
-            "emAberto": 7
+            "emAberto": 4
           }
         ],
         "responsaveis": [
           {
             "nome": "João Vieira",
             "total": 10,
-            "emAberto": 6
+            "emAberto": 3
           },
           {
             "nome": "Carlos Bruno  Pessanha Pereira",
@@ -13992,16 +13963,16 @@
           }
         ]
       },
-      "total": 7,
-      "atrasadas": 6,
+      "total": 4,
+      "atrasadas": 3,
       "porStatus": {
-        "naoIniciada": 7,
+        "naoIniciada": 4,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 7
+        "(sem equipe)": 4
       },
       "oss": [
         {
@@ -14016,57 +13987,6 @@
           "criticidade": "",
           "dataProgramada": "2026-06-23",
           "dataCriacao": "2026-06-19",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10271",
-          "ativo": "Estação Meteorológica Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "João Vieira ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "João Vieira ",
-          "status": "Não Iniciada",
-          "tarefa": "[ETM] - Coleta e análise de dados",
-          "criticidade": "",
-          "dataProgramada": "2026-07-28",
-          "dataCriacao": "2026-07-28",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10208",
-          "ativo": "Estação Meteorológica Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "João Vieira ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "João Vieira ",
-          "status": "Não Iniciada",
-          "tarefa": "[ETM] - Coleta e análise de dados",
-          "criticidade": "",
-          "dataProgramada": "2026-07-29",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10214",
-          "ativo": "Estação Meteorológica Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { SNE100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "João Vieira ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "João Vieira ",
-          "status": "Não Iniciada",
-          "tarefa": "[ETM] - Coleta e análise de dados",
-          "criticidade": "",
-          "dataProgramada": "2026-07-30",
-          "dataCriacao": "2026-07-27",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -14126,6 +14046,63 @@
       ],
       "ossHistorico": [
         {
+          "osId": "10271",
+          "ativo": "Estação Meteorológica Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "João Vieira ",
+          "status": "Finalizada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-07-28",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10214",
+          "ativo": "Estação Meteorológica Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { SNE100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "João Vieira ",
+          "status": "Finalizada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-07-30",
+          "dataCriacao": "2026-07-27",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 192.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10208",
+          "ativo": "Estação Meteorológica Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "João Vieira ",
+          "status": "Finalizada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-07-29",
+          "dataCriacao": "2026-07-27",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 192.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "10156",
           "ativo": "Estação Meteorológica Rodovia SP 334 S/N Batatais  São Paulo Brasil { BWK100-ESTM1 }",
           "equipe": "",
@@ -14170,7 +14147,7 @@
           "responsavel": "João Vieira ",
           "criadoPor": "Levi Maia ",
           "supervisor": "João Vieira ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[ETM] - Coleta e análise de dados",
           "criticidade": "",
           "dataProgramada": "2026-07-31",
@@ -14208,7 +14185,7 @@
           "responsavel": "João Vieira ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "João Vieira ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[ETM] - Coleta e análise de dados",
           "criticidade": "",
           "dataProgramada": "2026-07-30",
@@ -14981,10 +14958,45 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 45
+      "historicoTotal": 48
     }
   },
   "ossPublicas": [
+    {
+      "osId": "10617",
+      "ativo": "Cabine 2 Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Railson Gomes ",
+      "status": "pausado",
+      "tarefa": "[Cabine 2] - Religamento da Cabine 2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-04",
+      "dataCriacao": "2026-08-04",
+      "dataInicial": "2026-08-04",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
+      "osId": "10612",
+      "ativo": "Thopen - Ouro Branco 1 - AL FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Ricardo Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento UFV Ouro Branco 3",
+      "criticidade": "",
+      "dataProgramada": "2026-08-04",
+      "dataCriacao": "2026-08-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
     {
       "osId": "10611",
       "ativo": "Thopen - Coração 1 - SC Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100 }",
@@ -15058,7 +15070,7 @@
       "responsavel": "Olimpio Lima ",
       "criadoPor": "Raphael Vitoriano",
       "supervisor": "Olimpio Lima ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-08-04",
@@ -15102,23 +15114,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10544",
-      "ativo": "Inversor 1.3 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Railson Gomes ",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
-      "criticidade": "",
-      "dataProgramada": "2026-08-03",
-      "dataCriacao": "2026-08-03",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "10501",
       "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
       "equipe": "",
@@ -15136,36 +15131,21 @@
       "horasAteAbrir": 72.0
     },
     {
-      "osId": "10500",
-      "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
-      "equipe": "",
-      "responsavel": "Eduardo Souza",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Eduardo Souza",
-      "status": "Não Iniciada",
-      "tarefa": "[Usina] - Coleta e análise de dados de geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-03",
-      "dataCriacao": "2026-07-31",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "10499",
       "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
       "equipe": "",
       "responsavel": "Anderson  Parente",
       "criadoPor": "Levi Maia ",
       "supervisor": "Anderson  Parente",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Coleta e análise de dados de geração",
       "criticidade": "",
       "dataProgramada": "2026-08-03",
       "dataCriacao": "2026-07-31",
-      "dataInicial": "",
+      "dataInicial": "2026-08-04",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0
     },
     {
       "osId": "10485",
@@ -15610,14 +15590,15 @@
       "responsavel": "Cláudio  Ferreira",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Cláudio  Ferreira",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-13",
       "dataCriacao": "2026-07-29",
-      "dataInicial": "",
+      "dataInicial": "2026-08-04",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10319",
@@ -15943,39 +15924,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10272",
-      "ativo": "Transformador 1 Gázquez     { THPN-SCB100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Eduardo  Mendes",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-15",
-      "dataCriacao": "2026-07-28",
-      "dataInicial": "2026-08-04",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0
-    },
-    {
-      "osId": "10271",
-      "ativo": "Estação Meteorológica Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "João Vieira ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "João Vieira ",
-      "status": "Não Iniciada",
-      "tarefa": "[ETM] - Coleta e análise de dados",
-      "criticidade": "",
-      "dataProgramada": "2026-07-28",
-      "dataCriacao": "2026-07-28",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "10268",
       "ativo": "Preventiva Grupo de Inversores      { THPN-STN100-PGINVR1 }",
       "equipe": "",
@@ -16216,22 +16164,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10237",
-      "ativo": "Transformador 1      { MRJ100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Hélio Silva ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Hélio Silva ",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPS - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-14",
-      "dataCriacao": "2026-07-28",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "10232",
       "ativo": "Preventiva Grupo de Inversores      { THPN-IBT100-PGINVR1 }",
       "equipe": "",
@@ -16265,22 +16197,6 @@
       "horasAteAbrir": 0
     },
     {
-      "osId": "10214",
-      "ativo": "Estação Meteorológica Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { SNE100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "João Vieira ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "João Vieira ",
-      "status": "Não Iniciada",
-      "tarefa": "[ETM] - Coleta e análise de dados",
-      "criticidade": "",
-      "dataProgramada": "2026-07-30",
-      "dataCriacao": "2026-07-27",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "10209",
       "ativo": "Transformador 4 WTS     { THPN-CLN200-TRFR4 }",
       "equipe": "",
@@ -16291,22 +16207,6 @@
       "tarefa": "[Grid Co.] - MPS - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-19",
-      "dataCriacao": "2026-07-27",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "10208",
-      "ativo": "Estação Meteorológica Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "João Vieira ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "João Vieira ",
-      "status": "Não Iniciada",
-      "tarefa": "[ETM] - Coleta e análise de dados",
-      "criticidade": "",
-      "dataProgramada": "2026-07-29",
       "dataCriacao": "2026-07-27",
       "dataInicial": "",
       "dataFinal": "",
@@ -16833,7 +16733,7 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Gilson Souza ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Capitão Poço 1][Tracker 08.107] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-07-20",
@@ -16850,14 +16750,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Capitão Poço 1][Tracker 07.107] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-07-20",
       "dataCriacao": "2026-07-24",
-      "dataInicial": "",
+      "dataInicial": "2026-08-04",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 264.0
     },
     {
       "osId": "10002",
@@ -16866,7 +16767,7 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Gilson Souza ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Capitão Poço 1][Tracker 07.106] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-07-20",
@@ -16883,7 +16784,7 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Gilson Souza ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Capitão Poço 1][Tracker 07.103] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-07-20",
@@ -16900,7 +16801,7 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Gilson Souza ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Capitão Poço 1][Tracker 06.104] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-07-20",
@@ -16917,7 +16818,7 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Gilson Souza ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Capitão Poço 1][Tracker 05.106] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-07-20",
@@ -16934,7 +16835,7 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Gilson Souza ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Capitão Poço 1][Tracker 02.105] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-07-20",
@@ -17677,23 +17578,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "9023",
-      "ativo": "Infraestrutura Civil Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Railson Gomes ",
-      "status": "pausado",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-07-24",
-      "dataCriacao": "2026-07-06",
-      "dataInicial": "2026-07-21",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 360.0
-    },
-    {
       "osId": "9010",
       "ativo": "QGBT 2  Demerval Lobão  Piauí Brasil { DML100-QGBT2 }",
       "equipe": "",
@@ -18330,6 +18214,105 @@
   ],
   "ossHistorico": [
     {
+      "osId": "10626",
+      "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-04",
+      "dataCriacao": "2026-08-04",
+      "dataInicial": "2026-08-04",
+      "dataFinal": "2026-08-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "10623",
+      "ativo": "Thopen - Córrego do Sapucaia 1 - ES Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Marcos Duarte ",
+      "status": "Finalizados",
+      "tarefa": "Religamento UFV Córrego do Sapucaia 2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-04",
+      "dataCriacao": "2026-08-04",
+      "dataInicial": "2026-08-04",
+      "dataFinal": "2026-08-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "10618",
+      "ativo": "NCU 2      { TESTE100-NCU2 }",
+      "equipe": "",
+      "responsavel": "Levi Maia ",
+      "criadoPor": "FillipeFigueiró",
+      "supervisor": "Levi Maia ",
+      "status": "Finalizados",
+      "tarefa": "[TESTE Levi] NCU sem comunicacao - fluxo de chamado de garantia",
+      "criticidade": "",
+      "dataProgramada": "2026-08-04",
+      "dataCriacao": "2026-08-04",
+      "dataInicial": "2026-08-04",
+      "dataFinal": "2026-08-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "10616",
+      "ativo": "Cabine 2 Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizada",
+      "tarefa": "[Cabine 2] - Religamento da Cabine 2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-04",
+      "dataCriacao": "2026-08-04",
+      "dataInicial": "2026-08-04",
+      "dataFinal": "2026-08-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "10615",
+      "ativo": "Cabine 1 Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizada",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-04",
+      "dataCriacao": "2026-08-04",
+      "dataInicial": "2026-08-04",
+      "dataFinal": "2026-08-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "10604",
       "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
       "equipe": "",
@@ -18805,6 +18788,26 @@
       "dataFinal": "2026-08-03",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "10544",
+      "ativo": "Inversor 1.3 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Railson Gomes ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-08-03",
+      "dataInicial": "2026-08-04",
+      "dataFinal": "2026-08-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -19389,6 +19392,25 @@
       "atrasada": false
     },
     {
+      "osId": "10500",
+      "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
+      "equipe": "",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Eduardo Souza",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Coleta e análise de dados de geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-07-31",
+      "dataInicial": "2026-08-04",
+      "dataFinal": "2026-08-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "10498",
       "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
       "equipe": "",
@@ -19868,7 +19890,7 @@
       "responsavel": "João Vieira ",
       "criadoPor": "Levi Maia ",
       "supervisor": "João Vieira ",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "[ETM] - Coleta e análise de dados",
       "criticidade": "",
       "dataProgramada": "2026-07-31",
@@ -20589,7 +20611,7 @@
       "responsavel": "João Vieira ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "João Vieira ",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "[ETM] - Coleta e análise de dados",
       "criticidade": "",
       "dataProgramada": "2026-07-30",
@@ -21142,145 +21164,10 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "10326",
-      "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.4] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-05",
-      "dataCriacao": "2026-07-29",
-      "dataInicial": "2026-07-31",
-      "dataFinal": "2026-07-31",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10325",
-      "ativo": "Inversor 1.3 Sungrow SG250HX    { GDEN-GJR100-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.3] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-05",
-      "dataCriacao": "2026-07-29",
-      "dataInicial": "2026-07-31",
-      "dataFinal": "2026-07-31",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10324",
-      "ativo": "Inversor 1.2 Sungrow SG250HX    { GDEN-GJR100-INVR1.2 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.2] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-05",
-      "dataCriacao": "2026-07-29",
-      "dataInicial": "2026-07-31",
-      "dataFinal": "2026-07-31",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10323",
-      "ativo": "Inversor 1.1 Sungrow SG250HX    { GDEN-GJR100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.1] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-05",
-      "dataCriacao": "2026-07-29",
-      "dataInicial": "2026-07-31",
-      "dataFinal": "2026-07-31",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10316",
-      "ativo": "Estrutura Trackers BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200-ETKR1 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Marcos Duarte ",
-      "status": "Finalizada",
-      "tarefa": "[Primavera 2] - Execução de rotinas pendentes pós-roçagem nas estruturas dos Trackers (Pendências MPS)",
-      "criticidade": "",
-      "dataProgramada": "2026-07-31",
-      "dataCriacao": "2026-07-29",
-      "dataInicial": "2026-07-29",
-      "dataFinal": "2026-07-29",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10315",
-      "ativo": "Thopen - Parelhas 1 - RN Rodovia RN 088, nº 01, Zona Rural Parelhas  Rio Grande do Norte Brasil { THPN-PRL100 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Silva",
-      "criadoPor": "Juliana Rogério",
-      "supervisor": "Cláudio  Silva",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-29",
-      "dataCriacao": "2026-07-29",
-      "dataInicial": "2026-07-29",
-      "dataFinal": "2026-07-29",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "10314",
-      "ativo": "Athon - Marabá 2 - PA Rua Bom Jesus, S/N Marabá  Pará Brasil { ATHN-MAB200 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "James Chaves ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-07-29",
-      "dataCriacao": "2026-07-29",
-      "dataInicial": "2026-07-29",
-      "dataFinal": "2026-07-29",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2271,
-  "totalGeral": 4618,
+  "historicoTotal": 2284,
+  "totalGeral": 4625,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
