@@ -1803,7 +1803,9 @@ function toast(msg,ms){
 // no fim da página), senão quem insere pelo modal do calendário não a encontra.
 function rpDock(){
   let d=document.getElementById('rp-dock');
-  if(!RP_OK||!RP.length){ if(d)d.remove(); return; }
+  // só na aba Programação Semanal — nas outras (Gestão PCM, etc.) a fila atrapalha
+  const naSemana=(typeof S==='undefined')||!S.topView||S.topView==='semana';
+  if(!RP_OK||!RP.length||!naSemana){ if(d)d.remove(); return; }
   if(!d){ d=document.createElement('div'); d.id='rp-dock'; document.body.appendChild(d); }
   const aberto=d.classList.contains('open');
   d.className=aberto?'open':'';
@@ -2032,6 +2034,7 @@ function setTopView(v){
   if(isGestao){
     if(!GESTAO_DB){Promise.all([loadGestao(),loadConfiab()]).then(()=>renderGestao());} else {if(!CONFIAB_DB)loadConfiab().then(()=>renderConfiab());renderGestao();}
   } else if(!isSem){renderTipologiaAtual();}
+  if(typeof rpDock==='function') rpDock();   // a fila só vive na aba Programação Semanal
 }
 function atualizarContadoresTopNav(){
   const n=tipNumOSs();
