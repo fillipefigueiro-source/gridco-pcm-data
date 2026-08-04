@@ -1491,14 +1491,24 @@ def fazer_backup(arquivo):
 # porém aplicada à SEMANA ATUAL, no lugar:
 #     OS_ID; DIA; TAREFAS; TURNO   -> reposiciona a OS (Dia/Hora) e empurra conflitantes
 #     OS_ID; nao;                  -> remove a OS da semana (nem como pendente)
-_DIA_MAP_OBS = {'SEG': 0, 'TER': 1, 'QUA': 2, 'QUI': 3, 'SEX': 4}
+_DIA_MAP_OBS = {'SEG': 0, 'SEGUNDA': 0, 'TER': 1, 'TERCA': 1, 'TERÇA': 1,
+                'QUA': 2, 'QUARTA': 2, 'QUI': 3, 'QUINTA': 3, 'SEX': 4, 'SEXTA': 4}
 _TURNO_MAP_OBS = {'MANHA': 7 * 60 + 30, 'MANHÃ': 7 * 60 + 30, 'TARDE': 13 * 60, 'NOITE': 18 * 60}
 OBS_ATUAL_FILE = "Observacoes_Semana_Atual.txt"
 
 
 def _parse_observacoes_atual(linhas):
-    """Devolve (pins, excluidas). pins: {os_id: {dia:int|None, tarefas:[str]|None, start_min:int|None}}."""
-    pins, excluidas = {}, set()
+    """Mesma gramática do programacao_v7 (sexta), para as duas abas serem equivalentes:
+        OS; DIA(s); TAREFAS; TURNO   + campos 'só:' e 'sem:' em qualquer posição
+        OS; nao                      → tira a OS da semana
+
+    Devolve (pins, excluidas, excluir_tarefas):
+      pins            {os_id: [ {dia, tarefas, start_min, incluir}, ... ]}  (LISTA: uma
+                      OS pode ter várias linhas, ex. split dia/noite da MPA)
+      excluidas       {os_id}                — OS inteira fora da semana
+      excluir_tarefas {os_id: [kw, ...]}     — 'sem:' tira só essas tarefas
+    """
+    pins, excluidas, excluir_tarefas = {}, set(), {}
     for ln in linhas:
         ln = (ln or "").strip()
         if not ln or ln.startswith("#"):
@@ -1507,18 +1517,43 @@ def _parse_observacoes_atual(linhas):
         if not parts or not parts[0].isdigit():
             continue  # linha de texto livre — ignora
         os_id = int(parts[0])
-        dia_str = (parts[1].upper() if len(parts) > 1 else '')
-        if dia_str in ('NAO', 'NÃO', 'NO'):
+
+        campos = parts[1:]
+        # 'sem: QGBT, Trafo' — remove essas tarefas da semana (em qualquer posição)
+        _sem = [c for c in campos if re.match(r'^\s*sem\s*:', c, re.I)]
+        if _sem:
+            kws = re.split(r'[;,]', re.sub(r'^\s*sem\s*:', '', _sem[0], flags=re.I))
+            kws = [k.strip().lower() for k in kws if k.strip()]
+            if kws:
+                excluir_tarefas.setdefault(os_id, []).extend(kws)
+            campos = [c for c in campos if c not in _sem]
+        # 'só: Inversor, Cabine' — esta linha vale SÓ p/ as tarefas que batem
+        _so = [c for c in campos if re.match(r'^\s*(s[óo]|apenas)\s*:', c, re.I)]
+        incluir = None
+        if _so:
+            kws = re.split(r'[;,]', re.sub(r'^\s*(s[óo]|apenas)\s*:', '', _so[0], flags=re.I))
+            incluir = [k.strip().lower() for k in kws if k.strip()] or None
+            campos = [c for c in campos if c not in _so]
+
+        dia_str = (campos[0].upper() if len(campos) > 0 else '')
+        if dia_str.replace('Ã', 'A') in ('NAO', 'NO'):
             excluidas.add(os_id)
             continue
-        tarefas_s = parts[2] if len(parts) > 2 else ''
-        turno_str = (parts[3] if len(parts) > 3 else '').replace('Ã', 'A').replace('ã', 'a').upper().strip()
-        pins[os_id] = {
-            'dia': _DIA_MAP_OBS.get(dia_str),
-            'tarefas': [t.strip().lower() for t in tarefas_s.split(',') if t.strip()] or None,
-            'start_min': _TURNO_MAP_OBS.get(turno_str),
-        }
-    return pins, excluidas
+        tarefas_s = campos[1] if len(campos) > 1 else ''
+        turno_str = (campos[2] if len(campos) > 2 else '').replace('Ã', 'A').replace('ã', 'a').upper().strip()
+
+        # DIA pode trazer vários: "seg, ter" → um pin por dia
+        dias = [d for d in (_DIA_MAP_OBS.get(t.strip().upper().replace('Ã', 'A'))
+                            for t in re.split(r'[,;/\s]+', dia_str) if t.strip())
+                if d is not None] or [None]
+        for _di in dias:
+            pins.setdefault(os_id, []).append({
+                'dia': _di,
+                'tarefas': [t.strip().lower() for t in tarefas_s.split(',') if t.strip()] or None,
+                'start_min': _TURNO_MAP_OBS.get(turno_str),
+                'incluir': incluir,
+            })
+    return pins, excluidas, excluir_tarefas
 
 
 def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
@@ -1532,10 +1567,12 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
     except Exception as e:
         log(f"! Não consegui ler {OBS_ATUAL_FILE}: {e}", "WARN")
         return
-    pins, excluidas = _parse_observacoes_atual(linhas)
-    if not pins and not excluidas:
+    pins, excluidas, excluir_tarefas = _parse_observacoes_atual(linhas)
+    if not pins and not excluidas and not excluir_tarefas:
         return
-    log(f"STEP A3: Observações da semana atual — {len(pins)} pin(s), {len(excluidas)} exclusão(ões)...")
+    _n_pins = sum(len(v) for v in pins.values())
+    log(f"STEP A3: Observações da semana atual — {_n_pins} pin(s), "
+        f"{len(excluidas)} exclusão(ões), {len(excluir_tarefas)} filtro(s) 'sem:'...")
 
     def _match_tarefa(cell_val, alvos):
         if not alvos:
@@ -1543,9 +1580,10 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
         t = str(cell_val or "").lower()
         return any(a in t for a in alvos)
 
-    # 1) EXCLUSÕES: apaga as linhas da OS de qualquer aba que tenha "OSs ID" (inclui _Pendentes)
+    # 1) EXCLUSÕES: apaga as linhas da OS de qualquer aba que tenha "OSs ID" (inclui _Pendentes).
+    #    'não' remove a OS inteira; 'sem: X' remove só as tarefas que batem com X.
     n_excl = 0
-    if excluidas:
+    if excluidas or excluir_tarefas:
         for sheet_name in list(wb_prog.sheetnames):
             ws = wb_prog[sheet_name]
             if ws.max_row < 2:
@@ -1554,20 +1592,27 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
             if "OSs ID" not in header:
                 continue
             idx_os0 = header.index("OSs ID")
+            idx_tar0 = header.index("Tarefa") if "Tarefa" in header else None
             for r in range(ws.max_row, 1, -1):   # de baixo p/ cima (delete seguro)
                 try:
                     v = int(ws.cell(row=r, column=idx_os0 + 1).value)
                 except (ValueError, TypeError):
                     continue
-                if v in excluidas:
+                apagar = v in excluidas
+                if not apagar and v in excluir_tarefas and idx_tar0 is not None:
+                    apagar = _match_tarefa(ws.cell(row=r, column=idx_tar0 + 1).value,
+                                           excluir_tarefas[v])
+                if apagar:
                     ws.delete_rows(r, 1)
                     n_excl += 1
-        log(f"    exclusões: {n_excl} linha(s) removida(s) {sorted(excluidas)}")
+        _alvos = sorted(excluidas) + [f"{k}(sem:)" for k in sorted(excluir_tarefas)]
+        log(f"    exclusões: {n_excl} linha(s) removida(s) {_alvos}")
 
     # 2) PINS: reposiciona (Dia/Hora) e empurra conflitantes
     dias_por_idx = {i: (d_date, d_str) for i, (d_date, d_str) in enumerate(dias_semana)}
     n_pin = 0
-    for os_id, pin in pins.items():
+    for os_id, _lista_pins in pins.items():
+      for pin in (_lista_pins if isinstance(_lista_pins, list) else [_lista_pins]):
         alvo_idx = pin['dia']
         if alvo_idx is None and pin['start_min'] is None:
             continue  # sem dia nem turno: nada a reposicionar
@@ -1592,7 +1637,11 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
                         continue
                 except (ValueError, TypeError):
                     continue
-                if not _match_tarefa(ws.cell(row=r, column=idx_tar).value if idx_tar else None, pin['tarefas']):
+                _cel_tar = ws.cell(row=r, column=idx_tar).value if idx_tar else None
+                if not _match_tarefa(_cel_tar, pin['tarefas']):
+                    continue
+                # 'só: X' — esta linha só vale para as tarefas que batem com X
+                if pin.get('incluir') and not _match_tarefa(_cel_tar, pin['incluir']):
                     continue
                 try:
                     # novo dia
