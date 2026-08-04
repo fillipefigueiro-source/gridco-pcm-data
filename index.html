@@ -207,6 +207,21 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .rp-add.on{background:#5E8C1A;border-color:#5E8C1A;color:#fff}
 .rp-bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:#f3f9e8;border:1px solid #cfe3a5;border-radius:9px;padding:8px 12px;margin:8px 0}
 .rp-bar-t{font-weight:700;font-size:12.5px;color:#3f5c12;flex:1}
+/* dock fixo: a fila fica SEMPRE à vista, insira de onde inserir */
+#rp-dock{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:9000;
+  width:min(940px,calc(100% - 28px));background:#f3f9e8;border:1px solid #a9c96a;
+  border-radius:12px;box-shadow:0 10px 30px rgba(28,31,59,.22);padding:10px 14px}
+#rp-dock .rp-dock-h{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#rp-dock .rp-dock-t{font-weight:800;font-size:13px;color:#3f5c12;flex:1;min-width:150px}
+#rp-dock .rp-prev{margin-top:8px;display:none}
+#rp-dock.open .rp-prev{display:block}
+@media(max-width:700px){#rp-dock{bottom:8px;padding:9px 11px}#rp-dock .rp-dock-t{font-size:12px}}
+#gc-toast{position:fixed;left:50%;transform:translateX(-50%) translateY(14px);
+  bottom:96px;z-index:9500;background:#1C1F3B;color:#fff;font-size:12.5px;font-weight:600;
+  padding:10px 16px;border-radius:9px;box-shadow:0 8px 24px rgba(28,31,59,.3);
+  opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;max-width:88vw;text-align:center}
+#gc-toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(prefers-reduced-motion:reduce){#gc-toast{transition:none}}
 .rp-btn{font-size:11.5px;font-weight:700;padding:5px 11px;border-radius:7px;cursor:pointer;border:1px solid #5E8C1A;background:#5E8C1A;color:#fff}
 .rp-btn.sec{background:#fff;color:#5E8C1A}
 .rp-btn:hover{filter:brightness(1.07)}
@@ -215,6 +230,10 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .rpm-box{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .rpm-box select{font-size:12px;padding:5px 7px;border:1px solid #e2d9cc;border-radius:7px;background:#fff;color:#191528;cursor:pointer;max-width:100%}
 .rpm-box #rpm-alvo{flex:1 1 100%;min-width:0}
+.rp-out{font-size:11px;font-weight:700;padding:4px 9px;border:1px solid #d9a39d;
+  border-radius:6px;background:#fff;color:#b23b2e;cursor:pointer;white-space:nowrap}
+.rp-out:hover{background:#fdf1f0}
+.rp-out.on{background:#b23b2e;border-color:#b23b2e;color:#fff}
 .rpm-status{font-size:11.5px;color:#6b7280;margin-top:7px;line-height:1.45}
 .rpm-status code{background:#f3f9e8;color:#3f5c12;padding:1px 5px;border-radius:4px;font-size:11px;word-break:break-all}
 @media(max-width:700px){.pend-row{grid-template-columns:56px 1fr}.pend-tipo,.pend-mot{display:none}.rp-box{grid-column:1/-1}}
@@ -1689,6 +1708,8 @@ function rpChave(tarefa){
 }
 function rpLinha(r){
   const tur=r.turno||'';
+  // "não" = tira a OS da semana (vale nas duas abas; sempre a OS inteira)
+  if(r.dia==='não') return r.os+'; não';
   // OS inteira (tarefa vazia) → "OS; dia" ou "OS; dia; ; turno" (tarefas=None no motor)
   if(!r.tarefa) return tur ? (r.os+'; '+r.dia+'; ; '+tur) : (r.os+'; '+r.dia);
   const sig=rpSigla(r.tipo);
@@ -1698,6 +1719,22 @@ function rpLinha(r){
   }
   const nome=String(r.tarefa||'').split(',')[0].split(';')[0].trim();
   return [r.os, r.dia, nome, tur].filter((v,i)=>i<3||v).join('; ');
+}
+// Tirar a OS da semana — gera "OS; não". Sempre a OS INTEIRA: a gramática do
+// "não" não aceita filtro por tarefa (para tirar só uma parte, use "sem:").
+function rpTirar(os_id,n_tarefas){
+  if(!RP_OK)return;
+  const n=n_tarefas||1;
+  if(!confirm('Tirar a OS #'+os_id+' da programação desta semana?'
+      +(n>1?('\n\nIsso remove as '+n+' tarefas dela.'):'')))return;
+  const i=rpIdx(os_id,'');
+  if(i>=0)RP.splice(i,1);
+  RP.push({os:String(os_id),tarefa:'',tipo:'',dia:'não',turno:''});
+  rpSave();
+  toast('✕ OS #'+os_id+' será tirada da semana · '+RP.length+' na fila');
+  const st=document.getElementById('rpm-status');
+  if(st)st.innerHTML='<b>'+RP.length+'</b> na fila — linha: <code>'+esc(os_id+'; não')+'</code>';
+  renderPendentes();
 }
 // Reprogramar a partir do modal da OS (serve p/ qualquer OS já programada)
 function rpAddModal(os_id){
@@ -1751,6 +1788,36 @@ function rpFallback(txt){
   try{document.execCommand('copy');toast('✓ Copiado');}catch(e){toast('Selecione e copie o texto abaixo');}
   document.body.removeChild(ta);
 }
+// toast() era chamado em vários pontos (setAW, saveAdminGo, reprogramação) mas
+// nunca chegou a ser definido — as chamadas quebravam silenciosamente.
+function toast(msg,ms){
+  let t=document.getElementById('gc-toast');
+  if(!t){ t=document.createElement('div'); t.id='gc-toast'; document.body.appendChild(t); }
+  t.textContent=String(msg||'');
+  t.classList.add('on');
+  clearTimeout(t._h);
+  t._h=setTimeout(()=>t.classList.remove('on'), ms||2600);
+}
+
+// Barra fixa da fila — vive FORA da seção de pendentes (que é sanfona e fica
+// no fim da página), senão quem insere pelo modal do calendário não a encontra.
+function rpDock(){
+  let d=document.getElementById('rp-dock');
+  if(!RP_OK||!RP.length){ if(d)d.remove(); return; }
+  if(!d){ d=document.createElement('div'); d.id='rp-dock'; document.body.appendChild(d); }
+  const aberto=d.classList.contains('open');
+  d.className=aberto?'open':'';
+  d.innerHTML='<div class="rp-dock-h">'
+    +'<span class="rp-dock-t">📋 '+RP.length+' reprogramação(ões) na fila</span>'
+    +'<button class="rp-btn sec" onclick="rpVer()">'+(aberto?'Ocultar':'Ver linhas')+'</button>'
+    +'<button class="rp-btn" onclick="rpCopiar()">Copiar tudo</button>'
+    +'<button class="rp-btn sec" onclick="rpLimpar()">Limpar</button>'
+    +'</div><div class="rp-prev">'+esc(rpTexto())+'</div>';
+}
+function rpVer(){
+  const d=document.getElementById('rp-dock');
+  if(d){ d.classList.toggle('open'); rpDock(); }
+}
 function rpLimpar(){
   if(!RP_OK)return;
   if(!RP.length)return;
@@ -1773,7 +1840,7 @@ function renderPendentes(){
     if(S.fOS&&String(p.os_id||'').indexOf(S.fOS)<0)return false;
     return true;
   });
-  if(!pend.length){box.innerHTML='';return;}
+  if(!pend.length){box.innerHTML='';rpDock();return;}   // fila continua visível no dock
   const wasOpen=(document.getElementById('pend-wrap')||{}).classList&&document.getElementById('pend-wrap').classList.contains('open');
   const byU={};pend.forEach(p=>{(byU[p.usina]=byU[p.usina]||[]).push(p);});
   let inner='';
@@ -1798,13 +1865,10 @@ function renderPendentes(){
       +ctrl+'</div>';});
     inner+='</div>';
   });
-  // barra da fila de reprogramação (somente admin)
+  // dica de onde colar (a fila em si vive no dock fixo — ver rpDock)
   let rpBar='';
   if(RP_OK&&RP.length){
-    rpBar='<div class="rp-bar"><span class="rp-bar-t">📋 '+RP.length+' reprogramação(ões) na fila</span>'
-      +'<button class="rp-btn" onclick="event.stopPropagation();rpCopiar()">Copiar tudo</button>'
-      +'<button class="rp-btn sec" onclick="event.stopPropagation();rpLimpar()">Limpar</button>'
-      +'<div class="rp-prev">'+esc(rpTexto())+'</div>'
+    rpBar='<div class="rp-bar"><span class="rp-bar-t">📋 '+RP.length+' na fila — use a barra verde no rodapé para copiar</span>'
       +'<span class="pend-desc" style="width:100%">Cole no <b>PCM_Painel</b> → aba <b>Observações</b> (próxima semana) ou <b>Semana Atual</b> (semana em andamento), e gere a programação.</span></div>';
   }
   box.innerHTML='<div class="pend-wrap'+(wasOpen?' open':'')+'" id="pend-wrap">'
@@ -1813,6 +1877,7 @@ function renderPendentes(){
         ?'OS planejadas que estouraram a capacidade do dia — escolha dia/turno e clique <b>+ Inserir</b> para montar as observações.'
         :'OS planejadas que não couberam na capacidade da semana — serão reprogramadas pela equipe de PCM da Grid Co.')+'</div></div>'
     +'<span class="pend-chev">&#9662;</span></div><div class="pend-body">'+rpBar+inner+'</div></div>';
+  rpDock();
 }
 
 // === SUGESTOES PCM ===
@@ -3249,9 +3314,11 @@ function openMod(usina, dia, os_id){
     }
     html += '<select id="rpm-dia">'+_op(_dias)+'</select>'
          +  '<select id="rpm-turno">'+_op(_tur)+'</select>'
-         +  '<button class="rp-add" onclick="rpAddModal(\''+_esc(_oid)+'\')">+ Inserir</button>';
-    html += '</div><div class="rpm-status" id="rpm-status">Escolha o dia e clique <b>+ Inserir</b>. '
-         +  'A linha entra na fila; copie na seção <b>“Não couberam na semana”</b> e cole no PCM_Painel.</div></div>';
+         +  '<button class="rp-add" onclick="rpAddModal(\''+_esc(_oid)+'\')">+ Inserir</button>'
+         +  '<button class="rp-out" onclick="rpTirar(\''+_esc(_oid)+'\','+_tks.length+')">✕ Tirar da semana</button>';
+    html += '</div><div class="rpm-status" id="rpm-status">Escolha o dia e clique <b>+ Inserir</b> para mover, '
+         +  'ou <b>✕ Tirar da semana</b> para remover a OS. A linha entra na fila — copie na barra verde do rodapé '
+         +  'e cole no PCM_Painel.</div></div>';
   }
   // Ações
   const link = osRow.linkFracttal || (osRow.os_id ? ('https://app.fracttal.com/oneview/general/items?folio='+osRow.os_id) : '');
