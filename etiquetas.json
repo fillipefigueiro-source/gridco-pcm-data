@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-04T15:11:07Z",
+  "geradoEm": "2026-08-04T17:12:26Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-03 .. 2026-08-09",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3428,
-        "emAberto": 10,
+        "total": 3432,
+        "emAberto": 13,
         "atrasadas": 5,
-        "concluidas30d": 555,
-        "concluidas7d": 135,
-        "naSemanaCorrente": 34
+        "concluidas30d": 556,
+        "concluidas7d": 136,
+        "naSemanaCorrente": 38
       },
       "mttr": {
-        "horas": 10.69,
-        "label": "10h 41min",
-        "amostra": 555
+        "horas": 10.67,
+        "label": "10h 40min",
+        "amostra": 556
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W32",
-          "criadas": 34,
-          "finalizadas": 33
+          "criadas": 38,
+          "finalizadas": 34
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3428,
-            "emAberto": 10
+            "total": 3432,
+            "emAberto": 13
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 10,
+      "total": 13,
       "atrasadas": 5,
       "porStatus": {
-        "naoIniciada": 7,
-        "emProgresso": 0,
-        "pausada": 3,
+        "naoIniciada": 9,
+        "emProgresso": 2,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 10
+        "(sem equipe)": 13
       },
       "oss": [
         {
@@ -182,13 +182,68 @@
           "atrasada": true
         },
         {
+          "osId": "10639",
+          "ativo": "Inversor 8.2 Sungrow     { JCD100-INVR8.2 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "James Chaves ",
+          "status": "Em progresso",
+          "tarefa": "[Inversor 8.2] - Religamento do Inversor 8.2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-04",
+          "dataCriacao": "2026-08-04",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10638",
+          "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento UFV Embu Guaçu 3",
+          "criticidade": "",
+          "dataProgramada": "2026-08-04",
+          "dataCriacao": "2026-08-04",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10637",
+          "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Thiago Morais ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
+          "criticidade": "",
+          "dataProgramada": "2026-08-04",
+          "dataCriacao": "2026-08-04",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "10617",
           "ativo": "Cabine 2 Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100-CABN2 }",
           "equipe": "",
           "responsavel": "Railson Gomes ",
           "criadoPor": "Raphael Vitoriano",
           "supervisor": "Railson Gomes ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Cabine 2] - Religamento da Cabine 2",
           "criticidade": "",
           "dataProgramada": "2026-08-04",
@@ -293,6 +348,26 @@
           "horasAteAbrir": 0,
           "horasAteFechar": 24.0,
           "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10640",
+          "ativo": "Thopen - Salto Pirapora 3 - SP    São Paulo Brasil { THPN-SPP300 }",
+          "equipe": "",
+          "responsavel": "Cícero  Willian",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Cícero  Willian",
+          "status": "Finalizada",
+          "tarefa": "Religamento Remoto UFV Salto Pirapora 3",
+          "criticidade": "",
+          "dataProgramada": "2026-08-04",
+          "dataCriacao": "2026-08-04",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
           "atrasada": false
         },
         {
@@ -3254,34 +3329,14 @@
           "horasAteFechar": 24.0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10105",
-          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "[Timon 2][Cabine 5] - Religamento da Cabine 5",
-          "criticidade": "",
-          "dataProgramada": "2026-07-26",
-          "dataCriacao": "2026-07-26",
-          "dataInicial": "2026-07-26",
-          "dataFinal": "2026-07-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1627,
+      "historicoTotal": 1628,
       "subClassificacao": {
-        "remoto": 734,
-        "local": 2694,
+        "remoto": 735,
+        "local": 2697,
         "remotoEmAberto": 3,
-        "localEmAberto": 7,
+        "localEmAberto": 10,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -3452,8 +3507,8 @@
         ],
         "medHorasAbrir": 7.2,
         "medHorasFechar": 2.7,
-        "amostraAbrir": 725,
-        "amostraFechar": 724,
+        "amostraAbrir": 726,
+        "amostraFechar": 725,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3469,7 +3524,7 @@
           },
           {
             "nome": "CíceroWillian",
-            "total": 33
+            "total": 34
           },
           {
             "nome": "Juliana Cândido",
@@ -3504,16 +3559,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 621,
-        "emAberto": 107,
-        "atrasadas": 42,
-        "concluidas30d": 108,
-        "concluidas7d": 32,
+        "emAberto": 105,
+        "atrasadas": 41,
+        "concluidas30d": 110,
+        "concluidas7d": 34,
         "naSemanaCorrente": 27
       },
       "mttr": {
-        "horas": 291.56,
-        "label": "12d 3h",
-        "amostra": 108
+        "horas": 303.27,
+        "label": "12d 15h",
+        "amostra": 110
       },
       "tendencia4Semanas": [
         {
@@ -3534,7 +3589,7 @@
         {
           "semana": "W32",
           "criadas": 0,
-          "finalizadas": 14
+          "finalizadas": 16
         }
       ],
       "topOfensores": {
@@ -3542,7 +3597,7 @@
           {
             "nome": "(sem equipe)",
             "total": 621,
-            "emAberto": 107
+            "emAberto": 105
           }
         ],
         "responsaveis": [
@@ -3573,16 +3628,16 @@
           }
         ]
       },
-      "total": 107,
-      "atrasadas": 42,
+      "total": 105,
+      "atrasadas": 41,
       "porStatus": {
-        "naoIniciada": 94,
+        "naoIniciada": 93,
         "emProgresso": 2,
-        "pausada": 11,
+        "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 107
+        "(sem equipe)": 105
       },
       "oss": [
         {
@@ -3619,24 +3674,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 360.0,
-          "atrasada": true
-        },
-        {
-          "osId": "7104",
-          "ativo": "Cabine 1  Petrolina  Pernambuco Brasil { PTL300-CABN1 }",
-          "equipe": "",
-          "responsavel": "Rodrigo  Silva",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Rodrigo  Silva",
-          "status": "pausado",
-          "tarefa": "[Axis] - MPA - Cabine de Média Tensão",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "2026-05-26",
-          "dataInicial": "2026-06-15",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 480.0,
           "atrasada": true
         },
         {
@@ -4472,23 +4509,6 @@
           "supervisor": "Anderson  Parente",
           "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "10123",
-          "ativo": "Transformador 1      { PTB100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Thiago Morais ",
-          "status": "Não Iniciada",
-          "tarefa": "[Axis] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-07-27",
@@ -5525,6 +5545,25 @@
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-22",
+          "dataCriacao": "2026-07-27",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 192.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10123",
+          "ativo": "Transformador 1      { PTB100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[Axis] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-07-27",
           "dataInicial": "2026-08-04",
           "dataFinal": "2026-08-04",
@@ -8249,28 +8288,9 @@
           "horasAteAbrir": 120.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "7582",
-          "ativo": "Ar Condicionado      { THPN-NVL100-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "2026-06-09",
-          "dataInicial": "2026-06-09",
-          "dataFinal": "2026-06-09",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 275
+      "historicoTotal": 277
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9655,16 +9675,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 380,
-        "emAberto": 75,
-        "atrasadas": 71,
-        "concluidas30d": 245,
-        "concluidas7d": 72,
+        "emAberto": 68,
+        "atrasadas": 64,
+        "concluidas30d": 252,
+        "concluidas7d": 79,
         "naSemanaCorrente": 38
       },
       "mttr": {
-        "horas": 126.86,
-        "label": "5d 6h",
-        "amostra": 245
+        "horas": 130.67,
+        "label": "5d 10h",
+        "amostra": 252
       },
       "tendencia4Semanas": [
         {
@@ -9685,7 +9705,7 @@
         {
           "semana": "W32",
           "criadas": 3,
-          "finalizadas": 9
+          "finalizadas": 16
         }
       ],
       "topOfensores": {
@@ -9693,7 +9713,7 @@
           {
             "nome": "(sem equipe)",
             "total": 380,
-            "emAberto": 75
+            "emAberto": 68
           }
         ],
         "responsaveis": [
@@ -9724,16 +9744,16 @@
           }
         ]
       },
-      "total": 75,
-      "atrasadas": 71,
+      "total": 68,
+      "atrasadas": 64,
       "porStatus": {
         "naoIniciada": 53,
-        "emProgresso": 8,
+        "emProgresso": 1,
         "pausada": 14,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 75
+        "(sem equipe)": 68
       },
       "oss": [
         {
@@ -10283,132 +10303,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 216.0,
-          "atrasada": true
-        },
-        {
-          "osId": "10004",
-          "ativo": "Tracker 08.107 Brametal Bi-motor    { CPP100-ETKR8.107 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "[Capitão Poço 1][Tracker 08.107] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-24",
-          "dataInicial": "2026-07-30",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "atrasada": true
-        },
-        {
-          "osId": "10003",
-          "ativo": "Tracker 07.107 Brametal Bi-motor    { CPP100-ETKR7.107 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "[Capitão Poço 1][Tracker 07.107] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-24",
-          "dataInicial": "2026-08-04",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 264.0,
-          "atrasada": true
-        },
-        {
-          "osId": "10002",
-          "ativo": "Tracker 07.106 Brametal Bi-motor    { CPP100-ETKR7.106 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "[Capitão Poço 1][Tracker 07.106] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-24",
-          "dataInicial": "2026-07-30",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "atrasada": true
-        },
-        {
-          "osId": "10001",
-          "ativo": "Tracker 07.103 Brametal Bi-motor    { CPP100-ETKR7.103 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "[Capitão Poço 1][Tracker 07.103] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-24",
-          "dataInicial": "2026-07-30",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "atrasada": true
-        },
-        {
-          "osId": "10000",
-          "ativo": "Tracker 06.104 Brametal Bi-motor    { CPP100-ETKR6.104 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "[Capitão Poço 1][Tracker 06.104] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-24",
-          "dataInicial": "2026-07-30",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "atrasada": true
-        },
-        {
-          "osId": "9999",
-          "ativo": "Tracker 05.106 Brametal Bi-motor    { CPP100-ETKR5.106 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "[Capitão Poço 1][Tracker 05.106] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-24",
-          "dataInicial": "2026-07-30",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "atrasada": true
-        },
-        {
-          "osId": "9998",
-          "ativo": "Tracker 02.105 Brametal Bi-motor    { CPP100-ETKR2.105 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "[Capitão Poço 1][Tracker 02.105] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-24",
-          "dataInicial": "2026-07-30",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -11052,6 +10946,139 @@
           "linkFracttal": "",
           "horasAteAbrir": 96.0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10004",
+          "ativo": "Tracker 08.107 Brametal Bi-motor    { CPP100-ETKR8.107 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Capitão Poço 1][Tracker 08.107] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "2026-07-30",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
+          "horasAteFechar": 120.0,
+          "atrasada": false
+        },
+        {
+          "osId": "10003",
+          "ativo": "Tracker 07.107 Brametal Bi-motor    { CPP100-ETKR7.107 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Capitão Poço 1][Tracker 07.107] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 264.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10002",
+          "ativo": "Tracker 07.106 Brametal Bi-motor    { CPP100-ETKR7.106 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Capitão Poço 1][Tracker 07.106] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "2026-07-30",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
+          "horasAteFechar": 120.0,
+          "atrasada": false
+        },
+        {
+          "osId": "10001",
+          "ativo": "Tracker 07.103 Brametal Bi-motor    { CPP100-ETKR7.103 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Capitão Poço 1][Tracker 07.103] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "2026-07-30",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
+          "horasAteFechar": 120.0,
+          "atrasada": false
+        },
+        {
+          "osId": "10000",
+          "ativo": "Tracker 06.104 Brametal Bi-motor    { CPP100-ETKR6.104 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Capitão Poço 1][Tracker 06.104] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "2026-07-30",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
+          "horasAteFechar": 120.0,
+          "atrasada": false
+        },
+        {
+          "osId": "9999",
+          "ativo": "Tracker 05.106 Brametal Bi-motor    { CPP100-ETKR5.106 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Capitão Poço 1][Tracker 05.106] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "2026-07-30",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
+          "horasAteFechar": 120.0,
+          "atrasada": false
+        },
+        {
+          "osId": "9998",
+          "ativo": "Tracker 02.105 Brametal Bi-motor    { CPP100-ETKR2.105 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Capitão Poço 1][Tracker 02.105] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "2026-07-30",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
+          "horasAteFechar": 120.0,
           "atrasada": false
         },
         {
@@ -13734,82 +13761,6 @@
           "atrasada": false
         },
         {
-          "osId": "9486",
-          "ativo": "Inversor 1.4 Huawei SUN2000-250KTL-H1    { SPP300-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizada",
-          "tarefa": "[Salto Pirapora] [Inversor 1.4] - Análise Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-16",
-          "dataCriacao": "2026-07-15",
-          "dataInicial": "2026-07-17",
-          "dataFinal": "2026-07-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9476",
-          "ativo": "Inversor 1.5 Huawei     { THPN-NVL200-INVR1.5 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Nova Londrina 2][Inversor 1.5] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-07-15",
-          "dataCriacao": "2026-07-15",
-          "dataInicial": "2026-07-17",
-          "dataFinal": "2026-07-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9447",
-          "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { THPN-SCB100-INVR1.9 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizada",
-          "tarefa": "[Sorocaba 1][Inversor 1.9] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-04-30",
-          "dataCriacao": "2026-07-14",
-          "dataInicial": "2026-07-17",
-          "dataFinal": "2026-07-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9446",
-          "ativo": "Inversor 1.10 Huawei SUN2000-250KTL-H1    { THPN-SCB100-INVR1.10 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizada",
-          "tarefa": "[Sorocaba 1][Inversor 1.10] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-04-30",
-          "dataCriacao": "2026-07-14",
-          "dataInicial": "2026-07-17",
-          "dataFinal": "2026-07-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9503",
           "ativo": "Tracker 48.100 STI STI-H250    { THPN-VRT200-ETKR48.100 }",
           "equipe": "",
@@ -13827,66 +13778,9 @@
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "9485",
-          "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { BES100-INVR1.8 }",
-          "equipe": "",
-          "responsavel": "Rodolfo  Oliveira",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Rodolfo  Oliveira",
-          "status": "Finalizada",
-          "tarefa": "[Boa Esperança do Sul 1 e 2][Inversor 1.8] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-07-15",
-          "dataCriacao": "2026-07-15",
-          "dataInicial": "2026-07-16",
-          "dataFinal": "2026-07-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9484",
-          "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { BES100-INVR1.9 }",
-          "equipe": "",
-          "responsavel": "Rodolfo  Oliveira",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Rodolfo  Oliveira",
-          "status": "Finalizada",
-          "tarefa": "[Boa Esperança do Sul 1 e 2][Inversor 1.9] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-07-11",
-          "dataCriacao": "2026-07-15",
-          "dataInicial": "2026-07-16",
-          "dataFinal": "2026-07-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9468",
-          "ativo": "Cabos CC      { THPN-TPZ100-INFE1-CBCC }",
-          "equipe": "",
-          "responsavel": "Eduardo Souza",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Eduardo Souza",
-          "status": "Finalizada",
-          "tarefa": "[Matão 02-Topázio][Cabos CC] - Verificar quantidade de strings por inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-15",
-          "dataCriacao": "2026-07-15",
-          "dataInicial": "2026-07-16",
-          "dataFinal": "2026-07-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 270
+      "historicoTotal": 277
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14963,13 +14857,65 @@
   },
   "ossPublicas": [
     {
+      "osId": "10639",
+      "ativo": "Inversor 8.2 Sungrow     { JCD100-INVR8.2 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "James Chaves ",
+      "status": "Em progresso",
+      "tarefa": "[Inversor 8.2] - Religamento do Inversor 8.2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-04",
+      "dataCriacao": "2026-08-04",
+      "dataInicial": "2026-08-04",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
+      "osId": "10638",
+      "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento UFV Embu Guaçu 3",
+      "criticidade": "",
+      "dataProgramada": "2026-08-04",
+      "dataCriacao": "2026-08-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "10637",
+      "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Thiago Morais ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
+      "criticidade": "",
+      "dataProgramada": "2026-08-04",
+      "dataCriacao": "2026-08-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "10617",
       "ativo": "Cabine 2 Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100-CABN2 }",
       "equipe": "",
       "responsavel": "Railson Gomes ",
       "criadoPor": "Raphael Vitoriano",
       "supervisor": "Railson Gomes ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Cabine 2] - Religamento da Cabine 2",
       "criticidade": "",
       "dataProgramada": "2026-08-04",
@@ -16662,22 +16608,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10123",
-      "ativo": "Transformador 1      { PTB100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Thiago Morais ",
-      "status": "Não Iniciada",
-      "tarefa": "[Axis] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-07-27",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "10046",
       "ativo": "Tracker 109.100 STI Norland     { TIM100-ETKR109.100 }",
       "equipe": "",
@@ -16725,125 +16655,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "10004",
-      "ativo": "Tracker 08.107 Brametal Bi-motor    { CPP100-ETKR8.107 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "[Capitão Poço 1][Tracker 08.107] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-07-20",
-      "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-07-30",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
-    },
-    {
-      "osId": "10003",
-      "ativo": "Tracker 07.107 Brametal Bi-motor    { CPP100-ETKR7.107 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "[Capitão Poço 1][Tracker 07.107] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-07-20",
-      "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-08-04",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 264.0
-    },
-    {
-      "osId": "10002",
-      "ativo": "Tracker 07.106 Brametal Bi-motor    { CPP100-ETKR7.106 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "[Capitão Poço 1][Tracker 07.106] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-07-20",
-      "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-07-30",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
-    },
-    {
-      "osId": "10001",
-      "ativo": "Tracker 07.103 Brametal Bi-motor    { CPP100-ETKR7.103 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "[Capitão Poço 1][Tracker 07.103] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-07-20",
-      "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-07-30",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
-    },
-    {
-      "osId": "10000",
-      "ativo": "Tracker 06.104 Brametal Bi-motor    { CPP100-ETKR6.104 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "[Capitão Poço 1][Tracker 06.104] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-07-20",
-      "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-07-30",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
-    },
-    {
-      "osId": "9999",
-      "ativo": "Tracker 05.106 Brametal Bi-motor    { CPP100-ETKR5.106 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "[Capitão Poço 1][Tracker 05.106] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-07-20",
-      "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-07-30",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
-    },
-    {
-      "osId": "9998",
-      "ativo": "Tracker 02.105 Brametal Bi-motor    { CPP100-ETKR2.105 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "[Capitão Poço 1][Tracker 02.105] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-07-20",
-      "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-07-30",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
     },
     {
       "osId": "9972",
@@ -18145,23 +17956,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "7104",
-      "ativo": "Cabine 1  Petrolina  Pernambuco Brasil { PTL300-CABN1 }",
-      "equipe": "",
-      "responsavel": "Rodrigo  Silva",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Rodrigo  Silva",
-      "status": "pausado",
-      "tarefa": "[Axis] - MPA - Cabine de Média Tensão",
-      "criticidade": "",
-      "dataProgramada": "2026-06-15",
-      "dataCriacao": "2026-05-26",
-      "dataInicial": "2026-06-15",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 480.0
-    },
-    {
       "osId": "7103",
       "ativo": "Cabine 1  Petrolina  Pernambuco Brasil { PTL200-CABN1 }",
       "equipe": "",
@@ -18213,6 +18007,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "10640",
+      "ativo": "Thopen - Salto Pirapora 3 - SP    São Paulo Brasil { THPN-SPP300 }",
+      "equipe": "",
+      "responsavel": "Cícero  Willian",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Cícero  Willian",
+      "status": "Finalizada",
+      "tarefa": "Religamento Remoto UFV Salto Pirapora 3",
+      "criticidade": "",
+      "dataProgramada": "2026-08-04",
+      "dataCriacao": "2026-08-04",
+      "dataInicial": "2026-08-04",
+      "dataFinal": "2026-08-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "10626",
       "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
@@ -21145,29 +20959,10 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "10327",
-      "ativo": "Inversor 1.1 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.1] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-05",
-      "dataCriacao": "2026-07-29",
-      "dataInicial": "2026-07-31",
-      "dataFinal": "2026-07-31",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2284,
-  "totalGeral": 4625,
+  "historicoTotal": 2294,
+  "totalGeral": 4629,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
