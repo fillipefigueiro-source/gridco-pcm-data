@@ -245,15 +245,30 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .calkpi .klabel{font-size:10px;color:#8a8a94;text-transform:uppercase;letter-spacing:.04em;font-weight:700}
 .calkpi .kvalue{font-size:26px;font-weight:800;line-height:1.15;margin-top:3px}
 .calkpi .kfoot{font-size:10.5px;color:#9a9aa4;margin-top:2px}
-.mp-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px 12px;
-  align-items:end;background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 14px}
+.mp-bar{background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 14px}
+.mp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px 12px;align-items:end}
 .mp-bar .gp-fg{display:flex;flex-direction:column;gap:4px;min-width:0}
 .mp-bar .gp-fg>label{font-size:10px;font-weight:700;color:#8a8a94;text-transform:uppercase;letter-spacing:.05em}
+.mp-linha2{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px;
+  margin-top:11px;padding-top:11px;border-top:1px solid var(--line)}
+.mp-per{flex:1 1 380px;min-width:0}
+.mp-drow{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.mp-drow input[type=date]{padding:6px 8px;border:1px solid #d0d0d8;border-radius:7px;font-size:12px;
+  font-family:inherit;background:#fff;color:#191528;min-width:132px}
+.mp-drow input[type=date].on{border-color:#A2CA40;box-shadow:0 0 0 2px rgba(162,202,64,.20)}
+.mp-ate{font-size:11px;color:#8a8a94}
+.mp-pre{display:flex;gap:5px;flex-wrap:wrap;margin-left:4px}
+.mp-pre button{font-size:11px;font-family:inherit;background:#f6f5fa;border:1px solid #e2dff0;color:#4a4560;
+  border-radius:13px;padding:4px 10px;cursor:pointer;white-space:nowrap}
+.mp-pre button:hover{background:#ece9f6}
+.mp-pre button.on{background:#1C1F3B;border-color:#1C1F3B;color:#fff;font-weight:600}
+.mp-acoes{display:flex;align-items:center;gap:14px;margin-left:auto}
+.mp-acoes .rp-btn{margin:0}
 .mp-cbx{display:flex;align-items:center;gap:6px;font-size:11.5px;color:#191528;
   text-transform:none;letter-spacing:0;font-weight:600;white-space:nowrap;cursor:pointer}
-.mp-acoes{gap:7px}
-.mp-acoes .rp-btn{width:100%;justify-content:center}
-@media(max-width:700px){.mp-bar{grid-template-columns:1fr 1fr}}
+.mp-cbx input{width:14px;height:14px;accent-color:#1C1F3B;margin:0;cursor:pointer}
+@media(max-width:700px){.mp-grid{grid-template-columns:1fr 1fr}
+  .mp-acoes{margin-left:0;width:100%;justify-content:space-between}}
 .mp-chips{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0 0}
 .mp-chip{font-size:11.5px;background:#f1eff7;color:#2a2440;border-radius:14px;padding:3px 11px;cursor:pointer;border:1px solid #e2dff0}
 .mp-chip:hover{background:#e6e2f2}
@@ -1914,6 +1929,7 @@ const MP_MS={cluster:{f:'cluster',lbl:'Todos'},usina:{f:'usina_curta',lbl:'Todas
   situacao:{f:'_sit',lbl:'Todas'},prioridade:{f:'prioridade',lbl:'Todas'}};
 const MP_SEL={cluster:new Set(),usina:new Set(),tipo:new Set(),cliente:new Set(),
   situacao:new Set(),prioridade:new Set()};
+const MP_D={de:'',ate:'',pre:''};                 // filtro de data prevista (aaaa-mm-dd)
 const MP_SITS=['Concluída','Em andamento','Não iniciada','Atrasada'];
 const MP_MESES=['janeiro','fevereiro','março','abril','maio','junho','julho',
                 'agosto','setembro','outubro','novembro','dezembro'];
@@ -1973,7 +1989,15 @@ function mpBate(r,key){
   for(const x of s){if(String(x).toLowerCase()===v)return true;}
   return false;
 }
-const mpVisBase=r=>['cluster','usina','tipo','cliente','prioridade'].every(k=>mpBate(r,k));
+// data prevista: intervalo (ISO aaaa-mm-dd, comparação de string funciona)
+function mpBateData(r){
+  const {de,ate}=MP_D; if(!de&&!ate)return true;
+  const p=r.prevista||''; if(!p)return false;
+  if(de&&p<de)return false;
+  if(ate&&p>ate)return false;
+  return true;
+}
+const mpVisBase=r=>['cluster','usina','tipo','cliente','prioridade'].every(k=>mpBate(r,k))&&mpBateData(r);
 const mpFilt=()=>(MP?MP.manut:[]).filter(r=>mpVisBase(r)&&mpBate(r,'situacao'));
 
 // ---- componente multi-seleção (reusa o CSS .gp-ms) ----
@@ -2053,26 +2077,66 @@ function mpFiltros(){
       +'<div class="gp-ms" id="mp-ms-'+k+'"><button type="button" class="gp-ms-btn" onclick="mpMsToggle(\''+k+'\')">'
       +'<span class="gp-ms-lbl" id="mp-ms-lbl-'+k+'">'+MP_MS[k].lbl+'</span><span class="gp-ms-cv">▾</span></button>'
       +'<div class="gp-ms-pop" id="mp-ms-pop-'+k+'"></div></div></div>';
-    box.innerHTML= ms('cluster','Equipe Cluster')+ms('usina','Usina')
+    const pre=(k,r)=>'<button type="button" id="mp-pre-'+k+'" onclick="mpPreset(\''+k+'\')">'+r+'</button>';
+    box.innerHTML= '<div class="mp-grid">'
+      + ms('cluster','Equipe Cluster')+ms('usina','Usina')
       + ms('tipo','Tipo de manutenção')+ms('cliente','Cliente')
       + ms('situacao','Situação')+ms('prioridade','Prioridade')
-      + '<div class="gp-fg mp-acoes">'
+      + '</div><div class="mp-linha2">'
+      + '<div class="gp-fg mp-per"><label>Data prevista</label><div class="mp-drow">'
+      + '<input type="date" id="mp-d-de" onchange="mpData(\'de\',this.value)" title="a partir de">'
+      + '<span class="mp-ate">até</span>'
+      + '<input type="date" id="mp-d-ate" onchange="mpData(\'ate\',this.value)" title="até">'
+      + '<span class="mp-pre">'+pre('mes','Este mês')+pre('tri','Próx. 3 meses')
+      + pre('ano','Este ano')+pre('venc','Já venceu')+'</span></div></div>'
+      + '<div class="mp-acoes">'
       + '<label class="mp-cbx"><input type="checkbox" id="mp-f-conc"'+(MP_F.concluidas?' checked':'')
       + ' onchange="MP_F.concluidas=this.checked;renderMpas()"> mostrar concluídas</label>'
-      + '<button class="rp-btn sec" onclick="mpLimpar()">↺ Limpar filtros</button></div>';
+      + '<button class="rp-btn sec" onclick="mpLimpar()">↺ Limpar filtros</button></div></div>';
     box.dataset.built='1';
   }
   Object.keys(MP_MS).forEach(k=>{mpMsLabel(k);});
+  mpDataUI();
+}
+// ---- período (data prevista) ----
+const mpISO=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+function mpData(campo,v){MP_D[campo]=v||'';MP_D.pre='';mpDataUI();renderMpas();}
+function mpPreset(k){
+  if(MP_D.pre===k){MP_D.de='';MP_D.ate='';MP_D.pre='';}
+  else{
+    const h=new Date(); h.setHours(0,0,0,0);
+    if(k==='mes'){MP_D.de=mpISO(new Date(h.getFullYear(),h.getMonth(),1));
+                  MP_D.ate=mpISO(new Date(h.getFullYear(),h.getMonth()+1,0));}
+    else if(k==='tri'){MP_D.de=mpISO(h);MP_D.ate=mpISO(new Date(h.getFullYear(),h.getMonth()+3,h.getDate()));}
+    else if(k==='ano'){MP_D.de=h.getFullYear()+'-01-01';MP_D.ate=h.getFullYear()+'-12-31';}
+    else if(k==='venc'){MP_D.de='';MP_D.ate=mpISO(new Date(h.getTime()-864e5));}
+    MP_D.pre=k;
+  }
+  mpDataUI(); renderMpas();
+}
+function mpDataUI(){
+  const de=document.getElementById('mp-d-de'), at=document.getElementById('mp-d-ate');
+  if(!de)return;
+  de.value=MP_D.de; at.value=MP_D.ate;
+  de.classList.toggle('on',!!MP_D.de); at.classList.toggle('on',!!MP_D.ate);
+  ['mes','tri','ano','venc'].forEach(k=>{const b=document.getElementById('mp-pre-'+k);
+    if(b)b.classList.toggle('on',MP_D.pre===k);});
 }
 function mpLimpar(){
   Object.keys(MP_SEL).forEach(k=>MP_SEL[k].clear());
-  MP_F.concluidas=false;
+  MP_F.concluidas=false; MP_D.de='';MP_D.ate='';MP_D.pre='';
   const cb=document.getElementById('mp-f-conc'); if(cb)cb.checked=false;
   Object.keys(MP_MS).forEach(k=>{mpBuildPop(k);mpMsLabel(k);});
-  renderMpas();
+  mpDataUI(); renderMpas();
 }
 function mpChips(){
   const out=[];
+  if(MP_D.de||MP_D.ate){
+    const br=s=>s?s.split('-').reverse().join('/'):'';
+    const rot=MP_D.de&&MP_D.ate?br(MP_D.de)+' a '+br(MP_D.ate)
+             :MP_D.de?'a partir de '+br(MP_D.de):'até '+br(MP_D.ate);
+    out.push('<span class="mp-chip" onclick="mpData(\'de\',\'\');mpData(\'ate\',\'\')">📅 '+rot+' ✕</span>');
+  }
   Object.keys(MP_MS).forEach(k=>MP_SEL[k].forEach(v=>{
     out.push('<span class="mp-chip" onclick="mpTiraChip(\''+k+'\',\''+esc(String(v)).replace(/'/g,"\\'")+'\')">'
       +esc(v)+' ✕</span>');
