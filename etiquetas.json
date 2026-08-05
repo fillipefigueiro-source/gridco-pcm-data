@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-05T15:40:12Z",
+  "geradoEm": "2026-08-05T17:19:34Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-03 .. 2026-08-09",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3455,
-        "emAberto": 9,
+        "total": 3456,
+        "emAberto": 10,
         "atrasadas": 6,
         "concluidas30d": 569,
         "concluidas7d": 137,
-        "naSemanaCorrente": 61
+        "naSemanaCorrente": 62
       },
       "mttr": {
         "horas": 9.94,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W32",
-          "criadas": 61,
+          "criadas": 62,
           "finalizadas": 59
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3455,
-            "emAberto": 9
+            "total": 3456,
+            "emAberto": 10
           }
         ],
         "responsaveis": [
@@ -68,8 +68,8 @@
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 158,
-            "emAberto": 1
+            "total": 159,
+            "emAberto": 2
           },
           {
             "nome": "Italo  Lustosa",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 9,
+      "total": 10,
       "atrasadas": 6,
       "porStatus": {
-        "naoIniciada": 7,
+        "naoIniciada": 8,
         "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 9
+        "(sem equipe)": 10
       },
       "oss": [
         {
@@ -198,6 +198,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "10685",
+          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Wesllen  Castro",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-05",
+          "dataCriacao": "2026-08-05",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "10682",
@@ -3260,9 +3278,9 @@
       "historicoTotal": 1636,
       "subClassificacao": {
         "remoto": 735,
-        "local": 2720,
+        "local": 2721,
         "remotoEmAberto": 3,
-        "localEmAberto": 6,
+        "localEmAberto": 7,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -3557,8 +3575,8 @@
       "total": 100,
       "atrasadas": 40,
       "porStatus": {
-        "naoIniciada": 89,
-        "emProgresso": 2,
+        "naoIniciada": 88,
+        "emProgresso": 3,
         "pausada": 9,
         "verificacao": 0
       },
@@ -4143,14 +4161,15 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-03",
           "dataCriacao": "2026-07-28",
-          "dataInicial": "",
+          "dataInicial": "2026-08-05",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "atrasada": true
         },
         {
@@ -9512,8 +9531,8 @@
       "atrasadas": 58,
       "porStatus": {
         "naoIniciada": 48,
-        "emProgresso": 0,
-        "pausada": 14,
+        "emProgresso": 1,
+        "pausada": 13,
         "verificacao": 0
       },
       "porEquipe": {
@@ -10543,7 +10562,7 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "Ana Barros ",
           "supervisor": "Felipe  Lima",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Coleta e análise de dados de geração",
           "criticidade": "",
           "dataProgramada": "2026-08-05",
@@ -14518,6 +14537,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "10685",
+      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Wesllen  Castro",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-05",
+      "dataCriacao": "2026-08-05",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "10682",
       "ativo": "Inversor 1.8 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.8 }",
       "equipe": "",
@@ -14592,7 +14628,7 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "Ana Barros ",
       "supervisor": "Felipe  Lima",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Coleta e análise de dados de geração",
       "criticidade": "",
       "dataProgramada": "2026-08-05",
@@ -15307,14 +15343,15 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-03",
       "dataCriacao": "2026-07-28",
-      "dataInicial": "",
+      "dataInicial": "2026-08-05",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 192.0
     },
     {
       "osId": "10284",
@@ -20388,7 +20425,7 @@
     }
   ],
   "historicoTotal": 2307,
-  "totalGeral": 4662,
+  "totalGeral": 4663,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
