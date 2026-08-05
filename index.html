@@ -1234,7 +1234,9 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       </div>
       <div id="mp-lock" class="mp-lock" style="display:none">
         <div class="mp-lock-t">&#128274; Conte&uacute;do protegido</div>
-        <div class="mp-lock-d">Os dados de MPAS ficam <b>cifrados</b> no servidor. Digite a senha de admin para abrir.</div>
+        <div class="mp-lock-d">Os dados de MPAS ficam <b>cifrados</b> no reposit&oacute;rio. Normalmente a aba abre sozinha
+          com a senha do seu login &mdash; se pediu aqui, o <code>mpas.json</code> foi gerado com outra senha.
+          Regere com <code>py -3 gerar_mpas_json.py</code> usando a sua.</div>
         <div class="mp-lock-row">
           <input type="password" id="mp-pwd" placeholder="Senha de admin" autocomplete="off">
           <button class="rp-btn" onclick="mpAbrir()">Abrir</button>
@@ -1658,6 +1660,9 @@ async function doLogin() {
   if(h!==exp){err.style.display='block';err.textContent='Senha incorreta.';return;}
   err.style.display='none';
   S.isAdmin=key===ADMIN_ID; S.fEquipe=''; S.fTipo=''; S.fUsina=''; S.fSupervisor=''; S.fStatus=''; S.viewCli=null;
+  // Guarda a senha do admin s\u00f3 na SESS\u00c3O, para a aba Gest\u00e3o MPAS decifrar o
+  // mpas.json sem pedir de novo. Nunca vai para localStorage nem para o servidor.
+  if(S.isAdmin){ try{ sessionStorage.setItem('gc_mp_k', s); }catch(e){} }
   if(S.isAdmin){S.user='Admin';launch('Grid Co. \u2014 Todos os Clientes',true);}
   else {
     const aliasName=LOGIN_ALIASES[key]||null;
