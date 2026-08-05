@@ -280,6 +280,21 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .ttag.mps{background:#E0E7FF;color:#3730A3}
 .calempty{padding:26px;text-align:center;color:#8a8a94;font-size:13px;border:1px dashed var(--line);border-radius:11px}
 @media(max-width:900px){.calkpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* tabela dentro da árvore Cluster ▸ Usina ▸ Tipo */
+.mp-tblwrap{overflow-x:auto}
+.mp-tbl{width:100%;border-collapse:collapse;font-size:12px}
+.mp-tbl th{text-align:left;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:#8a8a94;
+  font-weight:700;padding:7px 10px;border-bottom:1px solid var(--line);background:#faf9f5;white-space:nowrap}
+.mp-tbl td{padding:8px 10px;border-bottom:1px solid #f0ece6;color:#191528;vertical-align:top}
+.mp-tbl tbody tr{cursor:pointer}
+.mp-tbl tbody tr:hover{background:#faf9f5}
+.mp-tbl tbody tr:last-child td{border-bottom:none}
+.mp-tbl .mp-os{font-family:monospace;font-weight:700;color:#5E8C1A;white-space:nowrap}
+.mp-tbl .mp-dt{white-space:nowrap;font-variant-numeric:tabular-nums}
+.mp-tbl .mp-eq{min-width:190px;font-size:11.5px;line-height:1.45}
+.mp-tbl .mp-ap{min-width:130px;font-size:11.5px;line-height:1.45;color:#55506a}
+.mp-tbl .mp-ob{min-width:230px;font-size:11.5px;line-height:1.45;color:#55506a}
+#mp-tree .gp-tip-h .nm{display:flex;align-items:center;gap:6px}
 .rp-out{font-size:11px;font-weight:700;padding:4px 9px;border:1px solid #d9a39d;
   border-radius:6px;background:#fff;color:#b23b2e;cursor:pointer;white-space:nowrap}
 .rp-out:hover{background:#fdf1f0}
@@ -1248,7 +1263,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="mp-bar" id="mp-filtros"></div>
         <div class="mp-chips" id="mp-chips"></div>
         <div class="mp-hint" id="mp-hint"></div>
-        <div class="monthGrid" id="mp-grid"></div>
+        <div id="mp-tree"></div>
         <div class="mp-foot" id="mp-foot"></div>
       </div>
     </div>
@@ -1886,7 +1901,7 @@ function rpFallback(txt){
 // repositório (que é público): sem a senha de admin, o arquivo é ilegível.
 const MP_URL='mpas.json';
 let MP_PACK=null, MP=null;                       // pacote cifrado / dados abertos
-const MP_F={cliente:null,tipo:null,cluster:null,situacao:null,concluidas:false};
+const MP_F={cliente:null,tipo:null,cluster:null,usina:null,situacao:null,concluidas:false};
 const MP_SITS=['Concluída','Em andamento','Não iniciada','Atrasada'];
 const MP_MESES=['janeiro','fevereiro','março','abril','maio','junho','julho',
                 'agosto','setembro','outubro','novembro','dezembro'];
@@ -1936,7 +1951,8 @@ function mpSit(r){
   const cls={'Concluída':'green','Em andamento':'blue','Não iniciada':'amber','Atrasada':'red'}[k]||'gray';
   return {k,cls};
 }
-const mpVisBase=r=>(!MP_F.cliente||r.cliente===MP_F.cliente)&&(!MP_F.tipo||r.tipo===MP_F.tipo)&&(!MP_F.cluster||r.cluster===MP_F.cluster);
+const mpVisBase=r=>(!MP_F.cliente||r.cliente===MP_F.cliente)&&(!MP_F.tipo||r.tipo===MP_F.tipo)
+  &&(!MP_F.cluster||r.cluster===MP_F.cluster)&&(!MP_F.usina||(r.usina_curta||r.usina)===MP_F.usina);
 const mpFilt=()=>(MP?MP.manut:[]).filter(r=>mpVisBase(r)&&(!MP_F.situacao||mpSit(r).k===MP_F.situacao));
 const mpTipoCls=t=>t==='MPA'?'mpa':t==='MPS'?'mps':'';
 
@@ -1969,69 +1985,126 @@ function mpFiltros(){
     +'<option value="">Todos</option>'
     +opts.map(o=>'<option'+(val===o?' selected':'')+'>'+esc(o)+'</option>').join('')+'</select></label>';
   document.getElementById('mp-filtros').innerHTML=
-     sel('mp-f-cli','Cliente',uniq('cliente'),MP_F.cliente)
-   + sel('mp-f-tip','Tipo',uniq('tipo'),MP_F.tipo)
-   + sel('mp-f-clu','Cluster',uniq('cluster'),MP_F.cluster)
+     sel('mp-f-clu','Equipe Cluster',uniq('cluster'),MP_F.cluster)
+   + sel('mp-f-usi','Usina',uniq('usina_curta'),MP_F.usina)
+   + sel('mp-f-tip','Tipo de manutenção',uniq('tipo'),MP_F.tipo)
+   + sel('mp-f-cli','Cliente',uniq('cliente'),MP_F.cliente)
    + '<label>Situação<select id="mp-f-sit"><option value="">Todas</option>'
    + MP_SITS.map(s=>'<option'+(MP_F.situacao===s?' selected':'')+'>'+s+'</option>').join('')+'</select></label>'
    + '<label style="flex-direction:row;align-items:center;gap:6px;text-transform:none;font-size:11.5px;color:#191528">'
    + '<input type="checkbox" id="mp-f-conc"'+(MP_F.concluidas?' checked':'')+'> mostrar concluídas</label>'
    + '<button class="rp-btn sec" onclick="mpLimpar()">↺ Limpar</button>';
   const on=(id,k)=>{const e=document.getElementById(id);if(e)e.onchange=()=>{MP_F[k]=e.value||null;renderMpas();};};
-  on('mp-f-cli','cliente'); on('mp-f-tip','tipo'); on('mp-f-clu','cluster'); on('mp-f-sit','situacao');
+  on('mp-f-cli','cliente'); on('mp-f-tip','tipo'); on('mp-f-clu','cluster');
+  on('mp-f-usi','usina'); on('mp-f-sit','situacao');
   const cb=document.getElementById('mp-f-conc');
   if(cb)cb.onchange=()=>{MP_F.concluidas=cb.checked;renderMpas();};
 }
 function mpLimpar(){Object.keys(MP_F).forEach(k=>MP_F[k]=(k==='concluidas'?false:null));renderMpas();}
 function mpChips(){
   const c=[];
-  if(MP_F.cliente)c.push(['cliente',MP_F.cliente]);
-  if(MP_F.tipo)c.push(['tipo',MP_F.tipo]);
   if(MP_F.cluster)c.push(['cluster',MP_F.cluster]);
+  if(MP_F.usina)c.push(['usina',MP_F.usina]);
+  if(MP_F.tipo)c.push(['tipo',MP_F.tipo]);
+  if(MP_F.cliente)c.push(['cliente',MP_F.cliente]);
   if(MP_F.situacao)c.push(['situacao',MP_F.situacao]);
   document.getElementById('mp-chips').innerHTML=c.length
     ? c.map(([k,v])=>'<span class="mp-chip" onclick="MP_F.'+k+'=null;renderMpas()">'+esc(v)+' ✕</span>').join('')
     : '';
 }
+// ---- árvore Cluster ▸ Usina ▸ Tipo (mesma navegação da Gestão PCM) ----
+let MP_TIP=[];                                    // listas por nó de tipo (lazy)
+function mpTog(el){el.parentElement.classList.toggle('gp-open');}
+function mpTogTip(el,idx){
+  const wrap=el.parentElement, body=wrap.querySelector('.gp-tip-b');
+  wrap.classList.toggle('gp-open');
+  if(body.dataset.filled==='1')return;
+  body.innerHTML=mpTabela(MP_TIP[idx]||[]);
+  body.dataset.filled='1';
+  body.querySelectorAll('tr[data-k]').forEach(tr=>tr.onclick=()=>mpModal(tr.dataset.k));
+}
+function mpTabela(list){
+  if(!list.length)return '<div class="gp-nores">—</div>';
+  const nl=s=>esc(String(s||'')).replace(/\r?\n/g,'<br>');
+  const linhas=list.map(r=>{
+    const s=mpSit(r), x=mpBd(r);
+    return '<tr data-k="'+esc((r.os||'')+'|'+r.usina+'|'+r.tipo+'|'+r.prevista)+'">'
+      +'<td class="mp-os">'+(r.os?('#'+esc(r.os)):'—')+'</td>'
+      +'<td><span class="spill '+s.cls+'">'+s.k+'</span>'
+        +(x?' <span class="bdtag">'+x.fin+'/'+x.total+'</span>':'')+'</td>'
+      +'<td class="mp-dt">'+(r.prevista?esc(mpDataBR(r.prevista)):'—')+'</td>'
+      +'<td class="mp-eq">'+(r.equipe?nl(r.equipe):'—')+'</td>'
+      +'<td class="mp-ap">'+(r.apoio?nl(r.apoio):'—')+'</td>'
+      +'<td class="mp-ob">'+(r.obs?nl(r.obs):'—')+'</td></tr>';
+  }).join('');
+  return '<div class="mp-tblwrap"><table class="mp-tbl"><thead><tr>'
+    +'<th>OS ID</th><th>Situação</th><th>Data Prevista</th>'
+    +'<th>Equipe</th><th>Apoio na equipe</th><th>Observação</th>'
+    +'</tr></thead><tbody>'+linhas+'</tbody></table></div>';
+}
+const mpDataBR=iso=>{const p=String(iso||'').split('-');return p.length===3?(p[2]+'/'+p[1]+'/'+p[0]):iso;};
+
 function renderMpas(){
   if(!MP)return;
   document.getElementById('mp-lock').style.display='none';
   document.getElementById('mp-body').style.display='';
   mpFiltros(); mpChips(); mpKpis();
   const mostrarConc=MP_F.concluidas||MP_F.situacao==='Concluída';
-  const rows=mpFilt().filter(r=>r.prevista&&r.prevista>=MP_DESDE&&(mostrarConc||mpSit(r).k!=='Concluída'));
+  const rows=mpFilt().filter(r=>mostrarConc||mpSit(r).k!=='Concluída');
   document.getElementById('mp-hint').textContent=
-    (mostrarConc?'Todas as manutenções':'Não finalizadas')+', pela data prevista (desde jan/2026) · clique num item para ver as tarefas do Fracttal';
-  const g={};
-  rows.forEach(r=>{const k=r.prevista.slice(0,7);(g[k]=g[k]||[]).push(r);});
-  const keys=Object.keys(g).sort(), grid=document.getElementById('mp-grid');
-  if(!keys.length){
-    grid.innerHTML='<div class="calempty" style="grid-column:1/-1">Nenhuma manutenção com os filtros atuais.</div>';
-  }else{
-    const hoje=new Date(), cur=hoje.getFullYear()+'-'+String(hoje.getMonth()+1).padStart(2,'0');
-    grid.innerHTML=keys.map(k=>{
-      const [y,m]=k.split('-');
-      const list=g[k].slice().sort((a,b)=>a.prevista.localeCompare(b.prevista)||a.usina.localeCompare(b.usina,'pt'));
-      const items=list.map(r=>{
-        const s=mpSit(r), x=mpBd(r);
-        return '<div class="mitem" data-k="'+esc((r.os||'')+'|'+r.usina+'|'+r.tipo+'|'+r.prevista)+'">'
-          +'<div class="day">'+r.prevista.slice(8,10)+'/'+m+'</div><div class="info">'
-          +'<div class="u">'+esc(r.usina_curta||r.usina)+(x?'<span class="bdtag">'+x.fin+'/'+x.total+'</span>':'')+'</div>'
-          +'<div class="m"><span class="ttag '+mpTipoCls(r.tipo)+'">'+esc(r.tipo)+'</span>'
-          +'<span>· '+esc(r.cluster||'—')+' ·</span><span class="spill '+s.cls+'">'+s.k+'</span></div>'
-          +'</div></div>';
-      }).join('');
-      return '<div class="mcard'+(k===cur?' cur':'')+'"><div class="mhead"><h3>'+MP_MESES[+m-1]+' '+y
-        +'</h3><span class="cnt">'+list.length+'</span></div><div class="mlist">'+items+'</div></div>';
+    (mostrarConc?'Todas as manutenções':'Não finalizadas')
+    +' · agrupadas por Equipe Cluster ▸ Usina ▸ Tipo · clique numa linha para ver as tarefas do Fracttal';
+  // monta a árvore
+  const tree={};
+  rows.forEach(r=>{
+    const cl=r.cluster||'(sem cluster)', us=r.usina_curta||r.usina||'(sem usina)', tp=r.tipo||'—';
+    const C=tree[cl]=tree[cl]||{usinas:{},n:0};
+    const U=C.usinas[us]=C.usinas[us]||{tipos:{},n:0};
+    (U.tipos[tp]=U.tipos[tp]||[]).push(r);
+    C.n++; U.n++;
+  });
+  MP_TIP=[];
+  const box=document.getElementById('mp-tree');
+  // "(sem cluster)" vai para o fim — é pendência de cadastro, não um cluster real
+  const semC='(sem cluster)';
+  const keys=Object.keys(tree).sort((a,b)=>
+    (a===semC)-(b===semC) || a.localeCompare(b,'pt-BR'));
+  if(!keys.length){ box.innerHTML='<div class="calempty">Nenhuma manutenção com os filtros atuais.</div>'; }
+  else{
+    const atr=l=>l.filter(r=>mpSit(r).k==='Atrasada').length;
+    const chip=n=>n>0?' <span class="gp-badge-t" style="background:#d94f3d;color:#fff">⏱ '+n+'</span>':'';
+    box.innerHTML=keys.map(cl=>{
+      const C=tree[cl];
+      const nAtrC=Object.values(C.usinas).flatMap(u=>Object.values(u.tipos)).flat().filter(r=>mpSit(r).k==='Atrasada').length;
+      let h='<div class="gp-cli"><div class="gp-cli-h" onclick="mpTog(this)"><span class="nm">'+esc(cl)
+        +'</span><span style="display:flex;align-items:center;gap:8px"><span class="gp-badge">'+C.n+'</span>'
+        +chip(nAtrC)+'<span class="gp-chev">▾</span></span></div><div class="gp-cli-b">';
+      Object.keys(C.usinas).sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(us=>{
+        const U=C.usinas[us];
+        const nAtrU=Object.values(U.tipos).flat().filter(r=>mpSit(r).k==='Atrasada').length;
+        h+='<div class="gp-usi"><div class="gp-usi-h" onclick="mpTog(this)"><span class="nm">'+esc(us)
+          +'</span><span style="display:flex;align-items:center;gap:8px"><span class="gp-badge-d">'+U.n+'</span>'
+          +chip(nAtrU)+'<span class="gp-chev-s">▾</span></span></div><div class="gp-usi-b">';
+        Object.keys(U.tipos).sort().forEach(tp=>{
+          const list=U.tipos[tp].slice().sort((a,b)=>String(a.prevista||'').localeCompare(String(b.prevista||'')));
+          const idx=MP_TIP.push(list)-1;
+          h+='<div class="gp-tip"><div class="gp-tip-h" onclick="mpTogTip(this,'+idx+')">'
+            +'<span class="nm"><span class="ttag '+mpTipoCls(tp)+'">'+esc(tp)+'</span></span>'
+            +'<span style="display:flex;align-items:center;gap:6px"><span class="gp-badge-t">'+list.length+'</span>'
+            +chip(atr(list))+'<span class="gp-chev-s">▾</span></span></div>'
+            +'<div class="gp-tip-b" data-filled="0"></div></div>';
+        });
+        h+='</div></div>';
+      });
+      return h+'</div></div>';
     }).join('');
-    grid.querySelectorAll('.mitem').forEach(it=>it.onclick=()=>mpModal(it.dataset.k));
   }
   const nBD=MP.bd?Object.keys(MP.bd).length:0;
   document.getElementById('mp-foot').textContent=
     MP.manut.length+' manutenções da aba "MPAS" (Gerencial - PCM_2026_R00.xlsx) · '
     +nBD+' OS cruzadas com o Fracttal · dados de '+(MP.geradoEm||'—');
   const sub=document.getElementById('mp-sub');
-  if(sub)sub.textContent='MPA e MPS por usina · planilha Gerencial + API Fracttal';
+  if(sub)sub.textContent='MPA e MPS por Equipe Cluster · planilha Gerencial + API Fracttal';
 }
 function mpModal(key){
   const [os,usina,tipo,prev]=String(key).split('|');
