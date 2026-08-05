@@ -230,6 +230,56 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .rpm-box{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .rpm-box select{font-size:12px;padding:5px 7px;border:1px solid #e2d9cc;border-radius:7px;background:#fff;color:#191528;cursor:pointer;max-width:100%}
 .rpm-box #rpm-alvo{flex:1 1 100%;min-width:0}
+/* ===== Gestão MPAS (aba nova) — cores do painel ===== */
+.mp-lock{background:#fff;border:1px solid var(--line);border-left:4px solid #b45309;border-radius:11px;padding:18px 20px;margin:14px 0;max-width:560px}
+.mp-lock-t{font-weight:800;font-size:14px;color:#191528;margin-bottom:4px}
+.mp-lock-d{font-size:12.5px;color:#6b7280;line-height:1.5;margin-bottom:11px}
+.mp-lock-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.mp-lock-row input{flex:1;min-width:190px;padding:8px 11px;border:1px solid #d0d0d8;border-radius:8px;font-size:13px;font-family:inherit}
+.mp-lock-err{font-size:12px;color:#b23b2e;margin-top:8px;min-height:16px}
+.calkpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:14px 0}
+.calkpi{background:#fff;border-radius:10px;padding:13px 16px;border:1px solid var(--line);position:relative;overflow:hidden;cursor:pointer;transition:box-shadow .15s,transform .15s}
+.calkpi:hover{box-shadow:0 4px 14px rgba(24,21,43,.10);transform:translateY(-1px)}
+.calkpi.sel{box-shadow:0 0 0 2px #191528 inset}
+.calkpi .top{height:3px;position:absolute;top:0;left:0;right:0}
+.calkpi .klabel{font-size:10px;color:#8a8a94;text-transform:uppercase;letter-spacing:.04em;font-weight:700}
+.calkpi .kvalue{font-size:26px;font-weight:800;line-height:1.15;margin-top:3px}
+.calkpi .kfoot{font-size:10.5px;color:#9a9aa4;margin-top:2px}
+.mp-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 14px}
+.mp-bar label{display:flex;flex-direction:column;gap:4px;font-size:10px;font-weight:700;color:#8a8a94;text-transform:uppercase;letter-spacing:.05em}
+.mp-bar select{padding:7px 9px;border:1px solid #d0d0d8;border-radius:7px;font-size:12px;font-family:inherit;background:#fff;color:#191528;min-width:130px}
+.mp-chips{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0 0}
+.mp-chip{font-size:11.5px;background:#f1eff7;color:#2a2440;border-radius:14px;padding:3px 11px;cursor:pointer;border:1px solid #e2dff0}
+.mp-chip:hover{background:#e6e2f2}
+.mp-hint{font-size:11.5px;color:#8a8a94;margin:12px 0 8px}
+.mp-foot{font-size:11px;color:#9a9aa4;margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
+.monthGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:14px}
+.mcard{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.mcard.cur{border-color:#A2CA40;box-shadow:0 0 0 2px rgba(162,202,64,.30)}
+.mhead{padding:11px 14px;background:#1C1F3B;color:#fff;display:flex;align-items:center;justify-content:space-between}
+.mhead h3{font-size:14px;font-weight:700;text-transform:capitalize;margin:0}
+.mhead .cnt{font-size:12px;background:rgba(162,202,64,.30);padding:2px 9px;border-radius:14px;color:#fff;font-weight:700}
+.mcard.cur .mhead{background:#5E8C1A}
+.mlist{max-height:320px;overflow-y:auto}
+.mitem{padding:9px 14px;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.mitem:last-child{border-bottom:none}
+.mitem:hover{background:#faf9f5}
+.mitem .day{font-weight:700;font-size:12px;color:#191528;min-width:40px}
+.mitem .info{flex:1;min-width:0}
+.mitem .info .u{font-weight:600;font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mitem .info .m{font-size:11px;color:#8a8a94;margin-top:2px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.mitem .bdtag{font-size:10px;color:#fff;background:#1C1F3B;padding:1px 6px;border-radius:6px;margin-left:6px;font-weight:700}
+.spill{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10.5px;font-weight:600;white-space:nowrap}
+.spill.green{background:#DCFCE7;color:#15803D}
+.spill.blue{background:#DBEAFE;color:#1D4ED8}
+.spill.amber{background:#FEF3C7;color:#92400E}
+.spill.red{background:#FEE2E2;color:#B91C1C}
+.spill.gray{background:#f1f1f4;color:#8a8a94}
+.ttag{display:inline-block;padding:2px 8px;border-radius:7px;font-size:10.5px;font-weight:700;white-space:nowrap}
+.ttag.mpa{background:#FEF3C7;color:#92400E}
+.ttag.mps{background:#E0E7FF;color:#3730A3}
+.calempty{padding:26px;text-align:center;color:#8a8a94;font-size:13px;border:1px dashed var(--line);border-radius:11px}
+@media(max-width:900px){.calkpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .rp-out{font-size:11px;font-weight:700;padding:4px 9px;border:1px solid #d9a39d;
   border-radius:6px;background:#fff;color:#b23b2e;cursor:pointer;white-space:nowrap}
 .rp-out:hover{background:#fdf1f0}
@@ -801,6 +851,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       <button class="tip-tab on" data-topv="semana" onclick="setTopView('semana')">&#128197; Programa&ccedil;&atilde;o Semanal</button>
       <button class="tip-tab" data-topv="religamentos" onclick="setTopView('religamentos')">&#9889; Religamentos <span class="tip-tab-cnt" id="tcnt-religamentos">0</span></button>
       <button class="tip-tab" data-topv="gestaoPcm" onclick="setTopView('gestaoPcm')">&#128203; Gest&atilde;o PCM <span class="tip-tab-cnt" id="tcnt-gestaoPcm">0</span></button>
+      <button class="tip-tab" data-topv="gestaoMpas" onclick="setTopView('gestaoMpas')">&#128506; Gest&atilde;o MPAS <span class="tip-tab-cnt" id="tcnt-gestaoMpas">0</span></button>
       <button class="tip-tab" data-topv="chamadosGarantia" onclick="setTopView('chamadosGarantia')">&#128737; Garantia <span class="tip-tab-cnt" id="tcnt-chamadosGarantia">0</span></button>
       <button class="tip-tab" data-topv="performance" onclick="setTopView('performance')">&#128200; Performance <span class="tip-tab-cnt" id="tcnt-performance">0</span></button>
       <button class="tip-tab" data-topv="engenharia" onclick="setTopView('engenharia')">&#9881; Engenharia <span class="tip-tab-cnt" id="tcnt-engenharia">0</span></button>
@@ -1164,6 +1215,40 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       <div id="gp-tree"><div class="gp-nores">Carregando&hellip;</div></div>
       <div id="gp-confiab"></div>
       <div id="gp-mttr-cluster"></div>
+    </div>
+
+    <!-- ===== GESTÃO MPAS (MPA/MPS por usina) ===== -->
+    <div class="tip-screen np" id="s-gestaompas">
+      <div class="gp-hero">
+        <div class="gp-hero-top">
+          <div>
+            <h2>&#128506; Gest&atilde;o MPAS</h2>
+            <div class="gp-sub" id="mp-sub">Carregando&hellip;</div>
+          </div>
+          <div class="gp-kpis">
+            <div class="gp-kpi"><div class="v" id="mp-k-tot">0</div><div class="l">MPA + MPS</div></div>
+            <div class="gp-kpi"><div class="v" id="mp-k-and">0</div><div class="l">Em andamento</div></div>
+            <div class="gp-kpi warn"><div class="v" id="mp-k-atr">0</div><div class="l">Atrasadas</div></div>
+          </div>
+        </div>
+      </div>
+      <div id="mp-lock" class="mp-lock" style="display:none">
+        <div class="mp-lock-t">&#128274; Conte&uacute;do protegido</div>
+        <div class="mp-lock-d">Os dados de MPAS ficam <b>cifrados</b> no servidor. Digite a senha de admin para abrir.</div>
+        <div class="mp-lock-row">
+          <input type="password" id="mp-pwd" placeholder="Senha de admin" autocomplete="off">
+          <button class="rp-btn" onclick="mpAbrir()">Abrir</button>
+        </div>
+        <div class="mp-lock-err" id="mp-err"></div>
+      </div>
+      <div id="mp-body" style="display:none">
+        <div class="calkpis" id="mp-kpis"></div>
+        <div class="mp-bar" id="mp-filtros"></div>
+        <div class="mp-chips" id="mp-chips"></div>
+        <div class="mp-hint" id="mp-hint"></div>
+        <div class="monthGrid" id="mp-grid"></div>
+        <div class="mp-foot" id="mp-foot"></div>
+      </div>
     </div>
 
     <!-- FILTER BAR -->
@@ -1603,17 +1688,20 @@ function launch(label,isAdmin) {
     sel.value=S.viewCli||'';
   } else sw.style.display='none';
   // Task #130: esconder abas restritas pra não-admin
-  const adminOnly = ['religamentos','emVerificacao','sugestoesIA'];
+  const adminOnly = ['religamentos','emVerificacao','sugestoesIA','gestaoMpas'];
   adminOnly.forEach(slug=>{
     const btn = document.querySelector('.tip-tab[data-topv="'+slug+'"]');
     if(btn) btn.style.display = isAdmin ? '' : 'none';
   });
   // Se user não-admin estava em aba restrita, volta pra Programação Semanal
+  let _voltouAba=false;
   if(!isAdmin && adminOnly.indexOf(S.topView)>=0){
     S.topView = 'semana';
     try{localStorage.setItem('gc_topv','semana');}catch(e){}
+    _voltouAba=true;   // só trocar a variável não esconde a tela restrita
   }
   show('s-briefing');
+  if(_voltouAba && typeof setTopView==='function') setTopView('semana');
   buildWeekChips(); buildFilters(); render();
   // Auto-refresh a cada CONFIG.REFRESH_MS (5 min) - dispara depois do login
   startTimer();
@@ -1788,6 +1876,210 @@ function rpFallback(txt){
   try{document.execCommand('copy');toast('✓ Copiado');}catch(e){toast('Selecione e copie o texto abaixo');}
   document.body.removeChild(ta);
 }
+// ===== GESTÃO MPAS ============================================================
+// Dados de MPA/MPS (planilha Gerencial + Fracttal). O mpas.json fica CIFRADO no
+// repositório (que é público): sem a senha de admin, o arquivo é ilegível.
+const MP_URL='mpas.json';
+let MP_PACK=null, MP=null;                       // pacote cifrado / dados abertos
+const MP_F={cliente:null,tipo:null,cluster:null,situacao:null,concluidas:false};
+const MP_SITS=['Concluída','Em andamento','Não iniciada','Atrasada'];
+const MP_MESES=['janeiro','fevereiro','março','abril','maio','junho','julho',
+                'agosto','setembro','outubro','novembro','dezembro'];
+const MP_DESDE='2026-01-01';
+
+async function mpCarregarPack(){
+  if(MP_PACK)return MP_PACK;
+  const r=await fetch(MP_URL+'?t='+Date.now(),{cache:'no-store'});
+  if(!r.ok)throw new Error('mpas.json não encontrado');
+  MP_PACK=await r.json();
+  return MP_PACK;
+}
+// AES-GCM + PBKDF2 — espelha o gerar_mpas_json.py
+async function mpDecifrar(pack,senha){
+  const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+  const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(senha),'PBKDF2',false,['deriveKey']);
+  const key=await crypto.subtle.deriveKey(
+    {name:'PBKDF2',salt:b64(pack.salt),iterations:pack.iter,hash:'SHA-256'},
+    km,{name:'AES-GCM',length:256},false,['decrypt']);
+  const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(pack.iv)},key,b64(pack.ct));
+  return JSON.parse(new TextDecoder().decode(plain));
+}
+async function mpAbrir(){
+  const inp=document.getElementById('mp-pwd'), err=document.getElementById('mp-err');
+  const senha=(inp&&inp.value||'').trim();
+  if(!senha){err.textContent='Digite a senha.';return;}
+  err.textContent='Abrindo…';
+  try{
+    const pack=await mpCarregarPack();
+    MP=await mpDecifrar(pack,senha);
+    try{sessionStorage.setItem('gc_mp_k',senha);}catch(e){}   // sessão only
+    err.textContent='';
+    renderMpas();
+  }catch(e){ err.textContent='Senha incorreta (ou arquivo indisponível).'; }
+}
+// ---- helpers de situação (mesma regra do site MPAS) ----
+const mpBd=r=>{const o=String(r.os||'').trim();return (o&&MP&&MP.bd&&MP.bd[o])?MP.bd[o]:null;};
+function mpSit(r){
+  const b=mpBd(r), hoje=new Date().toISOString().slice(0,10);
+  let k=null;
+  if(b&&b.sit) k=b.sit;
+  else{
+    const st=(r.status||'').toLowerCase();
+    k = st.startsWith('finaliz')?'Concluída' : st.startsWith('em execu')?'Em andamento':'Não iniciada';
+  }
+  if(k!=='Concluída'&&r.prevista&&r.prevista<hoje) k='Atrasada';
+  const cls={'Concluída':'green','Em andamento':'blue','Não iniciada':'amber','Atrasada':'red'}[k]||'gray';
+  return {k,cls};
+}
+const mpVisBase=r=>(!MP_F.cliente||r.cliente===MP_F.cliente)&&(!MP_F.tipo||r.tipo===MP_F.tipo)&&(!MP_F.cluster||r.cluster===MP_F.cluster);
+const mpFilt=()=>(MP?MP.manut:[]).filter(r=>mpVisBase(r)&&(!MP_F.situacao||mpSit(r).k===MP_F.situacao));
+const mpTipoCls=t=>t==='MPA'?'mpa':t==='MPS'?'mps':'';
+
+function mpKpis(){
+  const base=(MP?MP.manut:[]).filter(mpVisBase), c={};
+  MP_SITS.forEach(s=>c[s]=0);
+  base.forEach(r=>{const k=mpSit(r).k;c[k]=(c[k]||0)+1;});
+  const cards=[
+    {l:'Total filtrado',v:mpFilt().length,f:'MPAs e MPSs',c:'#191528',s:null},
+    {l:'Concluídas',v:c['Concluída'],f:'clique para filtrar',c:'#15803D',s:'Concluída'},
+    {l:'Em andamento',v:c['Em andamento'],f:'clique para filtrar',c:'#1D4ED8',s:'Em andamento'},
+    {l:'Não iniciadas',v:c['Não iniciada'],f:'clique para filtrar',c:'#92400E',s:'Não iniciada'},
+    {l:'Atrasadas',v:c['Atrasada'],f:'clique para filtrar',c:'#B91C1C',s:'Atrasada'}];
+  const box=document.getElementById('mp-kpis');
+  box.innerHTML=cards.map(k=>'<div class="calkpi'+(MP_F.situacao&&MP_F.situacao===k.s?' sel':'')+'" data-sit="'+(k.s||'')+'">'
+    +'<div class="top" style="background:'+k.c+'"></div><div class="klabel">'+k.l+'</div>'
+    +'<div class="kvalue" style="color:'+k.c+'">'+k.v+'</div><div class="kfoot">'+k.f+'</div></div>').join('');
+  box.querySelectorAll('.calkpi').forEach(el=>el.onclick=()=>{
+    const s=el.dataset.sit; if(!s)return;
+    MP_F.situacao=(MP_F.situacao===s)?null:s; renderMpas();
+  });
+  // KPIs do cabeçalho
+  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+  set('mp-k-tot',base.length); set('mp-k-and',c['Em andamento']||0); set('mp-k-atr',c['Atrasada']||0);
+  const t=document.getElementById('tcnt-gestaoMpas'); if(t)t.textContent=base.length;
+}
+function mpFiltros(){
+  const uniq=k=>[...new Set((MP?MP.manut:[]).map(r=>r[k]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt'));
+  const sel=(id,lbl,opts,val)=>'<label>'+lbl+'<select id="'+id+'">'
+    +'<option value="">Todos</option>'
+    +opts.map(o=>'<option'+(val===o?' selected':'')+'>'+esc(o)+'</option>').join('')+'</select></label>';
+  document.getElementById('mp-filtros').innerHTML=
+     sel('mp-f-cli','Cliente',uniq('cliente'),MP_F.cliente)
+   + sel('mp-f-tip','Tipo',uniq('tipo'),MP_F.tipo)
+   + sel('mp-f-clu','Cluster',uniq('cluster'),MP_F.cluster)
+   + '<label>Situação<select id="mp-f-sit"><option value="">Todas</option>'
+   + MP_SITS.map(s=>'<option'+(MP_F.situacao===s?' selected':'')+'>'+s+'</option>').join('')+'</select></label>'
+   + '<label style="flex-direction:row;align-items:center;gap:6px;text-transform:none;font-size:11.5px;color:#191528">'
+   + '<input type="checkbox" id="mp-f-conc"'+(MP_F.concluidas?' checked':'')+'> mostrar concluídas</label>'
+   + '<button class="rp-btn sec" onclick="mpLimpar()">↺ Limpar</button>';
+  const on=(id,k)=>{const e=document.getElementById(id);if(e)e.onchange=()=>{MP_F[k]=e.value||null;renderMpas();};};
+  on('mp-f-cli','cliente'); on('mp-f-tip','tipo'); on('mp-f-clu','cluster'); on('mp-f-sit','situacao');
+  const cb=document.getElementById('mp-f-conc');
+  if(cb)cb.onchange=()=>{MP_F.concluidas=cb.checked;renderMpas();};
+}
+function mpLimpar(){Object.keys(MP_F).forEach(k=>MP_F[k]=(k==='concluidas'?false:null));renderMpas();}
+function mpChips(){
+  const c=[];
+  if(MP_F.cliente)c.push(['cliente',MP_F.cliente]);
+  if(MP_F.tipo)c.push(['tipo',MP_F.tipo]);
+  if(MP_F.cluster)c.push(['cluster',MP_F.cluster]);
+  if(MP_F.situacao)c.push(['situacao',MP_F.situacao]);
+  document.getElementById('mp-chips').innerHTML=c.length
+    ? c.map(([k,v])=>'<span class="mp-chip" onclick="MP_F.'+k+'=null;renderMpas()">'+esc(v)+' ✕</span>').join('')
+    : '';
+}
+function renderMpas(){
+  if(!MP)return;
+  document.getElementById('mp-lock').style.display='none';
+  document.getElementById('mp-body').style.display='';
+  mpFiltros(); mpChips(); mpKpis();
+  const mostrarConc=MP_F.concluidas||MP_F.situacao==='Concluída';
+  const rows=mpFilt().filter(r=>r.prevista&&r.prevista>=MP_DESDE&&(mostrarConc||mpSit(r).k!=='Concluída'));
+  document.getElementById('mp-hint').textContent=
+    (mostrarConc?'Todas as manutenções':'Não finalizadas')+', pela data prevista (desde jan/2026) · clique num item para ver as tarefas do Fracttal';
+  const g={};
+  rows.forEach(r=>{const k=r.prevista.slice(0,7);(g[k]=g[k]||[]).push(r);});
+  const keys=Object.keys(g).sort(), grid=document.getElementById('mp-grid');
+  if(!keys.length){
+    grid.innerHTML='<div class="calempty" style="grid-column:1/-1">Nenhuma manutenção com os filtros atuais.</div>';
+  }else{
+    const hoje=new Date(), cur=hoje.getFullYear()+'-'+String(hoje.getMonth()+1).padStart(2,'0');
+    grid.innerHTML=keys.map(k=>{
+      const [y,m]=k.split('-');
+      const list=g[k].slice().sort((a,b)=>a.prevista.localeCompare(b.prevista)||a.usina.localeCompare(b.usina,'pt'));
+      const items=list.map(r=>{
+        const s=mpSit(r), x=mpBd(r);
+        return '<div class="mitem" data-k="'+esc((r.os||'')+'|'+r.usina+'|'+r.tipo+'|'+r.prevista)+'">'
+          +'<div class="day">'+r.prevista.slice(8,10)+'/'+m+'</div><div class="info">'
+          +'<div class="u">'+esc(r.usina_curta||r.usina)+(x?'<span class="bdtag">'+x.fin+'/'+x.total+'</span>':'')+'</div>'
+          +'<div class="m"><span class="ttag '+mpTipoCls(r.tipo)+'">'+esc(r.tipo)+'</span>'
+          +'<span>· '+esc(r.cluster||'—')+' ·</span><span class="spill '+s.cls+'">'+s.k+'</span></div>'
+          +'</div></div>';
+      }).join('');
+      return '<div class="mcard'+(k===cur?' cur':'')+'"><div class="mhead"><h3>'+MP_MESES[+m-1]+' '+y
+        +'</h3><span class="cnt">'+list.length+'</span></div><div class="mlist">'+items+'</div></div>';
+    }).join('');
+    grid.querySelectorAll('.mitem').forEach(it=>it.onclick=()=>mpModal(it.dataset.k));
+  }
+  const nBD=MP.bd?Object.keys(MP.bd).length:0;
+  document.getElementById('mp-foot').textContent=
+    MP.manut.length+' manutenções da aba "MPAS" (Gerencial - PCM_2026_R00.xlsx) · '
+    +nBD+' OS cruzadas com o Fracttal · dados de '+(MP.geradoEm||'—');
+  const sub=document.getElementById('mp-sub');
+  if(sub)sub.textContent='MPA e MPS por usina · planilha Gerencial + API Fracttal';
+}
+function mpModal(key){
+  const [os,usina,tipo,prev]=String(key).split('|');
+  const r=(MP.manut||[]).find(x=>String(x.os||'')===os&&x.usina===usina&&x.tipo===tipo&&x.prevista===prev);
+  if(!r)return;
+  const b=mpBd(r), s=mpSit(r);
+  const linha=(l,v)=>v?('<div class="mrow"><span class="mk">'+l+'</span><span class="mv">'+esc(String(v))+'</span></div>'):'';
+  let h='<div class="mtop2"><button class="mtop2-close" onclick="closeMod()">✕</button>'
+   +'<div class="mtop2-row"><span class="mtop2-os">'+(r.os?('OS #'+esc(r.os)):'sem OS')+'</span>'
+   +'<span class="spill '+s.cls+'">'+s.k+'</span></div>'
+   +'<div class="mtop2-title">'+esc(r.usina)+'</div>'
+   +'<div class="mtop2-sub">'+esc([r.cliente,r.cluster,r.tipo].filter(Boolean).join(' · '))+'</div></div>';
+  h+='<div class="msec"><div class="msec-t">📅 Datas</div>'
+   + linha('Prevista',r.prevista)+linha('Início',r.inicio)+linha('Término',r.termino)
+   + linha('Ciclo',r.ciclo)+linha('Prioridade',r.prioridade)+'</div>';
+  h+='<div class="msec"><div class="msec-t">👥 Equipe</div>'
+   + linha('Supervisor',r.supervisor)+linha('Apoio',r.apoio)
+   + linha('Status da OS (planilha)',r.status)+linha('Relatório',r.relatorio)+'</div>';
+  if(r.hectare||r.modulos)
+    h+='<div class="msec"><div class="msec-t">🔆 Usina</div>'
+     + linha('Hectares',r.hectare)+linha('Módulos',r.modulos)
+     + linha('Trafos a óleo',r.trafos_oleo)+linha('Análise de óleo',r.oleo)+'</div>';
+  if(b&&b.tasks&&b.tasks.length){
+    h+='<div class="msec"><div class="msec-t">🔧 Tarefas no Fracttal ('+b.fin+'/'+b.total+')</div>';
+    h+='<div class="mtasks">'+b.tasks.map(t=>{
+      const e=(t.estado||'').toLowerCase();
+      const cl=e.startsWith('finaliz')?'green':(e==='em progresso'||e==='pausado')?'blue':'amber';
+      return '<div class="mtask"><span class="spill '+cl+'">'+esc(t.estado||'—')+'</span> '+esc(t.tarefa||'')+'</div>';
+    }).join('')+'</div></div>';
+  }
+  if(r.obs)h+='<div class="msec"><div class="msec-t">📝 Observação</div><div class="mtarefa">'+esc(r.obs)+'</div></div>';
+  const mb=document.querySelector('#modal .mbox');
+  if(mb){mb.innerHTML=h;document.getElementById('modal').classList.add('open');}
+}
+async function initMpas(){
+  const lock=document.getElementById('mp-lock'), body=document.getElementById('mp-body');
+  if(MP){renderMpas();return;}
+  try{
+    const pack=await mpCarregarPack();
+    if(!pack.cifrado){ MP=pack; renderMpas(); return; }        // arquivo em claro
+    const s=sessionStorage.getItem('gc_mp_k');                 // já abriu nesta sessão?
+    if(s){ try{ MP=await mpDecifrar(pack,s); renderMpas(); return; }catch(e){} }
+    lock.style.display=''; body.style.display='none';
+    const sub=document.getElementById('mp-sub');
+    if(sub)sub.textContent=(pack.itens||0)+' manutenções · conteúdo protegido';
+  }catch(e){
+    lock.style.display='none'; body.style.display='';
+    document.getElementById('mp-grid').innerHTML=
+      '<div class="calempty" style="grid-column:1/-1">Não foi possível carregar o mpas.json.<br>'
+      +'Gere com <code>py -3 gerar_mpas_json.py</code> e publique.</div>';
+  }
+}
+
 // toast() era chamado em vários pontos (setAW, saveAdminGo, reprogramação) mas
 // nunca chegou a ser definido — as chamadas quebravam silenciosamente.
 function toast(msg,ms){
@@ -2029,8 +2321,13 @@ function setTopView(v){
   const isGestao=(v==='gestaoPcm');
   const gestaoScreen=document.getElementById('s-gestaopcm');
   if(gestaoScreen){gestaoScreen.classList.toggle('on',isGestao);gestaoScreen.style.display=isGestao?'block':'none';}
+  // Gestão MPAS — só admin (o conteúdo ainda vai cifrado; ver initMpas)
+  const isMpas=(v==='gestaoMpas');
+  const mpasScreen=document.getElementById('s-gestaompas');
+  if(mpasScreen){mpasScreen.classList.toggle('on',isMpas);mpasScreen.style.display=isMpas?'block':'none';}
+  if(isMpas && typeof initMpas==='function') initMpas();
   const tipScreen=document.getElementById('s-tipologias');
-  if(tipScreen){const showKanban=(!isSem && !isSugIA && !isVerif && !isGestao);tipScreen.classList.toggle('on',showKanban);tipScreen.style.display=showKanban?'block':'none';}
+  if(tipScreen){const showKanban=(!isSem && !isSugIA && !isVerif && !isGestao && !isMpas);tipScreen.classList.toggle('on',showKanban);tipScreen.style.display=showKanban?'block':'none';}
   if(isGestao){
     if(!GESTAO_DB){Promise.all([loadGestao(),loadConfiab()]).then(()=>renderGestao());} else {if(!CONFIAB_DB)loadConfiab().then(()=>renderConfiab());renderGestao();}
   } else if(!isSem){renderTipologiaAtual();}
