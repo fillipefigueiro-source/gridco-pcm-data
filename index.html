@@ -245,9 +245,15 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .calkpi .klabel{font-size:10px;color:#8a8a94;text-transform:uppercase;letter-spacing:.04em;font-weight:700}
 .calkpi .kvalue{font-size:26px;font-weight:800;line-height:1.15;margin-top:3px}
 .calkpi .kfoot{font-size:10.5px;color:#9a9aa4;margin-top:2px}
-.mp-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 14px}
-.mp-bar label{display:flex;flex-direction:column;gap:4px;font-size:10px;font-weight:700;color:#8a8a94;text-transform:uppercase;letter-spacing:.05em}
-.mp-bar select{padding:7px 9px;border:1px solid #d0d0d8;border-radius:7px;font-size:12px;font-family:inherit;background:#fff;color:#191528;min-width:130px}
+.mp-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px 12px;
+  align-items:end;background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 14px}
+.mp-bar .gp-fg{display:flex;flex-direction:column;gap:4px;min-width:0}
+.mp-bar .gp-fg>label{font-size:10px;font-weight:700;color:#8a8a94;text-transform:uppercase;letter-spacing:.05em}
+.mp-cbx{display:flex;align-items:center;gap:6px;font-size:11.5px;color:#191528;
+  text-transform:none;letter-spacing:0;font-weight:600;white-space:nowrap;cursor:pointer}
+.mp-acoes{gap:7px}
+.mp-acoes .rp-btn{width:100%;justify-content:center}
+@media(max-width:700px){.mp-bar{grid-template-columns:1fr 1fr}}
 .mp-chips{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0 0}
 .mp-chip{font-size:11.5px;background:#f1eff7;color:#2a2440;border-radius:14px;padding:3px 11px;cursor:pointer;border:1px solid #e2dff0}
 .mp-chip:hover{background:#e6e2f2}
@@ -1901,7 +1907,13 @@ function rpFallback(txt){
 // repositório (que é público): sem a senha de admin, o arquivo é ilegível.
 const MP_URL='mpas.json';
 let MP_PACK=null, MP=null;                       // pacote cifrado / dados abertos
-const MP_F={cliente:null,tipo:null,cluster:null,usina:null,situacao:null,concluidas:false};
+const MP_F={concluidas:false};                    // só o checkbox continua simples
+// multi-seleção (mesmo componente .gp-ms da Gestão PCM)
+const MP_MS={cluster:{f:'cluster',lbl:'Todos'},usina:{f:'usina_curta',lbl:'Todas'},
+  tipo:{f:'tipo',lbl:'Todos'},cliente:{f:'cliente',lbl:'Todos'},
+  situacao:{f:'_sit',lbl:'Todas'},prioridade:{f:'prioridade',lbl:'Todas'}};
+const MP_SEL={cluster:new Set(),usina:new Set(),tipo:new Set(),cliente:new Set(),
+  situacao:new Set(),prioridade:new Set()};
 const MP_SITS=['Concluída','Em andamento','Não iniciada','Atrasada'];
 const MP_MESES=['janeiro','fevereiro','março','abril','maio','junho','julho',
                 'agosto','setembro','outubro','novembro','dezembro'];
@@ -1951,9 +1963,61 @@ function mpSit(r){
   const cls={'Concluída':'green','Em andamento':'blue','Não iniciada':'amber','Atrasada':'red'}[k]||'gray';
   return {k,cls};
 }
-const mpVisBase=r=>(!MP_F.cliente||r.cliente===MP_F.cliente)&&(!MP_F.tipo||r.tipo===MP_F.tipo)
-  &&(!MP_F.cluster||r.cluster===MP_F.cluster)&&(!MP_F.usina||(r.usina_curta||r.usina)===MP_F.usina);
-const mpFilt=()=>(MP?MP.manut:[]).filter(r=>mpVisBase(r)&&(!MP_F.situacao||mpSit(r).k===MP_F.situacao));
+// valor do registro para um campo do filtro ('_sit' é calculado)
+const mpCampo=(r,f)=>f==='_sit'?mpSit(r).k:(r[f]||'');
+// vazio = todos; comparação case-insensitive (o Fracttal varia a grafia)
+function mpBate(r,key){
+  const s=MP_SEL[key];
+  if(!s||!s.size)return true;
+  const v=String(mpCampo(r,MP_MS[key].f)||'').toLowerCase();
+  for(const x of s){if(String(x).toLowerCase()===v)return true;}
+  return false;
+}
+const mpVisBase=r=>['cluster','usina','tipo','cliente','prioridade'].every(k=>mpBate(r,k));
+const mpFilt=()=>(MP?MP.manut:[]).filter(r=>mpVisBase(r)&&mpBate(r,'situacao'));
+
+// ---- componente multi-seleção (reusa o CSS .gp-ms) ----
+function mpMsOptions(key){
+  const f=MP_MS[key].f, byLk=new Map();
+  (MP?MP.manut:[]).forEach(r=>{
+    const v=mpCampo(r,f); if(!v)return;
+    const s=String(v), lk=s.toLowerCase();
+    let m=byLk.get(lk); if(!m){m=new Map();byLk.set(lk,m);}
+    m.set(s,(m.get(s)||0)+1);
+  });
+  const canon=new Map();     // mantém a grafia mais frequente
+  byLk.forEach((m,lk)=>{let b=null,bn=-1;m.forEach((n,s)=>{if(n>bn){bn=n;b=s;}});canon.set(lk,b);});
+  const ok=new Set(canon.keys());
+  [...MP_SEL[key]].forEach(v=>{if(!ok.has(String(v).toLowerCase()))MP_SEL[key].delete(v);});
+  return [...canon.values()].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+}
+function mpMsLabel(key){
+  const s=MP_SEL[key], el=document.getElementById('mp-ms-lbl-'+key); if(!el)return;
+  if(s.size===0){el.textContent=MP_MS[key].lbl;el.classList.remove('sel');}
+  else if(s.size===1){el.textContent=[...s][0];el.classList.add('sel');}
+  else{el.textContent=s.size+' selecionados';el.classList.add('sel');}
+}
+function mpBuildPop(key){
+  const pop=document.getElementById('mp-ms-pop-'+key); if(!pop)return;
+  const opts=mpMsOptions(key);
+  let h='<div class="gp-ms-top"><input class="gp-ms-search" placeholder="buscar…" oninput="mpMsSearch(\''+key+'\',this.value)">'
+    +'<div class="gp-ms-acts"><a onclick="mpMsAll(\''+key+'\')">Todos</a><a onclick="mpMsNone(\''+key+'\')">Limpar</a></div></div><div class="gp-ms-opts">';
+  h+=opts.map(v=>{const e=esc(v);return '<label class="gp-ms-opt"><input type="checkbox"'
+    +(MP_SEL[key].has(v)?' checked':'')+' value="'+e+'" onchange="mpMsCheck(\''+key+'\',this)"><span>'+e+'</span></label>';})
+    .join('')||'<div class="gp-ms-empty">—</div>';
+  pop.innerHTML=h+'</div>';
+}
+function mpMsToggle(key){
+  const box=document.getElementById('mp-ms-'+key), open=box.classList.contains('open');
+  document.querySelectorAll('.gp-ms.open').forEach(b=>b.classList.remove('open'));
+  if(!open){mpBuildPop(key);box.classList.add('open');}
+}
+function mpMsCheck(key,cb){cb.checked?MP_SEL[key].add(cb.value):MP_SEL[key].delete(cb.value);mpMsLabel(key);renderMpas();}
+function mpMsAll(key){mpMsOptions(key).forEach(v=>MP_SEL[key].add(v));mpBuildPop(key);mpMsLabel(key);renderMpas();}
+function mpMsNone(key){MP_SEL[key].clear();mpBuildPop(key);mpMsLabel(key);renderMpas();}
+function mpMsSearch(key,q){q=(q||'').toLowerCase();
+  document.querySelectorAll('#mp-ms-pop-'+key+' .gp-ms-opt').forEach(l=>{
+    l.style.display=l.textContent.toLowerCase().indexOf(q)>=0?'':'none';});}
 const mpTipoCls=t=>t==='MPA'?'mpa':t==='MPS'?'mps':'';
 
 function mpKpis(){
@@ -1967,12 +2031,14 @@ function mpKpis(){
     {l:'Não iniciadas',v:c['Não iniciada'],f:'clique para filtrar',c:'#92400E',s:'Não iniciada'},
     {l:'Atrasadas',v:c['Atrasada'],f:'clique para filtrar',c:'#B91C1C',s:'Atrasada'}];
   const box=document.getElementById('mp-kpis');
-  box.innerHTML=cards.map(k=>'<div class="calkpi'+(MP_F.situacao&&MP_F.situacao===k.s?' sel':'')+'" data-sit="'+(k.s||'')+'">'
+  box.innerHTML=cards.map(k=>'<div class="calkpi'+((k.s&&MP_SEL.situacao.has(k.s))?' sel':'')+'" data-sit="'+(k.s||'')+'">'
     +'<div class="top" style="background:'+k.c+'"></div><div class="klabel">'+k.l+'</div>'
     +'<div class="kvalue" style="color:'+k.c+'">'+k.v+'</div><div class="kfoot">'+k.f+'</div></div>').join('');
   box.querySelectorAll('.calkpi').forEach(el=>el.onclick=()=>{
     const s=el.dataset.sit; if(!s)return;
-    MP_F.situacao=(MP_F.situacao===s)?null:s; renderMpas();
+    // o card liga/desliga a situação no multi-seleção (os dois ficam em sincronia)
+    MP_SEL.situacao.has(s)?MP_SEL.situacao.delete(s):MP_SEL.situacao.add(s);
+    mpBuildPop('situacao'); mpMsLabel('situacao'); renderMpas();
   });
   // KPIs do cabeçalho
   const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
@@ -1980,38 +2046,40 @@ function mpKpis(){
   const t=document.getElementById('tcnt-gestaoMpas'); if(t)t.textContent=base.length;
 }
 function mpFiltros(){
-  const uniq=k=>[...new Set((MP?MP.manut:[]).map(r=>r[k]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt'));
-  const sel=(id,lbl,opts,val)=>'<label>'+lbl+'<select id="'+id+'">'
-    +'<option value="">Todos</option>'
-    +opts.map(o=>'<option'+(val===o?' selected':'')+'>'+esc(o)+'</option>').join('')+'</select></label>';
-  document.getElementById('mp-filtros').innerHTML=
-     sel('mp-f-clu','Equipe Cluster',uniq('cluster'),MP_F.cluster)
-   + sel('mp-f-usi','Usina',uniq('usina_curta'),MP_F.usina)
-   + sel('mp-f-tip','Tipo de manutenção',uniq('tipo'),MP_F.tipo)
-   + sel('mp-f-cli','Cliente',uniq('cliente'),MP_F.cliente)
-   + '<label>Situação<select id="mp-f-sit"><option value="">Todas</option>'
-   + MP_SITS.map(s=>'<option'+(MP_F.situacao===s?' selected':'')+'>'+s+'</option>').join('')+'</select></label>'
-   + '<label style="flex-direction:row;align-items:center;gap:6px;text-transform:none;font-size:11.5px;color:#191528">'
-   + '<input type="checkbox" id="mp-f-conc"'+(MP_F.concluidas?' checked':'')+'> mostrar concluídas</label>'
-   + '<button class="rp-btn sec" onclick="mpLimpar()">↺ Limpar</button>';
-  const on=(id,k)=>{const e=document.getElementById(id);if(e)e.onchange=()=>{MP_F[k]=e.value||null;renderMpas();};};
-  on('mp-f-cli','cliente'); on('mp-f-tip','tipo'); on('mp-f-clu','cluster');
-  on('mp-f-usi','usina'); on('mp-f-sit','situacao');
-  const cb=document.getElementById('mp-f-conc');
-  if(cb)cb.onchange=()=>{MP_F.concluidas=cb.checked;renderMpas();};
+  const box=document.getElementById('mp-filtros');
+  // só remonta a casca uma vez; depois é só repopular (senão o popup fecha ao clicar)
+  if(!box.dataset.built){
+    const ms=(k,rot)=>'<div class="gp-fg"><label>'+rot+'</label>'
+      +'<div class="gp-ms" id="mp-ms-'+k+'"><button type="button" class="gp-ms-btn" onclick="mpMsToggle(\''+k+'\')">'
+      +'<span class="gp-ms-lbl" id="mp-ms-lbl-'+k+'">'+MP_MS[k].lbl+'</span><span class="gp-ms-cv">▾</span></button>'
+      +'<div class="gp-ms-pop" id="mp-ms-pop-'+k+'"></div></div></div>';
+    box.innerHTML= ms('cluster','Equipe Cluster')+ms('usina','Usina')
+      + ms('tipo','Tipo de manutenção')+ms('cliente','Cliente')
+      + ms('situacao','Situação')+ms('prioridade','Prioridade')
+      + '<div class="gp-fg mp-acoes">'
+      + '<label class="mp-cbx"><input type="checkbox" id="mp-f-conc"'+(MP_F.concluidas?' checked':'')
+      + ' onchange="MP_F.concluidas=this.checked;renderMpas()"> mostrar concluídas</label>'
+      + '<button class="rp-btn sec" onclick="mpLimpar()">↺ Limpar filtros</button></div>';
+    box.dataset.built='1';
+  }
+  Object.keys(MP_MS).forEach(k=>{mpMsLabel(k);});
 }
-function mpLimpar(){Object.keys(MP_F).forEach(k=>MP_F[k]=(k==='concluidas'?false:null));renderMpas();}
+function mpLimpar(){
+  Object.keys(MP_SEL).forEach(k=>MP_SEL[k].clear());
+  MP_F.concluidas=false;
+  const cb=document.getElementById('mp-f-conc'); if(cb)cb.checked=false;
+  Object.keys(MP_MS).forEach(k=>{mpBuildPop(k);mpMsLabel(k);});
+  renderMpas();
+}
 function mpChips(){
-  const c=[];
-  if(MP_F.cluster)c.push(['cluster',MP_F.cluster]);
-  if(MP_F.usina)c.push(['usina',MP_F.usina]);
-  if(MP_F.tipo)c.push(['tipo',MP_F.tipo]);
-  if(MP_F.cliente)c.push(['cliente',MP_F.cliente]);
-  if(MP_F.situacao)c.push(['situacao',MP_F.situacao]);
-  document.getElementById('mp-chips').innerHTML=c.length
-    ? c.map(([k,v])=>'<span class="mp-chip" onclick="MP_F.'+k+'=null;renderMpas()">'+esc(v)+' ✕</span>').join('')
-    : '';
+  const out=[];
+  Object.keys(MP_MS).forEach(k=>MP_SEL[k].forEach(v=>{
+    out.push('<span class="mp-chip" onclick="mpTiraChip(\''+k+'\',\''+esc(String(v)).replace(/'/g,"\\'")+'\')">'
+      +esc(v)+' ✕</span>');
+  }));
+  document.getElementById('mp-chips').innerHTML=out.join('');
 }
+function mpTiraChip(k,v){MP_SEL[k].delete(v);mpBuildPop(k);mpMsLabel(k);renderMpas();}
 // ---- árvore Cluster ▸ Usina ▸ Tipo (mesma navegação da Gestão PCM) ----
 let MP_TIP=[];                                    // listas por nó de tipo (lazy)
 function mpTog(el){el.parentElement.classList.toggle('gp-open');}
@@ -2049,7 +2117,7 @@ function renderMpas(){
   document.getElementById('mp-lock').style.display='none';
   document.getElementById('mp-body').style.display='';
   mpFiltros(); mpChips(); mpKpis();
-  const mostrarConc=MP_F.concluidas||MP_F.situacao==='Concluída';
+  const mostrarConc=MP_F.concluidas||MP_SEL.situacao.has('Concluída');
   const rows=mpFilt().filter(r=>mostrarConc||mpSit(r).k!=='Concluída');
   document.getElementById('mp-hint').textContent=
     (mostrarConc?'Todas as manutenções':'Não finalizadas')
