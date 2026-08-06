@@ -336,6 +336,9 @@ def coletar(client, usina_idx, cluster_major, ativos, max_items=None):
             "etiquetas": sorted(_labels_para_lista(row.get("labels"))),
             "ss": str(row.get("id_request") or "").strip(),
             "dataProg": data_prog,
+            # Data de início = quando a TAREFA começou a ser executada
+            # (campo API initial_date). Usada pelo filtro "Período" do painel.
+            "dataInicio": _data_iso(row.get("initial_date")),
             # Data final = quando a TAREFA foi concluída (Estado da Tarefa,
             # campo API final_date). NÃO é wo_final_date (Status/fim da OS).
             "dataFinal": _data_iso(row.get("final_date")),
