@@ -1030,6 +1030,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
     .gp-kpi{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:8px 14px;text-align:center;min-width:76px}
     .gp-kpi .v{font-size:20px;font-weight:800;color:#a9db21;line-height:1}
     .gp-kpi.warn .v{color:#f87171}
+    .gp-kpi.ok .v{color:#4ade80}
     .gp-kpi .l{font-size:9px;color:#aaa;margin-top:2px;text-transform:uppercase;letter-spacing:.4px}
     .gp-toolbar{background:#fff;border:1px solid var(--line,#e6e6ee);border-radius:10px;padding:10px 12px;margin-bottom:12px;display:flex;gap:8px 12px;flex-wrap:wrap;align-items:flex-end}
     .gp-fg{display:flex;flex-direction:column;gap:3px}
@@ -1113,6 +1114,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
           </div>
           <div class="gp-kpis">
             <div class="gp-kpi"><div class="v" id="gp-k-vis">0</div><div class="l">Vis&iacute;veis</div></div>
+            <div class="gp-kpi ok" id="gp-kpi-fin"><div class="v" id="gp-k-fin">0</div><div class="l">Finalizadas</div></div>
             <div class="gp-kpi"><div class="v" id="gp-k-ab">0</div><div class="l">Em aberto</div></div>
             <div class="gp-kpi warn gp-kpi-click" id="gp-kpi-atr" onclick="gpToggleAtrasadas()" title="Clique para ver só as atrasadas"><div class="v" id="gp-k-atr">0</div><div class="l">Atrasadas</div></div>
           </div>
@@ -4019,9 +4021,20 @@ function renderGestao(rebuildFilters){
   const nf=all.filter(gpNaoFin);                 // não finalizadas no período (à parte)
   const arr=all.filter(t=>!gpNaoFin(t));         // árvore principal
   const ab=arr.filter(t=>t.aberta), atr=ab.filter(t=>t.atrasado);
+  // Finalizadas = Estado da Tarefa 'Finalizada' (aberta=false no gerador).
+  // Vale a identidade: Visíveis = Finalizadas + Em aberto.
+  const fin=arr.length-ab.length;
   document.getElementById('gp-k-vis').textContent=arr.length;
   document.getElementById('gp-k-ab').textContent=ab.length;
   document.getElementById('gp-k-atr').textContent=atr.length;
+  const _fin=document.getElementById('gp-k-fin');
+  if(_fin){
+    _fin.textContent=fin;
+    const pct=arr.length?Math.round(fin/arr.length*100):0;
+    document.getElementById('gp-kpi-fin').title=
+      'Estado da Tarefa = Finalizada · '+pct+'% do que está visível'
+      +(nf.length?' (as '+nf.length+' de "Não Finalizadas no Período" ficam fora desta conta)':'');
+  }
   const badge=document.getElementById('tcnt-gestaoPcm');if(badge)badge.textContent=ab.length;
   // Sincroniza visual do modo "só atrasadas"
   const _tg=document.getElementById('gp-atr-toggle');if(_tg)_tg.classList.toggle('on',!!GP.soAtrasadas);
