@@ -1037,6 +1037,8 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
     .gp-fg select,.gp-fg input{font-size:11.5px;padding:5px 8px;border:1px solid var(--line,#d6d6e0);border-radius:6px;font-family:inherit;color:var(--ink,#191528);background:#fff;min-width:120px}
     .gp-fg input{min-width:90px}
     .gp-fg input[type=date]{min-width:0;cursor:pointer}
+    /* Período (de/até/considerar) anda junto: quebra de linha leva os três */
+    .gp-per{display:flex;gap:8px;align-items:flex-end;padding-left:12px;border-left:1px solid var(--line,#e6e6ee)}
     .gp-clear{font-size:11px;padding:6px 12px;border:1px solid var(--line,#d6d6e0);border-radius:6px;background:#fff;cursor:pointer;color:#555;font-family:inherit;font-weight:600;height:29px}
     .gp-clear:hover{background:#f3f3f7}
     .gp-nores{text-align:center;padding:36px;color:#888;font-size:13px}
@@ -1241,10 +1243,16 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="gp-fg"><label>Estado</label><div class="gp-ms" id="gp-ms-estado"><button type="button" class="gp-ms-btn" onclick="gpMsToggle('estado')"><span class="gp-ms-lbl" id="gp-ms-lbl-estado">Todos</span><span class="gp-ms-cv">&#9662;</span></button><div class="gp-ms-pop" id="gp-ms-pop-estado"></div></div></div>
         <div class="gp-fg"><label>OS #</label><input type="text" id="gp-f-os" placeholder="ex: 8856" oninput="gpOnFilter()"></div>
         <div class="gp-fg"><label>Solicita&ccedil;&atilde;o #</label><input type="text" id="gp-f-ss" placeholder="ex: 2946" oninput="gpOnFilter()"></div>
-        <div class="gp-fg"><label>Data Prog. de</label><input type="date" id="gp-f-dini" onchange="gpOnFilter()"></div>
-        <div class="gp-fg"><label>at&eacute;</label><input type="date" id="gp-f-dfim" onchange="gpOnFilter()"></div>
-        <div class="gp-fg"><label>Data Final de</label><input type="date" id="gp-f-fini" onchange="gpOnFilter()"></div>
-        <div class="gp-fg"><label>at&eacute;</label><input type="date" id="gp-f-ffim" onchange="gpOnFilter()"></div>
+        <div class="gp-per" title="Pega a tarefa se a data programada, a de início OU a final cair no período">
+          <div class="gp-fg"><label>Per&iacute;odo de</label><input type="date" id="gp-f-pini" onchange="gpOnFilter()"></div>
+          <div class="gp-fg"><label>at&eacute;</label><input type="date" id="gp-f-pfim" onchange="gpOnFilter()"></div>
+          <div class="gp-fg"><label>considerar</label><select id="gp-f-pmodo" onchange="gpOnFilter()">
+            <option value="qq">Qualquer data</option>
+            <option value="prog">S&oacute; programada</option>
+            <option value="ini">S&oacute; in&iacute;cio</option>
+            <option value="fim">S&oacute; final</option>
+          </select></div>
+        </div>
         <button class="gp-atr-toggle" id="gp-atr-toggle" onclick="gpToggleAtrasadas()">&#9201; S&oacute; atrasadas</button>
         <button class="gp-clear" onclick="gpClear()">&#8635; Limpar</button>
       </div>
@@ -3938,8 +3946,20 @@ document.addEventListener('click',e=>{if(!e.target.closest('.gp-ms'))document.qu
 function gpVal(id){const el=document.getElementById(id);return el?el.value.trim():'';}
 function gpFilteredTarefas(){
   const S1=GP_SEL,fOS=gpVal('gp-f-os').toLowerCase(),fSS=gpVal('gp-f-ss').toLowerCase(),
-        dIni=gpVal('gp-f-dini'),dFim=gpVal('gp-f-dfim'),
-        fIni=gpVal('gp-f-fini'),fFim=gpVal('gp-f-ffim');
+        pIni=gpVal('gp-f-pini'),pFim=gpVal('gp-f-pfim'),pMod=gpVal('gp-f-pmodo')||'qq';
+  // Período: a tarefa entra se QUALQUER uma das datas (programada, início ou
+  // final) cair na faixa. O seletor "considerar" restringe a uma delas quando
+  // a pergunta é específica (ex.: "o que FINALIZEI em julho").
+  const _d=v=>v?String(v).slice(0,10):'';
+  const _dentro=v=>{const d=_d(v); if(!d)return false;
+    if(pIni&&d<pIni)return false; if(pFim&&d>pFim)return false; return true;};
+  const noPeriodo=t=>{
+    if(!pIni&&!pFim)return true;
+    if(pMod==='prog')return _dentro(t.dataProg);
+    if(pMod==='ini') return _dentro(t.dataInicio);
+    if(pMod==='fim') return _dentro(t.dataFinal);
+    return _dentro(t.dataProg)||_dentro(t.dataInicio)||_dentro(t.dataFinal);
+  };
   // Matches case-insensitive (grafias divergem no Fracttal: "PA NORTE 01" vs "PA Norte 01")
   const _L=s=>new Set([...s].map(x=>String(x).toLowerCase())), _in=(set,v)=>set.has(String(v||'').toLowerCase());
   const Lcli=_L(S1.cliente),Lusi=_L(S1.usina),Lclu=_L(S1.cluster),Lres=_L(S1.resp),Ltip=_L(S1.tipo),Lest=_L(S1.estado),Letq=_L(S1.etq);
@@ -3953,12 +3973,7 @@ function gpFilteredTarefas(){
     if(S1.etq.size&&!(t.etiquetas||[]).some(e=>_in(Letq,e)))return false;
     if(fOS&&String(t.os).toLowerCase().indexOf(fOS)<0)return false;
     if(fSS&&String(t.ss).toLowerCase().indexOf(fSS)<0)return false;
-    if(dIni&&(!t.dataProg||t.dataProg<dIni))return false;
-    if(dFim&&(!t.dataProg||t.dataProg>dFim))return false;
-    // Data final (nível TAREFA): filtra só o que foi finalizado no range;
-    // tarefa sem dataFinal sai quando o filtro está ativo (igual dataProg).
-    if(fIni&&(!t.dataFinal||t.dataFinal.slice(0,10)<fIni))return false;
-    if(fFim&&(!t.dataFinal||t.dataFinal.slice(0,10)>fFim))return false;
+    if(!noPeriodo(t))return false;
     return true;
   });
 }
@@ -4192,7 +4207,7 @@ function gpTogTip(h,idx){
   if(willOpen)gpFillTable(blk.querySelector('.gp-tip-b'));
 }
 function gpOnFilter(){renderGestao();}
-function gpClear(){GP.soAtrasadas=false;Object.keys(GP_SEL).forEach(k=>GP_SEL[k].clear());['gp-f-os','gp-f-ss','gp-f-dini','gp-f-dfim','gp-f-fini','gp-f-ffim'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});renderGestao(true);}
+function gpClear(){GP.soAtrasadas=false;Object.keys(GP_SEL).forEach(k=>GP_SEL[k].clear());['gp-f-os','gp-f-ss','gp-f-pini','gp-f-pfim'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});const md=document.getElementById('gp-f-pmodo');if(md)md.value='qq';renderGestao(true);}
 
 // FIX #159: carrega supervisores.json no boot
 loadSupervisores().then(()=>{ if(typeof buildFilters==='function' && S.user) buildFilters(); });
