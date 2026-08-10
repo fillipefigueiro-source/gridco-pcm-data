@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-10T14:56:34Z",
+  "geradoEm": "2026-08-10T15:51:25Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3559,
-        "emAberto": 13,
+        "total": 3561,
+        "emAberto": 14,
         "atrasadas": 10,
-        "concluidas30d": 603,
-        "concluidas7d": 160,
-        "naSemanaCorrente": 7
+        "concluidas30d": 604,
+        "concluidas7d": 161,
+        "naSemanaCorrente": 9
       },
       "mttr": {
-        "horas": 11.04,
-        "label": "11h 2min",
-        "amostra": 603
+        "horas": 11.02,
+        "label": "11h 1min",
+        "amostra": 604
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W33",
-          "criadas": 7,
-          "finalizadas": 13
+          "criadas": 9,
+          "finalizadas": 14
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3559,
-            "emAberto": 13
+            "total": 3561,
+            "emAberto": 14
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 13,
+      "total": 14,
       "atrasadas": 10,
       "porStatus": {
-        "naoIniciada": 9,
+        "naoIniciada": 10,
         "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -274,6 +274,24 @@
           "atrasada": true
         },
         {
+          "osId": "10978",
+          "ativo": "Cabine 1  Santa Maria do Pará  Pará Brasil { SMP100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-08-10",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "10969",
           "ativo": "Disjuntor do Transformador 3      { THPN-ORB100-DTRF3 }",
           "equipe": "",
@@ -330,6 +348,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10977",
+          "ativo": "Cabine 1  Barretos  São Paulo Brasil { BRS100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Cícero  Willian",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Cícero  Willian",
+          "status": "Finalizada",
+          "tarefa": "UFV: Barretos 1 e 2 | Proteção: 78 e 81 | Ação: Religamento Remoto| Falha: Usina desligada",
+          "criticidade": "",
+          "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-08-10",
+          "dataInicial": "2026-08-10",
+          "dataFinal": "2026-08-10",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "10968",
           "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
@@ -3309,34 +3347,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10568",
-          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "[Cabine 5] - Religamento da Cabine 5",
-          "criticidade": "",
-          "dataProgramada": "2026-08-03",
-          "dataCriacao": "2026-08-03",
-          "dataInicial": "2026-08-03",
-          "dataFinal": "2026-08-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1640,
+      "historicoTotal": 1641,
       "subClassificacao": {
-        "remoto": 737,
-        "local": 2822,
+        "remoto": 738,
+        "local": 2823,
         "remotoEmAberto": 3,
-        "localEmAberto": 10,
+        "localEmAberto": 11,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -3507,8 +3525,8 @@
         ],
         "medHorasAbrir": 7.2,
         "medHorasFechar": 2.7,
-        "amostraAbrir": 728,
-        "amostraFechar": 727,
+        "amostraAbrir": 729,
+        "amostraFechar": 728,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3524,7 +3542,7 @@
           },
           {
             "nome": "CíceroWillian",
-            "total": 36
+            "total": 37
           },
           {
             "nome": "Juliana Cândido",
@@ -8062,8 +8080,8 @@
       "atrasadas": 2,
       "porStatus": {
         "naoIniciada": 1,
-        "emProgresso": 1,
-        "pausada": 1,
+        "emProgresso": 0,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
@@ -8112,7 +8130,7 @@
           "responsavel": "Adriano Silva ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Adriano Silva ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "Testes técnicos em inversor substituído para garantia",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
@@ -9121,12 +9139,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 450,
-        "emAberto": 100,
+        "total": 451,
+        "emAberto": 101,
         "atrasadas": 74,
         "concluidas30d": 257,
         "concluidas7d": 47,
-        "naSemanaCorrente": 28
+        "naSemanaCorrente": 29
       },
       "mttr": {
         "horas": 145.4,
@@ -9151,7 +9169,7 @@
         },
         {
           "semana": "W33",
-          "criadas": 0,
+          "criadas": 1,
           "finalizadas": 5
         }
       ],
@@ -9159,8 +9177,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 450,
-            "emAberto": 100
+            "total": 451,
+            "emAberto": 101
           }
         ],
         "responsaveis": [
@@ -9191,16 +9209,16 @@
           }
         ]
       },
-      "total": 100,
+      "total": 101,
       "atrasadas": 74,
       "porStatus": {
-        "naoIniciada": 87,
+        "naoIniciada": 88,
         "emProgresso": 1,
         "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 100
+        "(sem equipe)": 101
       },
       "oss": [
         {
@@ -10792,6 +10810,23 @@
           "criticidade": "",
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-08-07",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "10976",
+          "ativo": "Inversor 1.4 Sungrow SG250HX    { THPN-JUC100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Silva",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Cláudio  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.4] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-11",
+          "dataCriacao": "2026-08-10",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -15392,6 +15427,39 @@
   },
   "ossPublicas": [
     {
+      "osId": "10978",
+      "ativo": "Cabine 1  Santa Maria do Pará  Pará Brasil { SMP100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-10",
+      "dataCriacao": "2026-08-10",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "10976",
+      "ativo": "Inversor 1.4 Sungrow SG250HX    { THPN-JUC100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Silva",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Cláudio  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.4] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-11",
+      "dataCriacao": "2026-08-10",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "10969",
       "ativo": "Disjuntor do Transformador 3      { THPN-ORB100-DTRF3 }",
       "equipe": "",
@@ -16544,7 +16612,7 @@
       "responsavel": "Adriano Silva ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Adriano Silva ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "Testes técnicos em inversor substituído para garantia",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
@@ -18938,6 +19006,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "10977",
+      "ativo": "Cabine 1  Barretos  São Paulo Brasil { BRS100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Cícero  Willian",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Cícero  Willian",
+      "status": "Finalizada",
+      "tarefa": "UFV: Barretos 1 e 2 | Proteção: 78 e 81 | Ação: Religamento Remoto| Falha: Usina desligada",
+      "criticidade": "",
+      "dataProgramada": "2026-08-10",
+      "dataCriacao": "2026-08-10",
+      "dataInicial": "2026-08-10",
+      "dataFinal": "2026-08-10",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "10968",
       "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
@@ -21903,30 +21991,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10598",
-      "ativo": "Axis - Petrolina 3 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL300 }",
-      "equipe": "",
-      "responsavel": "Rodrigo  Silva",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Rodrigo  Silva",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-04",
-      "dataCriacao": "2026-08-04",
-      "dataInicial": "2026-08-04",
-      "dataFinal": "2026-08-04",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2329,
-  "totalGeral": 4844,
+  "historicoTotal": 2330,
+  "totalGeral": 4847,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
