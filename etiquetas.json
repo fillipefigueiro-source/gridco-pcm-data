@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-10T11:23:15Z",
+  "geradoEm": "2026-08-10T12:10:38Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3554,
-        "emAberto": 19,
-        "atrasadas": 19,
-        "concluidas30d": 592,
-        "concluidas7d": 149,
+        "emAberto": 17,
+        "atrasadas": 17,
+        "concluidas30d": 594,
+        "concluidas7d": 151,
         "naSemanaCorrente": 2
       },
       "mttr": {
-        "horas": 9.37,
-        "label": "9h 22min",
-        "amostra": 592
+        "horas": 10.58,
+        "label": "10h 35min",
+        "amostra": 594
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W33",
           "criadas": 2,
-          "finalizadas": 2
+          "finalizadas": 4
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3554,
-            "emAberto": 19
+            "emAberto": 17
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 19,
-      "atrasadas": 19,
+      "total": 17,
+      "atrasadas": 17,
       "porStatus": {
-        "naoIniciada": 13,
+        "naoIniciada": 12,
         "emProgresso": 2,
-        "pausada": 4,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 19
+        "(sem equipe)": 17
       },
       "oss": [
         {
@@ -127,24 +127,6 @@
           "atrasada": true
         },
         {
-          "osId": "9451",
-          "ativo": "teste1  teste  teste teste { THPN-TESTE }",
-          "equipe": "",
-          "responsavel": "Cícero  Willian",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Cícero  Willian",
-          "status": "Não Iniciada",
-          "tarefa": "Religamento teste",
-          "criticidade": "",
-          "dataProgramada": "2026-07-15",
-          "dataCriacao": "2026-07-15",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "10313",
           "ativo": "Cabine 6  Santa Maria do Pará  Pará Brasil { SMP100-CABN6 }",
           "equipe": "",
@@ -179,25 +161,6 @@
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
           "modalidade": "remoto",
-          "atrasada": true
-        },
-        {
-          "osId": "10758",
-          "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "Gilson Souza ",
-          "status": "pausado",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-08-06",
-          "dataInicial": "2026-08-07",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "modalidade": "local",
           "atrasada": true
         },
         {
@@ -477,6 +440,26 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10758",
+          "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-06",
+          "dataCriacao": "2026-08-06",
+          "dataInicial": "2026-08-07",
+          "dataFinal": "2026-08-10",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 72.0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3419,34 +3402,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10535",
-          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Cabine 5] - Religamento da Cabine 5",
-          "criticidade": "",
-          "dataProgramada": "2026-08-02",
-          "dataCriacao": "2026-08-02",
-          "dataInicial": "2026-08-02",
-          "dataFinal": "2026-08-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1629,
+      "historicoTotal": 1631,
       "subClassificacao": {
         "remoto": 737,
         "local": 2817,
         "remotoEmAberto": 3,
-        "localEmAberto": 16,
+        "localEmAberto": 14,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -3668,33 +3631,33 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 613,
-        "emAberto": 89,
+        "total": 610,
+        "emAberto": 90,
         "atrasadas": 45,
-        "concluidas30d": 85,
-        "concluidas7d": 32,
-        "naSemanaCorrente": 35
+        "concluidas30d": 81,
+        "concluidas7d": 30,
+        "naSemanaCorrente": 36
       },
       "mttr": {
-        "horas": 352.66,
-        "label": "14d 16h",
-        "amostra": 85
+        "horas": 366.52,
+        "label": "15d 6h",
+        "amostra": 81
       },
       "tendencia4Semanas": [
         {
           "semana": "W30",
-          "criadas": 7,
-          "finalizadas": 16
+          "criadas": 6,
+          "finalizadas": 14
         },
         {
           "semana": "W31",
-          "criadas": 99,
+          "criadas": 98,
           "finalizadas": 21
         },
         {
           "semana": "W32",
           "criadas": 4,
-          "finalizadas": 32
+          "finalizadas": 30
         },
         {
           "semana": "W33",
@@ -3706,8 +3669,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 613,
-            "emAberto": 89
+            "total": 610,
+            "emAberto": 90
           }
         ],
         "responsaveis": [
@@ -3738,16 +3701,16 @@
           }
         ]
       },
-      "total": 89,
+      "total": 90,
       "atrasadas": 45,
       "porStatus": {
-        "naoIniciada": 80,
+        "naoIniciada": 81,
         "emProgresso": 0,
         "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 89
+        "(sem equipe)": 90
       },
       "oss": [
         {
@@ -4574,6 +4537,23 @@
           "atrasada": false
         },
         {
+          "osId": "10812",
+          "ativo": "Cabine 1  Caxambu  São Paulo Brasil { CXB100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Felipe  Lima",
+          "status": "Não Iniciada",
+          "tarefa": "[Caxambu] - Regularização de Termografia da Cabine (Pendências MPS)",
+          "criticidade": "",
+          "dataProgramada": "2026-08-11",
+          "dataCriacao": "2026-08-07",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "10309",
           "ativo": "Transformador 3      { THPN-EBG100-TRFR3 }",
           "equipe": "",
@@ -5313,25 +5293,6 @@
           "atrasada": false
         },
         {
-          "osId": "10818",
-          "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { FZL100-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Finalizados",
-          "tarefa": "[Fazenda Limão] - Regularização de Termografia do Inversor 1.3 (Pendências MPS)",
-          "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-07",
-          "dataFinal": "2026-08-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10274",
           "ativo": "Transformador 4 GAZQUEZ     { THPN-SDN100-TRFR4 }",
           "equipe": "",
@@ -5443,25 +5404,6 @@
           "linkFracttal": "",
           "horasAteAbrir": 240.0,
           "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "10485",
-          "ativo": "QGBT 1  Tupi Paulista  São Paulo Brasil { TPP100-QGBT1 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Carlos  Godoi",
-          "status": "Finalizados",
-          "tarefa": "[Tupi Paulista] - Manutenção Corretiva no Barramento BT do QGBT-1 (Pendências MPS)",
-          "criticidade": "",
-          "dataProgramada": "2026-08-03",
-          "dataCriacao": "2026-07-31",
-          "dataInicial": "2026-08-03",
-          "dataFinal": "2026-08-05",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 48.0,
           "atrasada": false
         },
         {
@@ -6263,25 +6205,6 @@
           "atrasada": false
         },
         {
-          "osId": "9769",
-          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { FZL100-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPS - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-31",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "2026-07-23",
-          "dataFinal": "2026-07-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8608",
           "ativo": "Transformador 1 WEG     { THPN-PRM200-TRFR1 }",
           "equipe": "",
@@ -6487,25 +6410,6 @@
           "dataFinal": "2026-07-21",
           "linkFracttal": "",
           "horasAteAbrir": 528.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9487",
-          "ativo": "Transformador 1 WEG     { PRB100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Felipe  Lima",
-          "status": "Finalizados",
-          "tarefa": "[Piracicaba] - Regularização de Termografia do Transformador (Pendências MPS)",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-15",
-          "dataInicial": "2026-07-20",
-          "dataFinal": "2026-07-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -8049,6 +7953,44 @@
           "atrasada": false
         },
         {
+          "osId": "7841",
+          "ativo": "Ar Condicionado      { NVX100-SOEM1-ARCD }",
+          "equipe": "",
+          "responsavel": "Gabriel Oliveira ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Gabriel Oliveira ",
+          "status": "Finalizada",
+          "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
+          "criticidade": "",
+          "dataProgramada": "2026-06-15",
+          "dataCriacao": "2026-06-15",
+          "dataInicial": "2026-06-17",
+          "dataFinal": "2026-06-23",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 144.0,
+          "atrasada": false
+        },
+        {
+          "osId": "7833",
+          "ativo": "QGBT 1  Ponto Belo  Espírito Santo Brasil { PTB100-QGBT1 }",
+          "equipe": "",
+          "responsavel": "Renato  Julien",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Renato  Julien",
+          "status": "Finalizada",
+          "tarefa": "[Axis] - MPA - QGBT/QDMT/QSFV/QSA",
+          "criticidade": "",
+          "dataProgramada": "2026-06-15",
+          "dataCriacao": "2026-06-15",
+          "dataInicial": "2026-06-22",
+          "dataFinal": "2026-06-23",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 24.0,
+          "atrasada": false
+        },
+        {
           "osId": "8061",
           "ativo": "Ar Condicionado      { ADS200-SOEM1-ARCD }",
           "equipe": "",
@@ -8084,6 +8026,44 @@
           "linkFracttal": "",
           "horasAteAbrir": 48.0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "7876",
+          "ativo": "Infraestrutura Civil Estrada Pedreira, S/N Matão  São Paulo Brasil { MTO100-INFC1 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Eduardo Souza",
+          "status": "Finalizada",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-06-29",
+          "dataCriacao": "2026-06-16",
+          "dataInicial": "2026-06-16",
+          "dataFinal": "2026-06-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 72.0,
+          "atrasada": false
+        },
+        {
+          "osId": "7776",
+          "ativo": "Estrutura Trackers  Ibirapuã  Bahia Brasil { IBI200-ETKR1 }",
+          "equipe": "",
+          "responsavel": "Renato  Julien",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Renato  Julien",
+          "status": "Finalizada",
+          "tarefa": "[Grid Co.] - MPA - Tracker",
+          "criticidade": "",
+          "dataProgramada": "2026-06-15",
+          "dataCriacao": "2026-06-12",
+          "dataInicial": "2026-06-16",
+          "dataFinal": "2026-06-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
+          "horasAteFechar": 72.0,
           "atrasada": false
         },
         {
@@ -8125,7 +8105,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 267
+      "historicoTotal": 263
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9338,8 +9318,8 @@
       "atrasadas": 79,
       "porStatus": {
         "naoIniciada": 89,
-        "emProgresso": 1,
-        "pausada": 15,
+        "emProgresso": 2,
+        "pausada": 14,
         "verificacao": 0
       },
       "porEquipe": {
@@ -9972,7 +9952,7 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Ricardo Silva ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Inversor 9.1] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-07-31",
@@ -14007,33 +13987,33 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 86,
-        "emAberto": 18,
+        "total": 89,
+        "emAberto": 17,
         "atrasadas": 6,
-        "concluidas30d": 23,
-        "concluidas7d": 6,
-        "naSemanaCorrente": 12
+        "concluidas30d": 27,
+        "concluidas7d": 8,
+        "naSemanaCorrente": 11
       },
       "mttr": {
-        "horas": 418.43,
-        "label": "17d 10h",
-        "amostra": 23
+        "horas": 367.11,
+        "label": "15d 7h",
+        "amostra": 27
       },
       "tendencia4Semanas": [
         {
           "semana": "W30",
-          "criadas": 2,
-          "finalizadas": 6
+          "criadas": 3,
+          "finalizadas": 8
         },
         {
           "semana": "W31",
-          "criadas": 9,
+          "criadas": 10,
           "finalizadas": 5
         },
         {
           "semana": "W32",
           "criadas": 15,
-          "finalizadas": 6
+          "finalizadas": 8
         },
         {
           "semana": "W33",
@@ -14045,8 +14025,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 86,
-            "emAberto": 18
+            "total": 89,
+            "emAberto": 17
           }
         ],
         "responsaveis": [
@@ -14057,7 +14037,7 @@
           },
           {
             "nome": "Carlos Bruno  Pessanha Pereira",
-            "total": 8,
+            "total": 10,
             "emAberto": 0
           },
           {
@@ -14077,16 +14057,16 @@
           }
         ]
       },
-      "total": 18,
+      "total": 17,
       "atrasadas": 6,
       "porStatus": {
-        "naoIniciada": 18,
+        "naoIniciada": 17,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 18
+        "(sem equipe)": 17
       },
       "oss": [
         {
@@ -14377,26 +14357,47 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": false
-        },
-        {
-          "osId": "10812",
-          "ativo": "Cabine 1  Caxambu  São Paulo Brasil { CXB100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
-          "tarefa": "[Caxambu] - Regularização de Termografia da Cabine (Pendências MPS)",
-          "criticidade": "",
-          "dataProgramada": "2026-08-11",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10818",
+          "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { FZL100-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "[Fazenda Limão] - Regularização de Termografia do Inversor 1.3 (Pendências MPS)",
+          "criticidade": "",
+          "dataProgramada": "2026-08-07",
+          "dataCriacao": "2026-08-07",
+          "dataInicial": "2026-08-07",
+          "dataFinal": "2026-08-07",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10485",
+          "ativo": "QGBT 1  Tupi Paulista  São Paulo Brasil { TPP100-QGBT1 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Carlos  Godoi",
+          "status": "Finalizados",
+          "tarefa": "[Tupi Paulista] - Manutenção Corretiva no Barramento BT do QGBT-1 (Pendências MPS)",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-31",
+          "dataInicial": "2026-08-03",
+          "dataFinal": "2026-08-05",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 48.0,
+          "atrasada": false
+        },
         {
           "osId": "8628",
           "ativo": "Transformador 1      { GYT100-TRFR1 }",
@@ -14683,6 +14684,25 @@
           "atrasada": false
         },
         {
+          "osId": "9769",
+          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { FZL100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPS - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-31",
+          "dataCriacao": "2026-07-21",
+          "dataInicial": "2026-07-23",
+          "dataFinal": "2026-07-23",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "9619",
           "ativo": "QGBT 1 BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM100-QGBT1 }",
           "equipe": "",
@@ -14718,6 +14738,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 144.0,
           "horasAteFechar": 360.0,
+          "atrasada": false
+        },
+        {
+          "osId": "9487",
+          "ativo": "Transformador 1 WEG     { PRB100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[Piracicaba] - Regularização de Termografia do Transformador (Pendências MPS)",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-15",
+          "dataInicial": "2026-07-20",
+          "dataFinal": "2026-07-20",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -15557,7 +15596,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 61
+      "historicoTotal": 65
     }
   },
   "ossPublicas": [
@@ -16775,24 +16814,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10758",
-      "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Gilson Souza ",
-      "status": "pausado",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-06",
-      "dataCriacao": "2026-08-06",
-      "dataInicial": "2026-08-07",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "modalidade": "local"
-    },
-    {
       "osId": "10739",
       "ativo": "Tracker 59.101 STI Norland dual row    { ALT100-ETKR59.101 }",
       "equipe": "",
@@ -17189,7 +17210,7 @@
       "responsavel": "Ricardo Silva ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Ricardo Silva ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Inversor 9.1] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-07-31",
@@ -18673,23 +18694,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 72.0
-    },
-    {
-      "osId": "9451",
-      "ativo": "teste1  teste  teste teste { THPN-TESTE }",
-      "equipe": "",
-      "responsavel": "Cícero  Willian",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Cícero  Willian",
-      "status": "Não Iniciada",
-      "tarefa": "Religamento teste",
-      "criticidade": "",
-      "dataProgramada": "2026-07-15",
-      "dataCriacao": "2026-07-15",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "9283",
@@ -20597,6 +20601,26 @@
       "atrasada": false
     },
     {
+      "osId": "10758",
+      "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-06",
+      "dataCriacao": "2026-08-06",
+      "dataInicial": "2026-08-07",
+      "dataFinal": "2026-08-10",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 72.0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "10757",
       "ativo": "Tracker 30.100 STI H250    { GY-CDP100-ETKR30.100 }",
       "equipe": "",
@@ -22324,29 +22348,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10577",
-      "ativo": "SKID 1 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID1 }",
-      "equipe": "",
-      "responsavel": "Italo  Lustosa",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Italo  Lustosa",
-      "status": "Finalizada",
-      "tarefa": "[SKID 1] - Religamento do SKID 1",
-      "criticidade": "",
-      "dataProgramada": "2026-08-03",
-      "dataCriacao": "2026-08-03",
-      "dataInicial": "2026-08-03",
-      "dataFinal": "2026-08-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2309,
+  "historicoTotal": 2311,
   "totalGeral": 4839,
   "verificacao": {
     "total": 0,
