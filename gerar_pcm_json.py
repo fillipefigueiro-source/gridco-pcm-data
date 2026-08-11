@@ -626,11 +626,47 @@ def main():
         _log("ERRO: não foi possível ler nenhuma planilha.")
         return 1
 
+    def _ler_alertas(pasta_):
+        try:
+            p = pasta_ / "_alertas_do_dia.json"
+            if p.exists():
+                return json.loads(p.read_text(encoding="utf-8"))
+        except Exception as e:
+            _log(f"  ! alertas ilegíveis: {e}")
+        return None
+
+    def _ler_motivos(pasta_):
+        """Linhas '# motivo OS 10371: Aguarda peça/material' das observações.
+        São comentário para o parser de pins (texto livre), mas viram DADO aqui
+        — alimentam o Pareto de causas do painel."""
+        out = []
+        pad = re.compile(r"^#\s*motivo\s+OS\s*#?\s*(\d+)\s*(?:\(([^)]*)\))?\s*:\s*(.+)$", re.I)
+        for arq in ("Observacoes_Semana_Atual.txt", "Observacoes_Semana.txt"):
+            p = pasta_ / arq
+            if not p.exists():
+                continue
+            try:
+                for ln in p.read_text(encoding="utf-8").splitlines():
+                    m = pad.match(ln.strip())
+                    if m:
+                        out.append({"os": m.group(1), "equipe": (m.group(2) or "").strip(),
+                                    "motivo": m.group(3).strip()[:80]})
+            except Exception as e:
+                _log(f"  ! motivos ilegíveis em {arq}: {e}")
+        if out:
+            _log(f"  → {len(out)} motivo(s) capturado(s) nas observações")
+        return out
+
     payload = {
         "geradoEm":     dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "fonte":        f"gerar_pcm_json.py ({len(semanas_json)} semanas)",
         "semana_ativa": semana_ativa_key,
         "semanas":      semanas_json,
+        # M3 — alertas do dia (STEP A5 grava o arquivo; o estado "janelas já
+        # emitidas hoje" viaja aqui dentro, que é o artefato commitado)
+        "alertas":      _ler_alertas(pasta),
+        # M3 — motivos capturados ("# motivo OS X: Y" nas observações) → Pareto
+        "motivos":      _ler_motivos(pasta),
     }
     total_rows = sum(len(s.get("rows", [])) for s in semanas_json)
     semanas_str = ", ".join(s["week"] for s in semanas_json)

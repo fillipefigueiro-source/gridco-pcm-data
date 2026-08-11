@@ -41,12 +41,21 @@ def token():
     return None
 
 
+def _redigir(texto, tok):
+    """NUNCA imprimir o token — nem em erro (a 1ª versão vazou no log)."""
+    return (texto or "").replace(tok, "***TOKEN***") if tok else (texto or "")
+
+
+_TOK_ATUAL = [None]
+
+
 def git(*args, ok_codes=(0,)):
     r = subprocess.run(["git", "-C", AQUI, *args],
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
     if r.returncode not in ok_codes:
-        print(r.stdout); print(r.stderr)
-        raise SystemExit(f"git {' '.join(args[:2])} falhou ({r.returncode})")
+        tok = _TOK_ATUAL[0]
+        print(_redigir(r.stdout, tok)); print(_redigir(r.stderr, tok))
+        raise SystemExit(_redigir(f"git {' '.join(args[:2])} falhou ({r.returncode})", tok))
     return r.stdout.strip()
 
 
@@ -56,6 +65,7 @@ def main():
     if not tok:
         print("ERRO: GITHUB_TOKEN não encontrado (env ou .env da pasta do PCM).")
         return 1
+    _TOK_ATUAL[0] = tok
     url = f"https://x-access-token:{tok}@github.com/{OWNER_REPO}.git"
 
     git("add", "-A")

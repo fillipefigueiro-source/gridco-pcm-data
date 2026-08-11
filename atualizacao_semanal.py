@@ -1955,6 +1955,201 @@ def aplicar_rolagem(wb_prog, dias_semana, hoje):
             + (f", {tot_pin} pinada(s) mantidas" if tot_pin else ""))
 
 
+# ====================== Alertas do dia (STEP A5 — Melhoria 3) ======================
+# Dois checkpoints (decisões 17-20): 13:30 = operacional (dá para reagir à
+# tarde); 16:45 = registro (captura o motivo com a memória fresca).
+#
+# DISPARO: "primeira execução APÓS o horário, se ainda não emitiu hoje" — o
+# robô roda a cada ~54 min (medido), então "dentro da janela 13:30-13:44"
+# perderia o alerta em metade dos dias. O estado (janelas já emitidas hoje)
+# viaja dentro do banco_dados.json, que o robô commita a cada rodada.
+#
+# O e-mail usa SMTP via env (GitHub Secrets). Sem credenciais, degrada para
+# painel-only com log claro — nunca em silêncio.
+ALERTA_JANELAS = [("13:30", 13 * 60 + 30), ("16:45", 16 * 60 + 45)]
+_TZ_BRT_HORAS = -3          # Brasil sem horário de verão desde 2019
+ALERTAS_ARQ = "_alertas_do_dia.json"
+
+
+def _agora_brt():
+    from datetime import timezone as _tz, timedelta as _td
+    forca = os.environ.get("PCM_ALERTA_FORCA_AGORA", "").strip()   # p/ teste
+    agora = datetime.now(_tz.utc) + _td(hours=_TZ_BRT_HORAS)
+    if forca:
+        try:
+            h, m = forca.split(":")
+            agora = agora.replace(hour=int(h), minute=int(m))
+        except ValueError:
+            pass
+    return agora
+
+
+def _alertas_emitidos_hoje(hoje_str):
+    """Janelas já emitidas HOJE, lidas do banco_dados.json da rodada anterior."""
+    try:
+        import json as _json
+        with open(os.path.join(BASE_DIR, "banco_dados.json"), encoding="utf-8") as f:
+            al = (_json.load(f).get("alertas") or {})
+        if al.get("data") == hoje_str:
+            return set(al.get("janelasEmitidas") or [])
+    except Exception:
+        pass
+    return set()
+
+
+def _hm(v):
+    m = _hora_str_to_min(v)
+    return m if m is not None else None
+
+
+def gerar_alertas_do_dia(wb_prog, dias_semana):
+    """STEP A5: calcula os itens em risco do dia e emite o alerta devido."""
+    import json as _json
+    agora = _agora_brt()
+    hoje = agora.date()
+    hoje_str = hoje.strftime("%Y-%m-%d")
+    min_agora = agora.hour * 60 + agora.minute
+    alvo = next(((d, ds) for d, ds in dias_semana if d == hoje), None)
+    emitidas = _alertas_emitidos_hoje(hoje_str)
+
+    payload = {"data": hoje_str, "geradoAs": agora.strftime("%H:%M"),
+               "janela": "", "janelasEmitidas": sorted(emitidas),
+               "itens": [], "doDia": 0, "fechadas": 0}
+    saida = os.path.join(BASE_DIR, ALERTAS_ARQ)
+
+    if alvo is not None:
+        _, dia_hoje_str = alvo
+        janelas_devidas = [n for n, m in ALERTA_JANELAS if min_agora >= m]
+        janela = janelas_devidas[-1] if janelas_devidas else ""
+        payload["janela"] = janela
+        itens, do_dia, fechadas = [], 0, 0
+        for sheet_name in wb_prog.sheetnames:
+            if sheet_name.startswith("_"):
+                continue
+            ws = wb_prog[sheet_name]
+            if ws.max_row < 2:
+                continue
+            header = [c.value for c in ws[1]]
+            def gi(n): return header.index(n) + 1 if n in header else None
+            i_dia, i_os = gi("Dia"), gi("OSs ID")
+            i_hi, i_hf = gi("Hora Início"), gi("Hora Fim")
+            i_at, i_ta = gi("Ativo (Usina)"), gi("Tarefa")
+            i_st, i_es = gi("Status Atual (BD)"), gi("Estado Tarefa (antes)")
+            i_pa = gi("Paralelo (terceirizada)")
+            if not (i_dia and i_os):
+                continue
+            for r in range(2, ws.max_row + 1):
+                dstr = str(ws.cell(row=r, column=i_dia).value or "")
+                if not dstr.startswith(dia_hoje_str):
+                    continue
+                if "NOTURNO" in dstr.upper() or "ZELADORIA" in dstr.upper():
+                    continue                      # janela própria / terceirizada
+                if i_pa and str(ws.cell(row=r, column=i_pa).value or "").strip().lower() == "sim":
+                    continue
+                est = str((ws.cell(row=r, column=i_st).value if i_st else None)
+                          or (ws.cell(row=r, column=i_es).value if i_es else None) or "")
+                el = est.lower()
+                do_dia += 1
+                if "finaliz" in el or "verifica" in el or "conclu" in el:
+                    fechadas += 1
+                    continue
+                if "cancelad" in el:
+                    continue
+                hi = _hm(ws.cell(row=r, column=i_hi).value) if i_hi else None
+                hf = _hm(ws.cell(row=r, column=i_hf).value) if i_hf else None
+                em_risco = False
+                if janela == "16:45":
+                    em_risco = True               # last call: tudo que não fechou
+                elif janela == "13:30":
+                    # decisão 18: fim previsto antes de 13:30 e não fechou;
+                    # ou Não Iniciada que já devia ter começado há > 1 h
+                    if hf is not None and hf < 13 * 60 + 30:
+                        em_risco = True
+                    elif "não iniciada" in el or "nao iniciada" in el:
+                        if hi is not None and min_agora - hi > 60:
+                            em_risco = True
+                if em_risco:
+                    itens.append({
+                        "equipe": sheet_name,
+                        "os": str(ws.cell(row=r, column=i_os).value or ""),
+                        "usina": str((ws.cell(row=r, column=i_at).value if i_at else "") or ""),
+                        "tarefa": str((ws.cell(row=r, column=i_ta).value if i_ta else "") or "")[:80],
+                        "h_ini": str(ws.cell(row=r, column=i_hi).value or "") if i_hi else "",
+                        "h_fim": str(ws.cell(row=r, column=i_hf).value or "") if i_hf else "",
+                        "estado": est,
+                    })
+        payload.update(itens=itens, doDia=do_dia, fechadas=fechadas)
+
+        # e-mail: no máximo UMA vez por janela por dia
+        if janela and janela not in emitidas:
+            if itens:
+                ok = _enviar_email_alerta(janela, itens, do_dia, fechadas)
+                log(f"STEP A5 (alerta {janela}): {len(itens)} em risco · "
+                    f"aderência {fechadas}/{do_dia}"
+                    + (" · e-mail enviado" if ok else " · e-mail NÃO enviado (ver acima)"))
+            else:
+                log(f"STEP A5 (alerta {janela}): dia limpo — nada em risco, sem e-mail")
+            emitidas.add(janela)
+            payload["janelasEmitidas"] = sorted(emitidas)
+
+    try:
+        with open(saida, "w", encoding="utf-8") as f:
+            _json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
+    except OSError as e:
+        log(f"  ! não gravei {ALERTAS_ARQ}: {e}", "WARN")
+
+
+def _enviar_email_alerta(janela, itens, do_dia, fechadas):
+    """SMTP simples via env (GitHub Secrets). Sem config -> False, com log."""
+    import smtplib
+    from email.mime.text import MIMEText
+    host = os.environ.get("SMTP_HOST", "").strip()
+    user = os.environ.get("SMTP_USER", "").strip()
+    pwd = os.environ.get("SMTP_PASS", "").strip()
+    para = os.environ.get("ALERTA_EMAIL_PARA", "").strip()
+    de = os.environ.get("MAIL_FROM", user).strip()
+    porta = int(os.environ.get("SMTP_PORT", "587") or 587)
+    if not (host and user and pwd and para):
+        log("  A5: e-mail não configurado (Secrets SMTP_* / ALERTA_EMAIL_PARA ausentes) "
+            "— alerta fica só no painel", "WARN")
+        return False
+    icone = "🟡" if janela == "13:30" else "🔴"
+    por_eq = {}
+    for i in itens:
+        por_eq.setdefault(i["equipe"], []).append(i)
+    linhas = []
+    for eq in sorted(por_eq):
+        linhas.append(f"<h3 style='margin:14px 0 4px'>{eq} — {len(por_eq[eq])} em risco</h3>")
+        linhas.append("<table border='0' cellpadding='4' style='border-collapse:collapse;font-size:13px'>")
+        for i in por_eq[eq]:
+            linhas.append(
+                f"<tr><td><b>OS {i['os']}</b></td><td>{i['usina']}</td>"
+                f"<td>{i['tarefa']}</td><td>{i['h_ini']}–{i['h_fim']}</td>"
+                f"<td>{i['estado']}</td></tr>")
+        linhas.append("</table>")
+    rodape = ("Informe o motivo no painel antes das 23:59 — sem motivo, a tarefa "
+              "rola como \"não informado\"." if janela == "16:45"
+              else "Checkpoint da manhã: a tarde ainda dá para reagir.")
+    html = (f"<div style='font-family:Segoe UI,Arial,sans-serif'>"
+            f"<h2>{icone} PCM Grid — alerta {janela}</h2>"
+            f"<p>{len(itens)} tarefa(s) em risco · aderência do dia até agora: "
+            f"{fechadas} de {do_dia}.</p>{''.join(linhas)}"
+            f"<p style='color:#666'>{rodape}</p></div>")
+    msg = MIMEText(html, "html", "utf-8")
+    msg["Subject"] = f"{icone} PCM Grid — alerta {janela}: {len(itens)} tarefa(s) em risco"
+    msg["From"] = de
+    msg["To"] = para
+    try:
+        with smtplib.SMTP(host, porta, timeout=60) as s:
+            s.starttls()
+            s.login(user, pwd)
+            s.sendmail(de, [p.strip() for p in para.split(",") if p.strip()], msg.as_string())
+        return True
+    except Exception as e:
+        log(f"  A5: falha no envio do e-mail ({type(e).__name__}: {e})", "WARN")
+        return False
+
+
 # ====================== Main ======================
 
 def main():
@@ -2060,6 +2255,12 @@ def main():
         # STEP A4: rolagem do dia (Melhoria 1) — depois dos overrides do usuário,
         # para que pin recém-colocado já conte como "não rola"
         aplicar_rolagem(wb_prog, dias_semana, date.today())
+        # STEP A5: alertas 13:30/16:45 (Melhoria 3) — por último, para avaliar
+        # o dia já com sync, observações e rolagem aplicados
+        try:
+            gerar_alertas_do_dia(wb_prog, dias_semana)
+        except Exception as e:
+            log(f"! STEP A5 falhou ({type(e).__name__}: {e}) — sem alerta nesta rodada", "WARN")
     elif args.no_sync:
         log("STEP A: PULADO (--no-sync)")
     elif args.no_sync:
