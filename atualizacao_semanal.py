@@ -318,23 +318,66 @@ def _load_workbook_robusto(path, max_tentativas=5):
     return None
 
 
+def _pid_vivo(pid):
+    """True se o PID existe NESTA máquina (Windows: tasklist; POSIX: kill 0)."""
+    try:
+        pid = int(pid)
+    except (TypeError, ValueError):
+        return False
+    try:
+        if os.name == "nt":
+            import subprocess
+            r = subprocess.run(["tasklist", "/FI", f"PID eq {pid}", "/NH"],
+                               capture_output=True, text=True, timeout=15)
+            return str(pid) in (r.stdout or "")
+        os.kill(pid, 0)
+        return True
+    except Exception:
+        return False
+
+
 def _aquire_lock(arquivo_prog):
-    """Lockfile impede execuções paralelas. Lockfile > 30 min é considerado stale."""
+    """Lockfile impede execuções paralelas (v9/0.8, decisão 7).
+
+    Grava MÁQUINA + PID + timestamp. Regras de limpeza:
+      - lock desta máquina com PID morto  -> órfão, remove na hora
+      - lock de OUTRA máquina             -> só idade decide (não dá p/ ver o PID
+        de lá; e a pasta é OneDrive, cujo sync atrasa — o lock entre máquinas é
+        melhor-esforço, nunca garantia)
+      - lock > 30 min                     -> stale, remove
+    Sempre LOGA quem segura o lock — silêncio aqui já escondeu 2 órfãos por meses.
+    """
+    import platform
     import time
     lock_path = arquivo_prog + ".lock"
+    minha_maq = platform.node() or "?"
     if os.path.exists(lock_path):
         try:
+            dono_maq, dono_pid, dono_ts = "?", None, "?"
+            try:
+                partes = open(lock_path, encoding="utf-8").read().split()
+                if len(partes) >= 3:
+                    dono_maq, dono_pid, dono_ts = partes[0], partes[1], partes[2]
+                elif len(partes) == 2:            # formato antigo: "PID data"
+                    dono_pid, dono_ts = partes[0], partes[1]
+            except OSError:
+                pass
             age = time.time() - os.path.getmtime(lock_path)
-            if age < 1800:
-                log(f"! Lockfile existe há {age:.0f}s. Outra execução em andamento? Abortando.", "WARN")
+            if dono_maq == minha_maq and dono_pid and not _pid_vivo(dono_pid):
+                log(f"  Lock órfão desta máquina (PID {dono_pid} morto) — removendo.", "WARN")
+                os.remove(lock_path)
+            elif age >= 1800:
+                log(f"  Lock stale ({age/60:.0f} min, de {dono_maq}/PID {dono_pid}) — removendo.", "WARN")
+                os.remove(lock_path)
+            else:
+                log(f"! Lock ativo: {dono_maq} / PID {dono_pid} desde {dono_ts} "
+                    f"({age:.0f}s). Abortando esta execução.", "WARN")
                 return None
-            log(f"  Lockfile antigo ({age:.0f}s) — removendo.", "WARN")
-            os.remove(lock_path)
         except OSError:
             pass
     try:
         with open(lock_path, "w", encoding="utf-8") as f:
-            f.write(f"{os.getpid()} {datetime.now().isoformat()}\n")
+            f.write(f"{minha_maq} {os.getpid()} {datetime.now().isoformat()}\n")
         return lock_path
     except OSError as e:
         log(f"  ! Não conseguiu criar lockfile ({e}). Prosseguindo sem lock.", "WARN")
