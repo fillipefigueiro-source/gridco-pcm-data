@@ -293,6 +293,7 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
     resumo = defaultdict(lambda: {"hh_util": 0.0, "hh_disp": HH_DISP, "pend": 0})
     pendentes_total = 0
     pendentes = []   # linhas da aba _Pendentes (não couberam) → mostradas no dashboard
+    qualidade = []   # linhas da aba _Qualidade (portão 0.7) → aviso no dashboard
 
     # FAST: usa iter_rows (values_only) que é ordens de magnitude mais rápido
     # que ws.cell() linha por linha em arquivo grande.
@@ -329,6 +330,18 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
                             "tipo":    str(_v(itp) or "").strip(),
                             "duracao": _safe_float(_v(idur)),
                             "motivo":  str(_v(imot) or "").strip(),
+                        })
+            # Aba especial: _Qualidade (portão 0.7) → aviso no dashboard
+            elif sheet_name == "_Qualidade":
+                rows_q = list(wb[sheet_name].iter_rows(values_only=True))
+                for r in rows_q[1:]:
+                    tipo = str(r[0] or "").strip()
+                    if tipo in ("REMOVIDA", "AVISO"):
+                        qualidade.append({
+                            "tipo": tipo,
+                            "item": str(r[1] or "").strip(),
+                            "detalhe": str(r[2] or "").strip(),
+                            "acao": str(r[3] or "").strip() if len(r) > 3 else "",
                         })
             continue
 
@@ -468,6 +481,7 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
         "resumo": resumo_final,
         "rows":   rows,
         "pendentes": pendentes,
+        "qualidade": qualidade,
     }
 
 

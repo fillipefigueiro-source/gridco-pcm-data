@@ -1118,6 +1118,15 @@ def incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana=
             if "cancelad" in est_l or "finaliz" in est_l or "conclu" in est_l:
                 continue
         equipe = row.get("Ativo Classificação 2")
+        # v9 — Portão de qualidade (0.7): ativo/equipe de teste NUNCA entra na
+        # programação pelo meio da semana (mesma regra do programacao_v7).
+        _ativo_inc = str(row.get("Ativo Classificação 1") or row.get("Ativo") or "")
+        _an = re.sub(r"[^a-z0-9]+", "", _strip_accents(_ativo_inc).lower())
+        if _an in ("gridco", "usinateste", "teste") or \
+                str(equipe or "").strip().lower() == "teste":
+            log(f"    [QUALIDADE] OS #{os_id} ignorada (ativo/equipe de teste: "
+                f"{_ativo_inc or equipe})")
+            continue
         equipe_aba = _resolver_nome_aba(equipe, wb_prog.sheetnames) if isinstance(equipe, str) else None
         if not equipe_aba:
             continue

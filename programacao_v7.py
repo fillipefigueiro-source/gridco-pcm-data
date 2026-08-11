@@ -909,6 +909,62 @@ df_tasks['_city']  = df_tasks['_ativo'].apply(extract_city_from_usina)
 df_tasks['_key']   = df_tasks.apply(lambda r: task_key(r['OSs ID'], r.get('Código','')), axis=1)
 
 
+# ====================== v9 — Portão de qualidade do cadastro (Melhoria 0.7) ======================
+# Decisão 6/6.3 do pacote de 08/08/2026: REMOVE o inequívoco (ativo de teste —
+# não existe interpretação em que programá-lo esteja certo), AVISA o ambíguo
+# (quase-duplicata, UF divergente — só o PCM sabe). Remove a LINHA, nunca
+# aborta: a semana sempre sai. Tudo que o portão faz vai para a aba _Qualidade
+# e para o painel — log que ninguém lê é o mesmo que silêncio.
+QUALIDADE = []          # [{'Tipo','Item','Detalhe','Ação'}]
+ATIVOS_TESTE = {'grid co', 'usina teste', 'teste'}   # comparação normalizada EXATA
+
+
+def _qnorm(s):
+    s = unicodedata.normalize('NFKD', str(s or '')).encode('ascii', 'ignore').decode().lower()
+    return re.sub(r'[^a-z0-9]+', '', s)
+
+
+_ATIVOS_TESTE_N = {_qnorm(a) for a in ATIVOS_TESTE}
+
+# a) REMOVE: tarefa em ativo de teste (ou equipe "TESTE")
+_mask_teste = (df_tasks['_ativo'].astype(str).apply(lambda a: _qnorm(a) in _ATIVOS_TESTE_N)
+               | df_tasks['Equipe'].astype(str).str.strip().str.lower().eq('teste'))
+if _mask_teste.any():
+    for _, _r in df_tasks[_mask_teste].iterrows():
+        _it = str(_r['_ativo']) if pd.notna(_r['_ativo']) else f"(sem ativo) · equipe {_r['Equipe']}"
+        QUALIDADE.append({'Tipo': 'REMOVIDA', 'Item': _it,
+                          'Detalhe': f"OS {_r['OSs ID']} · {str(_r.get('Tarefa', ''))[:70]}",
+                          'Ação': 'Linha excluída da programação (ativo/equipe de teste)'})
+    print(f'[QUALIDADE] {int(_mask_teste.sum())} tarefa(s) em ativo de teste '
+          f'removida(s) da programação (ver aba _Qualidade)')
+    df_tasks = df_tasks[~_mask_teste].copy().reset_index(drop=True)
+
+# b) AVISA: grafias que normalizam igual (ex.: "Coração 1 - SC" vs "Coração 1- SC")
+_por_norm = {}
+for _a in sorted(set(df_tasks['_ativo'].astype(str))):
+    _por_norm.setdefault(_qnorm(_a), []).append(_a)
+for _lst in _por_norm.values():
+    if len(_lst) > 1:
+        QUALIDADE.append({'Tipo': 'AVISO', 'Item': ' | '.join(_lst),
+                          'Detalhe': 'Grafias diferentes que normalizam igual — '
+                                     'contam como DUAS usinas na distribuição de dias',
+                          'Ação': 'Conferir no Fracttal se é uma usina duplicada'})
+
+# c) AVISA: UF do nome do ativo difere da UF da equipe (ex.: "Nobres 1 - CE" no MT Sul)
+for _, _r in df_tasks[['_ativo', 'Equipe']].drop_duplicates().iterrows():
+    _m = re.search(r'-\s*([A-Z]{2})\s*$', str(_r['_ativo']).strip())
+    _ufa = _m.group(1) if _m else None
+    _eq = str(_r['Equipe']).strip()
+    _ufe = _eq[:2].upper() if len(_eq) >= 2 and _eq[:2].isalpha() else None
+    if _ufa and _ufe and _ufa != _ufe:
+        QUALIDADE.append({'Tipo': 'AVISO', 'Item': str(_r['_ativo']),
+                          'Detalhe': f'UF do nome ({_ufa}) difere da equipe ({_eq})',
+                          'Ação': 'Conferir nome do ativo / Classificação 2 no Fracttal'})
+if QUALIDADE:
+    _nav = sum(1 for q in QUALIDADE if q['Tipo'] == 'AVISO')
+    print(f'[QUALIDADE] {_nav} aviso(s) de cadastro (ver aba _Qualidade)')
+
+
 # ====================== v8 — Placar Mensal por usina ======================
 # Mede o plano preventivo do MÊS CORRENTE por usina/cluster: quantas estavam
 # previstas, quantas já foram feitas e quantas ainda faltam.
@@ -2010,6 +2066,13 @@ with pd.ExcelWriter(OUTPUT, engine='openpyxl') as writer:
     pd.DataFrame(obs_rows).to_excel(writer, sheet_name='_Observacoes', index=False)
     if len(df_pend):
         df_pend.to_excel(writer, sheet_name='_Pendentes', index=False)
+    # v9 — Portão de qualidade (0.7): sempre escreve a aba, mesmo sem achados,
+    # para documentar que o portão RODOU (ausência de aba = portão não rodou).
+    _qrows = QUALIDADE or [{'Tipo': 'OK', 'Item': '—',
+                            'Detalhe': 'Nenhum achado de cadastro nesta geração',
+                            'Ação': '—'}]
+    pd.DataFrame(_qrows, columns=['Tipo', 'Item', 'Detalhe', 'Ação']).to_excel(
+        writer, sheet_name='_Qualidade', index=False)
     # v8 bloco 2 — Plano do Mês: meta/feitas/faltam de preventivas por usina
     if len(PLACAR_MENSAL):
         _pm = PLACAR_MENSAL.copy()
