@@ -68,7 +68,11 @@ def main():
     else:
         print("nada a commitar — só sincronizando")
 
-    # o robô pode ter commitado nesse meio-tempo: rebase antes do push
+    # o robô pode ter commitado nesse meio-tempo: rebase antes do push.
+    # Identidade explícita: o rebase também cria commits, e sem user.name
+    # configurado ele morre com 128 (aconteceu na primeira execução).
+    git("config", "user.name", "PCM Grid Co.")
+    git("config", "user.email", "fabricio.barreto@gridco.com.br")
     git("fetch", url, "main")
     git("rebase", "FETCH_HEAD")
     git("push", url, "HEAD:main")
