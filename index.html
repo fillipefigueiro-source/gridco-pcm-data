@@ -385,6 +385,10 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .osc-time{font-family:monospace;font-size:8px;opacity:.38}
 .osc-dur{font-size:9px;font-weight:700;opacity:.5}
 .osc-rep{font-size:7.5px;font-weight:700;color:var(--danger);background:#fff5f5;padding:1px 5px;border-radius:3px;border:1px solid rgba(229,62,62,.2)}
+/* M1 — rolagem 23:59 */
+.osc-rol{font-size:7.5px;font-weight:700;color:#1d4ed8;background:#eff6ff;padding:1px 5px;border-radius:3px;border:1px solid rgba(29,78,216,.25)}
+.osc-rol.r3{color:#b91c1c;background:#fef2f2;border-color:rgba(185,28,28,.3)}
+.osc-rolsombra{font-size:7.5px;font-weight:700;color:#8a5a08;background:#fffaf0;padding:1px 5px;border-radius:3px;border:1px dashed rgba(138,90,8,.4)}
 .osc-exec{font-size:7.5px;font-weight:700;color:#7c3aed;background:#f5f3ff;padding:1px 5px;border-radius:3px;border:1px solid rgba(124,58,237,.2)}
 .osc-nova{font-size:7.5px;font-weight:700;color:#0ea5e9;background:#f0f9ff;padding:1px 5px;border-radius:3px;border:1px solid rgba(14,165,233,.2)}
 .osc-fora{font-size:7.5px;font-weight:800;color:#c2691a;background:#fff6ec;padding:1px 5px;border-radius:3px;border:1px solid rgba(224,138,43,.3)}
@@ -3441,6 +3445,12 @@ function renderCal(d){
       if(isExec(r))om[k].exec=true;
       if(isNova(r))om[k].nova=true;
       if(r.foraDoPlano)om[k].fora=true;
+      // M1 — rolagem 23:59: '↻ de ...' = rolou de verdade; 'sombra: ...' = só
+      // simulação (visível apenas ao admin enquanto a rolagem roda em sombra)
+      if(r.rolagem){
+        if(r.rolagem.indexOf('sombra')===0){om[k].rolS=r.rolagem;}
+        else{om[k].rol=r.rolagem;}
+      }
     });
     const gs=Object.values(om).sort((a,b)=>{
       if(a.exec&&!b.exec)return -1;if(b.exec&&!a.exec)return 1;
@@ -3478,6 +3488,8 @@ function renderCal(d){
         +(g.exec?'<span class="osc-exec">&#9889; Em exec.</span>':'')
         +(g.nova?'<span class="osc-nova">&#43; N\u00e3o prog.</span>':'')
         +(g.rep?'<span class="osc-rep">&#8635; Reprog.</span>':'')
+        +(g.rol?'<span class="osc-rol'+(/([3-9]|\d\d)ª/.test(g.rol)?' r3':'')+'" title="'+esc(g.rol)+'">&#8635; rolou</span>':'')
+        +(g.rolS&&S.isAdmin?'<span class="osc-rolsombra" title="'+esc(g.rolS)+'">&#8635; sombra</span>':'')
         +'<span class="osc-n">'+g.tasks.length+'t</span></div></div>';
     }).join('');
     const ovfBtn=ovf>0?'<div class="more-pill" onclick="openMod(\'\',\''+esc(day)+'\',\'\')">+'+ovf+' OS</div>':'';
