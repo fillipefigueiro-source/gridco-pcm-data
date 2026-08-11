@@ -273,6 +273,19 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .mp-chip{font-size:11.5px;background:#f1eff7;color:#2a2440;border-radius:14px;padding:3px 11px;cursor:pointer;border:1px solid #e2dff0}
 .mp-chip:hover{background:#e6e2f2}
 .mp-hint{font-size:11.5px;color:#8a8a94;margin:12px 0 8px}
+/* ---- M3: alerta do dia + captura de motivo ---- */
+.al-box{border:1px solid;border-radius:10px;padding:11px 13px;margin:0 0 12px}
+.al-h1{font-size:13px;font-weight:800;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.al-ad{font-size:11px;font-weight:700;color:#6a6577;margin-left:auto}
+.al-eq{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#5a5566;margin:9px 0 3px}
+.al-i{font-size:11.5px;color:#3a3548;padding:3px 0;border-bottom:1px dashed rgba(0,0,0,.08);
+  display:flex;align-items:center;gap:6px;flex-wrap:wrap;line-height:1.45}
+.al-i .al-h{color:#8a8a94;font-size:10.5px}
+.mv-sel{margin-left:auto;font-size:11px;font-family:inherit;padding:3px 6px;border:1px solid #d0d0d8;border-radius:6px;background:#fff;max-width:220px}
+.al-foot{display:flex;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}
+.al-foot .rp-btn{margin:0}
+.al-dica{font-size:10.5px;color:#8a8a94}
+.al-pareto{font-size:11px;color:#4a4560;margin-top:9px;padding-top:8px;border-top:1px dashed rgba(0,0,0,.12);line-height:1.6}
 /* ---- Portão de qualidade (0.7) ---- */
 .qual-box{background:#fffaf0;border:1px solid #f0dcae;border-radius:10px;margin:0 0 12px;overflow:hidden}
 .qual-h{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 13px;
@@ -2492,6 +2505,79 @@ function rpLimpar(){
   if(!confirm('Limpar as '+RP.length+' reprogramações da fila?'))return;
   RP=[];rpSave();renderPendentes();
 }
+// ---- M3: alerta do dia (13:30/16:45) + captura de motivo — só admin ----
+const MOTIVOS_FIXOS=['Emergencial furou a fila','Aguarda peça/material','Chuva/clima',
+  'Acesso à usina negado','Equipe incompleta','Serviço maior que o estimado','Deslocamento','Outro'];
+let MV={};                                  // {os: motivo} escolhidos nesta sessão
+function mvLinhas(){
+  const A=DB&&DB.alertas, out=[];
+  Object.keys(MV).forEach(os=>{
+    const it=(A&&A.itens||[]).find(i=>String(i.os)===String(os));
+    out.push('# motivo OS '+os+(it?' ('+it.equipe+')':'')+': '+MV[os]);
+  });
+  return out;
+}
+function mvSet(os,v){
+  if(v==='Outro'){
+    const t=prompt('Descreva o motivo (curto):','');
+    if(!t){return;}
+    v='Outro: '+t.slice(0,60);
+  }
+  if(v)MV[os]=v; else delete MV[os];
+  renderAlertas();
+}
+function mvCopiar(){
+  const ls=mvLinhas();
+  if(!ls.length){toast('Nenhum motivo selecionado');return;}
+  navigator.clipboard.writeText(ls.join('\n')).then(()=>toast(ls.length+' motivo(s) copiados — cole nas Observações da Semana Atual (PCM_Painel)'));
+}
+function renderAlertas(){
+  let box=document.getElementById('alerta-dia-box');
+  if(!box){
+    const p=document.getElementById('pendentes');
+    if(!p)return;
+    box=document.createElement('div');box.id='alerta-dia-box';
+    p.parentNode.insertBefore(box,document.getElementById('qualidade-box')||p);
+  }
+  const A=DB&&DB.alertas;
+  const hojeISO=new Date().toISOString().slice(0,10);
+  if(!S.isAdmin||!A||A.data!==hojeISO||!A.janela||!(A.itens||[]).length){box.innerHTML='';return;}
+  const cor=A.janela==='16:45'?'#b91c1c':'#8a5a08';
+  const fundo=A.janela==='16:45'?'#fef2f2':'#fffaf0';
+  const borda=A.janela==='16:45'?'#f0b9b0':'#f0dcae';
+  const porEq={};(A.itens||[]).forEach(i=>{(porEq[i.equipe]=porEq[i.equipe]||[]).push(i);});
+  const linhas=Object.keys(porEq).sort().map(eq=>{
+    const its=porEq[eq].map(i=>{
+      const sel='<select class="mv-sel" onchange="mvSet(\''+esc(String(i.os))+'\',this.value)">'
+        +'<option value="">motivo…</option>'
+        +MOTIVOS_FIXOS.map(m=>'<option'+(MV[i.os]===m?' selected':'')+'>'+esc(m)+'</option>').join('')
+        +(MV[i.os]&&MV[i.os].indexOf('Outro: ')===0?'<option selected>'+esc(MV[i.os])+'</option>':'')
+        +'</select>';
+      return '<div class="al-i"><b>OS '+esc(String(i.os))+'</b> · '+esc((i.usina||'').split(' - ').slice(-2).join(' - '))
+        +' · '+esc(i.tarefa||'')+' <span class="al-h">'+esc(i.h_ini||'')+'–'+esc(i.h_fim||'')
+        +' · '+esc(i.estado||'')+'</span> '+sel+'</div>';
+    }).join('');
+    return '<div class="al-eq">'+esc(eq)+' — '+porEq[eq].length+' em risco</div>'+its;
+  }).join('');
+  // Pareto dos motivos já capturados (linhas "# motivo ..." das observações)
+  let pareto='';
+  const ms=DB.motivos||[];
+  if(ms.length){
+    const c={};ms.forEach(m=>{const k=(m.motivo||'').indexOf('Outro:')===0?'Outro':(m.motivo||'');c[k]=(c[k]||0)+1;});
+    const tot=ms.length,ord=Object.entries(c).sort((a,b)=>b[1]-a[1]).slice(0,8);
+    pareto='<div class="al-pareto"><b>Pareto de causas ('+tot+' motivos na semana):</b> '
+      +ord.map(([k,n])=>esc(k)+' <b>'+n+'</b>').join(' · ')+'</div>';
+  }
+  box.innerHTML='<div class="al-box" style="background:'+fundo+';border-color:'+borda+'">'
+    +'<div class="al-h1" style="color:'+cor+'">'+(A.janela==='16:45'?'🔴':'🟡')+' Alerta '+A.janela
+    +' — '+(A.itens||[]).length+' tarefa(s) do dia não fechadas'
+    +'<span class="al-ad">aderência até agora: '+A.fechadas+' de '+A.doDia+'</span></div>'
+    +linhas
+    +'<div class="al-foot"><button class="rp-btn" onclick="mvCopiar()">📋 Copiar '+(mvLinhas().length||'')+' motivo(s)</button>'
+    +'<span class="al-dica">cole nas Observações da Semana Atual — sem motivo até 23:59, rola como "não informado"</span></div>'
+    +pareto+'</div>';
+}
+
 // ---- Portão de qualidade (0.7): avisos de cadastro da geração — só admin ----
 function renderQualidade(){
   let box=document.getElementById('qualidade-box');
@@ -2515,6 +2601,7 @@ function renderQualidade(){
     +'</div></div>';
 }
 function renderPendentes(){
+  renderAlertas();
   renderQualidade();
   const box=document.getElementById('pendentes');if(!box)return;
   const w=AW();let pend=(w&&Array.isArray(w.pendentes))?w.pendentes.slice():[];
