@@ -1509,13 +1509,18 @@ def _parse_observacoes_atual(linhas):
       excluir_tarefas {os_id: [kw, ...]}     — 'sem:' tira só essas tarefas
     """
     pins, excluidas, excluir_tarefas = {}, set(), {}
-    for ln in linhas:
+    entendidas, problemas = [], []          # v9 (eco) — ver programacao_v7.py
+    for _lineno, ln in enumerate(linhas, start=1):
         ln = (ln or "").strip()
         if not ln or ln.startswith("#"):
             continue
         parts = [p.strip() for p in ln.split(';')]
         if not parts or not parts[0].isdigit():
-            continue  # linha de texto livre — ignora
+            # Só reclama se PARECE estruturada; texto livre segue calado.
+            if ';' in ln or re.match(r'^\s*os\s*[\s#nº:.-]*\d', ln, re.I):
+                problemas.append((_lineno, ln,
+                    "comece pelo número da OS, sem prefixo (ex.: 10369; qua)"))
+            continue
         os_id = int(parts[0])
 
         campos = parts[1:]
@@ -1538,22 +1543,38 @@ def _parse_observacoes_atual(linhas):
         dia_str = (campos[0].upper() if len(campos) > 0 else '')
         if dia_str.replace('Ã', 'A') in ('NAO', 'NO'):
             excluidas.add(os_id)
+            entendidas.append(f"OS {os_id} → fora da semana (nao)")
             continue
         tarefas_s = campos[1] if len(campos) > 1 else ''
         turno_str = (campos[2] if len(campos) > 2 else '').replace('Ã', 'A').replace('ã', 'a').upper().strip()
 
         # DIA pode trazer vários: "seg, ter" → um pin por dia
-        dias = [d for d in (_DIA_MAP_OBS.get(t.strip().upper().replace('Ã', 'A'))
-                            for t in re.split(r'[,;/\s]+', dia_str) if t.strip())
-                if d is not None] or [None]
+        _toks = [t.strip() for t in re.split(r'[,;/\s]+', dia_str) if t.strip()]
+        dias = [d for d in (_DIA_MAP_OBS.get(t.upper().replace('Ã', 'A')) for t in _toks)
+                if d is not None]
+        if not dias:
+            if _toks:
+                # v9 (eco): antes isto virava pin SEM dia — parecia ter funcionado.
+                problemas.append((_lineno, ln,
+                    f"dia não reconhecido ({', '.join(_toks)}) — use seg/ter/qua/qui/sex"))
+                continue
+            dias = [None]
+        _turno = _TURNO_MAP_OBS.get(turno_str)
+        if turno_str and _turno is None:
+            problemas.append((_lineno, ln,
+                f"turno não reconhecido ('{turno_str}') — use manhã/tarde/noite"))
         for _di in dias:
             pins.setdefault(os_id, []).append({
                 'dia': _di,
                 'tarefas': [t.strip().lower() for t in tarefas_s.split(',') if t.strip()] or None,
-                'start_min': _TURNO_MAP_OBS.get(turno_str),
+                'start_min': _turno,
                 'incluir': incluir,
             })
-    return pins, excluidas, excluir_tarefas
+        _dn = {0: 'segunda', 1: 'terça', 2: 'quarta', 3: 'quinta', 4: 'sexta'}
+        _d_txt = ' e '.join(_dn[d] for d in dias if d is not None) or 'melhor dia disponível'
+        _tu_txt = {7 * 60 + 30: 'manhã', 13 * 60: 'tarde', 18 * 60: 'noite'}.get(_turno, 'turno padrão')
+        entendidas.append(f"OS {os_id} → {_d_txt} · {_tu_txt}")
+    return pins, excluidas, excluir_tarefas, entendidas, problemas
 
 
 def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
@@ -1567,7 +1588,12 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
     except Exception as e:
         log(f"! Não consegui ler {OBS_ATUAL_FILE}: {e}", "WARN")
         return
-    pins, excluidas, excluir_tarefas = _parse_observacoes_atual(linhas)
+    pins, excluidas, excluir_tarefas, entendidas, problemas = _parse_observacoes_atual(linhas)
+    # v9 (eco): o que foi entendido e o que não foi. WARN aparece no painel e no robô.
+    for _d in entendidas:
+        log(f"  OK  {_d}")
+    for _lineno, _trecho, _motivo in problemas:
+        log(f'  !! linha {_lineno}: "{_trecho[:60]}" -> {_motivo}', "WARN")
     if not pins and not excluidas and not excluir_tarefas:
         return
     _n_pins = sum(len(v) for v in pins.values())
