@@ -180,6 +180,15 @@ def _carregar_observacoes_semana():
     return obs
 
 
+MUNICIPAL_FERIADOS = {}      # {date: set(cidade_normalizada)} — v9 (0.5)
+
+
+def _norm_cidade_fer(s):
+    """Normaliza nome de cidade p/ casar Feriados x AUXILIAR (acentos/caixa)."""
+    s = unicodedata.normalize('NFKD', str(s or '')).encode('ascii', 'ignore').decode()
+    return re.sub(r'[^a-z]+', ' ', s.lower()).strip()
+
+
 def _carregar_feriados_dict():
     """Carrega Feriados/FERIADOS ESTADUAIS, MUNICIPAIS E NACIONAIS 2026.xlsx
     Popula BR_HOLIDAYS_2026 (NACIONAL) e ESTADUAL_FERIADOS (por UF).
@@ -210,9 +219,34 @@ def _carregar_feriados_dict():
                 nac.add(d)
             elif tipo == "ESTADUAL" and uf and uf != "TODOS":
                 est.setdefault(d, set()).add(uf)
+        # v9 (0.5): MUNICIPAIS ficam no BLOCO DIREITO da mesma aba (colunas
+        # Tipo.1 / MUNICIPIO / Data.1) — nunca foram lidos por ninguém.
+        # Grão correto: feriado municipal bloqueia a CIDADE (as usinas dela),
+        # não a equipe inteira. Popula MUNICIPAL_FERIADOS {date: {cidade_norm}}.
+        mun = {}
+        _c_tipo2 = next((c for c in df.columns if str(c).startswith("Tipo.")), None)
+        _c_mun = next((c for c in df.columns if "MUNICIPIO" in str(c).upper()), None)
+        _c_data2 = next((c for c in df.columns if str(c).startswith("Data.")), None)
+        if _c_tipo2 and _c_mun and _c_data2:
+            for _, row in df.iterrows():
+                if "MUNICIP" not in str(row.get(_c_tipo2) or "").upper():
+                    continue
+                data_ = row.get(_c_data2)
+                cid = _norm_cidade_fer(row.get(_c_mun))
+                if data_ is None or not cid:
+                    continue
+                try:
+                    d = data_.date() if hasattr(data_, "date") else data_
+                except Exception:
+                    continue
+                mun.setdefault(d, set()).add(cid)
+        MUNICIPAL_FERIADOS.clear()
+        MUNICIPAL_FERIADOS.update(mun)
         BR_HOLIDAYS_2026 = nac
         ESTADUAL_FERIADOS = est
-        print(f"[INFO] Feriados: {len(nac)} nacionais, {sum(len(v) for v in est.values())} estaduais")
+        print(f"[INFO] Feriados: {len(nac)} nacionais, "
+              f"{sum(len(v) for v in est.values())} estaduais, "
+              f"{sum(len(v) for v in mun.values())} municipais")
     except Exception as _e:
         print(f"[AVISO] Falha ao carregar feriados ({type(_e).__name__}: {_e}). "
               f"Prosseguindo sem bloqueio.")
@@ -793,6 +827,59 @@ def find_corretiva_mttr(tarefa_txt):
 # Coordenadas geográficas foram removidas (não há mais UFV/LAT/LON disponíveis).
 # Mantemos resolve_coord como stub para preservar a interface sem alterar
 # o restante do algoritmo. Deslocamento entre OSs será zero.
+# ---------- v9 (0.5): feriado MUNICIPAL bloqueia a CIDADE, não a equipe ----------
+def _carregar_usina_cidade():
+    """Mapa usina_norm -> cidade_norm via AUXILIAR (colunas UFV e CIDADE)."""
+    mp = {}
+    try:
+        df_aux = fonte_bd_api.df_auxiliar()
+        cu = next((c for c in df_aux.columns if str(c).strip().upper() == 'UFV'), None)
+        cc = next((c for c in df_aux.columns if str(c).strip().upper() == 'CIDADE'), None)
+        if cu is not None and cc is not None:
+            for _, _r in df_aux.iterrows():
+                _u, _c = _r[cu], _r[cc]
+                if isinstance(_u, str) and _u.strip() and isinstance(_c, str) and _c.strip():
+                    _cidn = _norm_cidade_fer(_c)
+                    mp[_norm_usina(_u)] = _cidn
+                    # indexa também a grafia sem " - UF" (Fracttal usa com UF)
+                    mp[_norm_usina(re.sub(r'\s*-\s*[A-Z]{2}\s*$', '', _u.strip()))] = _cidn
+    except Exception as _e:
+        print(f"[AVISO] mapa usina→cidade indisponível ({_e}) — municipal usa o nome do ativo")
+    return mp
+
+
+USINA_CIDADE = _carregar_usina_cidade()
+_MUN_LOGADOS = set()
+
+
+def _mun_dias_bloqueados(usina):
+    """Índices de dia (0-4) desta semana em que a CIDADE da usina tem feriado
+    municipal. Fonte da cidade: AUXILIAR; fallback: nome do ativo."""
+    if not MUNICIPAL_FERIADOS:
+        return set()
+    # O ativo vem "Cliente - Usina N - UF"; o UFV do AUXILIAR vem sem UF.
+    # (1ª versão fazia lookup direto e falhava SEMPRE, em silêncio — pego no
+    # teste dirigido da W35: o bloqueio nunca disparava.)
+    _base = re.sub(r'\s*-\s*[A-Z]{2}\s*$', '', str(usina).strip())
+    cid = (USINA_CIDADE.get(_norm_usina(_base))
+           or USINA_CIDADE.get(_norm_usina(usina)))
+    if not cid:
+        # fallback: última parte do nome sem número ("Thopen - Matão 1"→"matao")
+        _sem_num = re.sub(r'\s+\d+(\s+e\s+\d+)?\s*$', '', _base)
+        cid = _norm_cidade_fer(_sem_num.split(' - ')[-1])
+    if not cid:
+        return set()
+    bloq = set()
+    for _di, _d in enumerate(DAYS):
+        if cid in MUNICIPAL_FERIADOS.get(_d, ()):
+            bloq.add(_di)
+            if (str(usina), _di) not in _MUN_LOGADOS:
+                _MUN_LOGADOS.add((str(usina), _di))
+                print(f"[FERIADO MUNICIPAL] {_d.strftime('%d/%m')} em "
+                      f"{cid.title()}: '{usina}' fora da distribuição nesse dia")
+    return bloq
+
+
 def resolve_coord(city_key):
     return None
 
@@ -1408,10 +1495,16 @@ def assign_days_to_usinas(usinas_carga_h, day_caps, mpa_done_idx=None):
 
     def _dias_permitidos(u):
         # Regra "@usina X = dias": só os dias permitidos (∩ disponíveis). Sem regra: todos.
+        base = None
         for regra, dias in USINA_DIAS.items():
             if _usina_match(u, regra):
-                return [i for i in available_idx if i in dias]
-        return list(available_idx)
+                base = [i for i in available_idx if i in dias]
+                break
+        if base is None:
+            base = list(available_idx)
+        # v9 (0.5): feriado MUNICIPAL tira o dia da cidade daquela usina
+        bloq = _mun_dias_bloqueados(u)
+        return [i for i in base if i not in bloq] if bloq else base
 
     days_per_usina = distribute_days(usinas_carga_h, days_disp)
     # Usina com regra não recebe mais dias do que os permitidos disponíveis

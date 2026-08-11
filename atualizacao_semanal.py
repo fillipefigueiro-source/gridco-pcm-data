@@ -557,7 +557,19 @@ def carregar_feriados():
             feriados.setdefault(d, set()).add("TODOS")
         elif tipo == "ESTADUAL" and uf and uf != "TODOS":
             feriados.setdefault(d, set()).add(uf)
-        # MUNICIPAL ignorado (precisaria mapear cidade->UFV)
+        # MUNICIPAL: aplicado no grão certo (usina/cidade) pela GERAÇÃO de sexta
+        # (programacao_v7 v9/0.5). Aqui só damos visibilidade — as sugestões do
+        # meio da semana ainda não bloqueiam por municipal.
+    try:
+        _dfm = _read_excel_robusto(INPUT_FERIADOS, sheet_name="Feriados 2026", header=1)
+        if _dfm is not None:
+            _ct = next((c for c in _dfm.columns if str(c).startswith("Tipo.")), None)
+            _n_mun = int((_dfm[_ct].astype(str).str.upper()
+                          .str.contains("MUNICIP", na=False)).sum()) if _ct else 0
+            if _n_mun:
+                log(f"  → {_n_mun} feriados MUNICIPAIS no arquivo (aplicados na geração de sexta)")
+    except Exception:
+        pass
     log(f"  → {len(feriados)} datas de feriado carregadas")
     return feriados
 
