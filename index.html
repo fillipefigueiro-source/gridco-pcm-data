@@ -273,6 +273,38 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .mp-chip{font-size:11.5px;background:#f1eff7;color:#2a2440;border-radius:14px;padding:3px 11px;cursor:pointer;border:1px solid #e2dff0}
 .mp-chip:hover{background:#e6e2f2}
 .mp-hint{font-size:11.5px;color:#8a8a94;margin:12px 0 8px}
+/* ---- Frentes de compra de equipamento (Gestão MPAS) ---- */
+.cmp-cap{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#8a8a94;margin:16px 0 8px}
+.cmp-box{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px}
+.cmp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:10px}
+.cmp-card{position:relative;border:1px solid var(--line);border-radius:10px;padding:12px 13px 11px;
+  background:#fff;overflow:hidden;cursor:pointer;transition:box-shadow .15s,transform .1s}
+.cmp-card:hover{box-shadow:0 4px 14px rgba(24,21,43,.10);transform:translateY(-1px)}
+.cmp-card.sel{outline:2px solid #191528;outline-offset:1px}
+.cmp-card.venc{border-color:#f0b9b0;background:#fff7f6}
+.cmp-card .top{position:absolute;top:0;left:0;right:0;height:3px}
+.cmp-card .cl{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#8a8a94}
+.cmp-card .cv{font-size:22px;font-weight:800;line-height:1.15;margin-top:4px;letter-spacing:-.01em}
+.cmp-card .cs{font-size:11.5px;color:#5a5566;margin-top:5px;line-height:1.4}
+.cmp-card .ctag{display:inline-block;font-size:10.5px;font-weight:700;border-radius:11px;padding:2px 8px;margin-top:8px}
+.cmp-card .t-red{background:#fdeceb;color:#a3271a}
+.cmp-card .t-gray{background:#f2f2f6;color:#6a6577}
+.cmp-tot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-top:11px;padding-top:11px;border-top:1px solid var(--line)}
+.cmp-tot .tt i{font-style:normal;font-size:10px;color:#8a8a94;text-transform:uppercase;font-weight:700;letter-spacing:.04em}
+.cmp-tot .tt b{display:block;font-size:16.5px;font-weight:800;margin-top:2px}
+.cmp-tot .rp-btn{margin:0}
+.cmp-av{display:flex;gap:9px;align-items:flex-start;margin-top:11px;padding:9px 11px;background:#fffaf0;
+  border:1px solid #f0dcae;border-radius:8px;font-size:11.5px;color:#6b4e12;line-height:1.5}
+.cmp-tbl{width:100%;border-collapse:collapse;margin-top:12px;font-size:11.5px}
+.cmp-tbl th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:#8a8a94;
+  border-bottom:1px solid var(--line);padding:6px 8px;font-weight:700;white-space:nowrap}
+.cmp-tbl td{padding:6px 8px;border-bottom:1px solid #f2f2f6;white-space:nowrap}
+.cmp-tbl tr:last-child td{border-bottom:none}
+.cmp-pill{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 8px}
+.cmp-pill.p-red{background:#fdeceb;color:#a3271a}
+.cmp-pill.p-amb{background:#fff4e0;color:#8a5a08}
+.cmp-pill.p-ok{background:#eef7e4;color:#3f6b12}
+@media(max-width:700px){.cmp-grid{grid-template-columns:1fr 1fr}}
 .mp-foot{font-size:11px;color:#9a9aa4;margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
 .monthGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:14px}
 .mcard{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
@@ -1293,6 +1325,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="calkpis" id="mp-kpis"></div>
         <div class="mp-bar" id="mp-filtros"></div>
         <div class="mp-chips" id="mp-chips"></div>
+        <div id="mp-compras"></div>
         <div class="mp-hint" id="mp-hint"></div>
         <div id="mp-tree"></div>
         <div class="mp-foot" id="mp-foot"></div>
@@ -2186,11 +2219,102 @@ function mpTabela(list){
 }
 const mpDataBR=iso=>{const p=String(iso||'').split('-');return p.length===3?(p[2]+'/'+p[1]+'/'+p[0]):iso;};
 
+// ---- Frentes de compra de equipamento (aba "Compra Equip MPA 2026") ----
+// O Excel manda nas quantidades e abatimentos (julgamento do PCM); a âncora,
+// o prazo e a frente são recalculados no gerador a partir das datas reais.
+let MP_CMP_ABERTO=false;
+const mpBRL=v=>'R$ '+(Math.round(v||0)).toLocaleString('pt-BR');
+const mpDia=s=>s?s.split('-').reverse().join('/'):'—';
+function mpDias(iso){
+  if(!iso)return null;
+  const h=new Date(); h.setHours(0,0,0,0);
+  return Math.round((new Date(iso+'T00:00:00')-h)/864e5);
+}
+function mpCompras(){
+  const box=document.getElementById('mp-compras');
+  if(!box)return;
+  const C=MP&&MP.compras;
+  if(!C||!C.clusters||!C.clusters.length){box.innerHTML='';return;}
+  const hojeISO=new Date().toISOString().slice(0,10);
+  // agrupa por frente, somando valor, clusters e MPAs destravadas
+  const fr={};
+  C.clusters.forEach(c=>{
+    const f=fr[c.frente]=fr[c.frente]||{n:0,A:0,B:0,mpas:0,venc:0,prazo:null,cls:[]};
+    f.n++; f.A+=c.valorA||0; f.B+=c.valorB||0; f.mpas+=c.mpas||0; f.cls.push(c.cluster);
+    if(c.ancora&&c.ancora<hojeISO)f.venc++;
+    if(c.ancora&&(!f.prazo||c.ancora<f.prazo))f.prazo=c.ancora;
+  });
+  const ordem=Object.keys(fr).sort();
+  const tA=C.clusters.reduce((s,c)=>s+(c.valorA||0),0);
+  const tB=C.clusters.reduce((s,c)=>s+(c.valorB||0),0);
+  const totMpas=C.clusters.reduce((s,c)=>s+(c.mpas||0),0);
+  const cards=ordem.map(k=>{
+    const f=fr[k], venc=f.venc>0, d=mpDias(f.prazo);
+    const sel=[...MP_SEL.cluster].length&&f.cls.every(c=>MP_SEL.cluster.has(c));
+    return '<div class="cmp-card'+(venc?' venc':'')+(sel?' sel':'')+'" onclick="mpFiltrarFrente(\''+esc(k).replace(/'/g,"\\'")+'\')" '
+      +'title="clique para ver só os clusters desta frente">'
+      +'<div class="top" style="background:'+(venc?'#c0392b':'#1C1F3B')+'"></div>'
+      +'<div class="cl">'+esc(k)+'</div>'
+      +'<div class="cv"'+(venc?' style="color:#c0392b"':'')+'>'+mpBRL(f.A)+'</div>'
+      +'<div class="cs">'+f.n+' cluster'+(f.n>1?'s':'')+' · destrava <b>'+f.mpas+' MPA'+(f.mpas>1?'s':'')+'</b></div>'
+      +'<div class="ctag '+(venc?'t-red':'t-gray')+'">'
+      +(venc?f.venc+' já vencida'+(f.venc>1?'s':''):'')
+      +(venc?' · ':'')+'prazo '+mpDia(f.prazo)
+      +(!venc&&d!=null?' · em '+d+' dias':'')+'</div></div>';
+  }).join('');
+  // ressalvas que fazem do número um piso
+  const av=[];
+  const pend=C.clusters.filter(c=>c.pendencia).map(c=>c.cluster);
+  if(pend.length)av.push('<b>'+pend.length+' cluster(s) sem tensão cadastrada</b> (aterramento zerado): '+pend.join(', '));
+  (C.semDimensionamento||[]).forEach(f=>av.push('<b>'+esc(f.cluster)+' sem linha de dimensionamento</b> — MPA em '+mpDia(f.ancora)+' ('+esc(f.usina||'')+')'));
+  if(C.semCluster)av.push(C.semCluster+' MPA(s) sem cluster ficaram fora do rateio');
+  const custoMpa=totMpas?tA/totMpas:0;
+  box.innerHTML=
+    '<div class="cmp-cap">Frentes de compra · equipamento para as '+(C.totalMpas||0)+' MPAs de '
+    +mpDia(C.janela&&C.janela[0])+' a '+mpDia(C.janela&&C.janela[1])+'</div>'
+    +'<div class="cmp-box"><div class="cmp-grid">'+cards+'</div>'
+    +'<div class="cmp-tot">'
+    +'<div class="tt"><i>Total do plano</i><b>'+mpBRL(tA)+'</b></div>'
+    +'<div class="tt"><i>Cenário econômico</i><b>'+mpBRL(tB)+'</b></div>'
+    +'<div class="tt"><i>Diferença</i><b style="color:#3f6b12">'+mpBRL(tA-tB)+'</b></div>'
+    +'<div class="tt"><i>Custo por MPA viabilizada</i><b>'+mpBRL(custoMpa)+'</b></div>'
+    +'<button class="rp-btn sec" style="margin-left:auto" onclick="mpCmpTog()">'
+    +(MP_CMP_ABERTO?'▴ ocultar':'▾ ver')+' os '+C.clusters.length+' clusters</button></div>'
+    +(av.length?'<div class="cmp-av"><span>⚠</span><div><b>O valor é piso, não teto.</b> '+av.join(' · ')+'</div></div>':'')
+    +(MP_CMP_ABERTO?mpCmpTabela(C,hojeISO):'')
+    +'</div>';
+}
+function mpCmpTabela(C,hojeISO){
+  const l=C.clusters.slice().sort((a,b)=>String(a.ancora||'9').localeCompare(String(b.ancora||'9')));
+  let h='<div style="overflow-x:auto"><table class="cmp-tbl"><thead><tr>'
+    +'<th>Cluster</th><th>Cliente</th><th>Âncora</th><th>MPAs</th>'
+    +'<th style="text-align:right">Cenário A</th><th style="text-align:right">Cenário B</th><th>Situação</th></tr></thead><tbody>';
+  l.forEach(c=>{
+    const venc=c.ancora&&c.ancora<hojeISO, d=mpDias(c.ancora);
+    const st=venc?'<span class="cmp-pill p-red">vencida há '+Math.abs(d)+'d</span>'
+      :c.pendencia?'<span class="cmp-pill p-amb">tensão pendente</span>'
+      :'<span class="cmp-pill p-ok">em '+d+' dias</span>';
+    h+='<tr><td><b>'+esc(c.cluster)+'</b></td><td>'+esc(c.cliente||'')+'</td><td>'+mpDia(c.ancora)+'</td>'
+      +'<td>'+(c.mpas||0)+'</td><td style="text-align:right">'+mpBRL(c.valorA)+'</td>'
+      +'<td style="text-align:right">'+mpBRL(c.valorB)+'</td><td>'+st+'</td></tr>';
+  });
+  return h+'</tbody></table></div>';
+}
+function mpCmpTog(){MP_CMP_ABERTO=!MP_CMP_ABERTO;mpCompras();}
+function mpFiltrarFrente(f){
+  const C=MP&&MP.compras; if(!C)return;
+  const alvo=C.clusters.filter(c=>c.frente===f).map(c=>c.cluster);
+  const jaEsta=alvo.length&&alvo.every(c=>MP_SEL.cluster.has(c))&&MP_SEL.cluster.size===alvo.length;
+  MP_SEL.cluster.clear();
+  if(!jaEsta)alvo.forEach(c=>MP_SEL.cluster.add(c));
+  mpBuildPop('cluster'); mpMsLabel('cluster'); renderMpas();
+}
+
 function renderMpas(){
   if(!MP)return;
   document.getElementById('mp-lock').style.display='none';
   document.getElementById('mp-body').style.display='';
-  mpFiltros(); mpChips(); mpKpis();
+  mpFiltros(); mpChips(); mpKpis(); mpCompras();
   const mostrarConc=MP_F.concluidas||MP_SEL.situacao.has('Concluída');
   const rows=mpFilt().filter(r=>mostrarConc||mpSit(r).k!=='Concluída');
   document.getElementById('mp-hint').textContent=
