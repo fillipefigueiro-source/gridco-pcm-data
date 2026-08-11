@@ -2104,24 +2104,46 @@ def _despachar_alertas(janela, itens, do_dia, fechadas):
     """Decide PARA QUEM vai o alerta e envia. Devolve (enviados, total_tentado).
 
     Dois modos, nesta ordem:
-      1) INDIVIDUAL (decisão 17) — Secret ALERTA_EMAIL_MAPA com JSON
-         {"BA Sul 01": "supervisor@...", "MT Leste 01": "outro@..."}.
-         Cada Responsável O&M recebe SÓ as tarefas da equipe dele.
-         O mapa vive em Secret, não no AUXILIAR: o repositório é público, e
-         e-mail de pessoa é dado pessoal — não pode ser commitado.
+      1) INDIVIDUAL (decisão 17) — cada Responsável O&M recebe SÓ as tarefas da
+         equipe dele. Fonte, em ordem de prioridade:
+           a. Secret ALERTA_EMAIL_MAPA (JSON) — permite trocar sem commit
+           b. arquivo alertas_destinatarios.json do repositório
+         Valor por cluster aceita string ou lista (cluster com dois donos).
       2) LISTA FIXA — ALERTA_EMAIL_PARA recebe o alerta completo (todas as
          equipes). Usado como recuo e para quem precisa da visão geral.
     Os dois podem coexistir: o supervisor recebe o dele, a lista recebe tudo.
     """
     import json as _json
+
+    def _norm_dest(d):
+        """Aceita 'a@x' ou ['a@x','b@x'] por cluster; devolve 'a@x, b@x'."""
+        out = {}
+        for k, v in (d or {}).items():
+            if isinstance(v, (list, tuple)):
+                v = ", ".join(str(x).strip() for x in v if str(x).strip())
+            v = str(v or "").strip()
+            if v:
+                out[str(k).strip()] = v
+        return out
+
     mapa = {}
     bruto = os.environ.get("ALERTA_EMAIL_MAPA", "").strip()
-    if bruto:
+    if bruto:                                   # Secret tem prioridade
         try:
-            mapa = {str(k).strip(): str(v).strip()
-                    for k, v in _json.loads(bruto).items() if str(v).strip()}
+            mapa = _norm_dest(_json.loads(bruto))
         except Exception as e:
-            log(f"  A5: ALERTA_EMAIL_MAPA inválido ({e}) — usando só a lista fixa", "WARN")
+            log(f"  A5: ALERTA_EMAIL_MAPA inválido ({e}) — tentando o arquivo", "WARN")
+    if not mapa:                                # recuo: arquivo versionado
+        _arq = os.path.join(BASE_DIR, "alertas_destinatarios.json")
+        if os.path.exists(_arq):
+            try:
+                with open(_arq, encoding="utf-8") as f:
+                    mapa = _norm_dest(_json.load(f).get("mapa"))
+                if mapa:
+                    log(f"  A5: destinatários lidos de alertas_destinatarios.json "
+                        f"({len(mapa)} cluster(s))")
+            except Exception as e:
+                log(f"  A5: alertas_destinatarios.json ilegível ({e})", "WARN")
     enviados = tentados = 0
     if mapa:
         por_eq = {}
