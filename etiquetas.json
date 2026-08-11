@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-11T16:44:10Z",
+  "geradoEm": "2026-08-11T17:49:05Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3582,
-        "emAberto": 7,
-        "atrasadas": 5,
-        "concluidas30d": 612,
-        "concluidas7d": 168,
+        "emAberto": 6,
+        "atrasadas": 4,
+        "concluidas30d": 613,
+        "concluidas7d": 169,
         "naSemanaCorrente": 30
       },
       "mttr": {
-        "horas": 10.83,
-        "label": "10h 50min",
-        "amostra": 612
+        "horas": 12.99,
+        "label": "12h 59min",
+        "amostra": 613
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W33",
           "criadas": 30,
-          "finalizadas": 40
+          "finalizadas": 41
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3582,
-            "emAberto": 7
+            "emAberto": 6
           }
         ],
         "responsaveis": [
@@ -78,36 +78,18 @@
           }
         ]
       },
-      "total": 7,
-      "atrasadas": 5,
+      "total": 6,
+      "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 5,
-        "emProgresso": 0,
+        "naoIniciada": 3,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 7
+        "(sem equipe)": 6
       },
       "oss": [
-        {
-          "osId": "7975",
-          "ativo": "Infraestrutura Civil Estrada p/Campo Grande União  Piauí Brasil { 2C-UNI100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
-          "criticidade": "",
-          "dataProgramada": "2026-06-23",
-          "dataCriacao": "2026-06-18",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "remoto",
-          "atrasada": true
-        },
         {
           "osId": "8848",
           "ativo": "Thopen - Aparecida do Taboado 1 e 2 - MS  Aparecida do Taboado  Mato Grosso do Sul Brasil { THPN-ADT100 }",
@@ -189,14 +171,15 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[SKID 4] - Religamento do SKID 4",
           "criticidade": "",
           "dataProgramada": "2026-08-11",
           "dataCriacao": "2026-08-11",
-          "dataInicial": "",
+          "dataInicial": "2026-08-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3221,17 +3204,25 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1652,
+      "historicoTotal": 1653,
       "subClassificacao": {
         "remoto": 738,
         "local": 2844,
-        "remotoEmAberto": 3,
+        "remotoEmAberto": 2,
         "localEmAberto": 4,
         "pctRemoto": 21,
         "alerta": true
       },
       "rankingDemora": {
         "topAbrir": [
+          {
+            "osId": "7975",
+            "ativo": "Infraestrutura Civil Estrada p/Campo Grande União  Piauí Brasil { 2C-UNI100-INFC1 }",
+            "criadoPor": "Juliana Cândido",
+            "responsavel": "Luiz  Silva",
+            "horas": 1296.0,
+            "linkFracttal": ""
+          },
           {
             "osId": "7597",
             "ativo": "Infraestrutura Civil Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-INFC1 }",
@@ -3302,14 +3293,6 @@
             "criadoPor": "Juliana Cândido",
             "responsavel": "Ricardo Silva ",
             "horas": 168.0,
-            "linkFracttal": ""
-          },
-          {
-            "osId": "8350",
-            "ativo": "Infraestrutura Civil Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100-INFC1 }",
-            "criadoPor": "Juliana Cândido",
-            "responsavel": "Cláudio  Ferreira",
-            "horas": 120.0,
             "linkFracttal": ""
           }
         ],
@@ -3395,10 +3378,10 @@
             "linkFracttal": ""
           }
         ],
-        "medHorasAbrir": 7.2,
+        "medHorasAbrir": 9.0,
         "medHorasFechar": 2.7,
-        "amostraAbrir": 729,
-        "amostraFechar": 728,
+        "amostraAbrir": 730,
+        "amostraFechar": 729,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3448,12 +3431,12 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 611,
-        "emAberto": 86,
+        "total": 613,
+        "emAberto": 88,
         "atrasadas": 44,
         "concluidas30d": 86,
         "concluidas7d": 28,
-        "naSemanaCorrente": 37
+        "naSemanaCorrente": 39
       },
       "mttr": {
         "horas": 364.47,
@@ -3478,7 +3461,7 @@
         },
         {
           "semana": "W33",
-          "criadas": 1,
+          "criadas": 3,
           "finalizadas": 5
         }
       ],
@@ -3486,20 +3469,20 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 611,
-            "emAberto": 86
+            "total": 613,
+            "emAberto": 88
           }
         ],
         "responsaveis": [
           {
+            "nome": "James Chaves",
+            "total": 30,
+            "emAberto": 6
+          },
+          {
             "nome": "Luiz  Silva",
             "total": 28,
             "emAberto": 5
-          },
-          {
-            "nome": "James Chaves",
-            "total": 28,
-            "emAberto": 4
           },
           {
             "nome": "Francisco  Santos",
@@ -3518,16 +3501,16 @@
           }
         ]
       },
-      "total": 86,
+      "total": 88,
       "atrasadas": 44,
       "porStatus": {
-        "naoIniciada": 78,
-        "emProgresso": 0,
+        "naoIniciada": 79,
+        "emProgresso": 1,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 86
+        "(sem equipe)": 88
       },
       "oss": [
         {
@@ -4285,6 +4268,23 @@
           "atrasada": true
         },
         {
+          "osId": "11029",
+          "ativo": "Sistema de Segurança Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-SSEG1 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[Athon] - MPM - Sistemas de segurança",
+          "criticidade": "",
+          "dataProgramada": "2026-08-11",
+          "dataCriacao": "2026-08-11",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "11019",
           "ativo": "Inversor 5.9 Sungrow     { MAB100-INVR5.9 }",
           "equipe": "",
@@ -4313,6 +4313,23 @@
           "criticidade": "",
           "dataProgramada": "2026-08-11",
           "dataCriacao": "2026-08-07",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11032",
+          "ativo": "Transformador 2 COMTRAFO     { MAB200-TRFR2 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[Athon] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-11",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -4854,14 +4871,15 @@
           "responsavel": "Francisco  Santos",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Francisco  Santos",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-08-23",
           "dataCriacao": "2026-07-28",
-          "dataInicial": "",
+          "dataInicial": "2026-08-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 336.0,
           "atrasada": false
         },
         {
@@ -8938,16 +8956,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 462,
-        "emAberto": 97,
+        "emAberto": 96,
         "atrasadas": 83,
-        "concluidas30d": 272,
-        "concluidas7d": 54,
+        "concluidas30d": 273,
+        "concluidas7d": 55,
         "naSemanaCorrente": 40
       },
       "mttr": {
-        "horas": 155.65,
+        "horas": 155.16,
         "label": "6d 11h",
-        "amostra": 272
+        "amostra": 273
       },
       "tendencia4Semanas": [
         {
@@ -8968,7 +8986,7 @@
         {
           "semana": "W33",
           "criadas": 12,
-          "finalizadas": 20
+          "finalizadas": 21
         }
       ],
       "topOfensores": {
@@ -8976,7 +8994,7 @@
           {
             "nome": "(sem equipe)",
             "total": 462,
-            "emAberto": 97
+            "emAberto": 96
           }
         ],
         "responsaveis": [
@@ -9007,16 +9025,16 @@
           }
         ]
       },
-      "total": 97,
+      "total": 96,
       "atrasadas": 83,
       "porStatus": {
-        "naoIniciada": 88,
-        "emProgresso": 1,
-        "pausada": 8,
+        "naoIniciada": 87,
+        "emProgresso": 2,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 97
+        "(sem equipe)": 96
       },
       "oss": [
         {
@@ -10087,7 +10105,7 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Levi Maia ",
           "supervisor": "Eduardo  Mendes",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Inversor 2.2] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
@@ -10474,23 +10492,6 @@
           "atrasada": false
         },
         {
-          "osId": "10988",
-          "ativo": "Tracker 1.1.500 Brametal     { GTA500-ETKR1.500 }",
-          "equipe": "",
-          "responsavel": "Henri Almeida ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Henri Almeida ",
-          "status": "Não Iniciada",
-          "tarefa": "[Tracker 1.1.500] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-11",
-          "dataCriacao": "2026-08-10",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "10976",
           "ativo": "Inversor 1.4 Sungrow SG250HX    { THPN-JUC100-INVR1.4 }",
           "equipe": "",
@@ -10688,6 +10689,25 @@
           "supervisor": "Francisco  Santos",
           "status": "Finalizados",
           "tarefa": "[Inversor 1.5] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-11",
+          "dataCriacao": "2026-08-10",
+          "dataInicial": "2026-08-11",
+          "dataFinal": "2026-08-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10988",
+          "ativo": "Tracker 1.1.500 Brametal     { GTA500-ETKR1.500 }",
+          "equipe": "",
+          "responsavel": "Henri Almeida ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Henri Almeida ",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 1.1.500] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-11",
           "dataCriacao": "2026-08-10",
@@ -13492,25 +13512,6 @@
           "atrasada": false
         },
         {
-          "osId": "9589",
-          "ativo": "Inversor 4.3 Sungrow SG250HX    { THPN-SDN100-INVR4.3 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizada",
-          "tarefa": "[Sítio dos Nogueiras 1][Inversor 4.3] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-07-16",
-          "dataCriacao": "2026-07-16",
-          "dataInicial": "2026-07-16",
-          "dataFinal": "2026-07-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 96.0,
-          "atrasada": false
-        },
-        {
           "osId": "9614",
           "ativo": "Inversor 1.9 Sungrow     { BWK100-INVR1.9 }",
           "equipe": "",
@@ -13530,7 +13531,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 320
+      "historicoTotal": 321
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15156,20 +15157,53 @@
   },
   "ossPublicas": [
     {
+      "osId": "11032",
+      "ativo": "Transformador 2 COMTRAFO     { MAB200-TRFR2 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[Athon] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11029",
+      "ativo": "Sistema de Segurança Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-SSEG1 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[Athon] - MPM - Sistemas de segurança",
+      "criticidade": "",
+      "dataProgramada": "2026-08-11",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "11028",
       "ativo": "SKID 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-SKID4 }",
       "equipe": "",
       "responsavel": "Ricardo Silva ",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[SKID 4] - Religamento do SKID 4",
       "criticidade": "",
       "dataProgramada": "2026-08-11",
       "dataCriacao": "2026-08-11",
-      "dataInicial": "",
+      "dataInicial": "2026-08-11",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15294,22 +15328,6 @@
       "supervisor": "Cláudio  Ferreira",
       "status": "Não Iniciada",
       "tarefa": "[Skid 1] - Avaliação da temperatura no momento de pico da geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-11",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "10988",
-      "ativo": "Tracker 1.1.500 Brametal     { GTA500-ETKR1.500 }",
-      "equipe": "",
-      "responsavel": "Henri Almeida ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Henri Almeida ",
-      "status": "Não Iniciada",
-      "tarefa": "[Tracker 1.1.500] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-11",
       "dataCriacao": "2026-08-10",
@@ -16241,7 +16259,7 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Levi Maia ",
       "supervisor": "Eduardo  Mendes",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Inversor 2.2] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
@@ -16968,14 +16986,15 @@
       "responsavel": "Francisco  Santos",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Francisco  Santos",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-08-23",
       "dataCriacao": "2026-07-28",
-      "dataInicial": "",
+      "dataInicial": "2026-08-11",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 336.0
     },
     {
       "osId": "10239",
@@ -18302,23 +18321,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "7975",
-      "ativo": "Infraestrutura Civil Estrada p/Campo Grande União  Piauí Brasil { 2C-UNI100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "Handover - COS - Supervisório, CFTV e Religamento Remoto",
-      "criticidade": "",
-      "dataProgramada": "2026-06-23",
-      "dataCriacao": "2026-06-18",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "remoto"
-    },
-    {
       "osId": "7103",
       "ativo": "Cabine 1  Petrolina  Pernambuco Brasil { PTL200-CABN1 }",
       "equipe": "",
@@ -18711,6 +18713,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "10988",
+      "ativo": "Tracker 1.1.500 Brametal     { GTA500-ETKR1.500 }",
+      "equipe": "",
+      "responsavel": "Henri Almeida ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Henri Almeida ",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 1.1.500] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-11",
+      "dataCriacao": "2026-08-10",
+      "dataInicial": "2026-08-11",
+      "dataFinal": "2026-08-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -21312,30 +21333,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10673",
-      "ativo": "Utragaz - Ibirapuã 2 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI200 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-05",
-      "dataCriacao": "2026-08-05",
-      "dataInicial": "2026-08-05",
-      "dataFinal": "2026-08-05",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2364,
-  "totalGeral": 4880,
+  "historicoTotal": 2366,
+  "totalGeral": 4882,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
