@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-11T11:12:41Z",
+  "geradoEm": "2026-08-11T12:04:39Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3572,
+        "total": 3573,
         "emAberto": 5,
         "atrasadas": 5,
-        "concluidas30d": 604,
-        "concluidas7d": 160,
-        "naSemanaCorrente": 20
+        "concluidas30d": 605,
+        "concluidas7d": 161,
+        "naSemanaCorrente": 21
       },
       "mttr": {
-        "horas": 11.14,
-        "label": "11h 8min",
-        "amostra": 604
+        "horas": 11.12,
+        "label": "11h 7min",
+        "amostra": 605
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W33",
-          "criadas": 20,
-          "finalizadas": 33
+          "criadas": 21,
+          "finalizadas": 34
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3572,
+            "total": 3573,
             "emAberto": 5
           }
         ],
@@ -67,14 +67,14 @@
             "emAberto": 0
           },
           {
+            "nome": "Italo  Lustosa",
+            "total": 163,
+            "emAberto": 0
+          },
+          {
             "nome": "Wesllen  Castro",
             "total": 162,
             "emAberto": 1
-          },
-          {
-            "nome": "Italo  Lustosa",
-            "total": 162,
-            "emAberto": 0
           }
         ]
       },
@@ -184,6 +184,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11011",
+          "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
+          "equipe": "",
+          "responsavel": "Italo  Lustosa",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Italo  Lustosa",
+          "status": "Finalizada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-11",
+          "dataCriacao": "2026-08-11",
+          "dataInicial": "2026-08-11",
+          "dataFinal": "2026-08-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "11007",
           "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
@@ -1945,26 +1965,6 @@
           "atrasada": false
         },
         {
-          "osId": "10612",
-          "ativo": "Thopen - Ouro Branco 1 - AL FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Ricardo Silva ",
-          "status": "Finalizados",
-          "tarefa": "Religamento UFV Ouro Branco 3",
-          "criticidade": "",
-          "dataProgramada": "2026-08-04",
-          "dataCriacao": "2026-08-04",
-          "dataInicial": "2026-08-07",
-          "dataFinal": "2026-08-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "10787",
           "ativo": "Athon -  Timon 1 - MA LOT Sucessão O, ROD. MA 040, S/N, Jóia  Timon  Maranhão Brasil { ATHN-TIM100 }",
           "equipe": "",
@@ -3185,10 +3185,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1644,
+      "historicoTotal": 1645,
       "subClassificacao": {
         "remoto": 738,
-        "local": 2834,
+        "local": 2835,
         "remotoEmAberto": 3,
         "localEmAberto": 2,
         "pctRemoto": 21,
@@ -8974,9 +8974,9 @@
       "total": 99,
       "atrasadas": 85,
       "porStatus": {
-        "naoIniciada": 90,
-        "emProgresso": 2,
-        "pausada": 7,
+        "naoIniciada": 89,
+        "emProgresso": 1,
+        "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
@@ -9609,7 +9609,7 @@
           "responsavel": "Andrick Gouveia ",
           "criadoPor": "Levi Maia",
           "supervisor": "Andrick Gouveia ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.9] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-08-06",
@@ -10358,7 +10358,7 @@
           "responsavel": "Andrick Gouveia ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Andrick Gouveia ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.1] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
@@ -10376,14 +10376,15 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 3.1] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-08-07",
-          "dataInicial": "",
+          "dataInicial": "2026-08-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "atrasada": true
         },
         {
@@ -15403,7 +15404,7 @@
       "responsavel": "Andrick Gouveia ",
       "criadoPor": "Levi Maia",
       "supervisor": "Andrick Gouveia ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.9] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-08-06",
@@ -15980,7 +15981,7 @@
       "responsavel": "Andrick Gouveia ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Andrick Gouveia ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.1] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
@@ -16029,14 +16030,15 @@
       "responsavel": "Ricardo Silva ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 3.1] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
       "dataCriacao": "2026-08-07",
-      "dataInicial": "",
+      "dataInicial": "2026-08-11",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0
     },
     {
       "osId": "10798",
@@ -18493,6 +18495,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "11011",
+      "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
+      "equipe": "",
+      "responsavel": "Italo  Lustosa",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Italo  Lustosa",
+      "status": "Finalizada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-11",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "2026-08-11",
+      "dataFinal": "2026-08-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "11007",
       "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
@@ -21460,30 +21482,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10652",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-04",
-      "dataCriacao": "2026-08-04",
-      "dataInicial": "2026-08-04",
-      "dataFinal": "2026-08-04",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2342,
-  "totalGeral": 4866,
+  "historicoTotal": 2343,
+  "totalGeral": 4867,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
