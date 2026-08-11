@@ -2083,10 +2083,11 @@ def gerar_alertas_do_dia(wb_prog, dias_semana):
         # e-mail: no máximo UMA vez por janela por dia
         if janela and janela not in emitidas:
             if itens:
-                ok = _enviar_email_alerta(janela, itens, do_dia, fechadas)
+                env, tot = _despachar_alertas(janela, itens, do_dia, fechadas)
                 log(f"STEP A5 (alerta {janela}): {len(itens)} em risco · "
                     f"aderência {fechadas}/{do_dia}"
-                    + (" · e-mail enviado" if ok else " · e-mail NÃO enviado (ver acima)"))
+                    + (f" · {env}/{tot} e-mail(s) enviado(s)" if tot
+                       else " · e-mail NÃO enviado (ver acima)"))
             else:
                 log(f"STEP A5 (alerta {janela}): dia limpo — nada em risco, sem e-mail")
             emitidas.add(janela)
@@ -2099,19 +2100,68 @@ def gerar_alertas_do_dia(wb_prog, dias_semana):
         log(f"  ! não gravei {ALERTAS_ARQ}: {e}", "WARN")
 
 
-def _enviar_email_alerta(janela, itens, do_dia, fechadas):
+def _despachar_alertas(janela, itens, do_dia, fechadas):
+    """Decide PARA QUEM vai o alerta e envia. Devolve (enviados, total_tentado).
+
+    Dois modos, nesta ordem:
+      1) INDIVIDUAL (decisão 17) — Secret ALERTA_EMAIL_MAPA com JSON
+         {"BA Sul 01": "supervisor@...", "MT Leste 01": "outro@..."}.
+         Cada Responsável O&M recebe SÓ as tarefas da equipe dele.
+         O mapa vive em Secret, não no AUXILIAR: o repositório é público, e
+         e-mail de pessoa é dado pessoal — não pode ser commitado.
+      2) LISTA FIXA — ALERTA_EMAIL_PARA recebe o alerta completo (todas as
+         equipes). Usado como recuo e para quem precisa da visão geral.
+    Os dois podem coexistir: o supervisor recebe o dele, a lista recebe tudo.
+    """
+    import json as _json
+    mapa = {}
+    bruto = os.environ.get("ALERTA_EMAIL_MAPA", "").strip()
+    if bruto:
+        try:
+            mapa = {str(k).strip(): str(v).strip()
+                    for k, v in _json.loads(bruto).items() if str(v).strip()}
+        except Exception as e:
+            log(f"  A5: ALERTA_EMAIL_MAPA inválido ({e}) — usando só a lista fixa", "WARN")
+    enviados = tentados = 0
+    if mapa:
+        por_eq = {}
+        for i in itens:
+            por_eq.setdefault(i["equipe"], []).append(i)
+        sem_dono = []
+        for eq, its in sorted(por_eq.items()):
+            dest = mapa.get(eq)
+            if not dest:
+                sem_dono.append(eq)
+                continue
+            tentados += 1
+            enviados += 1 if _enviar_email_alerta(
+                janela, its, do_dia, fechadas, para=dest, escopo=eq) else 0
+        if sem_dono:
+            log(f"  A5: sem e-mail no mapa para {len(sem_dono)} equipe(s): "
+                f"{', '.join(sorted(sem_dono)[:6])}"
+                + (" ..." if len(sem_dono) > 6 else "")
+                + " — essas só aparecem no painel e na lista fixa", "WARN")
+    if os.environ.get("ALERTA_EMAIL_PARA", "").strip():
+        tentados += 1
+        enviados += 1 if _enviar_email_alerta(janela, itens, do_dia, fechadas) else 0
+    if not tentados:
+        log("  A5: e-mail não configurado (Secrets SMTP_* + ALERTA_EMAIL_PARA "
+            "e/ou ALERTA_EMAIL_MAPA) — alerta fica só no painel", "WARN")
+    return enviados, tentados
+
+
+def _enviar_email_alerta(janela, itens, do_dia, fechadas, para=None, escopo=None):
     """SMTP simples via env (GitHub Secrets). Sem config -> False, com log."""
     import smtplib
     from email.mime.text import MIMEText
     host = os.environ.get("SMTP_HOST", "").strip()
     user = os.environ.get("SMTP_USER", "").strip()
     pwd = os.environ.get("SMTP_PASS", "").strip()
-    para = os.environ.get("ALERTA_EMAIL_PARA", "").strip()
+    para = (para or os.environ.get("ALERTA_EMAIL_PARA", "")).strip()
     de = os.environ.get("MAIL_FROM", user).strip()
     porta = int(os.environ.get("SMTP_PORT", "587") or 587)
     if not (host and user and pwd and para):
-        log("  A5: e-mail não configurado (Secrets SMTP_* / ALERTA_EMAIL_PARA ausentes) "
-            "— alerta fica só no painel", "WARN")
+        log("  A5: SMTP incompleto (Secrets SMTP_HOST/USER/PASS) — não enviei", "WARN")
         return False
     icone = "🟡" if janela == "13:30" else "🔴"
     por_eq = {}
@@ -2130,13 +2180,17 @@ def _enviar_email_alerta(janela, itens, do_dia, fechadas):
     rodape = ("Informe o motivo no painel antes das 23:59 — sem motivo, a tarefa "
               "rola como \"não informado\"." if janela == "16:45"
               else "Checkpoint da manhã: a tarde ainda dá para reagir.")
+    titulo = f"{icone} PCM Grid — alerta {janela}" + (f" · {escopo}" if escopo else "")
+    ader = (f"<p>{len(itens)} tarefa(s) em risco · aderência do dia (portfólio): "
+            f"{fechadas} de {do_dia}.</p>") if not escopo else \
+           (f"<p>{len(itens)} tarefa(s) da sua equipe ainda não fechada(s).</p>")
     html = (f"<div style='font-family:Segoe UI,Arial,sans-serif'>"
-            f"<h2>{icone} PCM Grid — alerta {janela}</h2>"
-            f"<p>{len(itens)} tarefa(s) em risco · aderência do dia até agora: "
-            f"{fechadas} de {do_dia}.</p>{''.join(linhas)}"
+            f"<h2>{titulo}</h2>{ader}{''.join(linhas)}"
             f"<p style='color:#666'>{rodape}</p></div>")
     msg = MIMEText(html, "html", "utf-8")
-    msg["Subject"] = f"{icone} PCM Grid — alerta {janela}: {len(itens)} tarefa(s) em risco"
+    msg["Subject"] = (f"{icone} PCM Grid — alerta {janela}"
+                      + (f" · {escopo}" if escopo else "")
+                      + f": {len(itens)} tarefa(s) em risco")
     msg["From"] = de
     msg["To"] = para
     try:
