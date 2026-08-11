@@ -378,6 +378,7 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
         i_resp     = G("Responsável")
         i_nova     = G("Nova OS")
         i_solic    = G("Nº Solicitação Origem")
+        i_rolagem  = G("Rolagem")            # M1: badge ↻ no painel
 
         def get(r, idx):
             if idx is None or idx >= len(r):
@@ -446,6 +447,8 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
                 "paralelo":    str(get(r, i_paralelo) or ""),
                 "nova_os":     str(get(r, i_nova) or ""),
                 "solic_orig":  get(r, i_solic) or "",
+                "rolagem":     str(get(r, i_rolagem) or ""),
+
                 "relatorio":   (extras_os or {}).get("relatorio", ""),
                 "historico":   (extras_os or {}).get("historico", []),
                 "mttr_s":      (extras_os or {}).get("mttr_s", 0),

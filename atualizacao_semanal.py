@@ -182,7 +182,7 @@ COLS_EQUIPE = [
 ]
 
 COLS_EXTRA_EQUIPE = ["Responsável", "Status Atual (BD)", "Nova OS", "Nº Solicitação Origem",
-                     "Deslocada (Original)", "Última Atualização"]
+                     "Deslocada (Original)", "Última Atualização", "Rolagem"]
 
 COLS_SUGESTOES = [
     "Nº Solicitação", "Equipe", "Ativo", "Código Equipamento", "Descrição",
@@ -1343,7 +1343,11 @@ def _coletar_slots_dia(ws, dia_str, header_map, hoje):
         # melhor: pegar até max(idx)+1
         max_idx = max(header_map.values()) if header_map else 0
         row_vals = [ws.cell(row=r, column=j + 1).value for j in range(max_idx + 1)]
-        if row_vals[idx_dia] != dia_str:
+        # v9 (bugfix M1): match por PREFIXO — o Dia pode vir com flags
+        # ("Terça-feira (11/08) [+29D EM ANDAMENTO]", "[NOTURNO]"...) e o match
+        # exato deixava essas linhas INVISÍVEIS para a ocupação: a cascata e a
+        # rolagem agendavam em cima delas.
+        if not str(row_vals[idx_dia] or "").startswith(dia_str):
             continue
         ini_min = _hora_str_to_min(row_vals[idx_ini])
         fim_min = _hora_str_to_min(row_vals[idx_fim])
@@ -1361,25 +1365,27 @@ def _coletar_slots_dia(ws, dia_str, header_map, hoje):
 def _achar_slot_livre(ocupados_sorted, dur_min, start_min):
     """Dado lista de (ini,fim) ordenada e duração desejada, encontra
     o primeiro slot livre a partir de start_min, respeitando GAP e almoço.
-    Retorna (ini, fim) ou None."""
+    Retorna (ini, fim) ou None.
+
+    v9 (bugfix M1): a versão antiga achava um vão ANTES do almoço, o
+    _encaixar_evitando_almoco empurrava o slot para as 13:12 e ninguém
+    re-validava contra os intervalos seguintes — todo mundo empilhava às
+    13:12 uma em cima da outra. Agora o candidato é SEMPRE re-checado
+    contra a lista inteira até estabilizar."""
     cursor = max(start_min, HORA_INICIO_TURNO_MIN + 30)
-    # evita almoço se cursor cai dentro
-    if HORA_ALMOCO_INI_MIN <= cursor < HORA_ALMOCO_FIM_MIN:
-        cursor = HORA_ALMOCO_FIM_MIN
-    for ini, fim in ocupados_sorted:
-        if fim <= cursor:
-            continue
-        # se cabe entre cursor e ini
-        if ini - cursor >= dur_min:
-            slot = _encaixar_evitando_almoco(cursor, dur_min)
-            if slot:
-                return slot
-        cursor = max(cursor, fim + GAP_ENTRE_OS_MIN)
-        if HORA_ALMOCO_INI_MIN <= cursor < HORA_ALMOCO_FIM_MIN:
-            cursor = HORA_ALMOCO_FIM_MIN
-    # depois do último
-    if cursor + dur_min <= HORA_FIM_TURNO_MIN:
-        return _encaixar_evitando_almoco(cursor, dur_min)
+    for _ in range(80):                      # limite duro anti-loop
+        slot = _encaixar_evitando_almoco(cursor, dur_min)
+        if slot is None:
+            return None                      # não cabe mais no expediente
+        ini, fim = slot
+        conflito = None
+        for b_ini, b_fim in ocupados_sorted:
+            if b_ini < fim and b_fim > ini:  # sobrepõe
+                conflito = (b_ini, b_fim)
+                break
+        if conflito is None:
+            return (ini, fim)
+        cursor = conflito[1] + GAP_ENTRE_OS_MIN
     return None
 
 
@@ -1766,6 +1772,189 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
         log(f"    pins: {n_pin} linha(s) reposicionada(s)")
 
 
+# ====================== Rolagem do dia (STEP A4 — Melhoria 1) ======================
+# Toda linha programada para um dia JÁ PASSADO desta semana e ainda não
+# finalizada rola para HOJE, por prioridade (tier→RPN, decisão 8).
+#
+# STATELESS por desenho: o robô da nuvem parte do xlsx prístino da sexta a cada
+# rodada (só os JSONs são commitados), então a rolagem é recalculada inteira em
+# toda execução — não existe "já rolei hoje". Idempotente: linha rolada fica
+# com Dia = hoje e não rola de novo.
+#
+# Decisões aplicadas: 8 (tier→RPN), 9 (sexta NÃO rola p/ segunda — o arquivo é
+# semanal, então segunda não tem dia anterior), 10 (corretiva força [EXCEDE HH];
+# preventiva/inspeção vira pendente com motivo), 11 (pin e paralela não rolam).
+#
+# MODO SOMBRA (padrão na 1ª semana): só anota a coluna "Rolagem" com o que
+# ACONTECERIA — nada se move. PCM_ROLAGEM=ativo liga de verdade.
+ROLAGEM_MODO_DEFAULT = "sombra"
+
+_TIER_ROLAGEM = [
+    ("corretiva", 0), ("religamento", 0),
+    ("inspe", 1), ("termograf", 1),
+    ("mpa", 2), ("mps", 3), ("mpt", 4), ("mpm", 5), ("mpq", 6),
+    ("preventiva", 7), ("zeladoria", 7),
+    ("handover", 9), ("administrativa", 9),
+]
+
+
+def _tier_rolagem(tipo):
+    t = _norm(str(tipo or ""))
+    for chave, tier in _TIER_ROLAGEM:
+        if chave in t:
+            return tier
+    return 8
+
+
+def _pins_com_dia():
+    """OS pinadas (com dia OU turno) nos DOIS arquivos de observação — decisão 11:
+    pin manda mais, não rola."""
+    fixadas = set()
+    for arq in ("Observacoes_Semana.txt", OBS_ATUAL_FILE):
+        p = os.path.join(BASE_DIR, arq)
+        if not os.path.exists(p):
+            continue
+        try:
+            pins, _, _, _, _ = _parse_observacoes_atual(
+                open(p, encoding="utf-8").read().splitlines())
+            for os_id, lst in pins.items():
+                for pin in (lst if isinstance(lst, list) else [lst]):
+                    if pin.get("dia") is not None or pin.get("start_min") is not None:
+                        fixadas.add(os_id)
+                        break
+        except Exception as e:
+            log(f"  ! rolagem: falha lendo pins de {arq}: {e}", "WARN")
+    return fixadas
+
+
+def aplicar_rolagem(wb_prog, dias_semana, hoje):
+    """STEP A4: rola para hoje o que ficou para trás nesta semana."""
+    modo = os.environ.get("PCM_ROLAGEM", ROLAGEM_MODO_DEFAULT).strip().lower()
+    if modo not in ("sombra", "ativo"):
+        modo = "sombra"
+    # hoje precisa ser um dia útil DESTA semana (sáb/dom/semana errada: nada a fazer)
+    alvo = next(((d, ds) for d, ds in dias_semana if d == hoje), None)
+    if alvo is None:
+        return
+    _, dia_hoje_str = alvo
+    fixadas = _pins_com_dia()
+    ano = hoje.year
+    tot_sombra = tot_rolou = tot_forcou = tot_pend = tot_pin = 0
+
+    for sheet_name in list(wb_prog.sheetnames):
+        if sheet_name.startswith("_"):
+            continue
+        ws = wb_prog[sheet_name]
+        if ws.max_row < 2:
+            continue
+        try:
+            cols = garantir_colunas_extras(ws)
+        except Exception:
+            continue
+        idx_os, idx_dia = cols.get("OSs ID"), cols.get("Dia")
+        idx_ini, idx_fim = cols.get("Hora Início"), cols.get("Hora Fim")
+        idx_dur, idx_tipo = cols.get("Duração (h)"), cols.get("Tipo")
+        idx_rpn, idx_par = cols.get("RPN/Prioridade"), cols.get("Paralelo (terceirizada)")
+        idx_st, idx_est = cols.get("Status Atual (BD)"), cols.get("Estado Tarefa (antes)")
+        idx_rol = cols.get("Rolagem")
+        if not (idx_os and idx_dia and idx_rol):
+            continue
+
+        candidatas = []
+        for r in range(2, ws.max_row + 1):
+            dia_str = ws.cell(row=r, column=idx_dia).value
+            data_dia = _parse_dia_str(dia_str, ano)
+            if not data_dia or data_dia >= hoje:
+                continue
+            # estado: o A1 já sincronizou "Status Atual (BD)" nesta mesma rodada
+            est = str((ws.cell(row=r, column=idx_st).value if idx_st else None)
+                      or (ws.cell(row=r, column=idx_est).value if idx_est else None) or "")
+            el = est.lower()
+            if "finaliz" in el or "verifica" in el or "conclu" in el or "cancelad" in el:
+                continue                     # fechou ontem: fica onde está
+            if idx_par and str(ws.cell(row=r, column=idx_par).value or "").strip().lower() == "sim":
+                continue                     # paralela/terceirizada não rola (decisão 11)
+            if "ZELADORIA" in str(dia_str or "").upper():
+                continue
+            try:
+                os_id = int(ws.cell(row=r, column=idx_os).value)
+            except (TypeError, ValueError):
+                continue
+            if os_id in fixadas:
+                tot_pin += 1                 # pin manda mais (decisão 11)
+                continue
+            try:
+                dur_min = max(30, int(round(float(ws.cell(row=r, column=idx_dur).value or 1) * 60)))
+            except (TypeError, ValueError):
+                dur_min = 60
+            try:
+                rpn = int(ws.cell(row=r, column=idx_rpn).value)
+            except (TypeError, ValueError):
+                rpn = 99
+            tipo = str(ws.cell(row=r, column=idx_tipo).value or "")
+            atras = (hoje - data_dia).days
+            candidatas.append({"row": r, "os": os_id, "tipo": tipo, "rpn": rpn,
+                               "dur": dur_min, "atras": atras, "de": str(dia_str)})
+
+        if not candidatas:
+            continue
+        # prioridade da fila do dia: tier → RPN → mais atrasada primeiro (decisão 8)
+        candidatas.sort(key=lambda c: (_tier_rolagem(c["tipo"]), c["rpn"], -c["atras"]))
+
+        if modo == "sombra":
+            for c in candidatas:
+                marca = f"sombra: rolaria p/ hoje ({c['atras']}º dia)"
+                ws.cell(row=c["row"], column=idx_rol, value=marca)
+                tot_sombra += 1
+            continue
+
+        # ---- modo ATIVO: move de verdade ----
+        cols0 = {k: v - 1 for k, v in cols.items()}   # helpers antigos usam mapa 0-based
+        remover = []                          # linhas que viram pendente (de baixo p/ cima)
+        for c in candidatas:
+            slots = _coletar_slots_dia(ws, dia_hoje_str, cols0, hoje)
+            ocup = sorted((s["ini"], s["fim"]) for s in slots)
+            slot = _achar_slot_livre(ocup, c["dur"], HORA_INICIO_TURNO_MIN + 30)
+            eh_corretiva = _tier_rolagem(c["tipo"]) == 0
+            if slot is None and eh_corretiva:
+                # decisão 10: corretiva FORÇA além do expediente, marcada
+                base = max([f for _, f in ocup], default=HORA_INICIO_TURNO_MIN + 30)
+                slot = (base + GAP_ENTRE_OS_MIN, base + GAP_ENTRE_OS_MIN + c["dur"])
+                marca_extra = " [EXCEDE HH]"
+                tot_forcou += 1
+            elif slot is None:
+                # decisão 10: preventiva/inspeção sem capacidade vira pendente
+                row_vals = [ws.cell(row=c["row"], column=j + 1).value
+                            for j in range(max(cols.values()))]
+                _registrar_pendente(wb_prog, sheet_name, row_vals, cols0,
+                                    f"Rolagem: sem capacidade em {dia_hoje_str}")
+                remover.append(c["row"])
+                tot_pend += 1
+                continue
+            else:
+                marca_extra = ""
+                tot_rolou += 1
+            ws.cell(row=c["row"], column=idx_dia, value=dia_hoje_str)
+            if idx_ini:
+                ws.cell(row=c["row"], column=idx_ini, value=_hora_min_to_str(slot[0]))
+            if idx_fim:
+                ws.cell(row=c["row"], column=idx_fim, value=_hora_min_to_str(slot[1]))
+            ws.cell(row=c["row"], column=idx_rol,
+                    value=f"↻ de {c['de']} · {c['atras']}ª rolagem{marca_extra}")
+        for r in sorted(remover, reverse=True):
+            ws.delete_rows(r, 1)
+
+    if modo == "sombra":
+        if tot_sombra or tot_pin:
+            log(f"STEP A4 (rolagem, SOMBRA): {tot_sombra} linha(s) rolariam p/ hoje"
+                + (f" · {tot_pin} pinada(s) não rolam" if tot_pin else "")
+                + " — nada foi movido (PCM_ROLAGEM=ativo liga)")
+    else:
+        log(f"STEP A4 (rolagem, ATIVO): {tot_rolou} rolada(s), {tot_forcou} forçada(s) "
+            f"[EXCEDE HH], {tot_pend} p/ pendentes"
+            + (f", {tot_pin} pinada(s) mantidas" if tot_pin else ""))
+
+
 # ====================== Main ======================
 
 def main():
@@ -1868,6 +2057,9 @@ def main():
         incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana, date.today())
         # STEP A3: aplica as observações da semana ATUAL (override manual do usuário)
         aplicar_observacoes_semana_atual(wb_prog, dias_semana, date.today())
+        # STEP A4: rolagem do dia (Melhoria 1) — depois dos overrides do usuário,
+        # para que pin recém-colocado já conte como "não rola"
+        aplicar_rolagem(wb_prog, dias_semana, date.today())
     elif args.no_sync:
         log("STEP A: PULADO (--no-sync)")
     elif args.no_sync:
