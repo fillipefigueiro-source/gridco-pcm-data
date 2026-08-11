@@ -1495,8 +1495,8 @@ async function loadDB(silent=false) {
     // if (data.pwds) { S.pwds=Object.assign({},data.pwds,lsG(LS.P,{})); lsS(LS.P,S.pwds); }
     DB=data;
     if (!S.active&&data.semana_ativa) S.active=data.semana_ativa;
-    const ts=new Date().toLocaleTimeString('pt-BR');
-    setStatus('\u2713 Atualizado \u00e0s '+ts,'ok');
+    statusHeartbeat();                      // 0.4: idade real do dado, n\u00e3o hora do fetch
+    if(!window._hbTimer) window._hbTimer=setInterval(statusHeartbeat,60000);
     return true;
   } catch(err) {
     if (!silent) setStatus('\u26a0 Falha: '+err.message,'warn');
@@ -1531,8 +1531,22 @@ async function loadSupervisores(){
 }
 function setStatus(msg,type) {
   const el=document.getElementById('refresh-status'); if(!el) return;
-  const cols={loading:'#A9DB21',ok:'#22c55e',warn:'#f59e0b'};
-  el.innerHTML='<span style="color:'+cols[type]+'">'+msg+'</span>';
+  const cols={loading:'#A9DB21',ok:'#22c55e',warn:'#f59e0b',err:'#ef4444'};
+  el.innerHTML='<span style="color:'+(cols[type]||cols.ok)+'">'+msg+'</span>';
+}
+// ---- Heartbeat do robô (0.4) ----
+// A barra verde mostrava a hora do FETCH do navegador — parecia fresco mesmo
+// com o dado 2h velho. Agora mostra a idade do geradoEm do banco_dados.json.
+// Régua medida no robô real: intervalo mediano 54 min, máximo observado 140.
+function statusHeartbeat(){
+  const g=DB&&DB.geradoEm?new Date(DB.geradoEm):null;
+  if(!g||isNaN(g)){setStatus('✓ Atualizado às '+new Date().toLocaleTimeString('pt-BR'),'ok');return;}
+  const min=Math.max(0,Math.round((Date.now()-g.getTime())/60000));
+  const idade=min<60?min+' min':Math.floor(min/60)+'h'+String(min%60).padStart(2,'0');
+  const hora=g.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+  if(min>240)setStatus('⚠ Dados de '+hora+' · há '+idade+' — robô parado? Verifique o Actions','err');
+  else if(min>120)setStatus('⚠ Dados de '+hora+' · há '+idade+' — acima do normal (~1h)','warn');
+  else setStatus('✓ Dados de '+hora+' · há '+idade,'ok');
 }
 function startTimer() {
   if(timer) clearInterval(timer);
