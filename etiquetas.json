@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-11T17:49:05Z",
+  "geradoEm": "2026-08-11T18:45:23Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3582,
+        "total": 3583,
         "emAberto": 6,
         "atrasadas": 4,
-        "concluidas30d": 613,
-        "concluidas7d": 169,
-        "naSemanaCorrente": 30
+        "concluidas30d": 614,
+        "concluidas7d": 170,
+        "naSemanaCorrente": 31
       },
       "mttr": {
-        "horas": 12.99,
-        "label": "12h 59min",
-        "amostra": 613
+        "horas": 12.97,
+        "label": "12h 58min",
+        "amostra": 614
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W33",
-          "criadas": 30,
-          "finalizadas": 41
+          "criadas": 31,
+          "finalizadas": 42
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3582,
+            "total": 3583,
             "emAberto": 6
           }
         ],
@@ -81,8 +81,8 @@
       "total": 6,
       "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 3,
-        "emProgresso": 1,
+        "naoIniciada": 2,
+        "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
@@ -165,14 +165,14 @@
           "atrasada": true
         },
         {
-          "osId": "11028",
-          "ativo": "SKID 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-SKID4 }",
+          "osId": "11035",
+          "ativo": "SKID 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID1 }",
           "equipe": "",
-          "responsavel": "Ricardo Silva ",
+          "responsavel": "Felipe  Lima",
           "criadoPor": "Italo  Lustosa",
-          "supervisor": "Ricardo Silva ",
+          "supervisor": "Felipe  Lima",
           "status": "Em progresso",
-          "tarefa": "[SKID 4] - Religamento do SKID 4",
+          "tarefa": "[SKID 1] - Religamento do SKID 1",
           "criticidade": "",
           "dataProgramada": "2026-08-11",
           "dataCriacao": "2026-08-11",
@@ -190,19 +190,40 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-11",
           "dataCriacao": "2026-08-11",
-          "dataInicial": "",
+          "dataInicial": "2026-08-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11028",
+          "ativo": "SKID 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-SKID4 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Ricardo Silva ",
+          "status": "Finalizados",
+          "tarefa": "[SKID 4] - Religamento do SKID 4",
+          "criticidade": "",
+          "dataProgramada": "2026-08-11",
+          "dataCriacao": "2026-08-11",
+          "dataInicial": "2026-08-11",
+          "dataFinal": "2026-08-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "11026",
           "ativo": "Thopen - Aparecida 3 - SP  Aparecida  São Paulo Brasil { THPN-APR300 }",
@@ -3182,32 +3203,12 @@
           "horasAteFechar": 0,
           "modalidade": "remoto",
           "atrasada": false
-        },
-        {
-          "osId": "10639",
-          "ativo": "Inversor 8.2 Sungrow     { JCD100-INVR8.2 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "James Chaves ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 8.2] - Religamento do Inversor 8.2",
-          "criticidade": "",
-          "dataProgramada": "2026-08-04",
-          "dataCriacao": "2026-08-04",
-          "dataInicial": "2026-08-04",
-          "dataFinal": "2026-08-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1653,
+      "historicoTotal": 1654,
       "subClassificacao": {
         "remoto": 738,
-        "local": 2844,
+        "local": 2845,
         "remotoEmAberto": 2,
         "localEmAberto": 4,
         "pctRemoto": 21,
@@ -3431,12 +3432,12 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 613,
-        "emAberto": 88,
+        "total": 614,
+        "emAberto": 89,
         "atrasadas": 44,
         "concluidas30d": 86,
         "concluidas7d": 28,
-        "naSemanaCorrente": 39
+        "naSemanaCorrente": 40
       },
       "mttr": {
         "horas": 364.47,
@@ -3461,7 +3462,7 @@
         },
         {
           "semana": "W33",
-          "criadas": 3,
+          "criadas": 4,
           "finalizadas": 5
         }
       ],
@@ -3469,8 +3470,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 613,
-            "emAberto": 88
+            "total": 614,
+            "emAberto": 89
           }
         ],
         "responsaveis": [
@@ -3501,16 +3502,16 @@
           }
         ]
       },
-      "total": 88,
+      "total": 89,
       "atrasadas": 44,
       "porStatus": {
         "naoIniciada": 79,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 88
+        "(sem equipe)": 89
       },
       "oss": [
         {
@@ -4353,6 +4354,23 @@
           "atrasada": false
         },
         {
+          "osId": "11036",
+          "ativo": "Preventiva Grupo de Inversores      { GY-CDP100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Railson Gomes ",
+          "status": "Não Iniciada",
+          "tarefa": "[GreenYellow] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-11",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "10421",
           "ativo": "Transformador 1  Seco    { IBT200-TRFR1 }",
           "equipe": "",
@@ -4547,14 +4565,15 @@
           "responsavel": "Marcos Duarte ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Marcos Duarte ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-15",
           "dataCriacao": "2026-07-28",
-          "dataInicial": "",
+          "dataInicial": "2026-08-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 336.0,
           "atrasada": false
         },
         {
@@ -5027,7 +5046,7 @@
           "responsavel": "Marcos Duarte ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Marcos Duarte ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-15",
@@ -8955,17 +8974,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 462,
-        "emAberto": 96,
-        "atrasadas": 83,
-        "concluidas30d": 273,
-        "concluidas7d": 55,
-        "naSemanaCorrente": 40
+        "total": 465,
+        "emAberto": 98,
+        "atrasadas": 82,
+        "concluidas30d": 274,
+        "concluidas7d": 56,
+        "naSemanaCorrente": 43
       },
       "mttr": {
-        "horas": 155.16,
-        "label": "6d 11h",
-        "amostra": 273
+        "horas": 154.95,
+        "label": "6d 10h",
+        "amostra": 274
       },
       "tendencia4Semanas": [
         {
@@ -8985,16 +9004,16 @@
         },
         {
           "semana": "W33",
-          "criadas": 12,
-          "finalizadas": 21
+          "criadas": 15,
+          "finalizadas": 22
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 462,
-            "emAberto": 96
+            "total": 465,
+            "emAberto": 98
           }
         ],
         "responsaveis": [
@@ -9025,16 +9044,16 @@
           }
         ]
       },
-      "total": 96,
-      "atrasadas": 83,
+      "total": 98,
+      "atrasadas": 82,
       "porStatus": {
-        "naoIniciada": 87,
+        "naoIniciada": 86,
         "emProgresso": 2,
-        "pausada": 7,
+        "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 96
+        "(sem equipe)": 98
       },
       "oss": [
         {
@@ -10389,24 +10408,6 @@
           "atrasada": true
         },
         {
-          "osId": "10808",
-          "ativo": "Inversor 3.1 Sungrow SG330HX    { THPN-INP100-INVR3.1 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Ricardo Silva ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 3.1] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-11",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "atrasada": true
-        },
-        {
           "osId": "10798",
           "ativo": "Inversor 1.3 Sungrow SG250HX    { THPN-CDS100-INVR1.3 }",
           "equipe": "",
@@ -10509,20 +10510,72 @@
           "atrasada": false
         },
         {
-          "osId": "11020",
-          "ativo": "Inversor 1.11 Sungrow     { BWK100-INVR1.11 }",
+          "osId": "11039",
+          "ativo": "Inversor 1.5 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.5 }",
           "equipe": "",
-          "responsavel": "Luis  Moura",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Luis  Moura",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Railson Gomes ",
           "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.11] - Recomposição de String",
+          "tarefa": "[Inversor 1.5] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-11",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11038",
+          "ativo": "Inversor 1.4 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Railson Gomes ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-11",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11033",
+          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { APG100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Adriano  Moraes",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.1] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-11",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11020",
+          "ativo": "Inversor 1.11 Sungrow     { BWK100-INVR1.11 }",
+          "equipe": "",
+          "responsavel": "Luis  Moura",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Luis  Moura",
+          "status": "Em progresso",
+          "tarefa": "[Inversor 1.11] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-11",
+          "dataInicial": "2026-08-11",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -10583,14 +10636,15 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Anderson  Parente",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-10",
-          "dataInicial": "",
+          "dataInicial": "2026-08-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": false
         },
         {
@@ -10600,14 +10654,15 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Anderson  Parente",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Tracker 81.101] - Verificação de Tracker em Altair 4",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-10",
-          "dataInicial": "",
+          "dataInicial": "2026-08-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": false
         },
         {
@@ -10617,14 +10672,15 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Anderson  Parente",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Tracker 73.101] - Verificação de Tracker em Altair 4",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-10",
-          "dataInicial": "",
+          "dataInicial": "2026-08-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": false
         },
         {
@@ -10784,6 +10840,25 @@
           "supervisor": "Andrick Gouveia ",
           "status": "Finalizados",
           "tarefa": "[Inversor 1.1] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-08-07",
+          "dataInicial": "2026-08-11",
+          "dataFinal": "2026-08-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10808",
+          "ativo": "Inversor 3.1 Sungrow SG330HX    { THPN-INP100-INVR3.1 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Ricardo Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 3.1] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-08-07",
@@ -13510,28 +13585,9 @@
           "horasAteAbrir": 72.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "9614",
-          "ativo": "Inversor 1.9 Sungrow     { BWK100-INVR1.9 }",
-          "equipe": "",
-          "responsavel": "Luis  Moura",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Luis  Moura",
-          "status": "Finalizada",
-          "tarefa": "[Brodowski 1][Inversor 1.9] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-07-01",
-          "dataCriacao": "2026-07-17",
-          "dataInicial": "2026-07-17",
-          "dataFinal": "2026-07-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 321
+      "historicoTotal": 322
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15082,7 +15138,7 @@
           "responsavel": "Marcos Duarte ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Marcos Duarte ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
           "criticidade": "",
           "dataProgramada": "2026-06-01",
@@ -15157,6 +15213,88 @@
   },
   "ossPublicas": [
     {
+      "osId": "11039",
+      "ativo": "Inversor 1.5 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Railson Gomes ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.5] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11038",
+      "ativo": "Inversor 1.4 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Railson Gomes ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11036",
+      "ativo": "Preventiva Grupo de Inversores      { GY-CDP100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Railson Gomes ",
+      "status": "Não Iniciada",
+      "tarefa": "[GreenYellow] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11035",
+      "ativo": "SKID 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Felipe  Lima",
+      "status": "Em progresso",
+      "tarefa": "[SKID 1] - Religamento do SKID 1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-11",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "2026-08-11",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
+      "osId": "11033",
+      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { APG100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Adriano  Moraes",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.1] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "11032",
       "ativo": "Transformador 2 COMTRAFO     { MAB200-TRFR2 }",
       "equipe": "",
@@ -15189,14 +15327,14 @@
       "linkFracttal": ""
     },
     {
-      "osId": "11028",
-      "ativo": "SKID 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-SKID4 }",
+      "osId": "11027",
+      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
       "equipe": "",
-      "responsavel": "Ricardo Silva ",
+      "responsavel": "Ronaldo  Silva",
       "criadoPor": "Italo  Lustosa",
-      "supervisor": "Ricardo Silva ",
+      "supervisor": "Ronaldo  Silva",
       "status": "Em progresso",
-      "tarefa": "[SKID 4] - Religamento do SKID 4",
+      "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-08-11",
       "dataCriacao": "2026-08-11",
@@ -15207,37 +15345,21 @@
       "modalidade": "local"
     },
     {
-      "osId": "11027",
-      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Italo  Lustosa",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-11",
-      "dataCriacao": "2026-08-11",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "11020",
       "ativo": "Inversor 1.11 Sungrow     { BWK100-INVR1.11 }",
       "equipe": "",
       "responsavel": "Luis  Moura",
       "criadoPor": "LuelySantos",
       "supervisor": "Luis  Moura",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.11] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-11",
-      "dataInicial": "",
+      "dataInicial": "2026-08-11",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "11019",
@@ -15342,14 +15464,15 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Anderson  Parente",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-10",
-      "dataInicial": "",
+      "dataInicial": "2026-08-11",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "10981",
@@ -15358,14 +15481,15 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Anderson  Parente",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Tracker 81.101] - Verificação de Tracker em Altair 4",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-10",
-      "dataInicial": "",
+      "dataInicial": "2026-08-11",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "10980",
@@ -15374,14 +15498,15 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Anderson  Parente",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Tracker 73.101] - Verificação de Tracker em Altair 4",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-10",
-      "dataInicial": "",
+      "dataInicial": "2026-08-11",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "10976",
@@ -15962,23 +16087,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "10808",
-      "ativo": "Inversor 3.1 Sungrow SG330HX    { THPN-INP100-INVR3.1 }",
-      "equipe": "",
-      "responsavel": "Ricardo Silva ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Ricardo Silva ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 3.1] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-11",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0
     },
     {
       "osId": "10798",
@@ -16890,14 +16998,15 @@
       "responsavel": "Marcos Duarte ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Marcos Duarte ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-15",
       "dataCriacao": "2026-07-28",
-      "dataInicial": "",
+      "dataInicial": "2026-08-11",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 336.0
     },
     {
       "osId": "10260",
@@ -18356,6 +18465,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "11028",
+      "ativo": "SKID 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-SKID4 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Ricardo Silva ",
+      "status": "Finalizados",
+      "tarefa": "[SKID 4] - Religamento do SKID 4",
+      "criticidade": "",
+      "dataProgramada": "2026-08-11",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "2026-08-11",
+      "dataFinal": "2026-08-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "11026",
       "ativo": "Thopen - Aparecida 3 - SP  Aparecida  São Paulo Brasil { THPN-APR300 }",
@@ -20399,6 +20528,25 @@
       "atrasada": false
     },
     {
+      "osId": "10808",
+      "ativo": "Inversor 3.1 Sungrow SG330HX    { THPN-INP100-INVR3.1 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Ricardo Silva ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 3.1] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-10",
+      "dataCriacao": "2026-08-07",
+      "dataInicial": "2026-08-11",
+      "dataFinal": "2026-08-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "10800",
       "ativo": "Thopen - Salto Pirapora 3 - SP    São Paulo Brasil { THPN-SPP300 }",
       "equipe": "",
@@ -21293,50 +21441,10 @@
       "horasAteFechar": 24.0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10675",
-      "ativo": "Thopen - Linhares 1 - ES Sítio São Francisco, Barro Novo Linhares  Espírito Santo  { THPN-LNH100 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Italo  Lustosa",
-      "supervisor": "Marcos Duarte ",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-05",
-      "dataCriacao": "2026-08-05",
-      "dataInicial": "2026-08-05",
-      "dataFinal": "2026-08-05",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "10674",
-      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "[Cabine 5] - Religamento da Cabine 5",
-      "criticidade": "",
-      "dataProgramada": "2026-08-04",
-      "dataCriacao": "2026-08-05",
-      "dataInicial": "2026-08-04",
-      "dataFinal": "2026-08-04",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2366,
-  "totalGeral": 4882,
+  "historicoTotal": 2368,
+  "totalGeral": 4887,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
