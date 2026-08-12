@@ -1414,6 +1414,106 @@ def estimate_h(row):
 
 df_tasks['dur_h'] = df_tasks.apply(estimate_h, axis=1)
 
+
+# ====== v9 — Melhoria 6 nível 1: duração APRENDIDA (MODO SOMBRA por padrão) ======
+# O aprender_duracoes.py mede o tempo real (real_duration) das finalizadas e grava
+# duracoes_aprendidas.json com a duração típica por categoria × usina → × cluster
+# → global (decisão 30). Aqui só LEMOS. Em sombra, a coluna "Duração aprendida (h)"
+# mostra o que o motor usaria; a capacidade continua sendo consumida pela estimativa
+# atual (armadilha 3.4 — nada que mude capacidade entra sem uma semana de sombra).
+DURACAO_APRENDIDA_ATIVA = os.environ.get('PCM_DURACAO_APRENDIDA', '0').strip() == '1'
+_APRENDIDO = {}
+try:
+    _pa = os.path.join(BASE_DIR, 'duracoes_aprendidas.json')
+    if os.path.exists(_pa):
+        import json as _json
+        with open(_pa, encoding='utf-8') as _f:
+            _APRENDIDO = _json.load(_f)
+        print(f"[DURAÇÃO APRENDIDA] {len(_APRENDIDO.get('porUsina', {}))} categoria×usina, "
+              f"{len(_APRENDIDO.get('porCluster', {}))} categoria×cluster, "
+              f"{len(_APRENDIDO.get('global', {}))} global "
+              f"(de {str(_APRENDIDO.get('geradoEm'))[:10]})")
+    else:
+        print('[DURAÇÃO APRENDIDA] duracoes_aprendidas.json ausente — '
+              'rode aprender_duracoes.py na sexta, antes da geração')
+except Exception as _e:
+    print(f'[DURAÇÃO APRENDIDA] arquivo ilegível ({_e}) — seguindo com a estimativa atual')
+
+
+def _cat_aprendizado(row):
+    c = row.get('mp_cat')
+    if c and c != 'OUTRA':
+        return c
+    t = norm(row.get('Tarefa', ''))
+    return 'HANDOVER' if 'handover' in t else 'OUTRA'
+
+
+APRENDE_TETO_TAREFA = float(os.environ.get('PCM_APRENDE_TETO_TAREFA', 2.0))
+
+
+def duracao_aprendida(row):
+    """Duração medida p/ esta tarefa, do mais específico ao mais geral
+    (decisão 30). None quando não há amostra suficiente em nenhum nível.
+
+    Dois guarda-corpos descobertos NO MODO SOMBRA (12/08/2026):
+
+    1) ZELADORIA fica de fora. É terceirizada: o apontamento no Fracttal
+       registra a conferência do técnico (~1 h), não as horas da equipe de
+       roçagem (20 h estimadas). Aplicar cortaria 296 h da carga da semana e o
+       motor encheria os dias com trabalho que não cabe.
+
+    2) Teto POR TAREFA, além do teto por categoria do aprender_duracoes.py:
+       uma Inspeção estimada em 29 h não vira 0,89 h só porque a média global
+       da categoria é essa. Divergência acima de 2x mantém a estimativa atual.
+    """
+    if not _APRENDIDO:
+        return None, ''
+    if row.get('zeladoria'):
+        return None, 'zeladoria (terceirizada — apontamento não mede o esforço)'
+    cat = _cat_aprendizado(row)
+    k = _chave_usina(row.get('_ativo', ''))
+    achado = None
+    it = _APRENDIDO.get('porUsina', {}).get(f'{cat}|{k}')
+    if it:
+        achado = (it['h'], f"usina (n={it['n']})")
+    if achado is None:
+        eq = str(row.get('Equipe') or '').strip()
+        it = _APRENDIDO.get('porCluster', {}).get(f'{cat}|{eq}')
+        if it:
+            achado = (it['h'], f"cluster (n={it['n']})")
+    if achado is None:
+        it = _APRENDIDO.get('global', {}).get(cat)
+        if it:
+            achado = (it['h'], f"global (n={it['n']})")
+    if achado is None:
+        return None, ''
+    h, origem = achado
+    atual = float(row.get('dur_h') or 0)
+    if atual > 0:
+        razao = h / atual
+        if razao > APRENDE_TETO_TAREFA or razao < 1.0 / APRENDE_TETO_TAREFA:
+            return None, f'fora do teto ({razao:.1f}x vs estimativa) — mantida'
+    return h, origem
+
+
+_dap, _dorig = [], []
+for _, _r in df_tasks.iterrows():
+    _h, _org = duracao_aprendida(_r)
+    _dap.append(_h); _dorig.append(_org)
+df_tasks['dur_aprendida'] = _dap
+df_tasks['dur_origem'] = _dorig
+if _APRENDIDO and len(df_tasks):
+    _com = df_tasks['dur_aprendida'].notna()
+    if _com.any():
+        _dif = (df_tasks.loc[_com, 'dur_aprendida'] - df_tasks.loc[_com, 'dur_h'])
+        print(f"[DURAÇÃO APRENDIDA] modo {'ATIVO' if DURACAO_APRENDIDA_ATIVA else 'SOMBRA'} | "
+              f"{int(_com.sum())} de {len(df_tasks)} tarefa(s) com medição | "
+              f"efeito na carga: {_dif.sum():+.1f} h "
+              f"({100 * _dif.sum() / max(df_tasks['dur_h'].sum(), 1):+.1f}%)")
+    if DURACAO_APRENDIDA_ATIVA:
+        df_tasks.loc[_com, 'dur_h'] = df_tasks.loc[_com, 'dur_aprendida']
+        print('[DURAÇÃO APRENDIDA] ATIVO — a capacidade passa a usar a medição')
+
 # Reprogramada = chave já apareceu em semana anterior
 def is_reprog(key):
     return key in historico and historico[key].get('count', 0) > 0
@@ -1751,6 +1851,9 @@ def build_tarefas_atomicas(sub):
             'rpn': int(r['rpn']),
             'rpn_novo': int(r.get('rpn_novo', 0) or 0),          # v9/M4 (sombra)
             'rpn_detalhe': str(r.get('rpn_detalhe', '') or ''),
+            'dur_aprendida': (float(r['dur_aprendida'])
+                              if pd.notna(r.get('dur_aprendida')) else None),   # v9/M6
+            'dur_origem': str(r.get('dur_origem', '') or ''),
             'reprog': bool(r['reprogramada']),
             'tier': int(r['tier']),                                   # v8
             'aging': bool(r['aging']),                                # v8: >= AGING_DIAS em andamento
@@ -2250,6 +2353,8 @@ def _row(equipe, day_idx, tk, start_min, end_min, desloc_h,
         'RPN/Prioridade': tk['rpn'],
         'RPN (novo)': tk.get('rpn_novo'),                 # v9/M4 — sombra
         'RPN (como calculou)': tk.get('rpn_detalhe'),
+        'Duração aprendida (h)': tk.get('dur_aprendida'),  # v9/M6 — sombra
+        'Duração (base)': tk.get('dur_origem'),
         'Etiquetas': tk.get('etiquetas',''),
         'Reprogramada': 'Sim' if tk['reprog'] else 'Não',
         'Idade (dias)': tk.get('idade_dias'),
@@ -2375,6 +2480,7 @@ with pd.ExcelWriter(OUTPUT, engine='openpyxl') as writer:
         'Equipe','Dia','OSs ID','Ativo (Usina)','Responsável','Cidade',
         'Código Equipamento','Tipo','Tarefa','Estado Tarefa (antes)',
         'RPN/Prioridade','RPN (novo)','RPN (como calculou)',
+        'Duração aprendida (h)','Duração (base)',
         'Etiquetas','Reprogramada','Idade (dias)','Nº vezes programada','Termografia',
         'Hora Início','Hora Fim','Duração (h)','Desloc (h)','Paralelo (terceirizada)'
     ]
