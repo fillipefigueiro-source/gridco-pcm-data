@@ -45,12 +45,27 @@ except (AttributeError, Exception):
 
 
 def carregar_env():
-    """Lê o arquivo .env na pasta do script (se existir) e popula env vars."""
+    """Popula env vars a partir do .env.
+
+    Procura em ordem: pasta do script -> PCM_PROG_DIR -> pasta atual -> pasta
+    padrão do PCM no OneDrive. Desde a decisão 4 (12/08/2026) os scripts moram
+    no checkout do repositório, onde o .env NÃO existe (e não pode existir: o
+    repo é público e o .gitignore o bloqueia). O segredo continua morando junto
+    com o dado, no OneDrive. Na nuvem nada disso é usado — lá as credenciais
+    vêm dos Secrets do Actions."""
+    candidatos = []
     try:
-        env_path = pathlib.Path(__file__).resolve().parent / ".env"
+        candidatos.append(pathlib.Path(__file__).resolve().parent / ".env")
     except NameError:
-        env_path = pathlib.Path(".env")
-    if not env_path.exists():
+        pass
+    _pcm = os.environ.get("PCM_PROG_DIR", "").strip()
+    if _pcm:
+        candidatos.append(pathlib.Path(_pcm) / ".env")
+    candidatos.append(pathlib.Path(".env"))
+    candidatos.append(pathlib.Path.home() / "GRID CO" / "GRID CO. - Gridco" / "4. O&M"
+                      / "11.Pré-Operação" / "6. PCM" / "09. Programação Semanal" / ".env")
+    env_path = next((p for p in candidatos if p.exists()), None)
+    if env_path is None:
         return False
     with open(env_path, "r", encoding="utf-8") as f:
         for line in f:
