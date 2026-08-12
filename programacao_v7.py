@@ -1176,6 +1176,169 @@ for _, r in df_tasks.iterrows():
     rpn_list.append(rpn); mttr_list.append(mttr)
 df_tasks['rpn'] = rpn_list
 df_tasks['mttr_h_fallback'] = mttr_list
+
+
+# ============ v9 — Melhoria 4: RPN dinâmico (MODO SOMBRA por padrão) ============
+# Hoje o RPN vem de match de TEXTO contra a Lista_Prioridades: nome fora do
+# padrão => RPN 99 silencioso (é uma das 4 falhas silenciosas da auditoria).
+# O dinâmico calcula dos DADOS que a API já entrega:
+#   Impacto (40%)     criticidade Fracttal + tipo de equipamento + porte da usina
+#   Recorrência (30%) corretivas no MESMO equipamento em 90 dias + nº de vezes programada
+#   Urgência (30%)    dias em aberto + solicitação marcada como urgente
+# Decisão 24: componente sem dado NÃO zera nem manda pro fim — entra neutro 5,0
+# e a linha é marcada "RPN parcial". Nunca o silêncio do 99.
+# Decisão 23: congela na geração de sexta (o painel mostra o recalculado ao lado).
+# Sombra: só reporta na coluna; a ordenação continua usando o RPN da planilha.
+RPN_DINAMICO_ATIVO = os.environ.get('PCM_RPN_DINAMICO', '0').strip() == '1'
+PESO_IMPACTO    = float(os.environ.get('PCM_RPN_W_IMPACTO', 40))
+PESO_RECORR     = float(os.environ.get('PCM_RPN_W_RECORR', 30))
+PESO_URGENCIA   = float(os.environ.get('PCM_RPN_W_URGENCIA', 30))
+RPN_JANELA_DIAS = int(os.environ.get('PCM_RPN_JANELA_DIAS', 90))
+_NEUTRO = 5.0
+
+_CRIT_NOTA = {'muito alto': 10.0, 'very_high': 10.0, 'alto': 8.0, 'high': 8.0,
+              'medio': 5.0, 'médio': 5.0, 'medium': 5.0,
+              'baixo': 2.5, 'low': 2.5, 'muito baixo': 1.0, 'very_low': 1.0}
+# Equipamento que, parado, derruba geração — peso maior no impacto
+_EQUIP_NOTA = [(('inversor', 'skid'), 10.0),
+               (('transformador', 'trafo', 'cabine', 'qgbt', 'quadro de juncao',
+                 'quadro de junção', 'cabos ca', 'cabos cc', 'cabo ca', 'cabo cc',
+                 'medicao', 'medição'), 9.0),
+               (('string', 'modulo', 'módulo', 'tracker', 'conjunto de'), 7.0),
+               (('estacao solarimetrica', 'estação solarimétrica', 'solarimetric',
+                 'piranometro', 'piranômetro', 'monitor'), 5.0),
+               (('nobreak', 'spda', 'seguranca', 'segurança', 'camera', 'câmera',
+                 'ppci', 'incendio', 'incêndio', 'aterramento'), 4.0),
+               (('infraestrutura', 'caixa d', 'agua', 'água', 'container', 'contêiner',
+                 'piso', 'cerca', 'abrigo'), 3.0),
+               (('zeladoria', 'roçagem', 'rocagem', 'limpeza', 'supressao', 'supressão',
+                 'vegetal', 'capina', 'poda', 'aceiro'), 2.0),
+               (('relatorio', 'relatório', 'inspecao', 'inspeção', 'acompanhamento',
+                 'coleta de dados', 'handover'), 5.0)]
+
+
+def _chave_usina(s):
+    """Chave para casar usina entre API e AUXILIAR.
+
+    As duas fontes divergem de duas formas — as MESMAS já tratadas no
+    gerar_mpas_json: a API traz " - UF" no fim ("Athon - Jacundá 1 - PA") e o
+    AUXILIAR numera de 100 em 100 ("Jacundá 100" x "Jacundá 1"). Sem isso o
+    lookup falhava em 44% das usinas, em silêncio.
+    """
+    s = unicodedata.normalize('NFKD', str(s or '')).encode('ascii', 'ignore').decode().lower()
+    s = re.sub(r'\s*-\s*[a-z]{2}\s*$', '', s.strip())      # tira " - UF"
+    s = re.sub(r'[^a-z0-9]+', ' ', s).strip()
+    s = re.sub(r'\b(\d)00\b', r'\1', s)                    # 100->1, 200->2
+    return s
+
+
+def _carregar_mwp():
+    """Porte da usina (MWp) do AUXILIAR — entra no Impacto."""
+    mp = {}
+    try:
+        df_aux = fonte_bd_api.df_auxiliar()
+        cu = next((c for c in df_aux.columns if str(c).strip().upper() == 'UFV'), None)
+        cm = next((c for c in df_aux.columns if 'MWP' in str(c).upper()), None)
+        if cu is not None and cm is not None:
+            for _, _r in df_aux.iterrows():
+                if isinstance(_r[cu], str) and isinstance(_r[cm], (int, float)):
+                    mp[_chave_usina(_r[cu])] = float(_r[cm])
+    except Exception as e:
+        print(f'[RPN] porte da usina indisponível ({e}) — Impacto usa neutro nesse componente')
+    return mp
+
+
+USINA_MWP = _carregar_mwp()
+_MWP_MAX = max(USINA_MWP.values()) if USINA_MWP else 0.0
+
+
+def _corretivas_recentes(df_bd_full):
+    """{código_equipamento: nº de corretivas nos últimos RPN_JANELA_DIAS}.
+    Decisão 22: recorrência por EQUIPAMENTO; recuo para categoria+usina."""
+    por_equip, por_usina = {}, {}
+    try:
+        d = df_bd_full.copy()
+        d['_dt'] = pd.to_datetime(d['Data Programada'], errors='coerce')
+        corte = pd.Timestamp('today').normalize() - pd.Timedelta(days=RPN_JANELA_DIAS)
+        d = d[(d['_dt'] >= corte) & d['Tipo de tarefa'].astype(str).str.lower().str.startswith('corretiva')]
+        for _, _r in d.iterrows():
+            _c = str(_r.get('Código') or '').strip()
+            if _c:
+                por_equip[_c] = por_equip.get(_c, 0) + 1
+            _u = _norm_usina(_r.get('Ativo Classificação 1') or _r.get('Ativo') or '')
+            if _u:
+                por_usina[_u] = por_usina.get(_u, 0) + 1
+    except Exception as e:
+        print(f'[RPN] histórico de corretivas indisponível ({e})')
+    return por_equip, por_usina
+
+
+CORR_EQUIP, CORR_USINA = _corretivas_recentes(df_bd)
+
+
+def _nota_equipamento(txt):
+    t = norm(txt)
+    for chaves, nota in _EQUIP_NOTA:
+        if any(k in t for k in chaves):
+            return nota
+    return None
+
+
+def calcular_rpn_dinamico(row):
+    """Devolve (rpn 1..40, detalhe, parcial). Menor = mais prioritário — mesma
+    escala do RPN da planilha, para poder comparar lado a lado."""
+    faltou = []
+
+    # ---- Impacto (40%) ----
+    crit = _CRIT_NOTA.get(str(row.get('Tarefa -> Criticidade') or '').strip().lower())
+    if crit is None:
+        crit = _NEUTRO; faltou.append('criticidade')
+    equip = _nota_equipamento(f"{row.get('Tarefa','')} {row.get('Código','')}")
+    if equip is None:
+        equip = _NEUTRO; faltou.append('equipamento')
+    _k = _chave_usina(row.get('_ativo', ''))
+    # recuo: a API costuma numerar a 1ª usina ("Altair 1") onde o AUXILIAR não
+    # numera ("Altair"). Sem isto, 35 usinas ficavam sem porte.
+    mwp = USINA_MWP.get(_k) or USINA_MWP.get(re.sub(r'\s+\d+$', '', _k))
+    if mwp is None or not _MWP_MAX:
+        porte = _NEUTRO; faltou.append('porte')
+    else:
+        porte = 1.0 + 9.0 * (mwp / _MWP_MAX)          # 0,13 MWp -> ~1 ; 7,13 -> 10
+    impacto = 0.45 * crit + 0.35 * equip + 0.20 * porte
+
+    # ---- Recorrência (30%) ----
+    cod = str(row.get('Código') or '').strip()
+    n = CORR_EQUIP.get(cod) if cod else None
+    if n is None:
+        n = CORR_USINA.get(_norm_usina(row.get('_ativo', '')))
+        if n is not None:
+            n = n / 4.0                                # recuo: dilui o nº da usina
+    if n is None:
+        rec_base = _NEUTRO; faltou.append('recorrência')
+    else:
+        rec_base = min(10.0, 2.0 + 2.0 * float(n))     # 1 corretiva -> 4 ; 4+ -> 10
+    vezes = historico.get(row.get('_key'), {}).get('count', 0)
+    recorrencia = min(10.0, rec_base + min(3.0, 0.75 * vezes))
+
+    # ---- Urgência (30%) ----
+    idade = row.get('idade_dias')
+    if idade is None or pd.isna(idade):
+        urg_idade = _NEUTRO; faltou.append('idade')
+    else:
+        urg_idade = min(10.0, max(0.0, float(idade)) / 3.0)   # 30 dias -> 10
+    urgente = str(row.get('Número de Solicitação') or '').strip() not in ('', 'nan')
+    urgencia = min(10.0, urg_idade + (2.0 if urgente else 0.0))
+
+    nota = (PESO_IMPACTO * impacto + PESO_RECORR * recorrencia
+            + PESO_URGENCIA * urgencia) / (PESO_IMPACTO + PESO_RECORR + PESO_URGENCIA)
+    # 10 (pior caso) -> RPN 1 ; 0 -> RPN 40. Mesma escala da planilha.
+    rpn = int(round(40 - (nota / 10.0) * 39))
+    rpn = max(1, min(40, rpn))
+    det = (f"I{impacto:.1f} R{recorrencia:.1f} U{urgencia:.1f}"
+           + (f" | parcial: {', '.join(faltou)}" if faltou else ""))
+    return rpn, det, bool(faltou)
+
+
 df_tasks['corretiva']   = df_tasks['Tipo de tarefa'].apply(is_corretiva)
 df_tasks['termografia'] = df_tasks['Tarefa'].apply(is_termografia)
 df_tasks['zeladoria']   = df_tasks['Tarefa'].apply(is_zeladoria)
@@ -1202,6 +1365,27 @@ if df_tasks['aging'].any():
 if FIM_MES_ATIVO and df_tasks['boost_mes'].any():
     print(f"[FIM DE MÊS] {int(df_tasks['boost_mes'].sum())} preventiva(s) do mês "
           f"corrente com prioridade elevada")
+
+
+# v9/M4 — calculado AQUI (e não antes) porque depende de idade_dias/aging,
+# criados no bloco acima. Na 1ª versão rodava antes e 100% das linhas saíam
+# marcadas 'parcial: idade' — a marca da decisão 24 foi o que denunciou.
+_rpn_novo, _rpn_det, _rpn_parcial = [], [], []
+for _, r in df_tasks.iterrows():
+    a, b, c = calcular_rpn_dinamico(r)
+    _rpn_novo.append(a); _rpn_det.append(b); _rpn_parcial.append(c)
+df_tasks['rpn_novo'] = _rpn_novo
+df_tasks['rpn_detalhe'] = _rpn_det
+df_tasks['rpn_parcial'] = _rpn_parcial
+if len(df_tasks):
+    _n99 = int((df_tasks['rpn'] == 99).sum())
+    _npar = int(df_tasks['rpn_parcial'].sum())
+    print(f"[RPN DINÂMICO] modo {'ATIVO' if RPN_DINAMICO_ATIVO else 'SOMBRA'} | "
+          f"{_n99} tarefa(s) sem match na planilha (RPN 99) receberam nota calculada | "
+          f"{_npar} com algum componente ausente (marcadas 'parcial')")
+if RPN_DINAMICO_ATIVO:
+    df_tasks['rpn'] = df_tasks['rpn_novo']
+    print('[RPN DINÂMICO] ATIVO — a ordenação passa a usar a nota calculada')
 
 
 def estimate_h(row):
@@ -1565,6 +1749,8 @@ def build_tarefas_atomicas(sub):
             'mp_cat': r['mp_cat'],
             'mp_order': PREVENTIVA_ORDER.get(r['mp_cat'], 5) if not r['corretiva'] else -1,
             'rpn': int(r['rpn']),
+            'rpn_novo': int(r.get('rpn_novo', 0) or 0),          # v9/M4 (sombra)
+            'rpn_detalhe': str(r.get('rpn_detalhe', '') or ''),
             'reprog': bool(r['reprogramada']),
             'tier': int(r['tier']),                                   # v8
             'aging': bool(r['aging']),                                # v8: >= AGING_DIAS em andamento
@@ -2062,6 +2248,8 @@ def _row(equipe, day_idx, tk, start_min, end_min, desloc_h,
         'Tarefa': tk['tarefa_txt'],
         'Estado Tarefa (antes)': tk['estado_antes'],
         'RPN/Prioridade': tk['rpn'],
+        'RPN (novo)': tk.get('rpn_novo'),                 # v9/M4 — sombra
+        'RPN (como calculou)': tk.get('rpn_detalhe'),
         'Etiquetas': tk.get('etiquetas',''),
         'Reprogramada': 'Sim' if tk['reprog'] else 'Não',
         'Idade (dias)': tk.get('idade_dias'),
@@ -2186,7 +2374,8 @@ with pd.ExcelWriter(OUTPUT, engine='openpyxl') as writer:
     COLS_PADRAO_EQUIPE = [
         'Equipe','Dia','OSs ID','Ativo (Usina)','Responsável','Cidade',
         'Código Equipamento','Tipo','Tarefa','Estado Tarefa (antes)',
-        'RPN/Prioridade','Etiquetas','Reprogramada','Idade (dias)','Nº vezes programada','Termografia',
+        'RPN/Prioridade','RPN (novo)','RPN (como calculou)',
+        'Etiquetas','Reprogramada','Idade (dias)','Nº vezes programada','Termografia',
         'Hora Início','Hora Fim','Duração (h)','Desloc (h)','Paralelo (terceirizada)'
     ]
     for equipe in equipes:
