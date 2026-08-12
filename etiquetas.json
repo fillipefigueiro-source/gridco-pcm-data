@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-12T12:08:27Z",
+  "geradoEm": "2026-08-12T13:49:27Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -3395,16 +3395,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 614,
-        "emAberto": 88,
-        "atrasadas": 47,
-        "concluidas30d": 87,
-        "concluidas7d": 19,
+        "emAberto": 87,
+        "atrasadas": 46,
+        "concluidas30d": 88,
+        "concluidas7d": 20,
         "naSemanaCorrente": 40
       },
       "mttr": {
-        "horas": 364.14,
-        "label": "15d 4h",
-        "amostra": 87
+        "horas": 365.18,
+        "label": "15d 5h",
+        "amostra": 88
       },
       "tendencia4Semanas": [
         {
@@ -3425,7 +3425,7 @@
         {
           "semana": "W33",
           "criadas": 4,
-          "finalizadas": 6
+          "finalizadas": 7
         }
       ],
       "topOfensores": {
@@ -3433,7 +3433,7 @@
           {
             "nome": "(sem equipe)",
             "total": 614,
-            "emAberto": 88
+            "emAberto": 87
           }
         ],
         "responsaveis": [
@@ -3464,16 +3464,16 @@
           }
         ]
       },
-      "total": 88,
-      "atrasadas": 47,
+      "total": 87,
+      "atrasadas": 46,
       "porStatus": {
         "naoIniciada": 79,
         "emProgresso": 1,
-        "pausada": 8,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 88
+        "(sem equipe)": 87
       },
       "oss": [
         {
@@ -3802,24 +3802,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10043",
-          "ativo": "Transformador 2 Weg     { FZL100-TRFR2 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "pausado",
-          "tarefa": "[Grid Co.] - MPA - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-07-27",
-          "dataCriacao": "2026-07-24",
-          "dataInicial": "2026-07-27",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
           "atrasada": true
         },
         {
@@ -4983,6 +4965,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10043",
+          "ativo": "Transformador 2 Weg     { FZL100-TRFR2 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPA - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-07-27",
+          "dataCriacao": "2026-07-24",
+          "dataInicial": "2026-07-27",
+          "dataFinal": "2026-08-12",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 384.0,
+          "atrasada": false
+        },
         {
           "osId": "10263",
           "ativo": "Transformador 1 WEG     { THPN-PRM200-TRFR1 }",
@@ -7813,45 +7814,26 @@
           "horasAteAbrir": 72.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "7929",
-          "ativo": "Ar Condicionado      { PCN100-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Pedro  Oliveira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Pedro  Oliveira",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-06-17",
-          "dataCriacao": "2026-06-17",
-          "dataInicial": "2026-06-17",
-          "dataFinal": "2026-06-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 267
+      "historicoTotal": 268
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
       "icone": "ti-shield-check",
       "cor": "#ef4444",
       "kpis": {
-        "total": 136,
-        "emAberto": 2,
+        "total": 138,
+        "emAberto": 3,
         "atrasadas": 2,
-        "concluidas30d": 8,
-        "concluidas7d": 1,
-        "naSemanaCorrente": 1
+        "concluidas30d": 9,
+        "concluidas7d": 2,
+        "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 135.0,
-        "label": "5d 15h",
-        "amostra": 8
+        "horas": 120.0,
+        "label": "5d 0h",
+        "amostra": 9
       },
       "tendencia4Semanas": [
         {
@@ -7871,16 +7853,16 @@
         },
         {
           "semana": "W33",
-          "criadas": 0,
-          "finalizadas": 1
+          "criadas": 2,
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 136,
-            "emAberto": 2
+            "total": 138,
+            "emAberto": 3
           }
         ],
         "responsaveis": [
@@ -7900,27 +7882,27 @@
             "emAberto": 1
           },
           {
-            "nome": "Rodolfo  Oliveira",
+            "nome": "Francisco  Santos",
             "total": 8,
-            "emAberto": 0
+            "emAberto": 1
           },
           {
-            "nome": "Francisco  Santos",
-            "total": 7,
+            "nome": "Rodolfo  Oliveira",
+            "total": 8,
             "emAberto": 0
           }
         ]
       },
-      "total": 2,
+      "total": 3,
       "atrasadas": 2,
       "porStatus": {
-        "naoIniciada": 1,
+        "naoIniciada": 2,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 2
+        "(sem equipe)": 3
       },
       "oss": [
         {
@@ -7957,9 +7939,45 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "11085",
+          "ativo": "Inversor 4.7 CANANDIAN SOLAR     { MTS100-INVR4.7 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "Juliana Cândido ",
+          "supervisor": "Francisco  Santos",
+          "status": "Não Iniciada",
+          "tarefa": "Abertura de chamado para garantia [Vídeos]",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-12",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11084",
+          "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { STR100-INVR1.8 }",
+          "equipe": "",
+          "responsavel": "Júlio Willers ",
+          "criadoPor": "Juliana Cândido ",
+          "supervisor": "Júlio Willers ",
+          "status": "Finalizados",
+          "tarefa": "Abertura de chamado para garantia [Coleta de Logs após procedimentos]",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-12",
+          "dataInicial": "2026-08-12",
+          "dataFinal": "2026-08-12",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "10763",
           "ativo": "Inversor 1.2 GROWATT 33000TL3-S    { SALE-SNP100-INVR1.2 }",
@@ -8892,24 +8910,24 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 49
+      "historicoTotal": 50
     },
     "performance": {
       "label": "Performance",
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 471,
-        "emAberto": 102,
-        "atrasadas": 84,
-        "concluidas30d": 276,
-        "concluidas7d": 40,
-        "naSemanaCorrente": 49
+        "total": 475,
+        "emAberto": 101,
+        "atrasadas": 82,
+        "concluidas30d": 281,
+        "concluidas7d": 45,
+        "naSemanaCorrente": 53
       },
       "mttr": {
-        "horas": 154.26,
-        "label": "6d 10h",
-        "amostra": 276
+        "horas": 155.36,
+        "label": "6d 11h",
+        "amostra": 281
       },
       "tendencia4Semanas": [
         {
@@ -8929,16 +8947,16 @@
         },
         {
           "semana": "W33",
-          "criadas": 21,
-          "finalizadas": 24
+          "criadas": 25,
+          "finalizadas": 29
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 471,
-            "emAberto": 102
+            "total": 475,
+            "emAberto": 101
           }
         ],
         "responsaveis": [
@@ -8949,13 +8967,13 @@
           },
           {
             "nome": "Cláudio  Ferreira",
-            "total": 33,
-            "emAberto": 4
+            "total": 30,
+            "emAberto": 0
           },
           {
             "nome": "James Chaves",
             "total": 30,
-            "emAberto": 6
+            "emAberto": 5
           },
           {
             "nome": "Paulo  Ribeiro",
@@ -8969,16 +8987,16 @@
           }
         ]
       },
-      "total": 102,
-      "atrasadas": 84,
+      "total": 101,
+      "atrasadas": 82,
       "porStatus": {
-        "naoIniciada": 90,
-        "emProgresso": 2,
+        "naoIniciada": 79,
+        "emProgresso": 12,
         "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 102
+        "(sem equipe)": 101
       },
       "oss": [
         {
@@ -9075,23 +9093,6 @@
           "supervisor": "James Chaves ",
           "status": "Não Iniciada",
           "tarefa": "[MAB200][TR-42(ID SunOP)]",
-          "criticidade": "",
-          "dataProgramada": "2026-07-03",
-          "dataCriacao": "2026-07-02",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "8851",
-          "ativo": "Tracker 12.101 STI Norland     { MAB200-ETKR12.101 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
-          "tarefa": "[MAB200][TR-12(ID SunOP)]",
           "criticidade": "",
           "dataProgramada": "2026-07-03",
           "dataCriacao": "2026-07-02",
@@ -9658,14 +9659,15 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Rodrigo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 1.6] - Verificação de Tracker com Alarme",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-07",
-          "dataInicial": "",
+          "dataInicial": "2026-08-12",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 120.0,
           "atrasada": true
         },
         {
@@ -9845,14 +9847,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 106.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-06",
-          "dataInicial": "",
+          "dataInicial": "2026-08-12",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -9862,14 +9865,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 84.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-06",
-          "dataInicial": "",
+          "dataInicial": "2026-08-12",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -9879,14 +9883,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 80.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-06",
-          "dataInicial": "",
+          "dataInicial": "2026-08-12",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -9896,14 +9901,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 79.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-06",
-          "dataInicial": "",
+          "dataInicial": "2026-08-12",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -9913,14 +9919,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 76.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-06",
-          "dataInicial": "",
+          "dataInicial": "2026-08-12",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -9930,14 +9937,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 75.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-06",
-          "dataInicial": "",
+          "dataInicial": "2026-08-12",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -9947,14 +9955,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 73.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-06",
-          "dataInicial": "",
+          "dataInicial": "2026-08-12",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -9981,14 +9990,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 63.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-06",
-          "dataInicial": "",
+          "dataInicial": "2026-08-12",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -9998,14 +10008,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 35.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-06",
-          "dataInicial": "",
+          "dataInicial": "2026-08-12",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -10015,14 +10026,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 34.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-06",
-          "dataInicial": "",
+          "dataInicial": "2026-08-12",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -10383,23 +10395,6 @@
           "atrasada": true
         },
         {
-          "osId": "10991",
-          "ativo": "SKID 1 Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100-SKID1 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Cláudio  Ferreira",
-          "status": "Não Iniciada",
-          "tarefa": "[Skid 1] - Avaliação da temperatura no momento de pico da geração",
-          "criticidade": "",
-          "dataProgramada": "2026-08-11",
-          "dataCriacao": "2026-08-10",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "10976",
           "ativo": "Inversor 1.4 Sungrow SG250HX    { THPN-JUC100-INVR1.4 }",
           "equipe": "",
@@ -10417,14 +10412,14 @@
           "atrasada": true
         },
         {
-          "osId": "11051",
-          "ativo": "Estrutura Trackers Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-ETKR1 }",
+          "osId": "11050",
+          "ativo": "Módulo Fotovoltaico CANADIAN SOLAR     { MTS200-MDFV }",
           "equipe": "",
           "responsavel": "Francisco  Santos",
           "criadoPor": "Roger Lélis",
           "supervisor": "Francisco  Santos",
           "status": "Em progresso",
-          "tarefa": "[SKC 04 - SKC 1.1.4] - Realizar a inspeção e normalização da SKC",
+          "tarefa": "[Módulo Fotovoltaico] - Realizar a troca do módulo fotovoltaico",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-11",
@@ -10432,23 +10427,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
-          "atrasada": false
-        },
-        {
-          "osId": "11050",
-          "ativo": "Módulo Fotovoltaico CANADIAN SOLAR     { MTS200-MDFV }",
-          "equipe": "",
-          "responsavel": "Francisco  Santos",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Francisco  Santos",
-          "status": "Não Iniciada",
-          "tarefa": "[Módulo Fotovoltaico] - Realizar a troca do módulo fotovoltaico",
-          "criticidade": "",
-          "dataProgramada": "2026-08-12",
-          "dataCriacao": "2026-08-11",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
           "atrasada": false
         },
         {
@@ -10534,24 +10512,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "11033",
-          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { APG100-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Adriano  Moraes",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.1] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-08-12",
-          "dataCriacao": "2026-08-11",
-          "dataInicial": "2026-08-12",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
           "atrasada": false
         },
         {
@@ -10663,9 +10623,9 @@
           "osId": "10866",
           "ativo": "GD Energy - Sol do Norte 2 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON200 }",
           "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
+          "responsavel": "Felipe Xavier ",
           "criadoPor": "Ana Barros ",
-          "supervisor": "Cláudio  Ferreira",
+          "supervisor": "Felipe Xavier ",
           "status": "Não Iniciada",
           "tarefa": "[Usina] - Coleta e análise de dados de geração",
           "criticidade": "",
@@ -10680,9 +10640,9 @@
           "osId": "10865",
           "ativo": "GD Energy - Sol do Norte 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON100 }",
           "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
+          "responsavel": "Felipe Xavier ",
           "criadoPor": "Ana Barros ",
-          "supervisor": "Cláudio  Ferreira",
+          "supervisor": "Felipe Xavier ",
           "status": "Não Iniciada",
           "tarefa": "[Usina] - Coleta e análise de dados de geração",
           "criticidade": "",
@@ -10697,14 +10657,65 @@
           "osId": "10864",
           "ativo": "GD Energy - Guajirú 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-GJR100 }",
           "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
+          "responsavel": "Felipe Xavier ",
           "criadoPor": "Ana Barros ",
-          "supervisor": "Cláudio  Ferreira",
+          "supervisor": "Felipe Xavier ",
           "status": "Não Iniciada",
           "tarefa": "[Usina] - Coleta e análise de dados de geração",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-07",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11086",
+          "ativo": "Inversor 5.4 SOLAREDGE SE100K    { CTS100-INVR5.4 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Railson Gomes ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 5.4] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-12",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11082",
+          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { BES100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Andrick Gouveia ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Andrick Gouveia ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.1] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-12",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11076",
+          "ativo": "Inversor 1.5 Huawei     { THPN-NVL200-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.5] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-12",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -10729,6 +10740,82 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11078",
+          "ativo": "Inversor 1.3 Sungrow     { MTO100-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Eduardo Souza",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.3] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-12",
+          "dataInicial": "2026-08-12",
+          "dataFinal": "2026-08-12",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "11051",
+          "ativo": "Estrutura Trackers Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-ETKR1 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Francisco  Santos",
+          "status": "Finalizados",
+          "tarefa": "[SKC 04 - SKC 1.1.4] - Realizar a inspeção e normalização da SKC",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-11",
+          "dataInicial": "2026-08-12",
+          "dataFinal": "2026-08-12",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "11033",
+          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { APG100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Adriano  Moraes",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.1] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-11",
+          "dataInicial": "2026-08-12",
+          "dataFinal": "2026-08-12",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10991",
+          "ativo": "SKID 1 Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100-SKID1 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Finalizados",
+          "tarefa": "[Skid 1] - Avaliação da temperatura no momento de pico da geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-11",
+          "dataCriacao": "2026-08-10",
+          "dataInicial": "2026-08-12",
+          "dataFinal": "2026-08-12",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "11020",
           "ativo": "Inversor 1.11 Sungrow     { BWK100-INVR1.11 }",
@@ -12744,25 +12831,6 @@
           "atrasada": false
         },
         {
-          "osId": "9739",
-          "ativo": "Inversor 2.4 Huawei     { TIM200-INVR2.4 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Timon 2][Inversor 2.4] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-07-18",
-          "dataCriacao": "2026-07-20",
-          "dataInicial": "2026-07-29",
-          "dataFinal": "2026-07-29",
-          "linkFracttal": "",
-          "horasAteAbrir": 216.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10242",
           "ativo": "Tracker 14.100      { ADS100-ETKR14.100 }",
           "equipe": "",
@@ -13447,25 +13515,6 @@
           "atrasada": false
         },
         {
-          "osId": "9738",
-          "ativo": "Tracker 38.200 STI STI-H250 Bi-linha    { SLG200-ETKR38.200 }",
-          "equipe": "",
-          "responsavel": "Daniel de Paula ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Daniel de Paula ",
-          "status": "Finalizada",
-          "tarefa": "[Sete Lagoas 2][Tracker 38.200] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-17",
-          "dataCriacao": "2026-07-20",
-          "dataInicial": "2026-07-22",
-          "dataFinal": "2026-07-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 24.0,
-          "atrasada": false
-        },
-        {
           "osId": "9818",
           "ativo": "Inversor 1.9 Sungrow     { BWK100-INVR1.9 }",
           "equipe": "",
@@ -13540,47 +13589,9 @@
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "9744",
-          "ativo": "Tracker 05.100 STI Norland     { TIM100-ETKR05.100 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Timon 1][Tracker 05.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-18",
-          "dataCriacao": "2026-07-20",
-          "dataInicial": "2026-07-20",
-          "dataFinal": "2026-07-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9643",
-          "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizada",
-          "tarefa": "[Capitão Poço 1][Inversor 7.2] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-07-17",
-          "dataCriacao": "2026-07-17",
-          "dataInicial": "2026-07-20",
-          "dataFinal": "2026-07-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 324
+      "historicoTotal": 329
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15189,6 +15200,70 @@
   },
   "ossPublicas": [
     {
+      "osId": "11086",
+      "ativo": "Inversor 5.4 SOLAREDGE SE100K    { CTS100-INVR5.4 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Railson Gomes ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 5.4] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-12",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11085",
+      "ativo": "Inversor 4.7 CANANDIAN SOLAR     { MTS100-INVR4.7 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Juliana Cândido ",
+      "supervisor": "Francisco  Santos",
+      "status": "Não Iniciada",
+      "tarefa": "Abertura de chamado para garantia [Vídeos]",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-12",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11082",
+      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { BES100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Andrick Gouveia ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Andrick Gouveia ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.1] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-12",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11076",
+      "ativo": "Inversor 1.5 Huawei     { THPN-NVL200-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.5] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-12",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "11060",
       "ativo": "Tracker 1.100 Axial Tracker 1VTwin    { THPN-EBG100-ETKR1.100 }",
       "equipe": "",
@@ -15205,14 +15280,14 @@
       "linkFracttal": ""
     },
     {
-      "osId": "11051",
-      "ativo": "Estrutura Trackers Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-ETKR1 }",
+      "osId": "11050",
+      "ativo": "Módulo Fotovoltaico CANADIAN SOLAR     { MTS200-MDFV }",
       "equipe": "",
       "responsavel": "Francisco  Santos",
       "criadoPor": "Roger Lélis",
       "supervisor": "Francisco  Santos",
       "status": "Em progresso",
-      "tarefa": "[SKC 04 - SKC 1.1.4] - Realizar a inspeção e normalização da SKC",
+      "tarefa": "[Módulo Fotovoltaico] - Realizar a troca do módulo fotovoltaico",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-11",
@@ -15220,22 +15295,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 24.0
-    },
-    {
-      "osId": "11050",
-      "ativo": "Módulo Fotovoltaico CANADIAN SOLAR     { MTS200-MDFV }",
-      "equipe": "",
-      "responsavel": "Francisco  Santos",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Francisco  Santos",
-      "status": "Não Iniciada",
-      "tarefa": "[Módulo Fotovoltaico] - Realizar a troca do módulo fotovoltaico",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-11",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
     },
     {
       "osId": "11044",
@@ -15332,23 +15391,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "11033",
-      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { APG100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Adriano  Moraes",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.1] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-11",
-      "dataInicial": "2026-08-12",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0
     },
     {
       "osId": "11032",
@@ -15455,22 +15497,6 @@
       "supervisor": "Janderson Miranda ",
       "status": "Não Iniciada",
       "tarefa": "[Tracker 20.200] - Verificação de Tracker em Pinheiro",
-      "criticidade": "",
-      "dataProgramada": "2026-08-11",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "10991",
-      "ativo": "SKID 1 Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100-SKID1 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Não Iniciada",
-      "tarefa": "[Skid 1] - Avaliação da temperatura no momento de pico da geração",
       "criticidade": "",
       "dataProgramada": "2026-08-11",
       "dataCriacao": "2026-08-10",
@@ -15649,9 +15675,9 @@
       "osId": "10866",
       "ativo": "GD Energy - Sol do Norte 2 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON200 }",
       "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
+      "responsavel": "Felipe Xavier ",
       "criadoPor": "Ana Barros ",
-      "supervisor": "Cláudio  Ferreira",
+      "supervisor": "Felipe Xavier ",
       "status": "Não Iniciada",
       "tarefa": "[Usina] - Coleta e análise de dados de geração",
       "criticidade": "",
@@ -15665,9 +15691,9 @@
       "osId": "10865",
       "ativo": "GD Energy - Sol do Norte 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON100 }",
       "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
+      "responsavel": "Felipe Xavier ",
       "criadoPor": "Ana Barros ",
-      "supervisor": "Cláudio  Ferreira",
+      "supervisor": "Felipe Xavier ",
       "status": "Não Iniciada",
       "tarefa": "[Usina] - Coleta e análise de dados de geração",
       "criticidade": "",
@@ -15681,9 +15707,9 @@
       "osId": "10864",
       "ativo": "GD Energy - Guajirú 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-GJR100 }",
       "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
+      "responsavel": "Felipe Xavier ",
       "criadoPor": "Ana Barros ",
-      "supervisor": "Cláudio  Ferreira",
+      "supervisor": "Felipe Xavier ",
       "status": "Não Iniciada",
       "tarefa": "[Usina] - Coleta e análise de dados de geração",
       "criticidade": "",
@@ -15700,14 +15726,15 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Rodrigo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 1.6] - Verificação de Tracker com Alarme",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-07",
-      "dataInicial": "",
+      "dataInicial": "2026-08-12",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0
     },
     {
       "osId": "10857",
@@ -16164,14 +16191,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 106.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-06",
-      "dataInicial": "",
+      "dataInicial": "2026-08-12",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10774",
@@ -16180,14 +16208,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 84.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-06",
-      "dataInicial": "",
+      "dataInicial": "2026-08-12",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10773",
@@ -16196,14 +16225,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 80.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-06",
-      "dataInicial": "",
+      "dataInicial": "2026-08-12",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10772",
@@ -16212,14 +16242,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 79.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-06",
-      "dataInicial": "",
+      "dataInicial": "2026-08-12",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10771",
@@ -16228,14 +16259,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 76.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-06",
-      "dataInicial": "",
+      "dataInicial": "2026-08-12",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10770",
@@ -16244,14 +16276,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 75.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-06",
-      "dataInicial": "",
+      "dataInicial": "2026-08-12",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10769",
@@ -16260,14 +16293,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 73.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-06",
-      "dataInicial": "",
+      "dataInicial": "2026-08-12",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10768",
@@ -16292,14 +16326,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 63.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-06",
-      "dataInicial": "",
+      "dataInicial": "2026-08-12",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10766",
@@ -16308,14 +16343,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 35.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-06",
-      "dataInicial": "",
+      "dataInicial": "2026-08-12",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10765",
@@ -16324,14 +16360,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 34.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-06",
-      "dataInicial": "",
+      "dataInicial": "2026-08-12",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10737",
@@ -17559,23 +17596,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10043",
-      "ativo": "Transformador 2 Weg     { FZL100-TRFR2 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "pausado",
-      "tarefa": "[Grid Co.] - MPA - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-07-27",
-      "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-07-27",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0
-    },
-    {
       "osId": "10013",
       "ativo": "Inversor 3.10 Huawei     { TIM100-INVR3.10 }",
       "equipe": "",
@@ -18110,22 +18130,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "8851",
-      "ativo": "Tracker 12.101 STI Norland     { MAB200-ETKR12.101 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
-      "tarefa": "[MAB200][TR-12(ID SunOP)]",
-      "criticidade": "",
-      "dataProgramada": "2026-07-03",
-      "dataCriacao": "2026-07-02",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "8850",
       "ativo": "Tracker 09.101 STI Norland     { MAB200-ETKR9.101 }",
       "equipe": "",
@@ -18437,6 +18441,44 @@
   ],
   "ossHistorico": [
     {
+      "osId": "11084",
+      "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { STR100-INVR1.8 }",
+      "equipe": "",
+      "responsavel": "Júlio Willers ",
+      "criadoPor": "Juliana Cândido ",
+      "supervisor": "Júlio Willers ",
+      "status": "Finalizados",
+      "tarefa": "Abertura de chamado para garantia [Coleta de Logs após procedimentos]",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-12",
+      "dataInicial": "2026-08-12",
+      "dataFinal": "2026-08-12",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "11078",
+      "ativo": "Inversor 1.3 Sungrow     { MTO100-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Eduardo Souza",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.3] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-12",
+      "dataInicial": "2026-08-12",
+      "dataFinal": "2026-08-12",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "11071",
       "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
       "equipe": "",
@@ -18577,6 +18619,25 @@
       "atrasada": false
     },
     {
+      "osId": "11051",
+      "ativo": "Estrutura Trackers Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-ETKR1 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Francisco  Santos",
+      "status": "Finalizados",
+      "tarefa": "[SKC 04 - SKC 1.1.4] - Realizar a inspeção e normalização da SKC",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "2026-08-12",
+      "dataFinal": "2026-08-12",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "11049",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -18714,6 +18775,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "11033",
+      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { APG100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Adriano  Moraes",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.1] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "2026-08-12",
+      "dataFinal": "2026-08-12",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -19093,6 +19173,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "10991",
+      "ativo": "SKID 1 Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100-SKID1 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Finalizados",
+      "tarefa": "[Skid 1] - Avaliação da temperatura no momento de pico da geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-11",
+      "dataCriacao": "2026-08-10",
+      "dataInicial": "2026-08-12",
+      "dataFinal": "2026-08-12",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -21311,110 +21410,10 @@
       "horasAteAbrir": 120.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "10717",
-      "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Finalizados",
-      "tarefa": "Religamento UFV Fazenda Limão 1 e 2",
-      "criticidade": "",
-      "dataProgramada": "2026-08-06",
-      "dataCriacao": "2026-08-06",
-      "dataInicial": "2026-08-06",
-      "dataFinal": "2026-08-06",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "10712",
-      "ativo": "Cabine 2 Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Ademir Necker ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Ademir Necker ",
-      "status": "Finalizados",
-      "tarefa": "Religamento UFV Guatambu 2",
-      "criticidade": "",
-      "dataProgramada": "2026-08-06",
-      "dataCriacao": "2026-08-06",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "10709",
-      "ativo": "Thopen - Bonfim Limoeiro do Norte 1 - CE Sítio Pitombeira Limoeiro do Norte  Ceará Brasil { THPN-BLN100 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Finalizados",
-      "tarefa": "Religamento UFV Sítio Bonfim",
-      "criticidade": "",
-      "dataProgramada": "2026-08-06",
-      "dataCriacao": "2026-08-06",
-      "dataInicial": "2026-08-06",
-      "dataFinal": "2026-08-06",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "10708",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-06",
-      "dataCriacao": "2026-08-06",
-      "dataInicial": "2026-08-06",
-      "dataFinal": "2026-08-06",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "10707",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-06",
-      "dataCriacao": "2026-08-06",
-      "dataInicial": "2026-08-06",
-      "dataFinal": "2026-08-06",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2367,
-  "totalGeral": 4906,
+  "historicoTotal": 2374,
+  "totalGeral": 4912,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
