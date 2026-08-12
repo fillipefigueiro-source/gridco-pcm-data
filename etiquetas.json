@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-12T09:00:41Z",
+  "geradoEm": "2026-08-12T10:12:35Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3593,
-        "emAberto": 5,
-        "atrasadas": 5,
-        "concluidas30d": 610,
-        "concluidas7d": 156,
+        "emAberto": 4,
+        "atrasadas": 4,
+        "concluidas30d": 611,
+        "concluidas7d": 157,
         "naSemanaCorrente": 41
       },
       "mttr": {
-        "horas": 13.05,
-        "label": "13h 3min",
-        "amostra": 610
+        "horas": 13.07,
+        "label": "13h 4min",
+        "amostra": 611
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W33",
           "criadas": 41,
-          "finalizadas": 53
+          "finalizadas": 54
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3593,
-            "emAberto": 5
+            "emAberto": 4
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 5,
-      "atrasadas": 5,
+      "total": 4,
+      "atrasadas": 4,
       "porStatus": {
         "naoIniciada": 2,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 5
+        "(sem equipe)": 4
       },
       "oss": [
         {
@@ -163,7 +163,9 @@
           "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "11061",
           "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
@@ -171,20 +173,19 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Ronaldo  Silva",
-          "status": "Em progresso",
+          "status": "Finalizados",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-11",
           "dataCriacao": "2026-08-11",
           "dataInicial": "2026-08-11",
-          "dataFinal": "",
+          "dataFinal": "2026-08-12",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 24.0,
           "modalidade": "local",
-          "atrasada": true
-        }
-      ],
-      "ossHistorico": [
+          "atrasada": false
+        },
         {
           "osId": "11064",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3106,26 +3107,6 @@
           "atrasada": false
         },
         {
-          "osId": "10664",
-          "ativo": "Cabine 4  Capitão Poço  Pará Brasil { CPP100-CABN4 }",
-          "equipe": "",
-          "responsavel": "Lucas  Nascimento",
-          "criadoPor": "LucasNascimento",
-          "supervisor": "Lucas  Nascimento",
-          "status": "Finalizada",
-          "tarefa": "[Cabine 4] - Religamento da Cabine 4",
-          "criticidade": "",
-          "dataProgramada": "2026-08-05",
-          "dataCriacao": "2026-08-05",
-          "dataInicial": "2026-08-05",
-          "dataFinal": "2026-08-05",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "10674",
           "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
           "equipe": "",
@@ -3186,12 +3167,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1648,
+      "historicoTotal": 1649,
       "subClassificacao": {
         "remoto": 738,
         "local": 2855,
         "remotoEmAberto": 2,
-        "localEmAberto": 3,
+        "localEmAberto": 2,
         "pctRemoto": 21,
         "alerta": true
       },
@@ -15206,24 +15187,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "11061",
-      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Italo  Lustosa",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Em progresso",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-11",
-      "dataCriacao": "2026-08-11",
-      "dataInicial": "2026-08-11",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "11060",
       "ativo": "Tracker 1.100 Axial Tracker 1VTwin    { THPN-EBG100-ETKR1.100 }",
       "equipe": "",
@@ -18490,6 +18453,26 @@
       "atrasada": false
     },
     {
+      "osId": "11061",
+      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-11",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "2026-08-11",
+      "dataFinal": "2026-08-12",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 24.0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "11057",
       "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
       "equipe": "",
@@ -21424,29 +21407,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10703",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Lucas  Nascimento",
-      "criadoPor": "LucasNascimento",
-      "supervisor": "Lucas  Nascimento",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-05",
-      "dataCriacao": "2026-08-06",
-      "dataInicial": "2026-08-05",
-      "dataFinal": "2026-08-06",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2363,
+  "historicoTotal": 2364,
   "totalGeral": 4903,
   "verificacao": {
     "total": 0,
