@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-13T12:17:39Z",
+  "geradoEm": "2026-08-13T14:02:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3625,
+        "total": 3626,
         "emAberto": 10,
-        "atrasadas": 9,
-        "concluidas30d": 617,
-        "concluidas7d": 160,
-        "naSemanaCorrente": 73
+        "atrasadas": 8,
+        "concluidas30d": 618,
+        "concluidas7d": 161,
+        "naSemanaCorrente": 74
       },
       "mttr": {
-        "horas": 12.64,
-        "label": "12h 38min",
-        "amostra": 617
+        "horas": 12.66,
+        "label": "12h 40min",
+        "amostra": 618
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W33",
-          "criadas": 73,
-          "finalizadas": 77
+          "criadas": 74,
+          "finalizadas": 78
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3625,
+            "total": 3626,
             "emAberto": 10
           }
         ],
@@ -79,7 +79,7 @@
         ]
       },
       "total": 10,
-      "atrasadas": 9,
+      "atrasadas": 8,
       "porStatus": {
         "naoIniciada": 7,
         "emProgresso": 1,
@@ -237,22 +237,22 @@
           "atrasada": true
         },
         {
-          "osId": "11100",
-          "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
+          "osId": "11149",
+          "ativo": "Inversor 4.2 Sungrow     { JCD100-INVR4.2 }",
           "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Janderson Miranda ",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "James Chaves ",
           "status": "Não Iniciada",
-          "tarefa": "UFV: Ceilândia 2 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
+          "tarefa": "[Inversor 4.2] - Religamento do Inversor 4.2",
           "criticidade": "",
-          "dataProgramada": "2026-08-12",
-          "dataCriacao": "2026-08-12",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-13",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": true
+          "atrasada": false
         },
         {
           "osId": "11146",
@@ -331,6 +331,26 @@
           "dataFinal": "2026-08-13",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11100",
+          "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "UFV: Ceilândia 2 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-12",
+          "dataInicial": "2026-08-13",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3254,32 +3274,12 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10706",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-08-06",
-          "dataInicial": "2026-08-06",
-          "dataFinal": "2026-08-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1661,
+      "historicoTotal": 1662,
       "subClassificacao": {
         "remoto": 739,
-        "local": 2886,
+        "local": 2887,
         "remotoEmAberto": 2,
         "localEmAberto": 8,
         "pctRemoto": 20,
@@ -3576,8 +3576,8 @@
       "total": 84,
       "atrasadas": 47,
       "porStatus": {
-        "naoIniciada": 77,
-        "emProgresso": 0,
+        "naoIniciada": 76,
+        "emProgresso": 1,
         "pausada": 7,
         "verificacao": 0
       },
@@ -4328,14 +4328,15 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Athon] - MPM - Sistemas de segurança",
           "criticidade": "",
           "dataProgramada": "2026-08-11",
           "dataCriacao": "2026-08-11",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -8982,7 +8983,7 @@
         "naSemanaCorrente": 66
       },
       "mttr": {
-        "horas": 156.7,
+        "horas": 156.61,
         "label": "6d 12h",
         "amostra": 293
       },
@@ -9047,9 +9048,9 @@
       "total": 92,
       "atrasadas": 78,
       "porStatus": {
-        "naoIniciada": 74,
-        "emProgresso": 1,
-        "pausada": 17,
+        "naoIniciada": 73,
+        "emProgresso": 4,
+        "pausada": 15,
         "verificacao": 0
       },
       "porEquipe": {
@@ -9954,6 +9955,24 @@
           "atrasada": true
         },
         {
+          "osId": "10737",
+          "ativo": "Tracker 90.101 STI Norland dual row    { ALT100-ETKR90.101 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Anderson  Parente",
+          "status": "Em progresso",
+          "tarefa": "[Tracker 90.101] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-07",
+          "dataCriacao": "2026-08-06",
+          "dataInicial": "2026-08-13",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "atrasada": true
+        },
+        {
           "osId": "10648",
           "ativo": "Tracker 44.100 Axial Tracker 1VTwin    { THPN-CLR100-ETKR44.100 }",
           "equipe": "",
@@ -9965,23 +9984,6 @@
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-04",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10879",
-          "ativo": "Inversor 1.11 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.11 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.11] - Inspeção Geral da PV 16",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-08-07",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -10351,15 +10353,15 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Anderson  Parente",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-10",
-          "dataInicial": "2026-08-11",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 24.0,
+          "horasAteAbrir": 72.0,
           "atrasada": true
         },
         {
@@ -10369,15 +10371,15 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Anderson  Parente",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Tracker 81.101] - Verificação de Tracker em Altair 4",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-10",
-          "dataInicial": "2026-08-11",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 24.0,
+          "horasAteAbrir": 72.0,
           "atrasada": true
         },
         {
@@ -10387,15 +10389,15 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Anderson  Parente",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Tracker 73.101] - Verificação de Tracker em Altair 4",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-10",
-          "dataInicial": "2026-08-11",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 24.0,
+          "horasAteAbrir": 72.0,
           "atrasada": true
         },
         {
@@ -10439,7 +10441,7 @@
           "responsavel": "Andrick Gouveia ",
           "criadoPor": "LuelySantos",
           "supervisor": "Andrick Gouveia ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.1] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-08-13",
@@ -10678,21 +10680,21 @@
           "atrasada": false
         },
         {
-          "osId": "10737",
-          "ativo": "Tracker 90.101 STI Norland dual row    { ALT100-ETKR90.101 }",
+          "osId": "10879",
+          "ativo": "Inversor 1.11 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.11 }",
           "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Anderson  Parente",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Felipe  Lima",
           "status": "Finalizados",
-          "tarefa": "[Tracker 90.101] - Verificação de Tracker Parado",
+          "tarefa": "[Inversor 1.11] - Inspeção Geral da PV 16",
           "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-08-06",
+          "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-08-07",
           "dataInicial": "2026-08-13",
           "dataFinal": "2026-08-13",
           "linkFracttal": "",
-          "horasAteAbrir": 168.0,
+          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -15099,6 +15101,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "11149",
+      "ativo": "Inversor 4.2 Sungrow     { JCD100-INVR4.2 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 4.2] - Religamento do Inversor 4.2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11146",
       "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
       "equipe": "",
@@ -15361,23 +15380,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "11100",
-      "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
-      "tarefa": "UFV: Ceilândia 2 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-12",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "11086",
       "ativo": "Inversor 5.4 SOLAREDGE SE100K    { CTS100-INVR5.4 }",
       "equipe": "",
@@ -15416,7 +15418,7 @@
       "responsavel": "Andrick Gouveia ",
       "criadoPor": "LuelySantos",
       "supervisor": "Andrick Gouveia ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.1] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-08-13",
@@ -15545,14 +15547,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Athon] - MPM - Sistemas de segurança",
       "criticidade": "",
       "dataProgramada": "2026-08-11",
       "dataCriacao": "2026-08-11",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "11019",
@@ -15625,15 +15628,15 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Anderson  Parente",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-11",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 24.0
+      "horasAteAbrir": 72.0
     },
     {
       "osId": "10981",
@@ -15642,15 +15645,15 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Anderson  Parente",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Tracker 81.101] - Verificação de Tracker em Altair 4",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-11",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 24.0
+      "horasAteAbrir": 72.0
     },
     {
       "osId": "10980",
@@ -15659,15 +15662,15 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Anderson  Parente",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Tracker 73.101] - Verificação de Tracker em Altair 4",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-11",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 24.0
+      "horasAteAbrir": 72.0
     },
     {
       "osId": "10976",
@@ -15762,22 +15765,6 @@
       "supervisor": "Janderson Miranda ",
       "status": "Não Iniciada",
       "tarefa": "[ETM] - Análise de sensores",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "10879",
-      "ativo": "Inversor 1.11 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.11 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.11] - Inspeção Geral da PV 16",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
       "dataCriacao": "2026-08-07",
@@ -16302,6 +16289,23 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 144.0
+    },
+    {
+      "osId": "10737",
+      "ativo": "Tracker 90.101 STI Norland dual row    { ALT100-ETKR90.101 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Anderson  Parente",
+      "status": "Em progresso",
+      "tarefa": "[Tracker 90.101] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-07",
+      "dataCriacao": "2026-08-06",
+      "dataInicial": "2026-08-13",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0
     },
     {
       "osId": "10727",
@@ -18723,6 +18727,26 @@
       "atrasada": false
     },
     {
+      "osId": "11100",
+      "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Janderson Miranda ",
+      "status": "Finalizados",
+      "tarefa": "UFV: Ceilândia 2 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-12",
+      "dataInicial": "2026-08-13",
+      "dataFinal": "2026-08-13",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "11090",
       "ativo": "Axis - Petrolina 2 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL200 }",
       "equipe": "",
@@ -20944,6 +20968,25 @@
       "atrasada": false
     },
     {
+      "osId": "10879",
+      "ativo": "Inversor 1.11 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.11 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Felipe  Lima",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.11] - Inspeção Geral da PV 16",
+      "criticidade": "",
+      "dataProgramada": "2026-08-10",
+      "dataCriacao": "2026-08-07",
+      "dataInicial": "2026-08-13",
+      "dataFinal": "2026-08-13",
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "10878",
       "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
       "equipe": "",
@@ -21173,49 +21216,10 @@
       "horasAteFechar": 72.0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10826",
-      "ativo": "Inversor 2.5 Huawei     { TIM100-INVR2.5 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Luiz  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 2.5] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-08-08",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10825",
-      "ativo": "Inversor 8.2 Sungrow     { JCD100-INVR8.2 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "James Chaves ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 8.2] - Religamento do Inversor 8.2",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-07",
-      "dataFinal": "2026-08-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2404,
-  "totalGeral": 4954,
+  "historicoTotal": 2405,
+  "totalGeral": 4955,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
