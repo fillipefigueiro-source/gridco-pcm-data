@@ -850,3 +850,13 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 /* Fase 3 (13/08/2026): as abas do topo viraram <a>; só o sublinhado precisa sumir
    — todo o resto do visual já vem de .tip-tab */
 .tip-nav a.tip-tab{text-decoration:none}
+
+/* Impressão por aba (13/08/2026): o PDF passa a sair inteiro nas abas
+   Programação Semanal, Gestão PCM e Gestão MPAS — sem cortes de rolagem.
+   O cabeçalho .ph é trocado pelo js/exportar.js no beforeprint. */
+@media print{
+  .dtasks,.exec-body,.mlist,.mp-tblwrap,.gp-ms-opts{max-height:none!important;overflow:visible!important}
+  .gp-ms-pop,.mbox-bg{display:none!important}
+  .gp-cli,.gp-nf,.gp-usi,.gp-tip,.gp-flat{break-inside:avoid;overflow:visible}
+  body[data-printview] .tip-nav,body[data-printview] .filter-wrap{display:none!important}
+}
