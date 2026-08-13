@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-13T10:37:17Z",
+  "geradoEm": "2026-08-13T11:30:44Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -3557,8 +3557,8 @@
       "total": 85,
       "atrasadas": 47,
       "porStatus": {
-        "naoIniciada": 78,
-        "emProgresso": 0,
+        "naoIniciada": 77,
+        "emProgresso": 1,
         "pausada": 7,
         "verificacao": 0
       },
@@ -4548,14 +4548,15 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-15",
           "dataCriacao": "2026-07-28",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 384.0,
           "atrasada": false
         },
         {
@@ -8973,16 +8974,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 488,
-        "emAberto": 95,
+        "emAberto": 94,
         "atrasadas": 80,
-        "concluidas30d": 290,
-        "concluidas7d": 57,
+        "concluidas30d": 291,
+        "concluidas7d": 58,
         "naSemanaCorrente": 66
       },
       "mttr": {
-        "horas": 157.41,
-        "label": "6d 13h",
-        "amostra": 290
+        "horas": 156.95,
+        "label": "6d 12h",
+        "amostra": 291
       },
       "tendencia4Semanas": [
         {
@@ -9003,7 +9004,7 @@
         {
           "semana": "W33",
           "criadas": 38,
-          "finalizadas": 48
+          "finalizadas": 49
         }
       ],
       "topOfensores": {
@@ -9011,7 +9012,7 @@
           {
             "nome": "(sem equipe)",
             "total": 488,
-            "emAberto": 95
+            "emAberto": 94
           }
         ],
         "responsaveis": [
@@ -9042,16 +9043,16 @@
           }
         ]
       },
-      "total": 95,
+      "total": 94,
       "atrasadas": 80,
       "porStatus": {
-        "naoIniciada": 77,
+        "naoIniciada": 76,
         "emProgresso": 1,
         "pausada": 17,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 95
+        "(sem equipe)": 94
       },
       "oss": [
         {
@@ -10366,14 +10367,15 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.3] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-10",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 72.0,
           "atrasada": true
         },
         {
@@ -10479,24 +10481,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "11076",
-          "ativo": "Inversor 1.5 Huawei     { THPN-NVL200-INVR1.5 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.5] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-08-13",
-          "dataCriacao": "2026-08-12",
-          "dataInicial": "2026-08-12",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -10688,6 +10672,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11076",
+          "ativo": "Inversor 1.5 Huawei     { THPN-NVL200-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.5] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-12",
+          "dataInicial": "2026-08-12",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 24.0,
+          "atrasada": false
+        },
         {
           "osId": "11116",
           "ativo": "Inversor 1.3 Sungrow SG250HX    { THPN-CDS100-INVR1.3 }",
@@ -13007,25 +13010,6 @@
           "atrasada": false
         },
         {
-          "osId": "9870",
-          "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { SBT500-INVR1.8 }",
-          "equipe": "",
-          "responsavel": "Adão Neto ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Adão Neto ",
-          "status": "Finalizada",
-          "tarefa": "INVERSOR 08 - Verificação de performance",
-          "criticidade": "",
-          "dataProgramada": "2026-07-23",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-07-23",
-          "dataFinal": "2026-07-29",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 144.0,
-          "atrasada": false
-        },
-        {
           "osId": "10242",
           "ativo": "Tracker 14.100      { ADS100-ETKR14.100 }",
           "equipe": "",
@@ -13539,7 +13523,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 348
+      "historicoTotal": 349
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15457,23 +15441,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "11076",
-      "ativo": "Inversor 1.5 Huawei     { THPN-NVL200-INVR1.5 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.5] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-08-13",
-      "dataCriacao": "2026-08-12",
-      "dataInicial": "2026-08-12",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
-    },
-    {
       "osId": "11060",
       "ativo": "Tracker 1.100 Axial Tracker 1VTwin    { THPN-EBG100-ETKR1.100 }",
       "equipe": "",
@@ -15656,14 +15623,15 @@
       "responsavel": "Janderson Miranda ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.3] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-10",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0
     },
     {
       "osId": "10994",
@@ -16923,14 +16891,15 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-15",
       "dataCriacao": "2026-07-28",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 384.0
     },
     {
       "osId": "10265",
@@ -18873,6 +18842,25 @@
       "linkFracttal": "",
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "11076",
+      "ativo": "Inversor 1.5 Huawei     { THPN-NVL200-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.5] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-12",
+      "dataInicial": "2026-08-12",
+      "dataFinal": "2026-08-13",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 24.0,
       "atrasada": false
     },
     {
@@ -21288,29 +21276,9 @@
       "horasAteAbrir": 96.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "10822",
-      "ativo": "Thopen - Córrego do Sapucaia 1 - ES Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100 }",
-      "equipe": "",
-      "responsavel": "Italo  Lustosa",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Italo  Lustosa",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-07",
-      "dataFinal": "2026-08-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2400,
+  "historicoTotal": 2401,
   "totalGeral": 4953,
   "verificacao": {
     "total": 0,
