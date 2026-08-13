@@ -2476,6 +2476,65 @@ df_out = pd.DataFrame(all_rows)
 df_pend = pd.DataFrame(all_pend)
 df_resumo = pd.DataFrame(resumo)
 
+# ── Melhoria 0.1 + decisão 2 ANTECIPADA EM SOMBRA (13/08/2026) ───────────────
+# A validação da W34 mostrou que o deslocamento ENTRE tarefas do mesmo dia é
+# estruturalmente ~0 (o motor raramente mistura usinas no dia). O custo real é
+# a PRIMEIRA viagem do dia: base da equipe -> usina. Aqui ela é medida e
+# escrita na coluna 'Desloc (h)' da primeira tarefa de cada (equipe, dia).
+#
+# É pós-processamento PURO da coluna de relatório: roda depois de toda a
+# distribuição, portanto não move cursor nem capacidade — sombra por construção.
+# Origem: 'Base Equipe' do AUXILIAR ("Cidade/UF"); coordenada da base vem por
+# âncora = média das usinas cadastradas na mesma cidade (sem geocodificador).
+BASES_SEM_ANCORA = {}
+_DESLOC_BASE_TOT = {}
+if DESLOC_CALCULA and len(df_out):
+    def _norm_txt_b(s):
+        import unicodedata as _ud
+        s = _ud.normalize('NFKD', str(s or '')).encode('ascii', 'ignore').decode().lower()
+        return re.sub(r'[^a-z0-9]+', ' ', s).strip()
+    try:
+        _cid_coord = {}
+        _cids = fonte_bd_api.mapa_cidades()
+        for _u, _c in _cids.items():
+            _xy = MAPA_COORD.get(_u)
+            if _xy:
+                _cid_coord.setdefault(_norm_txt_b(_c), []).append(_xy)
+        _cid_coord = {k: (sum(x[0] for x in v)/len(v), sum(x[1] for x in v)/len(v))
+                      for k, v in _cid_coord.items()}
+        _df_aux_b = fonte_bd_api.df_auxiliar()
+        _base_eq = {}
+        for _, _r in _df_aux_b.iterrows():
+            _eq = str(_r.get('Equipe Cluster') or '').strip()
+            _b = str(_r.get('Base Equipe') or '').strip()
+            if _eq and _b and _b.lower() != 'nan' and _eq not in _base_eq:
+                _xy = _cid_coord.get(_norm_txt_b(_b.split('/')[0]))
+                if _xy:
+                    _base_eq[_eq] = _xy
+                else:
+                    BASES_SEM_ANCORA[_eq] = _b
+        _n_base = 0
+        for (_eq, _dia), _g in df_out.groupby(['Equipe', 'Dia'], sort=False):
+            _bxy = _base_eq.get(str(_eq))
+            if not _bxy:
+                continue
+            _gd = _g[_g.get('Paralelo (terceirizada)', '') != 'Sim'] if 'Paralelo (terceirizada)' in _g else _g
+            if not len(_gd):
+                continue
+            _i0 = _gd['Hora Início'].astype(str).idxmin()
+            _uxy = resolve_coord(str(df_out.at[_i0, 'Ativo (Usina)']))
+            if not _uxy:
+                continue
+            _h = (haversine_km(_bxy, _uxy) / TRAVEL_KMH) * TRAVEL_FACTOR
+            df_out.at[_i0, 'Desloc (h)'] = round(_h, 2)
+            _DESLOC_BASE_TOT[_eq] = _DESLOC_BASE_TOT.get(_eq, 0.0) + _h
+            _n_base += 1
+        print(f"[DESLOC] viagem base→usina medida em {_n_base} dia(s)-equipe "
+              f"({len(_base_eq)} base(s) com âncora, {len(BASES_SEM_ANCORA)} sem)")
+    except Exception as _e:
+        print(f"[DESLOC] AVISO: medição base→usina falhou ({type(_e).__name__}: {_e}) "
+              "— coluna fica como estava. Nada mais é afetado.")
+
 # Output Excel
 with pd.ExcelWriter(OUTPUT, engine='openpyxl') as writer:
     df_resumo.to_excel(writer, sheet_name='_Resumo', index=False)
@@ -2569,6 +2628,17 @@ pd.DataFrame(hist_rows).to_excel(HISTORICO, index=False)
 # Melhoria 0.1 — o resolve_coord antigo falhou calado por dois anos; este
 # bloco existe para isso nunca se repetir.
 print(f'\n[DESLOC] modo={DESLOC_MODO} · {len(MAPA_COORD)} usinas com coordenada no Fracttal')
+if _DESLOC_BASE_TOT:
+    _tot_sem = sum(_DESLOC_BASE_TOT.values())
+    print(f'[DESLOC] viagem base→usina na semana: {_tot_sem:.1f} h somadas '
+          f'({len(_DESLOC_BASE_TOT)} equipes) — capacidade hoje contada como zero')
+    for _eq, _h in sorted(_DESLOC_BASE_TOT.items(), key=lambda x: -x[1])[:10]:
+        print(f'         {_eq:<16} {_h:5.1f} h/semana')
+if BASES_SEM_ANCORA:
+    print(f'[DESLOC] {len(BASES_SEM_ANCORA)} base(s) sem âncora de coordenada '
+          '(cidade da base não tem usina cadastrada com lat/lon):')
+    for _eq, _b in sorted(BASES_SEM_ANCORA.items()):
+        print(f'         - {_eq}: {_b}')
 if USINAS_SEM_COORD:
     print(f'[DESLOC] {len(USINAS_SEM_COORD)} usina(s) SEM coordenada — trecho contado como 0 h:')
     for _u in sorted(USINAS_SEM_COORD):
