@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-13T16:11:43Z",
+  "geradoEm": "2026-08-13T17:21:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3627,
-        "emAberto": 9,
+        "total": 3630,
+        "emAberto": 11,
         "atrasadas": 8,
-        "concluidas30d": 620,
-        "concluidas7d": 163,
-        "naSemanaCorrente": 75
+        "concluidas30d": 621,
+        "concluidas7d": 164,
+        "naSemanaCorrente": 78
       },
       "mttr": {
-        "horas": 12.62,
-        "label": "12h 37min",
-        "amostra": 620
+        "horas": 12.6,
+        "label": "12h 36min",
+        "amostra": 621
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W33",
-          "criadas": 75,
-          "finalizadas": 80
+          "criadas": 78,
+          "finalizadas": 81
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3627,
-            "emAberto": 9
+            "total": 3630,
+            "emAberto": 11
           }
         ],
         "responsaveis": [
@@ -58,7 +58,7 @@
           },
           {
             "nome": "Raphael Vitoriano",
-            "total": 418,
+            "total": 419,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 9,
+      "total": 11,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 6,
-        "emProgresso": 1,
-        "pausada": 2,
+        "naoIniciada": 4,
+        "emProgresso": 4,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 9
+        "(sem equipe)": 11
       },
       "oss": [
         {
@@ -115,7 +115,7 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Cabine 6] - Religamento da Cabine 6",
           "criticidade": "",
           "dataProgramada": "2026-07-28",
@@ -172,14 +172,15 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Felipe Silva",
           "supervisor": "Rodrigo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-12",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -190,14 +191,15 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Felipe Silva",
           "supervisor": "Rodrigo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-12",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -208,14 +210,15 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Felipe Silva",
           "supervisor": "Rodrigo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-12",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -238,14 +241,14 @@
           "atrasada": true
         },
         {
-          "osId": "11149",
-          "ativo": "Inversor 4.2 Sungrow     { JCD100-INVR4.2 }",
+          "osId": "11167",
+          "ativo": "Thopen - Indaiatuba 1 - SP Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { THPN-IND100 }",
           "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "James Chaves ",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Felipe  Lima",
           "status": "Não Iniciada",
-          "tarefa": "[Inversor 4.2] - Religamento do Inversor 4.2",
+          "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-13",
           "dataCriacao": "2026-08-13",
@@ -254,9 +257,66 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
+        },
+        {
+          "osId": "11162",
+          "ativo": "Inversor 8.2 Sungrow     { JCD100-INVR8.2 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 8.2] - Religamento do Inversor 8.2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11149",
+          "ativo": "Inversor 4.2 Sungrow     { JCD100-INVR4.2 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "James Chaves ",
+          "status": "Em progresso",
+          "tarefa": "[Inversor 4.2] - Religamento do Inversor 4.2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-13",
+          "dataInicial": "2026-08-13",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11160",
+          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizada",
+          "tarefa": "[Cabine 5] - Religamento da Cabine 5",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-13",
+          "dataInicial": "2026-08-13",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "11157",
           "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
@@ -3236,34 +3296,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10709",
-          "ativo": "Thopen - Bonfim Limoeiro do Norte 1 - CE Sítio Pitombeira Limoeiro do Norte  Ceará Brasil { THPN-BLN100 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Cláudio  Ferreira",
-          "status": "Finalizada",
-          "tarefa": "Religamento UFV Sítio Bonfim",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-08-06",
-          "dataInicial": "2026-08-06",
-          "dataFinal": "2026-08-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1664,
+      "historicoTotal": 1665,
       "subClassificacao": {
         "remoto": 739,
-        "local": 2888,
+        "local": 2891,
         "remotoEmAberto": 2,
-        "localEmAberto": 7,
+        "localEmAberto": 9,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3516,7 +3556,7 @@
         {
           "semana": "W33",
           "criadas": 5,
-          "finalizadas": 10
+          "finalizadas": 11
         }
       ],
       "topOfensores": {
@@ -3558,9 +3598,9 @@
       "total": 85,
       "atrasadas": 47,
       "porStatus": {
-        "naoIniciada": 75,
-        "emProgresso": 1,
-        "pausada": 9,
+        "naoIniciada": 72,
+        "emProgresso": 5,
+        "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4191,14 +4231,15 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPS - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-06",
           "dataCriacao": "2026-07-27",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 408.0,
           "atrasada": true
         },
         {
@@ -4310,15 +4351,16 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "James Chaves ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Athon] - MPM - Sistemas de segurança",
           "criticidade": "",
           "dataProgramada": "2026-08-11",
           "dataCriacao": "2026-08-11",
           "dataInicial": "2026-08-13",
-          "dataFinal": "",
+          "dataFinal": "2026-08-13",
           "linkFracttal": "",
           "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
           "atrasada": true
         },
         {
@@ -4345,14 +4387,15 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Athon] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-11",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -4704,14 +4747,15 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-07-28",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 384.0,
           "atrasada": false
         },
         {
@@ -5024,6 +5068,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11029",
+          "ativo": "Sistema de Segurança Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-SSEG1 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "James Chaves ",
+          "status": "Em progresso",
+          "tarefa": "[Athon] - MPM - Sistemas de segurança",
+          "criticidade": "",
+          "dataProgramada": "2026-08-11",
+          "dataCriacao": "2026-08-11",
+          "dataInicial": "2026-08-13",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "10268",
           "ativo": "Preventiva Grupo de Inversores      { THPN-STN100-PGINVR1 }",
@@ -7229,25 +7292,6 @@
           "atrasada": false
         },
         {
-          "osId": "8233",
-          "ativo": "Cabine 1  Guaratinguetá  São Paulo Brasil { GTA500-CABN1 }",
-          "equipe": "",
-          "responsavel": "Henri Almeida ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Henri Almeida ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-07-14",
-          "dataCriacao": "2026-06-23",
-          "dataInicial": "2026-07-07",
-          "dataFinal": "2026-07-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9017",
           "ativo": "Infraestrutura Civil  Irecê  Bahia Brasil { IRC100-INFC1 }",
           "equipe": "",
@@ -7875,7 +7919,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 267
+      "historicoTotal": 268
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8976,12 +9020,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 490,
-        "emAberto": 93,
+        "total": 492,
+        "emAberto": 95,
         "atrasadas": 78,
         "concluidas30d": 294,
         "concluidas7d": 61,
-        "naSemanaCorrente": 66
+        "naSemanaCorrente": 67
       },
       "mttr": {
         "horas": 156.16,
@@ -9006,16 +9050,16 @@
         },
         {
           "semana": "W33",
-          "criadas": 40,
-          "finalizadas": 52
+          "criadas": 42,
+          "finalizadas": 56
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 490,
-            "emAberto": 93
+            "total": 492,
+            "emAberto": 95
           }
         ],
         "responsaveis": [
@@ -9026,8 +9070,8 @@
           },
           {
             "nome": "James Chaves",
-            "total": 33,
-            "emAberto": 7
+            "total": 34,
+            "emAberto": 8
           },
           {
             "nome": "Cláudio  Ferreira",
@@ -9046,16 +9090,16 @@
           }
         ]
       },
-      "total": 93,
+      "total": 95,
       "atrasadas": 78,
       "porStatus": {
-        "naoIniciada": 75,
-        "emProgresso": 4,
+        "naoIniciada": 74,
+        "emProgresso": 3,
         "pausada": 14,
-        "verificacao": 0
+        "verificacao": 4
       },
       "porEquipe": {
-        "(sem equipe)": 93
+        "(sem equipe)": 95
       },
       "oss": [
         {
@@ -9962,15 +10006,16 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Levi Maia ",
           "supervisor": "Anderson  Parente",
-          "status": "Em progresso",
+          "status": "Em Verificação",
           "tarefa": "[Tracker 90.101] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-06",
           "dataInicial": "2026-08-13",
-          "dataFinal": "",
+          "dataFinal": "2026-08-13",
           "linkFracttal": "",
           "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
           "atrasada": true
         },
         {
@@ -10201,14 +10246,15 @@
           "responsavel": "Felipe Xavier ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Felipe Xavier ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-08-07",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -10286,14 +10332,15 @@
           "responsavel": "Railson Gomes ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Railson Gomes ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.5] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-11",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -10303,14 +10350,15 @@
           "responsavel": "Railson Gomes ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Railson Gomes ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-11",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -10354,15 +10402,16 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Anderson  Parente",
-          "status": "Em progresso",
+          "status": "Em Verificação",
           "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-10",
-          "dataInicial": "2026-08-13",
-          "dataFinal": "",
+          "dataInicial": "2026-08-11",
+          "dataFinal": "2026-08-13",
           "linkFracttal": "",
-          "horasAteAbrir": 72.0,
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 48.0,
           "atrasada": true
         },
         {
@@ -10372,15 +10421,16 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Anderson  Parente",
-          "status": "Em progresso",
+          "status": "Em Verificação",
           "tarefa": "[Tracker 81.101] - Verificação de Tracker em Altair 4",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-10",
-          "dataInicial": "2026-08-13",
-          "dataFinal": "",
+          "dataInicial": "2026-08-11",
+          "dataFinal": "2026-08-13",
           "linkFracttal": "",
-          "horasAteAbrir": 72.0,
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 48.0,
           "atrasada": true
         },
         {
@@ -10390,16 +10440,34 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Anderson  Parente",
-          "status": "Em progresso",
+          "status": "Em Verificação",
           "tarefa": "[Tracker 73.101] - Verificação de Tracker em Altair 4",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-10",
-          "dataInicial": "2026-08-13",
+          "dataInicial": "2026-08-11",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 48.0,
+          "atrasada": true
+        },
+        {
+          "osId": "11164",
+          "ativo": "Disjuntor do Inversor 8.2      { JCD100-DINV8.2 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "Falha: Perda de energia de rede elétrica",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-13",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "atrasada": true
+          "atrasada": false
         },
         {
           "osId": "11114",
@@ -10623,6 +10691,23 @@
           "atrasada": false
         },
         {
+          "osId": "11163",
+          "ativo": "Inversor 1.3 Sungrow SG250HX    { THPN-RDR100-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Silva",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Cláudio  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.3] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "11159",
           "ativo": "Tracker 1.1.500 Brametal     { GTA500-ETKR1.500 }",
           "equipe": "",
@@ -10716,6 +10801,63 @@
           "atrasada": false
         },
         {
+          "osId": "10982",
+          "ativo": "Tracker 88.101 STI Norland dual row    { ALT100-ETKR88.101 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Anderson  Parente",
+          "status": "Em Verificação",
+          "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-10",
+          "dataInicial": "2026-08-11",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 48.0,
+          "atrasada": false
+        },
+        {
+          "osId": "10981",
+          "ativo": "Tracker 81.101 STI Norland dual row    { ALT100-ETKR81.101 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Anderson  Parente",
+          "status": "Em Verificação",
+          "tarefa": "[Tracker 81.101] - Verificação de Tracker em Altair 4",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-10",
+          "dataInicial": "2026-08-11",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 48.0,
+          "atrasada": false
+        },
+        {
+          "osId": "10980",
+          "ativo": "Tracker 73.101 STI Norland dual row    { ALT100-ETKR73.101 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Anderson  Parente",
+          "status": "Em Verificação",
+          "tarefa": "[Tracker 73.101] - Verificação de Tracker em Altair 4",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-10",
+          "dataInicial": "2026-08-11",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 48.0,
+          "atrasada": false
+        },
+        {
           "osId": "10879",
           "ativo": "Inversor 1.11 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.11 }",
           "equipe": "",
@@ -10731,6 +10873,25 @@
           "dataFinal": "2026-08-13",
           "linkFracttal": "",
           "horasAteAbrir": 144.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10737",
+          "ativo": "Tracker 90.101 STI Norland dual row    { ALT100-ETKR90.101 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Anderson  Parente",
+          "status": "Em Verificação",
+          "tarefa": "[Tracker 90.101] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-07",
+          "dataCriacao": "2026-08-06",
+          "dataInicial": "2026-08-13",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -12046,63 +12207,6 @@
           "atrasada": false
         },
         {
-          "osId": "9886",
-          "ativo": "Tracker 37.100 STI STI-H250    { THPN-BJD100-ETKR37.100 }",
-          "equipe": "",
-          "responsavel": "Matheus Leite ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Matheus Leite ",
-          "status": "Finalizada",
-          "tarefa": "[Belo Jardim  1][Tracker 37.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-21",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-07-31",
-          "dataFinal": "2026-08-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 216.0,
-          "horasAteFechar": 96.0,
-          "atrasada": false
-        },
-        {
-          "osId": "9882",
-          "ativo": "Inversor 1.7 Huawei SUN2000-250KTL-H1    { THPN-BJD100-INVR1.7 }",
-          "equipe": "",
-          "responsavel": "Matheus Leite ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Matheus Leite ",
-          "status": "Finalizada",
-          "tarefa": "[Belo Jardim  1][Inversor 1.7] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-19",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-08-04",
-          "dataFinal": "2026-08-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 312.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9881",
-          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { THPN-BJD100-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Matheus Leite ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Matheus Leite ",
-          "status": "Finalizada",
-          "tarefa": "[Belo Jardim  1][Inversor 1.1] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-19",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-08-04",
-          "dataFinal": "2026-08-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 312.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10502",
           "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
           "equipe": "",
@@ -12213,25 +12317,6 @@
           "dataFinal": "2026-08-03",
           "linkFracttal": "",
           "horasAteAbrir": 120.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9885",
-          "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { THPN-BJD100-INVR1.8 }",
-          "equipe": "",
-          "responsavel": "Matheus Leite ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Matheus Leite ",
-          "status": "Finalizada",
-          "tarefa": "[Belo Jardim  1][Inversor 1.8] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-22",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-08-03",
-          "dataFinal": "2026-08-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 288.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -13509,7 +13594,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 352
+      "historicoTotal": 356
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15118,6 +15203,72 @@
   },
   "ossPublicas": [
     {
+      "osId": "11167",
+      "ativo": "Thopen - Indaiatuba 1 - SP Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { THPN-IND100 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Felipe  Lima",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11164",
+      "ativo": "Disjuntor do Inversor 8.2      { JCD100-DINV8.2 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "Falha: Perda de energia de rede elétrica",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11163",
+      "ativo": "Inversor 1.3 Sungrow SG250HX    { THPN-RDR100-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Silva",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Cláudio  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.3] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11162",
+      "ativo": "Inversor 8.2 Sungrow     { JCD100-INVR8.2 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 8.2] - Religamento do Inversor 8.2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11159",
       "ativo": "Tracker 1.1.500 Brametal     { GTA500-ETKR1.500 }",
       "equipe": "",
@@ -15173,14 +15324,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Raphael Vitoriano",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 4.2] - Religamento do Inversor 4.2",
       "criticidade": "",
       "dataProgramada": "2026-08-13",
       "dataCriacao": "2026-08-13",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15302,14 +15454,15 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Felipe Silva",
       "supervisor": "Rodrigo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-12",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -15319,14 +15472,15 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Felipe Silva",
       "supervisor": "Rodrigo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-12",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -15336,14 +15490,15 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Felipe Silva",
       "supervisor": "Rodrigo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-12",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -15514,14 +15669,15 @@
       "responsavel": "Railson Gomes ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Railson Gomes ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.5] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-11",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "11038",
@@ -15530,14 +15686,15 @@
       "responsavel": "Railson Gomes ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Railson Gomes ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-11",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "11036",
@@ -15562,14 +15719,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Athon] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-11",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "11029",
@@ -15578,15 +15736,16 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "James Chaves ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Athon] - MPM - Sistemas de segurança",
       "criticidade": "",
       "dataProgramada": "2026-08-11",
       "dataCriacao": "2026-08-11",
       "dataInicial": "2026-08-13",
-      "dataFinal": "",
+      "dataFinal": "2026-08-13",
       "linkFracttal": "",
-      "horasAteAbrir": 48.0
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0
     },
     {
       "osId": "11019",
@@ -15659,15 +15818,16 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Anderson  Parente",
-      "status": "Em progresso",
+      "status": "Em Verificação",
       "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-13",
-      "dataFinal": "",
+      "dataInicial": "2026-08-11",
+      "dataFinal": "2026-08-13",
       "linkFracttal": "",
-      "horasAteAbrir": 72.0
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 48.0
     },
     {
       "osId": "10981",
@@ -15676,15 +15836,16 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Anderson  Parente",
-      "status": "Em progresso",
+      "status": "Em Verificação",
       "tarefa": "[Tracker 81.101] - Verificação de Tracker em Altair 4",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-13",
-      "dataFinal": "",
+      "dataInicial": "2026-08-11",
+      "dataFinal": "2026-08-13",
       "linkFracttal": "",
-      "horasAteAbrir": 72.0
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 48.0
     },
     {
       "osId": "10980",
@@ -15693,15 +15854,16 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Anderson  Parente",
-      "status": "Em progresso",
+      "status": "Em Verificação",
       "tarefa": "[Tracker 73.101] - Verificação de Tracker em Altair 4",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-13",
-      "dataFinal": "",
+      "dataInicial": "2026-08-11",
+      "dataFinal": "2026-08-13",
       "linkFracttal": "",
-      "horasAteAbrir": 72.0
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 48.0
     },
     {
       "osId": "10976",
@@ -16178,14 +16340,15 @@
       "responsavel": "Felipe Xavier ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Felipe Xavier ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
       "dataCriacao": "2026-08-07",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "10815",
@@ -16328,15 +16491,16 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Levi Maia ",
       "supervisor": "Anderson  Parente",
-      "status": "Em progresso",
+      "status": "Em Verificação",
       "tarefa": "[Tracker 90.101] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-06",
       "dataInicial": "2026-08-13",
-      "dataFinal": "",
+      "dataFinal": "2026-08-13",
       "linkFracttal": "",
-      "horasAteAbrir": 168.0
+      "horasAteAbrir": 168.0,
+      "horasAteFechar": 0
     },
     {
       "osId": "10727",
@@ -16668,7 +16832,7 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Lucas  Nascimento",
       "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Cabine 6] - Religamento da Cabine 6",
       "criticidade": "",
       "dataProgramada": "2026-07-28",
@@ -16928,14 +17092,15 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-07-28",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 384.0
     },
     {
       "osId": "10248",
@@ -17331,14 +17496,15 @@
       "responsavel": "Janderson Miranda ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPS - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-06",
       "dataCriacao": "2026-07-27",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 408.0
     },
     {
       "osId": "10157",
@@ -18281,6 +18447,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "11160",
+      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizada",
+      "tarefa": "[Cabine 5] - Religamento da Cabine 5",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-13",
+      "dataInicial": "2026-08-13",
+      "dataFinal": "2026-08-13",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "11157",
       "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
@@ -19272,6 +19458,25 @@
       "atrasada": false
     },
     {
+      "osId": "11029",
+      "ativo": "Sistema de Segurança Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-SSEG1 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "James Chaves ",
+      "status": "Em progresso",
+      "tarefa": "[Athon] - MPM - Sistemas de segurança",
+      "criticidade": "",
+      "dataProgramada": "2026-08-11",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "2026-08-13",
+      "dataFinal": "2026-08-13",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "11028",
       "ativo": "SKID 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-SKID4 }",
       "equipe": "",
@@ -19764,6 +19969,63 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "10982",
+      "ativo": "Tracker 88.101 STI Norland dual row    { ALT100-ETKR88.101 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Anderson  Parente",
+      "status": "Em Verificação",
+      "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-10",
+      "dataInicial": "2026-08-11",
+      "dataFinal": "2026-08-13",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 48.0,
+      "atrasada": false
+    },
+    {
+      "osId": "10981",
+      "ativo": "Tracker 81.101 STI Norland dual row    { ALT100-ETKR81.101 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Anderson  Parente",
+      "status": "Em Verificação",
+      "tarefa": "[Tracker 81.101] - Verificação de Tracker em Altair 4",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-10",
+      "dataInicial": "2026-08-11",
+      "dataFinal": "2026-08-13",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 48.0,
+      "atrasada": false
+    },
+    {
+      "osId": "10980",
+      "ativo": "Tracker 73.101 STI Norland dual row    { ALT100-ETKR73.101 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Anderson  Parente",
+      "status": "Em Verificação",
+      "tarefa": "[Tracker 73.101] - Verificação de Tracker em Altair 4",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-10",
+      "dataInicial": "2026-08-11",
+      "dataFinal": "2026-08-13",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 48.0,
       "atrasada": false
     },
     {
@@ -21154,111 +21416,96 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "10871",
-      "ativo": "Estação Meteorológica Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "João Vieira ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "João Vieira ",
-      "status": "Finalizada",
-      "tarefa": "[ETM] - Coleta e análise de dados",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-11",
-      "dataFinal": "2026-08-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10866",
-      "ativo": "GD Energy - Sol do Norte 2 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON200 }",
-      "equipe": "",
-      "responsavel": "Felipe Xavier ",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Felipe Xavier ",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Coleta e análise de dados de geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-12",
-      "dataFinal": "2026-08-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10865",
-      "ativo": "GD Energy - Sol do Norte 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON100 }",
-      "equipe": "",
-      "responsavel": "Felipe Xavier ",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Felipe Xavier ",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Coleta e análise de dados de geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-12",
-      "dataFinal": "2026-08-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10864",
-      "ativo": "GD Energy - Guajirú 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-GJR100 }",
-      "equipe": "",
-      "responsavel": "Felipe Xavier ",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Felipe Xavier ",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Coleta e análise de dados de geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-12",
-      "dataFinal": "2026-08-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10847",
-      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "[Cabine 5] - Religamento da Cabine 5",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-07",
-      "dataFinal": "2026-08-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2408,
-  "totalGeral": 4959,
+  "historicoTotal": 2414,
+  "totalGeral": 4964,
   "verificacao": {
-    "total": 0,
-    "atrasadas": 0,
-    "porEquipe": {},
-    "porResponsavel": {},
-    "oss": []
+    "total": 4,
+    "atrasadas": 4,
+    "porEquipe": {
+      "(sem equipe)": 4
+    },
+    "porResponsavel": {
+      "Anderson  Parente": 4
+    },
+    "oss": [
+      {
+        "osId": "10737",
+        "ativo": "Tracker 90.101 STI Norland dual row    { ALT100-ETKR90.101 }",
+        "equipe": "",
+        "responsavel": "Anderson  Parente",
+        "criadoPor": "Levi Maia ",
+        "supervisor": "Anderson  Parente",
+        "status": "Em Verificação",
+        "tarefa": "[Tracker 90.101] - Verificação de Tracker Parado",
+        "criticidade": "",
+        "dataProgramada": "2026-08-07",
+        "dataCriacao": "2026-08-06",
+        "dataInicial": "2026-08-13",
+        "dataFinal": "2026-08-13",
+        "linkFracttal": "",
+        "horasAteAbrir": 168.0,
+        "horasAteFechar": 0,
+        "atrasada": true
+      },
+      {
+        "osId": "10982",
+        "ativo": "Tracker 88.101 STI Norland dual row    { ALT100-ETKR88.101 }",
+        "equipe": "",
+        "responsavel": "Anderson  Parente",
+        "criadoPor": "Gabriela Dias ",
+        "supervisor": "Anderson  Parente",
+        "status": "Em Verificação",
+        "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
+        "criticidade": "",
+        "dataProgramada": "2026-08-12",
+        "dataCriacao": "2026-08-10",
+        "dataInicial": "2026-08-11",
+        "dataFinal": "2026-08-13",
+        "linkFracttal": "",
+        "horasAteAbrir": 24.0,
+        "horasAteFechar": 48.0,
+        "atrasada": true
+      },
+      {
+        "osId": "10981",
+        "ativo": "Tracker 81.101 STI Norland dual row    { ALT100-ETKR81.101 }",
+        "equipe": "",
+        "responsavel": "Anderson  Parente",
+        "criadoPor": "Gabriela Dias ",
+        "supervisor": "Anderson  Parente",
+        "status": "Em Verificação",
+        "tarefa": "[Tracker 81.101] - Verificação de Tracker em Altair 4",
+        "criticidade": "",
+        "dataProgramada": "2026-08-12",
+        "dataCriacao": "2026-08-10",
+        "dataInicial": "2026-08-11",
+        "dataFinal": "2026-08-13",
+        "linkFracttal": "",
+        "horasAteAbrir": 24.0,
+        "horasAteFechar": 48.0,
+        "atrasada": true
+      },
+      {
+        "osId": "10980",
+        "ativo": "Tracker 73.101 STI Norland dual row    { ALT100-ETKR73.101 }",
+        "equipe": "",
+        "responsavel": "Anderson  Parente",
+        "criadoPor": "Gabriela Dias ",
+        "supervisor": "Anderson  Parente",
+        "status": "Em Verificação",
+        "tarefa": "[Tracker 73.101] - Verificação de Tracker em Altair 4",
+        "criticidade": "",
+        "dataProgramada": "2026-08-12",
+        "dataCriacao": "2026-08-10",
+        "dataInicial": "2026-08-11",
+        "dataFinal": "2026-08-13",
+        "linkFracttal": "",
+        "horasAteAbrir": 24.0,
+        "horasAteFechar": 48.0,
+        "atrasada": true
+      }
+    ]
   }
 }
