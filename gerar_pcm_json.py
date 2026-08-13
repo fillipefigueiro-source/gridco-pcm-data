@@ -247,6 +247,12 @@ def _carregar_mapa_extras(pasta: Path) -> dict:
                     str(_ua), str(_ca or ""), _uidx, _cmaj)
             except Exception:
                 pass
+        # Filtro "Responsável" do painel (13/08/2026): a PESSOA dona da OS no
+        # Fracttal (coluna "Responsável" da API). Não confundir com o
+        # "Responsável O&M" acima, que vem do AUXILIAR e é o contato da usina.
+        _ro = _nn(r.get("Responsável"))
+        if _ro and str(_ro).strip():
+            entrada["respOs"] = " ".join(str(_ro).split())
         entrada["dataCriacao"]    = _date_iso(r.get("Data de Criação da OS"))
         entrada["dataFinal"]      = _date_iso(r.get("Data de finalização da OS"))
         entrada["dataProgramada"] = _date_iso(r.get("Data Programada"))
@@ -433,6 +439,7 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
                 "codigo":      str(get(r, i_codigo) or "").strip(),
                 "tarefa":      str(get(r, i_tarefa) or ""),
                 "responsavel": (_ex.get("responsavelAtual") or str(get(r, i_resp) or "").strip()),
+                "resp_os": str(_ex.get("respOs") or ""),
                 "criticidade": str(get(r, i_rpn) or ""),
                 "etiquetas":   str(get(r, i_etiq) or ""),
                 "status_bd":   estado_badge,
@@ -537,6 +544,7 @@ def linhas_fora_do_plano(df, mon: dt.date, plan_keys: set) -> list:
             "tipo": str(r.get('Tipo de tarefa') or '').strip(),
             "dia": _DIA_FULL[fim.weekday()], "os_id": os_id, "codigo": cod,
             "tarefa": str(r.get('Tarefa') or ''), "responsavel": "",
+            "resp_os": " ".join(str(r.get('Responsável') or '').split()),
             "criticidade": str(r.get('Tarefa -> Criticidade') or ''),
             "etiquetas": str(r.get('Etiquetas') or ''),
             "status_bd": estado, "status": estado,

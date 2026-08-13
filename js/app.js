@@ -225,9 +225,12 @@ const _etqDesc=v=>{
   return s;
 };
 // ── Multi-seleção dos filtros (Programação Semanal) — reusa CSS .gp-ms ──────
-const SEM_MS={cliente:{lbl:'Todos'},usina:{lbl:'Todas'},cluster:{lbl:'Todas'},resp:{lbl:'Todos'},tipo:{lbl:'Todos'},etq:{lbl:'Todas'},estado:{lbl:'Todos'}};
-const SEM_SEL={cliente:new Set(),usina:new Set(),cluster:new Set(),resp:new Set(),tipo:new Set(),etq:new Set(),estado:new Set()};
+const SEM_MS={cliente:{lbl:'Todos'},usina:{lbl:'Todas'},cluster:{lbl:'Todas'},resp:{lbl:'Todos'},respos:{lbl:'Todos'},tipo:{lbl:'Todos'},etq:{lbl:'Todas'},estado:{lbl:'Todos'}};
+const SEM_SEL={cliente:new Set(),usina:new Set(),cluster:new Set(),resp:new Set(),respos:new Set(),tipo:new Set(),etq:new Set(),estado:new Set()};
 function _semVal(r,key){
+  // 'respos' = a PESSOA dona da OS no Fracttal (r.resp_os, 13/08/2026);
+  // 'resp' continua sendo o Responsável O&M (contato da usina, via AUXILIAR)
+  if(key==='respos')return r.resp_os?[String(r.resp_os)]:[];
   if(key==='etq'){const e=_etqDesc(r.etiquetas);return e?[e]:[];}
   if(key==='estado')return [estadoTarefaInfo(r).l];
   const v=r[key==='resp'?'responsavel':key];return v?[String(v)]:[];
@@ -253,12 +256,13 @@ function semMsSearch(key,q){q=(q||'').toLowerCase();document.querySelectorAll('#
 function onDataChange(){S.fDIni=document.getElementById('f-dini').value;S.fDFim=document.getElementById('f-dfim').value;render();updateFCount();}
 const GD=()=>{const Q=SEM_SEL;
   const _L=s=>new Set([...s].map(x=>String(x).toLowerCase())),_in=(set,v)=>set.has(String(v||'').toLowerCase());
-  const Lcli=_L(Q.cliente),Lusi=_L(Q.usina),Lclu=_L(Q.cluster),Lres=_L(Q.resp),Ltip=_L(Q.tipo),Lest=_L(Q.estado),Letq=_L(Q.etq);
+  const Lcli=_L(Q.cliente),Lusi=_L(Q.usina),Lclu=_L(Q.cluster),Lres=_L(Q.resp),Lros=_L(Q.respos),Ltip=_L(Q.tipo),Lest=_L(Q.estado),Letq=_L(Q.etq);
   return allRows().filter(r=>{
   if(Q.cliente.size&&!_in(Lcli,r.cliente))return false;
   if(Q.usina.size&&!_in(Lusi,r.usina))return false;
   if(Q.cluster.size&&!_in(Lclu,r.cluster))return false;
   if(Q.resp.size&&!_in(Lres,r.responsavel))return false;
+  if(Q.respos.size&&!_in(Lros,r.resp_os))return false;
   if(Q.tipo.size&&!_in(Ltip,r.tipo))return false;
   if(Q.estado.size&&!_in(Lest,estadoTarefaInfo(r).l))return false;
   if(Q.etq.size){const e=_etqDesc(r.etiquetas);if(!e||!_in(Letq,e))return false;}
