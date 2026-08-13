@@ -36,6 +36,58 @@ def _bd():
     return bd
 
 
+COORD_CACHE_NOME = "_usinas_coordenadas_cache.json"
+
+# Preenchidos por df_semanal() (Melhoria 0.1, 13/08/2026). Chave = Ativo
+# Classificação 1 (nome da usina). NÃO mudar o formato do cache de
+# classificação: ele é compartilhado com gerar_gestao_pcm_json (ver proposta §3).
+_MAPA_COORD = {}    # {usina: (lat, lon)}
+_MAPA_CIDADE = {}   # {usina: cidade}
+
+
+def _coord_valida(lat, lon):
+    """Faixa do território brasileiro. Descarta lixo sem confiar no cadastro."""
+    try:
+        lat, lon = float(lat), float(lon)
+    except (TypeError, ValueError):
+        return None
+    if -34.0 <= lat <= 6.0 and -74.0 <= lon <= -34.0:
+        return (lat, lon)
+    return None
+
+
+def _carregar_coord_cache():
+    """Popula os mapas a partir do ARQUIVO de cache, sem TTL de leitura.
+
+    Necessário porque df_semanal() com pickle quente retorna cedo e nunca chama
+    _carregar_ativos — sem isto, o deslocamento (0.1) ficava mudo sempre que o
+    cache estivesse quente, que é o caso normal. Coordenada de usina não
+    apodrece; quem RENOVA o arquivo é a paginação, quando o cache de
+    classificação expira (~6 h)."""
+    if _MAPA_COORD:
+        return
+    try:
+        with open(os.path.join(_bd().BASE_DIR, COORD_CACHE_NOME),
+                  encoding="utf-8") as f:
+            cc = json.load(f)
+        _MAPA_COORD.update({k: tuple(v) for k, v in cc.get("coords", {}).items()})
+        _MAPA_CIDADE.update(cc.get("cidades", {}))
+    except Exception:
+        pass
+
+
+def mapa_coordenadas():
+    """{usina: (lat, lon)} das usinas com coordenada válida no Fracttal."""
+    _carregar_coord_cache()
+    return dict(_MAPA_COORD)
+
+
+def mapa_cidades():
+    """{usina: cidade} — Fracttal field_3."""
+    _carregar_coord_cache()
+    return dict(_MAPA_CIDADE)
+
+
 def _carregar_ativos(client):
     """Mapa id_item -> (Classificação 1, Classificação 2) ATUAIS do ativo (cadastro).
     A OT guarda a classificação do momento da criação; aqui pegamos a ATUAL (usinas
@@ -43,20 +95,43 @@ def _carregar_ativos(client):
     bd = _bd()
     cache = os.path.join(bd.BASE_DIR, "_ativos_classificacao_cache.json")
     ttl = float(os.environ.get("GESTAO_ATIVOS_TTL_H", "6")) * 3600
-    if os.path.exists(cache):
+    coord_cache = os.path.join(bd.BASE_DIR, COORD_CACHE_NOME)
+    _dois_quentes = (
+        os.path.exists(cache) and os.path.exists(coord_cache)
+        and time.time() - os.path.getmtime(cache) < ttl
+        and time.time() - os.path.getmtime(coord_cache) < ttl)
+    if _dois_quentes:
         try:
-            if time.time() - os.path.getmtime(cache) < ttl:
-                with open(cache, "r", encoding="utf-8") as f:
-                    raw = json.load(f)
-                return {int(k): (v[0], v[1]) for k, v in raw.items()}
+            with open(cache, "r", encoding="utf-8") as f:
+                raw = json.load(f)
+            with open(coord_cache, "r", encoding="utf-8") as f:
+                cc = json.load(f)
+            _MAPA_COORD.update({k: tuple(v) for k, v in cc.get("coords", {}).items()})
+            _MAPA_CIDADE.update(cc.get("cidades", {}))
+            return {int(k): (v[0], v[1]) for k, v in raw.items()}
         except Exception:
             pass
     m = {}
+    coords, cidades = {}, {}
     for it in client.paginar("items", page_size=100):
+        # ATENÇÃO: page_size=100 é obrigatório (com 200 a API corta a paginação)
         i = it.get("id")
         if i is None:
             continue
-        m[int(i)] = (it.get("groups_1_description") or "", it.get("groups_2_description") or "")
+        c1 = (it.get("groups_1_description") or "").strip()
+        m[int(i)] = (c1, (it.get("groups_2_description") or "").strip())
+        if not c1:
+            continue
+        # Coordenada só existe no ativo de LOCALIZAÇÃO nível usina; os filhos
+        # (Cabine, QGBT, Skid) vêm vazios — por isso a chave é a Classificação 1.
+        if c1 not in coords:
+            xy = _coord_valida(it.get("latitude"), it.get("longitud"))
+            if xy:
+                coords[c1] = xy
+        if c1 not in cidades:
+            cid = (it.get("field_3") or "").strip()
+            if cid:
+                cidades[c1] = cid
     try:
         tmp = cache + ".tmp"
         with open(tmp, "w", encoding="utf-8") as f:
@@ -65,6 +140,17 @@ def _carregar_ativos(client):
         os.replace(tmp, cache)
     except Exception:
         pass
+    try:
+        tmp2 = coord_cache + ".tmp"
+        with open(tmp2, "w", encoding="utf-8") as f:
+            json.dump({"coords": {k: list(v) for k, v in coords.items()},
+                       "cidades": cidades},
+                      f, ensure_ascii=False, separators=(",", ":"))
+        os.replace(tmp2, coord_cache)
+    except Exception:
+        pass
+    _MAPA_COORD.update(coords)
+    _MAPA_CIDADE.update(cidades)
     return m
 
 

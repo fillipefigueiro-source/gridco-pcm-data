@@ -47,6 +47,7 @@ DADOS = os.path.join(os.path.expanduser("~"), "GRID CO", "GRID CO. - Gridco",
                      "4. O&M", "11.Pré-Operação", "6. PCM", "09. Programação Semanal")
 
 INSUMOS = [".cache_semanal_api.pkl", "_ativos_classificacao_cache.json",
+           "_usinas_coordenadas_cache.json",   # Melhoria 0.1 (13/08/2026)
            "AUXILIAR - FABRICIO.xlsx", "Planilha Confiabilidade R00.xlsx",
            "Lista_Prioridades_GridCo.xlsx", "Observacoes_Semana.txt",
            "Historico_Programacoes.xlsx", ".env"]
@@ -76,7 +77,8 @@ def montar_sandbox():
         log(f"aviso: insumos ausentes (seguem de fora): {', '.join(faltou)}")
     # congela: TTL gigante + mtime agora (o motor jamais chama a API daqui)
     agora = None
-    for f in (".cache_semanal_api.pkl", "_ativos_classificacao_cache.json"):
+    for f in (".cache_semanal_api.pkl", "_ativos_classificacao_cache.json",
+              "_usinas_coordenadas_cache.json"):
         p = os.path.join(SANDBOX, f)
         if os.path.exists(p):
             os.utime(p, agora)

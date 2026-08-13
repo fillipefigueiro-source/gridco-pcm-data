@@ -135,6 +135,13 @@ GAP_BETWEEN_OS   = 15
 MIN_PREVENTIVA_H = 1.0
 TRAVEL_KMH       = 70.0
 TRAVEL_FACTOR    = 1.2
+# Melhoria 0.1 (13/08/2026) — deslocamento entre usinas:
+#   off    = comportamento antigo (deslocamento ignorado)
+#   sombra = calcula e reporta na coluna "Desloc (h)", mas NÃO consome capacidade
+#   on     = calcula e consome capacidade (decisão 1: só após 1 semana de sombra)
+DESLOC_MODO    = os.environ.get('PCM_DESLOC', 'sombra').strip().lower()
+DESLOC_CONSOME = (DESLOC_MODO == 'on')
+DESLOC_CALCULA = (DESLOC_MODO in ('on', 'sombra'))
 USEFUL_DAY_MIN     = int((WORK_END_MIN - WORK_START_MIN - LUNCH_BREAK_MIN) * 0.80)
 NIGHT_CAPACITY_MIN = int((NIGHT_END_MIN - NIGHT_START_MIN) * 0.80)
 
@@ -824,9 +831,6 @@ def find_corretiva_mttr(tarefa_txt):
     return best_h if best_score >= 1 else None
 
 
-# Coordenadas geográficas foram removidas (não há mais UFV/LAT/LON disponíveis).
-# Mantemos resolve_coord como stub para preservar a interface sem alterar
-# o restante do algoritmo. Deslocamento entre OSs será zero.
 # ---------- v9 (0.5): feriado MUNICIPAL bloqueia a CIDADE, não a equipe ----------
 def _carregar_usina_cidade():
     """Mapa usina_norm -> cidade_norm via AUXILIAR (colunas UFV e CIDADE)."""
@@ -880,8 +884,37 @@ def _mun_dias_bloqueados(usina):
     return bloq
 
 
-def resolve_coord(city_key):
-    return None
+# ====================== Coordenadas (Melhoria 0.1) ======================
+# Vêm da API Fracttal (latitude/longitud do ativo de LOCALIZAÇÃO nível usina),
+# colhidas pelo fonte_bd_api no MESMO laço que carrega as classificações —
+# custo de API zero. A chave é o NOME DA USINA (Ativo Classificação 1), não a
+# cidade: duas usinas na mesma cidade são pontos distintos.
+#
+# Leitura PREGUIÇOSA de propósito: no import deste módulo o df_semanal() ainda
+# não rodou e o mapa do fonte_bd_api está vazio — capturar aqui congelaria {}.
+MAPA_COORD = {}
+USINAS_SEM_COORD = set()      # preenchido em runtime, reportado no fim
+_COORD_SEM_UF = {}
+
+
+def resolve_coord(usina):
+    """(lat, lon) da usina, ou None se não houver coordenada cadastrada.
+    Sem coordenada => trecho vale 0 h, mas a usina entra em USINAS_SEM_COORD e
+    aparece no resumo do fim da geração. Nunca falha em silêncio."""
+    if not usina:
+        return None
+    if not MAPA_COORD:
+        MAPA_COORD.update(fonte_bd_api.mapa_coordenadas())
+        for _k, _v in MAPA_COORD.items():
+            _COORD_SEM_UF.setdefault(
+                re.sub(r'\s*-\s*[A-Z]{2}\s*$', '', _k).strip().lower(), _v)
+    u = str(usina).strip()
+    xy = MAPA_COORD.get(u)
+    if xy is None:   # grafia com/sem " - UF" diverge entre planilha e cadastro
+        xy = _COORD_SEM_UF.get(re.sub(r'\s*-\s*[A-Z]{2}\s*$', '', u).lower())
+    if xy is None:
+        USINAS_SEM_COORD.add(u)
+    return xy
 
 
 # ====================== Histórico ======================
@@ -1573,11 +1606,12 @@ def alloc_diurno(dc, dur_h, prefer_morning, termo, coord, allow_partial=False, f
         if allow_partial and remaining < MIN_PIECE_MIN and dur_min > remaining:
             return None
     effective_min = min(dur_min, remaining)
-    if dc.coord is None:
+    if dc.coord is None or coord is None or not DESLOC_CALCULA:
         desloc_h = 0.0; chegada = dc.cursor
     else:
         desloc_h = (haversine_km(dc.coord, coord) / TRAVEL_KMH) * TRAVEL_FACTOR
-        chegada = dc.cursor + desloc_h * 60
+        # Em modo sombra o tempo é medido e reportado, mas não desloca o cursor.
+        chegada = dc.cursor + (desloc_h * 60 if DESLOC_CONSOME else 0.0)
     start = chegada
     if termo:
         start = max(start, TERMO_START_MIN)
@@ -1830,7 +1864,10 @@ def build_tarefas_atomicas(sub):
     tarefas = []
     for _, r in sub.iterrows():
         ativo = r['_ativo']
-        coord = resolve_coord(extract_city_from_usina(str(ativo)))
+        # 0.1: chave = usina (chavear por cidade daria distância zero entre
+        # duas usinas da mesma cidade). extract_city_from_usina segue viva
+        # para r['_city'] — não remover.
+        coord = resolve_coord(str(ativo))
         cidade = r['_city']
         _oid = int(float(str(r['OSs ID']).strip()))   # robusto p/ '7975' e '7975.0'
         tarefas.append({
@@ -2171,11 +2208,11 @@ def schedule_team(equipe, tarefas_all):
             if res is None:
                 # Força entrada mesmo sem capacidade
                 dur_min = int(round(tk['dur_h'] * 60))
-                if dc.coord is None:
+                if dc.coord is None or tk['coord'] is None or not DESLOC_CALCULA:
                     desloc_h_val = 0.0; chegada = dc.cursor
                 else:
                     desloc_h_val = (haversine_km(dc.coord, tk['coord']) / TRAVEL_KMH) * TRAVEL_FACTOR
-                    chegada = dc.cursor + desloc_h_val * 60
+                    chegada = dc.cursor + (desloc_h_val * 60 if DESLOC_CONSOME else 0.0)
                 start = chegada
                 end = start + dur_min
                 res = (start, end, desloc_h_val, tk['dur_h'], True)
@@ -2528,6 +2565,15 @@ for r in all_rows:
 
 hist_rows = [{'task_key': k, **v} for k, v in historico.items()]
 pd.DataFrame(hist_rows).to_excel(HISTORICO, index=False)
+
+# Melhoria 0.1 — o resolve_coord antigo falhou calado por dois anos; este
+# bloco existe para isso nunca se repetir.
+print(f'\n[DESLOC] modo={DESLOC_MODO} · {len(MAPA_COORD)} usinas com coordenada no Fracttal')
+if USINAS_SEM_COORD:
+    print(f'[DESLOC] {len(USINAS_SEM_COORD)} usina(s) SEM coordenada — trecho contado como 0 h:')
+    for _u in sorted(USINAS_SEM_COORD):
+        print(f'         - {_u}')
+    print('         Cadastre latitude/longitud no Fracttal para que entrem no cálculo.')
 
 print(f'\nOK -> {OUTPUT}')
 print(f'Histórico atualizado -> {HISTORICO}')
