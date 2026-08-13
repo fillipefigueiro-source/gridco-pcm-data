@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-13T17:21:07Z",
+  "geradoEm": "2026-08-13T18:17:53Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -3526,16 +3526,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 615,
-        "emAberto": 85,
-        "atrasadas": 47,
-        "concluidas30d": 88,
-        "concluidas7d": 18,
+        "emAberto": 83,
+        "atrasadas": 46,
+        "concluidas30d": 90,
+        "concluidas7d": 20,
         "naSemanaCorrente": 41
       },
       "mttr": {
-        "horas": 363.0,
+        "horas": 363.73,
         "label": "15d 3h",
-        "amostra": 88
+        "amostra": 90
       },
       "tendencia4Semanas": [
         {
@@ -3556,7 +3556,7 @@
         {
           "semana": "W33",
           "criadas": 5,
-          "finalizadas": 11
+          "finalizadas": 13
         }
       ],
       "topOfensores": {
@@ -3564,7 +3564,7 @@
           {
             "nome": "(sem equipe)",
             "total": 615,
-            "emAberto": 85
+            "emAberto": 83
           }
         ],
         "responsaveis": [
@@ -3595,16 +3595,16 @@
           }
         ]
       },
-      "total": 85,
-      "atrasadas": 47,
+      "total": 83,
+      "atrasadas": 46,
       "porStatus": {
-        "naoIniciada": 72,
-        "emProgresso": 5,
-        "pausada": 8,
+        "naoIniciada": 71,
+        "emProgresso": 3,
+        "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 85
+        "(sem equipe)": 83
       },
       "oss": [
         {
@@ -4225,24 +4225,6 @@
           "atrasada": true
         },
         {
-          "osId": "10159",
-          "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Janderson Miranda ",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPS - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-08-13",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 408.0,
-          "atrasada": true
-        },
-        {
           "osId": "10645",
           "ativo": "Cabine 1 Estrada Mun. Norimar Aparecida Brieda Piracicaba  São Paulo Brasil { PRB100-CABN1 }",
           "equipe": "",
@@ -4387,7 +4369,7 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "James Chaves ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Athon] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
@@ -4645,14 +4627,15 @@
           "responsavel": "Marcos Duarte ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Marcos Duarte ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-15",
           "dataCriacao": "2026-07-28",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 384.0,
           "atrasada": false
         },
         {
@@ -4738,24 +4721,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "10250",
-          "ativo": "Transformador 1 GAZQUEZ     { THPN-NVL200-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
-          "dataCriacao": "2026-07-28",
-          "dataInicial": "2026-08-13",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 384.0,
           "atrasada": false
         },
         {
@@ -5103,6 +5068,44 @@
           "dataFinal": "2026-08-13",
           "linkFracttal": "",
           "horasAteAbrir": 384.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10250",
+          "ativo": "Transformador 1 GAZQUEZ     { THPN-NVL200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "2026-08-13",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 384.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10159",
+          "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPS - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-06",
+          "dataCriacao": "2026-07-27",
+          "dataInicial": "2026-08-13",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 408.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -6015,25 +6018,6 @@
           "dataFinal": "2026-07-30",
           "linkFracttal": "",
           "horasAteAbrir": 576.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "8235",
-          "ativo": "Infraestrutura Civil  Ipixuna  Pará Brasil { IPX100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Infraestrutura",
-          "criticidade": "",
-          "dataProgramada": "2026-07-13",
-          "dataCriacao": "2026-06-23",
-          "dataInicial": "2026-07-30",
-          "dataFinal": "2026-07-30",
-          "linkFracttal": "",
-          "horasAteAbrir": 888.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -7615,25 +7599,6 @@
           "atrasada": false
         },
         {
-          "osId": "8234",
-          "ativo": "Transformador 1 WEG     { APR300-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Henri Almeida ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Henri Almeida ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-07-03",
-          "dataCriacao": "2026-06-23",
-          "dataInicial": "2026-07-02",
-          "dataFinal": "2026-07-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 216.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8786",
           "ativo": "Transformador 2 COMTRAFO     { MAB200-TRFR2 }",
           "equipe": "",
@@ -7919,7 +7884,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 268
+      "historicoTotal": 270
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -13601,12 +13566,12 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 89,
-        "emAberto": 5,
+        "total": 92,
+        "emAberto": 8,
         "atrasadas": 5,
         "concluidas30d": 37,
         "concluidas7d": 12,
-        "naSemanaCorrente": 11
+        "naSemanaCorrente": 14
       },
       "mttr": {
         "horas": 336.65,
@@ -13631,7 +13596,7 @@
         },
         {
           "semana": "W33",
-          "criadas": 0,
+          "criadas": 3,
           "finalizadas": 11
         }
       ],
@@ -13639,15 +13604,15 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 89,
-            "emAberto": 5
+            "total": 92,
+            "emAberto": 8
           }
         ],
         "responsaveis": [
           {
             "nome": "João Vieira",
-            "total": 16,
-            "emAberto": 1
+            "total": 19,
+            "emAberto": 4
           },
           {
             "nome": "Carlos Bruno  Pessanha Pereira",
@@ -13671,16 +13636,16 @@
           }
         ]
       },
-      "total": 5,
+      "total": 8,
       "atrasadas": 5,
       "porStatus": {
-        "naoIniciada": 3,
+        "naoIniciada": 6,
         "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 5
+        "(sem equipe)": 8
       },
       "oss": [
         {
@@ -13769,6 +13734,57 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "11170",
+          "ativo": "Estação Meteorológica LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "João Vieira ",
+          "status": "Não Iniciada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11169",
+          "ativo": "Estação Meteorológica LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "João Vieira ",
+          "status": "Não Iniciada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11168",
+          "ativo": "Estação Meteorológica Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "João Vieira ",
+          "status": "Não Iniciada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -15203,6 +15219,54 @@
   },
   "ossPublicas": [
     {
+      "osId": "11170",
+      "ativo": "Estação Meteorológica LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-ESTM1 }",
+      "equipe": "",
+      "responsavel": "João Vieira ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "João Vieira ",
+      "status": "Não Iniciada",
+      "tarefa": "[ETM] - Coleta e análise de dados",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11169",
+      "ativo": "Estação Meteorológica LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "João Vieira ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "João Vieira ",
+      "status": "Não Iniciada",
+      "tarefa": "[ETM] - Coleta e análise de dados",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11168",
+      "ativo": "Estação Meteorológica Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "João Vieira ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "João Vieira ",
+      "status": "Não Iniciada",
+      "tarefa": "[ETM] - Coleta e análise de dados",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "11167",
       "ativo": "Thopen - Indaiatuba 1 - SP Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { THPN-IND100 }",
       "equipe": "",
@@ -15719,7 +15783,7 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "James Chaves ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Athon] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
@@ -17086,23 +17150,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10250",
-      "ativo": "Transformador 1 GAZQUEZ     { THPN-NVL200-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-17",
-      "dataCriacao": "2026-07-28",
-      "dataInicial": "2026-08-13",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 384.0
-    },
-    {
       "osId": "10248",
       "ativo": "Inversor 3.1 Huawei     { TIM200-INVR3.1 }",
       "equipe": "",
@@ -17141,14 +17188,15 @@
       "responsavel": "Marcos Duarte ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Marcos Duarte ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-15",
       "dataCriacao": "2026-07-28",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 384.0
     },
     {
       "osId": "10239",
@@ -17488,23 +17536,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "10159",
-      "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Janderson Miranda ",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPS - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-06",
-      "dataCriacao": "2026-07-27",
-      "dataInicial": "2026-08-13",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 408.0
     },
     {
       "osId": "10157",
@@ -21418,8 +21449,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2414,
-  "totalGeral": 4964,
+  "historicoTotal": 2416,
+  "totalGeral": 4967,
   "verificacao": {
     "total": 4,
     "atrasadas": 4,
