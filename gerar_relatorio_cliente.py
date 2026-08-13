@@ -7,6 +7,14 @@ programacao_v7. Traz o FECHAMENTO da semana que termina e a PRÉVIA da semana
 que começa, e convida o cliente a pedir ajustes — que deságuam na gramática de
 observações que já existe (§11), sem mecanismo novo.
 
+Ciclo definido com o PCM em 13/08/2026:
+  · sexta ao MEIO-DIA  — PCM revisa a programação e dispara os .eml
+  · segunda ao MEIO-DIA — prazo do cliente para pedir ajuste
+  · terça em diante     — o pedido entra na programação
+A segunda-feira não é ajustável: quando o retorno chega, a equipe já está em
+campo com o dia fechado desde sexta. Por isso o e-mail promete "a partir de
+terça" — prometer a própria segunda seria vender o que a operação não entrega.
+
 Decisões do pacote de 08/08/2026:
   12 — contatos vêm de `contatos_relatorio.json`; cliente sem contato NÃO é
        enviado e aparece no aviso final
@@ -350,8 +358,9 @@ def montar_email(cli, rows, semana_lbl, semana_ant_lbl, rows_ant, resp, anexo_no
         f'<div style="font-size:12.5px;color:#5a5566;line-height:1.6">'
         f'Responda este e-mail citando a OS e o que precisa &mdash; por exemplo: '
         f'<i>OS 10390 &rarr; quinta</i> ou <i>OS 10415: adiar, a usina recebe visita na segunda</i>.<br>'
-        f'Retorno at&eacute; <b>segunda, 09h</b> entra logo no in&iacute;cio da semana; depois disso, '
-        f'entra no ciclo de atualiza&ccedil;&atilde;o do meio da semana.</div></div>')
+        f'Retorno at&eacute; <b>segunda ao meio-dia</b> entra na programa&ccedil;&atilde;o '
+        f'<b>a partir de ter&ccedil;a</b>; depois disso, entra no ciclo de '
+        f'atualiza&ccedil;&atilde;o do meio da semana.</div></div>')
     rodape = (f'<div style="margin-top:16px;padding-top:10px;border-top:1px solid #e6e6ee;'
               f'font-size:11px;color:{CINZA}">Respons&aacute;vel O&amp;M: {esc(resp)}'
               + (f'<br>Detalhe completo no anexo <b>{esc(anexo_nome)}</b>.' if grande and anexo_nome else '')
