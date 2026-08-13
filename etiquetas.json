@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-13T20:13:03Z",
+  "geradoEm": "2026-08-13T21:14:32Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3632,
-        "emAberto": 9,
-        "atrasadas": 7,
-        "concluidas30d": 625,
-        "concluidas7d": 168,
-        "naSemanaCorrente": 80
+        "total": 3634,
+        "emAberto": 8,
+        "atrasadas": 6,
+        "concluidas30d": 628,
+        "concluidas7d": 171,
+        "naSemanaCorrente": 82
       },
       "mttr": {
-        "horas": 13.14,
-        "label": "13h 9min",
-        "amostra": 625
+        "horas": 13.12,
+        "label": "13h 7min",
+        "amostra": 628
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W33",
-          "criadas": 80,
-          "finalizadas": 85
+          "criadas": 82,
+          "finalizadas": 88
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3632,
-            "emAberto": 9
+            "total": 3634,
+            "emAberto": 8
           }
         ],
         "responsaveis": [
@@ -58,7 +58,7 @@
           },
           {
             "nome": "Raphael Vitoriano",
-            "total": 421,
+            "total": 423,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 9,
-      "atrasadas": 7,
+      "total": 8,
+      "atrasadas": 6,
       "porStatus": {
-        "naoIniciada": 3,
-        "emProgresso": 4,
-        "pausada": 2,
+        "naoIniciada": 2,
+        "emProgresso": 2,
+        "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 9
+        "(sem equipe)": 8
       },
       "oss": [
         {
@@ -147,32 +147,13 @@
           "atrasada": true
         },
         {
-          "osId": "11122",
-          "ativo": "Inversor 1.7 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.7 }",
-          "equipe": "",
-          "responsavel": "Rodrigo  Silva",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "Rodrigo  Silva",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
-          "criticidade": "",
-          "dataProgramada": "2026-08-12",
-          "dataCriacao": "2026-08-12",
-          "dataInicial": "2026-08-13",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "11121",
           "ativo": "Inversor 1.6 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.6 }",
           "equipe": "",
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Felipe Silva",
           "supervisor": "Rodrigo  Silva",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
@@ -191,7 +172,7 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Felipe Silva",
           "supervisor": "Rodrigo  Silva",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
@@ -228,14 +209,15 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-13",
           "dataCriacao": "2026-08-13",
-          "dataInicial": "",
+          "dataInicial": "2026-08-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -260,6 +242,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11181",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-13",
+          "dataInicial": "2026-08-13",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11180",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-13",
+          "dataInicial": "2026-08-13",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "11178",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -436,6 +458,26 @@
           "dataFinal": "2026-08-13",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11122",
+          "ativo": "Inversor 1.7 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.7 }",
+          "equipe": "",
+          "responsavel": "Rodrigo  Silva",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Rodrigo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
+          "criticidade": "",
+          "dataProgramada": "2026-08-12",
+          "dataCriacao": "2026-08-12",
+          "dataInicial": "2026-08-13",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3001,26 +3043,6 @@
           "atrasada": false
         },
         {
-          "osId": "10731",
-          "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
-          "equipe": "",
-          "responsavel": "Hélio Silva ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Hélio Silva ",
-          "status": "Finalizada",
-          "tarefa": "Religamento UFV Santo Inácio",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-08-06",
-          "dataInicial": "2026-08-06",
-          "dataFinal": "2026-08-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "10787",
           "ativo": "Athon -  Timon 1 - MA LOT Sucessão O, ROD. MA 040, S/N, Jóia  Timon  Maranhão Brasil { ATHN-TIM100 }",
           "equipe": "",
@@ -3219,54 +3241,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10732",
-          "ativo": "Cabine 2  Santa Maria do Pará  Pará Brasil { SMP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Cabine 2] - Religamento da Cabine 2",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-08-06",
-          "dataInicial": "2026-08-06",
-          "dataFinal": "2026-08-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "10729",
-          "ativo": "Athon - Jacundá 1 - PA Estrada da Areia Branca, s/n Jacundá  Pará Brasil { ATHN-JCD100 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-08-06",
-          "dataInicial": "2026-08-06",
-          "dataFinal": "2026-08-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1669,
+      "historicoTotal": 1672,
       "subClassificacao": {
         "remoto": 739,
-        "local": 2893,
+        "local": 2895,
         "remotoEmAberto": 2,
-        "localEmAberto": 7,
+        "localEmAberto": 6,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3488,12 +3470,12 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 615,
-        "emAberto": 80,
+        "total": 614,
+        "emAberto": 79,
         "atrasadas": 46,
         "concluidas30d": 93,
         "concluidas7d": 23,
-        "naSemanaCorrente": 41
+        "naSemanaCorrente": 40
       },
       "mttr": {
         "horas": 361.03,
@@ -3518,7 +3500,7 @@
         },
         {
           "semana": "W33",
-          "criadas": 5,
+          "criadas": 4,
           "finalizadas": 16
         }
       ],
@@ -3526,8 +3508,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 615,
-            "emAberto": 80
+            "total": 614,
+            "emAberto": 79
           }
         ],
         "responsaveis": [
@@ -3558,16 +3540,16 @@
           }
         ]
       },
-      "total": 80,
+      "total": 79,
       "atrasadas": 46,
       "porStatus": {
-        "naoIniciada": 71,
+        "naoIniciada": 70,
         "emProgresso": 1,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 80
+        "(sem equipe)": 79
       },
       "oss": [
         {
@@ -4359,23 +4341,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
-        },
-        {
-          "osId": "11179",
-          "ativo": "Inversor 1.1 Huawei     { TESTE100-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Davi Damasceno ",
-          "criadoPor": "Davi Damasceno ",
-          "supervisor": "Davi Damasceno ",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPA - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-13",
-          "dataCriacao": "2026-08-13",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
         },
         {
           "osId": "10421",
@@ -8894,12 +8859,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 492,
-        "emAberto": 93,
-        "atrasadas": 75,
+        "total": 494,
+        "emAberto": 94,
+        "atrasadas": 74,
         "concluidas30d": 296,
         "concluidas7d": 63,
-        "naSemanaCorrente": 67
+        "naSemanaCorrente": 69
       },
       "mttr": {
         "horas": 155.92,
@@ -8924,7 +8889,7 @@
         },
         {
           "semana": "W33",
-          "criadas": 42,
+          "criadas": 44,
           "finalizadas": 59
         }
       ],
@@ -8932,8 +8897,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 492,
-            "emAberto": 93
+            "total": 494,
+            "emAberto": 94
           }
         ],
         "responsaveis": [
@@ -8944,8 +8909,8 @@
           },
           {
             "nome": "James Chaves",
-            "total": 34,
-            "emAberto": 8
+            "total": 35,
+            "emAberto": 9
           },
           {
             "nome": "Cláudio  Ferreira",
@@ -8960,20 +8925,20 @@
           {
             "nome": "Paulo  Ribeiro",
             "total": 28,
-            "emAberto": 2
+            "emAberto": 1
           }
         ]
       },
-      "total": 93,
-      "atrasadas": 75,
+      "total": 94,
+      "atrasadas": 74,
       "porStatus": {
-        "naoIniciada": 74,
+        "naoIniciada": 75,
         "emProgresso": 1,
         "pausada": 14,
         "verificacao": 4
       },
       "porEquipe": {
-        "(sem equipe)": 93
+        "(sem equipe)": 94
       },
       "oss": [
         {
@@ -9124,23 +9089,6 @@
           "criticidade": "",
           "dataProgramada": "2026-07-06",
           "dataCriacao": "2026-07-06",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9156",
-          "ativo": "Tracker 5.100 STI     { FRN100-ETKR5.100 }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "Gabriela Dias",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Não Iniciada",
-          "tarefa": "[Fernandópolis 1] [Tracker] - Verificar tracker com problema",
-          "criticidade": "",
-          "dataProgramada": "2026-07-09",
-          "dataCriacao": "2026-07-08",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -10342,6 +10290,40 @@
           "atrasada": false
         },
         {
+          "osId": "11183",
+          "ativo": "Tracker 12.100 STI     { BWK100-ETKR12.100 }",
+          "equipe": "",
+          "responsavel": "Luis  Moura",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Luis  Moura",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 12.100] - Verificação de Tracker 12 SLIDE 2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11182",
+          "ativo": "Inversor 2.3 Sungrow     { MAB100-INVR2.3 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Ana Barros",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "Verificar PV05 e 06 do inversor 2.3 de MAB100. Verificar se há strings desligadas e quantidade e potência dos módulos dessas duas strings. Verificar também se há algum conector Y entre strings",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "11173",
           "ativo": "Inversor 3.3 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR3.3 }",
           "equipe": "",
@@ -11196,7 +11178,7 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "Levi Maia ",
           "supervisor": "Felipe  Lima",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Tracker 25.100] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-06",
@@ -15098,16 +15080,32 @@
   },
   "ossPublicas": [
     {
-      "osId": "11179",
-      "ativo": "Inversor 1.1 Huawei     { TESTE100-INVR1.1 }",
+      "osId": "11183",
+      "ativo": "Tracker 12.100 STI     { BWK100-ETKR12.100 }",
       "equipe": "",
-      "responsavel": "Davi Damasceno ",
-      "criadoPor": "Davi Damasceno ",
-      "supervisor": "Davi Damasceno ",
+      "responsavel": "Luis  Moura",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Luis  Moura",
       "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPA - Inversor",
+      "tarefa": "[Tracker 12.100] - Verificação de Tracker 12 SLIDE 2",
       "criticidade": "",
-      "dataProgramada": "2026-08-13",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11182",
+      "ativo": "Inversor 2.3 Sungrow     { MAB100-INVR2.3 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Ana Barros",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "Verificar PV05 e 06 do inversor 2.3 de MAB100. Verificar se há strings desligadas e quantidade e potência dos módulos dessas duas strings. Verificar também se há algum conector Y entre strings",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
       "dataCriacao": "2026-08-13",
       "dataInicial": "",
       "dataFinal": "",
@@ -15136,14 +15134,15 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-08-13",
       "dataCriacao": "2026-08-13",
-      "dataInicial": "",
+      "dataInicial": "2026-08-13",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15341,31 +15340,13 @@
       "linkFracttal": ""
     },
     {
-      "osId": "11122",
-      "ativo": "Inversor 1.7 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.7 }",
-      "equipe": "",
-      "responsavel": "Rodrigo  Silva",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Rodrigo  Silva",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-12",
-      "dataInicial": "2026-08-13",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "modalidade": "local"
-    },
-    {
       "osId": "11121",
       "ativo": "Inversor 1.6 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.6 }",
       "equipe": "",
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Felipe Silva",
       "supervisor": "Rodrigo  Silva",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
@@ -15383,7 +15364,7 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Felipe Silva",
       "supervisor": "Rodrigo  Silva",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
@@ -17719,22 +17700,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "9156",
-      "ativo": "Tracker 5.100 STI     { FRN100-ETKR5.100 }",
-      "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Paulo  Ribeiro",
-      "status": "Não Iniciada",
-      "tarefa": "[Fernandópolis 1] [Tracker] - Verificar tracker com problema",
-      "criticidade": "",
-      "dataProgramada": "2026-07-09",
-      "dataCriacao": "2026-07-08",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "9045",
       "ativo": "Transformador de Potencial 4      { THPN-ORB100-TRTP4 }",
       "equipe": "",
@@ -18190,6 +18155,46 @@
   ],
   "ossHistorico": [
     {
+      "osId": "11181",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-13",
+      "dataInicial": "2026-08-13",
+      "dataFinal": "2026-08-13",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "11180",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-13",
+      "dataInicial": "2026-08-13",
+      "dataFinal": "2026-08-13",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "11178",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -18602,6 +18607,26 @@
       "dataFinal": "2026-08-12",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "11122",
+      "ativo": "Inversor 1.7 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.7 }",
+      "equipe": "",
+      "responsavel": "Rodrigo  Silva",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Rodrigo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-12",
+      "dataInicial": "2026-08-13",
+      "dataFinal": "2026-08-13",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -21100,67 +21125,10 @@
       "horasAteAbrir": 96.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "10894",
-      "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { BES100-INVR1.9 }",
-      "equipe": "",
-      "responsavel": "Andrick Gouveia ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Andrick Gouveia ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.9] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-08-06",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-11",
-      "dataFinal": "2026-08-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10891",
-      "ativo": "Estação Meteorológica Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "[ETM] - Análise de sensores",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10884",
-      "ativo": "Estação Meteorológica Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "João Vieira ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "João Vieira ",
-      "status": "Finalizada",
-      "tarefa": "[ETM] - Coleta e análise de dados",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-11",
-      "dataFinal": "2026-08-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2428,
-  "totalGeral": 4969,
+  "historicoTotal": 2431,
+  "totalGeral": 4972,
   "verificacao": {
     "total": 4,
     "atrasadas": 4,
