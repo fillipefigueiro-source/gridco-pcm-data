@@ -2373,8 +2373,14 @@ function openMod(usina, dia, os_id){
     const w = AW() || DB.semanas[DB.semanas.length-1];
     if(w && w.rows){
       if(os_id){
-        osRow = w.rows.find(r => String(r.os_id) === String(os_id));
         osLista = w.rows.filter(r => String(r.os_id) === String(os_id));
+        // O card do dia é POR TAREFA: uma OS partida aparece em vários dias com
+        // tarefas diferentes. Sem filtrar pelo dia clicado, o modal mostrava a
+        // PRIMEIRA tarefa da OS na semana — ou seja, quase sempre a de outro
+        // dia, e o técnico não sabia o que fazer naquele dia.
+        const _doDia = dia ? osLista.filter(r => String(r.dia||'').indexOf(dia) >= 0) : [];
+        osRow = _doDia[0] || osLista[0] || null;
+        if(_doDia.length){ osRow = Object.assign({}, osRow, {_tarefasDoDia:_doDia, _diaClicado:dia}); }
       } else if(usina && dia){
         osLista = w.rows.filter(r => r.usina===usina && (r.dia||'').indexOf(dia)>=0);
         osRow = osLista[0] || null;
@@ -2425,6 +2431,8 @@ function openMod(usina, dia, os_id){
           if(!osRow[k] && fromBD[k]!=null) osRow[k] = fromBD[k];
         });
         if(matches.length > 1) osLista = matches;
+        // não deixa o enriquecimento trocar a tarefa do dia pela primeira da OS
+        if(osRow._tarefasDoDia && osRow._tarefasDoDia.length) osRow.tarefa = osRow._tarefasDoDia[0].tarefa;
         break;
       }
     }
@@ -2513,7 +2521,25 @@ function openMod(usina, dia, os_id){
   html += '</div>';
   // SEÇÃO 1: O que fazer
   html += '<div class="msec"><div class="msec-t">📋 O que fazer</div>';
-  html += '  <div class="mtarefa">'+_esc(osRow.tarefa||osRow.usina||'(sem descrição da tarefa)')+'</div>';
+  const _td = osRow._tarefasDoDia || [];
+  if(_td.length){
+    const _dl = String(osRow._diaClicado||'').split(' [')[0];
+    html += '  <div class="mdia-lbl">'+_esc(_dl)+' &middot; '+_td.length+' tarefa(s) neste dia</div>';
+    html += _td.slice().sort((x,y)=>String(x.h_ini||'').localeCompare(String(y.h_ini||'')))
+      .map(t => '<div class="mtarefa mtarefa-dia">'
+        + (t.h_ini ? '<span class="mtarefa-h">'+_esc(t.h_ini)+(t.h_fim?'–'+_esc(t.h_fim):'')+'</span>' : '')
+        + _esc(t.tarefa||'(sem descrição)') + '</div>').join('');
+    // as demais tarefas da MESMA OS ficam como contexto, sem confundir com o dia
+    const _outras = (osLista||[]).filter(r => _td.indexOf(r) < 0);
+    if(_outras.length){
+      const _po = {};
+      _outras.forEach(r => { const d = String(r.dia||'').split(' [')[0]; (_po[d] = _po[d] || []).push(r); });
+      html += '<div class="mdia-out"><b>Mesma OS em outros dias:</b> '
+        + Object.keys(_po).map(d => _esc(d)+' ('+_po[d].length+')').join(' &middot; ') + '</div>';
+    }
+  } else {
+    html += '  <div class="mtarefa">'+_esc(osRow.tarefa||osRow.usina||'(sem descrição da tarefa)')+'</div>';
+  }
   html += '  <div class="mpills">';
   if(isUrgente) html += '<span class="mpill crit-muito">⚠ URGENTE</span>';
   if(critKey) html += '<span class="mpill '+critKey+'">'+_esc(osRow.criticidade||'')+'</span>';
