@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-14T09:13:31Z",
+  "geradoEm": "2026-08-14T10:23:29Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3638,
-        "emAberto": 10,
+        "total": 3640,
+        "emAberto": 11,
         "atrasadas": 10,
-        "concluidas30d": 600,
-        "concluidas7d": 148,
-        "naSemanaCorrente": 86
+        "concluidas30d": 601,
+        "concluidas7d": 149,
+        "naSemanaCorrente": 88
       },
       "mttr": {
-        "horas": 12.84,
-        "label": "12h 51min",
-        "amostra": 600
+        "horas": 12.82,
+        "label": "12h 49min",
+        "amostra": 601
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W33",
-          "criadas": 86,
-          "finalizadas": 90
+          "criadas": 88,
+          "finalizadas": 91
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3638,
-            "emAberto": 10
+            "total": 3640,
+            "emAberto": 11
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 10,
+      "total": 11,
       "atrasadas": 10,
       "porStatus": {
-        "naoIniciada": 5,
+        "naoIniciada": 6,
         "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 10
+        "(sem equipe)": 11
       },
       "oss": [
         {
@@ -274,9 +274,47 @@
           "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "11192",
+          "ativo": "Inversor 1.8 Huawei     { TESTE100-INVR1.8 }",
+          "equipe": "",
+          "responsavel": "Cícero  Willian",
+          "criadoPor": "Cícero  Willian",
+          "supervisor": "Cícero  Willian",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.8] - Religamento do Inversor 1.8",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11193",
+          "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
+          "equipe": "",
+          "responsavel": "Cícero  Willian",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Cícero  Willian",
+          "status": "Finalizada",
+          "tarefa": "UFV: Barretos 1 | Proteção: 78/81 | Ação: Religamento Remoto | Falha: Usina desligada",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "2026-08-14",
+          "dataFinal": "2026-08-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "11191",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3256,34 +3294,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10736",
-          "ativo": "Inversor 8.2 Sungrow     { JCD100-INVR8.2 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "James Chaves ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 8.2] - Religamento do Inversor 8.2",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-08-06",
-          "dataInicial": "2026-08-06",
-          "dataFinal": "2026-08-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1661,
+      "historicoTotal": 1662,
       "subClassificacao": {
-        "remoto": 739,
-        "local": 2899,
+        "remoto": 740,
+        "local": 2900,
         "remotoEmAberto": 2,
-        "localEmAberto": 8,
+        "localEmAberto": 9,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3454,8 +3472,8 @@
         ],
         "medHorasAbrir": 9.0,
         "medHorasFechar": 2.7,
-        "amostraAbrir": 731,
-        "amostraFechar": 730,
+        "amostraAbrir": 732,
+        "amostraFechar": 731,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3471,7 +3489,7 @@
           },
           {
             "nome": "CíceroWillian",
-            "total": 37
+            "total": 38
           },
           {
             "nome": "Juliana Cândido",
@@ -3578,8 +3596,8 @@
       "total": 79,
       "atrasadas": 55,
       "porStatus": {
-        "naoIniciada": 70,
-        "emProgresso": 1,
+        "naoIniciada": 69,
+        "emProgresso": 2,
         "pausada": 8,
         "verificacao": 0
       },
@@ -4262,14 +4280,15 @@
           "responsavel": "Eduardo Souza",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Eduardo Souza",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-07-28",
-          "dataInicial": "",
+          "dataInicial": "2026-08-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 408.0,
           "atrasada": true
         },
         {
@@ -15113,6 +15132,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "11192",
+      "ativo": "Inversor 1.8 Huawei     { TESTE100-INVR1.8 }",
+      "equipe": "",
+      "responsavel": "Cícero  Willian",
+      "criadoPor": "Cícero  Willian",
+      "supervisor": "Cícero  Willian",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.8] - Religamento do Inversor 1.8",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11190",
       "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
       "equipe": "",
@@ -16770,14 +16806,15 @@
       "responsavel": "Eduardo Souza",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Eduardo Souza",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
       "dataCriacao": "2026-07-28",
-      "dataInicial": "",
+      "dataInicial": "2026-08-14",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 408.0
     },
     {
       "osId": "10297",
@@ -18236,6 +18273,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "11193",
+      "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
+      "equipe": "",
+      "responsavel": "Cícero  Willian",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Cícero  Willian",
+      "status": "Finalizada",
+      "tarefa": "UFV: Barretos 1 | Proteção: 78/81 | Ação: Religamento Remoto | Falha: Usina desligada",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "2026-08-14",
+      "dataFinal": "2026-08-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "11191",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -21189,30 +21246,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10898",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-07",
-      "dataFinal": "2026-08-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2415,
-  "totalGeral": 4977,
+  "historicoTotal": 2416,
+  "totalGeral": 4979,
   "verificacao": {
     "total": 4,
     "atrasadas": 4,
