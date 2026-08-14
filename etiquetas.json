@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-14T22:29:39Z",
+  "geradoEm": "2026-08-14T22:57:17Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3652,
-        "emAberto": 9,
+        "emAberto": 8,
         "atrasadas": 7,
-        "concluidas30d": 615,
-        "concluidas7d": 163,
+        "concluidas30d": 616,
+        "concluidas7d": 164,
         "naSemanaCorrente": 100
       },
       "mttr": {
-        "horas": 12.44,
-        "label": "12h 26min",
-        "amostra": 615
+        "horas": 12.42,
+        "label": "12h 25min",
+        "amostra": 616
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W33",
           "criadas": 100,
-          "finalizadas": 104
+          "finalizadas": 105
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3652,
-            "emAberto": 9
+            "emAberto": 8
           }
         ],
         "responsaveis": [
@@ -74,20 +74,20 @@
           {
             "nome": "Wesllen  Castro",
             "total": 165,
-            "emAberto": 2
+            "emAberto": 1
           }
         ]
       },
-      "total": 9,
+      "total": 8,
       "atrasadas": 7,
       "porStatus": {
         "naoIniciada": 3,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 4,
         "verificacao": 1
       },
       "porEquipe": {
-        "(sem equipe)": 9
+        "(sem equipe)": 8
       },
       "oss": [
         {
@@ -223,25 +223,6 @@
           "atrasada": true
         },
         {
-          "osId": "11245",
-          "ativo": "Cabine 1 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
-          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
-          "criticidade": "",
-          "dataProgramada": "2026-08-14",
-          "dataCriacao": "2026-08-14",
-          "dataInicial": "2026-08-14",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11203",
           "ativo": "Inversor 1.5 Huawei     { TESTE100-INVR1.5 }",
           "equipe": "",
@@ -261,6 +242,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11245",
+          "ativo": "Cabine 1 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Wesllen  Castro",
+          "status": "Finalizados",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "2026-08-14",
+          "dataFinal": "2026-08-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "11244",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3002,26 +3003,6 @@
           "atrasada": false
         },
         {
-          "osId": "10820",
-          "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Thiago Morais ",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-07",
-          "dataFinal": "2026-08-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "10903",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -3262,12 +3243,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1677,
+      "historicoTotal": 1678,
       "subClassificacao": {
         "remoto": 742,
         "local": 2910,
         "remotoEmAberto": 2,
-        "localEmAberto": 7,
+        "localEmAberto": 6,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -15000,24 +14981,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "11245",
-      "ativo": "Cabine 1 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
-      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
-      "criticidade": "",
-      "dataProgramada": "2026-08-14",
-      "dataCriacao": "2026-08-14",
-      "dataInicial": "2026-08-14",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "11242",
       "ativo": "Inversor 3.1 Sungrow SG75CX    { THPN-ORB100-INVR3.1 }",
       "equipe": "",
@@ -17982,6 +17945,26 @@
   ],
   "ossHistorico": [
     {
+      "osId": "11245",
+      "ativo": "Cabine 1 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Wesllen  Castro",
+      "status": "Finalizados",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "2026-08-14",
+      "dataFinal": "2026-08-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "11244",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -20927,29 +20910,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10929",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-08",
-      "dataCriacao": "2026-08-08",
-      "dataInicial": "2026-08-08",
-      "dataFinal": "2026-08-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2447,
+  "historicoTotal": 2448,
   "totalGeral": 5000,
   "verificacao": {
     "total": 5,
