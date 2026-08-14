@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-14T10:23:29Z",
+  "geradoEm": "2026-08-14T11:24:01Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3640,
-        "emAberto": 11,
+        "total": 3644,
+        "emAberto": 13,
         "atrasadas": 10,
-        "concluidas30d": 601,
-        "concluidas7d": 149,
-        "naSemanaCorrente": 88
+        "concluidas30d": 603,
+        "concluidas7d": 151,
+        "naSemanaCorrente": 92
       },
       "mttr": {
-        "horas": 12.82,
-        "label": "12h 49min",
-        "amostra": 601
+        "horas": 12.78,
+        "label": "12h 47min",
+        "amostra": 603
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W33",
-          "criadas": 88,
-          "finalizadas": 91
+          "criadas": 92,
+          "finalizadas": 93
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3640,
-            "emAberto": 11
+            "total": 3644,
+            "emAberto": 13
           }
         ],
         "responsaveis": [
@@ -63,7 +63,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 393,
+            "total": 394,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 11,
+      "total": 13,
       "atrasadas": 10,
       "porStatus": {
-        "naoIniciada": 6,
+        "naoIniciada": 8,
         "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 11
+        "(sem equipe)": 13
       },
       "oss": [
         {
@@ -276,6 +276,42 @@
           "atrasada": true
         },
         {
+          "osId": "11199",
+          "ativo": "Inversor 3.3 Sungrow     { MAB100-INVR3.3 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 3.3] - Religamento do Inversor 3.3",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11197",
+          "ativo": "Cabine 1  Santarém  Pará Brasil { STR100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Júlio Willers ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Júlio Willers ",
+          "status": "Não Iniciada",
+          "tarefa": "Para Inspecionar causa da falha após religamento da Cabine 1, inversores não apresentam CA. Será verificado o TSA da cabine.",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "11192",
           "ativo": "Inversor 1.8 Huawei     { TESTE100-INVR1.8 }",
           "equipe": "",
@@ -295,6 +331,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11196",
+          "ativo": "Cabine 1  Santarém  Pará Brasil { STR100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Cícero  Willian",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Cícero  Willian",
+          "status": "Finalizada",
+          "tarefa": "UFV: Santarém 1 e 2 | Proteção: 81 | Ação: Religamento Remoto | Falha: Usina desligada",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "2026-08-14",
+          "dataFinal": "2026-08-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
+          "osId": "11195",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "2026-08-14",
+          "dataFinal": "2026-08-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "11193",
           "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
@@ -3254,54 +3330,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10746",
-          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Cabine 5] - Religamento da Cabine 5",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-08-06",
-          "dataInicial": "2026-08-06",
-          "dataFinal": "2026-08-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "10738",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-08-06",
-          "dataInicial": "2026-08-06",
-          "dataFinal": "2026-08-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1662,
+      "historicoTotal": 1664,
       "subClassificacao": {
-        "remoto": 740,
-        "local": 2900,
+        "remoto": 741,
+        "local": 2903,
         "remotoEmAberto": 2,
-        "localEmAberto": 9,
+        "localEmAberto": 11,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3470,10 +3506,10 @@
             "linkFracttal": ""
           }
         ],
-        "medHorasAbrir": 9.0,
+        "medHorasAbrir": 8.9,
         "medHorasFechar": 2.7,
-        "amostraAbrir": 732,
-        "amostraFechar": 731,
+        "amostraAbrir": 733,
+        "amostraFechar": 732,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3489,7 +3525,7 @@
           },
           {
             "nome": "CíceroWillian",
-            "total": 38
+            "total": 39
           },
           {
             "nome": "Juliana Cândido",
@@ -3524,16 +3560,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 614,
-        "emAberto": 79,
-        "atrasadas": 55,
-        "concluidas30d": 88,
-        "concluidas7d": 20,
+        "emAberto": 78,
+        "atrasadas": 54,
+        "concluidas30d": 89,
+        "concluidas7d": 21,
         "naSemanaCorrente": 40
       },
       "mttr": {
-        "horas": 362.18,
+        "horas": 362.7,
         "label": "15d 2h",
-        "amostra": 88
+        "amostra": 89
       },
       "tendencia4Semanas": [
         {
@@ -3554,7 +3590,7 @@
         {
           "semana": "W33",
           "criadas": 4,
-          "finalizadas": 16
+          "finalizadas": 17
         }
       ],
       "topOfensores": {
@@ -3562,7 +3598,7 @@
           {
             "nome": "(sem equipe)",
             "total": 614,
-            "emAberto": 79
+            "emAberto": 78
           }
         ],
         "responsaveis": [
@@ -3593,16 +3629,16 @@
           }
         ]
       },
-      "total": 79,
-      "atrasadas": 55,
+      "total": 78,
+      "atrasadas": 54,
       "porStatus": {
         "naoIniciada": 69,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 79
+        "(sem equipe)": 78
       },
       "oss": [
         {
@@ -4271,24 +4307,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10301",
-          "ativo": "Transformador 1 WEG     { THPN-TPZ100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Eduardo Souza",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Eduardo Souza",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-07-28",
-          "dataInicial": "2026-08-14",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 408.0,
           "atrasada": true
         },
         {
@@ -4961,6 +4979,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10301",
+          "ativo": "Transformador 1 WEG     { THPN-TPZ100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Eduardo Souza",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "2026-08-14",
+          "dataFinal": "2026-08-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 408.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "11036",
           "ativo": "Preventiva Grupo de Inversores      { GY-CDP100-PGINVR1 }",
@@ -7527,25 +7564,6 @@
           "atrasada": false
         },
         {
-          "osId": "8250",
-          "ativo": "Cabine 1 2ª Seção Colônia Tapejara, Lote N 152-Re, 153 e 154 Cidade Gaúcha  Paraná Brasil { THPN-CGH100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-07-07",
-          "dataCriacao": "2026-06-23",
-          "dataInicial": "2026-07-02",
-          "dataFinal": "2026-07-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 216.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8786",
           "ativo": "Transformador 2 COMTRAFO     { MAB200-TRFR2 }",
           "equipe": "",
@@ -7812,7 +7830,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 269
+      "historicoTotal": 270
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -7820,16 +7838,16 @@
       "cor": "#ef4444",
       "kpis": {
         "total": 138,
-        "emAberto": 3,
-        "atrasadas": 3,
-        "concluidas30d": 9,
-        "concluidas7d": 2,
+        "emAberto": 2,
+        "atrasadas": 2,
+        "concluidas30d": 10,
+        "concluidas7d": 3,
         "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 120.0,
-        "label": "5d 0h",
-        "amostra": 9
+        "horas": 112.8,
+        "label": "4d 16h",
+        "amostra": 10
       },
       "tendencia4Semanas": [
         {
@@ -7850,7 +7868,7 @@
         {
           "semana": "W33",
           "criadas": 2,
-          "finalizadas": 2
+          "finalizadas": 3
         }
       ],
       "topOfensores": {
@@ -7858,7 +7876,7 @@
           {
             "nome": "(sem equipe)",
             "total": 138,
-            "emAberto": 3
+            "emAberto": 2
           }
         ],
         "responsaveis": [
@@ -7880,7 +7898,7 @@
           {
             "nome": "Francisco  Santos",
             "total": 8,
-            "emAberto": 1
+            "emAberto": 0
           },
           {
             "nome": "Rodolfo  Oliveira",
@@ -7889,16 +7907,16 @@
           }
         ]
       },
-      "total": 3,
-      "atrasadas": 3,
+      "total": 2,
+      "atrasadas": 2,
       "porStatus": {
-        "naoIniciada": 2,
+        "naoIniciada": 1,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 3
+        "(sem equipe)": 2
       },
       "oss": [
         {
@@ -7935,7 +7953,9 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "11085",
           "ativo": "Inversor 4.7 CANANDIAN SOLAR     { MTS100-INVR4.7 }",
@@ -7943,18 +7963,18 @@
           "responsavel": "Francisco  Santos",
           "criadoPor": "Juliana Cândido ",
           "supervisor": "Francisco  Santos",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "Abertura de chamado para garantia [Vídeos]",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-12",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-08-14",
+          "dataFinal": "2026-08-14",
           "linkFracttal": "",
-          "atrasada": true
-        }
-      ],
-      "ossHistorico": [
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "11084",
           "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { STR100-INVR1.8 }",
@@ -8887,7 +8907,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 49
+      "historicoTotal": 50
     },
     "performance": {
       "label": "Performance",
@@ -8967,8 +8987,8 @@
       "total": 94,
       "atrasadas": 78,
       "porStatus": {
-        "naoIniciada": 75,
-        "emProgresso": 1,
+        "naoIniciada": 72,
+        "emProgresso": 4,
         "pausada": 14,
         "verificacao": 4
       },
@@ -10433,14 +10453,15 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 2.9] - Inspeção Geral do Inversor e das Strings com baixa performance",
           "criticidade": "",
           "dataProgramada": "2026-08-14",
           "dataCriacao": "2026-08-12",
-          "dataInicial": "",
+          "dataInicial": "2026-08-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": false
         },
         {
@@ -10467,14 +10488,15 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.9] - Inspeção Geral do Inversor e das Strings com baixa performance",
           "criticidade": "",
           "dataProgramada": "2026-08-14",
           "dataCriacao": "2026-08-12",
-          "dataInicial": "",
+          "dataInicial": "2026-08-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": false
         },
         {
@@ -10484,14 +10506,15 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.8] - Inspeção Geral do Inversor e das Strings com baixa performance",
           "criticidade": "",
           "dataProgramada": "2026-08-14",
           "dataCriacao": "2026-08-12",
-          "dataInicial": "",
+          "dataInicial": "2026-08-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": false
         },
         {
@@ -13529,8 +13552,8 @@
       "total": 6,
       "atrasadas": 5,
       "porStatus": {
-        "naoIniciada": 4,
-        "emProgresso": 0,
+        "naoIniciada": 3,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
@@ -13615,14 +13638,15 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "Levi Maia",
           "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[ETM] - Análise de sensores",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-08-07",
-          "dataInicial": "",
+          "dataInicial": "2026-08-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 168.0,
           "atrasada": true
         },
         {
@@ -15132,6 +15156,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "11199",
+      "ativo": "Inversor 3.3 Sungrow     { MAB100-INVR3.3 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 3.3] - Religamento do Inversor 3.3",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11197",
+      "ativo": "Cabine 1  Santarém  Pará Brasil { STR100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Júlio Willers ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Júlio Willers ",
+      "status": "Não Iniciada",
+      "tarefa": "Para Inspecionar causa da falha após religamento da Cabine 1, inversores não apresentam CA. Será verificado o TSA da cabine.",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11192",
       "ativo": "Inversor 1.8 Huawei     { TESTE100-INVR1.8 }",
       "equipe": "",
@@ -15400,14 +15458,15 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 2.9] - Inspeção Geral do Inversor e das Strings com baixa performance",
       "criticidade": "",
       "dataProgramada": "2026-08-14",
       "dataCriacao": "2026-08-12",
-      "dataInicial": "",
+      "dataInicial": "2026-08-14",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "11132",
@@ -15432,14 +15491,15 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.9] - Inspeção Geral do Inversor e das Strings com baixa performance",
       "criticidade": "",
       "dataProgramada": "2026-08-14",
       "dataCriacao": "2026-08-12",
-      "dataInicial": "",
+      "dataInicial": "2026-08-14",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "11130",
@@ -15448,14 +15508,15 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.8] - Inspeção Geral do Inversor e das Strings com baixa performance",
       "criticidade": "",
       "dataProgramada": "2026-08-14",
       "dataCriacao": "2026-08-12",
-      "dataInicial": "",
+      "dataInicial": "2026-08-14",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "11121",
@@ -15585,22 +15646,6 @@
       "tarefa": "[Inversor 5.4] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-08-13",
-      "dataCriacao": "2026-08-12",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "11085",
-      "ativo": "Inversor 4.7 CANANDIAN SOLAR     { MTS100-INVR4.7 }",
-      "equipe": "",
-      "responsavel": "Francisco  Santos",
-      "criadoPor": "Juliana Cândido ",
-      "supervisor": "Francisco  Santos",
-      "status": "Não Iniciada",
-      "tarefa": "Abertura de chamado para garantia [Vídeos]",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-12",
       "dataInicial": "",
       "dataFinal": "",
@@ -15882,14 +15927,15 @@
       "responsavel": "Janderson Miranda ",
       "criadoPor": "Levi Maia",
       "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[ETM] - Análise de sensores",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
       "dataCriacao": "2026-08-07",
-      "dataInicial": "",
+      "dataInicial": "2026-08-14",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0
     },
     {
       "osId": "10858",
@@ -16798,23 +16844,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "10301",
-      "ativo": "Transformador 1 WEG     { THPN-TPZ100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Eduardo Souza",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Eduardo Souza",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-07-28",
-      "dataInicial": "2026-08-14",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 408.0
     },
     {
       "osId": "10297",
@@ -18274,6 +18303,46 @@
   ],
   "ossHistorico": [
     {
+      "osId": "11196",
+      "ativo": "Cabine 1  Santarém  Pará Brasil { STR100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Cícero  Willian",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Cícero  Willian",
+      "status": "Finalizada",
+      "tarefa": "UFV: Santarém 1 e 2 | Proteção: 81 | Ação: Religamento Remoto | Falha: Usina desligada",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "2026-08-14",
+      "dataFinal": "2026-08-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "11195",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "2026-08-14",
+      "dataFinal": "2026-08-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "11193",
       "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
       "equipe": "",
@@ -19086,6 +19155,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "11085",
+      "ativo": "Inversor 4.7 CANANDIAN SOLAR     { MTS100-INVR4.7 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Juliana Cândido ",
+      "supervisor": "Francisco  Santos",
+      "status": "Finalizados",
+      "tarefa": "Abertura de chamado para garantia [Vídeos]",
+      "criticidade": "",
+      "dataProgramada": "2026-08-12",
+      "dataCriacao": "2026-08-12",
+      "dataInicial": "2026-08-14",
+      "dataFinal": "2026-08-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -21186,70 +21274,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10901",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-07",
-      "dataFinal": "2026-08-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "10900",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-07",
-      "dataFinal": "2026-08-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "10899",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-07",
-      "dataFinal": "2026-08-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2416,
-  "totalGeral": 4979,
+  "historicoTotal": 2420,
+  "totalGeral": 4983,
   "verificacao": {
     "total": 4,
     "atrasadas": 4,
