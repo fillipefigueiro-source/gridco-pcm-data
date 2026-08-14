@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-14T23:28:49Z",
+  "geradoEm": "2026-08-14T23:56:02Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -82,8 +82,8 @@
       "atrasadas": 7,
       "porStatus": {
         "naoIniciada": 3,
-        "emProgresso": 0,
-        "pausada": 4,
+        "emProgresso": 1,
+        "pausada": 3,
         "verificacao": 1
       },
       "porEquipe": {
@@ -134,15 +134,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Felipe Silva",
           "supervisor": "Wesllen  Castro",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-08-10",
-          "dataInicial": "2026-08-10",
+          "dataInicial": "2026-08-14",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 0,
+          "horasAteAbrir": 96.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -3471,16 +3471,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 615,
-        "emAberto": 75,
-        "atrasadas": 50,
-        "concluidas30d": 93,
-        "concluidas7d": 25,
+        "emAberto": 74,
+        "atrasadas": 49,
+        "concluidas30d": 94,
+        "concluidas7d": 26,
         "naSemanaCorrente": 41
       },
       "mttr": {
-        "horas": 381.42,
+        "horas": 381.96,
         "label": "15d 21h",
-        "amostra": 93
+        "amostra": 94
       },
       "tendencia4Semanas": [
         {
@@ -3501,7 +3501,7 @@
         {
           "semana": "W33",
           "criadas": 5,
-          "finalizadas": 21
+          "finalizadas": 22
         }
       ],
       "topOfensores": {
@@ -3509,7 +3509,7 @@
           {
             "nome": "(sem equipe)",
             "total": 615,
-            "emAberto": 75
+            "emAberto": 74
           }
         ],
         "responsaveis": [
@@ -3540,16 +3540,16 @@
           }
         ]
       },
-      "total": 75,
-      "atrasadas": 50,
+      "total": 74,
+      "atrasadas": 49,
       "porStatus": {
         "naoIniciada": 66,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 75
+        "(sem equipe)": 74
       },
       "oss": [
         {
@@ -4393,24 +4393,6 @@
           "atrasada": true
         },
         {
-          "osId": "10150",
-          "ativo": "Transformador 3 WEG     { 2C-IPX100-TRFR3 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-13",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-08-14",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 432.0,
-          "atrasada": true
-        },
-        {
           "osId": "11234",
           "ativo": "Transformador 1      { TESTE100-TRFR1 }",
           "equipe": "",
@@ -4869,6 +4851,25 @@
           "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
           "criticidade": "",
           "dataProgramada": "2026-08-06",
+          "dataCriacao": "2026-07-27",
+          "dataInicial": "2026-08-14",
+          "dataFinal": "2026-08-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 432.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10150",
+          "ativo": "Transformador 3 WEG     { 2C-IPX100-TRFR3 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Wesllen  Castro",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
           "dataCriacao": "2026-07-27",
           "dataInicial": "2026-08-14",
           "dataFinal": "2026-08-14",
@@ -7538,25 +7539,6 @@
           "atrasada": false
         },
         {
-          "osId": "8257",
-          "ativo": "Nobreak 1      { THPN-NVL100-NBRK1 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Nobreak e Banco de Baterias",
-          "criticidade": "",
-          "dataProgramada": "2026-07-03",
-          "dataCriacao": "2026-06-23",
-          "dataInicial": "2026-07-01",
-          "dataFinal": "2026-07-01",
-          "linkFracttal": "",
-          "horasAteAbrir": 192.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8610",
           "ativo": "Transformador 1 WEG     { THPN-RDR100-TRFR1 }",
           "equipe": "",
@@ -7690,7 +7672,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 274
+      "historicoTotal": 275
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -15615,15 +15597,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Felipe Silva",
       "supervisor": "Wesllen  Castro",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
       "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-10",
+      "dataInicial": "2026-08-14",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 0,
+      "horasAteAbrir": 96.0,
       "modalidade": "local"
     },
     {
@@ -17096,23 +17078,6 @@
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-27",
-      "dataCriacao": "2026-07-27",
-      "dataInicial": "2026-08-14",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 432.0
-    },
-    {
-      "osId": "10150",
-      "ativo": "Transformador 3 WEG     { 2C-IPX100-TRFR3 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-13",
       "dataCriacao": "2026-07-27",
       "dataInicial": "2026-08-14",
       "dataFinal": "",
@@ -20914,7 +20879,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2448,
+  "historicoTotal": 2449,
   "totalGeral": 5000,
   "verificacao": {
     "total": 5,
