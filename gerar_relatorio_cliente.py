@@ -416,17 +416,55 @@ def main():
     a = ap.parse_args()
 
     base = pasta_dados()
-    with open(os.path.join(base, "banco_dados.json"), encoding="utf-8") as f:
-        db = json.load(f)
+
+    def _ler_db():
+        with open(os.path.join(base, "banco_dados.json"), encoding="utf-8") as f:
+            return json.load(f)
+
+    def _escolher(semanas):
+        if a.semana:
+            return next((s for s in semanas if s.get("num") == a.semana), None)
+        return max(semanas, key=lambda s: s.get("num", 0)) if semanas else None
+
+    db = _ler_db()
     semanas = db.get("semanas") or []
+    alvo = _escolher(semanas)
+
+    # A planilha da semana nova nasce ANTES de o banco_dados.json saber dela: o
+    # motor grava o .xlsx e só a rodada seguinte do robô (~54 min) regenera o
+    # JSON. Na sexta o PCM gera a programação e clica em seguida no relatório do
+    # cliente — sem isto, ou dá erro, ou (pior) manda em silêncio a semana
+    # PASSADA para o cliente. Então: se a planilha existe e o JSON não a tem,
+    # regenera o JSON aqui.
+    _no_json = max((s.get("num", 0) for s in semanas), default=0)
+    _nums_xlsx = [int(m.group(1)) for m in
+                  (re.match(r"^Programação Semana (\d+)\.xlsx$", f) for f in os.listdir(base))
+                  if m]
+    _xlsx_alvo = None
+    if a.semana and alvo is None and a.semana in _nums_xlsx:
+        _xlsx_alvo = f"Programação Semana {a.semana}.xlsx"      # pediram, existe, JSON não tem
+    elif not a.semana and _nums_xlsx and max(_nums_xlsx) > _no_json:
+        _xlsx_alvo = f"Programação Semana {max(_nums_xlsx)}.xlsx"  # planilha mais nova que o JSON
+
+    if _xlsx_alvo:
+        log(f"banco_dados.json não conhece a {_xlsx_alvo} — regenerando antes de continuar...")
+        import subprocess
+        _r = subprocess.run([sys.executable, "-u",
+                             os.path.join(AQUI, "gerar_pcm_json.py")],
+                            cwd=base, env={**os.environ, "PCM_PROG_DIR": base})
+        if _r.returncode == 0:
+            db = _ler_db()
+            semanas = db.get("semanas") or []
+            alvo = _escolher(semanas)
+        else:
+            log("! falha ao regenerar o banco_dados.json — seguindo com o que existe")
+
     if not semanas:
         log("ERRO: banco_dados.json sem semanas."); return 1
-    if a.semana:
-        alvo = next((s for s in semanas if s.get("num") == a.semana), None)
-    else:
-        alvo = max(semanas, key=lambda s: s.get("num", 0))
     if alvo is None:
-        log(f"ERRO: semana {a.semana} não está no banco_dados.json."); return 1
+        log(f"ERRO: semana {a.semana} não está no banco_dados.json, e não existe "
+            f"'Programação Semana {a.semana}.xlsx' na pasta. Gere a programação "
+            "dessa semana primeiro."); return 1
     ant = next((s for s in sorted(semanas, key=lambda s: -s.get("num", 0))
                 if s.get("num", 0) < alvo.get("num", 0)), None)
     log(f"Semana alvo: {alvo['label']}" + (f" | fechamento: {ant['label']}" if ant else ""))
