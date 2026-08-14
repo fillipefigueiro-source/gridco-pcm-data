@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-14T12:17:04Z",
+  "geradoEm": "2026-08-14T13:51:11Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3642,
-        "emAberto": 9,
+        "total": 3644,
+        "emAberto": 11,
         "atrasadas": 8,
         "concluidas30d": 605,
         "concluidas7d": 153,
-        "naSemanaCorrente": 90
+        "naSemanaCorrente": 92
       },
       "mttr": {
         "horas": 12.78,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W33",
-          "criadas": 90,
+          "criadas": 92,
           "finalizadas": 95
         }
       ],
@@ -46,15 +46,15 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3642,
-            "emAberto": 9
+            "total": 3644,
+            "emAberto": 11
           }
         ],
         "responsaveis": [
           {
             "nome": "Marcos  Camargo",
-            "total": 444,
-            "emAberto": 3
+            "total": 442,
+            "emAberto": 1
           },
           {
             "nome": "Raphael Vitoriano",
@@ -73,21 +73,21 @@
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 163,
-            "emAberto": 1
+            "total": 164,
+            "emAberto": 2
           }
         ]
       },
-      "total": 9,
+      "total": 11,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 5,
-        "emProgresso": 2,
+        "naoIniciada": 6,
+        "emProgresso": 3,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 9
+        "(sem equipe)": 11
       },
       "oss": [
         {
@@ -188,9 +188,9 @@
           "osId": "11190",
           "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
           "equipe": "",
-          "responsavel": "Marcos  Camargo",
+          "responsavel": "Ronaldo  Silva",
           "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Marcos  Camargo",
+          "supervisor": "Ronaldo  Silva",
           "status": "Não Iniciada",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
@@ -206,9 +206,9 @@
           "osId": "11189",
           "ativo": "Thopen - Colorado 1 - PR Zona Rural S/N Colorado  Paraná Brasil { THPN-CLR100 }",
           "equipe": "",
-          "responsavel": "Marcos  Camargo",
+          "responsavel": "Ronaldo  Silva",
           "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Marcos  Camargo",
+          "supervisor": "Ronaldo  Silva",
           "status": "Não Iniciada",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
@@ -239,20 +239,57 @@
           "atrasada": true
         },
         {
-          "osId": "11199",
-          "ativo": "Inversor 3.3 Sungrow     { MAB100-INVR3.3 }",
+          "osId": "11214",
+          "ativo": "Cabine 1 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-CABN1 }",
           "equipe": "",
-          "responsavel": "James Chaves ",
+          "responsavel": "Wesllen  Castro",
           "criadoPor": "Felipe Silva",
-          "supervisor": "James Chaves ",
+          "supervisor": "Wesllen  Castro",
           "status": "Não Iniciada",
-          "tarefa": "[Inversor 3.3] - Religamento do Inversor 3.3",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
           "criticidade": "",
           "dataProgramada": "2026-08-14",
           "dataCriacao": "2026-08-14",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11203",
+          "ativo": "Inversor 1.5 Huawei     { TESTE100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Cícero  Willian",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Cícero  Willian",
+          "status": "Não Iniciada",
+          "tarefa": "UFV: TESTE | Ação: Religamento Local| Falha: Inversor desligado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11199",
+          "ativo": "Inversor 3.3 Sungrow     { MAB100-INVR3.3 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "James Chaves ",
+          "status": "Em progresso",
+          "tarefa": "[Inversor 3.3] - Religamento do Inversor 3.3",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "2026-08-14",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         }
@@ -3262,9 +3299,9 @@
       "historicoTotal": 1666,
       "subClassificacao": {
         "remoto": 741,
-        "local": 2901,
+        "local": 2903,
         "remotoEmAberto": 2,
-        "localEmAberto": 7,
+        "localEmAberto": 9,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3487,16 +3524,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 614,
-        "emAberto": 78,
-        "atrasadas": 54,
-        "concluidas30d": 89,
-        "concluidas7d": 21,
+        "emAberto": 77,
+        "atrasadas": 53,
+        "concluidas30d": 90,
+        "concluidas7d": 22,
         "naSemanaCorrente": 40
       },
       "mttr": {
-        "horas": 362.7,
-        "label": "15d 2h",
-        "amostra": 89
+        "horas": 365.07,
+        "label": "15d 5h",
+        "amostra": 90
       },
       "tendencia4Semanas": [
         {
@@ -3517,7 +3554,7 @@
         {
           "semana": "W33",
           "criadas": 4,
-          "finalizadas": 17
+          "finalizadas": 18
         }
       ],
       "topOfensores": {
@@ -3525,7 +3562,7 @@
           {
             "nome": "(sem equipe)",
             "total": 614,
-            "emAberto": 78
+            "emAberto": 77
           }
         ],
         "responsaveis": [
@@ -3556,16 +3593,16 @@
           }
         ]
       },
-      "total": 78,
-      "atrasadas": 54,
+      "total": 77,
+      "atrasadas": 53,
       "porStatus": {
-        "naoIniciada": 68,
+        "naoIniciada": 67,
         "emProgresso": 2,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 78
+        "(sem equipe)": 77
       },
       "oss": [
         {
@@ -3602,23 +3639,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 360.0,
-          "atrasada": true
-        },
-        {
-          "osId": "9809",
-          "ativo": "Transformador 1 COMTRAFO     { MAB200-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ailton Leal ",
-          "status": "Não Iniciada",
-          "tarefa": "[Athon] - MPA - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-06-22",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
           "atrasada": true
         },
         {
@@ -4923,6 +4943,25 @@
           "dataFinal": "2026-08-14",
           "linkFracttal": "",
           "horasAteAbrir": 408.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "9809",
+          "ativo": "Transformador 1 COMTRAFO     { MAB200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Ailton Leal ",
+          "status": "Finalizados",
+          "tarefa": "[Athon] - MPA - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-06-22",
+          "dataCriacao": "2026-07-21",
+          "dataInicial": "2026-08-14",
+          "dataFinal": "2026-08-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 576.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -7454,25 +7493,6 @@
           "atrasada": false
         },
         {
-          "osId": "8251",
-          "ativo": "Cabine 1 Rodovia João Carlos Stuqui S/N Fernandópolis  São Paulo Brasil { FRN100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-07-03",
-          "dataCriacao": "2026-06-23",
-          "dataInicial": "2026-07-03",
-          "dataFinal": "2026-07-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8309",
           "ativo": "Cabine 1  Santo Inácio  São Paulo Brasil { STI100-CABN1 }",
           "equipe": "",
@@ -7758,7 +7778,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 270
+      "historicoTotal": 271
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8915,8 +8935,8 @@
       "total": 93,
       "atrasadas": 78,
       "porStatus": {
-        "naoIniciada": 71,
-        "emProgresso": 4,
+        "naoIniciada": 70,
+        "emProgresso": 5,
         "pausada": 14,
         "verificacao": 4
       },
@@ -9882,14 +9902,15 @@
           "responsavel": "Felipe Xavier ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Felipe Xavier ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-08-07",
-          "dataInicial": "",
+          "dataInicial": "2026-08-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 168.0,
           "atrasada": true
         },
         {
@@ -15068,14 +15089,14 @@
   },
   "ossPublicas": [
     {
-      "osId": "11199",
-      "ativo": "Inversor 3.3 Sungrow     { MAB100-INVR3.3 }",
+      "osId": "11214",
+      "ativo": "Cabine 1 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-CABN1 }",
       "equipe": "",
-      "responsavel": "James Chaves ",
+      "responsavel": "Wesllen  Castro",
       "criadoPor": "Felipe Silva",
-      "supervisor": "James Chaves ",
+      "supervisor": "Wesllen  Castro",
       "status": "Não Iniciada",
-      "tarefa": "[Inversor 3.3] - Religamento do Inversor 3.3",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
       "criticidade": "",
       "dataProgramada": "2026-08-14",
       "dataCriacao": "2026-08-14",
@@ -15085,12 +15106,47 @@
       "modalidade": "local"
     },
     {
+      "osId": "11203",
+      "ativo": "Inversor 1.5 Huawei     { TESTE100-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Cícero  Willian",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Cícero  Willian",
+      "status": "Não Iniciada",
+      "tarefa": "UFV: TESTE | Ação: Religamento Local| Falha: Inversor desligado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11199",
+      "ativo": "Inversor 3.3 Sungrow     { MAB100-INVR3.3 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "James Chaves ",
+      "status": "Em progresso",
+      "tarefa": "[Inversor 3.3] - Religamento do Inversor 3.3",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "2026-08-14",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
       "osId": "11190",
       "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
       "equipe": "",
-      "responsavel": "Marcos  Camargo",
+      "responsavel": "Ronaldo  Silva",
       "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Marcos  Camargo",
+      "supervisor": "Ronaldo  Silva",
       "status": "Não Iniciada",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
@@ -15105,9 +15161,9 @@
       "osId": "11189",
       "ativo": "Thopen - Colorado 1 - PR Zona Rural S/N Colorado  Paraná Brasil { THPN-CLR100 }",
       "equipe": "",
-      "responsavel": "Marcos  Camargo",
+      "responsavel": "Ronaldo  Silva",
       "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Marcos  Camargo",
+      "supervisor": "Ronaldo  Silva",
       "status": "Não Iniciada",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
@@ -15961,14 +16017,15 @@
       "responsavel": "Felipe Xavier ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Felipe Xavier ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
       "dataCriacao": "2026-08-07",
-      "dataInicial": "",
+      "dataInicial": "2026-08-14",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0
     },
     {
       "osId": "10843",
@@ -17540,22 +17597,6 @@
       "criticidade": "",
       "dataProgramada": "2026-07-22",
       "dataCriacao": "2026-07-22",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "9809",
-      "ativo": "Transformador 1 COMTRAFO     { MAB200-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Ailton Leal ",
-      "status": "Não Iniciada",
-      "tarefa": "[Athon] - MPA - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-06-22",
-      "dataCriacao": "2026-07-21",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
@@ -21087,8 +21128,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2424,
-  "totalGeral": 4981,
+  "historicoTotal": 2425,
+  "totalGeral": 4983,
   "verificacao": {
     "total": 4,
     "atrasadas": 4,
