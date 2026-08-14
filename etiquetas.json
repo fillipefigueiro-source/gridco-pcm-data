@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-14T15:41:07Z",
+  "geradoEm": "2026-08-14T16:40:32Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3647,
-        "emAberto": 11,
+        "total": 3648,
+        "emAberto": 12,
         "atrasadas": 8,
         "concluidas30d": 608,
         "concluidas7d": 156,
-        "naSemanaCorrente": 95
+        "naSemanaCorrente": 96
       },
       "mttr": {
         "horas": 12.55,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W33",
-          "criadas": 95,
+          "criadas": 96,
           "finalizadas": 96
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3647,
-            "emAberto": 11
+            "total": 3648,
+            "emAberto": 12
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 11,
+      "total": 12,
       "atrasadas": 8,
       "porStatus": {
         "naoIniciada": 7,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 11
+        "(sem equipe)": 12
       },
       "oss": [
         {
@@ -239,6 +239,24 @@
           "atrasada": true
         },
         {
+          "osId": "11224",
+          "ativo": "Axis - Linhares 1 - ES Sítio Rio Quartel, Zona Rural Linhares  Espírito Santo Brasil { AXIS-LHN100 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "11215",
           "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
           "equipe": "",
@@ -263,14 +281,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Felipe Silva",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Cabine 1] - Religamento da Cabine 1",
           "criticidade": "",
           "dataProgramada": "2026-08-14",
           "dataCriacao": "2026-08-14",
-          "dataInicial": "",
+          "dataInicial": "2026-08-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3298,9 +3317,9 @@
       "historicoTotal": 1669,
       "subClassificacao": {
         "remoto": 742,
-        "local": 2905,
+        "local": 2906,
         "remotoEmAberto": 2,
-        "localEmAberto": 9,
+        "localEmAberto": 10,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -8844,8 +8863,8 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 494,
-        "emAberto": 92,
+        "total": 497,
+        "emAberto": 95,
         "atrasadas": 77,
         "concluidas30d": 290,
         "concluidas7d": 62,
@@ -8874,7 +8893,7 @@
         },
         {
           "semana": "W33",
-          "criadas": 44,
+          "criadas": 47,
           "finalizadas": 61
         }
       ],
@@ -8882,15 +8901,15 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 494,
-            "emAberto": 92
+            "total": 497,
+            "emAberto": 95
           }
         ],
         "responsaveis": [
           {
             "nome": "Marcos Duarte",
-            "total": 37,
-            "emAberto": 0
+            "total": 40,
+            "emAberto": 3
           },
           {
             "nome": "James Chaves",
@@ -8914,16 +8933,16 @@
           }
         ]
       },
-      "total": 92,
+      "total": 95,
       "atrasadas": 77,
       "porStatus": {
-        "naoIniciada": 70,
+        "naoIniciada": 73,
         "emProgresso": 2,
         "pausada": 16,
         "verificacao": 4
       },
       "porEquipe": {
-        "(sem equipe)": 92
+        "(sem equipe)": 95
       },
       "oss": [
         {
@@ -10459,6 +10478,57 @@
           "criticidade": "",
           "dataProgramada": "2026-08-14",
           "dataCriacao": "2026-08-12",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11227",
+          "ativo": "Inversor 1.7 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.7 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.7] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11226",
+          "ativo": "Inversor 1.4 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11225",
+          "ativo": "Inversor 1.1 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-14",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -15053,6 +15123,71 @@
   },
   "ossPublicas": [
     {
+      "osId": "11227",
+      "ativo": "Inversor 1.7 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.7 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.7] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11226",
+      "ativo": "Inversor 1.4 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11225",
+      "ativo": "Inversor 1.1 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11224",
+      "ativo": "Axis - Linhares 1 - ES Sítio Rio Quartel, Zona Rural Linhares  Espírito Santo Brasil { AXIS-LHN100 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11215",
       "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
       "equipe": "",
@@ -15076,14 +15211,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Felipe Silva",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Cabine 1] - Religamento da Cabine 1",
       "criticidade": "",
       "dataProgramada": "2026-08-14",
       "dataCriacao": "2026-08-14",
-      "dataInicial": "",
+      "dataInicial": "2026-08-14",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -21059,7 +21195,7 @@
     }
   ],
   "historicoTotal": 2430,
-  "totalGeral": 4986,
+  "totalGeral": 4990,
   "verificacao": {
     "total": 4,
     "atrasadas": 4,
