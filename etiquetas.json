@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-15T01:21:52Z",
+  "geradoEm": "2026-08-15T02:34:15Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3652,
-        "emAberto": 8,
+        "total": 3653,
+        "emAberto": 9,
         "atrasadas": 8,
         "concluidas30d": 602,
         "concluidas7d": 146,
-        "naSemanaCorrente": 100
+        "naSemanaCorrente": 101
       },
       "mttr": {
         "horas": 12.72,
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W33",
-          "criadas": 100,
-          "finalizadas": 105
+          "criadas": 101,
+          "finalizadas": 106
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3652,
-            "emAberto": 8
+            "total": 3653,
+            "emAberto": 9
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 8,
+      "total": 9,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 3,
-        "emProgresso": 1,
+        "naoIniciada": 4,
+        "emProgresso": 0,
         "pausada": 3,
-        "verificacao": 1
+        "verificacao": 2
       },
       "porEquipe": {
-        "(sem equipe)": 8
+        "(sem equipe)": 9
       },
       "oss": [
         {
@@ -134,15 +134,16 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Felipe Silva",
           "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
+          "status": "Em Verificação",
           "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-08-10",
-          "dataInicial": "2026-08-14",
-          "dataFinal": "",
+          "dataInicial": "2026-08-10",
+          "dataFinal": "2026-08-14",
           "linkFracttal": "",
-          "horasAteAbrir": 96.0,
+          "horasAteAbrir": 0,
+          "horasAteFechar": 96.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -239,6 +240,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "11246",
+          "ativo": "Cabine 2  Santa Maria do Pará  Pará Brasil { SMP100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento da Cabine 102 - SMP100",
+          "criticidade": "",
+          "dataProgramada": "2026-08-15",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -599,6 +618,26 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 24.0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "10965",
+          "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.4 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Wesllen  Castro",
+          "status": "Em Verificação",
+          "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
+          "criticidade": "",
+          "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-08-10",
+          "dataInicial": "2026-08-10",
+          "dataFinal": "2026-08-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 96.0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3221,34 +3260,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10821",
-          "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizada",
-          "tarefa": "[SKID 3] - Religamento do SKID 3",
-          "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-07",
-          "dataFinal": "2026-08-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1664,
+      "historicoTotal": 1665,
       "subClassificacao": {
         "remoto": 742,
-        "local": 2910,
+        "local": 2911,
         "remotoEmAberto": 2,
-        "localEmAberto": 6,
+        "localEmAberto": 7,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -14964,6 +14983,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "11246",
+      "ativo": "Cabine 2  Santa Maria do Pará  Pará Brasil { SMP100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Fabricio Barreto",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento da Cabine 102 - SMP100",
+      "criticidade": "",
+      "dataProgramada": "2026-08-15",
+      "dataCriacao": "2026-08-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11242",
       "ativo": "Inversor 3.1 Sungrow SG75CX    { THPN-ORB100-INVR3.1 }",
       "equipe": "",
@@ -15597,15 +15633,16 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Felipe Silva",
       "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
+      "status": "Em Verificação",
       "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
       "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-14",
-      "dataFinal": "",
+      "dataInicial": "2026-08-10",
+      "dataFinal": "2026-08-14",
       "linkFracttal": "",
-      "horasAteAbrir": 96.0,
+      "horasAteAbrir": 0,
+      "horasAteFechar": 96.0,
       "modalidade": "local"
     },
     {
@@ -20359,6 +20396,26 @@
       "atrasada": false
     },
     {
+      "osId": "10965",
+      "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.4 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Wesllen  Castro",
+      "status": "Em Verificação",
+      "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
+      "criticidade": "",
+      "dataProgramada": "2026-08-10",
+      "dataCriacao": "2026-08-10",
+      "dataInicial": "2026-08-10",
+      "dataFinal": "2026-08-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 96.0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "10964",
       "ativo": "Inversor 1.2 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.2 }",
       "equipe": "",
@@ -20857,39 +20914,20 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10930",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-08",
-      "dataCriacao": "2026-08-08",
-      "dataInicial": "2026-08-08",
-      "dataFinal": "2026-08-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2435,
-  "totalGeral": 5000,
+  "historicoTotal": 2436,
+  "totalGeral": 5001,
   "verificacao": {
-    "total": 5,
-    "atrasadas": 5,
+    "total": 6,
+    "atrasadas": 6,
     "porEquipe": {
-      "(sem equipe)": 5
+      "(sem equipe)": 6
     },
     "porResponsavel": {
       "Ronaldo  Silva": 1,
-      "Anderson  Parente": 4
+      "Anderson  Parente": 4,
+      "Wesllen  Castro": 1
     },
     "oss": [
       {
@@ -20909,6 +20947,26 @@
         "linkFracttal": "",
         "horasAteAbrir": 168.0,
         "horasAteFechar": 0,
+        "atrasada": true
+      },
+      {
+        "osId": "10965",
+        "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.4 }",
+        "equipe": "",
+        "responsavel": "Wesllen  Castro",
+        "criadoPor": "Felipe Silva",
+        "supervisor": "Wesllen  Castro",
+        "status": "Em Verificação",
+        "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
+        "criticidade": "",
+        "dataProgramada": "2026-08-10",
+        "dataCriacao": "2026-08-10",
+        "dataInicial": "2026-08-10",
+        "dataFinal": "2026-08-14",
+        "linkFracttal": "",
+        "horasAteAbrir": 0,
+        "horasAteFechar": 96.0,
+        "modalidade": "local",
         "atrasada": true
       },
       {
