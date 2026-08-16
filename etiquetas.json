@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-16T17:27:02Z",
+  "geradoEm": "2026-08-16T17:53:19Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3682,
-        "emAberto": 14,
+        "total": 3683,
+        "emAberto": 15,
         "atrasadas": 8,
         "concluidas30d": 613,
         "concluidas7d": 143,
-        "naSemanaCorrente": 130
+        "naSemanaCorrente": 131
       },
       "mttr": {
         "horas": 12.52,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W33",
-          "criadas": 130,
+          "criadas": 131,
           "finalizadas": 130
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3682,
-            "emAberto": 14
+            "total": 3683,
+            "emAberto": 15
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
+      "total": 15,
       "atrasadas": 8,
       "porStatus": {
         "naoIniciada": 9,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 2
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -242,20 +242,39 @@
           "atrasada": true
         },
         {
-          "osId": "11276",
-          "ativo": "Inversor 1.5 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.5 }",
+          "osId": "11280",
+          "ativo": "Cabine 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-CABN1 }",
           "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "Wesllen  Castro",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Felipe  Lima",
           "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
+          "tarefa": "[IND100-CABN1] - Religamento do IND100-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-08-16",
           "dataCriacao": "2026-08-16",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11276",
+          "ativo": "Inversor 1.5 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Wesllen  Castro",
+          "status": "Em progresso",
+          "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
+          "criticidade": "",
+          "dataProgramada": "2026-08-16",
+          "dataCriacao": "2026-08-16",
+          "dataInicial": "2026-08-16",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3355,9 +3374,9 @@
       "historicoTotal": 1673,
       "subClassificacao": {
         "remoto": 745,
-        "local": 2937,
+        "local": 2938,
         "remotoEmAberto": 2,
-        "localEmAberto": 12,
+        "localEmAberto": 13,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -14913,20 +14932,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "11276",
-      "ativo": "Inversor 1.5 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.5 }",
+      "osId": "11280",
+      "ativo": "Cabine 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-CABN1 }",
       "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Wesllen  Castro",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Felipe  Lima",
       "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
+      "tarefa": "[IND100-CABN1] - Religamento do IND100-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-08-16",
       "dataCriacao": "2026-08-16",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11276",
+      "ativo": "Inversor 1.5 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Wesllen  Castro",
+      "status": "Em progresso",
+      "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
+      "criticidade": "",
+      "dataProgramada": "2026-08-16",
+      "dataCriacao": "2026-08-16",
+      "dataInicial": "2026-08-16",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -20779,7 +20816,7 @@
     }
   ],
   "historicoTotal": 2453,
-  "totalGeral": 5030,
+  "totalGeral": 5031,
   "verificacao": {
     "total": 6,
     "atrasadas": 6,
