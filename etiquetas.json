@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-16T15:58:20Z",
+  "geradoEm": "2026-08-16T16:31:44Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3678,
-        "emAberto": 13,
+        "total": 3680,
+        "emAberto": 14,
         "atrasadas": 8,
-        "concluidas30d": 610,
-        "concluidas7d": 140,
-        "naSemanaCorrente": 126
+        "concluidas30d": 611,
+        "concluidas7d": 141,
+        "naSemanaCorrente": 128
       },
       "mttr": {
-        "horas": 12.59,
-        "label": "12h 35min",
-        "amostra": 610
+        "horas": 12.57,
+        "label": "12h 34min",
+        "amostra": 611
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W33",
-          "criadas": 126,
-          "finalizadas": 127
+          "criadas": 128,
+          "finalizadas": 128
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3678,
-            "emAberto": 13
+            "total": 3680,
+            "emAberto": 14
           }
         ],
         "responsaveis": [
@@ -73,21 +73,21 @@
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 166,
-            "emAberto": 1
+            "total": 167,
+            "emAberto": 2
           }
         ]
       },
-      "total": 13,
+      "total": 14,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 8,
+        "naoIniciada": 9,
         "emProgresso": 0,
         "pausada": 3,
         "verificacao": 2
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -242,6 +242,24 @@
           "atrasada": true
         },
         {
+          "osId": "11276",
+          "ativo": "Inversor 1.5 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Wesllen  Castro",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
+          "criticidade": "",
+          "dataProgramada": "2026-08-16",
+          "dataCriacao": "2026-08-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "11269",
           "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
           "equipe": "",
@@ -333,6 +351,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11275",
+          "ativo": "Thopen - Córrego do Sapucaia 1 - ES Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100 }",
+          "equipe": "",
+          "responsavel": "Cícero  Willian",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Cícero  Willian",
+          "status": "Finalizada",
+          "tarefa": "UFV: Córrego do Sapucaia 1 | Proteção: 27/59 | Ação: Religamento Remoto | Falha: Usina desligada",
+          "criticidade": "",
+          "dataProgramada": "2026-08-16",
+          "dataCriacao": "2026-08-16",
+          "dataInicial": "2026-08-16",
+          "dataFinal": "2026-08-16",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
+          "atrasada": false
+        },
         {
           "osId": "11273",
           "ativo": "Cabine 1 Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-CABN1 }",
@@ -3312,34 +3350,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10917",
-          "ativo": "SKID 2 RN-118, Zona Rural Jucurutu  Rio Grande do Norte Brasil { THPN-JUC100-SKID2 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Silva",
-          "criadoPor": "Juliana Rogério",
-          "supervisor": "Cláudio  Silva",
-          "status": "Finalizada",
-          "tarefa": "[SKID 2] - Religamento do SKID 2",
-          "criticidade": "",
-          "dataProgramada": "2026-08-08",
-          "dataCriacao": "2026-08-08",
-          "dataInicial": "2026-08-08",
-          "dataFinal": "2026-08-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1670,
+      "historicoTotal": 1671,
       "subClassificacao": {
-        "remoto": 744,
-        "local": 2934,
+        "remoto": 745,
+        "local": 2935,
         "remotoEmAberto": 2,
-        "localEmAberto": 11,
+        "localEmAberto": 12,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3510,8 +3528,8 @@
         ],
         "medHorasAbrir": 8.9,
         "medHorasFechar": 2.6,
-        "amostraAbrir": 736,
-        "amostraFechar": 735,
+        "amostraAbrir": 737,
+        "amostraFechar": 736,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3527,7 +3545,7 @@
           },
           {
             "nome": "CíceroWillian",
-            "total": 41
+            "total": 42
           },
           {
             "nome": "Juliana Cândido",
@@ -14895,6 +14913,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "11276",
+      "ativo": "Inversor 1.5 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Wesllen  Castro",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
+      "criticidade": "",
+      "dataProgramada": "2026-08-16",
+      "dataCriacao": "2026-08-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11269",
       "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
       "equipe": "",
@@ -17777,6 +17812,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "11275",
+      "ativo": "Thopen - Córrego do Sapucaia 1 - ES Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100 }",
+      "equipe": "",
+      "responsavel": "Cícero  Willian",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Cícero  Willian",
+      "status": "Finalizada",
+      "tarefa": "UFV: Córrego do Sapucaia 1 | Proteção: 27/59 | Ação: Religamento Remoto | Falha: Usina desligada",
+      "criticidade": "",
+      "dataProgramada": "2026-08-16",
+      "dataCriacao": "2026-08-16",
+      "dataInicial": "2026-08-16",
+      "dataFinal": "2026-08-16",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
+      "atrasada": false
+    },
     {
       "osId": "11273",
       "ativo": "Cabine 1 Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-CABN1 }",
@@ -20721,30 +20776,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10963",
-      "ativo": "Cabine 1  Tupi Paulista  São Paulo Brasil { TPP100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Carlos  Godoi",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Carlos  Godoi",
-      "status": "Finalizados",
-      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2450,
-  "totalGeral": 5026,
+  "historicoTotal": 2451,
+  "totalGeral": 5028,
   "verificacao": {
     "total": 6,
     "atrasadas": 6,
