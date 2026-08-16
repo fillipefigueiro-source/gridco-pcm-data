@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-16T12:08:23Z",
+  "geradoEm": "2026-08-16T13:11:48Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-10 .. 2026-08-16",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3674,
-        "emAberto": 14,
+        "total": 3676,
+        "emAberto": 16,
         "atrasadas": 8,
         "concluidas30d": 605,
         "concluidas7d": 135,
-        "naSemanaCorrente": 122
+        "naSemanaCorrente": 124
       },
       "mttr": {
         "horas": 12.69,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W33",
-          "criadas": 122,
+          "criadas": 124,
           "finalizadas": 122
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3674,
-            "emAberto": 14
+            "total": 3676,
+            "emAberto": 16
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
+      "total": 16,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 9,
-        "emProgresso": 0,
+        "naoIniciada": 10,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 2
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -242,6 +242,42 @@
           "atrasada": true
         },
         {
+          "osId": "11271",
+          "ativo": "Thopen - Nova Londrina 2 - PR Estrada Mané Correia S/N Nova Londrina  Paraná Brasil { THPN-NVL200 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "UFV: Nova Londrina 2 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
+          "criticidade": "",
+          "dataProgramada": "2026-08-16",
+          "dataCriacao": "2026-08-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11270",
+          "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "UFV: Nova Londrina 1 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
+          "criticidade": "",
+          "dataProgramada": "2026-08-16",
+          "dataCriacao": "2026-08-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "11269",
           "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
           "equipe": "",
@@ -338,14 +374,15 @@
           "responsavel": "Railson Gomes ",
           "criadoPor": "Felipe Silva",
           "supervisor": "Railson Gomes ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Cabine 2] - Religamento da Cabine 2",
           "criticidade": "",
           "dataProgramada": "2026-08-16",
           "dataCriacao": "2026-08-16",
-          "dataInicial": "",
+          "dataInicial": "2026-08-16",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         }
@@ -3355,9 +3392,9 @@
       "historicoTotal": 1665,
       "subClassificacao": {
         "remoto": 742,
-        "local": 2932,
+        "local": 2934,
         "remotoEmAberto": 2,
-        "localEmAberto": 12,
+        "localEmAberto": 14,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -15056,6 +15093,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "11271",
+      "ativo": "Thopen - Nova Londrina 2 - PR Estrada Mané Correia S/N Nova Londrina  Paraná Brasil { THPN-NVL200 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "UFV: Nova Londrina 2 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
+      "criticidade": "",
+      "dataProgramada": "2026-08-16",
+      "dataCriacao": "2026-08-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11270",
+      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "UFV: Nova Londrina 1 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
+      "criticidade": "",
+      "dataProgramada": "2026-08-16",
+      "dataCriacao": "2026-08-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11269",
       "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
       "equipe": "",
@@ -15147,14 +15218,15 @@
       "responsavel": "Railson Gomes ",
       "criadoPor": "Felipe Silva",
       "supervisor": "Railson Gomes ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Cabine 2] - Religamento da Cabine 2",
       "criticidade": "",
       "dataProgramada": "2026-08-16",
       "dataCriacao": "2026-08-16",
-      "dataInicial": "",
+      "dataInicial": "2026-08-16",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -21058,7 +21130,7 @@
     }
   ],
   "historicoTotal": 2437,
-  "totalGeral": 5022,
+  "totalGeral": 5024,
   "verificacao": {
     "total": 6,
     "atrasadas": 6,
