@@ -882,3 +882,45 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .cmp-comp-tbl tfoot td{border-top:1.5px solid #d8d8e2;border-bottom:none;padding-top:7px}
 .cmp-comp-av{margin-top:8px;font-size:11.5px;color:#8a5a08;background:#fffaf0;border-left:3px solid #e8a020;padding:6px 10px;border-radius:4px}
 .cmp-comp-obs{margin-top:7px;font-size:11.5px;color:#6b7280}
+
+/* Gestão MPAS: Cronograma (Gantt) + planilha geral (14/08/2026) */
+.gt-box{background:#fff;border:1px solid #e6e6ee;border-radius:10px;margin:14px 0;overflow:hidden}
+.gt-top{display:flex;align-items:center;justify-content:space-between;gap:12px;
+        padding:11px 14px;border-bottom:1px solid #eee;flex-wrap:wrap}
+.gt-tit{font-size:13.5px;font-weight:800;color:#1C1F3B}
+.gt-nav{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.gt-b{border:1px solid #d8d8e2;background:#fff;border-radius:6px;cursor:pointer;
+      padding:3px 9px;font-size:13px;color:#475569;line-height:1.2}
+.gt-b:hover{background:#f4f6fa}
+.gt-sel{border:1px solid #d8d8e2;border-radius:6px;padding:4px 8px;font-size:12px;
+        font-family:inherit;background:#fff;color:#1C1F3B}
+.gt-info{font-size:11.5px;color:#6b7280;margin-left:4px}
+.gt-atr{color:#b91c1c}
+.gt-rows{max-height:520px;overflow-y:auto}
+.gt-row{display:flex;align-items:center;gap:10px;padding:7px 14px;border-bottom:1px solid #f2f2f7;cursor:pointer}
+.gt-row:hover{background:#f7f9f2}
+.gt-lb{width:262px;min-width:262px}
+.gt-u{font-size:12.5px;font-weight:700;color:#1C1F3B}
+.gt-c{font-size:10.5px;color:#8a8a94;line-height:1.35}
+.gt-os{font-size:10.5px;color:#5a5566;font-weight:600}
+.gt-tk{position:relative;flex:1;height:22px;background:#f4f4f8;border-radius:5px}
+.gt-bar{position:absolute;top:0;height:22px;border-radius:5px;display:flex;align-items:center;
+        overflow:hidden;min-width:34px}
+.gt-fill{position:absolute;left:0;top:0;bottom:0;background:rgba(255,255,255,.45)}
+.gt-d{position:relative;font-size:9.5px;font-weight:700;color:#fff;padding:0 7px;white-space:nowrap}
+.gt-scale{display:flex;justify-content:space-between;padding:5px 14px 9px;font-size:9.5px;color:#a0a0ad}
+.gt-vazio{padding:18px 14px;font-size:12.5px;color:#8a8a94}
+.mpg-top{display:flex;align-items:center;justify-content:space-between;gap:10px;
+         margin:16px 0 0;padding:10px 12px;background:#fff;border:1px solid #e6e6ee;border-radius:10px;flex-wrap:wrap}
+.mpg-tit{font-size:13px;font-weight:800;color:#1C1F3B}
+.mpg-n{font-size:11.5px;color:#6b7280;margin-right:10px}
+.mpg-b{border:1px solid #d8d8e2;background:#fff;border-radius:6px;cursor:pointer;
+       padding:4px 11px;font-size:11.5px;color:#475569;margin-left:6px;font-family:inherit}
+.mpg-b:hover{background:#f4f6fa}
+.mpg-wrap{overflow-x:auto;max-height:520px;overflow-y:auto;border:1px solid #e6e6ee;
+          border-top:none;border-radius:0 0 10px 10px;background:#fff}
+.mpg-tbl{width:100%;border-collapse:collapse;font-size:11.5px;white-space:nowrap}
+.mpg-tbl th{position:sticky;top:0;background:#1C1F3B;color:#fff;text-align:left;
+            padding:7px 9px;font-size:10px;text-transform:uppercase;letter-spacing:.03em}
+.mpg-tbl td{padding:5px 9px;border-bottom:1px solid #f0f0f5;color:#1a1a1a}
+.mpg-tbl tr:hover td{background:#f7f9f2}
