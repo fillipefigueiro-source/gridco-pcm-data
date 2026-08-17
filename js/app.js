@@ -153,6 +153,10 @@ async function manualRefresh(){
   if(typeof loadEtiquetas==='function') await loadEtiquetas();
   if(typeof loadGestao==='function') await loadGestao();
   if(typeof loadConfiab==='function') await loadConfiab();
+  // Gestão MPAS: o mpas.json tem fonte própria (Gerencial no OneDrive, via
+  // botão "Atualizar Gestão MPAS" do PCM_Painel) e não vinha aqui — quem
+  // clicava em "Atualizar agora" nesta aba não recebia nada de novo.
+  if(typeof initMpas==='function' && MP) { try{ await initMpas(true); }catch(e){} }
   if(ok && S.user){
     buildWeekChips();
     if(typeof render==='function') render();
@@ -586,7 +590,10 @@ const MP_MESES=['janeiro','fevereiro','março','abril','maio','junho','julho',
                 'agosto','setembro','outubro','novembro','dezembro'];
 const MP_DESDE='2026-01-01';
 
-async function mpCarregarPack(){
+async function mpCarregarPack(forcar){
+  // MP_PACK é cache de sessão: sem o `forcar`, "Atualizar agora" devolvia o
+  // MESMO objeto já em memória e o mpas.json novo nunca chegava à tela.
+  if(forcar) MP_PACK=null;
   if(MP_PACK)return MP_PACK;
   const r=await fetch(MP_URL+'?t='+Date.now(),{cache:'no-store'});
   if(!r.ok)throw new Error('mpas.json não encontrado');
@@ -1049,7 +1056,22 @@ function renderMpas(){
     MP.manut.length+' manutenções da aba "MPAS" (Gerencial - PCM_2026_R00.xlsx) · '
     +nBD+' OS cruzadas com o Fracttal · dados de '+(MP.geradoEm||'—');
   const sub=document.getElementById('mp-sub');
-  if(sub)sub.textContent='MPA e MPS por Equipe Cluster · planilha Gerencial + API Fracttal';
+  // idade do dado MPAS: o topo do painel mostra a idade do banco_dados.json,
+  // que é outro arquivo e outro robô — aqui o número é o desta aba.
+  if(sub){
+    let idade='';
+    const g=MP.geradoEm?new Date(MP.geradoEm):null;
+    if(g&&!isNaN(g)){
+      const min=Math.round((Date.now()-g.getTime())/60000);
+      const txt=min<60?min+' min':(min<1440?Math.round(min/60)+' h':Math.round(min/1440)+' dia(s)');
+      const cor=min>2880?'#b91c1c':(min>1440?'#8a5a08':'#5E8C1A');
+      idade=' · <b style="color:'+cor+'">dados de '+g.toLocaleString('pt-BR',
+              {day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})+
+            ' (há '+txt+')</b>';
+      if(min>1440) idade+=' <span style="color:#8a5a08">— atualize em PCM_Painel &rarr; Utilitários</span>';
+    }
+    sub.innerHTML='MPA e MPS por Equipe Cluster · planilha Gerencial + API Fracttal'+idade;
+  }
 }
 function mpModal(key){
   const [os,usina,tipo,prev]=String(key).split('|');
@@ -1084,11 +1106,14 @@ function mpModal(key){
   const mb=document.querySelector('#modal .mbox');
   if(mb){mb.innerHTML=h;document.getElementById('modal').classList.add('open');}
 }
-async function initMpas(){
+async function initMpas(forcar){
   const lock=document.getElementById('mp-lock'), body=document.getElementById('mp-body');
+  // forcar=true vem do "Atualizar agora": sem isso o MPAS ficava preso ao
+  // primeiro carregamento da sessão e só um F5 trazia o mpas.json novo.
+  if(forcar) MP=null;
   if(MP){renderMpas();return;}
   try{
-    const pack=await mpCarregarPack();
+    const pack=await mpCarregarPack(forcar);
     if(!pack.cifrado){ MP=pack; renderMpas(); return; }        // arquivo em claro
     const s=sessionStorage.getItem('gc_mp_k');                 // já abriu nesta sessão?
     if(s){ try{ MP=await mpDecifrar(pack,s); renderMpas(); return; }catch(e){} }
