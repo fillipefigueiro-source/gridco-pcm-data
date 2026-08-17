@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T15:58:07Z",
+  "geradoEm": "2026-08-17T16:36:05Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3699,
-        "emAberto": 16,
+        "total": 3700,
+        "emAberto": 17,
         "atrasadas": 13,
         "concluidas30d": 608,
         "concluidas7d": 143,
-        "naSemanaCorrente": 13
+        "naSemanaCorrente": 14
       },
       "mttr": {
         "horas": 12.49,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W34",
-          "criadas": 13,
+          "criadas": 14,
           "finalizadas": 11
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3699,
-            "emAberto": 16
+            "total": 3700,
+            "emAberto": 17
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 16,
+      "total": 17,
       "atrasadas": 13,
       "porStatus": {
         "naoIniciada": 11,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 2,
         "verificacao": 2
       },
       "porEquipe": {
-        "(sem equipe)": 16
+        "(sem equipe)": 17
       },
       "oss": [
         {
@@ -329,6 +329,25 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "11346",
+          "ativo": "SKID 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Felipe  Lima",
+          "status": "Em progresso",
+          "tarefa": "[SKID 1] - Religamento do SKID 1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "2026-08-17",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "11309",
@@ -3391,9 +3410,9 @@
       "historicoTotal": 1665,
       "subClassificacao": {
         "remoto": 745,
-        "local": 2954,
+        "local": 2955,
         "remotoEmAberto": 2,
-        "localEmAberto": 14,
+        "localEmAberto": 15,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3616,16 +3635,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 621,
-        "emAberto": 77,
-        "atrasadas": 52,
-        "concluidas30d": 89,
-        "concluidas7d": 24,
+        "emAberto": 76,
+        "atrasadas": 51,
+        "concluidas30d": 90,
+        "concluidas7d": 25,
         "naSemanaCorrente": 28
       },
       "mttr": {
-        "horas": 391.01,
-        "label": "16d 7h",
-        "amostra": 89
+        "horas": 387.2,
+        "label": "16d 3h",
+        "amostra": 90
       },
       "tendencia4Semanas": [
         {
@@ -3654,14 +3673,14 @@
           {
             "nome": "(sem equipe)",
             "total": 621,
-            "emAberto": 77
+            "emAberto": 76
           }
         ],
         "responsaveis": [
           {
             "nome": "James Chaves",
             "total": 29,
-            "emAberto": 5
+            "emAberto": 4
           },
           {
             "nome": "Luiz  Silva",
@@ -3685,16 +3704,16 @@
           }
         ]
       },
-      "total": 77,
-      "atrasadas": 52,
+      "total": 76,
+      "atrasadas": 51,
       "porStatus": {
-        "naoIniciada": 69,
-        "emProgresso": 2,
-        "pausada": 6,
+        "naoIniciada": 70,
+        "emProgresso": 1,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 77
+        "(sem equipe)": 76
       },
       "oss": [
         {
@@ -4330,40 +4349,20 @@
           "atrasada": true
         },
         {
-          "osId": "11029",
-          "ativo": "Sistema de Segurança Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-SSEG1 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "James Chaves ",
-          "status": "Em progresso",
-          "tarefa": "[Athon] - MPM - Sistemas de segurança",
-          "criticidade": "",
-          "dataProgramada": "2026-08-11",
-          "dataCriacao": "2026-08-11",
-          "dataInicial": "2026-08-13",
-          "dataFinal": "2026-08-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": true
-        },
-        {
           "osId": "11032",
           "ativo": "Transformador 2 COMTRAFO     { MAB200-TRFR2 }",
           "equipe": "",
           "responsavel": "James Chaves ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "James Chaves ",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Athon] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-11",
-          "dataInicial": "2026-08-13",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -5214,7 +5213,7 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "James Chaves ",
-          "status": "Em progresso",
+          "status": "Finalizados",
           "tarefa": "[Athon] - MPM - Sistemas de segurança",
           "criticidade": "",
           "dataProgramada": "2026-08-11",
@@ -10122,14 +10121,15 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 1.100] - Verificação de Tracker 51",
           "criticidade": "",
           "dataProgramada": "2026-08-13",
           "dataCriacao": "2026-08-11",
-          "dataInicial": "",
+          "dataInicial": "2026-08-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -10377,15 +10377,14 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Ana Barros ",
           "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
+          "status": "Não Iniciada",
           "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-17",
-          "dataInicial": "2026-08-17",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -13469,12 +13468,12 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 93,
-        "emAberto": 4,
+        "total": 94,
+        "emAberto": 5,
         "atrasadas": 4,
         "concluidas30d": 37,
         "concluidas7d": 16,
-        "naSemanaCorrente": 0
+        "naSemanaCorrente": 1
       },
       "mttr": {
         "horas": 304.22,
@@ -13499,7 +13498,7 @@
         },
         {
           "semana": "W34",
-          "criadas": 0,
+          "criadas": 1,
           "finalizadas": 0
         }
       ],
@@ -13507,15 +13506,15 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 93,
-            "emAberto": 4
+            "total": 94,
+            "emAberto": 5
           }
         ],
         "responsaveis": [
           {
             "nome": "João Vieira",
-            "total": 20,
-            "emAberto": 2
+            "total": 21,
+            "emAberto": 3
           },
           {
             "nome": "Carlos Bruno  Pessanha Pereira",
@@ -13539,16 +13538,16 @@
           }
         ]
       },
-      "total": 4,
+      "total": 5,
       "atrasadas": 4,
       "porStatus": {
-        "naoIniciada": 3,
+        "naoIniciada": 4,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 4
+        "(sem equipe)": 5
       },
       "oss": [
         {
@@ -13619,6 +13618,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "11347",
+          "ativo": "Estação Meteorológica Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "João Vieira ",
+          "status": "Não Iniciada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -15129,6 +15145,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "11347",
+      "ativo": "Estação Meteorológica Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "João Vieira ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "João Vieira ",
+      "status": "Não Iniciada",
+      "tarefa": "[ETM] - Coleta e análise de dados",
+      "criticidade": "",
+      "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11346",
+      "ativo": "SKID 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Felipe  Lima",
+      "status": "Em progresso",
+      "tarefa": "[SKID 1] - Religamento do SKID 1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "2026-08-17",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
       "osId": "11345",
       "ativo": "Tracker 09.102 Brametal Bi-motor    { SMP100-ETKR9.102 }",
       "equipe": "",
@@ -15394,15 +15444,14 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Ana Barros ",
       "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
+      "status": "Não Iniciada",
       "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-08-17",
-      "dataInicial": "2026-08-17",
+      "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
+      "linkFracttal": ""
     },
     {
       "osId": "11292",
@@ -15986,14 +16035,15 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 1.100] - Verificação de Tracker 51",
       "criticidade": "",
       "dataProgramada": "2026-08-13",
       "dataCriacao": "2026-08-11",
-      "dataInicial": "",
+      "dataInicial": "2026-08-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "11043",
@@ -16018,33 +16068,14 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "James Chaves ",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Athon] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-11",
-      "dataInicial": "2026-08-13",
+      "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
-    },
-    {
-      "osId": "11029",
-      "ativo": "Sistema de Segurança Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-SSEG1 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "James Chaves ",
-      "status": "Em progresso",
-      "tarefa": "[Athon] - MPM - Sistemas de segurança",
-      "criticidade": "",
-      "dataProgramada": "2026-08-11",
-      "dataCriacao": "2026-08-11",
-      "dataInicial": "2026-08-13",
-      "dataFinal": "2026-08-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0
+      "linkFracttal": ""
     },
     {
       "osId": "11016",
@@ -20832,7 +20863,7 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "James Chaves ",
-      "status": "Em progresso",
+      "status": "Finalizados",
       "tarefa": "[Athon] - MPM - Sistemas de segurança",
       "criticidade": "",
       "dataProgramada": "2026-08-11",
@@ -21203,7 +21234,7 @@
     }
   ],
   "historicoTotal": 2449,
-  "totalGeral": 5066,
+  "totalGeral": 5068,
   "verificacao": {
     "total": 3,
     "atrasadas": 3,
