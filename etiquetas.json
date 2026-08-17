@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T08:14:26Z",
+  "geradoEm": "2026-08-17T09:08:57Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3686,
+        "total": 3687,
         "emAberto": 14,
         "atrasadas": 14,
-        "concluidas30d": 597,
-        "concluidas7d": 132,
-        "naSemanaCorrente": 0
+        "concluidas30d": 598,
+        "concluidas7d": 133,
+        "naSemanaCorrente": 1
       },
       "mttr": {
-        "horas": 12.68,
-        "label": "12h 41min",
-        "amostra": 597
+        "horas": 12.66,
+        "label": "12h 40min",
+        "amostra": 598
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W34",
-          "criadas": 0,
-          "finalizadas": 0
+          "criadas": 1,
+          "finalizadas": 1
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3686,
+            "total": 3687,
             "emAberto": 14
           }
         ],
@@ -351,6 +351,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11284",
+          "ativo": "Greenyellow - Macaíba 1 - RN BR 226/304, S/N, Zona Rural Macaíba  Rio Grande do Norte Brasil { GY-MCB100 }",
+          "equipe": "",
+          "responsavel": "Cleiton  Farias",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Cleiton  Farias",
+          "status": "Finalizada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "2026-08-17",
+          "dataFinal": "2026-08-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "11283",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3330,32 +3350,12 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10926",
-          "ativo": "Cabine 1  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Felipe  Lima",
-          "status": "Finalizada",
-          "tarefa": "UFV: Santa Bárbara | Proteção: - | Ação: Religamento Local| Falha: Usina desligada, sem opção de comando remoto devido falha de comunicação",
-          "criticidade": "",
-          "dataProgramada": "2026-08-08",
-          "dataCriacao": "2026-08-08",
-          "dataInicial": "2026-08-08",
-          "dataFinal": "2026-08-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "remoto",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1654,
+      "historicoTotal": 1655,
       "subClassificacao": {
         "remoto": 745,
-        "local": 2941,
+        "local": 2942,
         "remotoEmAberto": 2,
         "localEmAberto": 12,
         "pctRemoto": 20,
@@ -17761,6 +17761,26 @@
   ],
   "ossHistorico": [
     {
+      "osId": "11284",
+      "ativo": "Greenyellow - Macaíba 1 - RN BR 226/304, S/N, Zona Rural Macaíba  Rio Grande do Norte Brasil { GY-MCB100 }",
+      "equipe": "",
+      "responsavel": "Cleiton  Farias",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Cleiton  Farias",
+      "status": "Finalizada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "2026-08-17",
+      "dataFinal": "2026-08-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "11283",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -20704,29 +20724,10 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 48.0,
       "atrasada": false
-    },
-    {
-      "osId": "10980",
-      "ativo": "Tracker 73.101 STI Norland dual row    { ALT100-ETKR73.101 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Anderson  Parente",
-      "status": "Em Verificação",
-      "tarefa": "[Tracker 73.101] - Verificação de Tracker em Altair 4",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-11",
-      "dataFinal": "2026-08-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 48.0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2434,
-  "totalGeral": 5034,
+  "historicoTotal": 2435,
+  "totalGeral": 5035,
   "verificacao": {
     "total": 6,
     "atrasadas": 6,
