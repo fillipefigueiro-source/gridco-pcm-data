@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T15:04:19Z",
+  "geradoEm": "2026-08-17T15:33:53Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3699,
-        "emAberto": 18,
+        "emAberto": 17,
         "atrasadas": 13,
-        "concluidas30d": 606,
-        "concluidas7d": 141,
+        "concluidas30d": 607,
+        "concluidas7d": 142,
         "naSemanaCorrente": 13
       },
       "mttr": {
-        "horas": 12.53,
-        "label": "12h 32min",
-        "amostra": 606
+        "horas": 12.51,
+        "label": "12h 30min",
+        "amostra": 607
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W34",
           "criadas": 13,
-          "finalizadas": 9
+          "finalizadas": 10
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3699,
-            "emAberto": 18
+            "emAberto": 17
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 18,
+      "total": 17,
       "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 14,
-        "emProgresso": 0,
+        "naoIniciada": 12,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 2
       },
       "porEquipe": {
-        "(sem equipe)": 18
+        "(sem equipe)": 17
       },
       "oss": [
         {
@@ -331,24 +331,6 @@
           "atrasada": true
         },
         {
-          "osId": "11334",
-          "ativo": "Inversor 1.7 SOLAREDGE SE100K    { CTS100-INVR1.7 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "Luely  Santos",
-          "supervisor": "Railson Gomes ",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
-          "dataCriacao": "2026-08-17",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11309",
           "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
           "equipe": "",
@@ -373,14 +355,15 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Cabine 2] - Religamento da Cabine 2",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-17",
-          "dataInicial": "",
+          "dataInicial": "2026-08-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -422,6 +405,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11334",
+          "ativo": "Inversor 1.7 SOLAREDGE SE100K    { CTS100-INVR1.7 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "Luely  Santos",
+          "supervisor": "Railson Gomes ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "2026-08-17",
+          "dataFinal": "2026-08-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "11314",
           "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
@@ -3401,34 +3404,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10938",
-          "ativo": "Cabine 1  Tupi Paulista  São Paulo Brasil { TPP100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Carlos  Godoi",
-          "status": "Finalizada",
-          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
-          "criticidade": "",
-          "dataProgramada": "2026-08-09",
-          "dataCriacao": "2026-08-09",
-          "dataInicial": "2026-08-09",
-          "dataFinal": "2026-08-09",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1663,
+      "historicoTotal": 1664,
       "subClassificacao": {
         "remoto": 745,
         "local": 2954,
         "remotoEmAberto": 2,
-        "localEmAberto": 16,
+        "localEmAberto": 15,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -8987,12 +8970,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 507,
-        "emAberto": 84,
+        "total": 515,
+        "emAberto": 92,
         "atrasadas": 70,
         "concluidas30d": 254,
         "concluidas7d": 77,
-        "naSemanaCorrente": 15
+        "naSemanaCorrente": 23
       },
       "mttr": {
         "horas": 166.39,
@@ -9017,7 +9000,7 @@
         },
         {
           "semana": "W34",
-          "criadas": 6,
+          "criadas": 14,
           "finalizadas": 1
         }
       ],
@@ -9025,8 +9008,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 507,
-            "emAberto": 84
+            "total": 515,
+            "emAberto": 92
           }
         ],
         "responsaveis": [
@@ -9041,6 +9024,11 @@
             "emAberto": 9
           },
           {
+            "nome": "Gilson Souza",
+            "total": 30,
+            "emAberto": 12
+          },
+          {
             "nome": "Cláudio  Ferreira",
             "total": 30,
             "emAberto": 0
@@ -9049,24 +9037,19 @@
             "nome": "Paulo  Ribeiro",
             "total": 29,
             "emAberto": 2
-          },
-          {
-            "nome": "Luiz  Silva",
-            "total": 28,
-            "emAberto": 4
           }
         ]
       },
-      "total": 84,
+      "total": 92,
       "atrasadas": 70,
       "porStatus": {
-        "naoIniciada": 73,
+        "naoIniciada": 81,
         "emProgresso": 2,
         "pausada": 8,
         "verificacao": 1
       },
       "porEquipe": {
-        "(sem equipe)": 84
+        "(sem equipe)": 92
       },
       "oss": [
         {
@@ -10268,6 +10251,142 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "11345",
+          "ativo": "Tracker 09.102 Brametal Bi-motor    { SMP100-ETKR9.102 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 09.102] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11344",
+          "ativo": "Tracker 07.105 Brametal Bi-motor    { SMP100-ETKR7.105 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 07.105] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11343",
+          "ativo": "Tracker 04.106 Brametal Bi-motor    { SMP100-ETKR4.106 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 04.106] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11342",
+          "ativo": "Tracker 04.104 Brametal Bi-motor    { SMP100-ETKR4.104 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 04.104] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11341",
+          "ativo": "Tracker 18.103 Brametal Bi-motor    { SMP100-ETKR18.103 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 18.103] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11340",
+          "ativo": "Tracker 18.101 Brametal Bi-motor    { SMP100-ETKR18.101 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 18.101] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11339",
+          "ativo": "Tracker 16.103 Brametal Bi-motor    { SMP100-ETKR16.103 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 16.103] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11338",
+          "ativo": "Tracker 01.102 Brametal Bi-motor    { SMP100-ETKR1.102 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 01.102] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "11293",
@@ -15028,21 +15147,132 @@
   },
   "ossPublicas": [
     {
-      "osId": "11334",
-      "ativo": "Inversor 1.7 SOLAREDGE SE100K    { CTS100-INVR1.7 }",
+      "osId": "11345",
+      "ativo": "Tracker 09.102 Brametal Bi-motor    { SMP100-ETKR9.102 }",
       "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "Luely  Santos",
-      "supervisor": "Railson Gomes ",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
       "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
+      "tarefa": "[Tracker 09.102] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-08-17",
       "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11344",
+      "ativo": "Tracker 07.105 Brametal Bi-motor    { SMP100-ETKR7.105 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 07.105] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11343",
+      "ativo": "Tracker 04.106 Brametal Bi-motor    { SMP100-ETKR4.106 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 04.106] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11342",
+      "ativo": "Tracker 04.104 Brametal Bi-motor    { SMP100-ETKR4.104 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 04.104] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11341",
+      "ativo": "Tracker 18.103 Brametal Bi-motor    { SMP100-ETKR18.103 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 18.103] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11340",
+      "ativo": "Tracker 18.101 Brametal Bi-motor    { SMP100-ETKR18.101 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 18.101] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11339",
+      "ativo": "Tracker 16.103 Brametal Bi-motor    { SMP100-ETKR16.103 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 16.103] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11338",
+      "ativo": "Tracker 01.102 Brametal Bi-motor    { SMP100-ETKR1.102 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 01.102] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
     },
     {
       "osId": "11321",
@@ -15164,14 +15394,15 @@
       "responsavel": "Ricardo Silva ",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Cabine 2] - Religamento da Cabine 2",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-08-17",
-      "dataInicial": "",
+      "dataInicial": "2026-08-17",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -18035,6 +18266,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "11334",
+      "ativo": "Inversor 1.7 SOLAREDGE SE100K    { CTS100-INVR1.7 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "Luely  Santos",
+      "supervisor": "Railson Gomes ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "2026-08-17",
+      "dataFinal": "2026-08-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "11314",
       "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
@@ -20984,30 +21235,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10993",
-      "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Thiago Morais ",
-      "status": "Finalizada",
-      "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2447,
-  "totalGeral": 5058,
+  "historicoTotal": 2448,
+  "totalGeral": 5066,
   "verificacao": {
     "total": 3,
     "atrasadas": 3,
