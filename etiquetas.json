@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T12:08:45Z",
+  "geradoEm": "2026-08-17T13:09:18Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3687,
-        "emAberto": 14,
-        "atrasadas": 14,
-        "concluidas30d": 598,
-        "concluidas7d": 133,
-        "naSemanaCorrente": 1
+        "total": 3689,
+        "emAberto": 15,
+        "atrasadas": 13,
+        "concluidas30d": 599,
+        "concluidas7d": 134,
+        "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 12.66,
-        "label": "12h 40min",
-        "amostra": 598
+        "horas": 12.68,
+        "label": "12h 41min",
+        "amostra": 599
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W34",
-          "criadas": 1,
-          "finalizadas": 1
+          "criadas": 3,
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3687,
-            "emAberto": 14
+            "total": 3689,
+            "emAberto": 15
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
-      "atrasadas": 14,
+      "total": 15,
+      "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 9,
-        "emProgresso": 0,
-        "pausada": 3,
+        "naoIniciada": 10,
+        "emProgresso": 1,
+        "pausada": 2,
         "verificacao": 2
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -115,15 +115,14 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Adriano  Moraes",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "Analise e testes de religamento remoto UFV - Araputanga",
           "criticidade": "",
           "dataProgramada": "2026-07-29",
           "dataCriacao": "2026-07-28",
-          "dataInicial": "2026-07-29",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 24.0,
           "modalidade": "remoto",
           "atrasada": true
         },
@@ -242,24 +241,6 @@
           "atrasada": true
         },
         {
-          "osId": "11281",
-          "ativo": "Cabine 1  Tupi Paulista  São Paulo Brasil { TPP100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "Carlos  Godoi",
-          "status": "Não Iniciada",
-          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
-          "criticidade": "",
-          "dataProgramada": "2026-08-16",
-          "dataCriacao": "2026-08-16",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "11269",
           "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
           "equipe": "",
@@ -348,6 +329,43 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "11296",
+          "ativo": "Cabine 2 Rodovia, 01 – Zona Rural Parelhas  Rio Grande do Norte Brasil { PRL100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Silva",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Cláudio  Silva",
+          "status": "Em progresso",
+          "tarefa": "[Cabine 2] - Religamento da Cabine 2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "2026-08-17",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11292",
+          "ativo": "Thopen - Coração 1 - SC Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100 }",
+          "equipe": "",
+          "responsavel": "Ademir Necker ",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Ademir Necker ",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -367,6 +385,26 @@
           "dataFinal": "2026-08-17",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11281",
+          "ativo": "Cabine 1  Tupi Paulista  São Paulo Brasil { TPP100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Carlos  Godoi",
+          "status": "Finalizados",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-16",
+          "dataCriacao": "2026-08-16",
+          "dataInicial": "2026-08-17",
+          "dataFinal": "2026-08-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3330,34 +3368,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10927",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-08",
-          "dataCriacao": "2026-08-08",
-          "dataInicial": "2026-08-08",
-          "dataFinal": "2026-08-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1655,
+      "historicoTotal": 1656,
       "subClassificacao": {
         "remoto": 745,
-        "local": 2942,
+        "local": 2944,
         "remotoEmAberto": 2,
-        "localEmAberto": 12,
+        "localEmAberto": 13,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3528,7 +3546,7 @@
         ],
         "medHorasAbrir": 8.9,
         "medHorasFechar": 2.6,
-        "amostraAbrir": 737,
+        "amostraAbrir": 736,
         "amostraFechar": 736,
         "topAbridores": [
           {
@@ -3652,8 +3670,8 @@
       "total": 73,
       "atrasadas": 52,
       "porStatus": {
-        "naoIniciada": 65,
-        "emProgresso": 1,
+        "naoIniciada": 64,
+        "emProgresso": 2,
         "pausada": 7,
         "verificacao": 0
       },
@@ -4181,14 +4199,15 @@
           "responsavel": "Francisco  Santos",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Francisco  Santos",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
           "criticidade": "",
           "dataProgramada": "2026-08-06",
           "dataCriacao": "2026-07-27",
-          "dataInicial": "",
+          "dataInicial": "2026-08-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 504.0,
           "atrasada": true
         },
         {
@@ -8848,17 +8867,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 505,
-        "emAberto": 83,
-        "atrasadas": 71,
-        "concluidas30d": 253,
-        "concluidas7d": 76,
-        "naSemanaCorrente": 13
+        "total": 507,
+        "emAberto": 84,
+        "atrasadas": 70,
+        "concluidas30d": 254,
+        "concluidas7d": 77,
+        "naSemanaCorrente": 15
       },
       "mttr": {
-        "horas": 165.34,
-        "label": "6d 21h",
-        "amostra": 253
+        "horas": 166.39,
+        "label": "6d 22h",
+        "amostra": 254
       },
       "tendencia4Semanas": [
         {
@@ -8878,16 +8897,16 @@
         },
         {
           "semana": "W34",
-          "criadas": 4,
-          "finalizadas": 0
+          "criadas": 6,
+          "finalizadas": 1
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 505,
-            "emAberto": 83
+            "total": 507,
+            "emAberto": 84
           }
         ],
         "responsaveis": [
@@ -8898,8 +8917,8 @@
           },
           {
             "nome": "James Chaves",
-            "total": 35,
-            "emAberto": 8
+            "total": 36,
+            "emAberto": 9
           },
           {
             "nome": "Cláudio  Ferreira",
@@ -8918,16 +8937,16 @@
           }
         ]
       },
-      "total": 83,
-      "atrasadas": 71,
+      "total": 84,
+      "atrasadas": 70,
       "porStatus": {
-        "naoIniciada": 72,
-        "emProgresso": 3,
-        "pausada": 7,
+        "naoIniciada": 73,
+        "emProgresso": 2,
+        "pausada": 8,
         "verificacao": 1
       },
       "porEquipe": {
-        "(sem equipe)": 83
+        "(sem equipe)": 84
       },
       "oss": [
         {
@@ -9430,24 +9449,6 @@
           "atrasada": true
         },
         {
-          "osId": "10406",
-          "ativo": "Inversor 12.2 Huawei SUN2000-75KTL-M1    { THPN-SDI100-INVR12.2 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Ricardo Silva ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 12.2] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-31",
-          "dataCriacao": "2026-07-30",
-          "dataInicial": "2026-08-03",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "atrasada": true
-        },
-        {
           "osId": "10501",
           "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
           "equipe": "",
@@ -9880,7 +9881,7 @@
           "responsavel": "Felipe Xavier ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Felipe Xavier ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
@@ -10149,6 +10150,24 @@
           "atrasada": true
         },
         {
+          "osId": "11293",
+          "ativo": "Inversor 2.1 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.1 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Wesllen  Castro",
+          "status": "Em progresso",
+          "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "2026-08-17",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "atrasada": false
+        },
+        {
           "osId": "11288",
           "ativo": "Inversor 1.1 Sungrow SG60KTL    { ADT100-INVR1.1 }",
           "equipe": "",
@@ -10228,6 +10247,23 @@
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11291",
+          "ativo": "Inversor 4.2 Sungrow     { JCD100-INVR4.2 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 4.2] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-17",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -10354,6 +10390,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10406",
+          "ativo": "Inversor 12.2 Huawei SUN2000-75KTL-M1    { THPN-SDI100-INVR12.2 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Ricardo Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 12.2] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-31",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "2026-08-03",
+          "dataFinal": "2026-08-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
+          "horasAteFechar": 336.0,
+          "atrasada": false
+        },
         {
           "osId": "11139",
           "ativo": "Tracker 43.100 STI Norland     { TIM100-ETKR43.100 }",
@@ -10988,7 +11043,7 @@
           "responsavel": "Francisco  Santos",
           "criadoPor": "Roger Lélis",
           "supervisor": "Francisco  Santos",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Módulo Fotovoltaico] - Realizar a troca do módulo fotovoltaico",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
@@ -11976,7 +12031,7 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Roger Lélis",
           "supervisor": "Wesllen  Castro",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Tracker-2.03] - Avaliação geral do tracker",
           "criticidade": "",
           "dataProgramada": "2026-08-04",
@@ -12081,25 +12136,6 @@
           "linkFracttal": "",
           "horasAteAbrir": 264.0,
           "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "10002",
-          "ativo": "Tracker 07.106 Brametal Bi-motor    { CPP100-ETKR7.106 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizada",
-          "tarefa": "[Capitão Poço 1][Tracker 07.106] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-24",
-          "dataInicial": "2026-07-30",
-          "dataFinal": "2026-08-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "horasAteFechar": 120.0,
           "atrasada": false
         },
         {
@@ -13205,7 +13241,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 376
+      "historicoTotal": 377
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14872,6 +14908,74 @@
   },
   "ossPublicas": [
     {
+      "osId": "11296",
+      "ativo": "Cabine 2 Rodovia, 01 – Zona Rural Parelhas  Rio Grande do Norte Brasil { PRL100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Silva",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Cláudio  Silva",
+      "status": "Em progresso",
+      "tarefa": "[Cabine 2] - Religamento da Cabine 2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "2026-08-17",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
+      "osId": "11293",
+      "ativo": "Inversor 2.1 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.1 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Wesllen  Castro",
+      "status": "Em progresso",
+      "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "2026-08-17",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0
+    },
+    {
+      "osId": "11292",
+      "ativo": "Thopen - Coração 1 - SC Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100 }",
+      "equipe": "",
+      "responsavel": "Ademir Necker ",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Ademir Necker ",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11291",
+      "ativo": "Inversor 4.2 Sungrow     { JCD100-INVR4.2 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 4.2] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "11290",
       "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
       "equipe": "",
@@ -14934,23 +15038,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "11281",
-      "ativo": "Cabine 1  Tupi Paulista  São Paulo Brasil { TPP100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Carlos  Godoi",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Carlos  Godoi",
-      "status": "Não Iniciada",
-      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
-      "criticidade": "",
-      "dataProgramada": "2026-08-16",
-      "dataCriacao": "2026-08-16",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "11269",
@@ -15958,7 +16045,7 @@
       "responsavel": "Felipe Xavier ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Felipe Xavier ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
@@ -16162,23 +16249,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10406",
-      "ativo": "Inversor 12.2 Huawei SUN2000-75KTL-M1    { THPN-SDI100-INVR12.2 }",
-      "equipe": "",
-      "responsavel": "Ricardo Silva ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Ricardo Silva ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 12.2] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-07-31",
-      "dataCriacao": "2026-07-30",
-      "dataInicial": "2026-08-03",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0
-    },
-    {
       "osId": "10355",
       "ativo": "Transformador 1  seco    { VRG100-TRFR1 }",
       "equipe": "",
@@ -16362,15 +16432,14 @@
       "responsavel": "Adriano  Moraes",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Adriano  Moraes",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "Analise e testes de religamento remoto UFV - Araputanga",
       "criticidade": "",
       "dataProgramada": "2026-07-29",
       "dataCriacao": "2026-07-28",
-      "dataInicial": "2026-07-29",
+      "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 24.0,
       "modalidade": "remoto"
     },
     {
@@ -16799,14 +16868,15 @@
       "responsavel": "Francisco  Santos",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Francisco  Santos",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
       "criticidade": "",
       "dataProgramada": "2026-08-06",
       "dataCriacao": "2026-07-27",
-      "dataInicial": "",
+      "dataInicial": "2026-08-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 504.0
     },
     {
       "osId": "10166",
@@ -17788,6 +17858,26 @@
       "dataFinal": "2026-08-16",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "11281",
+      "ativo": "Cabine 1  Tupi Paulista  São Paulo Brasil { TPP100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Carlos  Godoi",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Carlos  Godoi",
+      "status": "Finalizados",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-16",
+      "dataCriacao": "2026-08-16",
+      "dataInicial": "2026-08-17",
+      "dataFinal": "2026-08-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -19879,7 +19969,7 @@
       "responsavel": "Francisco  Santos",
       "criadoPor": "Roger Lélis",
       "supervisor": "Francisco  Santos",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "[Módulo Fotovoltaico] - Realizar a troca do módulo fotovoltaico",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
@@ -20677,29 +20767,10 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 48.0,
       "atrasada": false
-    },
-    {
-      "osId": "10981",
-      "ativo": "Tracker 81.101 STI Norland dual row    { ALT100-ETKR81.101 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Anderson  Parente",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 81.101] - Verificação de Tracker em Altair 4",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-11",
-      "dataFinal": "2026-08-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 48.0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2436,
-  "totalGeral": 5038,
+  "historicoTotal": 2438,
+  "totalGeral": 5042,
   "verificacao": {
     "total": 3,
     "atrasadas": 3,
