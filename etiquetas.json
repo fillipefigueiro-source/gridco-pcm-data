@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T17:05:29Z",
+  "geradoEm": "2026-08-17T17:37:11Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3701,
-        "emAberto": 17,
+        "total": 3703,
+        "emAberto": 16,
         "atrasadas": 13,
-        "concluidas30d": 609,
-        "concluidas7d": 144,
-        "naSemanaCorrente": 15
+        "concluidas30d": 612,
+        "concluidas7d": 147,
+        "naSemanaCorrente": 17
       },
       "mttr": {
-        "horas": 12.47,
-        "label": "12h 28min",
-        "amostra": 609
+        "horas": 12.4,
+        "label": "12h 24min",
+        "amostra": 612
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W34",
-          "criadas": 15,
-          "finalizadas": 12
+          "criadas": 17,
+          "finalizadas": 15
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3701,
-            "emAberto": 17
+            "total": 3703,
+            "emAberto": 16
           }
         ],
         "responsaveis": [
@@ -58,7 +58,7 @@
           },
           {
             "nome": "Raphael Vitoriano",
-            "total": 437,
+            "total": 438,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 17,
+      "total": 16,
       "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 11,
-        "emProgresso": 2,
+        "naoIniciada": 12,
+        "emProgresso": 0,
         "pausada": 2,
         "verificacao": 2
       },
       "porEquipe": {
-        "(sem equipe)": 17
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -331,21 +331,20 @@
           "atrasada": true
         },
         {
-          "osId": "11346",
-          "ativo": "SKID 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID1 }",
+          "osId": "11354",
+          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
           "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Felipe  Lima",
-          "status": "Em progresso",
-          "tarefa": "[SKID 1] - Religamento do SKID 1",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Luiz  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Cabine 5] - Religamento da Cabine 5",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-17",
-          "dataInicial": "2026-08-17",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -364,25 +363,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "11306",
-          "ativo": "Cabine 2 Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Valmir  Júnior",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Valmir  Júnior",
-          "status": "Em progresso",
-          "tarefa": "[Cabine 2] - Religamento da Cabine 2",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
-          "dataCriacao": "2026-08-17",
-          "dataInicial": "2026-08-17",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -407,6 +387,26 @@
       ],
       "ossHistorico": [
         {
+          "osId": "11350",
+          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizada",
+          "tarefa": "[Cabine 5] - Religamento da Cabine 5",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "2026-08-17",
+          "dataFinal": "2026-08-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "11348",
           "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
           "equipe": "",
@@ -415,6 +415,26 @@
           "supervisor": "Raphael Vitoriano ",
           "status": "Finalizada",
           "tarefa": "[Cabine 5] - Religamento da Cabine 5",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "2026-08-17",
+          "dataFinal": "2026-08-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11346",
+          "ativo": "SKID 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[SKID 1] - Religamento do SKID 1",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-17",
@@ -553,6 +573,26 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Ricardo Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Cabine 2] - Religamento da Cabine 2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "2026-08-17",
+          "dataFinal": "2026-08-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11306",
+          "ativo": "Cabine 2 Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Valmir  Júnior",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Valmir  Júnior",
           "status": "Finalizados",
           "tarefa": "[Cabine 2] - Religamento da Cabine 2",
           "criticidade": "",
@@ -3345,74 +3385,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10944",
-          "ativo": "Cabine 3 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN3 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Cabine 3] - Religamento da Cabine 3",
-          "criticidade": "",
-          "dataProgramada": "2026-08-09",
-          "dataCriacao": "2026-08-09",
-          "dataInicial": "2026-08-09",
-          "dataFinal": "2026-08-09",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "10943",
-          "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizada",
-          "tarefa": "[SKID 3] - Religamento do SKID 3",
-          "criticidade": "",
-          "dataProgramada": "2026-08-09",
-          "dataCriacao": "2026-08-09",
-          "dataInicial": "2026-08-09",
-          "dataFinal": "2026-08-09",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "10942",
-          "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
-          "equipe": "",
-          "responsavel": "Gilson  Milhomem",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Gilson  Milhomem",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-09",
-          "dataCriacao": "2026-08-09",
-          "dataInicial": "2026-08-09",
-          "dataFinal": "2026-08-09",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1666,
+      "historicoTotal": 1669,
       "subClassificacao": {
         "remoto": 745,
-        "local": 2956,
+        "local": 2958,
         "remotoEmAberto": 2,
-        "localEmAberto": 15,
+        "localEmAberto": 14,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3635,16 +3615,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 621,
-        "emAberto": 74,
-        "atrasadas": 49,
-        "concluidas30d": 92,
-        "concluidas7d": 27,
+        "emAberto": 73,
+        "atrasadas": 48,
+        "concluidas30d": 93,
+        "concluidas7d": 28,
         "naSemanaCorrente": 28
       },
       "mttr": {
-        "horas": 384.26,
-        "label": "16d 0h",
-        "amostra": 92
+        "horas": 385.03,
+        "label": "16d 1h",
+        "amostra": 93
       },
       "tendencia4Semanas": [
         {
@@ -3665,7 +3645,7 @@
         {
           "semana": "W34",
           "criadas": 6,
-          "finalizadas": 4
+          "finalizadas": 5
         }
       ],
       "topOfensores": {
@@ -3673,7 +3653,7 @@
           {
             "nome": "(sem equipe)",
             "total": 621,
-            "emAberto": 74
+            "emAberto": 73
           }
         ],
         "responsaveis": [
@@ -3704,16 +3684,16 @@
           }
         ]
       },
-      "total": 74,
-      "atrasadas": 49,
+      "total": 73,
+      "atrasadas": 48,
       "porStatus": {
         "naoIniciada": 69,
         "emProgresso": 0,
-        "pausada": 5,
+        "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 74
+        "(sem equipe)": 73
       },
       "oss": [
         {
@@ -4416,24 +4396,6 @@
           "atrasada": true
         },
         {
-          "osId": "10320",
-          "ativo": "Transformador 1      { ALLM-MRN100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Cláudio  Ferreira",
-          "status": "pausado",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-13",
-          "dataCriacao": "2026-07-29",
-          "dataInicial": "2026-08-04",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "atrasada": true
-        },
-        {
           "osId": "10292",
           "ativo": "Preventiva Grupo de Inversores      { THPN-MNG100-PGINVR1 }",
           "equipe": "",
@@ -4998,6 +4960,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10320",
+          "ativo": "Transformador 1      { ALLM-MRN100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
+          "horasAteFechar": 312.0,
           "atrasada": false
         },
         {
@@ -7699,25 +7680,6 @@
           "atrasada": false
         },
         {
-          "osId": "8308",
-          "ativo": "Cabine 1  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Felipe  Lima",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-07-01",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "2026-07-01",
-          "dataFinal": "2026-07-01",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8610",
           "ativo": "Transformador 1 WEG     { THPN-RDR100-TRFR1 }",
           "equipe": "",
@@ -7832,7 +7794,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 280
+      "historicoTotal": 281
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8916,17 +8878,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 515,
-        "emAberto": 92,
-        "atrasadas": 70,
-        "concluidas30d": 254,
-        "concluidas7d": 77,
-        "naSemanaCorrente": 23
+        "total": 518,
+        "emAberto": 94,
+        "atrasadas": 69,
+        "concluidas30d": 255,
+        "concluidas7d": 78,
+        "naSemanaCorrente": 26
       },
       "mttr": {
-        "horas": 166.39,
+        "horas": 166.31,
         "label": "6d 22h",
-        "amostra": 254
+        "amostra": 255
       },
       "tendencia4Semanas": [
         {
@@ -8946,16 +8908,16 @@
         },
         {
           "semana": "W34",
-          "criadas": 14,
-          "finalizadas": 1
+          "criadas": 17,
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 515,
-            "emAberto": 92
+            "total": 518,
+            "emAberto": 94
           }
         ],
         "responsaveis": [
@@ -8971,8 +8933,8 @@
           },
           {
             "nome": "Gilson Souza",
-            "total": 30,
-            "emAberto": 12
+            "total": 33,
+            "emAberto": 15
           },
           {
             "nome": "Cláudio  Ferreira",
@@ -8986,16 +8948,16 @@
           }
         ]
       },
-      "total": 92,
-      "atrasadas": 70,
+      "total": 94,
+      "atrasadas": 69,
       "porStatus": {
-        "naoIniciada": 81,
+        "naoIniciada": 84,
         "emProgresso": 2,
-        "pausada": 8,
+        "pausada": 7,
         "verificacao": 1
       },
       "porEquipe": {
-        "(sem equipe)": 92
+        "(sem equipe)": 94
       },
       "oss": [
         {
@@ -9280,7 +9242,7 @@
           "responsavel": "Júlio Willers ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Júlio Willers ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Santarém 1 e 2][Inversor 1.1] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-07-22",
@@ -10080,24 +10042,6 @@
           "atrasada": true
         },
         {
-          "osId": "11060",
-          "ativo": "Tracker 1.100 Axial Tracker 1VTwin    { THPN-EBG100-ETKR1.100 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Em progresso",
-          "tarefa": "[Tracker 1.100] - Verificação de Tracker 51",
-          "criticidade": "",
-          "dataProgramada": "2026-08-13",
-          "dataCriacao": "2026-08-11",
-          "dataInicial": "2026-08-17",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "atrasada": true
-        },
-        {
           "osId": "11183",
           "ativo": "Tracker 12.100 STI     { BWK100-ETKR12.100 }",
           "equipe": "",
@@ -10198,6 +10142,57 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "11353",
+          "ativo": "Tracker 08.106 Brametal Bi-motor    { SMP100-ETKR8.106 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 08.106] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11352",
+          "ativo": "Tracker 04.106 Brametal Bi-motor    { SMP100-ETKR4.106 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 04.106] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11351",
+          "ativo": "Tracker 02.106 Brametal Bi-motor    { SMP100-ETKR2.106 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 02.106] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "11345",
@@ -10575,6 +10570,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11060",
+          "ativo": "Tracker 1.100 Axial Tracker 1VTwin    { THPN-EBG100-ETKR1.100 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 1.100] - Verificação de Tracker 51",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-08-11",
+          "dataInicial": "2026-08-17",
+          "dataFinal": "2026-08-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "10406",
           "ativo": "Inversor 12.2 Huawei SUN2000-75KTL-M1    { THPN-SDI100-INVR12.2 }",
@@ -12305,25 +12319,6 @@
           "atrasada": false
         },
         {
-          "osId": "10003",
-          "ativo": "Tracker 07.107 Brametal Bi-motor    { CPP100-ETKR7.107 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizada",
-          "tarefa": "[Capitão Poço 1][Tracker 07.107] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-24",
-          "dataInicial": "2026-08-04",
-          "dataFinal": "2026-08-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 264.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10502",
           "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
           "equipe": "",
@@ -13426,7 +13421,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 377
+      "historicoTotal": 378
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15110,6 +15105,71 @@
   },
   "ossPublicas": [
     {
+      "osId": "11354",
+      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Luiz  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Cabine 5] - Religamento da Cabine 5",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11353",
+      "ativo": "Tracker 08.106 Brametal Bi-motor    { SMP100-ETKR8.106 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 08.106] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11352",
+      "ativo": "Tracker 04.106 Brametal Bi-motor    { SMP100-ETKR4.106 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 04.106] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11351",
+      "ativo": "Tracker 02.106 Brametal Bi-motor    { SMP100-ETKR2.106 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 02.106] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "11347",
       "ativo": "Estação Meteorológica Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-ESTM1 }",
       "equipe": "",
@@ -15124,24 +15184,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "11346",
-      "ativo": "SKID 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID1 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Italo  Lustosa",
-      "supervisor": "Felipe  Lima",
-      "status": "Em progresso",
-      "tarefa": "[SKID 1] - Religamento do SKID 1",
-      "criticidade": "",
-      "dataProgramada": "2026-08-17",
-      "dataCriacao": "2026-08-17",
-      "dataInicial": "2026-08-17",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
     },
     {
       "osId": "11345",
@@ -15366,24 +15408,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "11306",
-      "ativo": "Cabine 2 Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Valmir  Júnior",
-      "criadoPor": "Italo  Lustosa",
-      "supervisor": "Valmir  Júnior",
-      "status": "Em progresso",
-      "tarefa": "[Cabine 2] - Religamento da Cabine 2",
-      "criticidade": "",
-      "dataProgramada": "2026-08-17",
-      "dataCriacao": "2026-08-17",
-      "dataInicial": "2026-08-17",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15976,23 +16000,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "11060",
-      "ativo": "Tracker 1.100 Axial Tracker 1VTwin    { THPN-EBG100-ETKR1.100 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Eduardo  Mendes",
-      "status": "Em progresso",
-      "tarefa": "[Tracker 1.100] - Verificação de Tracker 51",
-      "criticidade": "",
-      "dataProgramada": "2026-08-13",
-      "dataCriacao": "2026-08-11",
-      "dataInicial": "2026-08-17",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
     },
     {
       "osId": "11043",
@@ -16787,23 +16794,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10320",
-      "ativo": "Transformador 1      { ALLM-MRN100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "pausado",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-13",
-      "dataCriacao": "2026-07-29",
-      "dataInicial": "2026-08-04",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
-    },
-    {
       "osId": "10319",
       "ativo": "Transformador 2      { IBI100-TRFR2 }",
       "equipe": "",
@@ -17519,7 +17509,7 @@
       "responsavel": "Júlio Willers ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Júlio Willers ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Santarém 1 e 2][Inversor 1.1] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-07-22",
@@ -18195,6 +18185,26 @@
   ],
   "ossHistorico": [
     {
+      "osId": "11350",
+      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizada",
+      "tarefa": "[Cabine 5] - Religamento da Cabine 5",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "2026-08-17",
+      "dataFinal": "2026-08-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "11348",
       "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
       "equipe": "",
@@ -18203,6 +18213,26 @@
       "supervisor": "Raphael Vitoriano ",
       "status": "Finalizada",
       "tarefa": "[Cabine 5] - Religamento da Cabine 5",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "2026-08-17",
+      "dataFinal": "2026-08-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "11346",
+      "ativo": "SKID 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Felipe  Lima",
+      "status": "Finalizados",
+      "tarefa": "[SKID 1] - Religamento do SKID 1",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-08-17",
@@ -18360,6 +18390,26 @@
       "responsavel": "Ricardo Silva ",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Ricardo Silva ",
+      "status": "Finalizados",
+      "tarefa": "[Cabine 2] - Religamento da Cabine 2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "2026-08-17",
+      "dataFinal": "2026-08-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "11306",
+      "ativo": "Cabine 2 Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Valmir  Júnior",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Valmir  Júnior",
       "status": "Finalizados",
       "tarefa": "[Cabine 2] - Religamento da Cabine 2",
       "criticidade": "",
@@ -20515,6 +20565,25 @@
       "atrasada": false
     },
     {
+      "osId": "11060",
+      "ativo": "Tracker 1.100 Axial Tracker 1VTwin    { THPN-EBG100-ETKR1.100 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 1.100] - Verificação de Tracker 51",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-08-11",
+      "dataInicial": "2026-08-17",
+      "dataFinal": "2026-08-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "11057",
       "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
       "equipe": "",
@@ -21083,89 +21152,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "11007",
-      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Railson Gomes ",
-      "status": "Finalizada",
-      "tarefa": "Religamento de usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "11006",
-      "ativo": "Cabine 7  Santa Maria do Pará  Pará Brasil { SMP100-CABN7 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizada",
-      "tarefa": "[Cabine 7] - Religamento da Cabine 7",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "11005",
-      "ativo": "Inversor 1.3 Sungrow SG250HX    { THPN-SDN100-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizada",
-      "tarefa": "[Inversor 1.3] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-13",
-      "dataFinal": "2026-08-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "11003",
-      "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2452,
-  "totalGeral": 5069,
+  "historicoTotal": 2457,
+  "totalGeral": 5074,
   "verificacao": {
     "total": 3,
     "atrasadas": 3,
