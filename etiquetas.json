@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T19:36:54Z",
+  "geradoEm": "2026-08-17T19:59:39Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 15,
       "atrasadas": 12,
       "porStatus": {
-        "naoIniciada": 12,
-        "emProgresso": 0,
+        "naoIniciada": 11,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 1
       },
@@ -317,14 +317,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Raphael Vitoriano",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Cabine 5] - Religamento da Cabine 5",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-17",
-          "dataInicial": "",
+          "dataInicial": "2026-08-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -793,7 +794,7 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Felipe  Lima",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[IND100-CABN1] - Religamento do IND100-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-08-16",
@@ -933,7 +934,7 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "CíceroWillian",
           "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "UFV: Nova Londrina 2 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
           "criticidade": "",
           "dataProgramada": "2026-08-16",
@@ -953,7 +954,7 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "CíceroWillian",
           "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "UFV: Nova Londrina 1 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
           "criticidade": "",
           "dataProgramada": "2026-08-16",
@@ -1453,7 +1454,7 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "CíceroWillian",
           "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "UFV: Nova Londrina 1 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
           "criticidade": "",
           "dataProgramada": "2026-08-14",
@@ -3594,12 +3595,12 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 622,
-        "emAberto": 74,
+        "total": 624,
+        "emAberto": 76,
         "atrasadas": 48,
         "concluidas30d": 93,
         "concluidas7d": 28,
-        "naSemanaCorrente": 28
+        "naSemanaCorrente": 30
       },
       "mttr": {
         "horas": 385.03,
@@ -3624,7 +3625,7 @@
         },
         {
           "semana": "W34",
-          "criadas": 8,
+          "criadas": 10,
           "finalizadas": 5
         }
       ],
@@ -3632,8 +3633,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 622,
-            "emAberto": 74
+            "total": 624,
+            "emAberto": 76
           }
         ],
         "responsaveis": [
@@ -3664,16 +3665,16 @@
           }
         ]
       },
-      "total": 74,
+      "total": 76,
       "atrasadas": 48,
       "porStatus": {
-        "naoIniciada": 70,
+        "naoIniciada": 72,
         "emProgresso": 0,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 74
+        "(sem equipe)": 76
       },
       "oss": [
         {
@@ -4659,6 +4660,40 @@
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-07-27",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11367",
+          "ativo": "Inversor 1.13 Huawei SUN2000-250KTL-H1    { STN100-INVR1.13 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Não Iniciada",
+          "tarefa": "[Saturnino] - Regularização de Termografia do Inversor 13 (Pendências MPS)",
+          "criticidade": "",
+          "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11366",
+          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STN100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Não Iniciada",
+          "tarefa": "[Saturnino] - Investigação de anomalia térmica no Inversor 6 (Pendências MPS)",
+          "criticidade": "",
+          "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-17",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -8875,12 +8910,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 518,
-        "emAberto": 92,
+        "total": 520,
+        "emAberto": 94,
         "atrasadas": 69,
         "concluidas30d": 257,
         "concluidas7d": 80,
-        "naSemanaCorrente": 26
+        "naSemanaCorrente": 28
       },
       "mttr": {
         "horas": 165.01,
@@ -8905,7 +8940,7 @@
         },
         {
           "semana": "W34",
-          "criadas": 17,
+          "criadas": 19,
           "finalizadas": 4
         }
       ],
@@ -8913,8 +8948,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 518,
-            "emAberto": 92
+            "total": 520,
+            "emAberto": 94
           }
         ],
         "responsaveis": [
@@ -8945,16 +8980,16 @@
           }
         ]
       },
-      "total": 92,
+      "total": 94,
       "atrasadas": 69,
       "porStatus": {
-        "naoIniciada": 85,
+        "naoIniciada": 87,
         "emProgresso": 2,
         "pausada": 4,
         "verificacao": 1
       },
       "porEquipe": {
-        "(sem equipe)": 92
+        "(sem equipe)": 94
       },
       "oss": [
         {
@@ -10527,6 +10562,40 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": false
+        },
+        {
+          "osId": "11369",
+          "ativo": "Inversor 1.1 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Felipe  Lima",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.1] - Inspeção Geral de módulo com falha",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11368",
+          "ativo": "Tracker 25.100 Brametal BRATracker Bifileira    { PRB100-ETKR25.100 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Felipe  Lima",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 25.100] - Verificação de Tracker 16 e 25",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -11069,7 +11138,7 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Anderson  Parente",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Tracker 81.101] - Verificação de Tracker em Altair 4",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
@@ -11088,7 +11157,7 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Anderson  Parente",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Tracker 73.101] - Verificação de Tracker em Altair 4",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
@@ -15046,6 +15115,70 @@
   },
   "ossPublicas": [
     {
+      "osId": "11369",
+      "ativo": "Inversor 1.1 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Felipe  Lima",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.1] - Inspeção Geral de módulo com falha",
+      "criticidade": "",
+      "dataProgramada": "2026-08-19",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11368",
+      "ativo": "Tracker 25.100 Brametal BRATracker Bifileira    { PRB100-ETKR25.100 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Felipe  Lima",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 25.100] - Verificação de Tracker 16 e 25",
+      "criticidade": "",
+      "dataProgramada": "2026-08-19",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11367",
+      "ativo": "Inversor 1.13 Huawei SUN2000-250KTL-H1    { STN100-INVR1.13 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Não Iniciada",
+      "tarefa": "[Saturnino] - Regularização de Termografia do Inversor 13 (Pendências MPS)",
+      "criticidade": "",
+      "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11366",
+      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STN100-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Não Iniciada",
+      "tarefa": "[Saturnino] - Investigação de anomalia térmica no Inversor 6 (Pendências MPS)",
+      "criticidade": "",
+      "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "11358",
       "ativo": "Cabine 1 Estrada Mun. Norimar Aparecida Brieda Piracicaba  São Paulo Brasil { PRB100-CABN1 }",
       "equipe": "",
@@ -15084,14 +15217,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Raphael Vitoriano",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Cabine 5] - Religamento da Cabine 5",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-08-17",
-      "dataInicial": "",
+      "dataInicial": "2026-08-17",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -18571,7 +18705,7 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Felipe  Lima",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "[IND100-CABN1] - Religamento do IND100-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-08-16",
@@ -18711,7 +18845,7 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "CíceroWillian",
       "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "UFV: Nova Londrina 2 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
       "criticidade": "",
       "dataProgramada": "2026-08-16",
@@ -18731,7 +18865,7 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "CíceroWillian",
       "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "UFV: Nova Londrina 1 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
       "criticidade": "",
       "dataProgramada": "2026-08-16",
@@ -19269,7 +19403,7 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "CíceroWillian",
       "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
+      "status": "Finalizada",
       "tarefa": "UFV: Nova Londrina 1 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
       "criticidade": "",
       "dataProgramada": "2026-08-14",
@@ -21058,7 +21192,7 @@
     }
   ],
   "historicoTotal": 2462,
-  "totalGeral": 5078,
+  "totalGeral": 5082,
   "verificacao": {
     "total": 2,
     "atrasadas": 2,
