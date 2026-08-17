@@ -892,19 +892,90 @@ function mpCompras(){
     +(MP_CMP_ABERTO?mpCmpTabela(C,hojeISO):'')
     +'</div>';
 }
+// Composição do valor por cluster (14/08/2026): o financeiro precisa saber o
+// QUE está sendo comprado, não só o total. Os itens já vinham no mpas.json
+// (qtd por equipamento + aterramento) e as premissas trazem o preço unitário;
+// aqui eles viram uma linha expansível sob o cluster.
+const CMP_ITENS = [
+  ['megometro',     'Megômetro 5 kV'],
+  ['microhmimetro', 'Microhmímetro 10 kV'],
+  ['terrometro',    'Terrômetro'],
+  ['chave_impacto', 'Chave de impacto + bateria + carregador'],
+  ['lanterna',      'Lanterna refletora à bateria'],
+];
+let MP_CMP_LINHA = null;                    // cluster com a composição aberta
+
+function mpCmpPreco(rotulo){
+  const P = (MP && MP.compras && MP.compras.premissas) || [];
+  const p = P.find(x => String(x.item || '').toLowerCase().startsWith(rotulo.toLowerCase().slice(0, 14)));
+  return p ? p.valor : 0;
+}
+
+function mpCmpComposicao(c){
+  const linhas = [];
+  let somaA = 0;
+  CMP_ITENS.forEach(([k, rot]) => {
+    const q = Number((c.qtd || {})[k] || 0);
+    if (!q) return;
+    const unit = mpCmpPreco(rot), tot = q * unit;
+    somaA += tot;
+    linhas.push([rot, q, unit, tot]);
+  });
+  if (c.aterramento) {
+    somaA += c.aterramento;
+    const faixa = (c.faixa && c.faixa !== 'PENDENTE') ? ' (' + c.faixa + ')' : '';
+    linhas.push(['Aterramento temporário' + faixa, 1, c.aterramento, c.aterramento]);
+  }
+  let h = '<div class="cmp-comp"><div class="cmp-comp-t">Composição do Cenário A &mdash; '
+        + esc(c.cluster) + '</div><table class="cmp-comp-tbl"><thead><tr>'
+        + '<th>Item</th><th style="text-align:center">Qtd</th>'
+        + '<th style="text-align:right">Unitário</th><th style="text-align:right">Total</th></tr></thead><tbody>';
+  linhas.forEach(([rot, q, u, t]) => {
+    h += '<tr><td>' + esc(rot) + '</td><td style="text-align:center">' + q + '</td>'
+       + '<td style="text-align:right">' + mpBRL(u) + '</td>'
+       + '<td style="text-align:right"><b>' + mpBRL(t) + '</b></td></tr>';
+  });
+  if (!linhas.length)
+    h += '<tr><td colspan="4" style="color:#8a8a94">Sem itens dimensionados para este cluster.</td></tr>';
+  h += '</tbody><tfoot><tr><td colspan="3" style="text-align:right">Cenário A</td>'
+     + '<td style="text-align:right"><b>' + mpBRL(c.valorA) + '</b></td></tr>'
+     + '<tr><td colspan="3" style="text-align:right">Cenário B (alternativa mais econômica)</td>'
+     + '<td style="text-align:right"><b>' + mpBRL(c.valorB) + '</b></td></tr></tfoot></table>';
+  // divergência entre a soma dos itens e o total da planilha: mostra, não esconde
+  if (Math.abs(somaA - (c.valorA || 0)) > 1)
+    h += '<div class="cmp-comp-av">A soma dos itens (' + mpBRL(somaA) + ') difere do valor da planilha ('
+       + mpBRL(c.valorA) + '). Conferir a linha do cluster na aba Compra Equip MPA 2026.</div>';
+  if (c.obs) h += '<div class="cmp-comp-obs">' + esc(c.obs) + '</div>';
+  const mpas = c.mpas || 0;
+  h += '<div class="cmp-comp-obs">Destrava <b>' + mpas + '</b> MPA(s)'
+     + (c.ancoraUsina ? ' &middot; âncora: ' + esc(c.ancoraUsina) : '')
+     + (mpas ? ' &middot; custo por MPA: <b>' + mpBRL((c.valorA || 0) / mpas) + '</b>' : '') + '</div>';
+  return h + '</div>';
+}
+
+function mpCmpLinha(cl){
+  MP_CMP_LINHA = (MP_CMP_LINHA === cl) ? null : cl;
+  mpCompras();
+}
+
 function mpCmpTabela(C,hojeISO){
   const l=C.clusters.slice().sort((a,b)=>String(a.ancora||'9').localeCompare(String(b.ancora||'9')));
   let h='<div style="overflow-x:auto"><table class="cmp-tbl"><thead><tr>'
-    +'<th>Cluster</th><th>Cliente</th><th>Âncora</th><th>MPAs</th>'
+    +'<th></th><th>Cluster</th><th>Cliente</th><th>Âncora</th><th>MPAs</th>'
     +'<th style="text-align:right">Cenário A</th><th style="text-align:right">Cenário B</th><th>Situação</th></tr></thead><tbody>';
   l.forEach(c=>{
     const venc=c.ancora&&c.ancora<hojeISO, d=mpDias(c.ancora);
     const st=venc?'<span class="cmp-pill p-red">vencida há '+Math.abs(d)+'d</span>'
       :c.pendencia?'<span class="cmp-pill p-amb">tensão pendente</span>'
       :'<span class="cmp-pill p-ok">em '+d+' dias</span>';
-    h+='<tr><td><b>'+esc(c.cluster)+'</b></td><td>'+esc(c.cliente||'')+'</td><td>'+mpDia(c.ancora)+'</td>'
+    const aberto = (MP_CMP_LINHA === c.cluster);
+    h+='<tr class="cmp-row'+(aberto?' on':'')+'" onclick="mpCmpLinha(&quot;'+esc(c.cluster)+'&quot;)" '
+      +'title="Ver o que compõe o valor">'
+      +'<td class="cmp-cv">'+(aberto?'&#9662;':'&#9656;')+'</td>'
+      +'<td><b>'+esc(c.cluster)+'</b></td><td>'+esc(c.cliente||'')+'</td><td>'+mpDia(c.ancora)+'</td>'
       +'<td>'+(c.mpas||0)+'</td><td style="text-align:right">'+mpBRL(c.valorA)+'</td>'
       +'<td style="text-align:right">'+mpBRL(c.valorB)+'</td><td>'+st+'</td></tr>';
+    if(aberto) h+='<tr class="cmp-comp-row"><td colspan="8">'+mpCmpComposicao(c)+'</td></tr>';
   });
   return h+'</tbody></table></div>';
 }

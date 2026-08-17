@@ -148,6 +148,35 @@ def carregar_contatos():
         return {}, p
 
 
+ASSINATURA_NOMES = ("assinatura.png", "assinatura.jpg", "assinatura.jpeg", "assinatura.gif")
+
+
+def assinatura_arquivo():
+    """Caminho do cartão de assinatura, se o PCM tiver colocado na pasta."""
+    base = pasta_dados()
+    for n in ASSINATURA_NOMES:
+        p = os.path.join(base, n)
+        if os.path.exists(p):
+            return p
+    return None
+
+
+def assinatura_html():
+    """Assinatura NO FIM do e-mail (14/08/2026).
+
+    O Outlook injeta a assinatura automática no TOPO do corpo que já vem pronto
+    no .eml — por isso o cartão aparecia antes do relatório. Como o novo Outlook
+    guarda a assinatura na nuvem (sem arquivo local para ler), a saída é o PCM
+    desligar a assinatura automática e deixar o cartão como imagem na pasta:
+    daí ele vai embutido aqui, no rodapé, onde deve ficar."""
+    p = assinatura_arquivo()
+    if not p:
+        return ""
+    return ('<div style="margin-top:22px">'
+            '<img src="cid:assinaturagridco" alt="" '
+            'style="display:block;max-width:520px;width:100%;height:auto;border:0"></div>')
+
+
 def dedup_blocos(rows):
     """O motor parte tarefas longas (MPA) em blocos de 4 h — para o cliente isso
     é a MESMA visita. Colapsa por (OS, dia) e mantém o período mais cedo, salvo
@@ -209,6 +238,31 @@ def bloco_fechamento(rows_ant, semana_ant, rows_atual):
             for r, d in sorted(volta, key=lambda x: str(x[0].get("os_id"))))
         lista = (f'<ul style="margin:8px 0 0 16px;padding:0;font-size:12px;'
                  f'color:#5a5566;line-height:1.5">{itens}</ul>')
+
+    # O que FOI concluído (pedido do PCM em 14/08). O bloco só mostrava o não
+    # feito, o que dava ao cliente uma leitura injusta da semana. A forma muda
+    # com o tamanho: listar as 139 OS da Thopen arruinaria o e-mail.
+    feito = ""
+    if feitas:
+        # Sempre agrupado por usina, e o número é de TAREFAS, não de OS (pedido
+        # do PCM em 14/08): uma OS pode ter 20 subtarefas, então contar OS
+        # subdimensiona o que a equipe realmente entregou na semana.
+        porusi = {}
+        for o in feitas:
+            for r in por_os[o]:
+                u = nome_usina(r)
+                porusi[u] = porusi.get(u, 0) + 1
+        # Sem teto (14/08): o "e mais 40 usina(s)" escondia justamente as usinas
+        # que o cliente quer ver reconhecidas. Em texto corrido, 50+ usinas ainda
+        # cabem num parágrafo — é bem menos volume que listar OS a OS.
+        top = sorted(porusi.items(), key=lambda x: (-x[1], x[0]))
+        corpo = (f'<div style="margin:6px 0 0;font-size:12px;color:#5a5566;line-height:1.6">'
+                 + " &middot; ".join(f'{esc(u)} <b>({n})</b>' for u, n in top)
+                 + '</div>')
+        feito = (f'<div style="margin-top:10px;padding-top:9px;border-top:1px solid #e4e4dc">'
+                 f'<div style="font-size:11px;color:{CINZA};text-transform:uppercase;'
+                 f'letter-spacing:.05em;font-weight:700">Conclu&iacute;das '
+                 f'&middot; tarefas por usina</div>{corpo}</div>')
     return (
         f'<div style="background:#f5f5f2;border-radius:8px;padding:12px 14px;margin:0 0 18px">'
         f'<div style="font-size:11px;color:{CINZA};text-transform:uppercase;letter-spacing:.05em;'
@@ -216,7 +270,12 @@ def bloco_fechamento(rows_ant, semana_ant, rows_atual):
         f'<div style="font-size:14px;color:{ESCURO}">'
         f'<b>{fin} de {tot} ordens de servi&ccedil;o conclu&iacute;das ({pct}%)</b>'
         + (' &middot; ' + ' &middot; '.join(det) if det else '')
-        + f'</div>{lista}</div>')
+        + f'</div>{feito}'
+        + (f'<div style="margin-top:10px;padding-top:9px;border-top:1px solid #e4e4dc">'
+           f'<div style="font-size:11px;color:{CINZA};text-transform:uppercase;'
+           f'letter-spacing:.05em;font-weight:700">Reprogramadas para esta semana</div>'
+           f'{lista}</div>' if lista else '')
+        + '</div>')
 
 
 def layout_a(cli, rows, semana_lbl, periodo_lbl, fechamento, resp):
@@ -364,7 +423,8 @@ def montar_email(cli, rows, semana_lbl, semana_ant_lbl, rows_ant, resp, anexo_no
     rodape = (f'<div style="margin-top:16px;padding-top:10px;border-top:1px solid #e6e6ee;'
               f'font-size:11px;color:{CINZA}">Respons&aacute;vel O&amp;M: {esc(resp)}'
               + (f'<br>Detalhe completo no anexo <b>{esc(anexo_nome)}</b>.' if grande and anexo_nome else '')
-              + '</div>')
+              + '</div>'
+              + assinatura_html())
     html_ = (f'<div style="font-family:Segoe UI,Arial,sans-serif;max-width:760px">'
              f'<div style="background:{ESCURO};color:#fff;padding:16px 18px;border-radius:8px 8px 0 0">'
              f'<div style="font-size:11px;color:{VERDE};letter-spacing:.06em">GRID CO. &mdash; O&amp;M</div>'
@@ -514,8 +574,21 @@ def main():
             sem_contato.append(cli)
             m["To"] = ""
         m["Subject"] = f"Grid Co. — Programação Semanal | {cli} | {alvo['label']}"
+        # X-Unsent: 1 faz o Outlook abrir o .eml como RASCUNHO (com botão
+        # Enviar) em vez de mensagem recebida (que só oferece Responder/
+        # Encaminhar). É o que entrega a decisão 15 — "rascunho no Outlook" —
+        # sem depender de COM/MAPI, que o novo Outlook não expõe.
+        m["X-Unsent"] = "1"
         m.set_content("Este e-mail tem versão HTML.")
         m.add_alternative(corpo, subtype="html")
+        # cartão de assinatura como imagem INLINE (cid), não como anexo solto
+        _sig = assinatura_arquivo()
+        if _sig:
+            import mimetypes
+            _sub = (mimetypes.guess_type(_sig)[0] or "image/png").split("/")[-1]
+            with open(_sig, "rb") as f:
+                m.get_payload()[1].add_related(
+                    f.read(), maintype="image", subtype=_sub, cid="<assinaturagridco>")
         if nome_anexo:
             with open(os.path.join(destino, nome_anexo), "rb") as f:
                 m.add_attachment(f.read(), maintype="application", filename=nome_anexo,

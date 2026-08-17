@@ -867,3 +867,18 @@ html{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .mtarefa-dia{display:flex;gap:8px;align-items:baseline;margin-bottom:5px}
 .mtarefa-h{font-size:11px;font-weight:700;color:#5E8C1A;background:#eef2e0;padding:2px 7px;border-radius:5px;white-space:nowrap}
 .mdia-out{margin-top:8px;padding-top:7px;border-top:1px dashed #e2e2ea;font-size:11.5px;color:#6b7280}
+
+/* Composição de compra por cluster (14/08/2026) */
+.cmp-row{cursor:pointer;transition:background .12s}
+.cmp-row:hover{background:#f7f9f2}
+.cmp-row.on{background:#f2f6e8}
+.cmp-cv{width:18px;color:#8a8a94;font-size:10px}
+.cmp-comp-row>td{padding:0!important;background:#fafaf7}
+.cmp-comp{padding:12px 16px 14px}
+.cmp-comp-t{font-size:11px;font-weight:800;color:#5E8C1A;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.cmp-comp-tbl{width:100%;border-collapse:collapse;font-size:12px}
+.cmp-comp-tbl th{text-align:left;font-size:10px;color:#8a8a94;text-transform:uppercase;padding:4px 8px;border-bottom:1px solid #e6e6ee}
+.cmp-comp-tbl td{padding:5px 8px;border-bottom:1px solid #efeff4}
+.cmp-comp-tbl tfoot td{border-top:1.5px solid #d8d8e2;border-bottom:none;padding-top:7px}
+.cmp-comp-av{margin-top:8px;font-size:11.5px;color:#8a5a08;background:#fffaf0;border-left:3px solid #e8a020;padding:6px 10px;border-radius:4px}
+.cmp-comp-obs{margin-top:7px;font-size:11.5px;color:#6b7280}
