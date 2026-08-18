@@ -53,6 +53,10 @@ async function authEntrar(p) {
     authAvisoSemPapel(p.userDetails || '');
     return;                                          // fica na tela, sem dados
   }
+  // FASE 2 (decisão 25 — filtro no servidor): no SWA, TODOS os papéis leem os
+  // dados por /api/dados; o cliente recebe do servidor apenas as linhas dele.
+  // No Pages/local não há /api, e CONFIG.JSON_URL continua o arquivo estático.
+  CONFIG.JSON_URL = '/api/dados';
   await loadDB();
   if (roles.includes('admin')) {
     S.isAdmin = true; S.user = 'Admin';
