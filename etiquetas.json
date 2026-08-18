@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-18T17:13:50Z",
+  "geradoEm": "2026-08-18T17:51:12Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,16 +8,16 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3719,
-        "emAberto": 15,
-        "atrasadas": 12,
+        "total": 3718,
+        "emAberto": 14,
+        "atrasadas": 11,
         "concluidas30d": 613,
-        "concluidas7d": 138,
-        "naSemanaCorrente": 34
+        "concluidas7d": 139,
+        "naSemanaCorrente": 35
       },
       "mttr": {
-        "horas": 12.18,
-        "label": "12h 11min",
+        "horas": 11.14,
+        "label": "11h 8min",
         "amostra": 613
       },
       "tendencia4Semanas": [
@@ -33,27 +33,27 @@
         },
         {
           "semana": "W33",
-          "criadas": 133,
+          "criadas": 132,
           "finalizadas": 133
         },
         {
           "semana": "W34",
-          "criadas": 34,
-          "finalizadas": 31
+          "criadas": 35,
+          "finalizadas": 32
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3719,
-            "emAberto": 15
+            "total": 3718,
+            "emAberto": 14
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 445,
+            "total": 446,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 15,
-      "atrasadas": 12,
+      "total": 14,
+      "atrasadas": 11,
       "porStatus": {
-        "naoIniciada": 13,
-        "emProgresso": 0,
+        "naoIniciada": 11,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 15
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -139,9 +139,10 @@
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-08-10",
           "dataInicial": "2026-08-10",
-          "dataFinal": "",
+          "dataFinal": "2026-08-14",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 96.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -194,24 +195,6 @@
           "criticidade": "",
           "dataProgramada": "2026-08-13",
           "dataCriacao": "2026-08-13",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "11203",
-          "ativo": "Inversor 1.5 Huawei     { TESTE100-INVR1.5 }",
-          "equipe": "",
-          "responsavel": "Cícero  Willian",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Cícero  Willian",
-          "status": "Não Iniciada",
-          "tarefa": "UFV: TESTE | Ação: Religamento Local| Falha: Inversor desligado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-14",
-          "dataCriacao": "2026-08-14",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -315,14 +298,15 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "CíceroWillian",
           "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[STB100-CABN1] - Religamento do STB100-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-08-18",
           "dataCriacao": "2026-08-18",
-          "dataInicial": "",
+          "dataInicial": "2026-08-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -364,6 +348,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11418",
+          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizada",
+          "tarefa": "[Cabine 5] - Religamento da Cabine 5",
+          "criticidade": "",
+          "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "2026-08-18",
+          "dataFinal": "2026-08-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "11414",
           "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
@@ -3343,34 +3347,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "10968",
-          "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizada",
-          "tarefa": "Religamento e Inspeção UFV Araçoiaba da Serra",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-08-10",
-          "dataInicial": "2026-08-10",
-          "dataFinal": "2026-08-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1663,
+      "historicoTotal": 1664,
       "subClassificacao": {
         "remoto": 745,
-        "local": 2974,
+        "local": 2973,
         "remotoEmAberto": 2,
-        "localEmAberto": 13,
+        "localEmAberto": 12,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3592,12 +3576,12 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 623,
-        "emAberto": 61,
+        "total": 624,
+        "emAberto": 62,
         "atrasadas": 46,
         "concluidas30d": 97,
         "concluidas7d": 28,
-        "naSemanaCorrente": 30
+        "naSemanaCorrente": 31
       },
       "mttr": {
         "horas": 377.81,
@@ -3622,7 +3606,7 @@
         },
         {
           "semana": "W34",
-          "criadas": 10,
+          "criadas": 11,
           "finalizadas": 9
         }
       ],
@@ -3630,8 +3614,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 623,
-            "emAberto": 61
+            "total": 624,
+            "emAberto": 62
           }
         ],
         "responsaveis": [
@@ -3662,16 +3646,16 @@
           }
         ]
       },
-      "total": 61,
+      "total": 62,
       "atrasadas": 46,
       "porStatus": {
-        "naoIniciada": 58,
+        "naoIniciada": 59,
         "emProgresso": 0,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 61
+        "(sem equipe)": 62
       },
       "oss": [
         {
@@ -4457,6 +4441,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "11423",
+          "ativo": "Inversor 5.9 Huawei     { MAB200-INVR5.9 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Ailton Leal ",
+          "status": "Não Iniciada",
+          "tarefa": "[Athon] - MPA - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "10130",
@@ -8653,17 +8654,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 523,
-        "emAberto": 85,
-        "atrasadas": 78,
-        "concluidas30d": 268,
-        "concluidas7d": 79,
-        "naSemanaCorrente": 31
+        "total": 530,
+        "emAberto": 91,
+        "atrasadas": 77,
+        "concluidas30d": 269,
+        "concluidas7d": 80,
+        "naSemanaCorrente": 38
       },
       "mttr": {
-        "horas": 168.18,
+        "horas": 168.54,
         "label": "7d 0h",
-        "amostra": 268
+        "amostra": 269
       },
       "tendencia4Semanas": [
         {
@@ -8679,20 +8680,20 @@
         {
           "semana": "W33",
           "criadas": 51,
-          "finalizadas": 77
+          "finalizadas": 76
         },
         {
           "semana": "W34",
-          "criadas": 22,
-          "finalizadas": 16
+          "criadas": 29,
+          "finalizadas": 17
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 523,
-            "emAberto": 85
+            "total": 530,
+            "emAberto": 91
           }
         ],
         "responsaveis": [
@@ -8708,8 +8709,8 @@
           },
           {
             "nome": "Gilson Souza",
-            "total": 33,
-            "emAberto": 12
+            "total": 36,
+            "emAberto": 15
           },
           {
             "nome": "Cláudio  Ferreira",
@@ -8723,16 +8724,16 @@
           }
         ]
       },
-      "total": 85,
-      "atrasadas": 78,
+      "total": 91,
+      "atrasadas": 77,
       "porStatus": {
-        "naoIniciada": 80,
-        "emProgresso": 1,
-        "pausada": 3,
-        "verificacao": 1
+        "naoIniciada": 85,
+        "emProgresso": 2,
+        "pausada": 4,
+        "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 85
+        "(sem equipe)": 91
       },
       "oss": [
         {
@@ -9255,14 +9256,15 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Rodrigo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 1.49] - Verificação de Tracker com Alarme",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-07",
-          "dataInicial": "",
+          "dataInicial": "2026-08-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 264.0,
           "atrasada": true
         },
         {
@@ -9342,23 +9344,6 @@
           "supervisor": "Rodrigo  Silva",
           "status": "Não Iniciada",
           "tarefa": "[Tracker 1.31] - Verificação de Tracker com Alarme",
-          "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10851",
-          "ativo": "Tracker 1.24 MTR Arcol     { PTL300-ETKR24.100 }",
-          "equipe": "",
-          "responsavel": "Rodrigo  Silva",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Rodrigo  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[Tracker 1.24] - Verificação de Tracker com Alarme",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-07",
@@ -9647,16 +9632,15 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Anderson  Parente",
-          "status": "Em Verificação",
+          "status": "pausado",
           "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-10",
           "dataInicial": "2026-08-11",
-          "dataFinal": "2026-08-13",
+          "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
-          "horasAteFechar": 48.0,
           "atrasada": true
         },
         {
@@ -10136,6 +10120,125 @@
           "atrasada": false
         },
         {
+          "osId": "11426",
+          "ativo": "GD Energy - Sol do Norte 2 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON200 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Coleta e análise de dados de geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11425",
+          "ativo": "GD Energy - Sol do Norte 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON100 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Coleta e análise de dados de geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11424",
+          "ativo": "GD Energy - Guajirú 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-GJR100 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Coleta e análise de dados de geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11422",
+          "ativo": "Inversor 1.9 Huawei     { THPN-NVL200-INVR1.9 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.9] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11421",
+          "ativo": "Tracker 06.104 Brametal Bi-motor    { SMP100-ETKR6.104 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 06.104] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11420",
+          "ativo": "Tracker 18.107 Brametal Bi-motor    { SMP100-ETKR18.107 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 18.107] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "11419",
+          "ativo": "Tracker 15.107 Brametal Bi-motor    { SMP100-ETKR15.107 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 15.107] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "11400",
           "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
           "equipe": "",
@@ -10311,6 +10414,25 @@
           "supervisor": "Rodrigo  Silva",
           "status": "Finalizados",
           "tarefa": "[Tracker 1.6] - Verificação de Tracker com Alarme",
+          "criticidade": "",
+          "dataProgramada": "2026-08-07",
+          "dataCriacao": "2026-08-07",
+          "dataInicial": "2026-08-18",
+          "dataFinal": "2026-08-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 264.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10851",
+          "ativo": "Tracker 1.24 MTR Arcol     { PTL300-ETKR24.100 }",
+          "equipe": "",
+          "responsavel": "Rodrigo  Silva",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Rodrigo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 1.24] - Verificação de Tracker com Alarme",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-08-07",
@@ -10908,25 +11030,6 @@
           "linkFracttal": "",
           "horasAteAbrir": 72.0,
           "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "10982",
-          "ativo": "Tracker 88.101 STI Norland dual row    { ALT100-ETKR88.101 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Anderson  Parente",
-          "status": "Em Verificação",
-          "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
-          "criticidade": "",
-          "dataProgramada": "2026-08-12",
-          "dataCriacao": "2026-08-10",
-          "dataInicial": "2026-08-11",
-          "dataFinal": "2026-08-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 48.0,
           "atrasada": false
         },
         {
@@ -14755,20 +14858,149 @@
   },
   "ossPublicas": [
     {
+      "osId": "11426",
+      "ativo": "GD Energy - Sol do Norte 2 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON200 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Coleta e análise de dados de geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-19",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11425",
+      "ativo": "GD Energy - Sol do Norte 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON100 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Coleta e análise de dados de geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-19",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11424",
+      "ativo": "GD Energy - Guajirú 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-GJR100 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Coleta e análise de dados de geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-19",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11423",
+      "ativo": "Inversor 5.9 Huawei     { MAB200-INVR5.9 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Ailton Leal ",
+      "status": "Não Iniciada",
+      "tarefa": "[Athon] - MPA - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11422",
+      "ativo": "Inversor 1.9 Huawei     { THPN-NVL200-INVR1.9 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.9] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-19",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11421",
+      "ativo": "Tracker 06.104 Brametal Bi-motor    { SMP100-ETKR6.104 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 06.104] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-19",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11420",
+      "ativo": "Tracker 18.107 Brametal Bi-motor    { SMP100-ETKR18.107 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 18.107] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-19",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "11419",
+      "ativo": "Tracker 15.107 Brametal Bi-motor    { SMP100-ETKR15.107 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 15.107] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-19",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "11415",
       "ativo": "Cabine 1  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-CABN1 }",
       "equipe": "",
       "responsavel": "Felipe  Lima",
       "criadoPor": "CíceroWillian",
       "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[STB100-CABN1] - Religamento do STB100-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-08-18",
       "dataCriacao": "2026-08-18",
-      "dataInicial": "",
+      "dataInicial": "2026-08-18",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15435,23 +15667,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "11203",
-      "ativo": "Inversor 1.5 Huawei     { TESTE100-INVR1.5 }",
-      "equipe": "",
-      "responsavel": "Cícero  Willian",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Cícero  Willian",
-      "status": "Não Iniciada",
-      "tarefa": "UFV: TESTE | Ação: Religamento Local| Falha: Inversor desligado",
-      "criticidade": "",
-      "dataProgramada": "2026-08-14",
-      "dataCriacao": "2026-08-14",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "11187",
       "ativo": "Estação Meteorológica Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-ESTM1 }",
       "equipe": "",
@@ -15718,16 +15933,15 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Anderson  Parente",
-      "status": "Em Verificação",
+      "status": "pausado",
       "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-10",
       "dataInicial": "2026-08-11",
-      "dataFinal": "2026-08-13",
+      "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 48.0
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "10976",
@@ -15758,9 +15972,10 @@
       "dataProgramada": "2026-08-10",
       "dataCriacao": "2026-08-10",
       "dataInicial": "2026-08-10",
-      "dataFinal": "",
+      "dataFinal": "2026-08-14",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 96.0,
       "modalidade": "local"
     },
     {
@@ -15803,14 +16018,15 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Rodrigo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 1.49] - Verificação de Tracker com Alarme",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-07",
-      "dataInicial": "",
+      "dataInicial": "2026-08-18",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 264.0
     },
     {
       "osId": "10856",
@@ -15885,22 +16101,6 @@
       "supervisor": "Rodrigo  Silva",
       "status": "Não Iniciada",
       "tarefa": "[Tracker 1.31] - Verificação de Tracker com Alarme",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "10851",
-      "ativo": "Tracker 1.24 MTR Arcol     { PTL300-ETKR24.100 }",
-      "equipe": "",
-      "responsavel": "Rodrigo  Silva",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Rodrigo  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[Tracker 1.24] - Verificação de Tracker com Alarme",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-08-07",
@@ -17504,6 +17704,26 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "11418",
+      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizada",
+      "tarefa": "[Cabine 5] - Religamento da Cabine 5",
+      "criticidade": "",
+      "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "2026-08-18",
+      "dataFinal": "2026-08-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
     {
       "osId": "11414",
       "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
@@ -20451,59 +20671,15 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "11053",
-      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-11",
-      "dataCriacao": "2026-08-11",
-      "dataInicial": "2026-08-11",
-      "dataFinal": "2026-08-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2464,
-  "totalGeral": 5100,
+  "historicoTotal": 2465,
+  "totalGeral": 5107,
   "verificacao": {
-    "total": 1,
-    "atrasadas": 1,
-    "porEquipe": {
-      "(sem equipe)": 1
-    },
-    "porResponsavel": {
-      "Anderson  Parente": 1
-    },
-    "oss": [
-      {
-        "osId": "10982",
-        "ativo": "Tracker 88.101 STI Norland dual row    { ALT100-ETKR88.101 }",
-        "equipe": "",
-        "responsavel": "Anderson  Parente",
-        "criadoPor": "Gabriela Dias ",
-        "supervisor": "Anderson  Parente",
-        "status": "Em Verificação",
-        "tarefa": "[Tracker 88.101] - Verificação de Tracker em Altair 4",
-        "criticidade": "",
-        "dataProgramada": "2026-08-12",
-        "dataCriacao": "2026-08-10",
-        "dataInicial": "2026-08-11",
-        "dataFinal": "2026-08-13",
-        "linkFracttal": "",
-        "horasAteAbrir": 24.0,
-        "horasAteFechar": 48.0,
-        "atrasada": true
-      }
-    ]
+    "total": 0,
+    "atrasadas": 0,
+    "porEquipe": {},
+    "porResponsavel": {},
+    "oss": []
   }
 }
