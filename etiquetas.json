@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-18T16:40:52Z",
+  "geradoEm": "2026-08-18T17:13:50Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3719,
-        "emAberto": 14,
+        "emAberto": 15,
         "atrasadas": 12,
-        "concluidas30d": 614,
-        "concluidas7d": 139,
-        "naSemanaCorrente": 33
+        "concluidas30d": 613,
+        "concluidas7d": 138,
+        "naSemanaCorrente": 34
       },
       "mttr": {
-        "horas": 12.16,
-        "label": "12h 10min",
-        "amostra": 614
+        "horas": 12.18,
+        "label": "12h 11min",
+        "amostra": 613
       },
       "tendencia4Semanas": [
         {
@@ -33,12 +33,12 @@
         },
         {
           "semana": "W33",
-          "criadas": 134,
-          "finalizadas": 135
+          "criadas": 133,
+          "finalizadas": 133
         },
         {
           "semana": "W34",
-          "criadas": 33,
+          "criadas": 34,
           "finalizadas": 31
         }
       ],
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3719,
-            "emAberto": 14
+            "emAberto": 15
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
+      "total": 15,
       "atrasadas": 12,
       "porStatus": {
-        "naoIniciada": 12,
+        "naoIniciada": 13,
         "emProgresso": 0,
-        "pausada": 1,
-        "verificacao": 1
+        "pausada": 2,
+        "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -133,16 +133,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Felipe Silva",
           "supervisor": "Wesllen  Castro",
-          "status": "Em Verificação",
+          "status": "pausado",
           "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-08-10",
           "dataInicial": "2026-08-10",
-          "dataFinal": "2026-08-14",
+          "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 0,
-          "horasAteFechar": 96.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -308,6 +307,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "11415",
+          "ativo": "Cabine 1  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Felipe  Lima",
+          "status": "Não Iniciada",
+          "tarefa": "[STB100-CABN1] - Religamento do STB100-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "11404",
@@ -1576,26 +1593,6 @@
           "supervisor": "Felipe Silva ",
           "status": "Finalizada",
           "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-14",
-          "dataCriacao": "2026-08-14",
-          "dataInicial": "2026-08-14",
-          "dataFinal": "2026-08-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "11232",
-          "ativo": "Cabine 1    TESTE TESTE { TESTE100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Cícero  Willian",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Cícero  Willian",
-          "status": "Finalizados",
-          "tarefa": "UFV: TESTE - PA | Proteção: 47 | Ação: Religamento Local | Falha: Usina desligada",
           "criticidade": "",
           "dataProgramada": "2026-08-14",
           "dataCriacao": "2026-08-14",
@@ -3346,14 +3343,34 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
+        },
+        {
+          "osId": "10968",
+          "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Finalizada",
+          "tarefa": "Religamento e Inspeção UFV Araçoiaba da Serra",
+          "criticidade": "",
+          "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-08-10",
+          "dataInicial": "2026-08-10",
+          "dataFinal": "2026-08-10",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
         }
       ],
-      "historicoTotal": 1665,
+      "historicoTotal": 1663,
       "subClassificacao": {
         "remoto": 745,
         "local": 2974,
         "remotoEmAberto": 2,
-        "localEmAberto": 12,
+        "localEmAberto": 13,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3576,16 +3593,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 623,
-        "emAberto": 63,
+        "emAberto": 61,
         "atrasadas": 46,
-        "concluidas30d": 95,
-        "concluidas7d": 26,
+        "concluidas30d": 97,
+        "concluidas7d": 28,
         "naSemanaCorrente": 30
       },
       "mttr": {
-        "horas": 385.26,
-        "label": "16d 1h",
-        "amostra": 95
+        "horas": 377.81,
+        "label": "15d 17h",
+        "amostra": 97
       },
       "tendencia4Semanas": [
         {
@@ -3606,7 +3623,7 @@
         {
           "semana": "W34",
           "criadas": 10,
-          "finalizadas": 7
+          "finalizadas": 9
         }
       ],
       "topOfensores": {
@@ -3614,7 +3631,7 @@
           {
             "nome": "(sem equipe)",
             "total": 623,
-            "emAberto": 63
+            "emAberto": 61
           }
         ],
         "responsaveis": [
@@ -3645,16 +3662,16 @@
           }
         ]
       },
-      "total": 63,
+      "total": 61,
       "atrasadas": 46,
       "porStatus": {
         "naoIniciada": 58,
-        "emProgresso": 1,
-        "pausada": 4,
+        "emProgresso": 0,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 63
+        "(sem equipe)": 61
       },
       "oss": [
         {
@@ -4442,42 +4459,6 @@
           "atrasada": true
         },
         {
-          "osId": "11367",
-          "ativo": "Inversor 1.13 Huawei SUN2000-250KTL-H1    { STN100-INVR1.13 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Em progresso",
-          "tarefa": "[Saturnino] - Regularização de Termografia do Inversor 13 (Pendências MPS)",
-          "criticidade": "",
-          "dataProgramada": "2026-08-18",
-          "dataCriacao": "2026-08-17",
-          "dataInicial": "2026-08-18",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "atrasada": false
-        },
-        {
-          "osId": "11366",
-          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STN100-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "pausado",
-          "tarefa": "[Saturnino] - Investigação de anomalia térmica no Inversor 6 (Pendências MPS)",
-          "criticidade": "",
-          "dataProgramada": "2026-08-18",
-          "dataCriacao": "2026-08-17",
-          "dataInicial": "2026-08-18",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "atrasada": false
-        },
-        {
           "osId": "10130",
           "ativo": "Sistema de Segurança  Petrolina  Pernambuco Brasil { PTL300-SSEG1 }",
           "equipe": "",
@@ -4735,6 +4716,44 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11367",
+          "ativo": "Inversor 1.13 Huawei SUN2000-250KTL-H1    { STN100-INVR1.13 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "[Saturnino] - Regularização de Termografia do Inversor 13 (Pendências MPS)",
+          "criticidade": "",
+          "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "2026-08-18",
+          "dataFinal": "2026-08-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "11366",
+          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STN100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "[Saturnino] - Investigação de anomalia térmica no Inversor 6 (Pendências MPS)",
+          "criticidade": "",
+          "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "2026-08-18",
+          "dataFinal": "2026-08-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "10726",
           "ativo": "Estação Meteorológica  Ibirapuã  Bahia Brasil { IBI200-ESTM1 }",
@@ -6788,25 +6807,6 @@
           "atrasada": false
         },
         {
-          "osId": "8382",
-          "ativo": "Infraestrutura Civil Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB200-INFC1 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "James Chaves ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-06-25",
-          "dataCriacao": "2026-06-25",
-          "dataInicial": "2026-07-10",
-          "dataFinal": "2026-07-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 360.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9022",
           "ativo": "Infraestrutura Civil  Demerval Lobão  Piauí Brasil { DML100-INFC1 }",
           "equipe": "",
@@ -7529,25 +7529,6 @@
           "atrasada": false
         },
         {
-          "osId": "8317",
-          "ativo": "Infraestrutura Civil  Vargem Grande  Espirito Santo Brasil { VRG100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Marcos Duarte ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Infraestrutura",
-          "criticidade": "",
-          "dataProgramada": "2026-07-01",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "2026-06-30",
-          "dataFinal": "2026-06-30",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8530",
           "ativo": "Cabine 1  Araputanga  Mato Grosso Brasil { APG100-CABN1 }",
           "equipe": "",
@@ -7586,7 +7567,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 278
+      "historicoTotal": 280
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8673,16 +8654,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 523,
-        "emAberto": 86,
-        "atrasadas": 79,
-        "concluidas30d": 267,
-        "concluidas7d": 78,
+        "emAberto": 85,
+        "atrasadas": 78,
+        "concluidas30d": 268,
+        "concluidas7d": 79,
         "naSemanaCorrente": 31
       },
       "mttr": {
-        "horas": 167.82,
-        "label": "6d 23h",
-        "amostra": 267
+        "horas": 168.18,
+        "label": "7d 0h",
+        "amostra": 268
       },
       "tendencia4Semanas": [
         {
@@ -8703,7 +8684,7 @@
         {
           "semana": "W34",
           "criadas": 22,
-          "finalizadas": 15
+          "finalizadas": 16
         }
       ],
       "topOfensores": {
@@ -8711,7 +8692,7 @@
           {
             "nome": "(sem equipe)",
             "total": 523,
-            "emAberto": 86
+            "emAberto": 85
           }
         ],
         "responsaveis": [
@@ -8742,16 +8723,16 @@
           }
         ]
       },
-      "total": 86,
-      "atrasadas": 79,
+      "total": 85,
+      "atrasadas": 78,
       "porStatus": {
         "naoIniciada": 80,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 1
       },
       "porEquipe": {
-        "(sem equipe)": 86
+        "(sem equipe)": 85
       },
       "oss": [
         {
@@ -9265,24 +9246,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10858",
-          "ativo": "Tracker 1.6 MTR Arcol     { PTL300-ETKR6.100 }",
-          "equipe": "",
-          "responsavel": "Rodrigo  Silva",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Rodrigo  Silva",
-          "status": "Em progresso",
-          "tarefa": "[Tracker 1.6] - Verificação de Tracker com Alarme",
-          "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-18",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 264.0,
           "atrasada": true
         },
         {
@@ -10336,6 +10299,25 @@
           "dataFinal": "2026-08-18",
           "linkFracttal": "",
           "horasAteAbrir": 144.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10858",
+          "ativo": "Tracker 1.6 MTR Arcol     { PTL300-ETKR6.100 }",
+          "equipe": "",
+          "responsavel": "Rodrigo  Silva",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Rodrigo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 1.6] - Verificação de Tracker com Alarme",
+          "criticidade": "",
+          "dataProgramada": "2026-08-07",
+          "dataCriacao": "2026-08-07",
+          "dataInicial": "2026-08-18",
+          "dataFinal": "2026-08-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 264.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -13019,25 +13001,6 @@
           "atrasada": false
         },
         {
-          "osId": "10154",
-          "ativo": "Inversor 1.5 Huawei     { THPN-NVL200-INVR1.5 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Inversor 1.5] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-07-27",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-07-29",
-          "dataFinal": "2026-07-29",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10242",
           "ativo": "Tracker 14.100      { ADS100-ETKR14.100 }",
           "equipe": "",
@@ -13076,7 +13039,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 391
+      "historicoTotal": 392
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14792,6 +14755,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "11415",
+      "ativo": "Cabine 1  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Felipe  Lima",
+      "status": "Não Iniciada",
+      "tarefa": "[STB100-CABN1] - Religamento do STB100-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11404",
       "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
       "equipe": "",
@@ -14952,40 +14932,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "11367",
-      "ativo": "Inversor 1.13 Huawei SUN2000-250KTL-H1    { STN100-INVR1.13 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Em progresso",
-      "tarefa": "[Saturnino] - Regularização de Termografia do Inversor 13 (Pendências MPS)",
-      "criticidade": "",
-      "dataProgramada": "2026-08-18",
-      "dataCriacao": "2026-08-17",
-      "dataInicial": "2026-08-18",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0
-    },
-    {
-      "osId": "11366",
-      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STN100-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "pausado",
-      "tarefa": "[Saturnino] - Investigação de anomalia térmica no Inversor 6 (Pendências MPS)",
-      "criticidade": "",
-      "dataProgramada": "2026-08-18",
-      "dataCriacao": "2026-08-17",
-      "dataInicial": "2026-08-18",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0
     },
     {
       "osId": "11358",
@@ -15806,16 +15752,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Felipe Silva",
       "supervisor": "Wesllen  Castro",
-      "status": "Em Verificação",
+      "status": "pausado",
       "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
       "dataCriacao": "2026-08-10",
       "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-14",
+      "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 0,
-      "horasAteFechar": 96.0,
       "modalidade": "local"
     },
     {
@@ -15850,23 +15795,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "10858",
-      "ativo": "Tracker 1.6 MTR Arcol     { PTL300-ETKR6.100 }",
-      "equipe": "",
-      "responsavel": "Rodrigo  Silva",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Rodrigo  Silva",
-      "status": "Em progresso",
-      "tarefa": "[Tracker 1.6] - Verificação de Tracker com Alarme",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-18",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 264.0
     },
     {
       "osId": "10857",
@@ -17796,6 +17724,44 @@
       "atrasada": false
     },
     {
+      "osId": "11367",
+      "ativo": "Inversor 1.13 Huawei SUN2000-250KTL-H1    { STN100-INVR1.13 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Finalizados",
+      "tarefa": "[Saturnino] - Regularização de Termografia do Inversor 13 (Pendências MPS)",
+      "criticidade": "",
+      "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "2026-08-18",
+      "dataFinal": "2026-08-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "11366",
+      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STN100-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Finalizados",
+      "tarefa": "[Saturnino] - Investigação de anomalia térmica no Inversor 6 (Pendências MPS)",
+      "criticidade": "",
+      "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "2026-08-18",
+      "dataFinal": "2026-08-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "11364",
       "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
       "equipe": "",
@@ -18947,26 +18913,6 @@
       "linkFracttal": "",
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "11232",
-      "ativo": "Cabine 1    TESTE TESTE { TESTE100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Cícero  Willian",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Cícero  Willian",
-      "status": "Finalizados",
-      "tarefa": "UFV: TESTE - PA | Proteção: 47 | Ação: Religamento Local | Falha: Usina desligada",
-      "criticidade": "",
-      "dataProgramada": "2026-08-14",
-      "dataCriacao": "2026-08-14",
-      "dataInicial": "2026-08-14",
-      "dataFinal": "2026-08-14",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -20525,60 +20471,20 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "11051",
-      "ativo": "Estrutura Trackers Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-ETKR1 }",
-      "equipe": "",
-      "responsavel": "Francisco  Santos",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Francisco  Santos",
-      "status": "Finalizados",
-      "tarefa": "[SKC 04 - SKC 1.1.4] - Realizar a inspeção e normalização da SKC",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-11",
-      "dataInicial": "2026-08-12",
-      "dataFinal": "2026-08-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2463,
+  "historicoTotal": 2464,
   "totalGeral": 5100,
   "verificacao": {
-    "total": 2,
-    "atrasadas": 2,
+    "total": 1,
+    "atrasadas": 1,
     "porEquipe": {
-      "(sem equipe)": 2
+      "(sem equipe)": 1
     },
     "porResponsavel": {
-      "Anderson  Parente": 1,
-      "Wesllen  Castro": 1
+      "Anderson  Parente": 1
     },
     "oss": [
-      {
-        "osId": "10965",
-        "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.4 }",
-        "equipe": "",
-        "responsavel": "Wesllen  Castro",
-        "criadoPor": "Felipe Silva",
-        "supervisor": "Wesllen  Castro",
-        "status": "Em Verificação",
-        "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
-        "criticidade": "",
-        "dataProgramada": "2026-08-10",
-        "dataCriacao": "2026-08-10",
-        "dataInicial": "2026-08-10",
-        "dataFinal": "2026-08-14",
-        "linkFracttal": "",
-        "horasAteAbrir": 0,
-        "horasAteFechar": 96.0,
-        "modalidade": "local",
-        "atrasada": true
-      },
       {
         "osId": "10982",
         "ativo": "Tracker 88.101 STI Norland dual row    { ALT100-ETKR88.101 }",
