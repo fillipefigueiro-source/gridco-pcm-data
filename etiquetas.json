@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-18T10:53:50Z",
+  "geradoEm": "2026-08-18T11:33:56Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3714,
-        "emAberto": 14,
+        "total": 3716,
+        "emAberto": 16,
         "atrasadas": 14,
         "concluidas30d": 609,
         "concluidas7d": 134,
-        "naSemanaCorrente": 28
+        "naSemanaCorrente": 30
       },
       "mttr": {
         "horas": 12.26,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W34",
-          "criadas": 28,
+          "criadas": 30,
           "finalizadas": 26
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3714,
-            "emAberto": 14
+            "total": 3716,
+            "emAberto": 16
           }
         ],
         "responsaveis": [
@@ -58,8 +58,8 @@
           },
           {
             "nome": "Marcos  Camargo",
-            "total": 442,
-            "emAberto": 1
+            "total": 443,
+            "emAberto": 2
           },
           {
             "nome": "Felipe Silva",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
+      "total": 16,
       "atrasadas": 14,
       "porStatus": {
-        "naoIniciada": 12,
-        "emProgresso": 0,
-        "pausada": 2,
-        "verificacao": 0
+        "naoIniciada": 13,
+        "emProgresso": 1,
+        "pausada": 1,
+        "verificacao": 1
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -133,7 +133,7 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Felipe Silva",
           "supervisor": "Wesllen  Castro",
-          "status": "pausado",
+          "status": "Em Verificação",
           "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
@@ -344,6 +344,43 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "11384",
+          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Adriano  Moraes",
+          "status": "Em progresso",
+          "tarefa": "[2C - Araputanga 1 - MT] - Religamento do 2C - Araputanga 1 - MT",
+          "criticidade": "",
+          "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "2026-08-18",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11382",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Marcos  Camargo",
+          "status": "Não Iniciada",
+          "tarefa": "[Axis - Marialva 1 - PR] - Religamento do Axis - Marialva 1 - PR",
+          "criticidade": "",
+          "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -1794,7 +1831,7 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Felipe Silva",
           "supervisor": "Wesllen  Castro",
-          "status": "pausado",
+          "status": "Em Verificação",
           "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
@@ -3351,9 +3388,9 @@
       "historicoTotal": 1660,
       "subClassificacao": {
         "remoto": 745,
-        "local": 2969,
+        "local": 2971,
         "remotoEmAberto": 2,
-        "localEmAberto": 12,
+        "localEmAberto": 14,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3648,8 +3685,8 @@
       "total": 76,
       "atrasadas": 58,
       "porStatus": {
-        "naoIniciada": 73,
-        "emProgresso": 0,
+        "naoIniciada": 72,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
@@ -4209,14 +4246,15 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Anderson  Parente",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-08-07",
           "dataCriacao": "2026-07-27",
-          "dataInicial": "",
+          "dataInicial": "2026-08-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 528.0,
           "atrasada": true
         },
         {
@@ -15143,6 +15181,41 @@
   },
   "ossPublicas": [
     {
+      "osId": "11384",
+      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Adriano  Moraes",
+      "status": "Em progresso",
+      "tarefa": "[2C - Araputanga 1 - MT] - Religamento do 2C - Araputanga 1 - MT",
+      "criticidade": "",
+      "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "2026-08-18",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
+      "osId": "11382",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Marcos  Camargo",
+      "status": "Não Iniciada",
+      "tarefa": "[Axis - Marialva 1 - PR] - Religamento do Axis - Marialva 1 - PR",
+      "criticidade": "",
+      "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11379",
       "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
       "equipe": "",
@@ -16235,7 +16308,7 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Felipe Silva",
       "supervisor": "Wesllen  Castro",
-      "status": "pausado",
+      "status": "Em Verificação",
       "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
@@ -17317,14 +17390,15 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Anderson  Parente",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-08-07",
       "dataCriacao": "2026-07-27",
-      "dataInicial": "",
+      "dataInicial": "2026-08-18",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 528.0
     },
     {
       "osId": "10185",
@@ -21266,17 +21340,38 @@
     }
   ],
   "historicoTotal": 2443,
-  "totalGeral": 5093,
+  "totalGeral": 5095,
   "verificacao": {
-    "total": 1,
-    "atrasadas": 1,
+    "total": 2,
+    "atrasadas": 2,
     "porEquipe": {
-      "(sem equipe)": 1
+      "(sem equipe)": 2
     },
     "porResponsavel": {
-      "Anderson  Parente": 1
+      "Anderson  Parente": 1,
+      "Wesllen  Castro": 1
     },
     "oss": [
+      {
+        "osId": "10965",
+        "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.4 }",
+        "equipe": "",
+        "responsavel": "Wesllen  Castro",
+        "criadoPor": "Felipe Silva",
+        "supervisor": "Wesllen  Castro",
+        "status": "Em Verificação",
+        "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
+        "criticidade": "",
+        "dataProgramada": "2026-08-10",
+        "dataCriacao": "2026-08-10",
+        "dataInicial": "2026-08-10",
+        "dataFinal": "2026-08-14",
+        "linkFracttal": "",
+        "horasAteAbrir": 0,
+        "horasAteFechar": 96.0,
+        "modalidade": "local",
+        "atrasada": true
+      },
       {
         "osId": "10982",
         "ativo": "Tracker 88.101 STI Norland dual row    { ALT100-ETKR88.101 }",
