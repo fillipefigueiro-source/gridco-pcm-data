@@ -9,21 +9,16 @@
       "statusCode": 404
     },
     {
+      "route": "/api/*",
+      "allowedRoles": [
+        "authenticated"
+      ]
+    },
+    {
       "route": "/banco_dados.json",
       "allowedRoles": [
         "admin",
-        "equipe",
-        "cli-2c",
-        "cli-alves-lima",
-        "cli-athon",
-        "cli-axis",
-        "cli-gd-energy",
-        "cli-greenyellow",
-        "cli-renogrid",
-        "cli-sal-energia",
-        "cli-semp",
-        "cli-thopen",
-        "cli-utragaz"
+        "equipe"
       ]
     },
     {
