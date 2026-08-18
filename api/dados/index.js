@@ -30,8 +30,6 @@ const PAPEL_CLIENTE = {
   'cli-thopen': 'Thopen', 'cli-utragaz': 'Utragaz',
 };
 
-// blocos que nunca saem para cliente (conteúdo operacional interno)
-const SO_INTERNO = ['alertas', 'qualidade', 'rolagem', 'motivos'];
 
 function principalDe(req) {
   try {
@@ -48,6 +46,13 @@ function carregarBase() {
   return JSON.parse(fs.readFileSync(p, 'utf8'));
 }
 
+// ATENÇÃO a quem for manter: a proteção aqui é por LISTA DE PERMISSÃO — só os
+// campos explicitamente copiados abaixo saem para o cliente. Não existe (nem
+// deve existir) lista de exclusão: blocos internos como alertas, qualidade,
+// rolagem e motivos ficam de fora por NÃO estarem nesta lista, e qualquer bloco
+// novo do banco_dados.json também fica, por padrão.
+// NUNCA troque isto por um spread do objeto base ({...base, rows}) — seria o
+// caminho para vazar um bloco novo sem ninguém perceber.
 function filtrarParaCliente(base, cliente) {
   const saida = { geradoEm: base.geradoEm, cliente: cliente, semanas: [] };
   for (const w of base.semanas || []) {
