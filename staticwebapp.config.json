@@ -1,0 +1,95 @@
+{
+  "routes": [
+    {
+      "route": "/.auth/login/github",
+      "statusCode": 404
+    },
+    {
+      "route": "/.auth/login/twitter",
+      "statusCode": 404
+    },
+    {
+      "route": "/banco_dados.json",
+      "allowedRoles": [
+        "admin",
+        "equipe",
+        "cli-2c",
+        "cli-alves-lima",
+        "cli-athon",
+        "cli-axis",
+        "cli-gd-energy",
+        "cli-greenyellow",
+        "cli-renogrid",
+        "cli-sal-energia",
+        "cli-semp",
+        "cli-thopen",
+        "cli-utragaz"
+      ]
+    },
+    {
+      "route": "/gestao_pcm.json",
+      "allowedRoles": [
+        "admin",
+        "equipe"
+      ]
+    },
+    {
+      "route": "/etiquetas.json",
+      "allowedRoles": [
+        "admin",
+        "equipe"
+      ]
+    },
+    {
+      "route": "/mpas.json",
+      "allowedRoles": [
+        "admin",
+        "equipe"
+      ]
+    },
+    {
+      "route": "/sugestoes.json",
+      "allowedRoles": [
+        "admin",
+        "equipe"
+      ]
+    },
+    {
+      "route": "/supervisores.json",
+      "allowedRoles": [
+        "admin",
+        "equipe"
+      ]
+    },
+    {
+      "route": "/confiabilidade.json",
+      "allowedRoles": [
+        "admin",
+        "equipe",
+        "cli-2c",
+        "cli-alves-lima",
+        "cli-athon",
+        "cli-axis",
+        "cli-gd-energy",
+        "cli-greenyellow",
+        "cli-renogrid",
+        "cli-sal-energia",
+        "cli-semp",
+        "cli-thopen",
+        "cli-utragaz"
+      ]
+    },
+    {
+      "route": "/*",
+      "allowedRoles": [
+        "authenticated"
+      ]
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "redirect": "/.auth/login/aad?post_login_redirect_uri=.referrer",
+      "statusCode": 302
+    }
+  }
+}
