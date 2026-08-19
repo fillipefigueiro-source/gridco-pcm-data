@@ -585,6 +585,14 @@ const MP_MS={cluster:{f:'cluster',lbl:'Todos'},usina:{f:'usina_curta',lbl:'Todas
 const MP_SEL={cluster:new Set(),usina:new Set(),tipo:new Set(),cliente:new Set(),
   situacao:new Set(),prioridade:new Set()};
 const MP_D={de:'',ate:'',pre:''};                 // filtro de data prevista (aaaa-mm-dd)
+// 19/08/2026 — filtro por AÇÃO NECESSÁRIA. A aba era organizada por Equipe
+// Cluster (a chave de quem executa) e nem o gerente operacional nem o
+// financeiro achavam o que era deles. Este filtro é a porta de entrada nova:
+// '' = tudo | 'bloq' travada por compra | 'atraso' | 'prox' vence em 30d | 'ok'.
+// Entra no mpFilt(), então a árvore, o Gantt e a planilha geral já o respeitam.
+let MP_ACAO='';
+const MP_ACAO_LBL={bloq:'Travadas por compra',atraso:'Atrasadas',
+                   prox:'Vencem em 30 dias',ok:'Concluídas'};
 const MP_SITS=['Concluída','Em andamento','Não iniciada','Atrasada'];
 const MP_MESES=['janeiro','fevereiro','março','abril','maio','junho','julho',
                 'agosto','setembro','outubro','novembro','dezembro'];
@@ -637,6 +645,38 @@ function mpSit(r){
   const cls={'Concluída':'green','Em andamento':'blue','Não iniciada':'amber','Atrasada':'red'}[k]||'gray';
   return {k,cls};
 }
+// Clusters cujo kit de equipamento ainda não foi comprado e cuja âncora já
+// venceu: as MPAs deles não têm como ser executadas. Memoizado por geradoEm.
+let _MP_TRAV=null,_MP_TRAV_G=null;
+function mpTrav(){
+  const g=(MP&&MP.geradoEm)||'';
+  if(_MP_TRAV&&_MP_TRAV_G===g)return _MP_TRAV;
+  const out={},hoje=new Date().toISOString().slice(0,10);
+  ((MP&&MP.compras&&MP.compras.clusters)||[]).forEach(c=>{
+    if(c.ancora&&c.ancora<hoje)out[c.cluster]=c;});
+  _MP_TRAV_G=g;_MP_TRAV=out;return out;
+}
+// A categoria é EXCLUSIVA e a ordem importa: uma MPA atrasada num cluster sem
+// kit é 'bloq', não 'atraso' — cobrar execução dela seria cobrar o impossível.
+function mpCat(r){
+  const k=mpSit(r).k;
+  if(k==='Concluída')return 'ok';
+  if(r.tipo==='MPA'&&mpTrav()[r.cluster])return 'bloq';
+  if(k==='Atrasada')return 'atraso';
+  const hoje=new Date().toISOString().slice(0,10);
+  const d=new Date();d.setDate(d.getDate()+30);
+  const lim=d.toISOString().slice(0,10);
+  if(r.prevista&&r.prevista>=hoje&&r.prevista<=lim)return 'prox';
+  return 'futuro';
+}
+const mpBateAcao=r=>!MP_ACAO||mpCat(r)===MP_ACAO;
+function mpAcaoSet(cat){
+  MP_ACAO=(MP_ACAO===cat)?'':cat;
+  // "Concluídas" precisa do checkbox ligado, senão o recorte volta vazio
+  if(MP_ACAO==='ok')MP_F.concluidas=true;
+  const cb=document.getElementById('mp-f-conc');if(cb)cb.checked=MP_F.concluidas;
+  renderMpas();
+}
 // valor do registro para um campo do filtro ('_sit' é calculado)
 const mpCampo=(r,f)=>f==='_sit'?mpSit(r).k:(r[f]||'');
 // vazio = todos; comparação case-insensitive (o Fracttal varia a grafia)
@@ -656,7 +696,7 @@ function mpBateData(r){
   return true;
 }
 const mpVisBase=r=>['cluster','usina','tipo','cliente','prioridade'].every(k=>mpBate(r,k))&&mpBateData(r);
-const mpFilt=()=>(MP?MP.manut:[]).filter(r=>mpVisBase(r)&&mpBate(r,'situacao'));
+const mpFilt=()=>(MP?MP.manut:[]).filter(r=>mpVisBase(r)&&mpBate(r,'situacao')&&mpBateAcao(r));
 
 // ---- componente multi-seleção (reusa o CSS .gp-ms) ----
 function mpMsOptions(key){
@@ -782,13 +822,15 @@ function mpDataUI(){
 }
 function mpLimpar(){
   Object.keys(MP_SEL).forEach(k=>MP_SEL[k].clear());
-  MP_F.concluidas=false; MP_D.de='';MP_D.ate='';MP_D.pre='';
+  MP_F.concluidas=false; MP_D.de='';MP_D.ate='';MP_D.pre=''; MP_ACAO='';
   const cb=document.getElementById('mp-f-conc'); if(cb)cb.checked=false;
   Object.keys(MP_MS).forEach(k=>{mpBuildPop(k);mpMsLabel(k);});
   mpDataUI(); renderMpas();
 }
 function mpChips(){
   const out=[];
+  if(MP_ACAO)out.push('<span class="mp-chip" onclick="mpAcaoSet(&quot;'+MP_ACAO+'&quot;)">'
+    +esc(MP_ACAO_LBL[MP_ACAO]||MP_ACAO)+' ✕</span>');
   if(MP_D.de||MP_D.ate){
     const br=s=>s?s.split('-').reverse().join('/'):'';
     const rot=MP_D.de&&MP_D.ate?br(MP_D.de)+' a '+br(MP_D.ate)
@@ -825,11 +867,21 @@ function mpTabela(list){
       +'<td class="mp-dt">'+(r.prevista?esc(mpDataBR(r.prevista)):'—')+'</td>'
       +'<td class="mp-eq">'+(r.equipe?nl(r.equipe):'—')+'</td>'
       +'<td class="mp-ap">'+(r.apoio?nl(r.apoio):'—')+'</td>'
+      // 19/08: o MOTIVO vem das colunas de pendência da planilha (equipamento
+      // faltante, compra, desligamento perdido). A "Observação" conta a
+      // história; esta coluna diz a causa. Texto completo no title.
+      +(typeof mpMotivo==='function'
+        ? (()=>{const m=mpMotivo(r);
+            return '<td class="mp-mot"'+(m.det?' title="'+esc(m.det)+'"':'')+'>'
+                 +(m.txt?'⚠ '+esc(m.txt):'—')+'</td>';})()
+        : '')
       +'<td class="mp-ob">'+(r.obs?nl(r.obs):'—')+'</td></tr>';
   }).join('');
   return '<div class="mp-tblwrap"><table class="mp-tbl"><thead><tr>'
     +'<th>OS ID</th><th>Situação</th><th>Data Prevista</th>'
-    +'<th>Equipe</th><th>Apoio na equipe</th><th>Observação</th>'
+    +'<th>Equipe</th><th>Apoio na equipe</th>'
+    +(typeof mpMotivo==='function'?'<th>Por que está parado</th>':'')
+    +'<th>Observação</th>'
     +'</tr></thead><tbody>'+linhas+'</tbody></table></div>';
 }
 const mpDataBR=iso=>{const p=String(iso||'').split('-');return p.length===3?(p[2]+'/'+p[1]+'/'+p[0]):iso;};
@@ -1001,7 +1053,8 @@ function renderMpas(){
   document.getElementById('mp-lock').style.display='none';
   document.getElementById('mp-body').style.display='';
   mpFiltros(); mpChips(); mpKpis(); mpCompras();
-  const mostrarConc=MP_F.concluidas||MP_SEL.situacao.has('Concluída');
+  if(typeof mpAcao==='function'){try{mpAcao();}catch(e){console.warn('painel de ação:',e);}}
+  const mostrarConc=MP_F.concluidas||MP_SEL.situacao.has('Concluída')||MP_ACAO==='ok';
   const rows=mpFilt().filter(r=>mostrarConc||mpSit(r).k!=='Concluída');
   document.getElementById('mp-hint').textContent=
     (mostrarConc?'Todas as manutenções':'Não finalizadas')

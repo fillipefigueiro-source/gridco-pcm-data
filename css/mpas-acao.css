@@ -1,0 +1,79 @@
+/* ───────────────────────────────────────────────────────────────────────────
+   mpas-acao.css — Gestão MPAS: painel "O que precisa da sua atenção".
+   Criado em 19/08/2026.
+
+   Por que existe: a aba nasceu organizada por Equipe Cluster — a chave de quem
+   EXECUTA. O gerente operacional e o financeiro não conseguiam ver o que está
+   atrasado, o que é urgente e quais usinas pedem atenção, porque isso estava
+   diluído dentro da árvore. Este bloco entra ANTES de tudo e organiza por AÇÃO,
+   dizendo em cada cartão quem resolve. Os cartões são filtros: clicar num deles
+   recorta a aba inteira (KPIs, Gantt, árvore e planilha geral).
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.mpa-wrap { margin: 0 0 14px }
+
+.mpa-cap { font-size: 11px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .06em; color: #8a8a94; margin: 2px 2px 8px }
+
+.mpa-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px }
+@media (max-width: 1000px) { .mpa-grid { grid-template-columns: repeat(2, 1fr) } }
+
+.mpa-card { position: relative; background: #fff; border: 1px solid var(--line);
+  border-radius: 10px; padding: 13px 15px 12px; cursor: pointer; overflow: hidden;
+  transition: box-shadow .15s, transform .15s }
+.mpa-card:hover { box-shadow: 0 4px 14px rgba(24,21,43,.10); transform: translateY(-1px) }
+.mpa-card.sel { outline: 2px solid #191528; outline-offset: 1px }
+.mpa-card .top { position: absolute; top: 0; left: 0; right: 0; height: 3px }
+.mpa-card .cl { font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .04em; color: #8a8a94 }
+.mpa-card .cv { font-size: 30px; font-weight: 800; line-height: 1.1; margin-top: 3px;
+  letter-spacing: -.02em }
+.mpa-card .cs { font-size: 11.5px; color: #5a5566; margin-top: 4px; line-height: 1.4;
+  min-height: 32px }
+.mpa-card .cd { display: inline-block; font-size: 10px; font-weight: 800;
+  border-radius: 11px; padding: 3px 9px; margin-top: 8px }
+
+.mpa-r  .cv { color: #b91c1c } .mpa-r  .cd { background: #fee2e2; color: #991b1b }
+.mpa-a  .cv { color: #b45309 } .mpa-a  .cd { background: #fef3c7; color: #92400e }
+.mpa-b  .cv { color: #1d4ed8 } .mpa-b  .cd { background: #dbeafe; color: #1e40af }
+.mpa-g  .cv { color: #15803d } .mpa-g  .cd { background: #dcfce7; color: #166534 }
+
+/* avisos: coisas que fazem o número mudar de sentido (nota velha, tensão em
+   branco). Ficam colados nos cartões de propósito — são ressalva, não enfeite. */
+.mpa-av { background: #fffbeb; border: 1px solid #fde68a; border-radius: 9px;
+  padding: 9px 13px; font-size: 12px; color: #78350f; line-height: 1.5; margin-top: 10px;
+  display: flex; gap: 8px }
+.mpa-av b { color: #92400e }
+.mpa-av > span { flex: 0 0 auto }
+
+/* ranking de usinas */
+.mpa-rank { background: #fff; border: 1px solid var(--line); border-radius: 10px;
+  margin-top: 12px; overflow: hidden }
+.mpa-rank-h { display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 15px; border-bottom: 1px solid var(--line) }
+.mpa-rank-h .t { font-size: 13.5px; font-weight: 700 }
+.mpa-rank-h .s { font-size: 11.5px; color: #8a8a94 }
+.mpa-rank-w { overflow-x: auto }
+.mpa-tbl { width: 100%; border-collapse: collapse; font-size: 12.5px }
+.mpa-tbl th { text-align: left; font-size: 10px; color: #8a8a98; text-transform: uppercase;
+  letter-spacing: .05em; padding: 7px 12px; border-bottom: 1px solid var(--line);
+  background: #fafafd }
+.mpa-tbl td { padding: 9px 12px; border-bottom: 1px solid #f2f2f7; vertical-align: top }
+.mpa-tbl tr:last-child td { border-bottom: 0 }
+.mpa-tbl tr.cl-row { cursor: pointer }
+.mpa-tbl tr.cl-row:hover td { background: #f8faf3 }
+.mpa-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; margin-top: 4px }
+.mpa-u { font-weight: 700 }
+.mpa-mut { color: #8a8a98; font-size: 11px; font-weight: 400 }
+.mpa-acao { font-size: 11.5px; color: #1e3a8a; font-weight: 700 }
+.mpa-nota { font-size: 11px; color: #5a5566; margin-top: 3px; line-height: 1.45; cursor: help }
+.mpa-nota.mot { color: #7c2d12 }
+
+/* colunas novas nas tabelas que já existiam (árvore e planilha geral) */
+.mp-mot { max-width: 230px; font-size: 11.5px; color: #7c2d12; line-height: 1.4; cursor: help }
+.mp-obsd { font-size: 10px; font-weight: 800; border-radius: 10px; padding: 2px 8px;
+  white-space: nowrap; display: inline-block; margin-bottom: 3px }
+.od-ok  { background: #dcfce7; color: #166534 }
+.od-med { background: #fef3c7; color: #92400e }
+.od-old { background: #fee2e2; color: #991b1b }
+.od-sd  { background: #eef0f5; color: #475569 }
