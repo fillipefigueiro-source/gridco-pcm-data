@@ -19,6 +19,10 @@ on:
       - "js/**"
       - "*.json"
       - "staticwebapp.config.json"
+      # api/** estava de fora: uma correcao no api/dados/index.js -- que e o
+      # codigo que decide o que cada cliente ve -- nao publicava sozinha. O
+      # sintoma seria a correcao urgente nao subir, sem nada falhar.
+      - "api/**"
   workflow_dispatch:
 
 jobs:
