@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-19T16:40:48Z",
+  "geradoEm": "2026-08-19T17:12:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3750,
+        "total": 3752,
         "emAberto": 21,
         "atrasadas": 13,
-        "concluidas30d": 623,
-        "concluidas7d": 141,
-        "naSemanaCorrente": 67
+        "concluidas30d": 625,
+        "concluidas7d": 143,
+        "naSemanaCorrente": 69
       },
       "mttr": {
-        "horas": 11.23,
-        "label": "11h 14min",
-        "amostra": 623
+        "horas": 11.19,
+        "label": "11h 12min",
+        "amostra": 625
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W34",
-          "criadas": 67,
-          "finalizadas": 57
+          "criadas": 69,
+          "finalizadas": 58
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3750,
+            "total": 3752,
             "emAberto": 21
           }
         ],
@@ -83,8 +83,8 @@
       "porStatus": {
         "naoIniciada": 19,
         "emProgresso": 1,
-        "pausada": 0,
-        "verificacao": 1
+        "pausada": 1,
+        "verificacao": 0
       },
       "porEquipe": {
         "(sem equipe)": 21
@@ -277,16 +277,15 @@
           "responsavel": "Railson Gomes ",
           "criadoPor": "David  Nascimento",
           "supervisor": "Railson Gomes ",
-          "status": "Em Verificação",
+          "status": "pausado",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-18",
           "dataInicial": "2026-08-18",
-          "dataFinal": "2026-08-18",
+          "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 0,
-          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -473,6 +472,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11501",
+          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+          "equipe": "",
+          "responsavel": "Luely  Santos",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Luely  Santos",
+          "status": "Finalizada",
+          "tarefa": "[Cabine 5] - Religamento da Cabine 5",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-19",
+          "dataInicial": "2026-08-19",
+          "dataFinal": "2026-08-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11500",
+          "ativo": "Athon -  Timon 2 - MA LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { ATHN-TIM200 }",
+          "equipe": "",
+          "responsavel": "Luely  Santos",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Luely  Santos",
+          "status": "Finalizada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-19",
+          "dataInicial": "2026-08-19",
+          "dataFinal": "2026-08-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "11495",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
@@ -1064,26 +1103,6 @@
           "tarefa": "[THPN-CDS100] - Religamento do THPN-CDS100",
           "criticidade": "",
           "dataProgramada": "2026-08-18",
-          "dataCriacao": "2026-08-18",
-          "dataInicial": "2026-08-18",
-          "dataFinal": "2026-08-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "11379",
-          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "David  Nascimento",
-          "supervisor": "Railson Gomes ",
-          "status": "Em Verificação",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-18",
           "dataInicial": "2026-08-18",
           "dataFinal": "2026-08-18",
@@ -3452,32 +3471,12 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "11041",
-          "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "[Cabine 5] - Religamento da Cabine 5",
-          "criticidade": "",
-          "dataProgramada": "2026-08-11",
-          "dataCriacao": "2026-08-11",
-          "dataInicial": "2026-08-11",
-          "dataFinal": "2026-08-11",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1671,
+      "historicoTotal": 1672,
       "subClassificacao": {
         "remoto": 745,
-        "local": 3005,
+        "local": 3007,
         "remotoEmAberto": 2,
         "localEmAberto": 19,
         "pctRemoto": 20,
@@ -8816,9 +8815,9 @@
       "total": 85,
       "atrasadas": 73,
       "porStatus": {
-        "naoIniciada": 66,
+        "naoIniciada": 65,
         "emProgresso": 3,
-        "pausada": 16,
+        "pausada": 17,
         "verificacao": 0
       },
       "porEquipe": {
@@ -9955,14 +9954,15 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Inversor 3.1] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-14",
-          "dataInicial": "",
+          "dataInicial": "2026-08-19",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 120.0,
           "atrasada": true
         },
         {
@@ -15663,16 +15663,15 @@
       "responsavel": "Railson Gomes ",
       "criadoPor": "David  Nascimento",
       "supervisor": "Railson Gomes ",
-      "status": "Em Verificação",
+      "status": "pausado",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-08-18",
       "dataInicial": "2026-08-18",
-      "dataFinal": "2026-08-18",
+      "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 0,
-      "horasAteFechar": 0,
       "modalidade": "local"
     },
     {
@@ -16210,14 +16209,15 @@
       "responsavel": "Ricardo Silva ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Inversor 3.1] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-08-14",
-      "dataInicial": "",
+      "dataInicial": "2026-08-19",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0
     },
     {
       "osId": "11241",
@@ -18142,6 +18142,46 @@
   ],
   "ossHistorico": [
     {
+      "osId": "11501",
+      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
+      "equipe": "",
+      "responsavel": "Luely  Santos",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Luely  Santos",
+      "status": "Finalizada",
+      "tarefa": "[Cabine 5] - Religamento da Cabine 5",
+      "criticidade": "",
+      "dataProgramada": "2026-08-19",
+      "dataCriacao": "2026-08-19",
+      "dataInicial": "2026-08-19",
+      "dataFinal": "2026-08-19",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "11500",
+      "ativo": "Athon -  Timon 2 - MA LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { ATHN-TIM200 }",
+      "equipe": "",
+      "responsavel": "Luely  Santos",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Luely  Santos",
+      "status": "Finalizada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-19",
+      "dataCriacao": "2026-08-19",
+      "dataInicial": "2026-08-19",
+      "dataFinal": "2026-08-19",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "11495",
       "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
       "equipe": "",
@@ -18808,26 +18848,6 @@
       "tarefa": "[THPN-CDS100] - Religamento do THPN-CDS100",
       "criticidade": "",
       "dataProgramada": "2026-08-18",
-      "dataCriacao": "2026-08-18",
-      "dataInicial": "2026-08-18",
-      "dataFinal": "2026-08-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "11379",
-      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "David  Nascimento",
-      "supervisor": "Railson Gomes ",
-      "status": "Em Verificação",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-08-18",
       "dataInicial": "2026-08-18",
       "dataFinal": "2026-08-18",
@@ -21094,60 +21114,15 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "11123",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-12",
-      "dataInicial": "2026-08-12",
-      "dataFinal": "2026-08-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2482,
-  "totalGeral": 5149,
+  "historicoTotal": 2483,
+  "totalGeral": 5151,
   "verificacao": {
-    "total": 1,
-    "atrasadas": 1,
-    "porEquipe": {
-      "(sem equipe)": 1
-    },
-    "porResponsavel": {
-      "Railson Gomes": 1
-    },
-    "oss": [
-      {
-        "osId": "11379",
-        "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-        "equipe": "",
-        "responsavel": "Railson Gomes ",
-        "criadoPor": "David  Nascimento",
-        "supervisor": "Railson Gomes ",
-        "status": "Em Verificação",
-        "tarefa": "[Usina] - Religamento da Usina",
-        "criticidade": "",
-        "dataProgramada": "2026-08-17",
-        "dataCriacao": "2026-08-18",
-        "dataInicial": "2026-08-18",
-        "dataFinal": "2026-08-18",
-        "linkFracttal": "",
-        "horasAteAbrir": 0,
-        "horasAteFechar": 0,
-        "modalidade": "local",
-        "atrasada": true
-      }
-    ]
+    "total": 0,
+    "atrasadas": 0,
+    "porEquipe": {},
+    "porResponsavel": {},
+    "oss": []
   }
 }
