@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-19T17:12:07Z",
+  "geradoEm": "2026-08-19T17:49:12Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3752,
-        "emAberto": 21,
+        "total": 3753,
+        "emAberto": 22,
         "atrasadas": 13,
         "concluidas30d": 625,
         "concluidas7d": 143,
-        "naSemanaCorrente": 69
+        "naSemanaCorrente": 70
       },
       "mttr": {
         "horas": 11.19,
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W34",
-          "criadas": 69,
-          "finalizadas": 58
+          "criadas": 70,
+          "finalizadas": 59
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3752,
-            "emAberto": 21
+            "total": 3753,
+            "emAberto": 22
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 21,
+      "total": 22,
       "atrasadas": 13,
       "porStatus": {
         "naoIniciada": 19,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 21
+        "(sem equipe)": 22
       },
       "oss": [
         {
@@ -283,9 +283,10 @@
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-18",
           "dataInicial": "2026-08-18",
-          "dataFinal": "",
+          "dataFinal": "2026-08-18",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -296,14 +297,15 @@
           "responsavel": "Valdério Paz ",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Valdério Paz ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-18",
           "dataCriacao": "2026-08-19",
-          "dataInicial": "",
+          "dataInicial": "2026-08-19",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -324,6 +326,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "11502",
+          "ativo": "Inversor 1.2 Huawei SUN-330KTL-H1    { GTA500-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Henri Almeida ",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Henri Almeida ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-19",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "11499",
@@ -1103,6 +1123,26 @@
           "tarefa": "[THPN-CDS100] - Religamento do THPN-CDS100",
           "criticidade": "",
           "dataProgramada": "2026-08-18",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "2026-08-18",
+          "dataFinal": "2026-08-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11379",
+          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "David  Nascimento",
+          "supervisor": "Railson Gomes ",
+          "status": "pausado",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-18",
           "dataInicial": "2026-08-18",
           "dataFinal": "2026-08-18",
@@ -3451,34 +3491,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "11045",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-11",
-          "dataCriacao": "2026-08-11",
-          "dataInicial": "2026-08-11",
-          "dataFinal": "2026-08-11",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1672,
+      "historicoTotal": 1673,
       "subClassificacao": {
         "remoto": 745,
-        "local": 3007,
+        "local": 3008,
         "remotoEmAberto": 2,
-        "localEmAberto": 19,
+        "localEmAberto": 20,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -3701,16 +3721,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 607,
-        "emAberto": 61,
-        "atrasadas": 48,
-        "concluidas30d": 87,
-        "concluidas7d": 20,
+        "emAberto": 60,
+        "atrasadas": 47,
+        "concluidas30d": 88,
+        "concluidas7d": 21,
         "naSemanaCorrente": 29
       },
       "mttr": {
-        "horas": 400.0,
+        "horas": 400.91,
         "label": "16d 16h",
-        "amostra": 87
+        "amostra": 88
       },
       "tendencia4Semanas": [
         {
@@ -3731,7 +3751,7 @@
         {
           "semana": "W34",
           "criadas": 9,
-          "finalizadas": 7
+          "finalizadas": 8
         }
       ],
       "topOfensores": {
@@ -3739,7 +3759,7 @@
           {
             "nome": "(sem equipe)",
             "total": 607,
-            "emAberto": 61
+            "emAberto": 60
           }
         ],
         "responsaveis": [
@@ -3770,16 +3790,16 @@
           }
         ]
       },
-      "total": 61,
-      "atrasadas": 48,
+      "total": 60,
+      "atrasadas": 47,
       "porStatus": {
         "naoIniciada": 58,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 61
+        "(sem equipe)": 60
       },
       "oss": [
         {
@@ -4224,24 +4244,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10421",
-          "ativo": "Transformador 1  Seco    { IBT200-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Andrick Gouveia ",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-13",
-          "dataCriacao": "2026-07-30",
-          "dataInicial": "2026-08-19",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 480.0,
           "atrasada": true
         },
         {
@@ -4824,6 +4826,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10421",
+          "ativo": "Transformador 1  Seco    { IBT200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Andrick Gouveia ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Andrick Gouveia ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "2026-08-19",
+          "dataFinal": "2026-08-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 480.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "10232",
           "ativo": "Preventiva Grupo de Inversores      { THPN-IBT100-PGINVR1 }",
@@ -5876,7 +5897,7 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Adriano  Moraes",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
@@ -7504,25 +7525,6 @@
           "atrasada": false
         },
         {
-          "osId": "8255",
-          "ativo": "Cabine 1  Caçapava  São Paulo Brasil { MRJ100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Hélio Silva ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Hélio Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-07-07",
-          "dataCriacao": "2026-06-23",
-          "dataInicial": "2026-07-01",
-          "dataFinal": "2026-07-01",
-          "linkFracttal": "",
-          "horasAteAbrir": 192.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8610",
           "ativo": "Transformador 1 WEG     { THPN-RDR100-TRFR1 }",
           "equipe": "",
@@ -7675,7 +7677,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 257
+      "historicoTotal": 258
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8816,8 +8818,8 @@
       "atrasadas": 73,
       "porStatus": {
         "naoIniciada": 65,
-        "emProgresso": 3,
-        "pausada": 17,
+        "emProgresso": 2,
+        "pausada": 18,
         "verificacao": 0
       },
       "porEquipe": {
@@ -9257,7 +9259,7 @@
           "responsavel": "Marcos  Camargo",
           "criadoPor": "Levi Maia ",
           "supervisor": "Marcos  Camargo",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Mandaguaçu 1][Inversor 4.4] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-07-23",
@@ -15276,6 +15278,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "11502",
+      "ativo": "Inversor 1.2 Huawei SUN-330KTL-H1    { GTA500-INVR1.2 }",
+      "equipe": "",
+      "responsavel": "Henri Almeida ",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Henri Almeida ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-19",
+      "dataCriacao": "2026-08-19",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11499",
       "ativo": "SKID 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID1 }",
       "equipe": "",
@@ -15300,14 +15319,15 @@
       "responsavel": "Valdério Paz ",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Valdério Paz ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-08-18",
       "dataCriacao": "2026-08-19",
-      "dataInicial": "",
+      "dataInicial": "2026-08-19",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15669,9 +15689,10 @@
       "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-08-18",
       "dataInicial": "2026-08-18",
-      "dataFinal": "",
+      "dataFinal": "2026-08-18",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
       "modalidade": "local"
     },
     {
@@ -16867,23 +16888,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10421",
-      "ativo": "Transformador 1  Seco    { IBT200-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Andrick Gouveia ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Andrick Gouveia ",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-13",
-      "dataCriacao": "2026-07-30",
-      "dataInicial": "2026-08-19",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 480.0
-    },
-    {
       "osId": "10416",
       "ativo": "Transformador 3 Romagnoli     { ELF100-TRFR3 }",
       "equipe": "",
@@ -17597,7 +17601,7 @@
       "responsavel": "Marcos  Camargo",
       "criadoPor": "Levi Maia ",
       "supervisor": "Marcos  Camargo",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Mandaguaçu 1][Inversor 4.4] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-07-23",
@@ -18848,6 +18852,26 @@
       "tarefa": "[THPN-CDS100] - Religamento do THPN-CDS100",
       "criticidade": "",
       "dataProgramada": "2026-08-18",
+      "dataCriacao": "2026-08-18",
+      "dataInicial": "2026-08-18",
+      "dataFinal": "2026-08-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "11379",
+      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "David  Nascimento",
+      "supervisor": "Railson Gomes ",
+      "status": "pausado",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-08-18",
       "dataInicial": "2026-08-18",
       "dataFinal": "2026-08-18",
@@ -21094,30 +21118,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "11124",
-      "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizada",
-      "tarefa": "[Cabine 5] - Religamento da Cabine 5",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-12",
-      "dataInicial": "2026-08-12",
-      "dataFinal": "2026-08-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2483,
-  "totalGeral": 5151,
+  "historicoTotal": 2485,
+  "totalGeral": 5152,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
