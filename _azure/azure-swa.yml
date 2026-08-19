@@ -1,10 +1,17 @@
-# Melhoria 5 — deploy do painel no Azure Static Web Apps (decisão 25).
+# ============================================================================
+# ESTA CÓPIA NÃO RODA. Editar aqui NÃO tem efeito nenhum.
 #
-# INERTE de propósito: fora de .github/workflows/ o GitHub não executa.
-# Para LIGAR (depois que o recurso SWA existir no Azure e o segredo
-# AZURE_STATIC_WEB_APPS_API_TOKEN estiver cadastrado no repositório), o DONO
-# do repositório copia este arquivo para .github/workflows/azure-swa.yml
-# (o token do robô não tem escopo workflow — por isso ele mora aqui)
+# O workflow que vale desde 19/08/2026 é  .github/workflows/azure-swa.yml
+# (o Fillipe copiou este arquivo para lá quando o SWA entrou no ar).
+#
+# Este arquivo fica como MOLDE histórico. Se precisar mudar o deploy, mude o
+# de .github/workflows/ — e, se mudar os dois, mude os dois de verdade: as
+# cópias divergirem em silêncio é exatamente o tipo de falha muda que já nos
+# custou tempo no parser de observações, na paginação do Fracttal e no
+# --cifrar do mpas.json.
+# ============================================================================
+#
+# Melhoria 5 — deploy do painel no Azure Static Web Apps (decisão 25).
 #
 # O robô não muda: ele continua commitando os .json; cada push dispara este
 # deploy, que copia o conteúdo do repositório para o SWA (sem build).
