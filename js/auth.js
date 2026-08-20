@@ -23,17 +23,32 @@ const AUTH_CLI = {
 
 let AUTH_PRINCIPAL = null;   // preenchido quando o SWA responde
 
+// Devolve: o principal (logado) | 'EXPIRADO' (no SWA, sem sessao) | null (legado).
+// A distincao entre 'EXPIRADO' e null e o ponto todo: os dois davam null e o
+// painel caia na tela de senha antiga, que no SWA nao funciona -- os .json sao
+// restritos por papel, entao o fetch tomava 302, vinha HTML e a tela dizia
+// "Falha ao carregar", sem pista de que era so refazer o login. (20/08/2026)
 async function authDescobrir() {
   try {
     const r = await fetch('/.auth/me', { cache: 'no-store' });
+    // o SWA mandou para o login: estamos NELE e a sessao caiu
+    if (r.redirected && String(r.url || '').indexOf('/.auth/login') >= 0) return 'EXPIRADO';
+    if (r.status === 404) return null;               // Pages/local: a rota nao existe
     if (!r.ok) return null;
     const ct = r.headers.get('content-type') || '';
-    if (ct.indexOf('json') < 0) return null;        // Pages devolve o 404 em HTML
+    if (ct.indexOf('json') < 0) return null;         // Pages devolve o 404 em HTML
     const j = await r.json();
-    return (j && j.clientPrincipal) || null;
+    if (j && j.clientPrincipal) return j.clientPrincipal;
+    return 'EXPIRADO';                               // respondeu JSON, mas sem ninguem logado
   } catch (e) {
     return null;                                     // file:// ou servidor local
   }
+}
+
+function authIrParaLogin() {
+  // preserva a aba em que a pessoa estava (o hash), para voltar no mesmo lugar
+  const volta = encodeURIComponent(location.pathname + location.search + location.hash);
+  location.replace('/.auth/login/aad?post_login_redirect_uri=' + volta);
 }
 
 function authAvisoSemPapel(email) {
@@ -80,6 +95,7 @@ async function authEntrar(p) {
 
 (async function authBoot() {
   const p = await authDescobrir();
+  if (p === 'EXPIRADO') { authIrParaLogin(); return; }   // sessao caiu: refaz o login
   if (!p) return;                                    // modo legado (Pages/local): nada muda
   // espera o app.js terminar de declarar as funções de boot
   for (let i = 0; i < 40 && typeof launch !== 'function'; i++) {
