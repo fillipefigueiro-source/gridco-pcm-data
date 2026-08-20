@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-20T16:55:53Z",
+  "geradoEm": "2026-08-20T17:34:33Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3764,
-        "emAberto": 13,
+        "total": 3768,
+        "emAberto": 17,
         "atrasadas": 12,
         "concluidas30d": 627,
         "concluidas7d": 140,
-        "naSemanaCorrente": 81
+        "naSemanaCorrente": 85
       },
       "mttr": {
         "horas": 11.2,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W34",
-          "criadas": 81,
+          "criadas": 85,
           "finalizadas": 78
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3764,
-            "emAberto": 13
+            "total": 3768,
+            "emAberto": 17
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 13,
+      "total": 17,
       "atrasadas": 12,
       "porStatus": {
-        "naoIniciada": 12,
+        "naoIniciada": 14,
         "emProgresso": 1,
-        "pausada": 0,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 17
       },
       "oss": [
         {
@@ -133,14 +133,15 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Felipe Silva",
           "supervisor": "Rodrigo  Silva",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-12",
-          "dataInicial": "",
+          "dataInicial": "2026-08-20",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -151,14 +152,15 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Felipe Silva",
           "supervisor": "Rodrigo  Silva",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-12",
-          "dataInicial": "",
+          "dataInicial": "2026-08-20",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -305,6 +307,78 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "11610",
+          "ativo": "Cabine 2  Ipixuna  Pará Brasil { IPX100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Cícero  Willian",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Cícero  Willian",
+          "status": "Não Iniciada",
+          "tarefa": "[IPX100-CABN2] - Religamento do IPX100-CABN2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-20",
+          "dataCriacao": "2026-08-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11596",
+          "ativo": "Cabine 4 Estrada Jussara S/N Mandaguaçu  Paraná Brasil { MNG100-CABN4 }",
+          "equipe": "",
+          "responsavel": "Cícero  Willian",
+          "criadoPor": "Cícero  Willian",
+          "supervisor": "Cícero  Willian",
+          "status": "Não Iniciada",
+          "tarefa": "[Cabine 4] - Religamento da Cabine 4",
+          "criticidade": "",
+          "dataProgramada": "2026-08-20",
+          "dataCriacao": "2026-08-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11595",
+          "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 3.1] - Religamento do Inversor 3.1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-20",
+          "dataCriacao": "2026-08-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11594",
+          "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+          "equipe": "",
+          "responsavel": "Ademir Necker ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ademir Necker ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
+          "criticidade": "",
+          "dataProgramada": "2026-08-20",
+          "dataCriacao": "2026-08-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "11556",
@@ -3331,9 +3405,9 @@
       "historicoTotal": 1672,
       "subClassificacao": {
         "remoto": 745,
-        "local": 3019,
+        "local": 3023,
         "remotoEmAberto": 2,
-        "localEmAberto": 11,
+        "localEmAberto": 15,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -4631,25 +4705,6 @@
           "atrasada": false
         },
         {
-          "osId": "10188",
-          "ativo": "Cabine 1  Barretos  São Paulo Brasil { BRS100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Anderson  Parente",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-08-18",
-          "dataFinal": "2026-08-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 528.0,
-          "horasAteFechar": 48.0,
-          "atrasada": false
-        },
-        {
           "osId": "10265",
           "ativo": "Transformador 1 WEG     { THPN-RDR100-TRFR1 }",
           "equipe": "",
@@ -4666,6 +4721,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 552.0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10188",
+          "ativo": "Cabine 1  Barretos  São Paulo Brasil { BRS100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-08-07",
+          "dataCriacao": "2026-07-27",
+          "dataInicial": "2026-08-18",
+          "dataFinal": "2026-08-20",
+          "linkFracttal": "",
+          "horasAteAbrir": 528.0,
+          "horasAteFechar": 48.0,
           "atrasada": false
         },
         {
@@ -8454,16 +8528,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 541,
-        "emAberto": 74,
+        "emAberto": 73,
         "atrasadas": 67,
-        "concluidas30d": 285,
-        "concluidas7d": 73,
+        "concluidas30d": 286,
+        "concluidas7d": 74,
         "naSemanaCorrente": 45
       },
       "mttr": {
-        "horas": 161.6,
+        "horas": 161.03,
         "label": "6d 17h",
-        "amostra": 285
+        "amostra": 286
       },
       "tendencia4Semanas": [
         {
@@ -8484,7 +8558,7 @@
         {
           "semana": "W34",
           "criadas": 40,
-          "finalizadas": 45
+          "finalizadas": 46
         }
       ],
       "topOfensores": {
@@ -8492,7 +8566,7 @@
           {
             "nome": "(sem equipe)",
             "total": 541,
-            "emAberto": 74
+            "emAberto": 73
           }
         ],
         "responsaveis": [
@@ -8523,16 +8597,16 @@
           }
         ]
       },
-      "total": 74,
+      "total": 73,
       "atrasadas": 67,
       "porStatus": {
-        "naoIniciada": 64,
-        "emProgresso": 3,
-        "pausada": 7,
+        "naoIniciada": 63,
+        "emProgresso": 2,
+        "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 74
+        "(sem equipe)": 73
       },
       "oss": [
         {
@@ -8986,15 +9060,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Ana Barros ",
           "supervisor": "Luiz  Silva",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Timon 1][Tracker 109.100] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-07-24",
           "dataCriacao": "2026-07-24",
-          "dataInicial": "2026-08-20",
+          "dataInicial": "2026-08-18",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 648.0,
+          "horasAteAbrir": 600.0,
           "atrasada": true
         },
         {
@@ -9754,23 +9828,6 @@
           "atrasada": false
         },
         {
-          "osId": "11588",
-          "ativo": "Inversor 1.18 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.18 }",
-          "equipe": "",
-          "responsavel": "Rodrigo  Silva",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Rodrigo  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.18] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-26",
-          "dataCriacao": "2026-08-20",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "11587",
           "ativo": "Inversor 1.12 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.12 }",
           "equipe": "",
@@ -9806,6 +9863,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11588",
+          "ativo": "Inversor 1.18 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.18 }",
+          "equipe": "",
+          "responsavel": "Rodrigo  Silva",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Rodrigo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.18] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-26",
+          "dataCriacao": "2026-08-20",
+          "dataInicial": "2026-08-20",
+          "dataFinal": "2026-08-20",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "11369",
           "ativo": "Inversor 1.1 Huawei SUN2000-215KTL-H0    { PRB100-INVR1.1 }",
@@ -11308,25 +11384,6 @@
           "atrasada": false
         },
         {
-          "osId": "10990",
-          "ativo": "Inversor 1.5 Huawei SUN2000-250KTL-H1    { THPN-JNC100-INVR1.5 }",
-          "equipe": "",
-          "responsavel": "Francisco  Santos",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Francisco  Santos",
-          "status": "Finalizada",
-          "tarefa": "[Inversor 1.5] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-08-11",
-          "dataCriacao": "2026-08-10",
-          "dataInicial": "2026-08-11",
-          "dataFinal": "2026-08-11",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10826",
           "ativo": "Inversor 2.5 Huawei     { TIM100-INVR2.5 }",
           "equipe": "",
@@ -12657,7 +12714,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 421
+      "historicoTotal": 422
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14824,20 +14881,72 @@
   },
   "ossPublicas": [
     {
-      "osId": "11588",
-      "ativo": "Inversor 1.18 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.18 }",
+      "osId": "11610",
+      "ativo": "Cabine 2  Ipixuna  Pará Brasil { IPX100-CABN2 }",
       "equipe": "",
-      "responsavel": "Rodrigo  Silva",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Rodrigo  Silva",
+      "responsavel": "Cícero  Willian",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Cícero  Willian",
       "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.18] - Inspeção Geral do Inversor",
+      "tarefa": "[IPX100-CABN2] - Religamento do IPX100-CABN2",
       "criticidade": "",
-      "dataProgramada": "2026-08-26",
+      "dataProgramada": "2026-08-20",
       "dataCriacao": "2026-08-20",
       "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11596",
+      "ativo": "Cabine 4 Estrada Jussara S/N Mandaguaçu  Paraná Brasil { MNG100-CABN4 }",
+      "equipe": "",
+      "responsavel": "Cícero  Willian",
+      "criadoPor": "Cícero  Willian",
+      "supervisor": "Cícero  Willian",
+      "status": "Não Iniciada",
+      "tarefa": "[Cabine 4] - Religamento da Cabine 4",
+      "criticidade": "",
+      "dataProgramada": "2026-08-20",
+      "dataCriacao": "2026-08-20",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11595",
+      "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 3.1] - Religamento do Inversor 3.1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-20",
+      "dataCriacao": "2026-08-20",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11594",
+      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+      "equipe": "",
+      "responsavel": "Ademir Necker ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Ademir Necker ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
+      "criticidade": "",
+      "dataProgramada": "2026-08-20",
+      "dataCriacao": "2026-08-20",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
     },
     {
       "osId": "11587",
@@ -15627,14 +15736,15 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Felipe Silva",
       "supervisor": "Rodrigo  Silva",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-12",
-      "dataInicial": "",
+      "dataInicial": "2026-08-20",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 192.0,
       "modalidade": "local"
     },
     {
@@ -15644,14 +15754,15 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Felipe Silva",
       "supervisor": "Rodrigo  Silva",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-12",
-      "dataInicial": "",
+      "dataInicial": "2026-08-20",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 192.0,
       "modalidade": "local"
     },
     {
@@ -17322,37 +17433,18 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Ana Barros ",
       "supervisor": "Luiz  Silva",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Timon 1][Tracker 109.100] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-07-24",
       "dataCriacao": "2026-07-24",
-      "dataInicial": "2026-08-20",
+      "dataInicial": "2026-08-18",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 648.0
+      "horasAteAbrir": 600.0
     }
   ],
   "ossHistorico": [
-    {
-      "osId": "11321",
-      "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Walter Santos ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Walter Santos ",
-      "status": "Finalizados",
-      "tarefa": "[SEMP] - MPQ - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-03",
-      "dataCriacao": "2026-08-17",
-      "dataInicial": "2026-08-20",
-      "dataFinal": "2026-08-20",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
     {
       "osId": "11029",
       "ativo": "Sistema de Segurança Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-SSEG1 }",
@@ -17522,25 +17614,6 @@
       "linkFracttal": "",
       "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10188",
-      "ativo": "Cabine 1  Barretos  São Paulo Brasil { BRS100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Anderson  Parente",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-07-27",
-      "dataInicial": "2026-08-18",
-      "dataFinal": "2026-08-20",
-      "linkFracttal": "",
-      "horasAteAbrir": 528.0,
-      "horasAteFechar": 48.0,
       "atrasada": false
     },
     {
@@ -17867,6 +17940,25 @@
       "linkFracttal": "",
       "horasAteAbrir": 480.0,
       "horasAteFechar": 1200.0,
+      "atrasada": false
+    },
+    {
+      "osId": "11588",
+      "ativo": "Inversor 1.18 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.18 }",
+      "equipe": "",
+      "responsavel": "Rodrigo  Silva",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Rodrigo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.18] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-26",
+      "dataCriacao": "2026-08-20",
+      "dataInicial": "2026-08-20",
+      "dataFinal": "2026-08-20",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -18883,6 +18975,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "11321",
+      "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Walter Santos ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Walter Santos ",
+      "status": "Finalizados",
+      "tarefa": "[SEMP] - MPQ - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-08-03",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "2026-08-20",
+      "dataFinal": "2026-08-20",
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -20241,8 +20352,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2494,
-  "totalGeral": 5173,
+  "historicoTotal": 2495,
+  "totalGeral": 5177,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
