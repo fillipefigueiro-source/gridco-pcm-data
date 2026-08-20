@@ -83,8 +83,27 @@ function hojeBRT() {
   return `${doisDig(agora.getUTCDate())}/${doisDig(agora.getUTCMonth() + 1)}/${agora.getUTCFullYear()}`;
 }
 
+function prefixoLinha(tarefa) {
+  return `[${hojeBRT()}] - [${String(tarefa || '').trim()}] - `;
+}
+
 function montarLinha(tarefa, motivo) {
-  return `[${hojeBRT()}] - [${String(tarefa || '').trim()}] - ${String(motivo || '').trim()}`;
+  return prefixoLinha(tarefa) + String(motivo || '').trim();
+}
+
+// Monta a Observação nova ACRESCENTANDO a linha e preservando tudo o que já
+// estava lá — inclusive outra linha do mesmo dia para a mesma tarefa.
+//
+// Isto foi decidido pelo PCM em 20/08 e é uma regra de negócio, não descuido:
+// a MESMA tarefa pode não ter sido feita por DOIS motivos no mesmo dia (faltou
+// equipamento E choveu). Substituir perderia metade da explicação. A única
+// coisa que nunca duplica é a linha idêntica (mesma data, tarefa e motivo) —
+// isso é tratado antes de chegar aqui.
+//
+// O texto escrito à mão pelo time de campo nunca é tocado.
+function textoFinal(atual, linha) {
+  const base = String(atual || '').replace(/\s+$/, '');
+  return base ? base + '\n' + linha : linha;
 }
 
 function principalDe(req) {
@@ -122,7 +141,7 @@ async function gravarUm(item, log) {
              detalhe: `a OS está com status ${st}; o Fracttal só aceita edição em processo ou em revisão` };
   }
 
-  const final = atual.trim() ? (atual.replace(/\s+$/, '') + '\n' + linha) : linha;
+  const final = textoFinal(atual, linha);
 
   // relê imediatamente antes de gravar: janela mínima para não atropelar
   // quem estiver editando a Observação pela tela do Fracttal
