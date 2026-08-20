@@ -1,4 +1,16 @@
 {
+  "auth": {
+    "rolesSource": "/api/papeis",
+    "identityProviders": {
+      "azureActiveDirectory": {
+        "registration": {
+          "openIdIssuer": "https://login.microsoftonline.com/common/v2.0",
+          "clientIdSettingName": "AZURE_CLIENT_ID",
+          "clientSecretSettingName": "AZURE_CLIENT_SECRET"
+        }
+      }
+    }
+  },
   "routes": [
     { "route": "/.auth/login/github",  "statusCode": 404 },
     { "route": "/.auth/login/twitter", "statusCode": 404 },
