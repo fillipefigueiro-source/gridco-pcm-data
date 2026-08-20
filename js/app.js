@@ -1219,7 +1219,10 @@ function rpLimpar(){
   if(!confirm('Limpar as '+RP.length+' reprogramações da fila?'))return;
   RP=[];rpSave();renderPendentes();
 }
-// ---- M3: alerta do dia (13:30/16:45) + captura de motivo — só admin ----
+// ---- M3: alerta do dia (13:30/16:00) + captura de motivo — só admin ----
+// A cor NÃO compara a hora literal de propósito: a janela da tarde já mudou
+// uma vez (16:45 -> 16:00 em 19/08) e o painel ficou para trás em 4 lugares.
+// Regra: qualquer janela que não seja a das 13:30 é a de registro (vermelha).
 const MOTIVOS_FIXOS=['Emergencial furou a fila','Aguarda peça/material','Chuva/clima',
   'Acesso à usina negado','Equipe incompleta','Serviço maior que o estimado','Deslocamento','Outro'];
 let MV={};                                  // {os: motivo} escolhidos nesta sessão
@@ -1256,9 +1259,10 @@ function renderAlertas(){
   const A=DB&&DB.alertas;
   const hojeISO=new Date().toISOString().slice(0,10);
   if(!S.isAdmin||!A||A.data!==hojeISO||!A.janela||!(A.itens||[]).length){box.innerHTML='';return;}
-  const cor=A.janela==='16:45'?'#b91c1c':'#8a5a08';
-  const fundo=A.janela==='16:45'?'#fef2f2':'#fffaf0';
-  const borda=A.janela==='16:45'?'#f0b9b0':'#f0dcae';
+  const reg=A.janela!=='13:30';            // janela de registro (a da tarde)
+  const cor=reg?'#b91c1c':'#8a5a08';
+  const fundo=reg?'#fef2f2':'#fffaf0';
+  const borda=reg?'#f0b9b0':'#f0dcae';
   const porEq={};(A.itens||[]).forEach(i=>{(porEq[i.equipe]=porEq[i.equipe]||[]).push(i);});
   const linhas=Object.keys(porEq).sort().map(eq=>{
     const its=porEq[eq].map(i=>{
@@ -1283,7 +1287,7 @@ function renderAlertas(){
       +ord.map(([k,n])=>esc(k)+' <b>'+n+'</b>').join(' · ')+'</div>';
   }
   box.innerHTML='<div class="al-box" style="background:'+fundo+';border-color:'+borda+'">'
-    +'<div class="al-h1" style="color:'+cor+'">'+(A.janela==='16:45'?'🔴':'🟡')+' Alerta '+A.janela
+    +'<div class="al-h1" style="color:'+cor+'">'+(reg?'🔴':'🟡')+' Alerta '+A.janela
     +' — '+(A.itens||[]).length+' tarefa(s) do dia não fechadas'
     +'<span class="al-ad">aderência até agora: '+A.fechadas+' de '+A.doDia+'</span></div>'
     +linhas

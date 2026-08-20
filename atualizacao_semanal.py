@@ -1957,7 +1957,10 @@ def aplicar_rolagem(wb_prog, dias_semana, hoje):
 
 # ====================== Alertas do dia (STEP A5 — Melhoria 3) ======================
 # Dois checkpoints (decisões 17-20): 13:30 = operacional (dá para reagir à
-# tarde); 16:45 = registro (captura o motivo com a memória fresca).
+# tarde); 16:00 = registro (captura o motivo com a memória fresca).
+# 19/08/2026: era 16:45. Antecipado a pedido do PCM — o bloco de motivos
+# precisa abrir mais cedo, e o e-mail acompanha para o supervisor receber
+# no mesmo momento em que o motivo passa a ser pedido.
 #
 # DISPARO: "primeira execução APÓS o horário, se ainda não emitiu hoje" — o
 # robô roda a cada ~54 min (medido), então "dentro da janela 13:30-13:44"
@@ -1966,7 +1969,7 @@ def aplicar_rolagem(wb_prog, dias_semana, hoje):
 #
 # O e-mail usa SMTP via env (GitHub Secrets). Sem credenciais, degrada para
 # painel-only com log claro — nunca em silêncio.
-ALERTA_JANELAS = [("13:30", 13 * 60 + 30), ("16:45", 16 * 60 + 45)]
+ALERTA_JANELAS = [("13:30", 13 * 60 + 30), ("16:00", 16 * 60)]
 _TZ_BRT_HORAS = -3          # Brasil sem horário de verão desde 2019
 ALERTAS_ARQ = "_alertas_do_dia.json"
 
@@ -2058,7 +2061,7 @@ def gerar_alertas_do_dia(wb_prog, dias_semana):
                 hi = _hm(ws.cell(row=r, column=i_hi).value) if i_hi else None
                 hf = _hm(ws.cell(row=r, column=i_hf).value) if i_hf else None
                 em_risco = False
-                if janela == "16:45":
+                if janela == "16:00":
                     em_risco = True               # last call: tudo que não fechou
                 elif janela == "13:30":
                     # decisão 18: fim previsto antes de 13:30 e não fechou;
@@ -2200,7 +2203,7 @@ def _enviar_email_alerta(janela, itens, do_dia, fechadas, para=None, escopo=None
                 f"<td>{i['estado']}</td></tr>")
         linhas.append("</table>")
     rodape = ("Informe o motivo no painel antes das 23:59 — sem motivo, a tarefa "
-              "rola como \"não informado\"." if janela == "16:45"
+              "rola como \"não informado\"." if janela == "16:00"
               else "Checkpoint da manhã: a tarde ainda dá para reagir.")
     titulo = f"{icone} PCM Grid — alerta {janela}" + (f" · {escopo}" if escopo else "")
     ader = (f"<p>{len(itens)} tarefa(s) em risco · aderência do dia (portfólio): "
@@ -2331,7 +2334,7 @@ def main():
         # STEP A4: rolagem do dia (Melhoria 1) — depois dos overrides do usuário,
         # para que pin recém-colocado já conte como "não rola"
         aplicar_rolagem(wb_prog, dias_semana, date.today())
-        # STEP A5: alertas 13:30/16:45 (Melhoria 3) — por último, para avaliar
+        # STEP A5: alertas 13:30/16:00 (Melhoria 3) — por último, para avaliar
         # o dia já com sync, observações e rolagem aplicados
         try:
             gerar_alertas_do_dia(wb_prog, dias_semana)
