@@ -57,6 +57,9 @@ let S = {
   pwds:    DEF_PWDS,
   active:  lsG(LS.A, ''),
   user:    null, isAdmin:false, viewCli:null,
+  // equipe = pessoal interno da Grid sem poderes de admin (supervisores).
+  // Serve hoje para UMA coisa: ver e preencher o bloco de motivos do dia.
+  equipe:  false,
   fEquipe:'', fTipo:'', fUsina:'', fSupervisor:'', fStatus:'', fSS:'', fEtq:'',
   view:    lsG(LS.V, 'semana'), // 'semana' | 'mes'
   topView: (function(){try{return localStorage.getItem('gc_topv')||'semana';}catch(e){return 'semana';}})(),
@@ -170,7 +173,7 @@ async function manualRefresh(){
 function show(id){document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));document.getElementById(id).classList.add('on');}
 function goAdmin(){buildAdmin();show('s-admin');}
 function goLogin(){updateLoginWeek();show('s-login');}
-function doLogout(){S.user=null;S.isAdmin=false;S.viewCli=null;S.fEquipe='';S.fTipo='';S.fUsina='';S.fSupervisor='';S.fStatus='';S.fOS='';S.fSS='';S.fEtq='';goLogin();}
+function doLogout(){S.user=null;S.isAdmin=false;S.equipe=false;S.viewCli=null;S.fEquipe='';S.fTipo='';S.fUsina='';S.fSupervisor='';S.fStatus='';S.fOS='';S.fSS='';S.fEtq='';goLogin();}
 function updateLoginWeek(){ const w=AW(); document.getElementById('l-week').textContent=w?.label||'Carregando...'; }
 
 // ── ADMIN ─────────────────────────────────────────────────────────────────────
@@ -1302,7 +1305,10 @@ function renderAlertas(){
   }
   const A=DB&&DB.alertas;
   const hojeISO=new Date().toISOString().slice(0,10);
-  if(!S.isAdmin||!A||A.data!==hojeISO||!A.janela||!(A.itens||[]).length){box.innerHTML='';return;}
+  // Admin E supervisor (papel `equipe`) preenchem motivo; cliente nunca ve
+  // este bloco, que expoe a operacao inteira. (20/08/2026)
+  const podeMotivo=S.isAdmin||S.equipe;
+  if(!podeMotivo||!A||A.data!==hojeISO||!A.janela||!(A.itens||[]).length){box.innerHTML='';return;}
   const reg=A.janela!=='13:30';            // janela de registro (a da tarde)
   const cor=reg?'#b91c1c':'#8a5a08';
   const fundo=reg?'#fef2f2':'#fffaf0';

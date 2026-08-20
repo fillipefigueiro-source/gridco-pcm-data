@@ -78,7 +78,8 @@ async function authEntrar(p) {
     // a chave da Gestão MPAS continua sendo pedida na aba (o mpas.json é cifrado)
     launch('Grid Co. — Todos os Clientes', true);
   } else if (roles.includes('equipe')) {
-    S.isAdmin = false; S.user = 'Grid Co.';
+    // supervisor da Grid: sem poderes de admin, mas preenche o motivo do dia
+    S.isAdmin = false; S.equipe = true; S.user = 'Grid Co.';
     launch('Grid Co. — Leitura interna', false);
   } else {
     const nome = AUTH_CLI[cliRole];
