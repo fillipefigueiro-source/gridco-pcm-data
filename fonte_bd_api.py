@@ -113,7 +113,14 @@ def _carregar_ativos(client):
             pass
     m = {}
     coords, cidades = {}, {}
-    for it in client.paginar("items", page_size=100):
+    # A varredura de items é a outra metade do custo (20.083 ativos ≈ 200 páginas,
+    # ~4,6 min em série). Mesmo tratamento: páginas em paralelo, com fallback.
+    try:
+        _itens = _paginas_rest(client, "items", {}, _total_rest(client, "items"))
+    except Exception as _e:
+        bd.log("  items em paralelo indisponivel (%s) — varredura em serie" % _e, "WARN")
+        _itens = client.paginar("items", page_size=100)
+    for it in _itens:
         # ATENÇÃO: page_size=100 é obrigatório (com 200 a API corta a paginação)
         i = it.get("id")
         if i is None:
@@ -154,6 +161,171 @@ def _carregar_ativos(client):
     return m
 
 
+# ── Coleta particionada por status (19/08/2026) ─────────────────────────────
+# A varredura única de work_orders pagina a conta INTEIRA (28.399 linhas em 19/08,
+# ~284 páginas, ~6,5 min em série) a cada execução — e 67% disso são OS concluídas,
+# que por definição não mudam mais. No Actions (runner sem estado, ciclo de 15 min)
+# isso quase saturava o próprio ciclo.
+#
+# O desenho: vivo (status 1+2, ~4.300 linhas) sempre fresco, em páginas paralelas;
+# histórico (3+4) em cache validado por CONTAGEM — uma OS terminal só muda por
+# transição de status, e transição muda a contagem da partição. TTL de 24 h como
+# cinto de segurança para o caso raríssimo de transições simultâneas que se
+# compensam. Medido em 19/08: os 4 status somam EXATAMENTE o total (28.399 = 2.149
+# + 2.166 + 18.940 + 5.144) — e essa soma é conferida a cada coleta: se um dia o
+# Fracttal criar um status 5, a conta não fecha e a coleta VOLTA para a varredura
+# completa antiga, avisando. Nenhuma inconsistência passa calada.
+
+_HIST_CACHE = ".cache_hist_api.pkl"
+_ST_VIVO = (1, 2)     # Em processo, Em verificação
+_ST_HIST = (3, 4)     # Concluída, Cancelada
+
+# O Fracttal corta em ~200 requisições/minuto por IP (HTTP 429 "Too many requests
+# (200) created from this IP", medido em 19/08/2026 na primeira tentativa de
+# paralelismo — a varredura serial antiga nunca chegou perto do teto). O espaçador
+# é GLOBAL entre as threads: 0,42 s entre requisições ≈ 143/min, com folga para as
+# chamadas de dimensionamento e para outro consumidor eventual no mesmo IP.
+import threading as _th
+_RITMO_TRAVA = _th.Lock()
+_RITMO_ULTIMO = [0.0]
+
+
+def _ritmo():
+    intervalo = float(os.environ.get("PROG_API_INTERVALO_S", "0.42"))
+    with _RITMO_TRAVA:
+        agora = time.monotonic()
+        espera = _RITMO_ULTIMO[0] + intervalo - agora
+        if espera > 0:
+            time.sleep(espera)
+            agora = time.monotonic()
+        _RITMO_ULTIMO[0] = agora
+
+
+def _total_rest(client, path, params=None):
+    """O campo `total` do envelope — dimensiona qualquer filtro por 1 requisição.
+
+    Nota: o `total` chega como int em work_orders e como STRING em requests —
+    o int() cobre os dois. E o caminho passa pelo _resolver_path do client, como
+    o paginar faz: o get cru não resolve, e a conta pode servir o recurso em
+    outra base."""
+    p = dict(params or {})
+    p.update({"limit": 1, "start": 0})
+    _ritmo()
+    payload = client.get(client._resolver_path(path), params=p)
+    try:
+        return int(payload.get("total"))
+    except (TypeError, ValueError, AttributeError):
+        return None
+
+
+def _paginas_rest(client, path, params, total, workers=5):
+    """Todas as linhas de um filtro, com as páginas em PARALELO (+ cauda em série).
+
+    O client não tem trava no refresh do token, então quem chama autentica ANTES —
+    o token novo dura a varredura inteira. O `total` pode crescer entre o
+    dimensionamento e a leitura: depois do paralelo, segue em série até a página
+    vazia, como o paginar antigo fazia."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    path = client._resolver_path(path)   # o get cru não resolve; o paginar resolvia
+
+    def _uma(start):
+        p = dict(params)
+        p.update({"limit": 100, "start": start})
+        # O retry interno do client espaça 3 s/6 s — curto demais para o castigo de
+        # 1 minuto do 429. Aqui: uma segunda chance depois de esperar a janela.
+        payload = None
+        for tentativa in (1, 2):
+            _ritmo()
+            try:
+                payload = client.get(path, params=p)
+                break
+            except Exception as e:
+                if tentativa == 1 and ("429" in str(e) or "Too many requests" in str(e)):
+                    time.sleep(62)
+                    continue
+                raise
+        return (payload.get("data") if isinstance(payload, dict) else payload) or []
+
+    out = []
+    starts = list(range(0, max(int(total or 0), 1), 100))
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for parte in ex.map(_uma, starts):
+            out.extend(parte)
+    start = starts[-1] + 100
+    while True:
+        parte = _uma(start)
+        if not parte:
+            break
+        out.extend(parte)
+        start += 100
+    return out
+
+
+def _hist_ler(totais):
+    """O histórico do cache — SE as contagens de 3 e 4 continuam as mesmas."""
+    try:
+        with open(os.path.join(_bd().BASE_DIR, _HIST_CACHE), "rb") as f:
+            d = pickle.load(f)
+        ttl_h = float(os.environ.get("PROG_HIST_TTL_H", "24"))
+        if (d.get("v") == 1
+                and d.get("totais") == {s: totais[s] for s in _ST_HIST}
+                and time.time() - float(d.get("ts") or 0) < ttl_h * 3600):
+            return d["rows"]
+    except Exception:
+        pass
+    return None
+
+
+def _hist_gravar(rows, totais):
+    # validade por carimbo INTERNO, não por mtime: o actions/cache restaura o
+    # arquivo com o mtime da criação, e mtime enganaria o TTL nos dois sentidos
+    try:
+        cam = os.path.join(_bd().BASE_DIR, _HIST_CACHE)
+        with open(cam + ".tmp", "wb") as f:
+            pickle.dump({"v": 1, "ts": time.time(),
+                         "totais": {s: totais[s] for s in _ST_HIST},
+                         "rows": rows}, f, protocol=4)
+        os.replace(cam + ".tmp", cam)
+    except Exception:
+        pass
+
+
+def _linhas_work_orders(client):
+    """As linhas cruas de work_orders — particionadas, com fallback à varredura antiga.
+
+    Devolve LISTA (não generator) de propósito: ou a partição inteira dá certo, ou
+    nada dela é usado — um fallback no meio de um generator já consumido duplicaria
+    linhas."""
+    bd = _bd()
+    try:
+        tot_geral = _total_rest(client, "work_orders")
+        totais = {s: _total_rest(client, "work_orders", {"id_status_work_order": s})
+                  for s in _ST_VIVO + _ST_HIST}
+        if not tot_geral or any(v is None for v in totais.values()) \
+                or sum(totais.values()) != tot_geral:
+            raise RuntimeError("particao nao fecha: %s vs total=%s" % (totais, tot_geral))
+        vivo = []
+        for s in _ST_VIVO:
+            vivo.extend(_paginas_rest(client, "work_orders",
+                                      {"id_status_work_order": s}, totais[s]))
+        hist = _hist_ler(totais)
+        origem = "cache"
+        if hist is None:
+            hist = []
+            for s in _ST_HIST:
+                hist.extend(_paginas_rest(client, "work_orders",
+                                          {"id_status_work_order": s}, totais[s]))
+            _hist_gravar(hist, totais)
+            origem = "refeito"
+        bd.log("  coleta particionada: vivo=%d hist=%d (hist %s)"
+               % (len(vivo), len(hist), origem))
+        return vivo + hist
+    except Exception as e:
+        bd.log("  coleta particionada indisponivel (%s) — varredura completa" % e, "WARN")
+        return list(client.paginar("work_orders", page_size=100))
+
+
 def df_semanal(ttl_min=None):
     """OS/tarefas da API Fracttal, no formato/colunas do BD 'Semanal'. Cache TTL."""
     bd = _bd()
@@ -174,7 +346,7 @@ def df_semanal(ttl_min=None):
     cols = list(bd.COLS_BD_SEMANAL)
     seen = set()
     rows = []
-    for it in client.paginar("work_orders", page_size=100):
+    for it in _linhas_work_orders(client):
         d = bd.transformar_wo_para_bd(it)
         e = d.get("Estado da Tarefa")
         if e in _EST_FIX:
