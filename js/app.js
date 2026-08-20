@@ -1225,23 +1225,67 @@ function rpLimpar(){
 // Regra: qualquer janela que não seja a das 13:30 é a de registro (vermelha).
 const MOTIVOS_FIXOS=['Emergencial furou a fila','Aguarda peça/material','Chuva/clima',
   'Acesso à usina negado','Equipe incompleta','Serviço maior que o estimado','Deslocamento','Outro'];
-let MV={};                                  // {os: motivo} escolhidos nesta sessão
+// A chave é OS+TAREFA, não só a OS. Antes era só a OS e, como a mesma OS
+// aparece várias vezes no alerta com tarefas diferentes (a 10308 aparece 5x),
+// escolher o motivo numa linha marcava todas as outras. (20/08/2026)
+let MV={};                                  // {os|tarefa: motivo} escolhidos nesta sessão
+let MV_ST={};                               // {os|tarefa: 'enviando'|'ok'|'local'|'erro:...'}
+const mvChave=i=>String(i.os)+'|'+String(i.tarefa||'');
 function mvLinhas(){
   const A=DB&&DB.alertas, out=[];
-  Object.keys(MV).forEach(os=>{
-    const it=(A&&A.itens||[]).find(i=>String(i.os)===String(os));
-    out.push('# motivo OS '+os+(it?' ('+it.equipe+')':'')+': '+MV[os]);
+  Object.keys(MV).forEach(k=>{
+    const it=(A&&A.itens||[]).find(i=>mvChave(i)===k);
+    out.push('# motivo OS '+k.split('|')[0]+(it?' ('+it.equipe+')':'')+': '+MV[k]);
   });
   return out;
 }
-function mvSet(os,v){
+// selo por linha: diz o que aconteceu com AQUELE motivo, sem re-renderizar a
+// lista inteira (re-render fecharia o select no meio da escolha)
+function mvSelo(ix,k){
+  const e=MV_ST[k]||'';
+  let t='',c='#8a8a94';
+  if(e==='enviando'){t='enviando…';}
+  else if(e==='ok'){t='✓ no Fracttal';c='#15803d';}
+  else if(e==='local'){t='só no painel';c='#8a5a08';}
+  else if(e.indexOf('erro:')===0){t='✗ '+e.slice(5);c='#b91c1c';}
+  return '<span class="mv-st" id="mvst-'+ix+'" title="'+esc(t)+'" '
+    +'style="font-size:10.5px;font-weight:700;color:'+c+';margin-left:7px">'+esc(t)+'</span>';
+}
+function mvPintar(ix,k){
+  const el=document.getElementById('mvst-'+ix);
+  if(el){const d=document.createElement('div');d.innerHTML=mvSelo(ix,k);el.replaceWith(d.firstChild);}
+}
+function mvSet(ix,v){
+  const A=DB&&DB.alertas, i=(A&&A.itens||[])[ix];
+  if(!i)return;
   if(v==='Outro'){
     const t=prompt('Descreva o motivo (curto):','');
     if(!t){return;}
     v='Outro: '+t.slice(0,60);
   }
-  if(v)MV[os]=v; else delete MV[os];
+  const k=mvChave(i);
+  if(v){MV[k]=v;} else {delete MV[k]; delete MV_ST[k];}
   renderAlertas();
+  if(v)mvEnviar(ix,i,v);
+}
+// Manda para /api/motivos, que grava na Observação da OS no Fracttal.
+// No Pages não existe /api (404) — aí degrada para o comportamento antigo
+// (guardar na sessão e copiar), sem mostrar erro para o usuário.
+async function mvEnviar(ix,i,motivo){
+  const k=mvChave(i);
+  MV_ST[k]='enviando'; mvPintar(ix,k);
+  try{
+    const r=await fetch('/api/motivos',{method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({os:i.os,tarefa:i.tarefa,motivo:motivo})});
+    if(r.status===404){ MV_ST[k]='local'; mvPintar(ix,k); return; }
+    const ct=r.headers.get('content-type')||'';
+    if(ct.indexOf('json')<0){ MV_ST[k]='local'; mvPintar(ix,k); return; }
+    const j=await r.json();
+    const it=(j&&j.itens&&j.itens[0])||{};
+    MV_ST[k]= it.ok ? 'ok' : ('erro:'+(it.detalhe||j.erro||('HTTP '+r.status)));
+  }catch(e){ MV_ST[k]='erro:'+((e&&e.message)||'falha de rede'); }
+  mvPintar(ix,k);
 }
 function mvCopiar(){
   const ls=mvLinhas();
@@ -1266,11 +1310,12 @@ function renderAlertas(){
   const porEq={};(A.itens||[]).forEach(i=>{(porEq[i.equipe]=porEq[i.equipe]||[]).push(i);});
   const linhas=Object.keys(porEq).sort().map(eq=>{
     const its=porEq[eq].map(i=>{
-      const sel='<select class="mv-sel" onchange="mvSet(\''+esc(String(i.os))+'\',this.value)">'
+      const ix=(A.itens||[]).indexOf(i), k=mvChave(i);
+      const sel='<select class="mv-sel" onchange="mvSet('+ix+',this.value)">'
         +'<option value="">motivo…</option>'
-        +MOTIVOS_FIXOS.map(m=>'<option'+(MV[i.os]===m?' selected':'')+'>'+esc(m)+'</option>').join('')
-        +(MV[i.os]&&MV[i.os].indexOf('Outro: ')===0?'<option selected>'+esc(MV[i.os])+'</option>':'')
-        +'</select>';
+        +MOTIVOS_FIXOS.map(m=>'<option'+(MV[k]===m?' selected':'')+'>'+esc(m)+'</option>').join('')
+        +(MV[k]&&MV[k].indexOf('Outro: ')===0?'<option selected>'+esc(MV[k])+'</option>':'')
+        +'</select>'+mvSelo(ix,k);
       return '<div class="al-i"><b>OS '+esc(String(i.os))+'</b> · '+esc((i.usina||'').split(' - ').slice(-2).join(' - '))
         +' · '+esc(i.tarefa||'')+' <span class="al-h">'+esc(i.h_ini||'')+'–'+esc(i.h_fim||'')
         +' · '+esc(i.estado||'')+'</span> '+sel+'</div>';
