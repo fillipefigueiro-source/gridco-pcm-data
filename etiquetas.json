@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-21T11:04:50Z",
+  "geradoEm": "2026-08-21T11:40:18Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3783,
+        "total": 3784,
         "emAberto": 9,
-        "atrasadas": 9,
-        "concluidas30d": 628,
-        "concluidas7d": 147,
-        "naSemanaCorrente": 100
+        "atrasadas": 8,
+        "concluidas30d": 629,
+        "concluidas7d": 148,
+        "naSemanaCorrente": 101
       },
       "mttr": {
-        "horas": 11.18,
-        "label": "11h 11min",
-        "amostra": 628
+        "horas": 11.2,
+        "label": "11h 12min",
+        "amostra": 629
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W34",
-          "criadas": 100,
-          "finalizadas": 96
+          "criadas": 101,
+          "finalizadas": 97
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3783,
+            "total": 3784,
             "emAberto": 9
           }
         ],
@@ -58,7 +58,7 @@
           },
           {
             "nome": "Marcos  Camargo",
-            "total": 447,
+            "total": 448,
             "emAberto": 2
           },
           {
@@ -79,10 +79,10 @@
         ]
       },
       "total": 9,
-      "atrasadas": 9,
+      "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 7,
-        "emProgresso": 0,
+        "naoIniciada": 5,
+        "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
@@ -207,14 +207,15 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Felipe Silva",
           "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 5.9] - Religamento do Inversor 5.9",
           "criticidade": "",
           "dataProgramada": "2026-08-20",
           "dataCriacao": "2026-08-20",
-          "dataInicial": "",
+          "dataInicial": "2026-08-21",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -225,17 +226,38 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Felipe Silva",
           "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 5.7] - Religamento do Inversor 5.7",
           "criticidade": "",
           "dataProgramada": "2026-08-20",
           "dataCriacao": "2026-08-20",
+          "dataInicial": "2026-08-21",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "11706",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Marcos  Camargo",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-21",
+          "dataCriacao": "2026-08-21",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": true
-        },
+          "atrasada": false
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "11596",
           "ativo": "Cabine 4 Estrada Jussara S/N Mandaguaçu  Paraná Brasil { MNG100-CABN4 }",
@@ -243,19 +265,19 @@
           "responsavel": "Marcos  Camargo",
           "criadoPor": "Cícero  Willian",
           "supervisor": "Marcos  Camargo",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "[Cabine 4] - Religamento da Cabine 4",
           "criticidade": "",
           "dataProgramada": "2026-08-20",
           "dataCriacao": "2026-08-20",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-08-21",
+          "dataFinal": "2026-08-21",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
           "modalidade": "local",
-          "atrasada": true
-        }
-      ],
-      "ossHistorico": [
+          "atrasada": false
+        },
         {
           "osId": "11650",
           "ativo": "SKID 3 Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { CGU100-SKID3 }",
@@ -2017,26 +2039,6 @@
           "atrasada": false
         },
         {
-          "osId": "11314",
-          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "[Cabine 6] - Religamento da Cabine 6",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
-          "dataCriacao": "2026-08-17",
-          "dataInicial": "2026-08-17",
-          "dataFinal": "2026-08-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11269",
           "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
           "equipe": "",
@@ -3257,10 +3259,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1674,
+      "historicoTotal": 1675,
       "subClassificacao": {
         "remoto": 745,
-        "local": 3038,
+        "local": 3039,
         "remotoEmAberto": 2,
         "localEmAberto": 7,
         "pctRemoto": 20,
@@ -14639,6 +14641,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "11706",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Marcos  Camargo",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-21",
+      "dataCriacao": "2026-08-21",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11702",
       "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
       "equipe": "",
@@ -14694,14 +14713,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Felipe Silva",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 5.9] - Religamento do Inversor 5.9",
       "criticidade": "",
       "dataProgramada": "2026-08-20",
       "dataCriacao": "2026-08-20",
-      "dataInicial": "",
+      "dataInicial": "2026-08-21",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -14711,14 +14731,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Felipe Silva",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 5.7] - Religamento do Inversor 5.7",
       "criticidade": "",
       "dataProgramada": "2026-08-20",
       "dataCriacao": "2026-08-20",
-      "dataInicial": "",
+      "dataInicial": "2026-08-21",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -14752,23 +14773,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "11596",
-      "ativo": "Cabine 4 Estrada Jussara S/N Mandaguaçu  Paraná Brasil { MNG100-CABN4 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Cícero  Willian",
-      "supervisor": "Marcos  Camargo",
-      "status": "Não Iniciada",
-      "tarefa": "[Cabine 4] - Religamento da Cabine 4",
-      "criticidade": "",
-      "dataProgramada": "2026-08-20",
-      "dataCriacao": "2026-08-20",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "11555",
@@ -17722,6 +17726,26 @@
       "atrasada": false
     },
     {
+      "osId": "11596",
+      "ativo": "Cabine 4 Estrada Jussara S/N Mandaguaçu  Paraná Brasil { MNG100-CABN4 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Cícero  Willian",
+      "supervisor": "Marcos  Camargo",
+      "status": "Finalizados",
+      "tarefa": "[Cabine 4] - Religamento da Cabine 4",
+      "criticidade": "",
+      "dataProgramada": "2026-08-20",
+      "dataCriacao": "2026-08-20",
+      "dataInicial": "2026-08-21",
+      "dataFinal": "2026-08-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "11595",
       "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
       "equipe": "",
@@ -19946,30 +19970,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10922",
-      "ativo": "Cabine 1  Barretos  São Paulo Brasil { BRS100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Cícero  Willian",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Cícero  Willian",
-      "status": "Finalizados",
-      "tarefa": "UFV: Barretos 1 e 2 | Proteção: 78 | Ação: Religamento Remoto | Falha: Usina desligada",
-      "criticidade": "",
-      "dataProgramada": "2026-08-08",
-      "dataCriacao": "2026-08-08",
-      "dataInicial": "2026-08-08",
-      "dataFinal": "2026-08-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2491,
-  "totalGeral": 5194,
+  "historicoTotal": 2492,
+  "totalGeral": 5195,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
