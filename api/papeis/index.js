@@ -12,24 +12,19 @@
 // Fabrício, 19/08). Por isso existe o papel-sentinela `vivo`, abaixo.
 //
 // REGRA (nesta ordem, primeira que casar vence):
-//   1. Tenant da Grid, não-convidado, e-mail em PAPEL_ADMINS -> admin
-//   2. Tenant da Grid, não-convidado                          -> equipe
-//   3. E-mail cadastrado para exatamente UM cliente           -> cli-<cliente>
-//   4. Qualquer outro                                          -> nenhum papel
+//   1. Tenant da Grid, não-convidado                -> admin
+//   2. E-mail cadastrado para exatamente UM cliente -> cli-<cliente>
+//   3. Qualquer outro                                -> nenhum papel
 // ============================================================================
 
 const TENANT_GRID = '70958e9f-5279-4fff-9577-93c88901a19e';
 
-// Os 11 papéis que o painel realmente conhece (AUTH_CLI em js/auth.js).
-// Serve de lista branca: papel derivado que não esteja aqui é ERRO DE CADASTRO,
-// não papel novo. Sem isto, ACESSO_CLI_THOPPEN devolveria "cli-thoppen", o Azure
-// aceitaria, e a pessoa veria "conta sem papel" mesmo estando cadastrada —
-// falha muda dos dois lados. (achado A do Fabrício)
-const PAPEIS_CLIENTE = new Set([
-  'cli-2c', 'cli-alves-lima', 'cli-athon', 'cli-axis', 'cli-gd-energy',
-  'cli-greenyellow', 'cli-renogrid', 'cli-sal-energia', 'cli-semp',
-  'cli-thopen', 'cli-utragaz',
-]);
+// O cadastro de clientes agora mora no Blob e é editado pela tela /acessos.html
+// (api/acessos). A lista branca dos 11 papéis vem do mesmo módulo, para não
+// existirem duas listas que possam divergir em silêncio — que foi o achado A do
+// Fabrício em outra roupagem.
+const { CLIENTES, ler, normalizar } = require('../_acessos_store');
+const PAPEIS_CLIENTE = new Set(Object.keys(CLIENTES));
 
 // Papel-sentinela: sai em TODO login que passa por esta função, inclusive quem
 // não tem papel nenhum. É o que distingue "não cadastrado" de "a função não
@@ -51,8 +46,6 @@ const CLAIM_EMAIL = [
   'preferred_username',
   'upn',
 ];
-
-const PREFIXO_CLIENTE = 'ACESSO_CLI_';
 
 function lista(valor) {
   return String(valor || '')
@@ -100,19 +93,15 @@ function ehConvidado(claims) {
   return upns.some(u => u.toLowerCase().includes('#ext#'));
 }
 
-// Devolve TODOS os clientes em que o e-mail aparece. Plural de propósito: se
-// aparecer em dois, a configuração está ambígua e devolver o "primeiro" seria
-// escolher por ordem de Object.entries, que não é contratual. (achado B)
-function clientesDoEmail(email) {
-  const achados = [];
-  for (const chave of Object.keys(process.env).sort()) {
-    if (!chave.startsWith(PREFIXO_CLIENTE)) continue;
-    const sufixo = chave.slice(PREFIXO_CLIENTE.length);
-    if (!sufixo) continue;                              // ACESSO_CLI_ pelado (achado E)
-    if (!lista(process.env[chave]).includes(email)) continue;
-    achados.push({ variavel: chave, papel: 'cli-' + sufixo.toLowerCase().replace(/_/g, '-') });
-  }
-  return achados;
+// Devolve TODOS os cadastros em que o e-mail aparece. Plural de propósito: se
+// aparecer em dois, o cadastro está ambíguo e escolher "o primeiro" seria
+// decidir por ordem de arquivo. Fecha em vez de adivinhar. (achado B)
+async function clientesDoEmail(email) {
+  if (!email) return [];
+  const { acessos } = await ler();          // se o Blob falhar, propaga e fecha
+  return acessos
+    .filter((a) => normalizar(a.email) === email)
+    .map((a) => ({ variavel: 'cadastro', papel: String(a.papel || '').toLowerCase() }));
 }
 
 module.exports = async function (context, req) {
@@ -135,7 +124,7 @@ module.exports = async function (context, req) {
       if (ehConvidado(claims)) {
         // Convidado B2B no tenant da Grid não é da Grid. Cai para a regra de
         // cliente: se estiver cadastrado, entra como cliente; senão, nada.
-        const c = clientesDoEmail(email);
+        const c = await clientesDoEmail(email);
         if (c.length === 1 && PAPEIS_CLIENTE.has(c[0].papel)) {
           papeis = [c[0].papel];
           motivo = 'convidado B2B, cadastrado como cliente';
@@ -143,23 +132,32 @@ module.exports = async function (context, req) {
           motivo = 'convidado B2B sem cadastro de cliente';
         }
       } else {
-        papeis = lista(process.env.PAPEL_ADMINS).includes(email) ? ['admin'] : ['equipe'];
+        // Todo o tenant da Grid recebe `admin` — decisão do Fillipe, 19/08/2026.
+        // Inclui as quatro abas internas (Religamentos, Em Verificação,
+        // Sugestões IA, Gestão MPAS). Não há mais distinção admin/equipe para
+        // quem é da Grid: a variável PAPEL_ADMINS deixou de ser lida e foi
+        // apagada do SWA, para não ficar configuração morta sugerindo controle
+        // que não existe.
+        //
+        // `equipe` continua definido nas rotas e no painel, e continua sendo o
+        // papel certo para quem só consulta. Hoje ninguém o recebe.
+        papeis = ['admin'];
         motivo = 'tenant Grid';
       }
     } else if (email) {
-      const achados = clientesDoEmail(email);
+      const achados = await clientesDoEmail(email);
       if (achados.length > 1) {
-        motivo = `ambíguo: e-mail cadastrado em ${achados.map(a => a.variavel).join(' e ')}`;
+        motivo = `ambíguo: ${email} cadastrado para ${achados.length} clientes`;
         context.log.error('papeis: ' + motivo);
       } else if (achados.length === 1) {
-        const { papel, variavel } = achados[0];
+        const { papel } = achados[0];
         if (PAPEIS_CLIENTE.has(papel)) {
           papeis = [papel];
           motivo = 'cadastro de cliente';
         } else {
           // Erro de digitação no nome da variável. O papel "existiria" e o
           // painel não o reconheceria — o pior dos dois mundos.
-          motivo = `papel "${papel}" desconhecido — confira o nome da variável ${variavel}`;
+          motivo = `papel "${papel}" desconhecido — cadastro inválido para ${email}`;
           context.log.error('papeis: ' + motivo);
         }
       } else {
