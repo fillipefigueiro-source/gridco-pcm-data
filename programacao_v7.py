@@ -1025,7 +1025,11 @@ for _k in OS_EXCLUIDAS:
 # Não mexe no filtro de topo: OS com Status='Finalizados' seguem fora. As 1.059
 # tarefas abertas dentro de OS fechada são problema de cadastro e têm relatório
 # próprio — despejá-las na semana seria trocar um buraco por ruído.
-FILA_MODO = os.environ.get('PCM_FILA', 'sombra').strip().lower()
+# ATIVO desde 21/08 por decisão do PCM: a regra é que MPM do mês corrente NUNCA
+# pode ficar invisível — ou está na semana, ou aparece em "Não couberam na
+# semana". Em sombra ela não aparecia em lugar nenhum, que é o pior dos casos.
+# PCM_FILA=sombra volta a desligar.
+FILA_MODO = os.environ.get('PCM_FILA', 'ativo').strip().lower()
 if FILA_MODO not in ('sombra', 'ativo'):
     FILA_MODO = 'sombra'
 
