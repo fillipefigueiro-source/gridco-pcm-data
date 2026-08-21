@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acessos de cliente · Grid Co.</title>
+<style>
+  :root{--navy:#18152B;--navy2:#1F2430;--ink:#2b3040;--muted:#5A6270;--bg:#F0F1F3;
+    --line:#E0E2E6;--soft:#EDEEF0;--green:#A0CB3D;--green-d:#5c7d13;--red:#D64545;--amber:#F59E0B;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.45}
+  header{background:var(--navy);color:#fff;padding:14px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  header b{font-size:16px}
+  header .tag{background:var(--green);color:var(--navy);font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px}
+  header .quem{margin-left:auto;font-size:12px;color:#B9BDC9}
+  header a{color:var(--green);font-size:12px;text-decoration:none;border:1px solid #3a3550;padding:4px 11px;border-radius:6px}
+  .wrap{max-width:900px;margin:0 auto;padding:20px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:16px}
+  h2{font-size:15px;margin-bottom:4px}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:14px}
+  form{display:flex;gap:9px;flex-wrap:wrap;align-items:flex-end}
+  label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:4px}
+  input,select{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;min-width:210px}
+  input:focus,select:focus{outline:2px solid var(--green);outline-offset:-1px}
+  button{font:inherit;font-weight:600;padding:8px 16px;border:0;border-radius:8px;background:var(--navy);color:#fff;cursor:pointer}
+  button:hover{background:var(--navy2)}
+  button:disabled{opacity:.5;cursor:default}
+  button.rm{background:transparent;color:var(--red);border:1px solid var(--line);padding:4px 11px;font-size:12px;font-weight:600}
+  button.rm:hover{background:#FDF6F6;border-color:var(--red)}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);
+     border-bottom:2px solid var(--line);padding:7px 8px}
+  td{border-bottom:1px solid var(--soft);padding:9px 8px;vertical-align:middle}
+  td.email{font-family:Consolas,monospace;font-size:12.5px}
+  .chip{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:20px;
+        padding:2px 11px;font-size:12px;font-weight:600}
+  .meta{color:var(--muted);font-size:11.5px}
+  .aviso{border-radius:10px;padding:11px 14px;margin-bottom:14px;font-size:13px;display:none}
+  .aviso.erro{background:#FDF6F6;border:1px solid #f0c6c6;color:#8f2f2f;display:block}
+  .aviso.ok{background:#F4F8EA;border:1px solid #d4e3a8;color:var(--green-d);display:block}
+  .aviso.carregando{background:#FFF8E6;border:1px solid #f2dfae;color:#a36a00;display:block}
+  .vazio{text-align:center;color:var(--muted);padding:26px 10px;font-size:13px}
+  .nota{background:var(--soft);border-radius:9px;padding:11px 14px;font-size:12.5px;color:var(--muted);margin-top:14px}
+  .nota b{color:var(--ink)}
+  @media(max-width:620px){ input,select{min-width:100%} form>div{flex:1 1 100%} }
+</style>
+</head>
+<body>
+
+<header>
+  <b>Grid Co.</b>
+  <span class="tag">Acessos de cliente</span>
+  <span class="quem" id="quem">carregando…</span>
+  <a href="/">← voltar ao painel</a>
+</header>
+
+<div class="wrap">
+  <div id="aviso" class="aviso"></div>
+
+  <div class="card">
+    <h2>Dar acesso a alguém de fora da Grid</h2>
+    <p class="sub">Quem tem e-mail <b>@gridco.com.br</b> já entra sozinho pelo login da Microsoft e
+       não precisa de cadastro. Esta tela é só para gente de fora.</p>
+    <form id="form">
+      <div>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="pessoa@cliente.com.br" required autocomplete="off">
+      </div>
+      <div>
+        <label for="papel">Vai poder ver</label>
+        <select id="papel" required><option value="">— escolha o cliente —</option></select>
+      </div>
+      <div><button type="submit" id="salvar">Cadastrar</button></div>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Cadastrados</h2>
+    <p class="sub" id="contagem">—</p>
+    <table>
+      <thead><tr><th>E-mail</th><th>Vê o cliente</th><th>Cadastrado por</th><th></th></tr></thead>
+      <tbody id="linhas"></tbody>
+    </table>
+    <div class="nota">
+      <b>O que o cliente vê:</b> só as linhas do cliente dele, servidas pela
+      <code>/api/dados</code>. As abas internas e os arquivos de dados brutos ficam fechados —
+      isso não depende desta tela, é regra de rota no Azure.
+    </div>
+  </div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, c => (
+  {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function avisar(texto, tipo) {
+  const a = $('aviso');
+  a.className = 'aviso ' + (tipo || 'erro');
+  a.textContent = texto;
+  if (!texto) a.className = 'aviso';
+}
+
+// Toda falha aparece na tela. Um cadastro que "salvou" sem salvar é pior que
+// um erro feio — o operador vai embora achando que deu certo.
+async function chamar(metodo, corpo) {
+  const r = await fetch('/api/acessos', {
+    method: metodo,
+    headers: { 'Content-Type': 'application/json' },
+    body: corpo ? JSON.stringify(corpo) : undefined,
+  });
+  let d = {};
+  try { d = await r.json(); } catch (e) { /* corpo vazio ou não-JSON */ }
+  if (!r.ok) throw new Error(d.erro || ('o servidor respondeu ' + r.status));
+  return d;
+}
+
+function desenhar(dados) {
+  const tb = $('linhas');
+  tb.innerHTML = '';
+  const lista = dados.acessos || [];
+  $('contagem').textContent = lista.length === 0
+    ? 'Ninguém de fora da Grid tem acesso ainda.'
+    : lista.length + (lista.length === 1 ? ' pessoa cadastrada' : ' pessoas cadastradas');
+
+  if (lista.length === 0) {
+    tb.innerHTML = '<tr><td colspan="4" class="vazio">Use o formulário acima para dar o primeiro acesso.</td></tr>';
+    return;
+  }
+  for (const a of lista) {
+    const tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td class="email">' + esc(a.email) + '</td>' +
+      '<td><span class="chip">' + esc(a.cliente || a.papel) + '</span></td>' +
+      '<td class="meta">' + esc(a.por || '—') +
+        (a.quando ? '<br>' + esc(String(a.quando).slice(0, 10).split('-').reverse().join('/')) : '') + '</td>' +
+      '<td style="text-align:right"></td>';
+    const b = document.createElement('button');
+    b.className = 'rm';
+    b.textContent = 'Remover';
+    b.onclick = () => remover(a.email);
+    tr.lastElementChild.appendChild(b);
+    tb.appendChild(tr);
+  }
+}
+
+async function carregar() {
+  avisar('carregando o cadastro…', 'carregando');
+  try {
+    const d = await chamar('GET');
+    const sel = $('papel');
+    if (sel.options.length <= 1) {
+      for (const c of d.clientes || []) {
+        const o = document.createElement('option');
+        o.value = c.papel; o.textContent = c.nome;
+        sel.appendChild(o);
+      }
+    }
+    desenhar(d);
+    avisar('');
+  } catch (e) {
+    avisar('Não consegui ler o cadastro: ' + e.message);
+  }
+}
+
+$('form').onsubmit = async (ev) => {
+  ev.preventDefault();
+  const email = $('email').value.trim();
+  const papel = $('papel').value;
+  if (!email || !papel) return;
+  $('salvar').disabled = true;
+  try {
+    const d = await chamar('POST', { email, papel });
+    avisar(email + ' foi ' + d.acao + '.', 'ok');
+    $('email').value = ''; $('papel').value = '';
+    await carregar();
+    avisar(email + ' foi ' + d.acao + '.', 'ok');
+  } catch (e) {
+    avisar('Não deu para cadastrar: ' + e.message);
+  } finally {
+    $('salvar').disabled = false;
+  }
+};
+
+async function remover(email) {
+  if (!confirm('Remover o acesso de ' + email + '?\n\nEle perde o acesso no próximo login.')) return;
+  try {
+    await chamar('DELETE', { email });
+    await carregar();
+    avisar(email + ' foi removido.', 'ok');
+  } catch (e) {
+    avisar('Não deu para remover: ' + e.message);
+  }
+}
+
+// Quem está logado — e confirmação de que é admin. Se a sessão caiu, manda para
+// o login em vez de mostrar uma tela vazia sem explicação.
+fetch('/.auth/me').then(r => r.json()).then(d => {
+  const p = d && d.clientPrincipal;
+  if (!p) { location.href = '/.auth/login/aad?post_login_redirect_uri=' + encodeURIComponent(location.pathname); return; }
+  $('quem').textContent = p.userDetails;
+  if (!(p.userRoles || []).includes('admin')) {
+    avisar('Sua conta não é administradora — esta tela é somente leitura para você.');
+    $('salvar').disabled = true;
+  }
+  carregar();
+}).catch(() => { $('quem').textContent = '—'; carregar(); });
+</script>
+</body>
+</html>
