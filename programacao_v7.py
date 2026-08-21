@@ -1676,7 +1676,10 @@ def alloc_diurno(dc, dur_h, prefer_morning, termo, coord, allow_partial=False, f
         if dur_min > remaining and not allow_partial: return None
         if allow_partial and remaining < MIN_PIECE_MIN and dur_min > remaining:
             return None
-    effective_min = min(dur_min, remaining)
+    # force = a tarefa entra INTEIRA, mesmo estourando o dia. Sem isto o
+    # min() truncava para a capacidade restante (zero num dia cheio) e o
+    # force nao forcava nada.
+    effective_min = dur_min if force else min(dur_min, remaining)
     if dc.coord is None or coord is None or not DESLOC_CALCULA:
         desloc_h = 0.0; chegada = dc.cursor
     else:
@@ -1704,6 +1707,8 @@ def alloc_diurno(dc, dur_h, prefer_morning, termo, coord, allow_partial=False, f
     else:
         end = start + effective_min
     if end > dc.work_end_min:
+        # com force, passar do fim do expediente e o esperado: e o [EXCEDE HH]
+        if force: return (start, end, desloc_h, effective_min/60.0, True)
         if not allow_partial: return None
         if start < LUNCH_START_MIN:
             available = (LUNCH_START_MIN - start) + (dc.work_end_min - LUNCH_END_MIN)
@@ -2244,9 +2249,47 @@ def schedule_team(equipe, tarefas_all):
                           f'→ janela estendida (dia cheio)')
                     placed = True
             if not placed:
+                # 2ª passada: o PIN MANDA (21/08/2026 — decisão do PCM).
+                # O dia pedido está cheio, mas a observação é ordem: força a
+                # entrada com [EXCEDE HH], a mesma marca da corretiva. Melhor
+                # o dia estourar VISIVELMENTE do que a tarefa sumir para
+                # pendentes contra o que foi pedido.
+                for di in allowed:
+                    if di < 0 or di > 4:
+                        continue
+                    dc = day_caps[di]
+                    if dc.is_holiday:
+                        continue
+                    _turno = turno_map.get(di)
+                    if _turno == NIGHT_START_MIN:
+                        continue                    # noturno tem regra própria
+                    if _turno is not None:
+                        dc.cursor = max(dc.cursor, _turno)
+                    res = alloc_diurno(dc, tk['dur_h'],
+                                       prefer_morning=(_turno is None
+                                                       or _turno < LUNCH_START_MIN),
+                                       termo=tk['termo'], coord=tk['coord'],
+                                       allow_partial=False, force=True)
+                    if res is None:
+                        continue
+                    start, end, desloc_h, used_h, completed = res
+                    is_first = (dc.coord != tk['coord'])
+                    rows.append(_row(equipe, di, tk, start, end,
+                                     desloc_h if is_first else 0.0,
+                                     over_capacity=True))
+                    commit_diurno(dc, start, end, int(round(used_h * 60)),
+                                  tk['coord'], ativo)
+                    if day_assignments[di] is None:
+                        day_assignments[di] = ativo
+                        dc.ativo = ativo
+                    print(f'[PIN FORÇADO] OS {tk["os_id"]} | '
+                          f'{tk["tarefa_txt"][:44]} → {_DN[di]} [EXCEDE HH]')
+                    placed = True
+                    break
+            if not placed:
                 pendentes.append(_pend(equipe, tk,
                     f'Modo A: OS {tk["os_id"]} não coube nos dias '
-                    f'{[_DN[d] for d in allowed]}'))
+                    f'{[_DN[d] for d in allowed]} nem forçando'))
 
     # Alocar tarefas por usina nos dias atribuídos
     # Estratégia em 2 passes por dia:
