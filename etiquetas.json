@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-21T14:04:22Z",
+  "geradoEm": "2026-08-21T14:49:42Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -3504,16 +3504,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 609,
-        "emAberto": 55,
-        "atrasadas": 43,
-        "concluidas30d": 88,
-        "concluidas7d": 20,
+        "emAberto": 54,
+        "atrasadas": 42,
+        "concluidas30d": 89,
+        "concluidas7d": 21,
         "naSemanaCorrente": 29
       },
       "mttr": {
-        "horas": 395.45,
-        "label": "16d 11h",
-        "amostra": 88
+        "horas": 392.09,
+        "label": "16d 8h",
+        "amostra": 89
       },
       "tendencia4Semanas": [
         {
@@ -3534,7 +3534,7 @@
         {
           "semana": "W34",
           "criadas": 11,
-          "finalizadas": 15
+          "finalizadas": 16
         }
       ],
       "topOfensores": {
@@ -3542,7 +3542,7 @@
           {
             "nome": "(sem equipe)",
             "total": 609,
-            "emAberto": 55
+            "emAberto": 54
           }
         ],
         "responsaveis": [
@@ -3573,16 +3573,16 @@
           }
         ]
       },
-      "total": 55,
-      "atrasadas": 43,
+      "total": 54,
+      "atrasadas": 42,
       "porStatus": {
-        "naoIniciada": 53,
-        "emProgresso": 0,
+        "naoIniciada": 51,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 55
+        "(sem equipe)": 54
       },
       "oss": [
         {
@@ -4097,37 +4097,21 @@
           "atrasada": true
         },
         {
-          "osId": "11320",
-          "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Walter Santos ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Walter Santos ",
-          "status": "Não Iniciada",
-          "tarefa": "[SEMP] - MPQ - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
-          "dataCriacao": "2026-08-17",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "11316",
           "ativo": "Cabine 1 Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-CABN1 }",
           "equipe": "",
           "responsavel": "Walter Santos ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Walter Santos ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[SEMP] - MPQ - Cabine",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-17",
-          "dataInicial": "",
+          "dataInicial": "2026-08-21",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "atrasada": true
         },
         {
@@ -4524,6 +4508,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11320",
+          "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Walter Santos ",
+          "status": "Finalizados",
+          "tarefa": "[SEMP] - MPQ - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-17",
+          "dataInicial": "2026-08-21",
+          "dataFinal": "2026-08-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "10296",
           "ativo": "Preventiva Grupo de Inversores      { THPN-SBT500-PGINVR1 }",
@@ -7185,25 +7188,6 @@
           "atrasada": false
         },
         {
-          "osId": "8309",
-          "ativo": "Cabine 1  Santo Inácio  São Paulo Brasil { STI100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Hélio Silva ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Hélio Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-07-03",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "2026-07-02",
-          "dataFinal": "2026-07-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 192.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8786",
           "ativo": "Transformador 2 COMTRAFO     { MAB200-TRFR2 }",
           "equipe": "",
@@ -7375,7 +7359,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 253
+      "historicoTotal": 254
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8363,8 +8347,8 @@
       "total": 75,
       "atrasadas": 67,
       "porStatus": {
-        "naoIniciada": 65,
-        "emProgresso": 4,
+        "naoIniciada": 64,
+        "emProgresso": 5,
         "pausada": 6,
         "verificacao": 0
       },
@@ -9526,14 +9510,15 @@
           "responsavel": "Henri Almeida ",
           "criadoPor": "LuelySantos",
           "supervisor": "Henri Almeida ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.2] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-08-21",
           "dataCriacao": "2026-08-21",
-          "dataInicial": "",
+          "dataInicial": "2026-08-21",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -14735,14 +14720,15 @@
       "responsavel": "Henri Almeida ",
       "criadoPor": "LuelySantos",
       "supervisor": "Henri Almeida ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.2] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-08-21",
       "dataCriacao": "2026-08-21",
-      "dataInicial": "",
+      "dataInicial": "2026-08-21",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "11724",
@@ -15215,22 +15201,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "11320",
-      "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Walter Santos ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Walter Santos ",
-      "status": "Não Iniciada",
-      "tarefa": "[SEMP] - MPQ - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-17",
-      "dataCriacao": "2026-08-17",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "11319",
       "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
       "equipe": "",
@@ -15269,14 +15239,15 @@
       "responsavel": "Walter Santos ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Walter Santos ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[SEMP] - MPQ - Cabine",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-08-17",
-      "dataInicial": "",
+      "dataInicial": "2026-08-21",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0
     },
     {
       "osId": "11288",
@@ -18971,6 +18942,25 @@
       "atrasada": false
     },
     {
+      "osId": "11320",
+      "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Walter Santos ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Walter Santos ",
+      "status": "Finalizados",
+      "tarefa": "[SEMP] - MPQ - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-08-17",
+      "dataInicial": "2026-08-21",
+      "dataFinal": "2026-08-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "11315",
       "ativo": "Cabine 1 Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-CABN1 }",
       "equipe": "",
@@ -20020,29 +20010,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10965",
-      "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.4 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Wesllen  Castro",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-14",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 96.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2497,
+  "historicoTotal": 2498,
   "totalGeral": 5202,
   "verificacao": {
     "total": 0,
