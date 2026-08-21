@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-20T23:58:37Z",
+  "geradoEm": "2026-08-21T01:22:52Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3782,
+        "total": 3783,
         "emAberto": 9,
-        "atrasadas": 5,
-        "concluidas30d": 649,
-        "concluidas7d": 162,
-        "naSemanaCorrente": 99
+        "atrasadas": 9,
+        "concluidas30d": 628,
+        "concluidas7d": 147,
+        "naSemanaCorrente": 100
       },
       "mttr": {
-        "horas": 10.81,
-        "label": "10h 49min",
-        "amostra": 649
+        "horas": 11.18,
+        "label": "11h 11min",
+        "amostra": 628
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W34",
-          "criadas": 99,
-          "finalizadas": 95
+          "criadas": 100,
+          "finalizadas": 96
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3782,
+            "total": 3783,
             "emAberto": 9
           }
         ],
@@ -74,12 +74,12 @@
           {
             "nome": "Wesllen  Castro",
             "total": 170,
-            "emAberto": 1
+            "emAberto": 0
           }
         ]
       },
       "total": 9,
-      "atrasadas": 5,
+      "atrasadas": 9,
       "porStatus": {
         "naoIniciada": 7,
         "emProgresso": 0,
@@ -183,6 +183,24 @@
           "atrasada": true
         },
         {
+          "osId": "11702",
+          "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Luiz  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento de usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-20",
+          "dataCriacao": "2026-08-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "11640",
           "ativo": "Inversor 5.9 Huawei     { MAB200-INVR5.9 }",
           "equipe": "",
@@ -198,7 +216,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "11639",
@@ -216,25 +234,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "11610",
-          "ativo": "Cabine 2  Ipixuna  Pará Brasil { IPX100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
-          "tarefa": "[IPX100-CABN2] - Religamento do IPX100-CABN2",
-          "criticidade": "",
-          "dataProgramada": "2026-08-20",
-          "dataCriacao": "2026-08-20",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "11596",
@@ -252,7 +252,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         }
       ],
       "ossHistorico": [
@@ -365,6 +365,26 @@
           "supervisor": "Luiz  Silva",
           "status": "Finalizados",
           "tarefa": "[Cabine 5] - Religamento da Cabine 5",
+          "criticidade": "",
+          "dataProgramada": "2026-08-20",
+          "dataCriacao": "2026-08-20",
+          "dataInicial": "2026-08-20",
+          "dataFinal": "2026-08-20",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11610",
+          "ativo": "Cabine 2  Ipixuna  Pará Brasil { IPX100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Wesllen  Castro",
+          "status": "Finalizados",
+          "tarefa": "[IPX100-CABN2] - Religamento do IPX100-CABN2",
           "criticidade": "",
           "dataProgramada": "2026-08-20",
           "dataCriacao": "2026-08-20",
@@ -3235,32 +3255,12 @@
           "horasAteFechar": 24.0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "6965",
-          "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.4 }",
-          "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Frank  Melo",
-          "status": "Finalizados",
-          "tarefa": "religamento do inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-05-22",
-          "dataCriacao": "2026-05-22",
-          "dataInicial": "2026-05-22",
-          "dataFinal": "2026-05-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1694,
+      "historicoTotal": 1674,
       "subClassificacao": {
         "remoto": 745,
-        "local": 3037,
+        "local": 3038,
         "remotoEmAberto": 2,
         "localEmAberto": 7,
         "pctRemoto": 20,
@@ -3486,15 +3486,15 @@
       "kpis": {
         "total": 609,
         "emAberto": 56,
-        "atrasadas": 43,
-        "concluidas30d": 91,
-        "concluidas7d": 26,
+        "atrasadas": 44,
+        "concluidas30d": 87,
+        "concluidas7d": 19,
         "naSemanaCorrente": 29
       },
       "mttr": {
-        "horas": 393.23,
+        "horas": 393.38,
         "label": "16d 9h",
-        "amostra": 91
+        "amostra": 87
       },
       "tendencia4Semanas": [
         {
@@ -3555,7 +3555,7 @@
         ]
       },
       "total": 56,
-      "atrasadas": 43,
+      "atrasadas": 44,
       "porStatus": {
         "naoIniciada": 54,
         "emProgresso": 0,
@@ -4313,7 +4313,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "10166",
@@ -7373,7 +7373,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 256
+      "historicoTotal": 252
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -7383,14 +7383,14 @@
         "total": 139,
         "emAberto": 1,
         "atrasadas": 1,
-        "concluidas30d": 9,
+        "concluidas30d": 8,
         "concluidas7d": 3,
         "naSemanaCorrente": 1
       },
       "mttr": {
-        "horas": 154.67,
-        "label": "6d 10h",
-        "amostra": 9
+        "horas": 174.0,
+        "label": "7d 6h",
+        "amostra": 8
       },
       "tendencia4Semanas": [
         {
@@ -8279,85 +8279,9 @@
           "horasAteAbrir": 168.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "6869",
-          "ativo": "RenoGrid - Nova Xavantina 1 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso  { RNGD-NVX100 }",
-          "equipe": "",
-          "responsavel": "Damião  Martins",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Damião  Martins",
-          "status": "Finalizados",
-          "tarefa": "Abertura de chamado para garantia [Levantamento de informações]",
-          "criticidade": "",
-          "dataProgramada": "2026-05-21",
-          "dataCriacao": "2026-05-20",
-          "dataInicial": "2026-05-21",
-          "dataFinal": "2026-05-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 24.0,
-          "atrasada": false
-        },
-        {
-          "osId": "6868",
-          "ativo": "RenoGrid - Nova Xavantina 2 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso Brasil { RNGD-NVX200 }",
-          "equipe": "",
-          "responsavel": "Damião  Martins",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Damião  Martins",
-          "status": "Finalizados",
-          "tarefa": "Abertura de chamado para garantia [Levantamento de informações]",
-          "criticidade": "",
-          "dataProgramada": "2026-05-21",
-          "dataCriacao": "2026-05-20",
-          "dataInicial": "2026-05-21",
-          "dataFinal": "2026-05-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 24.0,
-          "atrasada": false
-        },
-        {
-          "osId": "6585",
-          "ativo": "Inversor 4.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR4.1 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "Abertura de chamado para garantia [Teste em campo]",
-          "criticidade": "",
-          "dataProgramada": "2026-05-15",
-          "dataCriacao": "2026-05-13",
-          "dataInicial": "2026-05-22",
-          "dataFinal": "2026-05-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 216.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "6949",
-          "ativo": "Tracker 17.100 STI     { GYT100-ETKR17.100 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Juliana Cândido ",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Finalizada",
-          "tarefa": "Abertura de chamado para garantia [Embalo de Equipamento Defeituoso] - Tracker 17",
-          "criticidade": "",
-          "dataProgramada": "2026-05-22",
-          "dataCriacao": "2026-05-22",
-          "dataInicial": "2026-05-22",
-          "dataFinal": "2026-05-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 46
+      "historicoTotal": 42
     },
     "performance": {
       "label": "Performance",
@@ -8366,15 +8290,15 @@
       "kpis": {
         "total": 543,
         "emAberto": 73,
-        "atrasadas": 65,
-        "concluidas30d": 288,
-        "concluidas7d": 76,
+        "atrasadas": 67,
+        "concluidas30d": 282,
+        "concluidas7d": 65,
         "naSemanaCorrente": 49
       },
       "mttr": {
-        "horas": 162.25,
+        "horas": 162.47,
         "label": "6d 18h",
-        "amostra": 288
+        "amostra": 282
       },
       "tendencia4Semanas": [
         {
@@ -8435,7 +8359,7 @@
         ]
       },
       "total": 73,
-      "atrasadas": 65,
+      "atrasadas": 67,
       "porStatus": {
         "naoIniciada": 65,
         "emProgresso": 0,
@@ -9573,7 +9497,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "11528",
@@ -9591,7 +9515,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "11646",
@@ -12557,15 +12481,15 @@
       "kpis": {
         "total": 120,
         "emAberto": 10,
-        "atrasadas": 8,
-        "concluidas30d": 51,
-        "concluidas7d": 13,
+        "atrasadas": 9,
+        "concluidas30d": 49,
+        "concluidas7d": 10,
         "naSemanaCorrente": 9
       },
       "mttr": {
-        "horas": 283.29,
-        "label": "11d 19h",
-        "amostra": 51
+        "horas": 280.65,
+        "label": "11d 16h",
+        "amostra": 49
       },
       "tendencia4Semanas": [
         {
@@ -12626,7 +12550,7 @@
         ]
       },
       "total": 10,
-      "atrasadas": 8,
+      "atrasadas": 9,
       "porStatus": {
         "naoIniciada": 10,
         "emProgresso": 0,
@@ -12788,7 +12712,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "11454",
@@ -14715,6 +14639,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "11702",
+      "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Luiz  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento de usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-20",
+      "dataCriacao": "2026-08-20",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11646",
       "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { THPN-DMT100-INVR1.3 }",
       "equipe": "",
@@ -14811,23 +14752,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "11610",
-      "ativo": "Cabine 2  Ipixuna  Pará Brasil { IPX100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
-      "tarefa": "[IPX100-CABN2] - Religamento do IPX100-CABN2",
-      "criticidade": "",
-      "dataProgramada": "2026-08-20",
-      "dataCriacao": "2026-08-20",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "11596",
@@ -17778,6 +17702,26 @@
       "atrasada": false
     },
     {
+      "osId": "11610",
+      "ativo": "Cabine 2  Ipixuna  Pará Brasil { IPX100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Wesllen  Castro",
+      "status": "Finalizados",
+      "tarefa": "[IPX100-CABN2] - Religamento do IPX100-CABN2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-20",
+      "dataCriacao": "2026-08-20",
+      "dataInicial": "2026-08-20",
+      "dataFinal": "2026-08-20",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "11595",
       "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
       "equipe": "",
@@ -20022,29 +19966,10 @@
       "horasAteFechar": 0,
       "modalidade": "remoto",
       "atrasada": false
-    },
-    {
-      "osId": "10904",
-      "ativo": "Estação Meteorológica  São Bento  Rio de Janeiro Brasil { SBT500-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Adão Neto ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Adão Neto ",
-      "status": "Finalizados",
-      "tarefa": "[ETM] - Análise de sensores",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2519,
-  "totalGeral": 5193,
+  "historicoTotal": 2491,
+  "totalGeral": 5194,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
