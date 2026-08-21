@@ -1,34 +1,6 @@
-# ============================================================================
-# ESTA CÓPIA NÃO RODA. Editar aqui NÃO tem efeito nenhum.
-#
-# O workflow que vale desde 19/08/2026 é  .github/workflows/azure-swa.yml
-# (o Fillipe copiou este arquivo para lá quando o SWA entrou no ar).
-#
-# Este arquivo fica como MOLDE histórico. Se precisar mudar o deploy, mude o
-# de .github/workflows/ — e, se mudar os dois, mude os dois de verdade: as
-# cópias divergirem em silêncio é exatamente o tipo de falha muda que já nos
-# custou tempo no parser de observações, na paginação do Fracttal e no
-# --cifrar do mpas.json.
-# ============================================================================
-#
 # Melhoria 5 — deploy do painel no Azure Static Web Apps (decisão 25).
 name: Deploy Azure Static Web Apps
 
-# ATENÇÃO AO GATILHO — achado em 21/08/2026, custou meia manhã.
-#
-# O `push:` abaixo NÃO acorda este workflow quando quem empurra é o robô. Os
-# workflows do robô fazem checkout com o GITHUB_TOKEN padrão, e o GitHub, de
-# propósito, NÃO dispara workflows a partir de pushes feitos com esse token
-# (regra anti-loop da plataforma; workflow_dispatch é a exceção).
-#
-# Consequência: o SWA só era publicado quando uma PESSOA dava push, e ficava
-# para trás em silêncio o resto do tempo. Na sexta 21/08 a Semana 35 apareceu
-# no Pages e não no Azure, e o painel do Azure acusou "dados de 17h atrás".
-# Ninguém tinha errado nada — o gatilho é que nunca ia disparar.
-#
-# `workflow_run` resolve pela raiz: dispara DEPOIS que cada robô termina, que é
-# exatamente quando existe dado novo para publicar. O `push` fica junto para o
-# caso de publicação manual (index/css/js/api), que vem de token de pessoa.
 on:
   workflow_run:
     workflows:
@@ -44,9 +16,6 @@ on:
       - "js/**"
       - "*.json"
       - "staticwebapp.config.json"
-      # api/** estava de fora: uma correcao no api/dados/index.js -- que e o
-      # codigo que decide o que cada cliente ve -- nao publicava sozinha. O
-      # sintoma seria a correcao urgente nao subir, sem nada falhar.
       - "api/**"
   workflow_dispatch:
 
