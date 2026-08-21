@@ -1,0 +1,104 @@
+/* ───────────────────────────────────────────────────────────────────────────
+   preventivas.css — Gestão PCM: matriz de conclusão das preventivas.
+   Criado em 21/08/2026. Versão embutida do artifact aprovado pelo PCM.
+
+   Prefixo gpv- em TUDO: no artifact, a classe .grupo dos controles vazou para
+   o <tr> de subtotal (display:flex num table-row) e desalinhou a tabela
+   inteira. Aqui nenhum nome é compartilhado com o app.js.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.gpv-box { background: #fff; border: 1px solid #d9dae4; border-radius: 10px;
+  margin: 14px 0; overflow: hidden }
+
+.gpv-top { display: flex; justify-content: space-between; align-items: center;
+  padding: 13px 16px; cursor: pointer; gap: 10px }
+.gpv-top:hover { background: #fafafd }
+.gpv-tit { font-size: 14px; font-weight: 700; color: #1c1f3b }
+.gpv-mat { font-size: 10px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .06em; color: #3f6b12; background: #eef5d8; border-radius: 9px;
+  padding: 2px 8px; margin-left: 7px; vertical-align: 2px }
+.gpv-sub { font-size: 11.5px; color: #8a8a98; margin-top: 2px }
+.gpv-chev { color: #8a8a98; font-size: 13px }
+
+.gpv-ctl { display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+  padding: 10px 14px; border-top: 1px solid #eaeaf1; background: #fafafd; cursor: default }
+.gpv-rot { font-size: 9.5px; font-weight: 800; letter-spacing: .07em;
+  text-transform: uppercase; color: #8a8a98 }
+.gpv-seg { display: flex; border: 1px solid #d9dae4; border-radius: 7px;
+  overflow: hidden; background: #fff }
+.gpv-seg button { border: 0; border-right: 1px solid #d9dae4; background: #fff;
+  color: #565469; font-family: inherit; font-size: 12px; font-weight: 600;
+  padding: 5px 11px; cursor: pointer }
+.gpv-seg button:last-child { border-right: 0 }
+.gpv-seg button:hover:not(.on) { background: #f2f4ea; color: #1c1f3b }
+.gpv-seg button.on { background: #191528; color: #fff }
+.gpv-busca { border: 1px solid #d9dae4; border-radius: 7px; padding: 6px 10px;
+  font-family: inherit; font-size: 12px; min-width: 160px }
+.gpv-lnk { border: 1px solid #d9dae4; border-radius: 7px; background: #fff;
+  color: #565469; font-family: inherit; font-size: 12px; padding: 5px 10px; cursor: pointer }
+.gpv-lnk:hover { background: #f2f4ea; color: #1c1f3b }
+
+/* legenda das colunas — sempre visível, acima da tabela */
+.gpv-guia { display: flex; flex-wrap: wrap; background: #f7f8fa;
+  border-top: 1px solid #eaeaf1; border-bottom: 1px solid #d9dae4;
+  font-size: 11px; color: #565469 }
+.gpv-guia div { padding: 7px 12px; border-right: 1px solid #eaeaf1;
+  display: flex; gap: 5px; align-items: baseline }
+.gpv-guia div:last-child { border-right: 0; flex: 1; min-width: 200px }
+.gpv-guia b { color: #1c1f3b; font-weight: 800; font-size: 10px;
+  letter-spacing: .05em; text-transform: uppercase }
+
+/* a tabela em si — grade fechada, estilo planilha */
+.gpv-rolo { overflow: auto; max-height: 560px }
+.gpv-tbl { width: 100%; border-collapse: separate; border-spacing: 0;
+  font-size: 12.5px; table-layout: fixed }   /* fixed: largura vem do colgroup */
+.gpv-tbl th, .gpv-tbl td { border-right: 1px solid #eaeaf1;
+  border-bottom: 1px solid #eaeaf1; padding: 0 9px; height: 29px; white-space: nowrap }
+.gpv-tbl th { background: #f7f8fa; color: #6a6878; font-size: 10px; font-weight: 800;
+  letter-spacing: .05em; text-transform: uppercase; position: sticky; top: 0; z-index: 3;
+  border-bottom: 2px solid #c9c9d6; cursor: pointer; user-select: none; text-align: center }
+.gpv-tbl th.rotlin { text-align: left; left: 0; z-index: 5 }
+.gpv-tbl th:hover { color: #1c1f3b }
+.gpv-ord { opacity: .4; margin-left: 3px; font-weight: 600 }
+.gpv-tbl th.ativo { color: #1c1f3b }
+.gpv-tbl th.ativo .gpv-ord { opacity: 1; color: #3f6b12 }
+.gpv-tbl td { text-align: right; font-variant-numeric: tabular-nums }
+.gpv-tbl td.rotlin { position: sticky; left: 0; background: #fff; z-index: 2;
+  text-align: left; border-right: 2px solid #c9c9d6; overflow: hidden;
+  text-overflow: ellipsis }
+.gpv-tbl tbody tr:nth-child(even) td:not(.rotlin) { background: #fbfbfd }
+.gpv-tbl tbody tr:hover td { background: #f2f4ea }
+.gpv-tbl tbody tr:hover td.rotlin { background: #f2f4ea }
+
+/* subtotal (gpv-sub, nunca "grupo") e total */
+tr.gpv-sub td { background: #eef1e2 !important; font-weight: 700;
+  border-bottom: 1px solid #c9c9d6; cursor: pointer }
+tr.gpv-sub td.rotlin { background: #eef1e2 !important }
+.gpv-chev2 { display: inline-block; width: 12px; color: #6a6878; font-size: 10px }
+tr.gpv-filho td.rotlin { padding-left: 28px; color: #565469 }
+tr.gpv-total td { background: #e4e7ee !important; font-weight: 800;
+  border-top: 2px solid #c9c9d6; position: sticky; bottom: 0; z-index: 2 }
+tr.gpv-total td.rotlin { background: #e4e7ee !important; z-index: 4 }
+.gpv-mini { font-size: 10px; color: #8a8a98; font-weight: 400; margin-left: 6px }
+.gpv-num { font-weight: 700 }
+.gpv-vazio { text-align: center !important; color: #8a8a98; padding: 22px !important }
+
+/* célula colorida — a cor sempre segue o percentual */
+.gpv-cel { display: block; margin: 0 -9px; padding: 0 9px; height: 100%;
+  line-height: 29px; cursor: help; font-weight: 700; font-size: 12px }
+.gpv-cel.crit { background: #fbe0e0; color: #8f2323 }
+.gpv-cel.and  { background: #fdf0d4; color: #7d5106 }
+.gpv-cel.ok   { background: #dcf2de; color: #166030 }
+.gpv-cel.nulo { color: #b0aebe; font-weight: 500 }
+
+.gpv-leg { display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+  padding: 9px 14px; border-top: 1px solid #eaeaf1; background: #fafafd;
+  font-size: 11px; color: #565469 }
+.gpv-leg i { width: 11px; height: 11px; border-radius: 3px; display: inline-block;
+  margin-right: 5px; vertical-align: -1px; border: 1px solid #d9dae4 }
+.gpv-fim { margin-left: auto; color: #8a8a98 }
+
+@media (max-width: 760px) {
+  .gpv-tbl colgroup col:first-child { width: 180px !important }
+  .gpv-fim { display: none }
+}
