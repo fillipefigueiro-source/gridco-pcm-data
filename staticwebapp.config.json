@@ -14,6 +14,8 @@
   "routes": [
     { "route": "/.auth/login/github",  "statusCode": 404 },
     { "route": "/.auth/login/twitter", "statusCode": 404 },
+    { "route": "/acessos.html", "allowedRoles": ["admin"] },
+    { "route": "/api/acessos",  "allowedRoles": ["admin"] },
     { "route": "/api/*",   "allowedRoles": ["authenticated"] },
     { "route": "/*.json",  "allowedRoles": ["admin", "equipe"] },
     { "route": "/*",       "allowedRoles": ["authenticated"] }
