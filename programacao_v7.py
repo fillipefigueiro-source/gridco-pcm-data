@@ -1013,7 +1013,74 @@ for _k in OS_EXCLUIDAS:
     if str(_k) not in _ids_presentes:
         OBS_PROBLEMAS.append((None, f"OS {_k}",
             "marcada 'nao' mas já não estava na semana — linha desnecessária"))
-mask_week = mask_carry_over | mask_semana_atual | mask_pinned | mask_aging_in
+# ─────────────────────────────────────────────────────────────────────────────
+# FILA DE REPROGRAMAÇÃO ENTRE SEMANAS (21/08/2026 — pedido do PCM)
+#
+# O carry-over acima resolve 2 semanas e o aging para em AGING_JANELA_MAX (60
+# dias). Tarefa vencida há mais tempo saía do plano e não aparecia em semana
+# nenhuma — 1.334 tarefas em 21/08. Esta máscara traz de volta o que ainda faz
+# sentido executar, com regra por sigla, e o que não couber na capacidade
+# continua saindo como PENDENTE (visível), nunca sumindo.
+#
+# Não mexe no filtro de topo: OS com Status='Finalizados' seguem fora. As 1.059
+# tarefas abertas dentro de OS fechada são problema de cadastro e têm relatório
+# próprio — despejá-las na semana seria trocar um buraco por ruído.
+FILA_MODO = os.environ.get('PCM_FILA', 'sombra').strip().lower()
+if FILA_MODO not in ('sombra', 'ativo'):
+    FILA_MODO = 'sombra'
+
+_SIG_MES  = ('MPM', 'MPW', 'MPQ', 'MPT')   # só do mês corrente
+_SIG_LIVRE = ('MPS', 'MPA')                # de qualquer mês
+_TIPO_SEMPRE = ('corretiva', 'inspe')      # tier 0 e 1 da régua da rolagem
+_TIPO_NUNCA  = ('handover', 'administrativa')
+
+_rx_sig = re.compile(r'\b(MP[MSAQWT])\b')
+
+
+def _fila_elegivel(tarefa, tipo, dt_prog):
+    """True se a tarefa vencida deve voltar para a fila desta semana."""
+    if pd.isna(dt_prog):
+        return False
+    t = str(tipo or '').strip().lower()
+    if any(k in t for k in _TIPO_NUNCA):
+        return False
+    m = _rx_sig.search(str(tarefa or ''))
+    if m:
+        sig = m.group(1)
+        if sig in _SIG_LIVRE:
+            return True
+        if sig in _SIG_MES:
+            return (dt_prog.month == WEEK_START.month and
+                    dt_prog.year == WEEK_START.year)
+        return False
+    return any(k in t for k in _TIPO_SEMPRE)
+
+
+_venc = df_filt['Data Programada'] < pd.Timestamp(WEEK_START)
+mask_fila = _venc & df_filt.apply(
+    lambda r: _fila_elegivel(r.get('Tarefa'), r.get('Tipo de tarefa'),
+                             r.get('Data Programada')), axis=1)
+
+_n_fila = int(mask_fila.sum())
+if _n_fila:
+    _det = df_filt[mask_fila]
+    _por = _det['Tipo de tarefa'].astype(str).value_counts().head(6).to_dict()
+    _idade_max = int((_hoje_ts - _det['Data Programada']).dt.days.max())
+    print(f'[FILA REPROG · {FILA_MODO.upper()}] {_n_fila} tarefa(s) vencida(s) '
+          f'voltam para a semana · mais antiga há {_idade_max} dias · {_por}')
+    for _, _r in _det.iterrows():
+        OBS_PROBLEMAS.append((None,
+            f"OS {_r['OSs ID']}",
+            f"reprogramada: vencida em {_r['Data Programada'].date()} "
+            f"({(_hoje_ts - _r['Data Programada']).days}d) · {str(_r.get('Tarefa',''))[:60]}"))
+else:
+    print(f'[FILA REPROG · {FILA_MODO.upper()}] nada vencido elegível nesta semana')
+
+if FILA_MODO != 'ativo':
+    mask_fila = mask_fila & False          # sombra: contabiliza, não entra
+# ─────────────────────────────────────────────────────────────────────────────
+
+mask_week = mask_carry_over | mask_semana_atual | mask_pinned | mask_aging_in | mask_fila
 # OS marcadas com "nao" em Observacoes_Semana.txt são excluídas da programação
 if OS_EXCLUIDAS:
     mask_excluir_obs = _os_id_norm.isin({str(k) for k in OS_EXCLUIDAS})

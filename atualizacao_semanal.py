@@ -1786,8 +1786,13 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
 # preventiva/inspeção vira pendente com motivo), 11 (pin e paralela não rolam).
 #
 # MODO SOMBRA (padrão na 1ª semana): só anota a coluna "Rolagem" com o que
-# ACONTECERIA — nada se move. PCM_ROLAGEM=ativo liga de verdade.
-ROLAGEM_MODO_DEFAULT = "sombra"
+# ACONTECERIA — nada se move. PCM_ROLAGEM=sombra volta a desligar.
+#
+# ATIVO desde 21/08/2026, por decisão do PCM. Ficou em sombra desde que foi
+# escrita — registrava o que rolaria e nada se movia, e ninguém percebeu porque
+# a sombra não faz barulho. A rolagem trata o DIA (segunda não feita vai para
+# terça); o que atravessa a SEMANA é a fila de reprogramação do programacao_v7.
+ROLAGEM_MODO_DEFAULT = "ativo"
 
 _TIER_ROLAGEM = [
     ("corretiva", 0), ("religamento", 0),
