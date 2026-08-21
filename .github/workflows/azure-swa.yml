@@ -1,10 +1,19 @@
 # Melhoria 5 — deploy do painel no Azure Static Web Apps (decisão 25).
 #
-# O robô não muda: continua commitando os .json; cada push dispara este deploy,
-# que copia o conteúdo do repositório para o SWA (sem build).
+# GATILHO: o robô commita com o GITHUB_TOKEN, e o GitHub NÃO dispara workflows a
+# partir de pushes feitos com esse token (proteção contra laço). Por isso o
+# `push` sozinho nunca funcionou para as rodadas do robô — o dado atualizava no
+# repositório e o Azure ficava para trás, sem erro em lugar nenhum.
+# O `workflow_run` dispara quando cada robô TERMINA, que é quando há dado novo.
 name: Deploy Azure Static Web Apps
 
 on:
+  workflow_run:
+    workflows:
+      - "Atualiza Programação Semanal (a cada 15 min)"
+      - "Atualiza Gestão PCM (a cada 15 min)"
+    types: [completed]
+    branches: [main]
   push:
     branches: [main]
     paths:
