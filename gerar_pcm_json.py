@@ -54,6 +54,71 @@ def _log(msg):
     print(f"[{dt.datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
 
 
+# ─── Grafia canônica de cluster ──────────────────────────────────────────────
+# No Fracttal, cada cluster tem DUAS entradas na "Ativo Classificação 2" — uma
+# para instalação (tipo 1) e outra para equipamento (tipo 2). Em três delas a
+# segunda foi digitada em caixa alta, e o efeito era partir a equipe em duas:
+# capacidade dividida ao meio (PA Leste 01 aparecia como 8,4h E 46,5h de 44h) e
+# 297 tarefas sem destinatário de alerta, porque o alertas_destinatarios.json só
+# conhece a grafia normal.
+#
+# Decisão de 21/08/2026: o cadastro do Fracttal NÃO será corrigido (a API só lê;
+# a interface exigiria três renomeações manuais). Então este mapa é a REGRA, não
+# um remendo — e por isso normaliza EM SILÊNCIO. Gritar a cada rodada por uma
+# correção que ninguém vai fazer só ensina a ignorar o log.
+#
+# O que grita é grafia NOVA: se aparecer um par divergente fora deste mapa, o
+# _conferir_clusters() denuncia e já entrega a linha a colar aqui.
+_CLUSTER_CANONICO = {
+    "PA LESTE 01": "PA Leste 01",
+    "PA NORTE 01": "PA Norte 01",
+    "MA LESTE 02": "MA Leste 02",
+}
+_CLUSTER_VISTO = {}          # UPPER -> {grafias vistas}
+_CLUSTER_CORRIGIDO = {}      # grafia bruta -> quantas vezes
+
+
+def _cluster_norm(bruto):
+    """Grafia canônica do cluster. Silencioso para os casos conhecidos."""
+    c = str(bruto or "").strip()
+    if not c:
+        return c
+    _CLUSTER_VISTO.setdefault(c.upper(), set()).add(c)
+    alvo = _CLUSTER_CANONICO.get(c.upper())
+    if alvo and c != alvo:
+        _CLUSTER_CORRIGIDO[c] = _CLUSTER_CORRIGIDO.get(c, 0) + 1
+        return alvo
+    return c
+
+
+def _conferir_clusters():
+    """Resumo do que foi normalizado; alarme só para grafia nova.
+
+    Sem a segunda parte, o mapa resolveria os três de hoje e o próximo apareceria
+    em silêncio — que é exatamente como o problema chegou até aqui.
+    """
+    if _CLUSTER_CORRIGIDO:
+        det = ", ".join(f"{k} x{v}" for k, v in sorted(_CLUSTER_CORRIGIDO.items()))
+        _log(f"cluster: grafia canônica aplicada em "
+             f"{sum(_CLUSTER_CORRIGIDO.values())} linhas ({det})")
+
+    novos = [(k, sorted(g)) for k, g in sorted(_CLUSTER_VISTO.items())
+             if len(g) > 1 and k not in _CLUSTER_CANONICO]
+    for _chave, grafias in novos:
+        # Escolhe como canônica a que segue "UF Regiao NN" com a região em Título.
+        # Um [A-Za-z]+ aqui aceitava "SUL" tão bem quanto "Sul" e, como sorted()
+        # põe maiúscula primeiro, a sugestão saía inútil ("CE SUL 01" -> ela mesma).
+        pref = next((g for g in grafias
+                     if re.match(r"^[A-Z]{2} [A-ZÀ-Ú][a-zà-ú]+ \d{2}$", g)),
+                    grafias[0])
+        _log(f"ATENÇÃO: cluster com grafias divergentes NÃO tratadas: {grafias} "
+             f"— a equipe está sendo contada em dobro e pode ficar sem alerta.")
+        for g in grafias:
+            if g != pref:
+                _log(f'         acrescente em _CLUSTER_CANONICO:  '
+                     f'"{g.upper()}": "{pref}",')
+
+
 def _detectar_pasta() -> Path:
     env = os.getenv("PCM_PROG_DIR")
     if env and Path(env).exists():
@@ -240,7 +305,7 @@ def _carregar_mapa_extras(pasta: Path) -> dict:
         if _ua:
             entrada["usinaAtual"] = str(_ua).strip()
         if _ca:
-            entrada["clusterAtual"] = str(_ca).strip()
+            entrada["clusterAtual"] = _cluster_norm(_ca)
         if _gp is not None and _ua:
             try:
                 entrada["responsavelAtual"] = _gp.resolver_responsavel(
@@ -331,7 +396,7 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
                             "os_id":   str(_v(io_)).split(".")[0].strip(),
                             "usina":   _usina,
                             "cliente": _extrair_cliente(_usina) if _usina else "",
-                            "cluster": eq,
+                            "cluster": _cluster_norm(eq),
                             "tarefa":  str(_v(it) or "").strip(),
                             "tipo":    str(_v(itp) or "").strip(),
                             "duracao": _safe_float(_v(idur)),
@@ -432,7 +497,7 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
             row = {
                 "cliente":     (_extrair_cliente(_usina_at) if _usina_at else cliente),
                 "usina":       (_usina_at or str(ativo).strip()),
-                "cluster":     (_ex.get("clusterAtual") or str(equipe).strip()),
+                "cluster":     _cluster_norm(_ex.get("clusterAtual") or equipe),
                 "tipo":        str(get(r, i_tipo) or "").strip(),
                 "dia":         _norm_dia(get(r, i_dia)),
                 "os_id":       str(v_os).strip(),
@@ -540,7 +605,7 @@ def linhas_fora_do_plano(df, mon: dt.date, plan_keys: set) -> list:
         estado = str(r.get('Estado da Tarefa') or '').strip()
         out.append({
             "cliente": _extrair_cliente(usina), "usina": usina,
-            "cluster": str(r.get('Ativo Classificação 2') or '').strip(),
+            "cluster": _cluster_norm(r.get('Ativo Classificação 2')),
             "tipo": str(r.get('Tipo de tarefa') or '').strip(),
             "dia": _DIA_FULL[fim.weekday()], "os_id": os_id, "codigo": cod,
             "tarefa": str(r.get('Tarefa') or ''), "responsavel": "",
@@ -676,6 +741,7 @@ def main():
         # M3 — motivos capturados ("# motivo OS X: Y" nas observações) → Pareto
         "motivos":      _ler_motivos(pasta),
     }
+    _conferir_clusters()
     total_rows = sum(len(s.get("rows", [])) for s in semanas_json)
     semanas_str = ", ".join(s["week"] for s in semanas_json)
     if args.dry_run:
