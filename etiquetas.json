@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-22T19:40:44Z",
+  "geradoEm": "2026-08-22T19:56:34Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3821,
-        "emAberto": 13,
+        "total": 3822,
+        "emAberto": 14,
         "atrasadas": 5,
         "concluidas30d": 634,
         "concluidas7d": 164,
-        "naSemanaCorrente": 138
+        "naSemanaCorrente": 139
       },
       "mttr": {
         "horas": 11.13,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W34",
-          "criadas": 138,
+          "criadas": 139,
           "finalizadas": 130
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3821,
-            "emAberto": 13
+            "total": 3822,
+            "emAberto": 14
           }
         ],
         "responsaveis": [
@@ -58,8 +58,8 @@
           },
           {
             "nome": "Marcos  Camargo",
-            "total": 449,
-            "emAberto": 2
+            "total": 450,
+            "emAberto": 3
           },
           {
             "nome": "Felipe Silva",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 13,
+      "total": 14,
       "atrasadas": 5,
       "porStatus": {
         "naoIniciada": 9,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -183,6 +183,24 @@
           "atrasada": true
         },
         {
+          "osId": "11841",
+          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Marcos  Camargo",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
+          "criticidade": "",
+          "dataProgramada": "2026-08-22",
+          "dataCriacao": "2026-08-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "11839",
           "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
           "equipe": "",
@@ -243,14 +261,15 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-INP100] - Religamento do THPN-INP100",
           "criticidade": "",
           "dataProgramada": "2026-08-22",
           "dataCriacao": "2026-08-22",
-          "dataInicial": "",
+          "dataInicial": "2026-08-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3334,9 +3353,9 @@
       "historicoTotal": 1685,
       "subClassificacao": {
         "remoto": 745,
-        "local": 3076,
+        "local": 3077,
         "remotoEmAberto": 2,
-        "localEmAberto": 11,
+        "localEmAberto": 12,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -15379,6 +15398,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "11841",
+      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Marcos  Camargo",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
+      "criticidade": "",
+      "dataProgramada": "2026-08-22",
+      "dataCriacao": "2026-08-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11839",
       "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
       "equipe": "",
@@ -15436,14 +15472,15 @@
       "responsavel": "Ricardo Silva ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-INP100] - Religamento do THPN-INP100",
       "criticidade": "",
       "dataProgramada": "2026-08-22",
       "dataCriacao": "2026-08-22",
-      "dataInicial": "",
+      "dataInicial": "2026-08-22",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -21407,7 +21444,7 @@
     }
   ],
   "historicoTotal": 2513,
-  "totalGeral": 5282,
+  "totalGeral": 5283,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
