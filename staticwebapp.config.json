@@ -16,6 +16,7 @@
     { "route": "/.auth/login/twitter", "statusCode": 404 },
     { "route": "/acessos.html", "allowedRoles": ["admin"] },
     { "route": "/api/acessos",  "allowedRoles": ["admin"] },
+    { "route": "/api/fracttal", "allowedRoles": ["anonymous"] },
     { "route": "/api/*",   "allowedRoles": ["authenticated"] },
     { "route": "/*.json",  "allowedRoles": ["admin", "equipe"] },
     { "route": "/*",       "allowedRoles": ["authenticated"] }
