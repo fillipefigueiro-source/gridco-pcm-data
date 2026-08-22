@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-22T16:55:44Z",
+  "geradoEm": "2026-08-22T17:25:21Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3811,
-        "emAberto": 10,
+        "total": 3813,
+        "emAberto": 11,
         "atrasadas": 6,
-        "concluidas30d": 627,
-        "concluidas7d": 157,
-        "naSemanaCorrente": 128
+        "concluidas30d": 628,
+        "concluidas7d": 158,
+        "naSemanaCorrente": 130
       },
       "mttr": {
-        "horas": 11.18,
-        "label": "11h 11min",
-        "amostra": 627
+        "horas": 11.16,
+        "label": "11h 10min",
+        "amostra": 628
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W34",
-          "criadas": 128,
-          "finalizadas": 123
+          "criadas": 130,
+          "finalizadas": 124
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3811,
-            "emAberto": 10
+            "total": 3813,
+            "emAberto": 11
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 10,
+      "total": 11,
       "atrasadas": 6,
       "porStatus": {
         "naoIniciada": 8,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 10
+        "(sem equipe)": 11
       },
       "oss": [
         {
@@ -201,20 +201,39 @@
           "atrasada": true
         },
         {
-          "osId": "11829",
-          "ativo": "Cabine 1  Ibaté  São Paulo Brasil { IBT200-CABN1 }",
+          "osId": "11832",
+          "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
           "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Andrick Gouveia ",
+          "responsavel": "Gilson  Milhomem",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Gilson  Milhomem",
           "status": "Não Iniciada",
-          "tarefa": "[IBT200-CABN1] - Religamento do IBT200-CABN1",
+          "tarefa": "[Thopen - Céu Azul 1 - PR] - Religamento do Thopen - Céu Azul 1 - PR",
           "criticidade": "",
           "dataProgramada": "2026-08-22",
           "dataCriacao": "2026-08-22",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11829",
+          "ativo": "Cabine 1  Ibaté  São Paulo Brasil { IBT200-CABN1 }",
+          "equipe": "",
+          "responsavel": "Andrick Gouveia ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Andrick Gouveia ",
+          "status": "Em progresso",
+          "tarefa": "[IBT200-CABN1] - Religamento do IBT200-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-22",
+          "dataCriacao": "2026-08-22",
+          "dataInicial": "2026-08-22",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -310,6 +329,26 @@
           "dataFinal": "2026-08-22",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11830",
+          "ativo": "Thopen - Córrego do Sapucaia 1 - ES Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100 }",
+          "equipe": "",
+          "responsavel": "Cícero  Willian",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Cícero  Willian",
+          "status": "Finalizada",
+          "tarefa": "[THPN-CDS100] - Religamento do THPN-CDS100",
+          "criticidade": "",
+          "dataProgramada": "2026-08-22",
+          "dataCriacao": "2026-08-22",
+          "dataInicial": "2026-08-22",
+          "dataFinal": "2026-08-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -1935,26 +1974,6 @@
           "atrasada": false
         },
         {
-          "osId": "11453",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-18",
-          "dataCriacao": "2026-08-18",
-          "dataInicial": "2026-08-18",
-          "dataFinal": "2026-08-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11354",
           "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
           "equipe": "",
@@ -3275,12 +3294,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1678,
+      "historicoTotal": 1679,
       "subClassificacao": {
         "remoto": 745,
-        "local": 3066,
+        "local": 3068,
         "remotoEmAberto": 2,
-        "localEmAberto": 8,
+        "localEmAberto": 9,
         "pctRemoto": 20,
         "alerta": true
       },
@@ -15323,20 +15342,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "11829",
-      "ativo": "Cabine 1  Ibaté  São Paulo Brasil { IBT200-CABN1 }",
+      "osId": "11832",
+      "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
       "equipe": "",
-      "responsavel": "Andrick Gouveia ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Andrick Gouveia ",
+      "responsavel": "Gilson  Milhomem",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Gilson  Milhomem",
       "status": "Não Iniciada",
-      "tarefa": "[IBT200-CABN1] - Religamento do IBT200-CABN1",
+      "tarefa": "[Thopen - Céu Azul 1 - PR] - Religamento do Thopen - Céu Azul 1 - PR",
       "criticidade": "",
       "dataProgramada": "2026-08-22",
       "dataCriacao": "2026-08-22",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11829",
+      "ativo": "Cabine 1  Ibaté  São Paulo Brasil { IBT200-CABN1 }",
+      "equipe": "",
+      "responsavel": "Andrick Gouveia ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Andrick Gouveia ",
+      "status": "Em progresso",
+      "tarefa": "[IBT200-CABN1] - Religamento do IBT200-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-22",
+      "dataCriacao": "2026-08-22",
+      "dataInicial": "2026-08-22",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -21295,8 +21332,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2506,
-  "totalGeral": 5272,
+  "historicoTotal": 2507,
+  "totalGeral": 5274,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
