@@ -1,8 +1,36 @@
 name: Atualiza Programação Semanal (a cada 15 min)
 
+# GATILHOS — por que são três
+#
+# `schedule` sozinho fazia a semana esperar pela fila do cron. Medido em 21/08:
+# o `*/15` entrega na prática uma rodada a cada ~38 min (intervalos de 28 a 57),
+# porque o GitHub descarta a maioria dos agendamentos em horário redondo. Como o
+# motor leva 6 min, publicar uma Programação Semana XX podia demorar ~63 min para
+# aparecer no painel — e 90% disso era espera, não trabalho.
+#
+# O `push` corrige isso: publicar a semana (ou mexer nas observações) dispara o
+# motor na hora.
+#
+# NÃO cria laço: o robô commita com o GITHUB_TOKEN, e o GitHub não dispara
+# workflows a partir dele (proteção anti-loop). Além disso, `banco_dados.json` e
+# `etiquetas.json` — o que ele publica — não estão no `paths` abaixo.
+#
+# NÃO cria corrida: o `concurrency` mais abaixo põe a rodada nova na fila em vez
+# de colidir com uma em andamento.
+#
+# Mudança de CÓDIGO não dispara de propósito. O cron pega na próxima, e quem tiver
+# pressa usa o Run workflow — melhor que cada commit custar 6 min de execução.
 on:
   schedule:
     - cron: '*/15 * * * *'
+  push:
+    branches: [main]
+    paths:
+      # Sem acento no padrão de propósito: casa "Programação Semana 35.xlsx" e
+      # evita qualquer dúvida de codificação no glob.
+      - "Programa*.xlsx"
+      - "Observacoes_Semana*.txt"
+      - "AUXILIAR - FABRICIO.xlsx"
   workflow_dispatch: {}
 
 permissions:
