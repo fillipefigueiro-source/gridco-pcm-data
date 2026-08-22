@@ -31,6 +31,13 @@ on:
       - "Programa*.xlsx"
       - "Observacoes_Semana*.txt"
       - "AUXILIAR - FABRICIO.xlsx"
+        # Chamado pelo amortecedor (função /api/fracttal do SWA) quando o Fracttal avisa
+  # que algo mudou. O amortecedor existe porque disparar por evento seria pior que o
+  # cron: foram 723 tarefas finalizadas em 5 dias na Semana 34 (~145/dia), e a 6 min
+  # por rodada isso daria 14 h de execução por dia. Ele agrupa a rajada e chama aqui
+  # no máximo uma vez a cada N minutos — e nenhuma quando não houve mudança.
+  repository_dispatch:
+    types: [fracttal-mudou]
   workflow_dispatch: {}
 
 permissions:
