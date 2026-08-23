@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-23T11:55:23Z",
+  "geradoEm": "2026-08-23T12:45:25Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3824,
-        "emAberto": 13,
+        "total": 3825,
+        "emAberto": 14,
         "atrasadas": 11,
         "concluidas30d": 612,
         "concluidas7d": 153,
-        "naSemanaCorrente": 141
+        "naSemanaCorrente": 142
       },
       "mttr": {
         "horas": 10.3,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W34",
-          "criadas": 141,
+          "criadas": 142,
           "finalizadas": 133
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3824,
-            "emAberto": 13
+            "total": 3825,
+            "emAberto": 14
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 13,
+      "total": 14,
       "atrasadas": 11,
       "porStatus": {
         "naoIniciada": 10,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -292,20 +292,39 @@
           "atrasada": true
         },
         {
-          "osId": "11843",
-          "ativo": "Inversor 3.7 CANANDIAN SOLAR     { MTS100-INVR3.7 }",
+          "osId": "11844",
+          "ativo": "Inversor 2.3 CANANDIAN SOLAR     { MTS100-INVR2.3 }",
           "equipe": "",
           "responsavel": "Francisco  Santos",
           "criadoPor": "Raphael Vitoriano",
           "supervisor": "Francisco  Santos",
           "status": "Não Iniciada",
-          "tarefa": "[Inversor 3.7] - Religamento do Inversor 3.7",
+          "tarefa": "[Inversor 2.3] - Religamento do Inversor 2.3",
           "criticidade": "",
           "dataProgramada": "2026-08-23",
           "dataCriacao": "2026-08-23",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11843",
+          "ativo": "Inversor 3.7 CANANDIAN SOLAR     { MTS100-INVR3.7 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Francisco  Santos",
+          "status": "Em progresso",
+          "tarefa": "[Inversor 3.7] - Religamento do Inversor 3.7",
+          "criticidade": "",
+          "dataProgramada": "2026-08-23",
+          "dataCriacao": "2026-08-23",
+          "dataInicial": "2026-08-23",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3333,9 +3352,9 @@
       "historicoTotal": 1679,
       "subClassificacao": {
         "remoto": 745,
-        "local": 3079,
+        "local": 3080,
         "remotoEmAberto": 2,
-        "localEmAberto": 11,
+        "localEmAberto": 12,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -15378,20 +15397,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "11843",
-      "ativo": "Inversor 3.7 CANANDIAN SOLAR     { MTS100-INVR3.7 }",
+      "osId": "11844",
+      "ativo": "Inversor 2.3 CANANDIAN SOLAR     { MTS100-INVR2.3 }",
       "equipe": "",
       "responsavel": "Francisco  Santos",
       "criadoPor": "Raphael Vitoriano",
       "supervisor": "Francisco  Santos",
       "status": "Não Iniciada",
-      "tarefa": "[Inversor 3.7] - Religamento do Inversor 3.7",
+      "tarefa": "[Inversor 2.3] - Religamento do Inversor 2.3",
       "criticidade": "",
       "dataProgramada": "2026-08-23",
       "dataCriacao": "2026-08-23",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11843",
+      "ativo": "Inversor 3.7 CANANDIAN SOLAR     { MTS100-INVR3.7 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Francisco  Santos",
+      "status": "Em progresso",
+      "tarefa": "[Inversor 3.7] - Religamento do Inversor 3.7",
+      "criticidade": "",
+      "dataProgramada": "2026-08-23",
+      "dataCriacao": "2026-08-23",
+      "dataInicial": "2026-08-23",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -21406,7 +21443,7 @@
     }
   ],
   "historicoTotal": 2507,
-  "totalGeral": 5285,
+  "totalGeral": 5286,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
