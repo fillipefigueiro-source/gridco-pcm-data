@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-23T13:26:35Z",
+  "geradoEm": "2026-08-23T13:59:46Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-17 .. 2026-08-23",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3826,
-        "emAberto": 13,
+        "total": 3828,
+        "emAberto": 15,
         "atrasadas": 11,
         "concluidas30d": 614,
         "concluidas7d": 155,
-        "naSemanaCorrente": 143
+        "naSemanaCorrente": 145
       },
       "mttr": {
         "horas": 10.27,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W34",
-          "criadas": 143,
+          "criadas": 145,
           "finalizadas": 135
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3826,
-            "emAberto": 13
+            "total": 3828,
+            "emAberto": 15
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 13,
+      "total": 15,
       "atrasadas": 11,
       "porStatus": {
-        "naoIniciada": 9,
+        "naoIniciada": 11,
         "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -290,6 +290,42 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "11847",
+          "ativo": "Cabine 2 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN2 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Valdério Paz ",
+          "status": "Não Iniciada",
+          "tarefa": "[Cabine 2] - Religamento da Cabine 2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-23",
+          "dataCriacao": "2026-08-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "11846",
+          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Valdério Paz ",
+          "status": "Não Iniciada",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-23",
+          "dataCriacao": "2026-08-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "11844",
@@ -3334,9 +3370,9 @@
       "historicoTotal": 1681,
       "subClassificacao": {
         "remoto": 745,
-        "local": 3081,
+        "local": 3083,
         "remotoEmAberto": 2,
-        "localEmAberto": 11,
+        "localEmAberto": 13,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -15379,6 +15415,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "11847",
+      "ativo": "Cabine 2 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN2 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Valdério Paz ",
+      "status": "Não Iniciada",
+      "tarefa": "[Cabine 2] - Religamento da Cabine 2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-23",
+      "dataCriacao": "2026-08-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "11846",
+      "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Valdério Paz ",
+      "status": "Não Iniciada",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-23",
+      "dataCriacao": "2026-08-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "11844",
       "ativo": "Inversor 2.3 CANANDIAN SOLAR     { MTS100-INVR2.3 }",
       "equipe": "",
@@ -21409,7 +21479,7 @@
     }
   ],
   "historicoTotal": 2509,
-  "totalGeral": 5287,
+  "totalGeral": 5289,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
