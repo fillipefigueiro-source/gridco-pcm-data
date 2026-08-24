@@ -1,83 +1,3 @@
-name: Atualiza Programação Semanal (a cada 15 min)
-
-# GATILHOS — por que são três
-#
-# `schedule` sozinho fazia a semana esperar pela fila do cron. Medido em 21/08:
-# o `*/15` entrega na prática uma rodada a cada ~38 min (intervalos de 28 a 57),
-# porque o GitHub descarta a maioria dos agendamentos em horário redondo. Como o
-# motor leva 6 min, publicar uma Programação Semana XX podia demorar ~63 min para
-# aparecer no painel — e 90% disso era espera, não trabalho.
-#
-# O `push` corrige isso: publicar a semana (ou mexer nas observações) dispara o
-# motor na hora.
-#
-# NÃO cria laço: o robô commita com o GITHUB_TOKEN, e o GitHub não dispara
-# workflows a partir dele (proteção anti-loop). Além disso, `banco_dados.json` e
-# `etiquetas.json` — o que ele publica — não estão no `paths` abaixo.
-#
-# NÃO cria corrida: o `concurrency` mais abaixo põe a rodada nova na fila em vez
-# de colidir com uma em andamento.
-#
-# Mudança de CÓDIGO não dispara de propósito. O cron pega na próxima, e quem tiver
-# pressa usa o Run workflow — melhor que cada commit custar 6 min de execução.
-on:
-  schedule:
-    - cron: '*/15 * * * *'
-  push:
-    branches: [main]
-    paths:
-      # Sem acento no padrão de propósito: casa "Programação Semana 35.xlsx" e
-      # evita qualquer dúvida de codificação no glob.
-      - "Programa*.xlsx"
-      - "Observacoes_Semana*.txt"
-      - "AUXILIAR - FABRICIO.xlsx"
-        # Chamado pelo amortecedor (função /api/fracttal do SWA) quando o Fracttal avisa
-  # que algo mudou. O amortecedor existe porque disparar por evento seria pior que o
-  # cron: foram 723 tarefas finalizadas em 5 dias na Semana 34 (~145/dia), e a 6 min
-  # por rodada isso daria 14 h de execução por dia. Ele agrupa a rajada e chama aqui
-  # no máximo uma vez a cada N minutos — e nenhuma quando não houve mudança.
-  repository_dispatch:
-    types: [fracttal-mudou]
-  workflow_dispatch: {}
-
-permissions:
-  contents: write
-
-concurrency:
-  group: semanal
-  cancel-in-progress: false
-
-jobs:
-  atualizar:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Baixar o repositório
-        uses: actions/checkout@v4
-
-      - name: Preparar Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Instalar dependências
-        run: pip install --quiet pandas requests openpyxl python-calamine
-
-      - name: Restaurar insumos sensíveis (dos Secrets — RPN e Confiabilidade)
-        run: |
-          printf '%s' "${{ secrets.LISTA_PRIORIDADES_B64 }}" | base64 -d > "Lista_Prioridades_GridCo.xlsx"
-          printf '%s' "${{ secrets.CONFIABILIDADE_B64 }}"    | base64 -d > "Planilha Confiabilidade R00.xlsx"
-
-      - name: Rodar o motor semanal
-        env:
-          FRACTTAL_CLIENT_ID: ${{ secrets.FRACTTAL_CLIENT_ID }}
-          FRACTTAL_CLIENT_SECRET: ${{ secrets.FRACTTAL_CLIENT_SECRET }}
-          FRACTTAL_BASE_URL: https://app.fracttal.com/api/
-          PCM_PROG_DIR: ${{ github.workspace }}
-        run: |
-          python atualizacao_semanal.py
-          python gerar_pcm_json.py
-          python gerar_etiquetas_json.py --bd "AUXILIAR - FABRICIO.xlsx"
-
       - name: Publicar banco_dados.json + etiquetas.json
         run: |
           rm -f "Lista_Prioridades_GridCo.xlsx" "Planilha Confiabilidade R00.xlsx"
@@ -86,22 +6,53 @@ jobs:
           GUARDA="$(mktemp -d)"
           cp banco_dados.json etiquetas.json "$GUARDA/"
 
+          # Impressão digital do conteúdo REAL: os dois arquivos, sem o carimbo.
+          NOVO=$(python3 - <<'PY'
+          import json, hashlib
+          h = hashlib.sha256()
+          for f in ("banco_dados.json", "etiquetas.json"):
+              with open(f, encoding="utf-8") as fp:
+                  d = json.load(fp)
+              if isinstance(d, dict):
+                  d.pop("geradoEm", None)
+              h.update(json.dumps(d, sort_keys=True, ensure_ascii=False, default=str).encode("utf-8"))
+          print(h.hexdigest())
+          PY
+          )
+          [ -n "$NOVO" ] || { echo "Nao consegui calcular o hash do conteudo."; exit 1; }
+
+          AGORA="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          DADOS_DE=$(python3 -c "import json;print(json.load(open('banco_dados.json',encoding='utf-8')).get('geradoEm',''))")
+
           git config user.name  "semanal-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           for i in 1 2 3 4 5; do
             git fetch --quiet origin main || { echo "fetch falhou ($i/5)"; sleep 5; continue; }
             git reset --quiet --hard origin/main
-            cp "$GUARDA/banco_dados.json" "$GUARDA/etiquetas.json" .
-            git add banco_dados.json etiquetas.json
 
-            if git diff --cached --quiet; then
-              echo "Sem mudancas nos JSONs (o main ja tem este conteudo)."; exit 0
+            ANTIGO=$(cat _semanal_hash.txt 2>/dev/null || echo "")
+
+            printf '{"verificadoEm":"%s","dadosDe":"%s","hash":"%s"}\n' \
+                   "$AGORA" "$DADOS_DE" "${NOVO:0:12}" > _robo_pulso.json
+
+            if [ "$NOVO" = "$ANTIGO" ]; then
+              git add _robo_pulso.json
+              ACAO="pulso (dado inalterado, hash ${NOVO:0:8})"
+            else
+              cp "$GUARDA/banco_dados.json" "$GUARDA/etiquetas.json" .
+              echo "$NOVO" > _semanal_hash.txt
+              git add banco_dados.json etiquetas.json _semanal_hash.txt _robo_pulso.json
+              ACAO="dados novos (hash ${NOVO:0:8})"
             fi
 
-            git commit --quiet -m "chore: refresh Programacao Semanal [auto]"
+            if git diff --cached --quiet; then
+              echo "Nada a publicar."; exit 0
+            fi
+
+            git commit --quiet -m "chore: $ACAO [auto]"
             if git push --quiet origin HEAD:main; then
-              echo "Publicado (tentativa $i)."; exit 0
+              echo "Publicado (tentativa $i): $ACAO"; exit 0
             fi
             echo "Push colidiu - nova tentativa ($i/5)..."; sleep 5
           done
