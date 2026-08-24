@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T13:59:25Z",
+  "geradoEm": "2026-08-24T14:04:56Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -3540,12 +3540,12 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 689,
-        "emAberto": 130,
+        "total": 691,
+        "emAberto": 132,
         "atrasadas": 40,
         "concluidas30d": 87,
         "concluidas7d": 20,
-        "naSemanaCorrente": 89
+        "naSemanaCorrente": 91
       },
       "mttr": {
         "horas": 377.1,
@@ -3570,7 +3570,7 @@
         },
         {
           "semana": "W35",
-          "criadas": 80,
+          "criadas": 82,
           "finalizadas": 0
         }
       ],
@@ -3578,8 +3578,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 689,
-            "emAberto": 130
+            "total": 691,
+            "emAberto": 132
           }
         ],
         "responsaveis": [
@@ -3610,16 +3610,16 @@
           }
         ]
       },
-      "total": 130,
+      "total": 132,
       "atrasadas": 40,
       "porStatus": {
-        "naoIniciada": 126,
+        "naoIniciada": 128,
         "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 130
+        "(sem equipe)": 132
       },
       "oss": [
         {
@@ -4335,6 +4335,40 @@
           "criticidade": "",
           "dataProgramada": "2026-08-27",
           "dataCriacao": "2026-07-27",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "12061",
+          "ativo": "Infraestrutura Civil  Ibirapuã  Bahia Brasil { IBI100-INFC1 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Thiago Morais ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-08-28",
+          "dataCriacao": "2026-08-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "12060",
+          "ativo": "Infraestrutura Civil  Ibirapuã  Bahia Brasil { IBI200-INFC1 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Thiago Morais ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-08-28",
+          "dataCriacao": "2026-08-24",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -9677,8 +9711,8 @@
       "total": 116,
       "atrasadas": 68,
       "porStatus": {
-        "naoIniciada": 106,
-        "emProgresso": 1,
+        "naoIniciada": 105,
+        "emProgresso": 2,
         "pausada": 9,
         "verificacao": 0
       },
@@ -10736,14 +10770,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 18.107] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-19",
           "dataCriacao": "2026-08-18",
-          "dataInicial": "",
+          "dataInicial": "2026-08-24",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -16690,6 +16725,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "12061",
+      "ativo": "Infraestrutura Civil  Ibirapuã  Bahia Brasil { IBI100-INFC1 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Thiago Morais ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Spare Parts",
+      "criticidade": "",
+      "dataProgramada": "2026-08-28",
+      "dataCriacao": "2026-08-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "12060",
+      "ativo": "Infraestrutura Civil  Ibirapuã  Bahia Brasil { IBI200-INFC1 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Thiago Morais ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Spare Parts",
+      "criticidade": "",
+      "dataProgramada": "2026-08-28",
+      "dataCriacao": "2026-08-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "12057",
       "ativo": "Infraestrutura Civil  Demerval Lobão  Piauí Brasil { DML100-INFC1 }",
       "equipe": "",
@@ -19092,14 +19159,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 18.107] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-19",
       "dataCriacao": "2026-08-18",
-      "dataInicial": "",
+      "dataInicial": "2026-08-24",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "11419",
@@ -23949,7 +24017,7 @@
     }
   ],
   "historicoTotal": 2517,
-  "totalGeral": 5388,
+  "totalGeral": 5390,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
