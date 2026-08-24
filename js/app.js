@@ -62,6 +62,12 @@ function esc(s){
 }
 
 let DB=null, timer=null;
+// O pulso do robô (_robo_pulso.json, ~110 bytes) responde "quando o robô
+// CHECOU"; o geradoEm do banco_dados responde "quando o dado MUDOU". Antes o
+// geradoEm respondia as duas, e só funcionava porque o robô reescrevia 4,79 MB
+// a cada rodada mesmo sem mudança — o churn que o Patch B elimina. Sem esta
+// separação, toda madrugada tranquila acenderia "robô parado".
+let PULSO=null;
 let S = {
   pwds:    DEF_PWDS,
   active:  lsG(LS.A, ''),
@@ -87,6 +93,16 @@ const MESES = ['Janeiro','Fevereiro','Mar\u00e7o','Abril','Maio','Junho','Julho'
 const MESES_S = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
 
 // ── LOAD DB ──────────────────────────────────────────────────────────────────
+async function loadPulso() {
+  try {
+    const r = await fetch('_robo_pulso.json?t=' + Date.now(),
+                          { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+    PULSO = r.ok ? await r.json() : null;
+  } catch (e) {
+    PULSO = null;      // ausente, 403 (cliente) ou rede ruim: cai no modo antigo
+  }
+}
+
 async function loadDB(silent=false) {
   if (!silent) setStatus('Buscando dados...','loading');
   try {
@@ -146,13 +162,28 @@ function statusHeartbeat(){
   const min=Math.max(0,Math.round((Date.now()-g.getTime())/60000));
   const idade=min<60?min+' min':Math.floor(min/60)+'h'+String(min%60).padStart(2,'0');
   const hora=g.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+  // O ALARME mede o PULSO, não a idade do dado. Dado velho porque nada mudou
+  // é normal; robô calado não é — e antes as duas situações eram
+  // indistinguíveis. Limiares mantidos em 120/240 min: o cron entrega uma
+  // rodada a cada ~38 min (28 a 57 medidos), ou seja ~2 e ~4 ciclos perdidos.
+  const v=PULSO&&PULSO.verificadoEm?new Date(PULSO.verificadoEm):null;
+  if(v&&!isNaN(v)){
+    const mp=Math.max(0,Math.round((Date.now()-v.getTime())/60000));
+    const ip=mp<60?mp+' min':Math.floor(mp/60)+'h'+String(mp%60).padStart(2,'0');
+    if(mp>240) setStatus('⚠ Robô sem dar sinal há '+ip+' — verifique o Actions','err');
+    else if(mp>120) setStatus('⚠ Robô lento: último sinal há '+ip,'warn');
+    else setStatus('✓ Dados de '+hora+' · há '+idade+' · robô ok','ok');
+    return;
+  }
+  // Sem pulso (deploy antigo, ou 403 para cliente): idêntico ao de antes,
+  // para o painel nunca ficar pior do que estava.
   if(min>240)setStatus('⚠ Dados de '+hora+' · há '+idade+' — robô parado? Verifique o Actions','err');
   else if(min>120)setStatus('⚠ Dados de '+hora+' · há '+idade+' — acima do normal (~1h)','warn');
   else setStatus('✓ Dados de '+hora+' · há '+idade,'ok');
 }
 function startTimer() {
   if(timer) clearInterval(timer);
-  timer=setInterval(async()=>{ const ok=await loadDB(true); await loadSugestoes(); await loadSupervisores(); if(S.topView==='gestaoPcm'){await loadGestao();await loadConfiab();} if(ok&&S.user){buildWeekChips();render();renderSugestoes();if(S.topView==='gestaoPcm')renderGestao();} },CONFIG.REFRESH_MS);
+  timer=setInterval(async()=>{ const ok=await loadDB(true); await loadPulso(); await loadSugestoes(); await loadSupervisores(); if(S.topView==='gestaoPcm'){await loadGestao();await loadConfiab();} if(ok&&S.user){buildWeekChips();render();renderSugestoes();if(S.topView==='gestaoPcm')renderGestao();} },CONFIG.REFRESH_MS);
   const el=document.getElementById('refresh-badge'); if(el) el.textContent='Auto-refresh '+Math.round(CONFIG.REFRESH_MS/60000)+'min';
 }
 
@@ -160,6 +191,7 @@ function startTimer() {
 async function manualRefresh(){
   setStatus('Atualizando...','loading');
   const ok = await loadDB();
+  await loadPulso();
   await loadSugestoes();
   await loadSupervisores();
   if(typeof loadEtiquetas==='function') await loadEtiquetas();
