@@ -32,7 +32,16 @@ const LS  = { P:'gc_p', A:'gc_a', V:'gc_view' };
 const lsG = (k,fb) => { try { const v=localStorage.getItem(k); return v?JSON.parse(v):fb; } catch { return fb; } };
 const lsS = (k,v)  => { try { localStorage.setItem(k,JSON.stringify(v)); } catch {} };
 
-const DEF_PWDS = JSON.parse(document.getElementById('gc-pwds').textContent);
+// O bloco `gc-pwds` saiu do index.html em 24/08/2026: ele publicava os hashes
+// SHA-256 das senhas do admin e dos 12 clientes num repositório PÚBLICO.
+// Esta leitura tolerante não é zelo: a linha original era um `JSON.parse` de
+// topo, e com o elemento ausente ela lança — derrubando o app.js INTEIRO e o
+// painel junto. Devolvendo {}, o resto do arquivo segue carregando normal.
+const DEF_PWDS = (() => {
+  const el = document.getElementById('gc-pwds');
+  if (!el) return {};
+  try { return JSON.parse(el.textContent) || {}; } catch (e) { return {}; }
+})();
 // Mapa login → nome real do cliente no banco (para logins sem espaço como "gdenergy" → "GD Energy")
 const LOGIN_ALIASES = JSON.parse(document.getElementById('gc-aliases')?.textContent || '{}');
 
@@ -192,9 +201,12 @@ function buildAdmin() {
   const aw=AW();
   const clientes=aw?[...new Set(aw.rows.map(r=>r.cliente))].filter(Boolean).sort():[];
   document.getElementById('cli-list').innerHTML=clientes.map(c=>{
-    const hasPwd=!!S.pwds[c.toLowerCase()],n=aw?.rows.filter(r=>r.cliente===c).length||0;
+    // O selo de senha saiu junto com a tela de senha. Sem o gc-pwds ele diria
+    // "Sem senha" para TODOS os clientes — informação falsa. Quem confere o
+    // acesso de cliente agora é a tela /acessos.html.
+    const n=aw?.rows.filter(r=>r.cliente===c).length||0;
     return '<div class="cli-row"><div><div class="cli-name">'+c+'</div><div class="cli-meta">'+n+' tarefas</div></div>'
-      +'<div class="'+(hasPwd?'cli-ok':'cli-warn')+'">'+(hasPwd?'\u2713 Senha ativa':'\u26a0 Sem senha')+'</div></div>';
+      +'<div class="cli-ok">\u2713 ativo na semana</div></div>';
   }).join('');
 }
 function setAW(wk){S.active=wk;lsS(LS.A,wk);buildAdmin();toast('Semana ativa: '+wk);}
@@ -336,7 +348,16 @@ function taxaFinalizacaoPreventiva(rows, cat){
 }
 
 // ── LOGIN ─────────────────────────────────────────────────────────────────────
+// A tela de senha saiu do ar (decisão 28, último passo). A função sobrevive
+// porque ainda é referenciada, mas leva ao único caminho que restou. O corpo
+// antigo — sha256(senha) contra o hash publicado — ficou abaixo, inerte, e
+// pode ser apagado quando ninguém mais tiver dúvida sobre o que ele fazia.
 async function doLogin() {
+  if (typeof authIrParaLogin === 'function') return authIrParaLogin();
+  location.replace('/.auth/login/aad');
+}
+
+async function doLoginAntigo_INERTE() {
   const c=document.getElementById('inp-c').value.trim();
   const s=document.getElementById('inp-s').value;
   const err=document.getElementById('l-err');
