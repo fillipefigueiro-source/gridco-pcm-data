@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T20:37:22Z",
+  "geradoEm": "2026-08-24T20:42:49Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3855,
-        "emAberto": 17,
+        "total": 3857,
+        "emAberto": 19,
         "atrasadas": 11,
         "concluidas30d": 613,
         "concluidas7d": 160,
-        "naSemanaCorrente": 17
+        "naSemanaCorrente": 19
       },
       "mttr": {
         "horas": 9.85,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W35",
-          "criadas": 18,
+          "criadas": 20,
           "finalizadas": 17
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3855,
-            "emAberto": 17
+            "total": 3857,
+            "emAberto": 19
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 17,
+      "total": 19,
       "atrasadas": 11,
       "porStatus": {
-        "naoIniciada": 13,
+        "naoIniciada": 15,
         "emProgresso": 0,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 17
+        "(sem equipe)": 19
       },
       "oss": [
         {
@@ -290,6 +290,42 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "12108",
+          "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+          "equipe": "",
+          "responsavel": "Ademir Necker ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ademir Necker ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
+          "criticidade": "",
+          "dataProgramada": "2026-08-24",
+          "dataCriacao": "2026-08-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12107",
+          "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-24",
+          "dataCriacao": "2026-08-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "12090",
@@ -3406,9 +3442,9 @@
       "historicoTotal": 1691,
       "subClassificacao": {
         "remoto": 750,
-        "local": 3105,
+        "local": 3107,
         "remotoEmAberto": 7,
-        "localEmAberto": 10,
+        "localEmAberto": 12,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -3703,8 +3739,8 @@
       "total": 135,
       "atrasadas": 37,
       "porStatus": {
-        "naoIniciada": 130,
-        "emProgresso": 1,
+        "naoIniciada": 129,
+        "emProgresso": 2,
         "pausada": 4,
         "verificacao": 0
       },
@@ -4420,14 +4456,15 @@
           "responsavel": "Gabriel Oliveira ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Gabriel Oliveira ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
           "dataCriacao": "2026-08-24",
-          "dataInicial": "",
+          "dataInicial": "2026-08-24",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -16957,6 +16994,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "12108",
+      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+      "equipe": "",
+      "responsavel": "Ademir Necker ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Ademir Necker ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
+      "criticidade": "",
+      "dataProgramada": "2026-08-24",
+      "dataCriacao": "2026-08-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "12107",
+      "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-24",
+      "dataCriacao": "2026-08-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "12105",
       "ativo": "Inversor 1.6 Sungrow 250HX-20    { THPN-TPZ100-INVR1.6 }",
       "equipe": "",
@@ -17206,14 +17277,15 @@
       "responsavel": "Gabriel Oliveira ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Gabriel Oliveira ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
       "dataProgramada": "2026-08-28",
       "dataCriacao": "2026-08-24",
-      "dataInicial": "",
+      "dataInicial": "2026-08-24",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "12080",
@@ -24400,7 +24472,7 @@
     }
   ],
   "historicoTotal": 2534,
-  "totalGeral": 5416,
+  "totalGeral": 5418,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
