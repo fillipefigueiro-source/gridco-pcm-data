@@ -81,16 +81,29 @@ jobs:
       - name: Publicar banco_dados.json + etiquetas.json
         run: |
           rm -f "Lista_Prioridades_GridCo.xlsx" "Planilha Confiabilidade R00.xlsx"
+          set -uo pipefail
+
+          GUARDA="$(mktemp -d)"
+          cp banco_dados.json etiquetas.json "$GUARDA/"
+
           git config user.name  "semanal-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add banco_dados.json etiquetas.json
-          if git diff --cached --quiet; then
-            echo "Sem mudancas nos JSONs."; exit 0
-          fi
-          git commit -m "chore: refresh Programacao Semanal [auto]"
+
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin main || true
-            if git push; then echo "Publicado (tentativa $i)."; exit 0; fi
-            echo "Push colidiu — nova tentativa em 5s ($i/5)..."; sleep 5
+            git fetch --quiet origin main || { echo "fetch falhou ($i/5)"; sleep 5; continue; }
+            git reset --quiet --hard origin/main
+            cp "$GUARDA/banco_dados.json" "$GUARDA/etiquetas.json" .
+            git add banco_dados.json etiquetas.json
+
+            if git diff --cached --quiet; then
+              echo "Sem mudancas nos JSONs (o main ja tem este conteudo)."; exit 0
+            fi
+
+            git commit --quiet -m "chore: refresh Programacao Semanal [auto]"
+            if git push --quiet origin HEAD:main; then
+              echo "Publicado (tentativa $i)."; exit 0
+            fi
+            echo "Push colidiu - nova tentativa ($i/5)..."; sleep 5
           done
+
           echo "Falhou apos 5 tentativas."; exit 1
