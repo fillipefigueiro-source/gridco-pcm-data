@@ -1,7 +1,8 @@
 # Estado do painel PCM — o que não está óbvio no código
 
-**Última atualização: 21/08/2026.** Base escrita pelo Fabrício; ampliada com o que
-foi descoberto e alterado em 19–21/08.
+**Última atualização: 24/08/2026.** Base escrita pelo Fabrício; ampliada com o que
+foi descoberto e alterado em 19–24/08 — inclui o sentinela do Fracttal (§6d), a
+grafia canônica de cluster (§3.1b) e as armadilhas novas da §6.
 
 > **Este arquivo não contém nenhuma credencial, senha ou token.** Eles vivem nos
 > GitHub Secrets, nas app settings do Azure e no `.env` local, e passam por canal
@@ -78,23 +79,99 @@ app settings do Fracttal, gatilho do deploy e acesso da equipe.
 
 ### Aberto, sem bloquear
 
-**1. Colisão de push no `gestao_pcm.json`** — *achado em 21/08, sem correção.*
+**1. ~~Sincronização local quebrava o robô do `gestao_pcm.json`~~** — ✅ **RESOLVIDO
+em 21/08 17:50.** Mantido aqui porque o mecanismo é instrutivo e pode se repetir.
 
-O robô `gestao-pcm.yml` falha no step 6 ("Publicar só se os dados mudaram"),
-esgotando as **5 tentativas** com `pull --rebase`. Falhou às 16:28 e 17:02 de
-21/08. O step 5 (gerar via API) passa — o problema é só o push.
+> **Como terminou:** o Fabrício desabilitou a tarefa agendada. O robô voltou
+> sozinho, sem nenhuma linha de código alterada — rodada das 17:43 concluída com
+> sucesso, publicando às 17:50, a primeira do robô desde 15:54. Último push local:
+> 17:02.
+>
+> A lição: **não era o robô que estava quebrado.** Era a interferência de um
+> segundo publicador. Antes de mexer no que falha, vale perguntar quem mais
+> escreve no mesmo lugar.
 
-Causa: **a nuvem e a máquina local geram o mesmo arquivo, da mesma API, e
-empurram para o mesmo branch.** Os commits locais (autor `fillipefigueiro-source`)
-às 16:30, 16:45 e 17:02 batem exatamente com as falhas.
+**O mecanismo, para quem encontrar algo parecido.** O robô `gestao-pcm.yml` falhava
+no step 6 ("Publicar só se os dados mudaram"), esgotando as 5 tentativas com
+`pull --rebase`. O step 5 (gerar via API) **passava** — só o push falhava.
 
-Por que é perigoso: enquanto a máquina local publicar, o dado chega e **a falha do
-robô não tem consequência visível**. Se a máquina parar, a Gestão PCM congela sem
-erro em lugar nenhum.
+Havia uma tarefa na máquina do Fabrício publicando o `gestao_pcm.json` a cada
+15 min, com a identidade `fillipe.figueiro@gmail.com`. O que cada um tocava:
 
-Correção: **um dos dois tem que parar.** O robô da nuvem deve ser o único
-publicador — ele já funciona. Antes de desligar a sincronização local, é preciso
-saber exatamente o que ela publica que a nuvem não gera.
+| Quem | Arquivos no commit |
+|---|---|
+| Máquina local | `gestao_pcm.json` |
+| Robô da nuvem | `gestao_pcm.json` **e** `_gestao_pcm_published_hash.txt` |
+
+O `_gestao_pcm_published_hash.txt` é o controle anti-churn:
+
+```bash
+NEW_HASH=$(hash do gestao_pcm.json recém-gerado)
+OLD_HASH=$(cat _gestao_pcm_published_hash.txt)
+if [ "$NEW_HASH" = "$OLD_HASH" ]; then exit 0; fi   # nada a publicar
+```
+
+Como a tarefa local sobrescrevia o JSON **sem atualizar o hash**, o robô sempre via
+divergência e sempre tentava publicar, mesmo com dado idêntico — e aí colidia. A
+interferência fazia duas coisas ao mesmo tempo: **anulava o anti-churn** e
+**causava a colisão**.
+
+**Por que quase passou despercebido:** enquanto a tarefa local publicava, o dado
+chegava e a falha do robô não tinha consequência visível. Se aquela máquina saísse
+do ar com a tarefa ainda agendada, a Gestão PCM congelaria sem erro em lugar nenhum.
+
+**Se reaparecer:** procure um segundo publicador antes de mexer no robô. E note que
+desligar a máquina não bastaria — tarefa agendada em máquina sem dono volta a
+quebrar quando a máquina voltar.
+
+**1b. Grafia canônica de cluster** — ✅ **resolvido em 21/08 no código.**
+
+Três clusters tinham duas grafias no cadastro do Fracttal (`PA LESTE 01`, `PA NORTE 01`,
+`MA LESTE 02`), e o sistema os tratava como equipes diferentes. Efeito: **297 tarefas sem
+destinatário de alerta** e capacidade partida ao meio — `PA Leste 01` aparecia como
+8,4 h *e* 46,5 h das mesmas 44 h.
+
+Origem: no Fracttal cada cluster tem duas entradas na "Ativo Classificação 2" — uma para
+instalação (tipo 1), outra para equipamento (tipo 2). Nessas três, a segunda foi digitada
+em caixa alta. Por isso a divisão era limpa: instalações numa grafia, equipamentos na outra.
+
+**Decisão:** corrigir no código, não no cadastro. A API do Fracttal **só lê** classificação
+— não há endpoint de update (sondado em 21/08, ver abaixo). A interface exigiria três
+renomeações manuais, e o cadastro é território de outra rotina.
+
+O `gerar_pcm_json.py` ganhou `_cluster_norm()` (mapa canônico, silencioso) e
+`_conferir_clusters()` (alarme só para grafia **nova**, já entregando a linha a colar).
+Detalhes em `A1_Normalizacao_Cluster.md`.
+
+> **Por que o log é silencioso para os casos conhecidos:** a primeira versão gritava a cada
+> normalização, para pressionar pela correção na origem. Como a origem não será corrigida,
+> isso viraria três linhas por rodada que ninguém atenderia — e aviso que ninguém atende
+> ensina a ignorar avisos, inclusive os que importam.
+
+**Efeito colateral esperado:** `PA Leste 01` passa a mostrar **54,9 h de 44** — estourado.
+Não é o conserto piorando; é o número verdadeiro aparecendo. A divisão escondia uma equipe
+25% acima da capacidade.
+
+**Ficou pendente no cadastro**, se um dia alguém for mexer: ids 253625, 247469 e 255525;
+mais `TESTE` (252610/252611), que traz 2 tarefas ao painel.
+
+### Escrita no Fracttal: a REST não serve, e o RPC exige token de usuário
+
+Sondado em 21/08. A REST pública (`app.fracttal.com/api/`) é **só leitura**. A escrita vai
+por **JSON-RPC** em `one.fracttal.com/rpc/proxy`, com `Origin` forjado — é como o App de
+Campo fecha OS.
+
+Mas o RPC exige **token de usuário** (`authorization_code`, as credenciais
+`FRACTTAL_OAUTH_*`). O token de leitura (`FRACTTAL_JWT_TOKEN`, client_credentials) leva
+**HTTP 401 com corpo HTML**.
+
+> Detalhe útil para diagnóstico: **401 com HTML = porta fechada** (gateway recusou antes de
+> resolver o método). **Erro em JSON** = método errado. Dá para distinguir os dois casos
+> pelo formato da resposta, sem adivinhar.
+
+O script `sondar_rpc_fracttal.py` fica pronto na pasta do projeto: se um dia houver token
+de usuário à mão, é rodar. Nenhum dos 26 métodos que o middleware usa é de `inventories`,
+então os nomes desse módulo continuam desconhecidos.
 
 **2. Passo 4 — desligar o GitHub Pages.** O `github.io` serve `banco_dados.json`
 (4,07 MB) **sem autenticação nenhuma**. Enquanto estiver de pé, toda a proteção do
@@ -165,6 +242,9 @@ nada — e alguém confiaria nela.
 
 Gravação com `If-Match` no ETag: duas pessoas cadastrando ao mesmo tempo não se
 sobrescrevem.
+
+**Validado em 21/08:** cadastro de um e-mail externo, login com ele, e a visão restrita
+ao cliente escolhido — o caminho ponta a ponta funciona.
 
 **Falta:** o link no menu do painel (`index.html`). Até lá, acessa-se pelo
 endereço direto.
@@ -343,6 +423,263 @@ testar: ir na **raiz** primeiro (que redireciona para o login) e só depois abri
 o `/.auth/me`.
 
 ---
+
+### ⚠ O `etl_list` do Fracttal devolve credenciais em texto puro
+
+**Achado em 22/08.** Duas rotas da API expõem o mesmo segredo com proteções diferentes:
+
+| Rota | O campo `private_key` |
+|---|---|
+| `inventories`… `integrations_connections_list` | mascarado — `'*******************'` |
+| `etl_list` | **em texto puro, completo** |
+
+Ao listar os registros ETL veio a chave privada inteira da conta de serviço do Google
+(`medidores@healthy-dolphin-477218-e4…`) e o `client_secret` da conexão Fracttal API.
+
+**Consequência prática:** qualquer integração que leia ETL — inclusive o conector MCP —
+recebe credenciais que a plataforma acredita estar protegendo. Quem auditar o acesso pelo
+endpoint de conexões vai concluir, erradamente, que os segredos estão mascarados.
+
+**Ação tomada / pendente:**
+- Rotacionar a chave da service account no Google Cloud (projeto
+  `healthy-dolphin-477218-e4`), atualizar a conexão no Fracttal e revogar a antiga
+- Reportar ao suporte do Fracttal: mascarar num endpoint e não no outro é falha da
+  plataforma, não configuração nossa
+
+**Regra que fica:** antes de listar ETL — ou qualquer objeto de integração — assumir que
+pode vir credencial junto. Não colar a saída em canal persistente sem olhar.
+
+## 6b. Latência: quanto demora uma mudança a aparecer no painel
+
+Medido em 22/08. O gargalo **não é processamento** — é fila.
+
+| | |
+|---|---|
+| Motor rodando (os 3 scripts) | **6 min** |
+| Esperar o cron acordar | **até 57 min**, média 38 |
+| **Total até o painel** | **até ~63 min** — 90% espera |
+
+Detalhe por passo do `semanal.yml` (364 s de 384 s num passo só):
+
+```
+  364.0s  Rodar o motor semanal      ############################################
+    9.0s  Instalar dependências      #
+    2.0s  Baixar o repositório
+    2.0s  Publicar
+```
+
+Otimizar o workflow economizaria 10 s de 384. O `gerar_pcm_json.py` já usa
+`load_workbook(read_only=True, data_only=True)`, que é o caminho rápido do openpyxl.
+
+### O que foi feito: gatilho por `push` (22/08)
+
+O `semanal.yml` só tinha `schedule` e `workflow_dispatch`. Publicar uma
+`Programação Semana XX.xlsx` não disparava nada — o arquivo esperava o cron.
+
+Acrescentado:
+
+```yaml
+  push:
+    branches: [main]
+    paths:
+      - "Programa*.xlsx"          # sem acento no padrão, de propósito
+      - "Observacoes_Semana*.txt"
+      - "AUXILIAR - FABRICIO.xlsx"
+```
+
+Publicar a semana ou ajustar um pin passa a disparar **na hora**: ~63 min → ~6 min.
+
+O histórico justifica: a Semana 35 foi publicada **três vezes em 21/08** (10:59, 14:01,
+14:55) pelo botão do PCM_Painel. Não é evento de sexta.
+
+> **Não cria laço**, por duas razões independentes: o robô commita com `GITHUB_TOKEN`
+> (que não dispara workflows), e o que ele publica — `banco_dados.json`, `etiquetas.json`
+> — não está no `paths`. **Não cria corrida**: o `concurrency: group: semanal` já enfileira.
+>
+> Mudança de **código** não dispara, de propósito: senão cada commit custaria 6 min.
+
+**Cuidado ao editar este arquivo:** o `name:` dele é o que o `azure-swa.yml` casa no
+`workflow_run`. Um caractere diferente e o deploy automático para em silêncio.
+
+### O que NÃO é resolvido pelo push
+
+O gatilho reage a **arquivo que muda no repositório**. O que acontece no Fracttal — técnico
+fechando OS, reprogramação — só chega quando o robô consulta a API:
+
+| O que muda | Dispara na hora? |
+|---|---|
+| Republicar a Programação Semanal | ✅ |
+| Ajustar observação/pin | ✅ |
+| Técnico fecha OS no Fracttal | ❌ espera o cron |
+| Reprogramação no Fracttal | ❌ espera o cron |
+
+## 6c. Webhook do Fracttal — existe, e por que ainda não usamos
+
+Investigado em 22/08. **O Fracttal tem webhook**, por dois recursos combinados:
+
+**Integrações → conexão tipo HTTP** (`id_type = 2`): URL livre, método
+`get/post/put/delete`, e nove modos de autenticação — `NoAuth`, `Basic`, `OAuth2`,
+`BearerToken`, `CustomToken`, `CustomHeaders`, `CustomSession`, `OAuth1`, `SAP`.
+
+**Dispatcher**: regras *evento → condição → ação*. Já em uso — três regras, duas ativas,
+em `NEW_WORK_ORDER` e `NEW_WORK_REQUEST`. E há uma conexão configurada (Google Sheets
+service account, "Criação de Medidores"), o que prova que o recurso está habilitado no
+plano.
+
+Eventos relevantes para o painel:
+
+```
+WO_TASK_FINISHED (61)          ← a regra de ouro: Estado da Tarefa = Finalizada
+WO_TASK_STARTED (67)
+REASON_TASK_PAUSED (62)
+EVENT_WORK_ORDER_FINISHED (7)
+EVENT_WORK_ORDER_IN_REVIEW (2)
+WO_RESPONSIBLE_CHANGE (64)
+```
+
+### Por que a forma óbvia não serve
+
+Fracttal → `POST` no `repository_dispatch` do GitHub → robô roda. Parece limpo, e é
+armadilha: na Semana 34 foram **723 tarefas finalizadas em 5 dias**, ~145/dia. A 6 min por
+rodada, **14 horas de execução por dia** — muito pior que o cron.
+
+E o `concurrency` não salva: com `cancel-in-progress: false` tudo enfileira; com `true`,
+numa rajada de fechamentos às 17h cada evento cancela o anterior e a rodada nunca termina.
+
+### PARADO em 22/08 — o Fracttal não tem "webhook", tem ETL
+
+Três das quatro peças foram construídas e **provadas**. A quarta esbarrou no modelo do
+Fracttal, que é diferente do que eu supus.
+
+**O que ficou pronto e testado:**
+
+| Peça | Estado |
+|---|---|
+| `repository_dispatch: types: [fracttal-mudou]` no `semanal.yml` | ✅ no ar |
+| `GITHUB_DISPATCH_TOKEN` e `FRACTTAL_WEBHOOK_SEGREDO` nas app settings | ✅ |
+| Amortecedor `api/fracttal` no SWA | ✅ 8/8 nos testes |
+| Disparo real ponta a ponta | ✅ robô acordou 22/08 19:51 com origem `repository_dispatch` |
+
+**Onde parou.** Para o evento `EVENT_WORK_ORDER_IN_REVIEW`, as ações que o dispatcher
+oferece são:
+
+```
+SEND_EMAIL_TO · SEND_MAIL_TO_RESPONSIBLE · SEND_MAIL_TO_NOTIFICATIONS_GROUP
+AUTO_FINISH_WO · ETL_EVENT
+```
+
+**Não existe ação "chamar HTTP".** A única que sai do Fracttal é `ETL_EVENT` — e ETL é um
+pipeline `source → transform → target`, onde ambas as pontas são conexões com uma
+`feature`. O único ETL existente lê uma planilha do Google e **escreve dentro do Fracttal**
+(`feature: create_meters`): é ferramenta de importação.
+
+Para o nosso caso precisaria do inverso — evento como origem, a nossa URL como destino — e
+**não está confirmado** que exista uma `feature` de escrita HTTP genérica. Descobrir exige
+montar um ETL de teste com mapeamento de campos.
+
+**Estimativa corrigida:** eu descrevi como "criar uma conexão e uma regra". É montar um
+pipeline ETL. Bem mais que um ajuste.
+
+### Também descoberto: `WO_TASK_FINISHED` não está disponível
+
+O evento existe no enum (id 61), mas **não é oferecido** em nenhum submódulo de Tarefas
+(conferido em WORK_ORDERS=4 e PENDING_TASKS=3). O mais próximo de "trabalho executado" que
+dá para assinar é `EVENT_WORK_ORDER_IN_REVIEW`.
+
+Isso importa para qualquer automação futura: a regra de ouro (conclusão = Estado da Tarefa)
+**não tem evento correspondente** no dispatcher.
+
+### O que fica valendo
+
+O **gatilho por `push`** (§6b) já resolve o caso que originou tudo: a Programação Semanal
+aparece em ~6 min em vez de ~63.
+
+O que continua sem solução é mudança feita **dentro do Fracttal**, que segue esperando o
+cron — até 38 min. As três peças construídas ficam prontas para o dia em que houver um
+caminho de saída do Fracttal.
+
+### O desenho original, para retomada
+
+Se um dia o caminho existir, era este — e o amortecedor já está construído:
+
+```
+Fracttal (WO_TASK_FINISHED)
+      ↓ HTTP POST (conexão tipo 2 + regra no dispatcher)
+middleware  /api/fracttal/mudou      ← só anota "tem novidade"
+      ↓ no máximo 1x a cada N min, e SÓ se houve mudança
+GitHub  repository_dispatch
+      ↓
+semanal.yml  (+ `repository_dispatch: types: [fracttal]` nos gatilhos)
+```
+
+Ganha nos dois sentidos: mais rápido quando há novidade, e **zero execução** quando não há
+— hoje o cron roda de qualquer jeito.
+
+**Custo:** uma rota nova no middleware, a lógica de amortecimento, um token do GitHub
+guardado lá, e a regra no dispatcher. É projeto, não ajuste.
+
+## 6d. O sentinela — como o painel reage ao Fracttal (NO AR desde 24/08 01:15 UTC)
+
+A seção 6c descartou o dispatcher do Fracttal (as ações são e-mail/ETL; não há "chamar
+URL"). O que entrou no lugar foi um **timer no middleware** — e o caminho completo está
+provado em produção:
+
+```
+Fracttal  ←(3 chamadas leves, a cada 3 min)—  sentinela (timer no gridco-campo-mw)
+                                                  │ impressão digital mudou?
+                                                  ▼
+                                        /api/fracttal (amortecedor no SWA, janela 10 min)
+                                                  ▼
+                                        repository_dispatch → semanal.yml → painel
+```
+
+**A impressão digital**: `total geral | total status 1 | total status 2` de work_orders —
+o mesmo `total` que o `fonte_bd_api.py` usa para particionar. Criação de OS, término,
+decisão de supervisor e cancelamento mexem nesses números. Custo: ~1.400 chamadas
+leves/dia contra um teto de 200/min.
+
+**Latência**: mudança no Fracttal → painel em ~3–13 min (antes: até 57). Sem mudança
+(madrugada, fim de semana), zero rodadas por este caminho. O cron continua como rede.
+
+**Onde mora cada peça**:
+
+| Peça | Onde |
+|---|---|
+| `sentinela_painel` (timer 3 min) | fim do `function_app.py` do middleware |
+| Estado (impressão digital) | Table `pcmsentinela` no storage do middleware |
+| Amortecedor | `api/fracttal/` no repositório do painel |
+| Segredo compartilhado | `FRACTTAL_WEBHOOK_SEGREDO` nas app settings do SWA **e** do middleware |
+| Token do GitHub | `GITHUB_DISPATCH_TOKEN` no SWA (fine-grained, só este repo, Contents RW) |
+
+**Regra que garante que nada se perde**: o sentinela só grava a impressão nova quando o
+amortecedor responde `disparado`. Se responder `agrupado` (janela aberta), não grava — o
+tick seguinte revê a mesma diferença e re-tenta até passar.
+
+**Primeiro disparo real**: 24/08 01:15:06 UTC, rodada `repository_dispatch` concluída.
+Para o disparo acontecer, cada elo teve que funcionar — timer, chamadas ao Fracttal,
+Table, segredo, GitHub.
+
+### Armadilha nova para a §6: o zip do middleware perde pastas
+
+O `deploy_azure.ps1` lista os arquivos do zip UM A UM. Dois já ficaram de fora:
+
+- `gestao.html`/`gestao2.html` — pego ANTES do deploy (as rotas morreriam com
+  "gestao.html ausente")
+- `chamado_garantia/` — pego DEPOIS: o deploy de 24/08 removeu o pacote de produção por
+  ~1 h, e o `/health` acusou (`chamadoGarantia.ok=false`). O próprio código avisa: essa
+  mesma falha já tinha matado a tela de chamados por 3 releases no passado.
+
+Os dois estão na lista agora. **Ao criar arquivo/pasta novos que o `function_app.py` lê
+do disco, acrescente ao `$files` do script no mesmo commit.** A conferência é:
+
+```
+grep -oE 'os\.path\.join\(os\.path\.dirname\(__file__\), "[^"]+"' function_app.py
+```
+
+tudo que sair daí tem que estar no `$files`. E o deploy pelo script pode estourar o
+timeout de 300 s do az com o build remoto — status no cliente NÃO é status no servidor:
+confira o `/health` depois, e se a mudança não assentou em ~6 min, o deploy não veio
+(re-rodar resolve; um retry com `--timeout 540` passou de primeira).
 
 ## 7. Inventário de acesso
 
