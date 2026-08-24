@@ -1,6 +1,6 @@
 # Estado do painel PCM — o que não está óbvio no código
 
-**Última atualização: 24/08/2026.** Base escrita pelo Fabrício; ampliada com o que
+**Última atualização: 24/08/2026 (tarde).** Base escrita pelo Fabrício; ampliada com o que
 foi descoberto e alterado em 19–24/08 — inclui o sentinela do Fracttal (§6d), a
 grafia canônica de cluster (§3.1b) e as armadilhas novas da §6.
 
@@ -680,6 +680,204 @@ tudo que sair daí tem que estar no `$files`. E o deploy pelo script pode estour
 timeout de 300 s do az com o build remoto — status no cliente NÃO é status no servidor:
 confira o `/health` depois, e se a mudança não assentou em ~6 min, o deploy não veio
 (re-rodar resolve; um retry com `--timeout 540` passou de primeira).
+
+## 6e. O dia 24/08 — quatro falhas silenciosas e o que ficou de regra
+
+Um dia inteiro de consertos, e o padrão se repetiu: **tudo parecia funcionar.**
+Cada um destes tinha alguma forma de sucesso aparente por cima.
+
+### 1. O laço de publicação que não podia se recuperar
+
+**Sintoma:** duas rodadas do `semanal.yml` falharam no passo Publicar — 22/08 19:56
+e 24/08 01:16. Duas em 60. As duas logo depois de uma rodada por
+`repository_dispatch`.
+
+**Causa, reproduzida num repositório git de mentira:** quando duas rodadas se
+cruzam, a segunda parte de um SHA anterior ao commit da primeira, regenera o JSON
+com outro `geradoEm`, e o rebase conflita nessa linha. O `|| true` engolia a falha
+e deixava **HEAD desanexado com arquivos não mesclados**. As quatro tentativas
+seguintes batiam em `Pulling is not possible because you have unmerged files` —
+engolidas pelo mesmo `|| true`. Cinco voltas, exit 1.
+
+E o dado mais novo, o da segunda rodada, era **perdido** até a rodada seguinte.
+
+**Conserto (no ar desde 02:09):** não rebasear. Cada tentativa faz `fetch` +
+`reset --hard origin/main`, recoloca os arquivos gerados por cima, commita e
+empurra. Conflito deixa de ser possível — não é tratado, é estruturalmente
+inexistente.
+
+> Sutileza que o conserto evita: durante um rebase, `ours` é o upstream e
+> `theirs` é o seu commit. A inversão engana, e resolver "a favor de ours"
+> descartaria justamente o dado novo.
+
+**Resultado:** 16 rodadas nas horas seguintes, 16 sucessos — incluindo três pares
+que se cruzaram com 3, 5 e 7 minutos de intervalo.
+
+Patch e testes em `_azure_rolessource/patches_semanal/`. O teste só vale porque o
+script ANTIGO falha nele: um teste que passa nos dois não provou nada.
+
+### 2. A aba MPAS que sumiu da Gerencial
+
+**Sintoma:** `atualizar_mpas.py` morria com
+`ValueError: not enough values to unpack (expected 2, got 0)`.
+
+**Causa:** a Gerencial foi reestruturada. A aba `MPAS` foi fundida em
+**"Zeladoria e MPAS"**, o cabeçalho subiu da linha 4 para a 1, e a aba passou a
+trazer 140 linhas de zeladoria misturadas com as de manutenção.
+
+**O que isso expôs, e é o mais instrutivo:**
+
+- O `except` do `_remapear_colunas` devolvia `{}` onde quem chama esperava uma
+  dupla. **O plano B escrito para degradar com elegância derrubava o script** — e
+  rodou pela primeira vez naquele dia, desde que foi escrito.
+- Índices herdados apontariam para **outra coluna**: `C_MOD=7` pousaria em
+  "Relatório enviado ao cliente" e gravaria esse texto no campo "módulos", sem
+  erro nenhum. Por isso coluna perdida agora vira `None`, em vez de ficar com o
+  índice velho.
+- O `_enriquecer()` tinha o **seu próprio** `wb["MPAS"]` e o seu próprio recorte
+  de linhas. Escapou do primeiro conserto porque procurei os pontos em vez de
+  varrer todos — e quebrou depois, em produção.
+- O `_enriquecer` parea **por posição** (`brutos[i]` com `manut[i]`). Sem o filtro
+  por tipo seriam 312 linhas contra 172 coletadas, e cada observação cairia num
+  registro diferente.
+
+**Regra que fica:** ao adaptar leitura de planilha, varrer TODAS as referências
+literais à aba e a índices de linha antes de consertar qualquer uma.
+
+**O que a Gerencial nova não alimenta mais** (o conserto garante vazio, não
+errado — mas se esses campos importarem, a correção é na planilha):
+
+```
+campo             19/08          hoje
+modulos      219/219 100%    0/172   0%   ZEROU
+termino       24/219  10%    0/172   0%   ZEROU
+supervisor   219/219 100%    0/172   0%   ZEROU
+apoio         18/219   8%    0/172   0%   ZEROU
+obs          118/219  53%   18/172  10%
+```
+
+Total de 219 para 172 registros: as MPAs caíram de 111 para 59, e não estão em
+nenhuma outra aba. Patch e 28 testes em `_azure_rolessource/fix_aba_mpas/`.
+
+### 3. O OneDrive que aceita a escrita e depois a descarta
+
+**Sintoma:** a biblioteca `Grid Co. - Gridco` saiu da lista de sincronização do
+OneDrive. 48 arquivos da pasta viraram **placeholders órfãos** — metadados sem
+provedor, ilegíveis por qualquer programa, inclusive em modo binário. O erro é
+`O provedor do arquivo de nuvem não está em execução`.
+
+O processo do OneDrive estava **rodando** o tempo todo. Só a biblioteca havia
+saído do registro, em
+`HKCU:\SOFTWARE\Microsoft\OneDrive\Accounts\Business1\ScopeIdToMountPointPathCache`.
+
+**A parte perigosa:** durante a janela, escrever arquivo NOVO na pasta funcionava
+— testei e passou. O que não funcionava era **persistir**. Quando a sincronização
+religou, o OneDrive reconciliou e a nuvem venceu: os patches aplicados às 09:25
+sumiram sem aviso, e o script voltou a falhar com o erro original.
+
+> **Um ambiente que aceita a escrita e depois a descarta é pior que um que
+> recusa.** Se a sincronização estiver instável, não edite nada nessa pasta.
+
+**Como detectar um placeholder:**
+
+```powershell
+$i = Get-Item -LiteralPath $arquivo -Force
+if (($i.Attributes -band 0x400000) -ne 0) { "somente-nuvem" }
+```
+
+Comparar com a máscara, não com texto: o `.Attributes.ToString()` devolve o
+número cru (4199968) quando há flags que ele não sabe nomear.
+
+**Resolvido** reiniciando o OneDrive — mas demorou mais de 50 segundos para
+religar, tempo suficiente para eu declarar falha cedo demais.
+
+### 4. Os hashes de senha publicados
+
+**Sintoma:** nenhum. Estava assim desde sempre.
+
+A linha 11 do `index.html` publicava os **hashes SHA-256 das senhas do admin e
+dos 12 clientes**, sem sal e sem iteração, num repositório público.
+
+**Por que não era catastrófico:** no SWA o caminho da senha já estava desarmado —
+os `.json` exigem papel, o `loadDB()` falha para quem não tem, e o `doLogin()`
+desiste antes de olhar a senha. Mas a cópia do **GitHub Pages não tinha portão
+nenhum**: lá o painel rodava inteiro, com o cadeado e a chave no mesmo arquivo.
+
+**Cortado em 24/08** (decisão 28, último passo): bloco `gc-pwds` removido, tela
+de senha substituída pelo botão da Microsoft, Pages desligado.
+
+Detalhe que quase derrubou o painel: a linha 35 do `app.js` era um `JSON.parse`
+de topo sobre o elemento `gc-pwds`. **Sem o elemento ela lança, e o app.js inteiro
+deixa de carregar.** Por isso os dois arquivos vão sempre juntos.
+
+⚠ **Os hashes ficam no histórico do git para sempre.** Se alguma dessas senhas
+for reaproveitada em outro lugar, precisa ser trocada lá.
+
+---
+
+## 6f. Saída do OneDrive: o caminho Graph (em construção)
+
+O incidente acima motivou tirar as planilhas da dependência de uma estação estar
+ligada e sincronizada. O TI provisionou em 24/08:
+
+| | |
+|---|---|
+| Site | `https://gridcobr.sharepoint.com/sites/pcm-bd` ("PCM - Base de Dados") |
+| Biblioteca | `Dados PCM` |
+| Client ID | `ab7e21ac-17ba-48f8-a03c-c636673e48b6` |
+| Permissão | `Sites.Selected` (aplicação) + **write** neste site |
+| Autenticação | **certificado** (.pfx), thumbprint `AD1526BF...751`, vence em 2 anos |
+
+**Por que `Sites.Selected` e não `Sites.Read.All`:** a permissão sozinha não dá
+acesso a nada. Um administrador autoriza biblioteca por biblioteca. É chave de
+uma porta, não chave-mestra.
+
+**Por que write, se a Gerencial é só leitura:** o TI concedeu write por uma
+leitura equivocada do pedido — achou que a rotina escrevia na Gerencial, que na
+verdade é aberta com `read_only=True` em todos os pontos. Mas a conclusão está
+certa por outro motivo: `programacao_v7.py` escreve o `Historico_Programacoes.xlsx`
+e `atualizacao_semanal.py` escreve o BD. **Se a auditoria perguntar, a
+justificativa verdadeira é essa.**
+
+**O módulo** está em `_azure_rolessource/graph_planilhas/`, 20 testes passando.
+Duas escolhas que o definem:
+
+- **Não cai para o arquivo local quando o Graph falha.** Seria o pior erro
+  possível: a rotina "funcionaria" lendo cópia velha, e a defasagem voltaria a ser
+  invisível. Há um teste só para isso.
+- **Confere o thumbprint** calculado do próprio `.pfx` contra o esperado, antes de
+  tocar a rede. Um certificado trocado falha ali, com o motivo — não lá na frente
+  com um 401 mudo.
+
+**Bloqueado em 24/08:** a conta `fillipe.figueiro@gridco.com.br` recebe
+*Access denied* no conteúdo do site (o Graph devolve `/drives` vazio). Falta o TI
+conceder acesso às **pessoas** — a concessão feita foi só para o aplicativo.
+
+**Limite técnico para depois:** o Graph aceita upload simples até 4 MB. A
+Gerencial (813 KB) e o Histórico passam; o `BD_Relatório Semanal.xlsx` (6,7 MB)
+exige `createUploadSession`.
+
+---
+
+## 6g. Decisão de 24/08: os repositórios seguem públicos
+
+O `banco_dados.json` (4,4 MB, todos os clientes) continua baixável por qualquer um
+via `raw.githubusercontent`. Não é mais **navegável** — o Pages foi desligado e o
+painel só abre com login Microsoft — mas quem souber a URL baixa o arquivo.
+
+**A contrapartida medida:** repositório público tem minutos de Actions ilimitados.
+Os três robôs consomem **652 min/dia** (semanal 260 + gestao-pcm 311 + azure-swa
+81), o que dá ~19.500 min/mês contra uma cota de 2.000 em repositório privado.
+O excedente custaria **~US$ 140/mês**.
+
+Decisão do Fillipe: seguir público por enquanto. O caminho que tornaria o
+privado viável é tirar o dado do git — que é justamente para onde o §6f aponta.
+
+⚠ O raw serve com `Content-Type: text/plain` e `X-Content-Type-Options: nosniff`,
+então o painel **não roda** de lá: os arquivos são legíveis, não executáveis. Foi
+o que tornou o desligamento do Pages uma redução real, e não cosmética.
+
+---
 
 ## 7. Inventário de acesso
 
