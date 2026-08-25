@@ -181,9 +181,23 @@ function statusHeartbeat(){
   else if(min>120)setStatus('⚠ Dados de '+hora+' · há '+idade+' — acima do normal (~1h)','warn');
   else setStatus('✓ Dados de '+hora+' · há '+idade,'ok');
 }
+// As etiquetas alimentam os contadores das 9 abas do topo E o conteúdo das
+// telas de tipologia. Até 24/08/2026 o loadEtiquetas() era chamado de UM lugar
+// só: o botão "Atualizar agora". Quem abria o painel via "Religamentos 0 /
+// Sem dados / Aguardando JSON" quando havia 17 — e Performance 0 com 115.
+// Contador errado é pior que contador ausente: o primeiro é lido como fato.
+// Por isso a carga entra aqui, que é por onde os dois caminhos de login passam.
+async function _carregarEtiquetas(){
+  if(typeof loadEtiquetas!=='function') return;
+  await loadEtiquetas();
+  if(typeof atualizarContadoresTopNav==='function') atualizarContadoresTopNav();
+  if(typeof renderTipologiaAtual==='function' && S.topView && S.topView!=='semana') renderTipologiaAtual();
+}
+
 function startTimer() {
   if(timer) clearInterval(timer);
-  timer=setInterval(async()=>{ const ok=await loadDB(true); await loadPulso(); await loadSugestoes(); await loadSupervisores(); if(S.topView==='gestaoPcm'){await loadGestao();await loadConfiab();} if(ok&&S.user){buildWeekChips();render();renderSugestoes();if(S.topView==='gestaoPcm')renderGestao();} },CONFIG.REFRESH_MS);
+  _carregarEtiquetas();                    // agora, não só no próximo ciclo
+  timer=setInterval(async()=>{ const ok=await loadDB(true); await loadPulso(); await loadSugestoes(); await loadSupervisores(); await _carregarEtiquetas(); if(S.topView==='gestaoPcm'){await loadGestao();await loadConfiab();} if(ok&&S.user){buildWeekChips();render();renderSugestoes();if(S.topView==='gestaoPcm')renderGestao();} },CONFIG.REFRESH_MS);
   const el=document.getElementById('refresh-badge'); if(el) el.textContent='Auto-refresh '+Math.round(CONFIG.REFRESH_MS/60000)+'min';
 }
 
@@ -445,6 +459,12 @@ function launch(label,isAdmin) {
     const btn = document.querySelector('.tip-tab[data-topv="'+slug+'"]');
     if(btn) btn.style.display = isAdmin ? '' : 'none';
   });
+  // O botão Acessos leva para uma PÁGINA separada (acessos.html), não é uma
+  // aba do painel — por isso fica fora da lista acima, que só mexe em
+  // .tip-tab. A rota já exige o papel admin no servidor (staticwebapp.config
+  // .json); esconder aqui é para não oferecer o que a pessoa não pode abrir.
+  const _btnAc = document.getElementById('btn-acessos');
+  if(_btnAc) _btnAc.style.display = isAdmin ? '' : 'none';
   // Se user não-admin estava em aba restrita, volta pra Programação Semanal
   let _voltouAba=false;
   if(!isAdmin && adminOnly.indexOf(S.topView)>=0){

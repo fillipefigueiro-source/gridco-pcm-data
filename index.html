@@ -69,6 +69,12 @@
       <div class="ab-acts">
         <button class="btn btn-o np" onclick="window.print()">&#128424; PDF</button>
         <button class="btn btn-g np" onclick="exportCSV()">&darr; CSV</button>
+        <!-- Acessos de cliente. Nasce escondido: quem mostra e o launch(),
+             so para admin. Sem o display:none inicial ele pisca na tela de
+             quem nao pode abrir, entre o carregamento e o login. -->
+        <button class="btn btn-o np" id="btn-acessos" style="display:none"
+                onclick="location.href='acessos.html'"
+                title="Quem de cada cliente pode entrar no portal">&#128101; Acessos</button>
         <button class="btn btn-x np" onclick="doLogout()">Sair</button>
       </div>
     </div>
