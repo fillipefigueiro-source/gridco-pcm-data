@@ -41,6 +41,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
   flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto}
 .lat-marca{padding:16px 16px 13px;font-size:16px;font-weight:800;letter-spacing:-.02em;
   display:flex;align-items:center;gap:7px}
+.lat-enc{margin-left:auto;width:24px;height:24px;border-radius:6px;color:var(--latx);
+  display:flex;align-items:center;justify-content:center;font-size:13px;flex:0 0 24px}
+.lat-enc:hover{background:rgba(255,255,255,.12);color:#fff}
+.lat-enc:focus-visible{outline:2px solid var(--green);outline-offset:1px}
 .lat-marca i{font-style:normal;color:var(--green)}
 .lat-sec{font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
   color:rgba(255,255,255,.34);padding:14px 16px 6px}
@@ -82,18 +86,27 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .det-fundo{position:fixed;inset:0;z-index:60;background:rgba(10,8,20,.45);
   opacity:0;transition:opacity .18s ease}
 .det-fundo.on{opacity:1}
-.det{position:fixed;top:0;right:0;bottom:0;z-index:61;width:min(430px,100%);
-  background:var(--surf);border-left:1px solid var(--line2);
-  box-shadow:-14px 0 40px rgba(10,8,20,.22);display:flex;flex-direction:column;
-  transform:translateX(100%);transition:transform .2s ease}
-.det.on{transform:none}
+.det{position:fixed;top:50%;left:50%;z-index:61;width:min(600px,calc(100% - 28px));
+  max-height:min(84vh,calc(100% - 28px));background:var(--surf);
+  border:1px solid var(--line2);border-radius:14px;
+  box-shadow:0 24px 70px rgba(10,8,20,.35);display:flex;flex-direction:column;
+  transform:translate(-50%,-50%) scale(.96);opacity:0;
+  transition:transform .16s ease,opacity .16s ease}
+.det.on{transform:translate(-50%,-50%);opacity:1}
 @media (prefers-reduced-motion:reduce){.det,.det-fundo{transition:none}}
 .det-topo{display:flex;align-items:flex-start;gap:10px;padding:16px 16px 12px;
   border-bottom:1px solid var(--line)}
 .det-os{font-family:monospace;font-size:12.5px;font-weight:700;color:var(--ink3)}
 .det-tit{font-size:15px;font-weight:800;line-height:1.32;margin-top:5px;
   letter-spacing:-.01em;overflow-wrap:anywhere}
-.det-selos{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.det-fatos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(122px,100%),1fr));
+  gap:1px;background:var(--line);border-bottom:1px solid var(--line);flex:0 0 auto}
+.df{background:var(--surf);padding:9px 16px 10px;min-width:0}
+.df-l{display:block;font-size:8.5px;font-weight:800;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:4px}
+.df-v{font-size:12.5px;font-weight:700;display:flex;align-items:center;gap:6px;min-width:0}
+.df-v.df-mal{color:var(--mal)}
+.df-dot{width:8px;height:8px;border-radius:50%;flex:0 0 8px}
 .det-x{margin-left:auto;flex:0 0 auto;width:28px;height:28px;border-radius:7px;
   display:flex;align-items:center;justify-content:center;font-size:16px;
   color:var(--ink3);background:var(--surf2)}
@@ -109,13 +122,34 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .det-rel{font-size:12px;line-height:1.5;color:var(--ink2);background:var(--surf2);
   border-radius:8px;padding:10px 11px;white-space:pre-wrap;overflow-wrap:anywhere}
 .det-vazio{font-size:12px;color:var(--ink3);font-style:italic}
-.carga-erro{margin:40px auto;max-width:460px;padding:22px 24px;text-align:center;
-  background:var(--surf);border:1px solid var(--line2);border-radius:var(--r);
-  box-shadow:var(--sh);font-size:13px;line-height:1.55;color:var(--ink2)}
-.carga-erro b{color:var(--ink)}
-.carga-erro > div{margin-top:9px}
-.carga-dica{font-size:12px;color:var(--ink3);border-top:1px solid var(--line);
-  padding-top:11px;margin-top:13px}
+.pv-rolo{overflow-x:auto;background:var(--surf);border:1px solid var(--line);
+  border-radius:var(--r);box-shadow:var(--sh)}
+.pv{width:100%;border-collapse:collapse;font-size:12px;min-width:620px}
+.pv th{font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink3);text-align:right;padding:9px 12px;border-bottom:1px solid var(--line2);
+  white-space:nowrap}
+.pv th:first-child{text-align:left}
+.pv td{padding:6px 12px;border-bottom:1px solid var(--line);text-align:right;
+  font-variant-numeric:tabular-nums}
+.pv td:first-child{text-align:left}
+.pv-cli td{background:var(--surf2);font-weight:800;cursor:pointer;user-select:none}
+.pv-cli .seta{display:inline-block;width:15px;color:var(--ink3);transition:transform .12s}
+.pv-cli.fech .seta{transform:rotate(-90deg)}
+.pv-cli .qtd{font-size:10px;font-weight:600;color:var(--ink3);margin-left:7px}
+.pv-usi td:first-child{padding-left:32px;color:var(--ink2)}
+.pv-c b{display:block;font-size:12.5px;color:var(--ink)}
+.pv-c span{font-size:9.5px;color:var(--ink2)}  /* --ink3 dava 3.9 sobre a celula tingida */
+.pv-vazio{color:var(--ink3)}
+.pv-pend{font-weight:800}
+.pv-pend.mal{color:var(--mal)}
+.pv-leg{font-size:11px;color:var(--ink3);padding:9px 13px;line-height:1.55;
+  border-bottom:1px solid var(--line)}
+.pv-leg b{color:var(--ink2)}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(8px);
+  z-index:80;background:var(--navy);color:#fff;font-size:12.5px;font-weight:600;
+  padding:9px 16px;border-radius:9px;box-shadow:0 10px 30px rgba(10,8,20,.32);
+  opacity:0;transition:opacity .2s,transform .2s;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%)}
 .tl{list-style:none;margin:2px 0 0;padding:0 0 0 17px;position:relative}
 .tl::before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:2px;
   background:var(--line2);border-radius:1px}
@@ -311,17 +345,19 @@ tbody tr:hover{background:var(--surf2)}
 .rodape{padding:20px 18px;font-size:11.5px;color:var(--ink3);border-top:1px solid var(--line);line-height:1.6}
 .rodape b{color:var(--ink2)}
 
-@media(max-width:820px){
-  .lat{width:58px;flex:0 0 58px}
-  .lat-marca span,.lat-i .rot,.lat-sec,.lat-pe .lat-sem,.lat-u span{display:none}
-  .lat-i{justify-content:center;padding:10px 0}
-  .lat-i .n{margin-left:0;position:absolute;transform:translate(14px,-11px);font-size:9px;padding:0 4px}
-  .lat-i{position:relative}
-  .lat-pe{padding-left:8px;padding-right:8px}
-  .tema,.papel{flex-direction:column}
-  .tema .rot,.papel .rot{display:none}
-  .papel-cli{display:none}
-}
+/* Encolhida por ESCOLHA (classe .mini, botao « do topo da barra) ou por falta
+   de espaco (@container abaixo). As duas chegam ao mesmo lugar. */
+.app.mini .lat{width:58px;flex:0 0 58px}
+.app.mini .lat-marca span,.app.mini .lat-i .rot,.app.mini .lat-sec,
+.app.mini .lat-pe .lat-sem,.app.mini .lat-u span{display:none}
+.app.mini .lat-marca{justify-content:center;padding-left:8px;padding-right:8px}
+.app.mini .lat-enc{margin-left:0}
+.app.mini .lat-i{justify-content:center;padding:10px 0;position:relative}
+.app.mini .lat-i .n{margin-left:0;position:absolute;transform:translate(14px,-11px);font-size:9px;padding:0 4px}
+.app.mini .lat-pe{padding-left:8px;padding-right:8px}
+.app.mini .tema,.app.mini .papel{flex-direction:column}
+.app.mini .tema .rot,.app.mini .papel .rot{display:none}
+.app.mini .papel-cli{display:none}
 @container app (max-width:820px){
   .lat{width:58px;flex:0 0 58px}
   .lat-marca span,.lat-i .rot,.lat-sec,.lat-pe .lat-sem,.lat-u span{display:none}
@@ -333,16 +369,24 @@ tbody tr:hover{background:var(--surf2)}
   .tema .rot,.papel .rot{display:none}
   .papel-cli{display:none}
 }
+.carga-erro{margin:40px auto;max-width:460px;padding:22px 24px;text-align:center;
+  background:var(--surf);border:1px solid var(--line2);border-radius:var(--r);
+  box-shadow:var(--sh);font-size:13px;line-height:1.55;color:var(--ink2)}
+.carga-erro b{color:var(--ink)}
+.carga-erro > div{margin-top:9px}
+.carga-dica{font-size:12px;color:var(--ink3);border-top:1px solid var(--line);
+  padding-top:11px;margin-top:13px}
 </style>
 
 <div class="app">
   <nav class="lat">
-    <div class="lat-marca">Grid <i>Co.</i><span></span></div>
+    <div class="lat-marca"><span>Grid <i>Co.</i></span>
+      <button class="lat-enc" id="lat-enc" title="Encolher o menu">«</button></div>
 
     <div class="lat-sec">Operação</div>
-    <button class="lat-i on" data-v="semana"><span class="ic">▦</span><span class="rot">Semana</span><span class="n" id="n-semana"></span></button>
-    <button class="lat-i" data-v="insights"><span class="ic">◈</span><span class="rot">Insights</span></button>
-    <button class="lat-i" data-v="tarefas"><span class="ic">▤</span><span class="rot">Tarefas / OS</span><span class="n" id="n-tarefas"></span></button>
+    <button class="lat-i on" data-v="semana" title="Semana"><span class="ic">▦</span><span class="rot">Semana</span><span class="n" id="n-semana"></span></button>
+    <button class="lat-i" data-v="insights" title="Insights"><span class="ic">◈</span><span class="rot">Insights</span></button>
+    <button class="lat-i" data-v="tarefas" title="Tarefas / OS"><span class="ic">▤</span><span class="rot">Tarefas / OS</span><span class="n" id="n-tarefas"></span></button>
 
     <div class="lat-sec">Chamados</div>
     <div id="lat-mods"></div>
@@ -371,8 +415,7 @@ tbody tr:hover{background:var(--surf2)}
       <span class="sub" id="t-sub"></span>
       <span class="espaco"></span>
       <span class="pulso"><i></i>robô ok</span>
-      <button class="bt">Exportar</button>
-      <button class="bt">⋯</button>
+      <button class="bt" id="exportar" title="Baixa as OS filtradas em CSV">Exportar CSV</button>
     </header>
 
     <section class="tela on" id="v-semana"></section>
@@ -505,7 +548,8 @@ function montarD(bd, et){
 
 
 let D;
-
+const _esc = x => String(x==null?"":x).replace(/[&<>"]/g,
+  c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 /* Carga em tempo de execucao. O painel real faz o mesmo: em auth.js ele troca
    CONFIG.JSON_URL por /api/dados, que filtra por papel no servidor. Aqui a
    ordem e a mesma — /api/dados primeiro, arquivo estatico como reserva para
@@ -522,20 +566,18 @@ async function _pegar(caminhos){
   }
   throw new Error(ultimo || "sem origem");
 }
-const _esc = x => String(x==null?"":x).replace(/[&<>"]/g,
-  c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function _falha(msg){
   document.querySelector(".main").innerHTML =
-    '<div class="carga-erro"><b>Não foi possível carregar os dados.</b>'
+    '<div class="carga-erro"><b>Nao foi possivel carregar os dados.</b>'
     + '<div>' + _esc(msg) + '</div>'
     + '<div class="carga-dica">Os arquivos do painel exigem o papel <b>admin</b> '
-    + 'ou <b>equipe</b>. Esta é uma tela de revisão interna.</div></div>';
+    + 'ou <b>equipe</b>. Esta e uma tela de revisao interna.</div></div>';
 }
 (async () => {
   try {
     const [bd, et] = await Promise.all([
       _pegar(["/api/dados", "banco_dados.json"]),
-      _pegar(["etiquetas.json"]).catch(() => ({}))   // sem etiquetas: sem modulos
+      _pegar(["etiquetas.json"]).catch(() => ({}))
     ]);
     D = montarD(bd, et);
   } catch (e) { _falha(e.message); return; }
@@ -584,7 +626,7 @@ function arrancar(){
 
   /* ── barra lateral ─────────────────────────────────────────────────────── */
   $("#lat-mods").innerHTML = Object.entries(D.mods).map(([k,m]) =>
-    `<button class="lat-i" data-v="mod" data-m="${esc(k)}">
+    `<button class="lat-i" data-v="mod" data-m="${esc(k)}" title="${esc(m.label)}">
        <span class="ic">${ICO[k]||"•"}</span><span class="rot">${esc(m.label.replace("Chamados em ","").replace("Manutenções ",""))}</span>
        <span class="n ${m.atrasadas>0?"alerta":""}">${m.total}</span></button>`).join("");
   $("#n-semana").textContent = D.insights.total;
@@ -604,7 +646,8 @@ function arrancar(){
     // dizendo 289 enquanto a coluna mostra 4 cards.
     const max = Math.max(1, ...colunas.map(d => (porDia[d]||[]).length));
     return barraFiltros(dados.length)
-      + `<div class="cal-rolo"><div class="cal">` + colunas.map(dn => {
+      + `<div class="cal-rolo"><div class="cal"
+         style="grid-template-columns:repeat(${colunas.length},minmax(0,1fr));min-width:${colunas.length*172}px">` + colunas.map(dn => {
       const d = {n: dn};
       const todos = porDia[dn]||[], ts = todos.slice(0, TETO_CARDS);
       const h = Math.round(todos.reduce((a,t)=>a+(t.h||0),0)*10)/10;
@@ -638,41 +681,94 @@ function arrancar(){
 
   /* ── insights ──────────────────────────────────────────────────────────── */
   function vInsights(){
-    const i = D.insights, maxH = i.acima.length ? i.acima[0][1] : 44;
-    const maxR = Math.max(...i.rolagem.map(r=>r[1]));
-    return `
+    /* Tudo aqui sai do conjunto FILTRADO, nao do D.insights pre-calculado:
+       filtrar por equipe, cliente ou tipo re-segmenta cada numero. E o que
+       transforma o painel de retrato fixo em ferramenta de pergunta. */
+    const dados = filtrada();
+    if (!dados.length) return barraFiltros(0)
+      + '<div class="vazio">Nenhuma OS com esses filtros.</div>';
+    const n = dados.length;
+    const feitas = dados.filter(t=>t.st==="Finalizada").length;
+    const reprog = dados.filter(t=>t.rep).length;
+    const rol3   = dados.filter(t=>t.rol>=3).length;
+    const corr   = dados.filter(t=>t.tp==="Corretiva").length;
+    const horas  = Math.round(dados.reduce((a,t)=>a+(t.h||0),0));
+    const usinas = new Set(dados.map(t=>t.u).filter(Boolean)).size;
+    const ader   = Math.round(feitas/n*100);
+    // horas por equipe — soma das duracoes DO FILTRO (o hh_util do resumo e da
+    // semana inteira; com filtro ativo os dois divergem e o resumo mentiria)
+    const porCl = {};
+    dados.forEach(t=>{ if(t.cl) porCl[t.cl]=(porCl[t.cl]||0)+(t.h||0); });
+    const eqp = Object.entries(porCl).map(([c,h])=>[c,Math.round(h*10)/10])
+                      .sort((a,b)=>b[1]-a[1]);
+    const acima = eqp.filter(([,h])=>h>44), ocioso = eqp.filter(([,h])=>h<15).length;
+    const topo = eqp.slice(0,9), maxH = Math.max(topo.length?topo[0][1]:44, 44);
+    // rolagem
+    const rm={}; dados.forEach(t=>{const k=Math.min(t.rol||1,6); rm[k]=(rm[k]||0)+1;});
+    const rolagem = Object.keys(rm).map(Number).sort((a,b)=>a-b).map(k=>[k,rm[k]]);
+    const maxR = Math.max(...rolagem.map(r=>r[1]),1);
+    // aderencia por dia
+    const dias = ORDEM_DIAS.filter(d=>dados.some(t=>t.d===d)).map(d=>{
+      const dd = dados.filter(t=>t.d===d);
+      return { d, n:dd.length, f:dd.filter(t=>t.st==="Finalizada").length }; });
+    // corretivas por usina
+    const porU={};
+    dados.filter(t=>t.tp==="Corretiva").forEach(t=>{
+      const u=usinaCurta(t.u); if(u) porU[u]=(porU[u]||0)+1; });
+    const topU = Object.entries(porU).sort((a,b)=>b[1]-a[1]).slice(0,6);
+    const maxU = topU.length?topU[0][1]:1;
+
+    return barraFiltros(n) + `
     <div class="ins-g">
       <div class="card"><h3>Aderência ao plano</h3>
-        <div class="kv-n mal">${i.aderencia}%</div>
-        <div class="kv-s"><b>${i.feitas}</b> de ${i.total} concluídas nesta semana</div></div>
+        <div class="kv-n ${ader<50?"mal":""}">${ader}%</div>
+        <div class="kv-s"><b>${feitas}</b> de ${n} concluídas</div></div>
       <div class="card"><h3>Reprogramadas</h3>
-        <div class="kv-n mal">${Math.round(i.reprog/i.total*100)}%</div>
-        <div class="kv-s"><b>${i.reprog}</b> postergadas · <b>${i.rol3}</b> na 3ª tentativa ou mais</div></div>
+        <div class="kv-n ${reprog/n>.5?"mal":""}">${Math.round(reprog/n*100)}%</div>
+        <div class="kv-s"><b>${reprog}</b> postergadas · <b>${rol3}</b> na 3ª tentativa ou mais</div></div>
       <div class="card"><h3>Corretivas</h3>
-        <div class="kv-n">${Math.round(i.corretivas/i.total*100)}%</div>
-        <div class="kv-s"><b>${i.corretivas}</b> de ${i.total} · o resto é preventiva e zeladoria</div></div>
+        <div class="kv-n">${Math.round(corr/n*100)}%</div>
+        <div class="kv-s"><b>${corr}</b> de ${n} · o resto é preventiva e zeladoria</div></div>
       <div class="card"><h3>Escala</h3>
-        <div class="kv-n">${Math.round(i.horas).toLocaleString("pt-BR")}h</div>
-        <div class="kv-s"><b>${i.usinas}</b> usinas · <b>${i.equipes}</b> equipes</div></div>
+        <div class="kv-n">${horas.toLocaleString("pt-BR")}h</div>
+        <div class="kv-s"><b>${usinas}</b> usinas · <b>${eqp.length}</b> equipes</div></div>
     </div>
 
     <div class="ins-g" style="grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr))">
-      <div class="card"><h3>Capacidade — ${i.acima.length} equipes acima de 44h</h3>
-        <div class="barras">${i.acima.slice(0,9).map(([c,h])=>`
+      <div class="card"><h3>Carga por equipe — ${acima.length} acima de 44h</h3>
+        <div class="barras">${topo.map(([c,h])=>`
           <div class="br"><span class="br-n">${esc(c)}</span>
-            <span class="br-t"><span class="br-f mal" style="width:${h/maxH*100}%"></span>
+            <span class="br-t"><span class="br-f ${h>44?"mal":""}" style="width:${h/maxH*100}%"></span>
               <span class="br-44" style="left:${44/maxH*100}%"></span></span>
-            <span class="br-v mal">${h}h</span></div>`).join("")}</div>
-        <div class="kv-s" style="margin-top:11px">E <b>${i.n_ocioso} equipes</b> abaixo de 15h.
-          O problema não é falta de capacidade — é distribuição.</div></div>
+            <span class="br-v ${h>44?"mal":""}">${h}h</span></div>`).join("")}</div>
+        <div class="kv-s" style="margin-top:11px">${ocioso?`E <b>${ocioso} equipes</b> abaixo de 15h.
+          O problema não é falta de capacidade — é distribuição.`:
+          "Nenhuma equipe abaixo de 15h neste recorte."}</div></div>
 
       <div class="card"><h3>Quantas vezes a tarefa já rolou</h3>
-        <div class="rol">${i.rolagem.map(([v,n])=>`
-          <div class="rol-c"><div class="rol-n">${n}</div>
-            <div class="rol-b ${v>=4?"mal":""}" style="height:${Math.max(3,n/maxR*44)}px"></div>
+        <div class="rol">${rolagem.map(([v,q])=>`
+          <div class="rol-c"><div class="rol-n">${q}</div>
+            <div class="rol-b ${v>=4?"mal":""}" style="height:${Math.max(3,q/maxR*44)}px"></div>
             <div class="rol-l">${v>=6?"6+":v}ª</div></div>`).join("")}</div>
-        <div class="kv-s" style="margin-top:11px">A distribuição sobe à direita: quanto mais uma
-          tarefa rola, <b>mais provável que role de novo</b>. Não é fila — é abandono.</div></div>
+        <div class="kv-s" style="margin-top:11px">Quanto mais uma tarefa rola,
+          <b>mais provável que role de novo</b>. Não é fila — é abandono.</div></div>
+
+      <div class="card"><h3>Aderência por dia</h3>
+        <div class="barras">${dias.map(x=>`
+          <div class="br"><span class="br-n">${esc(x.d)}</span>
+            <span class="br-t"><span class="br-f ${x.n&&x.f/x.n<.5?"mal":""}"
+              style="width:${x.n?x.f/x.n*100:0}%"></span></span>
+            <span class="br-v">${x.f}/${x.n}</span></div>`).join("")}</div>
+        <div class="kv-s" style="margin-top:11px">Concluídas sobre programadas, dia a dia.
+          Barra curta no começo da semana = rolagem em formação.</div></div>
+
+      ${topU.length?`<div class="card"><h3>Corretivas — onde estão</h3>
+        <div class="barras">${topU.map(([u,q])=>`
+          <div class="br"><span class="br-n">${esc(u)}</span>
+            <span class="br-t"><span class="br-f mal" style="width:${q/maxU*100}%"></span></span>
+            <span class="br-v">${q}</span></div>`).join("")}</div>
+        <div class="kv-s" style="margin-top:11px">As ${topU.length} usinas com mais corretivas
+          neste recorte — candidatas a causa raiz, não a mais visita.</div></div>`:""}
     </div>`;
   }
 
@@ -749,7 +845,60 @@ function arrancar(){
   }
 
   /* ── módulo ────────────────────────────────────────────────────────────── */
+  /* Colunas do pivo: MPA anual, MPS semestral, e a familia MPM (inclui
+     MPM-Inversor, MPM-Mod/Tracker, MPQ e "Preventiva") como mensal. */
+  const PREV_COL = tp => tp==="MPA" ? "MPA" : tp==="MPS" ? "MPS"
+    : (tp && (tp.startsWith("MPM") || tp==="MPQ" || tp==="Preventiva")) ? "MPM" : null;
+  function vPreventivas(){
+    const dados = filtrada().map(t=>({t,col:PREV_COL(t.tp)})).filter(x=>x.col);
+    if (!dados.length) return barraFiltros(0)
+      + '<div class="vazio">Nenhuma tarefa preventiva com esses filtros.</div>';
+    const arv = {};
+    for (const {t,col} of dados) {
+      const cli = t.cli || "—", u = usinaCurta(t.u) || "—";
+      const c = arv[cli] = arv[cli] || {};
+      const uu = c[u] = c[u] || {MPM:{f:0,n:0},MPS:{f:0,n:0},MPA:{f:0,n:0}};
+      uu[col].n++; if (t.t && t.st==="Finalizada") uu[col].f++;
+    }
+    const cel = c => {
+      if (!c.n) return '<td class="pv-c pv-vazio">—</td>';
+      const p = Math.round(c.f/c.n*100);
+      const tom = p>=90?"var(--ok)":p>=50?"var(--warn)":"var(--danger)";
+      return `<td class="pv-c" style="background:color-mix(in srgb,${tom} 16%,var(--surf))">
+        <b>${p}%</b><span>${c.f}/${c.n}</span></td>`;
+    };
+    const soma = us => { const g={f:0,n:0};
+      Object.values(us).forEach(x=>{g.f+=x.f;g.n+=x.n;}); return g; };
+    const linhas = Object.entries(arv).map(([cli,usinas])=>{
+      const rows = Object.entries(usinas).map(([u,x])=>({u,x,g:soma(x)}))
+                         .sort((a,b)=>(b.g.n-b.g.f)-(a.g.n-a.g.f));
+      const gt = {MPM:{f:0,n:0},MPS:{f:0,n:0},MPA:{f:0,n:0}};
+      rows.forEach(({x})=>["MPM","MPS","MPA"].forEach(k=>{gt[k].f+=x[k].f;gt[k].n+=x[k].n;}));
+      const gg = soma(gt);
+      return { cli, rows, gt, gg, pend: gg.n-gg.f };
+    }).sort((a,b)=>b.pend-a.pend);
+    const total = dados.length, feitas = dados.filter(x=>x.t.st==="Finalizada").length;
+    return barraFiltros(total) + `
+    <div class="pv-rolo">
+      <div class="pv-leg"><b>MPM</b> mensal · <b>MPS</b> semestral · <b>MPA</b> anual
+        · célula = % de tarefas finalizadas na semana, com a fração embaixo
+        · <b>${feitas}/${total}</b> no total · clique no cliente para recolher</div>
+      <table class="pv"><thead><tr>
+        <th>Cliente ▸ Usina</th><th>MPM</th><th>MPS</th><th>MPA</th>
+        <th>Geral</th><th>Pendentes</th></tr></thead><tbody>
+      ${linhas.map(L=>`
+        <tr class="pv-cli"><td><span class="seta">▾</span>${esc(L.cli)}
+            <span class="qtd">${L.rows.length} usina${L.rows.length>1?"s":""}</span></td>
+          ${cel(L.gt.MPM)}${cel(L.gt.MPS)}${cel(L.gt.MPA)}${cel(L.gg)}
+          <td class="pv-pend ${L.pend?"mal":""}">${L.pend}</td></tr>
+        ${L.rows.map(({u,x,g})=>`
+        <tr class="pv-usi"><td>${esc(u)}</td>
+          ${cel(x.MPM)}${cel(x.MPS)}${cel(x.MPA)}${cel(g)}
+          <td class="pv-pend ${g.n-g.f?"mal":""}">${g.n-g.f}</td></tr>`).join("")}
+      `).join("")}</tbody></table></div>`;
+  }
   function vMod(){
+    if (MOD === "manutencoesPreventivas") return vPreventivas();
     const m = D.mods[MOD]; if(!m) return "";
     const maxT = Math.max(...m.tend.flatMap(t=>[t.criadas,t.finalizadas]), 1);
     return `
@@ -858,6 +1007,14 @@ function arrancar(){
       el.onkeydown = e => { if (e.key === "Enter" || e.key === " ") {
         e.preventDefault(); e.stopPropagation(); abrirDet(+el.dataset.i, el); } };
     });
+    document.querySelectorAll(".pv-cli").forEach(tr => tr.onclick = () => {
+      tr.classList.toggle("fech");
+      let e = tr.nextElementSibling;
+      while (e && e.classList.contains("pv-usi")) {
+        e.style.display = tr.classList.contains("fech") ? "none" : "";
+        e = e.nextElementSibling;
+      }
+    });
     const lim = $("#limpar");
     if (lim) lim.onclick = () => { CAMPOS.forEach(([k]) => SEL[k].clear());
       FT.os = ""; FT.ss = ""; POP = null; FOCO = null; pintar(); };
@@ -912,6 +1069,46 @@ function arrancar(){
   $("#papel-cli").onchange = e => aplicarPapel("cliente", e.target.value);
   $("#papel-cli").onclick = e => e.stopPropagation();
   aplicarPapel("admin");
+
+  function toast(msg){
+    document.querySelectorAll(".toast").forEach(e=>e.remove());
+    const t = document.createElement("div");
+    t.className = "toast"; t.textContent = msg;
+    document.body.appendChild(t);
+    requestAnimationFrame(()=>t.classList.add("on"));
+    setTimeout(()=>{ t.classList.remove("on"); setTimeout(()=>t.remove(), 250); }, 2400);
+  }
+  /* O botao ao lado era um "..." que nao fazia nada — saiu. Este exporta as OS
+     FILTRADAS: o que se ve e o que sai. */
+  function exportarCSV(){
+    const dados = ordenar(filtrada());
+    const cab = ["OS","SS","Tarefa","Usina","Cliente","Equipe","Resp. O&M","Responsável",
+                 "Tipo","Etiqueta","Estado","Dia","Início","Fim","Horas","Rolagem","Reprogramada"];
+    const cel = v => '"' + String(v==null?"":v).replace(/"/g,'""') + '"';
+    const corpo = dados.map(t => [t.os,t.ss,t.t,usinaCurta(t.u),t.cli,t.cl,t.resp,t.ros,
+      t.tp,t.etq,t.st,t.d,t.ini,t.fim,String(t.h).replace(".",","),t.rol,
+      t.rep?"Sim":"Não"].map(cel).join(";"));
+    const csv = "\uFEFF" + cab.map(cel).join(";") + "\r\n" + corpo.join("\r\n");
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
+    a.download = "programacao_semana.csv";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
+    toast(dados.length + " OS exportadas em CSV");
+  }
+  $("#exportar").onclick = exportarCSV;
+
+  function aplicarLat(mini){
+    document.querySelector(".app").classList.toggle("mini", mini);
+    const b = $("#lat-enc");
+    b.textContent = mini ? "»" : "«";
+    b.title = mini ? "Expandir o menu" : "Encolher o menu";
+    try { localStorage.setItem("pcm-lat", mini ? "mini" : "cheia"); } catch(e){}
+  }
+  $("#lat-enc").onclick = () =>
+    aplicarLat(!document.querySelector(".app").classList.contains("mini"));
+  let _lat = "cheia"; try { _lat = localStorage.getItem("pcm-lat") || "cheia"; } catch(e){}
+  aplicarLat(_lat === "mini");
   let TEMA = "sistema";
   try { TEMA = localStorage.getItem("pcm-tema") || "sistema"; } catch(e){}
   aplicarTema(TEMA);
@@ -969,15 +1166,18 @@ function arrancar(){
       <div class="det-topo"><div style="min-width:0">
         <div class="det-os">OS #${esc(t.os)}${t.ss?` · SS #${esc(t.ss)}`:""}</div>
         <div class="det-tit">${esc(t.t)}</div>
-        <div class="det-selos">
-          <span class="osc-badge" style="background:color-mix(in srgb,${cor} 17%,var(--surf))">
-            <i style="background:${cor}"></i>${esc(t.tp)}</span>
-          <span class="stp ${ST[t.st]||"naoIniciada"}"><span class="stp-dot"></span>${esc(t.st)}</span>
-          ${t.rep?'<span class="pill atr">↻ Reprogramada</span>':""}
-          ${t.rol>=3?`<span class="pill rol">${t.rol}ª semana</span>`:""}
-        </div></div>
+        </div>
         <button class="det-x" aria-label="Fechar">×</button></div>
-      <div class="det-corpo">
+      <div class="det-fatos">
+        <div class="df"><span class="df-l">Tipo</span>
+          <span class="df-v"><i class="df-dot" style="background:${cor}"></i>${esc(t.tp)}</span></div>
+        <div class="df"><span class="df-l">Situação</span>
+          <span class="df-v"><span class="stp ${ST[t.st]||"naoIniciada"}"><span class="stp-dot"></span>${esc(t.st)}</span></span></div>
+        <div class="df"><span class="df-l">Semanas na fila</span>
+          <span class="df-v ${t.rol>=3?"df-mal":""}">${t.rol||1}ª semana</span></div>
+        <div class="df"><span class="df-l">Reprogramada</span>
+          <span class="df-v ${t.rep?"df-mal":""}">${t.rep?"↻ Sim":"Não"}</span></div>
+      </div>    <div class="det-corpo">
         <div class="det-sec">Onde</div><dl style="margin:0">
           ${linhaDet("Usina", usinaCurta(t.u))}
           ${linhaDet("Cliente", t.cli)}
@@ -999,11 +1199,8 @@ function arrancar(){
           ${linhaDet("Responsável O&M", t.resp)}
           ${linhaDet("Responsável", t.ros)}</dl>
         <div class="det-sec">Situação</div><dl style="margin:0">
-          ${linhaDet("Estado da tarefa", t.st)}
           ${linhaDet("Status da OS", t.sp)}
           ${linhaDet("Criticidade", t.cri)}
-          ${linhaDet("Semanas na fila", t.rol ? t.rol+"ª" : "")}
-          ${linhaDet("Reprogramada", _sn(t.rep?"Sim":"Não"))}
           ${t.par?linhaDet("Em paralelo", _sn(t.par)):""}
           ${t.termo?linhaDet("Termo", _sn(t.termo)):""}
           ${t.nova?linhaDet("Origem", t.nova):""}
