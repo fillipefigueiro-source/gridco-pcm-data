@@ -1,0 +1,1039 @@
+<meta charset="utf-8">
+<title>Barra Lateral do PCM</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap">
+<style>
+:root{
+  --white:#fff; --navy:#191528; --green:#A9DB21; --gd:#5f7f08;
+  --ink:#191528; --ink2:#3a3550; --ink3:#68667d;
+  --bg:#e9ebf2; --surf:#fff; --surf2:#f6f7fa; --line:#e4e4ef; --line2:#cbcbdd;
+  --danger:#e53e3e; --warn:#f59e0b; --ok:#10b981; --mal:#b02525;
+  --lat:#191528; --lat2:#221d3a; --latx:rgba(255,255,255,.62);
+  --r:9px; --sh:0 1px 3px rgba(25,21,40,.07),0 6px 22px rgba(25,21,40,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ink:#eceaf5; --ink2:#c1bed3; --ink3:#8a879e; --gd:#A9DB21;
+  --danger:#ff7b7b; --warn:#fbbf5c; --ok:#4ade80; --mal:#ff8a8a;
+  --bg:#0e0d1a; --surf:#191728; --surf2:#201e30; --line:#2b2740; --line2:#413c58;
+  --white:#191728; --lat:#131120; --lat2:#1d1a2e;
+  --sh:0 1px 3px rgba(0,0,0,.5),0 6px 26px rgba(0,0,0,.4);
+}}
+:root[data-theme="dark"]{
+  --ink:#eceaf5; --ink2:#c1bed3; --ink3:#8a879e; --gd:#A9DB21;
+  --danger:#ff7b7b; --warn:#fbbf5c; --ok:#4ade80; --mal:#ff8a8a;
+  --bg:#0e0d1a; --surf:#191728; --surf2:#201e30; --line:#2b2740; --line2:#413c58;
+  --white:#191728; --lat:#131120; --lat2:#1d1a2e;
+  --sh:0 1px 3px rgba(0,0,0,.5),0 6px 26px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:14px;line-height:1.45;
+  -webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left}
+:focus-visible{outline:2px solid var(--gd);outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.app{display:flex;min-height:100vh;max-width:1440px;margin:0 auto;background:var(--surf);
+  container-type:inline-size;container-name:app;
+  box-shadow:var(--sh)}
+
+/* ── BARRA LATERAL ─────────────────────────────────────────────────────── */
+.lat{width:214px;flex:0 0 214px;background:var(--lat);color:#fff;display:flex;
+  flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto}
+.lat-marca{padding:16px 16px 13px;font-size:16px;font-weight:800;letter-spacing:-.02em;
+  display:flex;align-items:center;gap:7px}
+.lat-marca i{font-style:normal;color:var(--green)}
+.lat-sec{font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.34);padding:14px 16px 6px}
+.lat-i{display:flex;align-items:center;gap:9px;width:100%;padding:8px 16px;font-size:13px;
+  font-weight:600;color:var(--latx);border-left:3px solid transparent;transition:background .13s}
+.lat-i:hover{background:var(--lat2);color:#fff}
+.lat-i.on{background:var(--lat2);color:#fff;border-left-color:var(--green)}
+.lat-i .ic{width:17px;text-align:center;flex:0 0 auto;opacity:.9}
+.lat-i .n{margin-left:auto;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:20px;
+  background:rgba(255,255,255,.11);font-variant-numeric:tabular-nums}
+.lat-i .n.alerta{background:#c62828;color:#fff}
+.lat-i.on .n{background:var(--green);color:#141207}
+.lat-pe{margin-top:auto;padding:12px 16px 16px;border-top:1px solid rgba(255,255,255,.09)}
+.lat-sem{display:flex;gap:4px;margin-bottom:10px;flex-wrap:wrap}
+.sem{font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:5px;
+  background:rgba(255,255,255,.09);color:var(--latx)}
+.sem.on{background:var(--green);color:#141207}
+.papel,.tema{display:flex;gap:3px;margin-bottom:10px;padding:3px;border-radius:7px;
+  background:rgba(255,255,255,.07)}
+.papel button{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;
+  padding:5px 4px;border-radius:5px;font-size:10.5px;font-weight:700;
+  color:var(--latx);white-space:nowrap}
+.papel button:hover{color:#fff}
+.papel button.on{background:var(--green);color:#141207}
+.papel button:focus-visible{outline:2px solid var(--green);outline-offset:1px}
+.papel .ic{font-size:11px;line-height:1}
+.papel-cli{width:100%;margin-bottom:10px;padding:5px 7px;border-radius:6px;
+  font-family:inherit;font-size:11px;font-weight:600;
+  background:rgba(255,255,255,.09);color:#fff;border:1px solid rgba(255,255,255,.14)}
+.papel-cli option{color:#191528;background:#fff}
+.tema button{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;
+  padding:5px 4px;border-radius:5px;font-size:10.5px;font-weight:700;
+  color:var(--latx);white-space:nowrap}
+.tema button:hover{color:#fff}
+.tema button.on{background:rgba(255,255,255,.15);color:#fff}
+.tema button:focus-visible{outline:2px solid var(--green);outline-offset:1px}
+.tema .ic{font-size:12px;line-height:1}
+/* ── detalhe da OS ── */
+.det-fundo{position:fixed;inset:0;z-index:60;background:rgba(10,8,20,.45);
+  opacity:0;transition:opacity .18s ease}
+.det-fundo.on{opacity:1}
+.det{position:fixed;top:0;right:0;bottom:0;z-index:61;width:min(430px,100%);
+  background:var(--surf);border-left:1px solid var(--line2);
+  box-shadow:-14px 0 40px rgba(10,8,20,.22);display:flex;flex-direction:column;
+  transform:translateX(100%);transition:transform .2s ease}
+.det.on{transform:none}
+@media (prefers-reduced-motion:reduce){.det,.det-fundo{transition:none}}
+.det-topo{display:flex;align-items:flex-start;gap:10px;padding:16px 16px 12px;
+  border-bottom:1px solid var(--line)}
+.det-os{font-family:monospace;font-size:12.5px;font-weight:700;color:var(--ink3)}
+.det-tit{font-size:15px;font-weight:800;line-height:1.32;margin-top:5px;
+  letter-spacing:-.01em;overflow-wrap:anywhere}
+.det-selos{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.det-x{margin-left:auto;flex:0 0 auto;width:28px;height:28px;border-radius:7px;
+  display:flex;align-items:center;justify-content:center;font-size:16px;
+  color:var(--ink3);background:var(--surf2)}
+.det-x:hover{background:var(--line);color:var(--ink)}
+.det-x:focus-visible{outline:2px solid var(--gd);outline-offset:1px}
+.det-corpo{flex:1;overflow-y:auto;padding:4px 16px 18px}
+.det-sec{font-size:9px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink3);margin:16px 0 7px}
+.det-l{display:flex;gap:10px;padding:5px 0;font-size:12.5px;
+  border-bottom:1px solid var(--line)}
+.det-l dt{flex:0 0 122px;color:var(--ink3)}
+.det-l dd{margin:0;flex:1;min-width:0;font-weight:600;overflow-wrap:anywhere}
+.det-rel{font-size:12px;line-height:1.5;color:var(--ink2);background:var(--surf2);
+  border-radius:8px;padding:10px 11px;white-space:pre-wrap;overflow-wrap:anywhere}
+.det-vazio{font-size:12px;color:var(--ink3);font-style:italic}
+.carga-erro{margin:40px auto;max-width:460px;padding:22px 24px;text-align:center;
+  background:var(--surf);border:1px solid var(--line2);border-radius:var(--r);
+  box-shadow:var(--sh);font-size:13px;line-height:1.55;color:var(--ink2)}
+.carga-erro b{color:var(--ink)}
+.carga-erro > div{margin-top:9px}
+.carga-dica{font-size:12px;color:var(--ink3);border-top:1px solid var(--line);
+  padding-top:11px;margin-top:13px}
+.tl{list-style:none;margin:2px 0 0;padding:0 0 0 17px;position:relative}
+.tl::before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:2px;
+  background:var(--line2);border-radius:1px}
+.tl li{position:relative;padding:7px 0 7px 2px;border-bottom:1px solid var(--line)}
+.tl li:last-child{border-bottom:0}
+.tl li::before{content:"";position:absolute;left:-17px;top:12px;width:10px;height:10px;
+  border-radius:50%;background:var(--surf);border:2px solid var(--line2)}
+.tl li.ativa::before{border-color:var(--gd);background:var(--gd)}
+.tl-topo{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.tl-w{font-size:11px;font-weight:800;font-variant-numeric:tabular-nums;
+  letter-spacing:.02em;min-width:26px}
+.tl li.ativa .tl-w{color:var(--gd)}
+.tl-dia{font-size:11.5px;font-weight:700}
+.tl-h{font-family:monospace;font-size:10.5px;color:var(--ink3)}
+.tl-meta{font-size:10.5px;color:var(--ink3);margin-top:3px}
+.tl-nota{font-size:11px;color:var(--ink3);margin-top:8px;line-height:1.45}
+.mais{text-align:center;font-size:10.5px;font-weight:700;color:var(--ink3);
+  padding:7px 4px;margin-top:2px;border:1px dashed var(--line2);border-radius:7px}
+.lat-u{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--latx)}
+.lat-u .av{width:24px;height:24px;border-radius:50%;background:var(--green);color:#141207;
+  display:grid;place-items:center;font-weight:800;font-size:11px;flex:0 0 auto}
+
+/* ── ÁREA PRINCIPAL ────────────────────────────────────────────────────── */
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.topo{display:flex;align-items:center;gap:11px;padding:11px 18px;border-bottom:1px solid var(--line);
+  background:var(--surf);position:sticky;top:0;z-index:20;flex-wrap:wrap}
+.topo h1{font-size:16px;font-weight:800;letter-spacing:-.02em;margin:0}
+.topo .sub{font-size:12px;color:var(--ink3)}
+.espaco{flex:1}
+.pulso{font-size:11px;color:var(--ink3);display:flex;align-items:center;gap:5px}
+.pulso i{width:6px;height:6px;border-radius:50%;background:var(--ok);display:block}
+.bt{font-size:12px;font-weight:600;padding:5px 11px;border:1px solid var(--line2);
+  border-radius:7px;color:var(--ink2)}
+.bt:hover{border-color:var(--ink3)}
+.tela{display:none;padding:18px}
+.tela.on{display:block}
+
+/* filtros — mesma estrutura do painel */
+.filtros{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:12px 15px;margin-bottom:13px;box-shadow:var(--sh)}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(132px,100%),1fr));gap:9px 10px}
+.fl{font-size:9px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink3);margin-bottom:3px;display:block}
+.fs{width:100%;display:flex;align-items:center;justify-content:space-between;gap:6px;
+  padding:6px 9px;border:1px solid var(--line2);border-radius:7px;background:var(--surf);
+  font-size:12px;color:var(--ink)}
+.fs:hover{border-color:var(--ink3)}
+.fs.sel{border-color:var(--gd);font-weight:700}
+.fs .cv{color:var(--ink3);font-size:10px}
+.fgrupo{position:relative;display:flex;flex-direction:column;gap:3px;min-width:0}
+.fs-l{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ftxt{width:100%;min-width:0;padding:5px 8px;font-size:11.5px;font-family:inherit;
+  border:1px solid var(--line2);border-radius:6px;background:var(--surf);color:var(--ink)}
+.ftxt::placeholder,.fp-busca::placeholder{color:var(--ink3)}
+.ftxt:focus{outline:2px solid var(--gd);outline-offset:-1px;border-color:var(--gd)}
+.f-pop{position:absolute;top:100%;left:0;z-index:40;margin-top:3px;
+  background:var(--surf);border:1px solid var(--line2);border-radius:8px;
+  box-shadow:0 8px 26px rgba(0,0,0,.18);padding:6px;min-width:210px;max-width:320px}
+.fp-top{display:flex;flex-direction:column;gap:5px;padding-bottom:6px;
+  border-bottom:1px solid var(--line)}
+.fp-busca{width:100%;padding:5px 8px;font-size:11.5px;font-family:inherit;
+  border:1px solid var(--line2);border-radius:6px;background:var(--surf);color:var(--ink)}
+.fp-acts{display:flex;gap:12px}
+.fp-acts a{font-size:11px;font-weight:700;color:var(--gd);cursor:pointer}
+.fp-acts a:hover{text-decoration:underline}
+.fp-opts{max-height:220px;overflow-y:auto;margin-top:5px}
+.fp-op{display:flex;align-items:center;gap:7px;padding:4px 6px;border-radius:5px;
+  font-size:12px;cursor:pointer;line-height:1.3}
+.fp-op:hover{background:var(--surf2)}
+.fp-op input{accent-color:var(--gd);flex:0 0 auto;margin:0}
+.f-rod{display:flex;align-items:center;gap:11px;margin-top:10px;font-size:11.5px;color:var(--ink3)}
+.f-rod b{color:var(--ink);font-variant-numeric:tabular-nums}
+.f-lim{font-size:11px;font-weight:700;color:var(--gd)}
+
+/* ── calendário (o mesmo do painel) ────────────────────────────────────── */
+.cal-rolo{overflow-x:auto}
+.cal{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;min-width:900px}
+.dcol{background:var(--white);border-radius:var(--r);border:1px solid var(--line);
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--sh)}
+.dhdr{padding:11px 13px 9px;background:var(--navy)}
+.dname{font-size:9px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.12em}
+.dnum{font-size:26px;font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1.05}
+.dmeta{font-size:10px;color:rgba(255,255,255,.8);margin-top:3px;font-weight:600}
+.dcarga{height:4px;border-radius:2px;background:rgba(255,255,255,.16);margin-top:7px;overflow:hidden}
+.dcarga i{display:block;height:100%;background:var(--green);border-radius:2px}
+.dcarga i.pico{background:var(--danger)}
+.dtasks{padding:7px;display:flex;flex-direction:column;gap:4px;flex:1;max-height:420px;overflow-y:auto}
+.osc{border-radius:7px;padding:8px 9px;border-left:3px solid;overflow:hidden;flex-shrink:0;cursor:pointer}
+.osc:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(25,21,40,.13)}
+.osc-top{display:flex;align-items:center;flex-wrap:wrap;gap:3px 4px;margin-bottom:3px}
+.osc-num{font-family:monospace;font-size:9px;opacity:.62}
+.osc-badge{font-size:7.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;
+  padding:2px 6px;border-radius:3px;white-space:nowrap;color:var(--ink);
+  display:inline-flex;align-items:center;gap:4px}
+.osc-badge i{width:5px;height:5px;border-radius:50%;flex:0 0 5px}
+.osc-usina{color:var(--ink)}
+.osc-usina{font-size:11px;font-weight:800;line-height:1.3;margin-bottom:2px;overflow-wrap:anywhere}
+.osc-tasks{font-size:9px;opacity:.68;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;
+  -webkit-box-orient:vertical;overflow:hidden;word-break:break-word}
+.osc-foot{display:flex;align-items:center;gap:5px;margin-top:4px;flex-wrap:wrap}
+.osc-time{font-family:monospace;font-size:8.5px;opacity:.62}
+.osc-dur{font-size:9px;font-weight:700;opacity:.68}
+.osc-rep{font-size:7.5px;font-weight:700;color:var(--ink);padding:1px 5px;border-radius:3px;
+  background:color-mix(in srgb,#e53e3e 15%,var(--surf));
+  border:1px solid color-mix(in srgb,#e53e3e 34%,var(--surf))}
+.osc-n{font-size:8.5px;opacity:.66;margin-left:auto}
+.stp{display:inline-flex;align-items:center;gap:5px;padding:2px 8px;border-radius:5px;
+  font-size:9.5px;font-weight:800;text-transform:uppercase;white-space:nowrap}
+.stp-dot{width:5px;height:5px;border-radius:50%;background:var(--hs);flex:0 0 5px}
+.stp{background:var(--surf2);color:var(--ink)}
+.stp{background:color-mix(in srgb,var(--hs) 17%,var(--surf))}
+.stp.naoIniciada{--hs:#64748b} .stp.emProgresso{--hs:#2563eb}
+.stp.pausada{--hs:#d97706}     .stp.finalizada{--hs:#16a34a}
+/* O tom do card sai do acento MISTURADO na superficie do tema. Antes era fixo
+   (#fff5f5): no escuro o card continuava branco enquanto o texto virava claro —
+   texto quase branco sobre card quase branco. A cor cheia fica so na borda. */
+.osc{background:var(--surf2)}                    /* reserva p/ quem nao tem color-mix */
+.osc{background:color-mix(in srgb,var(--h) 10%,var(--surf));border-color:var(--h)}
+.tCorr{--h:#e53e3e} .tZel{--h:#10b981} .tMPM{--h:#6366f1}
+.tMPS{--h:#0ea5e9} .tMPA{--h:#f97316} .tOUT{--h:#f59e0b}
+
+/* ── insights ──────────────────────────────────────────────────────────── */
+/* minmax(min(Npx,100%),1fr) e nao minmax(Npx,1fr): o `min()` deixa a faixa
+   encolher abaixo do piso quando o container e mais estreito que ele. Sem isso,
+   ao lado da barra de 214px sobravam 186 e as grades de 330px transbordavam. */
+.ins-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(212px,100%),1fr));gap:13px;margin-bottom:16px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:15px 16px;box-shadow:var(--sh)}
+.card h3{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink3);margin:0 0 9px}
+.kv-n{font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1;
+  font-variant-numeric:tabular-nums}
+.kv-n.mal{color:var(--mal)}
+.kv-s{font-size:12px;color:var(--ink2);margin-top:5px;line-height:1.45}
+.kv-s b{color:var(--ink)}
+.barras{display:flex;flex-direction:column;gap:6px;margin-top:3px}
+.br{display:grid;grid-template-columns:78px 1fr 52px;gap:9px;align-items:center;font-size:11.5px}
+.br-n{color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.br-t{height:7px;background:var(--surf2);border-radius:4px;overflow:hidden;position:relative}
+.br-f{height:100%;background:var(--gd);border-radius:4px}
+.br-f.mal{background:var(--danger)}
+.br-44{position:absolute;top:-2px;bottom:-2px;width:1.5px;background:var(--ink3);opacity:.5}
+.br-v{text-align:right;font-weight:700;font-variant-numeric:tabular-nums;font-size:11.5px}
+.br-v.mal{color:var(--mal)}
+.rol{display:flex;gap:5px;align-items:flex-end;height:74px;margin-top:6px}
+.rol-c{flex:1;text-align:center}
+.rol-b{background:var(--gd);border-radius:3px 3px 0 0;opacity:.85}
+.rol-b.mal{background:var(--danger);opacity:1}
+.rol-n{font-size:10.5px;font-weight:700;font-variant-numeric:tabular-nums;margin-bottom:3px}
+.rol-l{font-size:9.5px;color:var(--ink3);margin-top:4px}
+
+/* ── tabela consolidada ────────────────────────────────────────────────── */
+.tab-rolo{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  overflow:auto;box-shadow:var(--sh);max-height:620px}
+table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:840px}
+thead th{position:sticky;top:0;background:var(--surf2);z-index:2;text-align:left;
+  padding:8px 11px;font-size:9.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink3);border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;
+  user-select:none}
+thead th:hover{color:var(--ink)}
+thead th .sd{opacity:1;color:var(--ink3);font-size:9px}
+tbody td{padding:8px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:var(--surf2)}
+.td-os{font-family:monospace;font-size:11px;color:var(--ink3)}
+.td-t{font-weight:600;max-width:290px}
+.td-u{font-size:11px;color:var(--ink3);margin-top:1px}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:4px;white-space:nowrap;
+  display:inline-block}
+/* Mesma correcao dos cards: o tom vai pro FUNDO, o texto fica em --ink. Antes
+   era o acento sobre um tom dele mesmo — 2.19 de contraste no escuro. */
+.pill{color:var(--ink);background:var(--surf2)}
+.pill{background:color-mix(in srgb,var(--hp,#7a7890) 17%,var(--surf))}
+.pill.rol{--hp:#f59e0b}
+.pill.atr{--hp:#e53e3e}
+
+/* ── módulo de chamados ────────────────────────────────────────────────── */
+.mod-k{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr));gap:11px;margin-bottom:15px}
+.mk{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+.mk-v{font-size:24px;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1}
+.mk-v.mal{color:var(--mal)}
+.mk-l{font-size:10.5px;color:var(--ink3);margin-top:3px}
+.tend{display:flex;gap:9px;align-items:flex-end;height:64px}
+.tend-c{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px}
+.tend-par{display:flex;gap:2px;align-items:flex-end;height:44px;width:100%;justify-content:center}
+.tend-b{width:11px;border-radius:2px 2px 0 0}
+.tend-b.cri{background:var(--ink3)}
+.tend-b.fim{background:var(--gd)}
+.tend-l{font-size:9.5px;color:var(--ink3)}
+.leg{display:flex;gap:12px;font-size:10.5px;color:var(--ink3);margin-top:8px}
+.leg i{width:9px;height:9px;border-radius:2px;display:inline-block;margin-right:4px;vertical-align:-1px}
+.vazio{padding:30px;text-align:center;color:var(--ink3);font-size:13px}
+.rodape{padding:20px 18px;font-size:11.5px;color:var(--ink3);border-top:1px solid var(--line);line-height:1.6}
+.rodape b{color:var(--ink2)}
+
+@media(max-width:820px){
+  .lat{width:58px;flex:0 0 58px}
+  .lat-marca span,.lat-i .rot,.lat-sec,.lat-pe .lat-sem,.lat-u span{display:none}
+  .lat-i{justify-content:center;padding:10px 0}
+  .lat-i .n{margin-left:0;position:absolute;transform:translate(14px,-11px);font-size:9px;padding:0 4px}
+  .lat-i{position:relative}
+  .lat-pe{padding-left:8px;padding-right:8px}
+  .tema,.papel{flex-direction:column}
+  .tema .rot,.papel .rot{display:none}
+  .papel-cli{display:none}
+}
+@container app (max-width:820px){
+  .lat{width:58px;flex:0 0 58px}
+  .lat-marca span,.lat-i .rot,.lat-sec,.lat-pe .lat-sem,.lat-u span{display:none}
+  .lat-i{justify-content:center;padding:10px 0}
+  .lat-i .n{margin-left:0;position:absolute;transform:translate(14px,-11px);font-size:9px;padding:0 4px}
+  .lat-i{position:relative}
+  .lat-pe{padding-left:8px;padding-right:8px}
+  .tema,.papel{flex-direction:column}
+  .tema .rot,.papel .rot{display:none}
+  .papel-cli{display:none}
+}
+</style>
+
+<div class="app">
+  <nav class="lat">
+    <div class="lat-marca">Grid <i>Co.</i><span></span></div>
+
+    <div class="lat-sec">Operação</div>
+    <button class="lat-i on" data-v="semana"><span class="ic">▦</span><span class="rot">Semana</span><span class="n" id="n-semana"></span></button>
+    <button class="lat-i" data-v="insights"><span class="ic">◈</span><span class="rot">Insights</span></button>
+    <button class="lat-i" data-v="tarefas"><span class="ic">▤</span><span class="rot">Tarefas / OS</span><span class="n" id="n-tarefas"></span></button>
+
+    <div class="lat-sec">Chamados</div>
+    <div id="lat-mods"></div>
+
+    <div class="lat-pe">
+      <div class="papel" role="group" aria-label="Papel">
+        <button data-p="admin"><span class="ic">◉</span><span class="rot">Admin</span></button>
+        <button data-p="cliente"><span class="ic">○</span><span class="rot">Cliente</span></button>
+      </div>
+      <select class="papel-cli" id="papel-cli" aria-label="Cliente" hidden></select>
+      <div class="tema" role="group" aria-label="Tema">
+        <button data-t="claro"   title="Tema claro"><span class="ic">☀</span><span class="rot">Claro</span></button>
+        <button data-t="sistema" title="Acompanhar o sistema"><span class="ic">◐</span><span class="rot">Sistema</span></button>
+        <button data-t="escuro"  title="Tema escuro"><span class="ic">☾</span><span class="rot">Escuro</span></button>
+      </div>
+      <div class="lat-sem">
+        <span class="sem on">S35</span><span class="sem">S34</span><span class="sem">S33</span><span class="sem">S32</span>
+      </div>
+      <div class="lat-u"><span class="av">A</span><span>Admin · Grid Co.</span></div>
+    </div>
+  </nav>
+
+  <div class="main">
+    <header class="topo">
+      <h1 id="t-tit">Semana</h1>
+      <span class="sub" id="t-sub"></span>
+      <span class="espaco"></span>
+      <span class="pulso"><i></i>robô ok</span>
+      <button class="bt">Exportar</button>
+      <button class="bt">⋯</button>
+    </header>
+
+    <section class="tela on" id="v-semana"></section>
+    <section class="tela" id="v-insights"></section>
+    <section class="tela" id="v-tarefas"></section>
+    <section class="tela" id="v-mod"></section>
+
+    <p class="rodape">
+      <b>Protótipo navegável.</b> Semana 35, 992 OS reais. A barra lateral substitui as nove abas
+      do topo; o calendário de cards e a estrutura de filtros são os do painel atual.
+      Clique nos módulos, ordene a tabela e use os filtros — funcionam.
+    </p>
+  </div>
+</div>
+
+<script>
+/* Monta o objeto D a partir dos JSON do painel, no navegador.
+   Porte de extrair_side.py — existe para que a pagina publicada NAO carregue
+   um instantaneo de 992 linhas embutido: o repositorio e publico, e uma copia
+   congelada de 11 clientes seria mais um arquivo aberto ali dentro. Buscando
+   em tempo de execucao, quem manda no que se ve e o papel de quem abriu. */
+const DIAS_LONGOS = ["Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira"];
+
+function _estado(r){
+  const s = String(r.status_bd || r.status || "").toLowerCase();
+  if (s.includes("finaliz") || s.includes("conclu")) return "Finalizada";
+  if (s.includes("pausad")) return "Pausada";
+  if (s.includes("progress") || s.includes("execu") || s.includes("andamento")) return "Em progresso";
+  return "Não Iniciada";
+}
+function _etq(v){
+  if (!v) return "";
+  const t = String(v).trim();
+  if (!t || t === "nan") return "";
+  try { const j = JSON.parse(t);
+    if (Array.isArray(j)) return j.map(o => (o && o.description) || "").filter(Boolean).join(" | ");
+  } catch(e){}
+  return "";
+}
+function _linha(r){
+  return { os:String(r.os_id||""), ss:String(r.solic_orig||""),
+    t:(r.tarefa||"").slice(0,62), u:r.usina||"", cli:r.cliente||"", cl:r.cluster||"",
+    resp:r.responsavel||"", ros:r.resp_os||"", tp:r.tipo||"", etq:_etq(r.etiquetas),
+    st:_estado(r), d:(r.dia||"").slice(0,3), h:r.duracao||0,
+    ini:r.h_ini||"", fim:r.h_fim||"",
+    rol:r.vezes||0, rep:r.reprog === "Sim",
+    cod:r.codigo||"", cri:String(r.criticidade||""),
+    dcri:(r.dataCriacao||"").slice(0,10), dprog:(r.dataProgramada||"").slice(0,10),
+    dfim:(r.dataFinal||"").slice(0,10), sp:r.statusPai||"", nova:r.nova_os||"",
+    par:r.paralelo||"", termo:r.termo||"", desl:r.desloc||0,
+    rel:(r.relatorio||"").slice(0,600) };
+}
+function _enxuta(o){
+  const ativo = String(o.ativo||"");
+  const usina = ativo.includes("  ") ? ativo.split("  ")[0].trim() : ativo.slice(0,46);
+  return { os:o.osId||"", t:(o.tarefa||"").slice(0,64), u:usina.slice(0,46),
+    resp:o.responsavel||o.supervisor||"", st:o.status||"", prog:o.dataProgramada||"",
+    cri:o.dataCriacao||"", atr:!!o.atrasada, mod:o.modalidade||"" };
+}
+
+function montarD(bd, et){
+  const ativa = bd.semana_ativa;
+  // seleciona pela CHAVE: o array vem do mais novo para o mais velho, e [-1]
+  // pegaria a semana mais VELHA — numeros plausiveis e errados.
+  const w = bd.semanas.find(x => x.week === ativa);
+  if (!w) throw new Error("semana ativa " + ativa + " não está no arquivo");
+  const rows = w.rows || [], resumo = w.resumo || {};
+
+  const mods = {};
+  for (const [k, v] of Object.entries((et && et.tipologias) || {})) {
+    mods[k] = { label:v.label, cor:v.cor, icone:v.icone,
+      total:v.total||0, atrasadas:v.atrasadas||0, hist:v.historicoTotal||0,
+      // mttr e topOfensores sao OBJETOS, nao listas: fatiar quebra
+      mttr:(v.mttr||{}).label, mttr_h:(v.mttr||{}).horas,
+      tend:v.tendencia4Semanas||[],
+      ofensores:((v.topOfensores||{}).responsaveis||[]).slice(0,5),
+      porStatus:v.porStatus||{}, kpis:v.kpis||{},
+      oss:(v.oss||[]).slice(0,14).map(_enxuta) };
+  }
+
+  const tabela = rows.map(_linha);
+
+  // trajetoria: a mesma tarefa reaparece nas outras semanas do arquivo.
+  // Identidade = ordem + texto; `os_id` sozinho e a ORDEM, com varias tarefas.
+  const chave = r => String(r.os_id||"") + "\u0000" + (r.tarefa||"").slice(0,60);
+  const porSemana = bd.semanas.map(sw => {
+    const idx = new Map();
+    (sw.rows||[]).forEach(r => idx.set(chave(r), r));
+    const wk = String(sw.week||"");
+    return { wk, curto: wk.includes("-W") ? "S"+wk.split("-W").pop() : wk, idx };
+  }).reverse();                      // do mais antigo para o mais novo
+
+  rows.forEach((r, i) => {
+    const k = chave(r), tl = [];
+    for (const { wk, curto, idx } of porSemana) {
+      const o = idx.get(k); if (!o) continue;
+      tl.push({ w:curto, wk, d:(o.dia||"").slice(0,3), ini:o.h_ini||"", fim:o.h_fim||"",
+                st:_estado(o), v:o.vezes||0, ativa: wk === ativa });
+    }
+    if (tl.length > 1) tabela[i].tl = tl;
+  });
+
+  const n = rows.length;
+  const soma = f => Math.round(rows.reduce((a,r)=>a+(f(r)||0),0)*10)/10;
+  const clusters = {}; for (const [c,v] of Object.entries(resumo)) clusters[c] = v.hh_util||0;
+  const acima = Object.entries(clusters).filter(([,h])=>h>44).sort((a,b)=>b[1]-a[1]);
+  const rolagem = {};
+  rows.forEach(r => { const k=Math.min(r.vezes||1,6); rolagem[k]=(rolagem[k]||0)+1; });
+
+  const feitas = rows.filter(r=>r.status==="Finalizados").length;
+  return {
+    semana: w.label, semanas_guardadas: bd.semanas.length,
+    insights: {
+      total:n, horas:soma(r=>r.duracao),
+      usinas:new Set(rows.map(r=>r.usina).filter(Boolean)).size,
+      equipes:Object.keys(clusters).length,
+      corretivas:rows.filter(r=>r.tipo==="Corretiva").length,
+      reprog:rows.filter(r=>r.reprog==="Sim").length,
+      rol3:rows.filter(r=>(r.vezes||0)>=3).length,
+      feitas, aderencia: n ? Math.round(feitas/n*100) : 0,
+      acima, n_ocioso:Object.values(clusters).filter(h=>h<15).length,
+      dias: DIAS_LONGOS.map(d=>({ n:d.slice(0,3),
+        t:rows.filter(r=>r.dia===d).length,
+        h:Math.round(rows.filter(r=>r.dia===d).reduce((a,r)=>a+(r.duracao||0),0)*10)/10 })),
+      rolagem: Object.keys(rolagem).map(Number).sort((a,b)=>a-b).map(k=>[k,rolagem[k]])
+    },
+    mods, tabela
+  };
+}
+
+
+let D;
+
+/* Carga em tempo de execucao. O painel real faz o mesmo: em auth.js ele troca
+   CONFIG.JSON_URL por /api/dados, que filtra por papel no servidor. Aqui a
+   ordem e a mesma — /api/dados primeiro, arquivo estatico como reserva para
+   uso local, onde nao ha /api. */
+async function _pegar(caminhos){
+  let ultimo = null;
+  for (const c of caminhos) {
+    try {
+      const r = await fetch(c + (c.includes("?") ? "&" : "?") + "t=" + Date.now(),
+                            { cache: "no-store" });
+      if (r.ok) return await r.json();
+      ultimo = "HTTP " + r.status + " em " + c;
+    } catch (e) { ultimo = e.message + " em " + c; }
+  }
+  throw new Error(ultimo || "sem origem");
+}
+const _esc = x => String(x==null?"":x).replace(/[&<>"]/g,
+  c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function _falha(msg){
+  document.querySelector(".main").innerHTML =
+    '<div class="carga-erro"><b>Não foi possível carregar os dados.</b>'
+    + '<div>' + _esc(msg) + '</div>'
+    + '<div class="carga-dica">Os arquivos do painel exigem o papel <b>admin</b> '
+    + 'ou <b>equipe</b>. Esta é uma tela de revisão interna.</div></div>';
+}
+(async () => {
+  try {
+    const [bd, et] = await Promise.all([
+      _pegar(["/api/dados", "banco_dados.json"]),
+      _pegar(["etiquetas.json"]).catch(() => ({}))   // sem etiquetas: sem modulos
+    ]);
+    D = montarD(bd, et);
+  } catch (e) { _falha(e.message); return; }
+  arrancar();
+})();
+
+function arrancar(){
+  /* Indice estavel por LINHA. A ordem (`os`) nao identifica a tarefa: 511 ordens
+     viram 992 linhas, 56% delas em ordens com mais de uma tarefa (a maior tem 34).
+     Abrir por `os` mostrava a primeira tarefa da ordem, e em 34 delas isso troca a
+     trajetoria por outra. */
+  D.tabela.forEach((t, i) => t.i = i);
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const TK = {"Corretiva":"tCorr","Zeladoria":"tZel","MPA":"tMPA","MPS":"tMPS","Preventiva":"tMPM",
+    "MPM":"tMPM","MPM-Mod/Tracker":"tMPM","MPM-Inversor":"tMPM","MPQ":"tMPM"};
+  const TC = {"Corretiva":"#e53e3e","Zeladoria":"#10b981","MPA":"#f97316","MPS":"#0ea5e9",
+    "Preventiva":"#6366f1","MPM":"#6366f1","MPM-Mod/Tracker":"#6366f1","MPM-Inversor":"#6366f1",
+    "MPQ":"#6366f1","Inspeção":"#0891b2","Handover":"#a855f7","Administrativa":"#7a7890"};
+  const ST = {"Não Iniciada":"naoIniciada","Em progresso":"emProgresso",
+    "Pausada":"pausada","Finalizada":"finalizada"};
+  /* A usina vem inteira ("Thopen - Santana do Ipanema 1 - AL") porque e assim que
+     o filtro em producao a compara; para exibir, corta o cliente da frente. */
+  const usinaCurta = u => { const x = String(u||"").split(" - "); return x.length>1 ? x.slice(1).join(" - ") : String(u||""); };
+  const ICO = {religamentos:"⚡",performance:"◔",manutencoesPreventivas:"◇",
+    engenharia:"⚙",chamadosGarantia:"⛨"};
+
+  let V = "semana", MOD = null;
+  /* Papel. Espelha o que o painel em producao ja faz: uma lista de telas restritas
+     (adminOnly, Task #130) e o escopo dos dados preso ao cliente do usuario
+     (_cliEq(r.cliente, S.user)). O cliente ve Semana e Tarefas/OS, mais nada. */
+  const TELAS_ADMIN = ["insights", "mod"];
+  let PAPEL = "admin", CLIENTE = null;
+  const baseRows = () => CLIENTE ? D.tabela.filter(t => t.cli === CLIENTE) : D.tabela;
+  /* As MESMAS dimensoes do index em producao (GD() em js/app.js): oito de
+     multipla escolha e dois campos de texto. Nao existe filtro por dia la. */
+  const CAMPOS = [["cli","Cliente","Todos"], ["u","Usina","Todas"],
+                  ["cl","Equipe Cluster","Todas"], ["resp","Responsável O&M","Todos"],
+                  ["ros","Responsável","Todos"], ["tp","Tipo","Todos"],
+                  ["etq","Etiqueta","Todas"], ["st","Estado","Todos"]];
+  const SEL = {}; CAMPOS.forEach(([k]) => SEL[k] = new Set());
+  const FT = { os:"", ss:"" };
+  let POP = null;    // qual lista esta aberta: {k, busca}
+  let FOCO = null;   // qual campo de texto tinha o cursor: "os" | "ss"
+  let ORD = { c:"d", asc:true };
+
+  /* ── barra lateral ─────────────────────────────────────────────────────── */
+  $("#lat-mods").innerHTML = Object.entries(D.mods).map(([k,m]) =>
+    `<button class="lat-i" data-v="mod" data-m="${esc(k)}">
+       <span class="ic">${ICO[k]||"•"}</span><span class="rot">${esc(m.label.replace("Chamados em ","").replace("Manutenções ",""))}</span>
+       <span class="n ${m.atrasadas>0?"alerta":""}">${m.total}</span></button>`).join("");
+  $("#n-semana").textContent = D.insights.total;
+  $("#n-tarefas").textContent = D.tabela.length;
+
+  /* ── semana ────────────────────────────────────────────────────────────── */
+  const ORDEM_DIAS = ["Seg","Ter","Qua","Qui","Sex","Sáb","Dom"];
+  const TETO_CARDS = 40;   // com a semana inteira (992), 12 por coluna era pouco
+  function vSemana(){
+    const dados = filtrada();
+    const porDia = {};
+    dados.forEach(t => (porDia[t.d] = porDia[t.d] || []).push(t));
+    // As colunas saem dos DADOS, nao de uma lista fixa de cinco dias: havia trabalho
+    // no sabado que entrava na conta do rodape e nao tinha coluna pra aparecer.
+    const colunas = ORDEM_DIAS.filter(d => baseRows().some(t => t.d === d));
+    // contagem e carga saem do conjunto FILTRADO: senao o cabecalho continuaria
+    // dizendo 289 enquanto a coluna mostra 4 cards.
+    const max = Math.max(1, ...colunas.map(d => (porDia[d]||[]).length));
+    return barraFiltros(dados.length)
+      + `<div class="cal-rolo"><div class="cal">` + colunas.map(dn => {
+      const d = {n: dn};
+      const todos = porDia[dn]||[], ts = todos.slice(0, TETO_CARDS);
+      const h = Math.round(todos.reduce((a,t)=>a+(t.h||0),0)*10)/10;
+      return `<div class="dcol">
+        <div class="dhdr">
+          <div class="dname">${esc(d.n)}</div>
+          <div class="dnum">${todos.length}</div>
+          <div class="dmeta">${h}h programadas</div>
+          <div class="dcarga"><i class="${todos.length===max?"pico":""}" style="width:${todos.length/max*100}%"></i></div>
+        </div>
+        <div class="dtasks">${ts.map(cardHTML).join("") || '<div class="vazio">—</div>'}
+          ${todos.length>ts.length?`<div class="mais">+${todos.length-ts.length} não exibidas</div>`:""}</div>
+      </div>`;
+    }).join("") + `</div></div>`;
+  }
+  function cardHTML(t){
+    const cor = TC[t.tp]||"#7a7890";
+    return `<div class="osc ${TK[t.tp]||"tOUT"}" style="--h:${cor}" data-i="${t.i}"
+        role="button" tabindex="0" aria-label="Abrir detalhe da OS ${esc(t.os)}">
+      <div class="osc-top"><span class="osc-num">OS #${esc(t.os)}</span>
+        <span class="stp ${ST[t.st]||"naoIniciada"}"><span class="stp-dot"></span>${esc(t.st)}</span>
+        <span class="osc-badge" style="background:color-mix(in srgb,${cor} 17%,var(--surf))">
+          <i style="background:${cor}"></i>${esc(t.tp)}</span></div>
+      <div class="osc-usina">${esc(usinaCurta(t.u))}</div>
+      <div class="osc-tasks">${esc(t.t)}</div>
+      <div class="osc-foot"><span class="osc-time">${esc(t.ini)}</span>
+        <span class="osc-dur">${t.h}h</span>
+        ${t.rep?'<span class="osc-rep">↻ Reprog.</span>':""}
+        <span class="osc-n">${t.rol}ª sem</span></div></div>`;
+  }
+
+  /* ── insights ──────────────────────────────────────────────────────────── */
+  function vInsights(){
+    const i = D.insights, maxH = i.acima.length ? i.acima[0][1] : 44;
+    const maxR = Math.max(...i.rolagem.map(r=>r[1]));
+    return `
+    <div class="ins-g">
+      <div class="card"><h3>Aderência ao plano</h3>
+        <div class="kv-n mal">${i.aderencia}%</div>
+        <div class="kv-s"><b>${i.feitas}</b> de ${i.total} concluídas nesta semana</div></div>
+      <div class="card"><h3>Reprogramadas</h3>
+        <div class="kv-n mal">${Math.round(i.reprog/i.total*100)}%</div>
+        <div class="kv-s"><b>${i.reprog}</b> postergadas · <b>${i.rol3}</b> na 3ª tentativa ou mais</div></div>
+      <div class="card"><h3>Corretivas</h3>
+        <div class="kv-n">${Math.round(i.corretivas/i.total*100)}%</div>
+        <div class="kv-s"><b>${i.corretivas}</b> de ${i.total} · o resto é preventiva e zeladoria</div></div>
+      <div class="card"><h3>Escala</h3>
+        <div class="kv-n">${Math.round(i.horas).toLocaleString("pt-BR")}h</div>
+        <div class="kv-s"><b>${i.usinas}</b> usinas · <b>${i.equipes}</b> equipes</div></div>
+    </div>
+
+    <div class="ins-g" style="grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr))">
+      <div class="card"><h3>Capacidade — ${i.acima.length} equipes acima de 44h</h3>
+        <div class="barras">${i.acima.slice(0,9).map(([c,h])=>`
+          <div class="br"><span class="br-n">${esc(c)}</span>
+            <span class="br-t"><span class="br-f mal" style="width:${h/maxH*100}%"></span>
+              <span class="br-44" style="left:${44/maxH*100}%"></span></span>
+            <span class="br-v mal">${h}h</span></div>`).join("")}</div>
+        <div class="kv-s" style="margin-top:11px">E <b>${i.n_ocioso} equipes</b> abaixo de 15h.
+          O problema não é falta de capacidade — é distribuição.</div></div>
+
+      <div class="card"><h3>Quantas vezes a tarefa já rolou</h3>
+        <div class="rol">${i.rolagem.map(([v,n])=>`
+          <div class="rol-c"><div class="rol-n">${n}</div>
+            <div class="rol-b ${v>=4?"mal":""}" style="height:${Math.max(3,n/maxR*44)}px"></div>
+            <div class="rol-l">${v>=6?"6+":v}ª</div></div>`).join("")}</div>
+        <div class="kv-s" style="margin-top:11px">A distribuição sobe à direita: quanto mais uma
+          tarefa rola, <b>mais provável que role de novo</b>. Não é fila — é abandono.</div></div>
+    </div>`;
+  }
+
+  /* ── tabela consolidada ────────────────────────────────────────────────── */
+  function opts(k){
+    // do escopo, nao de D.tabela: senao o cliente enxergaria as usinas dos outros
+    // na lista suspensa mesmo sem conseguir filtrar por elas
+    return [...new Set(baseRows().map(t => t[k]).filter(Boolean))]
+      .sort((a,b) => String(a).localeCompare(String(b), "pt-BR"));
+  }
+  const rotulo = (k,p) => SEL[k].size===0 ? p
+                        : SEL[k].size===1 ? [...SEL[k]][0]
+                        : SEL[k].size + " selecionados";
+  function filtrada(){
+    // comparacao sem caixa, como o _in() do app.js: as grafias divergem no Fracttal
+    const S = {};
+    CAMPOS.forEach(([k]) => { if (SEL[k].size) S[k] = new Set([...SEL[k]].map(v=>String(v).toLowerCase())); });
+    const ks = Object.keys(S);
+    return baseRows().filter(t => {
+      for (const k of ks) if (!S[k].has(String(t[k]||"").toLowerCase())) return false;
+      if (FT.os && String(t.os||"").indexOf(FT.os) < 0) return false;
+      if (FT.ss && String(t.ss||"").indexOf(FT.ss) < 0) return false;
+      return true;
+    });
+  }
+  function barraFiltros(n){
+    const ativo = CAMPOS.some(([k]) => SEL[k].size) || FT.os || FT.ss;
+    return `<div class="filtros"><div class="fg">
+      ${CAMPOS.map(([k,l,p]) => `<div class="fgrupo" data-g="${k}">
+        <span class="fl">${l}</span>
+        <button class="fs ${SEL[k].size?"sel":""}" data-f="${k}">
+          <span class="fs-l">${esc(rotulo(k,p))}</span><span class="cv">▾</span></button>
+      </div>`).join("")}
+      <div class="fgrupo"><span class="fl">OS #</span>
+        <input class="ftxt" data-t="os" placeholder="ex: 7862" value="${esc(FT.os)}"></div>
+      <div class="fgrupo"><span class="fl">SS #</span>
+        <input class="ftxt" data-t="ss" placeholder="ex: 2657" value="${esc(FT.ss)}"></div>
+    </div>
+    <div class="f-rod"><b>${n}</b> de ${baseRows().length} OS
+      ${ativo?'<button class="f-lim" id="limpar">↺ Limpar</button>':""}</div></div>`;
+  }
+  function vTarefas(){
+    const todas = ordenar(filtrada());
+    const TETO_LINHAS = 250;
+    const dados = todas.slice(0, TETO_LINHAS);
+    const cols = [["os","OS"],["t","Tarefa"],["tp","Tipo"],["cl","Equipe"],["d","Dia"],
+                  ["ini","Início"],["h","Horas"],["st","Situação"],["rol","Rolagem"]];
+    return `
+    ${barraFiltros(todas.length)}
+    <div class="tab-rolo"><table>
+      <thead><tr>${cols.map(([c,l])=>`<th data-c="${c}" class="${c==="h"||c==="rol"?"num":""}">
+        ${l}<span class="sd"> ${ORD.c===c?(ORD.asc?"▲":"▼"):"⇅"}</span></th>`).join("")}</tr></thead>
+      <tbody>${dados.map(t=>`<tr data-i="${t.i}" tabindex="0"
+        role="button" aria-label="Abrir detalhe da OS ${esc(t.os)}">
+        <td class="td-os">${esc(t.os)}</td>
+        <td class="td-t">${esc(t.t)}<div class="td-u">${esc(usinaCurta(t.u))} · ${esc(t.cli)}</div></td>
+        <td><span class="pill" style="--hp:${TC[t.tp]||"#7a7890"}">${esc(t.tp)}</span></td>
+        <td>${esc(t.cl)}</td><td>${esc(t.d)}</td>
+        <td class="td-os">${esc(t.ini)}</td>
+        <td class="num">${t.h}h</td>
+        <td><span class="stp ${ST[t.st]||"naoIniciada"}"><span class="stp-dot"></span>${esc(t.st)}</span></td>
+        <td class="num">${t.rol>=3?`<span class="pill rol">${t.rol}ª</span>`:t.rol+"ª"}</td>
+      </tr>`).join("")}</tbody></table></div>
+    ${todas.length>dados.length?`<div class="mais">mostrando ${dados.length} de ${todas.length} — refine os filtros para ver o resto</div>`:""}
+    ${todas.length?"":'<div class="vazio">Nenhuma tarefa com esses filtros.</div>'}`;
+  }
+  function ordenar(arr){
+    const c = ORD.c, s = ORD.asc?1:-1;
+    return [...arr].sort((a,b)=>{
+      const x=a[c], y=b[c];
+      if (typeof x==="number" && typeof y==="number") return (x-y)*s;
+      return String(x).localeCompare(String(y),"pt")*s;
+    });
+  }
+
+  /* ── módulo ────────────────────────────────────────────────────────────── */
+  function vMod(){
+    const m = D.mods[MOD]; if(!m) return "";
+    const maxT = Math.max(...m.tend.flatMap(t=>[t.criadas,t.finalizadas]), 1);
+    return `
+    <div class="mod-k">
+      <div class="mk"><div class="mk-v">${m.total}</div><div class="mk-l">em aberto</div></div>
+      <div class="mk"><div class="mk-v ${m.atrasadas?"mal":""}">${m.atrasadas}</div><div class="mk-l">atrasadas</div></div>
+      <div class="mk"><div class="mk-v">${esc(m.mttr||"—")}</div><div class="mk-l">tempo médio de reparo</div></div>
+      <div class="mk"><div class="mk-v">${m.hist.toLocaleString("pt-BR")}</div><div class="mk-l">no histórico</div></div>
+      <div class="mk"><div class="mk-v">${m.kpis.concluidas30d||0}</div><div class="mk-l">concluídas em 30 dias</div></div>
+    </div>
+
+    <div class="ins-g" style="grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))">
+      <div class="card"><h3>Criadas × finalizadas · 4 semanas</h3>
+        <div class="tend">${m.tend.map(t=>`
+          <div class="tend-c"><div class="tend-par">
+            <span class="tend-b cri" style="height:${Math.max(2,t.criadas/maxT*44)}px" title="${t.criadas} criadas"></span>
+            <span class="tend-b fim" style="height:${Math.max(2,t.finalizadas/maxT*44)}px" title="${t.finalizadas} finalizadas"></span>
+          </div><div class="tend-l">${esc(t.semana)}</div></div>`).join("")}</div>
+        <div class="leg"><span><i style="background:var(--ink3)"></i>criadas</span>
+          <span><i style="background:var(--gd)"></i>finalizadas</span></div></div>
+
+      <div class="card"><h3>Por situação</h3>
+        <div class="barras">${Object.entries(m.porStatus).map(([k,n])=>{
+          const tot = Object.values(m.porStatus).reduce((a,b)=>a+b,0) || 1;
+          return `<div class="br"><span class="br-n">${esc(k)}</span>
+            <span class="br-t"><span class="br-f" style="width:${n/tot*100}%"></span></span>
+            <span class="br-v">${n}</span></div>`;}).join("")}</div></div>
+    </div>
+
+    <div class="tab-rolo"><table>
+      <thead><tr><th>OS</th><th>Chamado</th><th>Responsável</th><th>Programada</th><th>Situação</th></tr></thead>
+      <tbody>${m.oss.map(o=>`<tr>
+        <td class="td-os">${esc(o.os)}</td>
+        <td class="td-t">${esc(o.t)}<div class="td-u">${esc(o.u)}</div></td>
+        <td>${esc(o.resp||"—")}</td>
+        <td class="td-os">${esc(o.prog||"—")} ${o.atr?'<span class="pill atr">atrasada</span>':""}</td>
+        <td><span class="stp ${ST[o.st]||"naoIniciada"}"><span class="stp-dot"></span>${esc(o.st)}</span></td>
+      </tr>`).join("")}</tbody></table></div>
+    ${m.oss.length<m.total?`<p class="kv-s" style="margin-top:9px">Mostrando ${m.oss.length}
+      de ${m.total} em aberto.</p>`:""}`;
+  }
+
+  /* ── render ────────────────────────────────────────────────────────────── */
+  const TITULOS = {semana:["Semana","calendário por dia · cards de OS"],
+    insights:["Insights","o que a semana está dizendo"],
+    tarefas:["Tarefas / OS","tabela consolidada com filtros"]};
+  function pintar(){
+    document.querySelectorAll(".lat-i").forEach(b =>
+      b.classList.toggle("on", b.dataset.v===V && (V!=="mod" || b.dataset.m===MOD)));
+    const t = V==="mod" ? [D.mods[MOD].label, "chamados em aberto e histórico"] : TITULOS[V];
+    $("#t-tit").textContent = t[0];
+    $("#t-sub").textContent = D.semana + " · " + t[1];
+    $("#v-semana").innerHTML = V==="semana" ? vSemana() : "";
+    $("#v-insights").innerHTML = V==="insights" ? vInsights() : "";
+    $("#v-tarefas").innerHTML = V==="tarefas" ? vTarefas() : "";
+    $("#v-mod").innerHTML = V==="mod" ? vMod() : "";
+    document.querySelectorAll(".tela").forEach(s => s.classList.toggle("on", s.id==="v-"+V));
+    ligar();
+  }
+  function abrirPop(k){
+    fecharPops();
+    const g = document.querySelector(`.fgrupo[data-g="${k}"]`); if (!g) return;
+    const busca = (POP && POP.k === k ? POP.busca : "") || "";
+    const q = busca.toLowerCase();
+    const pop = document.createElement("div");
+    pop.className = "f-pop";
+    pop.innerHTML = `<div class="fp-top">
+        <input class="fp-busca" placeholder="buscar…" value="${esc(busca)}">
+        <div class="fp-acts"><a data-a="todos">Todos</a><a data-a="nada">Limpar</a></div></div>
+      <div class="fp-opts">${opts(k).map(o => {
+        const oculto = q && String(o).toLowerCase().indexOf(q) < 0;
+        return `<label class="fp-op"${oculto?' style="display:none"':""}>
+          <input type="checkbox" value="${esc(o)}"${SEL[k].has(o)?" checked":""}>
+          <span>${esc(o)}</span></label>`; }).join("")}</div>`;
+    g.appendChild(pop);
+    POP = { k, busca };
+    pop.onclick = e => e.stopPropagation();
+    const b = pop.querySelector(".fp-busca");
+    b.oninput = () => { POP.busca = b.value; const qq = b.value.toLowerCase();
+      pop.querySelectorAll(".fp-op").forEach(l =>
+        l.style.display = l.textContent.trim().toLowerCase().indexOf(qq) < 0 ? "none" : ""); };
+    pop.querySelectorAll(".fp-op input").forEach(cb => cb.onchange = () => {
+      if (cb.checked) SEL[k].add(cb.value); else SEL[k].delete(cb.value); pintar(); });
+    pop.querySelectorAll(".fp-acts a").forEach(a => a.onclick = () => {
+      if (a.dataset.a === "todos") opts(k).forEach(v => SEL[k].add(v)); else SEL[k].clear();
+      pintar(); });
+    b.focus();
+  }
+  function ligar(){
+    document.querySelectorAll("th[data-c]").forEach(th => th.onclick = () => {
+      const c = th.dataset.c;
+      ORD = { c, asc: ORD.c===c ? !ORD.asc : true }; pintar(); });
+    document.querySelectorAll("[data-f]").forEach(b => b.onclick = e => {
+      e.stopPropagation(); FOCO = null;
+      const k = b.dataset.f;
+      if (POP && POP.k === k) { POP = null; fecharPops(); }
+      else { POP = { k, busca:"" }; abrirPop(k); }
+    });
+    document.querySelectorAll(".ftxt").forEach(inp => {
+      inp.onclick = e => e.stopPropagation();
+      inp.oninput = () => { FT[inp.dataset.t] = inp.value.trim();
+        FOCO = inp.dataset.t; POP = null; fecharPops(); pintar(); };
+    });
+    document.querySelectorAll("[data-i]").forEach(el => {
+      el.onclick = e => { e.stopPropagation(); abrirDet(+el.dataset.i, el); };
+      el.onkeydown = e => { if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault(); e.stopPropagation(); abrirDet(+el.dataset.i, el); } };
+    });
+    const lim = $("#limpar");
+    if (lim) lim.onclick = () => { CAMPOS.forEach(([k]) => SEL[k].clear());
+      FT.os = ""; FT.ss = ""; POP = null; FOCO = null; pintar(); };
+    // pintar() refaz o innerHTML e leva junto a lista aberta e o cursor: devolve
+    if (POP) abrirPop(POP.k);
+    else if (FOCO) { const i = document.querySelector(`.ftxt[data-t="${FOCO}"]`);
+      if (i) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }
+  }
+  /* Tres estados, nao dois: "sistema" nao e o mesmo que "claro". Sem data-theme o
+     CSS cai na @media (prefers-color-scheme), que e o padrao de quem nunca mexeu. */
+  function aplicarPapel(p, cli){
+    PAPEL = p;
+    const sel = $("#papel-cli");
+    if (p === "cliente") {
+      const clientes = [...new Set(D.tabela.map(t => t.cli).filter(Boolean))].sort(
+        (a,b) => String(a).localeCompare(String(b), "pt-BR"));
+      CLIENTE = cli || CLIENTE || clientes[0];
+      sel.hidden = false;
+      sel.innerHTML = clientes.map(c =>
+        `<option value="${esc(c)}"${c===CLIENTE?" selected":""}>${esc(c)}</option>`).join("");
+    } else { CLIENTE = null; sel.hidden = true; }
+    document.querySelectorAll(".papel button").forEach(b => b.classList.toggle("on", b.dataset.p === p));
+    // esconde as telas restritas
+    const ehAdmin = p === "admin";
+    document.querySelectorAll(".lat-i").forEach(b =>
+      b.style.display = (!ehAdmin && TELAS_ADMIN.includes(b.dataset.v)) ? "none" : "");
+    document.querySelectorAll(".lat-sec").forEach(sec =>
+      { if (sec.textContent.trim() === "Chamados") sec.style.display = ehAdmin ? "" : "none"; });
+    // Se estava numa tela restrita, volta pra Semana. Trocar so a variavel nao
+    // esconde a tela que ja esta renderizada — em producao isso virou o _voltouAba.
+    if (!ehAdmin && TELAS_ADMIN.includes(V)) { V = "semana"; MOD = null; }
+    CAMPOS.forEach(([k]) => SEL[k].clear()); FT.os = ""; FT.ss = ""; POP = null;
+    fecharDet(true);
+    atualizarContadores();
+    pintar();
+  }
+  function atualizarContadores(){
+    const n = baseRows().length;
+    $("#n-semana").textContent = n;
+    $("#n-tarefas").textContent = n;
+  }
+  function aplicarTema(t){
+    if (t === "sistema") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", t === "escuro" ? "dark" : "light");
+    document.querySelectorAll(".tema button").forEach(b => b.classList.toggle("on", b.dataset.t === t));
+    try { localStorage.setItem("pcm-tema", t); } catch(e){}
+  }
+  document.querySelectorAll(".tema button").forEach(b => b.onclick = e => {
+    e.stopPropagation(); aplicarTema(b.dataset.t); });
+  document.querySelectorAll(".papel button").forEach(b => b.onclick = e => {
+    e.stopPropagation(); aplicarPapel(b.dataset.p); });
+  $("#papel-cli").onchange = e => aplicarPapel("cliente", e.target.value);
+  $("#papel-cli").onclick = e => e.stopPropagation();
+  aplicarPapel("admin");
+  let TEMA = "sistema";
+  try { TEMA = localStorage.getItem("pcm-tema") || "sistema"; } catch(e){}
+  aplicarTema(TEMA);
+
+  /* Detalhe da OS. O card sempre teve cursor:pointer e subia no hover — prometia
+     clique sem entregar nada. Abre por clique, Enter ou Espaco; fecha no Esc, no
+     fundo ou no X, e devolve o foco a quem abriu. */
+  let ABRIU = null;   // elemento que disparou, pra devolver o foco
+  const _d = v => { const x=String(v||""); if(!x||x.length<10) return "—";
+    const [a,m,dd]=x.slice(0,10).split("-"); return `${dd}/${m}/${a}`; };
+  const _sn = v => { const x=String(v||"").trim().toLowerCase();
+    return x==="sim" ? "Sim" : x==="não"||x==="nao" ? "Não" : (v||"—"); };
+  function linhaDet(rot, val){
+    return val==null||val===""||val==="—" ? "" :
+      `<div class="det-l"><dt>${rot}</dt><dd>${esc(val)}</dd></div>`;
+  }
+  /* A trajetoria sai de comparar as 4 semanas do arquivo: a mesma tarefa
+     reaparece nelas, e a diferenca conta a historia. `historico` e `rolagem` sao
+     null nas 992 linhas, entao nao serviriam. Quando `vezes` e maior que o numero
+     de semanas guardadas, a tarefa rolou antes do que o arquivo alcanca — dizer
+     isso e melhor que deixar o leitor achar que a lista e completa. */
+  function timelineHTML(t){
+    const tl = t.tl;
+    if (!tl || tl.length < 2)
+      return `<div class="det-vazio">Primeira semana desta tarefa no período guardado`
+           + (t.rol > 1 ? ` — mas o campo <b>vezes</b> diz ${t.rol}ª semana na fila.` : ".")
+           + `</div>`;
+    const ultimo = tl[tl.length - 1];
+    const antes = (ultimo.v || 0) - tl.length;
+    return `<ol class="tl">${tl.map(e => `
+      <li class="${e.ativa ? "ativa" : ""}">
+        <div class="tl-topo">
+          <span class="tl-w">${esc(e.w)}</span>
+          <span class="tl-dia">${esc(e.d || "—")}</span>
+          ${e.ini ? `<span class="tl-h">${esc(e.ini)}${e.fim ? "–"+esc(e.fim) : ""}</span>` : ""}
+          <span class="stp ${ST[e.st]||"naoIniciada"}"><span class="stp-dot"></span>${esc(e.st)}</span>
+        </div>
+        ${e.ativa ? '<div class="tl-meta">semana em curso</div>' : ""}
+      </li>`).join("")}</ol>
+      ${antes > 0 ? `<div class="tl-nota">Antes disso rolou mais <b>${antes}</b> ${antes===1?"semana":"semanas"}: o
+         campo <b>vezes</b> marca ${ultimo.v}ª, e o arquivo guarda ${D.semanas_guardadas||tl.length}.</div>` : ""}`;
+  }
+  function abrirDet(i, alvo){
+    const t = D.tabela[i];
+    if (!t) return;
+    if (CLIENTE && t.cli !== CLIENTE) return;      // nao vaza fora do escopo
+    ABRIU = alvo || null;
+    fecharDet(true);
+    const cor = TC[t.tp] || "#7a7890";
+    const fundo = document.createElement("div"); fundo.className = "det-fundo";
+    const p = document.createElement("aside");
+    p.className = "det"; p.setAttribute("role","dialog");
+    p.setAttribute("aria-modal","true"); p.setAttribute("aria-label","Detalhe da OS "+t.os);
+    p.innerHTML = `
+      <div class="det-topo"><div style="min-width:0">
+        <div class="det-os">OS #${esc(t.os)}${t.ss?` · SS #${esc(t.ss)}`:""}</div>
+        <div class="det-tit">${esc(t.t)}</div>
+        <div class="det-selos">
+          <span class="osc-badge" style="background:color-mix(in srgb,${cor} 17%,var(--surf))">
+            <i style="background:${cor}"></i>${esc(t.tp)}</span>
+          <span class="stp ${ST[t.st]||"naoIniciada"}"><span class="stp-dot"></span>${esc(t.st)}</span>
+          ${t.rep?'<span class="pill atr">↻ Reprogramada</span>':""}
+          ${t.rol>=3?`<span class="pill rol">${t.rol}ª semana</span>`:""}
+        </div></div>
+        <button class="det-x" aria-label="Fechar">×</button></div>
+      <div class="det-corpo">
+        <div class="det-sec">Onde</div><dl style="margin:0">
+          ${linhaDet("Usina", usinaCurta(t.u))}
+          ${linhaDet("Cliente", t.cli)}
+          ${linhaDet("Equipe cluster", t.cl)}
+          ${linhaDet("Código do ativo", t.cod)}</dl>
+        <div class="det-sec">Quando</div><dl style="margin:0">
+          ${linhaDet("Criada em", _d(t.dcri))}
+          ${linhaDet("Dia nesta semana", t.d)}
+          ${/* NAO juntar com o dia acima: sao coisas diferentes. dataProgramada e a
+               data original no Fracttal, que fica congelada quando a tarefa rola;
+               `dia` e onde o PCM encaixou nesta semana. Batem em 77% das tarefas
+               de 1a semana e em so 15-22% das que ja rolaram. */
+            linhaDet("Data no Fracttal", _d(t.dprog))}
+          ${linhaDet("Janela", t.ini && t.fim ? `${t.ini} – ${t.fim}` : t.ini)}
+          ${linhaDet("Duração prevista", t.h ? t.h+"h" : "")}
+          ${t.desl?linhaDet("Deslocamento", t.desl+"h"):""}
+          ${t.dfim?linhaDet("Finalizada em", _d(t.dfim)):""}</dl>
+        <div class="det-sec">Quem</div><dl style="margin:0">
+          ${linhaDet("Responsável O&M", t.resp)}
+          ${linhaDet("Responsável", t.ros)}</dl>
+        <div class="det-sec">Situação</div><dl style="margin:0">
+          ${linhaDet("Estado da tarefa", t.st)}
+          ${linhaDet("Status da OS", t.sp)}
+          ${linhaDet("Criticidade", t.cri)}
+          ${linhaDet("Semanas na fila", t.rol ? t.rol+"ª" : "")}
+          ${linhaDet("Reprogramada", _sn(t.rep?"Sim":"Não"))}
+          ${t.par?linhaDet("Em paralelo", _sn(t.par)):""}
+          ${t.termo?linhaDet("Termo", _sn(t.termo)):""}
+          ${t.nova?linhaDet("Origem", t.nova):""}
+          ${t.etq?linhaDet("Etiqueta", t.etq):""}</dl>
+        <div class="det-sec">Trajetória</div>
+        ${timelineHTML(t)}
+        <div class="det-sec">Relatório de execução</div>
+        ${t.rel ? `<div class="det-rel">${esc(t.rel)}</div>`
+                : '<div class="det-vazio">Sem relatório registrado.</div>'}
+      </div>`;
+    document.body.append(fundo, p);
+    requestAnimationFrame(() => { fundo.classList.add("on"); p.classList.add("on"); });
+    fundo.onclick = () => fecharDet();
+    p.querySelector(".det-x").onclick = () => fecharDet();
+    p.onclick = e => e.stopPropagation();
+    p.querySelector(".det-x").focus();
+  }
+  function fecharDet(mudo){
+    document.querySelectorAll(".det, .det-fundo").forEach(e => e.remove());
+    if (!mudo && ABRIU && document.contains(ABRIU)) ABRIU.focus();
+    if (!mudo) ABRIU = null;
+  }
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && document.querySelector(".det")) fecharDet();
+  });
+
+  function fecharPops(){ document.querySelectorAll(".f-pop").forEach(p=>p.remove()); }
+  document.addEventListener("click", () => { POP = null; fecharPops(); });
+  document.querySelectorAll(".lat-i").forEach(b => b.onclick = () => {
+    V = b.dataset.v; MOD = b.dataset.m || null; pintar(); window.scrollTo(0,0); });
+  pintar();
+}
+</script>

@@ -15,6 +15,7 @@
     { "route": "/.auth/login/github",  "statusCode": 404 },
     { "route": "/.auth/login/twitter", "statusCode": 404 },
     { "route": "/acessos.html", "allowedRoles": ["admin"] },
+    { "route": "/novo.html",    "allowedRoles": ["admin", "equipe"] },
     { "route": "/api/acessos",  "allowedRoles": ["admin"] },
     { "route": "/api/fracttal", "allowedRoles": ["anonymous"] },
     { "route": "/api/*",   "allowedRoles": ["authenticated"] },
