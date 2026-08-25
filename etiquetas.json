@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T10:09:12Z",
+  "geradoEm": "2026-08-25T10:45:15Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3862,
-        "emAberto": 22,
-        "atrasadas": 16,
-        "concluidas30d": 587,
-        "concluidas7d": 138,
+        "emAberto": 21,
+        "atrasadas": 15,
+        "concluidas30d": 588,
+        "concluidas7d": 139,
         "naSemanaCorrente": 24
       },
       "mttr": {
-        "horas": 10.29,
-        "label": "10h 17min",
-        "amostra": 587
+        "horas": 10.36,
+        "label": "10h 21min",
+        "amostra": 588
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W35",
           "criadas": 26,
-          "finalizadas": 20
+          "finalizadas": 21
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3862,
-            "emAberto": 22
+            "emAberto": 21
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 22,
-      "atrasadas": 16,
+      "total": 21,
+      "atrasadas": 15,
       "porStatus": {
-        "naoIniciada": 18,
+        "naoIniciada": 17,
         "emProgresso": 0,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 22
+        "(sem equipe)": 21
       },
       "oss": [
         {
@@ -267,24 +267,6 @@
           "criticidade": "",
           "dataProgramada": "2026-08-22",
           "dataCriacao": "2026-08-22",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "11857",
-          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "David  Nascimento",
-          "supervisor": "Railson Gomes ",
-          "status": "Não Iniciada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-23",
-          "dataCriacao": "2026-08-23",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -492,6 +474,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11857",
+          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "David  Nascimento",
+          "supervisor": "Railson Gomes ",
+          "status": "Finalizados",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-23",
+          "dataCriacao": "2026-08-23",
+          "dataInicial": "2026-08-25",
+          "dataFinal": "2026-08-25",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "12120",
           "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
@@ -1781,26 +1783,6 @@
           "supervisor": "Italo  Lustosa",
           "status": "Finalizada",
           "tarefa": "[Cabine 2] - Religamento da Cabine 2",
-          "criticidade": "",
-          "dataProgramada": "2026-08-21",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "2026-08-21",
-          "dataFinal": "2026-08-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "11721",
-          "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-21",
           "dataCriacao": "2026-08-21",
@@ -3493,12 +3475,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1669,
+      "historicoTotal": 1670,
       "subClassificacao": {
         "remoto": 750,
         "local": 3112,
         "remotoEmAberto": 7,
-        "localEmAberto": 15,
+        "localEmAberto": 14,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -9927,8 +9909,8 @@
       "total": 126,
       "atrasadas": 79,
       "porStatus": {
-        "naoIniciada": 117,
-        "emProgresso": 0,
+        "naoIniciada": 116,
+        "emProgresso": 1,
         "pausada": 9,
         "verificacao": 0
       },
@@ -11346,14 +11328,15 @@
           "responsavel": "Eduardo Souza",
           "criadoPor": "Roger Lélis",
           "supervisor": "Eduardo Souza",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-25",
           "dataCriacao": "2026-08-24",
-          "dataInicial": "",
+          "dataInicial": "2026-08-25",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": false
         },
         {
@@ -17263,14 +17246,15 @@
       "responsavel": "Eduardo Souza",
       "criadoPor": "Roger Lélis",
       "supervisor": "Eduardo Souza",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-25",
       "dataCriacao": "2026-08-24",
-      "dataInicial": "",
+      "dataInicial": "2026-08-25",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "12101",
@@ -18897,23 +18881,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "11857",
-      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "David  Nascimento",
-      "supervisor": "Railson Gomes ",
-      "status": "Não Iniciada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-23",
-      "dataCriacao": "2026-08-23",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "11842",
@@ -22401,6 +22368,26 @@
       "atrasada": false
     },
     {
+      "osId": "11857",
+      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "David  Nascimento",
+      "supervisor": "Railson Gomes ",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-23",
+      "dataCriacao": "2026-08-23",
+      "dataInicial": "2026-08-25",
+      "dataFinal": "2026-08-25",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "11853",
       "ativo": "Inversor 5.9 Huawei     { MAB200-INVR5.9 }",
       "equipe": "",
@@ -24631,28 +24618,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10991",
-      "ativo": "SKID 1 Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100-SKID1 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Finalizados",
-      "tarefa": "[Skid 1] - Avaliação da temperatura no momento de pico da geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-11",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-12",
-      "dataFinal": "2026-08-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2504,
+  "historicoTotal": 2505,
   "totalGeral": 5427,
   "verificacao": {
     "total": 0,
