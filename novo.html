@@ -42,6 +42,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .lat-marca{padding:16px 16px 13px;font-size:16px;font-weight:800;letter-spacing:-.02em;
   display:flex;align-items:center;gap:7px}
 .marca-img{height:22px;width:auto;display:block}
+/* Reduzida: o simbolo ocupa exatamente as colunas 0-240 de um PNG 1355x240
+   (medido no canvas: lacuna de 240 a 337 antes do "Grid"). `cover` numa caixa
+   quadrada escala pela altura e `left` mantem justamente esse recorte — o
+   simbolo, sem o texto, e sem precisar de um segundo arquivo. */
+.app.mini .lat-marca span{display:block}
+.app.mini .marca-img{height:26px;width:26px;object-fit:cover;object-position:left center}
 .lat-enc{margin-left:auto;width:24px;height:24px;border-radius:6px;color:var(--latx);
   display:flex;align-items:center;justify-content:center;font-size:13px;flex:0 0 24px}
 .lat-enc:hover{background:rgba(255,255,255,.12);color:#fff}
@@ -172,6 +178,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .tl-h{font-family:monospace;font-size:10.5px;color:var(--ink3)}
 .tl-meta{font-size:10.5px;color:var(--ink3);margin-top:3px}
 .tl-nota{font-size:11px;color:var(--ink3);margin-top:8px;line-height:1.45}
+.turno{display:flex;align-items:center;gap:6px;margin:9px 2px 5px;
+  font-size:8.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink3)}
+.turno:first-child{margin-top:2px}
+.turno::after{content:"";flex:1;height:1px;background:var(--line)}
+.turno .tn{font-variant-numeric:tabular-nums;color:var(--ink2)}
 .mais{text-align:center;font-size:10.5px;font-weight:700;color:var(--ink3);
   padding:7px 4px;margin-top:2px;border:1px dashed var(--line2);border-radius:7px}
 .lat-u{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--latx)}
@@ -354,9 +366,9 @@ tbody tr:hover{background:var(--surf2)}
 /* Encolhida por ESCOLHA (classe .mini, botao « do topo da barra) ou por falta
    de espaco (@container abaixo). As duas chegam ao mesmo lugar. */
 .app.mini .lat{width:58px;flex:0 0 58px}
-.app.mini .lat-marca span,.app.mini .lat-i .rot,.app.mini .lat-sec,
+.app.mini .lat-i .rot,.app.mini .lat-sec,
 .app.mini .lat-pe .lat-sem,.app.mini .lat-u span{display:none}
-.app.mini .lat-marca{justify-content:center;padding-left:8px;padding-right:8px}
+.app.mini .lat-marca{flex-direction:column;gap:9px;padding:12px 8px 11px}
 .app.mini .lat-enc{margin-left:0}
 .app.mini .lat-i{justify-content:center;padding:10px 0;position:relative}
 .app.mini .lat-i .n{margin-left:0;position:absolute;transform:translate(14px,-11px);font-size:9px;padding:0 4px}
@@ -646,7 +658,19 @@ function arrancar(){
 
   /* ── semana ────────────────────────────────────────────────────────────── */
   const ORDEM_DIAS = ["Seg","Ter","Qua","Qui","Sex","Sáb","Dom"];
-  const TETO_CARDS = 40;   // com a semana inteira (992), 12 por coluna era pouco
+  /* Turnos do dia. Quatro faixas, nao tres: ha 6 tarefas antes das 06h na
+     semana, e joga-las na "manha" seria mentir sobre quando acontecem. Cada
+     faixa so aparece se tiver conteudo. */
+  const TURNOS = [
+    { rot:"Madrugada", pega:v => v!=null && v < 360 },
+    { rot:"Manhã",    pega:v => v!=null && v >= 360 && v < 720 },
+    { rot:"Tarde",     pega:v => v!=null && v >= 720 && v < 1080 },
+    { rot:"Noite",     pega:v => v!=null && v >= 1080 },
+    { rot:"Sem horário", pega:v => v == null },
+  ];
+  const _min = s => { const m = String(s||"").match(/^(\d{1,2}):(\d{2})/);
+                      return m ? +m[1]*60 + +m[2] : null; };
+  const TETO_TURNO = 14;
   function vSemana(){
     const dados = filtrada();
     const porDia = {};
@@ -661,8 +685,15 @@ function arrancar(){
       + `<div class="cal-rolo"><div class="cal"
          style="grid-template-columns:repeat(${colunas.length},minmax(0,1fr));min-width:${colunas.length*172}px">` + colunas.map(dn => {
       const d = {n: dn};
-      const todos = porDia[dn]||[], ts = todos.slice(0, TETO_CARDS);
+      const todos = porDia[dn]||[];
       const h = Math.round(todos.reduce((a,t)=>a+(t.h||0),0)*10)/10;
+      // Teto POR TURNO, nao por coluna: com 40 no total, as 175 da manha na
+      // Segunda comiam a cota inteira e tarde/noite nunca apareciam.
+      const blocos = TURNOS.map(T => {
+        const ts = todos.filter(t => T.pega(_min(t.ini)))
+                        .sort((a,b) => (_min(a.ini) ?? 9e9) - (_min(b.ini) ?? 9e9));
+        return { T, ts, hh: Math.round(ts.reduce((a,t)=>a+(t.h||0),0)*10)/10 };
+      }).filter(b => b.ts.length);
       return `<div class="dcol">
         <div class="dhdr">
           <div class="dname">${esc(d.n)}</div>
@@ -670,8 +701,13 @@ function arrancar(){
           <div class="dmeta">${h}h programadas</div>
           <div class="dcarga"><i class="${todos.length===max?"pico":""}" style="width:${todos.length/max*100}%"></i></div>
         </div>
-        <div class="dtasks">${ts.map(cardHTML).join("") || '<div class="vazio">—</div>'}
-          ${todos.length>ts.length?`<div class="mais">+${todos.length-ts.length} não exibidas</div>`:""}</div>
+        <div class="dtasks">${blocos.length ? blocos.map(b => {
+          const vis = b.ts.slice(0, TETO_TURNO);
+          return `<div class="turno">${b.T.rot}<span class="tn">${b.ts.length} · ${b.hh}h</span></div>`
+            + vis.map(cardHTML).join("")
+            + (b.ts.length > vis.length
+               ? `<div class="mais">+${b.ts.length - vis.length} não exibidas</div>` : "");
+        }).join("") : '<div class="vazio">—</div>'}</div>
       </div>`;
     }).join("") + `</div></div>`;
   }
