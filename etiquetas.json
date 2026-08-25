@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T13:32:54Z",
+  "geradoEm": "2026-08-25T13:45:05Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 24,
       "atrasadas": 16,
       "porStatus": {
-        "naoIniciada": 19,
-        "emProgresso": 1,
+        "naoIniciada": 18,
+        "emProgresso": 2,
         "pausada": 4,
         "verificacao": 0
       },
@@ -298,14 +298,15 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.1] - Religamento do Inversor 1.1",
           "criticidade": "",
           "dataProgramada": "2026-08-24",
           "dataCriacao": "2026-08-25",
-          "dataInicial": "",
+          "dataInicial": "2026-08-25",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -530,26 +531,6 @@
       ],
       "ossHistorico": [
         {
-          "osId": "12117",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-25",
-          "dataCriacao": "2026-08-25",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "2026-08-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11857",
           "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
           "equipe": "",
@@ -565,6 +546,26 @@
           "dataFinal": "2026-08-25",
           "linkFracttal": "",
           "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12151",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Marcos  Camargo",
+          "status": "Finalizada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-25",
+          "dataCriacao": "2026-08-25",
+          "dataInicial": "2026-08-25",
+          "dataFinal": "2026-08-25",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -9858,16 +9859,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 610,
-        "emAberto": 125,
-        "atrasadas": 79,
-        "concluidas30d": 261,
-        "concluidas7d": 57,
+        "emAberto": 124,
+        "atrasadas": 78,
+        "concluidas30d": 262,
+        "concluidas7d": 58,
         "naSemanaCorrente": 51
       },
       "mttr": {
-        "horas": 167.17,
-        "label": "6d 23h",
-        "amostra": 261
+        "horas": 166.9,
+        "label": "6d 22h",
+        "amostra": 262
       },
       "tendencia4Semanas": [
         {
@@ -9888,7 +9889,7 @@
         {
           "semana": "W35",
           "criadas": 17,
-          "finalizadas": 10
+          "finalizadas": 11
         }
       ],
       "topOfensores": {
@@ -9896,7 +9897,7 @@
           {
             "nome": "(sem equipe)",
             "total": 610,
-            "emAberto": 125
+            "emAberto": 124
           }
         ],
         "responsaveis": [
@@ -9927,16 +9928,16 @@
           }
         ]
       },
-      "total": 125,
-      "atrasadas": 79,
+      "total": 124,
+      "atrasadas": 78,
       "porStatus": {
-        "naoIniciada": 108,
-        "emProgresso": 5,
-        "pausada": 12,
+        "naoIniciada": 107,
+        "emProgresso": 4,
+        "pausada": 13,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 125
+        "(sem equipe)": 124
       },
       "oss": [
         {
@@ -11161,24 +11162,6 @@
           "atrasada": true
         },
         {
-          "osId": "11780",
-          "ativo": "Inversor 2.1 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.1 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-08-24",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "atrasada": true
-        },
-        {
           "osId": "11779",
           "ativo": "Inversor 1.10 Sungrow SG125HV    { THPN-CLN200-INVR1.10 }",
           "equipe": "",
@@ -11390,14 +11373,15 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "Roger Lélis",
           "supervisor": "Adriano  Moraes",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Inversor 1.10] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-25",
           "dataCriacao": "2026-08-24",
-          "dataInicial": "",
+          "dataInicial": "2026-08-25",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": false
         },
         {
@@ -12118,6 +12102,25 @@
           "dataFinal": "2026-08-25",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "11780",
+          "ativo": "Inversor 2.1 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.1 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Wesllen  Castro",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-24",
+          "dataCriacao": "2026-08-21",
+          "dataInicial": "2026-08-25",
+          "dataFinal": "2026-08-25",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -13984,25 +13987,6 @@
           "atrasada": false
         },
         {
-          "osId": "10776",
-          "ativo": "Tracker 106.200 STI Norland     { TIM200-ETKR106.200 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Tracker 106.200] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-08-06",
-          "dataInicial": "2026-08-12",
-          "dataFinal": "2026-08-12",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10894",
           "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { BES100-INVR1.9 }",
           "equipe": "",
@@ -14934,7 +14918,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 438
+      "historicoTotal": 439
     },
     "engenharia": {
       "label": "Engenharia",
@@ -17143,14 +17127,15 @@
       "responsavel": "Ricardo Silva ",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.1] - Religamento do Inversor 1.1",
       "criticidade": "",
       "dataProgramada": "2026-08-24",
       "dataCriacao": "2026-08-25",
-      "dataInicial": "",
+      "dataInicial": "2026-08-25",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -17357,14 +17342,15 @@
       "responsavel": "Adriano  Moraes",
       "criadoPor": "Roger Lélis",
       "supervisor": "Adriano  Moraes",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Inversor 1.10] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-25",
       "dataCriacao": "2026-08-24",
-      "dataInicial": "",
+      "dataInicial": "2026-08-25",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "12099",
@@ -19286,23 +19272,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "11780",
-      "ativo": "Inversor 2.1 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.1 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-24",
-      "dataCriacao": "2026-08-21",
-      "dataInicial": "2026-08-25",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0
     },
     {
       "osId": "11779",
@@ -22273,26 +22242,6 @@
       "atrasada": false
     },
     {
-      "osId": "12117",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-25",
-      "dataCriacao": "2026-08-25",
-      "dataInicial": "2026-08-25",
-      "dataFinal": "2026-08-25",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
       "osId": "12106",
       "ativo": "Cabine 1    TESTE TESTE { TESTE100-CABN1 }",
       "equipe": "",
@@ -22804,6 +22753,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "11780",
+      "ativo": "Inversor 2.1 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.1 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Wesllen  Castro",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-24",
+      "dataCriacao": "2026-08-21",
+      "dataInicial": "2026-08-25",
+      "dataFinal": "2026-08-25",
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -24643,7 +24611,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2513,
+  "historicoTotal": 2514,
   "totalGeral": 5435,
   "verificacao": {
     "total": 0,
