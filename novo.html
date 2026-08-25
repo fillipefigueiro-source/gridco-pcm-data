@@ -62,6 +62,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .sem{font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:5px;
   background:rgba(255,255,255,.09);color:var(--latx)}
 .sem.on{background:var(--green);color:#141207}
+.lat-ac{display:flex;align-items:center;gap:7px;margin-bottom:10px;padding:6px 8px;
+  border-radius:7px;font-size:11px;font-weight:700;color:var(--latx);
+  background:rgba(255,255,255,.07);text-decoration:none}
+.lat-ac:hover{color:#fff;background:rgba(255,255,255,.13)}
+.lat-ac .ic{font-size:13px;line-height:1}
 .papel,.tema{display:flex;gap:3px;margin-bottom:10px;padding:3px;border-radius:7px;
   background:rgba(255,255,255,.07)}
 .papel button{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;
@@ -356,7 +361,8 @@ tbody tr:hover{background:var(--surf2)}
 .app.mini .lat-i .n{margin-left:0;position:absolute;transform:translate(14px,-11px);font-size:9px;padding:0 4px}
 .app.mini .lat-pe{padding-left:8px;padding-right:8px}
 .app.mini .tema,.app.mini .papel{flex-direction:column}
-.app.mini .tema .rot,.app.mini .papel .rot{display:none}
+.app.mini .tema .rot,.app.mini .papel .rot,.app.mini .lat-ac .rot{display:none}
+.app.mini .lat-ac{justify-content:center;padding:6px 0}
 .app.mini .papel-cli{display:none}
 @container app (max-width:820px){
   .lat{width:58px;flex:0 0 58px}
@@ -366,7 +372,8 @@ tbody tr:hover{background:var(--surf2)}
   .lat-i{position:relative}
   .lat-pe{padding-left:8px;padding-right:8px}
   .tema,.papel{flex-direction:column}
-  .tema .rot,.papel .rot{display:none}
+  .tema .rot,.papel .rot,.lat-ac .rot{display:none}
+  .lat-ac{justify-content:center;padding:6px 0}
   .papel-cli{display:none}
 }
 .carga-erro{margin:40px auto;max-width:460px;padding:22px 24px;text-align:center;
@@ -392,6 +399,9 @@ tbody tr:hover{background:var(--surf2)}
     <div id="lat-mods"></div>
 
     <div class="lat-pe">
+      <a class="lat-ac" id="lat-ac" title="Quem de cada cliente pode entrar"
+         href="https://victorious-desert-0951e160f.7.azurestaticapps.net/acessos.html"
+         target="_blank" rel="noopener"><span class="ic">👥</span><span class="rot">Acessos de cliente</span></a>
       <div class="papel" role="group" aria-label="Papel">
         <button data-p="admin"><span class="ic">◉</span><span class="rot">Admin</span></button>
         <button data-p="cliente"><span class="ic">○</span><span class="rot">Cliente</span></button>
@@ -1041,6 +1051,8 @@ function arrancar(){
     const ehAdmin = p === "admin";
     document.querySelectorAll(".lat-i").forEach(b =>
       b.style.display = (!ehAdmin && TELAS_ADMIN.includes(b.dataset.v)) ? "none" : "");
+    const _ac = $("#lat-ac");
+    if (_ac) _ac.style.display = ehAdmin ? "" : "none";
     document.querySelectorAll(".lat-sec").forEach(sec =>
       { if (sec.textContent.trim() === "Chamados") sec.style.display = ehAdmin ? "" : "none"; });
     // Se estava numa tela restrita, volta pra Semana. Trocar so a variavel nao
