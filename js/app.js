@@ -459,6 +459,24 @@ function launch(label,isAdmin) {
     const btn = document.querySelector('.tip-tab[data-topv="'+slug+'"]');
     if(btn) btn.style.display = isAdmin ? '' : 'none';
   });
+  // Abas internas: somem para o CLIENTE, continuam para admin e equipe.
+  // Motivo concreto: as telas delas vivem de etiquetas.json, gestao_pcm.json,
+  // confiabilidade.json e supervisores.json, que são estáticos e caem em
+  // /*.json -> ["admin","equipe"]. No papel cli-* dão 403, e o cliente via
+  // "Garantia 0 / Performance 0 / Engenharia 0" — contador errado é pior que
+  // contador ausente: o primeiro é lido como fato. (25/08/2026)
+  const ehCliente = !isAdmin && !S.equipe;
+  const soInterno = ['gestaoPcm','chamadosGarantia','performance','engenharia'];
+  soInterno.forEach(slug=>{
+    const btn = document.querySelector('.tip-tab[data-topv="'+slug+'"]');
+    if(btn) btn.style.display = ehCliente ? 'none' : '';
+  });
+  // O filtro Cliente não serve a quem só tem um: /api/dados já devolve apenas
+  // as linhas dele. Para `equipe`, que lê todos, o filtro continua.
+  const _fgCli = document.getElementById('sm-ms-cliente');
+  const _grpCli = _fgCli && _fgCli.closest('.filter-group');
+  if(_grpCli) _grpCli.style.display = ehCliente ? 'none' : '';
+  if(ehCliente && typeof SEM_SEL!=='undefined' && SEM_SEL.cliente) SEM_SEL.cliente.clear();
   // O botão Acessos leva para uma PÁGINA separada (acessos.html), não é uma
   // aba do painel — por isso fica fora da lista acima, que só mexe em
   // .tip-tab. A rota já exige o papel admin no servidor (staticwebapp.config
@@ -467,7 +485,8 @@ function launch(label,isAdmin) {
   if(_btnAc) _btnAc.style.display = isAdmin ? '' : 'none';
   // Se user não-admin estava em aba restrita, volta pra Programação Semanal
   let _voltouAba=false;
-  if(!isAdmin && adminOnly.indexOf(S.topView)>=0){
+  const restritas = adminOnly.concat(ehCliente ? soInterno : []);
+  if(!isAdmin && restritas.indexOf(S.topView)>=0){
     S.topView = 'semana';
     try{localStorage.setItem('gc_topv','semana');}catch(e){}
     _voltouAba=true;   // só trocar a variável não esconde a tela restrita
