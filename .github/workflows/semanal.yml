@@ -89,13 +89,31 @@ jobs:
           # Impressão digital do conteúdo REAL: os dois arquivos, sem o carimbo de hora.
           NOVO=$(python3 - <<'PY'
           import json, hashlib
+
+          def limpar(o):
+              """Tira os carimbos de geracao, em QUALQUER profundidade.
+
+              Remover so o `geradoEm` do topo nao bastava: o `alertas.geradoAs`
+              muda toda rodada e sozinho fazia o hash diferir sempre — o caminho
+              "dado inalterado" nunca disparava, e o Patch B ficava inerte.
+              Descoberto em 24/08 comparando duas publicacoes consecutivas: das
+              994 linhas, 2 eram novas e 2 mudaram de status; todo o resto do
+              diff era esse carimbo.
+
+              Os campos de data do DADO (dataCriacao, dataFinal, dataProgramada)
+              nao comecam com "gerado", entao continuam contando para o hash.
+              """
+              if isinstance(o, dict):
+                  return {k: limpar(v) for k, v in o.items() if not k.startswith("gerado")}
+              if isinstance(o, list):
+                  return [limpar(x) for x in o]
+              return o
+
           h = hashlib.sha256()
           for f in ("banco_dados.json", "etiquetas.json"):
               with open(f, encoding="utf-8") as fp:
                   d = json.load(fp)
-              if isinstance(d, dict):
-                  d.pop("geradoEm", None)
-              h.update(json.dumps(d, sort_keys=True, ensure_ascii=False, default=str).encode("utf-8"))
+              h.update(json.dumps(limpar(d), sort_keys=True, ensure_ascii=False, default=str).encode("utf-8"))
           print(h.hexdigest())
           PY
           )
