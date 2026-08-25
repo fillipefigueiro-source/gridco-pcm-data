@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T12:10:16Z",
+  "geradoEm": "2026-08-25T12:21:14Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3864,
-        "emAberto": 21,
+        "total": 3866,
+        "emAberto": 22,
         "atrasadas": 16,
-        "concluidas30d": 590,
-        "concluidas7d": 141,
-        "naSemanaCorrente": 26
+        "concluidas30d": 591,
+        "concluidas7d": 142,
+        "naSemanaCorrente": 28
       },
       "mttr": {
-        "horas": 10.32,
-        "label": "10h 19min",
-        "amostra": 590
+        "horas": 10.3,
+        "label": "10h 18min",
+        "amostra": 591
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W35",
-          "criadas": 28,
-          "finalizadas": 23
+          "criadas": 30,
+          "finalizadas": 24
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3864,
-            "emAberto": 21
+            "total": 3866,
+            "emAberto": 22
           }
         ],
         "responsaveis": [
@@ -68,7 +68,7 @@
           },
           {
             "nome": "Italo  Lustosa",
-            "total": 178,
+            "total": 179,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 21,
+      "total": 22,
       "atrasadas": 16,
       "porStatus": {
-        "naoIniciada": 16,
+        "naoIniciada": 17,
         "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 21
+        "(sem equipe)": 22
       },
       "oss": [
         {
@@ -384,6 +384,24 @@
           "atrasada": true
         },
         {
+          "osId": "12140",
+          "ativo": "Inversor 3.3 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.3 }",
+          "equipe": "",
+          "responsavel": "Adão Neto ",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Adão Neto ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 3.3] - Religamento do Inversor 3.3",
+          "criticidade": "",
+          "dataProgramada": "2026-08-25",
+          "dataCriacao": "2026-08-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "12068",
           "ativo": "Sal Energia - Quixadá 1 (Hortina) - CE Fazenda Veneza, distrito de Boto, zona rural Quixadá  Ceará Brasil { SALE-HRT100 }",
           "equipe": "",
@@ -511,6 +529,26 @@
           "dataFinal": "2026-08-25",
           "linkFracttal": "",
           "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12141",
+          "ativo": "Thopen - Caxambu 1 - SP  Caxambu  São Paulo Brasil { THPN-CXB100 }",
+          "equipe": "",
+          "responsavel": "Italo  Lustosa",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Italo  Lustosa",
+          "status": "Finalizada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-25",
+          "dataCriacao": "2026-08-25",
+          "dataInicial": "2026-08-25",
+          "dataFinal": "2026-08-25",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -1757,26 +1795,6 @@
         },
         {
           "osId": "11740",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-21",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "2026-08-21",
-          "dataFinal": "2026-08-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "11739",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
           "responsavel": "Raphael Vitoriano ",
@@ -3476,12 +3494,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1672,
+      "historicoTotal": 1673,
       "subClassificacao": {
         "remoto": 750,
-        "local": 3114,
+        "local": 3116,
         "remotoEmAberto": 7,
-        "localEmAberto": 14,
+        "localEmAberto": 15,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -9876,8 +9894,8 @@
       "total": 124,
       "atrasadas": 79,
       "porStatus": {
-        "naoIniciada": 110,
-        "emProgresso": 2,
+        "naoIniciada": 109,
+        "emProgresso": 3,
         "pausada": 12,
         "verificacao": 0
       },
@@ -11113,14 +11131,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Ana Barros ",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-08-24",
           "dataCriacao": "2026-08-21",
-          "dataInicial": "",
+          "dataInicial": "2026-08-25",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "atrasada": true
         },
         {
@@ -16980,6 +16999,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "12140",
+      "ativo": "Inversor 3.3 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.3 }",
+      "equipe": "",
+      "responsavel": "Adão Neto ",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Adão Neto ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 3.3] - Religamento do Inversor 3.3",
+      "criticidade": "",
+      "dataProgramada": "2026-08-25",
+      "dataCriacao": "2026-08-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "12125",
       "ativo": "Inversor 1.1 Sungrow SG330HX    { THPN-INP100-INVR1.1 }",
       "equipe": "",
@@ -19136,14 +19172,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Ana Barros ",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-08-24",
       "dataCriacao": "2026-08-21",
-      "dataInicial": "",
+      "dataInicial": "2026-08-25",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0
     },
     {
       "osId": "11779",
@@ -24497,8 +24534,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2511,
-  "totalGeral": 5429,
+  "historicoTotal": 2512,
+  "totalGeral": 5431,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
