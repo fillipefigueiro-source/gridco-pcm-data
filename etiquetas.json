@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T20:06:28Z",
+  "geradoEm": "2026-08-25T20:12:52Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -6644,25 +6644,6 @@
           "atrasada": false
         },
         {
-          "osId": "10159",
-          "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPS - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-08-13",
-          "dataFinal": "2026-08-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 408.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10268",
           "ativo": "Preventiva Grupo de Inversores      { THPN-STN100-PGINVR1 }",
           "equipe": "",
@@ -6730,6 +6711,25 @@
           "tarefa": "[Athon] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-20",
+          "dataCriacao": "2026-07-27",
+          "dataInicial": "2026-08-13",
+          "dataFinal": "2026-08-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 408.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10159",
+          "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPS - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-06",
           "dataCriacao": "2026-07-27",
           "dataInicial": "2026-08-13",
           "dataFinal": "2026-08-13",
@@ -14818,12 +14818,12 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 119,
-        "emAberto": 5,
+        "total": 120,
+        "emAberto": 6,
         "atrasadas": 5,
         "concluidas30d": 47,
         "concluidas7d": 10,
-        "naSemanaCorrente": 0
+        "naSemanaCorrente": 1
       },
       "mttr": {
         "horas": 279.32,
@@ -14848,7 +14848,7 @@
         },
         {
           "semana": "W35",
-          "criadas": 0,
+          "criadas": 1,
           "finalizadas": 4
         }
       ],
@@ -14856,8 +14856,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 119,
-            "emAberto": 5
+            "total": 120,
+            "emAberto": 6
           }
         ],
         "responsaveis": [
@@ -14882,22 +14882,22 @@
             "emAberto": 0
           },
           {
-            "nome": "Adriano  Moraes",
+            "nome": "Aury  Albuquerque",
             "total": 4,
-            "emAberto": 0
+            "emAberto": 4
           }
         ]
       },
-      "total": 5,
+      "total": 6,
       "atrasadas": 5,
       "porStatus": {
-        "naoIniciada": 5,
+        "naoIniciada": 6,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 5
+        "(sem equipe)": 6
       },
       "oss": [
         {
@@ -14984,6 +14984,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "12206",
+          "ativo": "Estrutura Trackers Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS200-ETKR1 }",
+          "equipe": "",
+          "responsavel": "Aury  Albuquerque",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Aury  Albuquerque",
+          "status": "Não Iniciada",
+          "tarefa": "[MTS200] - Sem visualização dos trackers no supervisório",
+          "criticidade": "",
+          "dataProgramada": "2026-08-26",
+          "dataCriacao": "2026-08-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -16930,6 +16947,22 @@
     }
   },
   "ossPublicas": [
+    {
+      "osId": "12206",
+      "ativo": "Estrutura Trackers Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS200-ETKR1 }",
+      "equipe": "",
+      "responsavel": "Aury  Albuquerque",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Aury  Albuquerque",
+      "status": "Não Iniciada",
+      "tarefa": "[MTS200] - Sem visualização dos trackers no supervisório",
+      "criticidade": "",
+      "dataProgramada": "2026-08-26",
+      "dataCriacao": "2026-08-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
     {
       "osId": "12201",
       "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
@@ -21765,25 +21798,6 @@
       "atrasada": false
     },
     {
-      "osId": "10159",
-      "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPS - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-06",
-      "dataCriacao": "2026-07-27",
-      "dataInicial": "2026-08-13",
-      "dataFinal": "2026-08-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 408.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "10142",
       "ativo": "Cabos CC      { CLD100-INFE1-CBCC }",
       "equipe": "",
@@ -24372,10 +24386,30 @@
       "horasAteAbrir": 96.0,
       "horasAteFechar": 0,
       "atrasada": false
+    },
+    {
+      "osId": "10762",
+      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Marcos  Camargo",
+      "status": "Finalizados",
+      "tarefa": "Religamento UFV Mandaguaçu",
+      "criticidade": "",
+      "dataProgramada": "2026-08-06",
+      "dataCriacao": "2026-08-06",
+      "dataInicial": "2026-08-06",
+      "dataFinal": "2026-08-06",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
     }
   ],
   "historicoTotal": 2544,
-  "totalGeral": 5459,
+  "totalGeral": 5460,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
