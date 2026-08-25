@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T13:23:59Z",
+  "geradoEm": "2026-08-25T13:32:54Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -3758,16 +3758,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 698,
-        "emAberto": 133,
+        "emAberto": 132,
         "atrasadas": 37,
-        "concluidas30d": 93,
-        "concluidas7d": 21,
+        "concluidas30d": 94,
+        "concluidas7d": 22,
         "naSemanaCorrente": 98
       },
       "mttr": {
-        "horas": 369.03,
-        "label": "15d 9h",
-        "amostra": 93
+        "horas": 372.26,
+        "label": "15d 12h",
+        "amostra": 94
       },
       "tendencia4Semanas": [
         {
@@ -3788,7 +3788,7 @@
         {
           "semana": "W35",
           "criadas": 89,
-          "finalizadas": 7
+          "finalizadas": 8
         }
       ],
       "topOfensores": {
@@ -3796,7 +3796,7 @@
           {
             "nome": "(sem equipe)",
             "total": 698,
-            "emAberto": 133
+            "emAberto": 132
           }
         ],
         "responsaveis": [
@@ -3823,20 +3823,20 @@
           {
             "nome": "Felipe  Lima",
             "total": 26,
-            "emAberto": 10
+            "emAberto": 9
           }
         ]
       },
-      "total": 133,
+      "total": 132,
       "atrasadas": 37,
       "porStatus": {
         "naoIniciada": 125,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 133
+        "(sem equipe)": 132
       },
       "oss": [
         {
@@ -5988,24 +5988,6 @@
           "atrasada": false
         },
         {
-          "osId": "10239",
-          "ativo": "Cabine 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Felipe  Lima",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-07-28",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 672.0,
-          "atrasada": false
-        },
-        {
           "osId": "12047",
           "ativo": "Infraestrutura Civil Sítio Rio Quartel, Zona Rural Linhares  Espírito Santo Brasil { AXIS-LHN100-INFC1 }",
           "equipe": "",
@@ -6111,6 +6093,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10239",
+          "ativo": "Cabine 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-08-28",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "2026-08-25",
+          "dataFinal": "2026-08-25",
+          "linkFracttal": "",
+          "horasAteAbrir": 672.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "11995",
           "ativo": "Infraestrutura Civil  Vargem Grande  Espirito Santo Brasil { VRG100-INFC1 }",
@@ -8335,25 +8336,6 @@
           "atrasada": false
         },
         {
-          "osId": "8391",
-          "ativo": "Infraestrutura Civil Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-INFC1 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "James Chaves ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-06-25",
-          "dataCriacao": "2026-06-25",
-          "dataInicial": "2026-07-09",
-          "dataFinal": "2026-07-09",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9009",
           "ativo": "QGBT 2 BR 226/304, S/N, Zona Rural Macaíba  Rio Grande do Norte Brasil { MCB100-QGBT2 }",
           "equipe": "",
@@ -8962,19 +8944,19 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 258
+      "historicoTotal": 259
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
       "icone": "ti-shield-check",
       "cor": "#ef4444",
       "kpis": {
-        "total": 139,
-        "emAberto": 1,
+        "total": 140,
+        "emAberto": 2,
         "atrasadas": 1,
         "concluidas30d": 8,
         "concluidas7d": 2,
-        "naSemanaCorrente": 0
+        "naSemanaCorrente": 1
       },
       "mttr": {
         "horas": 174.0,
@@ -8999,7 +8981,7 @@
         },
         {
           "semana": "W35",
-          "criadas": 0,
+          "criadas": 1,
           "finalizadas": 0
         }
       ],
@@ -9007,8 +8989,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 139,
-            "emAberto": 1
+            "total": 140,
+            "emAberto": 2
           }
         ],
         "responsaveis": [
@@ -9039,16 +9021,16 @@
           }
         ]
       },
-      "total": 1,
+      "total": 2,
       "atrasadas": 1,
       "porStatus": {
-        "naoIniciada": 0,
+        "naoIniciada": 1,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 1
+        "(sem equipe)": 2
       },
       "oss": [
         {
@@ -9068,6 +9050,23 @@
           "linkFracttal": "",
           "horasAteAbrir": 72.0,
           "atrasada": true
+        },
+        {
+          "osId": "12149",
+          "ativo": "Inversor 3.5 SOLAREDGE     { NVX200-INVR3.5 }",
+          "equipe": "",
+          "responsavel": "Gabriel Oliveira ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Gabriel Oliveira ",
+          "status": "Não Iniciada",
+          "tarefa": "Inspeção elétrica - Inversor SolarEdge em alta temperatura (garantia) - Solicitação 3450",
+          "criticidade": "",
+          "dataProgramada": "2026-08-26",
+          "dataCriacao": "2026-08-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -9931,8 +9930,8 @@
       "total": 125,
       "atrasadas": 79,
       "porStatus": {
-        "naoIniciada": 109,
-        "emProgresso": 4,
+        "naoIniciada": 108,
+        "emProgresso": 5,
         "pausada": 12,
         "verificacao": 0
       },
@@ -11408,14 +11407,15 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "Roger Lélis",
           "supervisor": "Adriano  Moraes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-25",
           "dataCriacao": "2026-08-24",
-          "dataInicial": "",
+          "dataInicial": "2026-08-25",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": false
         },
         {
@@ -12122,44 +12122,6 @@
           "atrasada": false
         },
         {
-          "osId": "11793",
-          "ativo": "Thopen - Itajá 1 e 2 - RN Fazenda Pricila Alves de Macedo, km 18 BR304, nº01, Zona Rural Itajá  Rio Grande do Norte Brasil { THOPEN-ITA100 }",
-          "equipe": "",
-          "responsavel": "Cleiton  Farias",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Cleiton  Farias",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Coleta e análise de dados de geração",
-          "criticidade": "",
-          "dataProgramada": "2026-08-24",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "2026-08-24",
-          "dataFinal": "2026-08-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "11757",
-          "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Coleta e análise de dados de geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "2026-08-24",
-          "dataFinal": "2026-08-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11738",
           "ativo": "Tracker 41.100 Brametal BRATracker Bifileira    { PRB100-ETKR41.100 }",
           "equipe": "",
@@ -12270,6 +12232,44 @@
           "dataFinal": "2026-08-24",
           "linkFracttal": "",
           "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "11793",
+          "ativo": "Thopen - Itajá 1 e 2 - RN Fazenda Pricila Alves de Macedo, km 18 BR304, nº01, Zona Rural Itajá  Rio Grande do Norte Brasil { THOPEN-ITA100 }",
+          "equipe": "",
+          "responsavel": "Cleiton  Farias",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Cleiton  Farias",
+          "status": "Finalizada",
+          "tarefa": "[Usina] - Coleta e análise de dados de geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-24",
+          "dataCriacao": "2026-08-21",
+          "dataInicial": "2026-08-24",
+          "dataFinal": "2026-08-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "11757",
+          "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizada",
+          "tarefa": "[Usina] - Coleta e análise de dados de geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-01",
+          "dataCriacao": "2026-08-21",
+          "dataInicial": "2026-08-24",
+          "dataFinal": "2026-08-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -17054,6 +17054,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "12149",
+      "ativo": "Inversor 3.5 SOLAREDGE     { NVX200-INVR3.5 }",
+      "equipe": "",
+      "responsavel": "Gabriel Oliveira ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Gabriel Oliveira ",
+      "status": "Não Iniciada",
+      "tarefa": "Inspeção elétrica - Inversor SolarEdge em alta temperatura (garantia) - Solicitação 3450",
+      "criticidade": "",
+      "dataProgramada": "2026-08-26",
+      "dataCriacao": "2026-08-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "12147",
       "ativo": "Thopen - Caxambu 1 - SP  Caxambu  São Paulo Brasil { THPN-CXB100 }",
       "equipe": "",
@@ -17357,14 +17373,15 @@
       "responsavel": "Adriano  Moraes",
       "criadoPor": "Roger Lélis",
       "supervisor": "Adriano  Moraes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-25",
       "dataCriacao": "2026-08-24",
-      "dataInicial": "",
+      "dataInicial": "2026-08-25",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "12096",
@@ -20887,23 +20904,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10239",
-      "ativo": "Cabine 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Felipe  Lima",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-07-28",
-      "dataInicial": "2026-08-25",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 672.0
-    },
-    {
       "osId": "10215",
       "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
       "equipe": "",
@@ -21852,6 +21852,25 @@
       "atrasada": false
     },
     {
+      "osId": "10239",
+      "ativo": "Cabine 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Felipe  Lima",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-08-28",
+      "dataCriacao": "2026-07-28",
+      "dataInicial": "2026-08-25",
+      "dataFinal": "2026-08-25",
+      "linkFracttal": "",
+      "horasAteAbrir": 672.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "10237",
       "ativo": "Transformador 1      { MRJ100-TRFR1 }",
       "equipe": "",
@@ -22785,44 +22804,6 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "11793",
-      "ativo": "Thopen - Itajá 1 e 2 - RN Fazenda Pricila Alves de Macedo, km 18 BR304, nº01, Zona Rural Itajá  Rio Grande do Norte Brasil { THOPEN-ITA100 }",
-      "equipe": "",
-      "responsavel": "Cleiton  Farias",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Cleiton  Farias",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Coleta e análise de dados de geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-24",
-      "dataCriacao": "2026-08-21",
-      "dataInicial": "2026-08-24",
-      "dataFinal": "2026-08-24",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "11757",
-      "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Coleta e análise de dados de geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-01",
-      "dataCriacao": "2026-08-21",
-      "dataInicial": "2026-08-24",
-      "dataFinal": "2026-08-24",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -24641,10 +24622,29 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
+    },
+    {
+      "osId": "10991",
+      "ativo": "SKID 1 Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100-SKID1 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Finalizados",
+      "tarefa": "[Skid 1] - Avaliação da temperatura no momento de pico da geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-11",
+      "dataCriacao": "2026-08-10",
+      "dataInicial": "2026-08-12",
+      "dataFinal": "2026-08-12",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
     }
   ],
-  "historicoTotal": 2512,
-  "totalGeral": 5434,
+  "historicoTotal": 2513,
+  "totalGeral": 5435,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
