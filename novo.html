@@ -178,12 +178,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .tl-h{font-family:monospace;font-size:10.5px;color:var(--ink3)}
 .tl-meta{font-size:10.5px;color:var(--ink3);margin-top:3px}
 .tl-nota{font-size:11px;color:var(--ink3);margin-top:8px;line-height:1.45}
-.turno{display:flex;align-items:center;gap:6px;margin:9px 2px 5px;
-  font-size:8.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--ink3)}
-.turno:first-child{margin-top:2px}
-.turno::after{content:"";flex:1;height:1px;background:var(--line)}
-.turno .tn{font-variant-numeric:tabular-nums;color:var(--ink2)}
+.osc-tur{font-size:7.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;
+  padding:1px 5px;border-radius:3px;white-space:nowrap;color:var(--ink);
+  display:inline-flex;align-items:center;gap:4px}
+.osc-tur i{width:5px;height:5px;border-radius:50%;flex:0 0 5px}
 .mais{text-align:center;font-size:10.5px;font-weight:700;color:var(--ink3);
   padding:7px 4px;margin-top:2px;border:1px dashed var(--line2);border-radius:7px}
 .lat-u{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--latx)}
@@ -478,11 +476,22 @@ function _etq(v){
   } catch(e){}
   return "";
 }
+/* Manha 07-12 | Tarde 12-17 | Noite 17-07. A noite atravessa a meia-noite,
+   entao e o complemento das outras duas, nao uma faixa com inicio e fim. */
+function _turno(h){
+  const v = _minutos(h);
+  if (v == null) return "Sem horário";
+  if (v >= 420 && v < 720)  return "Manhã";
+  if (v >= 720 && v < 1020) return "Tarde";
+  return "Noite";
+}
+const _minutos = s => { const m = String(s||"").match(/^(\d{1,2}):(\d{2})/);
+                        return m ? +m[1]*60 + +m[2] : null; };
 function _linha(r){
   return { os:String(r.os_id||""), ss:String(r.solic_orig||""),
     t:(r.tarefa||"").slice(0,62), u:r.usina||"", cli:r.cliente||"", cl:r.cluster||"",
     resp:r.responsavel||"", ros:r.resp_os||"", tp:r.tipo||"", etq:_etq(r.etiquetas),
-    st:_estado(r), d:(r.dia||"").slice(0,3), h:r.duracao||0,
+    st:_estado(r), tur:_turno(r.h_ini), d:(r.dia||"").slice(0,3), h:r.duracao||0,
     ini:r.h_ini||"", fim:r.h_fim||"",
     rol:r.vezes||0, rep:r.reprog === "Sim",
     cod:r.codigo||"", cri:String(r.criticidade||""),
@@ -640,7 +649,8 @@ function arrancar(){
   const CAMPOS = [["cli","Cliente","Todos"], ["u","Usina","Todas"],
                   ["cl","Equipe Cluster","Todas"], ["resp","Responsável O&M","Todos"],
                   ["ros","Responsável","Todos"], ["tp","Tipo","Todos"],
-                  ["etq","Etiqueta","Todas"], ["st","Estado","Todos"]];
+                  ["etq","Etiqueta","Todas"], ["st","Estado","Todos"],
+                  ["tur","Turno","Todos"]];
   const SEL = {}; CAMPOS.forEach(([k]) => SEL[k] = new Set());
   const FT = { os:"", ss:"" };
   let POP = null;    // qual lista esta aberta: {k, busca}
@@ -658,19 +668,12 @@ function arrancar(){
 
   /* ── semana ────────────────────────────────────────────────────────────── */
   const ORDEM_DIAS = ["Seg","Ter","Qua","Qui","Sex","Sáb","Dom"];
-  /* Turnos do dia. Quatro faixas, nao tres: ha 6 tarefas antes das 06h na
-     semana, e joga-las na "manha" seria mentir sobre quando acontecem. Cada
-     faixa so aparece se tiver conteudo. */
-  const TURNOS = [
-    { rot:"Madrugada", pega:v => v!=null && v < 360 },
-    { rot:"Manhã",    pega:v => v!=null && v >= 360 && v < 720 },
-    { rot:"Tarde",     pega:v => v!=null && v >= 720 && v < 1080 },
-    { rot:"Noite",     pega:v => v!=null && v >= 1080 },
-    { rot:"Sem horário", pega:v => v == null },
-  ];
+  const TETO_CARDS = 40;
   const _min = s => { const m = String(s||"").match(/^(\d{1,2}):(\d{2})/);
                       return m ? +m[1]*60 + +m[2] : null; };
-  const TETO_TURNO = 14;
+  /* Cor do turno no card. Manha 07-12 | Tarde 12-17 | Noite 17-07. */
+  const TUR_COR = { "Manhã":"#f59e0b", "Tarde":"#0ea5e9", "Noite":"#6366f1",
+                    "Sem horário":"#7a7890" };
   function vSemana(){
     const dados = filtrada();
     const porDia = {};
@@ -685,15 +688,11 @@ function arrancar(){
       + `<div class="cal-rolo"><div class="cal"
          style="grid-template-columns:repeat(${colunas.length},minmax(0,1fr));min-width:${colunas.length*172}px">` + colunas.map(dn => {
       const d = {n: dn};
-      const todos = porDia[dn]||[];
+      // ordem cronologica: a coluna de um calendario desce no relogio
+      const todos = (porDia[dn]||[])
+        .slice().sort((a,b) => (_min(a.ini) ?? 9e9) - (_min(b.ini) ?? 9e9));
       const h = Math.round(todos.reduce((a,t)=>a+(t.h||0),0)*10)/10;
-      // Teto POR TURNO, nao por coluna: com 40 no total, as 175 da manha na
-      // Segunda comiam a cota inteira e tarde/noite nunca apareciam.
-      const blocos = TURNOS.map(T => {
-        const ts = todos.filter(t => T.pega(_min(t.ini)))
-                        .sort((a,b) => (_min(a.ini) ?? 9e9) - (_min(b.ini) ?? 9e9));
-        return { T, ts, hh: Math.round(ts.reduce((a,t)=>a+(t.h||0),0)*10)/10 };
-      }).filter(b => b.ts.length);
+      const ts = todos.slice(0, TETO_CARDS);
       return `<div class="dcol">
         <div class="dhdr">
           <div class="dname">${esc(d.n)}</div>
@@ -701,13 +700,8 @@ function arrancar(){
           <div class="dmeta">${h}h programadas</div>
           <div class="dcarga"><i class="${todos.length===max?"pico":""}" style="width:${todos.length/max*100}%"></i></div>
         </div>
-        <div class="dtasks">${blocos.length ? blocos.map(b => {
-          const vis = b.ts.slice(0, TETO_TURNO);
-          return `<div class="turno">${b.T.rot}<span class="tn">${b.ts.length} · ${b.hh}h</span></div>`
-            + vis.map(cardHTML).join("")
-            + (b.ts.length > vis.length
-               ? `<div class="mais">+${b.ts.length - vis.length} não exibidas</div>` : "");
-        }).join("") : '<div class="vazio">—</div>'}</div>
+        <div class="dtasks">${ts.map(cardHTML).join("") || '<div class="vazio">—</div>'}
+          ${todos.length>ts.length?`<div class="mais">+${todos.length-ts.length} não exibidas</div>`:""}</div>
       </div>`;
     }).join("") + `</div></div>`;
   }
@@ -722,6 +716,8 @@ function arrancar(){
       <div class="osc-usina">${esc(usinaCurta(t.u))}</div>
       <div class="osc-tasks">${esc(t.t)}</div>
       <div class="osc-foot"><span class="osc-time">${esc(t.ini)}</span>
+        <span class="osc-tur" style="background:color-mix(in srgb,${TUR_COR[t.tur]||"#7a7890"} 17%,var(--surf))"
+          ><i style="background:${TUR_COR[t.tur]||"#7a7890"}"></i>${esc(t.tur)}</span>
         <span class="osc-dur">${t.h}h</span>
         ${t.rep?'<span class="osc-rep">↻ Reprog.</span>':""}
         <span class="osc-n">${t.rol}ª sem</span></div></div>`;
