@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T16:42:03Z",
+  "geradoEm": "2026-08-25T17:02:26Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 21,
       "atrasadas": 12,
       "porStatus": {
-        "naoIniciada": 15,
-        "emProgresso": 3,
+        "naoIniciada": 14,
+        "emProgresso": 4,
         "pausada": 3,
         "verificacao": 0
       },
@@ -318,14 +318,15 @@
           "responsavel": "Henri Almeida ",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Henri Almeida ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-25",
           "dataCriacao": "2026-08-25",
-          "dataInicial": "",
+          "dataInicial": "2026-08-25",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -9821,12 +9822,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 615,
-        "emAberto": 123,
+        "total": 616,
+        "emAberto": 124,
         "atrasadas": 75,
         "concluidas30d": 268,
         "concluidas7d": 64,
-        "naSemanaCorrente": 56
+        "naSemanaCorrente": 57
       },
       "mttr": {
         "horas": 165.58,
@@ -9851,7 +9852,7 @@
         },
         {
           "semana": "W35",
-          "criadas": 22,
+          "criadas": 23,
           "finalizadas": 17
         }
       ],
@@ -9859,8 +9860,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 615,
-            "emAberto": 123
+            "total": 616,
+            "emAberto": 124
           }
         ],
         "responsaveis": [
@@ -9891,16 +9892,16 @@
           }
         ]
       },
-      "total": 123,
+      "total": 124,
       "atrasadas": 75,
       "porStatus": {
-        "naoIniciada": 111,
+        "naoIniciada": 112,
         "emProgresso": 0,
         "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 123
+        "(sem equipe)": 124
       },
       "oss": [
         {
@@ -11661,6 +11662,23 @@
           "criticidade": "",
           "dataProgramada": "2026-08-25",
           "dataCriacao": "2026-08-21",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "12178",
+          "ativo": "Inversor 1.2 Huawei     { TESTE100-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Levi Maia ",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Levi Maia ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.2] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-08-26",
+          "dataCriacao": "2026-08-25",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -16979,20 +16997,37 @@
   },
   "ossPublicas": [
     {
+      "osId": "12178",
+      "ativo": "Inversor 1.2 Huawei     { TESTE100-INVR1.2 }",
+      "equipe": "",
+      "responsavel": "Levi Maia ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Levi Maia ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.2] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-08-26",
+      "dataCriacao": "2026-08-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "12177",
       "ativo": "Thopen - Aparecida 3 - SP  Aparecida  São Paulo Brasil { THPN-APR300 }",
       "equipe": "",
       "responsavel": "Henri Almeida ",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Henri Almeida ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-08-25",
       "dataCriacao": "2026-08-25",
-      "dataInicial": "",
+      "dataInicial": "2026-08-25",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -24484,7 +24519,7 @@
     }
   ],
   "historicoTotal": 2529,
-  "totalGeral": 5447,
+  "totalGeral": 5448,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
