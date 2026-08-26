@@ -32,16 +32,7 @@ const LS  = { P:'gc_p', A:'gc_a', V:'gc_view' };
 const lsG = (k,fb) => { try { const v=localStorage.getItem(k); return v?JSON.parse(v):fb; } catch { return fb; } };
 const lsS = (k,v)  => { try { localStorage.setItem(k,JSON.stringify(v)); } catch {} };
 
-// O bloco `gc-pwds` saiu do index.html em 24/08/2026: ele publicava os hashes
-// SHA-256 das senhas do admin e dos 12 clientes num repositório PÚBLICO.
-// Esta leitura tolerante não é zelo: a linha original era um `JSON.parse` de
-// topo, e com o elemento ausente ela lança — derrubando o app.js INTEIRO e o
-// painel junto. Devolvendo {}, o resto do arquivo segue carregando normal.
-const DEF_PWDS = (() => {
-  const el = document.getElementById('gc-pwds');
-  if (!el) return {};
-  try { return JSON.parse(el.textContent) || {}; } catch (e) { return {}; }
-})();
+const DEF_PWDS = JSON.parse(document.getElementById('gc-pwds').textContent);
 // Mapa login → nome real do cliente no banco (para logins sem espaço como "gdenergy" → "GD Energy")
 const LOGIN_ALIASES = JSON.parse(document.getElementById('gc-aliases')?.textContent || '{}');
 
@@ -62,12 +53,6 @@ function esc(s){
 }
 
 let DB=null, timer=null;
-// O pulso do robô (_robo_pulso.json, ~110 bytes) responde "quando o robô
-// CHECOU"; o geradoEm do banco_dados responde "quando o dado MUDOU". Antes o
-// geradoEm respondia as duas, e só funcionava porque o robô reescrevia 4,79 MB
-// a cada rodada mesmo sem mudança — o churn que o Patch B elimina. Sem esta
-// separação, toda madrugada tranquila acenderia "robô parado".
-let PULSO=null;
 let S = {
   pwds:    DEF_PWDS,
   active:  lsG(LS.A, ''),
@@ -93,16 +78,6 @@ const MESES = ['Janeiro','Fevereiro','Mar\u00e7o','Abril','Maio','Junho','Julho'
 const MESES_S = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
 
 // ── LOAD DB ──────────────────────────────────────────────────────────────────
-async function loadPulso() {
-  try {
-    const r = await fetch('_robo_pulso.json?t=' + Date.now(),
-                          { cache: 'no-store', signal: AbortSignal.timeout(8000) });
-    PULSO = r.ok ? await r.json() : null;
-  } catch (e) {
-    PULSO = null;      // ausente, 403 (cliente) ou rede ruim: cai no modo antigo
-  }
-}
-
 async function loadDB(silent=false) {
   if (!silent) setStatus('Buscando dados...','loading');
   try {
@@ -162,42 +137,13 @@ function statusHeartbeat(){
   const min=Math.max(0,Math.round((Date.now()-g.getTime())/60000));
   const idade=min<60?min+' min':Math.floor(min/60)+'h'+String(min%60).padStart(2,'0');
   const hora=g.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
-  // O ALARME mede o PULSO, não a idade do dado. Dado velho porque nada mudou
-  // é normal; robô calado não é — e antes as duas situações eram
-  // indistinguíveis. Limiares mantidos em 120/240 min: o cron entrega uma
-  // rodada a cada ~38 min (28 a 57 medidos), ou seja ~2 e ~4 ciclos perdidos.
-  const v=PULSO&&PULSO.verificadoEm?new Date(PULSO.verificadoEm):null;
-  if(v&&!isNaN(v)){
-    const mp=Math.max(0,Math.round((Date.now()-v.getTime())/60000));
-    const ip=mp<60?mp+' min':Math.floor(mp/60)+'h'+String(mp%60).padStart(2,'0');
-    if(mp>240) setStatus('⚠ Robô sem dar sinal há '+ip+' — verifique o Actions','err');
-    else if(mp>120) setStatus('⚠ Robô lento: último sinal há '+ip,'warn');
-    else setStatus('✓ Dados de '+hora+' · há '+idade+' · robô ok','ok');
-    return;
-  }
-  // Sem pulso (deploy antigo, ou 403 para cliente): idêntico ao de antes,
-  // para o painel nunca ficar pior do que estava.
   if(min>240)setStatus('⚠ Dados de '+hora+' · há '+idade+' — robô parado? Verifique o Actions','err');
   else if(min>120)setStatus('⚠ Dados de '+hora+' · há '+idade+' — acima do normal (~1h)','warn');
   else setStatus('✓ Dados de '+hora+' · há '+idade,'ok');
 }
-// As etiquetas alimentam os contadores das 9 abas do topo E o conteúdo das
-// telas de tipologia. Até 24/08/2026 o loadEtiquetas() era chamado de UM lugar
-// só: o botão "Atualizar agora". Quem abria o painel via "Religamentos 0 /
-// Sem dados / Aguardando JSON" quando havia 17 — e Performance 0 com 115.
-// Contador errado é pior que contador ausente: o primeiro é lido como fato.
-// Por isso a carga entra aqui, que é por onde os dois caminhos de login passam.
-async function _carregarEtiquetas(){
-  if(typeof loadEtiquetas!=='function') return;
-  await loadEtiquetas();
-  if(typeof atualizarContadoresTopNav==='function') atualizarContadoresTopNav();
-  if(typeof renderTipologiaAtual==='function' && S.topView && S.topView!=='semana') renderTipologiaAtual();
-}
-
 function startTimer() {
   if(timer) clearInterval(timer);
-  _carregarEtiquetas();                    // agora, não só no próximo ciclo
-  timer=setInterval(async()=>{ const ok=await loadDB(true); await loadPulso(); await loadSugestoes(); await loadSupervisores(); await _carregarEtiquetas(); if(S.topView==='gestaoPcm'){await loadGestao();await loadConfiab();} if(ok&&S.user){buildWeekChips();render();renderSugestoes();if(S.topView==='gestaoPcm')renderGestao();} },CONFIG.REFRESH_MS);
+  timer=setInterval(async()=>{ const ok=await loadDB(true); await loadSugestoes(); await loadSupervisores(); if(S.topView==='gestaoPcm'){await loadGestao();await loadConfiab();} if(ok&&S.user){buildWeekChips();render();renderSugestoes();if(S.topView==='gestaoPcm')renderGestao();} },CONFIG.REFRESH_MS);
   const el=document.getElementById('refresh-badge'); if(el) el.textContent='Auto-refresh '+Math.round(CONFIG.REFRESH_MS/60000)+'min';
 }
 
@@ -205,7 +151,6 @@ function startTimer() {
 async function manualRefresh(){
   setStatus('Atualizando...','loading');
   const ok = await loadDB();
-  await loadPulso();
   await loadSugestoes();
   await loadSupervisores();
   if(typeof loadEtiquetas==='function') await loadEtiquetas();
@@ -247,12 +192,9 @@ function buildAdmin() {
   const aw=AW();
   const clientes=aw?[...new Set(aw.rows.map(r=>r.cliente))].filter(Boolean).sort():[];
   document.getElementById('cli-list').innerHTML=clientes.map(c=>{
-    // O selo de senha saiu junto com a tela de senha. Sem o gc-pwds ele diria
-    // "Sem senha" para TODOS os clientes — informação falsa. Quem confere o
-    // acesso de cliente agora é a tela /acessos.html.
-    const n=aw?.rows.filter(r=>r.cliente===c).length||0;
+    const hasPwd=!!S.pwds[c.toLowerCase()],n=aw?.rows.filter(r=>r.cliente===c).length||0;
     return '<div class="cli-row"><div><div class="cli-name">'+c+'</div><div class="cli-meta">'+n+' tarefas</div></div>'
-      +'<div class="cli-ok">\u2713 ativo na semana</div></div>';
+      +'<div class="'+(hasPwd?'cli-ok':'cli-warn')+'">'+(hasPwd?'\u2713 Senha ativa':'\u26a0 Sem senha')+'</div></div>';
   }).join('');
 }
 function setAW(wk){S.active=wk;lsS(LS.A,wk);buildAdmin();toast('Semana ativa: '+wk);}
@@ -394,16 +336,7 @@ function taxaFinalizacaoPreventiva(rows, cat){
 }
 
 // ── LOGIN ─────────────────────────────────────────────────────────────────────
-// A tela de senha saiu do ar (decisão 28, último passo). A função sobrevive
-// porque ainda é referenciada, mas leva ao único caminho que restou. O corpo
-// antigo — sha256(senha) contra o hash publicado — ficou abaixo, inerte, e
-// pode ser apagado quando ninguém mais tiver dúvida sobre o que ele fazia.
 async function doLogin() {
-  if (typeof authIrParaLogin === 'function') return authIrParaLogin();
-  location.replace('/.auth/login/aad');
-}
-
-async function doLoginAntigo_INERTE() {
   const c=document.getElementById('inp-c').value.trim();
   const s=document.getElementById('inp-s').value;
   const err=document.getElementById('l-err');
@@ -459,34 +392,9 @@ function launch(label,isAdmin) {
     const btn = document.querySelector('.tip-tab[data-topv="'+slug+'"]');
     if(btn) btn.style.display = isAdmin ? '' : 'none';
   });
-  // Abas internas: somem para o CLIENTE, continuam para admin e equipe.
-  // Motivo concreto: as telas delas vivem de etiquetas.json, gestao_pcm.json,
-  // confiabilidade.json e supervisores.json, que são estáticos e caem em
-  // /*.json -> ["admin","equipe"]. No papel cli-* dão 403, e o cliente via
-  // "Garantia 0 / Performance 0 / Engenharia 0" — contador errado é pior que
-  // contador ausente: o primeiro é lido como fato. (25/08/2026)
-  const ehCliente = !isAdmin && !S.equipe;
-  const soInterno = ['gestaoPcm','chamadosGarantia','performance','engenharia'];
-  soInterno.forEach(slug=>{
-    const btn = document.querySelector('.tip-tab[data-topv="'+slug+'"]');
-    if(btn) btn.style.display = ehCliente ? 'none' : '';
-  });
-  // O filtro Cliente não serve a quem só tem um: /api/dados já devolve apenas
-  // as linhas dele. Para `equipe`, que lê todos, o filtro continua.
-  const _fgCli = document.getElementById('sm-ms-cliente');
-  const _grpCli = _fgCli && _fgCli.closest('.filter-group');
-  if(_grpCli) _grpCli.style.display = ehCliente ? 'none' : '';
-  if(ehCliente && typeof SEM_SEL!=='undefined' && SEM_SEL.cliente) SEM_SEL.cliente.clear();
-  // O botão Acessos leva para uma PÁGINA separada (acessos.html), não é uma
-  // aba do painel — por isso fica fora da lista acima, que só mexe em
-  // .tip-tab. A rota já exige o papel admin no servidor (staticwebapp.config
-  // .json); esconder aqui é para não oferecer o que a pessoa não pode abrir.
-  const _btnAc = document.getElementById('btn-acessos');
-  if(_btnAc) _btnAc.style.display = isAdmin ? '' : 'none';
   // Se user não-admin estava em aba restrita, volta pra Programação Semanal
   let _voltouAba=false;
-  const restritas = adminOnly.concat(ehCliente ? soInterno : []);
-  if(!isAdmin && restritas.indexOf(S.topView)>=0){
+  if(!isAdmin && adminOnly.indexOf(S.topView)>=0){
     S.topView = 'semana';
     try{localStorage.setItem('gc_topv','semana');}catch(e){}
     _voltouAba=true;   // só trocar a variável não esconde a tela restrita

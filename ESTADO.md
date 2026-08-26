@@ -395,8 +395,24 @@ Com o login Microsoft, ninguém digita senha → `gc_mp_k` nunca é preenchido �
 `js/app.js:1174` não acha a chave → mostra o cadeado e "conteúdo protegido".
 **Sem erro. Para todo mundo.**
 
-**Resolver o caminho da senha sob o login Microsoft antes de cifrar** — o cadeado
-precisa pedir a senha na hora, em vez de depender de uma tela que não existe mais.
+**Resolvido em 24–25/08:** o cadeado agora pede a senha na própria aba, uma vez
+por sessão. Mas a resolução expôs a armadilha seguinte:
+
+### `setx` não muda programa aberto — e a cifra herda a senha errada
+
+Em 24/08 o `mpas.json` foi publicado cifrado com uma senha que **não decifrava
+mais**: `InvalidTag` até para a `PCM_MPAS_SENHA` correta do registro. Causa:
+`setx` grava no registro, mas **processos já abertos continuam com o ambiente
+antigo** — o PCM_Painel aberto desde antes da troca cifrou com o valor velho, e
+nada falhou, porque para o gerador a senha presente é a senha certa.
+
+Sintoma: a aba recusa a senha "certa" e todo mundo desconfia de quem digita.
+Diagnóstico que funciona: **testar a decifra localmente** contra o pacote
+publicado (PBKDF2 + AES-GCM com salt/iter do próprio pacote) usando a senha lida
+do registro — se falhar ali, o problema é o pacote, não o dedo. Correção: fechar
+e reabrir o programa (ou injetar a senha do registro no ambiente do subprocesso)
+e republicar. Feito em 25/08; decifra conferida contra o `origin/main` antes de
+avisar que estava no ar.
 
 ### O GitHub Pages produz falso positivo em teste de acesso
 
