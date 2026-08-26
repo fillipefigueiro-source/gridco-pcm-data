@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-26T20:42:51Z",
+  "geradoEm": "2026-08-26T20:49:27Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -82,8 +82,8 @@
       "atrasadas": 8,
       "porStatus": {
         "naoIniciada": 7,
-        "emProgresso": 1,
-        "pausada": 4,
+        "emProgresso": 0,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
@@ -133,7 +133,7 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Felipe Silva",
           "supervisor": "Rodrigo  Silva",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
@@ -8533,12 +8533,12 @@
       "icone": "ti-shield-check",
       "cor": "#ef4444",
       "kpis": {
-        "total": 142,
-        "emAberto": 4,
+        "total": 143,
+        "emAberto": 5,
         "atrasadas": 1,
         "concluidas30d": 8,
         "concluidas7d": 0,
-        "naSemanaCorrente": 3
+        "naSemanaCorrente": 4
       },
       "mttr": {
         "horas": 174.0,
@@ -8563,7 +8563,7 @@
         },
         {
           "semana": "W35",
-          "criadas": 3,
+          "criadas": 4,
           "finalizadas": 0
         }
       ],
@@ -8571,8 +8571,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 142,
-            "emAberto": 4
+            "total": 143,
+            "emAberto": 5
           }
         ],
         "responsaveis": [
@@ -8603,16 +8603,16 @@
           }
         ]
       },
-      "total": 4,
+      "total": 5,
       "atrasadas": 1,
       "porStatus": {
-        "naoIniciada": 2,
+        "naoIniciada": 3,
         "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 4
+        "(sem equipe)": 5
       },
       "oss": [
         {
@@ -8683,6 +8683,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12296",
+          "ativo": "NCU 1      { TPP100-NCU1 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Carlos  Godoi",
+          "status": "Não Iniciada",
+          "tarefa": "Abertura de Chamado para Garantia [validação em campo da NCU1]",
+          "criticidade": "",
+          "dataProgramada": "2026-08-27",
+          "dataCriacao": "2026-08-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
           "atrasada": false
         }
       ],
@@ -16611,6 +16628,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "12296",
+      "ativo": "NCU 1      { TPP100-NCU1 }",
+      "equipe": "",
+      "responsavel": "Carlos  Godoi",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Carlos  Godoi",
+      "status": "Não Iniciada",
+      "tarefa": "Abertura de Chamado para Garantia [validação em campo da NCU1]",
+      "criticidade": "",
+      "dataProgramada": "2026-08-27",
+      "dataCriacao": "2026-08-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "12285",
       "ativo": "Tracker 7.100 STI H250    { GY-CDP100-ETKR7.100 }",
       "equipe": "",
@@ -19419,7 +19452,7 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Felipe Silva",
       "supervisor": "Rodrigo  Silva",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
@@ -23752,7 +23785,7 @@
     }
   ],
   "historicoTotal": 2579,
-  "totalGeral": 5493,
+  "totalGeral": 5494,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
