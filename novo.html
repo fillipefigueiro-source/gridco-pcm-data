@@ -134,6 +134,76 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .det-rel{font-size:12px;line-height:1.5;color:var(--ink2);background:var(--surf2);
   border-radius:8px;padding:10px 11px;white-space:pre-wrap;overflow-wrap:anywhere}
 .det-vazio{font-size:12px;color:var(--ink3);font-style:italic}
+/* ── reprogramação, pendentes e motivos ── */
+.pend{margin-top:14px;background:var(--surf);border:1px solid var(--line);
+  border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.pend-h{display:flex;align-items:center;gap:9px;width:100%;padding:12px 16px;
+  font-size:13px;font-weight:800;letter-spacing:-.01em}
+.pend-h .seta{color:var(--ink3);transition:transform .12s;display:inline-block}
+.pend:not(.aberto) .pend-h .seta{transform:rotate(-90deg)}
+.pend-n{font-size:11px;font-weight:800;padding:1px 8px;border-radius:20px;
+  background:color-mix(in srgb,var(--warn) 20%,var(--surf));color:var(--aviso)}
+.pend-obs{margin-left:auto;font-size:10.5px;font-weight:600;color:var(--ink3)}
+.pend-corpo{display:none;border-top:1px solid var(--line);max-height:460px;overflow-y:auto}
+.pend.aberto .pend-corpo{display:block}
+.pend-u-h{display:flex;align-items:center;gap:8px;padding:8px 16px;background:var(--surf2);
+  font-size:11.5px;font-weight:800;position:sticky;top:0;z-index:1}
+.pend-cnt{font-size:10px;font-weight:700;color:var(--ink3)}
+.pend-l{display:flex;align-items:center;gap:11px;padding:8px 16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line)}
+.pend-l.na-fila{background:color-mix(in srgb,var(--vivo,#A9DB21) 9%,var(--surf))}
+.pend-t{flex:1;min-width:210px;font-size:12px;line-height:1.4}
+.pend-t small{display:block;color:var(--ink3);font-size:10.5px;margin-top:2px}
+.pend-t i{color:var(--aviso);font-style:normal}
+.pend-ctr{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.rp-sel{padding:4px 7px;border:1px solid var(--line2);border-radius:6px;font-size:11.5px;
+  font-family:inherit;background:var(--surf);color:var(--ink);max-width:210px}
+.rp-add{padding:4px 11px;border-radius:6px;font-size:11.5px;font-weight:700;
+  background:var(--navy);color:#fff}
+.rp-add.on{background:var(--gd)}
+.rp-tirar{padding:4px 11px;border-radius:6px;font-size:11.5px;font-weight:700;
+  color:var(--mal);border:1px solid color-mix(in srgb,var(--danger) 40%,var(--surf))}
+.rp-tirar:hover{background:color-mix(in srgb,var(--danger) 10%,var(--surf))}
+.rpm{padding:2px 0 4px}
+.rpm-l{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.rp-alvo-1{font-size:11.5px;color:var(--ink2)}
+.rpm-st{margin-top:9px;font-size:11.5px;color:var(--ink3)}
+.rpm-st code{font-family:ui-monospace,monospace;font-size:11px;color:var(--ink);
+  background:var(--surf2);padding:1px 5px;border-radius:4px}
+/* a fila fica fixa no rodape: some quando vazia ou fora da Semana */
+.rp-dock{position:fixed;left:50%;transform:translateX(-50%);bottom:14px;z-index:55;
+  width:min(680px,calc(100% - 24px));background:var(--navy);color:#fff;
+  border-radius:11px;box-shadow:0 12px 34px rgba(10,8,20,.34);overflow:hidden}
+.rp-h{display:flex;align-items:center;gap:9px;padding:9px 14px;flex-wrap:wrap}
+.rp-t{font-size:12.5px;font-weight:700;flex:1;min-width:150px}
+.rp-bt{padding:4px 11px;border-radius:6px;font-size:11.5px;font-weight:700;
+  background:var(--vivo,#A9DB21);color:#141207}
+.rp-bt.sec{background:rgba(255,255,255,.14);color:#fff}
+.rp-prev{display:none;margin:0;padding:10px 14px;border-top:1px solid rgba(255,255,255,.14);
+  font-family:ui-monospace,monospace;font-size:11.5px;line-height:1.6;
+  max-height:190px;overflow:auto;white-space:pre-wrap;color:#e9e7f5}
+.rp-dock.aberta .rp-prev{display:block}
+.mv{margin-bottom:14px;border-radius:var(--r);border:1px solid;overflow:hidden;
+  box-shadow:var(--sh)}
+.mv.avi{background:color-mix(in srgb,var(--warn) 9%,var(--surf));
+  border-color:color-mix(in srgb,var(--warn) 34%,var(--surf))}
+.mv.reg{background:color-mix(in srgb,var(--danger) 8%,var(--surf));
+  border-color:color-mix(in srgb,var(--danger) 32%,var(--surf))}
+.mv-h{display:flex;align-items:center;gap:11px;padding:11px 16px;flex-wrap:wrap;
+  font-size:13px}
+.mv.avi .mv-h b{color:var(--aviso)} .mv.reg .mv-h b{color:var(--mal)}
+.mv-h span{font-size:11px;color:var(--ink2)}
+.mv-h .rp-bt{margin-left:auto;background:var(--navy);color:#fff}
+.mv-l{max-height:340px;overflow-y:auto;border-top:1px solid var(--line)}
+.mv-i{display:flex;align-items:center;gap:10px;padding:7px 16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);font-size:12px}
+.mv-os{font-family:ui-monospace,monospace;font-size:11px;color:var(--ink3);flex:0 0 58px}
+.mv-t{flex:1;min-width:200px;line-height:1.35}
+.mv-t small{display:block;color:var(--ink3);font-size:10.5px;margin-top:2px}
+.mv-sel{padding:4px 7px;border:1px solid var(--line2);border-radius:6px;font-size:11.5px;
+  font-family:inherit;background:var(--surf);color:var(--ink)}
+.mv-st{font-size:10.5px;font-weight:700;color:var(--ink3);min-width:74px}
+.mv-st.ok{color:var(--ok)} .mv-st.loc{color:var(--aviso)} .mv-st.err{color:var(--mal)}
 /* ── Gestão PCM ── */
 .gp-carga{margin:34px auto;max-width:420px;padding:22px 24px;text-align:center;
   background:var(--surf);border:1px solid var(--line2);border-radius:var(--r);
@@ -546,8 +616,10 @@ function _turno(h){
 const _minutos = s => { const m = String(s||"").match(/^(\d{1,2}):(\d{2})/);
                         return m ? +m[1]*60 + +m[2] : null; };
 function _linha(r){
+  // `t` vai INTEIRO: a linha de reprogramacao leva o nome da tarefa ao motor,
+  // e um nome cortado nao casa. O corte fica no CSS, na exibicao.
   return { os:String(r.os_id||""), ss:String(r.solic_orig||""),
-    t:(r.tarefa||"").slice(0,62), u:r.usina||"", cli:r.cliente||"", cl:r.cluster||"",
+    t:r.tarefa||"", u:r.usina||"", cli:r.cliente||"", cl:r.cluster||"",
     resp:r.responsavel||"", ros:r.resp_os||"", tp:r.tipo||"", etq:_etq(r.etiquetas),
     st:_estado(r), tur:_turno(r.h_ini), d:(r.dia||"").slice(0,3), h:r.duracao||0,
     ini:r.h_ini||"", fim:r.h_fim||"",
@@ -616,8 +688,19 @@ function montarD(bd, et){
   rows.forEach(r => { const k=Math.min(r.vezes||1,6); rolagem[k]=(rolagem[k]||0)+1; });
 
   const feitas = rows.filter(r=>r.status==="Finalizados").length;
+  // `pendentes` vive DENTRO da semana; `alertas` no TOPO do banco.
+  const pendentes = (w.pendentes || []).map(x => ({
+    os:String(x.os_id||""), u:x.usina||"", cli:x.cliente||"", cl:x.cluster||"",
+    t:x.tarefa||"", tp:x.tipo||"", h:x.duracao||0, mot:x.motivo||"" }));
+  const _a = bd.alertas || {};
+  const alertas = { data:_a.data||"", geradoAs:_a.geradoAs||"", janela:_a.janela||"",
+    doDia:_a.doDia||0, fechadas:_a.fechadas||0,
+    itens:(_a.itens||[]).map(i => ({ os:String(i.os||""), u:i.usina||"", t:i.tarefa||"",
+      eq:i.equipe||"", ini:i.h_ini||"", fim:i.h_fim||"", st:i.estado||"" })) };
+
   return {
     semana: w.label, semanas_guardadas: bd.semanas.length,
+    pendentes, alertas,
     insights: {
       total:n, horas:soma(r=>r.duracao),
       usinas:new Set(rows.map(r=>r.usina).filter(Boolean)).size,
@@ -813,7 +896,7 @@ function arrancar(){
     // contagem e carga saem do conjunto FILTRADO: senao o cabecalho continuaria
     // dizendo 289 enquanto a coluna mostra 4 cards.
     const max = Math.max(1, ...colunas.map(d => (porDia[d]||[]).length));
-    return barraFiltros(dados.length)
+    return vMotivos() + barraFiltros(dados.length)
       + `<div class="cal-rolo"><div class="cal"
          style="grid-template-columns:repeat(${colunas.length},minmax(0,1fr));min-width:${colunas.length*172}px">` + colunas.map(dn => {
       const d = {n: dn};
@@ -832,7 +915,7 @@ function arrancar(){
         <div class="dtasks">${ts.map(cardHTML).join("") || '<div class="vazio">—</div>'}
           ${todos.length>ts.length?`<div class="mais">+${todos.length-ts.length} não exibidas</div>`:""}</div>
       </div>`;
-    }).join("") + `</div></div>`;
+    }).join("") + `</div></div>` + vPendentes() + rpBarra();
   }
   function cardHTML(t){
     const cor = TC[t.tp]||"#7a7890";
@@ -1087,6 +1170,256 @@ function arrancar(){
           <td class="pv-pend ${g.n-g.f?"mal":""}">${g.n-g.f}</td></tr>`).join("")}
       `).join("")}</tbody></table></div>`;
   }
+  /* ── Fila de reprogramação ───────────────────────────────────────────
+     O painel NÃO altera a programação: monta um texto que se cola no
+     PCM_Painel, e o motor programacao_v7.py reprograma a partir dali.
+     A GRAMÁTICA das linhas é contrato com o motor — copiada do js/app.js
+     sem alterar nada. */
+  const RP_KEY = "gc_reprog_v1";
+  let RP = [];
+  try { RP = JSON.parse(localStorage.getItem(RP_KEY) || "[]"); } catch(e) { RP = []; }
+  /* Reprogramar é ação de PCM. O Cliente vê a lista de pendentes (só das
+     usinas dele), mas não vê os controles nem a fila. */
+  const rpOk = () => PAPEL_REAL ? PAPEL_REAL.tipo === "admin" : PAPEL === "admin";
+  const RP_SIGLAS = ["MPA","MPS","MPT","MPM","MPQ","HANDOVER"];
+  function rpSave(){ try { localStorage.setItem(RP_KEY, JSON.stringify(RP)); } catch(e){} }
+  const rpKey = (os, tar) => String(os) + "||" + String(tar || "");
+  const rpIdx = (os, tar) => RP.findIndex(r => rpKey(r.os, r.tarefa) === rpKey(os, tar));
+
+  // Modo A (bloco por sigla) precisa de "só:" p/ isolar a tarefa; Modo B usa o nome.
+  function rpSigla(tipo){
+    const t = String(tipo||"").toUpperCase().replace(/-.*$/, "").trim();
+    return RP_SIGLAS.indexOf(t) >= 0 ? (t === "HANDOVER" ? "Handover" : t) : null;
+  }
+  // "[Grid Co.] - MPA - Caixa d'água" -> "Caixa d'água"
+  function rpChave(tarefa){
+    let s = String(tarefa||"").split(/\s[-\u2013]\s/).pop().trim();
+    s = s.split(",")[0].split(";")[0].trim();   // vírgula/; quebrariam o parser
+    return s;
+  }
+  function rpLinha(r){
+    const tur = r.turno || "";
+    if (r.dia === "não") return r.os + "; não";          // tira a OS da semana
+    if (!r.tarefa) return tur ? (r.os+"; "+r.dia+"; ; "+tur) : (r.os+"; "+r.dia);
+    const sig = rpSigla(r.tipo);
+    if (sig) {
+      const ch = rpChave(r.tarefa);
+      return [r.os, r.dia, sig, tur, ch ? ("só: "+ch) : ""].filter((v,i) => i<3 || v).join("; ");
+    }
+    const nome = String(r.tarefa||"").split(",")[0].split(";")[0].trim();
+    return [r.os, r.dia, nome, tur].filter((v,i) => i<3 || v).join("; ");
+  }
+  const rpTexto = () => RP.map(rpLinha).join("\n");
+
+  function rpAdd(os, tarefa, tipo, dia, turno){
+    if (!rpOk()) return null;
+    if (!dia) { toast("Escolha o dia primeiro"); return null; }
+    const i = rpIdx(os, tarefa);
+    if (i >= 0) RP.splice(i, 1);
+    RP.push({ os:String(os), tarefa:tarefa||"", tipo:tipo||"", dia, turno:turno||"" });
+    rpSave();
+    return RP[RP.length-1];
+  }
+  /* "OS; não" é SEMPRE a OS inteira: a gramática do "não" não aceita
+     filtro por tarefa (para tirar só uma parte usa-se "sem:"). */
+  function rpTirar(os, nTarefas){
+    if (!rpOk()) return;
+    const n = nTarefas || 1;
+    if (!confirm("Tirar a OS #" + os + " da programação desta semana?"
+        + (n>1 ? ("\n\nIsso remove as " + n + " tarefas dela.") : ""))) return;
+    const i = rpIdx(os, "");
+    if (i >= 0) RP.splice(i, 1);
+    RP.push({ os:String(os), tarefa:"", tipo:"", dia:"não", turno:"" });
+    rpSave();
+    toast("✕ OS #" + os + " será tirada da semana · " + RP.length + " na fila");
+    fecharDet(true); pintar();
+  }
+  function rpCopiar(){
+    if (!rpOk()) return;
+    const txt = rpTexto();
+    if (!txt) { toast("Nenhuma reprogramação na fila"); return; }
+    const pronto = () => toast("✓ " + RP.length + " linha(s) copiada(s) — cole no PCM_Painel");
+    // reserva: o painel abre em máquinas de campo sem clipboard API
+    const reserva = () => {
+      const ta = document.createElement("textarea");
+      ta.value = txt; ta.style.cssText = "position:fixed;opacity:0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); toast("✓ Copiado"); }
+      catch(e) { toast("Selecione e copie o texto da fila"); }
+      document.body.removeChild(ta);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText)
+      navigator.clipboard.writeText(txt).then(pronto).catch(reserva);
+    else reserva();
+  }
+  function rpLimpar(){
+    if (!rpOk() || !RP.length) return;
+    if (!confirm("Limpar as " + RP.length + " reprogramações da fila?")) return;
+    RP = []; rpSave(); pintar();
+  }
+  /* ── Bloco 3: motivos do fim do dia ────────────────────────────────────────
+     A cor NÃO compara a hora literal de propósito: a janela da tarde já
+     mudou uma vez (16:45 -> 16:00) e o painel ficou para trás em 4 lugares.
+     Regra: qualquer janela que não seja a das 13:30 é a de registro (vermelha). */
+  const MOTIVOS_FIXOS = ["Emergencial furou a fila","Aguarda peça/material",
+    "Chuva/clima","Acesso à usina negado","Equipe incompleta",
+    "Serviço maior que o estimado","Deslocamento","Outro"];
+  /* A chave é OS+TAREFA, nunca só a OS: a mesma OS aparece várias vezes com
+     tarefas diferentes, e com a chave só na OS escolher numa linha marcava
+     todas as outras. */
+  let MV = {}, MV_ST = {};
+  const mvChave = i => String(i.os) + "|" + String(i.t || "");
+  const mvPode = () => PAPEL_REAL ? (PAPEL_REAL.tipo === "admin" || PAPEL_REAL.tipo === "equipe")
+                                  : PAPEL === "admin";
+  const mvHoje = () => {
+    const d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0")
+         + "-" + String(d.getDate()).padStart(2,"0");
+  };
+  function mvSelo(k){
+    const e = MV_ST[k] || "";
+    if (e === "enviando") return '<span class="mv-st">enviando…</span>';
+    if (e === "ok")       return '<span class="mv-st ok">✓ no Fracttal</span>';
+    if (e === "local")    return '<span class="mv-st loc">só no painel</span>';
+    if (e.indexOf("erro:") === 0)
+      return `<span class="mv-st err">✗ ${esc(e.slice(5))}</span>`;
+    return '<span class="mv-st"></span>';
+  }
+  function mvPintar(k){
+    const el = document.querySelector(`[data-mvk="${CSS.escape(k)}"] .mv-st`);
+    if (el) { const d = document.createElement("div"); d.innerHTML = mvSelo(k);
+              el.replaceWith(d.firstChild); }
+  }
+  /* Manda para /api/motivos, que grava na Observação da OS no Fracttal.
+     404 ou resposta não-JSON = "sem API" (ambiente local) -> modo local, sem alarde. */
+  async function mvEnviar(it, motivo){
+    const k = mvChave(it);
+    MV_ST[k] = "enviando"; mvPintar(k);
+    try {
+      const r = await fetch("/api/motivos", { method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({ os: it.os, tarefa: it.t, motivo }) });
+      if (r.status === 404) { MV_ST[k] = "local"; mvPintar(k); return; }
+      const ct = r.headers.get("content-type") || "";
+      if (ct.indexOf("json") < 0) { MV_ST[k] = "local"; mvPintar(k); return; }
+      const j = await r.json();
+      const item = (j && j.itens && j.itens[0]) || {};
+      MV_ST[k] = item.ok ? "ok" : ("erro:" + (item.detalhe || j.erro || ("HTTP " + r.status)));
+    } catch(e) { MV_ST[k] = "erro:" + ((e && e.message) || "falha de rede"); }
+    mvPintar(k);
+  }
+  function mvCopiar(){
+    const A = D.alertas || {};
+    const ls = Object.keys(MV).map(k => {
+      const it = (A.itens || []).find(i => mvChave(i) === k);
+      return "# motivo OS " + k.split("|")[0] + (it ? " (" + it.eq + ")" : "") + ": " + MV[k];
+    });
+    if (!ls.length) { toast("Nenhum motivo selecionado"); return; }
+    navigator.clipboard.writeText(ls.join("\n")).then(() =>
+      toast(ls.length + " motivo(s) copiados — cole nas Observações do PCM_Painel"));
+  }
+  function vMotivos(){
+    const A = D.alertas;
+    // só aparece se o alerta for de HOJE, houver janela e houver itens
+    if (!mvPode() || !A || !A.janela || A.data !== mvHoje() || !(A.itens||[]).length) return "";
+    const registro = A.janela !== "13:30";      // 13:30 avisa; qualquer outra registra
+    return `<div class="mv ${registro?"reg":"avi"}">
+      <div class="mv-h"><b>${registro?"Registro do fim do dia":"Aviso do meio do dia"}</b>
+        <span>janela ${esc(A.janela)} · ${A.itens.length} sem fechar de ${A.doDia}
+          · ${A.fechadas} concluídas</span>
+        <button class="rp-bt sec" id="mv-copiar">Copiar motivos</button></div>
+      <div class="mv-l">${A.itens.map(it => {
+        const k = mvChave(it);
+        return `<div class="mv-i" data-mvk="${esc(k)}">
+          <span class="mv-os">#${esc(it.os)}</span>
+          <span class="mv-t">${esc(it.t)}
+            <small>${esc(usinaCurta(it.u))} · ${esc(it.eq)} · ${esc(it.ini)}–${esc(it.fim)}
+              · ${esc(it.st)}</small></span>
+          <select class="mv-sel" data-mvos="${esc(it.os)}" data-mvt="${esc(it.t)}">
+            <option value="">motivo…</option>
+            ${MOTIVOS_FIXOS.map(m => `<option value="${esc(m)}"${MV[k]===m?" selected":""}>${esc(m)}</option>`).join("")}
+          </select>${mvSelo(k)}</div>`; }).join("")}</div></div>`;
+  }
+
+  const RP_DIAS = [["","dia…"],["seg","seg"],["ter","ter"],["qua","qua"],
+                   ["qui","qui"],["sex","sex"],["sáb","sáb"]];
+  const RP_TURNOS = [["","turno…"],["manha","manhã"],["tarde","tarde"],["noite","noite"]];
+  const rpSel = (cls, ops, val) => `<select class="rp-sel ${cls}">${ops.map(([v,l]) =>
+    `<option value="${v}"${v===val?" selected":""}>${l}</option>`).join("")}</select>`;
+
+  /* Bloco 1 — "Não couberam na semana".
+     O Cliente VÊ a lista (só das usinas dele, pelo escopo de baseRows), mas
+     não vê os controles: quem decide a programação é a Grid Co. */
+  let PEND_ABERTO = false;
+  function vPendentes(){
+    let pend = D.pendentes || [];
+    if (CLIENTE) pend = pend.filter(p => p.cli === CLIENTE);
+    if (!pend.length) return "";
+    const porU = {};
+    pend.forEach(p => (porU[p.u] = porU[p.u] || []).push(p));
+    const usinas = Object.keys(porU).sort((a,b) => a.localeCompare(b, "pt-BR"));
+    const pode = rpOk();
+    return `<div class="pend ${PEND_ABERTO?"aberto":""}">
+      <button class="pend-h" id="pend-h"><span class="seta">▾</span>
+        Não couberam na semana<span class="pend-n">${pend.length}</span>
+        <span class="pend-obs">${pode?"escolha dia e turno, e insira na fila"
+          :"quem reprograma é o PCM da Grid Co."}</span></button>
+      <div class="pend-corpo">${usinas.map(u => {
+        const curta = usinaCurta(u);
+        return `<div class="pend-u"><div class="pend-u-h">${esc(curta)}
+          <span class="pend-cnt">${porU[u].length}</span></div>
+          ${porU[u].map(p => {
+            const ix = rpIdx(p.os, p.t), naFila = pode && ix >= 0;
+            const cur = naFila ? RP[ix] : null;
+            return `<div class="pend-l ${naFila?"na-fila":""}" data-os="${esc(p.os)}"
+                data-tar="${esc(p.t)}" data-tipo="${esc(p.tp)}">
+              <div class="pend-t">${esc(p.t)}
+                <small>OS #${esc(p.os)} · ${esc(p.tp)} · ${p.h}h
+                  ${p.mot?` · <i>${esc(p.mot)}</i>`:""}</small></div>
+              ${pode ? `<div class="pend-ctr">
+                ${rpSel("rp-dia", RP_DIAS, cur?cur.dia:"")}
+                ${rpSel("rp-turno", RP_TURNOS, cur?cur.turno:"")}
+                <button class="rp-add ${naFila?"on":""}">${naFila?"✓ na fila":"+ Inserir"}</button>
+              </div>` : ""}</div>`; }).join("")}</div>`; }).join("")}
+      </div></div>`;
+  }
+
+  /* Bloco 2 — REPROGRAMAR dentro do modal da OS.
+     Com UMA tarefa o alvo é <input hidden>, que não tem selectedOptions —
+     por isso o tipo também vem de dataset.tipo. Isso já quebrou uma vez. */
+  function rpNoModal(t){
+    if (!rpOk()) return "";
+    const irmas = D.tabela.filter(x => String(x.os) === String(t.os));
+    const alvo = irmas.length > 1
+      ? `<select class="rp-sel" id="rpm-alvo">
+          <option value="" data-tipo="">a OS inteira (${irmas.length} tarefas)</option>
+          ${irmas.map(x => `<option value="${esc(x.t)}" data-tipo="${esc(x.tp)}"
+            ${x.i===t.i?" selected":""}>${esc(x.t.slice(0,54))}</option>`).join("")}</select>`
+      : `<input type="hidden" id="rpm-alvo" value="${esc(t.t)}" data-tipo="${esc(t.tp)}">
+         <span class="rp-alvo-1">${esc(t.t.slice(0,48))}</span>`;
+    return `<div class="det-sec">Reprogramar</div>
+      <div class="rpm">
+        ${alvo}
+        <div class="rpm-l">${rpSel("", RP_DIAS, "")}${rpSel("", RP_TURNOS, "")}
+          <button class="rp-add" id="rpm-add">+ Inserir</button>
+          <button class="rp-tirar" id="rpm-tirar">✕ Tirar da semana</button></div>
+        <div class="rpm-st" id="rpm-status">${RP.length
+          ? `<b>${RP.length}</b> na fila` : "A fila está vazia."}</div>
+      </div>`;
+  }
+
+  let RP_ABERTA = false;
+  function rpBarra(){
+    // só na Semana: nas outras telas a fila atrapalha mais do que ajuda
+    if (!rpOk() || !RP.length || V !== "semana") return "";
+    return `<div class="rp-dock ${RP_ABERTA?"aberta":""}">
+      <div class="rp-h"><span class="rp-t">${RP.length} reprogramação(ões) na fila</span>
+        <button class="rp-bt sec" id="rp-ver">${RP_ABERTA?"Ocultar":"Ver linhas"}</button>
+        <button class="rp-bt" id="rp-copiar">Copiar tudo</button>
+        <button class="rp-bt sec" id="rp-limpar">Limpar</button></div>
+      <pre class="rp-prev">${esc(rpTexto())}</pre></div>`;
+  }
+
   /* ── Gestão PCM: carga, normalização e filtro ──────────────────────── */
 
   /* A sigla da preventiva NÃO existe como campo: o preventivas.js a extrai do
@@ -1577,6 +1910,34 @@ function arrancar(){
       while (e && e.classList.contains("pv-usi")) {
         e.style.display = tr.classList.contains("fech") ? "none" : ""; e = e.nextElementSibling; }
     });
+    // ── reprogramação e motivos ──
+    const ph = $("#pend-h");
+    if (ph) ph.onclick = () => { PEND_ABERTO = !PEND_ABERTO; pintar(); };
+    document.querySelectorAll(".pend-l .rp-add").forEach(b => b.onclick = e => {
+      e.stopPropagation();
+      const l = b.closest(".pend-l");
+      const ix = rpIdx(l.dataset.os, l.dataset.tar);
+      if (ix >= 0) { RP.splice(ix,1); rpSave(); pintar(); return; }   // clicar de novo tira
+      const r = rpAdd(l.dataset.os, l.dataset.tar, l.dataset.tipo,
+                      l.querySelector(".rp-dia").value, l.querySelector(".rp-turno").value);
+      if (r) { toast("✓ " + rpLinha(r) + " · " + RP.length + " na fila"); pintar(); }
+    });
+    const rv = $("#rp-ver");     if (rv) rv.onclick = () => { RP_ABERTA = !RP_ABERTA; pintar(); };
+    const rc = $("#rp-copiar");  if (rc) rc.onclick = rpCopiar;
+    const rl = $("#rp-limpar");  if (rl) rl.onclick = rpLimpar;
+    const mc = $("#mv-copiar");  if (mc) mc.onclick = mvCopiar;
+    document.querySelectorAll(".mv-sel").forEach(sel => sel.onchange = () => {
+      const it = { os: sel.dataset.mvos, t: sel.dataset.mvt };
+      const k = mvChave(it);
+      let v = sel.value;
+      if (v === "Outro") {
+        const txt = prompt("Descreva o motivo (curto):", "");
+        if (!txt) { sel.value = MV[k] || ""; return; }
+        v = "Outro: " + txt.slice(0,60);
+      }
+      if (v) { MV[k] = v; mvEnviar(it, v); }        // sem re-render: fecharia o select
+      else { delete MV[k]; delete MV_ST[k]; mvPintar(k); }
+    });
     const lim = $("#limpar");
     if (lim) lim.onclick = () => { CAMPOS.forEach(([k]) => SEL[k].clear());
       FT.os = ""; FT.ss = ""; POP = null; FOCO = null; pintar(); };
@@ -1793,6 +2154,7 @@ function arrancar(){
           ${t.termo?linhaDet("Termo", _sn(t.termo)):""}
           ${t.nova?linhaDet("Origem", t.nova):""}
           ${t.etq?linhaDet("Etiqueta", t.etq):""}</dl>
+        ${rpNoModal(t)}
         <div class="det-sec">Trajetória</div>
         ${timelineHTML(t)}
         <div class="det-sec">Relatório de execução</div>
@@ -1804,6 +2166,24 @@ function arrancar(){
     fundo.onclick = () => fecharDet();
     p.querySelector(".det-x").onclick = () => fecharDet();
     p.onclick = e => e.stopPropagation();
+    const add = p.querySelector("#rpm-add");
+    if (add) add.onclick = () => {
+      const alvo = p.querySelector("#rpm-alvo");
+      const tarefa = (alvo && alvo.value) || "";
+      // com 1 tarefa o alvo e <input hidden>: nao tem selectedOptions
+      const opt = (alvo && alvo.selectedOptions) ? alvo.selectedOptions[0] : null;
+      const tipo = (opt && opt.dataset && opt.dataset.tipo)
+                || (alvo && alvo.dataset && alvo.dataset.tipo) || "";
+      const sels = p.querySelectorAll(".rpm-l .rp-sel");
+      const r = rpAdd(t.os, tarefa, tipo, sels[0].value, sels[1].value);
+      if (!r) return;
+      toast("✓ " + (tarefa ? "Tarefa" : "OS #" + t.os) + " → " + r.dia
+            + (r.turno ? " (" + r.turno + ")" : "") + " · " + RP.length + " na fila");
+      const st = p.querySelector("#rpm-status");
+      if (st) st.innerHTML = `<b>${RP.length}</b> na fila — linha: <code>${esc(rpLinha(r))}</code>`;
+    };
+    const tir = p.querySelector("#rpm-tirar");
+    if (tir) tir.onclick = () => rpTirar(t.os, D.tabela.filter(x => String(x.os)===String(t.os)).length);
     p.querySelector(".det-x").focus();
   }
   function fecharDet(mudo){
