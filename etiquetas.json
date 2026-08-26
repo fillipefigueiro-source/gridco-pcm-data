@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-26T12:45:02Z",
+  "geradoEm": "2026-08-26T12:57:11Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3887,
-        "emAberto": 18,
-        "atrasadas": 13,
-        "concluidas30d": 606,
-        "concluidas7d": 146,
+        "emAberto": 17,
+        "atrasadas": 12,
+        "concluidas30d": 607,
+        "concluidas7d": 147,
         "naSemanaCorrente": 49
       },
       "mttr": {
-        "horas": 10.36,
-        "label": "10h 22min",
-        "amostra": 606
+        "horas": 10.42,
+        "label": "10h 25min",
+        "amostra": 607
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W35",
           "criadas": 51,
-          "finalizadas": 42
+          "finalizadas": 43
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3887,
-            "emAberto": 18
+            "emAberto": 17
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 18,
-      "atrasadas": 13,
+      "total": 17,
+      "atrasadas": 12,
       "porStatus": {
-        "naoIniciada": 12,
-        "emProgresso": 1,
+        "naoIniciada": 10,
+        "emProgresso": 2,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 18
+        "(sem equipe)": 17
       },
       "oss": [
         {
@@ -202,24 +202,6 @@
           "atrasada": true
         },
         {
-          "osId": "12108",
-          "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
-          "equipe": "",
-          "responsavel": "Ademir Necker ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Ademir Necker ",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
-          "criticidade": "",
-          "dataProgramada": "2026-08-24",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "12107",
           "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
           "equipe": "",
@@ -244,14 +226,15 @@
           "responsavel": "Ademir Necker ",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Ademir Necker ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-25",
           "dataCriacao": "2026-08-25",
-          "dataInicial": "",
+          "dataInicial": "2026-08-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -438,6 +421,26 @@
           "dataFinal": "2026-08-26",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12108",
+          "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+          "equipe": "",
+          "responsavel": "Ademir Necker ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ademir Necker ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
+          "criticidade": "",
+          "dataProgramada": "2026-08-24",
+          "dataCriacao": "2026-08-24",
+          "dataInicial": "2026-08-26",
+          "dataFinal": "2026-08-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -2283,26 +2286,6 @@
           "atrasada": false
         },
         {
-          "osId": "11702",
-          "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "Religamento de usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-20",
-          "dataCriacao": "2026-08-20",
-          "dataInicial": "2026-08-20",
-          "dataFinal": "2026-08-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11620",
           "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
           "equipe": "",
@@ -3423,12 +3406,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1684,
+      "historicoTotal": 1685,
       "subClassificacao": {
         "remoto": 750,
         "local": 3137,
         "remotoEmAberto": 7,
-        "localEmAberto": 11,
+        "localEmAberto": 10,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -9687,16 +9670,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 624,
-        "emAberto": 123,
+        "emAberto": 122,
         "atrasadas": 92,
-        "concluidas30d": 277,
-        "concluidas7d": 52,
+        "concluidas30d": 278,
+        "concluidas7d": 53,
         "naSemanaCorrente": 67
       },
       "mttr": {
-        "horas": 168.35,
-        "label": "7d 0h",
-        "amostra": 277
+        "horas": 167.74,
+        "label": "6d 23h",
+        "amostra": 278
       },
       "tendencia4Semanas": [
         {
@@ -9717,7 +9700,7 @@
         {
           "semana": "W35",
           "criadas": 33,
-          "finalizadas": 26
+          "finalizadas": 27
         }
       ],
       "topOfensores": {
@@ -9725,7 +9708,7 @@
           {
             "nome": "(sem equipe)",
             "total": 624,
-            "emAberto": 123
+            "emAberto": 122
           }
         ],
         "responsaveis": [
@@ -9756,16 +9739,16 @@
           }
         ]
       },
-      "total": 123,
+      "total": 122,
       "atrasadas": 92,
       "porStatus": {
         "naoIniciada": 108,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 14,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 123
+        "(sem equipe)": 122
       },
       "oss": [
         {
@@ -11347,24 +11330,6 @@
           "atrasada": true
         },
         {
-          "osId": "12240",
-          "ativo": "Tracker 40.100 STI Norland STI-H250 V05    { MCB100-ETKR40.100 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Valdério Paz ",
-          "status": "Em progresso",
-          "tarefa": "[Tracker 40.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-26",
-          "dataCriacao": "2026-08-26",
-          "dataInicial": "2026-08-26",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "atrasada": false
-        },
-        {
           "osId": "12197",
           "ativo": "Inversor 1.2 Huawei     { TESTE100-INVR1.2 }",
           "equipe": "",
@@ -11876,6 +11841,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "12240",
+          "ativo": "Tracker 40.100 STI Norland STI-H250 V05    { MCB100-ETKR40.100 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Valdério Paz ",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 40.100] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-26",
+          "dataCriacao": "2026-08-26",
+          "dataInicial": "2026-08-26",
+          "dataFinal": "2026-08-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "11760",
           "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { THPN-APR200-INVR1.3 }",
@@ -13777,25 +13761,6 @@
           "atrasada": false
         },
         {
-          "osId": "10866",
-          "ativo": "GD Energy - Sol do Norte 2 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON200 }",
-          "equipe": "",
-          "responsavel": "Felipe Xavier ",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Felipe Xavier ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Coleta e análise de dados de geração",
-          "criticidade": "",
-          "dataProgramada": "2026-08-12",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-12",
-          "dataFinal": "2026-08-12",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10894",
           "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { BES100-INVR1.9 }",
           "equipe": "",
@@ -14727,7 +14692,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 454
+      "historicoTotal": 455
     },
     "engenharia": {
       "label": "Engenharia",
@@ -16881,23 +16846,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "12240",
-      "ativo": "Tracker 40.100 STI Norland STI-H250 V05    { MCB100-ETKR40.100 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Valdério Paz ",
-      "status": "Em progresso",
-      "tarefa": "[Tracker 40.100] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-08-26",
-      "dataCriacao": "2026-08-26",
-      "dataInicial": "2026-08-26",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
-    },
-    {
       "osId": "12234",
       "ativo": "Thopen - Indaiatuba 1 - SP Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { THPN-IND100 }",
       "equipe": "",
@@ -16937,14 +16885,15 @@
       "responsavel": "Ademir Necker ",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Ademir Necker ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-08-25",
       "dataCriacao": "2026-08-25",
-      "dataInicial": "",
+      "dataInicial": "2026-08-26",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -17365,23 +17314,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 48.0,
-      "modalidade": "local"
-    },
-    {
-      "osId": "12108",
-      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
-      "equipe": "",
-      "responsavel": "Ademir Necker ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Ademir Necker ",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
-      "criticidade": "",
-      "dataProgramada": "2026-08-24",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
       "modalidade": "local"
     },
     {
@@ -21847,6 +21779,25 @@
       "atrasada": false
     },
     {
+      "osId": "12240",
+      "ativo": "Tracker 40.100 STI Norland STI-H250 V05    { MCB100-ETKR40.100 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Valdério Paz ",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 40.100] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-08-26",
+      "dataCriacao": "2026-08-26",
+      "dataInicial": "2026-08-26",
+      "dataFinal": "2026-08-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "12200",
       "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
       "equipe": "",
@@ -21882,6 +21833,26 @@
       "dataFinal": "2026-08-25",
       "linkFracttal": "",
       "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "12108",
+      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+      "equipe": "",
+      "responsavel": "Ademir Necker ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Ademir Necker ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
+      "criticidade": "",
+      "dataProgramada": "2026-08-24",
+      "dataCriacao": "2026-08-24",
+      "dataInicial": "2026-08-26",
+      "dataFinal": "2026-08-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -24200,48 +24171,9 @@
       "horasAteAbrir": 120.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "10796",
-      "ativo": "Inversor 1.1 Sungrow SG250HX    { THPN-CDS100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Marcos Duarte ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.1] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-12",
-      "dataFinal": "2026-08-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10795",
-      "ativo": "Cabine 4 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN4 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Luiz  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Cabine 4] - Religamento da Cabine 4",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-07",
-      "dataFinal": "2026-08-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 48.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2544,
+  "historicoTotal": 2546,
   "totalGeral": 5472,
   "verificacao": {
     "total": 0,
