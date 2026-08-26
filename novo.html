@@ -340,8 +340,26 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .tela.on{display:block}
 
 /* filtros — mesma estrutura do painel */
+/* A barra de filtros acompanha a rolagem: nas telas de tabela longa (Gestão
+   PCM, Tarefas) ela sumia da vista e obrigava a subir para trocar um filtro.
+   O `top` acompanha a altura REAL do topo, medida em tempo de execução — ela
+   muda quando o topo recolhe e quando os controles quebram em duas linhas. */
 .filtros{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
-  padding:12px 15px;margin-bottom:13px;box-shadow:var(--sh)}
+  padding:12px 15px;margin-bottom:13px;box-shadow:var(--sh);
+  position:sticky;top:calc(var(--topo-h,52px) + 8px);z-index:19}
+.filtros.compacta .fg{display:none}
+.filtros.compacta{padding:8px 15px}
+.f-resumo{display:none;gap:7px;flex-wrap:wrap;align-items:center;font-size:11.5px;
+  color:var(--ink3)}
+.filtros.compacta .f-resumo{display:flex}
+.f-resumo b{color:var(--ink);font-variant-numeric:tabular-nums}
+.f-resumo .fr-chip{padding:2px 8px;border-radius:20px;background:var(--surf2);
+  border:1px solid var(--line);font-size:10.5px;font-weight:600;color:var(--ink2)}
+.f-dobra{margin-left:auto;width:24px;height:24px;border-radius:6px;flex:0 0 24px;
+  display:flex;align-items:center;justify-content:center;font-size:12px;
+  color:var(--ink3);border:1px solid var(--line)}
+.f-dobra:hover{background:var(--surf2);color:var(--ink)}
+.filtros.compacta .f-dobra{transform:rotate(180deg)}
 .fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(132px,100%),1fr));gap:9px 10px}
 .fl{font-size:9px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
   color:var(--ink3);margin-bottom:3px;display:block}
@@ -878,6 +896,7 @@ function arrancar(){
   const SEL = {}; CAMPOS.forEach(([k]) => SEL[k] = new Set());
   const FT = { os:"", ss:"" };
   let POP = null;    // qual lista esta aberta: {k, busca}
+  let F_COMPACTA = false;   // barra de filtros dobrada, mantendo o resumo
   let FOCO = null;   // qual campo de texto tinha o cursor: "os" | "ss"
   let ORD = { c:"d", asc:true };
   let PORD = { c:"pend", asc:false };   // ordenacao do pivo de preventivas
@@ -1062,9 +1081,21 @@ function arrancar(){
       return true;
     });
   }
+  /* Quando dobrada, a barra não pode esconder o que está filtrado: o resumo
+     mostra as dimensões ativas em fichas, e a contagem continua à vista. */
+  function fResumo(campos, sel, ft, n, total){
+    const chips = campos.filter(([k]) => sel[k] && sel[k].size).map(([k,l]) =>
+      `<span class="fr-chip">${esc(l)}: ${sel[k].size===1?esc([...sel[k]][0]):sel[k].size+" sel."}</span>`);
+    if (ft.os) chips.push(`<span class="fr-chip">OS ${esc(ft.os)}</span>`);
+    if (ft.ss) chips.push(`<span class="fr-chip">SS ${esc(ft.ss)}</span>`);
+    return `<div class="f-resumo"><b>${n.toLocaleString("pt-BR")}</b> de ${total.toLocaleString("pt-BR")}
+      ${chips.length ? chips.join("") : '<span class="fr-chip">sem filtro</span>'}</div>`;
+  }
   function barraFiltros(n){
     const ativo = CAMPOS.some(([k]) => SEL[k].size) || FT.os || FT.ss;
-    return `<div class="filtros"><div class="fg">
+    return `<div class="filtros ${F_COMPACTA?"compacta":""}">
+      ${fResumo(CAMPOS, SEL, FT, n, baseRows().length)}
+      <div class="fg">
       ${CAMPOS.map(([k,l,p]) => `<div class="fgrupo" data-g="${k}">
         <span class="fl">${l}</span>
         <button class="fs ${SEL[k].size?"sel":""}" data-f="${k}">
@@ -1076,7 +1107,8 @@ function arrancar(){
         <input class="ftxt" data-t="ss" placeholder="ex: 2657" value="${esc(FT.ss)}"></div>
     </div>
     <div class="f-rod"><b>${n}</b> de ${baseRows().length} OS
-      ${ativo?'<button class="f-lim" id="limpar">↺ Limpar</button>':""}</div></div>`;
+      ${ativo?'<button class="f-lim" id="limpar">↺ Limpar</button>':""}
+      <button class="f-dobra" data-dobra title="Dobrar a barra">⌃</button></div></div>`;
   }
   function vTarefas(){
     const todas = ordenar(filtrada());
@@ -1570,7 +1602,9 @@ function arrancar(){
   function gpBarra(n){
     const ativo = GP_CAMPOS.some(([k]) => GPSEL[k].size) || GPFT.os || GPFT.ss
                || GPFT.de || GPFT.ate || GPFT.soAtrasadas;
-    return `<div class="filtros"><div class="fg">
+    return `<div class="filtros ${F_COMPACTA?"compacta":""}">
+      ${fResumo(GP_CAMPOS, GPSEL, GPFT, n, GP.total)}
+      <div class="fg">
       ${GP_CAMPOS.map(([k,l,pd]) => `<div class="fgrupo" data-gg="${k}">
         <span class="fl">${l}</span>
         <button class="fs ${GPSEL[k].size?"sel":""}" data-gf="${k}">
@@ -1591,7 +1625,8 @@ function arrancar(){
     </div>
     <div class="f-rod"><b>${n.toLocaleString("pt-BR")}</b> de ${GP.total.toLocaleString("pt-BR")} tarefas
       <button class="gp-chip ${GPFT.soAtrasadas?"on":""}" id="gp-atr">⚠ Só atrasadas</button>
-      ${ativo?'<button class="f-lim" id="gp-limpar">↺ Limpar</button>':""}</div></div>`;
+      ${ativo?'<button class="f-lim" id="gp-limpar">↺ Limpar</button>':""}
+      <button class="f-dobra" data-dobra title="Dobrar a barra">⌃</button></div></div>`;
   }
 
   /* Agrupador comum às duas tabelas: linhas = <dimensao> ▸ usina. */
@@ -2027,6 +2062,8 @@ function arrancar(){
       if (v) { MV[k] = v; mvEnviar(it, v); }        // sem re-render: fecharia o select
       else { delete MV[k]; delete MV_ST[k]; mvPintar(k); }
     });
+    document.querySelectorAll("[data-dobra]").forEach(b => b.onclick = e => {
+      e.stopPropagation(); F_COMPACTA = !F_COMPACTA; POP = null; pintar(); });
     const lim = $("#limpar");
     if (lim) lim.onclick = () => { CAMPOS.forEach(([k]) => SEL[k].clear());
       FT.os = ""; FT.ss = ""; POP = null; FOCO = null; pintar(); };
@@ -2125,8 +2162,18 @@ function arrancar(){
   }
   $("#exportar").onclick = exportarCSV;
 
+  function medirTopo(){
+    const t = document.querySelector(".topo");
+    if (!t) return;
+    void t.offsetHeight;                       // forca o recalculo antes de ler
+    const h = Math.round(t.getBoundingClientRect().height);
+    document.documentElement.style.setProperty("--topo-h", h + "px");
+  }
   function aplicarTopo(oculto){
     document.querySelector(".topo").classList.toggle("oculto", oculto);
+    /* medir DIRETO, com reflow forcado: o requestAnimationFrame nao dispara em
+       aba oculta, e o valor ficava travado no anterior. */
+    medirTopo();
     const b = $("#topo-x");
     b.title = oculto ? "Mostrar a barra" : "Recolher a barra";
     try { localStorage.setItem("pcm-topo", oculto ? "oculto" : "visivel"); } catch(e){}
@@ -2135,6 +2182,10 @@ function arrancar(){
     aplicarTopo(!document.querySelector(".topo").classList.contains("oculto")); };
   let _topo = "visivel"; try { _topo = localStorage.getItem("pcm-topo") || "visivel"; } catch(e){}
   aplicarTopo(_topo === "oculto");
+  medirTopo();
+  // o topo quebra em duas linhas quando estreita: remedir mantem o encaixe
+  if (window.ResizeObserver) new ResizeObserver(medirTopo).observe(document.querySelector(".topo"));
+  else window.addEventListener("resize", medirTopo);
 
   function aplicarLat(mini){
     document.querySelector(".app").classList.toggle("mini", mini);
