@@ -777,12 +777,25 @@ async function _pegar(caminhos){
   }
   throw new Error(ultimo || "sem origem");
 }
-function _falha(msg){
+/* Avisa o servidor que a tela nao montou. O /api/dados registra a ENTREGA dos
+   dados, nao a renderizacao: com 200 na API e erro no JS, o servidor ve sucesso
+   enquanto o usuario ve erro. keepalive porque a pagina pode estar sendo
+   descartada. Nunca deixa o proprio aviso quebrar a pagina. */
+function _avisarFalha(msg, onde){
+  try {
+    fetch("/api/falha", { method:"POST", keepalive:true,
+      headers:{ "Content-Type":"application/json" },
+      body: JSON.stringify({ mensagem:String(msg||"").slice(0,300),
+                             onde:onde||"carga" }) }).catch(function(){});
+  } catch (e) {}
+}
+function _falha(msg, onde){
+  _avisarFalha(msg, onde);
   document.querySelector(".main").innerHTML =
     '<div class="carga-erro"><b>Nao foi possivel carregar os dados.</b>'
     + '<div>' + _esc(msg) + '</div>'
-    + '<div class="carga-dica">Os arquivos do painel exigem o papel <b>admin</b> '
-    + 'ou <b>equipe</b>. Esta e uma tela de revisao interna.</div></div>';
+    + '<div class="carga-dica">O PCM da Grid Co. ja foi avisado automaticamente. '
+    + 'Se continuar, recarregue a pagina em alguns minutos.</div></div>';
 }
 /* Descobre quem entrou. Coleta apenas os papeis crus: traduzir cli-<x> para o
    nome do cliente exige o AUTH_CLI, que vive dentro do arrancar() — por isso a
@@ -817,8 +830,17 @@ function _semPapel(quem){
       _pegar(["etiquetas.json"]).catch(() => ({}))
     ]);
     D = montarD(bd, et);
-  } catch (e) { _falha(e.message); return; }
-  arrancar();
+  } catch (e) { _falha(e.message, "carga"); return; }
+  /* arrancar() ficava FORA do try: se ele quebrasse, a tela morria sem mensagem
+     e sem aviso — a falha mais dificil de descobrir. O throw proposital de
+     "sessao sem papel valido" ja trocou a tela pelo _semPapel: nesse caso
+     avisar, mas nao sobrescrever a mensagem certa. */
+  try { arrancar(); }
+  catch (e) {
+    const m = (e && e.message) || "erro sem mensagem";
+    if (m === "sessao sem papel valido") _avisarFalha(m, "sem-papel");
+    else _falha(m, "arrancar");
+  }
 })();
 
 function arrancar(){
