@@ -29,7 +29,7 @@
 let GPV = { dim: 'cli', col: 'sig', val: 'pct', mes: 'todos', busca: '',
             ordem: 'pend', desc: true, fechados: null, aberto: true };
 
-const GPV_SIGLAS = ['MPM', 'MPS', 'MPA'];
+const GPV_SIGLAS = ['MPM', 'MPT', 'MPS', 'MPA'];   // ordem de cadência (MPT entrou em 26/08)
 const GPV_RX = /\b(MP[MSAT])\b/;
 const GPV_MESNOME = ['', 'jan', 'fev', 'mar', 'abr', 'mai', 'jun',
                      'jul', 'ago', 'set', 'out', 'nov', 'dez'];
@@ -58,8 +58,7 @@ function gpvBase() {
     if (!m) return;
     const mes = String(t.dataProg || '').slice(0, 7);
     if (MESES.indexOf(mes) < 0) return;
-    const sig = m[1] === 'MPT' ? 'MPA' : m[1];      // MPT é raro; agrega na anual? NÃO:
-    if (m[1] === 'MPT') return;                     // fora — só MPM/MPS/MPA, como no artifact
+    const sig = m[1];
     const k = [t.cliente || '—', t.usina || '—', t.cluster || '—',
                t.responsavel || '—', sig, mes].join('');
     let c = reg.get(k);
@@ -188,8 +187,8 @@ function gpvRender() {
 
   // ── legenda das colunas (a lição do print do PA LESTE 01) ──
   h += '<div class="gpv-guia">'
-    + '<div><b>MPM</b> mensal</div><div><b>MPS</b> semestral</div><div><b>MPA</b> anual</div>'
-    + '<div><b>Geral</b> as três somadas</div><div><b>Pendentes</b> o que falta, em número</div>'
+    + '<div><b>MPM</b> mensal</div><div><b>MPT</b> trimestral</div><div><b>MPS</b> semestral</div><div><b>MPA</b> anual</div>'
+    + '<div><b>Geral</b> as quatro somadas</div><div><b>Pendentes</b> o que falta, em número</div>'
     + '<div><b>Célula</b> ' + VAL_ROT[GPV.val] + '; a cor sempre segue o percentual</div></div>';
 
   // ── tabela ──
