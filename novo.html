@@ -134,6 +134,44 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .det-rel{font-size:12px;line-height:1.5;color:var(--ink2);background:var(--surf2);
   border-radius:8px;padding:10px 11px;white-space:pre-wrap;overflow-wrap:anywhere}
 .det-vazio{font-size:12px;color:var(--ink3);font-style:italic}
+/* ── Gestão PCM ── */
+.gp-carga{margin:34px auto;max-width:420px;padding:22px 24px;text-align:center;
+  background:var(--surf);border:1px solid var(--line2);border-radius:var(--r);
+  box-shadow:var(--sh);font-size:13px;color:var(--ink2);line-height:1.55}
+.gp-carga b{color:var(--ink)}
+.gp-carga span{display:block;margin-top:8px;font-size:12px;color:var(--ink3)}
+.gp-carga.erro{border-color:var(--danger)}
+.gp-b{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--sh);margin-bottom:14px;overflow:hidden}
+.gp-b > h3{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:13px;
+  font-weight:800;margin:0;padding:12px 16px;border-bottom:1px solid var(--line);
+  letter-spacing:-.01em}
+.gp-obs{margin-left:auto;font-size:10.5px;font-weight:600;color:var(--ink3)}
+.gp-b.amb{background:var(--surf)}
+.gp-b.amb > h3{color:var(--warn)}
+.ctr{display:flex;gap:15px;flex-wrap:wrap;padding:10px 16px;background:var(--surf2);
+  border-bottom:1px solid var(--line)}
+.ctr-g{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.ctr-l{font-size:8.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink3);margin-right:2px}
+.op{padding:4px 10px;border:1px solid var(--line2);border-radius:20px;font-size:11px;
+  font-weight:600;background:var(--surf);white-space:nowrap}
+.op:hover{border-color:var(--ink3)}
+.op.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.op:focus-visible{outline:2px solid var(--gd);outline-offset:1px}
+.gp-chip{padding:3px 10px;border:1px solid var(--line2);border-radius:20px;font-size:11px;
+  font-weight:600}
+.gp-chip.on{border-color:var(--danger);color:var(--mal);
+  background:color-mix(in srgb,var(--danger) 9%,var(--surf))}
+.pv-total td{background:var(--surf2);font-weight:800;border-top:2px solid var(--line2)}
+.gp-nf{padding:4px 16px 12px}
+.nf-i{display:flex;align-items:center;gap:11px;padding:8px 0;font-size:12px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line)}
+.nf-i:last-child{border-bottom:0}
+.nf-os{font-family:ui-monospace,monospace;font-size:11px;color:var(--ink3);flex:0 0 60px}
+.nf-t{flex:1;min-width:190px;line-height:1.4}
+.nf-t small{display:block;color:var(--ink3);font-size:10.5px;margin-top:2px}
+.nf-d{font-weight:800;color:var(--warn);font-variant-numeric:tabular-nums;white-space:nowrap}
 .pv-rolo{overflow-x:auto;background:var(--surf);border:1px solid var(--line);
   border-radius:var(--r);box-shadow:var(--sh)}
 .pv{width:100%;border-collapse:collapse;font-size:12px;min-width:620px}
@@ -408,6 +446,8 @@ tbody tr:hover{background:var(--surf2)}
 
     <div class="lat-sec">Chamados</div>
     <div id="lat-mods"></div>
+    <button class="lat-i" data-v="gestao" id="lat-gestao" title="Gestão PCM">
+      <span class="ic">📋</span><span class="rot">Gestão PCM</span></button>
 
     <div class="lat-pe">
       <a class="lat-ac" id="lat-ac" title="Quem de cada cliente pode entrar"
@@ -443,6 +483,7 @@ tbody tr:hover{background:var(--surf2)}
     <section class="tela" id="v-insights"></section>
     <section class="tela" id="v-tarefas"></section>
     <section class="tela" id="v-mod"></section>
+    <section class="tela" id="v-gestao"></section>
 
     <p class="rodape">
       <b>Protótipo navegável.</b> Semana 35, 992 OS reais. A barra lateral substitui as nove abas
@@ -667,7 +708,7 @@ function arrancar(){
   /* Papel. Espelha o que o painel em producao ja faz: uma lista de telas restritas
      (adminOnly, Task #130) e o escopo dos dados preso ao cliente do usuario
      (_cliEq(r.cliente, S.user)). O cliente ve Semana e Tarefas/OS, mais nada. */
-  const TELAS_ADMIN = ["insights", "mod"];
+  const TELAS_ADMIN = ["insights", "mod", "gestao"];
   /* Os 11 papeis de cliente, iguais ao AUTH_CLI de js/auth.js. Papel derivado
      fora desta lista e erro de cadastro, nao papel novo. */
   const AUTH_CLI = {
@@ -699,6 +740,21 @@ function arrancar(){
     throw new Error("sessao sem papel valido");
   }
   let PAPEL = "admin", CLIENTE = null;
+
+  /* ── Gestão PCM ────────────────────────────────────────────────────────
+     Fonte própria e pesada: gestao_pcm.json tem 20.668 tarefas (9,4 MB) e
+     confiabilidade.json 1,4 MB. Carregam SO quando a aba abre, e uma vez só.
+     Dimensões diferentes das da semana, então o filtro daqui é próprio. */
+  let GP = null, GPC = null, GP_ESTADO = "vazio";   // vazio | carregando | pronto | erro
+  let GP_ERRO = "";
+  const GP_CAMPOS = [["cliente","Cliente","Todos"], ["usina","Usina","Todas"],
+    ["cluster","Equipe Cluster","Todas"], ["responsavel","Responsável O&M","Todos"],
+    ["tipo","Tipo","Todos"], ["etq","Etiqueta","Todas"], ["estado","Estado","Todos"]];
+  const GPSEL = {}; GP_CAMPOS.forEach(([k]) => GPSEL[k] = new Set());
+  const GPFT = { os:"", ss:"", de:"", ate:"", considerar:"qualquer", soAtrasadas:false };
+  let GPORD = { c:"tot", asc:false };
+  let GPLIN = "cliente", GPCOL = "tipo", GPVAL = "abertas";   // tabela dinâmica
+  let GPPV = { linhas:"cliente", colunas:"tipo", valor:"pct" }; // matriz preventivas
   const baseRows = () => CLIENTE ? D.tabela.filter(t => t.cli === CLIENTE) : D.tabela;
   /* As MESMAS dimensoes do index em producao (GD() em js/app.js): oito de
      multipla escolha e dois campos de texto. Nao existe filtro por dia la. */
@@ -1014,6 +1070,299 @@ function arrancar(){
           <td class="pv-pend ${g.n-g.f?"mal":""}">${g.n-g.f}</td></tr>`).join("")}
       `).join("")}</tbody></table></div>`;
   }
+  /* ── Gestão PCM: carga, normalização e filtro ──────────────────────── */
+
+  /* A sigla da preventiva NÃO existe como campo: o preventivas.js a extrai do
+     TEXTO da tarefa. Hoje isso casa com 6.733 de 20.668 (33%) — as demais
+     preventivas ficam fora da matriz. Mantive o mesmo critério para não
+     divergir do painel atual, e a tela diz o denominador em voz alta. */
+  const GP_RX = /\b(MP[MSAT])\b/;
+  const GP_SIGLAS = ["MPM", "MPT", "MPS", "MPA"];       // ordem de cadência
+  const gpSigla = x => { const m = GP_RX.exec(String(x.tarefa || "")); return m ? m[1] : null; };
+  const gpUsina = u => { const p = String(u || "").split(" - "); return p.length > 1 ? p.slice(1).join(" - ") : String(u || ""); };
+  const gpEtq = x => Array.isArray(x.etiquetas) ? x.etiquetas.join(" | ") : String(x.etiquetas || "");
+
+  async function gpCarregar(){
+    if (GP_ESTADO === "carregando" || GP_ESTADO === "pronto") return;
+    GP_ESTADO = "carregando"; pintar();
+    try {
+      const pegar = async caminhos => {
+        let ultimo = null;
+        for (const c of caminhos) {
+          try {
+            const r = await fetch(c + "?t=" + Date.now(), { cache: "no-store" });
+            if (r.ok) return await r.json();
+            ultimo = "HTTP " + r.status;
+          } catch (e) { ultimo = e.message; }
+        }
+        throw new Error(ultimo || "sem origem");
+      };
+      const [g, c] = await Promise.all([
+        pegar(["gestao_pcm.json"]),
+        pegar(["confiabilidade.json"]).catch(() => null)   // sem ela, blocos 5 e 6 somem
+      ]);
+      // normaliza uma vez: o resto da tela le daqui
+      GP = { geradoEm: g.geradoEm, total: g.totalTarefas, abertas: g.totalAbertas,
+             atrasadas: g.totalAtrasadas, corte: g.corteData,
+             t: (g.tarefas || []).map(x => ({
+               os:String(x.os||""), ss:String(x.ss||""), tarefa:x.tarefa||"", url:x.url||"",
+               cliente:x.cliente||"", usina:gpUsina(x.usina), cluster:x.cluster||"",
+               responsavel:x.responsavel||"", tipo:x.tipo||"", etq:gpEtq(x),
+               estado:x.estado||"", osStatus:x.osStatus||"",
+               aberta:!!x.aberta, atrasado:!!x.atrasado, dias:x.dias||0,
+               criacao:(x.criacao||"").slice(0,10), dataProg:(x.dataProg||"").slice(0,10),
+               dataFinal:(x.dataFinal||"").slice(0,10), sig:gpSigla(x) })) };
+      GPC = c;
+      GP_ESTADO = "pronto";
+    } catch (e) { GP_ESTADO = "erro"; GP_ERRO = e.message; }
+    pintar();
+  }
+
+  function gpFiltrada(){
+    if (!GP) return [];
+    const S = {};
+    GP_CAMPOS.forEach(([k]) => { if (GPSEL[k].size)
+      S[k] = new Set([...GPSEL[k]].map(v => String(v).toLowerCase())); });
+    const ks = Object.keys(S);
+    const campoData = GPFT.considerar === "criacao" ? "criacao"
+                    : GPFT.considerar === "programada" ? "dataProg" : null;
+    return GP.t.filter(x => {
+      for (const k of ks) if (!S[k].has(String(x[k]||"").toLowerCase())) return false;
+      if (GPFT.os && x.os.indexOf(GPFT.os) < 0) return false;
+      if (GPFT.ss && x.ss.indexOf(GPFT.ss) < 0) return false;
+      if (GPFT.soAtrasadas && !x.atrasado) return false;
+      if (GPFT.de || GPFT.ate) {
+        // "qualquer data" aceita se QUALQUER uma das tres cair na janela
+        const datas = campoData ? [x[campoData]] : [x.criacao, x.dataProg, x.dataFinal];
+        const bate = datas.some(d => d && (!GPFT.de || d >= GPFT.de) && (!GPFT.ate || d <= GPFT.ate));
+        if (!bate) return false;
+      }
+      return true;
+    });
+  }
+  const gpOpts = k => [...new Set(GP ? GP.t.map(x => x[k]).filter(Boolean) : [])]
+    .sort((a,b) => String(a).localeCompare(String(b), "pt-BR"));
+
+  /* ── Gestão PCM: a tela ─────────────────────────────────────────────── */
+  function gpBarra(n){
+    const ativo = GP_CAMPOS.some(([k]) => GPSEL[k].size) || GPFT.os || GPFT.ss
+               || GPFT.de || GPFT.ate || GPFT.soAtrasadas;
+    return `<div class="filtros"><div class="fg">
+      ${GP_CAMPOS.map(([k,l,pd]) => `<div class="fgrupo" data-gg="${k}">
+        <span class="fl">${l}</span>
+        <button class="fs ${GPSEL[k].size?"sel":""}" data-gf="${k}">
+          <span class="fs-l">${esc(GPSEL[k].size===0?pd:GPSEL[k].size===1?[...GPSEL[k]][0]:GPSEL[k].size+" selecionados")}</span>
+          <span class="cv">▾</span></button></div>`).join("")}
+      <div class="fgrupo"><span class="fl">OS #</span>
+        <input class="ftxt" data-gt="os" placeholder="ex: 7862" value="${esc(GPFT.os)}"></div>
+      <div class="fgrupo"><span class="fl">Solicitação #</span>
+        <input class="ftxt" data-gt="ss" placeholder="ex: 2657" value="${esc(GPFT.ss)}"></div>
+      <div class="fgrupo"><span class="fl">Período de</span>
+        <input class="ftxt" type="date" data-gt="de" value="${esc(GPFT.de)}"></div>
+      <div class="fgrupo"><span class="fl">Período até</span>
+        <input class="ftxt" type="date" data-gt="ate" value="${esc(GPFT.ate)}"></div>
+      <div class="fgrupo"><span class="fl">Considerar</span>
+        <button class="fs" data-gf="considerar"><span class="fs-l">${
+          GPFT.considerar==="criacao"?"Criação":GPFT.considerar==="programada"?"Programada":"Qualquer data"
+        }</span><span class="cv">▾</span></button></div>
+    </div>
+    <div class="f-rod"><b>${n.toLocaleString("pt-BR")}</b> de ${GP.total.toLocaleString("pt-BR")} tarefas
+      <button class="gp-chip ${GPFT.soAtrasadas?"on":""}" id="gp-atr">⚠ Só atrasadas</button>
+      ${ativo?'<button class="f-lim" id="gp-limpar">↺ Limpar</button>':""}</div></div>`;
+  }
+
+  /* Agrupador comum às duas tabelas: linhas = <dimensao> ▸ usina. */
+  function gpAgrupar(dados, dim, colunas, chaveCol, valor){
+    const arv = new Map();
+    for (const x of dados) {
+      const c = chaveCol(x); if (c == null) continue;
+      const g = x[dim] || "—", u = x.usina || "—";
+      if (!arv.has(g)) arv.set(g, new Map());
+      const m = arv.get(g);
+      if (!m.has(u)) m.set(u, Object.fromEntries(colunas.map(k => [k, {f:0,n:0,a:0,at:0}])));
+      const cel = m.get(u)[c]; if (!cel) continue;
+      cel.n++;
+      if (x.estado === "Finalizada") cel.f++;
+      if (x.aberta) cel.a++;
+      if (x.atrasado) cel.at++;
+    }
+    const soma = cs => cs.reduce((t,c) => ({f:t.f+c.f, n:t.n+c.n, a:t.a+c.a, at:t.at+c.at}),
+                                 {f:0,n:0,a:0,at:0});
+    const grupos = [];
+    for (const [g, m] of arv) {
+      const linhas = [];
+      for (const [u, cols] of m) linhas.push({ u, cols, tot: soma(Object.values(cols)) });
+      const gt = Object.fromEntries(colunas.map(k => [k, soma(linhas.map(l => l.cols[k]))]));
+      grupos.push({ g, linhas, gt, tot: soma(Object.values(gt)), nUs: linhas.length });
+    }
+    const val = c => valor === "pct" ? (c.n ? c.f/c.n : -1)
+                : valor === "abertas" ? c.a : valor === "atrasadas" ? c.at
+                : valor === "finalizadas" ? c.f : c.n;
+    grupos.forEach(gr => gr.linhas.sort((a,b) => val(b.tot) - val(a.tot)));
+    grupos.sort((a,b) => val(b.tot) - val(a.tot));
+    return { grupos, val };
+  }
+
+  /* Ordem fixa das colunas por tipo: a lista sai do próprio arquivo, mas com
+     ordem estável para a tabela não dançar entre um filtro e outro. */
+  const GP_TIPOS = ["Corretiva","Corretiva Emergencial","Preventiva","Preditiva",
+                    "Inspeção","Religamento","Religamento Remoto",
+                    "Zeladoria","Handover","Administrativa"];
+  const GP_DIMS = [["cliente","Cliente"],["cluster","Cluster"],
+                   ["responsavel","Responsável"],["usina","Só usina"]];
+  const GP_MESES = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+  function gpControles(pref, dim, col, val, vals){
+    const bt = (grupo, chave, rot, ativo) =>
+      `<button class="op ${ativo?"on":""}" data-${pref}="${grupo}" data-v="${chave}">${rot}</button>`;
+    return `<div class="ctr">
+      <div class="ctr-g"><span class="ctr-l">Linhas</span>
+        ${GP_DIMS.map(([k,l]) => bt("lin", k, k==="usina"?l:l+" ▸ Usina", dim===k)).join("")}</div>
+      <div class="ctr-g"><span class="ctr-l">Colunas</span>
+        ${bt("col","tipo","Tipo",col==="tipo")}${bt("col","mes","Mês",col==="mes")}</div>
+      <div class="ctr-g"><span class="ctr-l">Valor</span>
+        ${vals.map(([k,l]) => bt("val", k, l, val===k)).join("")}</div>
+    </div>`;
+  }
+  function gpCel(c, valor){
+    if (!c || !c.n) return '<td class="cel vazio">—</td>';
+    if (valor === "pct") {
+      const p = Math.round(c.f/c.n*100);
+      const tom = p>=90 ? "var(--ok)" : p>=50 ? "var(--warn)" : "var(--danger)";
+      return `<td class="cel" style="background:color-mix(in srgb,${tom} 15%,var(--surf))"
+        title="${c.f} de ${c.n} finalizadas"><b>${p}%</b><span>${c.f}/${c.n}</span></td>`;
+    }
+    const v = valor==="abertas"?c.a : valor==="atrasadas"?c.at : valor==="finalizadas"?c.f : c.n;
+    const mal = valor==="atrasadas" && v>0;
+    return `<td class="${mal?"pv-pend mal":""}" title="${c.n} tarefas">${v || '<span class="vazio">—</span>'}</td>`;
+  }
+  function gpTabela(dados, dim, col, val, pref){
+    const colunas = col === "mes" ? GP_MESES : GP_TIPOS;
+    const chave = col === "mes"
+      ? x => { const d = x.dataProg || x.criacao; return d ? GP_MESES[+d.slice(5,7)-1] : null; }
+      : x => x.tipo;
+    const { grupos } = gpAgrupar(dados, dim, colunas, chave, val);
+    if (!grupos.length) return '<div class="vazio">Nada com esses filtros.</div>';
+    const usadas = colunas.filter(c => grupos.some(g => g.gt[c] && g.gt[c].n));
+    const rot = { cliente:"Cliente", cluster:"Cluster", responsavel:"Responsável", usina:"Usina" }[dim];
+    const geral = usadas.map(c => grupos.reduce((t,g) => ({
+        f:t.f+g.gt[c].f, n:t.n+g.gt[c].n, a:t.a+g.gt[c].a, at:t.at+g.gt[c].at }), {f:0,n:0,a:0,at:0}));
+    const tudo = geral.reduce((t,c)=>({f:t.f+c.f,n:t.n+c.n,a:t.a+c.a,at:t.at+c.at}),{f:0,n:0,a:0,at:0});
+    return `<div class="pv-rolo"><table class="pv"><thead><tr>
+      <th>${rot}${dim==="usina"?"":" ▸ Usina"}</th>
+      ${usadas.map(c => `<th>${esc(c)}</th>`).join("")}
+      <th>Geral</th><th>${val==="pct"?"Pendentes":"Total"}</th></tr></thead><tbody>
+    ${grupos.map(g => `
+      <tr class="pv-cli" data-${pref}g><td><span class="seta">▾</span>${esc(g.g)}
+        ${dim==="usina"?"":`<span class="qtd">${g.nUs} usina${g.nUs>1?"s":""}</span>`}</td>
+        ${usadas.map(c => gpCel(g.gt[c], val)).join("")}
+        ${gpCel(g.tot, val)}
+        <td class="pv-pend ${val==="pct"&&g.tot.n-g.tot.f?"mal":""}">${
+          val==="pct" ? g.tot.n-g.tot.f : g.tot.n}</td></tr>
+      ${dim==="usina" ? "" : g.linhas.map(l => `
+      <tr class="pv-usi"><td>${esc(l.u)}</td>
+        ${usadas.map(c => gpCel(l.cols[c], val)).join("")}
+        ${gpCel(l.tot, val)}
+        <td class="pv-pend ${val==="pct"&&l.tot.n-l.tot.f?"mal":""}">${
+          val==="pct" ? l.tot.n-l.tot.f : l.tot.n}</td></tr>`).join("")}
+    `).join("")}
+      <tr class="pv-total"><td>TOTAL GERAL</td>
+        ${geral.map(c => gpCel(c, val)).join("")}
+        ${gpCel(tudo, val)}
+        <td class="pv-pend">${val==="pct" ? tudo.n-tudo.f : tudo.n}</td></tr>
+    </tbody></table></div>`;
+  }
+
+  function vGestao(){
+    if (GP_ESTADO === "vazio")      { gpCarregar(); return '<div class="gp-carga">Carregando a Gestão PCM…</div>'; }
+    if (GP_ESTADO === "carregando") return '<div class="gp-carga">Carregando <b>20 mil tarefas</b> e a base de confiabilidade…<span>São cerca de 11 MB; a primeira abertura demora.</span></div>';
+    if (GP_ESTADO === "erro")       return `<div class="gp-carga erro"><b>Não foi possível carregar.</b><span>${esc(GP_ERRO)}</span></div>`;
+
+    const dados = gpFiltrada();
+
+    /* 2 — matriz de preventivas: controles PRÓPRIOS, ignora a barra do item 1.
+       É o comportamento do painel atual; o aviso no título diz isso. */
+    const pv = (GP.t || []).filter(x => x.sig);
+    const pvMat = (() => {
+      const colunas = GPPV.colunas === "mes" ? GP_MESES : GP_SIGLAS;
+      const chave = GPPV.colunas === "mes"
+        ? x => { const d = x.dataProg || x.criacao; return d ? GP_MESES[+d.slice(5,7)-1] : null; }
+        : x => x.sig;
+      const { grupos } = gpAgrupar(pv, GPPV.linhas, colunas, chave, GPPV.valor);
+      const usadas = colunas.filter(c => grupos.some(g => g.gt[c] && g.gt[c].n));
+      if (!grupos.length) return '<div class="vazio">Sem preventivas com sigla.</div>';
+      const rot = { cliente:"Cliente", cluster:"Cluster", responsavel:"Responsável", usina:"Usina" }[GPPV.linhas];
+      return `<div class="pv-rolo"><table class="pv"><thead><tr>
+        <th>${rot}${GPPV.linhas==="usina"?"":" ▸ Usina"}</th>
+        ${usadas.map(c => `<th>${esc(c)}</th>`).join("")}
+        <th>Geral</th><th>Pendentes</th></tr></thead><tbody>
+        ${grupos.map(g => `
+          <tr class="pv-cli"><td><span class="seta">▾</span>${esc(g.g)}
+            ${GPPV.linhas==="usina"?"":`<span class="qtd">${g.nUs} usina${g.nUs>1?"s":""}</span>`}</td>
+            ${usadas.map(c => gpCel(g.gt[c], GPPV.valor)).join("")}
+            ${gpCel(g.tot, GPPV.valor)}
+            <td class="pv-pend ${g.tot.n-g.tot.f?"mal":""}">${g.tot.n-g.tot.f}</td></tr>
+          ${GPPV.linhas==="usina" ? "" : g.linhas.map(l => `
+          <tr class="pv-usi"><td>${esc(l.u)}</td>
+            ${usadas.map(c => gpCel(l.cols[c], GPPV.valor)).join("")}
+            ${gpCel(l.tot, GPPV.valor)}
+            <td class="pv-pend ${l.tot.n-l.tot.f?"mal":""}">${l.tot.n-l.tot.f}</td></tr>`).join("")}
+        `).join("")}</tbody></table></div>`;
+    })();
+
+    /* 3 — não finalizadas: respeita a barra */
+    const nf = dados.filter(x => x.aberta && x.atrasado).sort((a,b) => b.dias - a.dias);
+
+    /* 5 e 6 — confiabilidade */
+    const conf = GPC ? (GPC.clientes||[]).slice().sort((a,b)=>(b.n||0)-(a.n||0)).slice(0,8) : [];
+    const clus = GPC ? (GPC.clusters||[]).slice().sort((a,b)=>(b.mttr||0)-(a.mttr||0)).slice(0,12) : [];
+    const maxM = clus.length ? clus[0].mttr : 1;
+
+    return gpBarra(dados.length) + `
+    <div class="gp-b"><h3>Conclusão das preventivas
+      <span class="gp-obs">controles próprios — ignora a barra de filtros acima</span></h3>
+      ${gpControles("pv", GPPV.linhas, GPPV.colunas, GPPV.valor,
+          [["pct","% concluído"],["abertas","Pendentes"],["finalizadas","Feitas"],["total","Total"]])}
+      <div class="pv-leg"><b>MPM</b> mensal · <b>MPT</b> trimestral · <b>MPS</b> semestral
+        · <b>MPA</b> anual · a sigla vem do texto da tarefa, e alcança
+        <b>${pv.length.toLocaleString("pt-BR")}</b> das ${GP.total.toLocaleString("pt-BR")} tarefas</div>
+      ${pvMat}</div>
+
+    <div class="gp-b amb"><h3>Não finalizadas no período
+      <span class="gp-obs">${nf.length.toLocaleString("pt-BR")} tarefas</span></h3>
+      <div class="gp-nf">${nf.length ? nf.slice(0,40).map(x => `
+        <div class="nf-i"><span class="nf-os">#${esc(x.os)}</span>
+          <span class="nf-t">${esc(x.tarefa.slice(0,72))}
+            <small>${esc(x.usina)} · ${esc(x.responsavel||"sem responsável")} · ${esc(x.tipo)}</small></span>
+          <span class="nf-d">${x.dias} dias</span></div>`).join("")
+        : '<div class="vazio">Nenhuma atrasada com esses filtros.</div>'}
+        ${nf.length>40?`<div class="mais">+${(nf.length-40).toLocaleString("pt-BR")} não exibidas</div>`:""}</div></div>
+
+    <div class="gp-b"><h3>PCM geral
+      <span class="gp-obs">respeita a barra de filtros acima</span></h3>
+      ${gpControles("gp", GPLIN, GPCOL, GPVAL,
+          [["abertas","Abertas"],["atrasadas","Atrasadas"],["finalizadas","Finalizadas"],["total","Total"]])}
+      ${gpTabela(dados, GPLIN, GPCOL, GPVAL, "gp")}</div>
+
+    ${conf.length ? `<div class="gp-b"><h3>Confiabilidade
+      <span class="gp-obs">base: corretivas e religamentos</span></h3>
+      <div class="ins-g" style="padding:14px 16px">${conf.map(x => `
+        <div class="card"><h3>${esc(x.cliente)}</h3>
+          <div class="kv-n">${Math.round(x.mtbf||0).toLocaleString("pt-BR")}h</div>
+          <div class="kv-s">MTBF · MTTR <b>${(x.mttr||0).toFixed(1)}h</b>
+            · disp. <b>${(x.disp||0).toFixed(2)}%</b> · ${x.n} eventos</div></div>`).join("")}
+      </div></div>` : ""}
+
+    ${clus.length ? `<div class="gp-b"><h3>Tempo médio de reparo por Equipe Cluster
+      <span class="gp-obs">piores no topo · verde ≤24h, amarelo ≤72h</span></h3>
+      <div class="barras" style="padding:14px 16px">${clus.map(x => {
+        const tom = x.mttr<=24 ? "var(--ok)" : x.mttr<=72 ? "var(--warn)" : "var(--danger)";
+        return `<div class="br"><span class="br-n">${esc(x.cluster)}
+          <span style="color:var(--ink3)">· ${esc(x.cliente||"")}</span></span>
+          <span class="br-t"><span class="br-f" style="width:${x.mttr/maxM*100}%;background:${tom}"></span></span>
+          <span class="br-v" style="color:${tom}">${Math.round(x.mttr)}h</span></div>`; }).join("")}
+      </div></div>` : ""}`;
+  }
+
   function vMod(){
     if (MOD === "manutencoesPreventivas") return vPreventivas();
     const m = D.mods[MOD]; if(!m) return "";
@@ -1061,19 +1410,61 @@ function arrancar(){
   /* ── render ────────────────────────────────────────────────────────────── */
   const TITULOS = {semana:["Semana","calendário por dia · cards de OS"],
     insights:["Insights","o que a semana está dizendo"],
-    tarefas:["Tarefas / OS","tabela consolidada com filtros"]};
+    tarefas:["Tarefas / OS","tabela consolidada com filtros"],
+    gestao:["Gestão PCM","o ano inteiro · 20 mil tarefas · somente leitura"]};
   function pintar(){
     document.querySelectorAll(".lat-i").forEach(b =>
       b.classList.toggle("on", b.dataset.v===V && (V!=="mod" || b.dataset.m===MOD)));
-    const t = V==="mod" ? [D.mods[MOD].label, "chamados em aberto e histórico"] : TITULOS[V];
+    const t = V==="mod" ? [D.mods[MOD].label, "chamados em aberto e histórico"]
+            : (TITULOS[V] || [V, ""]);   // tela sem titulo nao derruba o pintar
     $("#t-tit").textContent = t[0];
     $("#t-sub").textContent = D.semana + " · " + t[1];
     $("#v-semana").innerHTML = V==="semana" ? vSemana() : "";
     $("#v-insights").innerHTML = V==="insights" ? vInsights() : "";
     $("#v-tarefas").innerHTML = V==="tarefas" ? vTarefas() : "";
     $("#v-mod").innerHTML = V==="mod" ? vMod() : "";
+    $("#v-gestao").innerHTML = V==="gestao" ? vGestao() : "";
     document.querySelectorAll(".tela").forEach(s => s.classList.toggle("on", s.id==="v-"+V));
     ligar();
+  }
+  function gpAbrirPop(k){
+    fecharPops();
+    const g = document.querySelector(`.fgrupo[data-gg="${k}"]`)
+           || document.querySelector(`[data-gf="${k}"]`)?.parentElement;
+    if (!g) return;
+    if (k === "considerar") {                       // escolha unica, nao multipla
+      const pop = document.createElement("div"); pop.className = "f-pop";
+      pop.innerHTML = [["qualquer","Qualquer data"],["criacao","Criação"],["programada","Programada"]]
+        .map(([v,l]) => `<label class="fp-op"><input type="radio" name="gpc" value="${v}"
+          ${GPFT.considerar===v?"checked":""}><span>${l}</span></label>`).join("");
+      g.appendChild(pop); POP = { k, busca:"", gp:true };
+      pop.onclick = e => e.stopPropagation();
+      pop.querySelectorAll("input").forEach(r => r.onchange = () => {
+        GPFT.considerar = r.value; POP = null; pintar(); });
+      return;
+    }
+    const busca = (POP && POP.k === k ? POP.busca : "") || "", q = busca.toLowerCase();
+    const pop = document.createElement("div"); pop.className = "f-pop";
+    pop.innerHTML = `<div class="fp-top">
+        <input class="fp-busca" placeholder="buscar…" value="${esc(busca)}">
+        <div class="fp-acts"><a data-a="todos">Todos</a><a data-a="nada">Limpar</a></div></div>
+      <div class="fp-opts">${gpOpts(k).map(o => {
+        const oculto = q && String(o).toLowerCase().indexOf(q) < 0;
+        return `<label class="fp-op"${oculto?' style="display:none"':""}>
+          <input type="checkbox" value="${esc(o)}"${GPSEL[k].has(o)?" checked":""}>
+          <span>${esc(o)}</span></label>`; }).join("")}</div>`;
+    g.appendChild(pop); POP = { k, busca, gp:true };
+    pop.onclick = e => e.stopPropagation();
+    const b = pop.querySelector(".fp-busca");
+    b.oninput = () => { POP.busca = b.value; const qq = b.value.toLowerCase();
+      pop.querySelectorAll(".fp-op").forEach(l =>
+        l.style.display = l.textContent.trim().toLowerCase().indexOf(qq) < 0 ? "none" : ""); };
+    pop.querySelectorAll(".fp-op input").forEach(cb => cb.onchange = () => {
+      if (cb.checked) GPSEL[k].add(cb.value); else GPSEL[k].delete(cb.value); pintar(); });
+    pop.querySelectorAll(".fp-acts a").forEach(a => a.onclick = () => {
+      if (a.dataset.a === "todos") gpOpts(k).forEach(v => GPSEL[k].add(v)); else GPSEL[k].clear();
+      pintar(); });
+    b.focus();
   }
   function abrirPop(k){
     fecharPops();
@@ -1136,12 +1527,44 @@ function arrancar(){
         e = e.nextElementSibling;
       }
     });
+    // ── Gestão PCM ──
+    document.querySelectorAll("[data-gf]").forEach(b => b.onclick = e => {
+      e.stopPropagation(); FOCO = null;
+      const k = b.dataset.gf;
+      if (POP && POP.k === k) { POP = null; fecharPops(); }
+      else { POP = { k, busca:"", gp:true }; gpAbrirPop(k); }
+    });
+    document.querySelectorAll("[data-gt]").forEach(inp => {
+      inp.onclick = e => e.stopPropagation();
+      inp.oninput = () => { GPFT[inp.dataset.gt] = inp.value.trim();
+        FOCO = "gp:" + inp.dataset.gt; POP = null; fecharPops(); pintar(); };
+    });
+    const atr = $("#gp-atr");
+    if (atr) atr.onclick = () => { GPFT.soAtrasadas = !GPFT.soAtrasadas; pintar(); };
+    const gplim = $("#gp-limpar");
+    if (gplim) gplim.onclick = () => { GP_CAMPOS.forEach(([k]) => GPSEL[k].clear());
+      Object.assign(GPFT, { os:"", ss:"", de:"", ate:"", soAtrasadas:false }); pintar(); };
+    document.querySelectorAll("[data-gp]").forEach(b => b.onclick = () => {
+      const g = b.dataset.gp, v = b.dataset.v;
+      if (g==="lin") GPLIN = v; else if (g==="col") GPCOL = v; else GPVAL = v; pintar(); });
+    document.querySelectorAll("[data-pv]").forEach(b => b.onclick = () => {
+      const g = b.dataset.pv, v = b.dataset.v;
+      if (g==="lin") GPPV.linhas = v; else if (g==="col") GPPV.colunas = v; else GPPV.valor = v;
+      pintar(); });
+    document.querySelectorAll("#v-gestao .pv-cli").forEach(tr => tr.onclick = () => {
+      tr.classList.toggle("fech");
+      let e = tr.nextElementSibling;
+      while (e && e.classList.contains("pv-usi")) {
+        e.style.display = tr.classList.contains("fech") ? "none" : ""; e = e.nextElementSibling; }
+    });
     const lim = $("#limpar");
     if (lim) lim.onclick = () => { CAMPOS.forEach(([k]) => SEL[k].clear());
       FT.os = ""; FT.ss = ""; POP = null; FOCO = null; pintar(); };
     // pintar() refaz o innerHTML e leva junto a lista aberta e o cursor: devolve
-    if (POP) abrirPop(POP.k);
-    else if (FOCO) { const i = document.querySelector(`.ftxt[data-t="${FOCO}"]`);
+    if (POP) (POP.gp ? gpAbrirPop : abrirPop)(POP.k);
+    else if (FOCO) { const i = FOCO.startsWith("gp:")
+        ? document.querySelector(`.ftxt[data-gt="${FOCO.slice(3)}"]`)
+        : document.querySelector(`.ftxt[data-t="${FOCO}"]`);
       if (i) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }
   }
   /* Tres estados, nao dois: "sistema" nao e o mesmo que "claro". Sem data-theme o
