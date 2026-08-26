@@ -605,8 +605,34 @@ function _falha(msg){
     + '<div class="carga-dica">Os arquivos do painel exigem o papel <b>admin</b> '
     + 'ou <b>equipe</b>. Esta e uma tela de revisao interna.</div></div>';
 }
+/* Descobre quem entrou. Coleta apenas os papeis crus: traduzir cli-<x> para o
+   nome do cliente exige o AUTH_CLI, que vive dentro do arrancar() — por isso a
+   interpretacao acontece la, e nao aqui. Tentar usar o mapa deste escopo
+   passava no teste local (onde /.auth/me da 404 e a funcao retorna antes) e
+   quebraria so em producao. */
+async function _quemEntrou(){
+  try {
+    const r = await fetch("/.auth/me", { cache: "no-store" });
+    if (!r.ok) return null;
+    const j = await r.json();
+    const p = j && j.clientPrincipal;
+    if (!p) return null;
+    const papeis = (p.userRoles || []).filter(x => x !== "anonymous" && x !== "authenticated");
+    return { papeis, quem: p.userDetails || "" };
+  } catch (e) { return null; }        // sem /.auth (uso local): seletor volta
+}
+function _semPapel(quem){
+  document.querySelector(".main").innerHTML =
+    '<div class="carga-erro"><b>Sua conta autenticou, mas ainda nao tem acesso a este painel.</b>'
+    + '<div>' + _esc(quem || "") + '</div>'
+    + '<div class="carga-dica">Peca a liberacao ao PCM da Grid Co. '
+    + 'Autenticar e ser liberado sao duas coisas separadas.</div></div>';
+}
 (async () => {
   try {
+    window.__SESSAO = await _quemEntrou();
+    // quem decide se ha acesso e o arrancar(), onde o AUTH_CLI existe: um papel
+    // cli-* fora do mapa e erro de cadastro, e "comeca com cli-" nao basta.
     const [bd, et] = await Promise.all([
       _pegar(["/api/dados", "banco_dados.json"]),
       _pegar(["etiquetas.json"]).catch(() => ({}))
@@ -642,6 +668,36 @@ function arrancar(){
      (adminOnly, Task #130) e o escopo dos dados preso ao cliente do usuario
      (_cliEq(r.cliente, S.user)). O cliente ve Semana e Tarefas/OS, mais nada. */
   const TELAS_ADMIN = ["insights", "mod"];
+  /* Os 11 papeis de cliente, iguais ao AUTH_CLI de js/auth.js. Papel derivado
+     fora desta lista e erro de cadastro, nao papel novo. */
+  const AUTH_CLI = {
+    "cli-2c":"2C", "cli-alves-lima":"Alves Lima", "cli-athon":"Athon",
+    "cli-axis":"Axis", "cli-gd-energy":"GD Energy", "cli-greenyellow":"Greenyellow",
+    "cli-renogrid":"RenoGrid", "cli-sal-energia":"Sal Energia", "cli-semp":"Semp",
+    "cli-thopen":"Thopen", "cli-utragaz":"Utragaz",
+  };
+  /* PAPEL_REAL vem de /.auth/me. Quando existe, manda: o seletor Admin/Cliente
+     some e ninguem escolhe o proprio papel. Quando NAO existe — uso local, sem
+     /.auth — o seletor volta, para dar pra revisar os dois lados. */
+  /* Interpreta a sessao coletada pelo carregador. Fica aqui porque e aqui que o
+     AUTH_CLI existe. Sem sessao (uso local), PAPEL_REAL segue nulo. */
+  const PAPEL_REAL = (() => {
+    const s = (typeof window !== "undefined" && window.__SESSAO) || null;
+    if (!s || !s.papeis) return null;
+    const cli = s.papeis.find(x => AUTH_CLI[x]);
+    if (s.papeis.includes("admin"))  return { tipo:"admin",   cliente:null, quem:s.quem };
+    if (s.papeis.includes("equipe")) return { tipo:"equipe",  cliente:null, quem:s.quem };
+    if (cli)                         return { tipo:"cliente", cliente:AUTH_CLI[cli], quem:s.quem };
+    return null;
+  })();
+  /* Sessao existe mas nao rendeu papel valido -> sem acesso. Cobre tanto quem
+     autenticou sem cadastro quanto um cli-<x> fora do AUTH_CLI, que e erro de
+     cadastro e nao papel novo. Sem esta linha, os dois cairiam no modo de
+     revisao local, com o seletor de papel a mostra. */
+  if (typeof window !== "undefined" && window.__SESSAO && !PAPEL_REAL) {
+    if (typeof _semPapel === "function") _semPapel(window.__SESSAO.quem);
+    throw new Error("sessao sem papel valido");
+  }
   let PAPEL = "admin", CLIENTE = null;
   const baseRows = () => CLIENTE ? D.tabela.filter(t => t.cli === CLIENTE) : D.tabela;
   /* As MESMAS dimensoes do index em producao (GD() em js/app.js): oito de
@@ -1091,6 +1147,10 @@ function arrancar(){
   /* Tres estados, nao dois: "sistema" nao e o mesmo que "claro". Sem data-theme o
      CSS cai na @media (prefers-color-scheme), que e o padrao de quem nunca mexeu. */
   function aplicarPapel(p, cli){
+    if (PAPEL_REAL) {                       // sessao real: o papel nao se escolhe
+      p = PAPEL_REAL.tipo === "cliente" ? "cliente" : "admin";
+      cli = PAPEL_REAL.cliente;
+    }
     PAPEL = p;
     const sel = $("#papel-cli");
     if (p === "cliente") {
@@ -1102,7 +1162,13 @@ function arrancar(){
         `<option value="${esc(c)}"${c===CLIENTE?" selected":""}>${esc(c)}</option>`).join("");
     } else { CLIENTE = null; sel.hidden = true; }
     document.querySelectorAll(".papel button").forEach(b => b.classList.toggle("on", b.dataset.p === p));
+    if (PAPEL_REAL) {                       // some com o seletor e trava o cliente
+      const cx = document.querySelector(".papel"); if (cx) cx.style.display = "none";
+      if (PAPEL_REAL.cliente) sel.disabled = true;
+    }
     // esconde as telas restritas
+    // `equipe` (interno da Grid) enxerga todos os clientes e as telas internas,
+    // como no painel antigo. So o papel cli-* perde as telas.
     const ehAdmin = p === "admin";
     document.querySelectorAll(".lat-i").forEach(b =>
       b.style.display = (!ehAdmin && TELAS_ADMIN.includes(b.dataset.v)) ? "none" : "");
@@ -1135,7 +1201,8 @@ function arrancar(){
     e.stopPropagation(); aplicarPapel(b.dataset.p); });
   $("#papel-cli").onchange = e => aplicarPapel("cliente", e.target.value);
   $("#papel-cli").onclick = e => e.stopPropagation();
-  aplicarPapel("admin");
+  aplicarPapel(PAPEL_REAL && PAPEL_REAL.tipo === "cliente" ? "cliente" : "admin",
+              PAPEL_REAL ? PAPEL_REAL.cliente : null);
 
   function toast(msg){
     document.querySelectorAll(".toast").forEach(e=>e.remove());
