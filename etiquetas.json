@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-26T17:25:33Z",
+  "geradoEm": "2026-08-26T17:39:37Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 13,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 7,
-        "emProgresso": 0,
+        "naoIniciada": 6,
+        "emProgresso": 1,
         "pausada": 6,
         "verificacao": 0
       },
@@ -265,14 +265,15 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "Felipe Silva",
           "supervisor": "Adriano  Moraes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-26",
           "dataCriacao": "2026-08-26",
-          "dataInicial": "",
+          "dataInicial": "2026-08-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3561,16 +3562,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 700,
-        "emAberto": 121,
+        "emAberto": 120,
         "atrasadas": 35,
-        "concluidas30d": 107,
-        "concluidas7d": 34,
+        "concluidas30d": 108,
+        "concluidas7d": 35,
         "naSemanaCorrente": 99
       },
       "mttr": {
-        "horas": 353.05,
-        "label": "14d 17h",
-        "amostra": 107
+        "horas": 350.22,
+        "label": "14d 14h",
+        "amostra": 108
       },
       "tendencia4Semanas": [
         {
@@ -3591,7 +3592,7 @@
         {
           "semana": "W35",
           "criadas": 91,
-          "finalizadas": 22
+          "finalizadas": 23
         }
       ],
       "topOfensores": {
@@ -3599,7 +3600,7 @@
           {
             "nome": "(sem equipe)",
             "total": 700,
-            "emAberto": 121
+            "emAberto": 120
           }
         ],
         "responsaveis": [
@@ -3616,7 +3617,7 @@
           {
             "nome": "Francisco  Santos",
             "total": 29,
-            "emAberto": 2
+            "emAberto": 1
           },
           {
             "nome": "Felipe  Lima",
@@ -3630,16 +3631,16 @@
           }
         ]
       },
-      "total": 121,
+      "total": 120,
       "atrasadas": 35,
       "porStatus": {
         "naoIniciada": 111,
-        "emProgresso": 3,
+        "emProgresso": 2,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 121
+        "(sem equipe)": 120
       },
       "oss": [
         {
@@ -5453,24 +5454,6 @@
           "atrasada": false
         },
         {
-          "osId": "11897",
-          "ativo": "Infraestrutura Civil Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS200-INFC1 }",
-          "equipe": "",
-          "responsavel": "Francisco  Santos",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Francisco  Santos",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-26",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "atrasada": false
-        },
-        {
           "osId": "11896",
           "ativo": "Infraestrutura Civil Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-INFC1 }",
           "equipe": "",
@@ -5814,6 +5797,25 @@
           "responsavel": "Henri Almeida ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Henri Almeida ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-08-28",
+          "dataCriacao": "2026-08-24",
+          "dataInicial": "2026-08-26",
+          "dataFinal": "2026-08-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "11897",
+          "ativo": "Infraestrutura Civil Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS200-INFC1 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Francisco  Santos",
           "status": "Finalizados",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
@@ -7803,25 +7805,6 @@
           "atrasada": false
         },
         {
-          "osId": "8534",
-          "ativo": "Transformador 1 WEG     { TPP100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Carlos  Godoi",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-07-16",
-          "dataCriacao": "2026-06-26",
-          "dataInicial": "2026-07-16",
-          "dataFinal": "2026-07-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 480.0,
-          "horasAteFechar": 96.0,
-          "atrasada": false
-        },
-        {
           "osId": "9607",
           "ativo": "Infraestrutura Civil  Aparecida  São Paulo Brasil { APR300-INFC1 }",
           "equipe": "",
@@ -8563,7 +8546,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 269
+      "historicoTotal": 270
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -16823,14 +16806,15 @@
       "responsavel": "Adriano  Moraes",
       "criadoPor": "Felipe Silva",
       "supervisor": "Adriano  Moraes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-08-26",
       "dataCriacao": "2026-08-26",
-      "dataInicial": "",
+      "dataInicial": "2026-08-26",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -18510,23 +18494,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "11897",
-      "ativo": "Infraestrutura Civil Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS200-INFC1 }",
-      "equipe": "",
-      "responsavel": "Francisco  Santos",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Francisco  Santos",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-08-26",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
     },
     {
       "osId": "11896",
@@ -22070,6 +22037,25 @@
       "atrasada": false
     },
     {
+      "osId": "11897",
+      "ativo": "Infraestrutura Civil Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS200-INFC1 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Francisco  Santos",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Spare Parts",
+      "criticidade": "",
+      "dataProgramada": "2026-08-28",
+      "dataCriacao": "2026-08-24",
+      "dataInicial": "2026-08-26",
+      "dataFinal": "2026-08-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "11861",
       "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
       "equipe": "",
@@ -23846,28 +23832,9 @@
       "horasAteAbrir": 72.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "10890",
-      "ativo": "Estação Meteorológica Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "[ETM] - Análise de sensores",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-14",
-      "dataFinal": "2026-08-14",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2570,
+  "historicoTotal": 2571,
   "totalGeral": 5487,
   "verificacao": {
     "total": 0,
