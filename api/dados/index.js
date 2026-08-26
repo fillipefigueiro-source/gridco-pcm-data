@@ -84,24 +84,38 @@ module.exports = async function (context, req) {
     };
   };
 
-  if (!p) { resposta(401, { erro: 'não autenticado' }); return; }
+  // registro de acesso: uma linha por carga do painel, para saber quem entrou e
+  // quando. Vai para o Application Insights (privado) — nunca para o repositório,
+  // que é público.
+  const registrar = (forma, extra) => {
+    const quem = (p && (p.userDetails || p.userId)) || 'anonimo';
+    context.log('acesso: ' + quem + ' | forma=' + forma +
+                ' | papeis=' + (roles.join(',') || '-') +
+                (extra ? ' | ' + extra : ''));
+  };
+
+  if (!p) { registrar('nao-autenticado'); resposta(401, { erro: 'não autenticado' }); return; }
 
   let base;
   try {
     base = carregarBase();
   } catch (e) {
+    registrar('erro-dado');
     resposta(500, { erro: 'dado indisponível no deploy — verifique o passo de cópia no workflow' });
     return;
   }
 
   if (roles.includes('admin') || roles.includes('equipe')) {
+    registrar('completo');
     resposta(200, base);
     return;
   }
   const papelCli = roles.find(r => PAPEL_CLIENTE[r]);
   if (papelCli) {
+    registrar('cliente', 'cliente=' + PAPEL_CLIENTE[papelCli]);
     resposta(200, filtrarParaCliente(base, PAPEL_CLIENTE[papelCli]));
     return;
   }
+  registrar('sem-papel');
   resposta(403, { erro: 'conta autenticada sem papel neste painel — peça o convite ao PCM' });
 };
