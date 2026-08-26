@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-26T11:45:20Z",
+  "geradoEm": "2026-08-26T11:54:55Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3882,
-        "emAberto": 18,
+        "total": 3884,
+        "emAberto": 19,
         "atrasadas": 15,
-        "concluidas30d": 601,
-        "concluidas7d": 141,
-        "naSemanaCorrente": 44
+        "concluidas30d": 602,
+        "concluidas7d": 142,
+        "naSemanaCorrente": 46
       },
       "mttr": {
-        "horas": 10.21,
-        "label": "10h 13min",
-        "amostra": 601
+        "horas": 10.19,
+        "label": "10h 12min",
+        "amostra": 602
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W35",
-          "criadas": 46,
-          "finalizadas": 37
+          "criadas": 48,
+          "finalizadas": 38
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3882,
-            "emAberto": 18
+            "total": 3884,
+            "emAberto": 19
           }
         ],
         "responsaveis": [
@@ -63,7 +63,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 435,
+            "total": 436,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 18,
+      "total": 19,
       "atrasadas": 15,
       "porStatus": {
-        "naoIniciada": 12,
-        "emProgresso": 0,
+        "naoIniciada": 11,
+        "emProgresso": 2,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 18
+        "(sem equipe)": 19
       },
       "oss": [
         {
@@ -208,14 +208,15 @@
           "responsavel": "Gilson  Milhomem",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Gilson  Milhomem",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Thopen - Céu Azul 1 - PR] - Religamento do Thopen - Céu Azul 1 - PR",
           "criticidade": "",
           "dataProgramada": "2026-08-22",
           "dataCriacao": "2026-08-22",
-          "dataInicial": "",
+          "dataInicial": "2026-08-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -280,14 +281,15 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Raphael Vitoriano",
           "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 3.1] - Religamento do Inversor 3.1",
           "criticidade": "",
           "dataProgramada": "2026-08-25",
           "dataCriacao": "2026-08-25",
-          "dataInicial": "",
+          "dataInicial": "2026-08-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -367,6 +369,24 @@
           "atrasada": true
         },
         {
+          "osId": "12231",
+          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+          "equipe": "",
+          "responsavel": "Adriano Silva ",
+          "criadoPor": "Felipe Silva",
+          "supervisor": "Adriano Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-26",
+          "dataCriacao": "2026-08-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "12066",
           "ativo": "Sal Energia - Aquiraz 2 (Carosa) - CE Sítio Araponga, S/N, Distrito de Justiniano de Serpa Aquiraz  Ceará Brasil { SALE-CRS200 }",
           "equipe": "",
@@ -422,6 +442,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "12232",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-26",
+          "dataCriacao": "2026-08-26",
+          "dataInicial": "2026-08-26",
+          "dataFinal": "2026-08-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "12222",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -2303,26 +2343,6 @@
           "atrasada": false
         },
         {
-          "osId": "11638",
-          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Cabine 6] - Religamento da Cabine 6",
-          "criticidade": "",
-          "dataProgramada": "2026-08-20",
-          "dataCriacao": "2026-08-20",
-          "dataInicial": "2026-08-20",
-          "dataFinal": "2026-08-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11497",
           "ativo": "Thopen - Rodrigues 2 - RN FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200 }",
           "equipe": "",
@@ -3423,12 +3443,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1679,
+      "historicoTotal": 1680,
       "subClassificacao": {
         "remoto": 750,
-        "local": 3132,
+        "local": 3134,
         "remotoEmAberto": 7,
-        "localEmAberto": 11,
+        "localEmAberto": 12,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -3723,8 +3743,8 @@
       "total": 126,
       "atrasadas": 37,
       "porStatus": {
-        "naoIniciada": 118,
-        "emProgresso": 1,
+        "naoIniciada": 117,
+        "emProgresso": 2,
         "pausada": 7,
         "verificacao": 0
       },
@@ -5480,14 +5500,15 @@
           "responsavel": "Henri Almeida ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Henri Almeida ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
           "dataCriacao": "2026-08-24",
-          "dataInicial": "",
+          "dataInicial": "2026-08-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": false
         },
         {
@@ -14736,12 +14757,12 @@
         "emAberto": 6,
         "atrasadas": 5,
         "concluidas30d": 47,
-        "concluidas7d": 6,
+        "concluidas7d": 7,
         "naSemanaCorrente": 1
       },
       "mttr": {
-        "horas": 279.32,
-        "label": "11d 15h",
+        "horas": 287.49,
+        "label": "11d 23h",
         "amostra": 47
       },
       "tendencia4Semanas": [
@@ -14753,7 +14774,7 @@
         {
           "semana": "W33",
           "criadas": 7,
-          "finalizadas": 22
+          "finalizadas": 21
         },
         {
           "semana": "W34",
@@ -14763,7 +14784,7 @@
         {
           "semana": "W35",
           "criadas": 1,
-          "finalizadas": 4
+          "finalizadas": 5
         }
       ],
       "topOfensores": {
@@ -14918,6 +14939,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10905",
+          "ativo": "Estação Meteorológica  Santarém  Pará Brasil { STR100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Júlio Willers ",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Júlio Willers ",
+          "status": "Finalizados",
+          "tarefa": "[ETM] - Análise de sensores",
+          "criticidade": "",
+          "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-08-07",
+          "dataInicial": "2026-08-10",
+          "dataFinal": "2026-08-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 384.0,
+          "atrasada": false
+        },
         {
           "osId": "11187",
           "ativo": "Estação Meteorológica Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-ESTM1 }",
@@ -15447,25 +15487,6 @@
           "dataFinal": "2026-08-11",
           "linkFracttal": "",
           "horasAteAbrir": 312.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "10905",
-          "ativo": "Estação Meteorológica  Santarém  Pará Brasil { STR100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Júlio Willers ",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Júlio Willers ",
-          "status": "Finalizados",
-          "tarefa": "[ETM] - Análise de sensores",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-10",
-          "dataFinal": "2026-08-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -16862,6 +16883,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "12231",
+      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+      "equipe": "",
+      "responsavel": "Adriano Silva ",
+      "criadoPor": "Felipe Silva",
+      "supervisor": "Adriano Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-26",
+      "dataCriacao": "2026-08-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "12208",
       "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
       "equipe": "",
@@ -16901,14 +16939,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Raphael Vitoriano",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 3.1] - Religamento do Inversor 3.1",
       "criticidade": "",
       "dataProgramada": "2026-08-25",
       "dataCriacao": "2026-08-25",
-      "dataInicial": "",
+      "dataInicial": "2026-08-26",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -18584,14 +18623,15 @@
       "responsavel": "Henri Almeida ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Henri Almeida ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
       "dataProgramada": "2026-08-28",
       "dataCriacao": "2026-08-24",
-      "dataInicial": "",
+      "dataInicial": "2026-08-26",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "11957",
@@ -18856,14 +18896,15 @@
       "responsavel": "Gilson  Milhomem",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Gilson  Milhomem",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Thopen - Céu Azul 1 - PR] - Religamento do Thopen - Céu Azul 1 - PR",
       "criticidade": "",
       "dataProgramada": "2026-08-22",
       "dataCriacao": "2026-08-22",
-      "dataInicial": "",
+      "dataInicial": "2026-08-26",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 96.0,
       "modalidade": "local"
     },
     {
@@ -21384,25 +21425,6 @@
       "atrasada": false
     },
     {
-      "osId": "10905",
-      "ativo": "Estação Meteorológica  Santarém  Pará Brasil { STR100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Júlio Willers ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Júlio Willers ",
-      "status": "Finalizados",
-      "tarefa": "[ETM] - Análise de sensores",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "10308",
       "ativo": "Transformador 9      { THPN-ORB100-TRFR9 }",
       "equipe": "",
@@ -23913,6 +23935,25 @@
       "atrasada": false
     },
     {
+      "osId": "10905",
+      "ativo": "Estação Meteorológica  Santarém  Pará Brasil { STR100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "Júlio Willers ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Júlio Willers ",
+      "status": "Finalizados",
+      "tarefa": "[ETM] - Análise de sensores",
+      "criticidade": "",
+      "dataProgramada": "2026-08-10",
+      "dataCriacao": "2026-08-07",
+      "dataInicial": "2026-08-10",
+      "dataFinal": "2026-08-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0,
+      "horasAteFechar": 384.0,
+      "atrasada": false
+    },
+    {
       "osId": "10904",
       "ativo": "Estação Meteorológica  São Bento  Rio de Janeiro Brasil { SBT500-ESTM1 }",
       "equipe": "",
@@ -24240,8 +24281,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2537,
-  "totalGeral": 5465,
+  "historicoTotal": 2538,
+  "totalGeral": 5467,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
