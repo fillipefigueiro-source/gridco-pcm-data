@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-26T15:02:44Z",
+  "geradoEm": "2026-08-26T16:14:38Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3892,
-        "emAberto": 14,
+        "emAberto": 13,
         "atrasadas": 8,
-        "concluidas30d": 615,
-        "concluidas7d": 155,
+        "concluidas30d": 616,
+        "concluidas7d": 156,
         "naSemanaCorrente": 54
       },
       "mttr": {
-        "horas": 10.49,
-        "label": "10h 29min",
-        "amostra": 615
+        "horas": 10.47,
+        "label": "10h 28min",
+        "amostra": 616
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W35",
           "criadas": 56,
-          "finalizadas": 51
+          "finalizadas": 52
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3892,
-            "emAberto": 14
+            "emAberto": 13
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
+      "total": 13,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 8,
-        "emProgresso": 1,
-        "pausada": 5,
+        "naoIniciada": 7,
+        "emProgresso": 0,
+        "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 13
       },
       "oss": [
         {
@@ -240,31 +240,13 @@
           "atrasada": true
         },
         {
-          "osId": "12252",
-          "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
-          "equipe": "",
-          "responsavel": "Adão Neto ",
-          "criadoPor": "Cícero  Willian",
-          "supervisor": "Adão Neto ",
-          "status": "Não Iniciada",
-          "tarefa": "[SKID 3] - Religamento do SKID 3",
-          "criticidade": "",
-          "dataProgramada": "2026-08-26",
-          "dataCriacao": "2026-08-26",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "12242",
           "ativo": "Cabine 2  Santa Maria do Pará  Pará Brasil { SMP100-CABN2 }",
           "equipe": "",
           "responsavel": "Gilson Souza ",
           "criadoPor": "Felipe Silva",
           "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Cabine 2] - Religamento da Cabine 2",
           "criticidade": "",
           "dataProgramada": "2026-08-26",
@@ -367,6 +349,26 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 72.0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12252",
+          "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
+          "equipe": "",
+          "responsavel": "Cícero  Willian",
+          "criadoPor": "Cícero  Willian",
+          "supervisor": "Cícero  Willian",
+          "status": "Finalizados",
+          "tarefa": "[SKID 3] - Religamento do SKID 3",
+          "criticidade": "",
+          "dataProgramada": "2026-08-26",
+          "dataCriacao": "2026-08-26",
+          "dataInicial": "2026-08-26",
+          "dataFinal": "2026-08-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -2191,26 +2193,6 @@
           "atrasada": false
         },
         {
-          "osId": "11740",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-21",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "2026-08-21",
-          "dataFinal": "2026-08-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11620",
           "ativo": "Cabine 5 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN5 }",
           "equipe": "",
@@ -3351,12 +3333,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1693,
+      "historicoTotal": 1694,
       "subClassificacao": {
         "remoto": 750,
         "local": 3142,
         "remotoEmAberto": 7,
-        "localEmAberto": 7,
+        "localEmAberto": 6,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -3579,16 +3561,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 700,
-        "emAberto": 123,
-        "atrasadas": 36,
-        "concluidas30d": 105,
-        "concluidas7d": 32,
+        "emAberto": 122,
+        "atrasadas": 35,
+        "concluidas30d": 106,
+        "concluidas7d": 33,
         "naSemanaCorrente": 99
       },
       "mttr": {
-        "horas": 352.91,
-        "label": "14d 16h",
-        "amostra": 105
+        "horas": 355.92,
+        "label": "14d 19h",
+        "amostra": 106
       },
       "tendencia4Semanas": [
         {
@@ -3609,7 +3591,7 @@
         {
           "semana": "W35",
           "criadas": 91,
-          "finalizadas": 20
+          "finalizadas": 21
         }
       ],
       "topOfensores": {
@@ -3617,7 +3599,7 @@
           {
             "nome": "(sem equipe)",
             "total": 700,
-            "emAberto": 123
+            "emAberto": 122
           }
         ],
         "responsaveis": [
@@ -3648,16 +3630,16 @@
           }
         ]
       },
-      "total": 123,
-      "atrasadas": 36,
+      "total": 122,
+      "atrasadas": 35,
       "porStatus": {
         "naoIniciada": 112,
-        "emProgresso": 4,
+        "emProgresso": 3,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 123
+        "(sem equipe)": 122
       },
       "oss": [
         {
@@ -3985,24 +3967,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10321",
-          "ativo": "Transformador 1      { GDEN-GJR100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Felipe Xavier ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Felipe Xavier ",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-13",
-          "dataCriacao": "2026-07-29",
-          "dataInicial": "2026-08-26",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 672.0,
           "atrasada": true
         },
         {
@@ -5857,6 +5821,25 @@
           "dataFinal": "2026-08-26",
           "linkFracttal": "",
           "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10321",
+          "ativo": "Transformador 1      { GDEN-GJR100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Felipe Xavier ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-07-29",
+          "dataInicial": "2026-08-26",
+          "dataFinal": "2026-08-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 672.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -7742,25 +7725,6 @@
           "atrasada": false
         },
         {
-          "osId": "8531",
-          "ativo": "Transformador 1 WEG     { 2C-IPX100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-07-13",
-          "dataCriacao": "2026-06-26",
-          "dataInicial": "2026-07-22",
-          "dataFinal": "2026-07-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 624.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9358",
           "ativo": "Transformador 1      { GDEN-SON100-TRFR1 }",
           "equipe": "",
@@ -8616,7 +8580,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 267
+      "historicoTotal": 268
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9564,12 +9528,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 625,
-        "emAberto": 118,
+        "total": 626,
+        "emAberto": 119,
         "atrasadas": 88,
         "concluidas30d": 283,
         "concluidas7d": 58,
-        "naSemanaCorrente": 68
+        "naSemanaCorrente": 69
       },
       "mttr": {
         "horas": 166.47,
@@ -9594,7 +9558,7 @@
         },
         {
           "semana": "W35",
-          "criadas": 34,
+          "criadas": 35,
           "finalizadas": 32
         }
       ],
@@ -9602,8 +9566,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 625,
-            "emAberto": 118
+            "total": 626,
+            "emAberto": 119
           }
         ],
         "responsaveis": [
@@ -9634,16 +9598,16 @@
           }
         ]
       },
-      "total": 118,
+      "total": 119,
       "atrasadas": 88,
       "porStatus": {
-        "naoIniciada": 107,
+        "naoIniciada": 108,
         "emProgresso": 0,
         "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 118
+        "(sem equipe)": 119
       },
       "oss": [
         {
@@ -11284,6 +11248,23 @@
           "criticidade": "",
           "dataProgramada": "2026-08-26",
           "dataCriacao": "2026-08-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "12266",
+          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { SPP300-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-27",
+          "dataCriacao": "2026-08-26",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -16670,6 +16651,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "12266",
+      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { SPP300-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-27",
+      "dataCriacao": "2026-08-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "12261",
       "ativo": "Inversor 1.10 Huawei SUN2000-250KTL-H1    { BES100-INVR1.10 }",
       "equipe": "",
@@ -16684,23 +16681,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "12252",
-      "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
-      "equipe": "",
-      "responsavel": "Adão Neto ",
-      "criadoPor": "Cícero  Willian",
-      "supervisor": "Adão Neto ",
-      "status": "Não Iniciada",
-      "tarefa": "[SKID 3] - Religamento do SKID 3",
-      "criticidade": "",
-      "dataProgramada": "2026-08-26",
-      "dataCriacao": "2026-08-26",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "12250",
@@ -16757,7 +16737,7 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Felipe Silva",
       "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Cabine 2] - Religamento da Cabine 2",
       "criticidade": "",
       "dataProgramada": "2026-08-26",
@@ -19963,23 +19943,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10321",
-      "ativo": "Transformador 1      { GDEN-GJR100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Felipe Xavier ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Felipe Xavier ",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-13",
-      "dataCriacao": "2026-07-29",
-      "dataInicial": "2026-08-26",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 672.0
-    },
-    {
       "osId": "10319",
       "ativo": "Transformador 2      { IBI100-TRFR2 }",
       "equipe": "",
@@ -21505,6 +21468,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 480.0,
       "horasAteFechar": 1200.0,
+      "atrasada": false
+    },
+    {
+      "osId": "12252",
+      "ativo": "SKID 3 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-SKID3 }",
+      "equipe": "",
+      "responsavel": "Cícero  Willian",
+      "criadoPor": "Cícero  Willian",
+      "supervisor": "Cícero  Willian",
+      "status": "Finalizados",
+      "tarefa": "[SKID 3] - Religamento do SKID 3",
+      "criticidade": "",
+      "dataProgramada": "2026-08-26",
+      "dataCriacao": "2026-08-26",
+      "dataInicial": "2026-08-26",
+      "dataFinal": "2026-08-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -23844,29 +23827,10 @@
       "horasAteFechar": 24.0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "10841",
-      "ativo": "Tracker 42.100 STI STI-H250    { THPN-TNB100-ETKR42.100 }",
-      "equipe": "",
-      "responsavel": "Luis  Moura",
-      "criadoPor": "Juliana Cândido ",
-      "supervisor": "Luis  Moura",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 42.100] - Inspeção em Tracker - Solicitação Thopen",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 48.0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2563,
-  "totalGeral": 5480,
+  "historicoTotal": 2565,
+  "totalGeral": 5481,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
