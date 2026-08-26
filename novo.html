@@ -6,20 +6,20 @@
   --white:#fff; --navy:#191528; --green:#A9DB21; --gd:#5f7f08;
   --ink:#191528; --ink2:#3a3550; --ink3:#68667d;
   --bg:#e9ebf2; --surf:#fff; --surf2:#f6f7fa; --line:#e4e4ef; --line2:#cbcbdd;
-  --danger:#e53e3e; --warn:#f59e0b; --ok:#10b981; --mal:#b02525;
+  --danger:#e53e3e; --warn:#f59e0b; --ok:#10b981; --mal:#b02525; --aviso:#a04408;
   --lat:#191528; --lat2:#221d3a; --latx:rgba(255,255,255,.62);
   --r:9px; --sh:0 1px 3px rgba(25,21,40,.07),0 6px 22px rgba(25,21,40,.06);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --ink:#eceaf5; --ink2:#c1bed3; --ink3:#8a879e; --gd:#A9DB21;
-  --danger:#ff7b7b; --warn:#fbbf5c; --ok:#4ade80; --mal:#ff8a8a;
+  --danger:#ff7b7b; --warn:#fbbf5c; --ok:#4ade80; --mal:#ff8a8a; --aviso:#fbbf5c;
   --bg:#0e0d1a; --surf:#191728; --surf2:#201e30; --line:#2b2740; --line2:#413c58;
   --white:#191728; --lat:#131120; --lat2:#1d1a2e;
   --sh:0 1px 3px rgba(0,0,0,.5),0 6px 26px rgba(0,0,0,.4);
 }}
 :root[data-theme="dark"]{
   --ink:#eceaf5; --ink2:#c1bed3; --ink3:#8a879e; --gd:#A9DB21;
-  --danger:#ff7b7b; --warn:#fbbf5c; --ok:#4ade80; --mal:#ff8a8a;
+  --danger:#ff7b7b; --warn:#fbbf5c; --ok:#4ade80; --mal:#ff8a8a; --aviso:#fbbf5c;
   --bg:#0e0d1a; --surf:#191728; --surf2:#201e30; --line:#2b2740; --line2:#413c58;
   --white:#191728; --lat:#131120; --lat2:#1d1a2e;
   --sh:0 1px 3px rgba(0,0,0,.5),0 6px 26px rgba(0,0,0,.4);
@@ -148,7 +148,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
   letter-spacing:-.01em}
 .gp-obs{margin-left:auto;font-size:10.5px;font-weight:600;color:var(--ink3)}
 .gp-b.amb{background:var(--surf)}
-.gp-b.amb > h3{color:var(--warn)}
+.gp-b.amb > h3{color:var(--aviso)}
 .ctr{display:flex;gap:15px;flex-wrap:wrap;padding:10px 16px;background:var(--surf2);
   border-bottom:1px solid var(--line)}
 .ctr-g{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
@@ -171,7 +171,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .nf-os{font-family:ui-monospace,monospace;font-size:11px;color:var(--ink3);flex:0 0 60px}
 .nf-t{flex:1;min-width:190px;line-height:1.4}
 .nf-t small{display:block;color:var(--ink3);font-size:10.5px;margin-top:2px}
-.nf-d{font-weight:800;color:var(--warn);font-variant-numeric:tabular-nums;white-space:nowrap}
+.nf-d{font-weight:800;color:var(--aviso);font-variant-numeric:tabular-nums;white-space:nowrap}
 .pv-rolo{overflow-x:auto;background:var(--surf);border:1px solid var(--line);
   border-radius:var(--r);box-shadow:var(--sh)}
 .pv{width:100%;border-collapse:collapse;font-size:12px;min-width:620px}
@@ -231,6 +231,22 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .topo{display:flex;align-items:center;gap:11px;padding:11px 18px;border-bottom:1px solid var(--line);
   background:var(--surf);position:sticky;top:0;z-index:20;flex-wrap:wrap}
 .topo h1{font-size:16px;font-weight:800;letter-spacing:-.02em;margin:0}
+/* Recolher a barra libera altura util para as tabelas da Gestao PCM, que sao
+   longas. Fica um botao pequeno no canto para traze-la de volta — se o
+   proprio botao sumisse, nao haveria caminho de volta sem recarregar. */
+.topo-x{margin-left:4px;width:26px;height:26px;border-radius:7px;flex:0 0 26px;
+  display:flex;align-items:center;justify-content:center;font-size:13px;
+  color:var(--ink3);border:1px solid var(--line)}
+.topo-x:hover{background:var(--surf2);color:var(--ink)}
+.topo-x:focus-visible{outline:2px solid var(--gd);outline-offset:1px}
+/* Recolhida vira altura ZERO e o botao flutua sobre o conteudo: com a barra
+   apenas encolhida sobrava so 21px de ganho, o que nao pagava o gesto. */
+.topo.oculto{padding:0;height:0;min-height:0;overflow:visible;border-bottom-color:transparent}
+.topo.oculto > *:not(.topo-x){display:none}
+.topo.oculto .topo-x{position:absolute;right:12px;top:5px;width:22px;height:22px;
+  font-size:11px;transform:rotate(180deg);opacity:.5;border-color:transparent;
+  background:var(--surf);box-shadow:0 1px 4px rgba(25,21,40,.14)}
+.topo.oculto .topo-x:hover{opacity:1}
 .topo .sub{font-size:12px;color:var(--ink3)}
 .espaco{flex:1}
 .pulso{font-size:11px;color:var(--ink3);display:flex;align-items:center;gap:5px}
@@ -477,6 +493,7 @@ tbody tr:hover{background:var(--surf2)}
       <span class="espaco"></span>
       <span class="pulso"><i></i>robô ok</span>
       <button class="bt" id="exportar" title="Baixa as OS filtradas em CSV">Exportar CSV</button>
+      <button class="topo-x" id="topo-x" title="Recolher a barra">⌃</button>
     </header>
 
     <section class="tela on" id="v-semana"></section>
@@ -1355,11 +1372,14 @@ function arrancar(){
     ${clus.length ? `<div class="gp-b"><h3>Tempo médio de reparo por Equipe Cluster
       <span class="gp-obs">piores no topo · verde ≤24h, amarelo ≤72h</span></h3>
       <div class="barras" style="padding:14px 16px">${clus.map(x => {
+        // duas cores: a cheia pinta a BARRA, a segura pinta o NUMERO. O amarelo
+        // puro sobre branco da 2.15 de contraste — some como texto.
         const tom = x.mttr<=24 ? "var(--ok)" : x.mttr<=72 ? "var(--warn)" : "var(--danger)";
+        const txt = x.mttr<=24 ? "var(--ok)" : x.mttr<=72 ? "var(--aviso)" : "var(--mal)";
         return `<div class="br"><span class="br-n">${esc(x.cluster)}
           <span style="color:var(--ink3)">· ${esc(x.cliente||"")}</span></span>
           <span class="br-t"><span class="br-f" style="width:${x.mttr/maxM*100}%;background:${tom}"></span></span>
-          <span class="br-v" style="color:${tom}">${Math.round(x.mttr)}h</span></div>`; }).join("")}
+          <span class="br-v" style="color:${txt}">${Math.round(x.mttr)}h</span></div>`; }).join("")}
       </div></div>` : ""}`;
   }
 
@@ -1654,6 +1674,17 @@ function arrancar(){
     toast(dados.length + " OS exportadas em CSV");
   }
   $("#exportar").onclick = exportarCSV;
+
+  function aplicarTopo(oculto){
+    document.querySelector(".topo").classList.toggle("oculto", oculto);
+    const b = $("#topo-x");
+    b.title = oculto ? "Mostrar a barra" : "Recolher a barra";
+    try { localStorage.setItem("pcm-topo", oculto ? "oculto" : "visivel"); } catch(e){}
+  }
+  $("#topo-x").onclick = e => { e.stopPropagation();
+    aplicarTopo(!document.querySelector(".topo").classList.contains("oculto")); };
+  let _topo = "visivel"; try { _topo = localStorage.getItem("pcm-topo") || "visivel"; } catch(e){}
+  aplicarTopo(_topo === "oculto");
 
   function aplicarLat(mini){
     document.querySelector(".app").classList.toggle("mini", mini);
