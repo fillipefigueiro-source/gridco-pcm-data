@@ -669,11 +669,19 @@ function _enxuta(o){
 }
 
 function montarD(bd, et){
-  const ativa = bd.semana_ativa;
+  // /api/dados devolve DUAS formas: admin/equipe recebem o arquivo inteiro (tem
+  // semana_ativa); o CLIENTE passa por filtrarParaCliente, que monta
+  // {geradoEm, cliente, semanas} e NAO tem semana_ativa. Sem este fallback o
+  // painel do cliente morre na carga.
   // seleciona pela CHAVE: o array vem do mais novo para o mais velho, e [-1]
   // pegaria a semana mais VELHA — numeros plausiveis e errados.
-  const w = bd.semanas.find(x => x.week === ativa);
-  if (!w) throw new Error("semana ativa " + ativa + " não está no arquivo");
+  const semanas = bd.semanas || [];
+  const w = bd.semana_ativa ? semanas.find(x => x.week === bd.semana_ativa)
+                            : semanas[0];   // sem a chave, [0] e a mais nova
+  if (!w) throw new Error(bd.semana_ativa
+    ? ("semana ativa " + bd.semana_ativa + " não está no arquivo")
+    : "o arquivo não tem nenhuma semana");
+  const ativa = w.week;              // marca a semana corrente na trajetoria
   const rows = w.rows || [], resumo = w.resumo || {};
 
   const mods = {};
@@ -693,7 +701,7 @@ function montarD(bd, et){
   // trajetoria: a mesma tarefa reaparece nas outras semanas do arquivo.
   // Identidade = ordem + texto; `os_id` sozinho e a ORDEM, com varias tarefas.
   const chave = r => String(r.os_id||"") + "\u0000" + (r.tarefa||"").slice(0,60);
-  const porSemana = bd.semanas.map(sw => {
+  const porSemana = semanas.map(sw => {
     const idx = new Map();
     (sw.rows||[]).forEach(r => idx.set(chave(r), r));
     const wk = String(sw.week||"");
