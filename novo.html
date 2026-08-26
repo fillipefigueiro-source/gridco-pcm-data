@@ -149,18 +149,28 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .pend-u-h{display:flex;align-items:center;gap:8px;padding:8px 16px;background:var(--surf2);
   font-size:11.5px;font-weight:800;position:sticky;top:0;z-index:1}
 .pend-cnt{font-size:10px;font-weight:700;color:var(--ink3)}
+.pend-de{font-size:10.5px;font-weight:600;color:var(--ink3)}
+.pend-lote{margin-left:auto;display:flex;gap:5px;align-items:center}
+.pend-lote .rp-sel{padding:3px 6px;font-size:11px}
+.rp-add.lote{background:var(--surf);color:var(--ink2);border:1px solid var(--line2);
+  font-weight:600}
+.rp-add.lote:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.mv-chip{margin-left:auto;padding:3px 10px;border:1px solid var(--line2);border-radius:20px;
+  font-size:11px;font-weight:600;background:var(--surf)}
+.mv-chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.mv-h .rp-bt{margin-left:0}
 .pend-l{display:flex;align-items:center;gap:11px;padding:8px 16px;flex-wrap:wrap;
   border-bottom:1px solid var(--line)}
 .pend-l.na-fila{background:color-mix(in srgb,var(--vivo,#A9DB21) 9%,var(--surf))}
 .pend-t{flex:1;min-width:210px;font-size:12px;line-height:1.4}
-.pend-t small{display:block;color:var(--ink3);font-size:10.5px;margin-top:2px}
+.pend-t small{display:block;color:var(--ink2);font-size:10.5px;margin-top:2px}
 .pend-t i{color:var(--aviso);font-style:normal}
 .pend-ctr{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .rp-sel{padding:4px 7px;border:1px solid var(--line2);border-radius:6px;font-size:11.5px;
   font-family:inherit;background:var(--surf);color:var(--ink);max-width:210px}
 .rp-add{padding:4px 11px;border-radius:6px;font-size:11.5px;font-weight:700;
   background:var(--navy);color:#fff}
-.rp-add.on{background:var(--gd)}
+.rp-add.on{background:var(--gd);color:#141207}   /* tinta escura: o verde e claro nos dois temas */
 .rp-tirar{padding:4px 11px;border-radius:6px;font-size:11.5px;font-weight:700;
   color:var(--mal);border:1px solid color-mix(in srgb,var(--danger) 40%,var(--surf))}
 .rp-tirar:hover{background:color-mix(in srgb,var(--danger) 10%,var(--surf))}
@@ -202,6 +212,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .mv-t small{display:block;color:var(--ink3);font-size:10.5px;margin-top:2px}
 .mv-sel{padding:4px 7px;border:1px solid var(--line2);border-radius:6px;font-size:11.5px;
   font-family:inherit;background:var(--surf);color:var(--ink)}
+.mv-jan{font-size:9.5px;font-weight:700;padding:1px 6px;border-radius:4px;
+  background:var(--surf2);color:var(--ink2);white-space:nowrap}
 .mv-st{font-size:10.5px;font-weight:700;color:var(--ink3);min-width:74px}
 .mv-st.ok{color:var(--ok)} .mv-st.loc{color:var(--aviso)} .mv-st.err{color:var(--mal)}
 /* ── Gestão PCM ── */
@@ -1268,6 +1280,24 @@ function arrancar(){
      tarefas diferentes, e com a chave só na OS escolher numa linha marcava
      todas as outras. */
   let MV = {}, MV_ST = {};
+  let MV_SO_VAZIOS = false;      // proposta: esconder o que ja tem motivo
+  /* O item do alerta so traz os/tarefa/usina/equipe — nao traz cliente, tipo nem
+     estado. Para os filtros valerem aqui, cada item herda as dimensoes da linha
+     correspondente na tabela da semana: casa por (os, tarefa) e, na falta, so
+     por os. 94% casam exato, 97% por os. Os 6% restantes NAO somem quando ha
+     filtro: ficam separados e contados no cabecalho, senao desapareceriam em
+     silencio — e sao justamente tarefas que o painel conhece mal. */
+  let _MV_IDX = null;
+  function mvPar(it){
+    if (!_MV_IDX) {
+      _MV_IDX = { exato:new Map(), porOs:new Map() };
+      (D.tabela||[]).forEach(t => {
+        _MV_IDX.exato.set(t.os + "||" + t.t, t);
+        if (!_MV_IDX.porOs.has(t.os)) _MV_IDX.porOs.set(t.os, t);
+      });
+    }
+    return _MV_IDX.exato.get(it.os + "||" + it.t) || _MV_IDX.porOs.get(it.os) || null;
+  }
   const mvChave = i => String(i.os) + "|" + String(i.t || "");
   const mvPode = () => PAPEL_REAL ? (PAPEL_REAL.tipo === "admin" || PAPEL_REAL.tipo === "equipe")
                                   : PAPEL === "admin";
@@ -1323,18 +1353,42 @@ function arrancar(){
     // só aparece se o alerta for de HOJE, houver janela e houver itens
     if (!mvPode() || !A || !A.janela || A.data !== mvHoje() || !(A.itens||[]).length) return "";
     const registro = A.janela !== "13:30";      // 13:30 avisa; qualquer outra registra
+    const totalA = A.itens.length;
+    const haFiltro = CAMPOS.some(([k]) => SEL[k].size) || FT.os || FT.ss;
+    const naFiltrada = new Set((haFiltro ? filtrada() : []).map(t => t.os + "||" + t.t));
+    let semPar = 0;
+    let itens = A.itens.filter(it => {
+      if (!haFiltro) return true;
+      const par = mvPar(it);
+      if (!par) { semPar++; return true; }        // nunca some em silencio
+      return naFiltrada.has(par.os + "||" + par.t);
+    });
+    if (MV_SO_VAZIOS) itens = itens.filter(it => !MV[mvChave(it)]);
+    /* A mesma OS+tarefa aparece em mais de uma JANELA de horário (a 10971 tem
+       três). Como a chave é OS+tarefa, responder numa cobre as irmãs — o que
+       é razoável (um motivo explica a tarefa do dia), mas ficava invisível.
+       O selo "N janelas" avisa quantas linhas aquela escolha alcança. */
+    const janelas = {};
+    A.itens.forEach(it => { const k = mvChave(it); janelas[k] = (janelas[k]||0) + 1; });
+    const respondidos = A.itens.filter(it => MV[mvChave(it)]).length;
     return `<div class="mv ${registro?"reg":"avi"}">
       <div class="mv-h"><b>${registro?"Registro do fim do dia":"Aviso do meio do dia"}</b>
-        <span>janela ${esc(A.janela)} · ${A.itens.length} sem fechar de ${A.doDia}
-          · ${A.fechadas} concluídas</span>
+        <span>janela ${esc(A.janela)} · ${itens.length}${itens.length!==totalA?` de ${totalA}`:""}
+          sem fechar de ${A.doDia} · ${A.fechadas} concluídas
+          ${respondidos?` · <b>${respondidos}</b> com motivo`:""}
+          ${semPar?` · ${semPar} fora do filtro por falta de par na semana`:""}</span>
+        <button class="mv-chip ${MV_SO_VAZIOS?"on":""}" id="mv-vazios">Só sem motivo</button>
         <button class="rp-bt sec" id="mv-copiar">Copiar motivos</button></div>
-      <div class="mv-l">${A.itens.map(it => {
+      <div class="mv-l">${!itens.length
+        ? '<div class="vazio">Nada aqui com esses filtros.</div>'
+        : itens.map(it => {
         const k = mvChave(it);
         return `<div class="mv-i" data-mvk="${esc(k)}">
           <span class="mv-os">#${esc(it.os)}</span>
           <span class="mv-t">${esc(it.t)}
             <small>${esc(usinaCurta(it.u))} · ${esc(it.eq)} · ${esc(it.ini)}–${esc(it.fim)}
               · ${esc(it.st)}</small></span>
+          ${janelas[k]>1?`<span class="mv-jan" title="a mesma tarefa em ${janelas[k]} janelas — um motivo vale para todas">${janelas[k]} janelas</span>`:""}
           <select class="mv-sel" data-mvos="${esc(it.os)}" data-mvt="${esc(it.t)}">
             <option value="">motivo…</option>
             ${MOTIVOS_FIXOS.map(m => `<option value="${esc(m)}"${MV[k]===m?" selected":""}>${esc(m)}</option>`).join("")}
@@ -1354,7 +1408,20 @@ function arrancar(){
   function vPendentes(){
     let pend = D.pendentes || [];
     if (CLIENTE) pend = pend.filter(p => p.cli === CLIENTE);
-    if (!pend.length) return "";
+    const total = pend.length;
+    /* Os pendentes carregam cliente/usina/cluster/tipo proprios, entao filtram
+       direto. As outras dimensoes da barra (responsavel, etiqueta, estado,
+       turno) nao existem neste registro e sao ignoradas aqui — o cabecalho
+       diz quantas ficaram, para o numero nunca surpreender. */
+    const DIMS_PEND = [["cli","cli"],["u","u"],["cl","cl"],["tp","tp"]];
+    DIMS_PEND.forEach(([campo, chave]) => {
+      if (SEL[chave] && SEL[chave].size) {
+        const alvo = new Set([...SEL[chave]].map(v => String(v).toLowerCase()));
+        pend = pend.filter(p => alvo.has(String(p[campo]||"").toLowerCase()));
+      }
+    });
+    if (FT.os) pend = pend.filter(p => p.os.indexOf(FT.os) >= 0);
+    if (!total) return "";
     const porU = {};
     pend.forEach(p => (porU[p.u] = porU[p.u] || []).push(p));
     const usinas = Object.keys(porU).sort((a,b) => a.localeCompare(b, "pt-BR"));
@@ -1362,12 +1429,18 @@ function arrancar(){
     return `<div class="pend ${PEND_ABERTO?"aberto":""}">
       <button class="pend-h" id="pend-h"><span class="seta">▾</span>
         Não couberam na semana<span class="pend-n">${pend.length}</span>
+        ${pend.length!==total?`<span class="pend-de">de ${total}</span>`:""}
         <span class="pend-obs">${pode?"escolha dia e turno, e insira na fila"
           :"quem reprograma é o PCM da Grid Co."}</span></button>
-      <div class="pend-corpo">${usinas.map(u => {
+      <div class="pend-corpo">${!pend.length
+        ? '<div class="vazio">Nenhum pendente com esses filtros.</div>'
+        : usinas.map(u => {
         const curta = usinaCurta(u);
-        return `<div class="pend-u"><div class="pend-u-h">${esc(curta)}
-          <span class="pend-cnt">${porU[u].length}</span></div>
+        return `<div class="pend-u"><div class="pend-u-h" data-usina="${esc(u)}">${esc(curta)}
+          <span class="pend-cnt">${porU[u].length}</span>
+          ${pode && porU[u].length > 1 ? `<span class="pend-lote">
+            ${rpSel("lote-dia", RP_DIAS, "")}${rpSel("lote-turno", RP_TURNOS, "")}
+            <button class="rp-add lote">+ todas (${porU[u].length})</button></span>` : ""}</div>
           ${porU[u].map(p => {
             const ix = rpIdx(p.os, p.t), naFila = pode && ix >= 0;
             const cur = naFila ? RP[ix] : null;
@@ -1913,6 +1986,20 @@ function arrancar(){
     // ── reprogramação e motivos ──
     const ph = $("#pend-h");
     if (ph) ph.onclick = () => { PEND_ABERTO = !PEND_ABERTO; pintar(); };
+    /* Lote por usina: com 833 pendentes em 61 usinas, marcar dia e turno linha a
+       linha e o gargalo. Aqui uma escolha vale para todas as linhas da usina. */
+    document.querySelectorAll(".pend-u-h .rp-add.lote").forEach(b => b.onclick = e => {
+      e.stopPropagation();
+      const cab = b.closest(".pend-u-h");
+      const dia = cab.querySelector(".lote-dia").value;
+      const turno = cab.querySelector(".lote-turno").value;
+      if (!dia) { toast("Escolha o dia primeiro"); return; }
+      const linhas = [...cab.parentElement.querySelectorAll(".pend-l")];
+      let n = 0;
+      linhas.forEach(l => { if (rpAdd(l.dataset.os, l.dataset.tar, l.dataset.tipo, dia, turno)) n++; });
+      if (n) { toast(`✓ ${n} tarefa(s) → ${dia}${turno?" ("+turno+")":""} · ${RP.length} na fila`);
+               pintar(); }
+    });
     document.querySelectorAll(".pend-l .rp-add").forEach(b => b.onclick = e => {
       e.stopPropagation();
       const l = b.closest(".pend-l");
@@ -1926,6 +2013,8 @@ function arrancar(){
     const rc = $("#rp-copiar");  if (rc) rc.onclick = rpCopiar;
     const rl = $("#rp-limpar");  if (rl) rl.onclick = rpLimpar;
     const mc = $("#mv-copiar");  if (mc) mc.onclick = mvCopiar;
+    const mvz = $("#mv-vazios");
+    if (mvz) mvz.onclick = () => { MV_SO_VAZIOS = !MV_SO_VAZIOS; pintar(); };
     document.querySelectorAll(".mv-sel").forEach(sel => sel.onchange = () => {
       const it = { os: sel.dataset.mvos, t: sel.dataset.mvt };
       const k = mvChave(it);
