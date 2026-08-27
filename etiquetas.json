@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-27T11:09:10Z",
+  "geradoEm": "2026-08-27T11:21:16Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3904,
-        "emAberto": 15,
+        "total": 3905,
+        "emAberto": 16,
         "atrasadas": 12,
         "concluidas30d": 607,
         "concluidas7d": 141,
-        "naSemanaCorrente": 66
+        "naSemanaCorrente": 67
       },
       "mttr": {
         "horas": 10.12,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W35",
-          "criadas": 68,
+          "criadas": 69,
           "finalizadas": 62
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3904,
-            "emAberto": 15
+            "total": 3905,
+            "emAberto": 16
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 15,
+      "total": 16,
       "atrasadas": 12,
       "porStatus": {
         "naoIniciada": 9,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 15
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -207,14 +207,15 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Cabine 4] - Religamento da Cabine 4",
           "criticidade": "",
           "dataProgramada": "2026-08-24",
           "dataCriacao": "2026-08-27",
-          "dataInicial": "",
+          "dataInicial": "2026-08-27",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -310,6 +311,24 @@
           "linkFracttal": "",
           "modalidade": "remoto",
           "atrasada": true
+        },
+        {
+          "osId": "12305",
+          "ativo": "Inversor 1.2 Huawei SUN2000-330KTL-H1    { ADS200-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Adão Neto ",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Adão Neto ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-27",
+          "dataCriacao": "2026-08-27",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "12303",
@@ -3372,9 +3391,9 @@
       "historicoTotal": 1693,
       "subClassificacao": {
         "remoto": 750,
-        "local": 3154,
+        "local": 3155,
         "remotoEmAberto": 7,
-        "localEmAberto": 8,
+        "localEmAberto": 9,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -16670,20 +16689,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "12305",
+      "ativo": "Inversor 1.2 Huawei SUN2000-330KTL-H1    { ADS200-INVR1.2 }",
+      "equipe": "",
+      "responsavel": "Adão Neto ",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Adão Neto ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-27",
+      "dataCriacao": "2026-08-27",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "12304",
       "ativo": "Cabine 4 Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200-CABN4 }",
       "equipe": "",
       "responsavel": "Janderson Miranda ",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Cabine 4] - Religamento da Cabine 4",
       "criticidade": "",
       "dataProgramada": "2026-08-24",
       "dataCriacao": "2026-08-27",
-      "dataInicial": "",
+      "dataInicial": "2026-08-27",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -23868,7 +23905,7 @@
     }
   ],
   "historicoTotal": 2564,
-  "totalGeral": 5500,
+  "totalGeral": 5501,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
