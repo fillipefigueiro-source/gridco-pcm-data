@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-27T15:00:16Z",
+  "geradoEm": "2026-08-27T15:12:15Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3914,
-        "emAberto": 14,
+        "total": 3915,
+        "emAberto": 13,
         "atrasadas": 10,
-        "concluidas30d": 618,
-        "concluidas7d": 152,
-        "naSemanaCorrente": 76
+        "concluidas30d": 620,
+        "concluidas7d": 154,
+        "naSemanaCorrente": 77
       },
       "mttr": {
-        "horas": 10.06,
-        "label": "10h 4min",
-        "amostra": 618
+        "horas": 10.03,
+        "label": "10h 2min",
+        "amostra": 620
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W35",
-          "criadas": 78,
-          "finalizadas": 73
+          "criadas": 79,
+          "finalizadas": 75
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3914,
-            "emAberto": 14
+            "total": 3915,
+            "emAberto": 13
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 14,
+      "total": 13,
       "atrasadas": 10,
       "porStatus": {
-        "naoIniciada": 7,
-        "emProgresso": 3,
+        "naoIniciada": 8,
+        "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 13
       },
       "oss": [
         {
@@ -275,6 +275,24 @@
           "atrasada": true
         },
         {
+          "osId": "12333",
+          "ativo": "Cabine 1  Crateús  Ceará Brasil { CTS100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Railson Gomes ",
+          "status": "Não Iniciada",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-27",
+          "dataCriacao": "2026-08-27",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "12329",
           "ativo": "SKID 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID1 }",
           "equipe": "",
@@ -283,44 +301,6 @@
           "supervisor": "Felipe  Lima",
           "status": "Em progresso",
           "tarefa": "[IND100-SKID1] - Religamento do IND100-SKID1",
-          "criticidade": "",
-          "dataProgramada": "2026-08-27",
-          "dataCriacao": "2026-08-27",
-          "dataInicial": "2026-08-27",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "12322",
-          "ativo": "Thopen - Aparecida 3 - SP  Aparecida  São Paulo Brasil { THPN-APR300 }",
-          "equipe": "",
-          "responsavel": "Henri Almeida ",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Henri Almeida ",
-          "status": "Em progresso",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-27",
-          "dataCriacao": "2026-08-27",
-          "dataInicial": "2026-08-27",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "12305",
-          "ativo": "Inversor 1.2 Huawei SUN2000-330KTL-H1    { ADS200-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Adão Neto ",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Adão Neto ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
           "criticidade": "",
           "dataProgramada": "2026-08-27",
           "dataCriacao": "2026-08-27",
@@ -392,6 +372,26 @@
           "atrasada": false
         },
         {
+          "osId": "12322",
+          "ativo": "Thopen - Aparecida 3 - SP  Aparecida  São Paulo Brasil { THPN-APR300 }",
+          "equipe": "",
+          "responsavel": "Henri Almeida ",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Henri Almeida ",
+          "status": "Finalizados",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-27",
+          "dataCriacao": "2026-08-27",
+          "dataInicial": "2026-08-27",
+          "dataFinal": "2026-08-27",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "12314",
           "ativo": "Thopen - Primavera 2 - ES BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200 }",
           "equipe": "",
@@ -420,6 +420,26 @@
           "supervisor": "Carlos Bruno  Pessanha Pereira",
           "status": "Finalizados",
           "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-27",
+          "dataCriacao": "2026-08-27",
+          "dataInicial": "2026-08-27",
+          "dataFinal": "2026-08-27",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12305",
+          "ativo": "Inversor 1.2 Huawei SUN2000-330KTL-H1    { ADS200-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Adão Neto ",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Adão Neto ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
           "criticidade": "",
           "dataProgramada": "2026-08-27",
           "dataCriacao": "2026-08-27",
@@ -2072,46 +2092,6 @@
           "atrasada": false
         },
         {
-          "osId": "11838",
-          "ativo": "Inversor 5.9 Huawei     { MAB200-INVR5.9 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "James Chaves ",
-          "status": "Finalizada",
-          "tarefa": "[Inversor 5.9] - Religamento do Inversor 5.9",
-          "criticidade": "",
-          "dataProgramada": "2026-08-22",
-          "dataCriacao": "2026-08-22",
-          "dataInicial": "2026-08-22",
-          "dataFinal": "2026-08-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "11837",
-          "ativo": "Inversor 5.7 Huawei     { MAB200-INVR5.7 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "James Chaves ",
-          "status": "Finalizada",
-          "tarefa": "[Inversor 5.7] - Religamento do Inversor 5.7",
-          "criticidade": "",
-          "dataProgramada": "2026-08-22",
-          "dataCriacao": "2026-08-22",
-          "dataInicial": "2026-08-22",
-          "dataFinal": "2026-08-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11833",
           "ativo": "Cabine 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-CABN1 }",
           "equipe": "",
@@ -3352,12 +3332,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1704,
+      "historicoTotal": 1706,
       "subClassificacao": {
         "remoto": 750,
-        "local": 3164,
+        "local": 3165,
         "remotoEmAberto": 7,
-        "localEmAberto": 7,
+        "localEmAberto": 6,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -3580,16 +3560,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 703,
-        "emAberto": 116,
+        "emAberto": 115,
         "atrasadas": 36,
-        "concluidas30d": 112,
-        "concluidas7d": 39,
+        "concluidas30d": 113,
+        "concluidas7d": 40,
         "naSemanaCorrente": 101
       },
       "mttr": {
-        "horas": 338.36,
-        "label": "14d 2h",
-        "amostra": 112
+        "horas": 336.0,
+        "label": "14d 0h",
+        "amostra": 113
       },
       "tendencia4Semanas": [
         {
@@ -3610,7 +3590,7 @@
         {
           "semana": "W35",
           "criadas": 94,
-          "finalizadas": 30
+          "finalizadas": 31
         }
       ],
       "topOfensores": {
@@ -3618,7 +3598,7 @@
           {
             "nome": "(sem equipe)",
             "total": 703,
-            "emAberto": 116
+            "emAberto": 115
           }
         ],
         "responsaveis": [
@@ -3649,16 +3629,16 @@
           }
         ]
       },
-      "total": 116,
+      "total": 115,
       "atrasadas": 36,
       "porStatus": {
-        "naoIniciada": 103,
-        "emProgresso": 3,
-        "pausada": 10,
+        "naoIniciada": 102,
+        "emProgresso": 2,
+        "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 116
+        "(sem equipe)": 115
       },
       "oss": [
         {
@@ -4605,24 +4585,6 @@
           "atrasada": false
         },
         {
-          "osId": "12048",
-          "ativo": "Infraestrutura Civil  Ponto Belo  Espírito Santo Brasil { PTB100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Thiago Morais ",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-27",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "atrasada": false
-        },
-        {
           "osId": "12034",
           "ativo": "Infraestrutura Civil Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100-INFC1 }",
           "equipe": "",
@@ -4852,14 +4814,15 @@
           "responsavel": "Matheus Leite ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Matheus Leite ",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
           "dataCriacao": "2026-08-24",
-          "dataInicial": "",
+          "dataInicial": "2026-08-27",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 72.0,
           "atrasada": false
         },
         {
@@ -5656,6 +5619,25 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Rodrigo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-08-28",
+          "dataCriacao": "2026-08-24",
+          "dataInicial": "2026-08-27",
+          "dataFinal": "2026-08-27",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12048",
+          "ativo": "Infraestrutura Civil  Ponto Belo  Espírito Santo Brasil { PTB100-INFC1 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Thiago Morais ",
           "status": "Finalizados",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
@@ -7759,25 +7741,6 @@
           "atrasada": false
         },
         {
-          "osId": "8608",
-          "ativo": "Transformador 1 WEG     { THPN-PRM200-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Marcos Duarte ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-07-17",
-          "dataCriacao": "2026-06-29",
-          "dataInicial": "2026-07-23",
-          "dataFinal": "2026-07-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 576.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9358",
           "ativo": "Transformador 1      { GDEN-SON100-TRFR1 }",
           "equipe": "",
@@ -8500,7 +8463,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 270
+      "historicoTotal": 271
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -16638,6 +16601,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "12333",
+      "ativo": "Cabine 1  Crateús  Ceará Brasil { CTS100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Railson Gomes ",
+      "status": "Não Iniciada",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-27",
+      "dataCriacao": "2026-08-27",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "12331",
       "ativo": "Inversor 1.8 Sungrow SG250HX    { COR100-INVR1.8 }",
       "equipe": "",
@@ -16688,24 +16668,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "12322",
-      "ativo": "Thopen - Aparecida 3 - SP  Aparecida  São Paulo Brasil { THPN-APR300 }",
-      "equipe": "",
-      "responsavel": "Henri Almeida ",
-      "criadoPor": "Italo  Lustosa",
-      "supervisor": "Henri Almeida ",
-      "status": "Em progresso",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-27",
-      "dataCriacao": "2026-08-27",
-      "dataInicial": "2026-08-27",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "12319",
       "ativo": "Inversor 6.2 SOLIS SOLIS-110K-5G    { SALE-SNP100-INVR6.2 }",
       "equipe": "",
@@ -16753,24 +16715,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "12305",
-      "ativo": "Inversor 1.2 Huawei SUN2000-330KTL-H1    { ADS200-INVR1.2 }",
-      "equipe": "",
-      "responsavel": "Adão Neto ",
-      "criadoPor": "Italo  Lustosa",
-      "supervisor": "Adão Neto ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
-      "criticidade": "",
-      "dataProgramada": "2026-08-27",
-      "dataCriacao": "2026-08-27",
-      "dataInicial": "2026-08-27",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
     },
     {
       "osId": "12296",
@@ -17811,23 +17755,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "12048",
-      "ativo": "Infraestrutura Civil  Ponto Belo  Espírito Santo Brasil { PTB100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Thiago Morais ",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-08-27",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0
-    },
-    {
       "osId": "12034",
       "ativo": "Infraestrutura Civil Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100-INFC1 }",
       "equipe": "",
@@ -18044,14 +17971,15 @@
       "responsavel": "Matheus Leite ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Matheus Leite ",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
       "dataProgramada": "2026-08-28",
       "dataCriacao": "2026-08-24",
-      "dataInicial": "",
+      "dataInicial": "2026-08-27",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0
     },
     {
       "osId": "11990",
@@ -21390,6 +21318,26 @@
       "atrasada": false
     },
     {
+      "osId": "12322",
+      "ativo": "Thopen - Aparecida 3 - SP  Aparecida  São Paulo Brasil { THPN-APR300 }",
+      "equipe": "",
+      "responsavel": "Henri Almeida ",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Henri Almeida ",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-27",
+      "dataCriacao": "2026-08-27",
+      "dataInicial": "2026-08-27",
+      "dataFinal": "2026-08-27",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "12314",
       "ativo": "Thopen - Primavera 2 - ES BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200 }",
       "equipe": "",
@@ -21418,6 +21366,26 @@
       "supervisor": "Carlos Bruno  Pessanha Pereira",
       "status": "Finalizados",
       "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-27",
+      "dataCriacao": "2026-08-27",
+      "dataInicial": "2026-08-27",
+      "dataFinal": "2026-08-27",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "12305",
+      "ativo": "Inversor 1.2 Huawei SUN2000-330KTL-H1    { ADS200-INVR1.2 }",
+      "equipe": "",
+      "responsavel": "Adão Neto ",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Adão Neto ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
       "criticidade": "",
       "dataProgramada": "2026-08-27",
       "dataCriacao": "2026-08-27",
@@ -21869,6 +21837,25 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Rodrigo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Spare Parts",
+      "criticidade": "",
+      "dataProgramada": "2026-08-28",
+      "dataCriacao": "2026-08-24",
+      "dataInicial": "2026-08-27",
+      "dataFinal": "2026-08-27",
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "12048",
+      "ativo": "Infraestrutura Civil  Ponto Belo  Espírito Santo Brasil { PTB100-INFC1 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Thiago Morais ",
       "status": "Finalizados",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
@@ -23745,69 +23732,10 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 168.0,
       "atrasada": false
-    },
-    {
-      "osId": "10992",
-      "ativo": "Cabine 1 Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR200-CABN1 }",
-      "equipe": "",
-      "responsavel": "Leonardo  Dias",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Leonardo  Dias",
-      "status": "Finalizados",
-      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "10991",
-      "ativo": "SKID 1 Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100-SKID1 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Finalizados",
-      "tarefa": "[Skid 1] - Avaliação da temperatura no momento de pico da geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-11",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-12",
-      "dataFinal": "2026-08-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10989",
-      "ativo": "Cabine 1  Campos dos Goytacazes  Rio de Janeiro Brasil { FZL100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Finalizados",
-      "tarefa": "UFV: Fazenda Limão 1 e 2 | Proteção: 27 | Ação: Religamento Local| Falha: Usina desligada",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-10",
-      "dataInicial": "2026-08-10",
-      "dataFinal": "2026-08-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2581,
-  "totalGeral": 5515,
+  "historicoTotal": 2584,
+  "totalGeral": 5516,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
