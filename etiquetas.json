@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-26T22:09:07Z",
+  "geradoEm": "2026-08-27T00:21:02Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -10,15 +10,15 @@
       "kpis": {
         "total": 3898,
         "emAberto": 12,
-        "atrasadas": 8,
-        "concluidas30d": 623,
-        "concluidas7d": 163,
+        "atrasadas": 11,
+        "concluidas30d": 604,
+        "concluidas7d": 138,
         "naSemanaCorrente": 60
       },
       "mttr": {
-        "horas": 10.31,
-        "label": "10h 18min",
-        "amostra": 623
+        "horas": 10.18,
+        "label": "10h 11min",
+        "amostra": 604
       },
       "tendencia4Semanas": [
         {
@@ -79,7 +79,7 @@
         ]
       },
       "total": 12,
-      "atrasadas": 8,
+      "atrasadas": 11,
       "porStatus": {
         "naoIniciada": 7,
         "emProgresso": 0,
@@ -255,7 +255,7 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12066",
@@ -273,7 +273,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "remoto",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12065",
@@ -291,7 +291,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "remoto",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12064",
@@ -3314,7 +3314,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1701,
+      "historicoTotal": 1690,
       "subClassificacao": {
         "remoto": 750,
         "local": 3148,
@@ -3542,16 +3542,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 701,
-        "emAberto": 120,
-        "atrasadas": 35,
-        "concluidas30d": 109,
-        "concluidas7d": 36,
+        "emAberto": 119,
+        "atrasadas": 36,
+        "concluidas30d": 107,
+        "concluidas7d": 34,
         "naSemanaCorrente": 100
       },
       "mttr": {
-        "horas": 347.45,
-        "label": "14d 11h",
-        "amostra": 109
+        "horas": 350.8,
+        "label": "14d 14h",
+        "amostra": 107
       },
       "tendencia4Semanas": [
         {
@@ -3572,7 +3572,7 @@
         {
           "semana": "W35",
           "criadas": 92,
-          "finalizadas": 24
+          "finalizadas": 25
         }
       ],
       "topOfensores": {
@@ -3580,7 +3580,7 @@
           {
             "nome": "(sem equipe)",
             "total": 701,
-            "emAberto": 120
+            "emAberto": 119
           }
         ],
         "responsaveis": [
@@ -3611,16 +3611,16 @@
           }
         ]
       },
-      "total": 120,
-      "atrasadas": 35,
+      "total": 119,
+      "atrasadas": 36,
       "porStatus": {
-        "naoIniciada": 111,
-        "emProgresso": 1,
+        "naoIniciada": 109,
+        "emProgresso": 2,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 120
+        "(sem equipe)": 119
       },
       "oss": [
         {
@@ -3974,14 +3974,15 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPA - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-13",
           "dataCriacao": "2026-07-27",
-          "dataInicial": "",
+          "dataInicial": "2026-08-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 720.0,
           "atrasada": true
         },
         {
@@ -4238,7 +4239,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12284",
@@ -5572,23 +5573,6 @@
           "atrasada": false
         },
         {
-          "osId": "10136",
-          "ativo": "Transformador 9 COMTRAFO     { JCD100-TRFR9 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ailton Leal ",
-          "status": "Não Iniciada",
-          "tarefa": "[Athon] - MPA - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-29",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "12234",
           "ativo": "Thopen - Indaiatuba 1 - SP Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { THPN-IND100 }",
           "equipe": "",
@@ -5675,6 +5659,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10136",
+          "ativo": "Transformador 9 COMTRAFO     { JCD100-TRFR9 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Ailton Leal ",
+          "status": "Finalizados",
+          "tarefa": "[Athon] - MPA - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-29",
+          "dataCriacao": "2026-07-27",
+          "dataInicial": "2026-08-26",
+          "dataFinal": "2026-08-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 720.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "10130",
           "ativo": "Sistema de Segurança  Petrolina  Pernambuco Brasil { PTL300-SSEG1 }",
@@ -7861,25 +7864,6 @@
           "atrasada": false
         },
         {
-          "osId": "8536",
-          "ativo": "Transformador 4 WTS     { THPN-CLN200-TRFR4 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-07-17",
-          "dataCriacao": "2026-06-26",
-          "dataInicial": "2026-07-16",
-          "dataFinal": "2026-07-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 480.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8664",
           "ativo": "Cabine 3 Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso  { NVX100-CABN3 }",
           "equipe": "",
@@ -8526,7 +8510,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 271
+      "historicoTotal": 265
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8535,15 +8519,15 @@
       "kpis": {
         "total": 143,
         "emAberto": 5,
-        "atrasadas": 1,
-        "concluidas30d": 8,
+        "atrasadas": 4,
+        "concluidas30d": 7,
         "concluidas7d": 0,
         "naSemanaCorrente": 4
       },
       "mttr": {
-        "horas": 174.0,
-        "label": "7d 6h",
-        "amostra": 8
+        "horas": 130.29,
+        "label": "5d 10h",
+        "amostra": 7
       },
       "tendencia4Semanas": [
         {
@@ -8604,7 +8588,7 @@
         ]
       },
       "total": 5,
-      "atrasadas": 1,
+      "atrasadas": 4,
       "porStatus": {
         "naoIniciada": 3,
         "emProgresso": 0,
@@ -8648,7 +8632,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12152",
@@ -8665,7 +8649,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12149",
@@ -8683,7 +8667,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 0,
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12296",
@@ -9493,15 +9477,15 @@
       "kpis": {
         "total": 631,
         "emAberto": 120,
-        "atrasadas": 84,
-        "concluidas30d": 287,
-        "concluidas7d": 62,
+        "atrasadas": 92,
+        "concluidas30d": 268,
+        "concluidas7d": 44,
         "naSemanaCorrente": 71
       },
       "mttr": {
-        "horas": 168.17,
-        "label": "7d 0h",
-        "amostra": 287
+        "horas": 157.34,
+        "label": "6d 13h",
+        "amostra": 268
       },
       "tendencia4Semanas": [
         {
@@ -9562,7 +9546,7 @@
         ]
       },
       "total": 120,
-      "atrasadas": 84,
+      "atrasadas": 92,
       "porStatus": {
         "naoIniciada": 112,
         "emProgresso": 2,
@@ -11024,7 +11008,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12194",
@@ -11041,7 +11025,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12193",
@@ -11058,7 +11042,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12192",
@@ -11075,7 +11059,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12187",
@@ -11092,7 +11076,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12186",
@@ -11109,7 +11093,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12185",
@@ -11126,7 +11110,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12182",
@@ -11143,7 +11127,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12268",
@@ -14474,7 +14458,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 464
+      "historicoTotal": 463
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14483,9 +14467,9 @@
       "kpis": {
         "total": 121,
         "emAberto": 7,
-        "atrasadas": 5,
+        "atrasadas": 6,
         "concluidas30d": 47,
-        "concluidas7d": 7,
+        "concluidas7d": 5,
         "naSemanaCorrente": 2
       },
       "mttr": {
@@ -14552,7 +14536,7 @@
         ]
       },
       "total": 7,
-      "atrasadas": 5,
+      "atrasadas": 6,
       "porStatus": {
         "naoIniciada": 7,
         "emProgresso": 0,
@@ -14663,7 +14647,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12245",
@@ -20164,14 +20148,15 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPA - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-13",
       "dataCriacao": "2026-07-27",
-      "dataInicial": "",
+      "dataInicial": "2026-08-26",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 720.0
     },
     {
       "osId": "10185",
@@ -20281,22 +20266,6 @@
       "tarefa": "[Piracicaba] - Investigação de anomalia no TC da Cabine de Medição (Pendências MPS)",
       "criticidade": "",
       "dataProgramada": "2026-07-27",
-      "dataCriacao": "2026-07-27",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "10136",
-      "ativo": "Transformador 9 COMTRAFO     { JCD100-TRFR9 }",
-      "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Ailton Leal ",
-      "status": "Não Iniciada",
-      "tarefa": "[Athon] - MPA - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-29",
       "dataCriacao": "2026-07-27",
       "dataInicial": "",
       "dataFinal": "",
@@ -21153,6 +21122,25 @@
       "dataFinal": "2026-07-29",
       "linkFracttal": "",
       "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "10136",
+      "ativo": "Transformador 9 COMTRAFO     { JCD100-TRFR9 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Ailton Leal ",
+      "status": "Finalizados",
+      "tarefa": "[Athon] - MPA - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-08-29",
+      "dataCriacao": "2026-07-27",
+      "dataInicial": "2026-08-26",
+      "dataFinal": "2026-08-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 720.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -23762,28 +23750,9 @@
       "horasAteAbrir": 96.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "10894",
-      "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { BES100-INVR1.9 }",
-      "equipe": "",
-      "responsavel": "Andrick Gouveia ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Andrick Gouveia ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.9] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-08-06",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-11",
-      "dataFinal": "2026-08-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2579,
+  "historicoTotal": 2561,
   "totalGeral": 5494,
   "verificacao": {
     "total": 0,
