@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-27T16:00:20Z",
+  "geradoEm": "2026-08-27T16:18:15Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -8525,8 +8525,8 @@
       "atrasadas": 4,
       "porStatus": {
         "naoIniciada": 2,
-        "emProgresso": 1,
-        "pausada": 3,
+        "emProgresso": 0,
+        "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
@@ -8610,7 +8610,7 @@
           "responsavel": "Adriano Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Adriano Silva ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "Reinstalação e testes de inversor em garantia",
           "criticidade": "",
           "dataProgramada": "2026-08-27",
@@ -9429,16 +9429,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 632,
-        "emAberto": 120,
-        "atrasadas": 91,
-        "concluidas30d": 269,
-        "concluidas7d": 45,
+        "emAberto": 119,
+        "atrasadas": 90,
+        "concluidas30d": 270,
+        "concluidas7d": 46,
         "naSemanaCorrente": 72
       },
       "mttr": {
-        "horas": 158.54,
-        "label": "6d 14h",
-        "amostra": 269
+        "horas": 159.73,
+        "label": "6d 15h",
+        "amostra": 270
       },
       "tendencia4Semanas": [
         {
@@ -9459,7 +9459,7 @@
         {
           "semana": "W35",
           "criadas": 41,
-          "finalizadas": 37
+          "finalizadas": 38
         }
       ],
       "topOfensores": {
@@ -9467,7 +9467,7 @@
           {
             "nome": "(sem equipe)",
             "total": 632,
-            "emAberto": 120
+            "emAberto": 119
           }
         ],
         "responsaveis": [
@@ -9498,16 +9498,16 @@
           }
         ]
       },
-      "total": 120,
-      "atrasadas": 91,
+      "total": 119,
+      "atrasadas": 90,
       "porStatus": {
         "naoIniciada": 112,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 120
+        "(sem equipe)": 119
       },
       "oss": [
         {
@@ -10091,24 +10091,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 456.0,
-          "atrasada": true
-        },
-        {
-          "osId": "10834",
-          "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Felipe Xavier ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Felipe Xavier ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-27",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 480.0,
           "atrasada": true
         },
         {
@@ -11560,6 +11542,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10834",
+          "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Felipe Xavier ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-08-07",
+          "dataInicial": "2026-08-27",
+          "dataFinal": "2026-08-27",
+          "linkFracttal": "",
+          "horasAteAbrir": 480.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "10833",
           "ativo": "Inversor 1.3 Sungrow SG250HX    { GDEN-GJR100-INVR1.3 }",
@@ -13252,25 +13253,6 @@
           "atrasada": false
         },
         {
-          "osId": "11038",
-          "ativo": "Inversor 1.4 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Railson Gomes ",
-          "status": "Finalizada",
-          "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-12",
-          "dataCriacao": "2026-08-11",
-          "dataInicial": "2026-08-13",
-          "dataFinal": "2026-08-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11116",
           "ativo": "Inversor 1.3 Sungrow SG250HX    { THPN-CDS100-INVR1.3 }",
           "equipe": "",
@@ -14411,7 +14393,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 464
+      "historicoTotal": 465
     },
     "engenharia": {
       "label": "Engenharia",
@@ -16637,7 +16619,7 @@
       "responsavel": "Adriano Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Adriano Silva ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "Reinstalação e testes de inversor em garantia",
       "criticidade": "",
       "dataProgramada": "2026-08-27",
@@ -19678,23 +19660,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 456.0
-    },
-    {
-      "osId": "10834",
-      "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Felipe Xavier ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Felipe Xavier ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "2026-08-27",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 480.0
     },
     {
       "osId": "10815",
@@ -23698,7 +23663,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2585,
+  "historicoTotal": 2586,
   "totalGeral": 5516,
   "verificacao": {
     "total": 0,
