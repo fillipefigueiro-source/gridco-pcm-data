@@ -58,6 +58,14 @@ function principalDe(req) {
 
 const STATUS = { 1: 'Em processo', 2: 'Em verificação', 3: 'Finalizada', 4: 'Cancelada' };
 const PRIOR  = { 1: 'Muito alta', 2: 'Alta', 3: 'Média', 4: 'Baixa', 5: 'Muito baixa' };
+// O Fracttal devolve o estado da tarefa em código (NO_STARTED, IN_PROGRESS…).
+// O painel mostra em português em toda parte; traduzir aqui evita que cada tela
+// invente a sua tabela.
+const ESTADO = {
+  NO_STARTED: 'Não Iniciada', NOT_STARTED: 'Não Iniciada',
+  IN_PROGRESS: 'Em progresso', PAUSED: 'Pausada',
+  DONE: 'Finalizada', STOPPED: 'Parada', CANCELLED: 'Cancelada',
+};
 const dia = s => (s ? String(s).slice(0, 10) : '');
 
 // O Fracttal devolve o ativo como "Nome   { CODIGO }". Separar deixa a gaveta legível.
@@ -112,7 +120,7 @@ module.exports = async function (context, req) {
 
     const tarefas = ((tk.ok && tk.body && tk.body.data) || []).map(t => ({
       tarefa: t.description || t.tasks_description || '',
-      estado: t.task_status || '',
+      estado: ESTADO[t.task_status] || t.task_status || '',
       ativo: partirAtivo(t.items_log_description || t.items_description || ''),
       prog: dia(t.date_maintenance),
       inicio: dia(t.initial_date),
@@ -130,6 +138,19 @@ module.exports = async function (context, req) {
     // melhor mostrar metade do que uma tela de erro sobre uma OS que existe.
     const tarefasOk = !!tk.ok;
 
+    // Ativos: o cabeçalho nem sempre traz items_log_descriptions (medido vazio na
+    // OS 10345, que tem três ativos). Cada tarefa carrega o seu, então a lista sai
+    // dali, sem repetir, e o cabeçalho serve só de reforço.
+    const vistos = new Set(), ativos = [];
+    const juntar = a => {
+      if (!a || (!a.nome && !a.codigo)) return;
+      const k = a.codigo || a.nome;
+      if (vistos.has(k)) return;
+      vistos.add(k); ativos.push(a);
+    };
+    tarefas.forEach(t => juntar(t.ativo));
+    (cab.items_log_descriptions || []).forEach(x => juntar(partirAtivo(x)));
+
     responder(200, {
       os: folio,
       idWO: idWO,
@@ -144,7 +165,7 @@ module.exports = async function (context, req) {
       fechamento: dia(cab.wo_final_date),
       duracao: cab.duration || 0,
       avaliacao: cab.rating || null,
-      ativos: (cab.items_log_descriptions || []).map(partirAtivo),
+      ativos: ativos,
       tarefas: tarefas,
       tarefasOk: tarefasOk,
       url: FX_BASE.replace(/\/$/, '') + '/tasks/wo/' + encodeURIComponent(idWO),
