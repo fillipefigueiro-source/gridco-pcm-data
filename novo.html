@@ -856,7 +856,18 @@ function _semPapel(quem){
       _pegar(["etiquetas.json"]).catch(() => ({}))
     ]);
     D = montarD(bd, et, _semanaEscolhida(bd));
-  } catch (e) { _falha(e.message, "carga"); return; }
+  } catch (e) {
+    /* 403 na carga = a conta autenticou mas nao tem papel. A tela certa para isso
+       ja existe (_semPapel), mas vivia so dentro do arrancar(), inalcancavel: a
+       carga estoura antes. O cliente novo lia "HTTP 403 em banco_dados.json" e
+       ligava para o PCM. Medido em producao 28/08: 5 tentativas seguidas de um
+       contato da Thopen, um minuto de intervalo, sem entender o que fazer. */
+    const _m = (e && e.message) || "";
+    const _s = (typeof window !== "undefined" && window.__SESSAO) || null;
+    if (_m.indexOf("403") >= 0 && _s) { _avisarFalha(_m, "sem-papel"); _semPapel(_s.quem); }
+    else { _falha(_m, "carga"); }
+    return;
+  }
   /* arrancar() ficava FORA do try: se ele quebrasse, a tela morria sem mensagem
      e sem aviso — a falha mais dificil de descobrir. O throw proposital de
      "sessao sem papel valido" ja trocou a tela pelo _semPapel: nesse caso
