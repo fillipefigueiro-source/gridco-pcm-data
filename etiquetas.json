@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-28T11:24:21Z",
+  "geradoEm": "2026-08-28T11:36:31Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -3576,9 +3576,9 @@
       "total": 105,
       "atrasadas": 35,
       "porStatus": {
-        "naoIniciada": 94,
-        "emProgresso": 2,
-        "pausada": 9,
+        "naoIniciada": 93,
+        "emProgresso": 4,
+        "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4484,7 +4484,7 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
@@ -4673,14 +4673,15 @@
           "responsavel": "Júlio Willers ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Júlio Willers ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
           "dataCriacao": "2026-08-24",
-          "dataInicial": "",
+          "dataInicial": "2026-08-28",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "atrasada": false
         },
         {
@@ -7171,25 +7172,6 @@
           "atrasada": false
         },
         {
-          "osId": "10237",
-          "ativo": "Transformador 1      { MRJ100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Hélio Silva ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Hélio Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPS - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-14",
-          "dataCriacao": "2026-07-28",
-          "dataInicial": "2026-08-04",
-          "dataFinal": "2026-08-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10283",
           "ativo": "Transformador 1 WEG     { THPN-BJD100-TRFR1 }",
           "equipe": "",
@@ -7244,6 +7226,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 144.0,
           "horasAteFechar": 24.0,
+          "atrasada": false
+        },
+        {
+          "osId": "10237",
+          "ativo": "Transformador 1      { MRJ100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Hélio Silva ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Hélio Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPS - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "2026-08-04",
+          "dataFinal": "2026-08-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -8243,16 +8244,16 @@
       "cor": "#ef4444",
       "kpis": {
         "total": 144,
-        "emAberto": 5,
-        "atrasadas": 5,
-        "concluidas30d": 10,
-        "concluidas7d": 3,
+        "emAberto": 4,
+        "atrasadas": 4,
+        "concluidas30d": 12,
+        "concluidas7d": 5,
         "naSemanaCorrente": 5
       },
       "mttr": {
-        "horas": 278.4,
-        "label": "11d 14h",
-        "amostra": 10
+        "horas": 446.0,
+        "label": "18d 14h",
+        "amostra": 12
       },
       "tendencia4Semanas": [
         {
@@ -8273,7 +8274,7 @@
         {
           "semana": "W35",
           "criadas": 5,
-          "finalizadas": 3
+          "finalizadas": 5
         }
       ],
       "topOfensores": {
@@ -8281,7 +8282,7 @@
           {
             "nome": "(sem equipe)",
             "total": 144,
-            "emAberto": 5
+            "emAberto": 4
           }
         ],
         "responsaveis": [
@@ -8312,36 +8313,18 @@
           }
         ]
       },
-      "total": 5,
-      "atrasadas": 5,
+      "total": 4,
+      "atrasadas": 4,
       "porStatus": {
         "naoIniciada": 2,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 5
+        "(sem equipe)": 4
       },
       "oss": [
-        {
-          "osId": "8281",
-          "ativo": "Inversor 1.17 Sungrow SG125HV    { BRS100-INVR1.17 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Anderson  Parente",
-          "status": "Em progresso",
-          "tarefa": "Abertura de chamado para garantia - Inversor 17 de SN A1910293409 [Testes em campo]",
-          "criticidade": "",
-          "dataProgramada": "2026-06-25",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 1560.0,
-          "atrasada": true
-        },
         {
           "osId": "9602",
           "ativo": "Estrutura Trackers Estrada Jussara S/N Mandaguaçu  Paraná Brasil { MNG100-ETKR1 }",
@@ -8414,6 +8397,44 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "9606",
+          "ativo": "Inversor 1.1 Sungrow SG125HV    { BRS100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "Abertura de chamado para garantia - Inversor 01 de SN A1910293475 [Testes em campo]",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-17",
+          "dataInicial": "2026-07-17",
+          "dataFinal": "2026-08-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 1008.0,
+          "atrasada": false
+        },
+        {
+          "osId": "8281",
+          "ativo": "Inversor 1.17 Sungrow SG125HV    { BRS100-INVR1.17 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "Abertura de chamado para garantia - Inversor 17 de SN A1910293409 [Testes em campo]",
+          "criticidade": "",
+          "dataProgramada": "2026-06-25",
+          "dataCriacao": "2026-06-24",
+          "dataInicial": "2026-06-30",
+          "dataFinal": "2026-08-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
+          "horasAteFechar": 1416.0,
+          "atrasada": false
+        },
         {
           "osId": "7758",
           "ativo": "Inversor 1.3 Sungrow SG250HX-20    { PRL100-INVR1.3 }",
@@ -8656,25 +8677,6 @@
           "dataCriacao": "2026-07-20",
           "dataInicial": "2026-07-20",
           "dataFinal": "2026-07-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9606",
-          "ativo": "Inversor 1.1 Sungrow SG125HV    { BRS100-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Anderson  Parente",
-          "status": "Finalizados",
-          "tarefa": "Abertura de chamado para garantia - Inversor 01 de SN A1910293475 [Testes em campo]",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-17",
-          "dataInicial": "2026-07-17",
-          "dataFinal": "2026-07-17",
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
@@ -9156,7 +9158,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 39
+      "historicoTotal": 40
     },
     "performance": {
       "label": "Performance",
@@ -14135,16 +14137,16 @@
       "cor": "#3b82f6",
       "kpis": {
         "total": 122,
-        "emAberto": 10,
-        "atrasadas": 10,
-        "concluidas30d": 50,
-        "concluidas7d": 8,
+        "emAberto": 8,
+        "atrasadas": 8,
+        "concluidas30d": 51,
+        "concluidas7d": 9,
         "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 371.52,
-        "label": "15d 11h",
-        "amostra": 50
+        "horas": 394.35,
+        "label": "16d 10h",
+        "amostra": 51
       },
       "tendencia4Semanas": [
         {
@@ -14165,7 +14167,7 @@
         {
           "semana": "W35",
           "criadas": 3,
-          "finalizadas": 8
+          "finalizadas": 9
         }
       ],
       "topOfensores": {
@@ -14173,7 +14175,7 @@
           {
             "nome": "(sem equipe)",
             "total": 122,
-            "emAberto": 10
+            "emAberto": 8
           }
         ],
         "responsaveis": [
@@ -14185,7 +14187,7 @@
           {
             "nome": "Carlos Bruno  Pessanha Pereira",
             "total": 14,
-            "emAberto": 1
+            "emAberto": 0
           },
           {
             "nome": "Marcos Duarte",
@@ -14204,54 +14206,18 @@
           }
         ]
       },
-      "total": 10,
-      "atrasadas": 10,
+      "total": 8,
+      "atrasadas": 8,
       "porStatus": {
         "naoIniciada": 8,
-        "emProgresso": 1,
-        "pausada": 1,
+        "emProgresso": 0,
+        "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 10
+        "(sem equipe)": 8
       },
       "oss": [
-        {
-          "osId": "7179",
-          "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { APG100-INVR1.8 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Adriano  Moraes",
-          "status": "pausado",
-          "tarefa": "[Ultragaz] - MPS - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-06-02",
-          "dataCriacao": "2026-05-29",
-          "dataInicial": "2026-06-02",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "atrasada": true
-        },
-        {
-          "osId": "8397",
-          "ativo": "Ar Condicionado      { FZL100-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-01",
-          "dataCriacao": "2026-06-25",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 1536.0,
-          "atrasada": true
-        },
         {
           "osId": "10815",
           "ativo": "Estação Meteorológica Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100-ESTM1 }",
@@ -14407,6 +14373,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 1344.0,
+          "atrasada": false
+        },
+        {
+          "osId": "8397",
+          "ativo": "Ar Condicionado      { FZL100-SOEM1-ARCD }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
+          "criticidade": "",
+          "dataProgramada": "2026-07-01",
+          "dataCriacao": "2026-06-25",
+          "dataInicial": "2026-07-01",
+          "dataFinal": "2026-08-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
+          "horasAteFechar": 1392.0,
           "atrasada": false
         },
         {
@@ -16234,6 +16219,25 @@
           "atrasada": false
         },
         {
+          "osId": "7179",
+          "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { APG100-INVR1.8 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Adriano  Moraes",
+          "status": "Finalizados",
+          "tarefa": "[Ultragaz] - MPS - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-06-02",
+          "dataCriacao": "2026-05-29",
+          "dataInicial": "2026-06-02",
+          "dataFinal": "2026-06-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "7246",
           "ativo": "Infraestrutura Civil  Irecê  Bahia Brasil { IRC100-INFC1 }",
           "equipe": "",
@@ -16291,7 +16295,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 100
+      "historicoTotal": 102
     }
   },
   "ossPublicas": [
@@ -17450,7 +17454,7 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
       "dataProgramada": "2026-08-28",
@@ -17628,14 +17632,15 @@
       "responsavel": "Júlio Willers ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Júlio Willers ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
       "dataProgramada": "2026-08-28",
       "dataCriacao": "2026-08-24",
-      "dataInicial": "",
+      "dataInicial": "2026-08-28",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0
     },
     {
       "osId": "11987",
@@ -20263,57 +20268,6 @@
       "linkFracttal": "",
       "horasAteAbrir": 0,
       "horasAteFechar": 0
-    },
-    {
-      "osId": "8397",
-      "ativo": "Ar Condicionado      { FZL100-SOEM1-ARCD }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
-      "criticidade": "",
-      "dataProgramada": "2026-07-01",
-      "dataCriacao": "2026-06-25",
-      "dataInicial": "2026-08-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 1536.0
-    },
-    {
-      "osId": "8281",
-      "ativo": "Inversor 1.17 Sungrow SG125HV    { BRS100-INVR1.17 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Anderson  Parente",
-      "status": "Em progresso",
-      "tarefa": "Abertura de chamado para garantia - Inversor 17 de SN A1910293409 [Testes em campo]",
-      "criticidade": "",
-      "dataProgramada": "2026-06-25",
-      "dataCriacao": "2026-06-24",
-      "dataInicial": "2026-08-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 1560.0
-    },
-    {
-      "osId": "7179",
-      "ativo": "Inversor 1.8 Huawei SUN2000-250KTL-H1    { APG100-INVR1.8 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Adriano  Moraes",
-      "status": "pausado",
-      "tarefa": "[Ultragaz] - MPS - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-06-02",
-      "dataCriacao": "2026-05-29",
-      "dataInicial": "2026-06-02",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0
     }
   ],
   "ossHistorico": [
@@ -20432,25 +20386,6 @@
       "atrasada": false
     },
     {
-      "osId": "10267",
-      "ativo": "Cabine 1  Santo Inácio  São Paulo Brasil { STI100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Hélio Silva ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Hélio Silva ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-08-07",
-      "dataCriacao": "2026-07-28",
-      "dataInicial": "2026-08-03",
-      "dataFinal": "2026-08-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "10264",
       "ativo": "Cabine 1    São Paulo Brasil { SPP300-CABN1 }",
       "equipe": "",
@@ -20466,25 +20401,6 @@
       "dataFinal": "2026-08-27",
       "linkFracttal": "",
       "horasAteAbrir": 720.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10237",
-      "ativo": "Transformador 1      { MRJ100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Hélio Silva ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Hélio Silva ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPS - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-14",
-      "dataCriacao": "2026-07-28",
-      "dataInicial": "2026-08-04",
-      "dataFinal": "2026-08-04",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -23216,9 +23132,47 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "atrasada": false
+    },
+    {
+      "osId": "11140",
+      "ativo": "Tracker 69.100 STI Norland     { TIM100-ETKR69.100 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Luiz  Silva",
+      "status": "Finalizados",
+      "tarefa": "[TIM100-ETK69.100] - Verificação de tracker com oscilação de ângulo alvo",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-12",
+      "dataInicial": "2026-08-14",
+      "dataFinal": "2026-08-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "11139",
+      "ativo": "Tracker 43.100 STI Norland     { TIM100-ETKR43.100 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Luiz  Silva",
+      "status": "Finalizados",
+      "tarefa": "[TIM100-ETK43.100] - Verificação de tracker com oscilação de ângulo alvo",
+      "criticidade": "",
+      "dataProgramada": "2026-08-14",
+      "dataCriacao": "2026-08-12",
+      "dataInicial": "2026-08-14",
+      "dataFinal": "2026-08-16",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 48.0,
+      "atrasada": false
     }
   ],
-  "historicoTotal": 2603,
+  "historicoTotal": 2606,
   "totalGeral": 5544,
   "verificacao": {
     "total": 0,
