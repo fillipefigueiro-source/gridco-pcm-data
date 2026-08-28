@@ -274,6 +274,21 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .pv-usi td:first-child{padding-left:32px;color:var(--ink2)}
 .pv-c b{display:block;font-size:12.5px;color:var(--ink)}
 .pv-c span{font-size:9.5px;color:var(--ink2)}  /* --ink3 dava 3.9 sobre a celula tingida */
+.cel b{font-weight:800;color:var(--ink)}
+.cel span{color:var(--ink2);font-size:11px;margin-left:3px}
+.cel-hv{cursor:pointer}
+.cel-hv:hover{box-shadow:inset 0 0 0 2px var(--ink3)}
+.pvpop{position:fixed;z-index:60;max-width:360px;max-height:340px;overflow:auto;
+  background:var(--surf);border:1px solid var(--line);border-radius:10px;
+  box-shadow:0 12px 32px rgba(0,0,0,.28);padding:6px 0;font-size:12px}
+.pvpop h4{margin:0;padding:7px 12px 8px;font-size:10.5px;color:var(--ink3);
+  font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.pvpop a{display:flex;gap:8px;padding:7px 12px;color:var(--ink);text-decoration:none;
+  border-top:1px solid var(--line)}
+.pvpop a:hover{background:color-mix(in srgb,var(--ink) 8%,var(--surf))}
+.pvpop .po{font-weight:700;color:var(--ink2);white-space:nowrap}
+.pvpop .pt{flex:1;min-width:0}
+.pvpop .pe{font-size:10px;color:var(--ink3)}
 .pv-vazio{color:var(--ink3)}
 .pv-pend{font-weight:800}
 .pv-pend.mal{color:var(--mal)}
@@ -1766,13 +1781,55 @@ function arrancar(){
         ${vals.map(([k,l]) => bt("val", k, l, val===k)).join("")}</div>
     </div>`;
   }
-  function gpCel(c, valor){
+  let PVPOP = null;
+  function gpFecharPvPop(){ if (PVPOP){ PVPOP.remove(); PVPOP = null; } }
+  /* Popup das tarefas faltantes de uma usina numa sigla (MPM/MPT/MPS/MPA).
+     Le de GP._pv (as preventivas ja filtradas pela barra). Cada item vira link
+     para a OS no Fracttal (x.url). Hover abre; entrar no popup mantem aberto. */
+  function gpPopFalta(){
+    gpFecharPvPop();
+    let hideT = null;
+    const abrir = (td) => {
+      clearTimeout(hideT);
+      const u = td.dataset.pvu, c = td.dataset.pvc;
+      const lista = (GP._pv || []).filter(x => x.usina === u && x.sig === c && x.estado !== "Finalizada");
+      if (!lista.length) return;
+      gpFecharPvPop();
+      const pop = document.createElement("div");
+      pop.className = "pvpop";
+      pop.innerHTML = `<h4>${esc(c)} · ${esc(u)} — ${lista.length} pendente${lista.length>1?"s":""}</h4>` +
+        lista.slice(0,60).map(x => `<a href="${esc(x.url||"#")}" target="_blank" rel="noopener">
+          <span class="po">#${esc(x.os)}</span>
+          <span class="pt">${esc(String(x.tarefa||"").slice(0,90))}<br>
+            <span class="pe">${esc(x.estado||"—")}</span></span></a>`).join("") +
+        (lista.length>60 ? `<div class="pe" style="padding:6px 12px">+${lista.length-60} não exibidas</div>` : "");
+      document.body.appendChild(pop);
+      const r = td.getBoundingClientRect();
+      let left = r.left, top = r.bottom + 6;
+      if (left + pop.offsetWidth > innerWidth - 8)  left = innerWidth - pop.offsetWidth - 8;
+      if (top + pop.offsetHeight > innerHeight - 8) top = r.top - pop.offsetHeight - 6;
+      pop.style.left = Math.max(8, left) + "px";
+      pop.style.top  = Math.max(8, top) + "px";
+      pop.onmouseenter = () => clearTimeout(hideT);
+      pop.onmouseleave = () => { hideT = setTimeout(gpFecharPvPop, 180); };
+      PVPOP = pop;
+    };
+    document.querySelectorAll(".cel-hv[data-pvu]").forEach(td => {
+      td.onmouseenter = () => abrir(td);
+      td.onmouseleave = () => { hideT = setTimeout(gpFecharPvPop, 180); };
+      td.onclick = (e) => { e.stopPropagation(); abrir(td); };
+    });
+  }
+  function gpCel(c, valor, meta){
     if (!c || !c.n) return '<td class="cel vazio">—</td>';
     if (valor === "pct") {
       const p = Math.round(c.f/c.n*100);
       const tom = p>=90 ? "var(--ok)" : p>=50 ? "var(--warn)" : "var(--danger)";
-      return `<td class="cel" style="background:color-mix(in srgb,${tom} 15%,var(--surf))"
-        title="${c.f} de ${c.n} finalizadas"><b>${p}%</b><span>${c.f}/${c.n}</span></td>`;
+      const falta = c.n - c.f;
+      const hv = (meta && falta)
+        ? ` data-pvu="${esc(meta.u)}" data-pvc="${esc(meta.c)}" class="cel cel-hv"` : ' class="cel"';
+      return `<td${hv} style="background:color-mix(in srgb,${tom} 15%,var(--surf))"
+        title="${c.f} de ${c.n} finalizadas${meta&&falta?" · "+falta+" pendente"+(falta>1?"s":"")+" — clique/mouse":""}"><b>${p}%</b><span>(${c.f}/${c.n})</span></td>`;
     }
     const v = valor==="abertas"?c.a : valor==="atrasadas"?c.at : valor==="finalizadas"?c.f : c.n;
     const mal = valor==="atrasadas" && v>0;
@@ -1822,9 +1879,10 @@ function arrancar(){
 
     const dados = gpFiltrada();
 
-    /* 2 — matriz de preventivas: controles PRÓPRIOS, ignora a barra do item 1.
-       É o comportamento do painel atual; o aviso no título diz isso. */
-    const pv = (GP.t || []).filter(x => x.sig);
+    /* 2 — matriz de preventivas: agora RESPEITA a barra de filtros (dados), a
+       pedido do PCM (28/08). Os controles de agrupamento/valor seguem próprios. */
+    const pv = dados.filter(x => x.sig);
+    GP._pv = pv;   // o popup de tarefas faltantes lê daqui
     const pvMat = (() => {
       const colunas = GPPV.colunas === "mes" ? GP_MESES : GP_SIGLAS;
       const chave = GPPV.colunas === "mes"
@@ -1841,12 +1899,12 @@ function arrancar(){
         ${grupos.map(g => `
           <tr class="pv-cli"><td><span class="seta">▾</span>${esc(g.g)}
             ${GPPV.linhas==="usina"?"":`<span class="qtd">${g.nUs} usina${g.nUs>1?"s":""}</span>`}</td>
-            ${usadas.map(c => gpCel(g.gt[c], GPPV.valor)).join("")}
+            ${usadas.map(c => gpCel(g.gt[c], GPPV.valor, GPPV.linhas==="usina"?{u:g.g,c}:null)).join("")}
             ${gpCel(g.tot, GPPV.valor)}
             <td class="pv-pend ${g.tot.n-g.tot.f?"mal":""}">${g.tot.n-g.tot.f}</td></tr>
           ${GPPV.linhas==="usina" ? "" : g.linhas.map(l => `
           <tr class="pv-usi"><td>${esc(l.u)}</td>
-            ${usadas.map(c => gpCel(l.cols[c], GPPV.valor)).join("")}
+            ${usadas.map(c => gpCel(l.cols[c], GPPV.valor, {u:l.u, c})).join("")}
             ${gpCel(l.tot, GPPV.valor)}
             <td class="pv-pend ${l.tot.n-l.tot.f?"mal":""}">${l.tot.n-l.tot.f}</td></tr>`).join("")}
         `).join("")}</tbody></table></div>`;
@@ -1862,12 +1920,12 @@ function arrancar(){
 
     return gpBarra(dados.length) + `
     <div class="gp-b"><h3>Conclusão das preventivas
-      <span class="gp-obs">controles próprios — ignora a barra de filtros acima</span></h3>
+      <span class="gp-obs">respeita a barra · passe o mouse numa usina para ver o que falta</span></h3>
       ${gpControles("pv", GPPV.linhas, GPPV.colunas, GPPV.valor,
           [["pct","% concluído"],["abertas","Pendentes"],["finalizadas","Feitas"],["total","Total"]])}
       <div class="pv-leg"><b>MPM</b> mensal · <b>MPT</b> trimestral · <b>MPS</b> semestral
         · <b>MPA</b> anual · a sigla vem do texto da tarefa, e alcança
-        <b>${pv.length.toLocaleString("pt-BR")}</b> das ${GP.total.toLocaleString("pt-BR")} tarefas</div>
+        <b>${pv.length.toLocaleString("pt-BR")}</b> das ${dados.length.toLocaleString("pt-BR")} tarefas</div>
       ${pvMat}</div>
 
     <div class="gp-b amb"><h3>Não finalizadas no período
@@ -2082,8 +2140,12 @@ function arrancar(){
     });
     document.querySelectorAll("[data-gt]").forEach(inp => {
       inp.onclick = e => e.stopPropagation();
-      inp.oninput = () => { GPFT[inp.dataset.gt] = inp.value.trim();
+      const commit = () => { GPFT[inp.dataset.gt] = inp.value.trim();
         FOCO = "gp:" + inp.dataset.gt; POP = null; fecharPops(); pintar(); };
+      // type=date: só na data COMPLETA (onchange). oninput re-renderizava a cada
+      // segmento e, como .value só preenche com a data inteira, o ano nunca entrava.
+      if (inp.type === "date") inp.onchange = commit;
+      else inp.oninput = commit;
     });
     const atr = $("#gp-atr");
     if (atr) atr.onclick = () => { GPFT.soAtrasadas = !GPFT.soAtrasadas; pintar(); };
@@ -2097,6 +2159,7 @@ function arrancar(){
       const g = b.dataset.pv, v = b.dataset.v;
       if (g==="lin") GPPV.linhas = v; else if (g==="col") GPPV.colunas = v; else GPPV.valor = v;
       pintar(); });
+    gpPopFalta();
     document.querySelectorAll("#v-gestao .pv-cli").forEach(tr => tr.onclick = () => {
       tr.classList.toggle("fech");
       let e = tr.nextElementSibling;
@@ -2157,7 +2220,7 @@ function arrancar(){
     else if (FOCO) { const i = FOCO.startsWith("gp:")
         ? document.querySelector(`.ftxt[data-gt="${FOCO.slice(3)}"]`)
         : document.querySelector(`.ftxt[data-t="${FOCO}"]`);
-      if (i) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }
+      if (i) { i.focus(); try { i.setSelectionRange(i.value.length, i.value.length); } catch (e) {} } }
   }
   /* Tres estados, nao dois: "sistema" nao e o mesmo que "claro". Sem data-theme o
      CSS cai na @media (prefers-color-scheme), que e o padrao de quem nunca mexeu. */
