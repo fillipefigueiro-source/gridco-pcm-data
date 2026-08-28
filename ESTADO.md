@@ -1,8 +1,9 @@
 # Estado do painel PCM — o que não está óbvio no código
 
-**Última atualização: 24/08/2026 (tarde).** Base escrita pelo Fabrício; ampliada com o que
+**Última atualização: 28/08/2026.** Base escrita pelo Fabrício; ampliada com o que
 foi descoberto e alterado em 19–24/08 — inclui o sentinela do Fracttal (§6d), a
-grafia canônica de cluster (§3.1b) e as armadilhas novas da §6.
+grafia canônica de cluster (§3.1b) e as armadilhas novas da §6. Em 28/08 entrou a
+regra do `novo.html` como fonte (§1, "Onde o código realmente mora").
 
 > **Este arquivo não contém nenhuma credencial, senha ou token.** Eles vivem nos
 > GitHub Secrets, nas app settings do Azure e no `.env` local, e passam por canal
@@ -49,6 +50,24 @@ no OneDrive, que a nuvem não enxerga. Esse JSON só atualiza por ação manual.
 Os scripts vivem no repositório. A pasta do OneDrive tem **shims** que delegam.
 Editar o shim não tem efeito. **Se um deles passar de ~1 KB, alguém sobrescreveu
 o shim com o arquivo real.** Conferido em 21/08: todos entre 921 e 942 bytes.
+
+**O `novo.html` é fonte, não é gerado — edite ele direto** (28/08). Como todo
+`.html` deste repositório.
+
+Até 27/08 ele era montado por um `construir_novo.py` a partir de um
+`side_pcm.html` + `montar.js` que **nunca estiveram aqui** — viviam numa pasta
+temporária de sessão do Claude. Quem abrisse o repositório via só o arquivo
+gerado e, com razão, editava ele. Foi o que aconteceu em 27/08 às 21h, com os
+chips de semana (7d13ebfe): uma reconstrução teria apagado aquilo **sem aviso
+nenhum**, porque o build reescreve o arquivo inteiro. Só não apagou porque o
+`git` acusou conflito.
+
+Esse gerador está aposentado. Não regenere o `novo.html`.
+
+**Detector:** o arquivo tem que conter `_semanaEscolhida` e `trocarSemana` (os
+chips de semana) e `_semPapel(_s.quem)` (a tela de conta sem papel). Se algum
+sumir, alguém republicou por cima a partir de um build velho — recupere pelo
+histórico em vez de refazer.
 
 ---
 
