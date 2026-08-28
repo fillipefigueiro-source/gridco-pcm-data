@@ -2142,9 +2142,11 @@ function arrancar(){
       inp.onclick = e => e.stopPropagation();
       const commit = () => { GPFT[inp.dataset.gt] = inp.value.trim();
         FOCO = "gp:" + inp.dataset.gt; POP = null; fecharPops(); pintar(); };
-      // type=date: só na data COMPLETA (onchange). oninput re-renderizava a cada
-      // segmento e, como .value só preenche com a data inteira, o ano nunca entrava.
-      if (inp.type === "date") inp.onchange = commit;
+      // type=date: só na data COMPLETA (onchange). E LIMPA o oninput: o loop
+      // .ftxt de cima (linha ~2112) liga um oninput em TODO .ftxt — inclusive
+      // estes — que re-renderiza a cada segmento, e por isso o ano nunca entrava.
+      // Como este loop roda depois, o inp.oninput=null desfaz aquele.
+      if (inp.type === "date") { inp.onchange = commit; inp.oninput = null; }
       else inp.oninput = commit;
     });
     const atr = $("#gp-atr");
