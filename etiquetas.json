@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-28T15:45:23Z",
+  "geradoEm": "2026-08-28T15:57:06Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 13,
       "atrasadas": 10,
       "porStatus": {
-        "naoIniciada": 10,
-        "emProgresso": 0,
+        "naoIniciada": 9,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
@@ -298,14 +298,15 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Cabine 1] - Religamento da Cabine 1",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
           "dataCriacao": "2026-08-28",
-          "dataInicial": "",
+          "dataInicial": "2026-08-28",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -9033,8 +9034,8 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 639,
-        "emAberto": 120,
+        "total": 641,
+        "emAberto": 122,
         "atrasadas": 94,
         "concluidas30d": 266,
         "concluidas7d": 50,
@@ -9063,7 +9064,7 @@
         },
         {
           "semana": "W35",
-          "criadas": 48,
+          "criadas": 50,
           "finalizadas": 46
         }
       ],
@@ -9071,8 +9072,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 639,
-            "emAberto": 120
+            "total": 641,
+            "emAberto": 122
           }
         ],
         "responsaveis": [
@@ -9103,16 +9104,16 @@
           }
         ]
       },
-      "total": 120,
+      "total": 122,
       "atrasadas": 94,
       "porStatus": {
-        "naoIniciada": 110,
+        "naoIniciada": 112,
         "emProgresso": 2,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 120
+        "(sem equipe)": 122
       },
       "oss": [
         {
@@ -10769,6 +10770,40 @@
           "criticidade": "",
           "dataProgramada": "2026-08-28",
           "dataCriacao": "2026-08-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "12401",
+          "ativo": "Tracker 1.100 Sparkin SK1L62    { IBI200-ETKR1.100 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Thiago Morais ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 1.100] - Verificação de Trackers Parados em Ibirapuã 2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-31",
+          "dataCriacao": "2026-08-28",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "12400",
+          "ativo": "Tracker 1.100 Sparkin SK1L62    { IBI100-ETKR1.100 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Thiago Morais ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 1.100] - Verificação de Trackers Parados em Ibirapuã 1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-31",
+          "dataCriacao": "2026-08-28",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -16191,6 +16226,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "12401",
+      "ativo": "Tracker 1.100 Sparkin SK1L62    { IBI200-ETKR1.100 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Thiago Morais ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 1.100] - Verificação de Trackers Parados em Ibirapuã 2",
+      "criticidade": "",
+      "dataProgramada": "2026-08-31",
+      "dataCriacao": "2026-08-28",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "12400",
+      "ativo": "Tracker 1.100 Sparkin SK1L62    { IBI100-ETKR1.100 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Thiago Morais ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 1.100] - Verificação de Trackers Parados em Ibirapuã 1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-31",
+      "dataCriacao": "2026-08-28",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "12399",
       "ativo": "Inversor 1.10 Huawei SUN2000-250KTL-H1    { SBT500-INVR1.10 }",
       "equipe": "",
@@ -16230,14 +16297,15 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Cabine 1] - Religamento da Cabine 1",
       "criticidade": "",
       "dataProgramada": "2026-08-28",
       "dataCriacao": "2026-08-28",
-      "dataInicial": "",
+      "dataInicial": "2026-08-28",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -22918,7 +22986,7 @@
     }
   ],
   "historicoTotal": 2623,
-  "totalGeral": 5553,
+  "totalGeral": 5555,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
