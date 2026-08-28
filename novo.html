@@ -67,8 +67,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .lat-pe{margin-top:auto;padding:12px 16px 16px;border-top:1px solid rgba(255,255,255,.09)}
 .lat-sem{display:flex;gap:4px;margin-bottom:10px;flex-wrap:wrap}
 .sem{font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:5px;
-  background:rgba(255,255,255,.09);color:var(--latx)}
+  background:rgba(255,255,255,.09);color:var(--latx);cursor:pointer;
+  border:0;font-family:inherit;line-height:1.45}
+.sem:hover{background:rgba(255,255,255,.2)}
 .sem.on{background:var(--green);color:#141207}
+.sem.on:hover{background:var(--green)}
 .lat-ac{display:flex;align-items:center;gap:7px;margin-bottom:10px;padding:6px 8px;
   border-radius:7px;font-size:11px;font-weight:700;color:var(--latx);
   background:rgba(255,255,255,.07);text-decoration:none}
@@ -579,9 +582,9 @@ tbody tr:hover{background:var(--surf2)}
         <button data-t="sistema" title="Acompanhar o sistema"><span class="ic">◐</span><span class="rot">Sistema</span></button>
         <button data-t="escuro"  title="Tema escuro"><span class="ic">☾</span><span class="rot">Escuro</span></button>
       </div>
-      <div class="lat-sem">
-        <span class="sem on">S35</span><span class="sem">S34</span><span class="sem">S33</span><span class="sem">S32</span>
-      </div>
+      <!-- preenchido por JS a partir de bd.semanas: escrito a mao, ficava eternamente
+           em S35..S32 e sem clique (heranca do prototipo). -->
+      <div class="lat-sem" id="lat-sem"></div>
       <div class="lat-u"><span class="av">A</span><span>Admin · Grid Co.</span></div>
     </div>
   </nav>
@@ -668,7 +671,24 @@ function _enxuta(o){
     cri:o.dataCriacao||"", atr:!!o.atrasada, mod:o.modalidade||"" };
 }
 
-function montarD(bd, et){
+/* Semana que a tela deve mostrar. Guardada no sessionStorage (nao na URL, que
+   iria parar em link compartilhado e historico) e validada contra o arquivo: a
+   lista guarda so as ultimas semanas, entao a escolhida some depois de um mes e
+   precisa cair na ativa em vez de quebrar a carga. */
+function _semanaEscolhida(bd){
+  let sel = null;
+  try { sel = sessionStorage.getItem("pcmSemana"); } catch (e) {}
+  const existe = (bd.semanas || []).some(s => s.week === sel);
+  return existe ? sel : (bd.semana_ativa || null);
+}
+function trocarSemana(wk){
+  try { sessionStorage.setItem("pcmSemana", wk); } catch (e) {}
+  /* Recarrega em vez de remontar: arrancar() registra listeners no document
+     (keydown/click), entao chama-lo de novo duplicaria cada um deles. */
+  location.reload();
+}
+
+function montarD(bd, et, semanaSel){
   // /api/dados devolve DUAS formas: admin/equipe recebem o arquivo inteiro (tem
   // semana_ativa); o CLIENTE passa por filtrarParaCliente, que monta
   // {geradoEm, cliente, semanas} e NAO tem semana_ativa. Sem este fallback o
@@ -676,10 +696,11 @@ function montarD(bd, et){
   // seleciona pela CHAVE: o array vem do mais novo para o mais velho, e [-1]
   // pegaria a semana mais VELHA — numeros plausiveis e errados.
   const semanas = bd.semanas || [];
-  const w = bd.semana_ativa ? semanas.find(x => x.week === bd.semana_ativa)
-                            : semanas[0];   // sem a chave, [0] e a mais nova
-  if (!w) throw new Error(bd.semana_ativa
-    ? ("semana ativa " + bd.semana_ativa + " não está no arquivo")
+  const alvo = semanaSel || bd.semana_ativa;   // chip da barra lateral manda
+  const w = alvo ? semanas.find(x => x.week === alvo)
+                 : semanas[0];   // sem a chave, [0] e a mais nova
+  if (!w) throw new Error(alvo
+    ? ("semana " + alvo + " não está no arquivo")
     : "o arquivo não tem nenhuma semana");
   const ativa = w.week;              // marca a semana corrente na trajetoria
   const rows = w.rows || [], resumo = w.resumo || {};
@@ -738,6 +759,11 @@ function montarD(bd, et){
 
   return {
     semana: w.label, semanas_guardadas: bd.semanas.length,
+    // chips da barra lateral: da mais nova para a mais velha, com a contagem
+    // de OS de cada uma e qual e a semana corrente do calendario
+    semanas_lista: semanas.map(s => ({ week: String(s.week || ""),
+                                       n: (s.rows || []).length })),
+    semana_vendo: w.week, semana_corrente: bd.semana_ativa || null,
     pendentes, alertas,
     insights: {
       total:n, horas:soma(r=>r.duracao),
@@ -829,7 +855,7 @@ function _semPapel(quem){
       _pegar(["/api/dados", "banco_dados.json"]),
       _pegar(["etiquetas.json"]).catch(() => ({}))
     ]);
-    D = montarD(bd, et);
+    D = montarD(bd, et, _semanaEscolhida(bd));
   } catch (e) { _falha(e.message, "carga"); return; }
   /* arrancar() ficava FORA do try: se ele quebrasse, a tela morria sem mensagem
      e sem aviso — a falha mais dificil de descobrir. O throw proposital de
@@ -936,6 +962,24 @@ function arrancar(){
     `<button class="lat-i" data-v="mod" data-m="${esc(k)}" title="${esc(m.label)}">
        <span class="ic">${ICO[k]||"•"}</span><span class="rot">${esc(m.label.replace("Chamados em ","").replace("Manutenções ",""))}</span>
        <span class="n ${m.atrasadas>0?"alerta":""}">${m.total}</span></button>`).join("");
+  /* Chips de semana. Vêm de bd.semanas (o arquivo guarda as ultimas), da mais
+     nova para a mais velha. A semana CORRENTE do calendario ganha um ponto: sem
+     ele, com a proxima semana ja publicada na sexta, nao da para saber qual das
+     duas e "hoje" — as duas ficariam iguais. */
+  const _cur = (D.semanas_lista || []).slice()
+    .sort((a, b) => String(b.week).localeCompare(String(a.week)));
+  $("#lat-sem").innerHTML = _cur.map(s => {
+    const curto = s.week.includes("-W") ? "S" + s.week.split("-W").pop() : s.week;
+    const vendo = s.week === D.semana_vendo;
+    const hoje = s.week === D.semana_corrente;
+    const t = s.n + " OS" + (hoje ? " · semana corrente" : "");
+    return `<button class="sem${vendo ? " on" : ""}" data-wk="${esc(s.week)}"
+              title="${esc(curto + " — " + t)}">${esc(curto)}${hoje ? " ·" : ""}</button>`;
+  }).join("");
+  $("#lat-sem").addEventListener("click", e => {
+    const b = e.target.closest(".sem");
+    if (b && b.dataset.wk !== D.semana_vendo) trocarSemana(b.dataset.wk);
+  });
   $("#n-semana").textContent = D.insights.total;
   $("#n-tarefas").textContent = D.tabela.length;
 
