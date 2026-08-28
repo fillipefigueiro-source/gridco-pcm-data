@@ -2352,10 +2352,22 @@ function arrancar(){
         inp.classList.remove("ruim");
         const k = inp.dataset.gtd;
         if (!inp.value) { if (GPFT[k]) { GPFT[k] = ""; FOCO = "gpd:" + k; pintar(); } return; }
-        const iso = gpIso(inp.value);
+        /* Só aplica com o ano INTEIRO. Aceitar 2 dígitos aqui fazia "01/06/20"
+           virar 2020 no meio da digitação de 2026: o filtro aplicava, a tela
+           re-renderizava e os dois últimos dígitos se perdiam — o campo virava
+           01/06/2020 sozinho. O atalho de 2 dígitos continua valendo, mas só
+           quando o usuário sai do campo. */
+        const cheia = /^\d{2}\/\d{2}\/\d{4}$/.test(inp.value);
+        const iso = cheia ? gpIso(inp.value) : null;
         if (iso && iso !== GPFT[k]) { GPFT[k] = iso; FOCO = "gpd:" + k; POP = null; fecharPops(); pintar(); }
       };
-      inp.onblur = () => { if (inp.value && !gpIso(inp.value)) inp.classList.add("ruim"); };
+      inp.onblur = () => {
+        const k = inp.dataset.gtd;
+        const iso = inp.value ? gpIso(inp.value) : "";
+        if (inp.value && !iso) { inp.classList.add("ruim"); return; }
+        inp.classList.remove("ruim");
+        if (iso !== GPFT[k]) { GPFT[k] = iso || ""; POP = null; fecharPops(); pintar(); }
+      };
     });
     document.querySelectorAll("[data-gtc]").forEach(b => b.onclick = e => {
       e.stopPropagation();
