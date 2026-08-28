@@ -286,6 +286,55 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .pvpop a{display:flex;gap:8px;padding:7px 12px;color:var(--ink);text-decoration:none;
   border-top:1px solid var(--line)}
 .pvpop a:hover{background:color-mix(in srgb,var(--ink) 8%,var(--surf))}
+/* gaveta lateral do detalhe da OS */
+.osf{position:fixed;inset:0;z-index:70;background:rgba(10,8,20,.45);opacity:0;
+  pointer-events:none;transition:opacity .18s ease}
+.osf.on{opacity:1;pointer-events:auto}
+.osg{position:fixed;top:0;right:0;bottom:0;z-index:71;width:min(470px,calc(100% - 28px));
+  background:var(--surf);border-left:1px solid var(--line2);
+  box-shadow:-18px 0 50px rgba(10,8,20,.28);transform:translateX(100%);
+  transition:transform .2s ease;display:flex;flex-direction:column}
+.osg.on{transform:translateX(0)}
+@media (prefers-reduced-motion:reduce){.osg,.osf{transition:none}}
+.osg-t{display:flex;align-items:flex-start;gap:10px;padding:15px 16px 12px;
+  border-bottom:1px solid var(--line)}
+.osg-n{font-family:ui-monospace,monospace;font-size:12.5px;font-weight:700;color:var(--ink3)}
+.osg-h{font-size:15px;font-weight:800;line-height:1.32;margin-top:4px}
+.osg-x{margin-left:auto;flex:0 0 auto;width:28px;height:28px;border-radius:7px;border:0;
+  background:var(--surf2);color:var(--ink2);cursor:pointer;font-size:15px;line-height:1}
+.osg-x:hover{background:var(--line)}
+.osg-c{overflow:auto;padding:0 0 20px}
+.osg-s{padding:13px 16px;border-bottom:1px solid var(--line)}
+.osg-s:last-child{border-bottom:0}
+.osg-s h5{margin:0 0 8px;font-size:10px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--ink3)}
+.osg-f{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(128px,100%),1fr));gap:10px}
+.osg-f .k{font-size:10px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.04em}
+.osg-f .v{font-size:13px;font-weight:600;margin-top:2px;word-break:break-word}
+.osg-b{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10.5px;font-weight:800}
+.osg-b.ok{background:color-mix(in srgb,var(--ok) 18%,var(--surf));color:var(--ok)}
+.osg-b.nao{background:color-mix(in srgb,var(--warn) 20%,var(--surf));color:var(--aviso)}
+.osg-b.proc{background:color-mix(in srgb,var(--gd) 20%,var(--surf));color:var(--gd)}
+.osg-tar{display:flex;gap:9px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line)}
+.osg-tar:last-child{border-bottom:0}
+.osg-tar .tt{flex:1;min-width:0;font-size:12.5px}
+.osg-tar .tm{font-size:10.5px;color:var(--ink3);margin-top:2px}
+.osg-obs{white-space:pre-wrap;font-size:12.5px;color:var(--ink2);
+  background:var(--surf2);border:1px solid var(--line);border-radius:8px;padding:10px 11px;
+  max-height:230px;overflow:auto}
+.osg-l{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;
+  font-weight:700;color:var(--gd);text-decoration:none}
+.osg-l:hover{text-decoration:underline}
+.osg-carga{padding:22px 16px;text-align:center;color:var(--ink3);font-size:12.5px}
+.osg-erro{color:var(--mal);font-weight:600}
+/* campo de data digitavel */
+.dtw{position:relative;display:flex;gap:5px;align-items:center}
+.dtw .ftxt{flex:1;min-width:0}
+.dtcal{flex:0 0 auto;width:30px;height:30px;border-radius:7px;border:1px solid var(--line2);
+  background:var(--surf2);color:var(--ink2);cursor:pointer;font-size:13px;padding:0}
+.dtcal:hover{background:var(--line)}
+.dtnat{position:absolute;right:0;bottom:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.ftxt.ruim{outline:2px solid var(--danger);outline-offset:1px}
 .pvpop .po{font-weight:700;color:var(--ink2);white-space:nowrap}
 .pvpop .pt{flex:1;min-width:0}
 .pvpop .pe{font-size:10px;color:var(--ink3)}
@@ -1715,9 +1764,9 @@ function arrancar(){
       <div class="fgrupo"><span class="fl">Solicitação #</span>
         <input class="ftxt" data-gt="ss" placeholder="ex: 2657" value="${esc(GPFT.ss)}"></div>
       <div class="fgrupo"><span class="fl">Período de</span>
-        <input class="ftxt" type="date" data-gt="de" value="${esc(GPFT.de)}"></div>
+        <div class="dtw"><input class="ftxt" data-gtd="de" inputmode="numeric" autocomplete="off" placeholder="dd/mm/aaaa" value="${gpBr(GPFT.de)}"><button class="dtcal" data-gtc="de" title="Abrir calendário" aria-label="Abrir calendário">▤</button><input class="dtnat" type="date" data-gtn="de" tabindex="-1" aria-hidden="true"></div></div>
       <div class="fgrupo"><span class="fl">Período até</span>
-        <input class="ftxt" type="date" data-gt="ate" value="${esc(GPFT.ate)}"></div>
+        <div class="dtw"><input class="ftxt" data-gtd="ate" inputmode="numeric" autocomplete="off" placeholder="dd/mm/aaaa" value="${gpBr(GPFT.ate)}"><button class="dtcal" data-gtc="ate" title="Abrir calendário" aria-label="Abrir calendário">▤</button><input class="dtnat" type="date" data-gtn="ate" tabindex="-1" aria-hidden="true"></div></div>
       <div class="fgrupo"><span class="fl">Considerar</span>
         <button class="fs" data-gf="considerar"><span class="fs-l">${
           GPFT.considerar==="criacao"?"Criação":GPFT.considerar==="programada"?"Programada":"Qualquer data"
@@ -1781,6 +1830,138 @@ function arrancar(){
         ${vals.map(([k,l]) => bt("val", k, l, val===k)).join("")}</div>
     </div>`;
   }
+  /* ── Gaveta lateral do detalhe da OS ─────────────────────────────────────
+     O gestao_pcm.json guarda só o essencial de cada uma das 20 mil tarefas. A
+     Observação, quem criou, os ativos e as durações reais vêm do Fracttal sob
+     demanda, por /api/os, na hora que a gaveta abre. Uma consulta por abertura,
+     com cache em memória para não repetir a mesma OS. */
+  const OSCACHE = new Map();
+  let OSABERTA = null;
+  const osBr = s => (s && s.length >= 10)
+    ? s.slice(8,10) + "/" + s.slice(5,7) + "/" + s.slice(0,4) : "";
+  const osDur = seg => {
+    seg = +seg || 0; if (!seg) return "";
+    const h = Math.floor(seg/3600), m = Math.round((seg%3600)/60);
+    return h ? (h + "h" + (m ? " " + m + "min" : "")) : (m + "min");
+  };
+  const osCls = e => /finaliz/i.test(e) ? "ok" : /progress|process/i.test(e) ? "proc" : "nao";
+
+  function osFechar(){
+    const f = $("#os-fundo"), g = $("#os-gav");
+    if (f) f.classList.remove("on");
+    if (g) g.classList.remove("on");
+    OSABERTA = null;
+  }
+  function osCasca(){
+    if ($("#os-gav")) return;
+    const f = document.createElement("div");
+    f.className = "osf"; f.id = "os-fundo"; f.onclick = osFechar;
+    const g = document.createElement("aside");
+    g.className = "osg"; g.id = "os-gav";
+    g.setAttribute("role","dialog"); g.setAttribute("aria-modal","true");
+    g.innerHTML = '<div class="osg-t"><div style="min-width:0">' +
+      '<div class="osg-n" id="os-num"></div><div class="osg-h" id="os-tit"></div></div>' +
+      '<button class="osg-x" id="os-x" aria-label="Fechar">✕</button></div>' +
+      '<div class="osg-c" id="os-corpo"></div>';
+    document.body.appendChild(f); document.body.appendChild(g);
+    $("#os-x").onclick = osFechar;
+  }
+  async function osAbrir(folio, titulo){
+    osCasca();
+    OSABERTA = folio;
+    $("#os-num").textContent = "OS #" + folio;
+    $("#os-tit").textContent = titulo || "";
+    $("#os-corpo").innerHTML = '<div class="osg-carga">Buscando a OS no Fracttal…</div>';
+    $("#os-fundo").classList.add("on");
+    $("#os-gav").classList.add("on");
+    let d = OSCACHE.get(folio);
+    if (!d) {
+      try {
+        const r = await fetch("/api/os?folio=" + encodeURIComponent(folio));
+        d = await r.json();
+        if (!r.ok) throw new Error(d && d.erro ? d.erro : "HTTP " + r.status);
+        OSCACHE.set(folio, d);
+      } catch (e) {
+        if (OSABERTA !== folio) return;      // o usuário já fechou ou abriu outra
+        $("#os-corpo").innerHTML = '<div class="osg-carga"><div class="osg-erro">' +
+          esc(e.message) + '</div><div style="margin-top:8px">O link para o Fracttal ' +
+          'continua valendo.</div></div>';
+        return;
+      }
+    }
+    if (OSABERTA !== folio) return;
+    osPintar(d);
+  }
+  function osPintar(d){
+    const feitas = (d.tarefas||[]).filter(t => t.feita || /finaliz/i.test(t.estado||"")).length;
+    const fato = (k,v) => v ? '<div><div class="k">'+k+'</div><div class="v">'+v+'</div></div>' : "";
+    const sec = (h,c) => c ? '<div class="osg-s"><h5>'+h+'</h5>'+c+'</div>' : "";
+
+    const cab = '<div class="osg-s"><div class="osg-f">' +
+      fato("Status", d.status ? '<span class="osg-b '+osCls(d.status)+'">'+esc(d.status)+'</span>' : "") +
+      fato("Concluído", d.pct == null ? "" : d.pct + "%") +
+      fato("Responsável", esc(d.responsavel||"")) +
+      fato("Criada por", esc(d.criadaPor||"")) +
+      fato("Criada em", osBr(d.criacao)) +
+      fato("Programada", osBr(d.programada)) +
+      fato("Fechada em", osBr(d.fechamento)) +
+      fato("Duração prevista", osDur(d.duracao)) +
+      '</div><a class="osg-l" href="' + esc(d.url||"#") + '" target="_blank" rel="noopener">' +
+      'Abrir no Fracttal →</a></div>';
+
+    const obs = d.observacao
+      ? '<div class="osg-obs">' + esc(d.observacao) + '</div>'
+      : '<div style="font-size:12.5px;color:var(--ink3)">Sem observação registrada nesta OS.</div>';
+
+    const tars = (d.tarefas||[]).length
+      ? (d.tarefas||[]).map(t => '<div class="osg-tar">' +
+          '<span class="osg-b '+osCls(t.estado||"")+'">'+esc(t.estado||"—")+'</span>' +
+          '<span class="tt">'+esc(t.tarefa||"") +
+            (t.ativo && t.ativo.codigo ? '<div class="tm">'+esc(t.ativo.nome)+
+              ' · <b>'+esc(t.ativo.codigo)+'</b></div>' : "") +
+            (t.duracaoReal ? '<div class="tm">real: '+osDur(t.duracaoReal)+
+              (t.duracao ? ' · previsto: '+osDur(t.duracao) : "")+'</div>' : "") +
+            (t.observacao ? '<div class="tm">'+esc(String(t.observacao).slice(0,160))+'</div>' : "") +
+          '</span></div>').join("")
+      : (d.tarefasOk === false
+          ? '<div style="font-size:12.5px;color:var(--aviso)">Não consegui listar as tarefas agora.</div>'
+          : '<div style="font-size:12.5px;color:var(--ink3)">Nenhuma tarefa nesta OS.</div>');
+
+    const ativos = (d.ativos||[]).length
+      ? (d.ativos||[]).map(a => '<div class="osg-tar"><span class="tt">'+esc(a.nome) +
+          (a.codigo ? '<div class="tm"><b>'+esc(a.codigo)+'</b></div>' : "") +
+          '</span></div>').join("")
+      : "";
+
+    $("#os-corpo").innerHTML = cab +
+      sec("Observação da OS", obs) +
+      sec("Tarefas — " + feitas + " de " + (d.tarefas||[]).length + " finalizadas", tars) +
+      sec("Ativos envolvidos", ativos);
+  }
+
+  /* ── Campo de data que aceita digitação ──────────────────────────────────
+     O widget nativo em segmentos é ruim de digitar e varia por navegador. Aqui
+     o campo é texto: aceita 01/06/2026, 01062026 e 1/6/26, formata enquanto se
+     digita, e o botão ao lado abre o calendário nativo para quem preferir. */
+  const gpBr = iso => (iso && iso.length >= 10)
+    ? iso.slice(8,10) + "/" + iso.slice(5,7) + "/" + iso.slice(0,4) : "";
+  function gpIso(txt){
+    const m = String(txt||"").trim().match(/^(\d{1,2})\/(\d{1,2})\/(\d{2}|\d{4})$/);
+    if (!m) return null;
+    let d = +m[1], mo = +m[2], a = +m[3];
+    if (a < 100) a += 2000;
+    if (mo < 1 || mo > 12 || d < 1 || d > 31) return null;
+    const dt = new Date(a, mo-1, d);
+    if (dt.getDate() !== d || dt.getMonth() !== mo-1 || dt.getFullYear() !== a) return null;
+    return a + "-" + String(mo).padStart(2,"0") + "-" + String(d).padStart(2,"0");
+  }
+  function gpMascara(v){
+    let n = String(v||"").replace(/[^\d]/g, "").slice(0,8);
+    if (n.length > 4) return n.slice(0,2)+"/"+n.slice(2,4)+"/"+n.slice(4);
+    if (n.length > 2) return n.slice(0,2)+"/"+n.slice(2);
+    return n;
+  }
+
   let PVPOP = null;
   function gpFecharPvPop(){ if (PVPOP){ PVPOP.remove(); PVPOP = null; } }
   /* Popup das tarefas faltantes de uma usina numa sigla (MPM/MPT/MPS/MPA).
@@ -1797,11 +1978,15 @@ function arrancar(){
       gpFecharPvPop();
       const pop = document.createElement("div");
       pop.className = "pvpop";
+      // clique na linha abre a gaveta; o link direto do Fracttal fica no ícone ↗,
+      // para quem prefere o sistema em vez do resumo.
       pop.innerHTML = `<h4>${esc(c)} · ${esc(u)} — ${lista.length} pendente${lista.length>1?"s":""}</h4>` +
-        lista.slice(0,60).map(x => `<a href="${esc(x.url||"#")}" target="_blank" rel="noopener">
+        lista.slice(0,60).map(x => `<a data-osf="${esc(x.os)}"
+            data-ost="${esc(String(x.tarefa||"").slice(0,90))}" style="cursor:pointer">
           <span class="po">#${esc(x.os)}</span>
           <span class="pt">${esc(String(x.tarefa||"").slice(0,90))}<br>
-            <span class="pe">${esc(x.estado||"—")}</span></span></a>`).join("") +
+            <span class="pe">${esc(x.estado||"—")}</span></span>
+          <span class="po" title="Abrir no Fracttal" data-osu="${esc(x.url||"")}">↗</span></a>`).join("") +
         (lista.length>60 ? `<div class="pe" style="padding:6px 12px">+${lista.length-60} não exibidas</div>` : "");
       document.body.appendChild(pop);
       const r = td.getBoundingClientRect();
@@ -1812,6 +1997,13 @@ function arrancar(){
       pop.style.top  = Math.max(8, top) + "px";
       pop.onmouseenter = () => clearTimeout(hideT);
       pop.onmouseleave = () => { hideT = setTimeout(gpFecharPvPop, 180); };
+      pop.querySelectorAll("[data-osf]").forEach(a => a.onclick = ev => {
+        ev.preventDefault(); ev.stopPropagation();
+        const ic = ev.target.closest("[data-osu]");
+        if (ic && ic.dataset.osu) { window.open(ic.dataset.osu, "_blank", "noopener"); return; }
+        gpFecharPvPop();
+        osAbrir(a.dataset.osf, a.dataset.ost);
+      });
       PVPOP = pop;
     };
     document.querySelectorAll(".cel-hv[data-pvu]").forEach(td => {
@@ -2149,6 +2341,35 @@ function arrancar(){
       if (inp.type === "date") { inp.onchange = commit; inp.oninput = null; }
       else inp.oninput = commit;
     });
+    /* Datas: texto mascarado. Só aplica o filtro quando a data está completa e
+       é válida — a cada tecla seria re-render no meio da digitação, que foi o
+       defeito que tornou o campo antigo inutilizável. */
+    document.querySelectorAll("[data-gtd]").forEach(inp => {
+      inp.onclick = e => e.stopPropagation();
+      inp.oninput = () => {
+        const pos = inp.value.length;
+        inp.value = gpMascara(inp.value);
+        inp.classList.remove("ruim");
+        const k = inp.dataset.gtd;
+        if (!inp.value) { if (GPFT[k]) { GPFT[k] = ""; FOCO = "gpd:" + k; pintar(); } return; }
+        const iso = gpIso(inp.value);
+        if (iso && iso !== GPFT[k]) { GPFT[k] = iso; FOCO = "gpd:" + k; POP = null; fecharPops(); pintar(); }
+      };
+      inp.onblur = () => { if (inp.value && !gpIso(inp.value)) inp.classList.add("ruim"); };
+    });
+    document.querySelectorAll("[data-gtc]").forEach(b => b.onclick = e => {
+      e.stopPropagation();
+      const nat = document.querySelector('.dtnat[data-gtn="' + b.dataset.gtc + '"]');
+      if (!nat) return;
+      nat.value = GPFT[b.dataset.gtc] || "";
+      if (nat.showPicker) { try { nat.showPicker(); return; } catch (err) {} }
+      nat.style.pointerEvents = "auto"; nat.style.opacity = "0.01"; nat.focus(); nat.click();
+    });
+    document.querySelectorAll("[data-gtn]").forEach(nat => nat.onchange = () => {
+      const k = nat.dataset.gtn;
+      GPFT[k] = nat.value || "";
+      FOCO = "gpd:" + k; POP = null; fecharPops(); pintar();
+    });
     const atr = $("#gp-atr");
     if (atr) atr.onclick = () => { GPFT.soAtrasadas = !GPFT.soAtrasadas; pintar(); };
     const gplim = $("#gp-limpar");
@@ -2219,6 +2440,10 @@ function arrancar(){
       FT.os = ""; FT.ss = ""; POP = null; FOCO = null; pintar(); };
     // pintar() refaz o innerHTML e leva junto a lista aberta e o cursor: devolve
     if (POP) (POP.gp ? gpAbrirPop : abrirPop)(POP.k);
+    else if (FOCO && FOCO.startsWith("gpd:")) {
+      const i = document.querySelector('.ftxt[data-gtd="' + FOCO.slice(4) + '"]');
+      if (i) { i.focus(); try { i.setSelectionRange(i.value.length, i.value.length); } catch (e) {} }
+    }
     else if (FOCO) { const i = FOCO.startsWith("gp:")
         ? document.querySelector(`.ftxt[data-gt="${FOCO.slice(3)}"]`)
         : document.querySelector(`.ftxt[data-t="${FOCO}"]`);
@@ -2482,6 +2707,7 @@ function arrancar(){
     if (!mudo) ABRIU = null;
   }
   document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && document.querySelector(".osg.on")) { osFechar(); return; }
     if (e.key === "Escape" && document.querySelector(".det")) fecharDet();
   });
 
