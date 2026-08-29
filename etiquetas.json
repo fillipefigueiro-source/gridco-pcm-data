@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-29T12:06:24Z",
+  "geradoEm": "2026-08-29T12:45:25Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 3960,
-        "emAberto": 17,
-        "atrasadas": 15,
-        "concluidas30d": 617,
-        "concluidas7d": 154,
+        "emAberto": 16,
+        "atrasadas": 14,
+        "concluidas30d": 618,
+        "concluidas7d": 155,
         "naSemanaCorrente": 122
       },
       "mttr": {
-        "horas": 16.62,
-        "label": "16h 37min",
-        "amostra": 617
+        "horas": 16.63,
+        "label": "16h 38min",
+        "amostra": 618
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W35",
           "criadas": 124,
-          "finalizadas": 118
+          "finalizadas": 119
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 3960,
-            "emAberto": 17
+            "emAberto": 16
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 17,
-      "atrasadas": 15,
+      "total": 16,
+      "atrasadas": 14,
       "porStatus": {
-        "naoIniciada": 14,
-        "emProgresso": 0,
+        "naoIniciada": 12,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 17
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -262,32 +262,15 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-INP100-DINV1.1] - Religamento do THPN-INP100-DINV1.1",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
           "dataCriacao": "2026-08-29",
-          "dataInicial": "",
+          "dataInicial": "2026-08-29",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "12428",
-          "ativo": "Thopen - Alto Paraná 2 - PR Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-APR200] - Religamento do THPN-APR200",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-28",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -530,6 +513,26 @@
           "supervisor": "Railson Gomes ",
           "status": "Finalizados",
           "tarefa": "[CTS100-CABN1] - Religamento do CTS100-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-28",
+          "dataCriacao": "2026-08-28",
+          "dataInicial": "2026-08-29",
+          "dataFinal": "2026-08-29",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12428",
+          "ativo": "Thopen - Alto Paraná 2 - PR Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[THPN-APR200] - Religamento do THPN-APR200",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
           "dataCriacao": "2026-08-28",
@@ -2202,26 +2205,6 @@
           "atrasada": false
         },
         {
-          "osId": "12151",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-25",
-          "dataCriacao": "2026-08-25",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "2026-08-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11861",
           "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
           "equipe": "",
@@ -3402,12 +3385,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1718,
+      "historicoTotal": 1719,
       "subClassificacao": {
         "remoto": 750,
         "local": 3210,
         "remotoEmAberto": 6,
-        "localEmAberto": 11,
+        "localEmAberto": 10,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -16272,14 +16255,15 @@
       "responsavel": "Ricardo Silva ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-INP100-DINV1.1] - Religamento do THPN-INP100-DINV1.1",
       "criticidade": "",
       "dataProgramada": "2026-08-28",
       "dataCriacao": "2026-08-29",
-      "dataInicial": "",
+      "dataInicial": "2026-08-29",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16363,23 +16347,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "12428",
-      "ativo": "Thopen - Alto Paraná 2 - PR Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-APR200] - Religamento do THPN-APR200",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-08-28",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "12424",
@@ -20749,6 +20716,26 @@
       "atrasada": false
     },
     {
+      "osId": "12428",
+      "ativo": "Thopen - Alto Paraná 2 - PR Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[THPN-APR200] - Religamento do THPN-APR200",
+      "criticidade": "",
+      "dataProgramada": "2026-08-28",
+      "dataCriacao": "2026-08-28",
+      "dataInicial": "2026-08-29",
+      "dataFinal": "2026-08-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "12401",
       "ativo": "Tracker 1.100 Sparkin SK1L62    { IBI200-ETKR1.100 }",
       "equipe": "",
@@ -23045,29 +23032,9 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "11100",
-      "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "UFV: Ceilândia 2 | Proteção: --/-- | Ação: Religamento Local | Falha: Usina desligada",
-      "criticidade": "",
-      "dataProgramada": "2026-08-12",
-      "dataCriacao": "2026-08-12",
-      "dataInicial": "2026-08-13",
-      "dataFinal": "2026-08-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2638,
+  "historicoTotal": 2639,
   "totalGeral": 5584,
   "verificacao": {
     "total": 0,
