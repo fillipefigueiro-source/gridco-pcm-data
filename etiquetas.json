@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-29T15:15:09Z",
+  "geradoEm": "2026-08-29T17:51:21Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-24 .. 2026-08-30",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3961,
-        "emAberto": 16,
+        "total": 3963,
+        "emAberto": 17,
         "atrasadas": 13,
-        "concluidas30d": 619,
-        "concluidas7d": 156,
-        "naSemanaCorrente": 123
+        "concluidas30d": 620,
+        "concluidas7d": 157,
+        "naSemanaCorrente": 125
       },
       "mttr": {
-        "horas": 16.61,
-        "label": "16h 36min",
-        "amostra": 619
+        "horas": 16.58,
+        "label": "16h 35min",
+        "amostra": 620
       },
       "tendencia4Semanas": [
         {
@@ -38,28 +38,28 @@
         },
         {
           "semana": "W35",
-          "criadas": 125,
-          "finalizadas": 120
+          "criadas": 127,
+          "finalizadas": 121
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3961,
-            "emAberto": 16
+            "total": 3963,
+            "emAberto": 17
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 483,
+            "total": 484,
             "emAberto": 0
           },
           {
             "nome": "Marcos  Camargo",
-            "total": 454,
-            "emAberto": 2
+            "total": 455,
+            "emAberto": 3
           },
           {
             "nome": "Felipe Silva",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 16,
+      "total": 17,
       "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 13,
+        "naoIniciada": 14,
         "emProgresso": 0,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 16
+        "(sem equipe)": 17
       },
       "oss": [
         {
@@ -328,6 +328,24 @@
           "atrasada": true
         },
         {
+          "osId": "12447",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Marcos  Camargo",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-29",
+          "dataCriacao": "2026-08-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "12446",
           "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
           "equipe": "",
@@ -559,6 +577,26 @@
           "dataFinal": "2026-08-29",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12448",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-29",
+          "dataCriacao": "2026-08-29",
+          "dataInicial": "2026-08-29",
+          "dataFinal": "2026-08-29",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -2184,26 +2222,6 @@
           "atrasada": false
         },
         {
-          "osId": "12173",
-          "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
-          "equipe": "",
-          "responsavel": "Italo  Lustosa",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Italo  Lustosa",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-25",
-          "dataCriacao": "2026-08-25",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "2026-08-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11861",
           "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
           "equipe": "",
@@ -3384,12 +3402,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1720,
+      "historicoTotal": 1721,
       "subClassificacao": {
         "remoto": 750,
-        "local": 3211,
+        "local": 3213,
         "remotoEmAberto": 6,
-        "localEmAberto": 10,
+        "localEmAberto": 11,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -16248,6 +16266,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "12447",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Marcos  Camargo",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-29",
+      "dataCriacao": "2026-08-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "12446",
       "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
       "equipe": "",
@@ -23033,8 +23068,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2640,
-  "totalGeral": 5585,
+  "historicoTotal": 2641,
+  "totalGeral": 5587,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
