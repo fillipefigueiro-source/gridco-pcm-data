@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T12:36:41Z",
+  "geradoEm": "2026-08-31T12:48:18Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -3739,16 +3739,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 706,
-        "emAberto": 87,
-        "atrasadas": 79,
-        "concluidas30d": 129,
-        "concluidas7d": 63,
+        "emAberto": 86,
+        "atrasadas": 78,
+        "concluidas30d": 130,
+        "concluidas7d": 64,
         "naSemanaCorrente": 8
       },
       "mttr": {
-        "horas": 325.77,
-        "label": "13d 13h",
-        "amostra": 129
+        "horas": 324.55,
+        "label": "13d 12h",
+        "amostra": 130
       },
       "tendencia4Semanas": [
         {
@@ -3769,7 +3769,7 @@
         {
           "semana": "W36",
           "criadas": 0,
-          "finalizadas": 1
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
@@ -3777,7 +3777,7 @@
           {
             "nome": "(sem equipe)",
             "total": 706,
-            "emAberto": 87
+            "emAberto": 86
           }
         ],
         "responsaveis": [
@@ -3808,16 +3808,16 @@
           }
         ]
       },
-      "total": 87,
-      "atrasadas": 79,
+      "total": 86,
+      "atrasadas": 78,
       "porStatus": {
-        "naoIniciada": 78,
-        "emProgresso": 0,
+        "naoIniciada": 76,
+        "emProgresso": 1,
         "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 87
+        "(sem equipe)": 86
       },
       "oss": [
         {
@@ -4645,23 +4645,6 @@
           "atrasada": true
         },
         {
-          "osId": "12007",
-          "ativo": "Infraestrutura Civil Sítio Pitombeira Limoeiro do Norte  Ceará Brasil { BLN100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Cláudio  Ferreira",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "11997",
           "ativo": "Infraestrutura Civil Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100-INFC1 }",
           "equipe": "",
@@ -4821,14 +4804,15 @@
           "responsavel": "Cláudio  Silva",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Cláudio  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
           "dataCriacao": "2026-08-24",
-          "dataInicial": "",
+          "dataInicial": "2026-08-31",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 168.0,
           "atrasada": true
         },
         {
@@ -4971,9 +4955,9 @@
           "osId": "11957",
           "ativo": "Infraestrutura Civil Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200-INFC1 }",
           "equipe": "",
-          "responsavel": "Marcos  Camargo",
+          "responsavel": "Matheus Gois ",
           "criadoPor": "Juliana Cândido",
-          "supervisor": "Marcos  Camargo",
+          "supervisor": "Matheus Gois ",
           "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
@@ -5311,6 +5295,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "12007",
+          "ativo": "Infraestrutura Civil Sítio Pitombeira Limoeiro do Norte  Ceará Brasil { BLN100-INFC1 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-08-28",
+          "dataCriacao": "2026-08-24",
+          "dataInicial": "2026-08-31",
+          "dataFinal": "2026-08-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "11989",
           "ativo": "Infraestrutura Civil  Santo Inácio  São Paulo Brasil { STI100-INFC1 }",
@@ -8141,28 +8144,9 @@
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "9015",
-          "ativo": "Infraestrutura Civil Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR200-INFC1 }",
-          "equipe": "",
-          "responsavel": "Leonardo  Dias",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Leonardo  Dias",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-07-06",
-          "dataCriacao": "2026-07-06",
-          "dataInicial": "2026-07-06",
-          "dataFinal": "2026-07-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 298
+      "historicoTotal": 299
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9073,16 +9057,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 652,
-        "emAberto": 123,
-        "atrasadas": 89,
-        "concluidas30d": 225,
-        "concluidas7d": 56,
+        "emAberto": 122,
+        "atrasadas": 88,
+        "concluidas30d": 226,
+        "concluidas7d": 57,
         "naSemanaCorrente": 38
       },
       "mttr": {
-        "horas": 178.45,
-        "label": "7d 10h",
-        "amostra": 225
+        "horas": 181.91,
+        "label": "7d 13h",
+        "amostra": 226
       },
       "tendencia4Semanas": [
         {
@@ -9103,7 +9087,7 @@
         {
           "semana": "W36",
           "criadas": 0,
-          "finalizadas": 2
+          "finalizadas": 3
         }
       ],
       "topOfensores": {
@@ -9111,7 +9095,7 @@
           {
             "nome": "(sem equipe)",
             "total": 652,
-            "emAberto": 123
+            "emAberto": 122
           }
         ],
         "responsaveis": [
@@ -9142,16 +9126,16 @@
           }
         ]
       },
-      "total": 123,
-      "atrasadas": 89,
+      "total": 122,
+      "atrasadas": 88,
       "porStatus": {
-        "naoIniciada": 105,
-        "emProgresso": 5,
-        "pausada": 13,
+        "naoIniciada": 104,
+        "emProgresso": 6,
+        "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 123
+        "(sem equipe)": 122
       },
       "oss": [
         {
@@ -9472,26 +9456,8 @@
           "responsavel": "Andrick Gouveia ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Andrick Gouveia ",
-          "status": "pausado",
-          "tarefa": "[Ibaté 2][Inversor 1.4] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-22",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 888.0,
-          "atrasada": true
-        },
-        {
-          "osId": "9838",
-          "ativo": "Inversor 1.3 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Andrick Gouveia ",
           "status": "Em progresso",
-          "tarefa": "[Ibaté 2][Inversor 1.3] - Inspeção Geral do Inversor",
+          "tarefa": "[Ibaté 2][Inversor 1.4] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-07-22",
           "dataCriacao": "2026-07-22",
@@ -10724,14 +10690,15 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "Levi Maia ",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.9] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-08-31",
           "dataCriacao": "2026-08-28",
-          "dataInicial": "",
+          "dataInicial": "2026-08-31",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 72.0,
           "atrasada": false
         },
         {
@@ -11198,9 +11165,9 @@
           "osId": "12421",
           "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { THPN-APR100-INVR1.9 }",
           "equipe": "",
-          "responsavel": "Ronaldo  Silva",
+          "responsavel": "Matheus Gois ",
           "criadoPor": "Ana Barros",
-          "supervisor": "Ronaldo  Silva",
+          "supervisor": "Matheus Gois ",
           "status": "Não Iniciada",
           "tarefa": "Coleta de Dados de Geração",
           "criticidade": "",
@@ -11282,6 +11249,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 72.0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "9838",
+          "ativo": "Inversor 1.3 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Andrick Gouveia ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Andrick Gouveia ",
+          "status": "Finalizados",
+          "tarefa": "[Ibaté 2][Inversor 1.3] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-22",
+          "dataCriacao": "2026-07-22",
+          "dataInicial": "2026-08-28",
+          "dataFinal": "2026-08-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 888.0,
+          "horasAteFechar": 72.0,
           "atrasada": false
         },
         {
@@ -12900,25 +12886,6 @@
           "atrasada": false
         },
         {
-          "osId": "11231",
-          "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { BES100-INVR1.9 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Andrick Gouveia ",
-          "status": "Finalizada",
-          "tarefa": "[Inversor 1.9] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-08-14",
-          "dataCriacao": "2026-08-14",
-          "dataInicial": "2026-08-14",
-          "dataFinal": "2026-08-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11164",
           "ativo": "Disjuntor do Inversor 8.2      { JCD100-DINV8.2 }",
           "equipe": "",
@@ -14116,7 +14083,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 481
+      "historicoTotal": 482
     },
     "engenharia": {
       "label": "Engenharia",
@@ -16520,9 +16487,9 @@
       "osId": "12421",
       "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { THPN-APR100-INVR1.9 }",
       "equipe": "",
-      "responsavel": "Ronaldo  Silva",
+      "responsavel": "Matheus Gois ",
       "criadoPor": "Ana Barros",
-      "supervisor": "Ronaldo  Silva",
+      "supervisor": "Matheus Gois ",
       "status": "Não Iniciada",
       "tarefa": "Coleta de Dados de Geração",
       "criticidade": "",
@@ -16750,14 +16717,15 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "Levi Maia ",
       "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.9] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-08-31",
       "dataCriacao": "2026-08-28",
-      "dataInicial": "",
+      "dataInicial": "2026-08-31",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0
     },
     {
       "osId": "12389",
@@ -17814,22 +17782,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "12007",
-      "ativo": "Infraestrutura Civil Sítio Pitombeira Limoeiro do Norte  Ceará Brasil { BLN100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "11997",
       "ativo": "Infraestrutura Civil Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100-INFC1 }",
       "equipe": "",
@@ -17980,14 +17932,15 @@
       "responsavel": "Cláudio  Silva",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Cláudio  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
       "dataProgramada": "2026-08-28",
       "dataCriacao": "2026-08-24",
-      "dataInicial": "",
+      "dataInicial": "2026-08-31",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0
     },
     {
       "osId": "11977",
@@ -18121,9 +18074,9 @@
       "osId": "11957",
       "ativo": "Infraestrutura Civil Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200-INFC1 }",
       "equipe": "",
-      "responsavel": "Marcos  Camargo",
+      "responsavel": "Matheus Gois ",
       "criadoPor": "Juliana Cândido",
-      "supervisor": "Marcos  Camargo",
+      "supervisor": "Matheus Gois ",
       "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
@@ -19773,25 +19726,8 @@
       "responsavel": "Andrick Gouveia ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Andrick Gouveia ",
-      "status": "pausado",
-      "tarefa": "[Ibaté 2][Inversor 1.4] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-07-22",
-      "dataCriacao": "2026-07-22",
-      "dataInicial": "2026-08-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 888.0
-    },
-    {
-      "osId": "9838",
-      "ativo": "Inversor 1.3 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Andrick Gouveia ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Andrick Gouveia ",
       "status": "Em progresso",
-      "tarefa": "[Ibaté 2][Inversor 1.3] - Inspeção Geral do Inversor",
+      "tarefa": "[Ibaté 2][Inversor 1.4] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-07-22",
       "dataCriacao": "2026-07-22",
@@ -20194,6 +20130,25 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "12007",
+      "ativo": "Infraestrutura Civil Sítio Pitombeira Limoeiro do Norte  Ceará Brasil { BLN100-INFC1 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Spare Parts",
+      "criticidade": "",
+      "dataProgramada": "2026-08-28",
+      "dataCriacao": "2026-08-24",
+      "dataInicial": "2026-08-31",
+      "dataFinal": "2026-08-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
     {
       "osId": "11588",
       "ativo": "Inversor 1.18 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.18 }",
@@ -23062,28 +23017,9 @@
       "horasAteAbrir": 264.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "11316",
-      "ativo": "Cabine 1 Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Walter Santos ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Walter Santos ",
-      "status": "Finalizados",
-      "tarefa": "[SEMP] - MPQ - Cabine",
-      "criticidade": "",
-      "dataProgramada": "2026-08-17",
-      "dataCriacao": "2026-08-17",
-      "dataInicial": "2026-08-21",
-      "dataFinal": "2026-08-21",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2625,
+  "historicoTotal": 2627,
   "totalGeral": 5609,
   "verificacao": {
     "total": 0,
