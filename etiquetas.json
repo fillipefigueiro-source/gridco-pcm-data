@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T20:30:13Z",
+  "geradoEm": "2026-08-31T20:42:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -82,8 +82,8 @@
       "atrasadas": 16,
       "porStatus": {
         "naoIniciada": 16,
-        "emProgresso": 3,
-        "pausada": 4,
+        "emProgresso": 1,
+        "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
@@ -153,7 +153,7 @@
           "responsavel": "Marcos  Camargo",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Marcos  Camargo",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-13",
@@ -210,7 +210,7 @@
           "responsavel": "Adriano Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Adriano Silva ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "Testes de religamento remoto UFV - Carosa",
           "criticidade": "",
           "dataProgramada": "2026-08-26",
@@ -9010,17 +9010,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 653,
+        "total": 654,
         "emAberto": 104,
-        "atrasadas": 75,
-        "concluidas30d": 245,
-        "concluidas7d": 76,
-        "naSemanaCorrente": 39
+        "atrasadas": 74,
+        "concluidas30d": 246,
+        "concluidas7d": 77,
+        "naSemanaCorrente": 40
       },
       "mttr": {
-        "horas": 205.81,
-        "label": "8d 13h",
-        "amostra": 245
+        "horas": 210.44,
+        "label": "8d 18h",
+        "amostra": 246
       },
       "tendencia4Semanas": [
         {
@@ -9040,15 +9040,15 @@
         },
         {
           "semana": "W36",
-          "criadas": 1,
-          "finalizadas": 22
+          "criadas": 2,
+          "finalizadas": 23
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 653,
+            "total": 654,
             "emAberto": 104
           }
         ],
@@ -9081,10 +9081,10 @@
         ]
       },
       "total": 104,
-      "atrasadas": 75,
+      "atrasadas": 74,
       "porStatus": {
-        "naoIniciada": 95,
-        "emProgresso": 2,
+        "naoIniciada": 96,
+        "emProgresso": 1,
         "pausada": 7,
         "verificacao": 0
       },
@@ -9192,24 +9192,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "9044",
-          "ativo": "Tracker 45.100 Axial AXIAL 4X28    { THPN-CGH100-ETKR45.100 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Em progresso",
-          "tarefa": "[Cidade Gaúcha][TR-45]",
-          "criticidade": "",
-          "dataProgramada": "2026-07-06",
-          "dataCriacao": "2026-07-06",
-          "dataInicial": "2026-08-31",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 1344.0,
           "atrasada": true
         },
         {
@@ -9510,9 +9492,9 @@
           "osId": "10976",
           "ativo": "Inversor 1.4 Sungrow SG250HX    { THPN-JUC100-INVR1.4 }",
           "equipe": "",
-          "responsavel": "Cláudio  Silva",
+          "responsavel": "Cleiton  Farias",
           "criadoPor": "LuelySantos",
-          "supervisor": "Cláudio  Silva",
+          "supervisor": "Cleiton  Farias",
           "status": "Não Iniciada",
           "tarefa": "[Inversor 1.4] - Recomposição de String",
           "criticidade": "",
@@ -9717,9 +9699,9 @@
           "osId": "11287",
           "ativo": "Inversor 2.1 Sungrow SG250HX    { THPN-JUC100-INVR2.1 }",
           "equipe": "",
-          "responsavel": "Cláudio  Silva",
+          "responsavel": "Cleiton  Farias",
           "criadoPor": "LuelySantos",
-          "supervisor": "Cláudio  Silva",
+          "supervisor": "Cleiton  Farias",
           "status": "Não Iniciada",
           "tarefa": "[Inversor 2.1] - Recomposição de String",
           "criticidade": "",
@@ -10496,6 +10478,23 @@
           "atrasada": false
         },
         {
+          "osId": "12567",
+          "ativo": "Inversor 2.4 Sungrow SG350HX    { SEMP-TCN200-INVR2.4 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Walter Santos ",
+          "status": "Não Iniciada",
+          "tarefa": "Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-01",
+          "dataCriacao": "2026-08-31",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "12416",
           "ativo": "Inversor 1.5 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.5 }",
           "equipe": "",
@@ -11211,6 +11210,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 888.0,
           "horasAteFechar": 72.0,
+          "atrasada": false
+        },
+        {
+          "osId": "9044",
+          "ativo": "Tracker 45.100 Axial AXIAL 4X28    { THPN-CGH100-ETKR45.100 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Cidade Gaúcha][TR-45]",
+          "criticidade": "",
+          "dataProgramada": "2026-07-06",
+          "dataCriacao": "2026-07-06",
+          "dataInicial": "2026-08-31",
+          "dataFinal": "2026-08-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 1344.0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -12160,25 +12178,6 @@
           "dataFinal": "2026-08-24",
           "linkFracttal": "",
           "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "11376",
-          "ativo": "Tracker 58.100 Trina Vanguard 1P    { THPN-CLN100-ETKR58.100 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizada",
-          "tarefa": "[Tracker 58.100] - Verificação de Tracker 58",
-          "criticidade": "",
-          "dataProgramada": "2026-08-18",
-          "dataCriacao": "2026-08-17",
-          "dataInicial": "2026-08-24",
-          "dataFinal": "2026-08-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -13722,7 +13721,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 501
+      "historicoTotal": 502
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15838,6 +15837,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "12567",
+      "ativo": "Inversor 2.4 Sungrow SG350HX    { SEMP-TCN200-INVR2.4 }",
+      "equipe": "",
+      "responsavel": "Walter Santos ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Walter Santos ",
+      "status": "Não Iniciada",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-09-01",
+      "dataCriacao": "2026-08-31",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "12565",
       "ativo": "Disjuntor do Inversor 3.3      { MAB100-DINV3.3 }",
       "equipe": "",
@@ -17178,7 +17193,7 @@
       "responsavel": "Adriano Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Adriano Silva ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "Testes de religamento remoto UFV - Carosa",
       "criticidade": "",
       "dataProgramada": "2026-08-26",
@@ -18318,9 +18333,9 @@
       "osId": "11287",
       "ativo": "Inversor 2.1 Sungrow SG250HX    { THPN-JUC100-INVR2.1 }",
       "equipe": "",
-      "responsavel": "Cláudio  Silva",
+      "responsavel": "Cleiton  Farias",
       "criadoPor": "LuelySantos",
-      "supervisor": "Cláudio  Silva",
+      "supervisor": "Cleiton  Farias",
       "status": "Não Iniciada",
       "tarefa": "[Inversor 2.1] - Recomposição de String",
       "criticidade": "",
@@ -18404,7 +18419,7 @@
       "responsavel": "Marcos  Camargo",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Marcos  Camargo",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-08-13",
@@ -18550,9 +18565,9 @@
       "osId": "10976",
       "ativo": "Inversor 1.4 Sungrow SG250HX    { THPN-JUC100-INVR1.4 }",
       "equipe": "",
-      "responsavel": "Cláudio  Silva",
+      "responsavel": "Cleiton  Farias",
       "criadoPor": "LuelySantos",
-      "supervisor": "Cláudio  Silva",
+      "supervisor": "Cleiton  Farias",
       "status": "Não Iniciada",
       "tarefa": "[Inversor 1.4] - Recomposição de String",
       "criticidade": "",
@@ -19180,23 +19195,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "9044",
-      "ativo": "Tracker 45.100 Axial AXIAL 4X28    { THPN-CGH100-ETKR45.100 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Em progresso",
-      "tarefa": "[Cidade Gaúcha][TR-45]",
-      "criticidade": "",
-      "dataProgramada": "2026-07-06",
-      "dataCriacao": "2026-07-06",
-      "dataInicial": "2026-08-31",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 1344.0
     },
     {
       "osId": "9010",
@@ -22330,8 +22328,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2675,
-  "totalGeral": 5636,
+  "historicoTotal": 2676,
+  "totalGeral": 5637,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
