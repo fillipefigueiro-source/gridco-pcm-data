@@ -273,6 +273,72 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .pv-cli .qtd{font-size:10px;font-weight:600;color:var(--ink3);margin-left:7px}
 .pv-usi td:first-child{padding-left:32px;color:var(--ink2)}
 .pv-c b{display:block;font-size:12.5px;color:var(--ink)}
+/* grade de aderência do ano (Preventivas) */
+.pa-bloco{margin-top:18px;background:var(--surf);border:1px solid var(--line);
+  border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.pa-bloco>h3{margin:0;display:flex;align-items:center;gap:10px;padding:13px 16px;
+  border-bottom:1px solid var(--line);font-size:14px;font-weight:800;flex-wrap:wrap}
+.pa-obs{margin-left:auto;font-size:10.5px;font-weight:600;color:var(--ink3)}
+.pa-convite{padding:26px 16px;text-align:center;color:var(--ink2);font-size:13px}
+.pa-btn{display:inline-block;margin-top:10px;font-family:inherit;font-size:12.5px;
+  font-weight:700;padding:8px 16px;border-radius:8px;border:1px solid var(--line2);
+  background:var(--surf2);color:var(--ink);cursor:pointer}
+.pa-btn:hover{background:var(--line)}
+.pa-ctr{display:flex;gap:6px;align-items:center;padding:11px 16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line)}
+.pa-rot{font-size:10px;font-weight:800;color:var(--ink3);text-transform:uppercase;
+  letter-spacing:.05em;margin-right:2px}
+.pa-sep{width:1px;height:19px;background:var(--line);margin:0 5px}
+.pa-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));
+  gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.pa-k{background:var(--surf);padding:11px 15px}
+.pa-k b{display:block;font-size:22px;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
+.pa-k span{font-size:10px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.04em}
+.pa-k.ok b{color:var(--ok)} .pa-k.pa b{color:var(--aviso)}
+.pa-k.na b{color:var(--mal)} .pa-k.vz b{color:var(--ink3)}
+.pa-rolo{overflow:auto;max-height:520px}
+table.pa{border-collapse:separate;border-spacing:0;width:100%;font-size:12.5px}
+table.pa th,table.pa td{padding:0;border-bottom:1px solid var(--line)}
+table.pa thead th{position:sticky;top:0;z-index:3;background:var(--surf2);
+  font-size:10px;font-weight:800;color:var(--ink3);text-transform:uppercase;
+  letter-spacing:.04em;padding:9px 8px;text-align:center;white-space:nowrap;
+  border-bottom:1px solid var(--line2)}
+table.pa thead th:first-child{left:0;z-index:4;text-align:left;padding-left:14px;min-width:180px}
+table.pa thead th.hoje{color:var(--gd)}
+table.pa tbody th{position:sticky;left:0;z-index:2;background:var(--surf);text-align:left;
+  font-weight:600;font-size:12.5px;padding:0 10px 0 14px;white-space:nowrap;
+  border-right:1px solid var(--line);max-width:230px;overflow:hidden;text-overflow:ellipsis}
+table.pa tr.pa-cli th{background:var(--surf2);font-weight:800;font-size:11px;
+  text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);padding:7px 14px}
+table.pa tr.pa-cli td{background:var(--surf2)}
+table.pa td{text-align:center;padding:4px 5px}
+.pa-cel{position:relative;display:block;width:100%;min-width:56px;height:34px;
+  border-radius:6px;border:1px solid transparent;overflow:hidden;cursor:pointer;
+  background:var(--surf2);font-family:inherit}
+.pa-cel .fill{position:absolute;inset:auto 0 0 0;background:var(--ok);opacity:.22}
+.pa-cel .txt{position:relative;display:flex;flex-direction:column;justify-content:center;
+  height:100%;line-height:1.1}
+.pa-cel .p{font-size:12px;font-weight:800;font-variant-numeric:tabular-nums}
+.pa-cel .fr{font-size:9.5px;color:var(--ink3);font-variant-numeric:tabular-nums}
+.pa-cel.cem{border-color:color-mix(in srgb,var(--ok) 45%,transparent)}
+.pa-cel.cem .p{color:var(--ok)}
+.pa-cel.parcial{border-color:color-mix(in srgb,var(--warn) 50%,transparent)}
+.pa-cel.parcial .fill{background:var(--warn)}
+.pa-cel.parcial .p{color:var(--aviso)}
+.pa-cel.nada{border-color:color-mix(in srgb,var(--danger) 55%,transparent);border-style:dashed}
+.pa-cel.nada .fill{display:none}
+.pa-cel.nada .p{color:var(--mal)}
+.pa-cel.vazia{background:transparent;border:1px dashed var(--line2);cursor:default}
+.pa-cel.vazia .p{color:var(--ink3);font-weight:600;font-size:13px}
+.pa-cel:not(.vazia):hover{outline:2px solid var(--ink3);outline-offset:1px}
+.pa-leg{display:flex;gap:14px;flex-wrap:wrap;padding:11px 16px;font-size:11px;
+  color:var(--ink3);border-top:1px solid var(--line)}
+.pa-leg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;
+  vertical-align:-1px;border:1px solid}
+.pa-leg .l1 i{background:color-mix(in srgb,var(--ok) 22%,var(--surf));border-color:var(--ok)}
+.pa-leg .l2 i{background:color-mix(in srgb,var(--warn) 22%,var(--surf));border-color:var(--warn)}
+.pa-leg .l3 i{background:transparent;border-color:var(--danger);border-style:dashed}
+.pa-leg .l4 i{background:transparent;border-color:var(--line2);border-style:dashed}
 .pv-c span{font-size:9.5px;color:var(--ink2)}  /* --ink3 dava 3.9 sobre a celula tingida */
 .cel b{font-weight:800;color:var(--ink)}
 .cel span{color:var(--ink2);font-size:11px;margin-left:3px}
@@ -1330,6 +1396,130 @@ function arrancar(){
      MPM-Inversor, MPM-Mod/Tracker, MPQ e "Preventiva") como mensal. */
   const PREV_COL = tp => tp==="MPA" ? "MPA" : tp==="MPS" ? "MPS"
     : (tp && (tp.startsWith("MPM") || tp==="MPQ" || tp==="Preventiva")) ? "MPM" : null;
+  /* ── Aderência do ano: usinas × 12 meses ─────────────────────────────
+     A tabela acima é da SEMANA. Esta é do ANO, e por isso precisa do
+     gestao_pcm.json (21 mil tarefas) e não do D.tabela. São 9,6 MB, então não é
+     carregada só por abrir Preventivas: quem quiser, pede. Se a pessoa já passou
+     pela Gestão PCM, o arquivo está em memória e a grade aparece na hora.
+     A cadência sai da sigla no texto da tarefa, como no resto do painel. */
+  let PREV_ANO = null, PREV_SIG = "", PREV_MODO = "pct";
+  const PREV_MESES = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+
+  function prevAnos(){
+    const a = new Set();
+    for (const t of (GP && GP.t) || []) {
+      if (!t.sig) continue;
+      const d = t.dataProg || t.criacao;
+      if (d) a.add(d.slice(0,4));
+    }
+    return [...a].sort();
+  }
+  /* Grade em memória: usina ▸ mês, num passo só sobre as 21 mil tarefas. */
+  function prevGrade(ano){
+    const g = new Map(), cli = new Map();
+    for (const t of (GP && GP.t) || []) {
+      if (!t.sig) continue;
+      const d = t.dataProg || t.criacao;
+      if (!d || d.slice(0,4) !== ano) continue;
+      const u = t.usina || "—", m = d.slice(0,7);
+      cli.set(u, t.cliente || "—");
+      if (!g.has(u)) g.set(u, new Map());
+      const mm = g.get(u);
+      if (!mm.has(m)) mm.set(m, { n:0, f:0, a:0, sig:{}, ab:[] });
+      const c = mm.get(m);
+      c.n++; c.sig[t.sig] = (c.sig[t.sig] || 0) + 1;
+      if (t.estado === "Finalizada") c.f++;
+      else { c.a++; if (c.ab.length < 40) c.ab.push(t); }
+    }
+    return { g, cli };
+  }
+  function prevCel(c){
+    if (!c) return null;
+    if (!PREV_SIG) return { n:c.n, f:c.f, a:c.a, ab:c.ab, sig:c.sig };
+    const n = c.sig[PREV_SIG] || 0;
+    if (!n) return null;
+    // o arquivo não separa finalizadas por sigla: a proporção é a do mês
+    const f = Math.round(n * (c.n ? c.f / c.n : 0));
+    return { n, f, a:n-f, ab:(c.ab||[]).filter(x => x.sig === PREV_SIG), sig:c.sig };
+  }
+  const prevCls = v => !v ? "vazia" : v.f === v.n ? "cem" : v.f === 0 ? "nada" : "parcial";
+
+  function vPrevAno(){
+    if (GP_ESTADO === "carregando")
+      return '<div class="gp-carga">Carregando o histórico do ano…<span>São 9,6 MB; a primeira vez demora.</span></div>';
+    if (GP_ESTADO === "erro")
+      return '<div class="gp-carga erro"><b>Não foi possível carregar.</b><span>' + esc(GP_ERRO) + '</span></div>';
+    if (GP_ESTADO !== "pronto")
+      return '<div class="pa-convite"><div>Ver a aderência das preventivas <b>mês a mês, no ano inteiro</b>.</div>'
+           + '<button class="pa-btn" id="pa-carregar">Carregar histórico (9,6 MB)</button></div>';
+
+    const anos = prevAnos();
+    if (!anos.length) return '<div class="vazio">Nenhuma preventiva com sigla no histórico.</div>';
+    if (!PREV_ANO || anos.indexOf(PREV_ANO) < 0) PREV_ANO = anos[anos.length-1];
+    const { g, cli } = prevGrade(PREV_ANO);
+    const meses = Array.from({length:12}, (_,i) => PREV_ANO + "-" + String(i+1).padStart(2,"0"));
+    const hoje = new Date();
+    const mesHoje = hoje.getFullYear() + "-" + String(hoje.getMonth()+1).padStart(2,"0");
+
+    const porCli = new Map();
+    for (const u of [...g.keys()].sort((a,b) => a.localeCompare(b,"pt-BR"))) {
+      const c = cli.get(u) || "—";
+      if (!porCli.has(c)) porCli.set(c, []);
+      porCli.get(c).push(u);
+    }
+    let cem=0, par=0, nada=0, vaz=0;
+    for (const u of g.keys()) for (const m of meses) {
+      const k = prevCls(prevCel(g.get(u).get(m)));
+      if (k==="cem") cem++; else if (k==="parcial") par++; else if (k==="nada") nada++; else vaz++;
+    }
+    const conteudo = v => {
+      if (!v) return '<span class="txt"><span class="p">—</span></span>';
+      const p = Math.round(v.f / v.n * 100);
+      if (PREV_MODO === "ab") return '<span class="txt"><span class="p">' + v.a + '</span><span class="fr">de ' + v.n + '</span></span>';
+      if (PREV_MODO === "n")  return '<span class="txt"><span class="p">' + v.n + '</span><span class="fr">' + p + '% ok</span></span>';
+      return '<span class="txt"><span class="p">' + p + '%</span><span class="fr">' + v.f + '/' + v.n + '</span></span>';
+    };
+    const chip = (dado, val, rot, atual) =>
+      '<button class="gp-chip ' + (val===atual?"on":"") + '" data-' + dado + '="' + esc(val) + '">' + esc(rot) + '</button>';
+
+    const cabec = meses.map((m,i) => '<th' + (m===mesHoje?' class="hoje"':'') + '>' + PREV_MESES[i] + '</th>').join("");
+    const corpo = [...porCli.entries()].map(([c,us]) =>
+      '<tr class="pa-cli"><th>' + esc(c) + '</th><td colspan="12"></td></tr>'
+      + us.map(u => '<tr><th title="' + esc(u) + '">' + esc(usinaCurta(u)) + '</th>'
+        + meses.map(m => {
+            const v = prevCel(g.get(u).get(m)), k = prevCls(v);
+            const p = v ? Math.round(v.f / v.n * 100) : 0;
+            return '<td><button class="pa-cel ' + k + '"' + (v?"":" disabled")
+              + ' data-pau="' + esc(u) + '" data-pam="' + m + '"'
+              + ' title="' + (v ? v.f + " de " + v.n + " finalizadas" : "sem preventiva neste mês") + '">'
+              + (v && k!=="nada" ? '<span class="fill" style="height:' + p + '%"></span>' : "")
+              + conteudo(v) + '</button></td>';
+          }).join("")
+        + '</tr>').join("")).join("");
+
+    return '<div class="pa-ctr"><span class="pa-rot">Ano</span>'
+      + anos.map(a => chip("paano", a, a, PREV_ANO)).join("")
+      + '<span class="pa-sep"></span><span class="pa-rot">Cadência</span>'
+      + [["","Todas"],["MPM","MPM"],["MPT","MPT"],["MPS","MPS"],["MPA","MPA"]]
+          .map(x => chip("pasig", x[0], x[1], PREV_SIG)).join("")
+      + '<span class="pa-sep"></span><span class="pa-rot">Mostrar</span>'
+      + [["pct","% concluído"],["ab","Em aberto"],["n","Total"]]
+          .map(x => chip("pamodo", x[0], x[1], PREV_MODO)).join("")
+      + '</div>'
+      + '<div class="pa-kpis">'
+      + '<div class="pa-k ok"><b>' + cem + '</b><span>mês fechado 100%</span></div>'
+      + '<div class="pa-k pa"><b>' + par + '</b><span>parcial</span></div>'
+      + '<div class="pa-k na"><b>' + nada + '</b><span>nada concluído</span></div>'
+      + '<div class="pa-k vz"><b>' + vaz + '</b><span>sem preventiva no mês</span></div></div>'
+      + '<div class="pa-rolo"><table class="pa"><thead><tr><th>Usina</th>' + cabec
+      + '</tr></thead><tbody>' + corpo + '</tbody></table></div>'
+      + '<div class="pa-leg"><span class="l1"><i></i>fechou 100%</span>'
+      + '<span class="l2"><i></i>parcial — a barra mostra quanto</span>'
+      + '<span class="l3"><i></i>tinha preventiva e nada concluiu</span>'
+      + '<span class="l4"><i></i>nenhuma preventiva no mês</span>'
+      + '<span style="margin-left:auto">clique numa célula para ver o que ficou em aberto</span></div>';
+  }
+
   function vPreventivas(){
     const dados = filtrada().map(t=>({t,col:PREV_COL(t.tp)})).filter(x=>x.col);
     if (!dados.length) return barraFiltros(0)
@@ -1393,7 +1583,10 @@ function arrancar(){
         <tr class="pv-usi"><td>${esc(u)}</td>
           ${cel(x.MPM)}${cel(x.MPS)}${cel(x.MPA)}${cel(g)}
           <td class="pv-pend ${g.n-g.f?"mal":""}">${g.n-g.f}</td></tr>`).join("")}
-      `).join("")}</tbody></table></div>`;
+      `).join("")}</tbody></table></div>
+    <div class="pa-bloco"><h3>Aderência do ano
+      <span class="pa-obs">mês a mês, por usina — histórico, não só esta semana</span></h3>
+      ${vPrevAno()}</div>`;
   }
   /* ── Fila de reprogramação ───────────────────────────────────────────
      O painel NÃO altera a programação: monta um texto que se cola no
@@ -1878,6 +2071,42 @@ function arrancar(){
   };
   const osCls = e => /finaliz/i.test(e) ? "ok" : /progress|process/i.test(e) ? "proc" : "nao";
 
+  /* Detalhe do mês na gaveta lateral — a mesma casca da gaveta da OS, para não
+     inventar um segundo padrão de painel lateral. Daqui a pessoa clica numa OS
+     e cai no detalhe completo dela. */
+  function paAbrir(usina, mes){
+    if (!GP || GP_ESTADO !== "pronto") return;
+    const { g } = prevGrade(mes.slice(0,4));
+    const v = prevCel((g.get(usina) || new Map()).get(mes));
+    if (!v) return;
+    osCasca();
+    OSABERTA = null;
+    const nomeMes = PREV_MESES[+mes.slice(5,7)-1] + "/" + mes.slice(0,4);
+    $("#os-num").textContent = nomeMes + (PREV_SIG ? " · " + PREV_SIG : "");
+    $("#os-tit").textContent = usinaCurta(usina);
+    const pct = Math.round(v.f / v.n * 100);
+    const cor = pct === 100 ? "var(--ok)" : pct ? "var(--aviso)" : "var(--mal)";
+    const sigs = Object.entries(v.sig || {})
+      .map(x => '<span class="osg-b nao" style="margin-right:5px">' + esc(x[0]) + ' ' + x[1] + '</span>').join("");
+    const abertas = (v.ab || []).length
+      ? v.ab.map(t => '<div class="osg-tar"><span class="osg-b ' + osCls(t.estado||"") + '">'
+          + esc(t.estado || "—") + '</span><span class="tt" data-paos="' + esc(t.os) + '" '
+          + 'style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted">'
+          + esc(String(t.tarefa || "").slice(0,90)) + '<div class="tm">OS #' + esc(t.os) + '</div></span></div>').join("")
+      : '<div style="font-size:12.5px;color:var(--ink3)">Nada em aberto — o mês fechou.</div>';
+    $("#os-corpo").innerHTML =
+      '<div class="osg-s"><div style="font-size:26px;font-weight:800;color:' + cor + '">' + pct + '%</div>'
+      + '<div style="font-size:12.5px;color:var(--ink2)">' + v.f + ' de ' + v.n
+      + ' preventivas finalizadas' + (v.a ? ' · ' + v.a + ' em aberto' : '') + '</div></div>'
+      + (sigs ? '<div class="osg-s"><h5>Cadências no mês</h5>' + sigs + '</div>' : '')
+      + '<div class="osg-s"><h5>Em aberto'
+      + ((v.ab||[]).length < v.a ? ' — primeiras ' + v.ab.length + ' de ' + v.a : '')
+      + '</h5>' + abertas + '</div>';
+    $("#os-fundo").classList.add("on");
+    $("#os-gav").classList.add("on");
+    document.querySelectorAll("[data-paos]").forEach(e => e.onclick = () =>
+      osAbrir(e.dataset.paos, e.textContent.trim()));
+  }
   function osFechar(){
     const f = $("#os-fundo"), g = $("#os-gav");
     if (f) f.classList.remove("on");
@@ -2422,6 +2651,19 @@ function arrancar(){
     document.querySelectorAll("[data-gp]").forEach(b => b.onclick = () => {
       const g = b.dataset.gp, v = b.dataset.v;
       if (g==="lin") GPLIN = v; else if (g==="col") GPCOL = v; else GPVAL = v; pintar(); });
+    /* Aderência do ano: os controles e as células. O gestao_pcm.json só é
+       baixado quando alguém pede — são 9,6 MB, e quem abre Preventivas nem
+       sempre quer o histórico. */
+    const paCar = $("#pa-carregar");
+    if (paCar) paCar.onclick = () => gpCarregar();
+    document.querySelectorAll("[data-paano]").forEach(b => b.onclick = () => {
+      PREV_ANO = b.dataset.paano; pintar(); });
+    document.querySelectorAll("[data-pasig]").forEach(b => b.onclick = () => {
+      PREV_SIG = b.dataset.pasig; pintar(); });
+    document.querySelectorAll("[data-pamodo]").forEach(b => b.onclick = () => {
+      PREV_MODO = b.dataset.pamodo; pintar(); });
+    document.querySelectorAll(".pa-cel[data-pau]").forEach(b => b.onclick = () =>
+      paAbrir(b.dataset.pau, b.dataset.pam));
     document.querySelectorAll("[data-pv]").forEach(b => b.onclick = () => {
       const g = b.dataset.pv, v = b.dataset.v;
       if (g==="lin") GPPV.linhas = v; else if (g==="col") GPPV.colunas = v; else GPPV.valor = v;
