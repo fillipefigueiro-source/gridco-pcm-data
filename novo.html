@@ -1485,7 +1485,9 @@ function arrancar(){
     const cabec = meses.map((m,i) => '<th' + (m===mesHoje?' class="hoje"':'') + '>' + PREV_MESES[i] + '</th>').join("");
     const corpo = [...porCli.entries()].map(([c,us]) =>
       '<tr class="pa-cli"><th>' + esc(c) + '</th><td colspan="12"></td></tr>'
-      + us.map(u => '<tr><th title="' + esc(u) + '">' + esc(usinaCurta(u)) + '</th>'
+      // GP.t.usina JA vem sem o prefixo do cliente (gpUsina, na carga). Cortar de
+      // novo com usinaCurta comia o nome: "Timon 1 - MA" virava "MA".
+      + us.map(u => '<tr><th title="' + esc(u) + '">' + esc(u) + '</th>'
         + meses.map(m => {
             const v = prevCel(g.get(u).get(m)), k = prevCls(v);
             const p = v ? Math.round(v.f / v.n * 100) : 0;
@@ -2083,7 +2085,7 @@ function arrancar(){
     OSABERTA = null;
     const nomeMes = PREV_MESES[+mes.slice(5,7)-1] + "/" + mes.slice(0,4);
     $("#os-num").textContent = nomeMes + (PREV_SIG ? " · " + PREV_SIG : "");
-    $("#os-tit").textContent = usinaCurta(usina);
+    $("#os-tit").textContent = usina;      // já vem curto de GP.t
     const pct = Math.round(v.f / v.n * 100);
     const cor = pct === 100 ? "var(--ok)" : pct ? "var(--aviso)" : "var(--mal)";
     const sigs = Object.entries(v.sig || {})
