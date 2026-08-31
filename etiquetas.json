@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T19:06:14Z",
+  "geradoEm": "2026-08-31T19:17:50Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3996,
-        "emAberto": 23,
+        "total": 3997,
+        "emAberto": 24,
         "atrasadas": 16,
         "concluidas30d": 617,
         "concluidas7d": 149,
-        "naSemanaCorrente": 18
+        "naSemanaCorrente": 19
       },
       "mttr": {
         "horas": 17.93,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W36",
-          "criadas": 19,
+          "criadas": 20,
           "finalizadas": 22
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3996,
-            "emAberto": 23
+            "total": 3997,
+            "emAberto": 24
           }
         ],
         "responsaveis": [
@@ -58,8 +58,8 @@
           },
           {
             "nome": "Marcos  Camargo",
-            "total": 458,
-            "emAberto": 6
+            "total": 459,
+            "emAberto": 7
           },
           {
             "nome": "Felipe Silva",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 23,
+      "total": 24,
       "atrasadas": 16,
       "porStatus": {
-        "naoIniciada": 17,
+        "naoIniciada": 18,
         "emProgresso": 2,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 23
+        "(sem equipe)": 24
       },
       "oss": [
         {
@@ -382,6 +382,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "12555",
+          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Luely  Santos",
+          "supervisor": "Marcos  Camargo",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-08-31",
+          "dataCriacao": "2026-08-31",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "12550",
@@ -3516,9 +3534,9 @@
       "historicoTotal": 1718,
       "subClassificacao": {
         "remoto": 750,
-        "local": 3246,
+        "local": 3247,
         "remotoEmAberto": 6,
-        "localEmAberto": 17,
+        "localEmAberto": 18,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -3814,8 +3832,8 @@
       "atrasadas": 73,
       "porStatus": {
         "naoIniciada": 72,
-        "emProgresso": 3,
-        "pausada": 10,
+        "emProgresso": 2,
+        "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4139,7 +4157,7 @@
           "responsavel": "Matheus Gois ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Matheus Gois ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
@@ -9117,8 +9135,8 @@
       "total": 110,
       "atrasadas": 79,
       "porStatus": {
-        "naoIniciada": 99,
-        "emProgresso": 4,
+        "naoIniciada": 98,
+        "emProgresso": 5,
         "pausada": 7,
         "verificacao": 0
       },
@@ -10538,14 +10556,15 @@
           "responsavel": "Gilson  Milhomem",
           "criadoPor": "Roger Lélis",
           "supervisor": "Gilson  Milhomem",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 52.100] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-31",
           "dataCriacao": "2026-08-27",
-          "dataInicial": "",
+          "dataInicial": "2026-08-31",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "atrasada": false
         },
         {
@@ -15976,6 +15995,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "12555",
+      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Luely  Santos",
+      "supervisor": "Marcos  Camargo",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-08-31",
+      "dataCriacao": "2026-08-31",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "12550",
       "ativo": "Inversor 3.1 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR3.1 }",
       "equipe": "",
@@ -16574,14 +16610,15 @@
       "responsavel": "Gilson  Milhomem",
       "criadoPor": "Roger Lélis",
       "supervisor": "Gilson  Milhomem",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 52.100] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-31",
       "dataCriacao": "2026-08-27",
-      "dataInicial": "",
+      "dataInicial": "2026-08-31",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0
     },
     {
       "osId": "12344",
@@ -19048,7 +19085,7 @@
       "responsavel": "Matheus Gois ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Matheus Gois ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
@@ -22595,7 +22632,7 @@
     }
   ],
   "historicoTotal": 2656,
-  "totalGeral": 5625,
+  "totalGeral": 5626,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
