@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T09:30:09Z",
+  "geradoEm": "2026-08-31T10:21:25Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -10,14 +10,14 @@
       "kpis": {
         "total": 3982,
         "emAberto": 27,
-        "atrasadas": 22,
+        "atrasadas": 23,
         "concluidas30d": 599,
         "concluidas7d": 130,
         "naSemanaCorrente": 5
       },
       "mttr": {
-        "horas": 17.05,
-        "label": "17h 3min",
+        "horas": 17.13,
+        "label": "17h 8min",
         "amostra": 599
       },
       "tendencia4Semanas": [
@@ -34,12 +34,12 @@
         {
           "semana": "W35",
           "criadas": 141,
-          "finalizadas": 130
+          "finalizadas": 128
         },
         {
           "semana": "W36",
           "criadas": 5,
-          "finalizadas": 0
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
@@ -74,15 +74,15 @@
           {
             "nome": "Wesllen  Castro",
             "total": 175,
-            "emAberto": 1
+            "emAberto": 2
           }
         ]
       },
       "total": 27,
-      "atrasadas": 22,
+      "atrasadas": 23,
       "porStatus": {
-        "naoIniciada": 23,
-        "emProgresso": 0,
+        "naoIniciada": 21,
+        "emProgresso": 2,
         "pausada": 4,
         "verificacao": 0
       },
@@ -401,6 +401,25 @@
           "atrasada": true
         },
         {
+          "osId": "12436",
+          "ativo": "Cabine 1  Ipixuna  Pará Brasil { IPX100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Wesllen  Castro",
+          "status": "Em progresso",
+          "tarefa": "[IPX100-CABN1] - Religamento do IPX100-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-29",
+          "dataCriacao": "2026-08-29",
+          "dataInicial": "2026-08-31",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "12465",
           "ativo": "Cabine 1 Estrada Jussara S/N Mandaguaçu  Paraná Brasil { MNG100-CABN1 }",
           "equipe": "",
@@ -494,35 +513,18 @@
           "osId": "12470",
           "ativo": "Disjuntor do Inversor 2.4      { MCB100-DINV2.4 }",
           "equipe": "",
-          "responsavel": "Cleiton  Farias",
+          "responsavel": "Valdério Paz ",
           "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Cleiton  Farias",
-          "status": "Não Iniciada",
+          "supervisor": "Valdério Paz ",
+          "status": "Em progresso",
           "tarefa": "[MCB100-DINV2.4] - Religamento do MCB100-DINV2.4",
           "criticidade": "",
           "dataProgramada": "2026-08-31",
           "dataCriacao": "2026-08-31",
-          "dataInicial": "",
+          "dataInicial": "2026-08-31",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "12469",
-          "ativo": "Cabine 1 Estrada Pedreira, S/N Matão  São Paulo Brasil { MTO100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Eduardo Souza",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Eduardo Souza",
-          "status": "Não Iniciada",
-          "tarefa": "[MTO100-CABN1] - Religamento do MTO100-CABN1",
-          "criticidade": "",
-          "dataProgramada": "2026-08-31",
-          "dataCriacao": "2026-08-31",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -582,6 +584,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "12469",
+          "ativo": "Cabine 1 Estrada Pedreira, S/N Matão  São Paulo Brasil { MTO100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Eduardo Souza",
+          "status": "Finalizados",
+          "tarefa": "[MTO100-CABN1] - Religamento do MTO100-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-31",
+          "dataCriacao": "2026-08-31",
+          "dataInicial": "2026-08-31",
+          "dataFinal": "2026-08-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12446",
+          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Valdério Paz ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-29",
+          "dataCriacao": "2026-08-29",
+          "dataInicial": "2026-08-29",
+          "dataFinal": "2026-08-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 48.0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "12462",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
@@ -763,26 +805,6 @@
           "atrasada": false
         },
         {
-          "osId": "12446",
-          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Valdério Paz ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
-          "criticidade": "",
-          "dataProgramada": "2026-08-29",
-          "dataCriacao": "2026-08-29",
-          "dataInicial": "2026-08-29",
-          "dataFinal": "2026-08-29",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "12445",
           "ativo": "Disjuntor do Inversor 1.1      { THPN-INP100-DINV1.1 }",
           "equipe": "",
@@ -831,26 +853,6 @@
           "supervisor": "Adriano  Moraes",
           "status": "Finalizados",
           "tarefa": "[2C-APG100] - Religamento do 2C-APG100",
-          "criticidade": "",
-          "dataProgramada": "2026-08-29",
-          "dataCriacao": "2026-08-29",
-          "dataInicial": "2026-08-29",
-          "dataFinal": "2026-08-29",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "12436",
-          "ativo": "Cabine 1  Ipixuna  Pará Brasil { IPX100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizados",
-          "tarefa": "[IPX100-CABN1] - Religamento do IPX100-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-08-29",
           "dataCriacao": "2026-08-29",
@@ -9234,8 +9236,8 @@
       "total": 125,
       "atrasadas": 90,
       "porStatus": {
-        "naoIniciada": 109,
-        "emProgresso": 1,
+        "naoIniciada": 108,
+        "emProgresso": 2,
         "pausada": 15,
         "verificacao": 0
       },
@@ -11289,14 +11291,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Ana Barros",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-09-02",
           "dataCriacao": "2026-08-28",
-          "dataInicial": "",
+          "dataInicial": "2026-08-31",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 72.0,
           "atrasada": false
         },
         {
@@ -16356,34 +16359,18 @@
       "osId": "12470",
       "ativo": "Disjuntor do Inversor 2.4      { MCB100-DINV2.4 }",
       "equipe": "",
-      "responsavel": "Cleiton  Farias",
+      "responsavel": "Valdério Paz ",
       "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Cleiton  Farias",
-      "status": "Não Iniciada",
+      "supervisor": "Valdério Paz ",
+      "status": "Em progresso",
       "tarefa": "[MCB100-DINV2.4] - Religamento do MCB100-DINV2.4",
       "criticidade": "",
       "dataProgramada": "2026-08-31",
       "dataCriacao": "2026-08-31",
-      "dataInicial": "",
+      "dataInicial": "2026-08-31",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "12469",
-      "ativo": "Cabine 1 Estrada Pedreira, S/N Matão  São Paulo Brasil { MTO100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Eduardo Souza",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Eduardo Souza",
-      "status": "Não Iniciada",
-      "tarefa": "[MTO100-CABN1] - Religamento do MTO100-CABN1",
-      "criticidade": "",
-      "dataProgramada": "2026-08-31",
-      "dataCriacao": "2026-08-31",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16662,14 +16649,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Ana Barros",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-09-02",
       "dataCriacao": "2026-08-28",
-      "dataInicial": "",
+      "dataInicial": "2026-08-31",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0
     },
     {
       "osId": "12422",
@@ -20394,6 +20382,24 @@
       "horasAteAbrir": 528.0
     },
     {
+      "osId": "12436",
+      "ativo": "Cabine 1  Ipixuna  Pará Brasil { IPX100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Wesllen  Castro",
+      "status": "Em progresso",
+      "tarefa": "[IPX100-CABN1] - Religamento do IPX100-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-29",
+      "dataCriacao": "2026-08-29",
+      "dataInicial": "2026-08-31",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "modalidade": "local"
+    },
+    {
       "osId": "12047",
       "ativo": "Infraestrutura Civil Sítio Rio Quartel, Zona Rural Linhares  Espírito Santo Brasil { AXIS-LHN100-INFC1 }",
       "equipe": "",
@@ -20870,6 +20876,26 @@
       "atrasada": false
     },
     {
+      "osId": "12469",
+      "ativo": "Cabine 1 Estrada Pedreira, S/N Matão  São Paulo Brasil { MTO100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Eduardo Souza",
+      "status": "Finalizados",
+      "tarefa": "[MTO100-CABN1] - Religamento do MTO100-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-31",
+      "dataCriacao": "2026-08-31",
+      "dataInicial": "2026-08-31",
+      "dataFinal": "2026-08-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "12462",
       "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
       "equipe": "",
@@ -21042,10 +21068,10 @@
       "dataProgramada": "2026-08-29",
       "dataCriacao": "2026-08-29",
       "dataInicial": "2026-08-29",
-      "dataFinal": "2026-08-29",
+      "dataFinal": "2026-08-31",
       "linkFracttal": "",
       "horasAteAbrir": 0,
-      "horasAteFechar": 0,
+      "horasAteFechar": 48.0,
       "modalidade": "local",
       "atrasada": false
     },
@@ -21098,26 +21124,6 @@
       "supervisor": "Adriano  Moraes",
       "status": "Finalizados",
       "tarefa": "[2C-APG100] - Religamento do 2C-APG100",
-      "criticidade": "",
-      "dataProgramada": "2026-08-29",
-      "dataCriacao": "2026-08-29",
-      "dataInicial": "2026-08-29",
-      "dataFinal": "2026-08-29",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "12436",
-      "ativo": "Cabine 1  Ipixuna  Pará Brasil { IPX100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Wesllen  Castro",
-      "status": "Finalizados",
-      "tarefa": "[IPX100-CABN1] - Religamento do IPX100-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-08-29",
       "dataCriacao": "2026-08-29",
