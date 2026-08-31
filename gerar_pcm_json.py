@@ -290,15 +290,25 @@ def _carregar_mapa_extras(pasta: Path) -> dict:
         sp = _nn(r.get("Status"))
         if sp:
             entrada["statusPai"] = str(sp).strip()
-        # ITEM 1 (status VIVO): estado da tarefa por (os_id, tarefa), direto da API.
-        # Duplicatas de mesma descrição: mantém o estado MAIS avançado (não sub-declara).
+        # ITEM 1 (status VIVO): estado da tarefa por (os_id, tarefa, ATIVO), direto da API.
+        # O NOME SOZINHO NAO IDENTIFICA A TAREFA: ele se repete uma vez por ativo dentro
+        # da OS. A 11029 tem 9 "[Athon] - MPM - Transformador" (um transformador cada);
+        # chaveado so pelo nome, a regra do "mais avancado" pegava o TRFR2 (em execucao) e
+        # pintava as NOVE de "Em progresso" -- 1 em execucao no Fracttal, 9 na tela do
+        # tecnico. Relato do James Chaves, 31/08/2026.
+        # A chave com ativo e' exata; a sem ativo continua gravada como RECUO, para linha
+        # que nao traz Codigo nao perder o status vivo (perder seria trocar um defeito
+        # visivel por um silencioso). Mesmo criterio de identidade que o
+        # `fonte_bd_api.py` ja usa: ("combo", OSs ID, Codigo, Tarefa).
         _tar_t = _nn(r.get("Tarefa"))
         if _tar_t:
             _d_est = entrada.setdefault("estadoTarefa", {})
-            _k = _norm_tar(str(_tar_t))
+            _nome = _norm_tar(str(_tar_t))
+            _cod_t = _norm_tar(str(_nn(r.get("Código")) or ""))
             _novo = str(_nn(r.get("Estado da Tarefa")) or "").strip()
-            if _k not in _d_est or _rank_est(_novo) >= _rank_est(_d_est[_k]):
-                _d_est[_k] = _novo
+            for _k in ([_nome + "|" + _cod_t] if _cod_t else []) + [_nome]:
+                if _k not in _d_est or _rank_est(_novo) >= _rank_est(_d_est[_k]):
+                    _d_est[_k] = _novo
         # Classificação ATUAL do ativo + responsável fresco (via API + AUXILIAR)
         _ua = _nn(r.get("Ativo Classificação 1"))
         _ca = _nn(r.get("Ativo Classificação 2"))
@@ -478,9 +488,16 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
                 continue
             # ITEM 1: badge = ESTADO DA TAREFA VIVO da API (casado por tarefa);
             # fallback p/ a coluna "Status Atual (BD)" do Excel só se a API não tiver.
+            # casa por (tarefa + ativo); sem ativo na linha, cai para so o nome
             _live_est = None
             if extras_os:
-                _live_est = (extras_os.get("estadoTarefa") or {}).get(_norm_tar(str(get(r, i_tarefa) or "")))
+                _mapa_est = extras_os.get("estadoTarefa") or {}
+                _nome_r = _norm_tar(str(get(r, i_tarefa) or ""))
+                _cod_r = _norm_tar(str(get(r, i_codigo) or ""))
+                if _cod_r:
+                    _live_est = _mapa_est.get(_nome_r + "|" + _cod_r)
+                if _live_est in (None, ""):
+                    _live_est = _mapa_est.get(_nome_r)
             estado_badge = _live_est if (_live_est not in (None, "")) else str(estado).strip()
             # NOTA: o badge principal reflete o ESTADO DA TAREFA puro (Não Iniciada /
             # Em progresso / Pausada / Finalizada). O Status da OS (Em processo /
