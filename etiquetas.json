@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T14:48:45Z",
+  "geradoEm": "2026-08-31T15:00:16Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3987,
-        "emAberto": 21,
+        "total": 3988,
+        "emAberto": 20,
         "atrasadas": 18,
-        "concluidas30d": 610,
-        "concluidas7d": 142,
-        "naSemanaCorrente": 9
+        "concluidas30d": 612,
+        "concluidas7d": 144,
+        "naSemanaCorrente": 10
       },
       "mttr": {
-        "horas": 18.02,
-        "label": "18h 1min",
-        "amostra": 610
+        "horas": 17.96,
+        "label": "17h 58min",
+        "amostra": 612
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W36",
-          "criadas": 10,
-          "finalizadas": 15
+          "criadas": 11,
+          "finalizadas": 17
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3987,
-            "emAberto": 21
+            "total": 3988,
+            "emAberto": 20
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 21,
+      "total": 20,
       "atrasadas": 18,
       "porStatus": {
         "naoIniciada": 15,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 21
+        "(sem equipe)": 20
       },
       "oss": [
         {
@@ -420,6 +420,24 @@
           "atrasada": true
         },
         {
+          "osId": "12522",
+          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Valdério Paz ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-31",
+          "dataCriacao": "2026-08-31",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "12521",
           "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
           "equipe": "",
@@ -436,7 +454,9 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "12508",
           "ativo": "Disjuntor do Inversor 2.4      { ADT100-DINV2.4 }",
@@ -444,15 +464,16 @@
           "responsavel": "Paulo  Ribeiro",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Paulo  Ribeiro",
-          "status": "Em progresso",
+          "status": "Finalizados",
           "tarefa": "[Disjuntor do Inversor 2.4] - Religamento do Disjuntor do Inversor 2.4",
           "criticidade": "",
           "dataProgramada": "2026-08-31",
           "dataCriacao": "2026-08-31",
           "dataInicial": "2026-08-31",
-          "dataFinal": "",
+          "dataFinal": "2026-08-31",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -463,19 +484,19 @@
           "responsavel": "Paulo  Ribeiro",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Paulo  Ribeiro",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "[Disjuntor do Inversor 2.4] - Religamento do Disjuntor do Inversor 2.4",
           "criticidade": "",
           "dataProgramada": "2026-08-31",
           "dataCriacao": "2026-08-31",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-08-31",
+          "dataFinal": "2026-08-31",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "12513",
           "ativo": "Thopen - Nova Londrina 2 - PR Estrada Mané Correia S/N Nova Londrina  Paraná Brasil { THPN-NVL200 }",
@@ -1093,26 +1114,6 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "12264",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-26",
-          "dataCriacao": "2026-08-26",
-          "dataInicial": "2026-08-26",
-          "dataFinal": "2026-08-29",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 72.0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -2265,26 +2266,6 @@
           "supervisor": "Felipe Silva ",
           "status": "Finalizada",
           "tarefa": "[Cabine 1] - Religamento da Cabine 1",
-          "criticidade": "",
-          "dataProgramada": "2026-08-26",
-          "dataCriacao": "2026-08-26",
-          "dataInicial": "2026-08-26",
-          "dataFinal": "2026-08-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "12265",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-26",
           "dataCriacao": "2026-08-26",
@@ -3477,12 +3458,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1711,
+      "historicoTotal": 1713,
       "subClassificacao": {
         "remoto": 750,
-        "local": 3237,
+        "local": 3238,
         "remotoEmAberto": 6,
-        "localEmAberto": 15,
+        "localEmAberto": 14,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -8990,16 +8971,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 653,
-        "emAberto": 112,
-        "atrasadas": 80,
-        "concluidas30d": 237,
-        "concluidas7d": 68,
+        "emAberto": 110,
+        "atrasadas": 79,
+        "concluidas30d": 239,
+        "concluidas7d": 70,
         "naSemanaCorrente": 39
       },
       "mttr": {
-        "horas": 197.87,
+        "horas": 197.12,
         "label": "8d 5h",
-        "amostra": 237
+        "amostra": 239
       },
       "tendencia4Semanas": [
         {
@@ -9020,7 +9001,7 @@
         {
           "semana": "W36",
           "criadas": 1,
-          "finalizadas": 14
+          "finalizadas": 16
         }
       ],
       "topOfensores": {
@@ -9028,7 +9009,7 @@
           {
             "nome": "(sem equipe)",
             "total": 653,
-            "emAberto": 112
+            "emAberto": 110
           }
         ],
         "responsaveis": [
@@ -9059,16 +9040,16 @@
           }
         ]
       },
-      "total": 112,
-      "atrasadas": 80,
+      "total": 110,
+      "atrasadas": 79,
       "porStatus": {
-        "naoIniciada": 103,
-        "emProgresso": 2,
+        "naoIniciada": 102,
+        "emProgresso": 1,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 112
+        "(sem equipe)": 110
       },
       "oss": [
         {
@@ -9947,23 +9928,6 @@
           "atrasada": true
         },
         {
-          "osId": "12142",
-          "ativo": "Estrutura Trackers  Ibaté  São Paulo Brasil { IBT200-ETKR1 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Andrick Gouveia ",
-          "status": "Não Iniciada",
-          "tarefa": "[Ibaté 02] - Verificação da perda de comunicação dos trackers",
-          "criticidade": "",
-          "dataProgramada": "2026-08-25",
-          "dataCriacao": "2026-08-25",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "12096",
           "ativo": "Inversor 3.3 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.3 }",
           "equipe": "",
@@ -10454,24 +10418,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "12400",
-          "ativo": "Tracker 1.100 Sparkin SK1L62    { IBI100-ETKR1.100 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Thiago Morais ",
-          "status": "Em progresso",
-          "tarefa": "[Tracker 1.100] - Verificação de Trackers Parados em Ibirapuã 1",
-          "criticidade": "",
-          "dataProgramada": "2026-08-31",
-          "dataCriacao": "2026-08-28",
-          "dataInicial": "2026-08-31",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
           "atrasada": false
         },
         {
@@ -11044,6 +10990,25 @@
           "atrasada": false
         },
         {
+          "osId": "12400",
+          "ativo": "Tracker 1.100 Sparkin SK1L62    { IBI100-ETKR1.100 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 1.100] - Verificação de Trackers Parados em Ibirapuã 1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-31",
+          "dataCriacao": "2026-08-28",
+          "dataInicial": "2026-08-31",
+          "dataFinal": "2026-08-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "12391",
           "ativo": "Inversor 1.9 Huawei     { THPN-NVL200-INVR1.9 }",
           "equipe": "",
@@ -11078,6 +11043,25 @@
           "dataFinal": "2026-08-31",
           "linkFracttal": "",
           "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12142",
+          "ativo": "Estrutura Trackers  Ibaté  São Paulo Brasil { IBT200-ETKR1 }",
+          "equipe": "",
+          "responsavel": "Andrick Gouveia ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Andrick Gouveia ",
+          "status": "Finalizados",
+          "tarefa": "[Ibaté 02] - Verificação da perda de comunicação dos trackers",
+          "criticidade": "",
+          "dataProgramada": "2026-08-25",
+          "dataCriacao": "2026-08-25",
+          "dataInicial": "2026-08-31",
+          "dataFinal": "2026-08-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -12507,25 +12491,6 @@
           "atrasada": false
         },
         {
-          "osId": "11343",
-          "ativo": "Tracker 04.106 Brametal Bi-motor    { SMP100-ETKR4.106 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizada",
-          "tarefa": "[Tracker 04.106] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
-          "dataCriacao": "2026-08-17",
-          "dataInicial": "2026-08-19",
-          "dataFinal": "2026-08-19",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10658",
           "ativo": "Tracker 25.100 STI STI-H250    { THPN-TNB100-ETKR25.100 }",
           "equipe": "",
@@ -12788,25 +12753,6 @@
           "dataFinal": "2026-08-12",
           "linkFracttal": "",
           "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "11051",
-          "ativo": "Estrutura Trackers Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { MTS100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "Francisco  Santos",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Francisco  Santos",
-          "status": "Finalizados",
-          "tarefa": "[SKC 04 - SKC 1.1.4] - Realizar a inspeção e normalização da SKC",
-          "criticidade": "",
-          "dataProgramada": "2026-08-12",
-          "dataCriacao": "2026-08-11",
-          "dataInicial": "2026-08-12",
-          "dataFinal": "2026-08-12",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -13837,7 +13783,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 493
+      "historicoTotal": 495
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15953,6 +15899,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "12522",
+      "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Valdério Paz ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-31",
+      "dataCriacao": "2026-08-31",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "12521",
       "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
       "equipe": "",
@@ -15984,41 +15947,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "12508",
-      "ativo": "Disjuntor do Inversor 2.4      { ADT100-DINV2.4 }",
-      "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "Italo  Lustosa",
-      "supervisor": "Paulo  Ribeiro",
-      "status": "Em progresso",
-      "tarefa": "[Disjuntor do Inversor 2.4] - Religamento do Disjuntor do Inversor 2.4",
-      "criticidade": "",
-      "dataProgramada": "2026-08-31",
-      "dataCriacao": "2026-08-31",
-      "dataInicial": "2026-08-31",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
-      "osId": "12507",
-      "ativo": "Disjuntor do Inversor 2.4      { ADT100-DINV2.4 }",
-      "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "Italo  Lustosa",
-      "supervisor": "Paulo  Ribeiro",
-      "status": "Não Iniciada",
-      "tarefa": "[Disjuntor do Inversor 2.4] - Religamento do Disjuntor do Inversor 2.4",
-      "criticidade": "",
-      "dataProgramada": "2026-08-31",
-      "dataCriacao": "2026-08-31",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "12465",
@@ -16396,23 +16324,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "12400",
-      "ativo": "Tracker 1.100 Sparkin SK1L62    { IBI100-ETKR1.100 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Thiago Morais ",
-      "status": "Em progresso",
-      "tarefa": "[Tracker 1.100] - Verificação de Trackers Parados em Ibirapuã 1",
-      "criticidade": "",
-      "dataProgramada": "2026-08-31",
-      "dataCriacao": "2026-08-28",
-      "dataInicial": "2026-08-31",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0
     },
     {
       "osId": "12399",
@@ -16958,22 +16869,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 0
-    },
-    {
-      "osId": "12142",
-      "ativo": "Estrutura Trackers  Ibaté  São Paulo Brasil { IBT200-ETKR1 }",
-      "equipe": "",
-      "responsavel": "Andrick Gouveia ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Andrick Gouveia ",
-      "status": "Não Iniciada",
-      "tarefa": "[Ibaté 02] - Verificação da perda de comunicação dos trackers",
-      "criticidade": "",
-      "dataProgramada": "2026-08-25",
-      "dataCriacao": "2026-08-25",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
     },
     {
       "osId": "12114",
@@ -19653,6 +19548,46 @@
   ],
   "ossHistorico": [
     {
+      "osId": "12508",
+      "ativo": "Disjuntor do Inversor 2.4      { ADT100-DINV2.4 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Finalizados",
+      "tarefa": "[Disjuntor do Inversor 2.4] - Religamento do Disjuntor do Inversor 2.4",
+      "criticidade": "",
+      "dataProgramada": "2026-08-31",
+      "dataCriacao": "2026-08-31",
+      "dataInicial": "2026-08-31",
+      "dataFinal": "2026-08-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "12507",
+      "ativo": "Disjuntor do Inversor 2.4      { ADT100-DINV2.4 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Finalizados",
+      "tarefa": "[Disjuntor do Inversor 2.4] - Religamento do Disjuntor do Inversor 2.4",
+      "criticidade": "",
+      "dataProgramada": "2026-08-31",
+      "dataCriacao": "2026-08-31",
+      "dataInicial": "2026-08-31",
+      "dataFinal": "2026-08-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "11588",
       "ativo": "Inversor 1.18 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.18 }",
       "equipe": "",
@@ -20728,6 +20663,25 @@
       "atrasada": false
     },
     {
+      "osId": "12400",
+      "ativo": "Tracker 1.100 Sparkin SK1L62    { IBI100-ETKR1.100 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 1.100] - Verificação de Trackers Parados em Ibirapuã 1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-31",
+      "dataCriacao": "2026-08-28",
+      "dataInicial": "2026-08-31",
+      "dataFinal": "2026-08-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "12394",
       "ativo": "Cabine 1  São Bento  Rio de Janeiro Brasil { SBT500-CABN1 }",
       "equipe": "",
@@ -20973,6 +20927,25 @@
       "dataFinal": "2026-08-28",
       "linkFracttal": "",
       "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "12142",
+      "ativo": "Estrutura Trackers  Ibaté  São Paulo Brasil { IBT200-ETKR1 }",
+      "equipe": "",
+      "responsavel": "Andrick Gouveia ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Andrick Gouveia ",
+      "status": "Finalizados",
+      "tarefa": "[Ibaté 02] - Verificação da perda de comunicação dos trackers",
+      "criticidade": "",
+      "dataProgramada": "2026-08-25",
+      "dataCriacao": "2026-08-25",
+      "dataInicial": "2026-08-31",
+      "dataFinal": "2026-08-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -22466,86 +22439,10 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "11394",
-      "ativo": "Tracker 12.100 AXIALtracker     { MTO100-ETKR12.100 }",
-      "equipe": "",
-      "responsavel": "Eduardo Souza",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Eduardo Souza",
-      "status": "Finalizados",
-      "tarefa": "Instalação de TCU do tracker 12 em garantia",
-      "criticidade": "",
-      "dataProgramada": "2026-08-19",
-      "dataCriacao": "2026-08-18",
-      "dataInicial": "2026-08-18",
-      "dataFinal": "2026-08-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "11367",
-      "ativo": "Inversor 1.13 Huawei SUN2000-250KTL-H1    { STN100-INVR1.13 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Finalizados",
-      "tarefa": "[Saturnino] - Regularização de Termografia do Inversor 13 (Pendências MPS)",
-      "criticidade": "",
-      "dataProgramada": "2026-08-18",
-      "dataCriacao": "2026-08-17",
-      "dataInicial": "2026-08-18",
-      "dataFinal": "2026-08-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "11366",
-      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STN100-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Finalizados",
-      "tarefa": "[Saturnino] - Investigação de anomalia térmica no Inversor 6 (Pendências MPS)",
-      "criticidade": "",
-      "dataProgramada": "2026-08-18",
-      "dataCriacao": "2026-08-17",
-      "dataInicial": "2026-08-18",
-      "dataFinal": "2026-08-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "11357",
-      "ativo": "Transformador 1 WEG     { PRB100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Felipe  Lima",
-      "status": "Finalizados",
-      "tarefa": "[Piracicaba] - Regularização de Termografia do Transformador (Pendências MPS)",
-      "criticidade": "",
-      "dataProgramada": "2026-07-20",
-      "dataCriacao": "2026-08-17",
-      "dataInicial": "2026-08-24",
-      "dataFinal": "2026-08-24",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2644,
-  "totalGeral": 5612,
+  "historicoTotal": 2648,
+  "totalGeral": 5613,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
