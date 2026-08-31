@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T12:48:18Z",
+  "geradoEm": "2026-08-31T13:00:16Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -3811,9 +3811,9 @@
       "total": 86,
       "atrasadas": 78,
       "porStatus": {
-        "naoIniciada": 76,
-        "emProgresso": 1,
-        "pausada": 9,
+        "naoIniciada": 74,
+        "emProgresso": 2,
+        "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4137,14 +4137,15 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-15",
           "dataCriacao": "2026-07-28",
-          "dataInicial": "",
+          "dataInicial": "2026-08-31",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 816.0,
           "atrasada": true
         },
         {
@@ -4256,14 +4257,15 @@
           "responsavel": "Júlio Willers ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Júlio Willers ",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPA - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-07-27",
-          "dataInicial": "",
+          "dataInicial": "2026-08-31",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 840.0,
           "atrasada": true
         },
         {
@@ -9057,16 +9059,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 652,
-        "emAberto": 122,
+        "emAberto": 121,
         "atrasadas": 88,
-        "concluidas30d": 226,
-        "concluidas7d": 57,
+        "concluidas30d": 227,
+        "concluidas7d": 58,
         "naSemanaCorrente": 38
       },
       "mttr": {
-        "horas": 181.91,
+        "horas": 181.43,
         "label": "7d 13h",
-        "amostra": 226
+        "amostra": 227
       },
       "tendencia4Semanas": [
         {
@@ -9087,7 +9089,7 @@
         {
           "semana": "W36",
           "criadas": 0,
-          "finalizadas": 3
+          "finalizadas": 4
         }
       ],
       "topOfensores": {
@@ -9095,7 +9097,7 @@
           {
             "nome": "(sem equipe)",
             "total": 652,
-            "emAberto": 122
+            "emAberto": 121
           }
         ],
         "responsaveis": [
@@ -9126,16 +9128,16 @@
           }
         ]
       },
-      "total": 122,
+      "total": 121,
       "atrasadas": 88,
       "porStatus": {
         "naoIniciada": 104,
-        "emProgresso": 6,
+        "emProgresso": 5,
         "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 122
+        "(sem equipe)": 121
       },
       "oss": [
         {
@@ -10684,24 +10686,6 @@
           "atrasada": false
         },
         {
-          "osId": "12391",
-          "ativo": "Inversor 1.9 Huawei     { THPN-NVL200-INVR1.9 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.9] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-08-31",
-          "dataCriacao": "2026-08-28",
-          "dataInicial": "2026-08-31",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "atrasada": false
-        },
-        {
           "osId": "12389",
           "ativo": "Inversor 1.4 Sungrow SG250HX    { THPN-RDR100-INVR1.4 }",
           "equipe": "",
@@ -11243,6 +11227,25 @@
           "tarefa": "Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-09-02",
+          "dataCriacao": "2026-08-28",
+          "dataInicial": "2026-08-31",
+          "dataFinal": "2026-08-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12391",
+          "ativo": "Inversor 1.9 Huawei     { THPN-NVL200-INVR1.9 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.9] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-31",
           "dataCriacao": "2026-08-28",
           "dataInicial": "2026-08-31",
           "dataFinal": "2026-08-31",
@@ -12350,25 +12353,6 @@
           "dataFinal": "2026-08-20",
           "linkFracttal": "",
           "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "11241",
-          "ativo": "Estação Meteorológica Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "Gabriela Dias",
-          "supervisor": "Ricardo Silva ",
-          "status": "Finalizada",
-          "tarefa": "Realizar limpeza dos sensores de Inhapi",
-          "criticidade": "",
-          "dataProgramada": "2026-08-18",
-          "dataCriacao": "2026-08-14",
-          "dataInicial": "2026-08-20",
-          "dataFinal": "2026-08-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -14083,7 +14067,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 482
+      "historicoTotal": 483
     },
     "engenharia": {
       "label": "Engenharia",
@@ -16709,23 +16693,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "12391",
-      "ativo": "Inversor 1.9 Huawei     { THPN-NVL200-INVR1.9 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.9] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-08-31",
-      "dataCriacao": "2026-08-28",
-      "dataInicial": "2026-08-31",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0
     },
     {
       "osId": "12389",
@@ -19431,14 +19398,15 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-15",
       "dataCriacao": "2026-07-28",
-      "dataInicial": "",
+      "dataInicial": "2026-08-31",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 816.0
     },
     {
       "osId": "10245",
@@ -19561,14 +19529,15 @@
       "responsavel": "Júlio Willers ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Júlio Willers ",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - MPA - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-07-27",
-      "dataInicial": "",
+      "dataInicial": "2026-08-31",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 840.0
     },
     {
       "osId": "10164",
@@ -20130,25 +20099,6 @@
     }
   ],
   "ossHistorico": [
-    {
-      "osId": "12007",
-      "ativo": "Infraestrutura Civil Sítio Pitombeira Limoeiro do Norte  Ceará Brasil { BLN100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-08-31",
-      "dataFinal": "2026-08-31",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
     {
       "osId": "11588",
       "ativo": "Inversor 1.18 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.18 }",
@@ -21108,6 +21058,25 @@
       "atrasada": false
     },
     {
+      "osId": "12391",
+      "ativo": "Inversor 1.9 Huawei     { THPN-NVL200-INVR1.9 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.9] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-31",
+      "dataCriacao": "2026-08-28",
+      "dataInicial": "2026-08-31",
+      "dataFinal": "2026-08-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "12340",
       "ativo": "Inversor 1.1 Sungrow SG250HX    { THPN-RDR100-INVR1.1 }",
       "equipe": "",
@@ -21676,6 +21645,25 @@
       "linkFracttal": "",
       "horasAteAbrir": 48.0,
       "horasAteFechar": 48.0,
+      "atrasada": false
+    },
+    {
+      "osId": "12007",
+      "ativo": "Infraestrutura Civil Sítio Pitombeira Limoeiro do Norte  Ceará Brasil { BLN100-INFC1 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Spare Parts",
+      "criticidade": "",
+      "dataProgramada": "2026-08-28",
+      "dataCriacao": "2026-08-24",
+      "dataInicial": "2026-08-31",
+      "dataFinal": "2026-08-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -22998,28 +22986,9 @@
       "horasAteAbrir": 264.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "11317",
-      "ativo": "Cabine 1 Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Walter Santos ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Walter Santos ",
-      "status": "Finalizados",
-      "tarefa": "[SEMP] - MPQ - Cabine",
-      "criticidade": "",
-      "dataProgramada": "2026-08-31",
-      "dataCriacao": "2026-08-17",
-      "dataInicial": "2026-08-28",
-      "dataFinal": "2026-08-28",
-      "linkFracttal": "",
-      "horasAteAbrir": 264.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2627,
+  "historicoTotal": 2628,
   "totalGeral": 5609,
   "verificacao": {
     "total": 0,
