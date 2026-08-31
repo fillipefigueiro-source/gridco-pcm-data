@@ -1425,10 +1425,10 @@ function arrancar(){
       cli.set(u, t.cliente || "—");
       if (!g.has(u)) g.set(u, new Map());
       const mm = g.get(u);
-      if (!mm.has(m)) mm.set(m, { n:0, f:0, a:0, sig:{}, ab:[] });
+      if (!mm.has(m)) mm.set(m, { n:0, f:0, a:0, sig:{}, sigF:{}, ab:[] });
       const c = mm.get(m);
       c.n++; c.sig[t.sig] = (c.sig[t.sig] || 0) + 1;
-      if (t.estado === "Finalizada") c.f++;
+      if (t.estado === "Finalizada") { c.f++; c.sigF[t.sig] = (c.sigF[t.sig] || 0) + 1; }
       else { c.a++; if (c.ab.length < 40) c.ab.push(t); }
     }
     return { g, cli };
@@ -1438,8 +1438,11 @@ function arrancar(){
     if (!PREV_SIG) return { n:c.n, f:c.f, a:c.a, ab:c.ab, sig:c.sig };
     const n = c.sig[PREV_SIG] || 0;
     if (!n) return null;
-    // o arquivo não separa finalizadas por sigla: a proporção é a do mês
-    const f = Math.round(n * (c.n ? c.f / c.n : 0));
+    /* Finalizadas REAIS da sigla. Antes isto era uma proporção do mês inteiro, e
+       mentia feio quando o mês misturava cadências: em Marabá 1, jul/26, as MPA
+       concluídas faziam a célula marcar 89% de MPM quando NENHUMA MPM tinha sido
+       feita. Medido em produção: 18 células de 343 erradas, todas para mais. */
+    const f = c.sigF[PREV_SIG] || 0;
     return { n, f, a:n-f, ab:(c.ab||[]).filter(x => x.sig === PREV_SIG), sig:c.sig };
   }
   const prevCls = v => !v ? "vazia" : v.f === v.n ? "cem" : v.f === 0 ? "nada" : "parcial";
