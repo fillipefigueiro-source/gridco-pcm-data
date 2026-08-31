@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T09:18:22Z",
+  "geradoEm": "2026-08-31T09:30:09Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 3980,
-        "emAberto": 25,
+        "total": 3982,
+        "emAberto": 27,
         "atrasadas": 22,
         "concluidas30d": 599,
         "concluidas7d": 130,
-        "naSemanaCorrente": 3
+        "naSemanaCorrente": 5
       },
       "mttr": {
         "horas": 17.05,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W36",
-          "criadas": 3,
+          "criadas": 5,
           "finalizadas": 0
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 3980,
-            "emAberto": 25
+            "total": 3982,
+            "emAberto": 27
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 25,
+      "total": 27,
       "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 21,
+        "naoIniciada": 23,
         "emProgresso": 0,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 25
+        "(sem equipe)": 27
       },
       "oss": [
         {
@@ -489,6 +489,42 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "12470",
+          "ativo": "Disjuntor do Inversor 2.4      { MCB100-DINV2.4 }",
+          "equipe": "",
+          "responsavel": "Cleiton  Farias",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Cleiton  Farias",
+          "status": "Não Iniciada",
+          "tarefa": "[MCB100-DINV2.4] - Religamento do MCB100-DINV2.4",
+          "criticidade": "",
+          "dataProgramada": "2026-08-31",
+          "dataCriacao": "2026-08-31",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12469",
+          "ativo": "Cabine 1 Estrada Pedreira, S/N Matão  São Paulo Brasil { MTO100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Eduardo Souza",
+          "status": "Não Iniciada",
+          "tarefa": "[MTO100-CABN1] - Religamento do MTO100-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-31",
+          "dataCriacao": "2026-08-31",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "12468",
@@ -3550,9 +3586,9 @@
       "historicoTotal": 1700,
       "subClassificacao": {
         "remoto": 750,
-        "local": 3230,
+        "local": 3232,
         "remotoEmAberto": 6,
-        "localEmAberto": 19,
+        "localEmAberto": 21,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -16317,6 +16353,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "12470",
+      "ativo": "Disjuntor do Inversor 2.4      { MCB100-DINV2.4 }",
+      "equipe": "",
+      "responsavel": "Cleiton  Farias",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Cleiton  Farias",
+      "status": "Não Iniciada",
+      "tarefa": "[MCB100-DINV2.4] - Religamento do MCB100-DINV2.4",
+      "criticidade": "",
+      "dataProgramada": "2026-08-31",
+      "dataCriacao": "2026-08-31",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "12469",
+      "ativo": "Cabine 1 Estrada Pedreira, S/N Matão  São Paulo Brasil { MTO100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Eduardo Souza",
+      "status": "Não Iniciada",
+      "tarefa": "[MTO100-CABN1] - Religamento do MTO100-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-08-31",
+      "dataCriacao": "2026-08-31",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "12468",
       "ativo": "Cabine 1  Ipixuna  Pará Brasil { IPX100-CABN1 }",
       "equipe": "",
@@ -23248,7 +23318,7 @@
     }
   ],
   "historicoTotal": 2615,
-  "totalGeral": 5604,
+  "totalGeral": 5606,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
