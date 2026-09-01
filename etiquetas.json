@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-01T14:24:34Z",
+  "geradoEm": "2026-09-01T14:36:19Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -8816,16 +8816,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 657,
-        "emAberto": 106,
+        "emAberto": 105,
         "atrasadas": 81,
-        "concluidas30d": 247,
-        "concluidas7d": 70,
+        "concluidas30d": 248,
+        "concluidas7d": 71,
         "naSemanaCorrente": 43
       },
       "mttr": {
-        "horas": 209.88,
+        "horas": 209.13,
         "label": "8d 17h",
-        "amostra": 247
+        "amostra": 248
       },
       "tendencia4Semanas": [
         {
@@ -8846,7 +8846,7 @@
         {
           "semana": "W36",
           "criadas": 5,
-          "finalizadas": 24
+          "finalizadas": 25
         }
       ],
       "topOfensores": {
@@ -8854,7 +8854,7 @@
           {
             "nome": "(sem equipe)",
             "total": 657,
-            "emAberto": 106
+            "emAberto": 105
           }
         ],
         "responsaveis": [
@@ -8885,16 +8885,16 @@
           }
         ]
       },
-      "total": 106,
+      "total": 105,
       "atrasadas": 81,
       "porStatus": {
-        "naoIniciada": 95,
-        "emProgresso": 4,
+        "naoIniciada": 93,
+        "emProgresso": 5,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 106
+        "(sem equipe)": 105
       },
       "oss": [
         {
@@ -10283,23 +10283,6 @@
           "atrasada": true
         },
         {
-          "osId": "12567",
-          "ativo": "Inversor 2.4 Sungrow SG350HX    { SEMP-TCN200-INVR2.4 }",
-          "equipe": "",
-          "responsavel": "Walter Santos ",
-          "criadoPor": "Gabriela Dias",
-          "supervisor": "Walter Santos ",
-          "status": "Não Iniciada",
-          "tarefa": "Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-08-31",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "12416",
           "ativo": "Inversor 1.5 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.5 }",
           "equipe": "",
@@ -10547,14 +10530,15 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "Ana Barros ",
           "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Coleta e análise de dados de geração",
           "criticidade": "",
           "dataProgramada": "2026-09-01",
           "dataCriacao": "2026-08-21",
-          "dataInicial": "",
+          "dataInicial": "2026-09-01",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 264.0,
           "atrasada": false
         },
         {
@@ -10712,6 +10696,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "12567",
+          "ativo": "Inversor 2.4 Sungrow SG350HX    { SEMP-TCN200-INVR2.4 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Walter Santos ",
+          "status": "Finalizados",
+          "tarefa": "Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-01",
+          "dataCriacao": "2026-08-31",
+          "dataInicial": "2026-09-01",
+          "dataFinal": "2026-09-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "11529",
           "ativo": "Inversor 1.12 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.12 }",
@@ -12001,25 +12004,6 @@
           "dataFinal": "2026-08-24",
           "linkFracttal": "",
           "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "11376",
-          "ativo": "Tracker 58.100 Trina Vanguard 1P    { THPN-CLN100-ETKR58.100 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizada",
-          "tarefa": "[Tracker 58.100] - Verificação de Tracker 58",
-          "criticidade": "",
-          "dataProgramada": "2026-08-18",
-          "dataCriacao": "2026-08-17",
-          "dataInicial": "2026-08-24",
-          "dataFinal": "2026-08-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -13563,7 +13547,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 503
+      "historicoTotal": 504
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15770,22 +15754,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "12567",
-      "ativo": "Inversor 2.4 Sungrow SG350HX    { SEMP-TCN200-INVR2.4 }",
-      "equipe": "",
-      "responsavel": "Walter Santos ",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Walter Santos ",
-      "status": "Não Iniciada",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-01",
-      "dataCriacao": "2026-08-31",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "12565",
       "ativo": "Disjuntor do Inversor 3.3      { MAB100-DINV3.3 }",
       "equipe": "",
@@ -17927,14 +17895,15 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "Ana Barros ",
       "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Coleta e análise de dados de geração",
       "criticidade": "",
       "dataProgramada": "2026-09-01",
       "dataCriacao": "2026-08-21",
-      "dataInicial": "",
+      "dataInicial": "2026-09-01",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 264.0
     },
     {
       "osId": "11752",
@@ -19852,6 +19821,25 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "12567",
+      "ativo": "Inversor 2.4 Sungrow SG350HX    { SEMP-TCN200-INVR2.4 }",
+      "equipe": "",
+      "responsavel": "Walter Santos ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Walter Santos ",
+      "status": "Finalizados",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-09-01",
+      "dataCriacao": "2026-08-31",
+      "dataInicial": "2026-09-01",
+      "dataFinal": "2026-09-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -21990,28 +21978,9 @@
       "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "11908",
-      "ativo": "Infraestrutura Civil Estrada p/Campo Grande União  Piauí Brasil { 2C-UNI100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Ailton Leal ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-08-27",
-      "dataFinal": "2026-08-27",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2687,
+  "historicoTotal": 2688,
   "totalGeral": 5663,
   "verificacao": {
     "total": 0,
