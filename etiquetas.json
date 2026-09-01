@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-01T18:36:31Z",
+  "geradoEm": "2026-09-01T18:47:55Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4034,
-        "emAberto": 18,
+        "total": 4035,
+        "emAberto": 19,
         "atrasadas": 13,
         "concluidas30d": 641,
         "concluidas7d": 178,
-        "naSemanaCorrente": 56
+        "naSemanaCorrente": 57
       },
       "mttr": {
         "horas": 18.23,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W36",
-          "criadas": 57,
+          "criadas": 58,
           "finalizadas": 65
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4034,
-            "emAberto": 18
+            "total": 4035,
+            "emAberto": 19
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 18,
+      "total": 19,
       "atrasadas": 13,
       "porStatus": {
         "naoIniciada": 13,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 18
+        "(sem equipe)": 19
       },
       "oss": [
         {
@@ -330,20 +330,39 @@
           "atrasada": true
         },
         {
-          "osId": "12634",
-          "ativo": "Greenyellow - Castelo do Piauí 1 - PI Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100 }",
+          "osId": "12635",
+          "ativo": "Thopen - Taguai 1 e 2 - SP Taguaí - SP, CEP 18890-000 Taguai  São Paulo Brasil { THPN-TGI100 }",
           "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Luiz  Silva",
+          "responsavel": "Valdir Silva ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Valdir Silva ",
           "status": "Não Iniciada",
-          "tarefa": "[GY-CDP100] - Religamento do GY-CDP100",
+          "tarefa": "[THPN-TGI100] - Religamento do THPN-TGI100",
           "criticidade": "",
           "dataProgramada": "2026-09-01",
           "dataCriacao": "2026-09-01",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12634",
+          "ativo": "Greenyellow - Castelo do Piauí 1 - PI Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Luiz  Silva",
+          "status": "Em progresso",
+          "tarefa": "[GY-CDP100] - Religamento do GY-CDP100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-01",
+          "dataCriacao": "2026-09-01",
+          "dataInicial": "2026-09-01",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3425,9 +3444,9 @@
       "historicoTotal": 1746,
       "subClassificacao": {
         "remoto": 750,
-        "local": 3284,
+        "local": 3285,
         "remotoEmAberto": 6,
-        "localEmAberto": 12,
+        "localEmAberto": 13,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -15533,20 +15552,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "12634",
-      "ativo": "Greenyellow - Castelo do Piauí 1 - PI Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100 }",
+      "osId": "12635",
+      "ativo": "Thopen - Taguai 1 e 2 - SP Taguaí - SP, CEP 18890-000 Taguai  São Paulo Brasil { THPN-TGI100 }",
       "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Luiz  Silva",
+      "responsavel": "Valdir Silva ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Valdir Silva ",
       "status": "Não Iniciada",
-      "tarefa": "[GY-CDP100] - Religamento do GY-CDP100",
+      "tarefa": "[THPN-TGI100] - Religamento do THPN-TGI100",
       "criticidade": "",
       "dataProgramada": "2026-09-01",
       "dataCriacao": "2026-09-01",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "12634",
+      "ativo": "Greenyellow - Castelo do Piauí 1 - PI Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Luiz  Silva",
+      "status": "Em progresso",
+      "tarefa": "[GY-CDP100] - Religamento do GY-CDP100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-01",
+      "dataCriacao": "2026-09-01",
+      "dataInicial": "2026-09-01",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -21849,7 +21886,7 @@
     }
   ],
   "historicoTotal": 2699,
-  "totalGeral": 5670,
+  "totalGeral": 5671,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
