@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-01T10:15:08Z",
+  "geradoEm": "2026-09-01T10:39:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4020,
-        "emAberto": 22,
+        "emAberto": 21,
         "atrasadas": 18,
-        "concluidas30d": 623,
-        "concluidas7d": 160,
+        "concluidas30d": 624,
+        "concluidas7d": 161,
         "naSemanaCorrente": 42
       },
       "mttr": {
-        "horas": 18.64,
-        "label": "18h 39min",
-        "amostra": 623
+        "horas": 18.61,
+        "label": "18h 37min",
+        "amostra": 624
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W36",
           "criadas": 43,
-          "finalizadas": 47
+          "finalizadas": 48
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4020,
-            "emAberto": 22
+            "emAberto": 21
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 22,
+      "total": 21,
       "atrasadas": 18,
       "porStatus": {
-        "naoIniciada": 13,
-        "emProgresso": 3,
-        "pausada": 6,
+        "naoIniciada": 14,
+        "emProgresso": 2,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 22
+        "(sem equipe)": 21
       },
       "oss": [
         {
@@ -97,15 +97,14 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Adriano  Moraes",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "Analise e testes de religamento remoto UFV - Araputanga",
           "criticidade": "",
           "dataProgramada": "2026-07-29",
           "dataCriacao": "2026-07-28",
-          "dataInicial": "2026-08-30",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 792.0,
           "modalidade": "remoto",
           "atrasada": true
         },
@@ -425,9 +424,9 @@
           "osId": "12587",
           "ativo": "RenoGrid - Elias Fausto 1 - SP CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { RNGD-ELF100 }",
           "equipe": "",
-          "responsavel": "Bruno Vinícius Pupo",
+          "responsavel": "Felipe  Lima",
           "criadoPor": "David  Nascimento",
-          "supervisor": "Bruno Vinícius Pupo",
+          "supervisor": "Felipe  Lima",
           "status": "Não Iniciada",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
@@ -436,25 +435,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "12586",
-          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "David  Nascimento",
-          "supervisor": "Adriano  Moraes",
-          "status": "Em progresso",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-01",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -497,6 +477,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "12586",
+          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "David  Nascimento",
+          "supervisor": "Adriano  Moraes",
+          "status": "Finalizados",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-09-01",
+          "dataCriacao": "2026-09-01",
+          "dataInicial": "2026-09-01",
+          "dataFinal": "2026-09-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "12578",
           "ativo": "Thopen - Nova Londrina 2 - PR Estrada Mané Correia S/N Nova Londrina  Paraná Brasil { THPN-NVL200 }",
@@ -2298,26 +2298,6 @@
           "atrasada": false
         },
         {
-          "osId": "12351",
-          "ativo": "Cabine 4  Capitão Poço  Pará Brasil { CPP100-CABN4 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizada",
-          "tarefa": "[Cabine 4] - Religamento da Cabine 4",
-          "criticidade": "",
-          "dataProgramada": "2026-08-27",
-          "dataCriacao": "2026-08-27",
-          "dataInicial": "2026-08-27",
-          "dataFinal": "2026-08-27",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11857",
           "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
           "equipe": "",
@@ -3498,12 +3478,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1728,
+      "historicoTotal": 1729,
       "subClassificacao": {
         "remoto": 750,
         "local": 3270,
         "remotoEmAberto": 6,
-        "localEmAberto": 16,
+        "localEmAberto": 15,
         "pctRemoto": 19,
         "alerta": true
       },
@@ -3531,14 +3511,6 @@
             "criadoPor": "Juliana Cândido",
             "responsavel": "Janderson Miranda ",
             "horas": 1200.0,
-            "linkFracttal": ""
-          },
-          {
-            "osId": "10297",
-            "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-            "criadoPor": "Juliana Cândido",
-            "responsavel": "Adriano  Moraes",
-            "horas": 792.0,
             "linkFracttal": ""
           },
           {
@@ -3587,6 +3559,14 @@
             "criadoPor": "ItaloLustosa",
             "responsavel": "Janderson Miranda ",
             "horas": 216.0,
+            "linkFracttal": ""
+          },
+          {
+            "osId": "2269",
+            "ativo": "Athon - Matões 1 - MA Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { ATHN-MTS100 }",
+            "criadoPor": "Raphael Vitoriano ",
+            "responsavel": "Raphael Vitoriano ",
+            "horas": 192.0,
             "linkFracttal": ""
           }
         ],
@@ -3672,9 +3652,9 @@
             "linkFracttal": ""
           }
         ],
-        "medHorasAbrir": 12.0,
+        "medHorasAbrir": 11.0,
         "medHorasFechar": 2.6,
-        "amostraAbrir": 741,
+        "amostraAbrir": 740,
         "amostraFechar": 737,
         "topAbridores": [
           {
@@ -3799,8 +3779,8 @@
       "atrasadas": 72,
       "porStatus": {
         "naoIniciada": 70,
-        "emProgresso": 1,
-        "pausada": 11,
+        "emProgresso": 0,
+        "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4401,7 +4381,7 @@
           "responsavel": "Thiago Morais ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Thiago Morais ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
@@ -15780,9 +15760,9 @@
       "osId": "12587",
       "ativo": "RenoGrid - Elias Fausto 1 - SP CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { RNGD-ELF100 }",
       "equipe": "",
-      "responsavel": "Bruno Vinícius Pupo",
+      "responsavel": "Felipe  Lima",
       "criadoPor": "David  Nascimento",
-      "supervisor": "Bruno Vinícius Pupo",
+      "supervisor": "Felipe  Lima",
       "status": "Não Iniciada",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
@@ -15791,24 +15771,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "12586",
-      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "David  Nascimento",
-      "supervisor": "Adriano  Moraes",
-      "status": "Em progresso",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-09-01",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "2026-09-01",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -17253,7 +17215,7 @@
       "responsavel": "Thiago Morais ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Thiago Morais ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
       "dataProgramada": "2026-08-28",
@@ -18798,15 +18760,14 @@
       "responsavel": "Adriano  Moraes",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Adriano  Moraes",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "Analise e testes de religamento remoto UFV - Araputanga",
       "criticidade": "",
       "dataProgramada": "2026-07-29",
       "dataCriacao": "2026-07-28",
-      "dataInicial": "2026-08-30",
+      "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 792.0,
       "modalidade": "remoto"
     },
     {
@@ -19897,6 +19858,26 @@
       "horasAteAbrir": 1296.0,
       "horasAteFechar": 0,
       "modalidade": "remoto",
+      "atrasada": false
+    },
+    {
+      "osId": "12586",
+      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "David  Nascimento",
+      "supervisor": "Adriano  Moraes",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-09-01",
+      "dataCriacao": "2026-09-01",
+      "dataInicial": "2026-09-01",
+      "dataFinal": "2026-09-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -22289,28 +22270,9 @@
       "horasAteAbrir": 96.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "11761",
-      "ativo": "Thopen - Ceilândia 1 - DF BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Coleta e análise de dados de geração",
-      "criticidade": "",
-      "dataProgramada": "2026-08-25",
-      "dataCriacao": "2026-08-21",
-      "dataInicial": "2026-08-27",
-      "dataFinal": "2026-08-27",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2670,
+  "historicoTotal": 2671,
   "totalGeral": 5655,
   "verificacao": {
     "total": 0,
