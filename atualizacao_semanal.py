@@ -1141,12 +1141,32 @@ def incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana=
             idx = header.index("OSs ID")
         except ValueError:
             continue
+        # O ATIVO faz parte da identidade da tarefa. Sem ele, uma OS com 24 ativos
+        # entrava na semana com UMA linha e as outras 23 ficavam invisiveis no App
+        # (Cleiton Farias, 01/09/2026). Aba que nao tiver as colunas recua para a OS
+        # sozinha — comportamento de antes, em vez de erro.
+        # A coluna da planilha chama "Código Equipamento"; o BD chama "Código". Os VALORES
+        # sao o mesmo codigo de ativo — so o cabecalho difere. Procurar so por "Código"
+        # nao acharia nada e o recuo por OS voltaria calado, ou seja: o conserto nao
+        # consertaria e ninguem saberia. Por isso as duas grafias, e um aviso quando
+        # nenhuma casar.
+        i_cod = next((header.index(h) for h in ("Código Equipamento", "Código")
+                      if h in header), None)
+        i_tar = header.index("Tarefa") if "Tarefa" in header else None
+        if i_cod is None:
+            log(f"    [ATENCAO] aba {sheet_name}: sem coluna de codigo do ativo — "
+                f"a trava volta a ser por OS nesta aba (tarefas irmas podem sumir)")
         for r in range(2, ws.max_row + 1):
             v = ws.cell(row=r, column=idx + 1).value
             try:
-                presentes.add(int(v))
+                _os = int(v)
             except (ValueError, TypeError):
-                pass
+                continue
+            _c = str(ws.cell(row=r, column=i_cod + 1).value or "").strip() if i_cod is not None else ""
+            _t = str(ws.cell(row=r, column=i_tar + 1).value or "").strip() if i_tar is not None else ""
+            presentes.add((_os, _c, _t))
+            if i_cod is None and i_tar is None:
+                presentes.add(_os)          # aba antiga: trava por OS, como antes
 
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     incorporadas = 0
@@ -1156,13 +1176,19 @@ def incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana=
         if pd.isna(os_id):
             continue
         os_id = int(os_id)
-        if os_id in presentes:
+        # A CHAVE E' A TAREFA, NAO A OS (01/09/2026). A trava abaixo continua sendo o que
+        # impede a duplicacao massiva — ela so passou a contar a coisa certa. Contando OS,
+        # uma OS de 24 ativos entrava com UMA tarefa e as outras 23 sumiam: 6 OS e 42
+        # tarefas invisiveis na W36 quando isto foi medido.
+        # (OS, Codigo, Tarefa) e' a MESMA identidade que o `fonte_bd_api` ja usa para
+        # deduplicar o BD — entao uma linha por tarefa entra uma vez so, e as "180 copias
+        # da mesma OS numa rodada" nao voltam.
+        _chave = (os_id,
+                  str(row.get("Código") or "").strip(),
+                  str(row.get("Tarefa") or "").strip())
+        if _chave in presentes or os_id in presentes:
             continue
-        # FIX dedupe in-loop: marca como presente AGORA, antes de incorporar.
-        # Sem isso, próxima linha do df_bd_semana com mesma OSs ID (BD tem
-        # múltiplas tarefas/subtasks por OS) reincorporaria, gerando duplicação
-        # massiva (ex: 180 cópias da mesma OS em uma única rodada).
-        presentes.add(os_id)
+        presentes.add(_chave)
         # Ignora OSs Cancelada/Finalizada/Concluída — não fazem sentido na programação.
         # Crítico: sem "finaliz"/"conclu" aqui, o sync_status_bd remove a linha
         # (porque virou Finalizada) e o loop seguinte re-adiciona, gerando duplicação
