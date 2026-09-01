@@ -273,6 +273,41 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
 .pv-cli .qtd{font-size:10px;font-weight:600;color:var(--ink3);margin-left:7px}
 .pv-usi td:first-child{padding-left:32px;color:var(--ink2)}
 .pv-c b{display:block;font-size:12.5px;color:var(--ink)}
+/* indicador de frescor do dado + forçar atualização */
+.fresc{position:relative;display:inline-flex}
+.fr-b{display:inline-flex;align-items:center;gap:7px;font-family:inherit;font-size:11.5px;
+  font-weight:700;padding:5px 11px;border-radius:20px;border:1px solid var(--line2);
+  background:var(--surf2);color:var(--ink2);cursor:pointer;white-space:nowrap}
+.fr-b:hover{background:var(--line)}
+.fr-b i{width:8px;height:8px;border-radius:50%;background:var(--ok);flex:0 0 auto}
+.fr-b.ama i{background:var(--warn)} .fr-b.ver i{background:var(--danger)}
+.fr-b.ama{color:var(--aviso)} .fr-b.ver{color:var(--mal)}
+.fr-b i.pulsa{animation:frp 1.6s ease-in-out infinite}
+@keyframes frp{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.fr-b i.pulsa{animation:none}}
+.fr-pop{position:absolute;right:0;top:calc(100% + 7px);z-index:40;width:min(320px,86vw);
+  background:var(--surf);border:1px solid var(--line2);border-radius:10px;
+  box-shadow:0 14px 36px rgba(10,8,20,.24);overflow:hidden;text-align:left}
+.fr-pop h4{margin:0;padding:10px 13px 9px;font-size:10px;font-weight:800;color:var(--ink3);
+  text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--line)}
+.fr-f{display:flex;align-items:center;gap:9px;padding:9px 13px;border-bottom:1px solid var(--line)}
+.fr-f i{width:8px;height:8px;border-radius:50%;flex:0 0 auto;background:var(--ok)}
+.fr-f.ama i{background:var(--warn)} .fr-f.ver i{background:var(--danger)}
+.fr-f.off i{background:var(--line2)}
+.fr-f .nm{flex:1;min-width:0;font-size:12.5px;font-weight:600}
+.fr-f .nm small{display:block;font-size:10.5px;color:var(--ink3);font-weight:500}
+.fr-f .id{font-size:11.5px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.fr-ac{padding:11px 13px;display:flex;flex-direction:column;gap:7px}
+.fr-bt{font-family:inherit;font-size:12.5px;font-weight:700;padding:8px 12px;border-radius:8px;
+  border:1px solid var(--line2);background:var(--surf2);color:var(--ink);cursor:pointer;text-align:left}
+.fr-bt:hover:not(:disabled){background:var(--line)}
+.fr-bt:disabled{opacity:.5;cursor:default}
+.fr-bt small{display:block;font-weight:500;font-size:10.5px;color:var(--ink3);margin-top:1px}
+.fr-bt.forte{background:var(--navy);color:#fff;border-color:var(--navy)}
+.fr-bt.forte small{color:rgba(255,255,255,.6)}
+.fr-prog{padding:11px 13px;border-top:1px solid var(--line);font-size:12px;color:var(--ink2)}
+.fr-prog b{display:block;color:var(--ink);margin-bottom:3px}
+.fr-prog.mal b{color:var(--mal)}
 /* grade de aderência do ano (Preventivas) */
 .pa-bloco{margin-top:18px;background:var(--surf);border:1px solid var(--line);
   border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
@@ -730,7 +765,7 @@ tbody tr:hover{background:var(--surf2)}
       <h1 id="t-tit">Semana</h1>
       <span class="sub" id="t-sub"></span>
       <span class="espaco"></span>
-      <span class="pulso"><i></i>robô ok</span>
+      <span class="fresc" id="fresc"></span>
       <button class="bt" id="exportar" title="Baixa as OS filtradas em CSV">Exportar CSV</button>
       <button class="topo-x" id="topo-x" title="Recolher a barra">⌃</button>
     </header>
@@ -895,6 +930,8 @@ function montarD(bd, et, semanaSel){
 
   return {
     semana: w.label, semanas_guardadas: bd.semanas.length,
+    // quando o robô gerou este arquivo — alimenta o indicador de frescor
+    geradoEm: bd.geradoEm || "",
     // datas de cada dia ({seg:"31/08"...}): o card do dia mostra a data, e o
     // corte de "criadas apos o plano" e derivado da segunda-feira.
     datas: w.dates || {},
@@ -2228,6 +2265,100 @@ function arrancar(){
     return n;
   }
 
+  /* ── Frescor do dado e forçar atualização ────────────────────────────
+     O cabeçalho dizia "robô ok" em texto fixo: dizia ok mesmo com o robô parado
+     há um dia. Agora mostra a idade real do arquivo, e abre as duas formas de
+     atualizar. São duas mesmo, e diferentes:
+       · recarregar  — rebusca o que o robô JÁ publicou. Instantâneo.
+       · acordar     — dispara o robô para buscar no Fracttal. ~7 min, só admin.
+     E só a Semana: o gestao-pcm.yml não escuta o repository_dispatch, então a
+     Gestão PCM segue o ciclo dela. A tela diz isso — não adianta o botão
+     prometer o que o pipeline não entrega. */
+  let FR_ABERTO = false, FR_MSG = null, FR_OCUP = false;
+
+  /* O robô grava o gestao_pcm.json SEM fuso (datetime.now() rodando em UTC no
+     Actions), e o banco_dados COM. Sem acrescentar o Z, o JavaScript lê a forma
+     sem fuso como hora local e a idade sai 3h errada — medido: -41 min, dado no
+     futuro. Um indicador novo mentindo igual ao antigo. */
+  const frZ = t => !t ? "" : (/[Zz]|[+-]\d\d:?\d\d$/.test(t) ? t : t + "Z");
+  function frMin(t){
+    if (!t) return null;
+    const d = new Date(frZ(t));
+    if (isNaN(d)) return null;
+    return Math.max(0, Math.round((Date.now() - d.getTime()) / 60000));
+  }
+  function frTexto(min){
+    if (min == null) return "sem data";
+    if (min < 2)  return "agora há pouco";
+    if (min < 60) return "há " + min + " min";
+    const h = Math.floor(min/60), m = min % 60;
+    return "há " + h + "h" + (m ? " " + m + "min" : "");
+  }
+  const frTom = min => min == null ? "ama" : min < 30 ? "" : min < 60 ? "ama" : "ver";
+
+  function frPintar(){
+    const el = $("#fresc");
+    if (!el) return;
+    const mS = frMin(D.geradoEm);
+    const mG = (GP && GP.geradoEm) ? frMin(GP.geradoEm) : null;
+    const ehAdmin = PAPEL_REAL ? PAPEL_REAL.tipo === "admin" : PAPEL === "admin";
+
+    const linha = (rot, sub, min, carregada) =>
+      '<div class="fr-f ' + (carregada ? frTom(min) : "off") + '"><i></i>'
+      + '<div class="nm">' + rot + '<small>' + sub + '</small></div>'
+      + '<span class="id">' + (carregada ? frTexto(min) : "não carregada") + '</span></div>';
+
+    el.innerHTML =
+      '<button class="fr-b ' + frTom(mS) + '" id="fr-b" title="Origem e idade dos dados">'
+      + '<i class="' + (FR_OCUP ? "pulsa" : "") + '"></i>' + esc(frTexto(mS)) + '</button>'
+      + (FR_ABERTO
+        ? '<div class="fr-pop" id="fr-pop"><h4>Origem dos dados</h4>'
+          + linha("Semana e módulos", "banco_dados.json · etiquetas.json", mS, true)
+          + linha("Gestão PCM", "gestao_pcm.json", mG, !!(GP && GP.geradoEm))
+          + '<div class="fr-ac">'
+          + '<button class="fr-bt forte" id="fr-rec"' + (FR_OCUP ? " disabled" : "") + '>Recarregar agora'
+          + '<small>busca de novo o que o robô já publicou · instantâneo</small></button>'
+          + (ehAdmin
+            ? '<button class="fr-bt" id="fr-aco"' + (FR_OCUP ? " disabled" : "") + '>Acordar o robô'
+              + '<small>busca no Fracttal e republica · leva ~7 min · só a Semana</small></button>'
+            : '')
+          + '</div>'
+          + (FR_MSG ? '<div class="fr-prog' + (FR_MSG.mal ? " mal" : "") + '"><b>'
+              + esc(FR_MSG.t) + '</b>' + esc(FR_MSG.s || "") + '</div>' : '')
+          + '</div>'
+        : '');
+
+    $("#fr-b").onclick = e => { e.stopPropagation(); FR_ABERTO = !FR_ABERTO; FR_MSG = null; frPintar(); };
+    const pop = $("#fr-pop");
+    if (pop) pop.onclick = e => e.stopPropagation();
+    const rec = $("#fr-rec");
+    /* Recarrega a página em vez de remontar o D: arrancar() registra listeners no
+       document, e chamá-lo de novo duplicaria cada um. É a mesma decisão do
+       trocarSemana(), registrada por ele. */
+    if (rec) rec.onclick = () => { FR_MSG = { t:"Recarregando…", s:"" }; FR_OCUP = true;
+      frPintar(); location.reload(); };
+    const aco = $("#fr-aco");
+    if (aco) aco.onclick = () => frAcordar();
+  }
+
+  async function frAcordar(){
+    if (FR_OCUP) return;
+    FR_OCUP = true;
+    FR_MSG = { t:"Acordando o robô…", s:"pedindo ao GitHub" };
+    frPintar();
+    try {
+      const r = await fetch("/api/acordar", { method:"POST" });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.erro || ("HTTP " + r.status));
+      FR_MSG = { t:"Robô acordado.",
+                 s:"leva ~7 min. Recarregue quando terminar — só a Semana muda." };
+    } catch (e) {
+      FR_MSG = { t:"Não deu para acordar.", s:e.message, mal:true };
+    }
+    FR_OCUP = false;
+    frPintar();
+  }
+
   let PVPOP = null;
   function gpFecharPvPop(){ if (PVPOP){ PVPOP.remove(); PVPOP = null; } }
   /* Popup das tarefas faltantes de uma usina numa sigla (MPM/MPT/MPS/MPA).
@@ -2488,6 +2619,7 @@ function arrancar(){
     $("#v-gestao").innerHTML = V==="gestao" ? vGestao() : "";
     document.querySelectorAll(".tela").forEach(s => s.classList.toggle("on", s.id==="v-"+V));
     ligar();
+    frPintar();     // idade do dado no cabeçalho, a cada render
   }
   function gpAbrirPop(k){
     fecharPops();
@@ -3003,7 +3135,8 @@ function arrancar(){
   });
 
   function fecharPops(){ document.querySelectorAll(".f-pop").forEach(p=>p.remove()); }
-  document.addEventListener("click", () => { POP = null; fecharPops(); });
+  document.addEventListener("click", () => { POP = null; fecharPops();
+    if (FR_ABERTO) { FR_ABERTO = false; frPintar(); } });
   document.querySelectorAll(".lat-i").forEach(b => b.onclick = () => {
     V = b.dataset.v; MOD = b.dataset.m || null; pintar(); window.scrollTo(0,0); });
   pintar();
