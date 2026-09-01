@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-01T17:54:08Z",
+  "geradoEm": "2026-09-01T18:12:00Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 20,
       "atrasadas": 16,
       "porStatus": {
-        "naoIniciada": 15,
-        "emProgresso": 1,
+        "naoIniciada": 14,
+        "emProgresso": 2,
         "pausada": 4,
         "verificacao": 0
       },
@@ -336,14 +336,15 @@
           "responsavel": "Marcos  Camargo",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Marcos  Camargo",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-08-31",
           "dataCriacao": "2026-08-31",
-          "dataInicial": "",
+          "dataInicial": "2026-09-01",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -3686,16 +3687,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 710,
-        "emAberto": 76,
-        "atrasadas": 66,
-        "concluidas30d": 143,
-        "concluidas7d": 74,
+        "emAberto": 75,
+        "atrasadas": 65,
+        "concluidas30d": 144,
+        "concluidas7d": 75,
         "naSemanaCorrente": 8
       },
       "mttr": {
-        "horas": 338.01,
-        "label": "14d 2h",
-        "amostra": 143
+        "horas": 341.5,
+        "label": "14d 5h",
+        "amostra": 144
       },
       "tendencia4Semanas": [
         {
@@ -3716,7 +3717,7 @@
         {
           "semana": "W36",
           "criadas": 4,
-          "finalizadas": 16
+          "finalizadas": 17
         }
       ],
       "topOfensores": {
@@ -3724,7 +3725,7 @@
           {
             "nome": "(sem equipe)",
             "total": 710,
-            "emAberto": 76
+            "emAberto": 75
           }
         ],
         "responsaveis": [
@@ -3755,16 +3756,16 @@
           }
         ]
       },
-      "total": 76,
-      "atrasadas": 66,
+      "total": 75,
+      "atrasadas": 65,
       "porStatus": {
         "naoIniciada": 61,
-        "emProgresso": 4,
+        "emProgresso": 3,
         "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 76
+        "(sem equipe)": 75
       },
       "oss": [
         {
@@ -3972,24 +3973,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10292",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-MNG100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Marcos  Camargo",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-13",
-          "dataCriacao": "2026-07-28",
-          "dataInicial": "2026-09-01",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 840.0,
           "atrasada": true
         },
         {
@@ -5093,6 +5076,25 @@
           "dataFinal": "2026-09-01",
           "linkFracttal": "",
           "horasAteAbrir": 792.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10292",
+          "ativo": "Preventiva Grupo de Inversores      { THPN-MNG100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Marcos  Camargo",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-13",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "2026-09-01",
+          "dataFinal": "2026-09-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 840.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -7833,25 +7835,6 @@
           "atrasada": false
         },
         {
-          "osId": "10137",
-          "ativo": "Infraestrutura Civil  Crateús  Ceará Brasil { CTS100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Railson Gomes ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Infraestrutura",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-07-29",
-          "dataFinal": "2026-07-29",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8401",
           "ativo": "Ar Condicionado      { ADS100-SOEM1-ARCD }",
           "equipe": "",
@@ -7928,7 +7911,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 311
+      "historicoTotal": 312
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9335,9 +9318,9 @@
           "osId": "11043",
           "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR1.2 }",
           "equipe": "",
-          "responsavel": "Eduardo  Mendes",
+          "responsavel": "Lucas Alberto Freitas de Faria ",
           "criadoPor": "LuelySantos",
-          "supervisor": "Eduardo  Mendes",
+          "supervisor": "Lucas Alberto Freitas de Faria ",
           "status": "Não Iniciada",
           "tarefa": "[Inversor 1.2] - Recomposição de String",
           "criticidade": "",
@@ -9746,9 +9729,9 @@
           "osId": "12096",
           "ativo": "Inversor 3.3 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.3 }",
           "equipe": "",
-          "responsavel": "Eduardo  Mendes",
+          "responsavel": "Lucas Alberto Freitas de Faria ",
           "criadoPor": "LuelySantos",
-          "supervisor": "Eduardo  Mendes",
+          "supervisor": "Lucas Alberto Freitas de Faria ",
           "status": "Não Iniciada",
           "tarefa": "[Inversor 3.3] - Recomposição de String",
           "criticidade": "",
@@ -9763,9 +9746,9 @@
           "osId": "12095",
           "ativo": "Inversor 3.1 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.1 }",
           "equipe": "",
-          "responsavel": "Eduardo  Mendes",
+          "responsavel": "Lucas Alberto Freitas de Faria ",
           "criadoPor": "LuelySantos",
-          "supervisor": "Eduardo  Mendes",
+          "supervisor": "Lucas Alberto Freitas de Faria ",
           "status": "Não Iniciada",
           "tarefa": "[Inversor 3.1] - Recomposição de String",
           "criticidade": "",
@@ -10052,9 +10035,9 @@
           "osId": "12250",
           "ativo": "Inversor 2.5 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR2.5 }",
           "equipe": "",
-          "responsavel": "Adão Neto ",
+          "responsavel": "Lucas Alberto Freitas de Faria ",
           "criadoPor": "Levi Maia ",
-          "supervisor": "Adão Neto ",
+          "supervisor": "Lucas Alberto Freitas de Faria ",
           "status": "Não Iniciada",
           "tarefa": "[Inversor 2.5] - Recomposição de String",
           "criticidade": "",
@@ -15765,14 +15748,15 @@
       "responsavel": "Marcos  Camargo",
       "criadoPor": "Lucas  Nascimento",
       "supervisor": "Marcos  Camargo",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-08-31",
       "dataCriacao": "2026-08-31",
-      "dataInicial": "",
+      "dataInicial": "2026-09-01",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -16392,9 +16376,9 @@
       "osId": "12250",
       "ativo": "Inversor 2.5 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR2.5 }",
       "equipe": "",
-      "responsavel": "Adão Neto ",
+      "responsavel": "Lucas Alberto Freitas de Faria ",
       "criadoPor": "Levi Maia ",
-      "supervisor": "Adão Neto ",
+      "supervisor": "Lucas Alberto Freitas de Faria ",
       "status": "Não Iniciada",
       "tarefa": "[Inversor 2.5] - Recomposição de String",
       "criticidade": "",
@@ -16761,9 +16745,9 @@
       "osId": "12096",
       "ativo": "Inversor 3.3 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.3 }",
       "equipe": "",
-      "responsavel": "Eduardo  Mendes",
+      "responsavel": "Lucas Alberto Freitas de Faria ",
       "criadoPor": "LuelySantos",
-      "supervisor": "Eduardo  Mendes",
+      "supervisor": "Lucas Alberto Freitas de Faria ",
       "status": "Não Iniciada",
       "tarefa": "[Inversor 3.3] - Recomposição de String",
       "criticidade": "",
@@ -16777,9 +16761,9 @@
       "osId": "12095",
       "ativo": "Inversor 3.1 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.1 }",
       "equipe": "",
-      "responsavel": "Eduardo  Mendes",
+      "responsavel": "Lucas Alberto Freitas de Faria ",
       "criadoPor": "LuelySantos",
-      "supervisor": "Eduardo  Mendes",
+      "supervisor": "Lucas Alberto Freitas de Faria ",
       "status": "Não Iniciada",
       "tarefa": "[Inversor 3.1] - Recomposição de String",
       "criticidade": "",
@@ -18238,9 +18222,9 @@
       "osId": "11043",
       "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR1.2 }",
       "equipe": "",
-      "responsavel": "Eduardo  Mendes",
+      "responsavel": "Lucas Alberto Freitas de Faria ",
       "criadoPor": "LuelySantos",
-      "supervisor": "Eduardo  Mendes",
+      "supervisor": "Lucas Alberto Freitas de Faria ",
       "status": "Não Iniciada",
       "tarefa": "[Inversor 1.2] - Recomposição de String",
       "criticidade": "",
@@ -18536,23 +18520,6 @@
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
-      "dataCriacao": "2026-07-28",
-      "dataInicial": "2026-09-01",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 840.0
-    },
-    {
-      "osId": "10292",
-      "ativo": "Preventiva Grupo de Inversores      { THPN-MNG100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Marcos  Camargo",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-08-13",
       "dataCriacao": "2026-07-28",
       "dataInicial": "2026-09-01",
       "dataFinal": "",
@@ -19252,6 +19219,25 @@
       "dataFinal": "2026-08-19",
       "linkFracttal": "",
       "horasAteAbrir": 528.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "10292",
+      "ativo": "Preventiva Grupo de Inversores      { THPN-MNG100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Marcos  Camargo",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-08-13",
+      "dataCriacao": "2026-07-28",
+      "dataInicial": "2026-09-01",
+      "dataFinal": "2026-09-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 840.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -21999,28 +21985,9 @@
       "horasAteAbrir": 72.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "11963",
-      "ativo": "Infraestrutura Civil BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-08-27",
-      "dataFinal": "2026-08-27",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2693,
+  "historicoTotal": 2694,
   "totalGeral": 5669,
   "verificacao": {
     "total": 0,
