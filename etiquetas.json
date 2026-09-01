@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-01T14:48:30Z",
+  "geradoEm": "2026-09-01T15:00:14Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -8817,16 +8817,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 657,
-        "emAberto": 105,
+        "emAberto": 104,
         "atrasadas": 81,
-        "concluidas30d": 248,
-        "concluidas7d": 71,
+        "concluidas30d": 249,
+        "concluidas7d": 72,
         "naSemanaCorrente": 43
       },
       "mttr": {
-        "horas": 209.13,
-        "label": "8d 17h",
-        "amostra": 248
+        "horas": 208.67,
+        "label": "8d 16h",
+        "amostra": 249
       },
       "tendencia4Semanas": [
         {
@@ -8847,7 +8847,7 @@
         {
           "semana": "W36",
           "criadas": 5,
-          "finalizadas": 25
+          "finalizadas": 26
         }
       ],
       "topOfensores": {
@@ -8855,14 +8855,14 @@
           {
             "nome": "(sem equipe)",
             "total": 657,
-            "emAberto": 105
+            "emAberto": 104
           }
         ],
         "responsaveis": [
           {
             "nome": "Gilson Souza",
             "total": 48,
-            "emAberto": 7
+            "emAberto": 6
           },
           {
             "nome": "Marcos Duarte",
@@ -8886,16 +8886,16 @@
           }
         ]
       },
-      "total": 105,
+      "total": 104,
       "atrasadas": 81,
       "porStatus": {
-        "naoIniciada": 93,
-        "emProgresso": 4,
+        "naoIniciada": 94,
+        "emProgresso": 2,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 105
+        "(sem equipe)": 104
       },
       "oss": [
         {
@@ -10321,36 +10321,17 @@
           "osId": "12412",
           "ativo": "Inversor 2.1 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.1 }",
           "equipe": "",
-          "responsavel": "Wesllen  Castro",
+          "responsavel": "Frank  Melo",
           "criadoPor": "Ana Barros ",
-          "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
+          "supervisor": "Frank  Melo",
+          "status": "Não Iniciada",
           "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-09-01",
           "dataCriacao": "2026-08-28",
-          "dataInicial": "2026-09-01",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "atrasada": false
-        },
-        {
-          "osId": "12411",
-          "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Ana Barros",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-08-28",
-          "dataInicial": "2026-09-01",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
           "atrasada": false
         },
         {
@@ -10697,6 +10678,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "12411",
+          "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Ana Barros",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-01",
+          "dataCriacao": "2026-08-28",
+          "dataInicial": "2026-09-01",
+          "dataFinal": "2026-09-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "12567",
           "ativo": "Inversor 2.4 Sungrow SG350HX    { SEMP-TCN200-INVR2.4 }",
@@ -12237,25 +12237,6 @@
           "atrasada": false
         },
         {
-          "osId": "11424",
-          "ativo": "GD Energy - Guajirú 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-GJR100 }",
-          "equipe": "",
-          "responsavel": "Felipe Xavier ",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Felipe Xavier ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Coleta e análise de dados de geração",
-          "criticidade": "",
-          "dataProgramada": "2026-08-19",
-          "dataCriacao": "2026-08-18",
-          "dataInicial": "2026-08-19",
-          "dataFinal": "2026-08-19",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10658",
           "ativo": "Tracker 25.100 STI STI-H250    { THPN-TNB100-ETKR25.100 }",
           "equipe": "",
@@ -13548,7 +13529,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 504
+      "historicoTotal": 505
     },
     "engenharia": {
       "label": "Engenharia",
@@ -16068,35 +16049,17 @@
       "osId": "12412",
       "ativo": "Inversor 2.1 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.1 }",
       "equipe": "",
-      "responsavel": "Wesllen  Castro",
+      "responsavel": "Frank  Melo",
       "criadoPor": "Ana Barros ",
-      "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
+      "supervisor": "Frank  Melo",
+      "status": "Não Iniciada",
       "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-09-01",
       "dataCriacao": "2026-08-28",
-      "dataInicial": "2026-09-01",
+      "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0
-    },
-    {
-      "osId": "12411",
-      "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Ana Barros",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-01",
-      "dataCriacao": "2026-08-28",
-      "dataInicial": "2026-09-01",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0
+      "linkFracttal": ""
     },
     {
       "osId": "12408",
@@ -19107,6 +19070,25 @@
       "atrasada": false
     },
     {
+      "osId": "12411",
+      "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Ana Barros",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-09-01",
+      "dataCriacao": "2026-08-28",
+      "dataInicial": "2026-09-01",
+      "dataFinal": "2026-09-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "11588",
       "ativo": "Inversor 1.18 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.18 }",
       "equipe": "",
@@ -21961,28 +21943,9 @@
       "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "11908",
-      "ativo": "Infraestrutura Civil Estrada p/Campo Grande União  Piauí Brasil { 2C-UNI100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Ailton Leal ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-08-27",
-      "dataFinal": "2026-08-27",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2688,
+  "historicoTotal": 2689,
   "totalGeral": 5663,
   "verificacao": {
     "total": 0,
