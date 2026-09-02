@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02T18:21:12Z",
+  "geradoEm": "2026-09-02T18:33:02Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 21,
       "atrasadas": 17,
       "porStatus": {
-        "naoIniciada": 17,
-        "emProgresso": 1,
+        "naoIniciada": 16,
+        "emProgresso": 2,
         "pausada": 3,
         "verificacao": 0
       },
@@ -407,14 +407,15 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Cabine 2] - Religamento da Cabine 2",
           "criticidade": "",
           "dataProgramada": "2026-09-02",
           "dataCriacao": "2026-09-02",
-          "dataInicial": "",
+          "dataInicial": "2026-09-02",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3703,16 +3704,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 764,
-        "emAberto": 120,
+        "emAberto": 119,
         "atrasadas": 62,
-        "concluidas30d": 152,
-        "concluidas7d": 74,
+        "concluidas30d": 153,
+        "concluidas7d": 75,
         "naSemanaCorrente": 22
       },
       "mttr": {
-        "horas": 330.79,
-        "label": "13d 18h",
-        "amostra": 152
+        "horas": 328.78,
+        "label": "13d 16h",
+        "amostra": 153
       },
       "tendencia4Semanas": [
         {
@@ -3733,7 +3734,7 @@
         {
           "semana": "W36",
           "criadas": 58,
-          "finalizadas": 26
+          "finalizadas": 27
         }
       ],
       "topOfensores": {
@@ -3741,7 +3742,7 @@
           {
             "nome": "(sem equipe)",
             "total": 764,
-            "emAberto": 120
+            "emAberto": 119
           }
         ],
         "responsaveis": [
@@ -3772,16 +3773,16 @@
           }
         ]
       },
-      "total": 120,
+      "total": 119,
       "atrasadas": 62,
       "porStatus": {
         "naoIniciada": 108,
         "emProgresso": 1,
-        "pausada": 11,
+        "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 120
+        "(sem equipe)": 119
       },
       "oss": [
         {
@@ -3998,15 +3999,14 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Eduardo  Mendes",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - MPA - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-13",
           "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-08-26",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 720.0,
           "atrasada": true
         },
         {
@@ -4953,23 +4953,6 @@
           "atrasada": false
         },
         {
-          "osId": "12680",
-          "ativo": "Transformador 1 WEG     { APR300-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Henri Almeida ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Henri Almeida ",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-09-03",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "12646",
           "ativo": "Preventiva Grupo de Inversores      { GY-IRC100-PGINVR1 }",
           "equipe": "",
@@ -5850,6 +5833,25 @@
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-09-02",
+          "dataCriacao": "2026-09-01",
+          "dataInicial": "2026-09-02",
+          "dataFinal": "2026-09-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12680",
+          "ativo": "Transformador 1 WEG     { APR300-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Henri Almeida ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Henri Almeida ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-09-03",
           "dataCriacao": "2026-09-01",
           "dataInicial": "2026-09-02",
           "dataFinal": "2026-09-02",
@@ -8519,25 +8521,6 @@
           "atrasada": false
         },
         {
-          "osId": "10348",
-          "ativo": "Preventiva Grupo de Inversores      { GY-MCB100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Cleiton  Farias",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Cleiton  Farias",
-          "status": "Finalizada",
-          "tarefa": "[GreenYellow] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-05",
-          "dataCriacao": "2026-07-29",
-          "dataInicial": "2026-08-03",
-          "dataFinal": "2026-08-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10135",
           "ativo": "Cabine 1 Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { NBS100-CABN1 }",
           "equipe": "",
@@ -8690,7 +8673,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 317
+      "historicoTotal": 318
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9580,16 +9563,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 667,
-        "emAberto": 104,
-        "atrasadas": 86,
-        "concluidas30d": 259,
-        "concluidas7d": 69,
+        "emAberto": 102,
+        "atrasadas": 84,
+        "concluidas30d": 261,
+        "concluidas7d": 71,
         "naSemanaCorrente": 53
       },
       "mttr": {
-        "horas": 209.24,
+        "horas": 209.84,
         "label": "8d 17h",
-        "amostra": 259
+        "amostra": 261
       },
       "tendencia4Semanas": [
         {
@@ -9610,7 +9593,7 @@
         {
           "semana": "W36",
           "criadas": 15,
-          "finalizadas": 36
+          "finalizadas": 38
         }
       ],
       "topOfensores": {
@@ -9618,7 +9601,7 @@
           {
             "nome": "(sem equipe)",
             "total": 667,
-            "emAberto": 104
+            "emAberto": 102
           }
         ],
         "responsaveis": [
@@ -9649,16 +9632,16 @@
           }
         ]
       },
-      "total": 104,
-      "atrasadas": 86,
+      "total": 102,
+      "atrasadas": 84,
       "porStatus": {
-        "naoIniciada": 89,
-        "emProgresso": 6,
+        "naoIniciada": 86,
+        "emProgresso": 7,
         "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 104
+        "(sem equipe)": 102
       },
       "oss": [
         {
@@ -11040,42 +11023,8 @@
           "responsavel": "Cláudio  Silva",
           "criadoPor": "Ana Barros ",
           "supervisor": "Cláudio  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.4] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "11764",
-          "ativo": "Inversor 1.3      { THPN-CAI100-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Silva",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Cláudio  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.3] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "11763",
-          "ativo": "Inversor 1.2      { THPN-CAI100-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Silva",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Cláudio  Silva",
           "status": "Em progresso",
-          "tarefa": "[Inversor 1.2] - Coleta de Dados de Geração",
+          "tarefa": "[Inversor 1.4] - Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-09-01",
           "dataCriacao": "2026-08-21",
@@ -11178,14 +11127,15 @@
           "responsavel": "Matheus Gois ",
           "criadoPor": "Ana Barros",
           "supervisor": "Matheus Gois ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-09-02",
           "dataCriacao": "2026-08-28",
-          "dataInicial": "",
+          "dataInicial": "2026-09-02",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 120.0,
           "atrasada": false
         },
         {
@@ -11571,6 +11521,44 @@
           "tarefa": "[Inversor 2.2] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-25",
+          "dataCriacao": "2026-08-21",
+          "dataInicial": "2026-09-02",
+          "dataFinal": "2026-09-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 288.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "11764",
+          "ativo": "Inversor 1.3      { THPN-CAI100-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Silva",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Cláudio  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.3] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-01",
+          "dataCriacao": "2026-08-21",
+          "dataInicial": "2026-09-02",
+          "dataFinal": "2026-09-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 288.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "11763",
+          "ativo": "Inversor 1.2      { THPN-CAI100-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Silva",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Cláudio  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.2] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-01",
           "dataCriacao": "2026-08-21",
           "dataInicial": "2026-09-02",
           "dataFinal": "2026-09-02",
@@ -12861,44 +12849,6 @@
           "supervisor": "Cleiton  Farias",
           "status": "Finalizada",
           "tarefa": "[Usina] - Coleta e análise de dados de geração",
-          "criticidade": "",
-          "dataProgramada": "2026-08-24",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "2026-08-24",
-          "dataFinal": "2026-08-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "11757",
-          "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizada",
-          "tarefa": "[Usina] - Coleta e análise de dados de geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "2026-08-24",
-          "dataFinal": "2026-08-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "11738",
-          "ativo": "Tracker 41.100 Brametal BRATracker Bifileira    { PRB100-ETKR41.100 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Felipe  Lima",
-          "status": "Finalizada",
-          "tarefa": "[Tracker 41.100] - Verificação de Tracker 41 de Piracicaba",
           "criticidade": "",
           "dataProgramada": "2026-08-24",
           "dataCriacao": "2026-08-21",
@@ -14297,7 +14247,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 514
+      "historicoTotal": 516
     },
     "engenharia": {
       "label": "Engenharia",
@@ -16335,14 +16285,15 @@
       "responsavel": "Ricardo Silva ",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Cabine 2] - Religamento da Cabine 2",
       "criticidade": "",
       "dataProgramada": "2026-09-02",
       "dataCriacao": "2026-09-02",
-      "dataInicial": "",
+      "dataInicial": "2026-09-02",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16903,22 +16854,6 @@
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "12680",
-      "ativo": "Transformador 1 WEG     { APR300-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Henri Almeida ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Henri Almeida ",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
       "dataCriacao": "2026-09-01",
       "dataInicial": "",
       "dataFinal": "",
@@ -17711,14 +17646,15 @@
       "responsavel": "Matheus Gois ",
       "criadoPor": "Ana Barros",
       "supervisor": "Matheus Gois ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-09-02",
       "dataCriacao": "2026-08-28",
-      "dataInicial": "",
+      "dataInicial": "2026-09-02",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0
     },
     {
       "osId": "12418",
@@ -19293,40 +19229,8 @@
       "responsavel": "Cláudio  Silva",
       "criadoPor": "Ana Barros ",
       "supervisor": "Cláudio  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.4] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-01",
-      "dataCriacao": "2026-08-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "11764",
-      "ativo": "Inversor 1.3      { THPN-CAI100-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Silva",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Cláudio  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.3] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-01",
-      "dataCriacao": "2026-08-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "11763",
-      "ativo": "Inversor 1.2      { THPN-CAI100-INVR1.2 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Silva",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Cláudio  Silva",
       "status": "Em progresso",
-      "tarefa": "[Inversor 1.2] - Coleta de Dados de Geração",
+      "tarefa": "[Inversor 1.4] - Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-09-01",
       "dataCriacao": "2026-08-21",
@@ -20010,15 +19914,14 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Eduardo  Mendes",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - MPA - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-13",
       "dataCriacao": "2026-07-27",
-      "dataInicial": "2026-08-26",
+      "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 720.0
+      "linkFracttal": ""
     },
     {
       "osId": "10185",
@@ -20508,6 +20411,25 @@
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-09-02",
+      "dataCriacao": "2026-09-01",
+      "dataInicial": "2026-09-02",
+      "dataFinal": "2026-09-02",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "12680",
+      "ativo": "Transformador 1 WEG     { APR300-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Henri Almeida ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Henri Almeida ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-09-03",
       "dataCriacao": "2026-09-01",
       "dataInicial": "2026-09-02",
       "dataFinal": "2026-09-02",
@@ -23408,28 +23330,9 @@
       "horasAteAbrir": 72.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "11982",
-      "ativo": "Infraestrutura Civil BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Marcos Duarte ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-08-25",
-      "dataFinal": "2026-08-25",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2709,
+  "historicoTotal": 2712,
   "totalGeral": 5754,
   "verificacao": {
     "total": 0,
