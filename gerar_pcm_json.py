@@ -369,6 +369,12 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
         return None
     _log(f"Lendo {xlsx_path.name}...")
     wb = openpyxl.load_workbook(xlsx_path, read_only=True, data_only=True)
+    # Quando ESTA programacao nasceu, lido de dentro do arquivo. NAO usar o mtime:
+    # o actions/checkout reescreve o mtime de tudo para o instante do checkout, e o
+    # campo sairia "agora" a cada rodada. O carimbo interno viaja com o arquivo —
+    # conferido nas semanas 28 a 36, bate com a data de publicacao no repositorio.
+    _criado = getattr(wb.properties, "created", None)
+    _gerada_em = (_criado.replace(microsecond=0).isoformat() + "Z") if _criado else ""
 
     rows = []
     resumo = defaultdict(lambda: {"hh_util": 0.0, "hh_disp": HH_DISP, "pend": 0})
@@ -570,6 +576,11 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
         "num":    mon.isocalendar()[1],
         "label":  _label_semana(mon),
         "dates":  _dates_dict(mon),
+        # O painel conta as tarefas criadas DEPOIS que o plano fechou (o "criadas
+        # apos o plano" no card do dia). Sem este campo ele derivava pela sexta
+        # anterior, o que erra quando a semana sai fora do padrao: a 36 saiu numa
+        # quinta e marcava zero, escondendo 33 tarefas.
+        "geradaEm": _gerada_em,
         "resumo": resumo_final,
         "rows":   rows,
         "pendentes": pendentes,

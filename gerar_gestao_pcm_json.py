@@ -52,7 +52,20 @@ except Exception:
 # ============================================================
 # Config
 # ============================================================
-CORTE_DATA = os.environ.get("GESTAO_CORTE_DATA", "2026-01-01")   # Data Programada mínima
+# Data Programada minima. Relativo ao ano corrente, nao fixo: em "2026-01-01" o
+# corte nunca se movia e, a partir de janeiro, o arquivo acumularia 2026 + 2027
+# juntos sem teto — 10 meses ja pesam 9,6 MB, baixados por quem abre a Gestao PCM.
+#
+# Guarda o ano ANTERIOR de proposito: a grade de aderencia tem seletor de ano, e
+# sem o ano passado ele nao teria o que selecionar. Isso limita o arquivo a no
+# maximo 24 meses, contra o crescimento indefinido de antes.
+#
+# O piso de 2026 existe porque a operacao no Fracttal comeca ai: sem ele, HOJE o
+# corte iria para 2025-01-01 e o robo passaria a puxar um ano que ninguem pediu,
+# inchando o arquivo agora em vez de conte-lo.
+_ANO_PISO = 2026
+CORTE_DATA = os.environ.get(
+    "GESTAO_CORTE_DATA", f"{max(datetime.now().year - 1, _ANO_PISO)}-01-01")
 STATUS_OK = {1, 2, 3}                                            # exclui 4 (cancelada)
 # Clientes de teste a NÃO exibir (normalizado: minúsculas, sem acento). Decisão do PCM.
 CLIENTES_EXCLUIR = {"usina teste"}
