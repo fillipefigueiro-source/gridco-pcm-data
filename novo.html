@@ -932,9 +932,12 @@ function montarD(bd, et, semanaSel){
     semana: w.label, semanas_guardadas: bd.semanas.length,
     // quando o robô gerou este arquivo — alimenta o indicador de frescor
     geradoEm: bd.geradoEm || "",
-    // datas de cada dia ({seg:"31/08"...}): o card do dia mostra a data, e o
-    // corte de "criadas apos o plano" e derivado da segunda-feira.
+    // datas de cada dia ({seg:"31/08"...}): o card do dia mostra a data.
     datas: w.dates || {},
+    // quando ESTA programacao foi gerada, do carimbo interno do xlsx. Semanas
+    // publicadas antes de 01/09/2026 nao tem o campo — nelas o corte volta a
+    // ser derivado da sexta anterior.
+    geradaEm: w.geradaEm || "",
     // chips da barra lateral: da mais nova para a mais velha, com a contagem
     // de OS de cada uma e qual e a semana corrente do calendario
     semanas_lista: semanas.map(s => ({ week: String(s.week || ""),
@@ -1180,6 +1183,9 @@ function arrancar(){
      quinta e, nesse caso, a conta fica MENOR que a verdade — nunca maior.
      Some quando o robô passar a gravar a data de geração junto da semana. */
   function corteDoPlano(){
+    /* Se o robo gravou quando a programacao nasceu, e essa a verdade: usa a data
+       dela, sem derivar nada. So as semanas antigas caem na regra de reserva. */
+    if (D.geradaEm && D.geradaEm.length >= 10) return D.geradaEm.slice(0,10);
     const d = (D.datas || {}).seg;                 // "31/08"
     if (!d) return null;
     const m = String(d).match(/^(\d{2})\/(\d{2})$/);
@@ -1224,7 +1230,7 @@ function arrancar(){
           <div class="dname">${esc(d.n)}${dt?` <span class="ddata">${esc(dt)}</span>`:""}</div>
           <div class="dnum">${todos.length}</div>
           <div class="dmeta">${h}h programadas</div>
-          ${CORTE ? `<div class="dnovas${novas?"":" zero"}" title="Criadas depois que a programação da semana foi fechada (corte: ${esc(CORTE.split("-").reverse().slice(0,2).join("/"))})"><b>${novas}</b><span>criada${novas===1?"":"s"} após o plano</span></div>` : ""}
+          ${CORTE ? `<div class="dnovas${novas?"":" zero"}" title="Criadas depois que a programação da semana foi fechada (corte: ${esc(CORTE.split("-").reverse().slice(0,2).join("/"))}${D.geradaEm?"":" — estimado pela sexta anterior"})"><b>${novas}</b><span>criada${novas===1?"":"s"} após o plano</span></div>` : ""}
           <div class="dcarga"><i class="${todos.length===max?"pico":""}" style="width:${todos.length/max*100}%"></i></div>
         </div>
         <div class="dtasks">${ts.map(cardHTML).join("") || '<div class="vazio">—</div>'}
