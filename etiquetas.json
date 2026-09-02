@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-02T20:08:52Z",
+  "geradoEm": "2026-09-02T20:15:21Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -9520,7 +9520,7 @@
         {
           "semana": "W36",
           "criadas": 15,
-          "finalizadas": 48
+          "finalizadas": 49
         }
       ],
       "topOfensores": {
@@ -9563,9 +9563,9 @@
       "atrasadas": 75,
       "porStatus": {
         "naoIniciada": 83,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 7,
-        "verificacao": 0
+        "verificacao": 1
       },
       "porEquipe": {
         "(sem equipe)": 92
@@ -10929,15 +10929,16 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Luiz  Silva",
-          "status": "Em progresso",
+          "status": "Em Verificação",
           "tarefa": "[Inversor 4.6] - Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-09-02",
           "dataCriacao": "2026-09-02",
           "dataInicial": "2026-09-02",
-          "dataFinal": "",
+          "dataFinal": "2026-09-02",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -11162,6 +11163,25 @@
           "dataFinal": "2026-09-02",
           "linkFracttal": "",
           "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12748",
+          "ativo": "Inversor 4.6 Huawei     { TIM100-INVR4.6 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Luiz  Silva",
+          "status": "Em Verificação",
+          "tarefa": "[Inversor 4.6] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-02",
+          "dataCriacao": "2026-09-02",
+          "dataInicial": "2026-09-02",
+          "dataFinal": "2026-09-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -12511,25 +12531,6 @@
           "dataFinal": "2026-08-25",
           "linkFracttal": "",
           "horasAteAbrir": 504.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "12102",
-          "ativo": "Inversor 1.1 Sungrow 250HX-20    { THPN-TPZ100-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Eduardo Souza",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Eduardo Souza",
-          "status": "Finalizada",
-          "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-25",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "2026-08-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -13997,7 +13998,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 526
+      "historicoTotal": 527
     },
     "engenharia": {
       "label": "Engenharia",
@@ -19852,15 +19853,16 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Luiz  Silva",
-      "status": "Em progresso",
+      "status": "Em Verificação",
       "tarefa": "[Inversor 4.6] - Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-09-02",
       "dataCriacao": "2026-09-02",
       "dataInicial": "2026-09-02",
-      "dataFinal": "",
+      "dataFinal": "2026-09-02",
       "linkFracttal": "",
-      "horasAteAbrir": 0
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0
     },
     {
       "osId": "12047",
@@ -20453,6 +20455,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "12748",
+      "ativo": "Inversor 4.6 Huawei     { TIM100-INVR4.6 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Luiz  Silva",
+      "status": "Em Verificação",
+      "tarefa": "[Inversor 4.6] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-09-02",
+      "dataCriacao": "2026-09-02",
+      "dataInicial": "2026-09-02",
+      "dataFinal": "2026-09-02",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -22814,34 +22835,39 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12020",
-      "ativo": "Infraestrutura Civil Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { SNE100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Valdério Paz ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-08-25",
-      "dataFinal": "2026-08-25",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2733,
+  "historicoTotal": 2734,
   "totalGeral": 5760,
   "verificacao": {
-    "total": 0,
+    "total": 1,
     "atrasadas": 0,
-    "porEquipe": {},
-    "porResponsavel": {},
-    "oss": []
+    "porEquipe": {
+      "(sem equipe)": 1
+    },
+    "porResponsavel": {
+      "Luiz  Silva": 1
+    },
+    "oss": [
+      {
+        "osId": "12748",
+        "ativo": "Inversor 4.6 Huawei     { TIM100-INVR4.6 }",
+        "equipe": "",
+        "responsavel": "Luiz  Silva",
+        "criadoPor": "Roger Lélis",
+        "supervisor": "Luiz  Silva",
+        "status": "Em Verificação",
+        "tarefa": "[Inversor 4.6] - Coleta de Dados de Geração",
+        "criticidade": "",
+        "dataProgramada": "2026-09-02",
+        "dataCriacao": "2026-09-02",
+        "dataInicial": "2026-09-02",
+        "dataFinal": "2026-09-02",
+        "linkFracttal": "",
+        "horasAteAbrir": 0,
+        "horasAteFechar": 0,
+        "atrasada": false
+      }
+    ]
   }
 }
