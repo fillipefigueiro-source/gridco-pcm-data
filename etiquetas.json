@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T11:54:37Z",
+  "geradoEm": "2026-09-03T12:09:40Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -3720,8 +3720,8 @@
       "total": 119,
       "atrasadas": 66,
       "porStatus": {
-        "naoIniciada": 107,
-        "emProgresso": 1,
+        "naoIniciada": 106,
+        "emProgresso": 2,
         "pausada": 11,
         "verificacao": 0
       },
@@ -4852,14 +4852,15 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Inversor",
           "criticidade": "",
           "dataProgramada": "2026-09-02",
           "dataCriacao": "2026-09-01",
-          "dataInicial": "",
+          "dataInicial": "2026-09-03",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -9507,17 +9508,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 669,
-        "emAberto": 91,
-        "atrasadas": 78,
-        "concluidas30d": 266,
-        "concluidas7d": 69,
-        "naSemanaCorrente": 55
+        "total": 671,
+        "emAberto": 92,
+        "atrasadas": 77,
+        "concluidas30d": 267,
+        "concluidas7d": 70,
+        "naSemanaCorrente": 57
       },
       "mttr": {
-        "horas": 215.1,
+        "horas": 215.01,
         "label": "8d 23h",
-        "amostra": 266
+        "amostra": 267
       },
       "tendencia4Semanas": [
         {
@@ -9537,16 +9538,16 @@
         },
         {
           "semana": "W36",
-          "criadas": 17,
-          "finalizadas": 52
+          "criadas": 19,
+          "finalizadas": 53
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 669,
-            "emAberto": 91
+            "total": 671,
+            "emAberto": 92
           }
         ],
         "responsaveis": [
@@ -9577,16 +9578,16 @@
           }
         ]
       },
-      "total": 91,
-      "atrasadas": 78,
+      "total": 92,
+      "atrasadas": 77,
       "porStatus": {
-        "naoIniciada": 83,
+        "naoIniciada": 84,
         "emProgresso": 0,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 91
+        "(sem equipe)": 92
       },
       "oss": [
         {
@@ -10532,23 +10533,6 @@
           "atrasada": true
         },
         {
-          "osId": "12250",
-          "ativo": "Inversor 2.5 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR2.5 }",
-          "equipe": "",
-          "responsavel": "Lucas Alberto Freitas de Faria ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 2.5] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-08-27",
-          "dataCriacao": "2026-08-26",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "12172",
           "ativo": "Tracker 02.103 Brametal Bi-motor    { CPP100-ETKR2.103 }",
           "equipe": "",
@@ -11095,6 +11079,40 @@
           "atrasada": false
         },
         {
+          "osId": "12878",
+          "ativo": "Inversor 3.2 Sungrow     { IND100-INVR3.2 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Felipe  Lima",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 3.2] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-09-04",
+          "dataCriacao": "2026-09-03",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "12877",
+          "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { THPN-SCB100-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.3] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-09-04",
+          "dataCriacao": "2026-09-03",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "12774",
           "ativo": "Tracker 1.58 STI STI H250    { PTL200-ETKR58.100 }",
           "equipe": "",
@@ -11163,6 +11181,25 @@
           "dataFinal": "2026-09-03",
           "linkFracttal": "",
           "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12250",
+          "ativo": "Inversor 2.5 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR2.5 }",
+          "equipe": "",
+          "responsavel": "Lucas Alberto Freitas de Faria ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Lucas Alberto Freitas de Faria ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 2.5] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-27",
+          "dataCriacao": "2026-08-26",
+          "dataInicial": "2026-09-03",
+          "dataFinal": "2026-09-03",
+          "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -12208,25 +12245,6 @@
           "dataFinal": "2026-08-28",
           "linkFracttal": "",
           "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "12276",
-          "ativo": "Inversor 1.4 Sungrow SG125HV    { BRS100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Anderson  Parente",
-          "status": "Finalizada",
-          "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-31",
-          "dataCriacao": "2026-08-26",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "2026-08-28",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -13998,7 +14016,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 530
+      "historicoTotal": 531
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15998,6 +16016,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "12878",
+      "ativo": "Inversor 3.2 Sungrow     { IND100-INVR3.2 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Felipe  Lima",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 3.2] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-09-04",
+      "dataCriacao": "2026-09-03",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "12877",
+      "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { THPN-SCB100-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.3] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-09-04",
+      "dataCriacao": "2026-09-03",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "12848",
       "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
       "equipe": "",
@@ -17019,14 +17069,15 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Inversor",
       "criticidade": "",
       "dataProgramada": "2026-09-02",
       "dataCriacao": "2026-09-01",
-      "dataInicial": "",
+      "dataInicial": "2026-09-03",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "12635",
@@ -17573,22 +17624,6 @@
       "tarefa": "[São Bento do Una] - Mapeamento das Strings com Módulos Trincados",
       "criticidade": "",
       "dataProgramada": "2026-09-01",
-      "dataCriacao": "2026-08-26",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "12250",
-      "ativo": "Inversor 2.5 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR2.5 }",
-      "equipe": "",
-      "responsavel": "Lucas Alberto Freitas de Faria ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 2.5] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-08-27",
       "dataCriacao": "2026-08-26",
       "dataInicial": "",
       "dataFinal": "",
@@ -22557,6 +22592,25 @@
       "atrasada": false
     },
     {
+      "osId": "12250",
+      "ativo": "Inversor 2.5 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR2.5 }",
+      "equipe": "",
+      "responsavel": "Lucas Alberto Freitas de Faria ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Lucas Alberto Freitas de Faria ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 2.5] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-08-27",
+      "dataCriacao": "2026-08-26",
+      "dataInicial": "2026-09-03",
+      "dataFinal": "2026-09-03",
+      "linkFracttal": "",
+      "horasAteAbrir": 192.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "12242",
       "ativo": "Cabine 2  Santa Maria do Pará  Pará Brasil { SMP100-CABN2 }",
       "equipe": "",
@@ -22822,29 +22876,10 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12052",
-      "ativo": "Infraestrutura Civil Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { NBS100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Valmir  Júnior",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Valmir  Júnior",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-09-02",
-      "dataFinal": "2026-09-02",
-      "linkFracttal": "",
-      "horasAteAbrir": 216.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2737,
-  "totalGeral": 5774,
+  "historicoTotal": 2738,
+  "totalGeral": 5776,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
