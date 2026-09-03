@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T17:36:46Z",
+  "geradoEm": "2026-09-03T17:48:30Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4083,
-        "emAberto": 21,
+        "total": 4085,
+        "emAberto": 23,
         "atrasadas": 12,
         "concluidas30d": 657,
         "concluidas7d": 181,
-        "naSemanaCorrente": 102
+        "naSemanaCorrente": 104
       },
       "mttr": {
         "horas": 17.89,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W36",
-          "criadas": 107,
+          "criadas": 109,
           "finalizadas": 111
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4083,
-            "emAberto": 21
+            "total": 4085,
+            "emAberto": 23
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 21,
+      "total": 23,
       "atrasadas": 12,
       "porStatus": {
-        "naoIniciada": 20,
-        "emProgresso": 0,
+        "naoIniciada": 21,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 21
+        "(sem equipe)": 23
       },
       "oss": [
         {
@@ -308,20 +308,57 @@
           "atrasada": true
         },
         {
-          "osId": "12922",
-          "ativo": "Inversor 2.12 Sungrow SG60KTL    { ADT100-INVR2.12 }",
+          "osId": "12927",
+          "ativo": "Cabine 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-CABN1 }",
           "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Paulo  Ribeiro",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Felipe  Lima",
           "status": "Não Iniciada",
-          "tarefa": "[ADT100-INVR2.12] - Religamento do ADT100-INVR2.12",
+          "tarefa": "[IND100-CABN1] - Religamento do IND100-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-09-03",
           "dataCriacao": "2026-09-03",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12924",
+          "ativo": "SKID 1  Tupi Paulista  São Paulo Brasil { TPP100-SKID1 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Carlos  Godoi",
+          "status": "Não Iniciada",
+          "tarefa": "[TPP100-SKID1] - Religamento do TPP100-SKID1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-03",
+          "dataCriacao": "2026-09-03",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12922",
+          "ativo": "Inversor 2.12 Sungrow SG60KTL    { ADT100-INVR2.12 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Em progresso",
+          "tarefa": "[ADT100-INVR2.12] - Religamento do ADT100-INVR2.12",
+          "criticidade": "",
+          "dataProgramada": "2026-09-03",
+          "dataCriacao": "2026-09-03",
+          "dataInicial": "2026-09-03",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3475,9 +3512,9 @@
       "historicoTotal": 1768,
       "subClassificacao": {
         "remoto": 754,
-        "local": 3329,
+        "local": 3331,
         "remotoEmAberto": 10,
-        "localEmAberto": 11,
+        "localEmAberto": 13,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -3699,9 +3736,9 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 765,
-        "emAberto": 114,
-        "atrasadas": 63,
+        "total": 766,
+        "emAberto": 115,
+        "atrasadas": 64,
         "concluidas30d": 153,
         "concluidas7d": 71,
         "naSemanaCorrente": 23
@@ -3729,7 +3766,7 @@
         },
         {
           "semana": "W36",
-          "criadas": 59,
+          "criadas": 60,
           "finalizadas": 33
         }
       ],
@@ -3737,8 +3774,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 765,
-            "emAberto": 114
+            "total": 766,
+            "emAberto": 115
           }
         ],
         "responsaveis": [
@@ -3746,6 +3783,11 @@
             "nome": "James Chaves",
             "total": 36,
             "emAberto": 6
+          },
+          {
+            "nome": "Marcos Duarte",
+            "total": 30,
+            "emAberto": 2
           },
           {
             "nome": "Felipe  Lima",
@@ -3758,27 +3800,22 @@
             "emAberto": 5
           },
           {
-            "nome": "Marcos Duarte",
-            "total": 29,
-            "emAberto": 1
-          },
-          {
             "nome": "Francisco  Santos",
             "total": 29,
             "emAberto": 0
           }
         ]
       },
-      "total": 114,
-      "atrasadas": 63,
+      "total": 115,
+      "atrasadas": 64,
       "porStatus": {
         "naoIniciada": 99,
         "emProgresso": 4,
-        "pausada": 11,
+        "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 114
+        "(sem equipe)": 115
       },
       "oss": [
         {
@@ -4017,6 +4054,23 @@
           "criticidade": "",
           "dataProgramada": "2026-08-13",
           "dataCriacao": "2026-07-27",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
+          "osId": "12926",
+          "ativo": "Transformador 1 WEG     { THPN-PRM100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-15",
+          "dataCriacao": "2026-09-03",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -4459,14 +4513,15 @@
           "responsavel": "Cláudio  Silva",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Cláudio  Silva",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
           "dataCriacao": "2026-08-24",
-          "dataInicial": "",
+          "dataInicial": "2026-09-03",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 240.0,
           "atrasada": true
         },
         {
@@ -9550,8 +9605,8 @@
       "total": 94,
       "atrasadas": 74,
       "porStatus": {
-        "naoIniciada": 80,
-        "emProgresso": 4,
+        "naoIniciada": 79,
+        "emProgresso": 5,
         "pausada": 10,
         "verificacao": 0
       },
@@ -10645,14 +10700,15 @@
           "responsavel": "Adão Neto ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Adão Neto ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.4] - Inspeção geral dos inversores com baixa performance",
           "criticidade": "",
           "dataProgramada": "2026-08-31",
           "dataCriacao": "2026-08-24",
-          "dataInicial": "",
+          "dataInicial": "2026-09-03",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 240.0,
           "atrasada": true
         },
         {
@@ -16059,20 +16115,71 @@
   },
   "ossPublicas": [
     {
-      "osId": "12922",
-      "ativo": "Inversor 2.12 Sungrow SG60KTL    { ADT100-INVR2.12 }",
+      "osId": "12927",
+      "ativo": "Cabine 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-CABN1 }",
       "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Paulo  Ribeiro",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Felipe  Lima",
       "status": "Não Iniciada",
-      "tarefa": "[ADT100-INVR2.12] - Religamento do ADT100-INVR2.12",
+      "tarefa": "[IND100-CABN1] - Religamento do IND100-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-09-03",
       "dataCriacao": "2026-09-03",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "12926",
+      "ativo": "Transformador 1 WEG     { THPN-PRM100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Fabricio Barreto",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-08-15",
+      "dataCriacao": "2026-09-03",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "12924",
+      "ativo": "SKID 1  Tupi Paulista  São Paulo Brasil { TPP100-SKID1 }",
+      "equipe": "",
+      "responsavel": "Carlos  Godoi",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Carlos  Godoi",
+      "status": "Não Iniciada",
+      "tarefa": "[TPP100-SKID1] - Religamento do TPP100-SKID1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-03",
+      "dataCriacao": "2026-09-03",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "12922",
+      "ativo": "Inversor 2.12 Sungrow SG60KTL    { ADT100-INVR2.12 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Em progresso",
+      "tarefa": "[ADT100-INVR2.12] - Religamento do ADT100-INVR2.12",
+      "criticidade": "",
+      "dataProgramada": "2026-09-03",
+      "dataCriacao": "2026-09-03",
+      "dataInicial": "2026-09-03",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -18053,14 +18160,15 @@
       "responsavel": "Adão Neto ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Adão Neto ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.4] - Inspeção geral dos inversores com baixa performance",
       "criticidade": "",
       "dataProgramada": "2026-08-31",
       "dataCriacao": "2026-08-24",
-      "dataInicial": "",
+      "dataInicial": "2026-09-03",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 240.0
     },
     {
       "osId": "12113",
@@ -18513,14 +18621,15 @@
       "responsavel": "Cláudio  Silva",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Cláudio  Silva",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
       "dataProgramada": "2026-08-28",
       "dataCriacao": "2026-08-24",
-      "dataInicial": "",
+      "dataInicial": "2026-09-03",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 240.0
     },
     {
       "osId": "11977",
@@ -22970,7 +23079,7 @@
     }
   ],
   "historicoTotal": 2755,
-  "totalGeral": 5795,
+  "totalGeral": 5798,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
