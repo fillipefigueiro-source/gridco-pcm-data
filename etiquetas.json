@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T10:55:11Z",
+  "geradoEm": "2026-09-03T11:07:06Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 21,
       "atrasadas": 18,
       "porStatus": {
-        "naoIniciada": 18,
-        "emProgresso": 1,
+        "naoIniciada": 17,
+        "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
@@ -442,14 +442,15 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "David  Nascimento",
           "supervisor": "Adriano  Moraes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-09-03",
           "dataCriacao": "2026-09-03",
-          "dataInicial": "",
+          "dataInicial": "2026-09-03",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -9561,16 +9562,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 669,
-        "emAberto": 93,
-        "atrasadas": 79,
-        "concluidas30d": 264,
-        "concluidas7d": 67,
+        "emAberto": 92,
+        "atrasadas": 78,
+        "concluidas30d": 265,
+        "concluidas7d": 68,
         "naSemanaCorrente": 55
       },
       "mttr": {
-        "horas": 215.27,
+        "horas": 215.64,
         "label": "8d 23h",
-        "amostra": 264
+        "amostra": 265
       },
       "tendencia4Semanas": [
         {
@@ -9591,7 +9592,7 @@
         {
           "semana": "W36",
           "criadas": 17,
-          "finalizadas": 50
+          "finalizadas": 51
         }
       ],
       "topOfensores": {
@@ -9599,7 +9600,7 @@
           {
             "nome": "(sem equipe)",
             "total": 669,
-            "emAberto": 93
+            "emAberto": 92
           }
         ],
         "responsaveis": [
@@ -9630,16 +9631,16 @@
           }
         ]
       },
-      "total": 93,
-      "atrasadas": 79,
+      "total": 92,
+      "atrasadas": 78,
       "porStatus": {
-        "naoIniciada": 84,
+        "naoIniciada": 83,
         "emProgresso": 1,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 93
+        "(sem equipe)": 92
       },
       "oss": [
         {
@@ -10874,23 +10875,6 @@
           "atrasada": true
         },
         {
-          "osId": "11758",
-          "ativo": "Thopen - Indaiatuba 1 - SP Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { THPN-IND100 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
-          "tarefa": "[Usina] - Coleta e análise de dados de geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "11752",
           "ativo": "Thopen - Rodrigues 2 - RN FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200 }",
           "equipe": "",
@@ -11235,6 +11219,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11758",
+          "ativo": "Thopen - Indaiatuba 1 - SP Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { THPN-IND100 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[Usina] - Coleta e análise de dados de geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-01",
+          "dataCriacao": "2026-08-21",
+          "dataInicial": "2026-09-03",
+          "dataFinal": "2026-09-03",
+          "linkFracttal": "",
+          "horasAteAbrir": 312.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "11086",
           "ativo": "Inversor 5.4 SOLAREDGE SE100K    { CTS100-INVR5.4 }",
@@ -12289,25 +12292,6 @@
           "supervisor": "Eduardo Souza",
           "status": "Finalizada",
           "tarefa": "[Inversor 1.6] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-25",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "2026-08-28",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "12104",
-          "ativo": "Inversor 1.5 Sungrow 250HX-20    { THPN-TPZ100-INVR1.5 }",
-          "equipe": "",
-          "responsavel": "Eduardo Souza",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Eduardo Souza",
-          "status": "Finalizada",
-          "tarefa": "[Inversor 1.5] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-25",
           "dataCriacao": "2026-08-24",
@@ -14086,7 +14070,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 528
+      "historicoTotal": 529
     },
     "engenharia": {
       "label": "Engenharia",
@@ -16110,14 +16094,15 @@
       "responsavel": "Adriano  Moraes",
       "criadoPor": "David  Nascimento",
       "supervisor": "Adriano  Moraes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-09-03",
       "dataCriacao": "2026-09-03",
-      "dataInicial": "",
+      "dataInicial": "2026-09-03",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -18972,22 +18957,6 @@
       "tarefa": "[Tracker 21.100] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-24",
-      "dataCriacao": "2026-08-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "11758",
-      "ativo": "Thopen - Indaiatuba 1 - SP Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { THPN-IND100 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Ana Barros ",
-      "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
-      "tarefa": "[Usina] - Coleta e análise de dados de geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-01",
       "dataCriacao": "2026-08-21",
       "dataInicial": "",
       "dataFinal": "",
@@ -23010,7 +22979,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2731,
+  "historicoTotal": 2732,
   "totalGeral": 5773,
   "verificacao": {
     "total": 0,
