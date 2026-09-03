@@ -7,6 +7,10 @@
 # O `workflow_run` dispara quando cada robô TERMINA, que é quando há dado novo.
 name: Deploy Azure Static Web Apps
 
+concurrency:
+  group: deploy-swa
+  cancel-in-progress: false
+  
 on:
   workflow_run:
     workflows:
