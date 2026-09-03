@@ -7,8 +7,8 @@ name: Atualiza Gestão PCM (a cada 15 min)
 on:
   schedule:
     - cron: '*/15 * * * *'   # a cada 15 min (horário UTC; o GitHub pode atrasar em picos)
-    repository_dispatch:
-      types: [fracttal-mudou]
+  repository_dispatch:
+    types: [fracttal-mudou]
   workflow_dispatch: {}        # permite rodar na mão pelo botão "Run workflow"
 
 permissions:
