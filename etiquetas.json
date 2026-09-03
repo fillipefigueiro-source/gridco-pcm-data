@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T19:00:21Z",
+  "geradoEm": "2026-09-03T19:12:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -3756,8 +3756,8 @@
       "atrasadas": 62,
       "porStatus": {
         "naoIniciada": 103,
-        "emProgresso": 3,
-        "pausada": 12,
+        "emProgresso": 2,
+        "pausada": 13,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4788,7 +4788,7 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Anderson  Parente",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-09-02",
@@ -9529,16 +9529,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 676,
-        "emAberto": 91,
-        "atrasadas": 71,
-        "concluidas30d": 273,
-        "concluidas7d": 77,
+        "emAberto": 87,
+        "atrasadas": 68,
+        "concluidas30d": 277,
+        "concluidas7d": 81,
         "naSemanaCorrente": 58
       },
       "mttr": {
-        "horas": 217.05,
-        "label": "9d 1h",
-        "amostra": 273
+        "horas": 218.69,
+        "label": "9d 2h",
+        "amostra": 277
       },
       "tendencia4Semanas": [
         {
@@ -9559,7 +9559,7 @@
         {
           "semana": "W36",
           "criadas": 24,
-          "finalizadas": 60
+          "finalizadas": 64
         }
       ],
       "topOfensores": {
@@ -9567,7 +9567,7 @@
           {
             "nome": "(sem equipe)",
             "total": 676,
-            "emAberto": 91
+            "emAberto": 87
           }
         ],
         "responsaveis": [
@@ -9584,7 +9584,7 @@
           {
             "nome": "Marcos Duarte",
             "total": 42,
-            "emAberto": 2
+            "emAberto": 0
           },
           {
             "nome": "Luiz  Silva",
@@ -9598,16 +9598,16 @@
           }
         ]
       },
-      "total": 91,
-      "atrasadas": 71,
+      "total": 87,
+      "atrasadas": 68,
       "porStatus": {
-        "naoIniciada": 77,
-        "emProgresso": 7,
+        "naoIniciada": 75,
+        "emProgresso": 5,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 91
+        "(sem equipe)": 87
       },
       "oss": [
         {
@@ -10092,42 +10092,6 @@
           "atrasada": true
         },
         {
-          "osId": "11226",
-          "ativo": "Inversor 1.4 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Marcos Duarte ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
-          "dataCriacao": "2026-08-14",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "atrasada": true
-        },
-        {
-          "osId": "11225",
-          "ativo": "Inversor 1.1 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Marcos Duarte ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
-          "dataCriacao": "2026-08-14",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "atrasada": true
-        },
-        {
           "osId": "11287",
           "ativo": "Inversor 2.1 Sungrow SG250HX    { THPN-JUC100-INVR2.1 }",
           "equipe": "",
@@ -10520,24 +10484,6 @@
           "atrasada": true
         },
         {
-          "osId": "11588",
-          "ativo": "Inversor 1.18 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.18 }",
-          "equipe": "",
-          "responsavel": "Rodrigo  Silva",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Rodrigo  Silva",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.18] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-26",
-          "dataCriacao": "2026-08-20",
-          "dataInicial": "2026-09-03",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "atrasada": true
-        },
-        {
           "osId": "12172",
           "ativo": "Tracker 02.103 Brametal Bi-motor    { CPP100-ETKR2.103 }",
           "equipe": "",
@@ -10697,14 +10643,15 @@
           "responsavel": "Valdério Paz ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Valdério Paz ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-09-01",
           "dataCriacao": "2026-08-28",
-          "dataInicial": "",
+          "dataInicial": "2026-09-03",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -10830,14 +10777,14 @@
           "atrasada": true
         },
         {
-          "osId": "12754",
-          "ativo": "Inversor 1.2 Huawei SUN2000-100KTL-M1    { CDR100-INVR1.2 }",
+          "osId": "12753",
+          "ativo": "Inversor 1.1 Huawei SUN2000-100KTL-M1    { CDR200-INVR1.1 }",
           "equipe": "",
           "responsavel": "Leonardo  Dias",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Leonardo  Dias",
           "status": "Em progresso",
-          "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor e da PV 20",
+          "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor a partir das 16h",
           "criticidade": "",
           "dataProgramada": "2026-09-03",
           "dataCriacao": "2026-09-02",
@@ -10845,23 +10792,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
-          "atrasada": false
-        },
-        {
-          "osId": "12753",
-          "ativo": "Inversor 1.1 Huawei SUN2000-100KTL-M1    { CDR200-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Leonardo  Dias",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Leonardo  Dias",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor a partir das 16h",
-          "criticidade": "",
-          "dataProgramada": "2026-09-03",
-          "dataCriacao": "2026-09-02",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
           "atrasada": false
         },
         {
@@ -11175,6 +11105,25 @@
       ],
       "ossHistorico": [
         {
+          "osId": "12754",
+          "ativo": "Inversor 1.2 Huawei SUN2000-100KTL-M1    { CDR100-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Leonardo  Dias",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Leonardo  Dias",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor e da PV 20",
+          "criticidade": "",
+          "dataProgramada": "2026-09-03",
+          "dataCriacao": "2026-09-02",
+          "dataInicial": "2026-09-03",
+          "dataFinal": "2026-09-03",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "12622",
           "ativo": "Tracker 03.107 Brametal Bi-motor    { SMP100-ETKR3.107 }",
           "equipe": "",
@@ -11327,6 +11276,25 @@
           "atrasada": false
         },
         {
+          "osId": "11588",
+          "ativo": "Inversor 1.18 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.18 }",
+          "equipe": "",
+          "responsavel": "Rodrigo  Silva",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Rodrigo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.18] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-26",
+          "dataCriacao": "2026-08-20",
+          "dataInicial": "2026-08-20",
+          "dataFinal": "2026-09-03",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 336.0,
+          "atrasada": false
+        },
+        {
           "osId": "11227",
           "ativo": "Inversor 1.7 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.7 }",
           "equipe": "",
@@ -11335,6 +11303,44 @@
           "supervisor": "Marcos Duarte ",
           "status": "Finalizados",
           "tarefa": "[Inversor 1.7] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "2026-08-28",
+          "dataFinal": "2026-09-03",
+          "linkFracttal": "",
+          "horasAteAbrir": 336.0,
+          "horasAteFechar": 144.0,
+          "atrasada": false
+        },
+        {
+          "osId": "11226",
+          "ativo": "Inversor 1.4 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-08-14",
+          "dataInicial": "2026-08-28",
+          "dataFinal": "2026-09-03",
+          "linkFracttal": "",
+          "horasAteAbrir": 336.0,
+          "horasAteFechar": 144.0,
+          "atrasada": false
+        },
+        {
+          "osId": "11225",
+          "ativo": "Inversor 1.1 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-08-14",
@@ -13493,44 +13499,6 @@
           "atrasada": false
         },
         {
-          "osId": "8310",
-          "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Juliana Cândido ",
-          "supervisor": "James Chaves ",
-          "status": "Finalizados",
-          "tarefa": "[MAB100] - Trackers com atraso",
-          "criticidade": "",
-          "dataProgramada": "2026-06-24",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "2026-07-31",
-          "dataFinal": "2026-07-31",
-          "linkFracttal": "",
-          "horasAteAbrir": 888.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "8304",
-          "ativo": "Tracker 123.105      { MAB100-ETKR123.105 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Juliana Cândido ",
-          "supervisor": "James Chaves ",
-          "status": "Finalizados",
-          "tarefa": "[MAB100][TR-123] - Tracker parado",
-          "criticidade": "",
-          "dataProgramada": "2026-06-24",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "2026-07-30",
-          "dataFinal": "2026-07-31",
-          "linkFracttal": "",
-          "horasAteAbrir": 864.0,
-          "horasAteFechar": 24.0,
-          "atrasada": false
-        },
-        {
           "osId": "10044",
           "ativo": "Tracker 21.100 STI H250    { GY-CDP100-ETKR21.100 }",
           "equipe": "",
@@ -13985,47 +13953,9 @@
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "8560",
-          "ativo": "Inversor 7.4 Huawei SUN2000-250KTL-H1    { SMP100-INVR7.4 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "Procedimento",
-          "criticidade": "",
-          "dataProgramada": "2026-06-29",
-          "dataCriacao": "2026-06-26",
-          "dataInicial": "2026-07-03",
-          "dataFinal": "2026-07-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "8341",
-          "ativo": "Inversor 4.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR4.2 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[CPP100][Inversor 4.2] - Strings com corrente nula",
-          "criticidade": "",
-          "dataProgramada": "2026-06-26",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "2026-07-02",
-          "dataFinal": "2026-07-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 192.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 537
+      "historicoTotal": 541
     },
     "engenharia": {
       "label": "Engenharia",
@@ -16519,14 +16449,14 @@
       "linkFracttal": ""
     },
     {
-      "osId": "12754",
-      "ativo": "Inversor 1.2 Huawei SUN2000-100KTL-M1    { CDR100-INVR1.2 }",
+      "osId": "12753",
+      "ativo": "Inversor 1.1 Huawei SUN2000-100KTL-M1    { CDR200-INVR1.1 }",
       "equipe": "",
       "responsavel": "Leonardo  Dias",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Leonardo  Dias",
       "status": "Em progresso",
-      "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor e da PV 20",
+      "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor a partir das 16h",
       "criticidade": "",
       "dataProgramada": "2026-09-03",
       "dataCriacao": "2026-09-02",
@@ -16534,22 +16464,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 24.0
-    },
-    {
-      "osId": "12753",
-      "ativo": "Inversor 1.1 Huawei SUN2000-100KTL-M1    { CDR200-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Leonardo  Dias",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Leonardo  Dias",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor a partir das 16h",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-09-02",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
     },
     {
       "osId": "12749",
@@ -16958,7 +16872,7 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Anderson  Parente",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-09-02",
@@ -17635,14 +17549,15 @@
       "responsavel": "Valdério Paz ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Valdério Paz ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-09-01",
       "dataCriacao": "2026-08-28",
-      "dataInicial": "",
+      "dataInicial": "2026-09-03",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "12388",
@@ -19006,23 +18921,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "11588",
-      "ativo": "Inversor 1.18 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.18 }",
-      "equipe": "",
-      "responsavel": "Rodrigo  Silva",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Rodrigo  Silva",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.18] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-08-26",
-      "dataCriacao": "2026-08-20",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 336.0
-    },
-    {
       "osId": "11524",
       "ativo": "Athon - Matões  2 - MA Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { ATHN-MTS200 }",
       "equipe": "",
@@ -19118,40 +19016,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 480.0
-    },
-    {
-      "osId": "11226",
-      "ativo": "Inversor 1.4 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Marcos Duarte ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-08-17",
-      "dataCriacao": "2026-08-14",
-      "dataInicial": "2026-08-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 336.0
-    },
-    {
-      "osId": "11225",
-      "ativo": "Inversor 1.1 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Marcos Duarte ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-08-17",
-      "dataCriacao": "2026-08-14",
-      "dataInicial": "2026-08-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 336.0
     },
     {
       "osId": "11121",
@@ -20817,6 +20681,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "12754",
+      "ativo": "Inversor 1.2 Huawei SUN2000-100KTL-M1    { CDR100-INVR1.2 }",
+      "equipe": "",
+      "responsavel": "Leonardo  Dias",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Leonardo  Dias",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor e da PV 20",
+      "criticidade": "",
+      "dataProgramada": "2026-09-03",
+      "dataCriacao": "2026-09-02",
+      "dataInicial": "2026-09-03",
+      "dataFinal": "2026-09-03",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -22953,28 +22836,9 @@
       "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12266",
-      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { SPP300-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Eduardo  Mendes",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-08-27",
-      "dataCriacao": "2026-08-26",
-      "dataInicial": "2026-09-02",
-      "dataFinal": "2026-09-02",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2764,
+  "historicoTotal": 2768,
   "totalGeral": 5804,
   "verificacao": {
     "total": 0,
