@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T21:01:37Z",
+  "geradoEm": "2026-09-03T21:15:52Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4095,
-        "emAberto": 19,
+        "total": 4096,
+        "emAberto": 20,
         "atrasadas": 12,
         "concluidas30d": 671,
         "concluidas7d": 195,
-        "naSemanaCorrente": 113
+        "naSemanaCorrente": 114
       },
       "mttr": {
         "horas": 17.23,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W36",
-          "criadas": 119,
+          "criadas": 120,
           "finalizadas": 121
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4095,
-            "emAberto": 19
+            "total": 4096,
+            "emAberto": 20
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 19,
+      "total": 20,
       "atrasadas": 12,
       "porStatus": {
-        "naoIniciada": 17,
+        "naoIniciada": 18,
         "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 19
+        "(sem equipe)": 20
       },
       "oss": [
         {
@@ -306,6 +306,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "12958",
+          "ativo": "Disjuntor do Inversor 3.9      { MAB100-DINV3.9 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[MAB100-DINV3.9] - Religamento do MAB100-DINV3.9",
+          "criticidade": "",
+          "dataProgramada": "2026-09-03",
+          "dataCriacao": "2026-09-03",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "12920",
@@ -3440,9 +3458,9 @@
       "historicoTotal": 1782,
       "subClassificacao": {
         "remoto": 754,
-        "local": 3341,
+        "local": 3342,
         "remotoEmAberto": 10,
-        "localEmAberto": 9,
+        "localEmAberto": 10,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -15918,6 +15936,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "12958",
+      "ativo": "Disjuntor do Inversor 3.9      { MAB100-DINV3.9 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[MAB100-DINV3.9] - Religamento do MAB100-DINV3.9",
+      "criticidade": "",
+      "dataProgramada": "2026-09-03",
+      "dataCriacao": "2026-09-03",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "12955",
       "ativo": "Nobreak 1      { MTS100-NBRK1 }",
       "equipe": "",
@@ -22686,7 +22721,7 @@
     }
   ],
   "historicoTotal": 2783,
-  "totalGeral": 5815,
+  "totalGeral": 5816,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
