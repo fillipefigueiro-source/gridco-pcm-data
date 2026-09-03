@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T14:19:49Z",
+  "geradoEm": "2026-09-03T14:25:53Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4080,
-        "emAberto": 24,
-        "atrasadas": 16,
-        "concluidas30d": 651,
-        "concluidas7d": 175,
+        "emAberto": 23,
+        "atrasadas": 15,
+        "concluidas30d": 652,
+        "concluidas7d": 176,
         "naSemanaCorrente": 98
       },
       "mttr": {
-        "horas": 17.87,
-        "label": "17h 52min",
-        "amostra": 651
+        "horas": 17.88,
+        "label": "17h 53min",
+        "amostra": 652
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W36",
           "criadas": 103,
-          "finalizadas": 105
+          "finalizadas": 106
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4080,
-            "emAberto": 24
+            "emAberto": 23
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 24,
-      "atrasadas": 16,
+      "total": 23,
+      "atrasadas": 15,
       "porStatus": {
         "naoIniciada": 22,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 23
       },
       "oss": [
         {
@@ -358,25 +358,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "12752",
-          "ativo": "Disjuntor do Inversor 5.2      { SMP100-DINV5.2 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "[Disjuntor do Inversor 5.2] - Religamento do Disjuntor do Inversor 5.2",
-          "criticidade": "",
-          "dataProgramada": "2026-09-02",
-          "dataCriacao": "2026-09-02",
-          "dataInicial": "2026-09-03",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -655,6 +636,26 @@
           "supervisor": "Ronaldo  Silva",
           "status": "Finalizados",
           "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-02",
+          "dataCriacao": "2026-09-02",
+          "dataInicial": "2026-09-03",
+          "dataFinal": "2026-09-03",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12752",
+          "ativo": "Disjuntor do Inversor 5.2      { SMP100-DINV5.2 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Disjuntor do Inversor 5.2] - Religamento do Disjuntor do Inversor 5.2",
           "criticidade": "",
           "dataProgramada": "2026-09-02",
           "dataCriacao": "2026-09-02",
@@ -3505,34 +3506,14 @@
           "horasAteFechar": 0,
           "modalidade": "remoto",
           "atrasada": false
-        },
-        {
-          "osId": "8588",
-          "ativo": "Inversor 1.5 Huawei SUN2000-250KTL-H1    { TPP100-INVR1.5 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Carlos  Godoi",
-          "status": "Finalizados",
-          "tarefa": "religamento do inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-06-28",
-          "dataCriacao": "2026-06-28",
-          "dataInicial": "2026-07-08",
-          "dataFinal": "2026-07-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1762,
+      "historicoTotal": 1763,
       "subClassificacao": {
         "remoto": 754,
         "local": 3326,
         "remotoEmAberto": 10,
-        "localEmAberto": 14,
+        "localEmAberto": 13,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -9636,8 +9617,8 @@
       "total": 93,
       "atrasadas": 75,
       "porStatus": {
-        "naoIniciada": 83,
-        "emProgresso": 1,
+        "naoIniciada": 82,
+        "emProgresso": 2,
         "pausada": 9,
         "verificacao": 0
       },
@@ -10849,14 +10830,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 03.107] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-09-02",
           "dataCriacao": "2026-09-01",
-          "dataInicial": "",
+          "dataInicial": "2026-09-03",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -11426,25 +11408,6 @@
           "dataFinal": "2026-09-02",
           "linkFracttal": "",
           "horasAteAbrir": 168.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "12112",
-          "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { SBT500-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Adão Neto ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Adão Neto ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.2] - Inspeção geral dos inversores com baixa performance",
-          "criticidade": "",
-          "dataProgramada": "2026-08-31",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-09-02",
-          "dataFinal": "2026-09-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 216.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -12320,6 +12283,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 48.0,
           "horasAteFechar": 1512.0,
+          "atrasada": false
+        },
+        {
+          "osId": "12401",
+          "ativo": "Tracker 1.100 Sparkin SK1L62    { IBI200-ETKR1.100 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizada",
+          "tarefa": "[Tracker 1.100] - Verificação de Trackers Parados em Ibirapuã 2",
+          "criticidade": "",
+          "dataProgramada": "2026-08-31",
+          "dataCriacao": "2026-08-28",
+          "dataInicial": "2026-08-28",
+          "dataFinal": "2026-08-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -16437,24 +16419,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "12752",
-      "ativo": "Disjuntor do Inversor 5.2      { SMP100-DINV5.2 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "[Disjuntor do Inversor 5.2] - Religamento do Disjuntor do Inversor 5.2",
-      "criticidade": "",
-      "dataProgramada": "2026-09-02",
-      "dataCriacao": "2026-09-02",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "modalidade": "local"
-    },
-    {
       "osId": "12749",
       "ativo": "Inversor 3.3 Sungrow SUN2000-100KTL-H1    { MAB100-INVR3.3 }",
       "equipe": "",
@@ -17313,14 +17277,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 03.107] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-09-02",
       "dataCriacao": "2026-09-01",
-      "dataInicial": "",
+      "dataInicial": "2026-09-03",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "12585",
@@ -20700,6 +20665,26 @@
       "atrasada": false
     },
     {
+      "osId": "12752",
+      "ativo": "Disjuntor do Inversor 5.2      { SMP100-DINV5.2 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "[Disjuntor do Inversor 5.2] - Religamento do Disjuntor do Inversor 5.2",
+      "criticidade": "",
+      "dataProgramada": "2026-09-02",
+      "dataCriacao": "2026-09-02",
+      "dataInicial": "2026-09-03",
+      "dataFinal": "2026-09-03",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "12751",
       "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
       "equipe": "",
@@ -22929,25 +22914,6 @@
       "atrasada": false
     },
     {
-      "osId": "12112",
-      "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { SBT500-INVR1.2 }",
-      "equipe": "",
-      "responsavel": "Adão Neto ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Adão Neto ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.2] - Inspeção geral dos inversores com baixa performance",
-      "criticidade": "",
-      "dataProgramada": "2026-08-31",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-09-02",
-      "dataFinal": "2026-09-02",
-      "linkFracttal": "",
-      "horasAteAbrir": 216.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "12111",
       "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { SBT500-INVR1.1 }",
       "equipe": "",
@@ -23024,7 +22990,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2746,
+  "historicoTotal": 2747,
   "totalGeral": 5788,
   "verificacao": {
     "total": 0,
