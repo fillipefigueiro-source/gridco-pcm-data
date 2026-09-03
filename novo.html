@@ -722,6 +722,245 @@ tbody tr:hover{background:var(--surf2)}
 .carga-erro > div{margin-top:9px}
 .carga-dica{font-size:12px;color:var(--ink3);border-top:1px solid var(--line);
   padding-top:11px;margin-top:13px}
+/* ── Confiabilidade (módulo de engenharia) ── */
+/* ── Confiabilidade (módulo novo) — segue o vocabulário do gp-* ── */
+.cf-abas{display:flex;gap:6px;margin:0 0 14px;flex-wrap:wrap}
+.cf-aba{font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px;border:1px solid var(--line2);
+  background:var(--surf);color:var(--ink2)}
+.cf-aba.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+:root[data-theme="dark"] .cf-aba.on{background:var(--green);color:var(--navy);border-color:var(--green)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cf-aba.on{background:var(--green);color:var(--navy);border-color:var(--green)}}
+.cf-aba .n{margin-left:6px;font-size:10px;padding:0 6px;border-radius:10px;background:rgba(255,255,255,.22)}
+.cf-aba:not(.on) .n{background:var(--surf2);color:var(--ink3)}
+.cf-pag{display:none}.cf-pag.on{display:block}
+
+.cf-bloco{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);
+  overflow:hidden;margin-bottom:14px}
+.cf-bh{display:flex;align-items:center;gap:10px;padding:11px 15px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.cf-bh h3{margin:0;font-size:13.5px;font-weight:800}
+.cf-bh .obs{margin-left:auto;font-size:10.5px;font-weight:600;color:var(--ink3)}
+.cf-fonte{font-size:10.5px;color:var(--ink3);padding:8px 15px;border-top:1px solid var(--line);background:var(--surf2);line-height:1.5}
+.cf-fonte b{color:var(--ink2)}
+
+.cf-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:1px;background:var(--line)}
+.cf-kpi{background:var(--surf);padding:12px 15px}
+.cf-kpi .v{font-size:22px;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
+.cf-kpi .n{font-size:10px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.04em;margin-top:1px}
+.cf-kpi .m{font-size:10.5px;color:var(--ink3);margin-top:3px}
+.cf-bom{color:var(--gd);font-weight:700}.cf-ruim{color:var(--mal);font-weight:700}
+
+/* duas colunas no desktop, uma no celular */
+.cf-2{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:14px;align-items:start}
+@container app (max-width:980px){.cf-2{grid-template-columns:1fr}}
+
+.cf-at{display:flex;gap:10px;align-items:flex-start;padding:11px 15px;border-bottom:1px solid var(--line);width:100%}
+.cf-at:last-child{border-bottom:0}.cf-at:hover{background:var(--surf2)}
+.cf-pill{flex:0 0 auto;font-size:9.5px;font-weight:800;padding:3px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
+.cf-pill.critico{background:color-mix(in srgb,var(--danger) 18%,var(--surf));color:var(--mal)}
+.cf-pill.atencao{background:color-mix(in srgb,var(--warn) 20%,var(--surf));color:var(--aviso)}
+.cf-pill.monitorar{background:color-mix(in srgb,var(--ok) 16%,var(--surf));color:var(--gd)}
+.cf-at-c{flex:1;min-width:0}
+.cf-at-n{font-size:13px;font-weight:700;line-height:1.3}
+.cf-at-n .cd{font-size:10.5px;color:var(--ink3);margin-left:6px;font-family:ui-monospace,Consolas,monospace}
+.cf-at-m{font-size:11px;color:var(--ink3);margin-top:1px}
+.cf-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+.cf-tg{font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;border:1px solid var(--line2);background:var(--surf2);color:var(--ink3)}
+.cf-tg.on{background:color-mix(in srgb,var(--warn) 18%,var(--surf));color:var(--aviso);border-color:color-mix(in srgb,var(--warn) 45%,transparent)}
+.cf-tg.onx{background:color-mix(in srgb,var(--danger) 16%,var(--surf));color:var(--mal);border-color:color-mix(in srgb,var(--danger) 45%,transparent)}
+.cf-tg.critA{background:color-mix(in srgb,var(--danger) 14%,var(--surf));color:var(--mal);border-color:color-mix(in srgb,var(--danger) 40%,transparent)}
+.cf-at-r{flex:0 0 auto;text-align:right;min-width:60px}
+.cf-at-r .b{font-size:18px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.cf-at-r .s{font-size:10px;color:var(--ink3)}
+@media (max-width:560px){.cf-at{flex-wrap:wrap}.cf-at-r{width:100%;text-align:left;display:flex;gap:8px;align-items:baseline}}
+
+/* fila de tickets (coluna direita) */
+.cf-tk{display:flex;gap:9px;align-items:flex-start;padding:10px 15px;border-bottom:1px solid var(--line);width:100%}
+.cf-tk:last-child{border-bottom:0}.cf-tk:hover{background:var(--surf2)}
+.cf-tk .id{font-family:ui-monospace,Consolas,monospace;font-size:11px;font-weight:700;color:var(--ink3);white-space:nowrap;margin-top:2px}
+.cf-tk .c{flex:1;min-width:0}
+.cf-tk .t{font-size:12.5px;font-weight:700;line-height:1.3}
+.cf-tk .m{font-size:10.5px;color:var(--ink3);margin-top:2px}
+.cf-est{font-size:9.5px;font-weight:800;padding:2px 7px;border-radius:5px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.cf-est.detectado{background:color-mix(in srgb,var(--danger) 16%,var(--surf));color:var(--mal)}
+.cf-est.notificado{background:color-mix(in srgb,var(--warn) 18%,var(--surf));color:var(--aviso)}
+.cf-est.analise{background:color-mix(in srgb,var(--navy) 12%,var(--surf));color:var(--ink)}
+.cf-est.cf-acao{background:color-mix(in srgb,var(--green) 40%,var(--surf));color:#2f4300}
+.cf-est.verificado{background:color-mix(in srgb,var(--ok) 16%,var(--surf));color:var(--gd)}
+:root[data-theme="dark"] .cf-est.cf-acao{color:var(--green);background:color-mix(in srgb,var(--green) 18%,var(--surf))}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cf-est.cf-acao{color:var(--green);background:color-mix(in srgb,var(--green) 18%,var(--surf))}}
+.cf-tk .sla{font-size:10px;color:var(--ink3);white-space:nowrap;margin-top:3px}
+.cf-tk .sla.mal{color:var(--mal);font-weight:700}
+
+/* funil do ticket */
+.cf-funil{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line)}
+.cf-fu{background:var(--surf);padding:10px 12px;text-align:center}
+.cf-fu b{display:block;font-size:20px;font-weight:800;font-variant-numeric:tabular-nums}
+.cf-fu span{font-size:9.5px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.04em}
+@media (max-width:640px){.cf-funil{grid-template-columns:repeat(auto-fit,minmax(100px,1fr))}}
+
+/* tabela padrão */
+.cf-tab{width:100%;border-collapse:collapse;font-size:12.5px}
+.cf-tab th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink3);
+  padding:8px 12px;border-bottom:1px solid var(--line);background:var(--surf2);white-space:nowrap}
+.cf-tab td{padding:8px 12px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;vertical-align:middle}
+.cf-tab tr:last-child td{border-bottom:0}
+.cf-tab .r{text-align:right}
+.cf-tab tbody tr:hover{background:var(--surf2)}
+.cf-barra{position:relative;height:6px;background:var(--surf2);border-radius:3px;min-width:80px;overflow:hidden}
+.cf-barra i{position:absolute;left:0;top:0;bottom:0;background:var(--ok);border-radius:3px}
+.cf-barra i.mal{background:var(--danger)}
+.cf-barra u{position:absolute;top:-2px;bottom:-2px;width:1px;background:var(--ink3);left:85%}
+.cf-rolar{overflow-x:auto}
+
+/* matriz de criticidade */
+.cf-abc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.cf-abc > div{background:var(--surf);padding:12px 15px}
+.cf-abc b{display:block;font-size:22px;font-weight:800}
+.cf-abc .f{font-size:10.5px;color:var(--ink3)}
+.cf-abc .m{font-size:11px;margin-top:4px}
+.cf-crit-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:9px;padding:13px 15px}
+.cf-cri{border:1px solid var(--line);border-radius:7px;padding:9px 10px;background:var(--surf2)}
+.cf-cri b{display:block;font-size:11.5px}
+.cf-cri small{display:block;font-size:10px;color:var(--ink3);margin:2px 0 6px}
+.cf-nota3{display:flex;gap:4px}
+.cf-nota3 span{flex:1;text-align:center;font-size:11px;font-weight:700;padding:4px 0;border-radius:5px;border:1px solid var(--line2);background:var(--surf)}
+.cf-nota3 span.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+:root[data-theme="dark"] .cf-nota3 span.on{background:var(--green);color:var(--navy);border-color:var(--green)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cf-nota3 span.on{background:var(--green);color:var(--navy);border-color:var(--green)}}
+.cf-resultado{padding:11px 15px;border-top:1px solid var(--line);font-size:12.5px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.cf-resultado .g{font-size:20px;font-weight:800;font-family:ui-monospace,Consolas,monospace}
+
+.dtw{display:flex;gap:4px;align-items:center}.dtw .ftxt{flex:1}
+.dtcal{flex:0 0 auto;padding:4px 6px;border:1px solid var(--line2);border-radius:6px;background:var(--surf2);font-size:12px}
+
+/* relatórios: folha A4 sobre o painel, imprimível */
+.cf-rel{position:fixed;inset:0;z-index:80;background:rgba(10,8,20,.55);display:none;overflow:auto;padding:18px 12px 40px}
+.cf-rel.on{display:block}
+.cf-rel-bar{max-width:860px;margin:0 auto 10px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.cf-rel-bar .bt{background:var(--surf)}
+.cf-rel-bar .bt.forte{background:var(--green);color:var(--navy);border-color:var(--green)}
+.cf-rel-bar .esp{flex:1}
+.cf-rel-bar .dica{font-size:11px;color:#fff;opacity:.8}
+.cf-folha{max-width:860px;margin:0 auto;background:#fff;color:#191528;border-radius:6px;padding:26px 30px 30px;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);font-size:12px;line-height:1.45}
+.fo-top{display:flex;align-items:flex-start;gap:14px;border-bottom:3px solid #A9DB21;padding-bottom:12px;margin-bottom:14px}
+.fo-top .logo{font-weight:800;font-size:18px;letter-spacing:-.02em}.fo-top .logo i{font-style:normal;color:#5f7f08}
+.fo-top .tit{flex:1}.fo-top h2{margin:0;font-size:17px;font-weight:800}.fo-top .sub{font-size:11px;color:#68667d;margin-top:2px}
+.fo-top .num{text-align:right;font-family:ui-monospace,Consolas,monospace;font-size:11.5px;color:#3a3550}
+.fo-top .num b{display:block;font-size:14px;color:#191528}
+.fo-sec{margin:14px 0 6px;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#68667d;
+  display:flex;align-items:center;gap:8px}
+.fo-sec::after{content:"";flex:1;height:1px;background:#e4e4ef}
+.fo-sec .p{color:#5f7f08}
+.fo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr));gap:8px 14px}
+.fo-c{border-bottom:1px solid #e4e4ef;padding:3px 0 5px}
+.fo-c small{display:block;font-size:9.5px;color:#68667d;text-transform:uppercase;letter-spacing:.04em}
+.fo-c b{font-weight:600}
+.fo-c .cf-in,.fo-tab .cf-in{width:100%;border:0;border-bottom:1px dashed #cbcbdd;background:#fbfbe8;padding:3px 4px;font:inherit;color:inherit}
+.fo-c .cf-in:focus,.fo-tab .cf-in:focus{outline:2px solid #5f7f08;background:#fff}
+.fo-tab{width:100%;border-collapse:collapse;font-size:11.5px}
+.fo-tab th{background:#f6f7fa;border:1px solid #e4e4ef;padding:6px 7px;text-align:left;font-size:9.5px;text-transform:uppercase;letter-spacing:.04em;color:#68667d}
+.fo-tab td{border:1px solid #e4e4ef;padding:6px 7px;vertical-align:top}
+.fo-tab td.n{text-align:center;font-weight:800;font-family:ui-monospace,Consolas,monospace}
+.fo-tab select{font:inherit;border:1px solid #cbcbdd;border-radius:4px;padding:2px 4px;background:#fbfbe8}
+.cf-rpn{display:inline-block;padding:3px 10px;border-radius:5px;font-weight:800;font-family:ui-monospace,Consolas,monospace;font-size:13px}
+.cf-rpn.alto{background:#fde2e2;color:#b02525}.cf-rpn.medio{background:#fdf0d5;color:#a04408}.cf-rpn.baixo{background:#e3f6ea;color:#1f7a4d}
+.cf-pq{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid #e4e4ef}
+.cf-pq .k{flex:0 0 26px;height:26px;border-radius:50%;background:#191528;color:#fff;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center}
+.cf-pq .w{flex:1}.cf-pq .w small{display:block;font-size:9.5px;color:#68667d;text-transform:uppercase;letter-spacing:.04em}
+.cf-pq .w .cf-in{width:100%;border:0;border-bottom:1px dashed #cbcbdd;background:#fbfbe8;padding:3px 4px;font:inherit}
+.fo-ass{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:14px;margin-top:26px}
+.fo-ass div{border-top:1px solid #191528;padding-top:4px;font-size:10.5px;color:#68667d}
+.fo-ass b{display:block;color:#191528;font-size:11.5px}
+.fo-pe{margin-top:16px;font-size:9.5px;color:#68667d;border-top:1px solid #e4e4ef;padding-top:8px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.fo-nota{background:#fbfbe8;border-left:3px solid #A9DB21;padding:7px 10px;font-size:11px;color:#3a3550;margin-top:8px}
+@media print{
+  body *{visibility:hidden}
+  .cf-rel,.cf-rel *{visibility:visible}
+  .cf-rel{position:static;background:none;padding:0;display:block}
+  .cf-rel-bar{display:none}
+  .cf-folha{box-shadow:none;border-radius:0;max-width:none;padding:0}
+  .fo-c .cf-in,.fo-tab .cf-in,.cf-pq .cf-in,.fo-tab select{background:none;border-bottom-color:transparent}
+}
+
+/* campo sugerido: preenchido pela biblioteca, editável, com a fonte */
+.cf-sug{display:inline-block;font-size:8.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:1px 5px;
+  border-radius:4px;margin-left:5px;vertical-align:middle;background:#e3f6ea;color:#1f7a4d}
+.cf-sug.cf-ia{background:#ece6ff;color:#4b2fa3}
+.cf-sug.dado{background:#e4e4ef;color:#3a3550}
+.fo-c .cf-in.cf-pre,.fo-tab .cf-in.cf-pre,.cf-pq .cf-in.cf-pre{background:#eef8e6;border-bottom-style:solid;border-bottom-color:#A9DB21}
+.fo-c .cf-in.cf-ia,.fo-tab .cf-in.cf-ia,.cf-pq .cf-in.cf-ia{background:#f1ecff;border-bottom-color:#8b6cf0}
+.fo-alerta{background:#fde2e2;border-left:3px solid #b02525;padding:8px 11px;font-size:11.5px;color:#191528;margin:8px 0}
+.fo-alerta b{color:#b02525}
+.cf-legenda{display:flex;gap:10px;flex-wrap:wrap;font-size:10px;color:#68667d;margin:6px 0 0}
+.cf-legenda i{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:-1px;margin-right:3px}
+@media print{.cf-sug{display:none}.fo-c .cf-in.cf-pre,.fo-tab .cf-in.cf-pre,.cf-pq .cf-in.cf-pre,.fo-c .cf-in.cf-ia,.fo-tab .cf-in.cf-ia,.cf-pq .cf-in.cf-ia{background:none}}
+.fo-nota .cf-in{width:calc(100% - 90px);border:0;border-bottom:1px dashed #cbcbdd;background:#fff;padding:3px 4px;font:inherit}
+.fo-nota .cf-in.cf-pre{background:#eef8e6;border-bottom-color:#A9DB21}
+
+/* gestão do ticket na gaveta */
+.cf-gest{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.cf-gest label{display:block;font-size:9.5px;font-weight:800;color:var(--ink3);text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.cf-gest select,.cf-gest input,.cf-gest textarea{width:100%;font:inherit;font-size:12.5px;padding:6px 8px;border:1px solid var(--line2);border-radius:7px;background:var(--surf2);color:var(--ink)}
+.cf-gest textarea{min-height:56px;resize:vertical}
+.cf-gest .full{grid-column:1/-1}
+.cf-etapas{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px}
+.cf-etapas button{font-size:10px;font-weight:700;padding:4px 8px;border-radius:20px;border:1px solid var(--line2);background:var(--surf2);color:var(--ink3)}
+.cf-etapas button.feita{background:color-mix(in srgb,var(--ok) 16%,var(--surf));color:var(--gd);border-color:transparent}
+.cf-etapas button.agora{background:var(--navy);color:#fff;border-color:var(--navy)}
+:root[data-theme="dark"] .cf-etapas button.agora{background:var(--green);color:var(--navy);border-color:var(--green)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cf-etapas button.agora{background:var(--green);color:var(--navy);border-color:var(--green)}}
+.cf-hist{font-size:11.5px;color:var(--ink2);margin-top:8px}
+.cf-hist div{padding:3px 0;border-bottom:1px dashed var(--line)}
+.cf-hist small{color:var(--ink3);margin-right:6px;font-variant-numeric:tabular-nums}
+.cf-salvo{font-size:11px;color:var(--gd);font-weight:700;margin-left:8px}
+.cf-tab select.cf-mini{font:inherit;font-size:11.5px;padding:3px 5px;border:1px solid var(--line2);border-radius:6px;background:var(--surf2);color:var(--ink)}
+/* estatísticas */
+.cf-vis{display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding:10px 15px;border-bottom:1px solid var(--line)}
+.cf-vis .cf-lbl{font-size:10.5px;font-weight:700;color:var(--ink3);margin-right:4px}
+.cf-vis .cf-busca{margin-left:auto;font:inherit;font-size:12px;padding:5px 9px;border:1px solid var(--line2);border-radius:7px;background:var(--surf2);color:var(--ink);min-width:150px}
+.cf-tab th.ord{cursor:pointer;user-select:none}.cf-tab th.ord:hover{color:var(--ink)}
+.cf-tab th.ord.on::after{content:" ▾";color:var(--gd)}
+.cf-tab td .cf-bar{display:inline-block;height:5px;border-radius:3px;background:var(--ink3);opacity:.35;vertical-align:middle;margin-right:5px}
+.fo-top .marca{height:26px;width:auto;display:block}
+/* aba relatórios */
+.cf-rl-novo{display:flex;gap:8px;flex-wrap:wrap;padding:12px 15px;border-bottom:1px solid var(--line)}
+/* gaveta — mesma da OS */
+.cf-gf{position:fixed;inset:0;z-index:70;background:rgba(10,8,20,.45);opacity:0;pointer-events:none;transition:opacity .18s}
+.cf-gf.on{opacity:1;pointer-events:auto}
+.cf-gv{position:fixed;top:0;right:0;bottom:0;z-index:71;width:min(470px,calc(100% - 24px));background:var(--surf);
+  border-left:1px solid var(--line2);box-shadow:-18px 0 50px rgba(10,8,20,.28);transform:translateX(100%);
+  transition:transform .2s;display:flex;flex-direction:column}
+.cf-gv.on{transform:translateX(0)}
+.cf-gvt{display:flex;align-items:flex-start;gap:10px;padding:14px 16px 11px;border-bottom:1px solid var(--line)}
+.cf-gvt .k{font-size:10px;font-weight:800;color:var(--ink3);text-transform:uppercase;letter-spacing:.05em}
+.cf-gvt h4{margin:3px 0 0;font-size:15px;font-weight:800;line-height:1.3;overflow-wrap:anywhere}
+.cf-gvx{margin-left:auto;width:28px;height:28px;border-radius:7px;background:var(--surf2);color:var(--ink2);font-size:15px;text-align:center}
+.cf-gvc{overflow:auto;padding:0 0 20px}
+.cf-gvs{padding:13px 16px;border-bottom:1px solid var(--line)}
+.cf-gvs h5{margin:0 0 9px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--ink3)}
+.cf-g3{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.cf-g3 .c{background:var(--surf2);border-radius:7px;padding:9px 10px}
+.cf-g3 .c b{display:block;font-size:16px;font-weight:800;font-variant-numeric:tabular-nums}
+.cf-g3 .c span{font-size:9.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.04em}
+.cf-dt{width:100%;border-collapse:collapse;font-size:12.5px}
+.cf-dt td{padding:6px 0;border-bottom:1px solid var(--line)}.cf-dt tr:last-child td{border-bottom:0}
+.cf-dt .a{font-weight:700;width:32%}.cf-dt .b{color:var(--ink3);font-size:11.5px}
+.cf-dt .c{text-align:right;font-weight:800;white-space:nowrap;font-variant-numeric:tabular-nums}
+.cf-osi{display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--line);font-size:12.5px}
+.cf-osi:last-child{border-bottom:0}
+.cf-osi .n{font-weight:700;color:var(--ink2);white-space:nowrap;font-family:ui-monospace,Consolas,monospace}
+.cf-osi .d{font-size:10.5px;color:var(--ink3);display:block}
+.cf-linha-t{display:flex;gap:10px;padding:6px 0;font-size:12px}
+.cf-linha-t .q{width:8px;height:8px;border-radius:50%;background:var(--line2);margin-top:5px;flex:0 0 auto}
+.cf-linha-t .q.ok{background:var(--ok)}.cf-linha-t .q.agora{background:var(--warn)}
+.cf-linha-t .w{flex:1}.cf-linha-t .w small{display:block;color:var(--ink3);font-size:10.5px}
+.cf-acao{display:flex;gap:7px;flex-wrap:wrap;padding:12px 16px}
+.cf-acao .bt.forte{background:var(--navy);color:#fff;border-color:var(--navy)}
+:root[data-theme="dark"] .cf-acao .bt.forte{background:var(--green);color:var(--navy);border-color:var(--green)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cf-acao .bt.forte{background:var(--green);color:var(--navy);border-color:var(--green)}}
+.cf-aviso-mock{margin:0 0 14px;padding:9px 13px;border:1px dashed var(--line2);border-radius:var(--r);font-size:11.5px;color:var(--ink3)}
+.cf-aviso-mock b{color:var(--ink2)}
 </style>
 
 <div class="app">
@@ -738,6 +977,9 @@ tbody tr:hover{background:var(--surf2)}
     <div id="lat-mods"></div>
     <button class="lat-i" data-v="gestao" id="lat-gestao" title="Gestão PCM">
       <span class="ic">📋</span><span class="rot">Gestão PCM</span></button>
+    <div class="lat-sec">Engenharia</div>
+    <button class="lat-i" data-v="conf" id="lat-conf" title="Confiabilidade">
+      <span class="ic">◎</span><span class="rot">Confiabilidade</span></button>
 
     <div class="lat-pe">
       <a class="lat-ac" id="lat-ac" title="Quem de cada cliente pode entrar"
@@ -775,6 +1017,7 @@ tbody tr:hover{background:var(--surf2)}
     <section class="tela" id="v-tarefas"></section>
     <section class="tela" id="v-mod"></section>
     <section class="tela" id="v-gestao"></section>
+    <section class="tela" id="v-conf"></section>
 
     <p class="rodape">
       <b>Protótipo navegável.</b> Semana 35, 992 OS reais. A barra lateral substitui as nove abas
@@ -1084,7 +1327,7 @@ function arrancar(){
   /* Papel. Espelha o que o painel em producao ja faz: uma lista de telas restritas
      (adminOnly, Task #130) e o escopo dos dados preso ao cliente do usuario
      (_cliEq(r.cliente, S.user)). O cliente ve Semana e Tarefas/OS, mais nada. */
-  const TELAS_ADMIN = ["insights", "mod", "gestao"];
+  const TELAS_ADMIN = ["insights", "mod", "gestao", "conf"];
   /* Os 11 papeis de cliente, iguais ao AUTH_CLI de js/auth.js. Papel derivado
      fora desta lista e erro de cadastro, nao papel novo. */
   const AUTH_CLI = {
@@ -2612,7 +2855,8 @@ function arrancar(){
   const TITULOS = {semana:["Semana","calendário por dia · cards de OS"],
     insights:["Insights","o que a semana está dizendo"],
     tarefas:["Tarefas / OS","tabela consolidada com filtros"],
-    gestao:["Gestão PCM","o ano inteiro · 20 mil tarefas · somente leitura"]};
+    gestao:["Gestão PCM","o ano inteiro · 20 mil tarefas · somente leitura"],
+    conf:["Confiabilidade","engenharia de manutenção · sinais por ativo · tickets · FMEA"]};
   function pintar(){
     document.querySelectorAll(".lat-i").forEach(b =>
       b.classList.toggle("on", b.dataset.v===V && (V!=="mod" || b.dataset.m===MOD)));
@@ -2625,8 +2869,10 @@ function arrancar(){
     $("#v-tarefas").innerHTML = V==="tarefas" ? vTarefas() : "";
     $("#v-mod").innerHTML = V==="mod" ? vMod() : "";
     $("#v-gestao").innerHTML = V==="gestao" ? vGestao() : "";
+    $("#v-conf").innerHTML = V==="conf" ? vConf() : "";
     document.querySelectorAll(".tela").forEach(s => s.classList.toggle("on", s.id==="v-"+V));
     ligar();
+    if (V === "conf") cfPintar();
     frPintar();     // idade do dado no cabeçalho, a cada render
   }
   function gpAbrirPop(k){
@@ -2911,7 +3157,7 @@ function arrancar(){
     const _ac = $("#lat-ac");
     if (_ac) _ac.style.display = ehAdmin ? "" : "none";
     document.querySelectorAll(".lat-sec").forEach(sec =>
-      { if (sec.textContent.trim() === "Chamados") sec.style.display = ehAdmin ? "" : "none"; });
+      { if (["Chamados","Engenharia"].includes(sec.textContent.trim())) sec.style.display = ehAdmin ? "" : "none"; });
     // Se estava numa tela restrita, volta pra Semana. Trocar so a variavel nao
     // esconde a tela que ja esta renderizada — em producao isso virou o _voltouAba.
     if (!ehAdmin && TELAS_ADMIN.includes(V)) { V = "semana"; MOD = null; }
@@ -3141,6 +3387,436 @@ function arrancar(){
     if (e.key === "Escape" && document.querySelector(".osg.on")) { osFechar(); return; }
     if (e.key === "Escape" && document.querySelector(".det")) fecharDet();
   });
+
+
+  /* ── Confiabilidade ──────────────────────────────────────────────────────
+     Módulo de engenharia de manutenção. Dados do engenharia.json (robô
+     gerar_engenharia_json.py); carga preguiçosa como a Gestão PCM. Tickets e
+     relatórios emitidos ficam em localStorage nesta etapa — somem se trocar
+     de navegador. A etapa 2 leva para o repositório via Function. */
+  let CF = null, CF_ESTADO = "vazio", CF_ERRO = "";
+  let CF_TK = null, CF_REL = null;
+  const CF_FIL = { cliente:"", usina:"", fam:"", crit:"", nivel:"", busca:"", soFalha:false };
+  const CF_LS_TK = "pcm_conf_tickets_v1", CF_LS_REL = "pcm_conf_relatorios_v1";
+
+  async function cfCarregar(){
+    if (CF_ESTADO === "carregando" || CF_ESTADO === "pronto") return;
+    CF_ESTADO = "carregando"; pintar();
+    try {
+      const r = await fetch("engenharia.json?t=" + Date.now(), { cache:"no-store" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      CF = await r.json();
+      if (!CF || !Array.isArray(CF.ativos)) throw new Error("arquivo sem ativos");
+      CF_ESTADO = "pronto";
+    } catch (e) { CF_ESTADO = "erro"; CF_ERRO = e.message; }
+    pintar();
+  }
+  function cfLer(k){ try { return JSON.parse(localStorage.getItem(k) || "null"); } catch(e){ return null; } }
+  function cfGravar(){
+    try {
+      if (CF_TK) localStorage.setItem(CF_LS_TK, JSON.stringify(CF_TK.map(t => Object.assign({}, t, { a: undefined, cod: t.a.cod }))));
+      if (CF_REL) localStorage.setItem(CF_LS_REL, JSON.stringify(CF_REL));
+    } catch(e){}
+  }
+  function cfTickets(){
+    if (CF_TK) return CF_TK;
+    const bruto = cfLer(CF_LS_TK) || [];
+    CF_TK = bruto.map(t => { const a = CF.ativos.find(x => x.cod === t.cod); return a ? Object.assign(t, { a }) : null; }).filter(Boolean);
+    return CF_TK;
+  }
+  function cfRelatorios(){ if (!CF_REL) CF_REL = cfLer(CF_LS_REL) || []; return CF_REL; }
+  function cfProxNum(pref){
+    const ano = new Date().getFullYear();
+    const n = cfRelatorios().filter(r => r.n.startsWith(pref + "-" + ano)).length + 1;
+    return pref + "-" + ano + "-" + String(n).padStart(4, "0");
+  }
+  function cfLogo(){ const m = document.querySelector(".marca-img"); return m ? m.outerHTML.replace("marca-img", "cf-marca") : "Grid Co."; }
+  function cfFiltrada(){
+    const f = CF_FIL, q = f.busca.toLowerCase();
+    return CF.ativos.filter(a =>
+      (!f.cliente || a.cliente === f.cliente) && (!f.usina || a.usina === f.usina) &&
+      (!f.fam || a.fam === f.fam) && (!f.crit || a.crit === f.crit) && (!f.nivel || a.nivel === f.nivel) &&
+      (!f.soFalha || !a.soServico) &&
+      (!q || (a.nome + " " + a.cod + " " + a.usina).toLowerCase().includes(q)));
+  }
+  function cfOpts(k){ return [...new Set(CF.ativos.map(a => a[k]).filter(Boolean))].sort(); }
+  function cfFiltros(){
+    const sel = (k, rot, opts, rotulos) => '<div class="fgrupo"><span class="fl">' + rot + '</span>'
+      + '<select class="fs cf-sel" data-cfk="' + k + '"><option value="">Todos</option>'
+      + opts.map(o => '<option value="' + esc(o) + '"' + (CF_FIL[k] === o ? " selected" : "") + '>' + esc(rotulos ? rotulos[o] : o) + '</option>').join("") + '</select></div>';
+    document.getElementById("cf-fil").innerHTML =
+      sel("cliente", "Cliente", cfOpts("cliente")) + sel("usina", "Usina", cfOpts("usina")) + sel("fam", "Família", cfOpts("fam"))
+      + sel("crit", "Criticidade", ["A","B","C"]) + sel("nivel", "Nível", ["critico","atencao","monitorar"], {critico:"Crítico",atencao:"Atenção",monitorar:"Monitorar"})
+      + '<div class="fgrupo"><span class="fl">Buscar</span><input class="fs cf-sel" data-cfk="busca" placeholder="ativo, código, usina" value="' + esc(CF_FIL.busca) + '"></div>';
+    const n = cfFiltrada().length;
+    document.getElementById("cf-fil-rod").innerHTML =
+      '<b>' + n + '</b> ativos com sinal, de <b>' + CF.kpi.ativosCorretiva + '</b> com corretiva em ' + CF.periodo.dias + ' dias'
+      + '<button class="gp-chip ' + (CF_FIL.soFalha ? "on" : "") + '" id="cf-so-falha">Esconder serviço registrado como corretiva</button>'
+      + (Object.values(CF_FIL).some(v => v) ? '<button class="f-lim" id="cf-limpar">↺ Limpar</button>' : '');
+    document.querySelectorAll(".cf-sel").forEach(el => {
+      el.onclick = e => e.stopPropagation();
+      el.onchange = el.oninput = () => { CF_FIL[el.dataset.cfk] = el.value; cfPintar(); };
+    });
+    document.getElementById("cf-so-falha").onclick = () => { CF_FIL.soFalha = !CF_FIL.soFalha; cfPintar(); };
+    const lim = document.getElementById("cf-limpar");
+    if (lim) lim.onclick = () => { Object.keys(CF_FIL).forEach(k => CF_FIL[k] = k === "soFalha" ? false : ""); cfPintar(); };
+  }
+  function vConf(){
+    if (CF_ESTADO === "vazio")      { cfCarregar(); return '<div class="gp-carga">Carregando a Confiabilidade…</div>'; }
+    if (CF_ESTADO === "carregando") return '<div class="gp-carga">Carregando <b>engenharia.json</b>…</div>';
+    if (CF_ESTADO === "erro")       return '<div class="gp-carga erro"><b>Não foi possível carregar.</b><span>' + esc(CF_ERRO) + '</span></div>';
+    return CF_HTML;
+  }
+  const CF_HTML = '<div id="cf-raiz">\n  <div class="filtros"><div class="fg" id="cf-fil"></div><div class="f-rod" id="cf-fil-rod"></div></div>\n<div class="cf-abas">\n    <button class="cf-aba on" data-cp="ativos">Ativos<span class="n" id="cf-n-ativos"></span></button>\n    <button class="cf-aba" data-cp="tickets">Tickets<span class="n" id="cf-n-tickets"></span></button>\n    <button class="cf-aba" data-cp="ind">Indicadores</button>\n    <button class="cf-aba" data-cp="crit">Matriz de criticidade</button>\n    <button class="cf-aba" data-cp="email">E-mail automático</button>\n    <button class="cf-aba" data-cp="rel">Relatórios<span class="n" id="cf-n-rel"></span></button>\n  </div>\n\n  <!-- ATIVOS -->\n  <div class="cf-pag on" id="cf-cp-ativos">\n    <div class="cf-bloco">\n      <div class="cf-kpis" id="cf-kpis"></div>\n      <div class="cf-fonte">Metas de <b>classe mundial</b> do PCM Descomplicado: disponibilidade ≥ 85% · cumprimento ≥ 85% · backlog ≤ 4 semanas.\n        Disp = MTBF ÷ (MTBF + MTTR) · λ = 1 ÷ MTBF.</div>\n    </div>\n    <div class="cf-2">\n      <div class="cf-bloco">\n        <div class="cf-bh"><h3>Ativos com sinal</h3><span class="obs">por gravidade · clique abre a gaveta</span></div>\n        <div id="cf-lista"></div>\n        <div class="cf-fonte">Nível = <b>maior dimensão atingida</b>. Criticidade <b>A</b> sobe um degrau.\n          A dimensão C (mesma causa) fica cega até a classificação de falha ser preenchida nas OS — hoje em 8%.</div>\n      </div>\n      <div class="cf-bloco">\n        <div class="cf-bh"><h3>Tickets abertos</h3><span class="obs">os seus primeiro</span></div>\n        <div id="cf-fila"></div>\n        <div class="cf-fonte">Fecha só na etapa <b>Verificado</b>: uma janela inteira sem reincidir. Reincidiu, reabre no mesmo ticket.</div>\n      </div>\n    </div>\n  </div>\n\n  <!-- TICKETS -->\n  <div class="cf-pag" id="cf-cp-tickets">\n    <div class="cf-bloco">\n      <div class="cf-bh"><h3>Ciclo</h3><span class="obs">abertos por etapa</span></div>\n      <div class="cf-funil" id="cf-funil"></div>\n    </div>\n    <div class="cf-bloco">\n      <div class="cf-bh"><h3>Todos os tickets</h3><span class="obs">ordenar clicando no cabeçalho</span></div>\n      <div class="cf-rolar"><table class="cf-tab" id="cf-tk-tab"></table></div>\n      <div class="cf-fonte">O estado fica no <b>banco do painel</b>, não no Fracttal — o Fracttal recebe a OS quando a etapa Ação a gera.\n        Quem <b>notifica</b> é o robô; quem <b>assume</b> é gente. O SLA conta da detecção.</div>\n    </div>\n  </div>\n\n  <!-- INDICADORES -->\n  <div class="cf-pag" id="cf-cp-ind">\n    <div class="cf-bloco">\n      <div class="cf-bh"><h3>Estatísticas</h3><span class="obs">clique no cabeçalho para ordenar</span></div>\n      <div class="cf-vis"><span class="cf-lbl">Ver por</span>\n        <button class="gp-chip on" data-vis="cliente">Cliente</button>\n        <button class="gp-chip" data-vis="usina">Usina</button>\n        <button class="gp-chip" data-vis="colab">Colaborador da engenharia</button>\n        <input class="cf-busca" id="cf-st-busca" placeholder="filtrar…">\n      </div>\n      <div class="cf-rolar"><table class="cf-tab" id="cf-ind-tab"></table></div>\n      <div class="cf-fonte" id="cf-st-fonte"><b class="cf-ruim">Leia com cuidado:</b> a disponibilidade agregada por cliente <b>não é a média das usinas</b>.\n        O robô soma as falhas de todos os ativos do cliente, e o MTBF encolhe com o tamanho da frota: Athon aparece com 14% porque tem 1.919\n        eventos, não porque ficou 86% do tempo parada. O MTTR e a contagem valem; a disponibilidade agregada precisa ser\n        <b>recalculada ponderada por ativo</b> antes de ir para um cliente. É um ajuste no robô, meu.</div>\n    </div>\n    <div class="cf-bloco">\n      <div class="cf-bh"><h3>Os seis do livro</h3><span class="obs">cap. 7</span></div>\n      <div class="cf-rolar"><table class="cf-tab">\n        <thead><tr><th>Indicador</th><th>Fórmula</th><th>Meta</th><th>Hoje no painel</th></tr></thead>\n        <tbody>\n          <tr><td>MTBF</td><td>Σ horas em bom funcionamento ÷ nº falhas</td><td>crescente</td><td class="cf-bom">calculado por ativo</td></tr>\n          <tr><td>MTTR</td><td>Σ tempos de reparo ÷ nº intervenções</td><td>decrescente</td><td class="cf-bom">calculado por ativo</td></tr>\n          <tr><td>Disponibilidade</td><td>MTBF ÷ (MTBF + MTTR)</td><td>≥ 85%</td><td class="cf-bom">por ativo · <span class="cf-ruim">agregado precisa de ajuste</span></td></tr>\n          <tr><td>Taxa de falha λ</td><td>1 ÷ MTBF</td><td>—</td><td class="cf-bom">derivado</td></tr>\n          <tr><td>Cumprimento da programação</td><td>HH executados ÷ HH planejados</td><td>≥ 85%</td><td>sai da Programação Semanal · ligar</td></tr>\n          <tr><td>Backlog</td><td>HH necessário ÷ (fator × HH disponível)</td><td>≤ 4 semanas</td><td class="cf-ruim">falta o HH disponível da equipe</td></tr>\n        </tbody></table></div>\n    </div>\n  </div>\n\n  <!-- CRITICIDADE -->\n  <div class="cf-pag" id="cf-cp-crit">\n    <div class="cf-bloco">\n      <div class="cf-bh"><h3>Distribuição A · B · C</h3><span class="obs">proxy por família — a matriz real ainda não foi preenchida</span></div>\n      <div class="cf-abc" id="cf-abc"></div>\n      <div class="cf-fonte"><b>"Onde tudo é crítico, nada é crítico."</b> O livro pede A ≤ 20%, B 30–40%, C 40–50%. O proxy sai com\n        <b class="cf-ruim">35% de A</b> — reprova o próprio teste. É o sinal de que a matriz precisa ser feita ativo a ativo, com o campo, não\n        derivada de família. Esta aba é onde ela será preenchida.</div>\n    </div>\n    <div class="cf-bloco">\n      <div class="cf-bh"><h3>Preencher a matriz</h3><span class="obs">exemplo: Inversor 1.8 Huawei · Marabá 1</span></div>\n      <div class="cf-crit-form">\n        <div class="cf-cri"><b>Segurança</b><small>risco a pessoas e ambiente</small><div class="cf-nota3"><span>0</span><span>1</span><span class="on">2</span><span>3</span></div></div>\n        <div class="cf-cri"><b>Custo de manutenção</b><small>peça, HH, deslocamento</small><div class="cf-nota3"><span>0</span><span>1</span><span class="on">2</span><span>3</span></div></div>\n        <div class="cf-cri"><b>Qualidade</b><small>impacto na entrega</small><div class="cf-nota3"><span>0</span><span>1</span><span class="on">2</span><span>3</span></div></div>\n        <div class="cf-cri"><b>Produção</b><small>kWh parado por falha</small><div class="cf-nota3"><span>0</span><span class="on">1</span><span>2</span><span>3</span></div></div>\n        <div class="cf-cri"><b>Back-up</b><small>existe redundância?</small><div class="cf-nota3"><span>0</span><span>1</span><span class="on">2</span><span>3</span></div></div>\n      </div>\n      <div class="cf-resultado"><span class="g">2 × 2 × 2 × 1 × 2 = 16</span>\n        <span class="cf-pill critico">Classe A</span>\n        <span style="font-size:11.5px;color:var(--ink3)">0–55 = A · 56–161 = B · 162–243 = C. Nota 0 em qualquer critério zera o produto — e é\n          A por definição: o livro trata o zero como "parada total".</span></div>\n    </div>\n  </div>\n\n\n  <!-- RELATÓRIOS -->\n  <div class="cf-pag" id="cf-cp-rel">\n    <div class="cf-bloco">\n      <div class="cf-bh"><h3>FMEA e Análise de Causa Raiz</h3><span class="obs">emitidos pela plataforma · numerados · revisáveis</span></div>\n      <div class="cf-rl-novo">\n        <button class="bt forte" id="cf-rl-fmea">＋ Novo FMEA</button>\n        <button class="bt" id="cf-rl-rca">＋ Nova Causa Raiz</button>\n        <span style="font-size:11.5px;color:var(--ink3);align-self:center">ou emita direto da gaveta do ativo — o cabeçalho e o histórico vêm preenchidos</span>\n      </div>\n      <div class="cf-rolar"><table class="cf-tab" id="cf-rl-tab"></table></div>\n      <div class="cf-fonte">Estrutura do FMEA conforme o livro, cap. 5: <b>Cabeçalho · Ponto da falha · Análise (modo → efeito → causa) · Risco (OCC×SEV×DET) · Ação recomendada</b>.\n        Causa raiz pelos <b>5 Porquês</b>, ações priorizadas pela <b>matriz GUT</b>. Pré-preenchimento em <b>três camadas</b>: o que o painel mede (cinza), o que a <b>biblioteca de modos de falha</b> por família reconhece nas notas das OS (verde) e, se quiser, um <b>rascunho por IA</b> lendo as notas (lilás). Tudo editável; nada é emitido sem alguém assinar.\n        Emitir a Causa Raiz <b>grava a causa nas OS do Fracttal</b> — é assim que o campo hoje em 8% passa a ser preenchido.</div>\n    </div>\n  </div>\n  <!-- E-MAIL -->\n  <div class="cf-pag" id="cf-cp-email">\n    <div class="cf-bloco">\n      <div class="cf-bh"><h3>Regras de envio</h3><span class="obs">reusa o SMTP do atualizacao_semanal.py</span></div>\n      <div class="cf-rolar"><table class="cf-tab">\n        <thead><tr><th>Quando</th><th>Para quem</th><th>O quê</th><th>Ligado</th></tr></thead>\n        <tbody>\n          <tr><td><b>Todo evento novo</b> — ativo acende em qualquer nível</td><td>engenharia@gridco.com.br</td><td>imediato, um por evento, com link para o ativo</td><td class="cf-bom">sim</td></tr>\n          <tr><td>FMEA ou Causa Raiz emitido</td><td>engenharia + responsável do cluster</td><td>PDF anexo, nº e revisão</td><td class="cf-bom">sim</td></tr>\n          <tr><td>Ativo entra em <b>Crítico</b></td><td>responsável do cluster</td><td>imediato, um e-mail por pessoa, agrupado</td><td class="cf-bom">sim</td></tr>\n          <tr><td>Ticket sem dono há 48h</td><td>responsável + coordenação</td><td>lembrete, com o tempo parado</td><td class="cf-bom">sim</td></tr>\n          <tr><td>Segunda 07:00</td><td>cada responsável</td><td>resumo semanal dos seus clusters</td><td class="cf-bom">sim</td></tr>\n          <tr><td>Ticket verificado</td><td>quem abriu</td><td>confirmação de fechamento</td><td>opcional</td></tr>\n          <tr><td>Cliente</td><td>—</td><td><b>nada</b>: o cliente vê resultado, não processo</td><td>—</td></tr>\n        </tbody></table></div>\n      <div class="cf-fonte">Mapa de destinatário por cluster já existe em <code>alertas_destinatarios.json</code> (6 responsáveis, 46 clusters).\n        Sem credencial SMTP configurada, o robô <b>degrada em silêncio</b> e o ticket fica só no painel — como já acontece com o alerta diário.</div>\n    </div>\n    <div class="cf-bloco">\n      <div class="cf-bh"><h3>Como chega — evento novo</h3><span class="obs">um por evento · engenharia</span></div>\n      <div style="padding:13px 15px;font-size:12.5px;line-height:1.55" id="cf-mail-evento"></div>\n    </div>\n    <div class="cf-bloco">\n      <div class="cf-bh"><h3>Como chega — resumo ao responsável</h3><span class="obs">agrupado por pessoa</span></div>\n      <div style="padding:13px 15px;font-size:12.5px;line-height:1.55">\n        <div style="font-size:11.5px;color:var(--ink3);margin-bottom:8px"><b style="color:var(--ink2)">Assunto:</b> <span id="cf-mail-assunto"></span></div>\n        <div id="cf-mail-corpo"></div>\n      </div>\n    </div>\n  </div>\n</div>';
+  const CF_FIXOS = '<div class="cf-rel" id="cf-rel">\n  <div class="cf-rel-bar">\n    <button class="bt forte" onclick="window.print()">Imprimir / PDF</button>\n        <button class="bt" id="cf-rel-emitir">Emitir</button>\n    <span class="esp"></span><span class="dica">campos amarelos são da engenharia · o resto veio do painel</span>\n    <button class="bt" id="cf-rel-x">Fechar</button>\n  </div>\n  <div class="cf-folha" id="cf-folha"></div>\n</div>\n<div class="cf-gf" id="cf-gf"></div>\n<aside class="cf-gv" id="cf-gv" role="dialog" aria-modal="true">\n  <div class="cf-gvt"><div style="min-width:0"><div class="k" id="cf-gk"></div><h4 id="cf-gh"></h4></div>\n    <button class="cf-gvx" id="cf-gx" aria-label="Fechar">✕</button></div>\n  <div class="cf-gvc" id="cf-gc"></div>\n</aside>';
+  let CF_ABA = "ativos";
+  function cfPintar(){
+    if (CF_ESTADO !== "pronto" || V !== "conf") return;
+    if (!document.getElementById("cf-gv")) document.body.insertAdjacentHTML("beforeend", CF_FIXOS);
+    cfFiltros();
+    cfMontar();
+    document.querySelectorAll(".cf-aba").forEach(o => o.classList.toggle("on", o.dataset.cp === CF_ABA));
+    document.querySelectorAll(".cf-pag").forEach(o => o.classList.toggle("on", o.id === "cf-cp-" + CF_ABA));
+  }
+  function cfMontar(){
+    const D = CF;
+    const ROT = {critico:"Crítico",atencao:"Atenção",monitorar:"Monitorar"};
+    const K = D.kpi;
+    
+    /* tickets: derivados dos ativos com sinal, para o mockup */
+    const EQ = D.equipe.map(e=>e.nome); const RESP = EQ;
+    const ETAPAS = ["detectado","notificado","analise","acao","verificado"];
+    const ROTE = {detectado:"Detectado",notificado:"Notificado",analise:"Em análise",acao:"Ação",verificado:"Verificado"};
+    const TK = cfTickets();
+    let PROX_TK = TK.reduce((m,t)=>Math.max(m, +t.id.slice(3)||0), 100) + 1;
+    document.getElementById("cf-n-ativos").textContent = cfFiltrada().length;
+    document.getElementById("cf-n-tickets").textContent = TK.filter(t=>t.etapa!=="verificado").length;
+    
+    document.getElementById("cf-kpis").innerHTML =
+      '<div class="cf-kpi"><div class="v" style="color:var(--ok)">'+K.disp+'%</div><div class="n">Disponibilidade</div><div class="m">mediana de '+K.ativosConf.toLocaleString("pt-BR")+' ativos · meta ≥ 85%</div></div>'
+    + '<div class="cf-kpi"><div class="v">'+K.mtbf.toLocaleString("pt-BR")+'h</div><div class="n">MTBF mediano</div><div class="m">λ = '+(1/K.mtbf).toExponential(1)+' falhas/h</div></div>'
+    + '<div class="cf-kpi"><div class="v">'+K.mttr+'h</div><div class="n">MTTR mediano</div><div class="m">tempo médio de reparo</div></div>'
+    + '<div class="cf-kpi"><div class="v" style="color:var(--mal)">'+K.abaixo85+'</div><div class="n">Abaixo da meta</div><div class="m">ativos com disponibilidade &lt; 85%</div></div>'
+    + '<div class="cf-kpi"><div class="v">'+TK.filter(t=>t.etapa!=="verificado").length+'</div><div class="n">Tickets abertos</div><div class="m">'+TK.filter(t=>t.resp==="—"&&t.etapa!=="verificado").length+' sem dono</div></div>';
+    
+    function tags(a){
+      const t=[{x:"A · "+a.nFalha+" falhas em 30d",on:a.nFalha>=3,xx:a.nFalha>=4},{x:"B · "+a.n7+" em 7d",on:a.n7>=2,xx:a.n7>=3},
+               {x:"D · P90 "+a.fam+" = "+a.p90,on:a.nFalha>a.p90,xx:false}];
+      if (a.disp!=null) t.push({x:"Disp "+(100*a.disp).toFixed(1)+"%",on:a.disp<0.85,xx:false});
+      return t;
+    }
+    document.getElementById("cf-lista").innerHTML = cfFiltrada().map(a=>{const i=D.ativos.indexOf(a); return (
+      '<button class="cf-at" data-ci="'+i+'"><span class="cf-pill '+a.nivel+'">'+ROT[a.nivel]+'</span>'
+      +'<span class="cf-at-c"><span class="cf-at-n">'+esc(a.nome)+'<span class="cd">'+esc(a.cod)+'</span></span>'
+      +'<span class="cf-at-m">'+esc(a.usina)+(a.circuito?' · '+esc(a.circuito):'')+'</span>'
+      +'<span class="cf-tags"><span class="tg'+(a.crit==="A"?" critA":"")+'">Crit. '+a.crit+'</span>'
+      +tags(a).map(t=>'<span class="cf-tg '+(t.xx?"onx":t.on?"on":"")+'">'+esc(t.x)+'</span>').join("")+'</span></span>'
+      +'<span class="cf-at-r"><span class="b">'+a.nFalha+'</span><span class="s">falhas · '+a.n30+' OS</span></span></button>');}).join("")
+      || '<div style="padding:16px;color:var(--ink3);font-size:12.5px">nenhum ativo com esse filtro</div>';
+    
+    function pintarTickets(){
+    document.getElementById("cf-fila").innerHTML = TK.filter(t=>t.etapa!=="verificado").slice(0,7).map(t=>
+      '<button class="cf-tk" data-ci="'+D.ativos.indexOf(t.a)+'"><span class="id">'+t.id+'</span>'
+      +'<span class="c"><span class="t">'+esc(t.a.nome.slice(0,38))+'</span><span class="m">'+esc(t.a.usina)+' · '+(t.resp==="—"?'<b class="cf-ruim">sem dono</b>':esc(t.resp))+'</span></span>'
+      +'<span><span class="cf-est '+t.etapa+'">'+ROTE[t.etapa]+'</span><div class="sla'+(t.dias>=2&&t.etapa==="notificado"?" mal":"")+'">'+(t.dias?t.dias+"d":"hoje")+'</div></span></button>').join("");
+    
+    document.getElementById("cf-funil").innerHTML = ETAPAS.map(e=>'<div class="cf-fu"><b>'+TK.filter(t=>t.etapa===e).length+'</b><span>'+ROTE[e]+'</span></div>').join("");
+    document.getElementById("cf-tk-tab").innerHTML =
+      '<thead><tr><th>Ticket</th><th>Ativo</th><th>Usina</th><th>Crit.</th><th>Etapa</th><th>Responsável</th><th class="r">Aberto há</th><th class="r">Reincid.</th></tr></thead><tbody>'
+      + TK.map(t=>'<tr><td class="cd" style="font-family:ui-monospace,Consolas,monospace;font-weight:700">'+t.id+'</td><td>'+esc(t.a.nome.slice(0,34))+'</td><td>'+esc(t.a.usina)+'</td>'
+        +'<td><span class="tg'+(t.a.crit==="A"?" critA":"")+'">'+t.a.crit+'</span></td><td><span class="cf-est '+t.etapa+'">'+ROTE[t.etapa]+'</span></td>'
+        +'<td><select class="cf-mini" data-tk="'+t.id+'"><option value="—"'+(t.resp==="—"?" selected":"")+'>sem dono</option>'+EQ.map(n=>'<option'+(t.resp===n?" selected":"")+'>'+esc(n)+'</option>').join("")+'</select></td><td class="r">'+(t.dias?t.dias+" d":"hoje")+'</td>'
+        +'<td class="r">'+(t.reinc?'<b class="cf-ruim">'+t.reinc+'</b>':"0")+'</td></tr>').join("")+'</tbody>';
+    document.querySelectorAll("#cf-tk-tab select.cf-mini").forEach(sl=>sl.onchange=()=>{const t=TK.find(x=>x.id===sl.dataset.tk); assumir(t, sl.value); pintarTickets();});
+    document.getElementById("cf-n-tickets").textContent = TK.filter(t=>t.etapa!=="verificado").length;
+    }
+    function assumir(t, nome){
+      if (!t) return; cfGravar();
+      const antes=t.resp; t.resp=nome||"—";
+      if (t.resp!=="—" && antes==="—"){ t.assumidoEm=0; if(t.etapa==="detectado"||t.etapa==="notificado"){t.etapa="analise";} t.hist.push({q:t.resp,t:"assumiu o ticket",d:"agora"}); }
+      else if (t.resp!=="—") t.hist.push({q:t.resp,t:"passou a responder",d:"agora"});
+    }
+    function avancar(t, etapa){
+      if (!t) return; cfGravar(); t.etapa=etapa; t.hist.push({q:t.resp==="—"?"—":t.resp,t:ROTE[etapa],d:"agora"});
+    }
+    pintarTickets();
+    
+    /* ── Estatísticas por cliente / usina / colaborador ─────────────────────
+       Eventos = ativos com sinal; tickets = os do mockup. Em produção os dois
+       vêm do banco do painel, e a confiabilidade do confiabilidade.json. */
+    let ST_VIS="cliente", ST_ORD=null, ST_DESC=true;
+    const pct = v => v==null?"—":Math.round(100*v)+"%";
+    const barra = (v,max,cls) => '<span class="cf-bar" style="width:'+Math.max(2,Math.round(60*v/(max||1)))+'px"></span>'+v;
+    function stLinhas(){
+      const abertos = t => t.etapa!=="verificado";
+      if (ST_VIS==="cliente") return D.clientes.map(c=>{
+        const ev=D.ativos.filter(a=>(a.cliente||"").toLowerCase()===c.cliente.toLowerCase()||a.usina.toLowerCase().startsWith(c.cliente.toLowerCase()));
+        const tk=TK.filter(t=>ev.includes(t.a));
+        return {k:c.cliente, cols:[c.usinas,c.n,ev.length,tk.filter(abertos).length,tk.filter(t=>abertos(t)&&t.resp==="—").length,tk.filter(t=>t.etapa==="verificado").length,c.mtbf.toFixed(0),c.mttr.toFixed(1),c.disp]};});
+      if (ST_VIS==="usina") return D.usinas.map(u=>{
+        const ev=D.ativos.filter(a=>u.usina.toLowerCase().includes(a.usina.toLowerCase().replace(/^[^-]+ - /,"").trim()));
+        const tk=TK.filter(t=>ev.includes(t.a));
+        return {k:u.usina, sub:u.cliente, cols:[u.ativos,u.n,ev.length,tk.filter(abertos).length,u.abaixo85,tk.filter(t=>t.etapa==="verificado").length,u.mtbf!=null?u.mtbf.toFixed(0):"—",u.mttr!=null?u.mttr.toFixed(1):"—",u.disp]};});
+      return D.equipe.map(e=>{
+        const tk=TK.filter(t=>t.resp===e.nome), ab=tk.filter(abertos), ver=tk.filter(t=>t.etapa==="verificado");
+        const ass=tk.filter(t=>t.assumidoEm!=null), tma=ass.length?(ass.reduce((x,t)=>x+t.assumidoEm,0)/ass.length).toFixed(1)+" d":"—";
+        const rel=REL.filter(r=>r.autor===e.nome||r.autor===e.email).length;
+        return {k:e.nome, sub:e.email, cols:[e.clusters,tk.length,ab.length,tk.filter(t=>t.etapa==="analise").length,tk.filter(t=>t.etapa==="acao").length,ver.length,tma,rel,tk.filter(t=>t.reinc>0).length]};});
+    }
+    const ST_COLS = {
+      cliente:["Usinas","Eventos (hist.)","Ativos c/ sinal","Tickets abertos","Sem dono","Verificados","MTBF (h)","MTTR (h)","Disp. agregada"],
+      usina:["Ativos","Eventos (hist.)","Ativos c/ sinal","Tickets abertos","Ativos < 85%","Verificados","MTBF (h)","MTTR (h)","Disp. agregada"],
+      colab:["Clusters","Tickets","Abertos","Em análise","Em ação","Verificados","Tempo p/ assumir","FMEA/RCA emitidos","Com reincidência"]};
+    function pintarStats(){
+      const cols=ST_COLS[ST_VIS], q=(document.getElementById("cf-st-busca").value||"").toLowerCase();
+      let L=stLinhas().filter(l=>!q||l.k.toLowerCase().includes(q)||(l.sub||"").toLowerCase().includes(q));
+      if (ST_ORD!=null) L.sort((a,b)=>{const x=parseFloat(a.cols[ST_ORD]), y=parseFloat(b.cols[ST_ORD]); const vx=isNaN(x)?-1:x, vy=isNaN(y)?-1:y; return ST_DESC?vy-vx:vx-vy;});
+      const disp = ST_VIS!=="colab";
+      const max = cols.map((_,j)=>Math.max(...L.map(l=>+l.cols[j]||0)));
+      document.getElementById("cf-ind-tab").innerHTML =
+        '<thead><tr><th>'+(ST_VIS==="cliente"?"Cliente":ST_VIS==="usina"?"Usina":"Colaborador")+'</th>'+cols.map((c,j)=>'<th class="r ord'+(ST_ORD===j?" on":"")+'" data-j="'+j+'">'+c+'</th>').join("")+'</tr></thead><tbody>'
+        + L.map(l=>'<tr><td><b>'+esc(l.k)+'</b>'+(l.sub?'<div style="font-size:10.5px;color:var(--ink3)">'+esc(l.sub)+'</div>':'')+'</td>'
+          + l.cols.map((v,j)=>{
+              if (disp && j===cols.length-1) { const p=v==null?null:Math.round(100*v); return '<td><div style="display:flex;gap:8px;align-items:center;justify-content:flex-end"><div class="cf-barra" style="min-width:60px"><i class="'+(p!=null&&p<85?"mal":"")+'" style="width:'+(p||0)+'%"></i><u></u></div><span class="'+(p==null?"":p<85?"cf-ruim":"cf-bom")+'" style="min-width:34px;text-align:right">'+(p==null?"—":p+"%")+'</span></div></td>'; }
+              const num=+v; const mal=(ST_VIS!=="colab"&&(j===4)&&num>0)||(ST_VIS==="colab"&&j===8&&num>0);
+              return '<td class="r'+(mal?" ruim":"")+'">'+(isNaN(num)||typeof v==="string"&&/[a-z%]/i.test(v)?esc(v):barra(num,max[j]))+'</td>';}).join("")+'</tr>').join("")
+        + '</tbody>' + (L.length?'':'<tbody><tr><td colspan="10" style="color:var(--ink3)">nada com esse filtro</td></tr></tbody>');
+      document.querySelectorAll("#cf-ind-tab th.ord").forEach(th=>th.onclick=()=>{const j=+th.dataset.j; if(ST_ORD===j) ST_DESC=!ST_DESC; else {ST_ORD=j;ST_DESC=true;} pintarStats();});
+      document.getElementById("cf-st-fonte").style.display = disp ? "" : "none";
+    }
+    document.querySelectorAll("[data-vis]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-vis]").forEach(o=>o.classList.toggle("on",o===b)); ST_VIS=b.dataset.vis; ST_ORD=null; document.getElementById("cf-st-busca").value=""; pintarStats();});
+    document.getElementById("cf-st-busca").oninput=pintarStats;
+    
+    
+    const cd=D.critDist, tot=cd.A+cd.B+cd.C;
+    document.getElementById("cf-abc").innerHTML = [["A","0 – 55","≤ 20%"],["B","56 – 161","30–40%"],["C","162 – 243","40–50%"]].map(([k,f,m])=>{
+      const p=Math.round(100*cd[k]/tot); const mal=(k==="A"&&p>20);
+      return '<div><b class="'+(mal?"cf-ruim":"")+'">'+p+'%</b><div class="f">Classe '+k+' · produto '+f+'</div><div class="m">'+cd[k]+' ativos · livro pede '+m+(mal?' · <b class="cf-ruim">estourou</b>':'')+'</div></div>';}).join("");
+    
+    const cr=cfFiltrada().filter(a=>a.nivel==="critico"), at=cfFiltrada().filter(a=>a.nivel==="atencao").slice(0,4);
+    document.getElementById("cf-mail-assunto").textContent="PCM · "+(cr.length+at.length)+" ativos com sinal nos seus clusters — "+D.periodo.ate;
+    document.getElementById("cf-mail-corpo").innerHTML='<div class="cf-rolar"><table class="cf-tab"><thead><tr><th>Nível</th><th>Ativo</th><th>Usina</th><th class="r">30d</th><th class="r">Disp.</th></tr></thead><tbody>'
+      +cr.concat(at).map(a=>'<tr><td class="'+(a.nivel==="critico"?"cf-ruim":"")+'">'+ROT[a.nivel]+'</td><td>'+esc(a.nome.slice(0,30))+'</td><td>'+esc(a.usina.slice(0,24))+'</td><td class="r">'+a.n30+'</td><td class="r">'+(a.disp!=null?(100*a.disp).toFixed(0)+"%":"—")+'</td></tr>').join("")
+      +'</tbody></table></div><p style="margin:8px 0 0;font-size:11.5px;color:var(--ink3)">Cada linha abre o ativo no painel. Responder o e-mail não abre ticket — o botão fica no painel, para o registro ficar junto do ativo.</p>';
+    
+    function abrir(i){
+      const a=D.ativos[i]; const t=TK.find(x=>x.a===a);
+      document.getElementById("cf-gk").textContent=a.cod+" · "+a.fam+" · criticidade "+a.crit;
+      document.getElementById("cf-gh").textContent=a.nome;
+      const idx=t?ETAPAS.indexOf(t.etapa):-1;
+      document.getElementById("cf-gc").innerHTML=
+        (a.mtbf?'<div class="cf-gvs"><h5>Confiabilidade</h5><div class="cf-g3"><div class="c"><b>'+Math.round(a.mtbf).toLocaleString("pt-BR")+'h</b><span>MTBF</span></div>'
+          +'<div class="c"><b>'+a.mttr.toFixed(1)+'h</b><span>MTTR</span></div><div class="c"><b style="color:'+(a.disp<0.85?"var(--mal)":"var(--ok)")+'">'+(100*a.disp).toFixed(1)+'%</b><span>Disponib.</span></div></div></div>':"")
+        +'<div class="cf-gvs"><h5>Por que acendeu</h5><table class="cf-dt">'
+        +'<tr><td class="a">A — frequência</td><td class="b">corretivas em 30 dias</td><td class="c">'+a.n30+'</td></tr>'
+        +'<tr><td class="a">B — aceleração</td><td class="b">últimos 7 dias</td><td class="c">'+a.n7+'</td></tr>'
+        +'<tr><td class="a">D — pares</td><td class="b">P90 de '+esc(a.fam)+' é '+a.p90+'</td><td class="c">'+(a.n30>a.p90?"acima":"dentro")+'</td></tr>'
+        +'<tr><td class="a">C — mesma causa</td><td class="b">precisa da classificação de falha</td><td class="c" style="color:var(--ink3)">cega</td></tr></table></div>'
+        +'<div class="cf-gvs"><h5>RPN</h5><div style="font-size:12.5px;color:var(--ink2)">Ocorrência = <b>'+a.n30+'</b> (medida). Severidade e Detecção não cadastradas.</div>'
+        +'<div style="font-family:ui-monospace,Consolas,monospace;font-size:12px;background:var(--surf2);padding:8px 10px;border-radius:6px;margin-top:8px">RPN = SEV × OCC × DET = ? × '+a.n30+' × ?</div></div>'
+        +(t?'<div class="cf-gvs"><h5>Gestão do ticket '+t.id+'<span class="cf-salvo" id="cf-g-salvo"></span></h5>'
+          +'<div class="cf-gest">'
+          +'<div><label>Quem assume</label><select id="cf-g-resp"><option value="—"'+(t.resp==="—"?" selected":"")+'>sem dono</option>'+EQ.map(n=>'<option'+(t.resp===n?" selected":"")+'>'+esc(n)+'</option>').join("")+'</select></div>'
+          +'<div><label>Prazo</label><input id="cf-g-prazo" inputmode="numeric" placeholder="dd/mm/aaaa" value="'+esc(t.prazo)+'"></div>'
+          +'<div class="full"><label>Etapa</label><div class="cf-etapas">'+ETAPAS.map((e,k)=>'<button data-et="'+e+'" class="'+(k<idx?"feita":k===idx?"agora":"")+'">'+ROTE[e]+'</button>').join("")+'</div></div>'
+          +'<div class="full"><label>Nota da engenharia</label><textarea id="cf-g-nota" placeholder="o que foi visto, o que foi decidido">'+esc(t.nota)+'</textarea></div>'
+          +'</div>'
+          +'<div class="cf-hist">'+t.hist.map(h=>'<div><small>'+esc(h.d)+'</small><b>'+esc(h.q)+'</b> · '+esc(h.t)+'</div>').join("")+'</div>'
+          +'</div>':"")
+        +'<div class="cf-gvs"><h5>Corretivas que pesaram</h5>'+a.os.map(o=>'<div class="cf-osi"><span class="n">#'+esc(o.os)+'</span><span>'+esc(o.t)+'<span class="d">'+esc(o.d)+' · '+esc(o.st)+'</span></span></div>').join("")+'</div>'
+        +'<div class="cf-acao">'+(t?'<button class="bt forte" id="cf-g-salvar">Salvar ticket</button>':'<button class="bt forte" id="cf-g-abrir">Abrir ticket</button>')+'<button class="bt" data-rel="fmea" data-ci="'+i+'">Emitir FMEA</button>'+'<button class="bt" data-rel="rca" data-ci="'+i+'">Emitir Causa Raiz</button>'+'<button class="bt">Ver no Fracttal</button></div>';
+      document.querySelectorAll('#cf-gc [data-rel]').forEach(b=>b.onclick=()=>{fechar();abrirRel(b.dataset.rel,+b.dataset.ci);});
+      /* gestão: as ações mudam o estado em memória e redesenham — em produção vão ao banco do painel */
+      const gs=document.getElementById("cf-g-salvar");
+      if (gs) gs.onclick=()=>{ assumir(t, document.getElementById("cf-g-resp").value); t.prazo=document.getElementById("cf-g-prazo").value; t.nota=document.getElementById("cf-g-nota").value;
+        cfGravar(); pintarTickets(); pintarStats(); abrir(i); document.getElementById("cf-g-salvo").textContent="salvo"; };
+      document.querySelectorAll("#cf-gc .cf-etapas button").forEach(b=>b.onclick=()=>{ avancar(t,b.dataset.et); pintarTickets(); pintarStats(); abrir(i); });
+      const ga=document.getElementById("cf-g-abrir");
+      if (ga) ga.onclick=()=>{ TK.push({id:"TK-"+String(PROX_TK++).padStart(4,"0"),a,etapa:"detectado",resp:"—",dias:0,reinc:0,assumidoEm:null,prazo:"",nota:"",hist:[{q:"manual",t:"Detectado",d:"agora"}]}); cfGravar(); pintarTickets(); pintarStats(); abrir(i); };
+      document.getElementById("cf-gf").classList.add("on");document.getElementById("cf-gv").classList.add("on");
+    }
+    document.querySelectorAll(".cf-at,.cf-tk").forEach(b=>b.onclick=()=>abrir(+b.dataset.ci));
+    const fechar=()=>{document.getElementById("cf-gf").classList.remove("on");document.getElementById("cf-gv").classList.remove("on");};
+    document.getElementById("cf-gx").onclick=fechar;document.getElementById("cf-gf").onclick=fechar;
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")fechar();});
+    
+    /* ── Relatórios ─────────────────────────────────────────────────────── */
+    const FUNCAO = {Inversor:"Converter CC dos strings em CA sincronizada com a rede",Tracker:"Manter o ângulo dos módulos no ponto de máxima geração",
+      Cabine:"Elevar tensão e proteger a saída da usina",Transformador:"Elevar tensão para a rede",QGBT:"Distribuir e proteger circuitos de baixa tensão",Outros:"—"};
+    const OCC = n => n>=5?10:n===4?8:n===3?6:n===2?4:2;           /* frequência em 30 d → escala 1–10 */
+    const REL = cfRelatorios();
+    document.getElementById("cf-n-rel").textContent = REL.length || "";
+    document.getElementById("cf-rl-tab").innerHTML =
+      '<thead><tr><th>Nº</th><th>Tipo</th><th>Rev.</th><th>Ativo</th><th>Usina</th><th>Emitido</th><th>Autor</th><th class="r">RPN</th><th>Estado</th></tr></thead><tbody>'
+      + REL.map(r=>{const at=D.ativos.find(x=>x.cod===r.cod)||{nome:r.cod,usina:""}; return '<tr><td style="font-family:ui-monospace,Consolas,monospace;font-weight:700">'+r.n+'</td><td>'+r.tipo+'</td><td>'+r.rev+'</td><td>'+esc(at.nome.slice(0,32))+'</td>'
+        +'<td>'+esc(at.usina)+'</td><td>'+r.data+'</td><td>'+r.autor+'</td><td class="r">'+(r.rpn?'<span class="cf-rpn '+(r.rpn>=150?"alto":r.rpn>=60?"medio":"baixo")+'" style="font-size:11px;padding:1px 7px">'+r.rpn+'</span>':"—")+'</td>'
+        +'<td><span class="cf-est '+(r.st==="emitido"?"verificado":"analise")+'">'+r.st+'</span></td></tr>';}).join("")+'</tbody>'
+      + (REL.length?'':'<tbody><tr><td colspan="9" style="color:var(--ink3)">nenhum relatório emitido ainda — abra um ativo e clique em Emitir FMEA ou Emitir Causa Raiz</td></tr></tbody>');
+    
+    
+    /* ── Pré-preenchimento ──────────────────────────────────────────────────
+       Camada 2: biblioteca de modos de falha por família, casada por padrão no
+       texto das OS e das notas do técnico. Cada acerto traz modo, efeito, causa
+       provável, SEV/DET sugeridos, os porquês esboçados e as ações padrão.
+       A ordem importa: o primeiro padrão que casa vence. */
+    const BIB = [
+     {re:/string.*(sem corrente|corrente nula|corrente reversa|nula)/i, fam:"Inversor", nome:"String com corrente nula ou reversa",
+      modo:"String PV com corrente nula ou reversa no inversor", efeito:"Perda de geração da string (≈ 1/N da potência do inversor) enquanto não normalizada",
+      causa:"Conector MC4 degradado, fusível de string aberto ou diodo de bypass em curto", tipo:"Elétrica", det:4, sev:5, detTxt:"Alarme do monitoramento (corrente por string)",
+      pq:["A string apresentou corrente nula no monitoramento","Há circuito aberto entre a string e a entrada do inversor","Conector MC4 ou fusível de string degradado por aquecimento","Mau contato progressivo, sem inspeção termográfica na cadência atual","O plano preventivo não inclui termografia dos conectores de string"],
+      acoes:[["Normalizar a string e substituir conector/fusível afetado",5,5,4],["Termografia nos conectores de todas as strings do inversor",4,4,4],["Incluir termografia de strings na MPT (trimestral)",3,3,5]]},
+     {re:/bateria baixa|TCU|perda de comunica|tracker parado/i, fam:"Tracker", nome:"TCU sem comunicação / bateria baixa",
+      modo:"TCU do tracker sem comunicação ou com bateria baixa; tracker parado", efeito:"Tracker fora do ângulo ótimo — perda de ganho de rastreamento (até 20–25% no dia) e risco em vento forte sem estivagem",
+      causa:"Bateria da TCU no fim de vida ou carga insuficiente (painel de carga sujo/sombreado)", tipo:"Elétrica", det:3, sev:4, detTxt:"Alarme do SCADA do tracker",
+      pq:["O tracker parou e a TCU indicou bateria baixa","A bateria não sustenta a TCU durante a noite","Capacidade da bateria caiu (fim de vida) ou a recarga é insuficiente","Sem verificação de tensão de bateria na preventiva","O plano não prevê troca programada de baterias de TCU"],
+      acoes:[["Substituir a bateria da TCU e validar comunicação",4,5,4],["Medir tensão de bateria de todas as TCUs do bloco na próxima MPM",3,4,4],["Troca programada de baterias por idade no plano de 52 semanas",3,2,5]]},
+     {re:/fonte capacitiva|rel[eé]\b|rele de prote/i, fam:"Cabine", nome:"Relé de proteção sem alimentação",
+      modo:"Relé de proteção da cabine sem alimentação ou sem comunicação", efeito:"Cabine sem supervisão de proteção — desligamento não detectado e risco de operar sem proteção",
+      causa:"Fonte capacitiva do relé com falha", tipo:"Elétrica", det:6, sev:8, detTxt:"Percebido na inspeção ou pela perda de comunicação do relé",
+      pq:["O relé ficou sem alimentação","A fonte capacitiva que o alimenta falhou","Fonte submetida a sobretensões transitórias sem proteção adequada","Não há redundância nem monitoramento da alimentação do relé","O projeto da cabine não previu alarme de falha de fonte"],
+      acoes:[["Substituir a fonte capacitiva e testar o relé",5,5,4],["Verificar fontes das demais cabines da usina",4,4,3],["Incluir teste de fonte do relé na MPS (semestral)",3,3,4]]},
+     {re:/limpeza|ensaio|teste|revis[ãa]o|readequa|projeto|avcb|ajuste de antena|reset/i, servico:true, nome:"Serviço, não falha"}
+    ];
+    function pre(a){
+      const hits = a.os.map(o => ({o, b: BIB.find(b => b.re.test((o.t||"")+" "+(o.nota||"")))})).filter(h => h.b);
+      const falhas = hits.filter(h => !h.b.servico), servicos = hits.filter(h => h.b.servico);
+      const b = falhas.length ? falhas[0].b : null;
+      return { b, falhas, servicos,
+        soServico: servicos.length && !falhas.length,
+        tipo: (a.os.find(o=>o.tp2)||{}).tp2 || (b && b.tipo) || "",
+        fontes: falhas.slice(0,3).map(h=>"#"+h.o.os).join(", ") };
+    }
+    /* Camada 3 — rascunho por IA. No mockup é um exemplo fixo para o inversor de
+       Embu Guaçu; em produção é uma Function que manda as notas das OS ao modelo e
+       devolve estes campos, sempre marcados como rascunho. */
+    const IA = {
+      "THPN-EBG100-INVR2.2": {
+        modo:"String PV18 recorrente com corrente nula (3 OS em 30 d); PV8/PV9/PV12 com corrente reversa em 21/07",
+        causa:"Padrão aponta para o mesmo circuito (PV18) reincidindo após 'normalizar' — sugere conector/fusível sendo religado sem troca, ou diodo de bypass danificado a montante",
+        pq:["PV18 voltou a zerar 3 vezes após normalização","A intervenção religa o circuito mas não troca o componente degradado","Conector MC4 com aquecimento — o defeito volta com carga","Sem termografia, o técnico não vê o aquecimento na hora","A OS 'Recomposição de String' não pede troca de conector, só normalização"],
+        acao:"Trocar conectores MC4 e fusível da PV18 (não só religar); termografia sob carga nas 18 strings; revisar o texto-padrão da OS de recomposição para exigir a troca"
+      }
+    };
+    pintarStats();
+    const inp = (v,ph,cls) => '<input class="cf-in '+(cls||"")+'" value="'+esc(v||"")+'" placeholder="'+esc(ph||"")+'">';
+    const SUG = f => '<span class="cf-sug" title="'+esc(f)+'">biblioteca</span>';
+    const preC = (r,v,f,ph) => '<div class="fo-c"><small>'+r+(v?SUG(f):'')+'</small>'+inp(v,ph,v?"cf-pre":"")+'</div>';
+    const campo = (r,v,eng) => '<div class="fo-c"><small>'+r+'</small>'+(eng?inp(v,eng===true?"preencher":eng):'<b>'+esc(v)+'</b>')+'</div>';
+    const sel10 = (id,v) => '<select data-cff="'+id+'">'+Array.from({length:10},(_,k)=>'<option'+(k+1===v?" selected":"")+'>'+(k+1)+'</option>').join("")+'</select>';
+    const hoje = D.periodo.ate;
+    const quemSou = () => (PAPEL_REAL && PAPEL_REAL.quem) || "painel";
+    function topo(tipo,num,a,sub){
+      return '<div class="fo-top"><div class="logo">'+cfLogo()+'</div><div class="tit"><h2>'+tipo+'</h2><div class="sub">'+sub+'</div></div>'
+        +'<div class="num"><b>'+num+'</b>Revisão R00 · '+hoje+'</div></div>';
+    }
+    function osTab(a){
+      return '<table class="fo-tab"><thead><tr><th>OS</th><th>Tarefa</th><th>Tipo</th><th>Data</th><th>Estado</th></tr></thead><tbody>'
+        + a.os.map(o=>'<tr><td style="font-family:ui-monospace,Consolas,monospace">#'+esc(o.os)+'</td><td>'+esc(o.t)+'</td><td>'+esc(o.tp2||"—")+'</td><td>'+esc(o.d)+'</td><td>'+esc(o.st)+'</td></tr>').join("")+'</tbody></table>';
+    }
+    function rodape(){
+      return '<div class="fo-ass"><div><b>Elaboração</b>engenharia de manutenção</div><div><b>Revisão</b>coordenação O&amp;M</div><div><b>Aprovação</b>gerência O&amp;M</div></div>'
+        +'<div class="fo-pe"><span>Emitido pela plataforma PCM · pcm.gridco.com.br</span><span>Método: PCM Descomplicado (Engeteles), cap. 5 · IEC 60300-3-11</span></div>';
+    }
+    function fmea(a){
+      const P=pre(a), b=P.b;
+      const occ=OCC(a.n30), sev=b?b.sev:(a.crit==="A"?8:a.crit==="B"?6:4), det=b?b.det:6;
+      const aviso = P.soServico ? '<div class="fo-alerta"><b>Isto parece não ser falha.</b> '+P.servicos.length+' de '+a.os.length+' OS são serviço (limpeza, ensaio, revisão) registradas como corretiva. '+'O sinal veio da contagem, não de falha funcional. Recomendação: reclassificar no Fracttal e não emitir FMEA — ou emitir só se a engenharia discordar.</div>' : '';
+      const legenda='<div class="cf-legenda"><span><i style="background:#e4e4ef"></i>medido pelo painel</span><span><i style="background:#eef8e6"></i>sugerido pela biblioteca'+(b?' — '+esc(b.nome)+' ('+P.fontes+')':'')+'</span><span><i style="background:#f1ecff"></i>rascunho de IA</span><span><i style="background:#fbfbe8"></i>a preencher</span></div>';
+      return topo("FMEA — Análise de Modos de Falha e Efeitos",cfProxNum("FMEA"),a,esc(a.nome)+" · "+esc(a.usina))
+       + aviso + legenda
+       +'<div class="fo-sec"><span class="p">1</span>Cabeçalho</div><div class="fo-grid">'
+       + campo("Processo","Geração fotovoltaica") + campo("Área",a.usina) + campo("Sistema",a.circuito||a.fam)
+       + campo("Equipe",null,"nomes da equipe") + campo("Data de início",hoje) + campo("Responsável pela elaboração",null,true) + campo("Responsável pela revisão",null,true)
+       +'</div>'
+       +'<div class="fo-sec"><span class="p">2</span>Ponto da falha</div><div class="fo-grid">'
+       + campo("Equipamento",a.nome+" · "+a.cod) + campo("Função do equipamento",FUNCAO[a.fam]||"—") + campo("Componente",null,"peça ou subconjunto analisado")
+       +'</div>'
+       +'<div class="fo-sec"><span class="p">3</span>Análise da falha</div>'
+       +'<table class="fo-tab"><thead><tr><th style="width:33%">Modo de falha <small>(sintoma)</small></th><th style="width:33%">Efeito <small>(consequência)</small></th><th>Causa</th></tr></thead>'
+       +'<tbody><tr><td>'+inp(b&&b.modo,"como a falha se apresentou",b?"cf-pre":"")+'</td><td>'+inp(b&&b.efeito,"impacto na geração / segurança",b?"cf-pre":"")+'</td><td>'+inp(b&&b.causa,"por que ocorreu",b?"cf-pre":"")+'</td></tr>'
+       +'<tr><td>'+inp("","")+'</td><td>'+inp("","")+'</td><td>'+inp("","")+'</td></tr></tbody></table>'
+       +'<div class="fo-nota">Histórico que motivou a análise — '+a.n30+' corretivas em 30 dias'+(a.mtbf?', MTBF '+Math.round(a.mtbf)+' h, MTTR '+a.mttr.toFixed(1)+' h, disponibilidade '+(100*a.disp).toFixed(1)+'%':'')+'.</div>'
+       + osTab(a)
+       +'<div class="fo-sec"><span class="p">4</span>Avaliação do risco</div>'
+       +'<table class="fo-tab"><thead><tr><th>Ocorrência <small>(medida)</small></th><th>Severidade <small>(engenharia)</small></th><th>Detecção <small>(engenharia)</small></th><th>RPN = OCC × SEV × DET</th></tr></thead>'
+       +'<tbody><tr><td class="n" data-occ="'+occ+'">'+occ+'<div style="font-weight:400;font-size:9.5px;color:#68667d">'+a.n30+' em 30 d</div></td>'+'<td class="n">'+sel10("sev",sev)+(b?'<div style="font-weight:400;font-size:9.5px;color:#1f7a4d">sugerido</div>':'')+'</td>'+'<td class="n">'+sel10("det",det)+(b?'<div style="font-weight:400;font-size:9.5px;color:#1f7a4d">'+esc(b.detTxt)+'</div>':'')+'</td>'
+       +'<td class="n"><span class="cf-rpn" id="cf-rpn"></span></td></tr></tbody></table>'
+       +'<div style="font-size:10.5px;color:#68667d;margin-top:5px">Desempate: maior Severidade primeiro; depois SEV × OCC. Escala 1–10 em cada fator, RPN de 1 a 1000.</div>'
+       +'<div class="fo-sec"><span class="p">5</span>Ação preventiva recomendada</div>'
+       +'<table class="fo-tab"><thead><tr><th>Ação</th><th style="width:18%">Responsável</th><th style="width:14%">Prazo</th><th style="width:16%">RPN após ação</th></tr></thead>'
+       +(b?b.acoes:[[""],[""]]).map(x=>'<tr><td>'+inp(x[0],"incluir no plano / alterar cadência / trocar componente",x[0]?"cf-pre":"")+'</td><td>'+inp("")+'</td><td>'+inp("")+'</td><td>'+inp("")+'</td></tr>').join("")+'</tbody></table>'
+       + rodape();
+    }
+    function rca(a){
+      const P=pre(a), b=P.b;
+      const aviso = P.soServico ? '<div class="fo-alerta"><b>Isto parece não ser falha.</b> '+P.servicos.length+' de '+a.os.length+' OS são serviço registradas como corretiva. A causa raiz aqui é de <b>processo</b>: classificação errada da OS.</div>' : '';
+      return topo("Análise de Causa Raiz",cfProxNum("RCA"),a,esc(a.nome)+" · "+esc(a.usina))
+       + aviso
+       +'<div class="fo-sec"><span class="p">1</span>Evento</div><div class="fo-grid">'
+       + campo("Equipamento",a.nome+" · "+a.cod) + campo("Usina / circuito",a.usina+(a.circuito?" · "+a.circuito:"")) + campo("Criticidade","Classe "+a.crit)
+       + campo("Corretivas em 30 dias",a.n30+" (P90 da família: "+a.p90+")") + campo("Ticket",(TK.find(x=>x.a===a)||{}).id ? (TK.find(x=>x.a===a).id+" · "+ROTE[TK.find(x=>x.a===a).etapa]) : "sem ticket") + campo("Equipe da análise",null,true)
+       +'</div>'
+       +'<div class="fo-sec"><span class="p">2</span>Descrição da falha</div>'
+       +'<div class="fo-c">'+inp(b?(b.modo+'. '+a.n30+' ocorrências em 30 dias ('+P.fontes+'). Última: '+a.os[0].d+', '+(a.os[0].quem||'solicitante não informado')+'.'):'',"o que aconteceu, quando foi percebido, quem atendeu",b?"cf-pre":"")+'</div>'
+       + osTab(a)
+       +'<div class="fo-sec"><span class="p">3</span>Os cinco porquês</div>'
+       + [1,2,3,4,5].map(k=>'<div class="cf-pq"><span class="k">'+k+'</span><div class="w"><small>Por quê?'+(b?SUG(b.nome):'')+'</small>'+inp(b?b.pq[k-1]:"",k===1?"por que o equipamento falhou?":k===5?"a causa que, removida, impede a repetição":"não aceite a resposta imediata",b?"cf-pre":"")+'</div></div>').join("")
+       +'<div class="fo-nota"><b>Causa raiz:</b> '+inp(b?b.pq[4]:"","conclusão em uma frase",b?"cf-pre":"")+'</div>'
+       +'<div class="fo-sec"><span class="p">4</span>Classificação — grava nas OS do Fracttal</div><div class="fo-grid">'
+       + preC("Tipo de falha",P.tipo,"tasks_types_2 do Fracttal","elétrica · mecânica · comunicação · ambiental · operação") + preC("Causa",b&&b.causa,b&&b.nome,"lista do Fracttal") + preC("Método de detecção",b&&b.detTxt,b&&b.nome,"inspeção · alarme · cliente · monitoramento")
+       +'</div>'
+       +'<div class="fo-sec"><span class="p">5</span>Ações e prioridade (matriz GUT)</div>'
+       +'<table class="fo-tab"><thead><tr><th>Ação</th><th style="width:14%">Responsável</th><th style="width:11%">Prazo</th><th style="width:7%">G</th><th style="width:7%">U</th><th style="width:7%">T</th><th style="width:9%">G×U×T</th></tr></thead>'
+       +'<tbody>'+(b?b.acoes:[["Corretiva definitiva",5,5,4],["Bloqueio da recorrência",4,4,4],["Revisão do plano preventivo",3,3,4]]).map(([t,g,u,x])=>
+          '<tr><td>'+(b?inp(t,"","cf-pre"):inp("",t))+'</td><td>'+inp("")+'</td><td>'+inp("")+'</td><td class="n">'+g+'</td><td class="n">'+u+'</td><td class="n">'+x+'</td><td class="n">'+(g*u*x)+'</td></tr>').join("")+'</tbody></table>'
+       +'<div style="font-size:10.5px;color:#68667d;margin-top:5px">Gravidade, Urgência e Tendência de 1 a 5. Maior produto, primeiro na fila.</div>'
+       +'<div class="fo-sec"><span class="p">6</span>Verificação</div>'
+       +'<div class="fo-grid">'+campo("Critério de eficácia","uma janela de 30 dias sem reincidência no ativo")+campo("Verificar em",null,"data")+campo("Resultado",null,"o ticket só fecha aqui")+'</div>'
+       + rodape();
+    }
+    function rpnPintar(){
+      const f=document.getElementById("cf-folha"); const e=f.querySelector("#cf-rpn"); if(!e) return;
+      const occ=+f.querySelector("[data-occ]").dataset.occ;
+      const sev=+f.querySelector('[data-cff="sev"]').value, det=+f.querySelector('[data-cff="det"]').value, r=occ*sev*det;
+      e.textContent=r; e.className="cf-rpn "+(r>=150?"alto":r>=60?"medio":"baixo");
+    }
+    function abrirRel(tipo,i){
+      const a=D.ativos[i]; REL_ATUAL={tipo,i}; document.querySelector(".cf-rel-bar .dica").textContent="campos amarelos são da engenharia · verdes vieram da biblioteca · o resto veio do painel";
+      document.getElementById("cf-folha").innerHTML = tipo==="fmea"?fmea(a):rca(a);
+      document.getElementById("cf-folha").querySelectorAll("select").forEach(x=>x.onchange=rpnPintar);
+      rpnPintar();
+      document.getElementById("cf-rel").classList.add("on"); document.getElementById("cf-rel").scrollTop=0;
+    }
+    let REL_ATUAL = null;
+    document.getElementById("cf-rel-emitir").onclick=()=>{
+      const a=REL_ATUAL && D.ativos[REL_ATUAL.i]; if(!a) return;
+      const f=document.getElementById("cf-folha"), tipo=REL_ATUAL.tipo==="fmea"?"FMEA":"Causa Raiz";
+      const campos=[...f.querySelectorAll("input.cf-in,select")].map(x=>x.value);
+      const rpn=(f.querySelector("#cf-rpn")||{}).textContent||null;
+      REL.unshift({n:cfProxNum(REL_ATUAL.tipo==="fmea"?"FMEA":"RCA"),tipo,rev:"R00",cod:a.cod,data:hoje,autor:quemSou(),rpn:rpn?+rpn:null,st:"emitido",campos});
+      cfGravar(); document.getElementById("cf-rel").classList.remove("on"); pintar();
+    };
+    document.getElementById("cf-rel-x").onclick=()=>document.getElementById("cf-rel").classList.remove("on");
+    document.getElementById("cf-rl-fmea").onclick=()=>abrirRel("fmea",0);
+    document.getElementById("cf-rl-rca").onclick=()=>abrirRel("rca",0);
+    
+    /* e-mail por evento — um por evento, para a engenharia */
+    (function(){
+      const a=cfFiltrada()[0]||D.ativos[0]; if(!a) return;
+      document.getElementById("cf-mail-evento").innerHTML =
+        '<div style="font-size:11.5px;color:var(--ink3);margin-bottom:8px"><b style="color:var(--ink2)">Para:</b> engenharia@gridco.com.br &nbsp;·&nbsp; '
+        +'<b style="color:var(--ink2)">Assunto:</b> [PCM] Evento novo · '+ROT[a.nivel].toUpperCase()+' · '+esc(a.nome.slice(0,40))+' · '+esc(a.usina)+'</div>'
+        +'<p style="margin:0 0 8px">O ativo <b>'+esc(a.nome)+'</b> ('+esc(a.cod)+') entrou em <b>'+ROT[a.nivel]+'</b> em '+hoje+'.</p>'
+        +'<table class="cf-tab" style="max-width:520px"><tbody>'
+        +'<tr><td>Por quê</td><td>'+a.n30+' corretivas em 30 dias · '+a.n7+' nos últimos 7 · P90 da família é '+a.p90+'</td></tr>'
+        +'<tr><td>Criticidade</td><td>Classe '+a.crit+'</td></tr>'
+        +(a.disp!=null?'<tr><td>Confiabilidade</td><td>MTBF '+Math.round(a.mtbf)+' h · MTTR '+a.mttr.toFixed(1)+' h · disp. '+(100*a.disp).toFixed(1)+'%</td></tr>':'')
+        +'<tr><td>Última OS</td><td>#'+esc(a.os[0].os)+' · '+esc(a.os[0].t)+' · '+esc(a.os[0].d)+'</td></tr>'
+        +'</tbody></table>'
+        +'<p style="margin:8px 0 0;font-size:11.5px;color:var(--ink3)">Abrir no painel → assumir o ticket → emitir FMEA ou Causa Raiz. Responder este e-mail não registra nada.</p>';
+    })();
+    document.querySelectorAll(".cf-aba").forEach(b => b.onclick = () => { CF_ABA = b.dataset.cp; cfPintar(); });
+  }
 
   function fecharPops(){ document.querySelectorAll(".f-pop").forEach(p=>p.remove()); }
   document.addEventListener("click", () => { POP = null; fecharPops();

@@ -20,6 +20,7 @@ regra do `novo.html` como fonte (§1, "Onde o código realmente mora").
 |---|---|---|
 | `semanal.yml` | `atualizacao_semanal.py` + `gerar_pcm_json.py` + `gerar_etiquetas_json.py` → `banco_dados.json`, `etiquetas.json` | cron diz `*/15`; **medido: ~38 min** |
 | `gestao-pcm.yml` | `gerar_gestao_pcm_json.py` → `gestao_pcm.json` | idem |
+| `gestao-pcm.yml` (passo a incluir) | `gerar_engenharia_json.py` → `engenharia.json` | **ainda não roda na nuvem** — ver §3 |
 | `azure-swa.yml` | deploy do painel no Azure SWA | ao fim de cada robô (ver §3) |
 
 **Não confie no `*/15`.** Medição de 21/08, 12 execuções: intervalos de 28, 34,
@@ -44,6 +45,40 @@ Nada agendado — se ninguém abrir o programa, não acontece:
 
 **A Gestão MPAS é o caso mais frágil:** a fonte é o `Gerencial - PCM_2026_R00.xlsx`
 no OneDrive, que a nuvem não enxerga. Esse JSON só atualiza por ação manual.
+
+### Confiabilidade — módulo de engenharia (03/09)
+
+Tela `conf` no `novo.html` (seção **Engenharia** da barra), só admin/equipe
+(`TELAS_ADMIN`); o `engenharia.json` já cai na rota `/*.json` → admin/equipe.
+Dado: `gerar_engenharia_json.py` lê **todas** as `work_orders` do Fracttal (31 mil,
+~6 min), fica com as Corretivas dos últimos 30 dias e escreve, por ativo: dimensões
+A/B/D do Engenheiro Preventivo, nível, criticidade **proxy por família**
+(`critProxy: true` — a matriz do cap. 4 do PCM Descomplicado nunca foi preenchida),
+MTBF/MTTR/disp casados do `confiabilidade.json` por nome, e as OS com texto, tipo
+e nota do técnico (alimentam o pré-preenchimento do FMEA).
+
+**Serviço não é falha.** "Limpeza dos sensores" chega como Corretiva. O robô marca
+`servico` por padrão no texto e a dimensão A conta só falhas; o ativo fica visível
+com `soServico` para a engenharia reclassificar no Fracttal.
+
+**Etapa 1 (hoje):** tickets e relatórios FMEA/Causa Raiz emitidos vivem em
+`localStorage` (`pcm_conf_tickets_v1`, `pcm_conf_relatorios_v1`) — somem ao trocar
+de navegador. Etapa 2: `/api/ticket` gravando JSON no repositório. Etapa 3: e-mail
+por evento e por emissão pelo SMTP do `atualizacao_semanal.py`. O botão de
+rascunho por IA do mockup **não subiu** — manda notas de OS para API externa; só
+com aval.
+
+O módulo foi gerado a partir de um mockup por `_integrar_novo.py` (sessão de
+03/09) e **colado no `novo.html`; o HTML é a fonte**, como o resto. Classes têm
+prefixo `cf-` porque `pill`, `at`, `hist`, `rel`, `cri`, `ruim` já existiam.
+Cuidado ao editar: o `ligar()` do painel captura `[data-i]`, `[data-f]` e `.ftxt`
+em toda a página — o módulo usa `data-ci`, `data-cff`, `data-cp` e `.cf-sel` para
+não cair nesses handlers.
+
+Achado do dado (03/09): a **disponibilidade agregada por cliente/usina** no
+`confiabilidade.json` soma as falhas de todos os ativos e o MTBF encolhe com a
+frota — Athon sai com 14%. Só o nível de ativo é honesto. A tela avisa; o ajuste
+no robô que gera o arquivo está pendente.
 
 ### Onde o código realmente mora
 
@@ -92,6 +127,10 @@ As planilhas de origem existem no OneDrive: `Lista_Prioridades_GridCo.xlsx` e
 ## 3. O que está quebrado ou pendente
 
 ### Bloqueia uso
+
+- **`engenharia.json` não se atualiza sozinho.** O passo do robô ainda não está no
+  `gestao-pcm.yml` (meu PAT não tem escopo `workflow`). Até o Fillipe incluir o passo,
+  o arquivo é o da última rodada manual (03/09 18:25). Ver o snippet no §3 abaixo.
 
 **Nenhum item aberto** desde 21/08 17:15. Os três que bloqueavam foram fechados:
 app settings do Fracttal, gatilho do deploy e acesso da equipe.
