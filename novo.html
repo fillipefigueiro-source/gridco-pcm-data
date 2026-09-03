@@ -2277,9 +2277,11 @@ function arrancar(){
      atualizar. São duas mesmo, e diferentes:
        · recarregar  — rebusca o que o robô JÁ publicou. Instantâneo.
        · acordar     — dispara o robô para buscar no Fracttal. ~7 min, só admin.
-     E só a Semana: o gestao-pcm.yml não escuta o repository_dispatch, então a
-     Gestão PCM segue o ciclo dela. A tela diz isso — não adianta o botão
-     prometer o que o pipeline não entrega. */
+     Desde 03/09/2026 as DUAS origens: o gestao-pcm.yml passou a escutar o
+     repository_dispatch. E para a Gestão PCM o botão não é conveniência: o cron
+     dela pede de 15 em 15 min, mas o GitHub estrangula agendamento em
+     repositório público, e o intervalo REAL medido foi de 218 min em média,
+     variando de 2h a 4h44. Sem o botão, a espera é de quase quatro horas. */
   let FR_ABERTO = false, FR_MSG = null, FR_OCUP = false;
 
   /* O robô grava o gestao_pcm.json SEM fuso (datetime.now() rodando em UTC no
@@ -2326,7 +2328,7 @@ function arrancar(){
           + '<small>busca de novo o que o robô já publicou · instantâneo</small></button>'
           + (ehAdmin
             ? '<button class="fr-bt" id="fr-aco"' + (FR_OCUP ? " disabled" : "") + '>Acordar o robô'
-              + '<small>busca no Fracttal e republica · leva ~7 min · só a Semana</small></button>'
+              + '<small>busca no Fracttal e republica · leva ~7 min · as duas origens</small></button>'
             : '')
           + '</div>'
           + (FR_MSG ? '<div class="fr-prog' + (FR_MSG.mal ? " mal" : "") + '"><b>'
@@ -2357,7 +2359,7 @@ function arrancar(){
       const j = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(j.erro || ("HTTP " + r.status));
       FR_MSG = { t:"Robô acordado.",
-                 s:"leva ~7 min. Recarregue quando terminar — só a Semana muda." };
+                 s:"leva ~7 min. Recarregue quando terminar." };
     } catch (e) {
       FR_MSG = { t:"Não deu para acordar.", s:e.message, mal:true };
     }
