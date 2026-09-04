@@ -845,7 +845,7 @@ tbody tr:hover{background:var(--surf2)}
   box-shadow:0 20px 60px rgba(0,0,0,.4);font-size:12px;line-height:1.45}
 .fo-top{display:flex;align-items:flex-start;gap:14px;border-bottom:3px solid #A9DB21;padding-bottom:12px;margin-bottom:14px}
 .fo-top .logo{font-weight:800;font-size:18px;letter-spacing:-.02em}.fo-top .logo i{font-style:normal;color:#5f7f08}
-.fo-top .tit{flex:1}.fo-top h2{margin:0;font-size:17px;font-weight:800}.fo-top .sub{font-size:11px;color:#68667d;margin-top:2px}
+.fo-top .tit{flex:1;min-width:0}.fo-top h2{margin:0;font-size:17px;font-weight:800;line-height:1.25}.fo-top .sub{font-size:11px;color:#68667d;margin-top:2px}
 .fo-top .num{text-align:right;font-family:ui-monospace,Consolas,monospace;font-size:11.5px;color:#3a3550}
 .fo-top .num b{display:block;font-size:14px;color:#191528}
 .fo-sec{margin:14px 0 6px;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#68667d;
@@ -922,7 +922,17 @@ tbody tr:hover{background:var(--surf2)}
 .cf-tab th.ord{cursor:pointer;user-select:none}.cf-tab th.ord:hover{color:var(--ink)}
 .cf-tab th.ord.on::after{content:" ▾";color:var(--gd)}
 .cf-tab td .cf-bar{display:inline-block;height:5px;border-radius:3px;background:var(--ink3);opacity:.35;vertical-align:middle;margin-right:5px}
-.fo-top .marca{height:26px;width:auto;display:block}
+/* a folha é papel: cores fixas, imune ao tema escuro e às regras globais do painel */
+.cf-folha table{min-width:0;width:100%;table-layout:auto}
+.cf-folha td,.cf-folha th,.cf-folha p,.cf-folha div,.cf-folha span,.cf-folha b,.cf-folha small{color:#191528}
+.cf-folha .fo-tab th,.cf-folha .fo-c small,.cf-folha .fo-sec,.cf-folha .fo-pe,.cf-folha .fo-top .sub,.cf-folha .fo-ass div,.cf-folha .fo-c .b,.cf-folha .cf-pq .w small{color:#68667d}
+.cf-folha .fo-sec .p{color:#5f7f08}
+.cf-folha input,.cf-folha select,.cf-folha textarea{color:#191528;font-family:inherit}
+.cf-folha select{background:#fbfbe8;border:1px solid #cbcbdd}
+.cf-folha td{overflow-wrap:anywhere}
+.fo-top .logo{flex:0 0 auto;padding-top:2px}
+.fo-top .cf-marca{height:28px;width:auto;display:block}
+@media print{.fo-top .cf-marca{height:24px}}
 /* aba relatórios */
 .cf-rl-novo{display:flex;gap:8px;flex-wrap:wrap;padding:12px 15px;border-bottom:1px solid var(--line)}
 /* gaveta — mesma da OS */

@@ -51,6 +51,8 @@ RX_SERVICO = re.compile(
     r"\breset\b|vistoria|inventári|levantamento|instala[çc][ãa]o de|treinamento|acompanhamento",
     re.I)
 RX_TESTE = re.compile(r"\bTESTE\b", re.I)
+# "TESTE100-NCU1": o \b não separa o E do 1 — código de teste precisa de outra regra.
+RX_TESTE_COD = re.compile(r"^TESTE|TESTE\d|\bTESTE\b", re.I)
 RX_COD = re.compile(r"\{\s*([A-Z0-9][A-Z0-9\-\.]+)\s*\}")
 
 # Criticidade proxy por família: 5 critérios 0–3 multiplicados (cap. 4).
@@ -119,6 +121,10 @@ def coletar(client, inicio):
         cod = m.group(1) if m else str(row.get("code") or "").strip()
         if not cod:
             sem_cod += 1
+            continue
+        # Ativo de teste vem com código TESTE100-xxx e nome limpo ("NCU 1"):
+        # o nome não denuncia, o código sim. Visto em produção em 04/09.
+        if RX_TESTE_COD.search(cod) or RX_TESTE_COD.search(str(row.get("groups_1_description") or "")):
             continue
         tarefa = str(row.get("description") or row.get("tasks_description") or "")
         nota = str(row.get("task_note") or "").strip()
