@@ -41,6 +41,14 @@ jobs:
           PCM_PROG_DIR: ${{ github.workspace }}
           GESTAO_AUXILIAR_PATH: ${{ github.workspace }}/AUXILIAR_gestao.xlsx
         run: python gerar_gestao_pcm_json.py
+        
+      - name: Gerar engenharia.json (módulo Confiabilidade)
+        env:
+          FRACTTAL_CLIENT_ID: ${{ secrets.FRACTTAL_CLIENT_ID }}
+          FRACTTAL_CLIENT_SECRET: ${{ secrets.FRACTTAL_CLIENT_SECRET }}
+          FRACTTAL_BASE_URL: https://app.fracttal.com/api/
+          PCM_PROG_DIR: ${{ github.workspace }}
+        run: python gerar_engenharia_json.py
 
       - name: Publicar só se os dados mudaram (anti-churn)
         run: |
@@ -53,7 +61,7 @@ jobs:
           echo "$NEW_HASH" > _gestao_pcm_published_hash.txt
           git config user.name  "gestao-pcm-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add gestao_pcm.json _gestao_pcm_published_hash.txt
+          git add gestao_pcm.json _gestao_pcm_published_hash.txt engenharia.json
           git commit -m "chore: refresh gestao_pcm.json [auto ${NEW_HASH:0:8}]"
           for i in 1 2 3 4 5; do
             git pull --rebase --autostash origin main || true
