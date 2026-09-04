@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-04T06:30:48Z",
+  "geradoEm": "2026-09-04T09:19:06Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4100,
-        "emAberto": 24,
+        "total": 4101,
+        "emAberto": 25,
         "atrasadas": 19,
         "concluidas30d": 646,
         "concluidas7d": 156,
-        "naSemanaCorrente": 118
+        "naSemanaCorrente": 119
       },
       "mttr": {
         "horas": 17.6,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W36",
-          "criadas": 124,
+          "criadas": 125,
           "finalizadas": 121
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4100,
-            "emAberto": 24
+            "total": 4101,
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -73,21 +73,21 @@
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 179,
-            "emAberto": 1
+            "total": 180,
+            "emAberto": 2
           }
         ]
       },
-      "total": 24,
+      "total": 25,
       "atrasadas": 19,
       "porStatus": {
         "naoIniciada": 22,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -435,20 +435,39 @@
           "atrasada": true
         },
         {
-          "osId": "12965",
-          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+          "osId": "12966",
+          "ativo": "Cabine 1 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-CABN1 }",
           "equipe": "",
-          "responsavel": "Railson Gomes ",
+          "responsavel": "Wesllen  Castro",
           "criadoPor": "GerdesonAraújo",
-          "supervisor": "Railson Gomes ",
+          "supervisor": "Wesllen  Castro",
           "status": "Não Iniciada",
-          "tarefa": "[RenoGrid - Crateús 1 - CE] - Religamento do RenoGrid - Crateús 1 - CE",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
           "criticidade": "",
           "dataProgramada": "2026-09-04",
           "dataCriacao": "2026-09-04",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12965",
+          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Railson Gomes ",
+          "status": "Em progresso",
+          "tarefa": "[RenoGrid - Crateús 1 - CE] - Religamento do RenoGrid - Crateús 1 - CE",
+          "criticidade": "",
+          "dataProgramada": "2026-09-04",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-04",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3530,9 +3549,9 @@
       "historicoTotal": 1777,
       "subClassificacao": {
         "remoto": 754,
-        "local": 3346,
+        "local": 3347,
         "remotoEmAberto": 10,
-        "localEmAberto": 14,
+        "localEmAberto": 15,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -15952,20 +15971,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "12965",
-      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+      "osId": "12966",
+      "ativo": "Cabine 1 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-CABN1 }",
       "equipe": "",
-      "responsavel": "Railson Gomes ",
+      "responsavel": "Wesllen  Castro",
       "criadoPor": "GerdesonAraújo",
-      "supervisor": "Railson Gomes ",
+      "supervisor": "Wesllen  Castro",
       "status": "Não Iniciada",
-      "tarefa": "[RenoGrid - Crateús 1 - CE] - Religamento do RenoGrid - Crateús 1 - CE",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
       "criticidade": "",
       "dataProgramada": "2026-09-04",
       "dataCriacao": "2026-09-04",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "12965",
+      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Railson Gomes ",
+      "status": "Em progresso",
+      "tarefa": "[RenoGrid - Crateús 1 - CE] - Religamento do RenoGrid - Crateús 1 - CE",
+      "criticidade": "",
+      "dataProgramada": "2026-09-04",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "2026-09-04",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -22806,7 +22843,7 @@
     }
   ],
   "historicoTotal": 2772,
-  "totalGeral": 5820,
+  "totalGeral": 5821,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
