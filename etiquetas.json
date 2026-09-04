@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-04T18:09:14Z",
+  "geradoEm": "2026-09-04T18:21:47Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4123,
-        "emAberto": 26,
+        "emAberto": 25,
         "atrasadas": 14,
-        "concluidas30d": 667,
-        "concluidas7d": 177,
+        "concluidas30d": 668,
+        "concluidas7d": 178,
         "naSemanaCorrente": 139
       },
       "mttr": {
-        "horas": 17.18,
-        "label": "17h 11min",
-        "amostra": 667
+        "horas": 17.16,
+        "label": "17h 10min",
+        "amostra": 668
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W36",
           "criadas": 147,
-          "finalizadas": 142
+          "finalizadas": 143
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4123,
-            "emAberto": 26
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 26,
+      "total": 25,
       "atrasadas": 14,
       "porStatus": {
-        "naoIniciada": 25,
+        "naoIniciada": 23,
         "emProgresso": 0,
-        "pausada": 1,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 26
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -344,24 +344,6 @@
           "atrasada": true
         },
         {
-          "osId": "13041",
-          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Adriano  Moraes",
-          "status": "Não Iniciada",
-          "tarefa": "[2C-APG100] - Religamento do 2C-APG100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-04",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "13032",
           "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
           "equipe": "",
@@ -386,14 +368,15 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[IND100-CABN1] - Religamento do IND100-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-09-04",
           "dataCriacao": "2026-09-04",
-          "dataInicial": "",
+          "dataInicial": "2026-09-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -561,6 +544,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13041",
+          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Adriano  Moraes",
+          "status": "Finalizados",
+          "tarefa": "[2C-APG100] - Religamento do 2C-APG100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-04",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-04",
+          "dataFinal": "2026-09-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "13031",
           "ativo": "2C - Tupi Paulista 1 e 2 - SP  Tupi Paulista  São Paulo Brasil { 2C-TPP100 }",
@@ -3502,26 +3505,6 @@
           "atrasada": false
         },
         {
-          "osId": "10617",
-          "ativo": "Cabine 2 Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Railson Gomes ",
-          "status": "Finalizados",
-          "tarefa": "[Cabine 2] - Religamento da Cabine 2",
-          "criticidade": "",
-          "dataProgramada": "2026-08-04",
-          "dataCriacao": "2026-08-04",
-          "dataInicial": "2026-08-04",
-          "dataFinal": "2026-08-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9263",
           "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
           "equipe": "",
@@ -3562,12 +3545,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1798,
+      "historicoTotal": 1799,
       "subClassificacao": {
         "remoto": 756,
         "local": 3367,
         "remotoEmAberto": 12,
-        "localEmAberto": 14,
+        "localEmAberto": 13,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -15930,23 +15913,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "13041",
-      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Adriano  Moraes",
-      "status": "Não Iniciada",
-      "tarefa": "[2C-APG100] - Religamento do 2C-APG100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-04",
-      "dataCriacao": "2026-09-04",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "13040",
       "ativo": "Inversor 1.9 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.9 }",
       "equipe": "",
@@ -16034,14 +16000,15 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[IND100-CABN1] - Religamento do IND100-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-09-04",
       "dataCriacao": "2026-09-04",
-      "dataInicial": "",
+      "dataInicial": "2026-09-04",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -20281,6 +20248,26 @@
       "atrasada": false
     },
     {
+      "osId": "13041",
+      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Adriano  Moraes",
+      "status": "Finalizados",
+      "tarefa": "[2C-APG100] - Religamento do 2C-APG100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-04",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "2026-09-04",
+      "dataFinal": "2026-09-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13031",
       "ativo": "2C - Tupi Paulista 1 e 2 - SP  Tupi Paulista  São Paulo Brasil { 2C-TPP100 }",
       "equipe": "",
@@ -22754,28 +22741,9 @@
       "horasAteAbrir": 96.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12411",
-      "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Ana Barros",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-01",
-      "dataCriacao": "2026-08-28",
-      "dataInicial": "2026-09-01",
-      "dataFinal": "2026-09-01",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2812,
+  "historicoTotal": 2813,
   "totalGeral": 5860,
   "verificacao": {
     "total": 0,
