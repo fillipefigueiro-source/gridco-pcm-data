@@ -298,6 +298,14 @@ def main():
     os.replace(tmp, SAIDA)
     log(f"{SAIDA}: {len(lista)} ativos com sinal ({kpi['criticos']} críticos) | "
         f"{kpi['corretivas']} corretivas | {os.path.getsize(SAIDA)/1024:.0f} KB | hash {saida['dataHash'][:8]}")
+
+    # Etapa 3: e-mails (evento novo, relatório emitido, ticket sem dono, resumo
+    # semanal). Nunca derruba o robô: sem SMTP ele decide, loga e grava o estado.
+    try:
+        import notificar_engenharia
+        notificar_engenharia.rodar(saida)
+    except Exception as e:
+        log(f"notificar_engenharia falhou ({type(e).__name__}: {e}) — o JSON já está gravado", "WARN")
     return 0
 
 

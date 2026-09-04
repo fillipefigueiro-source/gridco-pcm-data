@@ -68,10 +68,19 @@ token é o mesmo `GITHUB_DISPATCH_TOKEN` do `/api/acordar`. O arquivo está numa
 SUBPASTA de propósito: o deploy do SWA dispara em `*.json` da raiz, e um commit por
 clique redeployaria o painel. Cada commit é a trilha (`pcm: ticket TK-0101 · analise ·
 Fulano · por quem`). `localStorage` virou cache e modo local sem `/.auth`; a barra de
-filtros avisa em vermelho quando a API não respondeu. Etapa 3: e-mail
-por evento e por emissão pelo SMTP do `atualizacao_semanal.py`. O botão de
-rascunho por IA do mockup **não subiu** — manda notas de OS para API externa; só
-com aval.
+filtros avisa em vermelho quando a API não respondeu.
+
+**Etapa 3 (04/09):** e-mail em `notificar_engenharia.py`, chamado no fim do
+`gerar_engenharia_json.py`. Quatro regras: evento novo → `ENG_EMAIL_PARA`; FMEA/RCA
+emitido → engenharia + responsável do cluster (corpo = a folha em HTML; o PDF sai do
+painel); ticket sem dono há 48 h → responsável + engenharia, a cada 48 h; resumo às
+segundas por responsável. Estado em `engenharia/notificacoes.json` — **tem de estar no
+`git add` do workflow**; sem isso toda rodada é "primeira" e nada é enviado (seguro,
+mas mudo). Primeira rodada = linha de base, zero e-mail; teto `ENG_EMAIL_MAX=20` por
+rodada. Mesmos Secrets do alerta diário (`SMTP_HOST/PORT/USER/PASS`, `MAIL_FROM`,
+`ALERTA_EMAIL_MAPA`) — que **nunca foram configurados na nuvem**: nenhum workflow os
+passa. `ENG_EMAIL_DUMP=<pasta>` grava .eml em vez de enviar (teste). O botão de
+rascunho por IA do mockup **não subiu** — manda notas de OS para API externa; só com aval.
 
 O módulo foi gerado a partir de um mockup por `_integrar_novo.py` (sessão de
 03/09) e **colado no `novo.html`; o HTML é a fonte**, como o resto. Classes têm
