@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-04T10:09:28Z",
+  "geradoEm": "2026-09-04T10:27:30Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4103,
-        "emAberto": 26,
-        "atrasadas": 20,
-        "concluidas30d": 647,
-        "concluidas7d": 157,
+        "emAberto": 25,
+        "atrasadas": 19,
+        "concluidas30d": 648,
+        "concluidas7d": 158,
         "naSemanaCorrente": 121
       },
       "mttr": {
-        "horas": 17.57,
-        "label": "17h 34min",
-        "amostra": 647
+        "horas": 17.58,
+        "label": "17h 35min",
+        "amostra": 648
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W36",
           "criadas": 127,
-          "finalizadas": 122
+          "finalizadas": 123
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4103,
-            "emAberto": 26
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 26,
-      "atrasadas": 20,
+      "total": 25,
+      "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 24,
-        "emProgresso": 0,
-        "pausada": 2,
+        "naoIniciada": 23,
+        "emProgresso": 1,
+        "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 26
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -314,14 +314,15 @@
           "responsavel": "Henri Almeida ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Henri Almeida ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.8] - Religamento do Inversor 1.8",
           "criticidade": "",
           "dataProgramada": "2026-09-03",
           "dataCriacao": "2026-09-04",
-          "dataInicial": "",
+          "dataInicial": "2026-09-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -412,25 +413,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "12898",
-          "ativo": "Inversor 1.2 Huawei     { THPN-NVL200-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Ronaldo  Silva",
-          "status": "pausado",
-          "tarefa": "[THPN-NVL200-INVR1.2] - Religamento do THPN-NVL200-INVR1.2",
-          "criticidade": "",
-          "dataProgramada": "2026-09-03",
-          "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-03",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -579,6 +561,26 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12898",
+          "ativo": "Inversor 1.2 Huawei     { THPN-NVL200-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[THPN-NVL200-INVR1.2] - Religamento do THPN-NVL200-INVR1.2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-03",
+          "dataCriacao": "2026-09-03",
+          "dataInicial": "2026-09-03",
+          "dataFinal": "2026-09-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 24.0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -2423,26 +2425,6 @@
           "atrasada": false
         },
         {
-          "osId": "7048",
-          "ativo": "Inversor 1.8 Sungrow     { ALT100-INVR1.8 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Anderson  Parente",
-          "status": "Finalizados",
-          "tarefa": "Religamento do inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-05-25",
-          "dataCriacao": "2026-05-25",
-          "dataInicial": "2026-05-25",
-          "dataFinal": "2026-08-27",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 2256.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11857",
           "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
           "equipe": "",
@@ -3563,12 +3545,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1778,
+      "historicoTotal": 1779,
       "subClassificacao": {
         "remoto": 754,
         "local": 3349,
         "remotoEmAberto": 10,
-        "localEmAberto": 16,
+        "localEmAberto": 15,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -15976,14 +15958,15 @@
       "responsavel": "Henri Almeida ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Henri Almeida ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.8] - Religamento do Inversor 1.8",
       "criticidade": "",
       "dataProgramada": "2026-09-03",
       "dataCriacao": "2026-09-04",
-      "dataInicial": "",
+      "dataInicial": "2026-09-04",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16381,24 +16364,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "12898",
-      "ativo": "Inversor 1.2 Huawei     { THPN-NVL200-INVR1.2 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Ronaldo  Silva",
-      "status": "pausado",
-      "tarefa": "[THPN-NVL200-INVR1.2] - Religamento do THPN-NVL200-INVR1.2",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
     },
     {
       "osId": "12888",
@@ -20661,6 +20626,26 @@
       "atrasada": false
     },
     {
+      "osId": "12898",
+      "ativo": "Inversor 1.2 Huawei     { THPN-NVL200-INVR1.2 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[THPN-NVL200-INVR1.2] - Religamento do THPN-NVL200-INVR1.2",
+      "criticidade": "",
+      "dataProgramada": "2026-09-03",
+      "dataCriacao": "2026-09-03",
+      "dataInicial": "2026-09-03",
+      "dataFinal": "2026-09-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 24.0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "12897",
       "ativo": "Cabine 1 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-CABN1 }",
       "equipe": "",
@@ -22820,28 +22805,9 @@
       "horasAteAbrir": 216.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12097",
-      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { STR100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Júlio Willers ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Júlio Willers ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.1] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-08-25",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-08-25",
-      "dataFinal": "2026-08-25",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2774,
+  "historicoTotal": 2775,
   "totalGeral": 5823,
   "verificacao": {
     "total": 0,
