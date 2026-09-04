@@ -61,9 +61,14 @@ e nota do técnico (alimentam o pré-preenchimento do FMEA).
 `servico` por padrão no texto e a dimensão A conta só falhas; o ativo fica visível
 com `soServico` para a engenharia reclassificar no Fracttal.
 
-**Etapa 1 (hoje):** tickets e relatórios FMEA/Causa Raiz emitidos vivem em
-`localStorage` (`pcm_conf_tickets_v1`, `pcm_conf_relatorios_v1`) — somem ao trocar
-de navegador. Etapa 2: `/api/ticket` gravando JSON no repositório. Etapa 3: e-mail
+**Etapa 2 (04/09):** tickets e relatórios vivem em `engenharia/tickets.json`, no
+repositório, via `/api/ticket` (GET devolve tudo; POST grava UMA operação — ticket ou
+relatório — com leitura→aplicação→gravação por sha e 4 tentativas em conflito). O
+token é o mesmo `GITHUB_DISPATCH_TOKEN` do `/api/acordar`. O arquivo está numa
+SUBPASTA de propósito: o deploy do SWA dispara em `*.json` da raiz, e um commit por
+clique redeployaria o painel. Cada commit é a trilha (`pcm: ticket TK-0101 · analise ·
+Fulano · por quem`). `localStorage` virou cache e modo local sem `/.auth`; a barra de
+filtros avisa em vermelho quando a API não respondeu. Etapa 3: e-mail
 por evento e por emissão pelo SMTP do `atualizacao_semanal.py`. O botão de
 rascunho por IA do mockup **não subiu** — manda notas de OS para API externa; só
 com aval.

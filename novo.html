@@ -3407,20 +3407,65 @@ function arrancar(){
       if (!r.ok) throw new Error("HTTP " + r.status);
       CF = await r.json();
       if (!CF || !Array.isArray(CF.ativos)) throw new Error("arquivo sem ativos");
+      await cfSincronizar();
       CF_ESTADO = "pronto";
     } catch (e) { CF_ESTADO = "erro"; CF_ERRO = e.message; }
     pintar();
   }
   function cfLer(k){ try { return JSON.parse(localStorage.getItem(k) || "null"); } catch(e){ return null; } }
-  function cfGravar(){
+  /* Onde o estado mora: /api/ticket grava engenharia/tickets.json no repositório
+     (etapa 2, 04/09). localStorage é só cache — e o único lugar quando não há
+     /.auth (uso local). CF_API diz em qual dos dois estamos, e a tela mostra. */
+  let CF_API = null, CF_SALVANDO = null;   // null = ainda não sabe | true | false
+  const cfTemAuth = () => !!(typeof window !== "undefined" && window.__SESSAO);
+  function cfCache(){
     try {
       if (CF_TK) localStorage.setItem(CF_LS_TK, JSON.stringify(CF_TK.map(t => Object.assign({}, t, { a: undefined, cod: t.a.cod }))));
       if (CF_REL) localStorage.setItem(CF_LS_REL, JSON.stringify(CF_REL));
     } catch(e){}
   }
+  async function cfSincronizar(){
+    if (!cfTemAuth()) { CF_API = false; return; }
+    try {
+      const r = await fetch("/api/ticket", { cache:"no-store" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      const e = await r.json();
+      CF_TK = (e.tickets || []).map(t => { const a = CF.ativos.find(x => x.cod === t.cod); return a ? Object.assign(t, { a }) : null; }).filter(Boolean);
+      CF_REL = e.relatorios || [];
+      CF_API = true; cfCache();
+    } catch (err) {
+      CF_API = false; CF_SALVANDO = { mal:true, t:"sem acesso ao /api/ticket (" + err.message + ") — usando a cópia local deste navegador" };
+    }
+  }
+  /* Grava UMA operação: um ticket ou um relatório. Nunca o estado inteiro —
+     dois engenheiros salvando ao mesmo tempo apagariam um ao outro. */
+  async function cfGravar(ticket, relatorio){
+    cfCache();
+    if (CF_API === false) return;
+    const corpo = ticket ? { op:"ticket", ticket: Object.assign({}, ticket, { a: undefined, cod: ticket.a.cod }) }
+                         : { op:"relatorio", relatorio };
+    CF_SALVANDO = { t:"salvando…" }; cfEstadoSalvar();
+    try {
+      const r = await fetch("/api/ticket", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(corpo) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.erro || ("HTTP " + r.status));
+      if (ticket && j.ticket && j.ticket.id !== ticket.id) ticket.id = j.ticket.id;   // id definitivo veio do servidor
+      if (relatorio && j.relatorio && j.relatorio.n !== relatorio.n) relatorio.n = j.relatorio.n;
+      CF_SALVANDO = { t:"salvo no repositório" }; cfCache();
+    } catch (err) {
+      CF_SALVANDO = { mal:true, t:"não gravou (" + err.message + ") — ficou só neste navegador" };
+    }
+    cfEstadoSalvar();
+  }
+  function cfEstadoSalvar(){
+    const el = document.getElementById("cf-g-salvo");
+    if (el && CF_SALVANDO) { el.textContent = CF_SALVANDO.t; el.style.color = CF_SALVANDO.mal ? "var(--mal)" : ""; }
+    const av = document.getElementById("cf-fil-aviso");
+    if (av) av.textContent = CF_API === false && cfTemAuth() ? "⚠ tickets em cópia local — o /api/ticket não respondeu" : "";
+  }
   function cfTickets(){
     if (CF_TK) return CF_TK;
-    const bruto = cfLer(CF_LS_TK) || [];
+    const bruto = cfLer(CF_LS_TK) || [];   // só chega aqui sem API (uso local)
     CF_TK = bruto.map(t => { const a = CF.ativos.find(x => x.cod === t.cod); return a ? Object.assign(t, { a }) : null; }).filter(Boolean);
     return CF_TK;
   }
@@ -3452,12 +3497,14 @@ function arrancar(){
     document.getElementById("cf-fil-rod").innerHTML =
       '<b>' + n + '</b> ativos com sinal, de <b>' + CF.kpi.ativosCorretiva + '</b> com corretiva em ' + CF.periodo.dias + ' dias'
       + '<button class="gp-chip ' + (CF_FIL.soFalha ? "on" : "") + '" id="cf-so-falha">Esconder serviço registrado como corretiva</button>'
-      + (Object.values(CF_FIL).some(v => v) ? '<button class="f-lim" id="cf-limpar">↺ Limpar</button>' : '');
+      + (Object.values(CF_FIL).some(v => v) ? '<button class="f-lim" id="cf-limpar">↺ Limpar</button>' : '')
+      + '<span id="cf-fil-aviso" style="margin-left:auto;font-size:11px;color:var(--mal);font-weight:700"></span>';
     document.querySelectorAll(".cf-sel").forEach(el => {
       el.onclick = e => e.stopPropagation();
       el.onchange = el.oninput = () => { CF_FIL[el.dataset.cfk] = el.value; cfPintar(); };
     });
     document.getElementById("cf-so-falha").onclick = () => { CF_FIL.soFalha = !CF_FIL.soFalha; cfPintar(); };
+    cfEstadoSalvar();
     const lim = document.getElementById("cf-limpar");
     if (lim) lim.onclick = () => { Object.keys(CF_FIL).forEach(k => CF_FIL[k] = k === "soFalha" ? false : ""); cfPintar(); };
   }
@@ -3489,6 +3536,11 @@ function arrancar(){
     const ROTE = {detectado:"Detectado",notificado:"Notificado",analise:"Em análise",acao:"Ação",verificado:"Verificado"};
     const TK = cfTickets();
     let PROX_TK = TK.reduce((m,t)=>Math.max(m, +t.id.slice(3)||0), 100) + 1;
+    const quemSou = () => (PAPEL_REAL && PAPEL_REAL.quem) || "painel";
+    const agoraIso = () => new Date().toISOString();
+    const diasDesde = iso => { const d = new Date(iso); return isNaN(d) ? 0 : Math.max(0, Math.floor((Date.now() - d.getTime()) / 86400000)); };
+    const quando = iso => { const d = new Date(iso); return isNaN(d) ? String(iso||"") : d.toLocaleString("pt-BR", { day:"2-digit", month:"2-digit", hour:"2-digit", minute:"2-digit" }); };
+    TK.forEach(t => { t.dias = diasDesde(t.abertoEm); });
     document.getElementById("cf-n-ativos").textContent = cfFiltrada().length;
     document.getElementById("cf-n-tickets").textContent = TK.filter(t=>t.etapa!=="verificado").length;
     
@@ -3531,13 +3583,14 @@ function arrancar(){
     document.getElementById("cf-n-tickets").textContent = TK.filter(t=>t.etapa!=="verificado").length;
     }
     function assumir(t, nome){
-      if (!t) return; cfGravar();
+      if (!t) return;
       const antes=t.resp; t.resp=nome||"—";
-      if (t.resp!=="—" && antes==="—"){ t.assumidoEm=0; if(t.etapa==="detectado"||t.etapa==="notificado"){t.etapa="analise";} t.hist.push({q:t.resp,t:"assumiu o ticket",d:"agora"}); }
-      else if (t.resp!=="—") t.hist.push({q:t.resp,t:"passou a responder",d:"agora"});
+      if (t.resp!=="—" && antes==="—"){ t.assumidoEm=agoraIso(); if(t.etapa==="detectado"||t.etapa==="notificado"){t.etapa="analise";} t.hist.push({q:t.resp,t:"assumiu o ticket",d:agoraIso()}); }
+      else if (t.resp!=="—" && antes!==t.resp) t.hist.push({q:t.resp,t:"passou a responder",d:agoraIso()});
+      cfGravar(t);
     }
     function avancar(t, etapa){
-      if (!t) return; cfGravar(); t.etapa=etapa; t.hist.push({q:t.resp==="—"?"—":t.resp,t:ROTE[etapa],d:"agora"});
+      if (!t || t.etapa===etapa) return; t.etapa=etapa; t.hist.push({q:t.resp==="—"?"—":t.resp,t:ROTE[etapa],d:agoraIso()}); cfGravar(t);
     }
     pintarTickets();
     
@@ -3559,7 +3612,7 @@ function arrancar(){
         return {k:u.usina, sub:u.cliente, cols:[u.ativos,u.n,ev.length,tk.filter(abertos).length,u.abaixo85,tk.filter(t=>t.etapa==="verificado").length,u.mtbf!=null?u.mtbf.toFixed(0):"—",u.mttr!=null?u.mttr.toFixed(1):"—",u.disp]};});
       return D.equipe.map(e=>{
         const tk=TK.filter(t=>t.resp===e.nome), ab=tk.filter(abertos), ver=tk.filter(t=>t.etapa==="verificado");
-        const ass=tk.filter(t=>t.assumidoEm!=null), tma=ass.length?(ass.reduce((x,t)=>x+t.assumidoEm,0)/ass.length).toFixed(1)+" d":"—";
+        const ass=tk.filter(t=>t.assumidoEm), tma=ass.length?(ass.reduce((x,t)=>x+Math.max(0,(new Date(t.assumidoEm)-new Date(t.abertoEm))/86400000),0)/ass.length).toFixed(1)+" d":"—";
         const rel=REL.filter(r=>r.autor===e.nome||r.autor===e.email).length;
         return {k:e.nome, sub:e.email, cols:[e.clusters,tk.length,ab.length,tk.filter(t=>t.etapa==="analise").length,tk.filter(t=>t.etapa==="acao").length,ver.length,tma,rel,tk.filter(t=>t.reinc>0).length]};});
     }
@@ -3621,7 +3674,7 @@ function arrancar(){
           +'<div class="full"><label>Etapa</label><div class="cf-etapas">'+ETAPAS.map((e,k)=>'<button data-et="'+e+'" class="'+(k<idx?"feita":k===idx?"agora":"")+'">'+ROTE[e]+'</button>').join("")+'</div></div>'
           +'<div class="full"><label>Nota da engenharia</label><textarea id="cf-g-nota" placeholder="o que foi visto, o que foi decidido">'+esc(t.nota)+'</textarea></div>'
           +'</div>'
-          +'<div class="cf-hist">'+t.hist.map(h=>'<div><small>'+esc(h.d)+'</small><b>'+esc(h.q)+'</b> · '+esc(h.t)+'</div>').join("")+'</div>'
+          +'<div class="cf-hist">'+t.hist.map(h=>'<div><small>'+esc(quando(h.d))+'</small><b>'+esc(h.q)+'</b> · '+esc(h.t)+'</div>').join("")+'</div>'
           +'</div>':"")
         +'<div class="cf-gvs"><h5>Corretivas que pesaram</h5>'+a.os.map(o=>'<div class="cf-osi"><span class="n">#'+esc(o.os)+'</span><span>'+esc(o.t)+'<span class="d">'+esc(o.d)+' · '+esc(o.st)+'</span></span></div>').join("")+'</div>'
         +'<div class="cf-acao">'+(t?'<button class="bt forte" id="cf-g-salvar">Salvar ticket</button>':'<button class="bt forte" id="cf-g-abrir">Abrir ticket</button>')+'<button class="bt" data-rel="fmea" data-ci="'+i+'">Emitir FMEA</button>'+'<button class="bt" data-rel="rca" data-ci="'+i+'">Emitir Causa Raiz</button>'+'<button class="bt">Ver no Fracttal</button></div>';
@@ -3629,10 +3682,10 @@ function arrancar(){
       /* gestão: as ações mudam o estado em memória e redesenham — em produção vão ao banco do painel */
       const gs=document.getElementById("cf-g-salvar");
       if (gs) gs.onclick=()=>{ assumir(t, document.getElementById("cf-g-resp").value); t.prazo=document.getElementById("cf-g-prazo").value; t.nota=document.getElementById("cf-g-nota").value;
-        cfGravar(); pintarTickets(); pintarStats(); abrir(i); document.getElementById("cf-g-salvo").textContent="salvo"; };
+        cfGravar(t); pintarTickets(); pintarStats(); abrir(i); cfEstadoSalvar(); };
       document.querySelectorAll("#cf-gc .cf-etapas button").forEach(b=>b.onclick=()=>{ avancar(t,b.dataset.et); pintarTickets(); pintarStats(); abrir(i); });
       const ga=document.getElementById("cf-g-abrir");
-      if (ga) ga.onclick=()=>{ TK.push({id:"TK-"+String(PROX_TK++).padStart(4,"0"),a,etapa:"detectado",resp:"—",dias:0,reinc:0,assumidoEm:null,prazo:"",nota:"",hist:[{q:"manual",t:"Detectado",d:"agora"}]}); cfGravar(); pintarTickets(); pintarStats(); abrir(i); };
+      if (ga) ga.onclick=()=>{ TK.push({id:"TK-"+String(PROX_TK++).padStart(4,"0"),a,etapa:"detectado",resp:"—",dias:0,reinc:0,assumidoEm:null,prazo:"",nota:"",abertoEm:agoraIso(),hist:[{q:quemSou(),t:"Detectado",d:agoraIso()}]}); cfGravar(TK[TK.length-1]); pintarTickets(); pintarStats(); abrir(i); };
       document.getElementById("cf-gf").classList.add("on");document.getElementById("cf-gv").classList.add("on");
     }
     document.querySelectorAll(".cf-at,.cf-tk").forEach(b=>b.onclick=()=>abrir(+b.dataset.ci));
@@ -3704,7 +3757,6 @@ function arrancar(){
     const campo = (r,v,eng) => '<div class="fo-c"><small>'+r+'</small>'+(eng?inp(v,eng===true?"preencher":eng):'<b>'+esc(v)+'</b>')+'</div>';
     const sel10 = (id,v) => '<select data-cff="'+id+'">'+Array.from({length:10},(_,k)=>'<option'+(k+1===v?" selected":"")+'>'+(k+1)+'</option>').join("")+'</select>';
     const hoje = D.periodo.ate;
-    const quemSou = () => (PAPEL_REAL && PAPEL_REAL.quem) || "painel";
     function topo(tipo,num,a,sub){
       return '<div class="fo-top"><div class="logo">'+cfLogo()+'</div><div class="tit"><h2>'+tipo+'</h2><div class="sub">'+sub+'</div></div>'
         +'<div class="num"><b>'+num+'</b>Revisão R00 · '+hoje+'</div></div>';
@@ -3793,8 +3845,10 @@ function arrancar(){
       const f=document.getElementById("cf-folha"), tipo=REL_ATUAL.tipo==="fmea"?"FMEA":"Causa Raiz";
       const campos=[...f.querySelectorAll("input.cf-in,select")].map(x=>x.value);
       const rpn=(f.querySelector("#cf-rpn")||{}).textContent||null;
-      REL.unshift({n:cfProxNum(REL_ATUAL.tipo==="fmea"?"FMEA":"RCA"),tipo,rev:"R00",cod:a.cod,data:hoje,autor:quemSou(),rpn:rpn?+rpn:null,st:"emitido",campos});
-      cfGravar(); document.getElementById("cf-rel").classList.remove("on"); pintar();
+      const novo={n:cfProxNum(REL_ATUAL.tipo==="fmea"?"FMEA":"RCA"),tipo,rev:"R00",cod:a.cod,data:hoje,autor:quemSou(),rpn:rpn?+rpn:null,st:"emitido",campos};
+      REL.unshift(novo);
+      cfGravar(null, novo).then(() => pintar());
+      document.getElementById("cf-rel").classList.remove("on"); pintar();
     };
     document.getElementById("cf-rel-x").onclick=()=>document.getElementById("cf-rel").classList.remove("on");
     document.getElementById("cf-rl-fmea").onclick=()=>abrirRel("fmea",0);
