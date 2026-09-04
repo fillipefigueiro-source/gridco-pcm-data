@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-04T12:03:47Z",
+  "geradoEm": "2026-09-04T12:15:00Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -3790,8 +3790,8 @@
       "total": 118,
       "atrasadas": 63,
       "porStatus": {
-        "naoIniciada": 105,
-        "emProgresso": 1,
+        "naoIniciada": 104,
+        "emProgresso": 2,
         "pausada": 12,
         "verificacao": 0
       },
@@ -5077,14 +5077,15 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "Fabricio Barreto",
           "supervisor": "Adriano  Moraes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
           "dataCriacao": "2026-09-04",
-          "dataInicial": "",
+          "dataInicial": "2026-09-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -9524,16 +9525,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 678,
-        "emAberto": 83,
-        "atrasadas": 73,
-        "concluidas30d": 265,
-        "concluidas7d": 81,
+        "emAberto": 82,
+        "atrasadas": 72,
+        "concluidas30d": 266,
+        "concluidas7d": 82,
         "naSemanaCorrente": 59
       },
       "mttr": {
-        "horas": 223.7,
+        "horas": 223.04,
         "label": "9d 7h",
-        "amostra": 265
+        "amostra": 266
       },
       "tendencia4Semanas": [
         {
@@ -9554,7 +9555,7 @@
         {
           "semana": "W36",
           "criadas": 26,
-          "finalizadas": 70
+          "finalizadas": 71
         }
       ],
       "topOfensores": {
@@ -9562,7 +9563,7 @@
           {
             "nome": "(sem equipe)",
             "total": 678,
-            "emAberto": 83
+            "emAberto": 82
           }
         ],
         "responsaveis": [
@@ -9579,7 +9580,7 @@
           {
             "nome": "James Chaves",
             "total": 43,
-            "emAberto": 13
+            "emAberto": 12
           },
           {
             "nome": "Luiz  Silva",
@@ -9593,16 +9594,16 @@
           }
         ]
       },
-      "total": 83,
-      "atrasadas": 73,
+      "total": 82,
+      "atrasadas": 72,
       "porStatus": {
-        "naoIniciada": 72,
-        "emProgresso": 3,
-        "pausada": 8,
+        "naoIniciada": 71,
+        "emProgresso": 4,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 83
+        "(sem equipe)": 82
       },
       "oss": [
         {
@@ -10280,7 +10281,7 @@
           "responsavel": "Lucas Alberto Freitas de Faria ",
           "criadoPor": "LuelySantos",
           "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Inversor 3.3] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-08-25",
@@ -10720,23 +10721,6 @@
           "atrasada": true
         },
         {
-          "osId": "12749",
-          "ativo": "Inversor 3.3 Sungrow SUN2000-100KTL-H1    { MAB100-INVR3.3 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 3.3] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-03",
-          "dataCriacao": "2026-09-02",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "12741",
           "ativo": "Tracker 02.104 Brametal Bi-motor    { CPP100-ETKR2.104 }",
           "equipe": "",
@@ -11030,6 +11014,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "12749",
+          "ativo": "Inversor 3.3 Sungrow SUN2000-100KTL-H1    { MAB100-INVR3.3 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 3.3] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-03",
+          "dataCriacao": "2026-09-02",
+          "dataInicial": "2026-09-04",
+          "dataFinal": "2026-09-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "11752",
           "ativo": "Thopen - Rodrigues 2 - RN FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200 }",
@@ -13520,25 +13523,6 @@
           "atrasada": false
         },
         {
-          "osId": "8877",
-          "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "James Chaves ",
-          "status": "Finalizados",
-          "tarefa": "[MAB100][TR-120(ID SunOp)]",
-          "criticidade": "",
-          "dataProgramada": "2026-07-03",
-          "dataCriacao": "2026-07-02",
-          "dataInicial": "2026-07-27",
-          "dataFinal": "2026-07-27",
-          "linkFracttal": "",
-          "horasAteAbrir": 600.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9774",
           "ativo": "Inversor 1.10 Sungrow     { MAB100-INVR1.10 }",
           "equipe": "",
@@ -13881,7 +13865,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 547
+      "historicoTotal": 548
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15968,14 +15952,15 @@
       "responsavel": "Adriano  Moraes",
       "criadoPor": "Fabricio Barreto",
       "supervisor": "Adriano  Moraes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
       "dataCriacao": "2026-09-04",
-      "dataInicial": "",
+      "dataInicial": "2026-09-04",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "12967",
@@ -16452,22 +16437,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 48.0
-    },
-    {
-      "osId": "12749",
-      "ativo": "Inversor 3.3 Sungrow SUN2000-100KTL-H1    { MAB100-INVR3.3 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 3.3] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-09-02",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
     },
     {
       "osId": "12741",
@@ -17988,7 +17957,7 @@
       "responsavel": "Lucas Alberto Freitas de Faria ",
       "criadoPor": "LuelySantos",
       "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Inversor 3.3] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-08-25",
@@ -20974,6 +20943,25 @@
       "atrasada": false
     },
     {
+      "osId": "12749",
+      "ativo": "Inversor 3.3 Sungrow SUN2000-100KTL-H1    { MAB100-INVR3.3 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "James Chaves ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 3.3] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-09-03",
+      "dataCriacao": "2026-09-02",
+      "dataInicial": "2026-09-04",
+      "dataFinal": "2026-09-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "12748",
       "ativo": "Inversor 4.6 Huawei     { TIM100-INVR4.6 }",
       "equipe": "",
@@ -22682,29 +22670,9 @@
       "horasAteAbrir": 192.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12242",
-      "ativo": "Cabine 2  Santa Maria do Pará  Pará Brasil { SMP100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Felipe Silva",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizados",
-      "tarefa": "[Cabine 2] - Religamento da Cabine 2",
-      "criticidade": "",
-      "dataProgramada": "2026-08-26",
-      "dataCriacao": "2026-08-26",
-      "dataInicial": "2026-08-26",
-      "dataFinal": "2026-08-27",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2784,
+  "historicoTotal": 2785,
   "totalGeral": 5829,
   "verificacao": {
     "total": 0,
