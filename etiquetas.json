@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-04T10:39:42Z",
+  "geradoEm": "2026-09-04T10:51:37Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4103,
-        "emAberto": 25,
-        "atrasadas": 19,
-        "concluidas30d": 648,
-        "concluidas7d": 158,
+        "emAberto": 24,
+        "atrasadas": 18,
+        "concluidas30d": 649,
+        "concluidas7d": 159,
         "naSemanaCorrente": 121
       },
       "mttr": {
-        "horas": 17.58,
-        "label": "17h 35min",
-        "amostra": 648
+        "horas": 17.55,
+        "label": "17h 33min",
+        "amostra": 649
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W36",
           "criadas": 127,
-          "finalizadas": 123
+          "finalizadas": 124
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4103,
-            "emAberto": 25
+            "emAberto": 24
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 25,
-      "atrasadas": 19,
+      "total": 24,
+      "atrasadas": 18,
       "porStatus": {
-        "naoIniciada": 22,
-        "emProgresso": 2,
+        "naoIniciada": 20,
+        "emProgresso": 3,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 25
+        "(sem equipe)": 24
       },
       "oss": [
         {
@@ -308,25 +308,6 @@
           "atrasada": true
         },
         {
-          "osId": "12968",
-          "ativo": "Inversor 1.8 Huawei SUN2000-330KTL-H1    { APR300-INVR1.8 }",
-          "equipe": "",
-          "responsavel": "Henri Almeida ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Henri Almeida ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.8] - Religamento do Inversor 1.8",
-          "criticidade": "",
-          "dataProgramada": "2026-09-03",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "2026-09-04",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "12963",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -369,14 +350,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "GerdesonAraújo",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Religamento de usina",
           "criticidade": "",
           "dataProgramada": "2026-09-03",
           "dataCriacao": "2026-09-03",
-          "dataInicial": "",
+          "dataInicial": "2026-09-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -460,14 +442,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "GerdesonAraújo",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Cabine 1] - Religamento da Cabine 1",
           "criticidade": "",
           "dataProgramada": "2026-09-04",
           "dataCriacao": "2026-09-04",
-          "dataInicial": "",
+          "dataInicial": "2026-09-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -545,6 +528,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "12968",
+          "ativo": "Inversor 1.8 Huawei SUN2000-330KTL-H1    { APR300-INVR1.8 }",
+          "equipe": "",
+          "responsavel": "Henri Almeida ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Henri Almeida ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.8] - Religamento do Inversor 1.8",
+          "criticidade": "",
+          "dataProgramada": "2026-09-03",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-04",
+          "dataFinal": "2026-09-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "12965",
           "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
@@ -2406,26 +2409,6 @@
           "atrasada": false
         },
         {
-          "osId": "7551",
-          "ativo": "Inversor 1.2 Huawei     { THPN-NVL100-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
-          "tarefa": "Religamento do inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-06-08",
-          "dataCriacao": "2026-06-08",
-          "dataInicial": "2026-06-09",
-          "dataFinal": "2026-08-27",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 1896.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11857",
           "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
           "equipe": "",
@@ -3546,12 +3529,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1779,
+      "historicoTotal": 1780,
       "subClassificacao": {
         "remoto": 754,
         "local": 3349,
         "remotoEmAberto": 10,
-        "localEmAberto": 15,
+        "localEmAberto": 14,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -3846,8 +3829,8 @@
       "total": 119,
       "atrasadas": 64,
       "porStatus": {
-        "naoIniciada": 103,
-        "emProgresso": 1,
+        "naoIniciada": 102,
+        "emProgresso": 2,
         "pausada": 15,
         "verificacao": 0
       },
@@ -5272,14 +5255,15 @@
           "responsavel": "Andrick Gouveia ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Andrick Gouveia ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Inversor",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
           "dataCriacao": "2026-09-01",
-          "dataInicial": "",
+          "dataInicial": "2026-09-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 72.0,
           "atrasada": false
         },
         {
@@ -15953,24 +15937,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "12968",
-      "ativo": "Inversor 1.8 Huawei SUN2000-330KTL-H1    { APR300-INVR1.8 }",
-      "equipe": "",
-      "responsavel": "Henri Almeida ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Henri Almeida ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.8] - Religamento do Inversor 1.8",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-09-04",
-      "dataInicial": "2026-09-04",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "12967",
       "ativo": "Disjuntor do Inversor 5.2      { SMP100-DINV5.2 }",
       "equipe": "",
@@ -15994,14 +15960,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "GerdesonAraújo",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Cabine 1] - Religamento da Cabine 1",
       "criticidade": "",
       "dataProgramada": "2026-09-04",
       "dataCriacao": "2026-09-04",
-      "dataInicial": "",
+      "dataInicial": "2026-09-04",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16045,14 +16012,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "GerdesonAraújo",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Religamento de usina",
       "criticidade": "",
       "dataProgramada": "2026-09-03",
       "dataCriacao": "2026-09-03",
-      "dataInicial": "",
+      "dataInicial": "2026-09-04",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -17021,14 +16989,15 @@
       "responsavel": "Andrick Gouveia ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Andrick Gouveia ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Inversor",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
       "dataCriacao": "2026-09-01",
-      "dataInicial": "",
+      "dataInicial": "2026-09-04",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0
     },
     {
       "osId": "12675",
@@ -20251,6 +20220,26 @@
       "atrasada": false
     },
     {
+      "osId": "12968",
+      "ativo": "Inversor 1.8 Huawei SUN2000-330KTL-H1    { APR300-INVR1.8 }",
+      "equipe": "",
+      "responsavel": "Henri Almeida ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Henri Almeida ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.8] - Religamento do Inversor 1.8",
+      "criticidade": "",
+      "dataProgramada": "2026-09-03",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "2026-09-04",
+      "dataFinal": "2026-09-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "12965",
       "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
       "equipe": "",
@@ -22788,28 +22777,9 @@
       "horasAteAbrir": 240.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12111",
-      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { SBT500-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Adão Neto ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Adão Neto ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.1] - Inspeção geral dos inversores com baixa performance",
-      "criticidade": "",
-      "dataProgramada": "2026-08-31",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-09-02",
-      "dataFinal": "2026-09-02",
-      "linkFracttal": "",
-      "horasAteAbrir": 216.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2775,
+  "historicoTotal": 2776,
   "totalGeral": 5823,
   "verificacao": {
     "total": 0,
