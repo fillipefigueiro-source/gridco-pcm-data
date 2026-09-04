@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-04T14:04:13Z",
+  "geradoEm": "2026-09-04T14:14:15Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -3735,12 +3735,12 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 777,
-        "emAberto": 119,
+        "total": 780,
+        "emAberto": 122,
         "atrasadas": 63,
         "concluidas30d": 152,
         "concluidas7d": 62,
-        "naSemanaCorrente": 23
+        "naSemanaCorrente": 24
       },
       "mttr": {
         "horas": 320.21,
@@ -3765,7 +3765,7 @@
         },
         {
           "semana": "W36",
-          "criadas": 71,
+          "criadas": 74,
           "finalizadas": 40
         }
       ],
@@ -3773,8 +3773,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 777,
-            "emAberto": 119
+            "total": 780,
+            "emAberto": 122
           }
         ],
         "responsaveis": [
@@ -3785,36 +3785,36 @@
           },
           {
             "nome": "Marcos Duarte",
-            "total": 33,
-            "emAberto": 5
+            "total": 34,
+            "emAberto": 6
+          },
+          {
+            "nome": "Luiz  Silva",
+            "total": 31,
+            "emAberto": 7
+          },
+          {
+            "nome": "Felipe  Lima",
+            "total": 31,
+            "emAberto": 10
           },
           {
             "nome": "Francisco  Santos",
             "total": 31,
             "emAberto": 2
-          },
-          {
-            "nome": "Luiz  Silva",
-            "total": 30,
-            "emAberto": 6
-          },
-          {
-            "nome": "Felipe  Lima",
-            "total": 30,
-            "emAberto": 9
           }
         ]
       },
-      "total": 119,
+      "total": 122,
       "atrasadas": 63,
       "porStatus": {
-        "naoIniciada": 103,
-        "emProgresso": 4,
+        "naoIniciada": 105,
+        "emProgresso": 5,
         "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 119
+        "(sem equipe)": 122
       },
       "oss": [
         {
@@ -4973,6 +4973,23 @@
           "atrasada": false
         },
         {
+          "osId": "13011",
+          "ativo": "Transformador 1 TOTEX     { AXIS-LHN100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Axis] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-09-05",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "12991",
           "ativo": "Transformador 3 WEG     { THPN-INP100-TRFR3 }",
           "equipe": "",
@@ -5120,6 +5137,23 @@
           "criticidade": "",
           "dataProgramada": "2026-09-08",
           "dataCriacao": "2026-09-01",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "13013",
+          "ativo": "Nobreak 1      { TIM200-NBRK1 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Luiz  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
+          "criticidade": "",
+          "dataProgramada": "2026-09-09",
+          "dataCriacao": "2026-09-04",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -5483,6 +5517,23 @@
           "atrasada": false
         },
         {
+          "osId": "13012",
+          "ativo": "QGBT 1 Estrada Mun. Norimar Aparecida Brieda Piracicaba  São Paulo Brasil { PRB100-QGBT1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Felipe  Lima",
+          "status": "Não Iniciada",
+          "tarefa": "[Piracicaba] - Manutenção Corretiva e Investigação Térmica no QGBT (Pendências MPS)",
+          "criticidade": "",
+          "dataProgramada": "2026-09-11",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "12929",
           "ativo": "Cabine 1  Vargem Grande  Espirito Santo Brasil { VRG100-CABN1 }",
           "equipe": "",
@@ -5728,14 +5779,15 @@
           "responsavel": "Ailton Leal ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Ailton Leal ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[GreenYellow] - MPM - Infraestrutura",
           "criticidade": "",
           "dataProgramada": "2026-09-15",
           "dataCriacao": "2026-09-01",
-          "dataInicial": "",
+          "dataInicial": "2026-09-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 72.0,
           "atrasada": false
         },
         {
@@ -15864,6 +15916,54 @@
   },
   "ossPublicas": [
     {
+      "osId": "13013",
+      "ativo": "Nobreak 1      { TIM200-NBRK1 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Fabricio Barreto",
+      "supervisor": "Luiz  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
+      "criticidade": "",
+      "dataProgramada": "2026-09-09",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "13012",
+      "ativo": "QGBT 1 Estrada Mun. Norimar Aparecida Brieda Piracicaba  São Paulo Brasil { PRB100-QGBT1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Felipe  Lima",
+      "status": "Não Iniciada",
+      "tarefa": "[Piracicaba] - Manutenção Corretiva e Investigação Térmica no QGBT (Pendências MPS)",
+      "criticidade": "",
+      "dataProgramada": "2026-09-11",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "13011",
+      "ativo": "Transformador 1 TOTEX     { AXIS-LHN100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Fabricio Barreto",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Axis] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-09-05",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "13006",
       "ativo": "Estrutura Trackers 2ª Seção Colônia Tapejara, Lote N 152-Re, 153 e 154 Cidade Gaúcha  Paraná Brasil { THPN-CGH100-ETKR1 }",
       "equipe": "",
@@ -17071,14 +17171,15 @@
       "responsavel": "Ailton Leal ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Ailton Leal ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[GreenYellow] - MPM - Infraestrutura",
       "criticidade": "",
       "dataProgramada": "2026-09-15",
       "dataCriacao": "2026-09-01",
-      "dataInicial": "",
+      "dataInicial": "2026-09-04",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0
     },
     {
       "osId": "12663",
@@ -22645,7 +22746,7 @@
     }
   ],
   "historicoTotal": 2797,
-  "totalGeral": 5840,
+  "totalGeral": 5843,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
