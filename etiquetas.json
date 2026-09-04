@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-04T18:33:37Z",
+  "geradoEm": "2026-09-04T18:45:27Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4123,
-        "emAberto": 24,
+        "total": 4125,
+        "emAberto": 25,
         "atrasadas": 14,
-        "concluidas30d": 669,
-        "concluidas7d": 179,
-        "naSemanaCorrente": 139
+        "concluidas30d": 670,
+        "concluidas7d": 180,
+        "naSemanaCorrente": 141
       },
       "mttr": {
-        "horas": 17.13,
-        "label": "17h 8min",
-        "amostra": 669
+        "horas": 17.11,
+        "label": "17h 6min",
+        "amostra": 670
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W36",
-          "criadas": 147,
-          "finalizadas": 144
+          "criadas": 149,
+          "finalizadas": 145
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4123,
-            "emAberto": 24
+            "total": 4125,
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -68,7 +68,7 @@
           },
           {
             "nome": "Italo  Lustosa",
-            "total": 197,
+            "total": 198,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 25,
       "atrasadas": 14,
       "porStatus": {
         "naoIniciada": 22,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -344,20 +344,39 @@
           "atrasada": true
         },
         {
-          "osId": "13032",
-          "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
+          "osId": "13046",
+          "ativo": "Thopen - Coração 1 e 2 - SC Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100 }",
           "equipe": "",
-          "responsavel": "Janderson Miranda ",
+          "responsavel": "Ademir Necker ",
           "criadoPor": "ItaloLustosa",
-          "supervisor": "Janderson Miranda ",
+          "supervisor": "Ademir Necker ",
           "status": "Não Iniciada",
-          "tarefa": "[THPN-SDN100] - Religamento do THPN-SDN100",
+          "tarefa": "[Thopen - Coração 1 e 2 - SC] - Religamento do Thopen - Coração 1 e 2 - SC",
           "criticidade": "",
           "dataProgramada": "2026-09-04",
           "dataCriacao": "2026-09-04",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13032",
+          "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Janderson Miranda ",
+          "status": "Em progresso",
+          "tarefa": "[THPN-SDN100] - Religamento do THPN-SDN100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-04",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-04",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -526,6 +545,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13048",
+          "ativo": "Thopen - Córrego do Sapucaia 1 - ES Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100 }",
+          "equipe": "",
+          "responsavel": "Italo  Lustosa",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Italo  Lustosa",
+          "status": "Finalizados",
+          "tarefa": "[THPN-CDS100] - Religamento do THPN-CDS100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-04",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-04",
+          "dataFinal": "2026-09-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "13041",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
@@ -3467,26 +3506,6 @@
           "atrasada": false
         },
         {
-          "osId": "10626",
-          "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Thiago Morais ",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-04",
-          "dataCriacao": "2026-08-04",
-          "dataInicial": "2026-08-04",
-          "dataFinal": "2026-08-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9263",
           "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
           "equipe": "",
@@ -3527,12 +3546,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1800,
+      "historicoTotal": 1801,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3367,
+        "local": 3369,
         "remotoEmAberto": 12,
-        "localEmAberto": 12,
+        "localEmAberto": 13,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -8838,8 +8857,8 @@
       "total": 7,
       "atrasadas": 5,
       "porStatus": {
-        "naoIniciada": 5,
-        "emProgresso": 0,
+        "naoIniciada": 4,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
@@ -8941,14 +8960,15 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "Davi Damasceno ",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Abertura de chamado para garantia [Envio de TCU para o fabricante] - MAC: ZM0013A2004227CD2A",
           "criticidade": "",
           "dataProgramada": "2026-09-04",
           "dataCriacao": "2026-09-04",
-          "dataInicial": "",
+          "dataInicial": "2026-09-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -9644,16 +9664,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 681,
-        "emAberto": 76,
-        "atrasadas": 66,
-        "concluidas30d": 275,
-        "concluidas7d": 91,
+        "emAberto": 75,
+        "atrasadas": 65,
+        "concluidas30d": 276,
+        "concluidas7d": 92,
         "naSemanaCorrente": 60
       },
       "mttr": {
-        "horas": 232.49,
-        "label": "9d 16h",
-        "amostra": 275
+        "horas": 234.09,
+        "label": "9d 18h",
+        "amostra": 276
       },
       "tendencia4Semanas": [
         {
@@ -9674,7 +9694,7 @@
         {
           "semana": "W36",
           "criadas": 29,
-          "finalizadas": 79
+          "finalizadas": 80
         }
       ],
       "topOfensores": {
@@ -9682,7 +9702,7 @@
           {
             "nome": "(sem equipe)",
             "total": 681,
-            "emAberto": 76
+            "emAberto": 75
           }
         ],
         "responsaveis": [
@@ -9713,16 +9733,16 @@
           }
         ]
       },
-      "total": 76,
-      "atrasadas": 66,
+      "total": 75,
+      "atrasadas": 65,
       "porStatus": {
-        "naoIniciada": 66,
+        "naoIniciada": 65,
         "emProgresso": 5,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 76
+        "(sem equipe)": 75
       },
       "oss": [
         {
@@ -9991,25 +10011,8 @@
           "responsavel": "Felipe Xavier ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Felipe Xavier ",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.5] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10838",
-          "ativo": "Inversor 1.4 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Felipe Xavier ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Felipe Xavier ",
           "status": "Em progresso",
-          "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
+          "tarefa": "[Inversor 1.5] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
           "dataCriacao": "2026-08-07",
@@ -11179,6 +11182,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 312.0,
           "horasAteFechar": 24.0,
+          "atrasada": false
+        },
+        {
+          "osId": "10838",
+          "ativo": "Inversor 1.4 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Felipe Xavier ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-08-07",
+          "dataInicial": "2026-09-04",
+          "dataFinal": "2026-09-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 672.0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -13652,25 +13674,6 @@
           "atrasada": false
         },
         {
-          "osId": "9071",
-          "ativo": "Tracker 54.100 Axial 1V bilinha (um eixo de rotação horizontal)    { CAZ100-ETKR54.100 }",
-          "equipe": "",
-          "responsavel": "Gilson  Milhomem",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson  Milhomem",
-          "status": "Finalizados",
-          "tarefa": "[Céu Azul][TR-54-Skid 03] - Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-07",
-          "dataCriacao": "2026-07-07",
-          "dataInicial": "2026-07-15",
-          "dataFinal": "2026-07-15",
-          "linkFracttal": "",
-          "horasAteAbrir": 192.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9099",
           "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID1 }",
           "equipe": "",
@@ -13880,7 +13883,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 556
+      "historicoTotal": 557
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15912,6 +15915,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13046",
+      "ativo": "Thopen - Coração 1 e 2 - SC Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100 }",
+      "equipe": "",
+      "responsavel": "Ademir Necker ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Ademir Necker ",
+      "status": "Não Iniciada",
+      "tarefa": "[Thopen - Coração 1 e 2 - SC] - Religamento do Thopen - Coração 1 e 2 - SC",
+      "criticidade": "",
+      "dataProgramada": "2026-09-04",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13043",
       "ativo": "Cabine 1  Araçoiaba  São Paulo Brasil { ADS200-CABN1 }",
       "equipe": "",
@@ -15982,14 +16002,15 @@
       "responsavel": "Janderson Miranda ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-SDN100] - Religamento do THPN-SDN100",
       "criticidade": "",
       "dataProgramada": "2026-09-04",
       "dataCriacao": "2026-09-04",
-      "dataInicial": "",
+      "dataInicial": "2026-09-04",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16081,14 +16102,15 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "Davi Damasceno ",
       "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Abertura de chamado para garantia [Envio de TCU para o fabricante] - MAC: ZM0013A2004227CD2A",
       "criticidade": "",
       "dataProgramada": "2026-09-04",
       "dataCriacao": "2026-09-04",
-      "dataInicial": "",
+      "dataInicial": "2026-09-04",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "13005",
@@ -19204,24 +19226,8 @@
       "responsavel": "Felipe Xavier ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Felipe Xavier ",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.5] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-08-10",
-      "dataCriacao": "2026-08-07",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "10838",
-      "ativo": "Inversor 1.4 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Felipe Xavier ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Felipe Xavier ",
       "status": "Em progresso",
-      "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
+      "tarefa": "[Inversor 1.5] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-10",
       "dataCriacao": "2026-08-07",
@@ -20243,6 +20249,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 2880.0,
       "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "13048",
+      "ativo": "Thopen - Córrego do Sapucaia 1 - ES Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100 }",
+      "equipe": "",
+      "responsavel": "Italo  Lustosa",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Italo  Lustosa",
+      "status": "Finalizados",
+      "tarefa": "[THPN-CDS100] - Religamento do THPN-CDS100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-04",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "2026-09-04",
+      "dataFinal": "2026-09-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -22721,29 +22747,10 @@
       "horasAteAbrir": 72.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12414",
-      "ativo": "Inversor 1.9 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.9 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Ana Barros",
-      "supervisor": "Marcos Duarte ",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-01",
-      "dataCriacao": "2026-08-28",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "2026-09-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2814,
-  "totalGeral": 5861,
+  "historicoTotal": 2816,
+  "totalGeral": 5863,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
