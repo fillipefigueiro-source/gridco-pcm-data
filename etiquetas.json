@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-05T12:24:29Z",
+  "geradoEm": "2026-09-05T12:53:59Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4145,
-        "emAberto": 33,
+        "emAberto": 32,
         "atrasadas": 23,
-        "concluidas30d": 659,
-        "concluidas7d": 177,
+        "concluidas30d": 660,
+        "concluidas7d": 178,
         "naSemanaCorrente": 161
       },
       "mttr": {
-        "horas": 17.29,
-        "label": "17h 18min",
-        "amostra": 659
+        "horas": 17.27,
+        "label": "17h 16min",
+        "amostra": 660
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W36",
           "criadas": 169,
-          "finalizadas": 157
+          "finalizadas": 158
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4145,
-            "emAberto": 33
+            "emAberto": 32
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 33,
+      "total": 32,
       "atrasadas": 23,
       "porStatus": {
-        "naoIniciada": 29,
+        "naoIniciada": 28,
         "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 33
+        "(sem equipe)": 32
       },
       "oss": [
         {
@@ -386,14 +386,15 @@
           "responsavel": "Frank  Melo",
           "criadoPor": "David  Nascimento",
           "supervisor": "Frank  Melo",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-09-04",
           "dataCriacao": "2026-09-04",
-          "dataInicial": "",
+          "dataInicial": "2026-09-05",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -522,25 +523,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "13075",
-          "ativo": "Inversor 2.4 Huawei SUN2000-250KTL-H1    { FZL100-INVR2.4 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Em progresso",
-          "tarefa": "[FZL100-INVR2.4] - Religamento do FZL100-INVR2.4",
-          "criticidade": "",
-          "dataProgramada": "2026-09-05",
-          "dataCriacao": "2026-09-05",
-          "dataInicial": "2026-09-05",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -690,6 +672,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13075",
+          "ativo": "Inversor 2.4 Huawei SUN2000-250KTL-H1    { FZL100-INVR2.4 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "[FZL100-INVR2.4] - Religamento do FZL100-INVR2.4",
+          "criticidade": "",
+          "dataProgramada": "2026-09-05",
+          "dataCriacao": "2026-09-05",
+          "dataInicial": "2026-09-05",
+          "dataFinal": "2026-09-05",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "13071",
           "ativo": "RenoGrid - Nobres 1 - MT Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { RNGD-NBS100 }",
@@ -3491,26 +3493,6 @@
           "atrasada": false
         },
         {
-          "osId": "10735",
-          "ativo": "Cabine 2  Santa Maria do Pará  Pará Brasil { SMP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Felipe Silva",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Cabine 2] - Religamento da Cabine 2",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-08-06",
-          "dataInicial": "2026-08-07",
-          "dataFinal": "2026-08-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 72.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "10795",
           "ativo": "Cabine 4 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN4 }",
           "equipe": "",
@@ -3691,12 +3673,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1797,
+      "historicoTotal": 1798,
       "subClassificacao": {
         "remoto": 756,
         "local": 3389,
         "remotoEmAberto": 12,
-        "localEmAberto": 21,
+        "localEmAberto": 20,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -16130,24 +16112,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "13075",
-      "ativo": "Inversor 2.4 Huawei SUN2000-250KTL-H1    { FZL100-INVR2.4 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Em progresso",
-      "tarefa": "[FZL100-INVR2.4] - Religamento do FZL100-INVR2.4",
-      "criticidade": "",
-      "dataProgramada": "2026-09-05",
-      "dataCriacao": "2026-09-05",
-      "dataInicial": "2026-09-05",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "13074",
       "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
       "equipe": "",
@@ -16222,14 +16186,15 @@
       "responsavel": "Frank  Melo",
       "criadoPor": "David  Nascimento",
       "supervisor": "Frank  Melo",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-09-04",
       "dataCriacao": "2026-09-04",
-      "dataInicial": "",
+      "dataInicial": "2026-09-05",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -20619,6 +20584,26 @@
       "atrasada": false
     },
     {
+      "osId": "13075",
+      "ativo": "Inversor 2.4 Huawei SUN2000-250KTL-H1    { FZL100-INVR2.4 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Finalizados",
+      "tarefa": "[FZL100-INVR2.4] - Religamento do FZL100-INVR2.4",
+      "criticidade": "",
+      "dataProgramada": "2026-09-05",
+      "dataCriacao": "2026-09-05",
+      "dataInicial": "2026-09-05",
+      "dataFinal": "2026-09-05",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13071",
       "ativo": "RenoGrid - Nobres 1 - MT Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { RNGD-NBS100 }",
       "equipe": "",
@@ -23097,29 +23082,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "12444",
-      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
-      "equipe": "",
-      "responsavel": "Ademir Necker ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Ademir Necker ",
-      "status": "Finalizados",
-      "tarefa": "[Thopen - Guatambú 1 - SC] - Religamento do Thopen - Guatambú 1 - SC",
-      "criticidade": "",
-      "dataProgramada": "2026-08-29",
-      "dataCriacao": "2026-08-29",
-      "dataInicial": "2026-08-31",
-      "dataFinal": "2026-08-31",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2817,
+  "historicoTotal": 2818,
   "totalGeral": 5890,
   "verificacao": {
     "total": 0,
