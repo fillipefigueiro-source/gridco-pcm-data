@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-05T15:18:36Z",
+  "geradoEm": "2026-09-05T15:31:48Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4153,
-        "emAberto": 36,
+        "total": 4154,
+        "emAberto": 37,
         "atrasadas": 20,
         "concluidas30d": 664,
         "concluidas7d": 182,
-        "naSemanaCorrente": 169
+        "naSemanaCorrente": 170
       },
       "mttr": {
         "horas": 17.24,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W36",
-          "criadas": 177,
+          "criadas": 178,
           "finalizadas": 162
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4153,
-            "emAberto": 36
+            "total": 4154,
+            "emAberto": 37
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 36,
+      "total": 37,
       "atrasadas": 20,
       "porStatus": {
         "naoIniciada": 33,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 36
+        "(sem equipe)": 37
       },
       "oss": [
         {
@@ -454,6 +454,24 @@
           "atrasada": true
         },
         {
+          "osId": "13089",
+          "ativo": "Cabine 2  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Não Iniciada",
+          "tarefa": "[ADT100-CABN2] - Religamento do ADT100-CABN2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-05",
+          "dataCriacao": "2026-09-05",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "13088",
           "ativo": "Thopen - Indaiatuba 1 - SP Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { THPN-IND100 }",
           "equipe": "",
@@ -478,14 +496,15 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Adriano  Moraes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[2C-APG100] - Religamento do 2C-APG100",
           "criticidade": "",
           "dataProgramada": "2026-09-05",
           "dataCriacao": "2026-09-05",
-          "dataInicial": "",
+          "dataInicial": "2026-09-05",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3747,9 +3766,9 @@
       "historicoTotal": 1802,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3397,
+        "local": 3398,
         "remotoEmAberto": 12,
-        "localEmAberto": 24,
+        "localEmAberto": 25,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -16166,6 +16185,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13089",
+      "ativo": "Cabine 2  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Não Iniciada",
+      "tarefa": "[ADT100-CABN2] - Religamento do ADT100-CABN2",
+      "criticidade": "",
+      "dataProgramada": "2026-09-05",
+      "dataCriacao": "2026-09-05",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13088",
       "ativo": "Thopen - Indaiatuba 1 - SP Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { THPN-IND100 }",
       "equipe": "",
@@ -16189,14 +16225,15 @@
       "responsavel": "Adriano  Moraes",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Adriano  Moraes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[2C-APG100] - Religamento do 2C-APG100",
       "criticidade": "",
       "dataProgramada": "2026-09-05",
       "dataCriacao": "2026-09-05",
-      "dataInicial": "",
+      "dataInicial": "2026-09-05",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -23223,7 +23260,7 @@
     }
   ],
   "historicoTotal": 2822,
-  "totalGeral": 5898,
+  "totalGeral": 5899,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
