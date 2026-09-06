@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-06T08:39:24Z",
+  "geradoEm": "2026-09-06T10:30:40Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-08-31 .. 2026-09-06",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4164,
-        "emAberto": 39,
-        "atrasadas": 32,
+        "total": 4165,
+        "emAberto": 40,
+        "atrasadas": 33,
         "concluidas30d": 648,
         "concluidas7d": 178,
-        "naSemanaCorrente": 180
+        "naSemanaCorrente": 181
       },
       "mttr": {
         "horas": 17.56,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W36",
-          "criadas": 188,
+          "criadas": 189,
           "finalizadas": 170
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4164,
-            "emAberto": 39
+            "total": 4165,
+            "emAberto": 40
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 39,
-      "atrasadas": 32,
+      "total": 40,
+      "atrasadas": 33,
       "porStatus": {
         "naoIniciada": 35,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 39
+        "(sem equipe)": 40
       },
       "oss": [
         {
@@ -454,20 +454,39 @@
           "atrasada": true
         },
         {
-          "osId": "13102",
-          "ativo": "SKID 2 Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100-SKID2 }",
+          "osId": "13104",
+          "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
           "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Marcos Duarte ",
+          "responsavel": "Henri Almeida ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Henri Almeida ",
           "status": "Não Iniciada",
-          "tarefa": "[SKID 2] - Religamento do SKID 2",
+          "tarefa": "[THPN-STI100] - Religamento do THPN-STI100",
           "criticidade": "",
           "dataProgramada": "2026-09-05",
           "dataCriacao": "2026-09-06",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "13102",
+          "ativo": "SKID 2 Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100-SKID2 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Marcos Duarte ",
+          "status": "Em progresso",
+          "tarefa": "[SKID 2] - Religamento do SKID 2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-05",
+          "dataCriacao": "2026-09-06",
+          "dataInicial": "2026-09-06",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -3802,9 +3821,9 @@
       "historicoTotal": 1793,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3408,
+        "local": 3409,
         "remotoEmAberto": 12,
-        "localEmAberto": 27,
+        "localEmAberto": 28,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -16203,6 +16222,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13104",
+      "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
+      "equipe": "",
+      "responsavel": "Henri Almeida ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Henri Almeida ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-STI100] - Religamento do THPN-STI100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-05",
+      "dataCriacao": "2026-09-06",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13103",
       "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
       "equipe": "",
@@ -16226,14 +16262,15 @@
       "responsavel": "Marcos Duarte ",
       "criadoPor": "GerdesonAraújo",
       "supervisor": "Marcos Duarte ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[SKID 2] - Religamento do SKID 2",
       "criticidade": "",
       "dataProgramada": "2026-09-05",
       "dataCriacao": "2026-09-06",
-      "dataInicial": "",
+      "dataInicial": "2026-09-06",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -23295,7 +23332,7 @@
     }
   ],
   "historicoTotal": 2814,
-  "totalGeral": 5909,
+  "totalGeral": 5910,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
