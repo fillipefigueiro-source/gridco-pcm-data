@@ -1,7 +1,7 @@
 {
-  "geradoEm": "2026-09-06T20:51:36Z",
+  "geradoEm": "2026-09-07T00:58:59Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
-  "semana": "2026-08-31 .. 2026-09-06",
+  "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
@@ -10,22 +10,17 @@
       "kpis": {
         "total": 4184,
         "emAberto": 38,
-        "atrasadas": 30,
-        "concluidas30d": 669,
-        "concluidas7d": 199,
-        "naSemanaCorrente": 200
+        "atrasadas": 32,
+        "concluidas30d": 651,
+        "concluidas7d": 191,
+        "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 17.01,
-        "label": "17h 1min",
-        "amostra": 669
+        "horas": 17.37,
+        "label": "17h 22min",
+        "amostra": 651
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W33",
-          "criadas": 132,
-          "finalizadas": 136
-        },
         {
           "semana": "W34",
           "criadas": 153,
@@ -40,6 +35,11 @@
           "semana": "W36",
           "criadas": 208,
           "finalizadas": 191
+        },
+        {
+          "semana": "W37",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -79,7 +79,7 @@
         ]
       },
       "total": 38,
-      "atrasadas": 30,
+      "atrasadas": 32,
       "porStatus": {
         "naoIniciada": 34,
         "emProgresso": 1,
@@ -650,7 +650,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "13107",
@@ -668,7 +668,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "13000",
@@ -3781,7 +3781,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1814,
+      "historicoTotal": 1802,
       "subClassificacao": {
         "remoto": 756,
         "local": 3428,
@@ -4011,21 +4011,16 @@
         "total": 796,
         "emAberto": 133,
         "atrasadas": 64,
-        "concluidas30d": 149,
-        "concluidas7d": 46,
-        "naSemanaCorrente": 24
+        "concluidas30d": 146,
+        "concluidas7d": 45,
+        "naSemanaCorrente": 54
       },
       "mttr": {
-        "horas": 348.24,
-        "label": "14d 12h",
-        "amostra": 149
+        "horas": 350.3,
+        "label": "14d 14h",
+        "amostra": 146
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W33",
-          "criadas": 3,
-          "finalizadas": 17
-        },
         {
           "semana": "W34",
           "criadas": 11,
@@ -4040,6 +4035,11 @@
           "semana": "W36",
           "criadas": 90,
           "finalizadas": 45
+        },
+        {
+          "semana": "W37",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -9218,7 +9218,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 332
+      "historicoTotal": 329
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9230,7 +9230,7 @@
         "atrasadas": 6,
         "concluidas30d": 11,
         "concluidas7d": 1,
-        "naSemanaCorrente": 3
+        "naSemanaCorrente": 0
       },
       "mttr": {
         "horas": 471.27,
@@ -9238,11 +9238,6 @@
         "amostra": 11
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W33",
-          "criadas": 2,
-          "finalizadas": 3
-        },
         {
           "semana": "W34",
           "criadas": 1,
@@ -9257,6 +9252,11 @@
           "semana": "W36",
           "criadas": 3,
           "finalizadas": 1
+        },
+        {
+          "semana": "W37",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -10058,47 +10058,9 @@
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "7424",
-          "ativo": "Estrutura Trackers LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Athon-TIM100] - Retirada de 13 TCU's para Garantia",
-          "criticidade": "",
-          "dataProgramada": "2026-06-05",
-          "dataCriacao": "2026-06-05",
-          "dataInicial": "2026-06-08",
-          "dataFinal": "2026-06-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "7358",
-          "ativo": "Tracker 42.100 STI STI-H250    { THPN-TNB100-ETKR42.100 }",
-          "equipe": "",
-          "responsavel": "João  Neves",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "João  Neves",
-          "status": "Finalizada",
-          "tarefa": "Abertura de chamado para garantia [Reset]",
-          "criticidade": "",
-          "dataProgramada": "2026-06-08",
-          "dataCriacao": "2026-06-03",
-          "dataInicial": "2026-06-08",
-          "dataFinal": "2026-06-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 36
+      "historicoTotal": 34
     },
     "performance": {
       "label": "Performance",
@@ -10108,21 +10070,16 @@
         "total": 682,
         "emAberto": 72,
         "atrasadas": 67,
-        "concluidas30d": 270,
+        "concluidas30d": 266,
         "concluidas7d": 84,
-        "naSemanaCorrente": 60
+        "naSemanaCorrente": 8
       },
       "mttr": {
-        "horas": 235.56,
-        "label": "9d 19h",
-        "amostra": 270
+        "horas": 236.84,
+        "label": "9d 20h",
+        "amostra": 266
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W33",
-          "criadas": 49,
-          "finalizadas": 77
-        },
         {
           "semana": "W34",
           "criadas": 90,
@@ -10137,6 +10094,11 @@
           "semana": "W36",
           "criadas": 30,
           "finalizadas": 84
+        },
+        {
+          "semana": "W37",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -14282,21 +14244,16 @@
         "total": 127,
         "emAberto": 11,
         "atrasadas": 9,
-        "concluidas30d": 39,
+        "concluidas30d": 38,
         "concluidas7d": 1,
-        "naSemanaCorrente": 3
+        "naSemanaCorrente": 2
       },
       "mttr": {
-        "horas": 354.46,
-        "label": "14d 18h",
-        "amostra": 39
+        "horas": 363.79,
+        "label": "15d 3h",
+        "amostra": 38
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W33",
-          "criadas": 7,
-          "finalizadas": 21
-        },
         {
           "semana": "W34",
           "criadas": 8,
@@ -14311,6 +14268,11 @@
           "semana": "W36",
           "criadas": 5,
           "finalizadas": 1
+        },
+        {
+          "semana": "W37",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -16259,47 +16221,9 @@
           "horasAteAbrir": 192.0,
           "horasAteFechar": 96.0,
           "atrasada": false
-        },
-        {
-          "osId": "7435",
-          "ativo": "Relé da Cabine 2      { THPN-TNB100-RELE2 }",
-          "equipe": "",
-          "responsavel": "João  Neves",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "João  Neves",
-          "status": "Finalizados",
-          "tarefa": "Relé de proteção com atraso - Tanabi",
-          "criticidade": "",
-          "dataProgramada": "2026-06-08",
-          "dataCriacao": "2026-06-05",
-          "dataInicial": "2026-06-08",
-          "dataFinal": "2026-06-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "7242",
-          "ativo": "SPDA BR 226/304, S/N, Zona Rural Macaíba  Rio Grande do Norte Brasil { MCB100-SPDA1 }",
-          "equipe": "",
-          "responsavel": "Cleiton  Farias",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Cleiton  Farias",
-          "status": "Finalizados",
-          "tarefa": "[GreenYellow] - MPS - Quadro Aterramento",
-          "criticidade": "",
-          "dataProgramada": "2026-06-03",
-          "dataCriacao": "2026-06-01",
-          "dataInicial": "2026-06-08",
-          "dataFinal": "2026-06-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 92
+      "historicoTotal": 90
     }
   },
   "ossPublicas": [
@@ -23491,7 +23415,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2835,
+  "historicoTotal": 2816,
   "totalGeral": 5936,
   "verificacao": {
     "total": 0,
