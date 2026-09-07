@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-07T14:22:16Z",
+  "geradoEm": "2026-09-07T15:27:42Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4196,
-        "emAberto": 40,
-        "atrasadas": 29,
-        "concluidas30d": 661,
-        "concluidas7d": 201,
+        "emAberto": 39,
+        "atrasadas": 28,
+        "concluidas30d": 662,
+        "concluidas7d": 202,
         "naSemanaCorrente": 15
       },
       "mttr": {
-        "horas": 17.33,
+        "horas": 17.34,
         "label": "17h 20min",
-        "amostra": 661
+        "amostra": 662
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W37",
           "criadas": 12,
-          "finalizadas": 9
+          "finalizadas": 10
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4196,
-            "emAberto": 40
+            "emAberto": 39
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 40,
-      "atrasadas": 29,
+      "total": 39,
+      "atrasadas": 28,
       "porStatus": {
-        "naoIniciada": 36,
-        "emProgresso": 1,
-        "pausada": 3,
+        "naoIniciada": 33,
+        "emProgresso": 2,
+        "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 40
+        "(sem equipe)": 39
       },
       "oss": [
         {
@@ -598,38 +598,21 @@
           "atrasada": true
         },
         {
-          "osId": "13107",
-          "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
-          "equipe": "",
-          "responsavel": "Ademir Necker ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Ademir Necker ",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-06",
-          "dataCriacao": "2026-09-06",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "13148",
           "ativo": "Thopen - Piracicaba 1 - SP Estrada Mun. Norimar Aparecida Brieda Piracicaba  São Paulo Brasil { THPN-PRB100 }",
           "equipe": "",
           "responsavel": "Felipe  Lima",
           "criadoPor": "CíceroWillian",
           "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-PRB100] - Religamento do THPN-PRB100",
           "criticidade": "",
           "dataProgramada": "2026-09-07",
           "dataCriacao": "2026-09-07",
-          "dataInicial": "",
+          "dataInicial": "2026-09-07",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -658,14 +641,15 @@
           "responsavel": "Andrick Gouveia ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Andrick Gouveia ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[IBT200-INVR1.6] - Religamento do IBT200-INVR1.6",
           "criticidade": "",
           "dataProgramada": "2026-09-07",
           "dataCriacao": "2026-09-07",
-          "dataInicial": "",
+          "dataInicial": "2026-09-07",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -676,7 +660,7 @@
           "responsavel": "Andrick Gouveia ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Andrick Gouveia ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[IBT100-INVR1.10] - Religamento do IBT100-INVR1.10",
           "criticidade": "",
           "dataProgramada": "2026-09-07",
@@ -892,6 +876,26 @@
           "dataFinal": "2026-09-07",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13107",
+          "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+          "equipe": "",
+          "responsavel": "Ademir Necker ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Ademir Necker ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-06",
+          "dataCriacao": "2026-09-06",
+          "dataInicial": "2026-09-07",
+          "dataFinal": "2026-09-07",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3737,26 +3741,6 @@
           "atrasada": false
         },
         {
-          "osId": "11857",
-          "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "David  Nascimento",
-          "supervisor": "Railson Gomes ",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-23",
-          "dataCriacao": "2026-08-23",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "2026-08-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "11861",
           "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
           "equipe": "",
@@ -3817,12 +3801,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1812,
+      "historicoTotal": 1813,
       "subClassificacao": {
         "remoto": 756,
         "local": 3440,
         "remotoEmAberto": 12,
-        "localEmAberto": 28,
+        "localEmAberto": 27,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -16270,14 +16254,15 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "CíceroWillian",
       "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-PRB100] - Religamento do THPN-PRB100",
       "criticidade": "",
       "dataProgramada": "2026-09-07",
       "dataCriacao": "2026-09-07",
-      "dataInicial": "",
+      "dataInicial": "2026-09-07",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16304,14 +16289,15 @@
       "responsavel": "Andrick Gouveia ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Andrick Gouveia ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[IBT200-INVR1.6] - Religamento do IBT200-INVR1.6",
       "criticidade": "",
       "dataProgramada": "2026-09-07",
       "dataCriacao": "2026-09-07",
-      "dataInicial": "",
+      "dataInicial": "2026-09-07",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16321,7 +16307,7 @@
       "responsavel": "Andrick Gouveia ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Andrick Gouveia ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[IBT100-INVR1.10] - Religamento do IBT100-INVR1.10",
       "criticidade": "",
       "dataProgramada": "2026-09-07",
@@ -16477,23 +16463,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "13107",
-      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
-      "equipe": "",
-      "responsavel": "Ademir Necker ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Ademir Necker ",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-06",
-      "dataCriacao": "2026-09-06",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "13095",
@@ -21224,6 +21193,26 @@
       "atrasada": false
     },
     {
+      "osId": "13107",
+      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+      "equipe": "",
+      "responsavel": "Ademir Necker ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Ademir Necker ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-06",
+      "dataCriacao": "2026-09-06",
+      "dataInicial": "2026-09-07",
+      "dataFinal": "2026-09-07",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13106",
       "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
       "equipe": "",
@@ -23463,29 +23452,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "12591",
-      "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
-      "equipe": "",
-      "responsavel": "Cícero  Willian",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Cícero  Willian",
-      "status": "Finalizados",
-      "tarefa": "[THPN-ADS200] - Religamento do THPN-ADS200",
-      "criticidade": "",
-      "dataProgramada": "2026-09-01",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "2026-09-01",
-      "dataFinal": "2026-09-01",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2826,
+  "historicoTotal": 2827,
   "totalGeral": 5948,
   "verificacao": {
     "total": 0,
