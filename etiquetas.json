@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-07T00:58:59Z",
+  "geradoEm": "2026-09-07T03:03:46Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4184,
-        "emAberto": 38,
-        "atrasadas": 32,
-        "concluidas30d": 651,
-        "concluidas7d": 191,
+        "emAberto": 37,
+        "atrasadas": 31,
+        "concluidas30d": 652,
+        "concluidas7d": 192,
         "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 17.37,
-        "label": "17h 22min",
-        "amostra": 651
+        "horas": 17.38,
+        "label": "17h 23min",
+        "amostra": 652
       },
       "tendencia4Semanas": [
         {
@@ -34,7 +34,7 @@
         {
           "semana": "W36",
           "criadas": 208,
-          "finalizadas": 191
+          "finalizadas": 192
         },
         {
           "semana": "W37",
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4184,
-            "emAberto": 38
+            "emAberto": 37
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 38,
-      "atrasadas": 32,
+      "total": 37,
+      "atrasadas": 31,
       "porStatus": {
-        "naoIniciada": 34,
+        "naoIniciada": 33,
         "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 38
+        "(sem equipe)": 37
       },
       "oss": [
         {
@@ -534,24 +534,6 @@
           "supervisor": "Frank  Melo",
           "status": "Não Iniciada",
           "tarefa": "[MRO100-INVR1.7] - Religamento do MRO100-INVR1.7",
-          "criticidade": "",
-          "dataProgramada": "2026-09-05",
-          "dataCriacao": "2026-09-05",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "13089",
-          "ativo": "Cabine 2  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Não Iniciada",
-          "tarefa": "[ADT100-CABN2] - Religamento do ADT100-CABN2",
           "criticidade": "",
           "dataProgramada": "2026-09-05",
           "dataCriacao": "2026-09-05",
@@ -1056,6 +1038,26 @@
           "dataFinal": "2026-09-06",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13089",
+          "ativo": "Cabine 2  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Finalizados",
+          "tarefa": "[ADT100-CABN2] - Religamento do ADT100-CABN2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-05",
+          "dataCriacao": "2026-09-05",
+          "dataInicial": "2026-09-06",
+          "dataFinal": "2026-09-06",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3721,26 +3723,6 @@
           "atrasada": false
         },
         {
-          "osId": "11334",
-          "ativo": "Inversor 1.7 SOLAREDGE SE100K    { CTS100-INVR1.7 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "Luely  Santos",
-          "supervisor": "Railson Gomes ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
-          "dataCriacao": "2026-08-17",
-          "dataInicial": "2026-08-17",
-          "dataFinal": "2026-08-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9263",
           "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
           "equipe": "",
@@ -3781,12 +3763,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1802,
+      "historicoTotal": 1803,
       "subClassificacao": {
         "remoto": 756,
         "local": 3428,
         "remotoEmAberto": 12,
-        "localEmAberto": 26,
+        "localEmAberto": 25,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -16459,23 +16441,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "13089",
-      "ativo": "Cabine 2  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Paulo  Ribeiro",
-      "status": "Não Iniciada",
-      "tarefa": "[ADT100-CABN2] - Religamento do ADT100-CABN2",
-      "criticidade": "",
-      "dataProgramada": "2026-09-05",
-      "dataCriacao": "2026-09-05",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "13086",
       "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
       "equipe": "",
@@ -21234,6 +21199,26 @@
       "atrasada": false
     },
     {
+      "osId": "13089",
+      "ativo": "Cabine 2  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Finalizados",
+      "tarefa": "[ADT100-CABN2] - Religamento do ADT100-CABN2",
+      "criticidade": "",
+      "dataProgramada": "2026-09-05",
+      "dataCriacao": "2026-09-05",
+      "dataInicial": "2026-09-06",
+      "dataFinal": "2026-09-06",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13088",
       "ativo": "Thopen - Indaiatuba 1 - SP Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { THPN-IND100 }",
       "equipe": "",
@@ -23393,29 +23378,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "12555",
-      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Luely  Santos",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-08-31",
-      "dataCriacao": "2026-08-31",
-      "dataInicial": "2026-08-31",
-      "dataFinal": "2026-08-31",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2816,
+  "historicoTotal": 2817,
   "totalGeral": 5936,
   "verificacao": {
     "total": 0,
