@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-07T03:03:46Z",
+  "geradoEm": "2026-09-07T03:15:49Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4184,
-        "emAberto": 37,
-        "atrasadas": 31,
-        "concluidas30d": 652,
-        "concluidas7d": 192,
+        "emAberto": 36,
+        "atrasadas": 30,
+        "concluidas30d": 653,
+        "concluidas7d": 193,
         "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 17.38,
-        "label": "17h 23min",
-        "amostra": 652
+        "horas": 17.43,
+        "label": "17h 26min",
+        "amostra": 653
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W37",
           "criadas": 0,
-          "finalizadas": 0
+          "finalizadas": 1
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4184,
-            "emAberto": 37
+            "emAberto": 36
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 37,
-      "atrasadas": 31,
+      "total": 36,
+      "atrasadas": 30,
       "porStatus": {
-        "naoIniciada": 33,
+        "naoIniciada": 32,
         "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 37
+        "(sem equipe)": 36
       },
       "oss": [
         {
@@ -454,24 +454,6 @@
           "atrasada": true
         },
         {
-          "osId": "13097",
-          "ativo": "Inversor 2.4 Sungrow     { FRN100-INVR2.4 }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
-          "criticidade": "",
-          "dataProgramada": "2026-09-05",
-          "dataCriacao": "2026-09-05",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "13095",
           "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
           "equipe": "",
@@ -762,6 +744,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13097",
+          "ativo": "Inversor 2.4 Sungrow     { FRN100-INVR2.4 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
+          "criticidade": "",
+          "dataProgramada": "2026-09-05",
+          "dataCriacao": "2026-09-05",
+          "dataInicial": "2026-09-07",
+          "dataFinal": "2026-09-07",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "13134",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3703,26 +3705,6 @@
           "atrasada": false
         },
         {
-          "osId": "11497",
-          "ativo": "Thopen - Rodrigues 2 - RN FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Valdério Paz ",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-18",
-          "dataCriacao": "2026-08-19",
-          "dataInicial": "2026-08-19",
-          "dataFinal": "2026-08-19",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9263",
           "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
           "equipe": "",
@@ -3763,12 +3745,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1803,
+      "historicoTotal": 1804,
       "subClassificacao": {
         "remoto": 756,
         "local": 3428,
         "remotoEmAberto": 12,
-        "localEmAberto": 25,
+        "localEmAberto": 24,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -16356,23 +16338,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "13097",
-      "ativo": "Inversor 2.4 Sungrow     { FRN100-INVR2.4 }",
-      "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Paulo  Ribeiro",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
-      "criticidade": "",
-      "dataProgramada": "2026-09-05",
-      "dataCriacao": "2026-09-05",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "13095",
       "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
       "equipe": "",
@@ -21199,6 +21164,26 @@
       "atrasada": false
     },
     {
+      "osId": "13097",
+      "ativo": "Inversor 2.4 Sungrow     { FRN100-INVR2.4 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
+      "criticidade": "",
+      "dataProgramada": "2026-09-05",
+      "dataCriacao": "2026-09-05",
+      "dataInicial": "2026-09-07",
+      "dataFinal": "2026-09-07",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13089",
       "ativo": "Cabine 2  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN2 }",
       "equipe": "",
@@ -23358,29 +23343,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "12556",
-      "ativo": "Cabine 1  Araçoiaba  São Paulo Brasil { ADS200-CABN1 }",
-      "equipe": "",
-      "responsavel": "Italo  Lustosa",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Italo  Lustosa",
-      "status": "Finalizados",
-      "tarefa": "[ADS200-CABN1] - Religamento do ADS200-CABN1",
-      "criticidade": "",
-      "dataProgramada": "2026-08-31",
-      "dataCriacao": "2026-08-31",
-      "dataInicial": "2026-08-31",
-      "dataFinal": "2026-08-31",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2817,
+  "historicoTotal": 2818,
   "totalGeral": 5936,
   "verificacao": {
     "total": 0,
