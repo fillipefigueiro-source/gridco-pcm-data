@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-07T15:39:41Z",
+  "geradoEm": "2026-09-07T16:15:45Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4196,
-        "emAberto": 35,
+        "total": 4198,
+        "emAberto": 36,
         "atrasadas": 25,
-        "concluidas30d": 666,
-        "concluidas7d": 206,
-        "naSemanaCorrente": 15
+        "concluidas30d": 667,
+        "concluidas7d": 207,
+        "naSemanaCorrente": 17
       },
       "mttr": {
-        "horas": 17.52,
-        "label": "17h 31min",
-        "amostra": 666
+        "horas": 17.49,
+        "label": "17h 30min",
+        "amostra": 667
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W37",
-          "criadas": 12,
-          "finalizadas": 14
+          "criadas": 14,
+          "finalizadas": 15
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4196,
-            "emAberto": 35
+            "total": 4198,
+            "emAberto": 36
           }
         ],
         "responsaveis": [
@@ -58,7 +58,7 @@
           },
           {
             "nome": "Felipe Silva",
-            "total": 472,
+            "total": 473,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 35,
+      "total": 36,
       "atrasadas": 25,
       "porStatus": {
         "naoIniciada": 30,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 35
+        "(sem equipe)": 36
       },
       "oss": [
         {
@@ -544,20 +544,39 @@
           "atrasada": true
         },
         {
-          "osId": "13146",
-          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+          "osId": "13149",
+          "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
           "equipe": "",
-          "responsavel": "Valdério Paz ",
+          "responsavel": "Matheus Leite ",
           "criadoPor": "Juliana Rogério ",
-          "supervisor": "Valdério Paz ",
+          "supervisor": "Matheus Leite ",
           "status": "Não Iniciada",
-          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "tarefa": "[Thopen - Belo Jardim  1 - PE] - Religamento do Thopen - Belo Jardim  1 - PE",
           "criticidade": "",
           "dataProgramada": "2026-09-07",
           "dataCriacao": "2026-09-07",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13146",
+          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Valdério Paz ",
+          "status": "Em progresso",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-07",
+          "dataCriacao": "2026-09-07",
+          "dataInicial": "2026-09-07",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -727,6 +746,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13150",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Felipe Silva ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Felipe Silva ",
+          "status": "Finalizados",
+          "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-07",
+          "dataCriacao": "2026-09-07",
+          "dataInicial": "2026-09-07",
+          "dataFinal": "2026-09-07",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "13148",
           "ativo": "Thopen - Piracicaba 1 - SP Estrada Mun. Norimar Aparecida Brieda Piracicaba  São Paulo Brasil { THPN-PRB100 }",
@@ -3488,26 +3527,6 @@
           "atrasada": false
         },
         {
-          "osId": "12428",
-          "ativo": "Thopen - Alto Paraná 2 - PR Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
-          "tarefa": "[THPN-APR200] - Religamento do THPN-APR200",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-28",
-          "dataInicial": "2026-08-29",
-          "dataFinal": "2026-08-31",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 48.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "12462",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
           "equipe": "",
@@ -3728,12 +3747,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1817,
+      "historicoTotal": 1818,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3440,
+        "local": 3442,
         "remotoEmAberto": 12,
-        "localEmAberto": 23,
+        "localEmAberto": 24,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -16175,20 +16194,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "13146",
-      "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+      "osId": "13149",
+      "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
       "equipe": "",
-      "responsavel": "Valdério Paz ",
+      "responsavel": "Matheus Leite ",
       "criadoPor": "Juliana Rogério ",
-      "supervisor": "Valdério Paz ",
+      "supervisor": "Matheus Leite ",
       "status": "Não Iniciada",
-      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "tarefa": "[Thopen - Belo Jardim  1 - PE] - Religamento do Thopen - Belo Jardim  1 - PE",
       "criticidade": "",
       "dataProgramada": "2026-09-07",
       "dataCriacao": "2026-09-07",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "13146",
+      "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Valdério Paz ",
+      "status": "Em progresso",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-07",
+      "dataCriacao": "2026-09-07",
+      "dataInicial": "2026-09-07",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -20811,6 +20848,26 @@
       "atrasada": false
     },
     {
+      "osId": "13150",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Felipe Silva ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Felipe Silva ",
+      "status": "Finalizados",
+      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-07",
+      "dataCriacao": "2026-09-07",
+      "dataInicial": "2026-09-07",
+      "dataFinal": "2026-09-07",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13148",
       "ativo": "Thopen - Piracicaba 1 - SP Estrada Mun. Norimar Aparecida Brieda Piracicaba  São Paulo Brasil { THPN-PRB100 }",
       "equipe": "",
@@ -23290,30 +23347,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "12597",
-      "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
-      "equipe": "",
-      "responsavel": "Cícero  Willian",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Cícero  Willian",
-      "status": "Finalizados",
-      "tarefa": "[THPN-ADS200] - Religamento do THPN-ADS200",
-      "criticidade": "",
-      "dataProgramada": "2026-09-01",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "2026-09-01",
-      "dataFinal": "2026-09-01",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2831,
-  "totalGeral": 5948,
+  "historicoTotal": 2832,
+  "totalGeral": 5950,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
