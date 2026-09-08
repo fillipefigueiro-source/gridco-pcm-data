@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-08T16:36:42Z",
+  "geradoEm": "2026-09-08T16:48:51Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -9855,16 +9855,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 691,
-        "emAberto": 77,
-        "atrasadas": 64,
-        "concluidas30d": 269,
-        "concluidas7d": 64,
+        "emAberto": 76,
+        "atrasadas": 63,
+        "concluidas30d": 270,
+        "concluidas7d": 65,
         "naSemanaCorrente": 17
       },
       "mttr": {
-        "horas": 239.38,
+        "horas": 239.82,
         "label": "9d 23h",
-        "amostra": 269
+        "amostra": 270
       },
       "tendencia4Semanas": [
         {
@@ -9885,7 +9885,7 @@
         {
           "semana": "W37",
           "criadas": 9,
-          "finalizadas": 4
+          "finalizadas": 5
         }
       ],
       "topOfensores": {
@@ -9893,7 +9893,7 @@
           {
             "nome": "(sem equipe)",
             "total": 691,
-            "emAberto": 77
+            "emAberto": 76
           }
         ],
         "responsaveis": [
@@ -9924,16 +9924,16 @@
           }
         ]
       },
-      "total": 77,
-      "atrasadas": 64,
+      "total": 76,
+      "atrasadas": 63,
       "porStatus": {
-        "naoIniciada": 65,
+        "naoIniciada": 64,
         "emProgresso": 5,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 77
+        "(sem equipe)": 76
       },
       "oss": [
         {
@@ -10485,24 +10485,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "12095",
-          "ativo": "Inversor 3.1 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.1 }",
-          "equipe": "",
-          "responsavel": "Lucas Alberto Freitas de Faria ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 3.1] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-08-25",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-09-08",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 360.0,
           "atrasada": true
         },
         {
@@ -11196,14 +11178,15 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "Levi Maia ",
           "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.7] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
           "dataCriacao": "2026-09-08",
-          "dataInicial": "",
+          "dataInicial": "2026-09-08",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -11294,6 +11277,25 @@
           "dataFinal": "2026-09-08",
           "linkFracttal": "",
           "horasAteAbrir": 264.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12095",
+          "ativo": "Inversor 3.1 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.1 }",
+          "equipe": "",
+          "responsavel": "Lucas Alberto Freitas de Faria ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Lucas Alberto Freitas de Faria ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 3.1] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-25",
+          "dataCriacao": "2026-08-24",
+          "dataInicial": "2026-09-08",
+          "dataFinal": "2026-09-08",
+          "linkFracttal": "",
+          "horasAteAbrir": 360.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -14053,25 +14055,6 @@
           "atrasada": false
         },
         {
-          "osId": "9109",
-          "ativo": "SKID 2 CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { ELF100-SKID2 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Felipe  Lima",
-          "status": "Finalizados",
-          "tarefa": "[Elias Fausto 02][Skid 01] - Verificação de temperatura",
-          "criticidade": "",
-          "dataProgramada": "2026-07-07",
-          "dataCriacao": "2026-07-07",
-          "dataInicial": "2026-07-13",
-          "dataFinal": "2026-07-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9101",
           "ativo": "SKID 3 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID3 }",
           "equipe": "",
@@ -14110,7 +14093,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 564
+      "historicoTotal": 565
     },
     "engenharia": {
       "label": "Engenharia",
@@ -16247,14 +16230,15 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "Levi Maia ",
       "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.7] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
       "dataCriacao": "2026-09-08",
-      "dataInicial": "",
+      "dataInicial": "2026-09-08",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "13184",
@@ -18623,23 +18607,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 0
-    },
-    {
-      "osId": "12095",
-      "ativo": "Inversor 3.1 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.1 }",
-      "equipe": "",
-      "responsavel": "Lucas Alberto Freitas de Faria ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 3.1] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-08-25",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-09-08",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 360.0
     },
     {
       "osId": "12093",
@@ -23108,7 +23075,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2846,
+  "historicoTotal": 2847,
   "totalGeral": 5992,
   "verificacao": {
     "total": 0,
