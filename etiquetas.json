@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-08T11:39:40Z",
+  "geradoEm": "2026-09-08T11:46:15Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4212,
-        "emAberto": 32,
-        "atrasadas": 24,
-        "concluidas30d": 658,
-        "concluidas7d": 184,
+        "emAberto": 31,
+        "atrasadas": 23,
+        "concluidas30d": 659,
+        "concluidas7d": 185,
         "naSemanaCorrente": 31
       },
       "mttr": {
-        "horas": 18.06,
+        "horas": 18.07,
         "label": "18h 4min",
-        "amostra": 658
+        "amostra": 659
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W37",
           "criadas": 28,
-          "finalizadas": 32
+          "finalizadas": 33
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4212,
-            "emAberto": 32
+            "emAberto": 31
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 32,
-      "atrasadas": 24,
+      "total": 31,
+      "atrasadas": 23,
       "porStatus": {
         "naoIniciada": 27,
         "emProgresso": 1,
-        "pausada": 4,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 32
+        "(sem equipe)": 31
       },
       "oss": [
         {
@@ -471,25 +471,6 @@
           "atrasada": true
         },
         {
-          "osId": "13144",
-          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Andrick Gouveia ",
-          "status": "pausado",
-          "tarefa": "[IBT200-INVR1.6] - Religamento do IBT200-INVR1.6",
-          "criticidade": "",
-          "dataProgramada": "2026-09-07",
-          "dataCriacao": "2026-09-07",
-          "dataInicial": "2026-09-07",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "13143",
           "ativo": "Inversor 1.10 Huawei SUN2000-215KTL-H0    { IBT100-INVR1.10 }",
           "equipe": "",
@@ -770,6 +751,26 @@
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13144",
+          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Andrick Gouveia ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Andrick Gouveia ",
+          "status": "Finalizados",
+          "tarefa": "[IBT200-INVR1.6] - Religamento do IBT200-INVR1.6",
+          "criticidade": "",
+          "dataProgramada": "2026-09-07",
+          "dataCriacao": "2026-09-07",
+          "dataInicial": "2026-09-07",
+          "dataFinal": "2026-09-08",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 24.0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3614,26 +3615,6 @@
           "atrasada": false
         },
         {
-          "osId": "12471",
-          "ativo": "Thopen - Cipó Guaçu - SP Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { THOPEN-CGU100 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-30",
-          "dataCriacao": "2026-08-31",
-          "dataInicial": "2026-08-31",
-          "dataFinal": "2026-08-31",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9263",
           "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
           "equipe": "",
@@ -3674,12 +3655,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1812,
+      "historicoTotal": 1813,
       "subClassificacao": {
         "remoto": 756,
         "local": 3456,
         "remotoEmAberto": 12,
-        "localEmAberto": 20,
+        "localEmAberto": 19,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -16013,24 +15994,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "13144",
-      "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Andrick Gouveia ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Andrick Gouveia ",
-      "status": "pausado",
-      "tarefa": "[IBT200-INVR1.6] - Religamento do IBT200-INVR1.6",
-      "criticidade": "",
-      "dataProgramada": "2026-09-07",
-      "dataCriacao": "2026-09-07",
-      "dataInicial": "2026-09-07",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "13143",
       "ativo": "Inversor 1.10 Huawei SUN2000-215KTL-H0    { IBT100-INVR1.10 }",
       "equipe": "",
@@ -20772,6 +20735,26 @@
       "atrasada": false
     },
     {
+      "osId": "13144",
+      "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Andrick Gouveia ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Andrick Gouveia ",
+      "status": "Finalizados",
+      "tarefa": "[IBT200-INVR1.6] - Religamento do IBT200-INVR1.6",
+      "criticidade": "",
+      "dataProgramada": "2026-09-07",
+      "dataCriacao": "2026-09-07",
+      "dataInicial": "2026-09-07",
+      "dataFinal": "2026-09-08",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 24.0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13142",
       "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
       "equipe": "",
@@ -22918,28 +22901,9 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12748",
-      "ativo": "Inversor 4.6 Huawei     { TIM100-INVR4.6 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Luiz  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 4.6] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-02",
-      "dataCriacao": "2026-09-02",
-      "dataInicial": "2026-09-02",
-      "dataFinal": "2026-09-04",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 48.0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2822,
+  "historicoTotal": 2823,
   "totalGeral": 5963,
   "verificacao": {
     "total": 0,
