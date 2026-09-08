@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-08T10:15:14Z",
+  "geradoEm": "2026-09-08T10:27:27Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4209,
-        "emAberto": 35,
-        "atrasadas": 28,
-        "concluidas30d": 652,
-        "concluidas7d": 178,
-        "naSemanaCorrente": 28
+        "total": 4210,
+        "emAberto": 34,
+        "atrasadas": 26,
+        "concluidas30d": 654,
+        "concluidas7d": 180,
+        "naSemanaCorrente": 29
       },
       "mttr": {
-        "horas": 17.82,
-        "label": "17h 49min",
-        "amostra": 652
+        "horas": 17.99,
+        "label": "17h 59min",
+        "amostra": 654
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W37",
-          "criadas": 25,
-          "finalizadas": 26
+          "criadas": 26,
+          "finalizadas": 28
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4209,
-            "emAberto": 35
+            "total": 4210,
+            "emAberto": 34
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 35,
-      "atrasadas": 28,
+      "total": 34,
+      "atrasadas": 26,
       "porStatus": {
-        "naoIniciada": 30,
+        "naoIniciada": 29,
         "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 35
+        "(sem equipe)": 34
       },
       "oss": [
         {
@@ -417,42 +417,6 @@
           "atrasada": true
         },
         {
-          "osId": "13092",
-          "ativo": "Utragaz - Ibirapuã 2 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI200 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Thiago Morais ",
-          "status": "Não Iniciada",
-          "tarefa": "[ULTG-IBI200] - Religamento do ULTG-IBI200",
-          "criticidade": "",
-          "dataProgramada": "2026-09-05",
-          "dataCriacao": "2026-09-05",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "13091",
-          "ativo": "Cabine 1  Ibirapuã  Bahia Brasil { IBI100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Thiago Morais ",
-          "status": "Não Iniciada",
-          "tarefa": "[IBI100-CABN1] - Religamento do IBI100-CABN1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-05",
-          "dataCriacao": "2026-09-05",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "13090",
           "ativo": "Inversor 1.7 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.7 }",
           "equipe": "",
@@ -598,6 +562,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "13164",
+          "ativo": "Disjuntor do Inversor 3.7      { MTS100-DINV3.7 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Francisco  Santos",
+          "status": "Não Iniciada",
+          "tarefa": "[MTS100-DINV3.7] - Religamento do MTS100-DINV3.7",
+          "criticidade": "",
+          "dataProgramada": "2026-09-08",
+          "dataCriacao": "2026-09-08",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "13159",
@@ -763,6 +745,46 @@
           "dataFinal": "2026-09-08",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13092",
+          "ativo": "Utragaz - Ibirapuã 2 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI200 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[ULTG-IBI200] - Religamento do ULTG-IBI200",
+          "criticidade": "",
+          "dataProgramada": "2026-09-05",
+          "dataCriacao": "2026-09-05",
+          "dataInicial": "2026-09-08",
+          "dataFinal": "2026-09-08",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13091",
+          "ativo": "Cabine 1  Ibirapuã  Bahia Brasil { IBI100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[IBI100-CABN1] - Religamento do IBI100-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-05",
+          "dataCriacao": "2026-09-05",
+          "dataInicial": "2026-09-08",
+          "dataFinal": "2026-09-08",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3648,46 +3670,6 @@
           "atrasada": false
         },
         {
-          "osId": "12461",
-          "ativo": "Thopen - Coração 1 - SC Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100 }",
-          "equipe": "",
-          "responsavel": "Ademir Necker ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Ademir Necker ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-COR100] - Religamento do THPN-COR100",
-          "criticidade": "",
-          "dataProgramada": "2026-08-30",
-          "dataCriacao": "2026-08-30",
-          "dataInicial": "2026-08-31",
-          "dataFinal": "2026-08-31",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "12462",
-          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizados",
-          "tarefa": "[2C - Araputanga 1 - MT] - Religamento do 2C - Araputanga 1 - MT",
-          "criticidade": "",
-          "dataProgramada": "2026-08-30",
-          "dataCriacao": "2026-08-30",
-          "dataInicial": "2026-08-30",
-          "dataFinal": "2026-08-30",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9263",
           "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
           "equipe": "",
@@ -3728,12 +3710,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1806,
+      "historicoTotal": 1808,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3453,
+        "local": 3454,
         "remotoEmAberto": 12,
-        "localEmAberto": 23,
+        "localEmAberto": 22,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -3956,16 +3938,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 796,
-        "emAberto": 132,
-        "atrasadas": 64,
-        "concluidas30d": 146,
-        "concluidas7d": 36,
+        "emAberto": 131,
+        "atrasadas": 63,
+        "concluidas30d": 147,
+        "concluidas7d": 37,
         "naSemanaCorrente": 54
       },
       "mttr": {
-        "horas": 344.55,
-        "label": "14d 8h",
-        "amostra": 146
+        "horas": 349.22,
+        "label": "14d 13h",
+        "amostra": 147
       },
       "tendencia4Semanas": [
         {
@@ -3986,7 +3968,7 @@
         {
           "semana": "W37",
           "criadas": 0,
-          "finalizadas": 1
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
@@ -3994,7 +3976,7 @@
           {
             "nome": "(sem equipe)",
             "total": 796,
-            "emAberto": 132
+            "emAberto": 131
           }
         ],
         "responsaveis": [
@@ -4011,7 +3993,7 @@
           {
             "nome": "Felipe  Lima",
             "total": 32,
-            "emAberto": 11
+            "emAberto": 10
           },
           {
             "nome": "Luiz  Silva",
@@ -4025,16 +4007,16 @@
           }
         ]
       },
-      "total": 132,
-      "atrasadas": 64,
+      "total": 131,
+      "atrasadas": 63,
       "porStatus": {
-        "naoIniciada": 119,
-        "emProgresso": 0,
-        "pausada": 13,
+        "naoIniciada": 118,
+        "emProgresso": 1,
+        "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 132
+        "(sem equipe)": 131
       },
       "oss": [
         {
@@ -4173,24 +4155,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10199",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-CXB100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Felipe  Lima",
-          "status": "pausado",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-03",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-09-04",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 936.0,
           "atrasada": true
         },
         {
@@ -5553,14 +5517,15 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Nobreak e Banco de Baterias",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
           "dataCriacao": "2026-09-01",
-          "dataInicial": "",
+          "dataInicial": "2026-09-08",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 168.0,
           "atrasada": false
         },
         {
@@ -6297,6 +6262,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "10199",
+          "ativo": "Preventiva Grupo de Inversores      { THPN-CXB100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-03",
+          "dataCriacao": "2026-07-27",
+          "dataInicial": "2026-09-04",
+          "dataFinal": "2026-09-08",
+          "linkFracttal": "",
+          "horasAteAbrir": 936.0,
+          "horasAteFechar": 96.0,
+          "atrasada": false
+        },
         {
           "osId": "12344",
           "ativo": "Transformador 7 COMTRAFO     { SMP100-TRFR7 }",
@@ -9110,25 +9094,6 @@
           "atrasada": false
         },
         {
-          "osId": "10142",
-          "ativo": "Cabos CC      { CLD100-INFE1-CBCC }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Cabos CA/CC",
-          "criticidade": "",
-          "dataProgramada": "2026-08-27",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-07-29",
-          "dataFinal": "2026-07-29",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8401",
           "ativo": "Ar Condicionado      { ADS100-SOEM1-ARCD }",
           "equipe": "",
@@ -9148,7 +9113,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 327
+      "historicoTotal": 328
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -16065,6 +16030,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13164",
+      "ativo": "Disjuntor do Inversor 3.7      { MTS100-DINV3.7 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Francisco  Santos",
+      "status": "Não Iniciada",
+      "tarefa": "[MTS100-DINV3.7] - Religamento do MTS100-DINV3.7",
+      "criticidade": "",
+      "dataProgramada": "2026-09-08",
+      "dataCriacao": "2026-09-08",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13162",
       "ativo": "Thopen - Linhares 1 - ES Sítio São Francisco, Barro Novo Linhares  Espírito Santo  { THPN-LNH100 }",
       "equipe": "",
@@ -16306,40 +16288,6 @@
       "supervisor": "Cláudio  Ferreira",
       "status": "Não Iniciada",
       "tarefa": "[ALLM-MRN100] - Religamento do ALLM-MRN100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-05",
-      "dataCriacao": "2026-09-05",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "13092",
-      "ativo": "Utragaz - Ibirapuã 2 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI200 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Thiago Morais ",
-      "status": "Não Iniciada",
-      "tarefa": "[ULTG-IBI200] - Religamento do ULTG-IBI200",
-      "criticidade": "",
-      "dataProgramada": "2026-09-05",
-      "dataCriacao": "2026-09-05",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "13091",
-      "ativo": "Cabine 1  Ibirapuã  Bahia Brasil { IBI100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Thiago Morais ",
-      "status": "Não Iniciada",
-      "tarefa": "[IBI100-CABN1] - Religamento do IBI100-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-09-05",
       "dataCriacao": "2026-09-05",
@@ -17735,14 +17683,15 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Nobreak e Banco de Baterias",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
       "dataCriacao": "2026-09-01",
-      "dataInicial": "",
+      "dataInicial": "2026-09-08",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0
     },
     {
       "osId": "12663",
@@ -19814,23 +19763,6 @@
       "horasAteAbrir": 0
     },
     {
-      "osId": "10199",
-      "ativo": "Preventiva Grupo de Inversores      { THPN-CXB100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Felipe  Lima",
-      "status": "pausado",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-08-03",
-      "dataCriacao": "2026-07-27",
-      "dataInicial": "2026-09-04",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 936.0
-    },
-    {
       "osId": "10189",
       "ativo": "Transformador 1 WEG     { ADS200-TRFR1 }",
       "equipe": "",
@@ -21363,6 +21295,46 @@
       "dataFinal": "2026-09-07",
       "linkFracttal": "",
       "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "13092",
+      "ativo": "Utragaz - Ibirapuã 2 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI200 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[ULTG-IBI200] - Religamento do ULTG-IBI200",
+      "criticidade": "",
+      "dataProgramada": "2026-09-05",
+      "dataCriacao": "2026-09-05",
+      "dataInicial": "2026-09-08",
+      "dataFinal": "2026-09-08",
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "13091",
+      "ativo": "Cabine 1  Ibirapuã  Bahia Brasil { IBI100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[IBI100-CABN1] - Religamento do IBI100-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-05",
+      "dataCriacao": "2026-09-05",
+      "dataInicial": "2026-09-08",
+      "dataFinal": "2026-09-08",
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -23131,49 +23103,10 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12678",
-      "ativo": "Cabine 1 Estrada Pedreira, S/N Matão  São Paulo Brasil { MTO100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Eduardo Souza",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Eduardo Souza",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "2026-09-02",
-      "dataFinal": "2026-09-02",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "12667",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizados",
-      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-01",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "2026-09-01",
-      "dataFinal": "2026-09-01",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2813,
-  "totalGeral": 5961,
+  "historicoTotal": 2816,
+  "totalGeral": 5962,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
