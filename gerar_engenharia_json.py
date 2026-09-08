@@ -53,6 +53,7 @@ RX_SERVICO = re.compile(
 RX_TESTE = re.compile(r"\bTESTE\b", re.I)
 # "TESTE100-NCU1": o \b não separa o E do 1 — código de teste precisa de outra regra.
 RX_TESTE_COD = re.compile(r"^TESTE|TESTE\d|\bTESTE\b", re.I)
+RX_RELIG = re.compile(r"religamento|religar|\brelig\b", re.I)
 RX_COD = re.compile(r"\{\s*([A-Z0-9][A-Z0-9\-\.]+)\s*\}")
 
 # Criticidade proxy por família: 5 critérios 0–3 multiplicados (cap. 4).
@@ -99,16 +100,42 @@ def _usina_curta(u: str) -> str:
     return " - ".join(p[1:]) if len(p) > 1 else str(u or "")
 
 
-def coletar(client, inicio):
-    """Corretivas criadas a partir de `inicio`, agrupadas por código de ativo."""
+def coletar(client, inicio, religamentos=None):
+    """Corretivas criadas a partir de `inicio`, agrupadas por código de ativo.
+    Na mesma paginação recolhe as tarefas de RELIGAMENTO (para o gerencial.json)
+    em `religamentos`, se a lista for passada — uma passada de 6 min, não duas."""
     por = collections.defaultdict(list)
     bruto = 0
     sem_cod = 0
+    ger_ini = None
+    if religamentos is not None:
+        try:
+            ger_ini = datetime.fromisoformat(os.environ.get("GER_INICIO", "2025-11-01")).replace(tzinfo=timezone(timedelta(hours=-3)))
+        except Exception:
+            ger_ini = None
     for row in client.paginar("work_orders", page_size=100):
         bruto += 1
         if bruto % 4000 == 0:
             log(f"  ... {bruto} linhas")
         tipo = str(row.get("tasks_log_task_type_main") or row.get("tasks_types_main_description") or "").strip().lower()
+        # Religamento pelo TEXTO da tarefa, não só pelo tipo: "Religamento do
+        # Inversor 3.1" chega como Corretiva. O one-pager conta esses também.
+        if religamentos is not None and ("religamento" in tipo or RX_RELIG.search(str(row.get("description") or ""))):
+            ev_ini = _dt(row.get("event_date")) or _dt(row.get("date_maintenance"))
+            if ev_ini and (ger_ini is None or ev_ini >= ger_ini):
+                nome_r = str(row.get("items_log_description") or "")
+                mr = RX_COD.search(nome_r)
+                religamentos.append({
+                    "os": str(row.get("wo_folio") or ""), "tipo": tipo, "tarefa": str(row.get("description") or ""),
+                    "nota": str(row.get("task_note") or "")[:200], "prio": str(row.get("tasks_log_priority") or row.get("priorities_description") or ""),
+                    "cod": mr.group(1) if mr else str(row.get("code") or ""), "nome": RX_COD.sub("", nome_r).strip(),
+                    "usinaFull": str(row.get("groups_1_description") or ""), "st": str(row.get("task_status") or ""),
+                    # "Tarefa → Classificação 1" na REST é tasks_log_types_description
+                    # (Religamento / Emergencial / Programada / QUEDA DE ENERGIA)
+                    "cls1": str(row.get("tasks_log_types_description") or row.get("tasks_types_description") or ""),
+                    "stWo": row.get("id_status_work_order"),
+                    "ini": row.get("event_date") or row.get("date_maintenance"), "fim": row.get("final_date"), "fimWo": row.get("wo_final_date"),
+                })
         if tipo not in TIPOS_FALHA:
             continue
         cr = _dt(row.get("creation_date"))
@@ -216,8 +243,24 @@ def main():
 
     agora = datetime.now(timezone.utc)
     inicio = agora - timedelta(days=JANELA_DIAS)
-    log(f"Corretivas desde {inicio:%d/%m/%Y} ({JANELA_DIAS} dias)...")
-    por = coletar(client, inicio)
+    log(f"Corretivas desde {inicio:%d/%m/%Y} ({JANELA_DIAS} dias) + religamentos desde {os.environ.get('GER_INICIO', '2025-11-01')}...")
+    religamentos = []
+    por = coletar(client, inicio, religamentos)
+    # GER_BRUTO=<arquivo>: guarda os religamentos crus para calibrar o método
+    # (categorias, datas, pesos) sem repetir a paginação de 6 min.
+    if os.environ.get("GER_BRUTO"):
+        try:
+            with open(os.environ["GER_BRUTO"], "w", encoding="utf-8") as f:
+                json.dump(religamentos, f, ensure_ascii=False, default=str)
+        except Exception as e:
+            log(f"GER_BRUTO não gravado ({e})", "WARN")
+    # Gerencial: cascata de disponibilidade a partir dos religamentos recolhidos
+    # na mesma paginação. Falha dele não derruba o engenharia.json.
+    try:
+        import gerar_gerencial_json
+        gerar_gerencial_json.gerar(religamentos, agora)
+    except Exception as e:
+        log(f"gerencial.json falhou ({type(e).__name__}: {e})", "WARN")
 
     ativos_conf, clientes, usinas = carregar_confiabilidade()
     equipe = carregar_equipe()

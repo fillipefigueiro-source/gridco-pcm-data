@@ -20,7 +20,7 @@ regra do `novo.html` como fonte (§1, "Onde o código realmente mora").
 |---|---|---|
 | `semanal.yml` | `atualizacao_semanal.py` + `gerar_pcm_json.py` + `gerar_etiquetas_json.py` → `banco_dados.json`, `etiquetas.json` | cron diz `*/15`; **medido: ~38 min** |
 | `gestao-pcm.yml` | `gerar_gestao_pcm_json.py` → `gestao_pcm.json` | idem |
-| `gestao-pcm.yml` (passo a incluir) | `gerar_engenharia_json.py` → `engenharia.json` | **ainda não roda na nuvem** — ver §3 |
+| `gestao-pcm.yml` | `gerar_engenharia_json.py` → `engenharia.json` + `gerencial.json` (mesma paginação) + e-mails | idem (passo incluído 04/09) |
 | `azure-swa.yml` | deploy do painel no Azure SWA | ao fim de cada robô (ver §3) |
 
 **Não confie no `*/15`.** Medição de 21/08, 12 execuções: intervalos de 28, 34,
@@ -41,6 +41,7 @@ Nada agendado — se ninguém abrir o programa, não acontece:
 | Enviar semana pra nuvem | `publicar_semana_github.py` | logo depois de gerar |
 | Programação Semanal Clientes | `gerar_relatorio_cliente.py` | sexta, depois do time aprovar |
 | Atualizar Gestão MPAS | `atualizar_mpas.py` | quando a Gerencial muda |
+| (sem botão ainda) | `exportar_operacoes.py` → `operacoes.json` | quando o BD_Operacoes muda — universo da cascata do Gerencial |
 | Rodar Atualização Diária | `atualizacao_semanal.py` | durante a semana |
 
 **A Gestão MPAS é o caso mais frágil:** a fonte é o `Gerencial - PCM_2026_R00.xlsx`
@@ -93,6 +94,37 @@ Achado do dado (03/09): a **disponibilidade agregada por cliente/usina** no
 `confiabilidade.json` soma as falhas de todos os ativos e o MTBF encolhe com a
 frota — Athon sai com 14%. Só o nível de ativo é honesto. A tela avisa; o ajuste
 no robô que gera o arquivo está pendente.
+
+### Gerencial — disponibilidade por região (04/09)
+
+Tela `ger` (seção **Gerencial** da barra, só admin/equipe). Reproduz o one-pager
+"Disponibilidade por região" de set/2026 e o torna vivo: `gerar_gerencial_json.py`
+calcula a cascata a partir das tarefas de religamento que o `gerar_engenharia_json.py`
+recolhe na mesma paginação (desde `GER_INICIO`, 2025-11-01), e a tela recalcula por
+filtro (período, região, cliente, usina, horas diurnas/24h, peso fração/inteira) a
+partir dos eventos — o `resumo` do JSON é só conferência.
+
+**Universo** = `operacoes.json`, exportado do `BD_Operacoes.xlsx` (OneDrive) por
+`exportar_operacoes.py`, usinas com status OPERAÇÃO, com MWp, UF→região, nº de cabines
+e inversores. **A nuvem não enxerga o BD**: quando ele mudar, alguém roda o export e
+commita — igual ao Gerencial MPAS. Em 08/09 o BD tinha 153 em OPERAÇÃO (34 novas desde
+o `(para análise)` de 03/09 usado no PDF, 32 sem nº de inversores, 9 sem UF).
+
+**Método, calibrado contra o PDF** (janela 01/11/25–30/06/26, universo "para análise"):
+religamento = tarefa cujo TEXTO contém "religamento/religar" (o tipo sozinho perde as
+corretivas "Religamento do Inversor"); janela `event_date → final_date` da TAREFA (a
+data final da OS dá parada de meses — testado, absurdo); canceladas fora; sem data final
+conta até agora só se tiver menos de 72 h; horas diurnas 6–18h; peso pelo sufixo do
+código do ativo (CABN → 1/nCab, INV → 1/nInv, outro → 1/nInv aproximado). Resultado:
+3.107 religamentos (PDF 3.111), 18.326 h ponderadas (PDF 18.576 — o "h" do PDF é a
+soma ponderada), disp 94,70 % (PDF 94,62), Norte 88,89 (88,29), Timon 100 −60,8 pp
+(−61,4). **Categorias** pela "Tarefa → Classificação 1" (`tasks_types_description`):
+pela REST (`tasks_log_types_description`): campo 3,33 pp (PDF 3,42), emergencial 1,82 (1,21 — as tarefas sem data final inflam na conferência), queda 0,15 (0,01).
+**Resíduo que não fecha por regra:** remoto 0,63 e programado 0,11 do PDF — foram ajuste
+manual no one-pager; por regra saem ~0,05 e ~0,5. A tela diz "por tipo e texto, não é
+causa". Não tentar fechar ao centésimo.
+
+Roadmap das abas "Aderência do plano" e "Backlog e MTTR": só os botões, apagados.
 
 ### Onde o código realmente mora
 

@@ -722,6 +722,70 @@ tbody tr:hover{background:var(--surf2)}
 .carga-erro > div{margin-top:9px}
 .carga-dica{font-size:12px;color:var(--ink3);border-top:1px solid var(--line);
   padding-top:11px;margin-top:13px}
+/* ── Gerencial: disponibilidade por região ── */
+.gr-abas{display:flex;gap:6px;margin:0 0 14px;flex-wrap:wrap;align-items:center}
+.gr-aba{font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px;border:1px solid var(--line2);background:var(--surf);color:var(--ink2)}
+.gr-aba.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+:root[data-theme="dark"] .gr-aba.on{background:var(--green);color:var(--navy);border-color:var(--green)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .gr-aba.on{background:var(--green);color:var(--navy);border-color:var(--green)}}
+.gr-aba.breve{opacity:.45;cursor:default}.gr-aba.breve small{font-weight:600;margin-left:5px;font-size:10px}
+.gr-acoes{margin-left:auto;display:flex;gap:6px}
+.gr-bloco{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;margin-bottom:14px}
+.gr-bh{display:flex;align-items:center;gap:10px;padding:11px 15px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.gr-bh h3{margin:0;font-size:13.5px;font-weight:800}.gr-bh .obs{margin-left:auto;font-size:10.5px;font-weight:600;color:var(--ink3)}
+.gr-fonte{font-size:10.5px;color:var(--ink3);padding:8px 15px;border-top:1px solid var(--line);background:var(--surf2);line-height:1.5}.gr-fonte b{color:var(--ink2)}
+.gr-topo{display:grid;grid-template-columns:minmax(0,2fr) minmax(250px,1fr);gap:14px;align-items:stretch}
+@container app (max-width:980px){.gr-topo{grid-template-columns:1fr}}
+.gr-kpis{display:grid;gap:10px}
+.gr-kpi{background:var(--surf);border:1px solid var(--line);border-left:3px solid var(--line2);border-radius:var(--r);padding:12px 14px;box-shadow:var(--sh)}
+.gr-kpi.dest{border-left-color:var(--green);background:color-mix(in srgb,var(--green) 8%,var(--surf))}.gr-kpi.mal{border-left-color:var(--danger)}
+.gr-kpi .v{font-size:24px;font-weight:800;line-height:1.05;font-variant-numeric:tabular-nums}.gr-kpi .n{font-size:12px;color:var(--ink2);margin-top:2px}.gr-kpi .m{font-size:10.5px;color:var(--ink3);margin-top:3px}
+.gr-cascata{padding:10px 8px 4px;overflow-x:auto}.gr-cascata svg{width:100%;height:auto;display:block;min-width:560px}.gr-cascata text{font-family:inherit}
+.gr-tab{width:100%;border-collapse:collapse;font-size:12.5px}
+.gr-tab th{padding:7px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink3);border-bottom:1px solid var(--line);background:var(--surf2);text-align:right;white-space:nowrap}
+.gr-tab th:first-child,.gr-tab td:first-child{text-align:left}
+.gr-tab th.g1{background:color-mix(in srgb,#c2410c 22%,var(--surf2));color:#7c2d12}.gr-tab th.g2{background:color-mix(in srgb,var(--ink3) 18%,var(--surf2))}.gr-tab th.g3{background:color-mix(in srgb,var(--green) 40%,var(--surf2));color:#2f4300}
+:root[data-theme="dark"] .gr-tab th.g1{color:#fdba74}:root[data-theme="dark"] .gr-tab th.g3{color:var(--green)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .gr-tab th.g1{color:#fdba74}:root:not([data-theme="light"]) .gr-tab th.g3{color:var(--green)}}
+.gr-tab td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;vertical-align:middle}
+.gr-tab td.c1{background:color-mix(in srgb,#c2410c 7%,transparent)}.gr-tab td.c3{background:color-mix(in srgb,var(--green) 10%,transparent);font-weight:800}
+.gr-tab tr.reg{cursor:pointer}.gr-tab tr.reg:hover td{background:var(--surf2)}
+.gr-tab tr.reg td:first-child::before{content:"▸ ";color:var(--ink3);font-size:10px}.gr-tab tr.reg.ab td:first-child::before{content:"▾ "}
+.gr-tab tr.sub{cursor:pointer}.gr-tab tr.sub td{font-size:12px;color:var(--ink2);background:var(--surf2);padding:6px 10px 6px 26px}.gr-tab tr.sub td:first-child{font-weight:600}.gr-tab tr.sub:hover td{background:var(--line)}
+.gr-tab tr.tot td{font-weight:800;background:var(--navy);color:#fff;border-bottom:0}.gr-tab tr.tot td.c3{color:var(--green);background:var(--navy)}
+.gr-pp{display:inline-flex;align-items:center;gap:6px;justify-content:flex-end}.gr-pp i{height:6px;border-radius:3px;background:#c2410c;display:inline-block;opacity:.8}.gr-pp i.rem{background:var(--ink3)}
+.gr-disp{font-weight:800}.gr-disp.ruim{color:var(--mal)}.gr-disp.ok{color:var(--gd)}
+.gr-2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px;align-items:start}
+@container app (max-width:900px){.gr-2{grid-template-columns:1fr}}
+.gr-ins{padding:6px 15px 10px;margin:0}.gr-ins li{margin:8px 0;font-size:13px;line-height:1.5;color:var(--ink2)}.gr-ins li b{color:var(--ink)}
+.gr-ins li .auto{font-size:10px;font-weight:800;color:var(--gd);margin-left:6px;text-transform:uppercase;letter-spacing:.04em}
+.gr-rk{display:flex;align-items:center;gap:10px;padding:9px 15px;border-bottom:1px solid var(--line);width:100%;text-align:left}
+.gr-rk:last-child{border-bottom:0}.gr-rk:hover{background:var(--surf2)}
+.gr-rk .n{font-size:13px;font-weight:700;flex:0 0 auto;max-width:46%}.gr-rk .n small{font-weight:500;color:var(--ink3);margin-left:6px}
+.gr-rk .bar{flex:1;height:6px;background:var(--surf2);border-radius:3px;overflow:hidden;min-width:40px}.gr-rk .bar i{display:block;height:100%;background:var(--danger);opacity:.75}
+.gr-rk .h{flex:0 0 auto;font-size:12px;font-variant-numeric:tabular-nums;text-align:right;min-width:100px}.gr-rk .h b{display:block;color:var(--mal)}
+.gr-legenda{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--ink3);padding:8px 15px;border-top:1px solid var(--line)}.gr-legenda i{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:-1px;margin-right:4px}
+.gr-gf{position:fixed;inset:0;z-index:70;background:rgba(10,8,20,.45);opacity:0;pointer-events:none;transition:opacity .18s}.gr-gf.on{opacity:1;pointer-events:auto}
+.gr-gv{position:fixed;top:0;right:0;bottom:0;z-index:71;width:min(480px,calc(100% - 24px));background:var(--surf);border-left:1px solid var(--line2);box-shadow:-18px 0 50px rgba(10,8,20,.28);transform:translateX(100%);transition:transform .2s;display:flex;flex-direction:column}
+.gr-gv.on{transform:translateX(0)}
+.gr-gvt{display:flex;align-items:flex-start;gap:10px;padding:14px 16px 11px;border-bottom:1px solid var(--line)}.gr-gvt .k{font-size:10px;font-weight:800;color:var(--ink3);text-transform:uppercase;letter-spacing:.05em}
+.gr-gvt h4{margin:3px 0 0;font-size:15px;font-weight:800;line-height:1.3;overflow-wrap:anywhere}
+.gr-gvx{margin-left:auto;width:28px;height:28px;border-radius:7px;background:var(--surf2);color:var(--ink2);font-size:15px;text-align:center}
+.gr-gvc{overflow:auto;padding:0 0 20px}.gr-gvs{padding:13px 16px;border-bottom:1px solid var(--line)}.gr-gvs h5{margin:0 0 9px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--ink3)}
+.gr-g4{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.gr-g4 .c{background:var(--surf2);border-radius:7px;padding:9px 10px}.gr-g4 .c b{display:block;font-size:16px;font-weight:800;font-variant-numeric:tabular-nums}.gr-g4 .c span{font-size:9.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.04em}
+.gr-dt{width:100%;border-collapse:collapse;font-size:12.5px}.gr-dt td{padding:5px 0;border-bottom:1px solid var(--line)}.gr-dt tr:last-child td{border-bottom:0}.gr-dt td:last-child{text-align:right;font-weight:800}
+.gr-evt{display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--line);font-size:12.5px}.gr-evt:last-child{border-bottom:0}
+.gr-evt .t{flex:0 0 auto;font-size:9.5px;font-weight:800;padding:2px 6px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;background:var(--surf2);color:var(--ink3)}
+.gr-evt .t.campo,.gr-evt .t.emergencial{background:color-mix(in srgb,#c2410c 16%,var(--surf));color:#9a3412}.gr-evt .d{font-size:10.5px;color:var(--ink3);display:block}
+.gr-acao{display:flex;gap:7px;flex-wrap:wrap;padding:12px 16px}
+.gr-sel{width:100%;min-width:0;font:inherit;font-size:11.5px;padding:5px 8px;border:1px solid var(--line2);border-radius:7px;background:var(--surf2);color:var(--ink)}
+.gr-aviso{font-size:11px;color:var(--aviso);font-weight:700;margin-left:auto}
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  .lat,.topo,.filtros,.gr-abas,.gr-gf,.gr-gv,.rodape{display:none!important}
+  .app{box-shadow:none;max-width:none}.tela{padding:0}.gr-bloco{box-shadow:none;break-inside:avoid}
+  .gr-topo{grid-template-columns:2fr 1fr}
+}
 /* ── Confiabilidade (módulo de engenharia) ── */
 /* ── Confiabilidade (módulo novo) — segue o vocabulário do gp-* ── */
 .cf-abas{display:flex;gap:6px;margin:0 0 14px;flex-wrap:wrap}
@@ -990,6 +1054,9 @@ tbody tr:hover{background:var(--surf2)}
     <div class="lat-sec">Engenharia</div>
     <button class="lat-i" data-v="conf" id="lat-conf" title="Confiabilidade">
       <span class="ic">◎</span><span class="rot">Confiabilidade</span></button>
+    <div class="lat-sec">Gerencial</div>
+    <button class="lat-i" data-v="ger" id="lat-ger" title="Disponibilidade por região">
+      <span class="ic">◆</span><span class="rot">Disponibilidade</span></button>
 
     <div class="lat-pe">
       <a class="lat-ac" id="lat-ac" title="Quem de cada cliente pode entrar"
@@ -1028,6 +1095,7 @@ tbody tr:hover{background:var(--surf2)}
     <section class="tela" id="v-mod"></section>
     <section class="tela" id="v-gestao"></section>
     <section class="tela" id="v-conf"></section>
+    <section class="tela" id="v-ger"></section>
 
     <p class="rodape">
       <b>Protótipo navegável.</b> Semana 35, 992 OS reais. A barra lateral substitui as nove abas
@@ -1337,7 +1405,7 @@ function arrancar(){
   /* Papel. Espelha o que o painel em producao ja faz: uma lista de telas restritas
      (adminOnly, Task #130) e o escopo dos dados preso ao cliente do usuario
      (_cliEq(r.cliente, S.user)). O cliente ve Semana e Tarefas/OS, mais nada. */
-  const TELAS_ADMIN = ["insights", "mod", "gestao", "conf"];
+  const TELAS_ADMIN = ["insights", "mod", "gestao", "conf", "ger"];
   /* Os 11 papeis de cliente, iguais ao AUTH_CLI de js/auth.js. Papel derivado
      fora desta lista e erro de cadastro, nao papel novo. */
   const AUTH_CLI = {
@@ -2866,7 +2934,8 @@ function arrancar(){
     insights:["Insights","o que a semana está dizendo"],
     tarefas:["Tarefas / OS","tabela consolidada com filtros"],
     gestao:["Gestão PCM","o ano inteiro · 20 mil tarefas · somente leitura"],
-    conf:["Confiabilidade","engenharia de manutenção · sinais por ativo · tickets · FMEA"]};
+    conf:["Confiabilidade","engenharia de manutenção · sinais por ativo · tickets · FMEA"],
+    ger:["Gerencial","disponibilidade por região · cascata de religamentos · one-pager"]};
   function pintar(){
     document.querySelectorAll(".lat-i").forEach(b =>
       b.classList.toggle("on", b.dataset.v===V && (V!=="mod" || b.dataset.m===MOD)));
@@ -2880,9 +2949,11 @@ function arrancar(){
     $("#v-mod").innerHTML = V==="mod" ? vMod() : "";
     $("#v-gestao").innerHTML = V==="gestao" ? vGestao() : "";
     $("#v-conf").innerHTML = V==="conf" ? vConf() : "";
+    $("#v-ger").innerHTML = V==="ger" ? vGer() : "";
     document.querySelectorAll(".tela").forEach(s => s.classList.toggle("on", s.id==="v-"+V));
     ligar();
     if (V === "conf") cfPintar();
+    if (V === "ger") grPintar();
     frPintar();     // idade do dado no cabeçalho, a cada render
   }
   function gpAbrirPop(k){
@@ -3167,7 +3238,7 @@ function arrancar(){
     const _ac = $("#lat-ac");
     if (_ac) _ac.style.display = ehAdmin ? "" : "none";
     document.querySelectorAll(".lat-sec").forEach(sec =>
-      { if (["Chamados","Engenharia"].includes(sec.textContent.trim())) sec.style.display = ehAdmin ? "" : "none"; });
+      { if (["Chamados","Engenharia","Gerencial"].includes(sec.textContent.trim())) sec.style.display = ehAdmin ? "" : "none"; });
     // Se estava numa tela restrita, volta pra Semana. Trocar so a variavel nao
     // esconde a tela que ja esta renderizada — em producao isso virou o _voltouAba.
     if (!ehAdmin && TELAS_ADMIN.includes(V)) { V = "semana"; MOD = null; }
@@ -3398,6 +3469,217 @@ function arrancar(){
     if (e.key === "Escape" && document.querySelector(".det")) fecharDet();
   });
 
+
+
+  /* ── Gerencial: disponibilidade por região ────────────────────────────
+     Dado: gerencial.json (robô), com o universo em operação (operacoes.json,
+     exportado do BD_Operacoes) e TODOS os eventos de religamento desde
+     GER_INICIO. A tela recalcula a cascata a cada filtro a partir dos eventos:
+     período, região, cliente, usina, horas diurnas ou 24h, peso por fração ou
+     usina inteira. O que o robô pré-calcula (resumo) só serve de conferência. */
+  let GR = null, GR_ESTADO = "vazio", GR_ERRO = "", GR_ABERTA = null, GR_FOCO = null;
+  const GR_CATS = [["campo","Religamento em campo",true],["emergencial","Religamento emergencial",true],["remoto","Religamento remoto",false],["queda","Queda de energia",false],["programado","Desligamento programado",false]];
+  const GR_FIL = { de:"", ate:"", regiao:"", cliente:"", usina:"", horas:"dia", peso:"fracao" };
+  const grN = (v,d) => v==null ? "·" : v.toLocaleString("pt-BR",{minimumFractionDigits:d??0,maximumFractionDigits:d??0});
+  const grBr = iso => iso ? iso.slice(8,10)+"/"+iso.slice(5,7)+"/"+iso.slice(0,4) : "";
+
+  async function grCarregar(){
+    if (GR_ESTADO === "carregando" || GR_ESTADO === "pronto") return;
+    GR_ESTADO = "carregando"; pintar();
+    try {
+      const r = await fetch("gerencial.json?t=" + Date.now(), { cache:"no-store" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      GR = await r.json();
+      if (!GR || !Array.isArray(GR.eventos)) throw new Error("arquivo sem eventos");
+      GR_FIL.de = GR.resumo.de; GR_FIL.ate = GR.resumo.ate;
+      GR_ESTADO = "pronto";
+    } catch (e) { GR_ESTADO = "erro"; GR_ERRO = e.message; }
+    pintar();
+  }
+  function vGer(){
+    if (GR_ESTADO === "vazio")      { grCarregar(); return '<div class="gp-carga">Carregando o Gerencial…</div>'; }
+    if (GR_ESTADO === "carregando") return '<div class="gp-carga">Carregando <b>gerencial.json</b>…</div>';
+    if (GR_ESTADO === "erro")       return '<div class="gp-carga erro"><b>Não foi possível carregar.</b><span>' + esc(GR_ERRO) + '</span></div>';
+    return GR_HTML;
+  }
+  const GR_HTML = '<div class="filtros"><div class="fg" id="gr-fil"></div><div class="f-rod" id="gr-fil-rod"></div></div>'
+    + '<div class="gr-abas"><button class="gr-aba on">Disponibilidade</button>'
+    + '<button class="gr-aba breve" title="próxima entrega">Aderência do plano<small>em breve</small></button>'
+    + '<button class="gr-aba breve" title="próxima entrega">Backlog e MTTR<small>em breve</small></button>'
+    + '<span class="gr-acoes"><button class="bt" id="gr-pdf">Gerar one-pager (PDF)</button></span></div>'
+    + '<div class="gr-topo"><div class="gr-bloco"><div class="gr-bh"><h3>Cascata de indisponibilidade</h3><span class="obs" id="gr-cas-obs">pontos percentuais · clique numa barra para destacar a coluna</span></div>'
+    + '<div class="gr-cascata" id="gr-cascata"></div>'
+    + '<div class="gr-legenda"><span><i style="background:#c2410c"></i>Exigiu deslocamento de equipe</span><span><i style="background:#8a879e"></i>Normalizado sem ir ao campo</span><span><i style="background:#A9DB21"></i>Disponibilidade</span></div></div>'
+    + '<div class="gr-kpis" id="gr-kpis"></div></div>'
+    + '<div class="gr-bloco"><div class="gr-bh"><h3>Por região</h3><span class="obs">clique na região para abrir as usinas · clique na usina para ver as OS</span></div>'
+    + '<div style="overflow-x:auto"><table class="gr-tab" id="gr-tab"></table></div>'
+    + '<div class="gr-fonte">Colunas em <b>pontos percentuais</b>; somadas fecham 100% − disponibilidade. Evento de cabine ou inversor entra pela <b>fração da usina afetada</b> (nº de cabines e inversores do BD_Operacoes), salvo se o filtro "Peso" disser usina inteira.</div></div>'
+    + '<div class="gr-2"><div class="gr-bloco"><div class="gr-bh"><h3>O que a cascata mostra</h3><span class="obs">gerado por regra a partir dos filtros</span></div><ul class="gr-ins" id="gr-ins"></ul></div>'
+    + '<div class="gr-bloco"><div class="gr-bh"><h3>Usinas que mais pararam</h3><span class="obs">horas ponderadas na janela</span></div><div id="gr-rank"></div></div></div>'
+    + '<div class="gr-fonte" style="border:1px solid var(--line);border-radius:var(--r);margin-bottom:14px" id="gr-metodo"></div>';
+  const GR_FIXOS = '<div class="gr-gf" id="gr-gf"></div><aside class="gr-gv" id="gr-gv" role="dialog" aria-modal="true">'
+    + '<div class="gr-gvt"><div style="min-width:0"><div class="k" id="gr-gk"></div><h4 id="gr-gh"></h4></div><button class="gr-gvx" id="gr-gx" aria-label="Fechar">✕</button></div><div class="gr-gvc" id="gr-gc"></div></aside>';
+
+  /* ── cálculo ── */
+  function grCalcular(){
+    const f = GR_FIL, U = GR.usinas;
+    const de = f.de, ate = f.ate;
+    const dias = Math.max(1, Math.round((new Date(ate + "T00:00:00") - new Date(de + "T00:00:00")) / 86400000) + 1);
+    const ids = U.map((u,i)=>i).filter(i => (!f.regiao || U[i].regiao === f.regiao) && (!f.cliente || U[i].cliente === f.cliente) && (!f.usina || U[i].usina === f.usina));
+    const set = new Set(ids);
+    const porU = new Map();
+    for (const e of GR.eventos){
+      if (!set.has(e.u)) continue;
+      const d = e.ini.slice(0,10);
+      if (d < de || d > ate) continue;
+      const h = f.horas === "dia" ? e.hDia : e.h24;
+      const peso = f.peso === "fracao" ? e.peso : 1;
+      const a = porU.get(e.u) || { rel:0, h:0, hp:0, campo:0, emergencial:0, remoto:0, queda:0, programado:0, evs:[] };
+      a.rel++; a.h += h; a.hp += h * peso; a[e.cat] += h * peso; a.evs.push(e);
+      porU.set(e.u, a);
+    }
+    const den = n => dias * 12 * Math.max(1, n);     // com 24h a base é 24h × dias
+    const base = f.horas === "dia" ? 12 : 24;
+    const bloco = lista => {
+      const n = lista.length, dn = dias * base * Math.max(1, n);
+      const g = k => lista.reduce((s,i)=>s + ((porU.get(i)||{})[k]||0), 0);
+      const out = { usinas:n, mwp: lista.reduce((s,i)=>s+(U[i].mwp||0),0), rel:g("rel"), h:g("h"), comRelig: lista.filter(i=>porU.has(i)).length };
+      GR_CATS.forEach(([k]) => out[k] = n ? 100 * g(k) / dn : null);
+      out.perda = n ? 100 * g("hp") / dn : null;
+      out.disp = n ? 100 - out.perda : null;
+      return out;
+    };
+    const regioes = {};
+    ids.forEach(i => (regioes[U[i].regiao || "Sem região"] = regioes[U[i].regiao || "Sem região"] || []).push(i));
+    const R = Object.keys(regioes).sort((a,b)=>(a==="Sem região")-(b==="Sem região") || a.localeCompare(b)).map(r => Object.assign({ regiao:r, ids:regioes[r] }, bloco(regioes[r])));
+    const usinas = [...porU.entries()].map(([i,a]) => ({ i, usina:U[i].usina, regiao:U[i].regiao, cliente:U[i].cliente, rel:a.rel, h:a.h, hp:a.hp, perda: 100*a.hp/(dias*base), disp: 100 - 100*a.hp/(dias*base), evs:a.evs, cats:{campo:a.campo,emergencial:a.emergencial,remoto:a.remoto,queda:a.queda,programado:a.programado} }))
+      .sort((x,y)=>y.hp-x.hp);
+    return { dias, base, portfolio: bloco(ids), regioes: R, usinas, porU };
+  }
+
+  /* ── render ── */
+  function grFiltros(){
+    const U = GR.usinas, f = GR_FIL;
+    const opts = k => [...new Set(U.map(u=>u[k]).filter(Boolean))].sort();
+    const sel = (k, rot, lista, rotulos) => '<div class="fgrupo"><span class="fl">'+rot+'</span><select class="gr-sel" data-grk="'+k+'"><option value="">Todos</option>'
+      + lista.map(o=>'<option value="'+esc(o)+'"'+(f[k]===o?" selected":"")+'>'+esc(rotulos?rotulos[o]:o)+'</option>').join("")+'</select></div>';
+    document.getElementById("gr-fil").innerHTML =
+      '<div class="fgrupo"><span class="fl">Período de</span><input class="gr-sel" type="date" data-grk="de" value="'+esc(f.de)+'" min="'+esc(GR.resumo.de)+'" max="'+esc(GR.resumo.ate)+'"></div>'
+      + '<div class="fgrupo"><span class="fl">Período até</span><input class="gr-sel" type="date" data-grk="ate" value="'+esc(f.ate)+'" min="'+esc(GR.resumo.de)+'" max="'+esc(GR.resumo.ate)+'"></div>'
+      + sel("regiao","Região",opts("regiao")) + sel("cliente","Cliente",opts("cliente")) + sel("usina","Usina",opts("usina"))
+      + '<div class="fgrupo"><span class="fl">Horas</span><select class="gr-sel" data-grk="horas"><option value="dia"'+(f.horas==="dia"?" selected":"")+'>Diurnas 6h–18h</option><option value="24"'+(f.horas==="24"?" selected":"")+'>24 h</option></select></div>'
+      + '<div class="fgrupo"><span class="fl">Peso do evento</span><select class="gr-sel" data-grk="peso"><option value="fracao"'+(f.peso==="fracao"?" selected":"")+'>Fração do ativo</option><option value="inteira"'+(f.peso==="inteira"?" selected":"")+'>Usina inteira</option></select></div>';
+    document.querySelectorAll(".gr-sel").forEach(el => {
+      el.onclick = e => e.stopPropagation();
+      el.onchange = () => { const v = el.value; if (el.dataset.grk === "de" || el.dataset.grk === "ate") { if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) return; if (el.dataset.grk==="de" && v > GR_FIL.ate) return; if (el.dataset.grk==="ate" && v < GR_FIL.de) return; } GR_FIL[el.dataset.grk] = v; GR_ABERTA = null; grPintar(); };
+    });
+  }
+  function grCascata(P){
+    const W=760,H=300,L=52,R=16,T=34,B=58;
+    const disp = P.disp==null ? 100 : P.disp;
+    const y0 = Math.max(0, Math.floor(Math.min(disp, 100 - GR_CATS.reduce((s,[k])=>s+(P[k]||0),0)) - 1)), y1 = 100;
+    const ys = v => T + (y1 - v) / (y1 - y0) * (H - T - B);
+    const cols = [{n:"Disponibilidade teórica",tipo:"base",v:100}].concat(GR_CATS.map(([k,n,campo])=>({k,n,campo,tipo:"drop",v:P[k]||0})),[{n:"Disponibilidade do recorte",tipo:"fim",v:disp}]);
+    const cw=(W-L-R)/cols.length, bw=cw*0.6;
+    let g='', nivel=100;
+    const passo = (y1-y0) > 12 ? Math.ceil((y1-y0)/6) : 1;
+    for (let v=y0; v<=y1; v+=passo) g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+ys(v)+'" y2="'+ys(v)+'" stroke="var(--line)"/><text x="'+(L-6)+'" y="'+(ys(v)+4)+'" font-size="10" fill="var(--ink3)" text-anchor="end">'+v+'%</text>';
+    cols.forEach((c,i)=>{
+      const x = L + i*cw + (cw-bw)/2; let top,bot,fill,rot;
+      if (c.tipo==="base"){ top=ys(100); bot=ys(y0); fill="var(--navy)"; rot="100,00%"; }
+      else if (c.tipo==="fim"){ top=ys(c.v); bot=ys(y0); fill="#A9DB21"; rot=grN(c.v,2)+"%"; }
+      else { const novo=nivel-c.v; top=ys(nivel); bot=ys(novo); fill=c.campo?"#c2410c":"#8a879e"; rot="−"+grN(c.v,2);
+        g+='<line x1="'+(x-(cw-bw)/2)+'" x2="'+x+'" y1="'+ys(nivel)+'" y2="'+ys(nivel)+'" stroke="var(--ink3)" stroke-dasharray="3 3"/>'; nivel=novo; }
+      g+='<rect data-grcat="'+(c.k||"")+'" x="'+x+'" y="'+Math.min(top,bot)+'" width="'+bw+'" height="'+Math.max(2,Math.abs(bot-top))+'" rx="2" fill="'+fill+'" style="cursor:'+(c.k?"pointer":"default")+'"'+(GR_FOCO&&c.k&&GR_FOCO!==c.k?' opacity=".35"':'')+'/>';
+      g+='<text x="'+(x+bw/2)+'" y="'+(Math.min(top,bot)-8)+'" font-size="'+(c.tipo==="drop"?11:12)+'" font-weight="800" text-anchor="middle" fill="'+(c.tipo==="drop"?(c.campo?"#c2410c":"var(--ink3)"):"var(--ink)")+'">'+rot+'</text>';
+      const pt=c.n.split(" "), m=Math.ceil(pt.length/2);
+      g+='<text x="'+(x+bw/2)+'" y="'+(H-B+16)+'" font-size="10.5" text-anchor="middle" fill="var(--ink2)">'+esc(pt.slice(0,m).join(" "))+'</text><text x="'+(x+bw/2)+'" y="'+(H-B+29)+'" font-size="10.5" text-anchor="middle" fill="var(--ink2)">'+esc(pt.slice(m).join(" "))+'</text>';
+    });
+    document.getElementById("gr-cascata").innerHTML = '<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cascata de indisponibilidade">'+g+'</svg>';
+    document.querySelectorAll("#gr-cascata rect[data-grcat]").forEach(r => r.onclick = () => { if (!r.dataset.grcat) return; GR_FOCO = GR_FOCO===r.dataset.grcat ? null : r.dataset.grcat; grPintar(); });
+  }
+  function grPintar(){
+    if (GR_ESTADO !== "pronto" || V !== "ger") return;
+    if (!document.getElementById("gr-gv")) { document.body.insertAdjacentHTML("beforeend", GR_FIXOS);
+      const fechar = () => { document.getElementById("gr-gf").classList.remove("on"); document.getElementById("gr-gv").classList.remove("on"); };
+      document.getElementById("gr-gx").onclick = fechar; document.getElementById("gr-gf").onclick = fechar; }
+    grFiltros();
+    const C = grCalcular(), P = C.portfolio, U = GR.usinas, f = GR_FIL;
+    const campo = (P.campo||0)+(P.emergencial||0), perda = P.perda||0;
+    document.getElementById("gr-fil-rod").innerHTML = '<b>'+P.usinas+'</b> usinas em operação no recorte · <b>'+P.comRelig+'</b> com religamento · <b>'+grN(P.rel)+'</b> religamentos · '+C.dias+' dias'
+      + (GR.avisos && (GR.avisos.usinasSemRegiao||GR.avisos.usinasSemNInv) ? '<span class="gr-aviso">⚠ '+(GR.avisos.usinasSemRegiao?GR.avisos.usinasSemRegiao+' usinas sem UF/região':'')+(GR.avisos.usinasSemNInv?' · '+GR.avisos.usinasSemNInv+' sem nº de inversores no BD_Operacoes':'')+'</span>' : '')
+      + (Object.entries(f).some(([k,v]) => !["de","ate","horas","peso"].includes(k) && v) || f.de!==GR.resumo.de || f.ate!==GR.resumo.ate || f.horas!=="dia" || f.peso!=="fracao" ? '<button class="f-lim" id="gr-limpar">↺ Limpar</button>' : '');
+    const lim = document.getElementById("gr-limpar"); if (lim) lim.onclick = () => { Object.assign(GR_FIL, { de:GR.resumo.de, ate:GR.resumo.ate, regiao:"", cliente:"", usina:"", horas:"dia", peso:"fracao" }); GR_FOCO=null; GR_ABERTA=null; grPintar(); };
+    grCascata(P);
+    document.getElementById("gr-cas-obs").textContent = grBr(f.de)+" a "+grBr(f.ate)+" · "+(f.horas==="dia"?"horas diurnas":"24 h")+" · "+(f.peso==="fracao"?"fração do ativo":"usina inteira");
+    document.getElementById("gr-kpis").innerHTML =
+      '<div class="gr-kpi dest"><div class="v">'+(P.disp==null?"—":grN(P.disp,2)+"%")+'</div><div class="n">Disponibilidade do recorte</div><div class="m">'+P.usinas+' usinas · '+grN(P.mwp,1)+' MWp</div></div>'
+    + '<div class="gr-kpi"><div class="v">'+grN(P.rel)+'</div><div class="n">religamentos no período</div><div class="m">'+grN(P.h)+' h de indisponibilidade'+(f.horas==="dia"?" diurna":"")+'</div></div>'
+    + '<div class="gr-kpi mal"><div class="v">'+grN(campo,2)+' pp</div><div class="n">exigiram ida a campo</div><div class="m">contra '+grN(P.remoto||0,2)+' pp resolvidos remotamente pelo COS</div></div>'
+    + '<div class="gr-kpi"><div class="v" style="font-size:17px">'+grBr(f.de)+' a '+grBr(f.ate)+'</div><div class="n">janela apurada</div><div class="m">'+P.comRelig+' das '+P.usinas+' usinas com religamento · dado do robô de '+esc((GR.geradoEm||"").slice(0,10))+'</div></div>';
+    // tabela
+    const max = Math.max(0.01, ...C.regioes.map(r=>r.campo||0));
+    const dcls = d => d==null ? "" : d<90 ? "ruim" : d>=95 ? "ok" : "";
+    const foco = k => GR_FOCO && GR_FOCO!==k ? ' style="opacity:.35"' : '';
+    const pp = (v,rem) => v==null ? '<td class="'+(rem?"":"c1")+'">·</td>' : '<td class="'+(rem?"":"c1")+'"><span class="gr-pp"><i class="'+(rem?"rem":"")+'" style="width:'+Math.max(3,Math.round(46*v/max))+'px"></i>'+grN(v,2)+'</span></td>';
+    let h = '<thead><tr><th rowspan="2">Região</th><th rowspan="2">Usinas</th><th rowspan="2">MWp</th><th rowspan="2">Religa-<br>mentos</th><th rowspan="2">Horas de<br>parada</th><th class="g1" colspan="2">Exigiu ida a campo</th><th class="g2" colspan="3">Sem deslocamento</th><th class="g3" rowspan="2">Disponibilidade</th></tr>'
+      + '<tr><th class="g1"'+foco("campo")+'>Em campo</th><th class="g1"'+foco("emergencial")+'>Emergencial</th><th class="g2"'+foco("remoto")+'>Remoto</th><th class="g2"'+foco("programado")+'>Programado</th><th class="g2"'+foco("queda")+'>Queda de energia</th></tr></thead><tbody>';
+    for (const r of C.regioes){
+      h += '<tr class="reg '+(GR_ABERTA===r.regiao?"ab":"")+'" data-grr="'+esc(r.regiao)+'"><td><b>'+esc(r.regiao)+'</b></td><td>'+r.usinas+'</td><td>'+grN(r.mwp,1)+'</td><td>'+grN(r.rel)+'</td><td>'+grN(r.h)+'</td>'
+        + pp(r.campo) + pp(r.emergencial) + pp(r.remoto,true) + pp(r.programado,true) + pp(r.queda,true) + '<td class="c3"><span class="gr-disp '+dcls(r.disp)+'">'+(r.disp==null?"—":grN(r.disp,2)+"%")+'</span></td></tr>';
+      if (GR_ABERTA===r.regiao){
+        const lista = C.usinas.filter(u=>u.regiao===r.regiao);
+        const semEv = r.ids.filter(i=>!C.porU.has(i));
+        for (const u of lista) h += '<tr class="sub" data-gru="'+u.i+'"><td colspan="2">'+esc(u.usina)+'</td><td>'+grN(U[u.i].mwp||0,1)+'</td><td>'+grN(u.rel)+'</td><td>'+grN(u.h)+'</td>'
+          + pp(100*u.cats.campo/(C.dias*C.base)) + pp(100*u.cats.emergencial/(C.dias*C.base)) + pp(100*u.cats.remoto/(C.dias*C.base),true) + pp(100*u.cats.programado/(C.dias*C.base),true) + pp(100*u.cats.queda/(C.dias*C.base),true)
+          + '<td class="c3"><span class="gr-disp '+dcls(u.disp)+'">'+grN(u.disp,2)+'%</span></td></tr>';
+        if (semEv.length) h += '<tr class="sub" style="cursor:default"><td colspan="11" style="color:var(--ink3)">'+semEv.length+' usina(s) sem religamento na janela: '+esc(semEv.slice(0,8).map(i=>U[i].usina).join(", "))+(semEv.length>8?" …":"")+'</td></tr>';
+      }
+    }
+    h += '<tr class="tot"><td>RECORTE</td><td>'+P.usinas+'</td><td>'+grN(P.mwp,1)+'</td><td>'+grN(P.rel)+'</td><td>'+grN(P.h)+'</td>'+GR_CATS.map(([k])=>'<td>'+grN(P[k]||0,2)+'</td>').join("")+'<td class="c3">'+(P.disp==null?"—":grN(P.disp,2)+"%")+'</td></tr></tbody>';
+    document.getElementById("gr-tab").innerHTML = h;
+    document.querySelectorAll("#gr-tab tr.reg").forEach(tr => tr.onclick = () => { GR_ABERTA = GR_ABERTA===tr.dataset.grr ? null : tr.dataset.grr; grPintar(); });
+    document.querySelectorAll("#gr-tab tr.sub[data-gru]").forEach(tr => tr.onclick = () => grUsina(+tr.dataset.gru, C));
+    // insights por regra
+    const ins = [];
+    if (P.rel) {
+      ins.push('<li><b>'+(campo>=(P.remoto||0)?"O grosso da perda exige alguém indo até a usina.":"A maior parte da perda foi normalizada sem deslocamento.")+'</b> '+grN(campo,2)+' dos '+grN(perda,2)+' pp de perda vêm de religamentos que precisaram de deslocamento — contra '+grN(P.remoto||0,2)+' pp resolvidos remotamente pelo COS.<span class="auto">regra: campo × remoto</span></li>');
+      const comDisp = C.regioes.filter(r=>r.disp!=null && r.usinas);
+      if (comDisp.length > 1){ const pior=[...comDisp].sort((a,b)=>a.disp-b.disp)[0], maisU=[...comDisp].sort((a,b)=>b.usinas-a.usinas)[0];
+        ins.push('<li><b>'+esc(pior.regiao)+' é o extremo.</b> '+pior.usinas+' usina(s) e '+grN(pior.mwp,1)+' MWp com '+grN(pior.rel)+' religamentos'+(pior!==maisU && pior.rel>maisU.rel?' — mais que '+esc(maisU.regiao)+' inteiro, que tem '+maisU.usinas+' usinas':'')+' — e disponibilidade de '+grN(pior.disp,2)+'%.<span class="auto">regra: pior região</span></li>');
+        const freq=[...comDisp].map(r=>Object.assign({},r,{porUs:r.rel/Math.max(1,r.usinas)})).sort((a,b)=>b.porUs-a.porUs).slice(0,2);
+        if (freq.length===2) ins.push('<li><b>'+esc(freq[0].regiao)+' e '+esc(freq[1].regiao)+' chamam atenção pela frequência.</b> Com '+freq[0].usinas+' e '+freq[1].usinas+' usinas, acumulam '+grN(freq[0].rel)+' e '+grN(freq[1].rel)+' religamentos ('+grN(freq[0].porUs,1)+' e '+grN(freq[1].porUs,1)+' por usina). Vale investigar se é qualidade de rede local ou ajuste de proteção.<span class="auto">regra: religamentos por usina</span></li>');
+      }
+      if (C.usinas.length){ const top=C.usinas[0]; ins.push('<li><b>'+esc(top.usina)+' concentra a maior perda.</b> '+grN(top.h)+' h e −'+grN(top.perda,2)+' pp, '+grN(top.rel)+' religamentos'+(top.cats.remoto>0.5*top.hp?' — a maioria resolvida remotamente':top.cats.emergencial>0.4*top.hp?' — quase metade em regime emergencial':'')+'.<span class="auto">regra: maior perda</span></li>'); }
+    } else ins.push('<li style="color:var(--ink3)">Nenhum religamento no recorte.</li>');
+    document.getElementById("gr-ins").innerHTML = ins.join("");
+    // ranking
+    const top = C.usinas.slice(0,8), mx = top.length ? top[0].hp : 1;
+    document.getElementById("gr-rank").innerHTML = top.map(u=>'<button class="gr-rk" data-gru="'+u.i+'"><span class="n">'+esc(u.usina)+'<small>'+esc(u.regiao)+'</small></span><span class="bar"><i style="width:'+Math.round(100*u.hp/mx)+'%"></i></span><span class="h"><b>'+grN(u.h)+' h</b>−'+grN(u.perda,2)+' pp</span></button>').join("")
+      || '<div style="padding:14px 15px;color:var(--ink3);font-size:12.5px">sem religamentos no recorte</div>';
+    document.querySelectorAll("#gr-rank .gr-rk").forEach(b => b.onclick = () => grUsina(+b.dataset.gru, C));
+    document.getElementById("gr-metodo").innerHTML = '<b>Método.</b> Cada tarefa de OS de religamento entra pela janela Data do Incidente → Data final, contada '+(f.horas==="dia"?'só nas horas diurnas (6h–18h)':'nas 24 h')+' e '+(f.peso==="fracao"?'ponderada pelo escopo do código do ativo — UFV inteira, cabine (1/nº de cabines) ou inversor (1/nº de inversores)':'com peso 1 por evento (usina inteira)')+'. Disponibilidade = 1 − Σ(horas ponderadas) ÷ (dias × '+C.base+' h × usinas em operação). <b>Fontes.</b> Eventos: Fracttal, robô de '+esc((GR.geradoEm||"").slice(0,10))+' · universo, potência e nº de cabines/inversores: BD_Operacoes exportado em '+esc((GR.operacoesGeradoEm||"").slice(0,10))+', usinas em OPERAÇÃO. <b>Nota.</b> O Fracttal não registra causa de perda; a separação é por tipo da OS e texto — como o evento foi resolvido, não responsabilidade contratual.'
+      + (GR.avisos ? ' Eventos sem usina casada no BD_Operacoes: '+GR.avisos.eventosSemUsina+'; com peso aproximado (ativo fora de cabine/inversor): '+GR.avisos.pesoAproximado+'.' : '');
+    document.getElementById("gr-pdf").onclick = () => window.print();
+  }
+  function grUsina(i, C){
+    const U = GR.usinas[i], u = C.usinas.find(x=>x.i===i);
+    if (!u) return;
+    const f = GR_FIL;
+    document.getElementById("gr-gk").textContent = (U.regiao||"")+" · "+(U.cliente||"")+" · "+grBr(f.de)+" a "+grBr(f.ate);
+    document.getElementById("gr-gh").textContent = U.usina;
+    const cats = u.cats, tot = Object.values(cats).reduce((a,b)=>a+b,0)||1;
+    const rot = {campo:"Em campo",emergencial:"Emergencial",remoto:"Remoto (COS)",queda:"Queda de energia",programado:"Programado"};
+    const nCat = {}; u.evs.forEach(e => nCat[e.cat] = (nCat[e.cat]||0)+1);
+    document.getElementById("gr-gc").innerHTML =
+      '<div class="gr-gvs"><h5>Na janela</h5><div class="gr-g4"><div class="c"><b style="color:'+(u.disp<90?"var(--mal)":"var(--gd)")+'">'+grN(u.disp,2)+'%</b><span>Disponibilidade</span></div><div class="c"><b>−'+grN(u.perda,2)+' pp</b><span>perda</span></div><div class="c"><b>'+grN(u.hp,1)+' h</b><span>horas ponderadas</span></div><div class="c"><b>'+grN(u.rel)+'</b><span>religamentos</span></div></div>'
+      + '<div style="font-size:11px;color:var(--ink3);margin-top:8px">'+grN(U.mwp||0,1)+' MWp · '+(U.nInv||"?")+' inversores · '+(U.nCab||"?")+' cabines</div></div>'
+      + '<div class="gr-gvs"><h5>Como foi resolvido</h5><table class="gr-dt">'+GR_CATS.map(([k])=>'<tr><td>'+rot[k]+'</td><td>'+(nCat[k]||0)+' · '+grN(100*cats[k]/tot,0)+'% das horas</td></tr>').join("")+'</table></div>'
+      + '<div class="gr-gvs"><h5>OS de religamento ('+u.evs.length+')</h5>'+u.evs.slice(0,40).map(e=>'<div class="gr-evt"><span class="t '+e.cat+'">'+rot[e.cat].split(" ")[0]+'</span><span>#'+esc(e.os)+' · '+esc(e.ativo)+(e.escopo!=="usina"?' ('+e.escopo+', peso '+grN(e.peso,2)+')':'')+'<span class="d">'+esc(e.ini.replace("T"," "))+' → '+esc(e.fim.replace("T"," "))+' · '+grN(f.horas==="dia"?e.hDia:e.h24,1)+' h'+(e.aberto?' · <b>ainda aberta</b>':'')+'</span></span></div>').join("")+(u.evs.length>40?'<div style="font-size:11px;color:var(--ink3);padding-top:6px">… e mais '+(u.evs.length-40)+'</div>':'')+'</div>'
+      + '<div class="gr-acao"><button class="bt" id="gr-ir-conf">Abrir no Confiabilidade</button></div>';
+    document.getElementById("gr-ir-conf").onclick = () => { document.getElementById("gr-gf").click(); V = "conf"; MOD = null; CF_FIL.usina = ""; CF_FIL.busca = U.usina.split(" ")[0]; pintar(); window.scrollTo(0,0); };
+    document.getElementById("gr-gf").classList.add("on"); document.getElementById("gr-gv").classList.add("on");
+  }
 
   /* ── Confiabilidade ──────────────────────────────────────────────────────
      Módulo de engenharia de manutenção. Dados do engenharia.json (robô
