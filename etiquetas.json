@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-08T21:00:45Z",
+  "geradoEm": "2026-09-08T21:13:10Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4235,
+        "total": 4237,
         "emAberto": 31,
-        "atrasadas": 19,
-        "concluidas30d": 682,
-        "concluidas7d": 208,
-        "naSemanaCorrente": 54
+        "atrasadas": 18,
+        "concluidas30d": 684,
+        "concluidas7d": 210,
+        "naSemanaCorrente": 56
       },
       "mttr": {
-        "horas": 17.67,
-        "label": "17h 40min",
-        "amostra": 682
+        "horas": 17.76,
+        "label": "17h 46min",
+        "amostra": 684
       },
       "tendencia4Semanas": [
         {
@@ -38,22 +38,22 @@
         },
         {
           "semana": "W37",
-          "criadas": 51,
-          "finalizadas": 56
+          "criadas": 53,
+          "finalizadas": 58
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4235,
+            "total": 4237,
             "emAberto": 31
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 539,
+            "total": 540,
             "emAberto": 3
           },
           {
@@ -73,16 +73,16 @@
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 183,
-            "emAberto": 1
+            "total": 184,
+            "emAberto": 2
           }
         ]
       },
       "total": 31,
-      "atrasadas": 19,
+      "atrasadas": 18,
       "porStatus": {
-        "naoIniciada": 27,
-        "emProgresso": 1,
+        "naoIniciada": 28,
+        "emProgresso": 0,
         "pausada": 3,
         "verificacao": 0
       },
@@ -344,25 +344,6 @@
           "atrasada": true
         },
         {
-          "osId": "12967",
-          "ativo": "Disjuntor do Inversor 5.2      { SMP100-DINV5.2 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Gilson Souza ",
-          "status": "pausado",
-          "tarefa": "[SMP100-DINV5.2] - Religamento do SMP100-DINV5.2",
-          "criticidade": "",
-          "dataProgramada": "2026-09-04",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "2026-09-08",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "13095",
           "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
           "equipe": "",
@@ -434,6 +415,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "13250",
+          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Wesllen  Castro",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-08",
+          "dataCriacao": "2026-09-08",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "13247",
@@ -532,7 +531,7 @@
           "responsavel": "Valdério Paz ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Valdério Paz ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-09-08",
@@ -654,6 +653,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13249",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizados",
+          "tarefa": "[Axis - Marialva 1 - PR] - Religamento do Axis - Marialva 1 - PR",
+          "criticidade": "",
+          "dataProgramada": "2026-09-08",
+          "dataCriacao": "2026-09-08",
+          "dataInicial": "2026-09-08",
+          "dataFinal": "2026-09-08",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "13243",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -1291,6 +1310,26 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 96.0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "12967",
+          "ativo": "Disjuntor do Inversor 5.2      { SMP100-DINV5.2 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[SMP100-DINV5.2] - Religamento do SMP100-DINV5.2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-04",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-08",
+          "dataFinal": "2026-09-08",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3575,46 +3614,6 @@
           "atrasada": false
         },
         {
-          "osId": "12626",
-          "ativo": "Inversor 1.4 Sofar 250KTL-HV-PRO    { IBI100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Thiago Morais ",
-          "status": "Finalizados",
-          "tarefa": "[IBI100-INVR1.4] - Religamento do IBI100-INVR1.4",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-01",
-          "dataFinal": "2026-09-01",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "12618",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Axis - Marialva 1 - PR] - Religamento do Axis - Marialva 1 - PR",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-01",
-          "dataFinal": "2026-09-01",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9263",
           "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
           "equipe": "",
@@ -3655,10 +3654,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1836,
+      "historicoTotal": 1838,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3479,
+        "local": 3481,
         "remotoEmAberto": 12,
         "localEmAberto": 19,
         "pctRemoto": 18,
@@ -15982,6 +15981,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13250",
+      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Wesllen  Castro",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-08",
+      "dataCriacao": "2026-09-08",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13248",
       "ativo": "Preventiva Grupo de Inversores      { THPN-ADT100-PGINVR1 }",
       "equipe": "",
@@ -16297,7 +16313,7 @@
       "responsavel": "Valdério Paz ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Valdério Paz ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-09-08",
@@ -16780,24 +16796,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "12967",
-      "ativo": "Disjuntor do Inversor 5.2      { SMP100-DINV5.2 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Gilson Souza ",
-      "status": "pausado",
-      "tarefa": "[SMP100-DINV5.2] - Religamento do SMP100-DINV5.2",
-      "criticidade": "",
-      "dataProgramada": "2026-09-04",
-      "dataCriacao": "2026-09-04",
-      "dataInicial": "2026-09-08",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "modalidade": "local"
     },
     {
       "osId": "12955",
@@ -20568,6 +20566,26 @@
       "atrasada": false
     },
     {
+      "osId": "13249",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizados",
+      "tarefa": "[Axis - Marialva 1 - PR] - Religamento do Axis - Marialva 1 - PR",
+      "criticidade": "",
+      "dataProgramada": "2026-09-08",
+      "dataCriacao": "2026-09-08",
+      "dataInicial": "2026-09-08",
+      "dataFinal": "2026-09-08",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13243",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -22719,6 +22737,26 @@
       "atrasada": false
     },
     {
+      "osId": "12967",
+      "ativo": "Disjuntor do Inversor 5.2      { SMP100-DINV5.2 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "[SMP100-DINV5.2] - Religamento do SMP100-DINV5.2",
+      "criticidade": "",
+      "dataProgramada": "2026-09-04",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "2026-09-08",
+      "dataFinal": "2026-09-08",
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "12966",
       "ativo": "Cabine 1 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-CABN1 }",
       "equipe": "",
@@ -22917,50 +22955,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "12950",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizados",
-      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "2026-09-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "12949",
-      "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "James Chaves ",
-      "status": "Finalizados",
-      "tarefa": "[JCD100-INVR3.1] - Religamento do JCD100-INVR3.1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "2026-09-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2864,
-  "totalGeral": 6004,
+  "historicoTotal": 2866,
+  "totalGeral": 6006,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
