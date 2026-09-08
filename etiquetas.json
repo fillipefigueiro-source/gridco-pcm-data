@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-08T14:42:46Z",
+  "geradoEm": "2026-09-08T14:54:14Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 29,
       "atrasadas": 20,
       "porStatus": {
-        "naoIniciada": 26,
-        "emProgresso": 1,
+        "naoIniciada": 25,
+        "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
@@ -478,14 +478,15 @@
           "responsavel": "Valdério Paz ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Valdério Paz ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-09-08",
           "dataCriacao": "2026-09-08",
-          "dataInicial": "",
+          "dataInicial": "2026-09-08",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -9817,17 +9818,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 686,
+        "total": 687,
         "emAberto": 75,
         "atrasadas": 66,
-        "concluidas30d": 266,
-        "concluidas7d": 61,
-        "naSemanaCorrente": 12
+        "concluidas30d": 267,
+        "concluidas7d": 62,
+        "naSemanaCorrente": 13
       },
       "mttr": {
-        "horas": 238.47,
-        "label": "9d 22h",
-        "amostra": 266
+        "horas": 237.57,
+        "label": "9d 21h",
+        "amostra": 267
       },
       "tendencia4Semanas": [
         {
@@ -9847,23 +9848,23 @@
         },
         {
           "semana": "W37",
-          "criadas": 4,
-          "finalizadas": 1
+          "criadas": 5,
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 686,
+            "total": 687,
             "emAberto": 75
           }
         ],
         "responsaveis": [
           {
             "nome": "Gilson Souza",
-            "total": 52,
-            "emAberto": 9
+            "total": 53,
+            "emAberto": 10
           },
           {
             "nome": "Marcos Duarte",
@@ -9890,8 +9891,8 @@
       "total": 75,
       "atrasadas": 66,
       "porStatus": {
-        "naoIniciada": 66,
-        "emProgresso": 2,
+        "naoIniciada": 67,
+        "emProgresso": 1,
         "pausada": 7,
         "verificacao": 0
       },
@@ -11030,24 +11031,6 @@
           "atrasada": true
         },
         {
-          "osId": "13189",
-          "ativo": "Estrutura Trackers  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Felipe  Lima",
-          "status": "Em progresso",
-          "tarefa": "Realização de testes para regularização de Trackers",
-          "criticidade": "",
-          "dataProgramada": "2026-09-08",
-          "dataCriacao": "2026-09-08",
-          "dataInicial": "2026-09-08",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13066",
           "ativo": "Inversor 2.8 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR2.8 }",
           "equipe": "",
@@ -11167,6 +11150,23 @@
           "atrasada": false
         },
         {
+          "osId": "13214",
+          "ativo": "Tracker 09.105 Brametal Bi-motor    { CPP100-ETKR9.105 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-09-10",
+          "dataCriacao": "2026-09-08",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "13212",
           "ativo": "Tracker 01.106 Brametal Bi-motor    { CPP100-ETKR1.106 }",
           "equipe": "",
@@ -11185,6 +11185,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13189",
+          "ativo": "Estrutura Trackers  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-ETKR1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "Realização de testes para regularização de Trackers",
+          "criticidade": "",
+          "dataProgramada": "2026-09-08",
+          "dataCriacao": "2026-09-08",
+          "dataInicial": "2026-09-08",
+          "dataFinal": "2026-09-08",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "11287",
           "ativo": "Inversor 2.1 Sungrow SG250HX    { THPN-JUC100-INVR2.1 }",
@@ -14015,28 +14034,9 @@
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "9106",
-          "ativo": "SKID 4  Crateús  Ceará Brasil { CTS100-SKID4 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Railson Gomes ",
-          "status": "Finalizados",
-          "tarefa": "[Crateús 01][Skid 04] - Verificação de temperatura",
-          "criticidade": "",
-          "dataProgramada": "2026-07-07",
-          "dataCriacao": "2026-07-07",
-          "dataInicial": "2026-07-08",
-          "dataFinal": "2026-07-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 561
+      "historicoTotal": 562
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15956,6 +15956,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "13214",
+      "ativo": "Tracker 09.105 Brametal Bi-motor    { CPP100-ETKR9.105 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-09-10",
+      "dataCriacao": "2026-09-08",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "13212",
       "ativo": "Tracker 01.106 Brametal Bi-motor    { CPP100-ETKR1.106 }",
       "equipe": "",
@@ -16068,23 +16084,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "13189",
-      "ativo": "Estrutura Trackers  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-ETKR1 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Felipe  Lima",
-      "status": "Em progresso",
-      "tarefa": "Realização de testes para regularização de Trackers",
-      "criticidade": "",
-      "dataProgramada": "2026-09-08",
-      "dataCriacao": "2026-09-08",
-      "dataInicial": "2026-09-08",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
-    },
-    {
       "osId": "13184",
       "ativo": "Transformador 2 WEG     { TPP100-TRFR2 }",
       "equipe": "",
@@ -16124,14 +16123,15 @@
       "responsavel": "Valdério Paz ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Valdério Paz ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-09-08",
       "dataCriacao": "2026-09-08",
-      "dataInicial": "",
+      "dataInicial": "2026-09-08",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -20731,6 +20731,25 @@
       "atrasada": false
     },
     {
+      "osId": "13189",
+      "ativo": "Estrutura Trackers  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-ETKR1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Felipe  Lima",
+      "status": "Finalizados",
+      "tarefa": "Realização de testes para regularização de Trackers",
+      "criticidade": "",
+      "dataProgramada": "2026-09-08",
+      "dataCriacao": "2026-09-08",
+      "dataInicial": "2026-09-08",
+      "dataFinal": "2026-09-08",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13185",
       "ativo": "Thopen - Cipó Guaçu - SP Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { THOPEN-CGU100 }",
       "equipe": "",
@@ -22943,30 +22962,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "12895",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizados",
-      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "2026-09-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2842,
-  "totalGeral": 5984,
+  "historicoTotal": 2843,
+  "totalGeral": 5985,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
