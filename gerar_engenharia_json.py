@@ -133,7 +133,7 @@ def coletar(client, inicio, religamentos=None):
                     # "Tarefa → Classificação 1" na REST é tasks_log_types_description
                     # (Religamento / Emergencial / Programada / QUEDA DE ENERGIA)
                     "cls1": str(row.get("tasks_log_types_description") or row.get("tasks_types_description") or ""),
-                    "stWo": row.get("id_status_work_order"),
+                    "stWo": row.get("id_status_work_order"), "idWo": row.get("id_work_order"),
                     "ini": row.get("event_date") or row.get("date_maintenance"), "fim": row.get("final_date"), "fimWo": row.get("wo_final_date"),
                 })
         if tipo not in TIPOS_FALHA:
@@ -170,6 +170,7 @@ def coletar(client, inicio, religamentos=None):
             "prio": str(row.get("priorities_description") or ""),
             "st": str(row.get("task_status") or ""),
             "servico": bool(RX_SERVICO.search(tarefa + " " + nota)),
+            "idWo": row.get("id_work_order"),
         })
     log(f"  -> {bruto} linhas brutas | {sum(len(v) for v in por.values())} corretivas na janela | "
         f"{len(por)} ativos | {sem_cod} sem código (descartadas)")
@@ -310,6 +311,7 @@ def main():
             "mttr": conf.get("mttr") if conf else None,
             "disp": conf.get("disp") if conf else None,
             "os": [{"os": r["os"], "t": r["t"], "tp2": r["tp2"], "nota": r["nota"],
+                    "url": (gp.WO_URL_TEMPLATE.format(folio=r["os"], id=r["idWo"]) if r.get("idWo") else ""),
                     "d": r["cr"].astimezone(timezone(timedelta(hours=-3))).strftime("%d/%m %H:%M"),
                     "st": r["st"], "quem": r["quem"], "prio": r["prio"], "servico": r["servico"]}
                    for r in rs[:MAX_OS_POR_ATIVO]],

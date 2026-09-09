@@ -34,6 +34,7 @@ BR = timezone(timedelta(hours=-3))
 SAIDA = os.environ.get("GER_SAIDA", "gerencial.json")
 OPERACOES = os.environ.get("OPERACOES_ARQ", "operacoes.json")
 INICIO_PADRAO = os.environ.get("GER_INICIO", "2025-11-01")
+WO_URL = os.environ.get("GESTAO_WO_URL", "https://one.fracttal.com/tasks/wo/{id}")   # mesmo do Gestão PCM
 MAX_EVENTOS = 20000
 
 RX_TOKEN = re.compile(r"\b([A-Z]{2,5}\d{2,3})\b")
@@ -197,6 +198,7 @@ def gerar(eventos_brutos, agora=None):
         eventos.append({
             "u": i, "os": str(ev.get("os") or ""), "cat": categoria(ev),
             "ini": ini.astimezone(BR).strftime("%Y-%m-%dT%H:%M"), "fim": fim.astimezone(BR).strftime("%Y-%m-%dT%H:%M"),
+            "url": (WO_URL.format(id=ev["idWo"]) if ev.get("idWo") else ""),
             "hDia": round(hd, 3), "h24": round(h24, 3), "peso": round(peso, 4), "escopo": escopo,
             "ativo": str(ev.get("nome") or "")[:50], "cod": str(ev.get("cod") or ""), "aberto": aberto,
         })
