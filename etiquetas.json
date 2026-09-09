@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-09T13:00:11Z",
+  "geradoEm": "2026-09-09T13:13:08Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 28,
       "atrasadas": 23,
       "porStatus": {
-        "naoIniciada": 26,
-        "emProgresso": 0,
+        "naoIniciada": 25,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
@@ -405,14 +405,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Cabine 6] - Religamento da Cabine 6",
           "criticidade": "",
           "dataProgramada": "2026-09-08",
           "dataCriacao": "2026-09-08",
-          "dataInicial": "",
+          "dataInicial": "2026-09-09",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -2630,11 +2631,11 @@
           "criticidade": "",
           "dataProgramada": "2026-09-03",
           "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-04",
+          "dataInicial": "2026-09-03",
           "dataFinal": "2026-09-04",
           "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
+          "horasAteAbrir": 0,
+          "horasAteFechar": 24.0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3827,16 +3828,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 808,
-        "emAberto": 131,
+        "emAberto": 130,
         "atrasadas": 70,
-        "concluidas30d": 158,
-        "concluidas7d": 40,
+        "concluidas30d": 159,
+        "concluidas7d": 41,
         "naSemanaCorrente": 57
       },
       "mttr": {
-        "horas": 336.3,
-        "label": "14d 0h",
-        "amostra": 158
+        "horas": 335.09,
+        "label": "13d 23h",
+        "amostra": 159
       },
       "tendencia4Semanas": [
         {
@@ -3857,7 +3858,7 @@
         {
           "semana": "W37",
           "criadas": 14,
-          "finalizadas": 14
+          "finalizadas": 15
         }
       ],
       "topOfensores": {
@@ -3865,7 +3866,7 @@
           {
             "nome": "(sem equipe)",
             "total": 808,
-            "emAberto": 131
+            "emAberto": 130
           }
         ],
         "responsaveis": [
@@ -3892,20 +3893,20 @@
           {
             "nome": "Francisco  Santos",
             "total": 31,
-            "emAberto": 2
+            "emAberto": 1
           }
         ]
       },
-      "total": 131,
+      "total": 130,
       "atrasadas": 70,
       "porStatus": {
         "naoIniciada": 116,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 14,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 131
+        "(sem equipe)": 130
       },
       "oss": [
         {
@@ -5179,24 +5180,6 @@
           "atrasada": false
         },
         {
-          "osId": "12955",
-          "ativo": "Nobreak 1      { MTS100-NBRK1 }",
-          "equipe": "",
-          "responsavel": "Francisco  Santos",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Francisco  Santos",
-          "status": "Em progresso",
-          "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
-          "criticidade": "",
-          "dataProgramada": "2026-09-09",
-          "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-09",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "atrasada": false
-        },
-        {
           "osId": "12930",
           "ativo": "Preventiva Grupo de Inversores      { THPN-LNH100-PGINVR1 }",
           "equipe": "",
@@ -5436,13 +5419,13 @@
         },
         {
           "osId": "12716",
-          "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
+          "ativo": "Sistema de Segurança Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN200-SSEG1 }",
           "equipe": "",
           "responsavel": "Walter Santos ",
           "criadoPor": "Fabricio Barreto",
           "supervisor": "Walter Santos ",
           "status": "Não Iniciada",
-          "tarefa": "[SEMP] - MPM - Transformador",
+          "tarefa": "[SEMP] - MPM - CFTV",
           "criticidade": "",
           "dataProgramada": "2026-09-10",
           "dataCriacao": "2026-09-02",
@@ -6169,6 +6152,25 @@
           "dataFinal": "2026-09-09",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12955",
+          "ativo": "Nobreak 1      { MTS100-NBRK1 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Francisco  Santos",
+          "status": "Finalizados",
+          "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
+          "criticidade": "",
+          "dataProgramada": "2026-09-09",
+          "dataCriacao": "2026-09-03",
+          "dataInicial": "2026-09-09",
+          "dataFinal": "2026-09-09",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -8491,25 +8493,6 @@
           "atrasada": false
         },
         {
-          "osId": "10180",
-          "ativo": "Cabine 1 Fazenda Cresciuma S/N Altair  São Paulo Brasil { ALT100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Anderson  Parente",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-08-03",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-08-17",
-          "dataFinal": "2026-08-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 504.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8626",
           "ativo": "Transformador 1 WEG     { THPN-TPZ100-TRFR1 }",
           "equipe": "",
@@ -9004,7 +8987,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 337
+      "historicoTotal": 338
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -16078,14 +16061,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Lucas  Nascimento",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Cabine 6] - Religamento da Cabine 6",
       "criticidade": "",
       "dataProgramada": "2026-09-08",
       "dataCriacao": "2026-09-08",
-      "dataInicial": "",
+      "dataInicial": "2026-09-09",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -16837,23 +16821,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "12955",
-      "ativo": "Nobreak 1      { MTS100-NBRK1 }",
-      "equipe": "",
-      "responsavel": "Francisco  Santos",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Francisco  Santos",
-      "status": "Em progresso",
-      "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
-      "criticidade": "",
-      "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-09",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
-    },
-    {
       "osId": "12954",
       "ativo": "Nobreak 1      { MTS200-NBRK1 }",
       "equipe": "",
@@ -17360,13 +17327,13 @@
     },
     {
       "osId": "12716",
-      "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
+      "ativo": "Sistema de Segurança Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN200-SSEG1 }",
       "equipe": "",
       "responsavel": "Walter Santos ",
       "criadoPor": "Fabricio Barreto",
       "supervisor": "Walter Santos ",
       "status": "Não Iniciada",
-      "tarefa": "[SEMP] - MPM - Transformador",
+      "tarefa": "[SEMP] - MPM - CFTV",
       "criticidade": "",
       "dataProgramada": "2026-09-10",
       "dataCriacao": "2026-09-02",
@@ -20080,6 +20047,25 @@
       "dataFinal": "2026-09-04",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "12955",
+      "ativo": "Nobreak 1      { MTS100-NBRK1 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Fabricio Barreto",
+      "supervisor": "Francisco  Santos",
+      "status": "Finalizados",
+      "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
+      "criticidade": "",
+      "dataProgramada": "2026-09-09",
+      "dataCriacao": "2026-09-03",
+      "dataInicial": "2026-09-09",
+      "dataFinal": "2026-09-09",
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -22801,11 +22787,11 @@
       "criticidade": "",
       "dataProgramada": "2026-09-03",
       "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-04",
+      "dataInicial": "2026-09-03",
       "dataFinal": "2026-09-04",
       "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
+      "horasAteAbrir": 0,
+      "horasAteFechar": 24.0,
       "modalidade": "local",
       "atrasada": false
     },
@@ -22928,29 +22914,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "12949",
-      "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "James Chaves ",
-      "status": "Finalizados",
-      "tarefa": "[JCD100-INVR3.1] - Religamento do JCD100-INVR3.1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "2026-09-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2843,
+  "historicoTotal": 2844,
   "totalGeral": 6016,
   "verificacao": {
     "total": 0,
