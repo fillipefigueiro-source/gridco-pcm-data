@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-09T14:12:59Z",
+  "geradoEm": "2026-09-09T14:24:33Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -3919,8 +3919,8 @@
       "atrasadas": 70,
       "porStatus": {
         "naoIniciada": 117,
-        "emProgresso": 0,
-        "pausada": 14,
+        "emProgresso": 1,
+        "pausada": 13,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4537,15 +4537,15 @@
           "responsavel": "Cláudio  Silva",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Cláudio  Silva",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Spare Parts",
           "criticidade": "",
           "dataProgramada": "2026-08-28",
           "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-31",
+          "dataInicial": "2026-09-09",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 168.0,
+          "horasAteAbrir": 384.0,
           "atrasada": true
         },
         {
@@ -9835,12 +9835,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 692,
-        "emAberto": 70,
+        "total": 694,
+        "emAberto": 72,
         "atrasadas": 62,
         "concluidas30d": 277,
         "concluidas7d": 67,
-        "naSemanaCorrente": 18
+        "naSemanaCorrente": 20
       },
       "mttr": {
         "horas": 243.47,
@@ -9865,7 +9865,7 @@
         },
         {
           "semana": "W37",
-          "criadas": 10,
+          "criadas": 12,
           "finalizadas": 12
         }
       ],
@@ -9873,8 +9873,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 692,
-            "emAberto": 70
+            "total": 694,
+            "emAberto": 72
           }
         ],
         "responsaveis": [
@@ -9895,8 +9895,8 @@
           },
           {
             "nome": "Luiz  Silva",
-            "total": 37,
-            "emAberto": 5
+            "total": 39,
+            "emAberto": 7
           },
           {
             "nome": "Paulo  Ribeiro",
@@ -9905,16 +9905,16 @@
           }
         ]
       },
-      "total": 70,
+      "total": 72,
       "atrasadas": 62,
       "porStatus": {
-        "naoIniciada": 62,
-        "emProgresso": 1,
+        "naoIniciada": 63,
+        "emProgresso": 2,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 70
+        "(sem equipe)": 72
       },
       "oss": [
         {
@@ -11037,11 +11037,46 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Gabriela Dias",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Coletar log de histórico dos inversores",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
           "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-09",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
+          "atrasada": false
+        },
+        {
+          "osId": "13290",
+          "ativo": "Tracker 32.100 STI Norland     { TIM100-ETKR32.100 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Luiz  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 32.100] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-09-10",
+          "dataCriacao": "2026-09-09",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "13289",
+          "ativo": "Tracker 73.100 STI Norland     { TIM100-ETKR73.100 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Luiz  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 73.100] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-09-10",
+          "dataCriacao": "2026-09-09",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -15941,6 +15976,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "13290",
+      "ativo": "Tracker 32.100 STI Norland     { TIM100-ETKR32.100 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Luiz  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 32.100] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-09-10",
+      "dataCriacao": "2026-09-09",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "13289",
+      "ativo": "Tracker 73.100 STI Norland     { TIM100-ETKR73.100 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Luiz  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 73.100] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-09-10",
+      "dataCriacao": "2026-09-09",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "13288",
       "ativo": "Cabine 1 Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100-CABN1 }",
       "equipe": "",
@@ -16712,14 +16779,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Gabriela Dias",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Coletar log de histórico dos inversores",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
       "dataCriacao": "2026-09-04",
-      "dataInicial": "",
+      "dataInicial": "2026-09-09",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0
     },
     {
       "osId": "13013",
@@ -18933,15 +19001,15 @@
       "responsavel": "Cláudio  Silva",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Cláudio  Silva",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Spare Parts",
       "criticidade": "",
       "dataProgramada": "2026-08-28",
       "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-08-31",
+      "dataInicial": "2026-09-09",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 168.0
+      "horasAteAbrir": 384.0
     },
     {
       "osId": "11962",
@@ -22913,7 +22981,7 @@
     }
   ],
   "historicoTotal": 2847,
-  "totalGeral": 6019,
+  "totalGeral": 6021,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
