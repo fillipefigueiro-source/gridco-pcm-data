@@ -124,7 +124,18 @@ pela REST (`tasks_log_types_description`): campo 3,33 pp (PDF 3,42), emergencial
 manual no one-pager; por regra saem ~0,05 e ~0,5. A tela diz "por tipo e texto, não é
 causa". Não tentar fechar ao centésimo.
 
-Roadmap das abas "Aderência do plano" e "Backlog e MTTR": só os botões, apagados.
+**Abas Aderência do plano e Backlog e MTTR (09/09):** calculadas no navegador a partir do
+`gestao_pcm.json` (carga preguiçosa da Gestão PCM) e do `confiabilidade.json`. Cumprimento =
+finalizadas ÷ programadas no mês; "no prazo" = final ≤ programada + 7 d; sigla pelo texto.
+Backlog em semanas = Σ duração estimada das atrasadas (`dur`, novo no robô do Gestão PCM —
+até a primeira rodada publicar, usa 2 h por tarefa) ÷ (fator × HH do cluster). **HH do cluster**
+= 44 h × pessoas ativas do cluster (aba "Relação Geral Colaboradores" do BD_Operacoes, exportada
+em `operacoes.json` só com nome/cluster/cargo/e-mail/supervisor — sem CPF nem telefone). Regra
+do PCM de 09/09. Fator de produtividade editável na tela (localStorage). 36 usinas sem "Equipe
+Cluster" no BD ficam fora da conta por cluster.
+
+**Quem assume um ticket** = qualquer pessoa da equipe exportada + supervisores + e-mail livre
+validado como `@gridco.com.br` (decisão de 09/09).
 
 ### Onde o código realmente mora
 

@@ -358,6 +358,9 @@ def coletar(client, usina_idx, cluster_major, ativos, max_items=None):
             "criacao": _data_iso(row.get("creation_date")),
             "dias": dias,
             "atrasado": atrasado,
+            # Duração estimada da tarefa (API `duration`, em segundos) → horas.
+            # Alimenta o "backlog em semanas" do Gerencial (HH necessário).
+            "dur": round((row.get("duration") or 0) / 3600, 2) if row.get("duration") else None,
         })
     log(f"  -> {total_bruto} linhas brutas | {len(tarefas)} tarefas no escopo")
     return tarefas

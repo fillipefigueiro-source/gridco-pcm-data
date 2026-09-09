@@ -78,6 +78,11 @@ def main(argv):
         "uf": _col(cab, "UF"), "nInv": _col(cab, "Nº INVERSORES"), "nCab": _col(cab, "Nº Cabine"),
         "nSkid": _col(cab, "Nº SKID"), "nQgbt": _col(cab, "Nº QGBT"), "cidade": _col(cab, "CIDADE"),
         "implantacao": _col(cab, "Data de Implantação"),
+        # cluster, região oficial e responsável — o BD tem; a UF é só o recuo
+        # "Equipe Cluster" (PR Oeste 01) é o nome que a aba de colaboradores usa;
+        # "CLUSTER" (PR Oeste) é a região do cluster, sem o número — não casa.
+        "cluster": _col(cab, "Equipe Cluster"), "clusterAlt": _col(cab, "CLUSTER"),
+        "regiaoBd": _col(cab, "REGIÃO"), "responsavel": _col(cab, "RESPONSÁVEL O&M"),
     }
     faltando = [k for k, v in ix.items() if v is None and k in ("usina", "codigo", "status", "cliente", "uf")]
     if faltando:
@@ -95,7 +100,8 @@ def main(argv):
             "codigo": str(g("codigo") or "").strip(),
             "status": str(g("status") or "").strip().upper(),
             "cliente": str(g("cliente") or "").strip(),
-            "uf": uf, "regiao": REGIAO_UF.get(uf, ""),
+            "uf": uf, "regiao": (re.sub(r"centro[\s-]*oeste", "Centro-Oeste", str(g("regiaoBd") or "").strip().title(), flags=re.I) or REGIAO_UF.get(uf, "")),
+            "cluster": str(g("cluster") or g("clusterAlt") or "").strip(), "responsavel": str(g("responsavel") or "").strip(),
             "cidade": str(g("cidade") or "").strip(),
             "mwp": _num(g("mwp")) or _num(g("mwpContr")),
             "nInv": _int(g("nInv")), "nCab": _int(g("nCab")), "nSkid": _int(g("nSkid")), "nQgbt": _int(g("nQgbt")),
@@ -104,12 +110,55 @@ def main(argv):
     oper = [u for u in out if u["status"] == "OPERAÇÃO"]
     semReg = [u["usina"] for u in oper if not u["regiao"]]
     semInv = [u["usina"] for u in oper if not u["nInv"]]
+
+    # ── Equipe: aba "Relação Geral Colaboradores" ──────────────────────────
+    # Só o que a plataforma precisa: nome, cluster, cargo, e-mail, supervisor.
+    # CPF, telefones e endereço NÃO saem daqui — o repositório é público.
+    equipe = []
+    if "Relação Geral Colaboradores" in wb.sheetnames:
+        wc = wb["Relação Geral Colaboradores"]
+        lc = wc.iter_rows(values_only=True)
+        cabc = next(lc)
+        ic = {k: _col(cabc, n) for k, n in (("nome", "Nome"), ("padrao", "Nome Padrão"), ("cluster", "Cluster"), ("cargo", "Cargo"),
+                                            ("email", "email"), ("sup", "Supervisor"), ("cliente", "Cliente"), ("status", "Status de Contratação"))}
+        for r in lc:
+            if not r or ic["nome"] is None or not r[ic["nome"]]:
+                continue
+            gc = lambda k: (r[ic[k]] if ic[k] is not None else None)
+            if str(gc("status") or "").strip().lower() != "ativo":
+                continue
+            email = str(gc("email") or "").strip().lower()
+            equipe.append({
+                "nome": str(gc("padrao") or gc("nome")).strip(), "nomeCompleto": str(gc("nome")).strip(),
+                "cluster": str(gc("cluster") or "").strip(), "cargo": str(gc("cargo") or "").strip(),
+                "email": email if "@" in email else "", "supervisor": str(gc("sup") or "").strip(),
+                "cliente": str(gc("cliente") or "").strip(),
+            })
+    # HH: cada colaborador tem 44 h/semana; o cluster soma as pessoas, e o HH
+    # por usina é o do cluster dividido pelas usinas do cluster (regra do PCM, 09/09).
+    HH_SEMANA = 44
+    clusters = {}
+    for u in oper:
+        c = u["cluster"] or "(sem cluster)"
+        clusters.setdefault(c, {"cluster": c, "usinas": 0, "pessoas": 0, "hhSemana": 0, "hhPorUsina": None, "responsavel": u["responsavel"]})
+        clusters[c]["usinas"] += 1
+    for e in equipe:
+        c = e["cluster"] or "(sem cluster)"
+        clusters.setdefault(c, {"cluster": c, "usinas": 0, "pessoas": 0, "hhSemana": 0, "hhPorUsina": None, "responsavel": ""})
+        clusters[c]["pessoas"] += 1
+        clusters[c]["hhSemana"] += HH_SEMANA
+    for c in clusters.values():
+        c["hhPorUsina"] = round(c["hhSemana"] / c["usinas"], 1) if c["usinas"] else None
+    supervisores = sorted({e["supervisor"] for e in equipe if e["supervisor"]})
+
     saida = {
         "geradoEm": datetime.now().replace(microsecond=0).isoformat(),
         "fonte": os.path.basename(caminho), "fonteModificadoEm": datetime.fromtimestamp(os.path.getmtime(caminho)).isoformat(timespec="seconds"),
         "total": len(out), "emOperacao": len(oper),
         "mwpOperacao": round(sum(u["mwp"] or 0 for u in oper), 1),
         "usinas": out,
+        "equipe": sorted(equipe, key=lambda e: e["nome"]), "supervisores": supervisores,
+        "hhSemanaPorPessoa": HH_SEMANA, "clusters": sorted(clusters.values(), key=lambda c: c["cluster"]),
     }
     with io.open(SAIDA, "w", encoding="utf-8") as f:
         json.dump(saida, f, ensure_ascii=False, separators=(",", ":"))

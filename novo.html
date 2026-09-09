@@ -786,6 +786,24 @@ tbody tr:hover{background:var(--surf2)}
   .app{box-shadow:none;max-width:none}.tela{padding:0}.gr-bloco{box-shadow:none;break-inside:avoid}
   .gr-topo{grid-template-columns:2fr 1fr}
 }
+.gr-bh .tog{display:flex;gap:4px}.gr-bh .tog button{font-size:11px;font-weight:700;padding:4px 9px;border-radius:14px;border:1px solid var(--line2);background:var(--surf2);color:var(--ink3)}
+.gr-bh .tog button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.gr-kpis4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr));gap:1px;background:var(--line)}
+.gr-kpis4 .gr-kpi{border:0;border-radius:0;box-shadow:none;border-left:0}
+.gr-graf{padding:10px 8px 4px;overflow-x:auto}.gr-graf svg{width:100%;height:auto;display:block;min-width:520px}.gr-graf text{font-family:inherit}
+.gr-tab tr.sub2 td{font-size:12px;color:var(--ink2);background:var(--surf2);padding:5px 10px 5px 26px}
+.gr-cel{display:inline-block;min-width:44px;padding:2px 6px;border-radius:5px;font-weight:700}
+.gr-cel.ok{background:color-mix(in srgb,var(--ok) 18%,var(--surf));color:var(--gd)}.gr-cel.mid{background:color-mix(in srgb,var(--warn) 22%,var(--surf));color:var(--aviso)}
+.gr-cel.mal{background:color-mix(in srgb,var(--danger) 18%,var(--surf));color:var(--mal)}.gr-cel.vazio{color:var(--ink3);background:none;font-weight:500}
+.gr-barl{display:flex;align-items:center;gap:10px;padding:8px 15px;border-bottom:1px solid var(--line);font-size:12.5px}.gr-barl:last-child{border-bottom:0}
+.gr-barl .n{flex:0 0 150px;font-weight:700}.gr-barl .n small{display:block;font-weight:500;color:var(--ink3);font-size:10.5px}
+.gr-barl .b{flex:1;height:8px;background:var(--surf2);border-radius:4px;overflow:hidden}.gr-barl .b i{display:block;height:100%;background:var(--ink3);opacity:.7}
+.gr-barl .b i.mal{background:var(--danger);opacity:.75}.gr-barl .b i.ok{background:var(--ok);opacity:.8}
+.gr-barl .v{flex:0 0 96px;text-align:right;font-variant-numeric:tabular-nums;font-weight:800}.gr-barl .v small{display:block;font-weight:500;color:var(--ink3);font-size:10.5px}
+.gr-stack{display:flex;height:10px;border-radius:5px;overflow:hidden;min-width:100px}.gr-stack i{display:block;height:100%}
+.gr-cfg{padding:10px 15px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:12px;color:var(--ink2);border-bottom:1px solid var(--line)}
+.gr-cfg input{width:70px;font:inherit;font-size:12px;padding:4px 7px;border:1px solid var(--line2);border-radius:6px;background:var(--surf2);color:var(--ink)}
+.cf-gest select optgroup{font-weight:800;color:var(--ink3)}
 /* ── Confiabilidade (módulo de engenharia) ── */
 /* ── Confiabilidade (módulo novo) — segue o vocabulário do gp-* ── */
 .cf-abas{display:flex;gap:6px;margin:0 0 14px;flex-wrap:wrap}
@@ -3477,7 +3495,8 @@ function arrancar(){
      GER_INICIO. A tela recalcula a cascata a cada filtro a partir dos eventos:
      período, região, cliente, usina, horas diurnas ou 24h, peso por fração ou
      usina inteira. O que o robô pré-calcula (resumo) só serve de conferência. */
-  let GR = null, GR_ESTADO = "vazio", GR_ERRO = "", GR_ABERTA = null, GR_FOCO = null;
+  let GR = null, GR_OP = null, GR_ESTADO = "vazio", GR_ERRO = "", GR_ABERTA = null, GR_FOCO = null;
+  let GR_ABA = "disp", AD_MED = "cump", AD_ABERTO = null, BK_FATOR = (function(){ try { const v = parseFloat(localStorage.getItem("pcm_ger_fator")); return v > 0 && v <= 1.5 ? v : 1.0; } catch(e){ return 1.0; } })();
   const GR_CATS = [["campo","Religamento em campo",true],["emergencial","Religamento emergencial",true],["remoto","Religamento remoto",false],["queda","Queda de energia",false],["programado","Desligamento programado",false]];
   const GR_FIL = { de:"", ate:"", regiao:"", cliente:"", usina:"", horas:"dia", peso:"fracao" };
   const grN = (v,d) => v==null ? "·" : v.toLocaleString("pt-BR",{minimumFractionDigits:d??0,maximumFractionDigits:d??0});
@@ -3491,6 +3510,7 @@ function arrancar(){
       if (!r.ok) throw new Error("HTTP " + r.status);
       GR = await r.json();
       if (!GR || !Array.isArray(GR.eventos)) throw new Error("arquivo sem eventos");
+      try { const o = await fetch("operacoes.json?t=" + Date.now(), { cache:"no-store" }); if (o.ok) GR_OP = await o.json(); } catch(e){}
       GR_FIL.de = GR.resumo.de; GR_FIL.ate = GR.resumo.ate;
       GR_ESTADO = "pronto";
     } catch (e) { GR_ESTADO = "erro"; GR_ERRO = e.message; }
@@ -3503,10 +3523,11 @@ function arrancar(){
     return GR_HTML;
   }
   const GR_HTML = '<div class="filtros"><div class="fg" id="gr-fil"></div><div class="f-rod" id="gr-fil-rod"></div></div>'
-    + '<div class="gr-abas"><button class="gr-aba on">Disponibilidade</button>'
-    + '<button class="gr-aba breve" title="próxima entrega">Aderência do plano<small>em breve</small></button>'
-    + '<button class="gr-aba breve" title="próxima entrega">Backlog e MTTR<small>em breve</small></button>'
+    + '<div class="gr-abas"><button class="gr-aba" data-gaba="disp">Disponibilidade</button>'
+    + '<button class="gr-aba" data-gaba="ader">Aderência do plano</button>'
+    + '<button class="gr-aba" data-gaba="back">Backlog e MTTR</button>'
     + '<span class="gr-acoes"><button class="bt" id="gr-pdf">Gerar one-pager (PDF)</button></span></div>'
+    + '<div id="gr-pag-disp">'
     + '<div class="gr-topo"><div class="gr-bloco"><div class="gr-bh"><h3>Cascata de indisponibilidade</h3><span class="obs" id="gr-cas-obs">pontos percentuais · clique numa barra para destacar a coluna</span></div>'
     + '<div class="gr-cascata" id="gr-cascata"></div>'
     + '<div class="gr-legenda"><span><i style="background:#c2410c"></i>Exigiu deslocamento de equipe</span><span><i style="background:#8a879e"></i>Normalizado sem ir ao campo</span><span><i style="background:#A9DB21"></i>Disponibilidade</span></div></div>'
@@ -3516,7 +3537,25 @@ function arrancar(){
     + '<div class="gr-fonte">Colunas em <b>pontos percentuais</b>; somadas fecham 100% − disponibilidade. Evento de cabine ou inversor entra pela <b>fração da usina afetada</b> (nº de cabines e inversores do BD_Operacoes), salvo se o filtro "Peso" disser usina inteira.</div></div>'
     + '<div class="gr-2"><div class="gr-bloco"><div class="gr-bh"><h3>O que a cascata mostra</h3><span class="obs">gerado por regra a partir dos filtros</span></div><ul class="gr-ins" id="gr-ins"></ul></div>'
     + '<div class="gr-bloco"><div class="gr-bh"><h3>Usinas que mais pararam</h3><span class="obs">horas ponderadas na janela</span></div><div id="gr-rank"></div></div></div>'
-    + '<div class="gr-fonte" style="border:1px solid var(--line);border-radius:var(--r);margin-bottom:14px" id="gr-metodo"></div>';
+    + '<div class="gr-fonte" style="border:1px solid var(--line);border-radius:var(--r);margin-bottom:14px" id="gr-metodo"></div></div>'
+    + '<div id="gr-pag-ader" hidden>'
+    + '<div class="gr-bloco"><div class="gr-kpis4" id="ad-kpis"></div><div class="gr-fonte"><b>Cumprimento</b> = finalizadas ÷ programadas no mês (meta ≥ 85%). <b>No prazo</b> = finalizada até 7 dias após a data programada. Sigla extraída do texto da tarefa — <span id="ad-den"></span>; as demais preventivas ficam fora.</div></div>'
+    + '<div class="gr-topo"><div class="gr-bloco"><div class="gr-bh"><h3>Mês a mês</h3><span class="obs">cumprimento × no prazo · meta 85%</span></div><div class="gr-graf" id="ad-graf"></div>'
+    + '<div class="gr-legenda"><span><i style="background:#191528"></i>Cumprimento</span><span><i style="background:#A9DB21"></i>No prazo (≤ 7 d)</span><span><i style="background:#c2410c;height:2px"></i>Meta 85%</span></div></div>'
+    + '<div class="gr-bloco"><div class="gr-bh"><h3>Por sigla</h3><span class="obs">meses fechados do ano</span></div><div id="ad-sig"></div></div></div>'
+    + '<div class="gr-bloco"><div class="gr-bh"><h3>Por cliente</h3><div class="tog"><button class="on" data-gmed="cump">Cumprimento</button><button data-gmed="prazo">No prazo</button></div><span class="obs">clique no cliente para abrir as usinas</span></div>'
+    + '<div style="overflow-x:auto"><table class="gr-tab" id="ad-tab"></table></div><div class="gr-fonte">Mês corrente é parcial. Verde ≥ 85%, âmbar 70–85%, vermelho &lt; 70%.</div></div>'
+    + '<div class="gr-bloco"><div class="gr-bh"><h3>O que a aderência mostra</h3><span class="obs">gerado por regra</span></div><ul class="gr-ins" id="ad-ins"></ul></div></div>'
+    + '<div id="gr-pag-back" hidden>'
+    + '<div class="gr-bloco"><div class="gr-kpis4" id="bk-kpis"></div><div class="gr-fonte"><b>Backlog</b> = tarefas abertas com data programada vencida. Referência: ≤ <b>4 semanas</b> de trabalho. <b>Backlog em semanas</b> = HH necessário (duração estimada das atrasadas) ÷ (fator × HH disponível do cluster: 44 h por pessoa, do BD_Operacoes). <b>MTTR</b> = Σ tempos de reparo ÷ nº de intervenções.</div></div>'
+    + '<div class="gr-2"><div class="gr-bloco"><div class="gr-bh"><h3>Backlog por cluster</h3><span class="obs">atrasadas por idade · semanas de trabalho</span></div>'
+    + '<div class="gr-cfg">Fator de produtividade <input id="bk-fator" inputmode="decimal"> <span style="color:var(--ink3)">(1,0 = toda hora disponível vira execução; o livro usa 0,7 a 0,8)</span></div>'
+    + '<div style="overflow-x:auto"><table class="gr-tab" id="bk-tab"></table></div>'
+    + '<div class="gr-legenda"><span><i style="background:#8a879e"></i>no prazo</span><span><i style="background:#f59e0b"></i>8–30 d</span><span><i style="background:#c2410c"></i>31–90 d</span><span><i style="background:#7f1d1d"></i>&gt; 90 d</span></div></div>'
+    + '<div><div class="gr-bloco"><div class="gr-bh"><h3>Idade do atraso</h3></div><div id="bk-idade"></div></div><div class="gr-bloco"><div class="gr-bh"><h3>Abertas por tipo</h3></div><div id="bk-tipo"></div></div></div></div>'
+    + '<div class="gr-2"><div class="gr-bloco"><div class="gr-bh"><h3>MTTR por região</h3><span class="obs">horas · usinas com ≥ 5 eventos</span></div><div id="mt-reg"></div><div class="gr-fonte">Média ponderada pelo nº de eventos; entre parênteses a mediana das usinas. MTBF e disponibilidade agregados não entram: somados por frota enganam — só o nível de ativo é honesto.</div></div>'
+    + '<div class="gr-bloco"><div class="gr-bh"><h3>MTTR por cluster</h3><span class="obs">os 12 mais lentos com ≥ 20 eventos</span></div><div style="overflow-x:auto"><table class="gr-tab" id="mt-tab"></table></div></div></div>'
+    + '<div class="gr-bloco"><div class="gr-bh"><h3>O que o backlog mostra</h3><span class="obs">gerado por regra</span></div><ul class="gr-ins" id="bk-ins"></ul></div></div>';
   const GR_FIXOS = '<div class="gr-gf" id="gr-gf"></div><aside class="gr-gv" id="gr-gv" role="dialog" aria-modal="true">'
     + '<div class="gr-gvt"><div style="min-width:0"><div class="k" id="gr-gk"></div><h4 id="gr-gh"></h4></div><button class="gr-gvx" id="gr-gx" aria-label="Fechar">✕</button></div><div class="gr-gvc" id="gr-gc"></div></aside>';
 
@@ -3661,6 +3700,117 @@ function arrancar(){
     document.getElementById("gr-metodo").innerHTML = '<b>Método.</b> Cada tarefa de OS de religamento entra pela janela Data do Incidente → Data final, contada '+(f.horas==="dia"?'só nas horas diurnas (6h–18h)':'nas 24 h')+' e '+(f.peso==="fracao"?'ponderada pelo escopo do código do ativo — UFV inteira, cabine (1/nº de cabines) ou inversor (1/nº de inversores)':'com peso 1 por evento (usina inteira)')+'. Disponibilidade = 1 − Σ(horas ponderadas) ÷ (dias × '+C.base+' h × usinas em operação). <b>Fontes.</b> Eventos: Fracttal, robô de '+esc((GR.geradoEm||"").slice(0,10))+' · universo, potência e nº de cabines/inversores: BD_Operacoes exportado em '+esc((GR.operacoesGeradoEm||"").slice(0,10))+', usinas em OPERAÇÃO. <b>Nota.</b> O Fracttal não registra causa de perda; a separação é por tipo da OS e texto — como o evento foi resolvido, não responsabilidade contratual.'
       + (GR.avisos ? ' Eventos sem usina casada no BD_Operacoes: '+GR.avisos.eventosSemUsina+'; com peso aproximado (ativo fora de cabine/inversor): '+GR.avisos.pesoAproximado+'.' : '');
     document.getElementById("gr-pdf").onclick = () => window.print();
+    // abas
+    document.querySelectorAll(".gr-aba[data-gaba]").forEach(b => { b.classList.toggle("on", b.dataset.gaba === GR_ABA); b.onclick = () => { GR_ABA = b.dataset.gaba; grPintar(); }; });
+    ["disp","ader","back"].forEach(k => { const el = document.getElementById("gr-pag-" + k); if (el) el.hidden = k !== GR_ABA; });
+    if (GR_ABA === "ader" || GR_ABA === "back") {
+      if (GP_ESTADO !== "pronto") { gpCarregar(); document.getElementById(GR_ABA === "ader" ? "ad-kpis" : "bk-kpis").innerHTML = '<div class="gr-kpi"><div class="n">Carregando o Gestão PCM (20 mil tarefas)…</div></div>'; return; }
+      if (GR_ABA === "ader") grAderencia(); else grBacklog();
+    }
+  }
+
+  /* ── Aderência do plano ─────────────────────────────────────────────── */
+  const GR_RX = /\b(MP[MSAT])\b/;
+  const grPct = (a,b) => b ? 100*a/b : null;
+  const grCls = p => p==null ? "vazio" : p>=85 ? "ok" : p>=70 ? "mid" : "mal";
+  const MESN = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+  function grAderencia(){
+    const ano = String(new Date().getFullYear()), mesAtual = new Date().toISOString().slice(0,7);
+    const prev = GP.t.filter(t => GR_RX.test(t.tarefa||"") && (t.dataProg||"").startsWith(ano) && (!GR_FIL.cliente || t.cliente === GR_FIL.cliente));
+    const meses = [...new Set(prev.map(t => t.dataProg.slice(0,7)))].sort().filter(m => m <= mesAtual);
+    const noPrazo = t => { if (!t.dataFinal || !t.dataProg) return false; return (new Date(t.dataFinal.slice(0,10)) - new Date(t.dataProg.slice(0,10))) / 86400000 <= 7; };
+    const agg = chave => { const o = {}; for (const t of prev) { const k = chave(t), m = t.dataProg.slice(0,7); if (!meses.includes(m)) continue; o[k] = o[k] || {}; const c = o[k][m] = o[k][m] || [0,0,0]; c[0]++; if (t.estado === "Finalizada") { c[1]++; if (noPrazo(t)) c[2]++; } } return o; };
+    const cli = agg(t => t.cliente || "—"), sig = agg(t => GR_RX.exec(t.tarefa)[1]), usi = agg(t => (t.cliente||"—") + "|" + (t.usina||"—"));
+    const tot = {}; meses.forEach(m => tot[m] = [0,0,0]); Object.values(cli).forEach(v => meses.forEach(m => { if (v[m]) tot[m] = tot[m].map((x,i)=>x+v[m][i]); }));
+    const fech = meses.filter(m => m !== mesAtual), ult = fech[fech.length-1];
+    const soma = (v, ms) => ms.reduce((a,m) => v[m] ? a.map((x,i)=>x+v[m][i]) : a, [0,0,0]);
+    const val = (c, med) => med === "cump" ? grPct(c[1],c[0]) : grPct(c[2],c[0]);
+    document.getElementById("ad-den").textContent = grN(prev.length) + " de " + grN(GP.t.filter(t=>(t.dataProg||"").startsWith(ano)).length) + " tarefas de " + ano;
+    const u = ult ? tot[ult] : [0,0,0], ytd = soma(tot, fech), atual = tot[mesAtual] || [0,0,0];
+    document.getElementById("ad-kpis").innerHTML =
+      '<div class="gr-kpi"><div class="v" style="color:'+(grPct(u[1],u[0])>=85?"var(--gd)":"var(--mal)")+'">'+(ult?grN(grPct(u[1],u[0]),0)+"%":"—")+'</div><div class="n">Cumprimento · '+(ult?MESN[+ult.slice(5)-1]:"—")+'</div><div class="m">'+grN(u[1])+' de '+grN(u[0])+' programadas · meta ≥ 85%</div></div>'
+    + '<div class="gr-kpi"><div class="v" style="color:var(--mal)">'+(ult?grN(grPct(u[2],u[0]),0)+"%":"—")+'</div><div class="n">No prazo · '+(ult?MESN[+ult.slice(5)-1]:"—")+'</div><div class="m">finalizadas até 7 dias após a data programada</div></div>'
+    + '<div class="gr-kpi"><div class="v">'+(ytd[0]?grN(grPct(ytd[1],ytd[0]),0)+"%":"—")+'</div><div class="n">Cumprimento no ano</div><div class="m">'+grN(ytd[1])+' de '+grN(ytd[0])+' · no prazo '+(ytd[0]?grN(grPct(ytd[2],ytd[0]),0)+"%":"—")+'</div></div>'
+    + '<div class="gr-kpi"><div class="v">'+grN(atual[0])+'</div><div class="n">Programadas · '+MESN[+mesAtual.slice(5)-1]+'</div><div class="m">'+grN(atual[1])+' finalizadas até agora (parcial)</div></div>';
+    // gráfico
+    { const W=640,H=240,L=40,R=12,T=18,B=34, n=Math.max(1,meses.length), cw=(W-L-R)/n, bw=Math.min(28,cw*0.3); const y = v => T + (100-v)/100*(H-T-B); let g='';
+      for (const v of [0,25,50,75,100]) g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="var(--line)"/><text x="'+(L-6)+'" y="'+(y(v)+4)+'" font-size="10" fill="var(--ink3)" text-anchor="end">'+v+'%</text>';
+      g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(85)+'" y2="'+y(85)+'" stroke="#c2410c" stroke-width="1.5" stroke-dasharray="5 4"/>';
+      meses.forEach((m,i)=>{ const c=tot[m], a=grPct(c[1],c[0])||0, b=grPct(c[2],c[0])||0, x=L+i*cw+cw/2, parcial=m===mesAtual;
+        g+='<rect x="'+(x-bw-2)+'" y="'+y(a)+'" width="'+bw+'" height="'+(y(0)-y(a))+'" rx="2" fill="var(--navy)" opacity="'+(parcial?.35:1)+'"/><text x="'+(x-bw/2-2)+'" y="'+(y(a)-5)+'" font-size="10" font-weight="800" text-anchor="middle" fill="var(--ink)">'+Math.round(a)+'%</text>';
+        g+='<rect x="'+(x+2)+'" y="'+y(b)+'" width="'+bw+'" height="'+(y(0)-y(b))+'" rx="2" fill="#A9DB21" opacity="'+(parcial?.35:1)+'"/><text x="'+(x+bw/2+2)+'" y="'+(y(b)-5)+'" font-size="10" font-weight="800" text-anchor="middle" fill="var(--gd)">'+Math.round(b)+'%</text>';
+        g+='<text x="'+x+'" y="'+(H-B+16)+'" font-size="11" text-anchor="middle" fill="var(--ink2)">'+MESN[+m.slice(5)-1]+(parcial?" (parcial)":"")+'</text><text x="'+x+'" y="'+(H-B+29)+'" font-size="10" text-anchor="middle" fill="var(--ink3)">'+grN(c[0])+' prog.</text>'; });
+      document.getElementById("ad-graf").innerHTML='<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">'+g+'</svg>'; }
+    document.getElementById("ad-sig").innerHTML = ["MPM","MPT","MPS","MPA"].map(sg => { const c = soma(sig[sg]||{}, fech), p = grPct(c[1],c[0]), q = grPct(c[2],c[0]);
+      return '<div class="gr-barl"><span class="n">'+sg+'<small>'+grN(c[0])+' programadas</small></span><span class="b"><i class="'+(p>=85?"ok":"mal")+'" style="width:'+(p||0)+'%"></i></span><span class="v">'+(p==null?"—":Math.round(p)+"%")+'<small>no prazo '+(q==null?"—":Math.round(q)+"%")+'</small></span></div>'; }).join("");
+    const tabela = () => {
+      const ordem = Object.entries(cli).sort((a,b) => soma(b[1],meses)[0] - soma(a[1],meses)[0]);
+      const linha = (nome, v, sub) => { const t = soma(v, fech);
+        return '<tr class="'+(sub?"sub2":"reg")+' '+(AD_ABERTO===nome?"ab":"")+'" data-gc="'+esc(nome)+'"><td>'+(sub?esc(nome.split("|")[1]):"<b>"+esc(nome)+"</b>")+'</td>'
+          + meses.map(m => { const c = v[m]||[0,0,0], p = val(c, AD_MED); return '<td><span class="gr-cel '+grCls(p)+'" title="'+c[1]+' de '+c[0]+'">'+(p==null?"·":Math.round(p)+"%")+'</span></td>'; }).join("")
+          + '<td><span class="gr-cel '+grCls(val(t,AD_MED))+'">'+(val(t,AD_MED)==null?"·":Math.round(val(t,AD_MED))+"%")+'</span></td></tr>'; };
+      let h = '<thead><tr><th>Cliente</th>'+meses.map(m=>'<th>'+MESN[+m.slice(5)-1]+(m===mesAtual?" *":"")+'</th>').join("")+'<th>fechados</th></tr></thead><tbody>';
+      for (const [nome,v] of ordem) { h += linha(nome, v); if (AD_ABERTO === nome) for (const [k,uv] of Object.entries(usi).filter(([k]) => k.startsWith(nome+"|")).sort((a,b)=>soma(b[1],meses)[0]-soma(a[1],meses)[0])) h += linha(k, uv, true); }
+      const tt = soma(tot, fech);
+      h += '<tr class="tot"><td>PORTFÓLIO</td>'+meses.map(m=>'<td>'+Math.round(val(tot[m],AD_MED)||0)+'%</td>').join("")+'<td>'+(tt[0]?Math.round(val(tt,AD_MED)):"—")+'%</td></tr></tbody>';
+      document.getElementById("ad-tab").innerHTML = h;
+      document.querySelectorAll("#ad-tab tr.reg").forEach(tr => tr.onclick = () => { AD_ABERTO = AD_ABERTO === tr.dataset.gc ? null : tr.dataset.gc; tabela(); });
+    };
+    tabela();
+    document.querySelectorAll("[data-gmed]").forEach(b => { b.classList.toggle("on", b.dataset.gmed === AD_MED); b.onclick = () => { AD_MED = b.dataset.gmed; grAderencia(); }; });
+    const ins = [];
+    if (fech.length >= 2) { const a = tot[fech[0]], g = tot[ult];
+      ins.push('<li><b>'+(grPct(g[2],g[0]) < grPct(a[2],a[0]) - 5 ? "O plano está sendo feito, mas cada vez mais tarde." : "Cumprimento e prazo andam juntos.")+'</b> Cumprimento '+Math.round(grPct(a[1],a[0]))+'% em '+MESN[+fech[0].slice(5)-1]+' → '+Math.round(grPct(g[1],g[0]))+'% em '+MESN[+ult.slice(5)-1]+'; feito <b>no prazo</b> '+Math.round(grPct(a[2],a[0]))+'% → '+Math.round(grPct(g[2],g[0]))+'%. A preventiva atrasada conta como feita — o cumprimento esconde o atraso.<span class="auto">regra: cumprimento × prazo</span></li>');
+      const comVol = Object.entries(cli).filter(([k,v]) => (v[ult]||[0])[0] >= 30); if (comVol.length >= 2) { const pior = [...comVol].sort((x,y)=>grPct(x[1][ult][1],x[1][ult][0])-grPct(y[1][ult][1],y[1][ult][0]))[0], melhor = [...comVol].sort((x,y)=>grPct(y[1][ult][1],y[1][ult][0])-grPct(x[1][ult][1],x[1][ult][0]))[0];
+        ins.push('<li><b>'+esc(pior[0])+' é o cliente com menor cumprimento em '+MESN[+ult.slice(5)-1]+'</b> ('+Math.round(grPct(pior[1][ult][1],pior[1][ult][0]))+'% de '+pior[1][ult][0]+' programadas); '+esc(melhor[0])+' é o melhor ('+Math.round(grPct(melhor[1][ult][1],melhor[1][ult][0]))+'%). Clique no cliente para ver em qual usina está a diferença.<span class="auto">regra: extremos do mês</span></li>'); }
+      const abaixo = fech.filter(m => grPct(tot[m][1],tot[m][0]) < 85); if (abaixo.length) ins.push('<li><b>'+(abaixo.length===1?"Um mês":abaixo.length+" meses")+' abaixo da meta:</b> '+abaixo.map(m=>MESN[+m.slice(5)-1]+" ("+Math.round(grPct(tot[m][1],tot[m][0]))+"%, "+grN(tot[m][0])+" programadas)").join(", ")+'. Volume e aderência andam em direções opostas — vale olhar a capacidade das equipes antes do plano do ano que vem.<span class="auto">regra: mês abaixo da meta</span></li>'); }
+    document.getElementById("ad-ins").innerHTML = ins.join("") || '<li style="color:var(--ink3)">Sem meses fechados no ano ainda.</li>';
+  }
+
+  /* ── Backlog e MTTR ─────────────────────────────────────────────────── */
+  function grBacklog(){
+    const ab = GP.t.filter(t => t.aberta && (!GR_FIL.cliente || t.cliente === GR_FIL.cliente));
+    const atr = ab.filter(t => t.atrasado);
+    const faixa = d => { d = d||0; return d<=7 ? "0-7" : d<=30 ? "8-30" : d<=90 ? "31-90" : ">90"; };
+    const f = {}; atr.forEach(t => f[faixa(t.dias)] = (f[faixa(t.dias)]||0)+1);
+    const p50 = atr.length ? [...atr].map(t=>t.dias||0).sort((a,b)=>a-b)[Math.floor(atr.length/2)] : 0;
+    // HH: duração estimada; sem ela, mediana do tipo; sem nada, 2 h
+    const durTipo = {}; GP.t.forEach(t => { if (t.dur) (durTipo[t.tipo] = durTipo[t.tipo] || []).push(t.dur); }); Object.keys(durTipo).forEach(k => { const v = durTipo[k].sort((a,b)=>a-b); durTipo[k] = v[Math.floor(v.length/2)]; });
+    const hh = t => t.dur || durTipo[t.tipo] || 2;
+    const hhCl = {}; ((GR_OP && GR_OP.clusters) || []).forEach(c => hhCl[c.cluster] = c);
+    const temDur = GP.t.some(t => t.dur);
+    const cl = {}; ab.forEach(t => { const k = t.cluster || "—"; const c = cl[k] = cl[k] || { tot:0, np:0, "8-30":0, "31-90":0, ">90":0, hhAtr:0 }; c.tot++; if (t.atrasado) { c[faixa(t.dias)] = (c[faixa(t.dias)]||0)+1; c.hhAtr += hh(t); } else c.np++; });
+    const semanas = k => { const c = cl[k], o = hhCl[k]; return o && o.hhSemana ? c.hhAtr / (BK_FATOR * o.hhSemana) : null; };
+    const hhTot = atr.reduce((s,t)=>s+hh(t),0), hhDisp = Object.keys(cl).reduce((s,k)=> s + ((hhCl[k]||{}).hhSemana||0), 0);
+    document.getElementById("bk-kpis").innerHTML =
+      '<div class="gr-kpi"><div class="v">'+grN(ab.length)+'</div><div class="n">Tarefas abertas</div><div class="m">todas as OS do Gestão PCM</div></div>'
+    + '<div class="gr-kpi"><div class="v" style="color:var(--mal)">'+grN(atr.length)+'</div><div class="n">Atrasadas</div><div class="m">'+(ab.length?Math.round(100*atr.length/ab.length):0)+'% das abertas · '+grN(f[">90"]||0)+' há mais de 90 dias</div></div>'
+    + '<div class="gr-kpi"><div class="v">'+grN(p50)+' d</div><div class="n">Idade mediana do atraso</div><div class="m">referência: backlog ≤ 4 semanas</div></div>'
+    + '<div class="gr-kpi"><div class="v" style="color:'+(hhDisp && hhTot/(BK_FATOR*hhDisp)>4?"var(--mal)":"inherit")+'">'+(hhDisp?grN(hhTot/(BK_FATOR*hhDisp),1)+" sem":"—")+'</div><div class="n">Backlog em semanas</div><div class="m">'+grN(hhTot)+' HH atrasadas ÷ ('+grN(BK_FATOR,1)+' × '+grN(hhDisp)+' HH/semana)'+(temDur?"":" · <b>sem duração estimada ainda</b>: usa 2 h por tarefa")+'</div></div>';
+    const fi = document.getElementById("bk-fator"); fi.value = String(BK_FATOR).replace(".", ","); fi.onchange = () => { const v = parseFloat(fi.value.replace(",", ".")); if (v > 0 && v <= 1.5) { BK_FATOR = v; try { localStorage.setItem("pcm_ger_fator", String(v)); } catch(e){} grBacklog(); } };
+    const ta = atr.length || 1;
+    document.getElementById("bk-idade").innerHTML = [["8-30","8–30 dias","#f59e0b"],["31-90","31–90 dias","#c2410c"],[">90","mais de 90 dias","#7f1d1d"]].map(([k,r,c]) => '<div class="gr-barl"><span class="n">'+r+'</span><span class="b"><i style="width:'+(100*(f[k]||0)/ta)+'%;background:'+c+';opacity:1"></i></span><span class="v">'+grN(f[k]||0)+'<small>'+Math.round(100*(f[k]||0)/ta)+'%</small></span></div>').join("");
+    const tipos = {}; ab.forEach(t => tipos[t.tipo||"—"] = (tipos[t.tipo||"—"]||0)+1); const tl = Object.entries(tipos).sort((a,b)=>b[1]-a[1]).slice(0,7), mx = tl.length ? tl[0][1] : 1;
+    document.getElementById("bk-tipo").innerHTML = tl.map(([t,n]) => '<div class="gr-barl"><span class="n">'+esc(t)+'</span><span class="b"><i style="width:'+(100*n/mx)+'%"></i></span><span class="v">'+grN(n)+'</span></div>').join("");
+    const ordem = Object.entries(cl).sort((a,b)=>b[1].tot-a[1].tot).slice(0,16);
+    document.getElementById("bk-tab").innerHTML = '<thead><tr><th>Cluster</th><th>Abertas</th><th>No prazo</th><th>8–30</th><th>31–90</th><th>&gt; 90</th><th>HH atrasadas</th><th>HH/sem</th><th>Semanas</th><th style="min-width:110px">Composição</th></tr></thead><tbody>'
+      + ordem.map(([k,c]) => { const o = hhCl[k], w = semanas(k); return '<tr><td><b>'+esc(k)+'</b>'+(o&&o.pessoas?'<div style="font-size:10.5px;color:var(--ink3)">'+o.pessoas+' pessoa(s) · '+o.usinas+' usina(s)</div>':'<div style="font-size:10.5px;color:var(--mal)">sem pessoas no BD_Operacoes</div>')+'</td><td>'+grN(c.tot)+'</td><td>'+grN(c.np)+'</td><td>'+grN(c["8-30"])+'</td><td>'+grN(c["31-90"])+'</td><td style="color:var(--mal);font-weight:800">'+grN(c[">90"])+'</td><td>'+grN(c.hhAtr)+'</td><td>'+(o?grN(o.hhSemana):"—")+'</td><td style="font-weight:800;color:'+(w!=null&&w>4?"var(--mal)":"inherit")+'">'+(w==null?"—":grN(w,1))+'</td>'
+        + '<td><div class="gr-stack"><i style="width:'+(100*c.np/c.tot)+'%;background:#8a879e"></i><i style="width:'+(100*c["8-30"]/c.tot)+'%;background:#f59e0b"></i><i style="width:'+(100*c["31-90"]/c.tot)+'%;background:#c2410c"></i><i style="width:'+(100*c[">90"]/c.tot)+'%;background:#7f1d1d"></i></div></td></tr>'; }).join("") + '</tbody>';
+    // MTTR (confiabilidade.json → GPC)
+    const UFR = {AC:"Norte",AM:"Norte",AP:"Norte",PA:"Norte",RO:"Norte",RR:"Norte",TO:"Norte",AL:"Nordeste",BA:"Nordeste",CE:"Nordeste",MA:"Nordeste",PB:"Nordeste",PE:"Nordeste",PI:"Nordeste",RN:"Nordeste",SE:"Nordeste",DF:"Centro-Oeste",GO:"Centro-Oeste",MT:"Centro-Oeste",MS:"Centro-Oeste",ES:"Sudeste",MG:"Sudeste",RJ:"Sudeste",SP:"Sudeste",PR:"Sul",RS:"Sul",SC:"Sul"};
+    const reg = u => { const m = /- ([A-Z]{2})\s*$/.exec(u||""); return m ? (UFR[m[1]]||"Sem região") : "Sem região"; };
+    const porReg = {}; ((GPC && GPC.clientes) || []).forEach(c => (c.usinas||[]).forEach(u => { if (u.mttr && (u.n||0) >= 5) (porReg[reg(u.usina)] = porReg[reg(u.usina)] || []).push(u); }));
+    const regs = Object.entries(porReg).filter(([r]) => r !== "Sem região").map(([r,v]) => ({ r, mttr: v.reduce((s,u)=>s+u.mttr*u.n,0)/v.reduce((s,u)=>s+u.n,0), med: [...v].map(u=>u.mttr).sort((a,b)=>a-b)[Math.floor(v.length/2)], n: v.reduce((s,u)=>s+u.n,0), usinas: v.length })).sort((a,b)=>b.mttr-a.mttr);
+    const mr = regs.length ? regs[0].mttr : 1;
+    document.getElementById("mt-reg").innerHTML = regs.map(r => '<div class="gr-barl"><span class="n">'+esc(r.r)+'<small>'+r.usinas+' usinas · '+grN(r.n)+' eventos</small></span><span class="b"><i class="'+(r.mttr>40?"mal":"")+'" style="width:'+(100*r.mttr/mr)+'%"></i></span><span class="v">'+grN(r.mttr,1)+' h<small>mediana '+grN(r.med,1)+' h</small></span></div>').join("") || '<div style="padding:12px 15px;color:var(--ink3);font-size:12.5px">confiabilidade.json não carregou</div>';
+    const cls = ((GPC && GPC.clusters) || []).filter(c => c.mttr && (c.n||0) >= 20).sort((a,b)=>b.mttr-a.mttr).slice(0,12);
+    document.getElementById("mt-tab").innerHTML = '<thead><tr><th>Cluster</th><th>Cliente</th><th>Eventos</th><th>MTTR (h)</th></tr></thead><tbody>' + cls.map(c => '<tr><td><b>'+esc(c.cluster)+'</b></td><td>'+esc(c.cliente||"")+'</td><td>'+grN(c.n)+'</td><td style="font-weight:800;color:'+(c.mttr>60?"var(--mal)":"inherit")+'">'+grN(c.mttr,1)+'</td></tr>').join("") + '</tbody>';
+    const ins = [];
+    if (atr.length) { ins.push('<li><b>'+(f[">90"]/ta > .4 ? "Quase metade do backlog é velho." : "Boa parte do backlog é recente.")+'</b> '+grN(f[">90"]||0)+' das '+grN(atr.length)+' tarefas atrasadas passaram de 90 dias — a referência é 4 semanas. Backlog dessa idade raramente é falta de braço: é tarefa que ninguém vai fazer e ninguém cancelou.<span class="auto">regra: idade > 90 d</span></li>');
+      if (ordem.length) { const [k,c] = ordem[0]; ins.push('<li><b>'+esc(k)+' concentra o maior backlog</b> ('+grN(c.tot)+' abertas, '+grN(c[">90"])+' há mais de 90 dias'+(semanas(k)!=null?', '+grN(semanas(k),1)+' semanas de trabalho da equipe':'')+').<span class="auto">regra: maior cluster</span></li>'); }
+      const semHH = ordem.filter(([k]) => !hhCl[k] || !hhCl[k].pessoas).length; if (semHH) ins.push('<li><b>'+semHH+' dos '+ordem.length+' maiores clusters não têm pessoas no BD_Operacoes</b> — o backlog em semanas fica sem base neles. É cadastro na aba de colaboradores, não cálculo.<span class="auto">regra: HH sem cadastro</span></li>'); }
+    if (regs.length >= 2) { const lento = regs[0], rapido = regs[regs.length-1]; ins.push('<li><b>MTTR: '+esc(lento.r)+' leva '+grN(lento.mttr,1)+' h por reparo; '+esc(rapido.r)+', '+grN(rapido.mttr,1)+' h.</b>'+(cls.length?' O cluster mais lento com volume é '+esc(cls[0].cluster)+' ('+grN(cls[0].mttr,1)+' h em '+grN(cls[0].n)+' eventos).':'')+' Distância explica parte; o resto é tempo de peça e de decisão — que a Causa Raiz do módulo Confiabilidade registra.<span class="auto">regra: extremos de MTTR</span></li>'); }
+    document.getElementById("bk-ins").innerHTML = ins.join("");
   }
   function grUsina(i, C){
     const U = GR.usinas[i], u = C.usinas.find(x=>x.i===i);
@@ -3686,7 +3836,7 @@ function arrancar(){
      gerar_engenharia_json.py); carga preguiçosa como a Gestão PCM. Tickets e
      relatórios emitidos ficam em localStorage nesta etapa — somem se trocar
      de navegador. A etapa 2 leva para o repositório via Function. */
-  let CF = null, CF_ESTADO = "vazio", CF_ERRO = "";
+  let CF = null, CF_OP = null, CF_ESTADO = "vazio", CF_ERRO = "";
   let CF_TK = null, CF_REL = null;
   const CF_FIL = { cliente:"", usina:"", fam:"", crit:"", nivel:"", busca:"", soFalha:false };
   const CF_LS_TK = "pcm_conf_tickets_v1", CF_LS_REL = "pcm_conf_relatorios_v1";
@@ -3699,6 +3849,7 @@ function arrancar(){
       if (!r.ok) throw new Error("HTTP " + r.status);
       CF = await r.json();
       if (!CF || !Array.isArray(CF.ativos)) throw new Error("arquivo sem ativos");
+      try { const o = await fetch("operacoes.json?t=" + Date.now(), { cache:"no-store" }); if (o.ok) CF_OP = await o.json(); } catch(e){}
       await cfSincronizar();
       CF_ESTADO = "pronto";
     } catch (e) { CF_ESTADO = "erro"; CF_ERRO = e.message; }
@@ -3823,7 +3974,22 @@ function arrancar(){
     const K = D.kpi;
     
     /* tickets: derivados dos ativos com sinal, para o mockup */
-    const EQ = D.equipe.map(e=>e.nome); const RESP = EQ;
+    /* Quem assume: toda a equipe do BD_Operacoes (aba de colaboradores, exportada
+       em operacoes.json) + supervisores + os responsáveis do alerta. Qualquer
+       pessoa da Grid Co. — decisão do PCM em 09/09. Sem o operacoes.json, cai
+       nos 6 do alerta. */
+    const OPE = (CF_OP && CF_OP.equipe) || [];
+    const EQ = [...new Set([...(CF_OP && CF_OP.supervisores || []), ...OPE.map(e=>e.nome), ...D.equipe.map(e=>e.nome)])].sort((a,b)=>a.localeCompare(b));
+    const EQ_SEL = (atual) => {
+      const grupo = (rot, lista) => lista.length ? '<optgroup label="'+esc(rot)+'">'+lista.map(n=>'<option'+(atual===n?" selected":"")+'>'+esc(n)+'</option>').join("")+'</optgroup>' : "";
+      const sups = [...new Set([...(CF_OP && CF_OP.supervisores || []), ...D.equipe.map(e=>e.nome)])].sort();
+      const campo = OPE.filter(e=>!sups.includes(e.nome));
+      const porSup = {}; campo.forEach(e => (porSup[e.supervisor||"Equipe"] = porSup[e.supervisor||"Equipe"] || []).push(e.nome));
+      return '<option value="—"'+(!atual||atual==="—"?" selected":"")+'>sem dono</option>' + grupo("Supervisores", sups)
+        + Object.entries(porSup).sort().map(([s,l]) => grupo("Equipe · "+s, l.sort())).join("")
+        + (atual && atual!=="—" && !EQ.includes(atual) ? '<option selected>'+esc(atual)+'</option>' : "");
+    };
+    const RESP = EQ;
     const ETAPAS = ["detectado","notificado","analise","acao","verificado"];
     const ROTE = {detectado:"Detectado",notificado:"Notificado",analise:"Em análise",acao:"Ação",verificado:"Verificado"};
     const TK = cfTickets();
@@ -3869,7 +4035,7 @@ function arrancar(){
       '<thead><tr><th>Ticket</th><th>Ativo</th><th>Usina</th><th>Crit.</th><th>Etapa</th><th>Responsável</th><th class="r">Aberto há</th><th class="r">Reincid.</th></tr></thead><tbody>'
       + TK.map(t=>'<tr><td class="cd" style="font-family:ui-monospace,Consolas,monospace;font-weight:700">'+t.id+'</td><td>'+esc(t.a.nome.slice(0,34))+'</td><td>'+esc(t.a.usina)+'</td>'
         +'<td><span class="tg'+(t.a.crit==="A"?" critA":"")+'">'+t.a.crit+'</span></td><td><span class="cf-est '+t.etapa+'">'+ROTE[t.etapa]+'</span></td>'
-        +'<td><select class="cf-mini" data-tk="'+t.id+'"><option value="—"'+(t.resp==="—"?" selected":"")+'>sem dono</option>'+EQ.map(n=>'<option'+(t.resp===n?" selected":"")+'>'+esc(n)+'</option>').join("")+'</select></td><td class="r">'+(t.dias?t.dias+" d":"hoje")+'</td>'
+        +'<td><select class="cf-mini" data-tk="'+t.id+'">'+EQ_SEL(t.resp)+'</select></td><td class="r">'+(t.dias?t.dias+" d":"hoje")+'</td>'
         +'<td class="r">'+(t.reinc?'<b class="cf-ruim">'+t.reinc+'</b>':"0")+'</td></tr>').join("")+'</tbody>';
     document.querySelectorAll("#cf-tk-tab select.cf-mini").forEach(sl=>sl.onchange=()=>{const t=TK.find(x=>x.id===sl.dataset.tk); assumir(t, sl.value); pintarTickets();});
     document.getElementById("cf-n-tickets").textContent = TK.filter(t=>t.etapa!=="verificado").length;
@@ -3961,7 +4127,8 @@ function arrancar(){
         +'<div style="font-family:ui-monospace,Consolas,monospace;font-size:12px;background:var(--surf2);padding:8px 10px;border-radius:6px;margin-top:8px">RPN = SEV × OCC × DET = ? × '+a.n30+' × ?</div></div>'
         +(t?'<div class="cf-gvs"><h5>Gestão do ticket '+t.id+'<span class="cf-salvo" id="cf-g-salvo"></span></h5>'
           +'<div class="cf-gest">'
-          +'<div><label>Quem assume</label><select id="cf-g-resp"><option value="—"'+(t.resp==="—"?" selected":"")+'>sem dono</option>'+EQ.map(n=>'<option'+(t.resp===n?" selected":"")+'>'+esc(n)+'</option>').join("")+'</select></div>'
+          +'<div><label>Quem assume</label><select id="cf-g-resp">'+EQ_SEL(t.resp)+'</select></div>'
+      +'<div><label>Ou outro e-mail @gridco.com.br</label><input id="cf-g-email" placeholder="nome.sobrenome@gridco.com.br" value=""></div>'
           +'<div><label>Prazo</label><input id="cf-g-prazo" inputmode="numeric" placeholder="dd/mm/aaaa" value="'+esc(t.prazo)+'"></div>'
           +'<div class="full"><label>Etapa</label><div class="cf-etapas">'+ETAPAS.map((e,k)=>'<button data-et="'+e+'" class="'+(k<idx?"feita":k===idx?"agora":"")+'">'+ROTE[e]+'</button>').join("")+'</div></div>'
           +'<div class="full"><label>Nota da engenharia</label><textarea id="cf-g-nota" placeholder="o que foi visto, o que foi decidido">'+esc(t.nota)+'</textarea></div>'
@@ -3973,7 +4140,8 @@ function arrancar(){
       document.querySelectorAll('#cf-gc [data-rel]').forEach(b=>b.onclick=()=>{fechar();abrirRel(b.dataset.rel,+b.dataset.ci);});
       /* gestão: as ações mudam o estado em memória e redesenham — em produção vão ao banco do painel */
       const gs=document.getElementById("cf-g-salvar");
-      if (gs) gs.onclick=()=>{ assumir(t, document.getElementById("cf-g-resp").value); t.prazo=document.getElementById("cf-g-prazo").value; t.nota=document.getElementById("cf-g-nota").value;
+      if (gs) gs.onclick=()=>{ const em=(document.getElementById("cf-g-email").value||"").trim().toLowerCase(); if (em && !/^[a-z0-9._-]+@gridco\.com\.br$/.test(em)) { document.getElementById("cf-g-salvo").textContent="e-mail precisa ser @gridco.com.br"; document.getElementById("cf-g-salvo").style.color="var(--mal)"; return; }
+    assumir(t, em || document.getElementById("cf-g-resp").value); t.prazo=document.getElementById("cf-g-prazo").value; t.nota=document.getElementById("cf-g-nota").value;
         cfGravar(t); pintarTickets(); pintarStats(); abrir(i); cfEstadoSalvar(); };
       document.querySelectorAll("#cf-gc .cf-etapas button").forEach(b=>b.onclick=()=>{ avancar(t,b.dataset.et); pintarTickets(); pintarStats(); abrir(i); });
       const ga=document.getElementById("cf-g-abrir");
