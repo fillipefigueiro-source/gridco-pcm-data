@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-09T22:30:51Z",
+  "geradoEm": "2026-09-09T22:42:18Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4244,
-        "emAberto": 26,
-        "atrasadas": 20,
-        "concluidas30d": 681,
-        "concluidas7d": 197,
+        "emAberto": 25,
+        "atrasadas": 19,
+        "concluidas30d": 682,
+        "concluidas7d": 198,
         "naSemanaCorrente": 64
       },
       "mttr": {
-        "horas": 17.91,
+        "horas": 17.92,
         "label": "17h 55min",
-        "amostra": 681
+        "amostra": 682
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W37",
           "criadas": 61,
-          "finalizadas": 67
+          "finalizadas": 68
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4244,
-            "emAberto": 26
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 26,
-      "atrasadas": 20,
+      "total": 25,
+      "atrasadas": 19,
       "porStatus": {
         "naoIniciada": 23,
-        "emProgresso": 2,
-        "pausada": 1,
+        "emProgresso": 0,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 26
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -187,7 +187,7 @@
           "responsavel": "Adriano Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Adriano Silva ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "Testes de religamento remoto UFV - Carosa",
           "criticidade": "",
           "dataProgramada": "2026-08-26",
@@ -431,25 +431,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "13223",
-          "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
-          "equipe": "",
-          "responsavel": "Ademir Necker ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Ademir Necker ",
-          "status": "Em progresso",
-          "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-08",
-          "dataCriacao": "2026-09-08",
-          "dataInicial": "2026-09-09",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -712,6 +693,26 @@
           "supervisor": "Wesllen  Castro",
           "status": "Finalizados",
           "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-08",
+          "dataCriacao": "2026-09-08",
+          "dataInicial": "2026-09-09",
+          "dataFinal": "2026-09-09",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13223",
+          "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+          "equipe": "",
+          "responsavel": "Ademir Necker ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Ademir Necker ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
           "criticidade": "",
           "dataProgramada": "2026-09-08",
           "dataCriacao": "2026-09-08",
@@ -3024,26 +3025,6 @@
           "atrasada": false
         },
         {
-          "osId": "11186",
-          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-08-13",
-          "dataCriacao": "2026-08-13",
-          "dataInicial": "2026-08-31",
-          "dataFinal": "2026-08-31",
-          "linkFracttal": "",
-          "horasAteAbrir": 432.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "12462",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
           "equipe": "",
@@ -3564,12 +3545,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1825,
+      "historicoTotal": 1826,
       "subClassificacao": {
         "remoto": 756,
         "local": 3488,
         "remotoEmAberto": 11,
-        "localEmAberto": 15,
+        "localEmAberto": 14,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -16669,24 +16650,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "13223",
-      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
-      "equipe": "",
-      "responsavel": "Ademir Necker ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Ademir Necker ",
-      "status": "Em progresso",
-      "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-08",
-      "dataCriacao": "2026-09-08",
-      "dataInicial": "2026-09-09",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "modalidade": "local"
-    },
-    {
       "osId": "13212",
       "ativo": "Tracker 01.106 Brametal Bi-motor    { CPP100-ETKR1.106 }",
       "equipe": "",
@@ -18817,7 +18780,7 @@
       "responsavel": "Adriano Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Adriano Silva ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "Testes de religamento remoto UFV - Carosa",
       "criticidade": "",
       "dataProgramada": "2026-08-26",
@@ -20951,6 +20914,26 @@
       "atrasada": false
     },
     {
+      "osId": "13223",
+      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+      "equipe": "",
+      "responsavel": "Ademir Necker ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Ademir Necker ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-08",
+      "dataCriacao": "2026-09-08",
+      "dataInicial": "2026-09-09",
+      "dataFinal": "2026-09-09",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13216",
       "ativo": "Tracker 4.100      { SPP300-ETKR4.100 }",
       "equipe": "",
@@ -23002,28 +22985,9 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12638",
-      "ativo": "Preventiva Grupo de Inversores      { THPN-GYT100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-09-02",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "2026-09-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2866,
+  "historicoTotal": 2867,
   "totalGeral": 6042,
   "verificacao": {
     "total": 0,
