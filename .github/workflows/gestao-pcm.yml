@@ -61,7 +61,7 @@ jobs:
           echo "$NEW_HASH" > _gestao_pcm_published_hash.txt
           git config user.name  "gestao-pcm-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add gestao_pcm.json _gestao_pcm_published_hash.txt engenharia.json
+          git add gestao_pcm.json _gestao_pcm_published_hash.txt engenharia.json gerencial.json engenharia/notificacoes.json
           git commit -m "chore: refresh gestao_pcm.json [auto ${NEW_HASH:0:8}]"
           for i in 1 2 3 4 5; do
             git pull --rebase --autostash origin main || true
