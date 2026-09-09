@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-09T10:03:21Z",
+  "geradoEm": "2026-09-09T10:21:39Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4238,
-        "emAberto": 32,
-        "atrasadas": 27,
-        "concluidas30d": 669,
-        "concluidas7d": 185,
+        "emAberto": 31,
+        "atrasadas": 26,
+        "concluidas30d": 670,
+        "concluidas7d": 186,
         "naSemanaCorrente": 57
       },
       "mttr": {
-        "horas": 18.09,
-        "label": "18h 5min",
-        "amostra": 669
+        "horas": 18.1,
+        "label": "18h 6min",
+        "amostra": 670
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W37",
           "criadas": 54,
-          "finalizadas": 58
+          "finalizadas": 59
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4238,
-            "emAberto": 32
+            "emAberto": 31
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 32,
-      "atrasadas": 27,
+      "total": 31,
+      "atrasadas": 26,
       "porStatus": {
-        "naoIniciada": 29,
-        "emProgresso": 0,
-        "pausada": 3,
+        "naoIniciada": 28,
+        "emProgresso": 1,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 32
+        "(sem equipe)": 31
       },
       "oss": [
         {
@@ -441,14 +441,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
           "criticidade": "",
           "dataProgramada": "2026-09-08",
           "dataCriacao": "2026-09-08",
-          "dataInicial": "",
+          "dataInicial": "2026-09-09",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -539,25 +540,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "13180",
-          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Valdério Paz ",
-          "status": "pausado",
-          "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-08",
-          "dataCriacao": "2026-09-08",
-          "dataInicial": "2026-09-08",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -671,6 +653,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13180",
+          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Valdério Paz ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-08",
+          "dataCriacao": "2026-09-08",
+          "dataInicial": "2026-09-08",
+          "dataFinal": "2026-09-09",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 24.0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "13249",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3492,26 +3494,6 @@
           "atrasada": false
         },
         {
-          "osId": "12627",
-          "ativo": "Inversor 2.1 Huawei SUN2000-215KTL-H3    { MCB100-INVR2.1 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Valdério Paz ",
-          "status": "Finalizados",
-          "tarefa": "[MCB100-INVR2.1] - Religamento do MCB100-INVR2.1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-02",
-          "dataFinal": "2026-09-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "12667",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -3672,12 +3654,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1813,
+      "historicoTotal": 1814,
       "subClassificacao": {
         "remoto": 756,
         "local": 3482,
         "remotoEmAberto": 12,
-        "localEmAberto": 20,
+        "localEmAberto": 19,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -16000,14 +15982,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
       "criticidade": "",
       "dataProgramada": "2026-09-08",
       "dataCriacao": "2026-09-08",
-      "dataInicial": "",
+      "dataInicial": "2026-09-09",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -16318,24 +16301,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "13180",
-      "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Valdério Paz ",
-      "status": "pausado",
-      "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-08",
-      "dataCriacao": "2026-09-08",
-      "dataInicial": "2026-09-08",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
     },
     {
       "osId": "13176",
@@ -21018,6 +20983,26 @@
       "atrasada": false
     },
     {
+      "osId": "13180",
+      "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Valdério Paz ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-08",
+      "dataCriacao": "2026-09-08",
+      "dataInicial": "2026-09-08",
+      "dataFinal": "2026-09-09",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 24.0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13173",
       "ativo": "Thopen - Primavera 1 - ES BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM100 }",
       "equipe": "",
@@ -22931,29 +22916,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "12953",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizados",
-      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "2026-09-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2835,
+  "historicoTotal": 2836,
   "totalGeral": 6008,
   "verificacao": {
     "total": 0,
