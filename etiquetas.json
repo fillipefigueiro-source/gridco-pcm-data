@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-10T12:21:27Z",
+  "geradoEm": "2026-09-10T12:34:06Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4262,
-        "emAberto": 29,
+        "total": 4263,
+        "emAberto": 30,
         "atrasadas": 21,
         "concluidas30d": 671,
         "concluidas7d": 184,
-        "naSemanaCorrente": 82
+        "naSemanaCorrente": 83
       },
       "mttr": {
         "horas": 17.71,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W37",
-          "criadas": 79,
+          "criadas": 80,
           "finalizadas": 82
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4262,
-            "emAberto": 29
+            "total": 4263,
+            "emAberto": 30
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 29,
+      "total": 30,
       "atrasadas": 21,
       "porStatus": {
         "naoIniciada": 27,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 29
+        "(sem equipe)": 30
       },
       "oss": [
         {
@@ -471,6 +471,24 @@
           "atrasada": true
         },
         {
+          "osId": "13358",
+          "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { THPN-DMT100-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Valmir  Júnior",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Valmir  Júnior",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-DMT100-INVR1.3] - Religamento do THPN-DMT100-INVR1.3",
+          "criticidade": "",
+          "dataProgramada": "2026-09-10",
+          "dataCriacao": "2026-09-10",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "13347",
           "ativo": "Thopen - Colorado 1 - PR Zona Rural S/N Colorado  Paraná Brasil { THPN-CLR100 }",
           "equipe": "",
@@ -495,14 +513,15 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-CGH100] - Religamento do THPN-CGH100",
           "criticidade": "",
           "dataProgramada": "2026-09-10",
           "dataCriacao": "2026-09-10",
-          "dataInicial": "",
+          "dataInicial": "2026-09-10",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3620,9 +3639,9 @@
       "historicoTotal": 1813,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3506,
+        "local": 3507,
         "remotoEmAberto": 11,
-        "localEmAberto": 18,
+        "localEmAberto": 19,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -16023,6 +16042,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13358",
+      "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { THPN-DMT100-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Valmir  Júnior",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Valmir  Júnior",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-DMT100-INVR1.3] - Religamento do THPN-DMT100-INVR1.3",
+      "criticidade": "",
+      "dataProgramada": "2026-09-10",
+      "dataCriacao": "2026-09-10",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13357",
       "ativo": "Tracker 25.102 Convert Italia SpA     { MTS200-ETKR25.102 }",
       "equipe": "",
@@ -16062,14 +16098,15 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-CGH100] - Religamento do THPN-CGH100",
       "criticidade": "",
       "dataProgramada": "2026-09-10",
       "dataCriacao": "2026-09-10",
-      "dataInicial": "",
+      "dataInicial": "2026-09-10",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -23096,7 +23133,7 @@
     }
   ],
   "historicoTotal": 2850,
-  "totalGeral": 6062,
+  "totalGeral": 6063,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
