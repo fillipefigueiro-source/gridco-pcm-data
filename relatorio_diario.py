@@ -107,7 +107,7 @@ def calcular(dia: date):
     g = ler("gestao_pcm.json", {})
     ger = ler("gerencial.json", {})
     eng = ler("engenharia.json", {})
-    D = {"dia": dia.isoformat(), "avisos": []}
+    D = {"dia": dia.isoformat(), "avisos": [], "foraPlano": 0}
 
     # programação do dia (Programação Semanal)
     w = semana_do_dia(bd, dia)
@@ -117,7 +117,9 @@ def calcular(dia: date):
         esperado = dia.strftime("%d/%m")
         if w.get("dates", {}).get(DIAS_KEY[dia.weekday()], esperado) != esperado:
             D["avisos"].append(f"a semana {w['week']} do banco_dados não bate com a data {esperado}")
-        rows = [r for r in w.get("rows", []) if str(r.get("dia", "")).lower().startswith(nome_dia[:3].lower())]
+        todos = [r for r in w.get("rows", []) if str(r.get("dia", "")).lower().startswith(nome_dia[:3].lower())]
+        rows = [r for r in todos if not r.get("foraDoPlano")]          # só o que estava no plano
+        D["foraPlano"] = len(todos) - len(rows)                          # executadas fora do plano
     else:
         D["avisos"].append(f"banco_dados.json não tem a semana de {dia:%d/%m} — aderência fica sem dado")
     D["semanaLabel"] = (w or {}).get("label", "") or f"Semana {dia.isocalendar()[1]}"
@@ -147,7 +149,7 @@ def calcular(dia: date):
     D["semana"] = []
     if w:
         for i, d in enumerate(DIAS_PT[:5]):
-            rs = [r for r in w.get("rows", []) if r.get("dia") == d]
+            rs = [r for r in w.get("rows", []) if r.get("dia") == d and not r.get("foraDoPlano")]
             D["semana"].append((d[:3], len(rs), sum(1 for r in rs if fin(r)), i > dia.weekday()))
 
     # não programadas e backlog (Gestão PCM)
@@ -192,7 +194,8 @@ def analise(D):
     if prog:
         ins.append(f"<b>Aderência de {ader:.0f}% no dia</b> — {n(fin)} das {n(prog)} OS programadas finalizadas, "
                    f"{'acima' if ader >= META_ADERENCIA else 'abaixo'} da meta de {META_ADERENCIA:.0f}%. "
-                   f"{n(D['naoIniciada'])} não iniciadas e {n(D['andamento'])} em andamento passam para hoje.")
+                   f"{n(D['naoIniciada'])} não iniciadas e {n(D['andamento'])} em andamento passam para hoje."
+                   + (f" Fora do plano, a equipe ainda fechou {n(D['foraPlano'])} tarefas que não estavam programadas." if D["foraPlano"] else ""))
     else:
         ins.append("<b>Sem OS programadas para o dia</b> na Programação Semanal — o relatório traz só o que entrou e os religamentos.")
     tipos = " · ".join(f"<b>{n(c)}</b> {h(t)}" for t, c in np_["tipos"]) or "nenhuma"
@@ -314,7 +317,7 @@ i{{font-style:normal;color:#b02525;font-weight:700;font-size:8pt}}
     <div class="d"><b>{titulo_dia}</b>gerado {gerado:%d/%m} às {gerado:%H:%M} · uso interno (PCM e engenharia)</div></div>
   {avisos}
   <div class="kpis">
-    <div class="kpi g"><div class="v">{f"{ader:.0f}%" if prog else "—"}</div><div class="n">Aderência do dia</div><div class="m">{n(fin)} de {n(prog)} programadas</div></div>
+    <div class="kpi g"><div class="v">{f"{ader:.0f}%" if prog else "—"}</div><div class="n">Aderência do dia</div><div class="m">{n(fin)} de {n(prog)} programadas · +{n(D["foraPlano"])} fora do plano</div></div>
     <div class="kpi"><div class="v">{n(nao + and_)}</div><div class="n">Passam para hoje</div><div class="m">{n(nao)} não iniciadas · {n(and_)} em andamento</div></div>
     <div class="kpi r"><div class="v">{n(np_['n'])}</div><div class="n">Não programadas geradas</div><div class="m">corretivas e religamentos</div></div>
     <div class="kpi"><div class="v">{n(len(relig))}</div><div class="n">Religamentos</div><div class="m">{hrel:.1f} h diurnas · média 7 d: {med7:.0f}/dia</div></div>
@@ -448,7 +451,7 @@ def enviar_email(assunto, html_resumo, pdf_path, nome_pdf, var_para="RELATORIO_D
 
 def resumo_email(D, dia: date, ins):
     ader = pct(D["fin"], D["prog"])
-    kpis = [(f"{ader:.0f}%" if D["prog"] else "—", f"aderência ({n(D['fin'])} de {n(D['prog'])})"),
+    kpis = [(f"{ader:.0f}%" if D["prog"] else "—", f"aderência ({n(D['fin'])} de {n(D['prog'])} · +{n(D['foraPlano'])} fora do plano)"),
             (n(D["naoIniciada"] + D["andamento"]), "passam para hoje"),
             (n(D["naoProg"]["n"]), "não programadas geradas"),
             (n(len(D["relig"])), "religamentos"),
@@ -487,12 +490,14 @@ def _hh(L):
 def calcular_matinal(dia: date):
     bd = ler("banco_dados.json", {})
     g = ler("gestao_pcm.json", {})
-    D = {"dia": dia.isoformat(), "avisos": []}
+    D = {"dia": dia.isoformat(), "avisos": [], "foraPlano": 0}
     w = semana_do_dia(bd, dia)
     nome_dia = DIAS_PT[dia.weekday()]
     rows = []
     if w:
-        rows = [r for r in w.get("rows", []) if str(r.get("dia", "")).lower().startswith(nome_dia[:3].lower())]
+        todos = [r for r in w.get("rows", []) if str(r.get("dia", "")).lower().startswith(nome_dia[:3].lower())]
+        rows = [r for r in todos if not r.get("foraDoPlano")]          # só o que estava no plano
+        D["foraPlano"] = len(todos) - len(rows)                          # executadas fora do plano
     else:
         D["avisos"].append(f"banco_dados.json não tem a semana de {dia:%d/%m} — sem programação para comparar")
     D["semanaLabel"] = (w or {}).get("label", "") or f"Semana {dia.isocalendar()[1]}"
@@ -614,7 +619,7 @@ td{{padding:2.6px 6px;border-bottom:1px solid #eceef4;vertical-align:top}} .r{{t
   <div class="d"><b>{DIAS_PT[dia.weekday()]}, {dia:%d/%m/%Y}</b>corte às {gerado:%H:%M} · uso interno (PCM, supervisores e engenharia)</div></div>
 
 <div class="kpis">
-  <div class="kpi"><div class="v">{n(m)}</div><div class="n">Programadas na manhã</div><div class="m">de {n(D['totalDia'])} no dia todo</div></div>
+  <div class="kpi"><div class="v">{n(m)}</div><div class="n">Programadas na manhã</div><div class="m">de {n(D['totalDia'])} no dia · +{n(D["foraPlano"])} fora do plano</div></div>
   <div class="kpi g"><div class="v">{n(m - p)}</div><div class="n">Fechadas</div><div class="m">{pct(m - p, m):.0f}% da manhã</div></div>
   <div class="kpi r"><div class="v">{n(p)}</div><div class="n">Pendentes</div><div class="m">em {n(len(D['os']))} OS · {D['hhPend']:.0f} h</div></div>
   <div class="kpi"><div class="v">{n(len(D['tarde']))}</div><div class="n">Já na tarde</div><div class="m">{D['hhTarde']:.0f} h a partir das {HORA_CORTE_MANHA:02d}:00</div></div>
