@@ -56,6 +56,20 @@ jobs:
           ENG_EMAIL_PARA: ${{ secrets.ENG_EMAIL_PARA }}
         run: python gerar_engenharia_json.py
 
+      - name: Relatórios por e-mail (diário 06:00 · tarde 13:00 · semana sex 17:00 · alerta da programação)
+        env:
+          PCM_PROG_DIR: ${{ github.workspace }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          RELATORIO_DIARIO_PARA: ${{ secrets.RELATORIO_DIARIO_PARA }}
+          RELATORIO_MATINAL_PARA: ${{ secrets.RELATORIO_MATINAL_PARA }}
+          RELATORIO_SEMANAL_PARA: ${{ secrets.RELATORIO_SEMANAL_PARA }}
+          RELATORIO_ALERTA_PARA: ${{ secrets.RELATORIO_ALERTA_PARA }}
+        run: python relatorio_diario.py
+
       - name: Publicar só se os dados mudaram (anti-churn)
         run: |
           NEW_HASH=$(python - <<'EOF'
@@ -75,7 +89,9 @@ jobs:
           EOF
           )
           OLD_HASH=$(cat _gestao_pcm_published_hash.txt 2>/dev/null || echo "")
-          if [ -n "$NEW_HASH" ] && [ "$NEW_HASH" = "$OLD_HASH" ]; then
+          # relatório diário novo (1x/dia) publica mesmo com os dados iguais
+          RELATORIO_NOVO=$(git status --porcelain relatorios 2>/dev/null | head -1)
+          if [ -n "$NEW_HASH" ] && [ "$NEW_HASH" = "$OLD_HASH" ] && [ -z "$RELATORIO_NOVO" ]; then
             echo "Dados sem mudança (hash $NEW_HASH) — nada a publicar."
             exit 0
           fi
@@ -83,7 +99,8 @@ jobs:
           git config user.name  "gestao-pcm-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add gestao_pcm.json _gestao_pcm_published_hash.txt engenharia.json gerencial.json engenharia/notificacoes.json
-          git commit -m "chore: dados do Gestão PCM / Confiabilidade / Gerencial [auto ${NEW_HASH:0:8}]"
+          git add -A relatorios 2>/dev/null || true
+          git commit -m "chore: dados do Gestão PCM / Confiabilidade / Gerencial [auto ${NEW_HASH:0:8}]" || { echo "nada a commitar"; exit 0; }
           for i in 1 2 3 4 5; do
             git pull --rebase --autostash origin main || true
             if git push; then
