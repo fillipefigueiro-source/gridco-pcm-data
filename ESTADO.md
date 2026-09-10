@@ -1038,3 +1038,16 @@ barulho**.
 
 Quando descobrir a próxima, **escreva aqui — não no e-mail**. E se for uma falha
 que não avisa quando acontece, ela pertence à §6.
+
+### Relatório diário de manutenção (10/09)
+
+`relatorio_diario.py` roda como passo do workflow "Atualiza Gestão PCM" a cada rodada, mas
+só age na primeira rodada depois das 06:00 BRT de cada dia (estado em
+`relatorios/diario/_estado.json`). Cobre o dia civil anterior, inclusive fim de semana.
+Lê só os JSON já gerados (banco_dados, gestao_pcm, gerencial, engenharia) — não chama o
+Fracttal. Gera `relatorios/diario/AAAA-MM-DD.html` + `.pdf` (Chrome headless do runner;
+30 dias guardados) e envia o PDF anexo para `RELATORIO_DIARIO_PARA` (Secret, vários
+e-mails separados por vírgula) com as mesmas Secrets SMTP da engenharia. Sem SMTP, gera e
+não envia. A análise é por regras fixas (meta de aderência 85%, `RELATORIO_DIARIO_META`).
+Publish step: um relatório novo publica mesmo com os dados iguais. Cliente não recebe.
+Teste local: `python relatorio_diario.py --dia AAAA-MM-DD --forcar --sem-email`.
