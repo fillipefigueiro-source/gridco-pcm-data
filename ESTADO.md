@@ -1085,3 +1085,19 @@ fabricio.barreto, breno.andrade, davi.damasceno). Todo destinatário vazio cai e
 `RELATORIO_DIARIO_PARA`. Alerta operacional 13:30/16:00 do `atualizacao_semanal.py`
 continua existindo (lista por cluster) — o "Recuperação da tarde" é a visão consolidada.
 Teste: `python relatorio_diario.py --janela alerta --semana 2026-W37 --forcar --sem-email`.
+
+### Tela "Relatórios" — emissão sob demanda no painel (10/09)
+
+`js/relatorios.js` (carregado pelo novo.html antes do script principal) monta no navegador
+os quatro relatórios — diário, recuperação da tarde, fechamento da semana e alerta da
+programação — com os mesmos JSON que o painel já serve, com recorte por cliente ou
+cluster/supervisor, e "Imprimir / PDF" pela impressão do navegador (como o FMEA). As regras
+são um espelho das do Python: **mudou lá, muda aqui**. O novo.html só ganhou o botão da nav
+(`data-v="rel"`, em TELAS_ADMIN), a section `v-rel`, o título, duas linhas no `pintar()` e
+`window.pintar = pintar` (o script principal é uma função fechada; o módulo repinta por aí).
+A lista "Emitidos automaticamente" vem de `relatorios/indice.json` (60 últimas emissões,
+gravado pelo `relatorio_diario.py`); `relatorios/feriados.json` alimenta a checagem de
+feriados no navegador. `/relatorios/*` é rota admin/equipe no SWA. Tema escuro: a folha usa
+cores fixas de papel dentro de `.rp-folha`. "Enviar por e-mail" pelo painel ficou para depois
+(precisa de uma função no Azure). Não há `<head>`/`<body>` explícitos no novo.html — a âncora
+para inserir scripts é o primeiro `<script>`.

@@ -21,6 +21,7 @@
     { "route": "/api/fracttal", "allowedRoles": ["anonymous"] },
     { "route": "/api/*",   "allowedRoles": ["authenticated"] },
     { "route": "/*.json",  "allowedRoles": ["admin", "equipe"] },
+    { "route": "/relatorios/*", "allowedRoles": ["admin", "equipe"] },
     { "route": "/*",       "allowedRoles": ["authenticated"] }
   ],
   "responseOverrides": {

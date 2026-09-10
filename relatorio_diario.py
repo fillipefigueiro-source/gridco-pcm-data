@@ -816,6 +816,34 @@ def _semana_nova(bd):
     return novas[-1]["week"], novas[-1].get("geradaEm") or ""
 
 
+INDICE_ARQ = os.path.join(BASE, "relatorios", "indice.json")
+FERIADOS_JSON = os.path.join(BASE, "relatorios", "feriados.json")
+
+
+def registrar_emissao(janela, ref, rotulo, pasta_rel, est):
+    """Acrescenta a emissão em relatorios/indice.json (a tela Relatórios do painel lê daqui). 60 últimas."""
+    idx = _ler_estado(INDICE_ARQ) or {}
+    lista = [e for e in (idx.get("emissoes") or []) if not (e.get("janela") == janela and e.get("ref") == ref)]
+    env = est.get("envio") or {}
+    lista.insert(0, {"janela": janela, "ref": ref, "rotulo": rotulo, "geradoEm": est.get("geradoEm", ""), "pdf": bool(est.get("pdf")),
+                     "arquivo": f"relatorios/{pasta_rel}/{ref}.pdf", "enviado": bool(env.get("enviado")), "para": env.get("para", 0),
+                     "motivo": ("" if env.get("enviado") else env.get("motivo", ""))[:80]})
+    idx = {"atualizadoEm": est.get("geradoEm", ""), "emissoes": lista[:60]}
+    _gravar_estado(INDICE_ARQ, idx)
+
+
+def exportar_feriados():
+    """Feriados da planilha em JSON simples, para o alerta montado no navegador."""
+    try:
+        import relatorios_semana as rs
+        fer = [{"tipo": t, "uf": uf, "data": d.isoformat(), "nome": nome} for t, uf, d, nome in rs.ler_feriados(FERIADOS_XLSX)]
+        atual = _ler_estado(FERIADOS_JSON)
+        if fer and fer != atual:
+            _gravar_estado(FERIADOS_JSON, fer)
+    except Exception as e:
+        log(f"feriados.json não exportado ({type(e).__name__}: {e})", "WARN")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--janela", choices=["auto", "diario", "matinal", "semanal", "alerta"], default="auto",
@@ -842,8 +870,8 @@ def main():
         dia = date.fromisoformat(a.dia) if a.dia else (agora.date() - timedelta(days=1))
         estado = _ler_estado(ESTADO_ARQ)
         if a.forcar or (agora.hour >= HORA_ENVIO and estado.get("ultimoDia") != dia.isoformat()):
-            _gravar_estado(ESTADO_ARQ, rodar_diario(dia, agora, a.sem_email))
-            fez += 1
+            est = rodar_diario(dia, agora, a.sem_email); _gravar_estado(ESTADO_ARQ, est)
+            registrar_emissao("diario", dia.isoformat(), f"{DIAS_PT[dia.weekday()][:3].lower()} {dia:%d/%m}", "diario", est); fez += 1
         elif a.janela == "diario":
             log(f"diário: {'antes das %02d:00 BRT' % HORA_ENVIO if agora.hour < HORA_ENVIO else 'já gerado hoje'} — nada a fazer")
 
@@ -853,8 +881,8 @@ def main():
         estado = _ler_estado(ESTADO_MAT)
         util = dia.weekday() < 5
         if a.forcar or (util and agora.hour >= HORA_MATINAL and estado.get("ultimoDia") != dia.isoformat()):
-            _gravar_estado(ESTADO_MAT, rodar_matinal(dia, agora, a.sem_email))
-            fez += 1
+            est = rodar_matinal(dia, agora, a.sem_email); _gravar_estado(ESTADO_MAT, est)
+            registrar_emissao("matinal", dia.isoformat(), f"{DIAS_PT[dia.weekday()][:3].lower()} {dia:%d/%m}", "matinal", est); fez += 1
         elif a.janela == "matinal":
             log(f"matinal: {'fim de semana' if not util else 'antes das %02d:00 BRT' % HORA_MATINAL if agora.hour < HORA_MATINAL else 'já gerado hoje'} — nada a fazer")
 
@@ -867,7 +895,7 @@ def main():
         if a.forcar or (hora_ok and estado.get("ultimaSemana") != week):
             est = rodar_semanal(week, agora, a.sem_email)
             if est:
-                _gravar_estado(ESTADO_SEM, est); fez += 1
+                _gravar_estado(ESTADO_SEM, est); registrar_emissao("semanal", week, f"Semana {week[-2:]}", "semanal", est); fez += 1
         elif a.janela == "semanal":
             log("semanal: fora da janela (sexta ≥ %02d:00 BRT) ou já gerado — nada a fazer" % HORA_SEMANAL)
 
@@ -882,10 +910,11 @@ def main():
         if week and (a.forcar or (estado.get("ultimaSemana"), estado.get("geradaEm")) != (week, gerada)):
             est = rodar_alerta(week, agora, a.sem_email, gerada)
             if est:
-                _gravar_estado(ESTADO_ALE, est); fez += 1
+                _gravar_estado(ESTADO_ALE, est); registrar_emissao("alerta", week, f"Semana {week[-2:]}", "alerta", est); fez += 1
         elif a.janela == "alerta":
             log("alerta: nenhuma semana nova (ou já alertada) — nada a fazer")
 
+    exportar_feriados()
     if not fez and a.janela == "auto":
         log(f"{agora:%H:%M} BRT — nenhuma janela a gerar agora")
     return 0

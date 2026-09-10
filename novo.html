@@ -1075,6 +1075,8 @@ tbody tr:hover{background:var(--surf2)}
     <div class="lat-sec">Gerencial</div>
     <button class="lat-i" data-v="ger" id="lat-ger" title="Disponibilidade por região">
       <span class="ic">◆</span><span class="rot">Disponibilidade</span></button>
+    <button class="lat-i" data-v="rel" id="lat-rel" title="Relatórios sob demanda">
+      <span class="ic">▣</span><span class="rot">Relatórios</span></button>
 
     <div class="lat-pe">
       <a class="lat-ac" id="lat-ac" title="Quem de cada cliente pode entrar"
@@ -1114,6 +1116,7 @@ tbody tr:hover{background:var(--surf2)}
     <section class="tela" id="v-gestao"></section>
     <section class="tela" id="v-conf"></section>
     <section class="tela" id="v-ger"></section>
+    <section class="tela" id="v-rel"></section>
 
     <p class="rodape">
       <b>Protótipo navegável.</b> Semana 35, 992 OS reais. A barra lateral substitui as nove abas
@@ -1123,6 +1126,7 @@ tbody tr:hover{background:var(--surf2)}
   </div>
 </div>
 
+<script src="js/relatorios.js?v=20260910"></script>
 <script>
 /* Monta o objeto D a partir dos JSON do painel, no navegador.
    Porte de extrair_side.py — existe para que a pagina publicada NAO carregue
@@ -1423,7 +1427,7 @@ function arrancar(){
   /* Papel. Espelha o que o painel em producao ja faz: uma lista de telas restritas
      (adminOnly, Task #130) e o escopo dos dados preso ao cliente do usuario
      (_cliEq(r.cliente, S.user)). O cliente ve Semana e Tarefas/OS, mais nada. */
-  const TELAS_ADMIN = ["insights", "mod", "gestao", "conf", "ger"];
+  const TELAS_ADMIN = ["insights", "mod", "gestao", "conf", "ger", "rel"];
   /* Os 11 papeis de cliente, iguais ao AUTH_CLI de js/auth.js. Papel derivado
      fora desta lista e erro de cadastro, nao papel novo. */
   const AUTH_CLI = {
@@ -2953,8 +2957,10 @@ function arrancar(){
     tarefas:["Tarefas / OS","tabela consolidada com filtros"],
     gestao:["Gestão PCM","o ano inteiro · 20 mil tarefas · somente leitura"],
     conf:["Confiabilidade","engenharia de manutenção · sinais por ativo · tickets · FMEA"],
-    ger:["Gerencial","disponibilidade por região · cascata de religamentos · one-pager"]};
+    ger:["Gerencial","disponibilidade por região · cascata de religamentos · one-pager"],
+    rel:["Relatórios","diário · recuperação da tarde · fechamento da semana · alerta da programação — emissão sob demanda"]};
   function pintar(){
+    window.pintar = pintar;           // js/relatorios.js repinta a tela por aqui
     document.querySelectorAll(".lat-i").forEach(b =>
       b.classList.toggle("on", b.dataset.v===V && (V!=="mod" || b.dataset.m===MOD)));
     const t = V==="mod" ? [D.mods[MOD].label, "chamados em aberto e histórico"]
@@ -2968,10 +2974,12 @@ function arrancar(){
     $("#v-gestao").innerHTML = V==="gestao" ? vGestao() : "";
     $("#v-conf").innerHTML = V==="conf" ? vConf() : "";
     $("#v-ger").innerHTML = V==="ger" ? vGer() : "";
+    $("#v-rel").innerHTML = V==="rel" ? (window.vRel ? vRel() : '<div class="gp-carga erro"><b>js/relatorios.js não carregou.</b></div>') : "";
     document.querySelectorAll(".tela").forEach(s => s.classList.toggle("on", s.id==="v-"+V));
     ligar();
     if (V === "conf") cfPintar();
     if (V === "ger") grPintar();
+    if (V === "rel" && window.rpPintar) rpPintar();
     frPintar();     // idade do dado no cabeçalho, a cada render
   }
   function gpAbrirPop(k){
