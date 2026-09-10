@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-10T13:09:33Z",
+  "geradoEm": "2026-09-10T13:16:29Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -3845,16 +3845,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 810,
-        "emAberto": 124,
-        "atrasadas": 74,
-        "concluidas30d": 164,
-        "concluidas7d": 40,
+        "emAberto": 123,
+        "atrasadas": 73,
+        "concluidas30d": 165,
+        "concluidas7d": 41,
         "naSemanaCorrente": 56
       },
       "mttr": {
-        "horas": 329.71,
-        "label": "13d 17h",
-        "amostra": 164
+        "horas": 330.18,
+        "label": "13d 18h",
+        "amostra": 165
       },
       "tendencia4Semanas": [
         {
@@ -3875,7 +3875,7 @@
         {
           "semana": "W37",
           "criadas": 17,
-          "finalizadas": 23
+          "finalizadas": 24
         }
       ],
       "topOfensores": {
@@ -3883,7 +3883,7 @@
           {
             "nome": "(sem equipe)",
             "total": 810,
-            "emAberto": 124
+            "emAberto": 123
           }
         ],
         "responsaveis": [
@@ -3900,7 +3900,7 @@
           {
             "nome": "Felipe  Lima",
             "total": 32,
-            "emAberto": 10
+            "emAberto": 9
           },
           {
             "nome": "Luiz  Silva",
@@ -3914,16 +3914,16 @@
           }
         ]
       },
-      "total": 124,
-      "atrasadas": 74,
+      "total": 123,
+      "atrasadas": 73,
       "porStatus": {
         "naoIniciada": 107,
         "emProgresso": 4,
-        "pausada": 13,
+        "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 124
+        "(sem equipe)": 123
       },
       "oss": [
         {
@@ -4157,7 +4157,7 @@
           "responsavel": "Davi Damasceno ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Davi Damasceno ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPA - Inversor",
           "criticidade": "",
           "dataProgramada": "2026-08-25",
@@ -4476,24 +4476,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "11986",
-          "ativo": "Infraestrutura Civil  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Felipe  Lima",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-09-10",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 408.0,
           "atrasada": true
         },
         {
@@ -6054,6 +6036,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "11986",
+          "ativo": "Infraestrutura Civil  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-INFC1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Spare Parts",
+          "criticidade": "",
+          "dataProgramada": "2026-08-28",
+          "dataCriacao": "2026-08-24",
+          "dataInicial": "2026-09-10",
+          "dataFinal": "2026-09-10",
+          "linkFracttal": "",
+          "horasAteAbrir": 408.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13201",
           "ativo": "Estrutura Fixa      { RNGD-CTS100-EFIX1 }",
@@ -8278,25 +8279,6 @@
           "atrasada": false
         },
         {
-          "osId": "10209",
-          "ativo": "Transformador 4 WTS     { THPN-CLN200-TRFR4 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPS - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-19",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-08-21",
-          "dataFinal": "2026-08-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 600.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11321",
           "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
           "equipe": "",
@@ -8905,7 +8887,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 342
+      "historicoTotal": 343
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9751,16 +9733,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 708,
-        "emAberto": 80,
-        "atrasadas": 64,
-        "concluidas30d": 270,
-        "concluidas7d": 54,
+        "emAberto": 79,
+        "atrasadas": 63,
+        "concluidas30d": 271,
+        "concluidas7d": 55,
         "naSemanaCorrente": 33
       },
       "mttr": {
-        "horas": 233.78,
+        "horas": 233.09,
         "label": "9d 17h",
-        "amostra": 270
+        "amostra": 271
       },
       "tendencia4Semanas": [
         {
@@ -9781,7 +9763,7 @@
         {
           "semana": "W37",
           "criadas": 27,
-          "finalizadas": 18
+          "finalizadas": 19
         }
       ],
       "topOfensores": {
@@ -9789,7 +9771,7 @@
           {
             "nome": "(sem equipe)",
             "total": 708,
-            "emAberto": 80
+            "emAberto": 79
           }
         ],
         "responsaveis": [
@@ -9801,7 +9783,7 @@
           {
             "nome": "James Chaves",
             "total": 46,
-            "emAberto": 12
+            "emAberto": 11
           },
           {
             "nome": "Marcos Duarte",
@@ -9820,16 +9802,16 @@
           }
         ]
       },
-      "total": 80,
-      "atrasadas": 64,
+      "total": 79,
+      "atrasadas": 63,
       "porStatus": {
         "naoIniciada": 69,
-        "emProgresso": 3,
+        "emProgresso": 2,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 80
+        "(sem equipe)": 79
       },
       "oss": [
         {
@@ -10862,24 +10844,6 @@
           "atrasada": true
         },
         {
-          "osId": "13234",
-          "ativo": "Tracker 10.101 STI Norland     { JCD100-ETKR10.101 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "James Chaves ",
-          "status": "Em progresso",
-          "tarefa": "[Tracker 10.101] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-09-09",
-          "dataCriacao": "2026-09-08",
-          "dataInicial": "2026-09-10",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "atrasada": true
-        },
-        {
           "osId": "13233",
           "ativo": "Tracker 09.101 STI Norland     { JCD100-ETKR9.101 }",
           "equipe": "",
@@ -11205,6 +11169,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13234",
+          "ativo": "Tracker 10.101 STI Norland     { JCD100-ETKR10.101 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 10.101] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-09-09",
+          "dataCriacao": "2026-09-08",
+          "dataInicial": "2026-09-10",
+          "dataFinal": "2026-09-10",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13269",
           "ativo": "Inversor 2.9 Sungrow SG60KTL    { ADT100-INVR2.9 }",
@@ -11746,25 +11729,6 @@
           "supervisor": "Ailton Leal ",
           "status": "Finalizados",
           "tarefa": "[Inversor 2.4][Demerval Lobão 02]",
-          "criticidade": "",
-          "dataProgramada": "2026-07-10",
-          "dataCriacao": "2026-07-10",
-          "dataInicial": "2026-09-04",
-          "dataFinal": "2026-09-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 1344.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9264",
-          "ativo": "Inversor 2.5 Huawei SUN2000-215KTL-H3    { DML100-INVR2.5 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Ailton Leal ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 2.5][Demerval Lobão 02]",
           "criticidade": "",
           "dataProgramada": "2026-07-10",
           "dataCriacao": "2026-07-10",
@@ -14056,7 +14020,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 576
+      "historicoTotal": 577
     },
     "engenharia": {
       "label": "Engenharia",
@@ -16742,23 +16706,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "13234",
-      "ativo": "Tracker 10.101 STI Norland     { JCD100-ETKR10.101 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "James Chaves ",
-      "status": "Em progresso",
-      "tarefa": "[Tracker 10.101] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-08",
-      "dataInicial": "2026-09-10",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
-    },
-    {
       "osId": "13233",
       "ativo": "Tracker 09.101 STI Norland     { JCD100-ETKR9.101 }",
       "equipe": "",
@@ -18550,7 +18497,7 @@
       "responsavel": "Davi Damasceno ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Davi Damasceno ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPA - Inversor",
       "criticidade": "",
       "dataProgramada": "2026-08-25",
@@ -19130,23 +19077,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "11986",
-      "ativo": "Infraestrutura Civil  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-INFC1 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Felipe  Lima",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Spare Parts",
-      "criticidade": "",
-      "dataProgramada": "2026-08-28",
-      "dataCriacao": "2026-08-24",
-      "dataInicial": "2026-09-10",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 408.0
     },
     {
       "osId": "11975",
@@ -21245,6 +21175,25 @@
       "atrasada": false
     },
     {
+      "osId": "13234",
+      "ativo": "Tracker 10.101 STI Norland     { JCD100-ETKR10.101 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "James Chaves ",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 10.101] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-09-09",
+      "dataCriacao": "2026-09-08",
+      "dataInicial": "2026-09-10",
+      "dataFinal": "2026-09-10",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13223",
       "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
       "equipe": "",
@@ -23084,29 +23033,9 @@
       "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12707",
-      "ativo": "RenoGrid - Nobres 1 - MT Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { RNGD-NBS100 }",
-      "equipe": "",
-      "responsavel": "Valmir  Júnior",
-      "criadoPor": "Italo  Lustosa",
-      "supervisor": "Valmir  Júnior",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-09-02",
-      "dataCriacao": "2026-09-02",
-      "dataInicial": "2026-09-02",
-      "dataFinal": "2026-09-02",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2851,
+  "historicoTotal": 2853,
   "totalGeral": 6063,
   "verificacao": {
     "total": 0,
