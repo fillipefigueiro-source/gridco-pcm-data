@@ -50,9 +50,24 @@ jobs:
           PCM_PROG_DIR: ${{ github.workspace }}
         run: python gerar_engenharia_json.py
 
-      - name: Publicar só se os dados mudaram (anti-churn)
+            - name: Publicar só se os dados mudaram (anti-churn)
         run: |
-          NEW_HASH=$(python -c "import json;print(json.load(open('gestao_pcm.json',encoding='utf-8')).get('dataHash',''))")
+          NEW_HASH=$(python - <<'EOF'
+          import json, hashlib
+          def ler(p):
+              try:
+                  with open(p, encoding='utf-8') as f: return json.load(f)
+              except Exception: return {}
+          g = ler('gestao_pcm.json'); e = ler('engenharia.json'); r = ler('gerencial.json'); n = ler('engenharia/notificacoes.json')
+          # o que muda a cada rodada sem dado novo fica de fora
+          r.pop('geradoEm', None); r.pop('resumo', None)
+          n.pop('ultimaRodada', None)
+          partes = [g.get('dataHash', ''), e.get('dataHash', ''),
+                    json.dumps(r, sort_keys=True, ensure_ascii=False),
+                    json.dumps(n, sort_keys=True, ensure_ascii=False)]
+          print(hashlib.sha256('|'.join(partes).encode('utf-8')).hexdigest())
+          EOF
+          )
           OLD_HASH=$(cat _gestao_pcm_published_hash.txt 2>/dev/null || echo "")
           if [ -n "$NEW_HASH" ] && [ "$NEW_HASH" = "$OLD_HASH" ]; then
             echo "Dados sem mudança (hash $NEW_HASH) — nada a publicar."
@@ -62,7 +77,7 @@ jobs:
           git config user.name  "gestao-pcm-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add gestao_pcm.json _gestao_pcm_published_hash.txt engenharia.json gerencial.json engenharia/notificacoes.json
-          git commit -m "chore: refresh gestao_pcm.json [auto ${NEW_HASH:0:8}]"
+          git commit -m "chore: dados do Gestão PCM / Confiabilidade / Gerencial [auto ${NEW_HASH:0:8}]"
           for i in 1 2 3 4 5; do
             git pull --rebase --autostash origin main || true
             if git push; then
