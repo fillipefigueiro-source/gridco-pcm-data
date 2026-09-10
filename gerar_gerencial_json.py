@@ -195,12 +195,19 @@ def gerar(eventos_brutos, agora=None):
         aprox += 1 if ap else 0
         hd = horas_diurnas(ini, fim)
         h24 = max(0.0, (fim - ini).total_seconds() / 3600)
+        # Evento AINDA ABERTO: o arquivo não guarda "fim = agora" nem as horas —
+        # isso mudava o JSON a cada rodada e furava o anti-churn (23 eventos, 09/09).
+        # O painel calcula "até agora" na hora de exibir; o resumo abaixo usa
+        # os valores vivos (_hd/_h24), que ficam fora do arquivo.
         eventos.append({
             "u": i, "os": str(ev.get("os") or ""), "cat": categoria(ev),
-            "ini": ini.astimezone(BR).strftime("%Y-%m-%dT%H:%M"), "fim": fim.astimezone(BR).strftime("%Y-%m-%dT%H:%M"),
+            "ini": ini.astimezone(BR).strftime("%Y-%m-%dT%H:%M"),
+            "fim": "" if aberto else fim.astimezone(BR).strftime("%Y-%m-%dT%H:%M"),
             "url": (WO_URL.format(id=ev["idWo"]) if ev.get("idWo") else ""),
-            "hDia": round(hd, 3), "h24": round(h24, 3), "peso": round(peso, 4), "escopo": escopo,
+            "hDia": None if aberto else round(hd, 3), "h24": None if aberto else round(h24, 3),
+            "peso": round(peso, 4), "escopo": escopo,
             "ativo": str(ev.get("nome") or "")[:50], "cod": str(ev.get("cod") or ""), "aberto": aberto,
+            "_hd": hd, "_h24": h24,
         })
     eventos.sort(key=lambda e: e["ini"], reverse=True)
     eventos = eventos[:MAX_EVENTOS]
@@ -212,7 +219,7 @@ def gerar(eventos_brutos, agora=None):
     por_u = {}
     for e in eventos:
         d = por_u.setdefault(e["u"], {"rel": 0, "h": 0.0, "hp": 0.0, **{c: 0.0 for c in cats}})
-        d["rel"] += 1; d["h"] += e["hDia"]; d["hp"] += e["hDia"] * e["peso"]; d[e["cat"]] += e["hDia"] * e["peso"]
+        d["rel"] += 1; d["h"] += e["_hd"]; d["hp"] += e["_hd"] * e["peso"]; d[e["cat"]] += e["_hd"] * e["peso"]
     def bloco(ids):
         n = len(ids)
         den = dias * 12.0 * n if n else 1.0
@@ -234,6 +241,8 @@ def gerar(eventos_brutos, agora=None):
               "usinas": [dict(i=i, usina=usinas[i]["usina"], regiao=usinas[i].get("regiao") or "Sem região", cliente=usinas[i].get("cliente"),
                               rel=por_u[i]["rel"], h=round(por_u[i]["h"]), disp=round(100 * (1 - por_u[i]["hp"] / (dias * 12.0)), 2))
                          for i in sorted(por_u, key=lambda i: -por_u[i]["hp"])[:40]]}
+    for e in eventos:                      # os valores vivos não vão para o arquivo
+        e.pop("_hd", None); e.pop("_h24", None)
     saida = {
         "geradoEm": agora.replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "operacoesGeradoEm": (json.load(io.open(OPERACOES, encoding="utf-8")).get("geradoEm") if os.path.exists(OPERACOES) else ""),

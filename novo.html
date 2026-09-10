@@ -3501,6 +3501,18 @@ function arrancar(){
   const GR_FIL = { de:"", ate:"", regiao:"", cliente:"", usina:"", horas:"dia", peso:"fracao" };
   const grN = (v,d) => v==null ? "·" : v.toLocaleString("pt-BR",{minimumFractionDigits:d??0,maximumFractionDigits:d??0});
   const grBr = iso => iso ? iso.slice(8,10)+"/"+iso.slice(5,7)+"/"+iso.slice(0,4) : "";
+  /* Evento ainda aberto vem sem fim e sem horas (para o JSON não mudar a cada
+     rodada): as horas são calculadas aqui, até agora, no mesmo critério 6h–18h. */
+  function grHorasAberto(e, diurno){
+    const a = new Date(e.ini), b = new Date();
+    if (isNaN(a) || b <= a) return 0;
+    if (!diurno) return (b - a) / 3.6e6;
+    let t = 0, d = new Date(a.getFullYear(), a.getMonth(), a.getDate());
+    while (d <= b) { const j0 = new Date(d); j0.setHours(6,0,0,0); const j1 = new Date(d); j1.setHours(18,0,0,0);
+      const lo = Math.max(a, j0), hi = Math.min(b, j1); if (hi > lo) t += (hi - lo) / 3.6e6; d.setDate(d.getDate() + 1); }
+    return t;
+  }
+  const grH = (e, diurno) => e.aberto ? grHorasAberto(e, diurno) : (diurno ? (e.hDia || 0) : (e.h24 || 0));
 
   async function grCarregar(){
     if (GR_ESTADO === "carregando" || GR_ESTADO === "pronto") return;
@@ -3571,7 +3583,7 @@ function arrancar(){
       if (!set.has(e.u)) continue;
       const d = e.ini.slice(0,10);
       if (d < de || d > ate) continue;
-      const h = f.horas === "dia" ? e.hDia : e.h24;
+      const h = grH(e, f.horas === "dia");
       const peso = f.peso === "fracao" ? e.peso : 1;
       const a = porU.get(e.u) || { rel:0, h:0, hp:0, campo:0, emergencial:0, remoto:0, queda:0, programado:0, evs:[] };
       a.rel++; a.h += h; a.hp += h * peso; a[e.cat] += h * peso; a.evs.push(e);
@@ -3825,7 +3837,7 @@ function arrancar(){
       '<div class="gr-gvs"><h5>Na janela</h5><div class="gr-g4"><div class="c"><b style="color:'+(u.disp<90?"var(--mal)":"var(--gd)")+'">'+grN(u.disp,2)+'%</b><span>Disponibilidade</span></div><div class="c"><b>−'+grN(u.perda,2)+' pp</b><span>perda</span></div><div class="c"><b>'+grN(u.hp,1)+' h</b><span>horas ponderadas</span></div><div class="c"><b>'+grN(u.rel)+'</b><span>religamentos</span></div></div>'
       + '<div style="font-size:11px;color:var(--ink3);margin-top:8px">'+grN(U.mwp||0,1)+' MWp · '+(U.nInv||"?")+' inversores · '+(U.nCab||"?")+' cabines</div></div>'
       + '<div class="gr-gvs"><h5>Como foi resolvido</h5><table class="gr-dt">'+GR_CATS.map(([k])=>'<tr><td>'+rot[k]+'</td><td>'+(nCat[k]||0)+' · '+grN(100*cats[k]/tot,0)+'% das horas</td></tr>').join("")+'</table></div>'
-      + '<div class="gr-gvs"><h5>OS de religamento ('+u.evs.length+')</h5>'+u.evs.slice(0,40).map(e=>'<div class="gr-evt"><span class="t '+e.cat+'">'+rot[e.cat].split(" ")[0]+'</span><span>'+(e.url?'<a href="'+esc(e.url)+'" target="_blank" rel="noopener" title="abrir no Fracttal">#'+esc(e.os)+' ↗</a>':'#'+esc(e.os))+' · '+esc(e.ativo)+(e.escopo!=="usina"?' ('+e.escopo+', peso '+grN(e.peso,2)+')':'')+'<span class="d">'+esc(e.ini.replace("T"," "))+' → '+esc(e.fim.replace("T"," "))+' · '+grN(f.horas==="dia"?e.hDia:e.h24,1)+' h'+(e.aberto?' · <b>ainda aberta</b>':'')+'</span></span></div>').join("")+(u.evs.length>40?'<div style="font-size:11px;color:var(--ink3);padding-top:6px">… e mais '+(u.evs.length-40)+'</div>':'')+'</div>'
+      + '<div class="gr-gvs"><h5>OS de religamento ('+u.evs.length+')</h5>'+u.evs.slice(0,40).map(e=>'<div class="gr-evt"><span class="t '+e.cat+'">'+rot[e.cat].split(" ")[0]+'</span><span>'+(e.url?'<a href="'+esc(e.url)+'" target="_blank" rel="noopener" title="abrir no Fracttal">#'+esc(e.os)+' ↗</a>':'#'+esc(e.os))+' · '+esc(e.ativo)+(e.escopo!=="usina"?' ('+e.escopo+', peso '+grN(e.peso,2)+')':'')+'<span class="d">'+esc(e.ini.replace("T"," "))+' → '+(e.aberto?'agora':esc((e.fim||"").replace("T"," ")))+' · '+grN(grH(e, f.horas==="dia"),1)+' h'+(e.aberto?' · <b>ainda aberta</b>':'')+'</span></span></div>').join("")+(u.evs.length>40?'<div style="font-size:11px;color:var(--ink3);padding-top:6px">… e mais '+(u.evs.length-40)+'</div>':'')+'</div>'
       + '<div class="gr-acao"><button class="bt" id="gr-ir-conf">Abrir no Confiabilidade</button></div>';
     document.getElementById("gr-ir-conf").onclick = () => { document.getElementById("gr-gf").click(); V = "conf"; MOD = null; CF_FIL.usina = ""; CF_FIL.busca = U.usina.split(" ")[0]; pintar(); window.scrollTo(0,0); };
     document.getElementById("gr-gf").classList.add("on"); document.getElementById("gr-gv").classList.add("on");
