@@ -50,7 +50,7 @@ jobs:
           PCM_PROG_DIR: ${{ github.workspace }}
         run: python gerar_engenharia_json.py
 
-            - name: Publicar só se os dados mudaram (anti-churn)
+- name: Publicar só se os dados mudaram (anti-churn)
         run: |
           NEW_HASH=$(python - <<'EOF'
           import json, hashlib
