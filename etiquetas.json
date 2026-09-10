@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-10T17:31:02Z",
+  "geradoEm": "2026-09-10T17:38:01Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -3828,16 +3828,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 810,
-        "emAberto": 117,
+        "emAberto": 116,
         "atrasadas": 70,
-        "concluidas30d": 171,
-        "concluidas7d": 47,
+        "concluidas30d": 172,
+        "concluidas7d": 48,
         "naSemanaCorrente": 56
       },
       "mttr": {
-        "horas": 324.21,
-        "label": "13d 12h",
-        "amostra": 171
+        "horas": 323.44,
+        "label": "13d 11h",
+        "amostra": 172
       },
       "tendencia4Semanas": [
         {
@@ -3858,7 +3858,7 @@
         {
           "semana": "W37",
           "criadas": 17,
-          "finalizadas": 30
+          "finalizadas": 31
         }
       ],
       "topOfensores": {
@@ -3866,7 +3866,7 @@
           {
             "nome": "(sem equipe)",
             "total": 810,
-            "emAberto": 117
+            "emAberto": 116
           }
         ],
         "responsaveis": [
@@ -3897,16 +3897,16 @@
           }
         ]
       },
-      "total": 117,
+      "total": 116,
       "atrasadas": 70,
       "porStatus": {
-        "naoIniciada": 103,
+        "naoIniciada": 102,
         "emProgresso": 1,
         "pausada": 13,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 117
+        "(sem equipe)": 116
       },
       "oss": [
         {
@@ -5214,23 +5214,6 @@
           "atrasada": false
         },
         {
-          "osId": "12716",
-          "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Walter Santos ",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Walter Santos ",
-          "status": "Não Iniciada",
-          "tarefa": "[SEMP] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-09-10",
-          "dataCriacao": "2026-09-02",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "12653",
           "ativo": "Transformador 1      { ALLM-MRN100-TRFR1 }",
           "equipe": "",
@@ -6007,6 +5990,25 @@
           "dataFinal": "2026-09-10",
           "linkFracttal": "",
           "horasAteAbrir": 216.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12716",
+          "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Walter Santos ",
+          "status": "Finalizados",
+          "tarefa": "[SEMP] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-09-10",
+          "dataCriacao": "2026-09-02",
+          "dataInicial": "2026-09-10",
+          "dataFinal": "2026-09-10",
+          "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -8519,25 +8521,6 @@
           "atrasada": false
         },
         {
-          "osId": "10247",
-          "ativo": "Nobreak 1      { THPN-NVL100-NBRK1 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Nobreak e Banco de Baterias",
-          "criticidade": "",
-          "dataProgramada": "2026-08-03",
-          "dataCriacao": "2026-07-28",
-          "dataInicial": "2026-08-10",
-          "dataFinal": "2026-08-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 312.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10274",
           "ativo": "Transformador 4 GAZQUEZ     { THPN-SDN100-TRFR4 }",
           "equipe": "",
@@ -8766,7 +8749,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 349
+      "historicoTotal": 350
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9701,8 +9684,8 @@
       "total": 75,
       "atrasadas": 60,
       "porStatus": {
-        "naoIniciada": 67,
-        "emProgresso": 1,
+        "naoIniciada": 64,
+        "emProgresso": 4,
         "pausada": 7,
         "verificacao": 0
       },
@@ -10334,14 +10317,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 03.101] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-27",
           "dataCriacao": "2026-08-25",
-          "dataInicial": "",
+          "dataInicial": "2026-09-10",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 384.0,
           "atrasada": true
         },
         {
@@ -10437,14 +10421,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 02.104] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-09-03",
           "dataCriacao": "2026-09-02",
-          "dataInicial": "",
+          "dataInicial": "2026-09-10",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "atrasada": true
         },
         {
@@ -10915,14 +10900,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 01.106] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-09-10",
           "dataCriacao": "2026-09-08",
-          "dataInicial": "",
+          "dataInicial": "2026-09-10",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": false
         },
         {
@@ -16506,14 +16492,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 01.106] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-09-10",
       "dataCriacao": "2026-09-08",
-      "dataInicial": "",
+      "dataInicial": "2026-09-10",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "13208",
@@ -17274,14 +17261,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 02.104] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-09-03",
       "dataCriacao": "2026-09-02",
-      "dataInicial": "",
+      "dataInicial": "2026-09-10",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 192.0
     },
     {
       "osId": "12728",
@@ -17372,22 +17360,6 @@
       "supervisor": "Felipe  Lima",
       "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-09-10",
-      "dataCriacao": "2026-09-02",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "12716",
-      "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Walter Santos ",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Walter Santos ",
-      "status": "Não Iniciada",
-      "tarefa": "[SEMP] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-10",
       "dataCriacao": "2026-09-02",
@@ -18321,14 +18293,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 03.101] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-27",
       "dataCriacao": "2026-08-25",
-      "dataInicial": "",
+      "dataInicial": "2026-09-10",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 384.0
     },
     {
       "osId": "12153",
@@ -22710,7 +22683,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2871,
+  "historicoTotal": 2872,
   "totalGeral": 6071,
   "verificacao": {
     "total": 0,
