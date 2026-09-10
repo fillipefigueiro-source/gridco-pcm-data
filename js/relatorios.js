@@ -51,7 +51,7 @@
   const tabela = (linhas, cab, cols, vazio) => !linhas.length ? `<div class="vazio">${h(vazio || "nada a listar")}</div>`
     : `<table><thead><tr>${cab.map(([t, c]) => `<th class="${c}">${t}</th>`).join("")}</tr></thead><tbody>${linhas.map(l => `<tr>${l.map((v, i) => `<td class="${cols[i] || ""}">${v}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
 
-  // ── folha (CSS igual ao Python; vira .rp-folha no painel e body na nova aba) ──
+  // ── folha (CSS igual ao Python; vira .rx-folha no painel e body na nova aba) ──
   const CSS_FOLHA = `
 .pg{page-break-after:always}.pg:last-child{page-break-after:auto}
 .top{display:flex;align-items:flex-start;gap:14px;padding-bottom:8px;margin-bottom:9px;border-bottom:3px solid #191528}
@@ -471,11 +471,11 @@ ${blocos}
   }
   function imprimir() {
     if (!RP.html) return;
-    document.body.classList.add("rp-imprimindo");
+    document.body.classList.add("rx-imprimindo");
     // @page não aceita condição por classe: entra só durante esta impressão, para não
     // mudar o one-pager do Gerencial (paisagem) nem o FMEA.
-    const pg = document.createElement("style"); pg.id = "rp-page"; pg.textContent = "@page{size:A4 portrait;margin:11mm 12mm 12mm}"; document.head.appendChild(pg);
-    const fim = () => { document.body.classList.remove("rp-imprimindo"); pg.remove(); window.removeEventListener("afterprint", fim); };
+    const pg = document.createElement("style"); pg.id = "rx-page"; pg.textContent = "@page{size:A4 portrait;margin:11mm 12mm 12mm}"; document.head.appendChild(pg);
+    const fim = () => { document.body.classList.remove("rx-imprimindo"); pg.remove(); window.removeEventListener("afterprint", fim); };
     window.addEventListener("afterprint", fim); setTimeout(fim, 60000);
     window.print();
   }
@@ -490,66 +490,70 @@ ${blocos}
     const clusters = [...new Set(rows.map(r => r.cluster).filter(Boolean))].sort(), resps = [...new Set(rows.map(r => r.responsavel).filter(x => x && x !== "TBD"))].sort();
     const porSemana = RP.tipo === "semanal" || RP.tipo === "alerta";
     const idx = (RP.idx && RP.idx.emissoes) || [];
-    return `<div class="rp-tela">
-<div class="rp-esq">
-  <div class="rp-card"><h3>1 · Tipo</h3><div class="rp-tipos">${TIPOS.map(([k, ic, t, s]) => `<div class="rp-tipo${RP.tipo === k ? " on" : ""}" data-rpt="${k}"><div class="ic">${ic}</div><div><b>${t}</b><span>${s}</span></div></div>`).join("")}
-    <div class="rp-tipo" data-rpt="fmea"><div class="ic">E</div><div><b>FMEA · Causa Raiz</b><span>por ativo, no módulo Confiabilidade → abre lá</span></div></div></div></div>
-  <div class="rp-card"><h3>2 · Período e recorte</h3>
-    <div class="rp-row"><div><label>Dia</label><input type="date" data-rpk="dia" value="${h(RP.dia)}"${porSemana ? " disabled" : ""}></div>
+    return `<div class="rx-tela">
+<div class="rx-esq">
+  <div class="rx-card"><h3>1 · Tipo</h3><div class="rx-tipos">${TIPOS.map(([k, ic, t, s]) => `<div class="rx-tipo${RP.tipo === k ? " on" : ""}" data-rpt="${k}"><div class="ic">${ic}</div><div><b>${t}</b><span>${s}</span></div></div>`).join("")}
+    <div class="rx-tipo" data-rpt="fmea"><div class="ic">E</div><div><b>FMEA · Causa Raiz</b><span>por ativo, no módulo Confiabilidade → abre lá</span></div></div></div></div>
+  <div class="rx-card"><h3>2 · Período e recorte</h3>
+    <div class="rx-row"><div><label>Dia</label><input type="date" data-rpk="dia" value="${h(RP.dia)}"${porSemana ? " disabled" : ""}></div>
       <div><label>Semana</label><select data-rpk="semana"${porSemana ? "" : " disabled"}>${semanas.map(s => `<option value="${s}"${s === RP.semana ? " selected" : ""}>${h(((RP.bd.semanas || []).find(w => w.week === s) || {}).label || s)}</option>`).join("")}</select></div></div>
-    <div class="rp-row"><div><label>Cliente</label><select data-rpk="cliente"><option value="">Todos</option>${clientes.map(c => `<option${c === RP.cliente ? " selected" : ""}>${h(c)}</option>`).join("")}</select></div>
+    <div class="rx-row"><div><label>Cliente</label><select data-rpk="cliente"><option value="">Todos</option>${clientes.map(c => `<option${c === RP.cliente ? " selected" : ""}>${h(c)}</option>`).join("")}</select></div>
       <div><label>Cluster / supervisor</label><select data-rpk="cluster"><option value="">Todos</option><optgroup label="Cluster">${clusters.map(c => `<option${c === RP.cluster ? " selected" : ""}>${h(c)}</option>`).join("")}</optgroup><optgroup label="Supervisor">${resps.map(c => `<option${c === RP.cluster ? " selected" : ""}>${h(c)}</option>`).join("")}</optgroup></select></div></div>
-    <div class="rp-acoes"><button class="bt forte" id="rp-gerar">Gerar</button><button class="bt" id="rp-aba"${RP.html ? "" : " disabled"}>Abrir em nova aba</button></div>
-    ${RP.erroGer ? `<div class="rp-erro">${h(RP.erroGer)}</div>` : ""}</div>
-  <div class="rp-card"><h3>Emitidos automaticamente · últimos 30 dias</h3>
-    ${idx.length ? `<table class="rp-hist"><tr><th>Quando</th><th>Relatório</th><th>E-mail</th><th></th></tr>${idx.slice(0, 40).map(e => `<tr><td>${h((e.geradoEm || "").slice(8, 10))}/${h((e.geradoEm || "").slice(5, 7))} ${h((e.geradoEm || "").slice(11, 16))}</td><td>${h(ROT[e.janela] || e.janela)} · ${h(e.rotulo || e.ref)}</td><td>${e.enviado ? `<span class="rp-tag env">enviado · ${e.para || ""}</span>` : `<span class="rp-tag nao">${h(e.motivo || "não enviado")}</span>`}</td><td>${e.pdf ? `<a href="${h(e.arquivo)}" target="_blank" rel="noopener">PDF</a>` : `<a href="${h((e.arquivo || "").replace(/\.pdf$/, ".html"))}" target="_blank" rel="noopener">HTML</a>`}</td></tr>`).join("")}</table>`
-      : '<div class="rp-vazio">Nenhuma emissão automática registrada ainda. Elas aparecem aqui depois da primeira rodada do robô com o passo de relatórios.</div>'}</div>
+    <div class="rx-acoes"><button class="bt forte" id="rx-gerar">Gerar</button><button class="bt" id="rx-aba"${RP.html ? "" : " disabled"}>Abrir em nova aba</button></div>
+    ${RP.erroGer ? `<div class="rx-erro">${h(RP.erroGer)}</div>` : ""}</div>
+  <div class="rx-card"><h3>Emitidos automaticamente · últimos 30 dias</h3>
+    ${idx.length ? `<table class="rx-hist"><tr><th>Quando</th><th>Relatório</th><th>E-mail</th><th></th></tr>${idx.slice(0, 40).map(e => `<tr><td>${h((e.geradoEm || "").slice(8, 10))}/${h((e.geradoEm || "").slice(5, 7))} ${h((e.geradoEm || "").slice(11, 16))}</td><td>${h(ROT[e.janela] || e.janela)} · ${h(e.rotulo || e.ref)}</td><td>${e.enviado ? `<span class="rx-tag env">enviado · ${e.para || ""}</span>` : `<span class="rx-tag nao">${h(e.motivo || "não enviado")}</span>`}</td><td>${e.pdf ? `<a href="${h(e.arquivo)}" target="_blank" rel="noopener">PDF</a>` : `<a href="${h((e.arquivo || "").replace(/\.pdf$/, ".html"))}" target="_blank" rel="noopener">HTML</a>`}</td></tr>`).join("")}</table>`
+      : '<div class="rx-vazio">Nenhuma emissão automática registrada ainda. Elas aparecem aqui depois da primeira rodada do robô com o passo de relatórios.</div>'}</div>
 </div>
-<div class="rp-dir">
-  <div class="rp-prev"><div class="rp-bar"><button class="bt verde" id="rp-print"${RP.html ? "" : " disabled"}>Imprimir / PDF</button><span class="dica">${RP.html ? `${h(RP.titulo.replace(/_/g, " "))} · gerado agora com o dado do painel` : "escolha o tipo e o período e clique em Gerar"}</span></div>
-    <div class="rp-papel">${RP.html ? `<div class="rp-folha">${RP.html}</div>` : '<div class="rp-vazio" style="padding:40px;text-align:center">A folha aparece aqui.</div>'}</div></div>
-  <div class="rp-nota"><b>Como funciona:</b> o relatório é montado aqui no navegador, com os mesmos dados que o painel já carrega, e "Imprimir / PDF" usa a impressão do navegador, igual ao FMEA. Nada vai para o servidor. As regras são as mesmas dos e-mails automáticos.</div>
+<div class="rx-dir">
+  <div class="rx-prev"><div class="rx-bar"><button class="bt verde" id="rx-print"${RP.html ? "" : " disabled"}>Imprimir / PDF</button><span class="dica">${RP.html ? `${h(RP.titulo.replace(/_/g, " "))} · gerado agora com o dado do painel` : "escolha o tipo e o período e clique em Gerar"}</span></div>
+    <div class="rx-papel">${RP.html ? `<div class="rx-folha">${RP.html}</div>` : '<div class="rx-vazio" style="padding:40px;text-align:center">A folha aparece aqui.</div>'}</div></div>
+  <div class="rx-nota"><b>Como funciona:</b> o relatório é montado aqui no navegador, com os mesmos dados que o painel já carrega, e "Imprimir / PDF" usa a impressão do navegador, igual ao FMEA. Nada vai para o servidor. As regras são as mesmas dos e-mails automáticos.</div>
 </div></div>`;
   };
   window.rpPintar = function () {
     if (RP.estado !== "pronto") return;
-    document.querySelectorAll(".rp-tipo[data-rpt]").forEach(el => el.onclick = () => { if (el.dataset.rpt === "fmea") { const b = document.querySelector('.lat-i[data-v="conf"]'); if (b) b.click(); return; } RP.tipo = el.dataset.rpt; RP.html = ""; RP.erroGer = ""; window.pintar(); });
+    document.querySelectorAll(".rx-tipo[data-rpt]").forEach(el => el.onclick = () => { if (el.dataset.rpt === "fmea") { const b = document.querySelector('.lat-i[data-v="conf"]'); if (b) b.click(); return; } RP.tipo = el.dataset.rpt; RP.html = ""; RP.erroGer = ""; window.pintar(); });
     document.querySelectorAll("[data-rpk]").forEach(el => el.onchange = () => { RP[el.dataset.rpk] = el.value; });
-    const g = document.getElementById("rp-gerar"); if (g) g.onclick = () => { gerar(); window.pintar(); if (RP.html) { const p = document.querySelector(".rp-dir"); if (p) p.scrollIntoView({ behavior: "smooth", block: "start" }); } };
-    const a = document.getElementById("rp-aba"); if (a) a.onclick = abrirNovaAba;
-    const p = document.getElementById("rp-print"); if (p) p.onclick = imprimir;
+    const g = document.getElementById("rx-gerar"); if (g) g.onclick = () => { gerar(); window.pintar(); if (RP.html) { const p = document.querySelector(".rx-dir"); if (p) p.scrollIntoView({ behavior: "smooth", block: "start" }); } };
+    const a = document.getElementById("rx-aba"); if (a) a.onclick = abrirNovaAba;
+    const p = document.getElementById("rx-print"); if (p) p.onclick = imprimir;
   };
   // CSS da tela + folha, injetado uma vez
   const st = document.createElement("style");
   st.textContent = `
-.rp-tela{display:grid;grid-template-columns:360px minmax(0,1fr);gap:18px;align-items:start}
-@media (max-width:1100px){.rp-tela{grid-template-columns:1fr}}
-.rp-card{background:var(--surf);border:1px solid var(--line);border-radius:var(--r,10px);padding:14px 16px;margin-bottom:12px}
-.rp-card h3{margin:0 0 10px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink3)}
-.rp-tipos{display:grid;gap:8px}.rp-tipo{border:1px solid var(--line);border-radius:8px;padding:9px 11px;cursor:pointer;display:flex;gap:10px;align-items:flex-start}
-.rp-tipo.on{border-color:#A9DB21;background:color-mix(in srgb,#A9DB21 14%,var(--surf))}.rp-tipo b{display:block;font-size:13.5px}.rp-tipo span{font-size:12px;color:var(--ink3)}
-.rp-tipo .ic{width:30px;height:30px;border-radius:7px;background:var(--surf2);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:var(--ink2);flex:none}.rp-tipo.on .ic{background:#A9DB21;color:#191528}
-.rp-card label{display:block;font-size:12px;color:var(--ink3);margin:8px 0 3px}.rp-card select,.rp-card input{width:100%;border:1px solid var(--line2);border-radius:6px;padding:7px 9px;font:inherit;font-size:13px;background:var(--surf);color:var(--ink)}
-.rp-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.rp-acoes{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
-.rp-acoes .bt.forte{background:var(--navy,#191528);color:#fff;border-color:var(--navy,#191528);font-weight:700}.bt.verde{background:#A9DB21;border-color:#A9DB21;color:#191528;font-weight:700}
-.rp-erro{margin-top:10px;background:#fde2e2;color:#b02525;border-radius:6px;padding:8px 10px;font-size:12.5px}
-.rp-hist{width:100%;border-collapse:collapse;font-size:12.5px}.rp-hist th{text-align:left;font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.04em;padding:6px 8px;border-bottom:1px solid var(--line2)}.rp-hist td{padding:6px 8px;border-bottom:1px solid var(--line)}
-.rp-tag{font-size:11px;padding:1px 7px;border-radius:4px;background:var(--surf2);color:var(--ink2);white-space:nowrap}.rp-tag.env{background:#e3f6ea;color:#1f7a4d}.rp-tag.nao{background:#fdf0d5;color:#a04408}
-.rp-vazio{color:var(--ink3);font-size:12.5px}
-.rp-prev{background:var(--surf);border:1px solid var(--line);border-radius:var(--r,10px);overflow:hidden}
-.rp-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surf2)}.rp-bar .dica{color:var(--ink3);font-size:12px;margin-left:auto}
-.rp-papel{background:#d8dae5;padding:22px;overflow:auto}
-.rp-folha{background:#fff;color:#191528;width:210mm;max-width:100%;margin:0 auto;box-shadow:0 6px 24px rgba(25,21,40,.18);padding:11mm 12mm;font-family:"Segoe UI",Arial,sans-serif;font-size:9.5pt;line-height:1.3}
-.rp-folha .pg{padding-bottom:10mm;margin-bottom:10mm;border-bottom:1px dashed #cbcbdd}.rp-folha .pg:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
-${cssPrefixada(".rp-folha")}
-.rp-nota{margin-top:12px;background:color-mix(in srgb,#A9DB21 12%,var(--surf));border-left:3px solid #A9DB21;padding:8px 11px;font-size:12.5px;color:var(--ink2);border-radius:0 6px 6px 0}
+.rx-tela{display:grid;grid-template-columns:360px minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:1100px){.rx-tela{grid-template-columns:1fr}}
+.rx-card{background:var(--surf);border:1px solid var(--line);border-radius:var(--r,10px);padding:14px 16px;margin-bottom:12px}
+.rx-card h3{margin:0 0 10px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink3)}
+.rx-tipos{display:grid;gap:8px}.rx-tipo{border:1px solid var(--line);border-radius:8px;padding:9px 11px;cursor:pointer;display:flex;gap:10px;align-items:flex-start}
+.rx-tipo.on{border-color:#A9DB21;background:color-mix(in srgb,#A9DB21 14%,var(--surf))}.rx-tipo b{display:block;font-size:13.5px}.rx-tipo span{font-size:12px;color:var(--ink3)}
+.rx-tipo .ic{width:30px;height:30px;border-radius:7px;background:var(--surf2);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:var(--ink2);flex:none}.rx-tipo.on .ic{background:#A9DB21;color:#191528}
+.rx-card label{display:block;font-size:12px;color:var(--ink3);margin:8px 0 3px}.rx-card select,.rx-card input{width:100%;border:1px solid var(--line2);border-radius:6px;padding:7px 9px;font:inherit;font-size:13px;background:var(--surf);color:var(--ink)}
+.rx-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.rx-acoes{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.rx-acoes .bt.forte{background:var(--navy,#191528);color:#fff;border-color:var(--navy,#191528);font-weight:700}.bt.verde{background:#A9DB21;border-color:#A9DB21;color:#191528;font-weight:700}
+.rx-erro{margin-top:10px;background:#fde2e2;color:#b02525;border-radius:6px;padding:8px 10px;font-size:12.5px}
+.rx-hist{width:100%;border-collapse:collapse;font-size:12.5px}.rx-hist th{text-align:left;font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.04em;padding:6px 8px;border-bottom:1px solid var(--line2)}.rx-hist td{padding:6px 8px;border-bottom:1px solid var(--line)}
+.rx-tag{font-size:11px;padding:1px 7px;border-radius:4px;background:var(--surf2);color:var(--ink2);white-space:nowrap}.rx-tag.env{background:#e3f6ea;color:#1f7a4d}.rx-tag.nao{background:#fdf0d5;color:#a04408}
+.rx-vazio{color:var(--ink3);font-size:12.5px}
+.rx-prev{background:var(--surf);border:1px solid var(--line);border-radius:var(--r,10px);overflow:hidden}
+.rx-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surf2)}.rx-bar .dica{color:var(--ink3);font-size:12px;margin-left:auto}
+.rx-papel{background:#d8dae5;padding:22px;overflow:auto}
+.rx-folha{background:#fff;color:#191528;width:210mm;max-width:100%;margin:0 auto;box-shadow:0 6px 24px rgba(25,21,40,.18);padding:11mm 12mm;font-family:"Segoe UI",Arial,sans-serif;font-size:9.5pt;line-height:1.3}
+.rx-folha .pg{padding-bottom:10mm;margin-bottom:10mm;border-bottom:1px dashed #cbcbdd}.rx-folha .pg:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+${cssPrefixada(".rx-folha")}
+.rx-folha table{min-width:0!important;width:100%!important;font-size:8.4pt!important}
+.rx-folha td,.rx-folha th{color:#191528}.rx-folha th{color:#68667d}
+.rx-folha .kpi .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.rx-folha .kpi .m{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rx-folha *{font-family:"Segoe UI",Arial,sans-serif;box-sizing:border-box}.rx-folha .mono{font-family:Consolas,monospace}
+.rx-nota{margin-top:12px;background:color-mix(in srgb,#A9DB21 12%,var(--surf));border-left:3px solid #A9DB21;padding:8px 11px;font-size:12.5px;color:var(--ink2);border-radius:0 6px 6px 0}
 @media print{
-  body.rp-imprimindo *{visibility:hidden}
-  body.rp-imprimindo .rp-folha,body.rp-imprimindo .rp-folha *{visibility:visible}
-  body.rp-imprimindo .rp-folha{position:absolute;left:0;top:0;width:100%;max-width:none;box-shadow:none;padding:0;margin:0}
-  body.rp-imprimindo .rp-folha .pg{border:0;padding:0;margin:0}
-  body.rp-imprimindo{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  body.rp-imprimindo .lat,body.rp-imprimindo .topo,body.rp-imprimindo .rp-esq,body.rp-imprimindo .rp-bar,body.rp-imprimindo .rp-nota{display:none!important}
+  body.rx-imprimindo *{visibility:hidden}
+  body.rx-imprimindo .rx-folha,body.rx-imprimindo .rx-folha *{visibility:visible}
+  body.rx-imprimindo .rx-folha{position:absolute;left:0;top:0;width:100%;max-width:none;box-shadow:none;padding:0;margin:0}
+  body.rx-imprimindo .rx-folha .pg{border:0;padding:0;margin:0}
+  body.rx-imprimindo{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body.rx-imprimindo .lat,body.rx-imprimindo .topo,body.rx-imprimindo .rx-esq,body.rx-imprimindo .rx-bar,body.rx-imprimindo .rx-nota{display:none!important}
 }`;
   document.head.appendChild(st);
 })();

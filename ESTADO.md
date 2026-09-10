@@ -1098,6 +1098,6 @@ são um espelho das do Python: **mudou lá, muda aqui**. O novo.html só ganhou 
 A lista "Emitidos automaticamente" vem de `relatorios/indice.json` (60 últimas emissões,
 gravado pelo `relatorio_diario.py`); `relatorios/feriados.json` alimenta a checagem de
 feriados no navegador. `/relatorios/*` é rota admin/equipe no SWA. Tema escuro: a folha usa
-cores fixas de papel dentro de `.rp-folha`. "Enviar por e-mail" pelo painel ficou para depois
+cores fixas de papel dentro de `.rx-folha` (prefixo `rp-` ja era usado pelo painel: colisao de classe, como `cf-`/`gr-`). "Enviar por e-mail" pelo painel ficou para depois
 (precisa de uma função no Azure). Não há `<head>`/`<body>` explícitos no novo.html — a âncora
 para inserir scripts é o primeiro `<script>`.
