@@ -1051,3 +1051,16 @@ e-mails separados por vírgula) com as mesmas Secrets SMTP da engenharia. Sem SM
 não envia. A análise é por regras fixas (meta de aderência 85%, `RELATORIO_DIARIO_META`).
 Publish step: um relatório novo publica mesmo com os dados iguais. Cliente não recebe.
 Teste local: `python relatorio_diario.py --dia AAAA-MM-DD --forcar --sem-email`.
+
+### Recuperação da tarde — relatório do meio-dia (10/09)
+
+Mesma engrenagem do diário, no mesmo `relatorio_diario.py` (janela `matinal`): na primeira
+rodada depois das 13:00 BRT de dia útil, gera 1 página com o que foi programado para a
+manhã de HOJE (`h_ini` < 12:00 no banco_dados) e ainda não está "Finalizados", ordenado
+por nº de rolagens (`vezes`), com HH pendente × HH já programado à tarde por supervisor.
+Tarefas com `h_fim` ≥ 24:00 (janela impossível, ex. OS 13184 com 49,8 h) ficam fora da
+conta de HH e listadas num aviso. Sai em `relatorios/matinal/`, vai para
+`RELATORIO_MATINAL_PARA` (se vazio, cai em `RELATORIO_DIARIO_PARA`). Estado em
+`relatorios/matinal/_estado.json`. Limitação honesta: OS feita e não fechada no Fracttal
+aparece como pendente — o relatório diz isso no rodapé.
+Teste local: `python relatorio_diario.py --janela matinal --dia AAAA-MM-DD --forcar --sem-email`.
