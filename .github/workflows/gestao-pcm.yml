@@ -41,16 +41,22 @@ jobs:
           PCM_PROG_DIR: ${{ github.workspace }}
           GESTAO_AUXILIAR_PATH: ${{ github.workspace }}/AUXILIAR_gestao.xlsx
         run: python gerar_gestao_pcm_json.py
-        
+
       - name: Gerar engenharia.json (módulo Confiabilidade)
         env:
           FRACTTAL_CLIENT_ID: ${{ secrets.FRACTTAL_CLIENT_ID }}
           FRACTTAL_CLIENT_SECRET: ${{ secrets.FRACTTAL_CLIENT_SECRET }}
           FRACTTAL_BASE_URL: https://app.fracttal.com/api/
           PCM_PROG_DIR: ${{ github.workspace }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          ENG_EMAIL_PARA: ${{ secrets.ENG_EMAIL_PARA }}
         run: python gerar_engenharia_json.py
 
-- name: Publicar só se os dados mudaram (anti-churn)
+      - name: Publicar só se os dados mudaram (anti-churn)
         run: |
           NEW_HASH=$(python - <<'EOF'
           import json, hashlib
