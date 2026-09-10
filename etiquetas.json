@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-10T13:16:29Z",
+  "geradoEm": "2026-09-10T13:23:20Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -3845,16 +3845,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 810,
-        "emAberto": 123,
+        "emAberto": 122,
         "atrasadas": 73,
-        "concluidas30d": 165,
-        "concluidas7d": 41,
+        "concluidas30d": 166,
+        "concluidas7d": 42,
         "naSemanaCorrente": 56
       },
       "mttr": {
-        "horas": 330.18,
-        "label": "13d 18h",
-        "amostra": 165
+        "horas": 329.06,
+        "label": "13d 17h",
+        "amostra": 166
       },
       "tendencia4Semanas": [
         {
@@ -3875,7 +3875,7 @@
         {
           "semana": "W37",
           "criadas": 17,
-          "finalizadas": 24
+          "finalizadas": 25
         }
       ],
       "topOfensores": {
@@ -3883,7 +3883,7 @@
           {
             "nome": "(sem equipe)",
             "total": 810,
-            "emAberto": 123
+            "emAberto": 122
           }
         ],
         "responsaveis": [
@@ -3914,16 +3914,16 @@
           }
         ]
       },
-      "total": 123,
+      "total": 122,
       "atrasadas": 73,
       "porStatus": {
-        "naoIniciada": 107,
-        "emProgresso": 4,
+        "naoIniciada": 105,
+        "emProgresso": 5,
         "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 123
+        "(sem equipe)": 122
       },
       "oss": [
         {
@@ -4931,14 +4931,15 @@
           "responsavel": "Frank  Melo",
           "criadoPor": "Fabricio Barreto",
           "supervisor": "Frank  Melo",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Athon] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-09-08",
           "dataCriacao": "2026-09-04",
-          "dataInicial": "",
+          "dataInicial": "2026-09-10",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -4948,14 +4949,15 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "Fabricio Barreto",
           "supervisor": "Adriano  Moraes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-09-08",
           "dataCriacao": "2026-09-04",
-          "dataInicial": "",
+          "dataInicial": "2026-09-10",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -6015,7 +6017,9 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": false
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "13062",
           "ativo": "Transformador 1 WEG     { SLG200-TRFR1 }",
@@ -6023,19 +6027,18 @@
           "responsavel": "Daniel de Paula ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Daniel de Paula ",
-          "status": "Em progresso",
+          "status": "Finalizados",
           "tarefa": "[Grid Co.] - MPS - Transformador",
           "criticidade": "",
           "dataProgramada": "2027-09-08",
           "dataCriacao": "2026-09-04",
           "dataInicial": "2026-09-10",
-          "dataFinal": "",
+          "dataFinal": "2026-09-10",
           "linkFracttal": "",
           "horasAteAbrir": 144.0,
+          "horasAteFechar": 0,
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "11986",
           "ativo": "Infraestrutura Civil  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-INFC1 }",
@@ -8374,25 +8377,6 @@
           "atrasada": false
         },
         {
-          "osId": "10232",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-IBT100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Andrick Gouveia ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-18",
-          "dataCriacao": "2026-07-28",
-          "dataInicial": "2026-08-07",
-          "dataFinal": "2026-08-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
-          "horasAteFechar": 264.0,
-          "atrasada": false
-        },
-        {
           "osId": "11315",
           "ativo": "Cabine 1 Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-CABN1 }",
           "equipe": "",
@@ -8887,7 +8871,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 343
+      "historicoTotal": 344
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9805,8 +9789,8 @@
       "total": 79,
       "atrasadas": 63,
       "porStatus": {
-        "naoIniciada": 69,
-        "emProgresso": 2,
+        "naoIniciada": 68,
+        "emProgresso": 3,
         "pausada": 8,
         "verificacao": 0
       },
@@ -10850,14 +10834,15 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Roger Lélis",
           "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 09.101] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
           "dataCriacao": "2026-09-08",
-          "dataInicial": "",
+          "dataInicial": "2026-09-10",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -14028,16 +14013,16 @@
       "cor": "#3b82f6",
       "kpis": {
         "total": 131,
-        "emAberto": 13,
-        "atrasadas": 12,
-        "concluidas30d": 37,
-        "concluidas7d": 2,
+        "emAberto": 12,
+        "atrasadas": 11,
+        "concluidas30d": 38,
+        "concluidas7d": 3,
         "naSemanaCorrente": 6
       },
       "mttr": {
-        "horas": 383.35,
-        "label": "15d 23h",
-        "amostra": 37
+        "horas": 374.53,
+        "label": "15d 14h",
+        "amostra": 38
       },
       "tendencia4Semanas": [
         {
@@ -14058,7 +14043,7 @@
         {
           "semana": "W37",
           "criadas": 4,
-          "finalizadas": 2
+          "finalizadas": 3
         }
       ],
       "topOfensores": {
@@ -14066,7 +14051,7 @@
           {
             "nome": "(sem equipe)",
             "total": 131,
-            "emAberto": 13
+            "emAberto": 12
           }
         ],
         "responsaveis": [
@@ -14091,22 +14076,22 @@
             "emAberto": 0
           },
           {
-            "nome": "Adriano  Moraes",
+            "nome": "Aury  Albuquerque",
             "total": 5,
-            "emAberto": 1
+            "emAberto": 4
           }
         ]
       },
-      "total": 13,
-      "atrasadas": 12,
+      "total": 12,
+      "atrasadas": 11,
       "porStatus": {
         "naoIniciada": 12,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 12
       },
       "oss": [
         {
@@ -14263,24 +14248,6 @@
           "atrasada": true
         },
         {
-          "osId": "13244",
-          "ativo": "Estação Meteorológica  Araputanga  Mato Grosso Brasil { APG100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Adriano  Moraes",
-          "status": "Em progresso",
-          "tarefa": "[ETM] - Análise de Sensor",
-          "criticidade": "",
-          "dataProgramada": "2026-09-09",
-          "dataCriacao": "2026-09-08",
-          "dataInicial": "2026-09-10",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "atrasada": true
-        },
-        {
           "osId": "13242",
           "ativo": "Estação Meteorológica  Araputanga  Mato Grosso Brasil { APG100-ESTM1 }",
           "equipe": "",
@@ -14333,6 +14300,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13244",
+          "ativo": "Estação Meteorológica  Araputanga  Mato Grosso Brasil { APG100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Adriano  Moraes",
+          "status": "Finalizados",
+          "tarefa": "[ETM] - Análise de Sensor",
+          "criticidade": "",
+          "dataProgramada": "2026-09-09",
+          "dataCriacao": "2026-09-08",
+          "dataInicial": "2026-09-10",
+          "dataFinal": "2026-09-10",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "12568",
           "ativo": "Estação Meteorológica  Boa Esperança do Sul  São Paulo Brasil { BES100-ESTM1 }",
@@ -15987,7 +15973,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 87
+      "historicoTotal": 88
     }
   },
   "ossPublicas": [
@@ -16639,23 +16625,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "13244",
-      "ativo": "Estação Meteorológica  Araputanga  Mato Grosso Brasil { APG100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Adriano  Moraes",
-      "status": "Em progresso",
-      "tarefa": "[ETM] - Análise de Sensor",
-      "criticidade": "",
-      "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-08",
-      "dataInicial": "2026-09-10",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
-    },
-    {
       "osId": "13242",
       "ativo": "Estação Meteorológica  Araputanga  Mato Grosso Brasil { APG100-ESTM1 }",
       "equipe": "",
@@ -16712,14 +16681,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Roger Lélis",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 09.101] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
       "dataCriacao": "2026-09-08",
-      "dataInicial": "",
+      "dataInicial": "2026-09-10",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "13224",
@@ -16952,23 +16922,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "13062",
-      "ativo": "Transformador 1 WEG     { SLG200-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Daniel de Paula ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Daniel de Paula ",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPS - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2027-09-08",
-      "dataCriacao": "2026-09-04",
-      "dataInicial": "2026-09-10",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
-    },
-    {
       "osId": "13061",
       "ativo": "Transformador 3 COMTRAFO     { FRN100-TRFR3 }",
       "equipe": "",
@@ -17088,14 +17041,15 @@
       "responsavel": "Frank  Melo",
       "criadoPor": "Fabricio Barreto",
       "supervisor": "Frank  Melo",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Athon] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-08",
       "dataCriacao": "2026-09-04",
-      "dataInicial": "",
+      "dataInicial": "2026-09-10",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "13029",
@@ -17202,14 +17156,15 @@
       "responsavel": "Adriano  Moraes",
       "criadoPor": "Fabricio Barreto",
       "supervisor": "Adriano  Moraes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-09-08",
       "dataCriacao": "2026-09-04",
-      "dataInicial": "",
+      "dataInicial": "2026-09-10",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "12954",
@@ -20163,6 +20118,25 @@
       "atrasada": false
     },
     {
+      "osId": "13062",
+      "ativo": "Transformador 1 WEG     { SLG200-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Daniel de Paula ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Daniel de Paula ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPS - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2027-09-08",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "2026-09-10",
+      "dataFinal": "2026-09-10",
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13004",
       "ativo": "Transformador 9      { THPN-ORB100-TRFR9 }",
       "equipe": "",
@@ -21112,6 +21086,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "13244",
+      "ativo": "Estação Meteorológica  Araputanga  Mato Grosso Brasil { APG100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Adriano  Moraes",
+      "status": "Finalizados",
+      "tarefa": "[ETM] - Análise de Sensor",
+      "criticidade": "",
+      "dataProgramada": "2026-09-09",
+      "dataCriacao": "2026-09-08",
+      "dataInicial": "2026-09-10",
+      "dataFinal": "2026-09-10",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -22995,47 +22988,9 @@
       "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12733",
-      "ativo": "Preventiva Grupo de Inversores      { CDR100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Leonardo  Dias",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Leonardo  Dias",
-      "status": "Finalizados",
-      "tarefa": "[GreenYellow] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-02",
-      "dataInicial": "2026-09-09",
-      "dataFinal": "2026-09-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "12715",
-      "ativo": "Fossa Séptica      { SEMP-TCN100-FSEP }",
-      "equipe": "",
-      "responsavel": "Walter Santos ",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Walter Santos ",
-      "status": "Finalizados",
-      "tarefa": "[SEMP] - MPM - Fossa Séptica",
-      "criticidade": "",
-      "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-02",
-      "dataInicial": "2026-09-09",
-      "dataFinal": "2026-09-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2853,
+  "historicoTotal": 2855,
   "totalGeral": 6063,
   "verificacao": {
     "total": 0,
