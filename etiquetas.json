@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-10T18:18:36Z",
+  "geradoEm": "2026-09-10T18:31:19Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4271,
+        "total": 4272,
         "emAberto": 29,
         "atrasadas": 22,
-        "concluidas30d": 680,
-        "concluidas7d": 193,
-        "naSemanaCorrente": 90
+        "concluidas30d": 681,
+        "concluidas7d": 194,
+        "naSemanaCorrente": 91
       },
       "mttr": {
-        "horas": 17.48,
-        "label": "17h 29min",
-        "amostra": 680
+        "horas": 17.45,
+        "label": "17h 27min",
+        "amostra": 681
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W37",
-          "criadas": 88,
-          "finalizadas": 91
+          "criadas": 89,
+          "finalizadas": 92
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4271,
+            "total": 4272,
             "emAberto": 29
           }
         ],
@@ -81,8 +81,8 @@
       "total": 29,
       "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 25,
-        "emProgresso": 2,
+        "naoIniciada": 26,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
@@ -489,6 +489,24 @@
           "atrasada": true
         },
         {
+          "osId": "13387",
+          "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Cabine 3] - Religamento da Cabine 3",
+          "criticidade": "",
+          "dataProgramada": "2026-09-10",
+          "dataCriacao": "2026-09-10",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "13383",
           "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
           "equipe": "",
@@ -508,31 +526,12 @@
           "atrasada": false
         },
         {
-          "osId": "13382",
-          "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "[CPP100-CABN3] - Religamento do CPP100-CABN3",
-          "criticidade": "",
-          "dataProgramada": "2026-09-10",
-          "dataCriacao": "2026-09-10",
-          "dataInicial": "2026-09-10",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "13378",
           "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
           "equipe": "",
-          "responsavel": "Valdério Paz ",
+          "responsavel": "Cleiton  Farias",
           "criadoPor": "ItaloLustosa",
-          "supervisor": "Valdério Paz ",
+          "supervisor": "Cleiton  Farias",
           "status": "Não Iniciada",
           "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
           "criticidade": "",
@@ -618,6 +617,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13382",
+          "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[CPP100-CABN3] - Religamento do CPP100-CABN3",
+          "criticidade": "",
+          "dataProgramada": "2026-09-10",
+          "dataCriacao": "2026-09-10",
+          "dataInicial": "2026-09-10",
+          "dataFinal": "2026-09-10",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "13379",
           "ativo": "Cabine 1 SITIO SANTA MARIA, CEP:59.300-000 Caicó  Rio Grande do Norte Brasil { THPN-CAI100-CABN1 }",
@@ -3379,26 +3398,6 @@
           "atrasada": false
         },
         {
-          "osId": "12410",
-          "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Thiago Morais ",
-          "status": "Finalizados",
-          "tarefa": "[IBI200-INVR1.3] - Religamento do IBI200-INVR1.3",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-28",
-          "dataInicial": "2026-08-31",
-          "dataFinal": "2026-08-31",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "12462",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
           "equipe": "",
@@ -3619,10 +3618,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1822,
+      "historicoTotal": 1823,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3515,
+        "local": 3516,
         "remotoEmAberto": 11,
         "localEmAberto": 18,
         "pctRemoto": 18,
@@ -3920,8 +3919,8 @@
       "atrasadas": 70,
       "porStatus": {
         "naoIniciada": 102,
-        "emProgresso": 1,
-        "pausada": 13,
+        "emProgresso": 2,
+        "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4932,7 +4931,7 @@
           "responsavel": "Frank  Melo",
           "criadoPor": "Fabricio Barreto",
           "supervisor": "Frank  Melo",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Athon] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-09-08",
@@ -15842,6 +15841,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13387",
+      "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Cabine 3] - Religamento da Cabine 3",
+      "criticidade": "",
+      "dataProgramada": "2026-09-10",
+      "dataCriacao": "2026-09-10",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13383",
       "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
       "equipe": "",
@@ -15850,24 +15866,6 @@
       "supervisor": "Carlos Bruno  Pessanha Pereira",
       "status": "Em progresso",
       "tarefa": "[Thopen - Fazenda Limão 1 - RJ] - Religamento do Thopen - Fazenda Limão 1 - RJ",
-      "criticidade": "",
-      "dataProgramada": "2026-09-10",
-      "dataCriacao": "2026-09-10",
-      "dataInicial": "2026-09-10",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
-      "osId": "13382",
-      "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "[CPP100-CABN3] - Religamento do CPP100-CABN3",
       "criticidade": "",
       "dataProgramada": "2026-09-10",
       "dataCriacao": "2026-09-10",
@@ -15897,9 +15895,9 @@
       "osId": "13378",
       "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
       "equipe": "",
-      "responsavel": "Valdério Paz ",
+      "responsavel": "Cleiton  Farias",
       "criadoPor": "ItaloLustosa",
-      "supervisor": "Valdério Paz ",
+      "supervisor": "Cleiton  Farias",
       "status": "Não Iniciada",
       "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
       "criticidade": "",
@@ -16857,7 +16855,7 @@
       "responsavel": "Frank  Melo",
       "criadoPor": "Fabricio Barreto",
       "supervisor": "Frank  Melo",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Athon] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-08",
@@ -19778,25 +19776,6 @@
   ],
   "ossHistorico": [
     {
-      "osId": "13269",
-      "ativo": "Inversor 2.9 Sungrow SG60KTL    { ADT100-INVR2.9 }",
-      "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Paulo  Ribeiro",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-10",
-      "dataCriacao": "2026-09-09",
-      "dataInicial": "2026-09-09",
-      "dataFinal": "2026-09-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "13246",
       "ativo": "Preventiva Grupo de Inversores      { THPN-FZL100-PGINVR1 }",
       "equipe": "",
@@ -20483,6 +20462,26 @@
       "atrasada": false
     },
     {
+      "osId": "13382",
+      "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "[CPP100-CABN3] - Religamento do CPP100-CABN3",
+      "criticidade": "",
+      "dataProgramada": "2026-09-10",
+      "dataCriacao": "2026-09-10",
+      "dataInicial": "2026-09-10",
+      "dataFinal": "2026-09-10",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13379",
       "ativo": "Cabine 1 SITIO SANTA MARIA, CEP:59.300-000 Caicó  Rio Grande do Norte Brasil { THPN-CAI100-CABN1 }",
       "equipe": "",
@@ -20958,6 +20957,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "13269",
+      "ativo": "Inversor 2.9 Sungrow SG60KTL    { ADT100-INVR2.9 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Finalizados",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-09-10",
+      "dataCriacao": "2026-09-09",
+      "dataInicial": "2026-09-09",
+      "dataFinal": "2026-09-09",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -22702,29 +22720,10 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "12913",
-      "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Felipe Xavier ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Felipe Xavier ",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "2026-09-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2873,
-  "totalGeral": 6073,
+  "historicoTotal": 2874,
+  "totalGeral": 6074,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
