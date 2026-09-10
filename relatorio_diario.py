@@ -30,8 +30,20 @@ ainda não fechou, ordenado por nº de rolagens, com HH pendente × HH já progr
 à tarde por supervisor. Sai em relatorios/matinal/ e vai para RELATORIO_MATINAL_PARA
 (se vazio, usa RELATORIO_DIARIO_PARA).
 
+Janela SEMANAL ("Fechamento da semana"): sexta-feira a partir das 17:00 BRT, uma vez por
+semana, 2 páginas sobre a semana ativa (aderência, tendência, reincidentes, religamentos,
+o que não coube, engenharia). relatorios/semanal/ · RELATORIO_SEMANAL_PARA.
+
+Janela ALERTA ("Alerta da programação"): assim que o banco_dados.json traz uma semana
+MAIS NOVA que a ativa (a planilha da semana seguinte foi publicada), ou quando essa semana
+é republicada (geradaEm muda), gera as 17 checagens. relatorios/alerta/ · RELATORIO_ALERTA_PARA.
+
+As regras de cálculo dos dois estão em relatorios_semana.py.
+
 Uso manual:
-  python relatorio_diario.py                 # regra normal (06:00 e 13:00, uma vez por dia cada)
+  python relatorio_diario.py                 # regra normal (todas as janelas, cada uma no seu horário)
+  python relatorio_diario.py --janela semanal --semana 2026-W36 --forcar --sem-email
+  python relatorio_diario.py --janela alerta  --semana 2026-W37 --forcar --sem-email
   python relatorio_diario.py --dia 2026-09-09 --forcar --sem-email              # diário
   python relatorio_diario.py --janela matinal --dia 2026-09-10 --forcar --sem-email
 """
@@ -66,6 +78,14 @@ ESTADO_MAT = os.path.join(PASTA_MAT, "_estado.json")
 HORA_MATINAL = int(os.environ.get("RELATORIO_MATINAL_HORA", "13"))   # quando dispara (BRT)
 HORA_CORTE_MANHA = 12                                                 # "manhã" = início programado antes disso
 LIN_MATINAL = 12                                                      # linhas da lista de prioridade
+# fechamento da semana (sexta 17:00 BRT) e alerta da programação (quando a semana nova aparece)
+PASTA_SEM = os.path.join(BASE, "relatorios", "semanal")
+ESTADO_SEM = os.path.join(PASTA_SEM, "_estado.json")
+HORA_SEMANAL = int(os.environ.get("RELATORIO_SEMANAL_HORA", "17"))
+DIA_SEMANAL = int(os.environ.get("RELATORIO_SEMANAL_DIA", "4"))       # 0=seg … 4=sex
+PASTA_ALE = os.path.join(BASE, "relatorios", "alerta")
+ESTADO_ALE = os.path.join(PASTA_ALE, "_estado.json")
+FERIADOS_XLSX = os.path.join(BASE, "Feriados", "FERIADOS ESTADUAIS, MUNICIPAIS E NACIONAIS 2026.xlsx")
 BR = timezone(timedelta(hours=-3))
 TIPOS_NAO_PROG = ("Corretiva", "Corretiva Emergencial", "Religamento", "Religamento Remoto")
 DIAS_PT = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo"]
@@ -742,21 +762,77 @@ def rodar_diario(dia: date, agora: datetime, sem_email: bool):
             "resumo": {"prog": D["prog"], "fin": D["fin"], "naoProg": D["naoProg"]["n"], "relig": len(D["relig"])}}
 
 
+def _dados_semana():
+    import relatorios_semana as rs
+    return {"bd": ler("banco_dados.json", {}), "gestao": ler("gestao_pcm.json", {}), "gerencial": ler("gerencial.json", {}),
+            "engenharia": ler("engenharia.json", {}), "operacoes": ler("operacoes.json", {}), "feriados": rs.ler_feriados(FERIADOS_XLSX)}
+
+
+def _emitir(pasta, nome, rel, agora, sem_email, var_para, tag, nome_pdf):
+    """Grava HTML+PDF em `pasta`, envia o e-mail e devolve o estado da emissão."""
+    os.makedirs(pasta, exist_ok=True)
+    html_path = os.path.join(pasta, f"{nome}.html")
+    pdf_path = os.path.join(pasta, f"{nome}.pdf")
+    with open(html_path, "w", encoding="utf-8") as f:
+        f.write(rel["html"])
+    ok_pdf = html_para_pdf(html_path, pdf_path)
+    log(f"{tag}: HTML gravado · PDF {'ok' if ok_pdf else 'NÃO gerado'} · {rel['resumo']}")
+    envio = {"enviado": False, "motivo": "--sem-email"}
+    if not sem_email:
+        envio = enviar_email(rel["assunto"], rel["email"], pdf_path if ok_pdf else None, nome_pdf, var_para=var_para, tag=tag, dia=nome)
+    return {"pdf": ok_pdf, "envio": envio, "resumo": rel["resumo"], "geradoEm": agora.strftime("%Y-%m-%dT%H:%M:%S-03:00")}
+
+
+def rodar_semanal(week, agora, sem_email):
+    import relatorios_semana as rs
+    log(f"gerando fechamento da semana {week}")
+    rel = rs.fechamento_semana(_dados_semana(), week, agora, logo=logo_html(), painel_url=PAINEL_URL)
+    if not rel:
+        log(f"semanal: banco_dados.json não tem a semana {week} — nada a fazer", "WARN")
+        return None
+    est = _emitir(PASTA_SEM, week, rel, agora, sem_email, "RELATORIO_SEMANAL_PARA", "semanal", f"Fechamento_da_Semana_{week}.pdf")
+    est["ultimaSemana"] = week
+    return est
+
+
+def rodar_alerta(week, agora, sem_email, gerada_em=""):
+    import relatorios_semana as rs
+    log(f"gerando alerta da programação da semana {week}")
+    rel = rs.alerta_programacao(_dados_semana(), week, agora, logo=logo_html(), painel_url=PAINEL_URL)
+    if not rel:
+        log(f"alerta: banco_dados.json não tem a semana {week} — nada a fazer", "WARN")
+        return None
+    est = _emitir(PASTA_ALE, week, rel, agora, sem_email, "RELATORIO_ALERTA_PARA", "alerta", f"Alerta_da_Programacao_{week}.pdf")
+    est.update(ultimaSemana=week, geradaEm=gerada_em)
+    return est
+
+
+def _semana_nova(bd):
+    """(week, geradaEm) da semana mais nova que a ativa no banco_dados, ou (None, '')."""
+    ativa = bd.get("semana_ativa") or ""
+    novas = sorted([w for w in bd.get("semanas", []) if (w.get("week") or "") > ativa], key=lambda w: w["week"])
+    if not novas:
+        return None, ""
+    return novas[-1]["week"], novas[-1].get("geradaEm") or ""
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--janela", choices=["auto", "diario", "matinal"], default="auto",
-                    help="auto = decide pelo horário (padrão); diario = só o de ontem; matinal = só o do meio-dia")
+    ap.add_argument("--janela", choices=["auto", "diario", "matinal", "semanal", "alerta"], default="auto",
+                    help="auto = decide pelo horário (padrão); ou uma janela específica")
     ap.add_argument("--dia", help="AAAA-MM-DD (padrão: ontem no diário, hoje no matinal)")
+    ap.add_argument("--semana", help="AAAA-Wnn para semanal/alerta (padrão: semana ativa / semana nova)")
     ap.add_argument("--forcar", action="store_true", help="gera mesmo fora do horário / já gerado")
     ap.add_argument("--sem-email", action="store_true")
     ap.add_argument("--saida", help="pasta de saída (padrão relatorios/diario e relatorios/matinal)")
     a = ap.parse_args()
-    global PASTA, ESTADO_ARQ, PASTA_MAT, ESTADO_MAT
+    global PASTA, ESTADO_ARQ, PASTA_MAT, ESTADO_MAT, PASTA_SEM, ESTADO_SEM, PASTA_ALE, ESTADO_ALE
     if a.saida:
         PASTA = a.saida
         ESTADO_ARQ = os.path.join(PASTA, "_estado.json")
-        PASTA_MAT = os.path.join(a.saida, "matinal")
-        ESTADO_MAT = os.path.join(PASTA_MAT, "_estado.json")
+        PASTA_MAT = os.path.join(a.saida, "matinal"); ESTADO_MAT = os.path.join(PASTA_MAT, "_estado.json")
+        PASTA_SEM = os.path.join(a.saida, "semanal"); ESTADO_SEM = os.path.join(PASTA_SEM, "_estado.json")
+        PASTA_ALE = os.path.join(a.saida, "alerta"); ESTADO_ALE = os.path.join(PASTA_ALE, "_estado.json")
 
     agora = datetime.now(BR)
     fez = 0
@@ -781,6 +857,34 @@ def main():
             fez += 1
         elif a.janela == "matinal":
             log(f"matinal: {'fim de semana' if not util else 'antes das %02d:00 BRT' % HORA_MATINAL if agora.hour < HORA_MATINAL else 'já gerado hoje'} — nada a fazer")
+
+    # ── fechamento da semana: sexta a partir das 17:00, uma vez por semana ──
+    if a.janela in ("auto", "semanal"):
+        bd = ler("banco_dados.json", {})
+        week = a.semana or bd.get("semana_ativa") or f"{agora.isocalendar()[0]}-W{agora.isocalendar()[1]:02d}"
+        estado = _ler_estado(ESTADO_SEM)
+        hora_ok = agora.weekday() == DIA_SEMANAL and agora.hour >= HORA_SEMANAL
+        if a.forcar or (hora_ok and estado.get("ultimaSemana") != week):
+            est = rodar_semanal(week, agora, a.sem_email)
+            if est:
+                _gravar_estado(ESTADO_SEM, est); fez += 1
+        elif a.janela == "semanal":
+            log("semanal: fora da janela (sexta ≥ %02d:00 BRT) ou já gerado — nada a fazer" % HORA_SEMANAL)
+
+    # ── alerta da programação: quando aparece semana mais nova que a ativa (ou é republicada) ──
+    if a.janela in ("auto", "alerta"):
+        bd = ler("banco_dados.json", {})
+        if a.semana:
+            week = a.semana; gerada = next((w.get("geradaEm") or "" for w in bd.get("semanas", []) if w.get("week") == week), "")
+        else:
+            week, gerada = _semana_nova(bd)
+        estado = _ler_estado(ESTADO_ALE)
+        if week and (a.forcar or (estado.get("ultimaSemana"), estado.get("geradaEm")) != (week, gerada)):
+            est = rodar_alerta(week, agora, a.sem_email, gerada)
+            if est:
+                _gravar_estado(ESTADO_ALE, est); fez += 1
+        elif a.janela == "alerta":
+            log("alerta: nenhuma semana nova (ou já alertada) — nada a fazer")
 
     if not fez and a.janela == "auto":
         log(f"{agora:%H:%M} BRT — nenhuma janela a gerar agora")

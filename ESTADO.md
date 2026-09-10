@@ -1064,3 +1064,24 @@ conta de HH e listadas num aviso. Sai em `relatorios/matinal/`, vai para
 `relatorios/matinal/_estado.json`. Limitação honesta: OS feita e não fechada no Fracttal
 aparece como pendente — o relatório diz isso no rodapé.
 Teste local: `python relatorio_diario.py --janela matinal --dia AAAA-MM-DD --forcar --sem-email`.
+
+### Fechamento da semana e Alerta da programação (10/09)
+
+Regras em `relatorios_semana.py`; orquestração no `relatorio_diario.py` (janelas `semanal` e
+`alerta`). **Fechamento da semana**: sexta ≥ 17:00 BRT, uma vez por semana, 2 páginas sobre a
+semana ativa — aderência (só linhas do plano; `foraDoPlano` à parte), tendência 4 semanas,
+por dia/cliente/supervisor, reincidentes (4+ rolagens), religamentos por região, o que não
+coube (motivos dos `pendentes`), engenharia. `relatorios/semanal/AAAA-Wnn.pdf`,
+`RELATORIO_SEMANAL_PARA`. **Alerta da programação**: dispara quando o banco_dados traz uma
+semana mais nova que a ativa (a planilha da semana seguinte entra no banco no mesmo dia em
+que é publicada — verificado no histórico de 04/09) ou quando essa semana é republicada
+(`geradaEm` muda). 17 checagens em 3 severidades: dado/capacidade (duração implausível,
+cluster > capacidade, dia × cluster > 8,8 h, desbalanceamento, janelas sobrepostas, 5+
+rolagens, TBD, decisões pendentes, feriados, cadastro) e viabilidade de campo (2+ cidades
+no dia, > 3 h de deslocamento, troca de usina sem tempo, fora de 06–19 h, > 12 tarefas/dia,
+fim de semana, cluster sem pessoa). Cidade vem do `operacoes.json` com nome normalizado;
+recuo para a UF. `relatorios/alerta/AAAA-Wnn.pdf`, `RELATORIO_ALERTA_PARA` (Fillipe +
+fabricio.barreto, breno.andrade, davi.damasceno). Todo destinatário vazio cai em
+`RELATORIO_DIARIO_PARA`. Alerta operacional 13:30/16:00 do `atualizacao_semanal.py`
+continua existindo (lista por cluster) — o "Recuperação da tarde" é a visão consolidada.
+Teste: `python relatorio_diario.py --janela alerta --semana 2026-W37 --forcar --sem-email`.
