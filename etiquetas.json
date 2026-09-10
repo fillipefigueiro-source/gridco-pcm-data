@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-10T13:48:19Z",
+  "geradoEm": "2026-09-10T14:00:52Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4263,
-        "emAberto": 29,
+        "total": 4264,
+        "emAberto": 30,
         "atrasadas": 21,
         "concluidas30d": 672,
         "concluidas7d": 185,
-        "naSemanaCorrente": 83
+        "naSemanaCorrente": 84
       },
       "mttr": {
         "horas": 17.69,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W37",
-          "criadas": 80,
+          "criadas": 81,
           "finalizadas": 83
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4263,
-            "emAberto": 29
+            "total": 4264,
+            "emAberto": 30
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 29,
+      "total": 30,
       "atrasadas": 21,
       "porStatus": {
-        "naoIniciada": 26,
+        "naoIniciada": 27,
         "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 29
+        "(sem equipe)": 30
       },
       "oss": [
         {
@@ -469,6 +469,24 @@
           "linkFracttal": "",
           "modalidade": "remoto",
           "atrasada": true
+        },
+        {
+          "osId": "13370",
+          "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-FZL100] - Religamento do THPN-FZL100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-10",
+          "dataCriacao": "2026-09-10",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "13358",
@@ -3621,9 +3639,9 @@
       "historicoTotal": 1814,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3507,
+        "local": 3508,
         "remotoEmAberto": 11,
-        "localEmAberto": 18,
+        "localEmAberto": 19,
         "pctRemoto": 18,
         "alerta": true
       },
@@ -3918,9 +3936,9 @@
       "total": 121,
       "atrasadas": 72,
       "porStatus": {
-        "naoIniciada": 105,
+        "naoIniciada": 104,
         "emProgresso": 3,
-        "pausada": 13,
+        "pausada": 14,
         "verificacao": 0
       },
       "porEquipe": {
@@ -5291,14 +5309,15 @@
           "responsavel": "Matheus Gois ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Matheus Gois ",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-09-10",
           "dataCriacao": "2026-09-02",
-          "dataInicial": "",
+          "dataInicial": "2026-09-10",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "atrasada": false
         },
         {
@@ -6308,25 +6327,6 @@
           "atrasada": false
         },
         {
-          "osId": "13128",
-          "ativo": "Cabine 1  Caçapava  São Paulo Brasil { MRJ100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Hélio Silva ",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Hélio Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-09-08",
-          "dataCriacao": "2026-09-06",
-          "dataInicial": "2026-09-08",
-          "dataFinal": "2026-09-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "12665",
           "ativo": "Nobreak 1      { THPN-NVL100-NBRK1 }",
           "equipe": "",
@@ -6354,6 +6354,25 @@
           "supervisor": "Júlio Willers ",
           "status": "Finalizados",
           "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-09-08",
+          "dataCriacao": "2026-09-06",
+          "dataInicial": "2026-09-08",
+          "dataFinal": "2026-09-08",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "13128",
+          "ativo": "Cabine 1  Caçapava  São Paulo Brasil { MRJ100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Hélio Silva ",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Hélio Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-09-08",
           "dataCriacao": "2026-09-06",
@@ -15926,6 +15945,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13370",
+      "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-FZL100] - Religamento do THPN-FZL100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-10",
+      "dataCriacao": "2026-09-10",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13362",
       "ativo": "Inversor 1.1 Sungrow SG60KTL    { ADT100-INVR1.1 }",
       "equipe": "",
@@ -17592,14 +17628,15 @@
       "responsavel": "Matheus Gois ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Matheus Gois ",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-10",
       "dataCriacao": "2026-09-02",
-      "dataInicial": "",
+      "dataInicial": "2026-09-10",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 192.0
     },
     {
       "osId": "12705",
@@ -19998,25 +20035,6 @@
       "atrasada": false
     },
     {
-      "osId": "13128",
-      "ativo": "Cabine 1  Caçapava  São Paulo Brasil { MRJ100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Hélio Silva ",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Hélio Silva ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-09-08",
-      "dataCriacao": "2026-09-06",
-      "dataInicial": "2026-09-08",
-      "dataFinal": "2026-09-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "13062",
       "ativo": "Transformador 1 WEG     { SLG200-TRFR1 }",
       "equipe": "",
@@ -21559,6 +21577,25 @@
       "atrasada": false
     },
     {
+      "osId": "13128",
+      "ativo": "Cabine 1  Caçapava  São Paulo Brasil { MRJ100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Hélio Silva ",
+      "criadoPor": "Fabricio Barreto",
+      "supervisor": "Hélio Silva ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-09-08",
+      "dataCriacao": "2026-09-06",
+      "dataInicial": "2026-09-08",
+      "dataFinal": "2026-09-08",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13127",
       "ativo": "Cabine 1 Estrada Mun. Norimar Aparecida Brieda Piracicaba  São Paulo Brasil { PRB100-CABN1 }",
       "equipe": "",
@@ -22890,7 +22927,7 @@
     }
   ],
   "historicoTotal": 2858,
-  "totalGeral": 6063,
+  "totalGeral": 6064,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
