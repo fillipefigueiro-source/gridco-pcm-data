@@ -101,9 +101,18 @@ jobs:
           git add gestao_pcm.json _gestao_pcm_published_hash.txt engenharia.json gerencial.json engenharia/notificacoes.json
           git add -A relatorios 2>/dev/null || true
           git commit -m "chore: dados do Gestão PCM / Confiabilidade / Gerencial [auto ${NEW_HASH:0:8}]" || { echo "nada a commitar"; exit 0; }
+          # O robô da Programação Semanal commita a cada poucos minutos. Se o main andou,
+          # rebaseia; se o rebase conflitar num arquivo gerado, fica com a versão DESTA
+          # rodada (no rebase, "theirs" é o commit sendo reaplicado, ou seja, o nosso).
+          GERADOS="gestao_pcm.json engenharia.json gerencial.json engenharia/notificacoes.json _gestao_pcm_published_hash.txt relatorios"
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin main || true
-            if git push; then
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git checkout --theirs -- $GERADOS 2>/dev/null || true
+              git add -A $GERADOS 2>/dev/null || true
+              GIT_EDITOR=true git rebase --continue || { git rebase --abort; echo "rebase falhou — tentativa $i"; sleep 5; continue; }
+            fi
+            if git push origin HEAD:main; then
               echo "Publicado (tentativa $i)."; exit 0
             fi
             echo "Push colidiu — nova tentativa em 5s ($i/5)..."; sleep 5
