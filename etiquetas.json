@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-12T15:58:17Z",
+  "geradoEm": "2026-09-12T18:18:20Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-07 .. 2026-09-13",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4324,
-        "emAberto": 30,
+        "total": 4327,
+        "emAberto": 31,
         "atrasadas": 24,
-        "concluidas30d": 686,
-        "concluidas7d": 183,
-        "naSemanaCorrente": 143
+        "concluidas30d": 688,
+        "concluidas7d": 185,
+        "naSemanaCorrente": 146
       },
       "mttr": {
-        "horas": 17.05,
-        "label": "17h 3min",
-        "amostra": 686
+        "horas": 17.0,
+        "label": "17h 0min",
+        "amostra": 688
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W37",
-          "criadas": 141,
-          "finalizadas": 142
+          "criadas": 144,
+          "finalizadas": 144
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4324,
-            "emAberto": 30
+            "total": 4327,
+            "emAberto": 31
           }
         ],
         "responsaveis": [
@@ -68,7 +68,7 @@
           },
           {
             "nome": "Italo  Lustosa",
-            "total": 221,
+            "total": 223,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 30,
+      "total": 31,
       "atrasadas": 24,
       "porStatus": {
         "naoIniciada": 27,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 30
+        "(sem equipe)": 31
       },
       "oss": [
         {
@@ -526,20 +526,39 @@
           "atrasada": true
         },
         {
-          "osId": "13508",
-          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "osId": "13515",
+          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
           "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Frank  Melo",
+          "responsavel": "Cleiton  Farias",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Cleiton  Farias",
           "status": "Não Iniciada",
-          "tarefa": "Religamento da cabine 3 de CPP100",
+          "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-09-12",
           "dataCriacao": "2026-09-12",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13508",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Frank  Melo",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Frank  Melo",
+          "status": "Em progresso",
+          "tarefa": "Religamento da cabine 3 de CPP100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-12",
+          "dataCriacao": "2026-09-12",
+          "dataInicial": "2026-09-12",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -635,6 +654,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13517",
+          "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
+          "equipe": "",
+          "responsavel": "Italo  Lustosa",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Italo  Lustosa",
+          "status": "Finalizados",
+          "tarefa": "[THPN-ADS200] - Religamento do THPN-ADS200",
+          "criticidade": "",
+          "dataProgramada": "2026-09-12",
+          "dataCriacao": "2026-09-12",
+          "dataInicial": "2026-09-12",
+          "dataFinal": "2026-09-12",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13516",
+          "ativo": "Thopen - Araçoiaba da Serra 1- SP  Araçoiaba  São Paulo Brasil { THPN-ADS100 }",
+          "equipe": "",
+          "responsavel": "Italo  Lustosa",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Italo  Lustosa",
+          "status": "Finalizados",
+          "tarefa": "[THPN-ADS100] - Religamento do THPN-ADS100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-12",
+          "dataCriacao": "2026-09-12",
+          "dataInicial": "2026-09-12",
+          "dataFinal": "2026-09-12",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "13514",
           "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
@@ -1264,26 +1323,6 @@
           "supervisor": "Valdir Silva ",
           "status": "Finalizados",
           "tarefa": "[THPN-TGI100] - Religamento do THPN-TGI100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-11",
-          "dataFinal": "2026-09-11",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "12632",
-          "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
-          "equipe": "",
-          "responsavel": "Valdir Silva ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Valdir Silva ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-SAP100] - Religamento do THPN-SAP100",
           "criticidade": "",
           "dataProgramada": "2026-09-01",
           "dataCriacao": "2026-09-01",
@@ -3516,26 +3555,6 @@
           "atrasada": false
         },
         {
-          "osId": "12634",
-          "ativo": "Greenyellow - Castelo do Piauí 1 - PI Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizados",
-          "tarefa": "[GY-CDP100] - Religamento do GY-CDP100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-02",
-          "dataFinal": "2026-09-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "12667",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -3636,12 +3655,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1818,
+      "historicoTotal": 1820,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3568,
+        "local": 3571,
         "remotoEmAberto": 10,
-        "localEmAberto": 20,
+        "localEmAberto": 21,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -15562,20 +15581,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "13508",
-      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+      "osId": "13515",
+      "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
       "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Frank  Melo",
+      "responsavel": "Cleiton  Farias",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Cleiton  Farias",
       "status": "Não Iniciada",
-      "tarefa": "Religamento da cabine 3 de CPP100",
+      "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-09-12",
       "dataCriacao": "2026-09-12",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "13508",
+      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+      "equipe": "",
+      "responsavel": "Frank  Melo",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Frank  Melo",
+      "status": "Em progresso",
+      "tarefa": "Religamento da cabine 3 de CPP100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-12",
+      "dataCriacao": "2026-09-12",
+      "dataInicial": "2026-09-12",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -19825,6 +19862,46 @@
       "atrasada": false
     },
     {
+      "osId": "13517",
+      "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
+      "equipe": "",
+      "responsavel": "Italo  Lustosa",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Italo  Lustosa",
+      "status": "Finalizados",
+      "tarefa": "[THPN-ADS200] - Religamento do THPN-ADS200",
+      "criticidade": "",
+      "dataProgramada": "2026-09-12",
+      "dataCriacao": "2026-09-12",
+      "dataInicial": "2026-09-12",
+      "dataFinal": "2026-09-12",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "13516",
+      "ativo": "Thopen - Araçoiaba da Serra 1- SP  Araçoiaba  São Paulo Brasil { THPN-ADS100 }",
+      "equipe": "",
+      "responsavel": "Italo  Lustosa",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Italo  Lustosa",
+      "status": "Finalizados",
+      "tarefa": "[THPN-ADS100] - Religamento do THPN-ADS100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-12",
+      "dataCriacao": "2026-09-12",
+      "dataInicial": "2026-09-12",
+      "dataFinal": "2026-09-12",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13514",
       "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
       "equipe": "",
@@ -22146,50 +22223,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13081",
-      "ativo": "Cabine 1  Ibirapuã  Bahia Brasil { IBI100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Thiago Morais ",
-      "status": "Finalizados",
-      "tarefa": "[IBI100-CABN1] - Religamento do IBI100-CABN1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-05",
-      "dataCriacao": "2026-09-05",
-      "dataInicial": "2026-09-05",
-      "dataFinal": "2026-09-05",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "13079",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizados",
-      "tarefa": "[Axis - Marialva 1 - PR] - Religamento do Axis - Marialva 1 - PR",
-      "criticidade": "",
-      "dataProgramada": "2026-09-05",
-      "dataCriacao": "2026-09-05",
-      "dataInicial": "2026-09-07",
-      "dataFinal": "2026-09-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2879,
-  "totalGeral": 6122,
+  "historicoTotal": 2881,
+  "totalGeral": 6125,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
