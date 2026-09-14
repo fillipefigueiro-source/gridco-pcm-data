@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-14T14:28:05Z",
+  "geradoEm": "2026-09-14T15:13:16Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -82,8 +82,8 @@
       "atrasadas": 23,
       "porStatus": {
         "naoIniciada": 25,
-        "emProgresso": 3,
-        "pausada": 2,
+        "emProgresso": 2,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
@@ -569,7 +569,7 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Luiz  Silva",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 5.8] - Religamento do Inversor 5.8",
           "criticidade": "",
           "dataProgramada": "2026-09-14",
@@ -3866,16 +3866,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 788,
-        "emAberto": 86,
-        "atrasadas": 55,
-        "concluidas30d": 166,
-        "concluidas7d": 38,
+        "emAberto": 85,
+        "atrasadas": 54,
+        "concluidas30d": 167,
+        "concluidas7d": 39,
         "naSemanaCorrente": 29
       },
       "mttr": {
-        "horas": 315.47,
+        "horas": 315.45,
         "label": "13d 3h",
-        "amostra": 166
+        "amostra": 167
       },
       "tendencia4Semanas": [
         {
@@ -3896,7 +3896,7 @@
         {
           "semana": "W38",
           "criadas": 1,
-          "finalizadas": 1
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
@@ -3904,7 +3904,7 @@
           {
             "nome": "(sem equipe)",
             "total": 788,
-            "emAberto": 86
+            "emAberto": 85
           }
         ],
         "responsaveis": [
@@ -3935,16 +3935,16 @@
           }
         ]
       },
-      "total": 86,
-      "atrasadas": 55,
+      "total": 85,
+      "atrasadas": 54,
       "porStatus": {
         "naoIniciada": 78,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 86
+        "(sem equipe)": 85
       },
       "oss": [
         {
@@ -4290,24 +4290,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "12643",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-SBT500-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Adão Neto ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Adão Neto ",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-09-02",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-14",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 312.0,
           "atrasada": true
         },
         {
@@ -5419,6 +5401,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "12643",
+          "ativo": "Preventiva Grupo de Inversores      { THPN-SBT500-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Adão Neto ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Adão Neto ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-09-02",
+          "dataCriacao": "2026-09-01",
+          "dataInicial": "2026-09-14",
+          "dataFinal": "2026-09-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 312.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13407",
           "ativo": "Preventiva Grupo de Inversores      { THPN-IBT200-PGINVR1 }",
@@ -7130,25 +7131,6 @@
           "atrasada": false
         },
         {
-          "osId": "12030",
-          "ativo": "Infraestrutura Civil Fazenda Veneza, distrito de Boto, zona rural Quixadá  Ceará Brasil { SALE-HRT100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Cláudio  Ferreira",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "2026-08-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11357",
           "ativo": "Transformador 1 WEG     { PRB100-TRFR1 }",
           "equipe": "",
@@ -8270,7 +8252,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 352
+      "historicoTotal": 353
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -15880,7 +15862,7 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Raphael Vitoriano ",
       "supervisor": "Luiz  Silva",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 5.8] - Religamento do Inversor 5.8",
       "criticidade": "",
       "dataProgramada": "2026-09-14",
@@ -17987,23 +17969,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "12643",
-      "ativo": "Preventiva Grupo de Inversores      { THPN-SBT500-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Adão Neto ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Adão Neto ",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-09-02",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "2026-09-14",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 312.0
-    },
-    {
       "osId": "12573",
       "ativo": "Inversor 1.6 Sungrow SG125HV    { THPN-PHS400-INVR1.6 }",
       "equipe": "",
@@ -19744,6 +19709,25 @@
       "dataFinal": "2026-09-04",
       "linkFracttal": "",
       "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "12643",
+      "ativo": "Preventiva Grupo de Inversores      { THPN-SBT500-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Adão Neto ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Adão Neto ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-09-02",
+      "dataCriacao": "2026-09-01",
+      "dataInicial": "2026-09-14",
+      "dataFinal": "2026-09-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 312.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -22333,28 +22317,9 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "13005",
-      "ativo": "Inversor 3.9 Sungrow SUN2000-100KTL-H1    { MAB100-INVR3.9 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "James Chaves ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 3.9] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-09-04",
-      "dataCriacao": "2026-09-04",
-      "dataInicial": "2026-09-04",
-      "dataFinal": "2026-09-04",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2888,
+  "historicoTotal": 2889,
   "totalGeral": 6177,
   "verificacao": {
     "total": 0,
