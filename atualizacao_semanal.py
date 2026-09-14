@@ -167,6 +167,15 @@ HORA_INICIO_TURNO_MIN = 7 * 60
 HORA_ALMOCO_INI_MIN = 12 * 60
 HORA_ALMOCO_FIM_MIN = 13 * 60 + 12
 GAP_ENTRE_OS_MIN = 15
+# 14/09/2026 — promoção de pendentes por observação (STEP A3, passo 3):
+#   MAX_TAREFA_PROMOVIDA_H  estimativa do Fracttal acima disto é implausível (OS 9010
+#                           veio com 29 h POR TAREFA) → usa a duração fixa da sigla.
+#   FORCA_LIMITE_MIN        até onde o dia pode ser esticado quando o pin não cabe
+#                           ([EXCEDE HH]). Além disto a tarefa FICA em pendentes com
+#                           motivo claro, em vez de virar horário depois da meia-noite.
+MAX_TAREFA_PROMOVIDA_H = 8.0
+FORCA_LIMITE_MIN = 20 * 60
+DUR_FIXA_SIGLA_H = {"MPM": 1.10, "MPS": 1.30, "MPT": 1.30, "MPA": 4.0, "MPQ": 0.75, "MPW": 0.75}
 
 SCORE_CRITICIDADE = {
     "Muito alto": 100, "Alto": 75, "Médio": 50, "Medio": 50,
@@ -1796,6 +1805,136 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
                     log(f"    ! pin OS #{os_id} (linha {r}, aba {sheet_name}): {e}", "WARN")
     if pins:
         log(f"    pins: {n_pin} linha(s) reposicionada(s)")
+
+    # 3) PROMOÇÃO DE PENDENTES (14/09/2026 — pedido do Davi Damasceno).
+    #    O laço acima pula as abas "_" de propósito, então uma observação que apontava
+    #    dia para tarefa que ficou em _Pendentes na sexta caía no vazio: a tarefa seguia
+    #    com o motivo de sexta ("Sem capacidade no(s) dia(s)...") e ninguém entendia.
+    #    Agora: casa a observação (OS + tarefa + "só:") com as linhas de _Pendentes e
+    #    puxa cada uma para o dia/turno pedido.
+    #      cabe            → slot livre (turno pedido primeiro, depois qualquer hora)
+    #      não cabe        → força depois do expediente até FORCA_LIMITE_MIN, [EXCEDE HH]
+    #                        (o PIN MANDA, decisão de 21/08 — mas dentro do fisicamente possível)
+    #      nem forçando    → fica em pendentes, com o motivo trocado por um que explica
+    n_prom = n_prom_forc = n_prom_fix = n_fica = n_dup = 0
+    ws_p = wb_prog["_Pendentes"] if "_Pendentes" in wb_prog.sheetnames else None
+    if ws_p is not None and ws_p.max_row >= 2 and pins:
+        hp = {c.value: j for j, c in enumerate(ws_p[1], start=1) if c.value}
+        if all(k in hp for k in ("Equipe", "OSs ID", "Tarefa")):
+            _dn3 = {0: 'seg', 1: 'ter', 2: 'qua', 3: 'qui', 4: 'sex'}
+            remover_p = []
+            for r in range(2, ws_p.max_row + 1):
+                try:
+                    os_id = int(ws_p.cell(row=r, column=hp["OSs ID"]).value)
+                except (ValueError, TypeError):
+                    continue
+                lista = pins.get(os_id)
+                if not lista:
+                    continue
+                tarefa = ws_p.cell(row=r, column=hp["Tarefa"]).value
+                pin = next((p for p in (lista if isinstance(lista, list) else [lista])
+                            if p.get('dia') is not None and p['dia'] in dias_por_idx
+                            and _match_tarefa(tarefa, p.get('tarefas'))
+                            and (not p.get('incluir') or _match_tarefa(tarefa, p['incluir']))),
+                           None)
+                if pin is None:
+                    continue
+                equipe = ws_p.cell(row=r, column=hp["Equipe"]).value
+                if not equipe or equipe not in wb_prog.sheetnames:
+                    log(f"    ! pendente OS #{os_id} sem aba de equipe ('{equipe}') — não promovida", "WARN")
+                    continue
+                ws = wb_prog[equipe]
+                try:
+                    cols = garantir_colunas_extras(ws)
+                except Exception as e:
+                    log(f"    ! pendente OS #{os_id}: aba {equipe} sem cabeçalho ({e})", "WARN")
+                    continue
+                cols0 = {k: v - 1 for k, v in cols.items()}
+                d_date, d_str = dias_por_idx[pin['dia']]
+                # duplicata: a mesma tarefa (OS + código + texto) já está na semana → a linha
+                # de _Pendentes é resto de sexta; sai sem agendar de novo
+                cod_p = str(ws_p.cell(row=r, column=hp["Código"]).value or "").strip() if "Código" in hp else ""
+                _ja = False
+                if cols.get("OSs ID") and cols.get("Tarefa"):
+                    for rr in range(2, ws.max_row + 1):
+                        if str(ws.cell(row=rr, column=cols["OSs ID"]).value) != str(os_id):
+                            continue
+                        if str(ws.cell(row=rr, column=cols["Tarefa"]).value or "").strip() != str(tarefa or "").strip():
+                            continue
+                        if cod_p and cols.get("Código Equipamento") and \
+                           str(ws.cell(row=rr, column=cols["Código Equipamento"]).value or "").strip() != cod_p:
+                            continue
+                        _ja = True
+                        break
+                if _ja:
+                    remover_p.append(r)
+                    n_dup += 1
+                    continue
+                # duração: a estimativa de sexta; se implausível, a fixa da sigla
+                try:
+                    dur_h = float(ws_p.cell(row=r, column=hp["Duração (h)"]).value or 0) if "Duração (h)" in hp else 0.0
+                except (ValueError, TypeError):
+                    dur_h = 0.0
+                dur_orig = dur_h
+                sigla = str(ws_p.cell(row=r, column=hp["Tipo"]).value or "").strip().upper() if "Tipo" in hp else ""
+                if sigla not in DUR_FIXA_SIGLA_H:
+                    sigla = next((s for s in DUR_FIXA_SIGLA_H if re.search(r'\b' + s + r'\b', str(tarefa or '').upper())), "")
+                if dur_h <= 0 or dur_h > MAX_TAREFA_PROMOVIDA_H:
+                    dur_h = DUR_FIXA_SIGLA_H.get(sigla, min(dur_h, MAX_TAREFA_PROMOVIDA_H) if dur_h > 0 else 1.0)
+                    n_prom_fix += 1
+                dur_min = int(round(dur_h * 60))
+                slots = _coletar_slots_dia(ws, d_str, cols0, hoje)
+                ocup = sorted((s["ini"], s["fim"]) for s in slots)
+                inicio = pin['start_min'] if pin['start_min'] is not None else HORA_INICIO_TURNO_MIN + 30
+                slot = _achar_slot_livre(ocup, dur_min, inicio)
+                if slot is None and pin['start_min'] is not None:
+                    slot = _achar_slot_livre(ocup, dur_min, HORA_INICIO_TURNO_MIN + 30)   # turno é preferência
+                marca = ""
+                if slot is None:
+                    # força depois do que já está no dia (ignorando blocos noturnos), até o limite
+                    base = max([f for i, f in ocup if i < _TURNO_MAP_OBS['NOITE']] + [HORA_FIM_TURNO_MIN])
+                    cand = (base + GAP_ENTRE_OS_MIN, base + GAP_ENTRE_OS_MIN + dur_min)
+                    if cand[1] <= FORCA_LIMITE_MIN:
+                        slot = cand
+                        marca = " [EXCEDE HH]"
+                        n_prom_forc += 1
+                if slot is None:
+                    if "Motivo" in hp:
+                        ws_p.cell(row=r, column=hp["Motivo"],
+                                  value=f"Observação ({_dn3[pin['dia']]}): dia cheio, não coube nem forçando "
+                                        f"até {_hora_min_to_str(FORCA_LIMITE_MIN)} — escolha outro dia")
+                    n_fica += 1
+                    continue
+                nova = ws.max_row + 1
+                def _put(nome, val, _ws=ws, _row=nova, _cols=cols):
+                    j = _cols.get(nome)
+                    if j:
+                        _ws.cell(row=_row, column=j, value=val)
+                _put("Equipe", equipe)
+                _put("Dia", d_str)
+                _put("OSs ID", os_id)
+                _put("Ativo (Usina)", ws_p.cell(row=r, column=hp["Ativo"]).value if "Ativo" in hp else None)
+                _put("Código Equipamento", ws_p.cell(row=r, column=hp["Código"]).value if "Código" in hp else None)
+                _put("Tipo", ws_p.cell(row=r, column=hp["Tipo"]).value if "Tipo" in hp else None)
+                _put("Tarefa", tarefa)
+                _put("Duração (h)", round(dur_h, 2))
+                if dur_orig != dur_h:
+                    _put("Duração (base)", f"Fracttal: {dur_orig:g} h (implausível → fixa {sigla or 'padrão'} {dur_h:g} h)")
+                _put("Hora Início", _hora_min_to_str(slot[0]))
+                _put("Hora Fim", _hora_min_to_str(slot[1]))
+                _put("Rolagem", f"↑ de pendentes por observação{marca}")
+                _put("Última Atualização", datetime.now().strftime("%Y-%m-%d %H:%M"))
+                remover_p.append(r)
+                n_prom += 1
+                log(f"    ↑ OS #{os_id} | {str(tarefa)[:44]} → {d_str} "
+                    f"{_hora_min_to_str(slot[0])}-{_hora_min_to_str(slot[1])}{marca}")
+            for r in sorted(remover_p, reverse=True):
+                ws_p.delete_rows(r, 1)
+    if n_prom or n_fica or n_dup:
+        log(f"    pendentes por observação: {n_prom} promovida(s) "
+            f"({n_prom_forc} forçada(s) [EXCEDE HH], {n_prom_fix} com duração implausível trocada pela fixa da sigla), "
+            f"{n_fica} ficou(aram) em pendentes por dia cheio"
+            + (f", {n_dup} duplicata(s) de sexta removida(s)" if n_dup else ""))
 
 
 # ====================== Rolagem do dia (STEP A4 — Melhoria 1) ======================

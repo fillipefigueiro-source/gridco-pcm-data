@@ -133,6 +133,11 @@ TERMO_START_MIN  = 11 * 60
 TERMO_END_MIN    = 15 * 60
 GAP_BETWEEN_OS   = 15
 MIN_PREVENTIVA_H = 1.0
+# 14/09/2026: teto para a estimativa que vem do Fracttal. A OS 9010 (MPT) trouxe 29 h
+# POR TAREFA — o total do plano copiado em cada linha — e nenhum dia comporta isso.
+# Acima do teto a duração é capada e a lista sai no log (corrigir na origem).
+MAX_TAREFA_H = 8.0
+_DUR_CAPADAS = []
 TRAVEL_KMH       = 70.0
 TRAVEL_FACTOR    = 1.2
 # Melhoria 0.1 (13/08/2026) — deslocamento entre usinas:
@@ -1503,6 +1508,7 @@ def estimate_h(row):
     if cat == 'MPS':                          return 1.30  # real 1.31h (n=1247) — era 1.0
     if cat == 'MPQ':                          return 0.75  # sem dado válido: apontamentos de ~3s (só SEMP)
     if cat == 'MPA':                          return 4.0   # real 3.95h (n=526)  — era 1.5 (subestimava 2.6x)
+    if cat == 'MPT':                          return 1.30  # 14/09/2026: provisório = MPS; sem amostra de tempo real ainda
     if 'mpw' in tarefa:                       return 0.75  # sem amostra no histórico
     if 'handover' in tarefa:                  return 0.65  # real 0.65h (n=2217) — era 0.5
     dur = parse_duration_to_hours(row.get('Tarefa -> Duração estimada'))
@@ -1511,12 +1517,20 @@ def estimate_h(row):
         dur = find_corretiva_mttr(row.get('Tarefa', ''))
     if not dur or dur <= 0: dur = row.get('mttr_h_fallback')
     if not dur or dur <= 0: dur = 1.5
+    if dur > MAX_TAREFA_H:
+        _DUR_CAPADAS.append((row.get('OSs ID'), str(row.get('Tarefa', ''))[:48], dur))
+        dur = MAX_TAREFA_H
     if not row['corretiva'] and not row['zeladoria'] and dur < MIN_PREVENTIVA_H:
         dur = MIN_PREVENTIVA_H
     return dur
 
 
 df_tasks['dur_h'] = df_tasks.apply(estimate_h, axis=1)
+if _DUR_CAPADAS:
+    _ex = ', '.join(f'OS {o} {t[:26]} {d:g}h' for o, t, d in _DUR_CAPADAS[:6])
+    print(f'[DURAÇÃO] {len(_DUR_CAPADAS)} tarefa(s) com estimativa do Fracttal acima de '
+          f'{MAX_TAREFA_H:g} h capadas em {MAX_TAREFA_H:g} h — corrigir na origem: {_ex}'
+          + (' …' if len(_DUR_CAPADAS) > 6 else ''))
 
 
 # ====== v9 — Melhoria 6 nível 1: duração APRENDIDA (MODO SOMBRA por padrão) ======
