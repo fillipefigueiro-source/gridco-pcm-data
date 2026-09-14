@@ -1101,3 +1101,20 @@ feriados no navegador. `/relatorios/*` é rota admin/equipe no SWA. Tema escuro:
 cores fixas de papel dentro de `.rx-folha` (prefixo `rp-` ja era usado pelo painel: colisao de classe, como `cf-`/`gr-`). "Enviar por e-mail" pelo painel ficou para depois
 (precisa de uma função no Azure). Não há `<head>`/`<body>` explícitos no novo.html — a âncora
 para inserir scripts é o primeiro `<script>`.
+
+### Observações da semana em andamento puxam pendentes (14/09)
+
+O motor que roda na nuvem a cada 15 min é o `atualizacao_semanal.py` (o `programacao_v7.py`
+só gera a semana na sexta). O STEP A3 (Observacoes_Semana_Atual.txt) só reposicionava linhas
+que já estavam nas abas de equipe e pulava `_Pendentes` — observar tarefa pendente não fazia
+nada e a mensagem de sexta ("Sem capacidade no(s) dia(s)...") ficava congelada. Caso do Davi
+em 14/09 (OS 12717: 1 na semana, 6 pendentes; OS 9010: 28 pendentes com 29 h cada).
+Agora o passo 3 do A3 promove a pendente para o dia/turno pedido: cabe → slot livre; não
+cabe → força até `FORCA_LIMITE_MIN` (20:00) com [EXCEDE HH]; nem assim → fica em pendentes
+com motivo "dia cheio, escolha outro dia". Duplicata de sexta (mesma OS+tarefa+código já na
+semana) é removida. Estimativa acima de `MAX_TAREFA_PROMOVIDA_H` (8 h) vira a fixa da sigla
+(`DUR_FIXA_SIGLA_H`), com a original anotada em "Duração (base)". Coluna "Rolagem" recebe
+"↑ de pendentes por observação". No `programacao_v7.py`: MPT = 1,30 h (provisório, igual
+MPS; calibrar com tempo real quando houver amostra) e `MAX_TAREFA_H` = 8 h capando a
+estimativa do Fracttal, com lista no log. Herdado e não mexido: `_achar_slot_livre` pode
+começar uma tarefa dentro do almoço. Teste: `_teste_promocao.py` numa cópia da Semana 38.
