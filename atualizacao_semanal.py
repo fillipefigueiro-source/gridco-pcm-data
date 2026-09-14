@@ -1823,6 +1823,7 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
         if all(k in hp for k in ("Equipe", "OSs ID", "Tarefa")):
             _dn3 = {0: 'seg', 1: 'ter', 2: 'qua', 3: 'qui', 4: 'sex'}
             remover_p = []
+            _forcados = {}   # (equipe, dia) -> [(ini, fim)] já forçados nesta passada
             for r in range(2, ws_p.max_row + 1):
                 try:
                     os_id = int(ws_p.cell(row=r, column=hp["OSs ID"]).value)
@@ -1892,12 +1893,15 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
                 marca = ""
                 if slot is None:
                     # força depois do que já está no dia (ignorando blocos noturnos), até o limite
-                    base = max([f for i, f in ocup if i < _TURNO_MAP_OBS['NOITE']] + [HORA_FIM_TURNO_MIN])
+                    base = max([f for i, f in ocup if i < _TURNO_MAP_OBS['NOITE']]
+                               + [f for _, f in _forcados.get((equipe, d_str), [])]
+                               + [HORA_FIM_TURNO_MIN])
                     cand = (base + GAP_ENTRE_OS_MIN, base + GAP_ENTRE_OS_MIN + dur_min)
                     if cand[1] <= FORCA_LIMITE_MIN:
                         slot = cand
                         marca = " [EXCEDE HH]"
                         n_prom_forc += 1
+                        _forcados.setdefault((equipe, d_str), []).append(cand)
                 if slot is None:
                     if "Motivo" in hp:
                         ws_p.cell(row=r, column=hp["Motivo"],
