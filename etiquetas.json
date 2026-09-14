@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-14T05:11:32Z",
+  "geradoEm": "2026-09-14T10:47:24Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4357,
+        "total": 4358,
         "emAberto": 35,
-        "atrasadas": 32,
-        "concluidas30d": 681,
-        "concluidas7d": 170,
-        "naSemanaCorrente": 3
+        "atrasadas": 31,
+        "concluidas30d": 682,
+        "concluidas7d": 171,
+        "naSemanaCorrente": 4
       },
       "mttr": {
-        "horas": 16.42,
-        "label": "16h 25min",
-        "amostra": 681
+        "horas": 16.4,
+        "label": "16h 24min",
+        "amostra": 682
       },
       "tendencia4Semanas": [
         {
@@ -34,11 +34,11 @@
         {
           "semana": "W37",
           "criadas": 174,
-          "finalizadas": 170
+          "finalizadas": 171
         },
         {
           "semana": "W38",
-          "criadas": 0,
+          "criadas": 1,
           "finalizadas": 0
         }
       ],
@@ -46,7 +46,7 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4357,
+            "total": 4358,
             "emAberto": 35
           }
         ],
@@ -79,10 +79,10 @@
         ]
       },
       "total": 35,
-      "atrasadas": 32,
+      "atrasadas": 31,
       "porStatus": {
-        "naoIniciada": 31,
-        "emProgresso": 2,
+        "naoIniciada": 30,
+        "emProgresso": 3,
         "pausada": 2,
         "verificacao": 0
       },
@@ -436,24 +436,6 @@
           "atrasada": true
         },
         {
-          "osId": "13485",
-          "ativo": "Thopen - Sorocaba 1 - SP Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
-          "tarefa": "[Thopen - Sorocaba 1 - SP] - Religamento do Thopen - Sorocaba 1 - SP",
-          "criticidade": "",
-          "dataProgramada": "2026-09-11",
-          "dataCriacao": "2026-09-11",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "13470",
           "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
           "equipe": "",
@@ -550,14 +532,15 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Carlos  Godoi",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-STA100] - Religamento do THPN-STA100",
           "criticidade": "",
           "dataProgramada": "2026-09-12",
           "dataCriacao": "2026-09-12",
-          "dataInicial": "",
+          "dataInicial": "2026-09-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -669,6 +652,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "13554",
+          "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
+          "equipe": "",
+          "responsavel": "Valdir Silva ",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Valdir Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-SAP100] - Religamento do THPN-SAP100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-14",
+          "dataCriacao": "2026-09-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "12906",
@@ -1142,6 +1143,26 @@
           "dataFinal": "2026-09-12",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13485",
+          "ativo": "Thopen - Sorocaba 1 - SP Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Finalizados",
+          "tarefa": "[Thopen - Sorocaba 1 - SP] - Religamento do Thopen - Sorocaba 1 - SP",
+          "criticidade": "",
+          "dataProgramada": "2026-09-11",
+          "dataCriacao": "2026-09-11",
+          "dataInicial": "2026-09-11",
+          "dataFinal": "2026-09-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3667,26 +3688,6 @@
           "atrasada": false
         },
         {
-          "osId": "11861",
-          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizados",
-          "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
-          "criticidade": "",
-          "dataProgramada": "2026-08-24",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-24",
-          "dataFinal": "2026-08-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "9263",
           "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
           "equipe": "",
@@ -3727,10 +3728,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1815,
+      "historicoTotal": 1816,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3601,
+        "local": 3602,
         "remotoEmAberto": 10,
         "localEmAberto": 25,
         "pctRemoto": 17,
@@ -3954,17 +3955,17 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 788,
+        "total": 789,
         "emAberto": 88,
         "atrasadas": 57,
-        "concluidas30d": 164,
-        "concluidas7d": 36,
-        "naSemanaCorrente": 28
+        "concluidas30d": 165,
+        "concluidas7d": 37,
+        "naSemanaCorrente": 29
       },
       "mttr": {
-        "horas": 317.27,
-        "label": "13d 5h",
-        "amostra": 164
+        "horas": 316.8,
+        "label": "13d 4h",
+        "amostra": 165
       },
       "tendencia4Semanas": [
         {
@@ -3980,11 +3981,11 @@
         {
           "semana": "W37",
           "criadas": 20,
-          "finalizadas": 36
+          "finalizadas": 37
         },
         {
           "semana": "W38",
-          "criadas": 0,
+          "criadas": 1,
           "finalizadas": 0
         }
       ],
@@ -3992,7 +3993,7 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 788,
+            "total": 789,
             "emAberto": 88
           }
         ],
@@ -4027,9 +4028,9 @@
       "total": 88,
       "atrasadas": 57,
       "porStatus": {
-        "naoIniciada": 80,
+        "naoIniciada": 81,
         "emProgresso": 0,
-        "pausada": 8,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
@@ -5012,6 +5013,23 @@
           "atrasada": true
         },
         {
+          "osId": "13555",
+          "ativo": "SPDA    TESTE TESTE { TESTE100-SPDA1 }",
+          "equipe": "",
+          "responsavel": "Davi Damasceno ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Davi Damasceno ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPA - SPDA",
+          "criticidade": "",
+          "dataProgramada": "2026-09-14",
+          "dataCriacao": "2026-09-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "13473",
           "ativo": "Transformador 2 WEG     { IPX100-TRFR2 }",
           "equipe": "",
@@ -5094,24 +5112,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "12677",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-BES100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Andrick Gouveia ",
-          "status": "pausado",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-09-14",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-11",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
           "atrasada": false
         },
         {
@@ -5577,6 +5577,25 @@
           "dataFinal": "2026-09-11",
           "linkFracttal": "",
           "horasAteAbrir": 192.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12677",
+          "ativo": "Preventiva Grupo de Inversores      { THPN-BES100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Andrick Gouveia ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Andrick Gouveia ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-09-14",
+          "dataCriacao": "2026-09-01",
+          "dataInicial": "2026-09-11",
+          "dataFinal": "2026-09-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 240.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -7253,25 +7272,6 @@
           "atrasada": false
         },
         {
-          "osId": "12020",
-          "ativo": "Infraestrutura Civil Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { SNE100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Valdério Paz ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "2026-08-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11357",
           "ativo": "Transformador 1 WEG     { PRB100-TRFR1 }",
           "equipe": "",
@@ -8393,7 +8393,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 350
+      "historicoTotal": 351
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -15577,6 +15577,39 @@
   },
   "ossPublicas": [
     {
+      "osId": "13555",
+      "ativo": "SPDA    TESTE TESTE { TESTE100-SPDA1 }",
+      "equipe": "",
+      "responsavel": "Davi Damasceno ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Davi Damasceno ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPA - SPDA",
+      "criticidade": "",
+      "dataProgramada": "2026-09-14",
+      "dataCriacao": "2026-09-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "13554",
+      "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
+      "equipe": "",
+      "responsavel": "Valdir Silva ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Valdir Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-SAP100] - Religamento do THPN-SAP100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-14",
+      "dataCriacao": "2026-09-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13553",
       "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
       "equipe": "",
@@ -15703,14 +15736,15 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Carlos  Godoi",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-STA100] - Religamento do THPN-STA100",
       "criticidade": "",
       "dataProgramada": "2026-09-12",
       "dataCriacao": "2026-09-12",
-      "dataInicial": "",
+      "dataInicial": "2026-09-14",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 48.0,
       "modalidade": "local"
     },
     {
@@ -15756,23 +15790,6 @@
       "supervisor": "Marcos  Camargo",
       "status": "Não Iniciada",
       "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-09-11",
-      "dataCriacao": "2026-09-11",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "13485",
-      "ativo": "Thopen - Sorocaba 1 - SP Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
-      "tarefa": "[Thopen - Sorocaba 1 - SP] - Religamento do Thopen - Sorocaba 1 - SP",
       "criticidade": "",
       "dataProgramada": "2026-09-11",
       "dataCriacao": "2026-09-11",
@@ -17725,23 +17742,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "12677",
-      "ativo": "Preventiva Grupo de Inversores      { THPN-BES100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Andrick Gouveia ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Andrick Gouveia ",
-      "status": "pausado",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-09-14",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "2026-09-11",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 240.0
-    },
-    {
       "osId": "12673",
       "ativo": "Caixa d'água      { SNE100-CXDA1 }",
       "equipe": "",
@@ -19544,6 +19544,25 @@
       "atrasada": false
     },
     {
+      "osId": "12677",
+      "ativo": "Preventiva Grupo de Inversores      { THPN-BES100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Andrick Gouveia ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Andrick Gouveia ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-09-14",
+      "dataCriacao": "2026-09-01",
+      "dataInicial": "2026-09-11",
+      "dataFinal": "2026-09-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 240.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "12675",
       "ativo": "Cabine 1 Rodovia, 01 – Zona Rural Parelhas  Rio Grande do Norte Brasil { PRL100-CABN1 }",
       "equipe": "",
@@ -20301,6 +20320,26 @@
       "dataFinal": "2026-09-12",
       "linkFracttal": "",
       "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "13485",
+      "ativo": "Thopen - Sorocaba 1 - SP Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Finalizados",
+      "tarefa": "[Thopen - Sorocaba 1 - SP] - Religamento do Thopen - Sorocaba 1 - SP",
+      "criticidade": "",
+      "dataProgramada": "2026-09-11",
+      "dataCriacao": "2026-09-11",
+      "dataInicial": "2026-09-11",
+      "dataFinal": "2026-09-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -22241,50 +22280,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "12949",
-      "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "James Chaves ",
-      "status": "Finalizados",
-      "tarefa": "[JCD100-INVR3.1] - Religamento do JCD100-INVR3.1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "2026-09-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "12946",
-      "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizados",
-      "tarefa": "[Cabine 6] - Religamento da Cabine 6",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-03",
-      "dataFinal": "2026-09-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2868,
-  "totalGeral": 6155,
+  "historicoTotal": 2870,
+  "totalGeral": 6157,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
