@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-14T22:03:59Z",
+  "geradoEm": "2026-09-14T22:15:48Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 24,
       "atrasadas": 17,
       "porStatus": {
-        "naoIniciada": 20,
-        "emProgresso": 1,
+        "naoIniciada": 19,
+        "emProgresso": 2,
         "pausada": 3,
         "verificacao": 0
       },
@@ -461,14 +461,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 5.8] - Religamento do Inversor 5.8",
           "criticidade": "",
           "dataProgramada": "2026-09-14",
           "dataCriacao": "2026-09-14",
-          "dataInicial": "",
+          "dataInicial": "2026-09-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -8913,16 +8914,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 736,
-        "emAberto": 89,
-        "atrasadas": 62,
-        "concluidas30d": 233,
-        "concluidas7d": 37,
+        "emAberto": 88,
+        "atrasadas": 61,
+        "concluidas30d": 234,
+        "concluidas7d": 38,
         "naSemanaCorrente": 29
       },
       "mttr": {
-        "horas": 256.07,
-        "label": "10d 16h",
-        "amostra": 233
+        "horas": 255.49,
+        "label": "10d 15h",
+        "amostra": 234
       },
       "tendencia4Semanas": [
         {
@@ -8943,7 +8944,7 @@
         {
           "semana": "W38",
           "criadas": 13,
-          "finalizadas": 7
+          "finalizadas": 8
         }
       ],
       "topOfensores": {
@@ -8951,7 +8952,7 @@
           {
             "nome": "(sem equipe)",
             "total": 736,
-            "emAberto": 89
+            "emAberto": 88
           }
         ],
         "responsaveis": [
@@ -8973,7 +8974,7 @@
           {
             "nome": "Luiz  Silva",
             "total": 39,
-            "emAberto": 4
+            "emAberto": 3
           },
           {
             "nome": "Felipe Xavier",
@@ -8982,16 +8983,16 @@
           }
         ]
       },
-      "total": 89,
-      "atrasadas": 62,
+      "total": 88,
+      "atrasadas": 61,
       "porStatus": {
         "naoIniciada": 70,
-        "emProgresso": 5,
+        "emProgresso": 4,
         "pausada": 14,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 89
+        "(sem equipe)": 88
       },
       "oss": [
         {
@@ -9957,24 +9958,6 @@
           "atrasada": true
         },
         {
-          "osId": "13289",
-          "ativo": "Tracker 73.100 STI Norland     { TIM100-ETKR73.100 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Luiz  Silva",
-          "status": "Em progresso",
-          "tarefa": "[Tracker 73.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-09-10",
-          "dataCriacao": "2026-09-09",
-          "dataInicial": "2026-09-14",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "atrasada": true
-        },
-        {
           "osId": "13399",
           "ativo": "Inversor 6.2 SOLIS SOLIS-110K-5G    { SALE-SNP100-INVR6.2 }",
           "equipe": "",
@@ -10575,6 +10558,25 @@
           "supervisor": "Luiz  Silva",
           "status": "Finalizados",
           "tarefa": "[Tracker 32.100] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-09-10",
+          "dataCriacao": "2026-09-09",
+          "dataInicial": "2026-09-14",
+          "dataFinal": "2026-09-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "13289",
+          "ativo": "Tracker 73.100 STI Norland     { TIM100-ETKR73.100 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Luiz  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 73.100] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-09-10",
           "dataCriacao": "2026-09-09",
@@ -12125,25 +12127,6 @@
           "atrasada": false
         },
         {
-          "osId": "9840",
-          "ativo": "Inversor 1.8 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.8 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Andrick Gouveia ",
-          "status": "Finalizados",
-          "tarefa": "[Ibaté 2][Inversor 1.8] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-22",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "2026-08-31",
-          "linkFracttal": "",
-          "horasAteAbrir": 888.0,
-          "horasAteFechar": 72.0,
-          "atrasada": false
-        },
-        {
           "osId": "12340",
           "ativo": "Inversor 1.1 Sungrow SG250HX    { THPN-RDR100-INVR1.1 }",
           "equipe": "",
@@ -13379,7 +13362,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 595
+      "historicoTotal": 596
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15886,14 +15869,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Raphael Vitoriano ",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 5.8] - Religamento do Inversor 5.8",
       "criticidade": "",
       "dataProgramada": "2026-09-14",
       "dataCriacao": "2026-09-14",
-      "dataInicial": "",
+      "dataInicial": "2026-09-14",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16563,23 +16547,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "13289",
-      "ativo": "Tracker 73.100 STI Norland     { TIM100-ETKR73.100 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Luiz  Silva",
-      "status": "Em progresso",
-      "tarefa": "[Tracker 73.100] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-09-10",
-      "dataCriacao": "2026-09-09",
-      "dataInicial": "2026-09-14",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0
     },
     {
       "osId": "13285",
@@ -21370,6 +21337,25 @@
       "atrasada": false
     },
     {
+      "osId": "13289",
+      "ativo": "Tracker 73.100 STI Norland     { TIM100-ETKR73.100 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Luiz  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 73.100] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-09-10",
+      "dataCriacao": "2026-09-09",
+      "dataInicial": "2026-09-14",
+      "dataFinal": "2026-09-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13288",
       "ativo": "Cabine 1 Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100-CABN1 }",
       "equipe": "",
@@ -22072,29 +22058,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13091",
-      "ativo": "Cabine 1  Ibirapuã  Bahia Brasil { IBI100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Thiago Morais ",
-      "status": "Finalizados",
-      "tarefa": "[IBI100-CABN1] - Religamento do IBI100-CABN1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-05",
-      "dataCriacao": "2026-09-05",
-      "dataInicial": "2026-09-08",
-      "dataFinal": "2026-09-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2911,
+  "historicoTotal": 2912,
   "totalGeral": 6192,
   "verificacao": {
     "total": 0,
