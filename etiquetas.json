@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-14T18:48:12Z",
+  "geradoEm": "2026-09-14T19:00:18Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -81,9 +81,9 @@
       "total": 26,
       "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 21,
+        "naoIniciada": 22,
         "emProgresso": 2,
-        "pausada": 3,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
@@ -497,15 +497,14 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Luiz  Silva",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Inversor 5.8] - Religamento do Inversor 5.8",
           "criticidade": "",
           "dataProgramada": "2026-09-14",
           "dataCriacao": "2026-09-14",
-          "dataInicial": "2026-09-14",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -5465,25 +5464,6 @@
           "atrasada": false
         },
         {
-          "osId": "12983",
-          "ativo": "Cabine 1  Poconé  Mato Grosso Brasil { PCN100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-09-08",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "2026-09-10",
-          "dataFinal": "2026-09-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "12682",
           "ativo": "Infraestrutura Civil Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-INFC1 }",
           "equipe": "",
@@ -5518,6 +5498,25 @@
           "dataFinal": "2026-09-10",
           "linkFracttal": "",
           "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12983",
+          "ativo": "Cabine 1  Poconé  Mato Grosso Brasil { PCN100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Adriano  Moraes",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-09-08",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-10",
+          "dataFinal": "2026-09-10",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -8932,16 +8931,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 735,
-        "emAberto": 92,
-        "atrasadas": 66,
-        "concluidas30d": 229,
-        "concluidas7d": 33,
+        "emAberto": 91,
+        "atrasadas": 65,
+        "concluidas30d": 230,
+        "concluidas7d": 34,
         "naSemanaCorrente": 28
       },
       "mttr": {
-        "horas": 257.71,
+        "horas": 257.22,
         "label": "10d 17h",
-        "amostra": 229
+        "amostra": 230
       },
       "tendencia4Semanas": [
         {
@@ -8957,7 +8956,7 @@
         {
           "semana": "W37",
           "criadas": 44,
-          "finalizadas": 29
+          "finalizadas": 30
         },
         {
           "semana": "W38",
@@ -8970,7 +8969,7 @@
           {
             "nome": "(sem equipe)",
             "total": 735,
-            "emAberto": 92
+            "emAberto": 91
           }
         ],
         "responsaveis": [
@@ -8992,7 +8991,7 @@
           {
             "nome": "Luiz  Silva",
             "total": 39,
-            "emAberto": 7
+            "emAberto": 6
           },
           {
             "nome": "Felipe Xavier",
@@ -9001,16 +9000,16 @@
           }
         ]
       },
-      "total": 92,
-      "atrasadas": 66,
+      "total": 91,
+      "atrasadas": 65,
       "porStatus": {
-        "naoIniciada": 73,
-        "emProgresso": 7,
-        "pausada": 12,
+        "naoIniciada": 72,
+        "emProgresso": 8,
+        "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 92
+        "(sem equipe)": 91
       },
       "oss": [
         {
@@ -9872,24 +9871,6 @@
           "atrasada": true
         },
         {
-          "osId": "13029",
-          "ativo": "Inversor 1.8 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.8 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Gabriela Dias",
-          "supervisor": "Luiz  Silva",
-          "status": "pausado",
-          "tarefa": "Coletar log de histórico dos inversores",
-          "criticidade": "",
-          "dataProgramada": "2026-09-09",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "2026-09-10",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "atrasada": true
-        },
-        {
           "osId": "13322",
           "ativo": "Tracker 18.100 Axial Tracker 1VTwin    { THPN-EBG100-ETKR18.100 }",
           "equipe": "",
@@ -10017,14 +9998,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 32.100] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-09-10",
           "dataCriacao": "2026-09-09",
-          "dataInicial": "",
+          "dataInicial": "2026-09-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 120.0,
           "atrasada": true
         },
         {
@@ -10728,6 +10710,25 @@
           "dataFinal": "2026-09-11",
           "linkFracttal": "",
           "horasAteAbrir": 432.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "13029",
+          "ativo": "Inversor 1.8 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.8 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Luiz  Silva",
+          "status": "Finalizados",
+          "tarefa": "Coletar log de histórico dos inversores",
+          "criticidade": "",
+          "dataProgramada": "2026-09-09",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-10",
+          "dataFinal": "2026-09-10",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -13373,25 +13374,6 @@
           "atrasada": false
         },
         {
-          "osId": "9774",
-          "ativo": "Inversor 1.10 Sungrow     { MAB100-INVR1.10 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "James Chaves ",
-          "status": "Finalizados",
-          "tarefa": "[Marabá 1][Inversor 1.10] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-20",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "2026-07-24",
-          "dataFinal": "2026-07-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9099",
           "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID1 }",
           "equipe": "",
@@ -13449,7 +13431,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 591
+      "historicoTotal": 592
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15809,15 +15791,14 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Raphael Vitoriano ",
       "supervisor": "Luiz  Silva",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Inversor 5.8] - Religamento do Inversor 5.8",
       "criticidade": "",
       "dataProgramada": "2026-09-14",
       "dataCriacao": "2026-09-14",
-      "dataInicial": "2026-09-14",
+      "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16546,14 +16527,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 32.100] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-09-10",
       "dataCriacao": "2026-09-09",
-      "dataInicial": "",
+      "dataInicial": "2026-09-14",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0
     },
     {
       "osId": "13289",
@@ -17023,23 +17005,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "13029",
-      "ativo": "Inversor 1.8 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.8 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Luiz  Silva",
-      "status": "pausado",
-      "tarefa": "Coletar log de histórico dos inversores",
-      "criticidade": "",
-      "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-04",
-      "dataInicial": "2026-09-10",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
     },
     {
       "osId": "13013",
@@ -19280,6 +19245,25 @@
       "atrasada": false
     },
     {
+      "osId": "13029",
+      "ativo": "Inversor 1.8 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.8 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Luiz  Silva",
+      "status": "Finalizados",
+      "tarefa": "Coletar log de histórico dos inversores",
+      "criticidade": "",
+      "dataProgramada": "2026-09-09",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "2026-09-10",
+      "dataFinal": "2026-09-10",
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13004",
       "ativo": "Transformador 9      { THPN-ORB100-TRFR9 }",
       "equipe": "",
@@ -19314,25 +19298,6 @@
       "dataFinal": "2026-09-09",
       "linkFracttal": "",
       "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "12983",
-      "ativo": "Cabine 1  Poconé  Mato Grosso Brasil { PCN100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Adriano  Moraes",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-09-08",
-      "dataCriacao": "2026-09-04",
-      "dataInicial": "2026-09-10",
-      "dataFinal": "2026-09-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -22154,7 +22119,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2896,
+  "historicoTotal": 2897,
   "totalGeral": 6179,
   "verificacao": {
     "total": 0,
