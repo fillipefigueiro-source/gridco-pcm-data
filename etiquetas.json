@@ -1,31 +1,26 @@
 {
-  "geradoEm": "2026-09-13T22:19:00Z",
+  "geradoEm": "2026-09-14T00:21:10Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
-  "semana": "2026-09-07 .. 2026-09-13",
+  "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4356,
-        "emAberto": 34,
-        "atrasadas": 26,
-        "concluidas30d": 698,
-        "concluidas7d": 191,
-        "naSemanaCorrente": 175
+        "total": 4357,
+        "emAberto": 35,
+        "atrasadas": 32,
+        "concluidas30d": 681,
+        "concluidas7d": 170,
+        "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 16.23,
-        "label": "16h 14min",
-        "amostra": 698
+        "horas": 16.42,
+        "label": "16h 25min",
+        "amostra": 681
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W34",
-          "criadas": 153,
-          "finalizadas": 151
-        },
         {
           "semana": "W35",
           "criadas": 140,
@@ -38,16 +33,21 @@
         },
         {
           "semana": "W37",
-          "criadas": 173,
+          "criadas": 174,
           "finalizadas": 170
+        },
+        {
+          "semana": "W38",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4356,
-            "emAberto": 34
+            "total": 4357,
+            "emAberto": 35
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 34,
-      "atrasadas": 26,
+      "total": 35,
+      "atrasadas": 32,
       "porStatus": {
-        "naoIniciada": 30,
+        "naoIniciada": 31,
         "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 34
+        "(sem equipe)": 35
       },
       "oss": [
         {
@@ -562,6 +562,24 @@
           "atrasada": true
         },
         {
+          "osId": "13553",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Athon - Capitão Poço 1 - PA] - Religamento do Athon - Capitão Poço 1 - PA",
+          "criticidade": "",
+          "dataProgramada": "2026-09-13",
+          "dataCriacao": "2026-09-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "13552",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -577,7 +595,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "13538",
@@ -595,7 +613,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "13536",
@@ -614,7 +632,7 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "13534",
@@ -632,7 +650,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "13527",
@@ -650,7 +668,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "12906",
@@ -3709,12 +3727,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1834,
+      "historicoTotal": 1815,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3600,
+        "local": 3601,
         "remotoEmAberto": 10,
-        "localEmAberto": 24,
+        "localEmAberto": 25,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -3939,21 +3957,16 @@
         "total": 788,
         "emAberto": 88,
         "atrasadas": 57,
-        "concluidas30d": 168,
+        "concluidas30d": 164,
         "concluidas7d": 36,
-        "naSemanaCorrente": 57
+        "naSemanaCorrente": 28
       },
       "mttr": {
-        "horas": 323.86,
-        "label": "13d 11h",
-        "amostra": 168
+        "horas": 317.27,
+        "label": "13d 5h",
+        "amostra": 164
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W34",
-          "criadas": 11,
-          "finalizadas": 20
-        },
         {
           "semana": "W35",
           "criadas": 72,
@@ -3968,6 +3981,11 @@
           "semana": "W37",
           "criadas": 20,
           "finalizadas": 36
+        },
+        {
+          "semana": "W38",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -8375,7 +8393,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 354
+      "historicoTotal": 350
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8385,21 +8403,16 @@
         "total": 152,
         "emAberto": 9,
         "atrasadas": 9,
-        "concluidas30d": 11,
+        "concluidas30d": 10,
         "concluidas7d": 2,
-        "naSemanaCorrente": 5
+        "naSemanaCorrente": 0
       },
       "mttr": {
-        "horas": 471.27,
-        "label": "19d 15h",
-        "amostra": 11
+        "horas": 513.6,
+        "label": "21d 9h",
+        "amostra": 10
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W34",
-          "criadas": 1,
-          "finalizadas": 2
-        },
         {
           "semana": "W35",
           "criadas": 5,
@@ -8414,6 +8427,11 @@
           "semana": "W37",
           "criadas": 5,
           "finalizadas": 2
+        },
+        {
+          "semana": "W38",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -9134,85 +9152,9 @@
           "horasAteAbrir": 168.0,
           "horasAteFechar": 1704.0,
           "atrasada": false
-        },
-        {
-          "osId": "7838",
-          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { STN100-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Juliana Cândido ",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Finalizada",
-          "tarefa": "Inversor 06 - Substituição do Inversor em garantia",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "2026-06-15",
-          "dataInicial": "2026-06-15",
-          "dataFinal": "2026-06-15",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "7752",
-          "ativo": "Inversor 1.7 Huawei     { TIM100-INVR1.7 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "Abertura de chamado para garantia [Testes em campo Inversor 1.7]",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "2026-06-12",
-          "dataInicial": "2026-06-12",
-          "dataFinal": "2026-06-15",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 72.0,
-          "atrasada": false
-        },
-        {
-          "osId": "7751",
-          "ativo": "Inversor 1.1 Huawei     { TIM200-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "Abertura de chamado para garantia [Testes em campo Inversor 1.1]",
-          "criticidade": "",
-          "dataProgramada": "2026-06-15",
-          "dataCriacao": "2026-06-12",
-          "dataInicial": "2026-06-15",
-          "dataFinal": "2026-06-15",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "7520",
-          "ativo": "Athon - Matões  2 - MA Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { ATHN-MTS200 }",
-          "equipe": "",
-          "responsavel": "Francisco  Santos",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Francisco  Santos",
-          "status": "Finalizada",
-          "tarefa": "Abertura de chamado para garantia [Levantamento de Informações]",
-          "criticidade": "",
-          "dataProgramada": "2026-06-11",
-          "dataCriacao": "2026-06-08",
-          "dataInicial": "2026-06-15",
-          "dataFinal": "2026-06-15",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 31
+      "historicoTotal": 27
     },
     "performance": {
       "label": "Performance",
@@ -9222,21 +9164,16 @@
         "total": 725,
         "emAberto": 86,
         "atrasadas": 70,
-        "concluidas30d": 234,
+        "concluidas30d": 225,
         "concluidas7d": 29,
-        "naSemanaCorrente": 36
+        "naSemanaCorrente": 16
       },
       "mttr": {
-        "horas": 251.79,
-        "label": "10d 11h",
-        "amostra": 234
+        "horas": 259.2,
+        "label": "10d 19h",
+        "amostra": 225
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W34",
-          "criadas": 89,
-          "finalizadas": 50
-        },
         {
           "semana": "W35",
           "criadas": 63,
@@ -9251,6 +9188,11 @@
           "semana": "W37",
           "criadas": 44,
           "finalizadas": 29
+        },
+        {
+          "semana": "W38",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -13636,21 +13578,16 @@
         "total": 133,
         "emAberto": 13,
         "atrasadas": 12,
-        "concluidas30d": 25,
+        "concluidas30d": 22,
         "concluidas7d": 4,
-        "naSemanaCorrente": 6
+        "naSemanaCorrente": 1
       },
       "mttr": {
-        "horas": 476.16,
-        "label": "19d 20h",
-        "amostra": 25
+        "horas": 502.91,
+        "label": "20d 22h",
+        "amostra": 22
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W34",
-          "criadas": 8,
-          "finalizadas": 6
-        },
         {
           "semana": "W35",
           "criadas": 3,
@@ -13665,6 +13602,11 @@
           "semana": "W37",
           "criadas": 5,
           "finalizadas": 4
+        },
+        {
+          "semana": "W38",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -15634,6 +15576,23 @@
     }
   },
   "ossPublicas": [
+    {
+      "osId": "13553",
+      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Athon - Capitão Poço 1 - PA] - Religamento do Athon - Capitão Poço 1 - PA",
+      "criticidade": "",
+      "dataProgramada": "2026-09-13",
+      "dataCriacao": "2026-09-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
     {
       "osId": "13552",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -22324,8 +22283,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2895,
-  "totalGeral": 6154,
+  "historicoTotal": 2868,
+  "totalGeral": 6155,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
