@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-14T13:22:02Z",
+  "geradoEm": "2026-09-14T13:33:25Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 33,
       "atrasadas": 27,
       "porStatus": {
-        "naoIniciada": 26,
-        "emProgresso": 5,
+        "naoIniciada": 25,
+        "emProgresso": 6,
         "pausada": 2,
         "verificacao": 0
       },
@@ -497,14 +497,15 @@
           "responsavel": "Matheus Gois ",
           "criadoPor": "LuelySantos",
           "supervisor": "Matheus Gois ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-APR200-INVR1.8] - Religamento do THPN-APR200-INVR1.8",
           "criticidade": "",
           "dataProgramada": "2026-09-13",
           "dataCriacao": "2026-09-14",
-          "dataInicial": "",
+          "dataInicial": "2026-09-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -9093,17 +9094,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 732,
+        "total": 733,
         "emAberto": 91,
         "atrasadas": 69,
-        "concluidas30d": 227,
-        "concluidas7d": 31,
-        "naSemanaCorrente": 23
+        "concluidas30d": 228,
+        "concluidas7d": 32,
+        "naSemanaCorrente": 24
       },
       "mttr": {
-        "horas": 258.61,
-        "label": "10d 18h",
-        "amostra": 227
+        "horas": 257.79,
+        "label": "10d 17h",
+        "amostra": 228
       },
       "tendencia4Semanas": [
         {
@@ -9123,15 +9124,15 @@
         },
         {
           "semana": "W38",
-          "criadas": 7,
-          "finalizadas": 2
+          "criadas": 8,
+          "finalizadas": 3
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 732,
+            "total": 733,
             "emAberto": 91
           }
         ],
@@ -10359,21 +10360,20 @@
           "atrasada": true
         },
         {
-          "osId": "13482",
-          "ativo": "Inversor 1.8 Sungrow     { ALT100-INVR1.8 }",
+          "osId": "13578",
+          "ativo": "Tracker 10.100 STI STI-H250 - 2x(1Px56)    { BRS100-ETKR10.100 }",
           "equipe": "",
           "responsavel": "Anderson  Parente",
-          "criadoPor": "Gabriela Dias ",
+          "criadoPor": "Davi Damasceno",
           "supervisor": "Anderson  Parente",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.8] - Inspeção Geral do Inversor",
+          "status": "Não Iniciada",
+          "tarefa": "Injetc da NCU - Barretos",
           "criticidade": "",
           "dataProgramada": "2026-09-14",
-          "dataCriacao": "2026-09-11",
-          "dataInicial": "2026-09-14",
+          "dataCriacao": "2026-09-14",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 72.0,
           "atrasada": false
         },
         {
@@ -10505,14 +10505,15 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Levi Maia ",
           "supervisor": "Anderson  Parente",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 5.6] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-09-15",
           "dataCriacao": "2026-09-14",
-          "dataInicial": "",
+          "dataInicial": "2026-09-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -10738,6 +10739,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13482",
+          "ativo": "Inversor 1.8 Sungrow     { ALT100-INVR1.8 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.8] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-09-14",
+          "dataCriacao": "2026-09-11",
+          "dataInicial": "2026-09-14",
+          "dataFinal": "2026-09-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13305",
           "ativo": "Inversor 1.9 Huawei SUN2000-215KTL-H0    { STI100-INVR1.9 }",
@@ -11374,25 +11394,6 @@
           "supervisor": "Ailton Leal ",
           "status": "Finalizados",
           "tarefa": "[Inversor 1.4][Demerval Lobão 01]",
-          "criticidade": "",
-          "dataProgramada": "2026-07-10",
-          "dataCriacao": "2026-07-10",
-          "dataInicial": "2026-09-04",
-          "dataFinal": "2026-09-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 1344.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9271",
-          "ativo": "Inversor 2.3 Huawei SUN2000-215KTL-H3    { DML100-INVR2.3 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Ailton Leal ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 2.3][Demerval Lobão 02]",
           "criticidade": "",
           "dataProgramada": "2026-07-10",
           "dataCriacao": "2026-07-10",
@@ -13589,7 +13590,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 589
+      "historicoTotal": 590
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15598,6 +15599,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "13578",
+      "ativo": "Tracker 10.100 STI STI-H250 - 2x(1Px56)    { BRS100-ETKR10.100 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Anderson  Parente",
+      "status": "Não Iniciada",
+      "tarefa": "Injetc da NCU - Barretos",
+      "criticidade": "",
+      "dataProgramada": "2026-09-14",
+      "dataCriacao": "2026-09-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "13575",
       "ativo": "Inversor 1.3 Sungrow     { ALT100-INVR1.3 }",
       "equipe": "",
@@ -15652,14 +15669,15 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Levi Maia ",
       "supervisor": "Anderson  Parente",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 5.6] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-09-15",
       "dataCriacao": "2026-09-14",
-      "dataInicial": "",
+      "dataInicial": "2026-09-14",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "13571",
@@ -15734,14 +15752,15 @@
       "responsavel": "Matheus Gois ",
       "criadoPor": "LuelySantos",
       "supervisor": "Matheus Gois ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-APR200-INVR1.8] - Religamento do THPN-APR200-INVR1.8",
       "criticidade": "",
       "dataProgramada": "2026-09-13",
       "dataCriacao": "2026-09-14",
-      "dataInicial": "",
+      "dataInicial": "2026-09-14",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15931,23 +15950,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "modalidade": "local"
-    },
-    {
-      "osId": "13482",
-      "ativo": "Inversor 1.8 Sungrow     { ALT100-INVR1.8 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Anderson  Parente",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.8] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-09-14",
-      "dataCriacao": "2026-09-11",
-      "dataInicial": "2026-09-14",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0
     },
     {
       "osId": "13480",
@@ -20507,6 +20509,25 @@
       "atrasada": false
     },
     {
+      "osId": "13482",
+      "ativo": "Inversor 1.8 Sungrow     { ALT100-INVR1.8 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Anderson  Parente",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.8] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-09-14",
+      "dataCriacao": "2026-09-11",
+      "dataInicial": "2026-09-14",
+      "dataFinal": "2026-09-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13465",
       "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
       "equipe": "",
@@ -22303,29 +22324,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "12978",
-      "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-SON200-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Felipe Xavier ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Felipe Xavier ",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-04",
-      "dataInicial": "2026-09-04",
-      "dataFinal": "2026-09-04",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2882,
-  "totalGeral": 6170,
+  "historicoTotal": 2883,
+  "totalGeral": 6171,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
