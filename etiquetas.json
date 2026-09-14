@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-14T16:25:12Z",
+  "geradoEm": "2026-09-14T16:37:31Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -9077,8 +9077,8 @@
       "atrasadas": 68,
       "porStatus": {
         "naoIniciada": 77,
-        "emProgresso": 7,
-        "pausada": 10,
+        "emProgresso": 6,
+        "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
@@ -10002,7 +10002,7 @@
           "responsavel": "Lucas Alberto Freitas de Faria ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Tracker 18.100] - Verificar operação dos trackers no inversor 2.3",
           "criticidade": "",
           "dataProgramada": "2026-09-10",
@@ -13560,12 +13560,12 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 133,
-        "emAberto": 13,
+        "total": 135,
+        "emAberto": 15,
         "atrasadas": 12,
         "concluidas30d": 22,
         "concluidas7d": 4,
-        "naSemanaCorrente": 1
+        "naSemanaCorrente": 3
       },
       "mttr": {
         "horas": 502.91,
@@ -13590,7 +13590,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 0,
+          "criadas": 2,
           "finalizadas": 0
         }
       ],
@@ -13598,8 +13598,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 133,
-            "emAberto": 13
+            "total": 135,
+            "emAberto": 15
           }
         ],
         "responsaveis": [
@@ -13619,27 +13619,27 @@
             "emAberto": 0
           },
           {
+            "nome": "Aury  Albuquerque",
+            "total": 7,
+            "emAberto": 6
+          },
+          {
             "nome": "Renato  Julien",
             "total": 7,
             "emAberto": 0
-          },
-          {
-            "nome": "Aury  Albuquerque",
-            "total": 6,
-            "emAberto": 5
           }
         ]
       },
-      "total": 13,
+      "total": 15,
       "atrasadas": 12,
       "porStatus": {
-        "naoIniciada": 13,
+        "naoIniciada": 15,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 15
       },
       "oss": [
         {
@@ -13858,6 +13858,40 @@
           "criticidade": "",
           "dataProgramada": "2026-09-14",
           "dataCriacao": "2026-09-10",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "13589",
+          "ativo": "Estação Meteorológica  Santarém  Pará Brasil { STR100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Júlio Willers ",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Júlio Willers ",
+          "status": "Não Iniciada",
+          "tarefa": "[ETM] - Coleta de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-09-15",
+          "dataCriacao": "2026-09-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "13590",
+          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { SBT500-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Aury  Albuquerque",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Aury  Albuquerque",
+          "status": "Não Iniciada",
+          "tarefa": "Análise de Falha nos Inversores de São Bento V",
+          "criticidade": "",
+          "dataProgramada": "2026-09-16",
+          "dataCriacao": "2026-09-14",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -15562,6 +15596,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "13590",
+      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { SBT500-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Aury  Albuquerque",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Aury  Albuquerque",
+      "status": "Não Iniciada",
+      "tarefa": "Análise de Falha nos Inversores de São Bento V",
+      "criticidade": "",
+      "dataProgramada": "2026-09-16",
+      "dataCriacao": "2026-09-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "13589",
+      "ativo": "Estação Meteorológica  Santarém  Pará Brasil { STR100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "Júlio Willers ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Júlio Willers ",
+      "status": "Não Iniciada",
+      "tarefa": "[ETM] - Coleta de dados",
+      "criticidade": "",
+      "dataProgramada": "2026-09-15",
+      "dataCriacao": "2026-09-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "13588",
       "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
       "equipe": "",
@@ -16373,7 +16439,7 @@
       "responsavel": "Lucas Alberto Freitas de Faria ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Tracker 18.100] - Verificar operação dos trackers no inversor 2.3",
       "criticidade": "",
       "dataProgramada": "2026-09-10",
@@ -22256,7 +22322,7 @@
     }
   ],
   "historicoTotal": 2893,
-  "totalGeral": 6179,
+  "totalGeral": 6181,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
