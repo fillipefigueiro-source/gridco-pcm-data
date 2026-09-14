@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-14T16:01:11Z",
+  "geradoEm": "2026-09-14T16:13:11Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4368,
-        "emAberto": 29,
+        "total": 4369,
+        "emAberto": 30,
         "atrasadas": 21,
         "concluidas30d": 698,
         "concluidas7d": 187,
-        "naSemanaCorrente": 12
+        "naSemanaCorrente": 13
       },
       "mttr": {
         "horas": 17.2,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 11,
+          "criadas": 12,
           "finalizadas": 16
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4368,
-            "emAberto": 29
+            "total": 4369,
+            "emAberto": 30
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 29,
+      "total": 30,
       "atrasadas": 21,
       "porStatus": {
-        "naoIniciada": 24,
+        "naoIniciada": 25,
         "emProgresso": 2,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 29
+        "(sem equipe)": 30
       },
       "oss": [
         {
@@ -470,6 +470,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "13588",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-14",
+          "dataCriacao": "2026-09-14",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "13587",
@@ -3623,9 +3641,9 @@
       "historicoTotal": 1832,
       "subClassificacao": {
         "remoto": 756,
-        "local": 3612,
+        "local": 3613,
         "remotoEmAberto": 10,
-        "localEmAberto": 19,
+        "localEmAberto": 20,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -9075,8 +9093,8 @@
       "total": 94,
       "atrasadas": 68,
       "porStatus": {
-        "naoIniciada": 78,
-        "emProgresso": 6,
+        "naoIniciada": 77,
+        "emProgresso": 7,
         "pausada": 10,
         "verificacao": 0
       },
@@ -10001,14 +10019,15 @@
           "responsavel": "Lucas Alberto Freitas de Faria ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 18.100] - Verificar operação dos trackers no inversor 2.3",
           "criticidade": "",
           "dataProgramada": "2026-09-10",
           "dataCriacao": "2026-09-09",
-          "dataInicial": "",
+          "dataInicial": "2026-09-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 120.0,
           "atrasada": true
         },
         {
@@ -10701,25 +10720,6 @@
       ],
       "ossHistorico": [
         {
-          "osId": "13040",
-          "ativo": "Inversor 1.9 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.9 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "Gabriela Dias",
-          "supervisor": "Marcos Duarte ",
-          "status": "Finalizados",
-          "tarefa": "Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-08",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "2026-09-14",
-          "dataFinal": "2026-09-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13482",
           "ativo": "Inversor 1.8 Sungrow     { ALT100-INVR1.8 }",
           "equipe": "",
@@ -10754,6 +10754,25 @@
           "dataFinal": "2026-09-14",
           "linkFracttal": "",
           "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "13040",
+          "ativo": "Inversor 1.9 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.9 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Marcos Duarte ",
+          "status": "Finalizados",
+          "tarefa": "Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-08",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-14",
+          "dataFinal": "2026-09-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 240.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -15560,6 +15579,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13588",
+      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-14",
+      "dataCriacao": "2026-09-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13587",
       "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
       "equipe": "",
@@ -16371,14 +16407,15 @@
       "responsavel": "Lucas Alberto Freitas de Faria ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 18.100] - Verificar operação dos trackers no inversor 2.3",
       "criticidade": "",
       "dataProgramada": "2026-09-10",
       "dataCriacao": "2026-09-09",
-      "dataInicial": "",
+      "dataInicial": "2026-09-14",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0
     },
     {
       "osId": "13321",
@@ -19360,25 +19397,6 @@
       "atrasada": false
     },
     {
-      "osId": "13040",
-      "ativo": "Inversor 1.9 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.9 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Marcos Duarte ",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-08",
-      "dataCriacao": "2026-09-04",
-      "dataInicial": "2026-09-14",
-      "dataFinal": "2026-09-14",
-      "linkFracttal": "",
-      "horasAteAbrir": 240.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "13039",
       "ativo": "Transformador 1 WEG     { MRO100-TRFR1 }",
       "equipe": "",
@@ -22231,6 +22249,25 @@
       "atrasada": false
     },
     {
+      "osId": "13040",
+      "ativo": "Inversor 1.9 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.9 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Marcos Duarte ",
+      "status": "Finalizados",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-09-08",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "2026-09-14",
+      "dataFinal": "2026-09-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 240.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13032",
       "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
       "equipe": "",
@@ -22252,7 +22289,7 @@
     }
   ],
   "historicoTotal": 2892,
-  "totalGeral": 6178,
+  "totalGeral": 6179,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
