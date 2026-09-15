@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-15T18:30:58Z",
+  "geradoEm": "2026-09-15T18:42:45Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4388,
-        "emAberto": 21,
+        "total": 4389,
+        "emAberto": 22,
         "atrasadas": 14,
         "concluidas30d": 714,
         "concluidas7d": 196,
-        "naSemanaCorrente": 31
+        "naSemanaCorrente": 32
       },
       "mttr": {
         "horas": 17.59,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 31,
+          "criadas": 32,
           "finalizadas": 44
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4388,
-            "emAberto": 21
+            "total": 4389,
+            "emAberto": 22
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 21,
+      "total": 22,
       "atrasadas": 14,
       "porStatus": {
         "naoIniciada": 16,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 21
+        "(sem equipe)": 22
       },
       "oss": [
         {
@@ -347,6 +347,24 @@
           "atrasada": true
         },
         {
+          "osId": "13649",
+          "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
+          "equipe": "",
+          "responsavel": "Hélio Silva ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Hélio Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-STI100] - Religamento do THPN-STI100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-15",
+          "dataCriacao": "2026-09-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "13648",
           "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
           "equipe": "",
@@ -371,14 +389,15 @@
           "responsavel": "Andrick Gouveia ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Andrick Gouveia ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-IBT100] - Religamento do THPN-IBT100",
           "criticidade": "",
           "dataProgramada": "2026-09-15",
           "dataCriacao": "2026-09-15",
-          "dataInicial": "",
+          "dataInicial": "2026-09-15",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3479,9 +3498,9 @@
       "historicoTotal": 1836,
       "subClassificacao": {
         "remoto": 757,
-        "local": 3631,
+        "local": 3632,
         "remotoEmAberto": 11,
-        "localEmAberto": 10,
+        "localEmAberto": 11,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -5208,25 +5227,6 @@
           "atrasada": false
         },
         {
-          "osId": "12643",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-SBT500-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Adão Neto ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Adão Neto ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-09-02",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-14",
-          "dataFinal": "2026-09-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 312.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "12431",
           "ativo": "Transformador 1 WEG     { THPN-BJD100-TRFR1 }",
           "equipe": "",
@@ -5261,6 +5261,25 @@
           "dataFinal": "2026-09-14",
           "linkFracttal": "",
           "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12643",
+          "ativo": "Preventiva Grupo de Inversores      { THPN-SBT500-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Adão Neto ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Adão Neto ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-09-02",
+          "dataCriacao": "2026-09-01",
+          "dataInicial": "2026-09-14",
+          "dataFinal": "2026-09-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 312.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -15206,6 +15225,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13649",
+      "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
+      "equipe": "",
+      "responsavel": "Hélio Silva ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Hélio Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-STI100] - Religamento do THPN-STI100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-15",
+      "dataCriacao": "2026-09-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13648",
       "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
       "equipe": "",
@@ -15262,14 +15298,15 @@
       "responsavel": "Andrick Gouveia ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Andrick Gouveia ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-IBT100] - Religamento do THPN-IBT100",
       "criticidade": "",
       "dataProgramada": "2026-09-15",
       "dataCriacao": "2026-09-15",
-      "dataInicial": "",
+      "dataInicial": "2026-09-15",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -18832,25 +18869,6 @@
       "atrasada": false
     },
     {
-      "osId": "12643",
-      "ativo": "Preventiva Grupo de Inversores      { THPN-SBT500-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Adão Neto ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Adão Neto ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-09-02",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "2026-09-14",
-      "dataFinal": "2026-09-14",
-      "linkFracttal": "",
-      "horasAteAbrir": 312.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "12573",
       "ativo": "Inversor 1.6 Sungrow SG125HV    { THPN-PHS400-INVR1.6 }",
       "equipe": "",
@@ -21430,10 +21448,29 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
+    },
+    {
+      "osId": "13205",
+      "ativo": "Tracker 25.102 Convert Italia SpA     { MTS200-ETKR25.102 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Francisco  Santos",
+      "status": "Finalizados",
+      "tarefa": "[Matões 200] - Tracker 25.3 - Verificação e Acionamento de Garantia",
+      "criticidade": "",
+      "dataProgramada": "2026-09-08",
+      "dataCriacao": "2026-09-08",
+      "dataInicial": "2026-09-08",
+      "dataFinal": "2026-09-08",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
     }
   ],
   "historicoTotal": 2920,
-  "totalGeral": 6205,
+  "totalGeral": 6206,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
