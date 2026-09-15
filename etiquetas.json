@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-15T12:16:14Z",
+  "geradoEm": "2026-09-15T12:31:08Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -3848,9 +3848,9 @@
       "total": 83,
       "atrasadas": 59,
       "porStatus": {
-        "naoIniciada": 77,
+        "naoIniciada": 78,
         "emProgresso": 0,
-        "pausada": 6,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4053,15 +4053,14 @@
           "responsavel": "Júlio Willers ",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Júlio Willers ",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - MPA - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-08-17",
           "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-08-31",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 840.0,
           "atrasada": true
         },
         {
@@ -8931,8 +8930,8 @@
       "total": 87,
       "atrasadas": 65,
       "porStatus": {
-        "naoIniciada": 69,
-        "emProgresso": 2,
+        "naoIniciada": 68,
+        "emProgresso": 3,
         "pausada": 16,
         "verificacao": 0
       },
@@ -10256,14 +10255,15 @@
           "responsavel": "Francisco  Santos",
           "criadoPor": "Levi Maia ",
           "supervisor": "Francisco  Santos",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 6.3] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-09-15",
           "dataCriacao": "2026-09-14",
-          "dataInicial": "",
+          "dataInicial": "2026-09-15",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": false
         },
         {
@@ -13298,16 +13298,16 @@
       "cor": "#3b82f6",
       "kpis": {
         "total": 139,
-        "emAberto": 13,
+        "emAberto": 12,
         "atrasadas": 11,
-        "concluidas30d": 28,
-        "concluidas7d": 9,
+        "concluidas30d": 29,
+        "concluidas7d": 10,
         "naSemanaCorrente": 7
       },
       "mttr": {
-        "horas": 426.86,
-        "label": "17d 18h",
-        "amostra": 28
+        "horas": 412.97,
+        "label": "17d 4h",
+        "amostra": 29
       },
       "tendencia4Semanas": [
         {
@@ -13328,7 +13328,7 @@
         {
           "semana": "W38",
           "criadas": 6,
-          "finalizadas": 6
+          "finalizadas": 7
         }
       ],
       "topOfensores": {
@@ -13336,7 +13336,7 @@
           {
             "nome": "(sem equipe)",
             "total": 139,
-            "emAberto": 13
+            "emAberto": 12
           }
         ],
         "responsaveis": [
@@ -13367,16 +13367,16 @@
           }
         ]
       },
-      "total": 13,
+      "total": 12,
       "atrasadas": 11,
       "porStatus": {
-        "naoIniciada": 13,
+        "naoIniciada": 12,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 12
       },
       "oss": [
         {
@@ -13567,23 +13567,6 @@
           "atrasada": true
         },
         {
-          "osId": "13589",
-          "ativo": "Estação Meteorológica  Santarém  Pará Brasil { STR100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Júlio Willers ",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Júlio Willers ",
-          "status": "Não Iniciada",
-          "tarefa": "[ETM] - Coleta de dados",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-14",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "13590",
           "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { SBT500-INVR1.1 }",
           "equipe": "",
@@ -13602,6 +13585,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13589",
+          "ativo": "Estação Meteorológica  Santarém  Pará Brasil { STR100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Júlio Willers ",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Júlio Willers ",
+          "status": "Finalizados",
+          "tarefa": "[ETM] - Coleta de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-09-15",
+          "dataCriacao": "2026-09-14",
+          "dataInicial": "2026-09-15",
+          "dataFinal": "2026-09-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "12245",
           "ativo": "Estação Meteorológica Estrada da Areia Branca, s/n Jacundá  Pará Brasil { JCD100-ESTM1 }",
@@ -15408,7 +15410,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 95
+      "historicoTotal": 96
     }
   },
   "ossPublicas": [
@@ -15555,22 +15557,6 @@
       "tarefa": "Análise de Falha nos Inversores de São Bento V",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
-      "dataCriacao": "2026-09-14",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "13589",
-      "ativo": "Estação Meteorológica  Santarém  Pará Brasil { STR100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Júlio Willers ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Júlio Willers ",
-      "status": "Não Iniciada",
-      "tarefa": "[ETM] - Coleta de dados",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
       "dataCriacao": "2026-09-14",
       "dataInicial": "",
       "dataFinal": "",
@@ -15778,14 +15764,15 @@
       "responsavel": "Francisco  Santos",
       "criadoPor": "Levi Maia ",
       "supervisor": "Francisco  Santos",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 6.3] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-09-15",
       "dataCriacao": "2026-09-14",
-      "dataInicial": "",
+      "dataInicial": "2026-09-15",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "13563",
@@ -18587,15 +18574,14 @@
       "responsavel": "Júlio Willers ",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Júlio Willers ",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - MPA - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-08-17",
       "dataCriacao": "2026-07-27",
-      "dataInicial": "2026-08-31",
+      "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 840.0
+      "linkFracttal": ""
     },
     {
       "osId": "10157",
@@ -19612,6 +19598,25 @@
       "dataFinal": "2026-09-14",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "13589",
+      "ativo": "Estação Meteorológica  Santarém  Pará Brasil { STR100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "Júlio Willers ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Júlio Willers ",
+      "status": "Finalizados",
+      "tarefa": "[ETM] - Coleta de dados",
+      "criticidade": "",
+      "dataProgramada": "2026-09-15",
+      "dataCriacao": "2026-09-14",
+      "dataInicial": "2026-09-15",
+      "dataFinal": "2026-09-15",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -21850,29 +21855,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13092",
-      "ativo": "Utragaz - Ibirapuã 2 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI200 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Thiago Morais ",
-      "status": "Finalizados",
-      "tarefa": "[ULTG-IBI200] - Religamento do ULTG-IBI200",
-      "criticidade": "",
-      "dataProgramada": "2026-09-05",
-      "dataCriacao": "2026-09-05",
-      "dataInicial": "2026-09-08",
-      "dataFinal": "2026-09-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2897,
+  "historicoTotal": 2898,
   "totalGeral": 6196,
   "verificacao": {
     "total": 0,
