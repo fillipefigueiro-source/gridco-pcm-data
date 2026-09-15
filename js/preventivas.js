@@ -70,8 +70,7 @@ async function gpvMpCarregar() {
     const dados = MP || await mpDecifrar(await mpCarregarPack(), senha);
     const itens = dados.manut || dados.itens || [];
     const mapa = new Map();
-    itens.forEach(it => {
-      const k = gpvMpNorm(it.usina || it.usina_curta);
+    const grava = (k, it) => {
       if (!k) return;
       const prev = mapa.get(k) || { crit: '', obs: '' };
       // criticidade: prioriza a linha da MPA; senão a primeira preenchida
@@ -84,9 +83,20 @@ async function gpvMpCarregar() {
         if (!prev.obs || km >= kp) prev.obs = o;
       }
       mapa.set(k, prev);
+    };
+    itens.forEach(it => {
+      // indexa pelas duas grafias: "Athon - Capitão Poço 1" e "Capitão Poço 1"
+      grava(gpvMpNorm(it.usina), it);
+      const curta = gpvMpNorm((it.cliente ? it.cliente + ' ' : '') + (it.usina_curta || ''));
+      if (curta && curta !== gpvMpNorm(it.usina)) grava(curta, it);
     });
     GPV_MP.mapa = mapa; GPV_MP.estado = 'ok';
-  } catch (e) { GPV_MP.estado = 'erro'; }
+    try { console.info('[gpv] mpas: ' + itens.length + ' itens, ' + mapa.size + ' usinas indexadas'); } catch (e) {}
+  } catch (e) {
+    GPV_MP.estado = 'erro';
+    GPV_MP.err = String((e && e.message) || e);
+    try { console.warn('[gpv] mpas indisponível: ' + GPV_MP.err); } catch (x) {}
+  }
   gpvRender();
 }
 function gpvMpCls(c) {
@@ -98,10 +108,17 @@ function gpvMpCls(c) {
 }
 function gpvMpTd(nomeUsina) {
   if (GPV_MP.estado === 'carregando') return '<td class="gpv-obs">…</td>';
-  if (GPV_MP.estado !== 'ok') return '<td class="gpv-obs">—</td>';
+  if (GPV_MP.estado !== 'ok')
+    return '<td class="gpv-obs" title="mpas.json não decifrado com a senha desta sessão — '
+      + 'abra a aba Gestão MPAS (senha de admin) e volte aqui">🔒</td>';
   const k = gpvMpNorm(nomeUsina);
   let hit = GPV_MP.mapa.get(k);
-  if (!hit) { for (const [kk, v] of GPV_MP.mapa) { if (kk.startsWith(k) || k.startsWith(kk)) { hit = v; break; } } }
+  if (!hit) {
+    for (const [kk, v] of GPV_MP.mapa) {
+      if (kk.startsWith(k) || k.startsWith(kk)
+          || (kk.length >= 8 && k.indexOf(kk) >= 0) || (k.length >= 8 && kk.indexOf(k) >= 0)) { hit = v; break; }
+    }
+  }
   if (!hit) return '<td class="gpv-obs">—</td>';
   const badge = hit.crit
     ? '<span class="gpv-crit ' + gpvMpCls(hit.crit) + '">' + gpEsc(hit.crit) + '</span>' : '';
@@ -281,7 +298,12 @@ function gpvRender() {
     + '<span class="gpv-ord">' + (GPV.ordem === id ? (GPV.desc ? '&#9660;' : '&#9650;') : '&#8597;') + '</span></th>';
 
   const mpAtivo = gpvMpAtivo();
-  if (mpAtivo) gpvMpCarregar();               // assíncrono; re-renderiza ao decifrar
+  if (mpAtivo) {
+    // se a aba Gestão MPAS abriu DEPOIS (MP em memória) e aqui tinha dado erro
+    // (ex.: senha de login ≠ senha do mpas.json), reconstrói direto do MP.
+    if (MP && GPV_MP.estado !== 'ok' && GPV_MP.estado !== 'carregando') GPV_MP.estado = 'nao';
+    gpvMpCarregar();                          // assíncrono; re-renderiza ao decifrar
+  }
 
   h += '<div class="gpv-rolo"><table class="gpv-tbl">'
     + '<colgroup><col style="width:300px">'
@@ -344,7 +366,9 @@ function gpvRender() {
     + '<span><i style="background:#fdf0d4"></i>40% a 99%</span>'
     + '<span><i style="background:#dcf2de"></i>100%</span>'
     + '<span><i style="background:#eef0f5"></i>sem preventiva no período</span>'
-    + (mpAtivo ? '<span><b>Criticidade / Observação</b> — Gerencial (aba MPAS), última entrada datada do log</span>' : '')
+    + (mpAtivo ? (GPV_MP.estado === 'erro'
+        ? '<span>🔒 <b>Criticidade / Observação</b> — a senha desta sessão não decifra o mpas.json; abra a aba Gestão MPAS uma vez e volte</span>'
+        : '<span><b>Criticidade / Observação</b> — Gerencial (aba MPAS), última entrada datada do log</span>') : '')
     + '<span class="gpv-fim">clique no cliente para abrir as usinas · no cabeçalho para ordenar · passe o mouse na célula para ver as OS</span>'
     + '</div></div>';
 
