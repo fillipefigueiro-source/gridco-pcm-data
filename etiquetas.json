@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-15T13:19:39Z",
+  "geradoEm": "2026-09-15T13:31:20Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4381,
-        "emAberto": 26,
+        "total": 4382,
+        "emAberto": 27,
         "atrasadas": 20,
         "concluidas30d": 702,
         "concluidas7d": 184,
-        "naSemanaCorrente": 24
+        "naSemanaCorrente": 25
       },
       "mttr": {
         "horas": 17.65,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 24,
+          "criadas": 25,
           "finalizadas": 32
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4381,
-            "emAberto": 26
+            "total": 4382,
+            "emAberto": 27
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 26,
+      "total": 27,
       "atrasadas": 20,
       "porStatus": {
         "naoIniciada": 21,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 26
+        "(sem equipe)": 27
       },
       "oss": [
         {
@@ -456,20 +456,39 @@
           "atrasada": true
         },
         {
-          "osId": "13627",
-          "ativo": "Inversor 1.5 Huawei SUN2000-330KTL-H1    { ADS100-INVR1.5 }",
+          "osId": "13630",
+          "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
           "equipe": "",
-          "responsavel": "Eduardo  Mendes",
+          "responsavel": "Valdir Silva ",
           "criadoPor": "CíceroWillian",
-          "supervisor": "Eduardo  Mendes",
+          "supervisor": "Valdir Silva ",
           "status": "Não Iniciada",
-          "tarefa": "[ADS100-INVR1.5] - Religamento do ADS100-INVR1.5",
+          "tarefa": "[THPN-SAP100] - Religamento do THPN-SAP100",
           "criticidade": "",
           "dataProgramada": "2026-09-15",
           "dataCriacao": "2026-09-15",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13627",
+          "ativo": "Inversor 1.5 Huawei SUN2000-330KTL-H1    { ADS100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Em progresso",
+          "tarefa": "[ADS100-INVR1.5] - Religamento do ADS100-INVR1.5",
+          "criticidade": "",
+          "dataProgramada": "2026-09-15",
+          "dataCriacao": "2026-09-15",
+          "dataInicial": "2026-09-15",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3569,9 +3588,9 @@
       "historicoTotal": 1824,
       "subClassificacao": {
         "remoto": 757,
-        "local": 3624,
+        "local": 3625,
         "remotoEmAberto": 11,
-        "localEmAberto": 15,
+        "localEmAberto": 16,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -15434,20 +15453,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "13627",
-      "ativo": "Inversor 1.5 Huawei SUN2000-330KTL-H1    { ADS100-INVR1.5 }",
+      "osId": "13630",
+      "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
       "equipe": "",
-      "responsavel": "Eduardo  Mendes",
+      "responsavel": "Valdir Silva ",
       "criadoPor": "CíceroWillian",
-      "supervisor": "Eduardo  Mendes",
+      "supervisor": "Valdir Silva ",
       "status": "Não Iniciada",
-      "tarefa": "[ADS100-INVR1.5] - Religamento do ADS100-INVR1.5",
+      "tarefa": "[THPN-SAP100] - Religamento do THPN-SAP100",
       "criticidade": "",
       "dataProgramada": "2026-09-15",
       "dataCriacao": "2026-09-15",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "13627",
+      "ativo": "Inversor 1.5 Huawei SUN2000-330KTL-H1    { ADS100-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Em progresso",
+      "tarefa": "[ADS100-INVR1.5] - Religamento do ADS100-INVR1.5",
+      "criticidade": "",
+      "dataProgramada": "2026-09-15",
+      "dataCriacao": "2026-09-15",
+      "dataInicial": "2026-09-15",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -21895,7 +21932,7 @@
     }
   ],
   "historicoTotal": 2898,
-  "totalGeral": 6197,
+  "totalGeral": 6198,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
