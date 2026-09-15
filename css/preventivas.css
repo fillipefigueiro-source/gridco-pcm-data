@@ -102,3 +102,16 @@ tr.gpv-total td.rotlin { background: #e4e7ee !important; z-index: 4 }
   .gpv-tbl colgroup col:first-child { width: 180px !important }
   .gpv-fim { display: none }
 }
+
+/* ── Criticidade / Observação (Gerencial, aba MPAS) — 15/09/2026 ─────────────
+   Coluna só existe p/ admin com o mpas.json decifrado (ver preventivas.js). */
+.gpv-obs-th { text-align: left !important }
+td.gpv-obs { text-align: left; font-family: inherit; font-weight: 400;
+  font-size: 11px; color: #504c63; white-space: nowrap; overflow: hidden;
+  text-overflow: ellipsis; max-width: 290px; cursor: help }
+.gpv-crit { display: inline-block; border-radius: 4px; padding: 1px 7px;
+  font-size: 10px; font-weight: 700; margin-right: 7px; vertical-align: middle }
+.gpv-crit.crit { background: #fbe0e0; color: #8f2323 }
+.gpv-crit.and  { background: #fdf0d4; color: #7d5106 }
+.gpv-crit.ok   { background: #dcf2de; color: #166030 }
+.gpv-obs-vazio { color: #b0aebe }

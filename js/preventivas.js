@@ -29,6 +29,88 @@
 let GPV = { dim: 'cli', col: 'sig', val: 'pct', mes: 'todos', busca: '',
             ordem: 'pend', desc: true, fechados: null, aberto: true };
 
+// ── Criticidade / Observação da Gerencial (aba MPAS) — 15/09/2026 ────────────
+// Coluna nova ao lado de Pendentes. A fonte é o mpas.json CIFRADO (o repo é
+// público): a coluna só aparece quando a sessão tem a senha de admin da aba
+// Gestão MPAS (sessionStorage 'gc_mp_k') e o pacote decifra. Cliente logado
+// nunca vê a coluna. Observação exibida = ENTRADA DATADA MAIS RECENTE do log
+// ("• dd/mm/aaaa - texto"), nunca a primeira linha — regra da Gerencial.
+let GPV_MP = { estado: 'nao', mapa: null };   // nao | carregando | ok | erro | sem-chave
+
+function gpvMpAtivo() {
+  if (MP) return true;
+  try { return !!sessionStorage.getItem('gc_mp_k'); } catch (e) { return false; }
+}
+function gpvMpNorm(s) {
+  return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[–—]/g, '-').toLowerCase()
+    .replace(/\s*-\s*[a-z]{2}\s*$/, '')      // corta o " - UF" do Fracttal
+    .replace(/(\d)00\b/g, '$1')              // Gerencial "Marabá 200" ~ Fracttal "Marabá 2"
+    .replace(/[^a-z0-9]+/g, ' ').trim();
+}
+const GPV_MP_DATA = /(\d{2})\/(\d{2})\/(\d{4})/;
+function gpvMpUltObs(txt) {
+  const t = String(txt || '').trim();
+  if (!t) return '';
+  const pedacos = t.split(/\n|(?=•)/).map(x => x.trim()).filter(Boolean);
+  let melhor = '', melhorK = '';
+  pedacos.forEach(p => {
+    const m = GPV_MP_DATA.exec(p);
+    const k = m ? m[3] + m[2] + m[1] : '';
+    if (!melhor || k >= melhorK) { melhorK = k; melhor = p; }
+  });
+  return melhor.replace(/^•\s*/, '');
+}
+async function gpvMpCarregar() {
+  if (GPV_MP.estado !== 'nao') return;
+  let senha = ''; try { senha = sessionStorage.getItem('gc_mp_k') || ''; } catch (e) {}
+  if (!senha && !MP) { GPV_MP.estado = 'sem-chave'; return; }
+  GPV_MP.estado = 'carregando';
+  try {
+    const dados = MP || await mpDecifrar(await mpCarregarPack(), senha);
+    const itens = dados.manut || dados.itens || [];
+    const mapa = new Map();
+    itens.forEach(it => {
+      const k = gpvMpNorm(it.usina || it.usina_curta);
+      if (!k) return;
+      const prev = mapa.get(k) || { crit: '', obs: '' };
+      // criticidade: prioriza a linha da MPA; senão a primeira preenchida
+      if (it.criticidade && (!prev.crit || String(it.tipo || '').toUpperCase().indexOf('MPA') >= 0))
+        prev.crit = it.criticidade;
+      const o = gpvMpUltObs(it.obs);
+      if (o) {   // entre MPA e MPS da mesma usina, fica a obs de data mais nova
+        const dm = GPV_MP_DATA.exec(o), dp = GPV_MP_DATA.exec(prev.obs || '');
+        const km = dm ? dm[3] + dm[2] + dm[1] : '', kp = dp ? dp[3] + dp[2] + dp[1] : '';
+        if (!prev.obs || km >= kp) prev.obs = o;
+      }
+      mapa.set(k, prev);
+    });
+    GPV_MP.mapa = mapa; GPV_MP.estado = 'ok';
+  } catch (e) { GPV_MP.estado = 'erro'; }
+  gpvRender();
+}
+function gpvMpCls(c) {
+  const s = String(c || '').toLowerCase();
+  if (!s) return '';
+  if (s.startsWith('crit') || s.startsWith('alt')) return 'crit';
+  if (s.startsWith('m')) return 'and';
+  return 'ok';
+}
+function gpvMpTd(nomeUsina) {
+  if (GPV_MP.estado === 'carregando') return '<td class="gpv-obs">…</td>';
+  if (GPV_MP.estado !== 'ok') return '<td class="gpv-obs">—</td>';
+  const k = gpvMpNorm(nomeUsina);
+  let hit = GPV_MP.mapa.get(k);
+  if (!hit) { for (const [kk, v] of GPV_MP.mapa) { if (kk.startsWith(k) || k.startsWith(kk)) { hit = v; break; } } }
+  if (!hit) return '<td class="gpv-obs">—</td>';
+  const badge = hit.crit
+    ? '<span class="gpv-crit ' + gpvMpCls(hit.crit) + '">' + gpEsc(hit.crit) + '</span>' : '';
+  const obs = hit.obs
+    ? gpEsc(hit.obs.length > 90 ? hit.obs.slice(0, 90) + '…' : hit.obs)
+    : '<span class="gpv-obs-vazio">—</span>';
+  return '<td class="gpv-obs" title="' + gpEsc(hit.obs || '') + '">' + badge + obs + '</td>';
+}
+
 const GPV_SIGLAS = ['MPM', 'MPT', 'MPS', 'MPA'];   // ordem de cadência (MPT entrou em 26/08)
 const GPV_RX = /\b(MP[MSAT])\b/;
 const GPV_MESNOME = ['', 'jan', 'fev', 'mar', 'abr', 'mai', 'jun',
@@ -198,13 +280,19 @@ function gpvRender() {
     + 'onclick="gpvOrd(&quot;' + id + '&quot;)">' + rot
     + '<span class="gpv-ord">' + (GPV.ordem === id ? (GPV.desc ? '&#9660;' : '&#9650;') : '&#8597;') + '</span></th>';
 
+  const mpAtivo = gpvMpAtivo();
+  if (mpAtivo) gpvMpCarregar();               // assíncrono; re-renderiza ao decifrar
+
   h += '<div class="gpv-rolo"><table class="gpv-tbl">'
     + '<colgroup><col style="width:300px">'
     + CS.map(() => '<col style="width:92px">').join('')
-    + '<col style="width:100px"><col style="width:88px"></colgroup>'
+    + '<col style="width:100px"><col style="width:88px">'
+    + (mpAtivo ? '<col style="width:290px">' : '') + '</colgroup>'
     + '<thead><tr>' + th('nome', rotL, 'rotlin')
     + CS.map(c => th(c, gpvRotCol(c))).join('')
-    + th('geral', 'Geral') + th('pend', 'Pendentes') + '</tr></thead><tbody>';
+    + th('geral', 'Geral') + th('pend', 'Pendentes')
+    + (mpAtivo ? '<th class="gpv-obs-th">Criticidade / Observação</th>' : '')
+    + '</tr></thead><tbody>';
 
   const celTd = c => {
     const m = gpvMostra(c);
@@ -228,24 +316,27 @@ function gpvRender() {
         + '<td class="rotlin"><span class="gpv-chev2">' + (ab ? '&#9662;' : '&#9656;') + '</span>'
         + '<b>' + gpEsc(g.nome) + '</b> <span class="gpv-mini">' + g.filhos.length + ' usina'
         + (g.filhos.length > 1 ? 's' : '') + '</span></td>'
-        + CS.map(c => celTd(g.cel[c])).join('') + fimTd(g) + '</tr>';
+        + CS.map(c => celTd(g.cel[c])).join('') + fimTd(g)
+        + (mpAtivo ? '<td class="gpv-obs"></td>' : '') + '</tr>';
       linhas++;
       if (!ab) return;
     }
     g.filhos.forEach(f => {
       h += '<tr class="' + (plano ? '' : 'gpv-filho') + '"><td class="rotlin"><b>'
         + gpEsc(f.nome) + '</b></td>'
-        + CS.map(c => celTd(f.cel[c])).join('') + fimTd(f) + '</tr>';
+        + CS.map(c => celTd(f.cel[c])).join('') + fimTd(f)
+        + (mpAtivo ? gpvMpTd(f.nome) : '') + '</tr>';
       linhas++;
     });
   });
-  if (!linhas) h += '<tr><td colspan="' + (CS.length + 3) + '" class="gpv-vazio">Nada com esse filtro.</td></tr>';
+  if (!linhas) h += '<tr><td colspan="' + (CS.length + 3 + (mpAtivo ? 1 : 0)) + '" class="gpv-vazio">Nada com esse filtro.</td></tr>';
 
   const totCol = {}; CS.forEach(c => { totCol[c] = gpvSoma(grupos.map(g => g.cel[c])); });
   const totG = gpvSoma(CS.map(c => totCol[c]));
   h += '<tr class="gpv-total"><td class="rotlin"><b>TOTAL GERAL</b> <span class="gpv-mini">'
     + grupos.reduce((s, g) => s + g.filhos.length, 0) + ' usinas</span></td>'
-    + CS.map(c => celTd(totCol[c])).join('') + fimTd({ tudo: totG }) + '</tr>';
+    + CS.map(c => celTd(totCol[c])).join('') + fimTd({ tudo: totG })
+    + (mpAtivo ? '<td class="gpv-obs"></td>' : '') + '</tr>';
   h += '</tbody></table></div>';
 
   h += '<div class="gpv-leg">'
@@ -253,6 +344,7 @@ function gpvRender() {
     + '<span><i style="background:#fdf0d4"></i>40% a 99%</span>'
     + '<span><i style="background:#dcf2de"></i>100%</span>'
     + '<span><i style="background:#eef0f5"></i>sem preventiva no período</span>'
+    + (mpAtivo ? '<span><b>Criticidade / Observação</b> — Gerencial (aba MPAS), última entrada datada do log</span>' : '')
     + '<span class="gpv-fim">clique no cliente para abrir as usinas · no cabeçalho para ordenar · passe o mouse na célula para ver as OS</span>'
     + '</div></div>';
 
