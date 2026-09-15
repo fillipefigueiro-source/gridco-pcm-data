@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-15T05:00:26Z",
+  "geradoEm": "2026-09-15T10:12:55Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 24,
       "atrasadas": 21,
       "porStatus": {
-        "naoIniciada": 20,
-        "emProgresso": 0,
+        "naoIniciada": 19,
+        "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
@@ -406,14 +406,15 @@
           "responsavel": "Railson Gomes ",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Railson Gomes ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-09-14",
           "dataCriacao": "2026-09-15",
-          "dataInicial": "",
+          "dataInicial": "2026-09-15",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -13296,16 +13297,16 @@
       "cor": "#3b82f6",
       "kpis": {
         "total": 139,
-        "emAberto": 19,
+        "emAberto": 16,
         "atrasadas": 14,
-        "concluidas30d": 22,
-        "concluidas7d": 3,
+        "concluidas30d": 25,
+        "concluidas7d": 6,
         "naSemanaCorrente": 7
       },
       "mttr": {
-        "horas": 502.91,
-        "label": "20d 22h",
-        "amostra": 22
+        "horas": 445.44,
+        "label": "18d 13h",
+        "amostra": 25
       },
       "tendencia4Semanas": [
         {
@@ -13326,7 +13327,7 @@
         {
           "semana": "W38",
           "criadas": 6,
-          "finalizadas": 0
+          "finalizadas": 3
         }
       ],
       "topOfensores": {
@@ -13334,14 +13335,14 @@
           {
             "nome": "(sem equipe)",
             "total": 139,
-            "emAberto": 19
+            "emAberto": 16
           }
         ],
         "responsaveis": [
           {
             "nome": "João Vieira",
             "total": 32,
-            "emAberto": 8
+            "emAberto": 5
           },
           {
             "nome": "Carlos Bruno  Pessanha Pereira",
@@ -13365,16 +13366,16 @@
           }
         ]
       },
-      "total": 19,
+      "total": 16,
       "atrasadas": 14,
       "porStatus": {
-        "naoIniciada": 19,
+        "naoIniciada": 16,
         "emProgresso": 0,
         "pausada": 0,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 19
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -13616,57 +13617,6 @@
           "atrasada": true
         },
         {
-          "osId": "13598",
-          "ativo": "Estação Meteorológica  Tupi Paulista  São Paulo Brasil { TPP100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "João Vieira ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "João Vieira ",
-          "status": "Não Iniciada",
-          "tarefa": "[ETM] - Coleta e análise de dados",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-14",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "13597",
-          "ativo": "Estação Meteorológica  Sete Lagoas  Minas Gerais Brasil { SLG200-ESTM1 }",
-          "equipe": "",
-          "responsavel": "João Vieira ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "João Vieira ",
-          "status": "Não Iniciada",
-          "tarefa": "[ETM] - Coleta e análise de dados",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-14",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "13596",
-          "ativo": "Estação Meteorológica Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "João Vieira ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "João Vieira ",
-          "status": "Não Iniciada",
-          "tarefa": "[ETM] - Coleta e análise de dados",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-14",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "13589",
           "ativo": "Estação Meteorológica  Santarém  Pará Brasil { STR100-ESTM1 }",
           "equipe": "",
@@ -13702,6 +13652,63 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13596",
+          "ativo": "Estação Meteorológica Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "João Vieira ",
+          "status": "Finalizados",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-09-15",
+          "dataCriacao": "2026-09-14",
+          "dataInicial": "2026-09-15",
+          "dataFinal": "2026-09-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "13598",
+          "ativo": "Estação Meteorológica  Tupi Paulista  São Paulo Brasil { TPP100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "João Vieira ",
+          "status": "Finalizada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-09-15",
+          "dataCriacao": "2026-09-14",
+          "dataInicial": "2026-09-15",
+          "dataFinal": "2026-09-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "13597",
+          "ativo": "Estação Meteorológica  Sete Lagoas  Minas Gerais Brasil { SLG200-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "João Vieira ",
+          "status": "Finalizada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-09-15",
+          "dataCriacao": "2026-09-14",
+          "dataInicial": "2026-09-15",
+          "dataFinal": "2026-09-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13244",
           "ativo": "Estação Meteorológica  Araputanga  Mato Grosso Brasil { APG100-ESTM1 }",
@@ -15394,7 +15401,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 89
+      "historicoTotal": 92
     }
   },
   "ossPublicas": [
@@ -15422,14 +15429,15 @@
       "responsavel": "Railson Gomes ",
       "criadoPor": "Lucas  Nascimento",
       "supervisor": "Railson Gomes ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-09-14",
       "dataCriacao": "2026-09-15",
-      "dataInicial": "",
+      "dataInicial": "2026-09-15",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15475,54 +15483,6 @@
       "tarefa": "[Grid Co.] - MPA - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-30",
-      "dataCriacao": "2026-09-14",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "13598",
-      "ativo": "Estação Meteorológica  Tupi Paulista  São Paulo Brasil { TPP100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "João Vieira ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "João Vieira ",
-      "status": "Não Iniciada",
-      "tarefa": "[ETM] - Coleta e análise de dados",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
-      "dataCriacao": "2026-09-14",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "13597",
-      "ativo": "Estação Meteorológica  Sete Lagoas  Minas Gerais Brasil { SLG200-ESTM1 }",
-      "equipe": "",
-      "responsavel": "João Vieira ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "João Vieira ",
-      "status": "Não Iniciada",
-      "tarefa": "[ETM] - Coleta e análise de dados",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
-      "dataCriacao": "2026-09-14",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "13596",
-      "ativo": "Estação Meteorológica Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "João Vieira ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "João Vieira ",
-      "status": "Não Iniciada",
-      "tarefa": "[ETM] - Coleta e análise de dados",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
       "dataCriacao": "2026-09-14",
       "dataInicial": "",
       "dataFinal": "",
@@ -19007,6 +18967,25 @@
   ],
   "ossHistorico": [
     {
+      "osId": "13596",
+      "ativo": "Estação Meteorológica Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "João Vieira ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "João Vieira ",
+      "status": "Finalizados",
+      "tarefa": "[ETM] - Coleta e análise de dados",
+      "criticidade": "",
+      "dataProgramada": "2026-09-15",
+      "dataCriacao": "2026-09-14",
+      "dataInicial": "2026-09-15",
+      "dataFinal": "2026-09-15",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13558",
       "ativo": "Inversor 1.7 Huawei SUN2000-250KTL-H1    { THPN-APR200-INVR1.7 }",
       "equipe": "",
@@ -21930,29 +21909,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13090",
-      "ativo": "Inversor 1.7 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.7 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Frank  Melo",
-      "status": "Finalizados",
-      "tarefa": "[MRO100-INVR1.7] - Religamento do MRO100-INVR1.7",
-      "criticidade": "",
-      "dataProgramada": "2026-09-05",
-      "dataCriacao": "2026-09-05",
-      "dataInicial": "2026-09-09",
-      "dataFinal": "2026-09-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2888,
+  "historicoTotal": 2891,
   "totalGeral": 6193,
   "verificacao": {
     "total": 0,
