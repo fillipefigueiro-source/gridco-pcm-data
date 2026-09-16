@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-16T20:11:12Z",
+  "geradoEm": "2026-09-16T20:19:09Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4422,
-        "emAberto": 30,
+        "total": 4421,
+        "emAberto": 29,
         "atrasadas": 17,
         "concluidas30d": 719,
         "concluidas7d": 185,
-        "naSemanaCorrente": 65
+        "naSemanaCorrente": 64
       },
       "mttr": {
         "horas": 18.07,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 65,
+          "criadas": 64,
           "finalizadas": 69
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4422,
-            "emAberto": 30
+            "total": 4421,
+            "emAberto": 29
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 30,
+      "total": 29,
       "atrasadas": 17,
       "porStatus": {
-        "naoIniciada": 27,
+        "naoIniciada": 25,
         "emProgresso": 1,
-        "pausada": 2,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 30
+        "(sem equipe)": 29
       },
       "oss": [
         {
@@ -133,7 +133,7 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Felipe Silva",
           "supervisor": "Rodrigo  Silva",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
@@ -400,38 +400,21 @@
           "atrasada": true
         },
         {
-          "osId": "13733",
-          "ativo": "2C - Sete Lagoas 2 - MG  Sete Lagoas  Minas Gerais Brasil { 2C-SLG200 }",
-          "equipe": "",
-          "responsavel": "Daniel de Paula ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Daniel de Paula ",
-          "status": "Não Iniciada",
-          "tarefa": "[2C-SLG200] - Religamento do 2C-SLG200",
-          "criticidade": "",
-          "dataProgramada": "2026-09-16",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "13731",
           "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
           "equipe": "",
           "responsavel": "Gilson Souza ",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
           "dataCriacao": "2026-09-16",
-          "dataInicial": "",
+          "dataInicial": "2026-09-16",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3639,9 +3622,9 @@
       "historicoTotal": 1846,
       "subClassificacao": {
         "remoto": 757,
-        "local": 3665,
+        "local": 3664,
         "remotoEmAberto": 11,
-        "localEmAberto": 19,
+        "localEmAberto": 18,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -15303,37 +15286,21 @@
   },
   "ossPublicas": [
     {
-      "osId": "13733",
-      "ativo": "2C - Sete Lagoas 2 - MG  Sete Lagoas  Minas Gerais Brasil { 2C-SLG200 }",
-      "equipe": "",
-      "responsavel": "Daniel de Paula ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Daniel de Paula ",
-      "status": "Não Iniciada",
-      "tarefa": "[2C-SLG200] - Religamento do 2C-SLG200",
-      "criticidade": "",
-      "dataProgramada": "2026-09-16",
-      "dataCriacao": "2026-09-16",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "13731",
       "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
       "equipe": "",
       "responsavel": "Gilson Souza ",
       "criadoPor": "Raphael Vitoriano ",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
       "dataCriacao": "2026-09-16",
-      "dataInicial": "",
+      "dataInicial": "2026-09-16",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -18178,7 +18145,7 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Felipe Silva",
       "supervisor": "Rodrigo  Silva",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
@@ -21663,7 +21630,7 @@
     }
   ],
   "historicoTotal": 2943,
-  "totalGeral": 6258,
+  "totalGeral": 6257,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
