@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-16T10:55:14Z",
+  "geradoEm": "2026-09-16T11:27:26Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4404,
-        "emAberto": 32,
-        "atrasadas": 24,
-        "concluidas30d": 699,
-        "concluidas7d": 165,
+        "emAberto": 31,
+        "atrasadas": 23,
+        "concluidas30d": 700,
+        "concluidas7d": 166,
         "naSemanaCorrente": 47
       },
       "mttr": {
-        "horas": 18.03,
-        "label": "18h 2min",
-        "amostra": 699
+        "horas": 18.04,
+        "label": "18h 3min",
+        "amostra": 700
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W38",
           "criadas": 47,
-          "finalizadas": 49
+          "finalizadas": 50
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4404,
-            "emAberto": 32
+            "emAberto": 31
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 32,
-      "atrasadas": 24,
+      "total": 31,
+      "atrasadas": 23,
       "porStatus": {
-        "naoIniciada": 27,
+        "naoIniciada": 26,
         "emProgresso": 0,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 32
+        "(sem equipe)": 31
       },
       "oss": [
         {
@@ -455,24 +455,6 @@
           "atrasada": true
         },
         {
-          "osId": "13656",
-          "ativo": "SKID 1  Ponto Belo  Espírito Santo Brasil { PTB100-SKID1 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Thiago Morais ",
-          "status": "Não Iniciada",
-          "tarefa": "[PTB100-SKID1] - Religamento do PTB100-SKID1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-15",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "13648",
           "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
           "equipe": "",
@@ -710,6 +692,26 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 24.0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13656",
+          "ativo": "SKID 1  Ponto Belo  Espírito Santo Brasil { PTB100-SKID1 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[PTB100-SKID1] - Religamento do PTB100-SKID1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-15",
+          "dataCriacao": "2026-09-15",
+          "dataInicial": "2026-09-16",
+          "dataFinal": "2026-09-16",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3652,34 +3654,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "12626",
-          "ativo": "Inversor 1.4 Sofar 250KTL-HV-PRO    { IBI100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Thiago Morais ",
-          "status": "Finalizados",
-          "tarefa": "[IBI100-INVR1.4] - Religamento do IBI100-INVR1.4",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-01",
-          "dataFinal": "2026-09-01",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1826,
+      "historicoTotal": 1827,
       "subClassificacao": {
         "remoto": 757,
         "local": 3647,
         "remotoEmAberto": 11,
-        "localEmAberto": 21,
+        "localEmAberto": 20,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -8986,9 +8968,9 @@
       "total": 79,
       "atrasadas": 70,
       "porStatus": {
-        "naoIniciada": 65,
-        "emProgresso": 1,
-        "pausada": 13,
+        "naoIniciada": 63,
+        "emProgresso": 4,
+        "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
@@ -9912,14 +9894,15 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Gabriela Dias",
           "supervisor": "Anderson  Parente",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Altair][Trackers] - Verificar operação dos trackers",
           "criticidade": "",
           "dataProgramada": "2026-09-11",
           "dataCriacao": "2026-09-09",
-          "dataInicial": "",
+          "dataInicial": "2026-09-16",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 168.0,
           "atrasada": true
         },
         {
@@ -9999,7 +9982,7 @@
           "responsavel": "Hélio Silva ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Hélio Silva ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.10] - Inspeção das strings partindo depois das 8h",
           "criticidade": "",
           "dataProgramada": "2026-09-14",
@@ -10154,14 +10137,15 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Levi Maia ",
           "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.5] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-09-15",
           "dataCriacao": "2026-09-14",
-          "dataInicial": "",
+          "dataInicial": "2026-09-16",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -15550,23 +15534,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "13656",
-      "ativo": "SKID 1  Ponto Belo  Espírito Santo Brasil { PTB100-SKID1 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Thiago Morais ",
-      "status": "Não Iniciada",
-      "tarefa": "[PTB100-SKID1] - Religamento do PTB100-SKID1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
-      "dataCriacao": "2026-09-15",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "13648",
       "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
       "equipe": "",
@@ -15867,14 +15834,15 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Levi Maia ",
       "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.5] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-09-15",
       "dataCriacao": "2026-09-14",
-      "dataInicial": "",
+      "dataInicial": "2026-09-16",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "13559",
@@ -16352,7 +16320,7 @@
       "responsavel": "Hélio Silva ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Hélio Silva ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.10] - Inspeção das strings partindo depois das 8h",
       "criticidade": "",
       "dataProgramada": "2026-09-14",
@@ -16385,14 +16353,15 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Gabriela Dias",
       "supervisor": "Anderson  Parente",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Altair][Trackers] - Verificar operação dos trackers",
       "criticidade": "",
       "dataProgramada": "2026-09-11",
       "dataCriacao": "2026-09-09",
-      "dataInicial": "",
+      "dataInicial": "2026-09-16",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0
     },
     {
       "osId": "13285",
@@ -19436,6 +19405,26 @@
       "atrasada": false
     },
     {
+      "osId": "13656",
+      "ativo": "SKID 1  Ponto Belo  Espírito Santo Brasil { PTB100-SKID1 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[PTB100-SKID1] - Religamento do PTB100-SKID1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-15",
+      "dataCriacao": "2026-09-15",
+      "dataInicial": "2026-09-16",
+      "dataFinal": "2026-09-16",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13647",
       "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
       "equipe": "",
@@ -21690,29 +21679,9 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "13224",
-      "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-      "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Raphael Vitoriano ",
-      "status": "Finalizados",
-      "tarefa": "[Cabine 6] - Religamento da Cabine 6",
-      "criticidade": "",
-      "dataProgramada": "2026-09-08",
-      "dataCriacao": "2026-09-08",
-      "dataInicial": "2026-09-08",
-      "dataFinal": "2026-09-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2907,
+  "historicoTotal": 2908,
   "totalGeral": 6223,
   "verificacao": {
     "total": 0,
