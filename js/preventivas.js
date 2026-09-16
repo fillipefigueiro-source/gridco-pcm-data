@@ -100,10 +100,11 @@ async function gpvMpCarregar() {
   gpvRender();
 }
 function gpvMpCls(c) {
-  // sem acento: "Crítico" tem í e o startsWith('crit') falhava (badge saía verde)
+  // sem acento: "Crítico" tem í e o startsWith('crit') falhava (badge saía verde).
+  // "Muito Crítico" começa com M — testar ANTES do balde "Média/Moderada" (âmbar).
   const s = String(c || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   if (!s) return '';
-  if (s.startsWith('crit') || s.startsWith('alt')) return 'crit';
+  if (s.indexOf('crit') >= 0 || s.startsWith('alt')) return 'crit';
   if (s.startsWith('m')) return 'and';
   return 'ok';
 }

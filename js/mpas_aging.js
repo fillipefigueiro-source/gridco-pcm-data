@@ -110,7 +110,7 @@ function gmaRender() {
   }
   if (GMA.estado !== 'ok') {
     box.innerHTML = '<div class="gp-b"><h3>MPA &amp; MPS — Envelhecimento e Pendências'
-      + '<span class="gp-obs">fonte: Gerencial (aba MPAS) + Fracttal</span></h3>'
+      + ' <span class="gma-sub">fonte: Gerencial (aba MPAS) + Fracttal</span></h3>'
       + '<div class="gma-trava"><div class="gma-cad">&#128274;</div>'
       + '<b>Dados restritos da Gerencial</b>'
       + '<p>Este bloco usa o plano MPA/MPS cifrado. Digite a senha de administrador para '
@@ -160,7 +160,7 @@ function gmaRender() {
     + r + '</button>').join('') + '</div>';
 
   let h = '<div class="gp-b"><h3>MPA &amp; MPS — Envelhecimento e Pendências'
-    + '<span class="gp-obs">Gerencial (aba MPAS) + Fracttal · controles próprios — ignora a barra acima</span></h3>'
+    + ' <span class="gma-sub">Gerencial (aba MPAS) + Fracttal · controles próprios — ignora a barra acima</span></h3>'
     + '<div class="gma-kpis">'
     + kpi('atraso', kAtr, 'atrasadas', 'red')
     + kpi('semos', kSem, 'sem OS no Fracttal', 'amb')
