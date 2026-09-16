@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-16T17:05:11Z",
+  "geradoEm": "2026-09-16T17:11:44Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -82,8 +82,8 @@
       "atrasadas": 19,
       "porStatus": {
         "naoIniciada": 23,
-        "emProgresso": 1,
-        "pausada": 3,
+        "emProgresso": 2,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
@@ -133,15 +133,15 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Felipe Silva",
           "supervisor": "Rodrigo  Silva",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
           "dataCriacao": "2026-08-12",
-          "dataInicial": "2026-09-15",
+          "dataInicial": "2026-09-16",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 816.0,
+          "horasAteAbrir": 840.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -3811,16 +3811,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 789,
-        "emAberto": 78,
-        "atrasadas": 59,
-        "concluidas30d": 175,
-        "concluidas7d": 36,
+        "emAberto": 77,
+        "atrasadas": 58,
+        "concluidas30d": 176,
+        "concluidas7d": 37,
         "naSemanaCorrente": 29
       },
       "mttr": {
-        "horas": 315.98,
+        "horas": 315.82,
         "label": "13d 3h",
-        "amostra": 175
+        "amostra": 176
       },
       "tendencia4Semanas": [
         {
@@ -3841,7 +3841,7 @@
         {
           "semana": "W38",
           "criadas": 3,
-          "finalizadas": 10
+          "finalizadas": 11
         }
       ],
       "topOfensores": {
@@ -3849,7 +3849,7 @@
           {
             "nome": "(sem equipe)",
             "total": 789,
-            "emAberto": 78
+            "emAberto": 77
           }
         ],
         "responsaveis": [
@@ -3880,16 +3880,16 @@
           }
         ]
       },
-      "total": 78,
-      "atrasadas": 59,
+      "total": 77,
+      "atrasadas": 58,
       "porStatus": {
         "naoIniciada": 73,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 78
+        "(sem equipe)": 77
       },
       "oss": [
         {
@@ -4318,24 +4318,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "13050",
-          "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Janderson Miranda ",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-09-08",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 288.0,
           "atrasada": true
         },
         {
@@ -5225,6 +5207,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13050",
+          "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-09-08",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-16",
+          "dataFinal": "2026-09-16",
+          "linkFracttal": "",
+          "horasAteAbrir": 288.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "12647",
           "ativo": "Transformador 1      { PTB100-TRFR1 }",
@@ -6898,25 +6899,6 @@
           "atrasada": false
         },
         {
-          "osId": "12054",
-          "ativo": "Infraestrutura Civil  Irecê  Bahia Brasil { IRC100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Olimpio Lima ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Olimpio Lima ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-26",
-          "dataFinal": "2026-08-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11523",
           "ativo": "Inversor 1.1 Sungrow     { JCD100-INVR1.1 }",
           "equipe": "",
@@ -8076,7 +8058,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 355
+      "historicoTotal": 356
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -16661,23 +16643,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "13050",
-      "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Janderson Miranda ",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-09-08",
-      "dataCriacao": "2026-09-04",
-      "dataInicial": "2026-09-16",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 288.0
-    },
-    {
       "osId": "13043",
       "ativo": "Cabine 1  Araçoiaba  São Paulo Brasil { ADS200-CABN1 }",
       "equipe": "",
@@ -18110,15 +18075,15 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Felipe Silva",
       "supervisor": "Rodrigo  Silva",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
       "dataCriacao": "2026-08-12",
-      "dataInicial": "2026-09-15",
+      "dataInicial": "2026-09-16",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 816.0,
+      "horasAteAbrir": 840.0,
       "modalidade": "local"
     },
     {
@@ -18699,6 +18664,25 @@
       "dataFinal": "2026-09-10",
       "linkFracttal": "",
       "horasAteAbrir": 144.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "13050",
+      "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "Fabricio Barreto",
+      "supervisor": "Janderson Miranda ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-09-08",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "2026-09-16",
+      "dataFinal": "2026-09-16",
+      "linkFracttal": "",
+      "horasAteAbrir": 288.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -21572,29 +21556,9 @@
       "horasAteAbrir": 120.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "13288",
-      "ativo": "Cabine 1 Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "[THPN-SDN100-CABN1] - Religamento do THPN-SDN100-CABN1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-09",
-      "dataInicial": "2026-09-09",
-      "dataFinal": "2026-09-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2928,
+  "historicoTotal": 2929,
   "totalGeral": 6241,
   "verificacao": {
     "total": 0,
