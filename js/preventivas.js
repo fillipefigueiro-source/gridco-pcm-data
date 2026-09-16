@@ -249,13 +249,17 @@ function gpvFilaLinhas() {
   const out = [];
   ((MP && MP.manut) || []).forEach(m => {
     const tipo = String(m.tipo || '').toUpperCase().indexOf('MPS') >= 0 ? 'MPS' : 'MPA';
-    let os = '', bd = null;
-    String(m.os || '').split(/[\/,;]/).map(x => x.trim()).filter(Boolean).forEach(p => {
-      if (!bd && MP.bd && MP.bd[p]) { os = p; bd = MP.bd[p]; }
-      if (!os) os = p;
+    // a célula OS da Gerencial pode trazer VÁRIAS OSs ("123/456") — todas
+    // contam: a Programada é a mais cedo entre elas e as tarefas se somam
+    const partes = String(m.os || '').split(/[\/,;]/).map(x => x.trim()).filter(Boolean);
+    const bds = partes.map(p => (MP.bd && MP.bd[p]) || null).filter(Boolean);
+    const os = partes.join(' / ');
+    let prog = null, bdFin = null, bdTot = null;
+    bds.forEach(b => {
+      if (b.tasks) b.tasks.forEach(t => { if (t.prog && (!prog || t.prog < prog)) prog = t.prog; });
+      bdFin = (bdFin || 0) + (b.fin || 0); bdTot = (bdTot || 0) + (b.total || 0);
     });
-    let prog = null;
-    if (bd && bd.tasks) bd.tasks.forEach(t => { if (t.prog && (!prog || t.prog < prog)) prog = t.prog; });
+    const bd = bds.length ? { fin: bdFin, total: bdTot } : null;
     const sit = mpSit(m);
     const conclu = sit.k === 'Concluída';
     const atraso = (!conclu && m.prevista && m.prevista < hoje) ? gpvDias(m.prevista) : null;
