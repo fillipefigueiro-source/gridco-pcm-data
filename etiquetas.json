@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-16T11:52:12Z",
+  "geradoEm": "2026-09-16T12:07:29Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 29,
       "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 24,
-        "emProgresso": 0,
+        "naoIniciada": 23,
+        "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
@@ -371,14 +371,15 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Adriano  Moraes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-09-15",
           "dataCriacao": "2026-09-16",
-          "dataInicial": "",
+          "dataInicial": "2026-09-16",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -8860,16 +8861,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 738,
-        "emAberto": 79,
-        "atrasadas": 70,
-        "concluidas30d": 237,
-        "concluidas7d": 40,
+        "emAberto": 77,
+        "atrasadas": 68,
+        "concluidas30d": 239,
+        "concluidas7d": 42,
         "naSemanaCorrente": 32
       },
       "mttr": {
-        "horas": 250.53,
-        "label": "10d 10h",
-        "amostra": 237
+        "horas": 249.74,
+        "label": "10d 9h",
+        "amostra": 239
       },
       "tendencia4Semanas": [
         {
@@ -8890,7 +8891,7 @@
         {
           "semana": "W38",
           "criadas": 16,
-          "finalizadas": 19
+          "finalizadas": 21
         }
       ],
       "topOfensores": {
@@ -8898,7 +8899,7 @@
           {
             "nome": "(sem equipe)",
             "total": 738,
-            "emAberto": 79
+            "emAberto": 77
           }
         ],
         "responsaveis": [
@@ -8929,16 +8930,16 @@
           }
         ]
       },
-      "total": 79,
-      "atrasadas": 70,
+      "total": 77,
+      "atrasadas": 68,
       "porStatus": {
         "naoIniciada": 61,
-        "emProgresso": 6,
+        "emProgresso": 4,
         "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 79
+        "(sem equipe)": 77
       },
       "oss": [
         {
@@ -9817,24 +9818,6 @@
           "atrasada": true
         },
         {
-          "osId": "13399",
-          "ativo": "Inversor 6.2 SOLIS SOLIS-110K-5G    { SALE-SNP100-INVR6.2 }",
-          "equipe": "",
-          "responsavel": "Adriano Silva ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Adriano Silva ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 6.2] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-11",
-          "dataCriacao": "2026-09-10",
-          "dataInicial": "2026-09-11",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "atrasada": true
-        },
-        {
           "osId": "13362",
           "ativo": "Inversor 1.1 Sungrow SG60KTL    { ADT100-INVR1.1 }",
           "equipe": "",
@@ -9939,24 +9922,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 72.0,
-          "atrasada": true
-        },
-        {
-          "osId": "13298",
-          "ativo": "Inversor 1.10 Huawei SUN2000-215KTL-H0    { STI100-INVR1.10 }",
-          "equipe": "",
-          "responsavel": "Hélio Silva ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Hélio Silva ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.10] - Inspeção das strings partindo depois das 8h",
-          "criticidade": "",
-          "dataProgramada": "2026-09-14",
-          "dataCriacao": "2026-09-09",
-          "dataInicial": "2026-09-14",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
           "atrasada": true
         },
         {
@@ -10304,6 +10269,44 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13399",
+          "ativo": "Inversor 6.2 SOLIS SOLIS-110K-5G    { SALE-SNP100-INVR6.2 }",
+          "equipe": "",
+          "responsavel": "Adriano Silva ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Adriano Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 6.2] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-11",
+          "dataCriacao": "2026-09-10",
+          "dataInicial": "2026-09-11",
+          "dataFinal": "2026-09-16",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 120.0,
+          "atrasada": false
+        },
+        {
+          "osId": "13298",
+          "ativo": "Inversor 1.10 Huawei SUN2000-215KTL-H0    { STI100-INVR1.10 }",
+          "equipe": "",
+          "responsavel": "Hélio Silva ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Hélio Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.10] - Inspeção das strings partindo depois das 8h",
+          "criticidade": "",
+          "dataProgramada": "2026-09-14",
+          "dataCriacao": "2026-09-09",
+          "dataInicial": "2026-09-14",
+          "dataFinal": "2026-09-16",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
+          "horasAteFechar": 48.0,
+          "atrasada": false
+        },
         {
           "osId": "12573",
           "ativo": "Inversor 1.6 Sungrow SG125HV    { THPN-PHS400-INVR1.6 }",
@@ -12414,25 +12417,6 @@
           "atrasada": false
         },
         {
-          "osId": "10648",
-          "ativo": "Tracker 44.100 Axial Tracker 1VTwin    { THPN-CLR100-ETKR44.100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 44.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-08-04",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "2026-08-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 504.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11506",
           "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
           "equipe": "",
@@ -12600,25 +12584,6 @@
           "dataFinal": "2026-08-19",
           "linkFracttal": "",
           "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "10658",
-          "ativo": "Tracker 25.100 STI STI-H250    { THPN-TNB100-ETKR25.100 }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 25.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-05",
-          "dataCriacao": "2026-08-04",
-          "dataInicial": "2026-08-18",
-          "dataFinal": "2026-08-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -13155,7 +13120,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 607
+      "historicoTotal": 609
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15372,14 +15337,15 @@
       "responsavel": "Adriano  Moraes",
       "criadoPor": "Lucas  Nascimento",
       "supervisor": "Adriano  Moraes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-09-15",
       "dataCriacao": "2026-09-16",
-      "dataInicial": "",
+      "dataInicial": "2026-09-16",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16039,23 +16005,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "13399",
-      "ativo": "Inversor 6.2 SOLIS SOLIS-110K-5G    { SALE-SNP100-INVR6.2 }",
-      "equipe": "",
-      "responsavel": "Adriano Silva ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Adriano Silva ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 6.2] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-11",
-      "dataCriacao": "2026-09-10",
-      "dataInicial": "2026-09-11",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0
-    },
-    {
       "osId": "13380",
       "ativo": "Inversor 1.9 Huawei SUN2000-330KTL-H1    { VRG100-INVR1.9 }",
       "equipe": "",
@@ -16246,23 +16195,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "13298",
-      "ativo": "Inversor 1.10 Huawei SUN2000-215KTL-H0    { STI100-INVR1.10 }",
-      "equipe": "",
-      "responsavel": "Hélio Silva ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Hélio Silva ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.10] - Inspeção das strings partindo depois das 8h",
-      "criticidade": "",
-      "dataProgramada": "2026-09-14",
-      "dataCriacao": "2026-09-09",
-      "dataInicial": "2026-09-14",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0
     },
     {
       "osId": "13297",
@@ -20869,6 +20801,25 @@
       "atrasada": false
     },
     {
+      "osId": "13399",
+      "ativo": "Inversor 6.2 SOLIS SOLIS-110K-5G    { SALE-SNP100-INVR6.2 }",
+      "equipe": "",
+      "responsavel": "Adriano Silva ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Adriano Silva ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 6.2] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-09-11",
+      "dataCriacao": "2026-09-10",
+      "dataInicial": "2026-09-11",
+      "dataFinal": "2026-09-16",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 120.0,
+      "atrasada": false
+    },
+    {
       "osId": "13395",
       "ativo": "Inversor 5.9 Huawei     { MAB200-INVR5.9 }",
       "equipe": "",
@@ -21423,6 +21374,25 @@
       "atrasada": false
     },
     {
+      "osId": "13298",
+      "ativo": "Inversor 1.10 Huawei SUN2000-215KTL-H0    { STI100-INVR1.10 }",
+      "equipe": "",
+      "responsavel": "Hélio Silva ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Hélio Silva ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.10] - Inspeção das strings partindo depois das 8h",
+      "criticidade": "",
+      "dataProgramada": "2026-09-14",
+      "dataCriacao": "2026-09-09",
+      "dataInicial": "2026-09-14",
+      "dataFinal": "2026-09-16",
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0,
+      "horasAteFechar": 48.0,
+      "atrasada": false
+    },
+    {
       "osId": "13290",
       "ativo": "Tracker 32.100 STI Norland     { TIM100-ETKR32.100 }",
       "equipe": "",
@@ -21576,48 +21546,9 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "13244",
-      "ativo": "Estação Meteorológica  Araputanga  Mato Grosso Brasil { APG100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Adriano  Moraes",
-      "status": "Finalizados",
-      "tarefa": "[ETM] - Análise de Sensor",
-      "criticidade": "",
-      "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-08",
-      "dataInicial": "2026-09-10",
-      "dataFinal": "2026-09-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "13235",
-      "ativo": "Thopen - Saturnino 1 - RJ Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { THPN-STN100 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Finalizados",
-      "tarefa": "[THPN-STN100] - Religamento do THPN-STN100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-08",
-      "dataCriacao": "2026-09-08",
-      "dataInicial": "2026-09-08",
-      "dataFinal": "2026-09-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2910,
+  "historicoTotal": 2912,
   "totalGeral": 6223,
   "verificacao": {
     "total": 0,
