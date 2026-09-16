@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-16T18:24:45Z",
+  "geradoEm": "2026-09-16T18:36:08Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4412,
-        "emAberto": 27,
+        "emAberto": 26,
         "atrasadas": 18,
-        "concluidas30d": 712,
-        "concluidas7d": 178,
+        "concluidas30d": 713,
+        "concluidas7d": 179,
         "naSemanaCorrente": 55
       },
       "mttr": {
-        "horas": 17.87,
-        "label": "17h 52min",
-        "amostra": 712
+        "horas": 17.85,
+        "label": "17h 51min",
+        "amostra": 713
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W38",
           "criadas": 55,
-          "finalizadas": 62
+          "finalizadas": 63
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4412,
-            "emAberto": 27
+            "emAberto": 26
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 27,
+      "total": 26,
       "atrasadas": 18,
       "porStatus": {
-        "naoIniciada": 22,
-        "emProgresso": 3,
-        "pausada": 2,
+        "naoIniciada": 21,
+        "emProgresso": 2,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 27
+        "(sem equipe)": 26
       },
       "oss": [
         {
@@ -316,7 +316,7 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valdir Silva ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
@@ -461,14 +461,15 @@
           "responsavel": "Frank  Melo",
           "criadoPor": "Raphael Vitoriano",
           "supervisor": "Frank  Melo",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
           "dataCriacao": "2026-09-16",
-          "dataInicial": "",
+          "dataInicial": "2026-09-16",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -505,25 +506,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "13671",
-          "ativo": "Inversor 2.12 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.12 }",
-          "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Frank  Melo",
-          "status": "Em progresso",
-          "tarefa": "[MRO100-INVR2.12] - Religamento do MRO100-INVR2.12",
-          "criticidade": "",
-          "dataProgramada": "2026-09-16",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -654,6 +636,26 @@
           "tarefa": "[RNGD-CLD100] - Religamento do RNGD-CLD100",
           "criticidade": "",
           "dataProgramada": "2026-09-15",
+          "dataCriacao": "2026-09-16",
+          "dataInicial": "2026-09-16",
+          "dataFinal": "2026-09-16",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13671",
+          "ativo": "Inversor 2.12 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.12 }",
+          "equipe": "",
+          "responsavel": "Frank  Melo",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Frank  Melo",
+          "status": "Finalizados",
+          "tarefa": "[MRO100-INVR2.12] - Religamento do MRO100-INVR2.12",
+          "criticidade": "",
+          "dataProgramada": "2026-09-16",
           "dataCriacao": "2026-09-16",
           "dataInicial": "2026-09-16",
           "dataFinal": "2026-09-16",
@@ -3562,34 +3564,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "12756",
-          "ativo": "Cabine 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "Italo  Lustosa",
-          "supervisor": "Ricardo Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Cabine 2] - Religamento da Cabine 2",
-          "criticidade": "",
-          "dataProgramada": "2026-09-02",
-          "dataCriacao": "2026-09-02",
-          "dataInicial": "2026-09-02",
-          "dataFinal": "2026-09-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1839,
+      "historicoTotal": 1840,
       "subClassificacao": {
         "remoto": 757,
         "local": 3655,
         "remotoEmAberto": 11,
-        "localEmAberto": 16,
+        "localEmAberto": 15,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -15632,14 +15614,15 @@
       "responsavel": "Frank  Melo",
       "criadoPor": "Raphael Vitoriano",
       "supervisor": "Frank  Melo",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
       "dataCriacao": "2026-09-16",
-      "dataInicial": "",
+      "dataInicial": "2026-09-16",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15674,24 +15657,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "13671",
-      "ativo": "Inversor 2.12 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.12 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Frank  Melo",
-      "status": "Em progresso",
-      "tarefa": "[MRO100-INVR2.12] - Religamento do MRO100-INVR2.12",
-      "criticidade": "",
-      "dataProgramada": "2026-09-16",
-      "dataCriacao": "2026-09-16",
-      "dataInicial": "2026-09-16",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16945,7 +16910,7 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valdir Silva ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
@@ -19459,6 +19424,26 @@
       "atrasada": false
     },
     {
+      "osId": "13671",
+      "ativo": "Inversor 2.12 Huawei SUN2000-215KTL-H0    { MRO100-INVR2.12 }",
+      "equipe": "",
+      "responsavel": "Frank  Melo",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Frank  Melo",
+      "status": "Finalizados",
+      "tarefa": "[MRO100-INVR2.12] - Religamento do MRO100-INVR2.12",
+      "criticidade": "",
+      "dataProgramada": "2026-09-16",
+      "dataCriacao": "2026-09-16",
+      "dataInicial": "2026-09-16",
+      "dataFinal": "2026-09-16",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13670",
       "ativo": "RenoGrid - Elias Fausto 1 - SP CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { RNGD-ELF100 }",
       "equipe": "",
@@ -21640,28 +21625,9 @@
       "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "13305",
-      "ativo": "Inversor 1.9 Huawei SUN2000-215KTL-H0    { STI100-INVR1.9 }",
-      "equipe": "",
-      "responsavel": "Hélio Silva ",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Hélio Silva ",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-14",
-      "dataCriacao": "2026-09-09",
-      "dataInicial": "2026-09-14",
-      "dataFinal": "2026-09-14",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2933,
+  "historicoTotal": 2934,
   "totalGeral": 6248,
   "verificacao": {
     "total": 0,
