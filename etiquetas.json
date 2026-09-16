@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-16T17:46:15Z",
+  "geradoEm": "2026-09-16T17:57:54Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8839,17 +8839,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 743,
+        "total": 744,
         "emAberto": 76,
         "atrasadas": 62,
-        "concluidas30d": 245,
-        "concluidas7d": 48,
+        "concluidas30d": 246,
+        "concluidas7d": 49,
         "naSemanaCorrente": 37
       },
       "mttr": {
-        "horas": 246.37,
-        "label": "10d 6h",
-        "amostra": 245
+        "horas": 245.85,
+        "label": "10d 5h",
+        "amostra": 246
       },
       "tendencia4Semanas": [
         {
@@ -8869,15 +8869,15 @@
         },
         {
           "semana": "W38",
-          "criadas": 21,
-          "finalizadas": 27
+          "criadas": 22,
+          "finalizadas": 28
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 743,
+            "total": 744,
             "emAberto": 76
           }
         ],
@@ -8895,7 +8895,7 @@
           {
             "nome": "James Chaves",
             "total": 47,
-            "emAberto": 11
+            "emAberto": 10
           },
           {
             "nome": "Luiz  Silva",
@@ -10069,24 +10069,6 @@
           "atrasada": false
         },
         {
-          "osId": "13455",
-          "ativo": "Inversor 3.3 Sungrow SUN2000-100KTL-H1    { MAB100-INVR3.3 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Ana Barros",
-          "supervisor": "James Chaves ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 3.3] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-16",
-          "dataCriacao": "2026-09-11",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "atrasada": false
-        },
-        {
           "osId": "13718",
           "ativo": "Tracker 43.100 Brametal     { MRJ100-ETKR43.100 }",
           "equipe": "",
@@ -10221,9 +10203,46 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": false
+        },
+        {
+          "osId": "13719",
+          "ativo": "Estrutura Trackers  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-ETKR1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Felipe  Lima",
+          "status": "Em progresso",
+          "tarefa": "[Thopen][Santa Bárbara] - Registro dos Trackers com falha",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-16",
+          "dataInicial": "2026-09-16",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "atrasada": false
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13455",
+          "ativo": "Inversor 3.3 Sungrow SUN2000-100KTL-H1    { MAB100-INVR3.3 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Ana Barros",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 3.3] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-16",
+          "dataCriacao": "2026-09-11",
+          "dataInicial": "2026-09-16",
+          "dataFinal": "2026-09-16",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13578",
           "ativo": "Tracker 10.100 STI STI-H250 - 2x(1Px56)    { BRS100-ETKR10.100 }",
@@ -12334,25 +12353,6 @@
           "atrasada": false
         },
         {
-          "osId": "10648",
-          "ativo": "Tracker 44.100 Axial Tracker 1VTwin    { THPN-CLR100-ETKR44.100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 44.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-08-04",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "2026-08-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 504.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11506",
           "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
           "equipe": "",
@@ -13075,7 +13075,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 615
+      "historicoTotal": 616
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15286,6 +15286,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13719",
+      "ativo": "Estrutura Trackers  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-ETKR1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Felipe  Lima",
+      "status": "Em progresso",
+      "tarefa": "[Thopen][Santa Bárbara] - Registro dos Trackers com falha",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-16",
+      "dataInicial": "2026-09-16",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0
+    },
+    {
       "osId": "13718",
       "ativo": "Tracker 43.100 Brametal     { MRJ100-ETKR43.100 }",
       "equipe": "",
@@ -16130,23 +16147,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "13455",
-      "ativo": "Inversor 3.3 Sungrow SUN2000-100KTL-H1    { MAB100-INVR3.3 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Ana Barros",
-      "supervisor": "James Chaves ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 3.3] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-16",
-      "dataCriacao": "2026-09-11",
-      "dataInicial": "2026-09-16",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0
     },
     {
       "osId": "13452",
@@ -18697,6 +18697,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "13455",
+      "ativo": "Inversor 3.3 Sungrow SUN2000-100KTL-H1    { MAB100-INVR3.3 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Ana Barros",
+      "supervisor": "James Chaves ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 3.3] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-09-16",
+      "dataCriacao": "2026-09-11",
+      "dataInicial": "2026-09-16",
+      "dataFinal": "2026-09-16",
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -21607,30 +21626,10 @@
       "horasAteAbrir": 120.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "13302",
-      "ativo": "Athon - Marabá 1 - PA Rua Bom Jesus, S/N Marabá  Pará Brasil { ATHN-MAB100 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "James Chaves ",
-      "status": "Finalizados",
-      "tarefa": "[ATHN-MAB100] - Religamento do ATHN-MAB100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-09",
-      "dataInicial": "2026-09-09",
-      "dataFinal": "2026-09-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2932,
-  "totalGeral": 6246,
+  "historicoTotal": 2933,
+  "totalGeral": 6247,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
