@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-16T17:22:13Z",
+  "geradoEm": "2026-09-16T17:33:34Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 28,
       "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 23,
-        "emProgresso": 3,
+        "naoIniciada": 22,
+        "emProgresso": 4,
         "pausada": 2,
         "verificacao": 0
       },
@@ -335,14 +335,15 @@
           "responsavel": "Marcos  Camargo",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Marcos  Camargo",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Cabine 3] - Religamento da Cabine 3",
           "criticidade": "",
           "dataProgramada": "2026-09-14",
           "dataCriacao": "2026-09-14",
-          "dataInicial": "",
+          "dataInicial": "2026-09-16",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -3830,16 +3831,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 789,
-        "emAberto": 77,
+        "emAberto": 76,
         "atrasadas": 58,
-        "concluidas30d": 176,
-        "concluidas7d": 37,
+        "concluidas30d": 177,
+        "concluidas7d": 38,
         "naSemanaCorrente": 29
       },
       "mttr": {
-        "horas": 315.82,
-        "label": "13d 3h",
-        "amostra": 176
+        "horas": 314.98,
+        "label": "13d 2h",
+        "amostra": 177
       },
       "tendencia4Semanas": [
         {
@@ -3860,7 +3861,7 @@
         {
           "semana": "W38",
           "criadas": 3,
-          "finalizadas": 11
+          "finalizadas": 12
         }
       ],
       "topOfensores": {
@@ -3868,7 +3869,7 @@
           {
             "nome": "(sem equipe)",
             "total": 789,
-            "emAberto": 77
+            "emAberto": 76
           }
         ],
         "responsaveis": [
@@ -3899,16 +3900,16 @@
           }
         ]
       },
-      "total": 77,
+      "total": 76,
       "atrasadas": 58,
       "porStatus": {
-        "naoIniciada": 73,
+        "naoIniciada": 72,
         "emProgresso": 0,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 77
+        "(sem equipe)": 76
       },
       "oss": [
         {
@@ -4902,23 +4903,6 @@
           "atrasada": true
         },
         {
-          "osId": "13272",
-          "ativo": "Transformador 1      { SALE-VTS200-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Cláudio  Ferreira",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-09-16",
-          "dataCriacao": "2026-09-09",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "12702",
           "ativo": "Transformador 1      { GDEN-SON200-TRFR1 }",
           "equipe": "",
@@ -5227,6 +5211,25 @@
       ],
       "ossHistorico": [
         {
+          "osId": "13272",
+          "ativo": "Transformador 1      { SALE-VTS200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-09-16",
+          "dataCriacao": "2026-09-09",
+          "dataInicial": "2026-09-16",
+          "dataFinal": "2026-09-16",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "13050",
           "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
           "equipe": "",
@@ -5237,6 +5240,25 @@
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-09-08",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-16",
+          "dataFinal": "2026-09-16",
+          "linkFracttal": "",
+          "horasAteAbrir": 288.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "13012",
+          "ativo": "QGBT 1 Estrada Mun. Norimar Aparecida Brieda Piracicaba  São Paulo Brasil { PRB100-QGBT1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[Piracicaba] - Manutenção Corretiva e Investigação Térmica no QGBT (Pendências MPS)",
+          "criticidade": "",
+          "dataProgramada": "2026-09-11",
           "dataCriacao": "2026-09-04",
           "dataInicial": "2026-09-16",
           "dataFinal": "2026-09-16",
@@ -5261,25 +5283,6 @@
           "dataFinal": "2026-09-16",
           "linkFracttal": "",
           "horasAteAbrir": 360.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "13012",
-          "ativo": "QGBT 1 Estrada Mun. Norimar Aparecida Brieda Piracicaba  São Paulo Brasil { PRB100-QGBT1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Felipe  Lima",
-          "status": "Finalizados",
-          "tarefa": "[Piracicaba] - Manutenção Corretiva e Investigação Térmica no QGBT (Pendências MPS)",
-          "criticidade": "",
-          "dataProgramada": "2026-09-11",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 288.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -6823,25 +6826,6 @@
           "atrasada": false
         },
         {
-          "osId": "12055",
-          "ativo": "Infraestrutura Civil Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Leonardo  Dias",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Leonardo  Dias",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-27",
-          "dataFinal": "2026-08-27",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10355",
           "ativo": "Transformador 1  seco    { VRG100-TRFR1 }",
           "equipe": "",
@@ -8077,19 +8061,19 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 356
+      "historicoTotal": 357
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
       "icone": "ti-shield-check",
       "cor": "#ef4444",
       "kpis": {
-        "total": 155,
-        "emAberto": 11,
+        "total": 157,
+        "emAberto": 13,
         "atrasadas": 8,
         "concluidas30d": 11,
         "concluidas7d": 1,
-        "naSemanaCorrente": 3
+        "naSemanaCorrente": 5
       },
       "mttr": {
         "horas": 477.82,
@@ -8114,7 +8098,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 3,
+          "criadas": 5,
           "finalizadas": 1
         }
       ],
@@ -8122,8 +8106,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 155,
-            "emAberto": 11
+            "total": 157,
+            "emAberto": 13
           }
         ],
         "responsaveis": [
@@ -8154,16 +8138,16 @@
           }
         ]
       },
-      "total": 11,
+      "total": 13,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 9,
+        "naoIniciada": 11,
         "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 11
+        "(sem equipe)": 13
       },
       "oss": [
         {
@@ -8303,6 +8287,40 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "13716",
+          "ativo": "Inversor 5.2 Huawei SUN2000-250KTL-H1    { SMP100-INVR5.2 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "Abertura de Chamado para Garantia [ Inversor BN2361031078]",
+          "criticidade": "",
+          "dataProgramada": "2026-09-16",
+          "dataCriacao": "2026-09-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "13714",
+          "ativo": "Inversor 1.4 SOLAREDGE     { CLD100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Deivity Jhon Cunha Saugo ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Deivity Jhon Cunha Saugo ",
+          "status": "Não Iniciada",
+          "tarefa": "Abertura de Chamado para Garantia [ Inversor inversor SJ3723-07B0C4F9A-70]",
+          "criticidade": "",
+          "dataProgramada": "2026-09-16",
+          "dataCriacao": "2026-09-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "13683",
@@ -8840,12 +8858,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 741,
-        "emAberto": 74,
+        "total": 742,
+        "emAberto": 75,
         "atrasadas": 62,
         "concluidas30d": 245,
         "concluidas7d": 48,
-        "naSemanaCorrente": 35
+        "naSemanaCorrente": 36
       },
       "mttr": {
         "horas": 246.37,
@@ -8870,7 +8888,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 19,
+          "criadas": 20,
           "finalizadas": 27
         }
       ],
@@ -8878,8 +8896,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 741,
-            "emAberto": 74
+            "total": 742,
+            "emAberto": 75
           }
         ],
         "responsaveis": [
@@ -8910,16 +8928,16 @@
           }
         ]
       },
-      "total": 74,
+      "total": 75,
       "atrasadas": 62,
       "porStatus": {
         "naoIniciada": 66,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 74
+        "(sem equipe)": 75
       },
       "oss": [
         {
@@ -10076,11 +10094,29 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Ana Barros",
           "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 3.3] - Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
           "dataCriacao": "2026-09-11",
+          "dataInicial": "2026-09-16",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
+          "atrasada": false
+        },
+        {
+          "osId": "13715",
+          "ativo": "Inversor 1.5 Huawei SUN2000-215KTL-INHO    { THPN-CNN100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Marcelo Lino de Souza ",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Marcelo Lino de Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-09-17",
+          "dataCriacao": "2026-09-16",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -15252,6 +15288,54 @@
   },
   "ossPublicas": [
     {
+      "osId": "13716",
+      "ativo": "Inversor 5.2 Huawei SUN2000-250KTL-H1    { SMP100-INVR5.2 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "Abertura de Chamado para Garantia [ Inversor BN2361031078]",
+      "criticidade": "",
+      "dataProgramada": "2026-09-16",
+      "dataCriacao": "2026-09-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "13715",
+      "ativo": "Inversor 1.5 Huawei SUN2000-215KTL-INHO    { THPN-CNN100-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Marcelo Lino de Souza ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Marcelo Lino de Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-09-17",
+      "dataCriacao": "2026-09-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "13714",
+      "ativo": "Inversor 1.4 SOLAREDGE     { CLD100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Deivity Jhon Cunha Saugo ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Deivity Jhon Cunha Saugo ",
+      "status": "Não Iniciada",
+      "tarefa": "Abertura de Chamado para Garantia [ Inversor inversor SJ3723-07B0C4F9A-70]",
+      "criticidade": "",
+      "dataProgramada": "2026-09-16",
+      "dataCriacao": "2026-09-16",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "13713",
       "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
       "equipe": "",
@@ -15878,14 +15962,15 @@
       "responsavel": "Marcos  Camargo",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Marcos  Camargo",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Cabine 3] - Religamento da Cabine 3",
       "criticidade": "",
       "dataProgramada": "2026-09-14",
       "dataCriacao": "2026-09-14",
-      "dataInicial": "",
+      "dataInicial": "2026-09-16",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 48.0,
       "modalidade": "local"
     },
     {
@@ -16057,14 +16142,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Ana Barros",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 3.3] - Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
       "dataCriacao": "2026-09-11",
-      "dataInicial": "",
+      "dataInicial": "2026-09-16",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0
     },
     {
       "osId": "13452",
@@ -16317,22 +16403,6 @@
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-18",
-      "dataCriacao": "2026-09-09",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "13272",
-      "ativo": "Transformador 1      { SALE-VTS200-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-09-16",
       "dataCriacao": "2026-09-09",
       "dataInicial": "",
       "dataFinal": "",
@@ -18634,6 +18704,25 @@
       "atrasada": false
     },
     {
+      "osId": "13272",
+      "ativo": "Transformador 1      { SALE-VTS200-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-09-16",
+      "dataCriacao": "2026-09-09",
+      "dataInicial": "2026-09-16",
+      "dataFinal": "2026-09-16",
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13201",
       "ativo": "Estrutura Fixa      { RNGD-CTS100-EFIX1 }",
       "equipe": "",
@@ -18972,25 +19061,6 @@
       "dataFinal": "2026-09-04",
       "linkFracttal": "",
       "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "12647",
-      "ativo": "Transformador 1      { PTB100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Thiago Morais ",
-      "status": "Finalizados",
-      "tarefa": "[Axis] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-09-08",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "2026-09-16",
-      "dataFinal": "2026-09-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 360.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -21562,8 +21632,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2930,
-  "totalGeral": 6242,
+  "historicoTotal": 2931,
+  "totalGeral": 6245,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
