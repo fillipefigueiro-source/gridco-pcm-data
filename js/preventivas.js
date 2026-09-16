@@ -100,7 +100,8 @@ async function gpvMpCarregar() {
   gpvRender();
 }
 function gpvMpCls(c) {
-  const s = String(c || '').toLowerCase();
+  // sem acento: "Crítico" tem í e o startsWith('crit') falhava (badge saía verde)
+  const s = String(c || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   if (!s) return '';
   if (s.startsWith('crit') || s.startsWith('alt')) return 'crit';
   if (s.startsWith('m')) return 'and';

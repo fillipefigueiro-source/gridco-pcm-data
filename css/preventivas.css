@@ -115,3 +115,58 @@ td.gpv-obs { text-align: left; font-family: inherit; font-weight: 400;
 .gpv-crit.and  { background: #fdf0d4; color: #7d5106 }
 .gpv-crit.ok   { background: #dcf2de; color: #166030 }
 .gpv-obs-vazio { color: #b0aebe }
+
+/* ── MPA & MPS — Envelhecimento e Pendências (mpas_aging.js) — 16/09/2026 ──── */
+.gma-kpis { display: flex; gap: 10px; padding: 12px 14px 2px; flex-wrap: wrap }
+.gma-kpi { flex: 1; min-width: 150px; border: 1px solid #e2e3ea; border-radius: 10px;
+  padding: 10px 14px; cursor: pointer; text-align: center; background: #fff;
+  transition: box-shadow .12s }
+.gma-kpi:hover { box-shadow: 0 2px 8px rgba(25,21,40,.10) }
+.gma-kpi .v { font-size: 22px; font-weight: 800; line-height: 1.1 }
+.gma-kpi .v small { font-size: 12px; font-weight: 600; color: #8a8794 }
+.gma-kpi .l { font-size: 10.5px; color: #504c63; margin-top: 2px }
+.gma-kpi.red .v { color: #8f2323 } .gma-kpi.amb .v { color: #7d5106 }
+.gma-kpi.grn .v { color: #166030 }
+.gma-kpi.on { outline: 2px solid #191528; background: #f5f6f8 }
+.gma-ctl { display: flex; gap: 10px; align-items: center; padding: 10px 14px; flex-wrap: wrap }
+.gma-busca { border: 1px solid #d9dae4; border-radius: 7px; padding: 6px 10px;
+  font: inherit; font-size: 12px; min-width: 200px }
+.gma-n { margin-left: auto; font-size: 11px; color: #8a8794 }
+.gma-tbl th small { font-weight: 600; opacity: .75 }
+.gma-lin { cursor: pointer }
+.gma-lin.gma-ok td { opacity: .55 }
+.gma-lin.aberta td { background: #f0f1f4 !important }
+.gma-dt { font-variant-numeric: tabular-nums; white-space: nowrap }
+.gma-atr { display: inline-block; border-radius: 4px; padding: 1px 7px;
+  font-weight: 700; font-size: 11px; font-variant-numeric: tabular-nums }
+.gma-atr.f1 { background: #fdf0d4; color: #7d5106 }
+.gma-atr.f2 { background: #f8dfb8; color: #8a5a06 }
+.gma-atr.f3 { background: #fbe0e0; color: #8f2323 }
+.gma-check { color: #166030; font-weight: 800 }
+.gma-nulo { color: #b0aebe }
+.gma-div { color: #c98a12; font-size: 8px; vertical-align: middle }
+.gma-semos { display: inline-block; border: 1px dashed #b9bbc9; border-radius: 4px;
+  padding: 1px 7px; font-size: 10.5px; color: #504c63; white-space: nowrap }
+.gma-tipo { display: inline-block; border: 1px solid #191528; border-radius: 4px;
+  padding: 0 6px; font-size: 10px; font-weight: 700; color: #191528 }
+.gma-sit { display: inline-block; border-radius: 4px; padding: 1px 7px;
+  font-size: 10.5px; font-weight: 700; white-space: nowrap }
+.gma-sit.green { background: #dcf2de; color: #166030 }
+.gma-sit.blue  { background: #e3ecf7; color: #20486e }
+.gma-sit.amber { background: #fdf0d4; color: #7d5106 }
+.gma-sit.red   { background: #fbe0e0; color: #8f2323 }
+.gma-sit.gray  { background: #eef0f5; color: #504c63 }
+.gma-obs-velha { color: #b0aebe }
+.gma-det td { background: #fafafc !important; border-bottom: 2px solid #d9dae4 }
+.gma-det-in { padding: 8px 14px; font-size: 11.5px; color: #504c63; text-align: left }
+.gma-det-in p { margin: 4px 0 }
+.gma-trava { text-align: center; padding: 34px 20px 38px; color: #504c63; font-size: 13px }
+.gma-trava .gma-cad { font-size: 30px; margin-bottom: 6px }
+.gma-trava b { font-size: 15px; color: #191528 }
+.gma-trava p { max-width: 460px; margin: 8px auto 14px; font-size: 12px }
+.gma-form { display: flex; gap: 8px; justify-content: center }
+.gma-form input { border: 1px solid #d9dae4; border-radius: 7px; padding: 7px 12px;
+  font: inherit; font-size: 13px; width: 220px }
+.gma-form button { border: 0; border-radius: 7px; background: #191528; color: #a9db21;
+  font: inherit; font-size: 13px; font-weight: 700; padding: 7px 16px; cursor: pointer }
+.gma-err { margin-top: 8px; font-size: 12px; color: #8f2323; min-height: 16px }
