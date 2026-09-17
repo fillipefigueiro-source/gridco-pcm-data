@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-17T16:18:24Z",
+  "geradoEm": "2026-09-17T16:31:16Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4440,
-        "emAberto": 32,
+        "total": 4441,
+        "emAberto": 33,
         "atrasadas": 28,
         "concluidas30d": 710,
         "concluidas7d": 188,
-        "naSemanaCorrente": 83
+        "naSemanaCorrente": 84
       },
       "mttr": {
         "horas": 19.55,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 83,
+          "criadas": 84,
           "finalizadas": 85
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4440,
-            "emAberto": 32
+            "total": 4441,
+            "emAberto": 33
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 32,
+      "total": 33,
       "atrasadas": 28,
       "porStatus": {
-        "naoIniciada": 27,
-        "emProgresso": 2,
-        "pausada": 3,
+        "naoIniciada": 28,
+        "emProgresso": 1,
+        "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 32
+        "(sem equipe)": 33
       },
       "oss": [
         {
@@ -598,6 +598,24 @@
           "atrasada": true
         },
         {
+          "osId": "13774",
+          "ativo": "QGBT 1 Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100-QGBT1 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Eduardo Souza",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-TPZ100-QGBT1] - Religamento do THPN-TPZ100-QGBT1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-17",
+          "dataCriacao": "2026-09-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "13773",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -659,7 +677,7 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "Cícero  Willian",
           "supervisor": "Carlos  Godoi",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
           "criticidade": "",
           "dataProgramada": "2026-09-17",
@@ -3677,9 +3695,9 @@
       "historicoTotal": 1833,
       "subClassificacao": {
         "remoto": 757,
-        "local": 3683,
+        "local": 3684,
         "remotoEmAberto": 11,
-        "localEmAberto": 21,
+        "localEmAberto": 22,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -8987,8 +9005,8 @@
       "total": 69,
       "atrasadas": 60,
       "porStatus": {
-        "naoIniciada": 59,
-        "emProgresso": 2,
+        "naoIniciada": 58,
+        "emProgresso": 3,
         "pausada": 8,
         "verificacao": 0
       },
@@ -9606,14 +9624,15 @@
           "responsavel": "Matheus Leite ",
           "criadoPor": "Gabriela Dias",
           "supervisor": "Matheus Leite ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[São Bento do Una] - Mapeamento das Strings com Módulos Trincados",
           "criticidade": "",
           "dataProgramada": "2026-09-01",
           "dataCriacao": "2026-08-26",
-          "dataInicial": "",
+          "dataInicial": "2026-09-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 528.0,
           "atrasada": true
         },
         {
@@ -15205,6 +15224,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13774",
+      "ativo": "QGBT 1 Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100-QGBT1 }",
+      "equipe": "",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Eduardo Souza",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-TPZ100-QGBT1] - Religamento do THPN-TPZ100-QGBT1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-17",
+      "dataCriacao": "2026-09-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13773",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -15311,7 +15347,7 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "Cícero  Willian",
       "supervisor": "Carlos  Godoi",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
       "criticidade": "",
       "dataProgramada": "2026-09-17",
@@ -17534,14 +17570,15 @@
       "responsavel": "Matheus Leite ",
       "criadoPor": "Gabriela Dias",
       "supervisor": "Matheus Leite ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[São Bento do Una] - Mapeamento das Strings com Módulos Trincados",
       "criticidade": "",
       "dataProgramada": "2026-09-01",
       "dataCriacao": "2026-08-26",
-      "dataInicial": "",
+      "dataInicial": "2026-09-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 528.0
     },
     {
       "osId": "12234",
@@ -21504,7 +21541,7 @@
     }
   ],
   "historicoTotal": 2939,
-  "totalGeral": 6284,
+  "totalGeral": 6285,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
