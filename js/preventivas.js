@@ -17,7 +17,8 @@
 //   Grandes atrasadas/mais antiga · críticas sem data futura.
 // · Busca e Tipo persistem entre os modos; o modo fica na sessionStorage.
 //
-// FONTES: Plano = gestao_pcm.json (aberto, papel-ciente via gpScopedTarefas).
+// FONTES: Plano = gestao_pcm.json (aberto, papel-ciente e passando pelos
+// FILTROS DO TOPO da aba via gpvTarefasTop — pedido de 17/09).
 // Fila = mpas.json CIFRADO (repo público). Sem a senha: admin vê a "versão
 // Fracttal" da fila (usina/tipo/programada/OS/situação) + desbloqueio inline;
 // cliente vê a mesma versão SEM CTA de senha e nunca vê Gerencial.
@@ -165,16 +166,64 @@ function gpvDias(iso) {
 }
 const gpvHoje = () => new Date().toISOString().slice(0, 10);
 
+// ── filtros do TOPO da aba valem aqui também (pedido de 17/09) ──────────────
+// gpFilteredTarefas = multi-seleção + OS/Solicitação + período; GP.soAtrasadas
+// é aplicado à parte (na aba ele troca a árvore por lista, não entra no filtro).
+function gpvTarefasTop() {
+  let arr = (typeof gpFilteredTarefas === 'function') ? gpFilteredTarefas() : gpScopedTarefas();
+  if (typeof GP !== 'undefined' && GP && GP.soAtrasadas) arr = arr.filter(t => t.aberta && t.atrasado);
+  return arr;
+}
+function gpvFiltroKey() {           // entra na chave do cache do gpvBase
+  try {
+    let k = (typeof GP !== 'undefined' && GP && GP.soAtrasadas) ? 'atr' : '';
+    if (typeof GP_SEL !== 'undefined')
+      k += '|' + Object.keys(GP_SEL).map(x => x + ':' + [...GP_SEL[x]].sort().join(',')).join('|');
+    if (typeof gpVal === 'function')
+      k += '|' + ['gp-f-os', 'gp-f-ss', 'gp-f-pini', 'gp-f-pfim', 'gp-f-pmodo'].map(gpVal).join('|');
+    return k;
+  } catch (e) { return ''; }
+}
+// Filtros do topo nas linhas da GERENCIAL (modo Fila). Os nomes divergem do
+// Fracttal ("Utragaz - Ibirapuã 2 - BA" × "Ultragaz – Ibirapuã 2") — comparação
+// normalizada, mesma régua do drill. Responsável/Tipo/Etiqueta/Estado/
+// Solicitação não existem na Gerencial, então não filtram a Fila.
+function gpvFilaTopOk(x) {
+  try {
+    if (typeof GP_SEL === 'undefined') return true;
+    const bate = (a, k) => a && k && (a === k || a.startsWith(k) || k.startsWith(a)
+      || (a.length >= 8 && k.indexOf(a) >= 0) || (k.length >= 8 && a.indexOf(k) >= 0));
+    const algum = (set, vals) => [...set].some(s => {
+      const a = gpvMpNorm(s);
+      return vals.some(v => v && bate(a, gpvMpNorm(v)));
+    });
+    if (GP_SEL.cliente.size && !algum(GP_SEL.cliente, [x.cli])) return false;
+    if (GP_SEL.usina.size && !algum(GP_SEL.usina, [x.usinaFull, x.nome])) return false;
+    if (GP_SEL.cluster.size && !algum(GP_SEL.cluster, [x.clu])) return false;
+    if (typeof gpVal === 'function') {
+      const fOS = gpVal('gp-f-os').toLowerCase();
+      if (fOS && String(x.os || '').toLowerCase().indexOf(fOS) < 0) return false;
+      const pIni = gpVal('gp-f-pini'), pFim = gpVal('gp-f-pfim');
+      if (pIni || pFim) {           // Prevista OU Programada dentro da faixa
+        const dentro = d => d && (!pIni || d >= pIni) && (!pFim || d <= pFim);
+        if (!dentro(x.prev) && !dentro(x.prog)) return false;
+      }
+    }
+    if (typeof GP !== 'undefined' && GP && GP.soAtrasadas && x.sit.k !== 'Atrasada') return false;
+    return true;
+  } catch (e) { return true; }
+}
+
 // ── base atômica: (cliente,usina,cluster,resp,sigla,mês) -> {f,t,os{}} ──────
-// Cacheada por geradoEm+usuário: 20 mil tarefas não precisam ser revarridas a
-// cada clique de controle.
+// Cacheada por geradoEm+usuário+filtros do topo: 20 mil tarefas não precisam
+// ser revarridas a cada clique de controle.
 let _gpvCacheKey = null, _gpvBase = null;
 
 function gpvBase() {
-  const key = ((GESTAO_DB && GESTAO_DB.geradoEm) || '') + '|' + (S.user || '');
+  const key = ((GESTAO_DB && GESTAO_DB.geradoEm) || '') + '|' + (S.user || '') + '|' + gpvFiltroKey();
   if (_gpvBase && _gpvCacheKey === key) return _gpvBase;
   const MESES = gpvMeses(), reg = new Map();
-  gpScopedTarefas().forEach(t => {
+  gpvTarefasTop().forEach(t => {
     const m = GPV_RX.exec(String(t.tarefa || ''));
     if (!m) return;
     const mes = String(t.dataProg || '').slice(0, 7);
@@ -269,7 +318,8 @@ function gpvFilaLinhas() {
     const critCls = gpvMpCls(m.criticidade);
     out.push({
       nome: (m.cliente ? m.cliente + ' – ' : '') + (m.usina_curta || m.usina || '—'),
-      usinaFull: m.usina || '', tipo, crit: m.criticidade || '', critCls,
+      usinaFull: m.usina || '', cli: m.cliente || '', clu: m.cluster || '',
+      tipo, crit: m.criticidade || '', critCls,
       prev: m.prevista || null, prog, atraso,
       os, semOS: !os, osSemPar: !!os && !bd, semData: !!bd && !prog,
       // "crítica sem data futura": criticidade alta/crítica, não concluída e
@@ -287,7 +337,7 @@ function gpvFilaLinhas() {
 function gpvFilaFracttal() {
   const hoje = gpvHoje();
   const porOS = new Map();
-  gpScopedTarefas().forEach(t => {
+  gpvTarefasTop().forEach(t => {
     const m = GPV_RX.exec(String(t.tarefa || ''));
     if (!m || (m[1] !== 'MPA' && m[1] !== 'MPS')) return;
     const os = String(t.os || '').trim();
@@ -359,12 +409,12 @@ function gpvRender() {
     gpvMpCarregar();
   }
   const temGer = GPV_MP.estado === 'ok' && MP;
-  const fila = temGer ? gpvFilaLinhas() : gpvFilaFracttal();
+  const fila = temGer ? gpvFilaLinhas().filter(gpvFilaTopOk) : gpvFilaFracttal();
 
   // ── cabeçalho do bloco ──
   const subt = GPV.modo === 'plano'
-    ? 'Plano: % de conclusão por OS · independente dos filtros acima — controles próprios'
-    : 'Fila: envelhecimento de MPA/MPS, da mais antiga para a mais nova · controles próprios';
+    ? 'Plano: % de conclusão por OS · obedece os filtros do topo da aba + controles próprios'
+    : 'Fila: envelhecimento de MPA/MPS, da mais antiga para a mais nova · obedece Cliente, Usina, Cluster, OS, Período e Só atrasadas do topo';
   let h = '<div class="gpv-box"><div class="gpv-top" onclick="gpvTog()">'
     + '<div><div class="gpv-tit">&#128202; Preventivas — Plano &amp; Fila <span class="gpv-mat">'
     + (GPV.modo === 'plano' ? 'matriz por OS' : 'Gerencial + Fracttal') + '</span></div>'
