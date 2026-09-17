@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-17T11:04:12Z",
+  "geradoEm": "2026-09-17T11:16:21Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4432,
-        "emAberto": 33,
+        "emAberto": 31,
         "atrasadas": 31,
-        "concluidas30d": 701,
-        "concluidas7d": 179,
+        "concluidas30d": 703,
+        "concluidas7d": 181,
         "naSemanaCorrente": 75
       },
       "mttr": {
-        "horas": 18.5,
-        "label": "18h 30min",
-        "amostra": 701
+        "horas": 18.45,
+        "label": "18h 27min",
+        "amostra": 703
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W38",
           "criadas": 75,
-          "finalizadas": 76
+          "finalizadas": 78
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4432,
-            "emAberto": 33
+            "emAberto": 31
           }
         ],
         "responsaveis": [
@@ -74,20 +74,20 @@
           {
             "nome": "Wesllen  Castro",
             "total": 193,
-            "emAberto": 2
+            "emAberto": 0
           }
         ]
       },
-      "total": 33,
+      "total": 31,
       "atrasadas": 31,
       "porStatus": {
         "naoIniciada": 27,
-        "emProgresso": 3,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 33
+        "(sem equipe)": 31
       },
       "oss": [
         {
@@ -651,7 +651,9 @@
           "linkFracttal": "",
           "modalidade": "remoto",
           "atrasada": true
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "13749",
           "ativo": "Inversor 2.6 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.6 }",
@@ -659,15 +661,16 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
+          "status": "Finalizados",
           "tarefa": "[Inversor 2.6] - Religamento do Inversor 2.6",
           "criticidade": "",
           "dataProgramada": "2026-09-17",
           "dataCriacao": "2026-09-17",
           "dataInicial": "2026-09-17",
-          "dataFinal": "",
+          "dataFinal": "2026-09-17",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -678,20 +681,19 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
+          "status": "Finalizados",
           "tarefa": "[Inversor 2.5] - Religamento do Inversor 2.5",
           "criticidade": "",
           "dataProgramada": "2026-09-17",
           "dataCriacao": "2026-09-17",
           "dataInicial": "2026-09-17",
-          "dataFinal": "",
+          "dataFinal": "2026-09-17",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "13747",
           "ativo": "Inversor 2.4 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.4 }",
@@ -3651,54 +3653,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "12957",
-          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Cabine 6] - Religamento da Cabine 6",
-          "criticidade": "",
-          "dataProgramada": "2026-09-03",
-          "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-03",
-          "dataFinal": "2026-09-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "12956",
-          "ativo": "Cabine 7  Capitão Poço  Pará Brasil { CPP100-CABN7 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Cabine 7] - Religamento da Cabine 7",
-          "criticidade": "",
-          "dataProgramada": "2026-09-03",
-          "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-03",
-          "dataFinal": "2026-09-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1824,
+      "historicoTotal": 1826,
       "subClassificacao": {
         "remoto": 757,
         "local": 3675,
         "remotoEmAberto": 11,
-        "localEmAberto": 22,
+        "localEmAberto": 20,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -3993,8 +3955,8 @@
       "total": 78,
       "atrasadas": 61,
       "porStatus": {
-        "naoIniciada": 74,
-        "emProgresso": 0,
+        "naoIniciada": 73,
+        "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
@@ -4385,14 +4347,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Infraestrutura",
           "criticidade": "",
           "dataProgramada": "2026-09-04",
           "dataCriacao": "2026-09-02",
-          "dataInicial": "",
+          "dataInicial": "2026-09-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 360.0,
           "atrasada": true
         },
         {
@@ -9055,8 +9018,8 @@
       "total": 75,
       "atrasadas": 66,
       "porStatus": {
-        "naoIniciada": 66,
-        "emProgresso": 1,
+        "naoIniciada": 63,
+        "emProgresso": 4,
         "pausada": 8,
         "verificacao": 0
       },
@@ -10150,14 +10113,15 @@
           "responsavel": "Felipe Xavier ",
           "criadoPor": "Ana Barros",
           "supervisor": "Felipe Xavier ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
           "dataCriacao": "2026-09-11",
-          "dataInicial": "",
+          "dataInicial": "2026-09-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -10167,14 +10131,15 @@
           "responsavel": "Felipe Xavier ",
           "criadoPor": "Ana Barros",
           "supervisor": "Felipe Xavier ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
           "dataCriacao": "2026-09-11",
-          "dataInicial": "",
+          "dataInicial": "2026-09-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -10184,14 +10149,15 @@
           "responsavel": "Felipe Xavier ",
           "criadoPor": "Ana Barros",
           "supervisor": "Felipe Xavier ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
           "dataCriacao": "2026-09-11",
-          "dataInicial": "",
+          "dataInicial": "2026-09-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -15372,42 +15338,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "13749",
-      "ativo": "Inversor 2.6 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.6 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 2.6] - Religamento do Inversor 2.6",
-      "criticidade": "",
-      "dataProgramada": "2026-09-17",
-      "dataCriacao": "2026-09-17",
-      "dataInicial": "2026-09-17",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
-      "osId": "13748",
-      "ativo": "Inversor 2.5 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.5 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 2.5] - Religamento do Inversor 2.5",
-      "criticidade": "",
-      "dataProgramada": "2026-09-17",
-      "dataCriacao": "2026-09-17",
-      "dataInicial": "2026-09-17",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "13743",
       "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
       "equipe": "",
@@ -16346,14 +16276,15 @@
       "responsavel": "Felipe Xavier ",
       "criadoPor": "Ana Barros",
       "supervisor": "Felipe Xavier ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
       "dataCriacao": "2026-09-11",
-      "dataInicial": "",
+      "dataInicial": "2026-09-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "13459",
@@ -16362,14 +16293,15 @@
       "responsavel": "Felipe Xavier ",
       "criadoPor": "Ana Barros",
       "supervisor": "Felipe Xavier ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
       "dataCriacao": "2026-09-11",
-      "dataInicial": "",
+      "dataInicial": "2026-09-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "13457",
@@ -16378,14 +16310,15 @@
       "responsavel": "Felipe Xavier ",
       "criadoPor": "Ana Barros",
       "supervisor": "Felipe Xavier ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
       "dataCriacao": "2026-09-11",
-      "dataInicial": "",
+      "dataInicial": "2026-09-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "13452",
@@ -17250,14 +17183,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Infraestrutura",
       "criticidade": "",
       "dataProgramada": "2026-09-04",
       "dataCriacao": "2026-09-02",
-      "dataInicial": "",
+      "dataInicial": "2026-09-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 360.0
     },
     {
       "osId": "12728",
@@ -19548,6 +19482,46 @@
       "atrasada": false
     },
     {
+      "osId": "13749",
+      "ativo": "Inversor 2.6 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.6 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Lucas  Nascimento",
+      "supervisor": "Wesllen  Castro",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 2.6] - Religamento do Inversor 2.6",
+      "criticidade": "",
+      "dataProgramada": "2026-09-17",
+      "dataCriacao": "2026-09-17",
+      "dataInicial": "2026-09-17",
+      "dataFinal": "2026-09-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "13748",
+      "ativo": "Inversor 2.5 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.5 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Lucas  Nascimento",
+      "supervisor": "Wesllen  Castro",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 2.5] - Religamento do Inversor 2.5",
+      "criticidade": "",
+      "dataProgramada": "2026-09-17",
+      "dataCriacao": "2026-09-17",
+      "dataInicial": "2026-09-17",
+      "dataFinal": "2026-09-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13747",
       "ativo": "Inversor 2.4 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.4 }",
       "equipe": "",
@@ -21809,49 +21783,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13340",
-      "ativo": "Thopen - Cidade Gaúcha 1 - PR 2ª Seção Colônia Tapejara, Lote N 152-Re, 153 e 154 Cidade Gaúcha  Paraná Brasil { THPN-CGH100 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
-      "tarefa": "[THPN-CGH100] - Religamento do THPN-CGH100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-10",
-      "dataCriacao": "2026-09-10",
-      "dataInicial": "2026-09-10",
-      "dataFinal": "2026-09-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "13338",
-      "ativo": "Thopen - Nova Londrina 2 - PR Estrada Mané Correia S/N Nova Londrina  Paraná Brasil { THPN-NVL200 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
-      "tarefa": "[THPN-NVL200] - Religamento do THPN-NVL200",
-      "criticidade": "",
-      "dataProgramada": "2026-09-10",
-      "dataCriacao": "2026-09-10",
-      "dataInicial": "2026-09-10",
-      "dataFinal": "2026-09-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2917,
+  "historicoTotal": 2919,
   "totalGeral": 6272,
   "verificacao": {
     "total": 0,
