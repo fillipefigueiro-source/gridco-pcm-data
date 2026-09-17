@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-17T10:52:03Z",
+  "geradoEm": "2026-09-17T11:04:12Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4432,
-        "emAberto": 35,
+        "emAberto": 33,
         "atrasadas": 31,
-        "concluidas30d": 699,
-        "concluidas7d": 177,
+        "concluidas30d": 701,
+        "concluidas7d": 179,
         "naSemanaCorrente": 75
       },
       "mttr": {
-        "horas": 18.55,
-        "label": "18h 33min",
-        "amostra": 699
+        "horas": 18.5,
+        "label": "18h 30min",
+        "amostra": 701
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W38",
           "criadas": 75,
-          "finalizadas": 74
+          "finalizadas": 76
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4432,
-            "emAberto": 35
+            "emAberto": 33
           }
         ],
         "responsaveis": [
@@ -74,20 +74,20 @@
           {
             "nome": "Wesllen  Castro",
             "total": 193,
-            "emAberto": 4
+            "emAberto": 2
           }
         ]
       },
-      "total": 35,
+      "total": 33,
       "atrasadas": 31,
       "porStatus": {
         "naoIniciada": 27,
-        "emProgresso": 5,
+        "emProgresso": 3,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 35
+        "(sem equipe)": 33
       },
       "oss": [
         {
@@ -689,7 +689,9 @@
           "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "13747",
           "ativo": "Inversor 2.4 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.4 }",
@@ -697,15 +699,16 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
+          "status": "Finalizados",
           "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
           "criticidade": "",
           "dataProgramada": "2026-09-17",
           "dataCriacao": "2026-09-17",
           "dataInicial": "2026-09-17",
-          "dataFinal": "",
+          "dataFinal": "2026-09-17",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -716,20 +719,19 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
+          "status": "Finalizados",
           "tarefa": "[Inversor 2.3] - Religamento do Inversor 2.3",
           "criticidade": "",
           "dataProgramada": "2026-09-17",
           "dataCriacao": "2026-09-17",
           "dataInicial": "2026-09-17",
-          "dataFinal": "",
+          "dataFinal": "2026-09-17",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "13745",
           "ativo": "Inversor 2.2 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.2 }",
@@ -3689,54 +3691,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "12949",
-          "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "James Chaves ",
-          "status": "Finalizados",
-          "tarefa": "[JCD100-INVR3.1] - Religamento do JCD100-INVR3.1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-03",
-          "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-03",
-          "dataFinal": "2026-09-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "12946",
-          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-          "equipe": "",
-          "responsavel": "Felipe Silva ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Felipe Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Cabine 6] - Religamento da Cabine 6",
-          "criticidade": "",
-          "dataProgramada": "2026-09-03",
-          "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-03",
-          "dataFinal": "2026-09-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1822,
+      "historicoTotal": 1824,
       "subClassificacao": {
         "remoto": 757,
         "local": 3675,
         "remotoEmAberto": 11,
-        "localEmAberto": 24,
+        "localEmAberto": 22,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -15446,42 +15408,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "13747",
-      "ativo": "Inversor 2.4 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.4 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
-      "criticidade": "",
-      "dataProgramada": "2026-09-17",
-      "dataCriacao": "2026-09-17",
-      "dataInicial": "2026-09-17",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
-      "osId": "13746",
-      "ativo": "Inversor 2.3 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.3 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 2.3] - Religamento do Inversor 2.3",
-      "criticidade": "",
-      "dataProgramada": "2026-09-17",
-      "dataCriacao": "2026-09-17",
-      "dataInicial": "2026-09-17",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "13743",
       "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
       "equipe": "",
@@ -19622,6 +19548,46 @@
       "atrasada": false
     },
     {
+      "osId": "13747",
+      "ativo": "Inversor 2.4 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.4 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Lucas  Nascimento",
+      "supervisor": "Wesllen  Castro",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
+      "criticidade": "",
+      "dataProgramada": "2026-09-17",
+      "dataCriacao": "2026-09-17",
+      "dataInicial": "2026-09-17",
+      "dataFinal": "2026-09-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "13746",
+      "ativo": "Inversor 2.3 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.3 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Lucas  Nascimento",
+      "supervisor": "Wesllen  Castro",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 2.3] - Religamento do Inversor 2.3",
+      "criticidade": "",
+      "dataProgramada": "2026-09-17",
+      "dataCriacao": "2026-09-17",
+      "dataInicial": "2026-09-17",
+      "dataFinal": "2026-09-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13745",
       "ativo": "Inversor 2.2 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.2 }",
       "equipe": "",
@@ -21883,49 +21849,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13337",
-      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
-      "tarefa": "[THPN-NVL100] - Religamento do THPN-NVL100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-10",
-      "dataCriacao": "2026-09-10",
-      "dataInicial": "2026-09-10",
-      "dataFinal": "2026-09-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "13331",
-      "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizados",
-      "tarefa": "[CPP100-CABN3] - Religamento do CPP100-CABN3",
-      "criticidade": "",
-      "dataProgramada": "2026-09-10",
-      "dataCriacao": "2026-09-10",
-      "dataInicial": "2026-09-10",
-      "dataFinal": "2026-09-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2915,
+  "historicoTotal": 2917,
   "totalGeral": 6272,
   "verificacao": {
     "total": 0,
