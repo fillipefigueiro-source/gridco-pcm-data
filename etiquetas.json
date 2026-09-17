@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-17T14:18:14Z",
+  "geradoEm": "2026-09-17T14:31:18Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4437,
-        "emAberto": 31,
+        "emAberto": 30,
         "atrasadas": 28,
-        "concluidas30d": 708,
-        "concluidas7d": 186,
+        "concluidas30d": 709,
+        "concluidas7d": 187,
         "naSemanaCorrente": 80
       },
       "mttr": {
-        "horas": 19.61,
-        "label": "19h 37min",
-        "amostra": 708
+        "horas": 19.58,
+        "label": "19h 35min",
+        "amostra": 709
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W38",
           "criadas": 80,
-          "finalizadas": 83
+          "finalizadas": 84
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4437,
-            "emAberto": 31
+            "emAberto": 30
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 31,
+      "total": 30,
       "atrasadas": 28,
       "porStatus": {
-        "naoIniciada": 28,
-        "emProgresso": 0,
-        "pausada": 3,
+        "naoIniciada": 27,
+        "emProgresso": 1,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 31
+        "(sem equipe)": 30
       },
       "oss": [
         {
@@ -115,7 +115,7 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Felipe Silva",
           "supervisor": "Rodrigo  Silva",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
@@ -632,7 +632,9 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "13760",
           "ativo": "Thopen - São Bento do Una 1 - PE Zona Rural, s/n São Bento do Una  Pernambuco Brasil { THPN-SBU100 }",
@@ -640,19 +642,19 @@
           "responsavel": "Matheus Leite ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Matheus Leite ",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "[THPN-SBU100] - Religamento do THPN-SBU100",
           "criticidade": "",
           "dataProgramada": "2026-09-17",
           "dataCriacao": "2026-09-17",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-09-17",
+          "dataFinal": "2026-09-17",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "13757",
           "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
@@ -3632,34 +3634,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "12984",
-          "ativo": "Disjuntor do Inversor 1.12      { MRO100-DINV1.12 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizados",
-          "tarefa": "[MRO100-DINV1.12] - Religamento do MRO100-DINV1.12",
-          "criticidade": "",
-          "dataProgramada": "2026-09-04",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "2026-09-04",
-          "dataFinal": "2026-09-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1831,
+      "historicoTotal": 1832,
       "subClassificacao": {
         "remoto": 757,
         "local": 3680,
         "remotoEmAberto": 11,
-        "localEmAberto": 20,
+        "localEmAberto": 19,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -8894,17 +8876,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 748,
+        "total": 749,
         "emAberto": 71,
         "atrasadas": 62,
-        "concluidas30d": 251,
-        "concluidas7d": 49,
-        "naSemanaCorrente": 40
+        "concluidas30d": 252,
+        "concluidas7d": 50,
+        "naSemanaCorrente": 41
       },
       "mttr": {
-        "horas": 241.91,
+        "horas": 241.05,
         "label": "10d 1h",
-        "amostra": 251
+        "amostra": 252
       },
       "tendencia4Semanas": [
         {
@@ -8924,15 +8906,15 @@
         },
         {
           "semana": "W38",
-          "criadas": 26,
-          "finalizadas": 37
+          "criadas": 27,
+          "finalizadas": 38
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 748,
+            "total": 749,
             "emAberto": 71
           }
         ],
@@ -10059,23 +10041,6 @@
           "atrasada": false
         },
         {
-          "osId": "13699",
-          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { BES100-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Rogério Aparecido Paravani ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Rogério Aparecido Paravani ",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.6] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-09-17",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "13657",
           "ativo": "Tracker 110.100 STI STI-H250    { THPN-TNB100-ETKR110.100 }",
           "equipe": "",
@@ -10121,6 +10086,23 @@
           "criticidade": "",
           "dataProgramada": "2026-09-17",
           "dataCriacao": "2026-09-11",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "13766",
+          "ativo": "Inversor 2.2  SUN2000-250KTL-H1    { THPN-TGI100-INVR2.2 }",
+          "equipe": "",
+          "responsavel": "Valdir Silva ",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Valdir Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-09-18",
+          "dataCriacao": "2026-09-17",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -10224,6 +10206,25 @@
           "supervisor": "Leonardo  Dias",
           "status": "Finalizados",
           "tarefa": "[Inversor 1.5] - Inspeção da string partindo depois das 8h",
+          "criticidade": "",
+          "dataProgramada": "2026-09-17",
+          "dataCriacao": "2026-09-16",
+          "dataInicial": "2026-09-17",
+          "dataFinal": "2026-09-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "13699",
+          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { BES100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Rogério Aparecido Paravani ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Rogério Aparecido Paravani ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.6] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-09-17",
           "dataCriacao": "2026-09-16",
@@ -12971,25 +12972,6 @@
           "atrasada": false
         },
         {
-          "osId": "10826",
-          "ativo": "Inversor 2.5 Huawei     { TIM100-INVR2.5 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 2.5] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-08-08",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-10",
-          "dataFinal": "2026-08-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9099",
           "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID1 }",
           "equipe": "",
@@ -13047,7 +13029,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 624
+      "historicoTotal": 625
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15220,6 +15202,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "13766",
+      "ativo": "Inversor 2.2  SUN2000-250KTL-H1    { THPN-TGI100-INVR2.2 }",
+      "equipe": "",
+      "responsavel": "Valdir Silva ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Valdir Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-09-18",
+      "dataCriacao": "2026-09-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "13765",
       "ativo": "Inversor 1.2 Sungrow SG333HX    { THPN-BDC100-INVR1.2 }",
       "equipe": "",
@@ -15277,23 +15275,6 @@
       "supervisor": "Carlos  Godoi",
       "status": "Não Iniciada",
       "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
-      "criticidade": "",
-      "dataProgramada": "2026-09-17",
-      "dataCriacao": "2026-09-17",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "13760",
-      "ativo": "Thopen - São Bento do Una 1 - PE Zona Rural, s/n São Bento do Una  Pernambuco Brasil { THPN-SBU100 }",
-      "equipe": "",
-      "responsavel": "Matheus Leite ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Matheus Leite ",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-SBU100] - Religamento do THPN-SBU100",
       "criticidade": "",
       "dataProgramada": "2026-09-17",
       "dataCriacao": "2026-09-17",
@@ -15608,22 +15589,6 @@
       "supervisor": "João Vieira ",
       "status": "Não Iniciada",
       "tarefa": "[ETM] - Coleta e análise de dados",
-      "criticidade": "",
-      "dataProgramada": "2026-09-17",
-      "dataCriacao": "2026-09-16",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "13699",
-      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { BES100-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Rogério Aparecido Paravani ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Rogério Aparecido Paravani ",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.6] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-09-17",
       "dataCriacao": "2026-09-16",
@@ -18069,7 +18034,7 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Felipe Silva",
       "supervisor": "Rodrigo  Silva",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
@@ -19215,6 +19180,26 @@
       "atrasada": false
     },
     {
+      "osId": "13760",
+      "ativo": "Thopen - São Bento do Una 1 - PE Zona Rural, s/n São Bento do Una  Pernambuco Brasil { THPN-SBU100 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Matheus Leite ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-SBU100] - Religamento do THPN-SBU100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-17",
+      "dataCriacao": "2026-09-17",
+      "dataInicial": "2026-09-17",
+      "dataFinal": "2026-09-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13759",
       "ativo": "Nobreak 2      { TESTE100-NBRK2 }",
       "equipe": "",
@@ -19579,6 +19564,25 @@
       "supervisor": "Leonardo  Dias",
       "status": "Finalizados",
       "tarefa": "[Inversor 1.5] - Inspeção da string partindo depois das 8h",
+      "criticidade": "",
+      "dataProgramada": "2026-09-17",
+      "dataCriacao": "2026-09-16",
+      "dataInicial": "2026-09-17",
+      "dataFinal": "2026-09-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "13699",
+      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { BES100-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Rogério Aparecido Paravani ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Rogério Aparecido Paravani ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.6] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-09-17",
       "dataCriacao": "2026-09-16",
@@ -21491,50 +21495,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13393",
-      "ativo": "Cabine 1 LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { CAZ100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Gilson  Milhomem",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Gilson  Milhomem",
-      "status": "Finalizados",
-      "tarefa": "[CAZ100-CABN1] - Religamento do CAZ100-CABN1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-10",
-      "dataCriacao": "2026-09-10",
-      "dataInicial": "2026-09-11",
-      "dataFinal": "2026-09-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "13389",
-      "ativo": "Inversor 5.7 Huawei     { MAB200-INVR5.7 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "James Chaves ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 5.7] - Religamento do Inversor 5.7",
-      "criticidade": "",
-      "dataProgramada": "2026-09-10",
-      "dataCriacao": "2026-09-10",
-      "dataInicial": "2026-09-11",
-      "dataFinal": "2026-09-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2934,
-  "totalGeral": 6280,
+  "historicoTotal": 2936,
+  "totalGeral": 6281,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
