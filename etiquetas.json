@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-17T14:54:57Z",
+  "geradoEm": "2026-09-17T15:06:42Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4437,
-        "emAberto": 30,
+        "total": 4438,
+        "emAberto": 31,
         "atrasadas": 28,
         "concluidas30d": 709,
         "concluidas7d": 187,
-        "naSemanaCorrente": 80
+        "naSemanaCorrente": 81
       },
       "mttr": {
         "horas": 19.58,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 80,
+          "criadas": 81,
           "finalizadas": 84
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4437,
-            "emAberto": 30
+            "total": 4438,
+            "emAberto": 31
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 30,
+      "total": 31,
       "atrasadas": 28,
       "porStatus": {
-        "naoIniciada": 27,
-        "emProgresso": 1,
-        "pausada": 2,
+        "naoIniciada": 28,
+        "emProgresso": 0,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 30
+        "(sem equipe)": 31
       },
       "oss": [
         {
@@ -115,7 +115,7 @@
           "responsavel": "Rodrigo  Silva",
           "criadoPor": "Felipe Silva",
           "supervisor": "Rodrigo  Silva",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
           "criticidade": "",
           "dataProgramada": "2026-08-12",
@@ -596,6 +596,24 @@
           "linkFracttal": "",
           "modalidade": "remoto",
           "atrasada": true
+        },
+        {
+          "osId": "13771",
+          "ativo": "2C - União 1 - PI Estrada p/Campo Grande União  Piauí Brasil { 2C-UNI100 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Ailton Leal ",
+          "status": "Não Iniciada",
+          "tarefa": "Religamento de usina",
+          "criticidade": "",
+          "dataProgramada": "2026-09-17",
+          "dataCriacao": "2026-09-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "13763",
@@ -3639,9 +3657,9 @@
       "historicoTotal": 1832,
       "subClassificacao": {
         "remoto": 757,
-        "local": 3680,
+        "local": 3681,
         "remotoEmAberto": 11,
-        "localEmAberto": 19,
+        "localEmAberto": 20,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -15202,6 +15220,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13771",
+      "ativo": "2C - União 1 - PI Estrada p/Campo Grande União  Piauí Brasil { 2C-UNI100 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Ailton Leal ",
+      "status": "Não Iniciada",
+      "tarefa": "Religamento de usina",
+      "criticidade": "",
+      "dataProgramada": "2026-09-17",
+      "dataCriacao": "2026-09-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13766",
       "ativo": "Inversor 2.2  SUN2000-250KTL-H1    { THPN-TGI100-INVR2.2 }",
       "equipe": "",
@@ -18034,7 +18069,7 @@
       "responsavel": "Rodrigo  Silva",
       "criadoPor": "Felipe Silva",
       "supervisor": "Rodrigo  Silva",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
       "criticidade": "",
       "dataProgramada": "2026-08-12",
@@ -21498,7 +21533,7 @@
     }
   ],
   "historicoTotal": 2936,
-  "totalGeral": 6281,
+  "totalGeral": 6282,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
