@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-18T18:31:03Z",
+  "geradoEm": "2026-09-18T18:45:25Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4481,
-        "emAberto": 26,
+        "total": 4486,
+        "emAberto": 25,
         "atrasadas": 19,
-        "concluidas30d": 734,
-        "concluidas7d": 198,
-        "naSemanaCorrente": 124
+        "concluidas30d": 740,
+        "concluidas7d": 204,
+        "naSemanaCorrente": 129
       },
       "mttr": {
-        "horas": 19.59,
-        "label": "19h 35min",
-        "amostra": 734
+        "horas": 19.43,
+        "label": "19h 26min",
+        "amostra": 740
       },
       "tendencia4Semanas": [
         {
@@ -38,22 +38,22 @@
         },
         {
           "semana": "W38",
-          "criadas": 124,
-          "finalizadas": 130
+          "criadas": 129,
+          "finalizadas": 136
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4481,
-            "emAberto": 26
+            "total": 4486,
+            "emAberto": 25
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 581,
+            "total": 586,
             "emAberto": 4
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 26,
+      "total": 25,
       "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 19,
-        "emProgresso": 4,
-        "pausada": 3,
+        "naoIniciada": 18,
+        "emProgresso": 2,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 26
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -352,7 +352,7 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valdir Silva ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
@@ -389,7 +389,7 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valdir Silva ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
@@ -446,24 +446,6 @@
           "supervisor": "Ronaldo  Silva",
           "status": "Não Iniciada",
           "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
-          "criticidade": "",
-          "dataProgramada": "2026-09-18",
-          "dataCriacao": "2026-09-18",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "13849",
-          "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
-          "equipe": "",
-          "responsavel": "Eduardo Souza",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Eduardo Souza",
-          "status": "Não Iniciada",
-          "tarefa": "[Thopen - Topázio (Matão 2) - SP] - Religamento do Thopen - Topázio (Matão 2) - SP",
           "criticidade": "",
           "dataProgramada": "2026-09-18",
           "dataCriacao": "2026-09-18",
@@ -567,6 +549,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13849",
+          "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Eduardo Souza",
+          "status": "Finalizados",
+          "tarefa": "[Thopen - Topázio (Matão 2) - SP] - Religamento do Thopen - Topázio (Matão 2) - SP",
+          "criticidade": "",
+          "dataProgramada": "2026-09-18",
+          "dataCriacao": "2026-09-18",
+          "dataInicial": "2026-09-18",
+          "dataFinal": "2026-09-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "13841",
           "ativo": "Thopen - Brodowski 1 - SP Rodovia SP 334 S/N Batatais  São Paulo Brasil { THPN-BWK100 }",
@@ -3546,34 +3548,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13288",
-          "ativo": "Cabine 1 Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-SDN100-CABN1] - Religamento do THPN-SDN100-CABN1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-09",
-          "dataCriacao": "2026-09-09",
-          "dataInicial": "2026-09-09",
-          "dataFinal": "2026-09-09",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1855,
+      "historicoTotal": 1861,
       "subClassificacao": {
         "remoto": 758,
-        "local": 3723,
+        "local": 3728,
         "remotoEmAberto": 10,
-        "localEmAberto": 16,
+        "localEmAberto": 15,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -3795,8 +3777,8 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 794,
-        "emAberto": 71,
+        "total": 793,
+        "emAberto": 70,
         "atrasadas": 56,
         "concluidas30d": 179,
         "concluidas7d": 25,
@@ -3825,7 +3807,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 8,
+          "criadas": 7,
           "finalizadas": 21
         }
       ],
@@ -3833,8 +3815,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 794,
-            "emAberto": 71
+            "total": 793,
+            "emAberto": 70
           }
         ],
         "responsaveis": [
@@ -3850,8 +3832,8 @@
           },
           {
             "nome": "Felipe  Lima",
-            "total": 32,
-            "emAberto": 7
+            "total": 31,
+            "emAberto": 6
           },
           {
             "nome": "Francisco  Santos",
@@ -3865,16 +3847,16 @@
           }
         ]
       },
-      "total": 71,
+      "total": 70,
       "atrasadas": 56,
       "porStatus": {
-        "naoIniciada": 67,
-        "emProgresso": 1,
+        "naoIniciada": 65,
+        "emProgresso": 2,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 71
+        "(sem equipe)": 70
       },
       "oss": [
         {
@@ -4482,14 +4464,15 @@
           "responsavel": "Adriano Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Adriano Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-09-11",
           "dataCriacao": "2026-09-09",
-          "dataInicial": "",
+          "dataInicial": "2026-09-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 216.0,
           "atrasada": true
         },
         {
@@ -5055,23 +5038,6 @@
           "atrasada": false
         },
         {
-          "osId": "13600",
-          "ativo": "Transformador 4 Gazquez     { IND100-TRFR4 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPA - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-09-30",
-          "dataCriacao": "2026-09-14",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "13208",
           "ativo": "Transformador 3 Romagnoli     { NVX200-TRFR3 }",
           "equipe": "",
@@ -5129,25 +5095,6 @@
           "atrasada": false
         },
         {
-          "osId": "9010",
-          "ativo": "QGBT 2  Demerval Lobão  Piauí Brasil { DML100-QGBT2 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ailton Leal ",
-          "status": "Finalizados",
-          "tarefa": "[GreenYellow] - MPT - QGBT",
-          "criticidade": "",
-          "dataProgramada": "2026-07-31",
-          "dataCriacao": "2026-07-06",
-          "dataInicial": "2026-09-18",
-          "dataFinal": "2026-09-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 1776.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13267",
           "ativo": "Transformador 1      { SALE-CRS200-TRFR1 }",
           "equipe": "",
@@ -5163,6 +5110,25 @@
           "dataFinal": "2026-09-18",
           "linkFracttal": "",
           "horasAteAbrir": 216.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "9010",
+          "ativo": "QGBT 2  Demerval Lobão  Piauí Brasil { DML100-QGBT2 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Ailton Leal ",
+          "status": "Finalizados",
+          "tarefa": "[GreenYellow] - MPT - QGBT",
+          "criticidade": "",
+          "dataProgramada": "2026-07-31",
+          "dataCriacao": "2026-07-06",
+          "dataInicial": "2026-09-18",
+          "dataFinal": "2026-09-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 1776.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -8740,16 +8706,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 756,
-        "emAberto": 67,
+        "emAberto": 66,
         "atrasadas": 58,
-        "concluidas30d": 242,
-        "concluidas7d": 52,
+        "concluidas30d": 243,
+        "concluidas7d": 53,
         "naSemanaCorrente": 43
       },
       "mttr": {
-        "horas": 242.78,
-        "label": "10d 2h",
-        "amostra": 242
+        "horas": 241.88,
+        "label": "10d 1h",
+        "amostra": 243
       },
       "tendencia4Semanas": [
         {
@@ -8770,7 +8736,7 @@
         {
           "semana": "W38",
           "criadas": 34,
-          "finalizadas": 49
+          "finalizadas": 50
         }
       ],
       "topOfensores": {
@@ -8778,7 +8744,7 @@
           {
             "nome": "(sem equipe)",
             "total": 756,
-            "emAberto": 67
+            "emAberto": 66
           }
         ],
         "responsaveis": [
@@ -8809,16 +8775,16 @@
           }
         ]
       },
-      "total": 67,
+      "total": 66,
       "atrasadas": 58,
       "porStatus": {
         "naoIniciada": 59,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 67
+        "(sem equipe)": 66
       },
       "oss": [
         {
@@ -9849,24 +9815,6 @@
           "atrasada": false
         },
         {
-          "osId": "13762",
-          "ativo": "Inversor 1.6 CANANDIAN SOLAR     { MTS200-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Francisco  Santos",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Francisco  Santos",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.6] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-09-18",
-          "dataCriacao": "2026-09-17",
-          "dataInicial": "2026-09-18",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "atrasada": false
-        },
-        {
           "osId": "13640",
           "ativo": "Inversor 2.4 Sungrow SG250HX-20    { PRL100-INVR2.4 }",
           "equipe": "",
@@ -9998,6 +9946,25 @@
           "supervisor": "Francisco  Santos",
           "status": "Finalizados",
           "tarefa": "[Tracker 24.102] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-09-18",
+          "dataCriacao": "2026-09-17",
+          "dataInicial": "2026-09-18",
+          "dataFinal": "2026-09-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "13762",
+          "ativo": "Inversor 1.6 CANANDIAN SOLAR     { MTS200-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Francisco  Santos",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Francisco  Santos",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.6] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-09-18",
           "dataCriacao": "2026-09-17",
@@ -12593,25 +12560,6 @@
           "atrasada": false
         },
         {
-          "osId": "9071",
-          "ativo": "Tracker 54.100 Axial 1V bilinha (um eixo de rotação horizontal)    { CAZ100-ETKR54.100 }",
-          "equipe": "",
-          "responsavel": "Gilson  Milhomem",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson  Milhomem",
-          "status": "Finalizados",
-          "tarefa": "[Céu Azul][TR-54-Skid 03] - Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-07",
-          "dataCriacao": "2026-07-07",
-          "dataInicial": "2026-07-15",
-          "dataFinal": "2026-07-15",
-          "linkFracttal": "",
-          "horasAteAbrir": 192.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9099",
           "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID1 }",
           "equipe": "",
@@ -12821,7 +12769,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 636
+      "historicoTotal": 637
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15013,23 +14961,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "13849",
-      "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
-      "equipe": "",
-      "responsavel": "Eduardo Souza",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Eduardo Souza",
-      "status": "Não Iniciada",
-      "tarefa": "[Thopen - Topázio (Matão 2) - SP] - Religamento do Thopen - Topázio (Matão 2) - SP",
-      "criticidade": "",
-      "dataProgramada": "2026-09-18",
-      "dataCriacao": "2026-09-18",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "13847",
       "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-SON200-INVR1.4 }",
       "equipe": "",
@@ -15278,23 +15209,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "modalidade": "local"
-    },
-    {
-      "osId": "13762",
-      "ativo": "Inversor 1.6 CANANDIAN SOLAR     { MTS200-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Francisco  Santos",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Francisco  Santos",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.6] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-09-18",
-      "dataCriacao": "2026-09-17",
-      "dataInicial": "2026-09-18",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0
     },
     {
       "osId": "13738",
@@ -15615,22 +15529,6 @@
       "tarefa": "[Grid Co.] - MPA - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-29",
-      "dataCriacao": "2026-09-14",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "13600",
-      "ativo": "Transformador 4 Gazquez     { IND100-TRFR4 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPA - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-09-30",
       "dataCriacao": "2026-09-14",
       "dataInicial": "",
       "dataFinal": "",
@@ -16141,14 +16039,15 @@
       "responsavel": "Adriano Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Adriano Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-11",
       "dataCriacao": "2026-09-09",
-      "dataInicial": "",
+      "dataInicial": "2026-09-18",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 216.0
     },
     {
       "osId": "13251",
@@ -16562,7 +16461,7 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valdir Silva ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
@@ -16597,7 +16496,7 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valdir Silva ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
@@ -18686,25 +18585,6 @@
       "atrasada": false
     },
     {
-      "osId": "9010",
-      "ativo": "QGBT 2  Demerval Lobão  Piauí Brasil { DML100-QGBT2 }",
-      "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Ailton Leal ",
-      "status": "Finalizados",
-      "tarefa": "[GreenYellow] - MPT - QGBT",
-      "criticidade": "",
-      "dataProgramada": "2026-07-31",
-      "dataCriacao": "2026-07-06",
-      "dataInicial": "2026-09-18",
-      "dataFinal": "2026-09-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 1776.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "8626",
       "ativo": "Transformador 1 WEG     { THPN-TPZ100-TRFR1 }",
       "equipe": "",
@@ -18740,6 +18620,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 792.0,
       "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "13849",
+      "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
+      "equipe": "",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Eduardo Souza",
+      "status": "Finalizados",
+      "tarefa": "[Thopen - Topázio (Matão 2) - SP] - Religamento do Thopen - Topázio (Matão 2) - SP",
+      "criticidade": "",
+      "dataProgramada": "2026-09-18",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "2026-09-18",
+      "dataFinal": "2026-09-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -19277,6 +19177,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "13762",
+      "ativo": "Inversor 1.6 CANANDIAN SOLAR     { MTS200-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Francisco  Santos",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Francisco  Santos",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.6] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-09-18",
+      "dataCriacao": "2026-09-17",
+      "dataInicial": "2026-09-18",
+      "dataFinal": "2026-09-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -21067,30 +20986,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13505",
-      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
-      "equipe": "",
-      "responsavel": "Ademir Necker ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Ademir Necker ",
-      "status": "Finalizados",
-      "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-12",
-      "dataCriacao": "2026-09-12",
-      "dataInicial": "2026-09-14",
-      "dataFinal": "2026-09-14",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2972,
-  "totalGeral": 6334,
+  "historicoTotal": 2979,
+  "totalGeral": 6338,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
