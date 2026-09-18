@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-18T15:19:22Z",
+  "geradoEm": "2026-09-18T16:13:10Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4477,
-        "emAberto": 33,
+        "total": 4478,
+        "emAberto": 34,
         "atrasadas": 27,
         "concluidas30d": 725,
         "concluidas7d": 189,
-        "naSemanaCorrente": 120
+        "naSemanaCorrente": 121
       },
       "mttr": {
         "horas": 19.74,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 120,
+          "criadas": 121,
           "finalizadas": 121
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4477,
-            "emAberto": 33
+            "total": 4478,
+            "emAberto": 34
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 33,
+      "total": 34,
       "atrasadas": 27,
       "porStatus": {
-        "naoIniciada": 28,
+        "naoIniciada": 29,
         "emProgresso": 3,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 33
+        "(sem equipe)": 34
       },
       "oss": [
         {
@@ -580,6 +580,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "13841",
+          "ativo": "Thopen - Brodowski 1 - SP Rodovia SP 334 S/N Batatais  São Paulo Brasil { THPN-BWK100 }",
+          "equipe": "",
+          "responsavel": "Luis  Moura",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Luis  Moura",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-BWK100] - Religamento do THPN-BWK100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-18",
+          "dataCriacao": "2026-09-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "13840",
@@ -3695,9 +3713,9 @@
       "historicoTotal": 1846,
       "subClassificacao": {
         "remoto": 758,
-        "local": 3719,
+        "local": 3720,
         "remotoEmAberto": 10,
-        "localEmAberto": 23,
+        "localEmAberto": 24,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -8952,9 +8970,9 @@
       "total": 65,
       "atrasadas": 59,
       "porStatus": {
-        "naoIniciada": 58,
+        "naoIniciada": 57,
         "emProgresso": 1,
-        "pausada": 6,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
@@ -9738,7 +9756,7 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "Roger Lélis",
           "supervisor": "Carlos  Godoi",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-09-14",
@@ -10046,14 +10064,15 @@
           "responsavel": "Walter Santos ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Walter Santos ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 2.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-09-21",
           "dataCriacao": "2026-09-18",
-          "dataInicial": "",
+          "dataInicial": "2026-09-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -15101,6 +15120,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13841",
+      "ativo": "Thopen - Brodowski 1 - SP Rodovia SP 334 S/N Batatais  São Paulo Brasil { THPN-BWK100 }",
+      "equipe": "",
+      "responsavel": "Luis  Moura",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Luis  Moura",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-BWK100] - Religamento do THPN-BWK100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-18",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13840",
       "ativo": "Inversor 1.4  SUN2000-250KTL-H1    { THPN-STA100-INVR1.4 }",
       "equipe": "",
@@ -15175,14 +15211,15 @@
       "responsavel": "Walter Santos ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Walter Santos ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 2.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-09-21",
       "dataCriacao": "2026-09-18",
-      "dataInicial": "",
+      "dataInicial": "2026-09-18",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "13832",
@@ -16040,7 +16077,7 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "Roger Lélis",
       "supervisor": "Carlos  Godoi",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-09-14",
@@ -21294,7 +21331,7 @@
     }
   ],
   "historicoTotal": 2960,
-  "totalGeral": 6326,
+  "totalGeral": 6327,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
