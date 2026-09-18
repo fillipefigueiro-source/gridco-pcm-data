@@ -1,0 +1,101 @@
+name: Calibra durações (sexta, antes da programação)
+
+# POR QUE ESTE WORKFLOW EXISTE
+#
+# O `programacao_v7.py` estima quanto dura cada tarefa por CONSTANTE FIXA, calibrada
+# à mão uma única vez em 31/07/2026. O `aprender_duracoes.py` mede o tempo de execução
+# REAL das tarefas finalizadas e grava `duracoes_aprendidas.json` com a duração típica
+# por categoria × usina → × cluster → global.
+#
+# Ele precisa das credenciais do Fracttal, que só existem aqui nos Secrets — por isso
+# roda na nuvem, e não na máquina onde o v7 é executado.
+#
+# MODO SOMBRA (decisão do PCM em 17/09/2026): a presença do arquivo NÃO muda a
+# programação. O v7 só passa a consumir a duração medida quando alguém definir
+# PCM_DURACAO_APRENDIDA=1 no ambiente. Enquanto isso, ele preenche a coluna
+# "Duração aprendida (h)" ao lado da estimativa atual, para comparação.
+#
+# Guarda-corpos que já vêm do script: piso de 5 amostras por escopo e teto de 2× de
+# variação contra a constante do motor. Na simulação de 17/09, 186 escopos foram
+# rejeitados por esse teto — quase todos com apontamento de segundos.
+
+on:
+  schedule:
+    # sexta-feira, 08:00 UTC = 05:00 de Brasília, bem antes da geração da semana
+    - cron: '0 8 * * 5'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: duracoes
+  cancel-in-progress: false
+
+jobs:
+  calibrar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install --quiet pandas requests openpyxl python-calamine
+
+      - name: Medir a duração real das finalizadas
+        env:
+          FRACTTAL_CLIENT_ID: ${{ secrets.FRACTTAL_CLIENT_ID }}
+          FRACTTAL_CLIENT_SECRET: ${{ secrets.FRACTTAL_CLIENT_SECRET }}
+          FRACTTAL_BASE_URL: https://app.fracttal.com/api/
+          PCM_PROG_DIR: ${{ github.workspace }}
+          PCM_APRENDE_JANELA_DIAS: '180'
+        run: python aprender_duracoes.py
+
+      - name: Publicar só se a calibração mudou
+        run: |
+          set -uo pipefail
+          if [ ! -f duracoes_aprendidas.json ]; then
+            echo "aprender_duracoes.py não gerou o arquivo — nada a publicar."; exit 1
+          fi
+
+          # O 'geradoEm' muda a cada rodada mesmo sem dado novo: fica de fora da comparação.
+          NOVO=$(python3 - <<'PY'
+          import json, hashlib
+          with open('duracoes_aprendidas.json', encoding='utf-8') as f:
+              d = json.load(f)
+          d.pop('geradoEm', None)
+          print(hashlib.sha256(json.dumps(d, sort_keys=True, ensure_ascii=False).encode()).hexdigest())
+          PY
+          )
+          ANTIGO=$(cat _duracoes_hash.txt 2>/dev/null || echo "")
+          if [ "$NOVO" = "$ANTIGO" ]; then
+            echo "Calibração sem mudança (hash $NOVO) — nada a publicar."
+            exit 0
+          fi
+          echo "$NOVO" > _duracoes_hash.txt
+
+          git config user.name  "gestao-pcm-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add duracoes_aprendidas.json _duracoes_hash.txt
+          git commit -m "chore: calibração de durações [auto ${NOVO:0:8}]" || { echo "nada a commitar"; exit 0; }
+
+          # O robô da Programação Semanal commita a cada poucos minutos: rebaseia e,
+          # se conflitar nos arquivos gerados, fica com os desta rodada.
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git checkout --theirs -- duracoes_aprendidas.json _duracoes_hash.txt 2>/dev/null || true
+              git add -A duracoes_aprendidas.json _duracoes_hash.txt 2>/dev/null || true
+              GIT_EDITOR=true git rebase --continue || { git rebase --abort; echo "rebase falhou ($i/5)"; sleep 5; continue; }
+            fi
+            if git push origin HEAD:main; then
+              echo "Publicado (tentativa $i)."; exit 0
+            fi
+            echo "Push colidiu — nova tentativa em 5s ($i/5)..."; sleep 5
+          done
+          echo "Falhou após 5 tentativas."; exit 1
