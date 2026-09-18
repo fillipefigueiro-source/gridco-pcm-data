@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-18T17:19:05Z",
+  "geradoEm": "2026-09-18T17:31:02Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4480,
-        "emAberto": 35,
+        "total": 4481,
+        "emAberto": 36,
         "atrasadas": 27,
         "concluidas30d": 726,
         "concluidas7d": 190,
-        "naSemanaCorrente": 123
+        "naSemanaCorrente": 124
       },
       "mttr": {
         "horas": 19.71,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 123,
+          "criadas": 124,
           "finalizadas": 122
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4480,
-            "emAberto": 35
+            "total": 4481,
+            "emAberto": 36
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 35,
+      "total": 36,
       "atrasadas": 27,
       "porStatus": {
-        "naoIniciada": 29,
-        "emProgresso": 4,
-        "pausada": 2,
+        "naoIniciada": 30,
+        "emProgresso": 3,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 35
+        "(sem equipe)": 36
       },
       "oss": [
         {
@@ -582,6 +582,24 @@
           "atrasada": true
         },
         {
+          "osId": "13850",
+          "ativo": "Inversor 1.4 Huawei     { THPN-NVL100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
+          "criticidade": "",
+          "dataProgramada": "2026-09-18",
+          "dataCriacao": "2026-09-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "13849",
           "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
           "equipe": "",
@@ -624,7 +642,7 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Carlos  Godoi",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
           "criticidade": "",
           "dataProgramada": "2026-09-18",
@@ -3732,9 +3750,9 @@
       "historicoTotal": 1847,
       "subClassificacao": {
         "remoto": 758,
-        "local": 3722,
+        "local": 3723,
         "remotoEmAberto": 10,
-        "localEmAberto": 25,
+        "localEmAberto": 26,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -15190,6 +15208,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13850",
+      "ativo": "Inversor 1.4 Huawei     { THPN-NVL100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
+      "criticidade": "",
+      "dataProgramada": "2026-09-18",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13849",
       "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
       "equipe": "",
@@ -15294,7 +15329,7 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Carlos  Godoi",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
       "criticidade": "",
       "dataProgramada": "2026-09-18",
@@ -21468,7 +21503,7 @@
     }
   ],
   "historicoTotal": 2962,
-  "totalGeral": 6333,
+  "totalGeral": 6334,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
