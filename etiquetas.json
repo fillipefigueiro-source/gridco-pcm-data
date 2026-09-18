@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-18T15:07:06Z",
+  "geradoEm": "2026-09-18T15:19:22Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4475,
-        "emAberto": 31,
+        "total": 4477,
+        "emAberto": 33,
         "atrasadas": 27,
         "concluidas30d": 725,
         "concluidas7d": 189,
-        "naSemanaCorrente": 118
+        "naSemanaCorrente": 120
       },
       "mttr": {
         "horas": 19.74,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 118,
+          "criadas": 120,
           "finalizadas": 121
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4475,
-            "emAberto": 31
+            "total": 4477,
+            "emAberto": 33
           }
         ],
         "responsaveis": [
@@ -63,8 +63,8 @@
           },
           {
             "nome": "Marcos  Camargo",
-            "total": 485,
-            "emAberto": 0
+            "total": 486,
+            "emAberto": 1
           },
           {
             "nome": "Italo  Lustosa",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 31,
+      "total": 33,
       "atrasadas": 27,
       "porStatus": {
-        "naoIniciada": 26,
+        "naoIniciada": 28,
         "emProgresso": 3,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 31
+        "(sem equipe)": 33
       },
       "oss": [
         {
@@ -580,6 +580,42 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "13840",
+          "ativo": "Inversor 1.4  SUN2000-250KTL-H1    { THPN-STA100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "Italo  Lustosa",
+          "supervisor": "Carlos  Godoi",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
+          "criticidade": "",
+          "dataProgramada": "2026-09-18",
+          "dataCriacao": "2026-09-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13839",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Marcos  Camargo",
+          "status": "Não Iniciada",
+          "tarefa": "[Axis - Marialva 1 - PR] - Religamento do Axis - Marialva 1 - PR",
+          "criticidade": "",
+          "dataProgramada": "2026-09-18",
+          "dataCriacao": "2026-09-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "13838",
@@ -3659,9 +3695,9 @@
       "historicoTotal": 1846,
       "subClassificacao": {
         "remoto": 758,
-        "local": 3717,
+        "local": 3719,
         "remotoEmAberto": 10,
-        "localEmAberto": 21,
+        "localEmAberto": 23,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -5195,25 +5231,6 @@
       ],
       "ossHistorico": [
         {
-          "osId": "13267",
-          "ativo": "Transformador 1      { SALE-CRS200-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Adriano Silva ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Adriano Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-09-14",
-          "dataCriacao": "2026-09-09",
-          "dataInicial": "2026-09-18",
-          "dataFinal": "2026-09-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 216.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "12702",
           "ativo": "Transformador 1      { GDEN-SON200-TRFR1 }",
           "equipe": "",
@@ -5248,6 +5265,25 @@
           "dataFinal": "2026-09-18",
           "linkFracttal": "",
           "horasAteAbrir": 408.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "13267",
+          "ativo": "Transformador 1      { SALE-CRS200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Adriano Silva ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Adriano Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-09-14",
+          "dataCriacao": "2026-09-09",
+          "dataInicial": "2026-09-18",
+          "dataFinal": "2026-09-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 216.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -15065,6 +15101,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "13840",
+      "ativo": "Inversor 1.4  SUN2000-250KTL-H1    { THPN-STA100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Carlos  Godoi",
+      "criadoPor": "Italo  Lustosa",
+      "supervisor": "Carlos  Godoi",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
+      "criticidade": "",
+      "dataProgramada": "2026-09-18",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "13839",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Marcos  Camargo",
+      "status": "Não Iniciada",
+      "tarefa": "[Axis - Marialva 1 - PR] - Religamento do Axis - Marialva 1 - PR",
+      "criticidade": "",
+      "dataProgramada": "2026-09-18",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13838",
       "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
       "equipe": "",
@@ -18307,25 +18377,6 @@
       "atrasada": false
     },
     {
-      "osId": "13267",
-      "ativo": "Transformador 1      { SALE-CRS200-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Adriano Silva ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Adriano Silva ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-09-14",
-      "dataCriacao": "2026-09-09",
-      "dataInicial": "2026-09-18",
-      "dataFinal": "2026-09-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 216.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "13201",
       "ativo": "Estrutura Fixa      { RNGD-CTS100-EFIX1 }",
       "equipe": "",
@@ -21221,10 +21272,29 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
+    },
+    {
+      "osId": "13471",
+      "ativo": "Inversor 7 Solaredge     { NBS100-INVR7 }",
+      "equipe": "",
+      "responsavel": "Valmir  Júnior",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Valmir  Júnior",
+      "status": "Finalizados",
+      "tarefa": "Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-09-14",
+      "dataCriacao": "2026-09-11",
+      "dataInicial": "2026-09-14",
+      "dataFinal": "2026-09-15",
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0,
+      "horasAteFechar": 24.0,
+      "atrasada": false
     }
   ],
   "historicoTotal": 2960,
-  "totalGeral": 6324,
+  "totalGeral": 6326,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
