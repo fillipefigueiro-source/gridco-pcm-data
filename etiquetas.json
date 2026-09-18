@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-18T16:24:27Z",
+  "geradoEm": "2026-09-18T16:37:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 34,
       "atrasadas": 27,
       "porStatus": {
-        "naoIniciada": 29,
-        "emProgresso": 3,
+        "naoIniciada": 28,
+        "emProgresso": 4,
         "pausada": 2,
         "verificacao": 0
       },
@@ -606,14 +606,15 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "Italo  Lustosa",
           "supervisor": "Carlos  Godoi",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
           "criticidade": "",
           "dataProgramada": "2026-09-18",
           "dataCriacao": "2026-09-18",
-          "dataInicial": "",
+          "dataInicial": "2026-09-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -8898,16 +8899,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 752,
-        "emAberto": 65,
+        "emAberto": 64,
         "atrasadas": 59,
-        "concluidas30d": 240,
-        "concluidas7d": 50,
+        "concluidas30d": 241,
+        "concluidas7d": 51,
         "naSemanaCorrente": 43
       },
       "mttr": {
-        "horas": 239.1,
-        "label": "9d 23h",
-        "amostra": 240
+        "horas": 238.11,
+        "label": "9d 22h",
+        "amostra": 241
       },
       "tendencia4Semanas": [
         {
@@ -8928,7 +8929,7 @@
         {
           "semana": "W38",
           "criadas": 30,
-          "finalizadas": 47
+          "finalizadas": 48
         }
       ],
       "topOfensores": {
@@ -8936,7 +8937,7 @@
           {
             "nome": "(sem equipe)",
             "total": 752,
-            "emAberto": 65
+            "emAberto": 64
           }
         ],
         "responsaveis": [
@@ -8967,16 +8968,16 @@
           }
         ]
       },
-      "total": 65,
+      "total": 64,
       "atrasadas": 59,
       "porStatus": {
         "naoIniciada": 57,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 65
+        "(sem equipe)": 64
       },
       "oss": [
         {
@@ -10058,24 +10059,6 @@
           "atrasada": false
         },
         {
-          "osId": "13834",
-          "ativo": "Tracker 2.200 STI STI-H250    { SEMP-TCN200-ETKR2.200 }",
-          "equipe": "",
-          "responsavel": "Walter Santos ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Walter Santos ",
-          "status": "Em progresso",
-          "tarefa": "[Tracker 2.200] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-09-21",
-          "dataCriacao": "2026-09-18",
-          "dataInicial": "2026-09-18",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13738",
           "ativo": "Inversor 1.1 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.1 }",
           "equipe": "",
@@ -10094,6 +10077,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13834",
+          "ativo": "Tracker 2.200 STI STI-H250    { SEMP-TCN200-ETKR2.200 }",
+          "equipe": "",
+          "responsavel": "Walter Santos ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Walter Santos ",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 2.200] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-09-21",
+          "dataCriacao": "2026-09-18",
+          "dataInicial": "2026-09-18",
+          "dataFinal": "2026-09-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13785",
           "ativo": "Tracker 24.102 Convert Italia SpA     { MTS100-ETKR24.102 }",
@@ -12204,25 +12206,6 @@
           "atrasada": false
         },
         {
-          "osId": "10648",
-          "ativo": "Tracker 44.100 Axial Tracker 1VTwin    { THPN-CLR100-ETKR44.100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 44.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-08-04",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "2026-08-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 504.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11506",
           "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
           "equipe": "",
@@ -12945,7 +12928,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 634
+      "historicoTotal": 635
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15143,14 +15126,15 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "Italo  Lustosa",
       "supervisor": "Carlos  Godoi",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
       "criticidade": "",
       "dataProgramada": "2026-09-18",
       "dataCriacao": "2026-09-18",
-      "dataInicial": "",
+      "dataInicial": "2026-09-18",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15203,23 +15187,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "modalidade": "local"
-    },
-    {
-      "osId": "13834",
-      "ativo": "Tracker 2.200 STI STI-H250    { SEMP-TCN200-ETKR2.200 }",
-      "equipe": "",
-      "responsavel": "Walter Santos ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Walter Santos ",
-      "status": "Em progresso",
-      "tarefa": "[Tracker 2.200] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-09-21",
-      "dataCriacao": "2026-09-18",
-      "dataInicial": "2026-09-18",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
     },
     {
       "osId": "13832",
@@ -19024,6 +18991,25 @@
       "atrasada": false
     },
     {
+      "osId": "13834",
+      "ativo": "Tracker 2.200 STI STI-H250    { SEMP-TCN200-ETKR2.200 }",
+      "equipe": "",
+      "responsavel": "Walter Santos ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Walter Santos ",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 2.200] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-09-21",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "2026-09-18",
+      "dataFinal": "2026-09-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13831",
       "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
       "equipe": "",
@@ -21309,29 +21295,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13483",
-      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Railson Gomes ",
-      "status": "Finalizados",
-      "tarefa": "[RenoGrid - Crateús 1 - CE] - Religamento do RenoGrid - Crateús 1 - CE",
-      "criticidade": "",
-      "dataProgramada": "2026-09-11",
-      "dataCriacao": "2026-09-11",
-      "dataInicial": "2026-09-12",
-      "dataFinal": "2026-09-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2961,
+  "historicoTotal": 2962,
   "totalGeral": 6328,
   "verificacao": {
     "total": 0,
