@@ -1153,3 +1153,25 @@ commita o JSON no repositório; o arquivo precisa ser copiado para a pasta do On
 gerar a semana. **Modo sombra:** a presença do arquivo não muda nada — o v7 só consome a
 duração medida com `PCM_DURACAO_APRENDIDA=1`; sem isso ele só preenche a coluna "Duração
 aprendida (h)" ao lado da estimativa atual. Anti-churn por hash do conteúdo sem o `geradoEm`.
+
+### Primeira medição real — a duração aponta hábito, não trabalho (18/09)
+
+Primeira rodada de `duracoes.yml` (180 dias, direto do Fracttal). Global contra o motor:
+MPM 1,02 vs 1,10 · MPS 1,32 vs 1,30 · MPT 0,72 vs 1,30 · MPA **2,27** vs 4,00 ·
+Handover 0,86 vs 0,65 · Outras 1,22 vs 1,50. MPQ e MPW foram rejeitados pelo teto de 2×.
+
+**A medição não mede trabalho.** Dentro de cada usina todas as categorias colapsam no mesmo
+valor: Athon Matões 1 dá MPA 7,04 / MPM 3,94 / MPS 3,27; Renogrid Colider 1 dá MPA 0,36 /
+MPM 0,37 / MPS 0,30. O motor assume MPA/MPM = 3,64×; a mediana medida é 1,90× e em 7 das 24
+usinas com as duas categorias a anual mede menos que a mensal. São dois hábitos de apontamento
+opostos, por equipe: fechar a tarefa em segundos (Semp Tucano, Thopen Céu Azul/Mandaguaçu/
+Senador Elói/Colorado 2, Renogrid Colider 1 e 2, Alves Lima Morada Nova) ou deixar o relógio
+correr a visita inteira (Athon inteira, Thopen Ipixuna/Vertentes 2/Belo Jardim, Renogrid Nobres).
+
+**Consequência:** `PCM_DURACAO_APRENDIDA` continua desligada. O escopo `porUsina` é o mais
+contaminado, porque isola o hábito da equipe. Se um dia ligar, começar só pelo `global` e só
+em MPM/MPS/Handover. A correção precisa vir do apontamento no campo, não do motor.
+
+Correção de rumo: a simulação de 17/09 leu o `BD_Relatório Semanal.xlsx` local (as credenciais
+do Fracttal não estão na máquina) e deu MPA 5,02 h com 353 amostras, sugerindo que 4,0 h era
+pouco. A medição real deu 2,27 h com 538 amostras — a MPA está superestimada, não subestimada.
