@@ -182,6 +182,10 @@ td.gpv-obs { text-align: left; font-family: inherit; font-weight: 400;
 .gpv-par b.ok { color: #166030 } .gpv-par b.mal { color: #8f2323 }
 .gpv-par b.aviso { color: #7d5106 }
 .gpv-seg button.off { color: #c4c2ce; cursor: not-allowed; background: #fff }
+.gpv-mais { border: 1px solid #d9dae4; border-radius: 7px; background: #fff;
+  color: #504c63; font: inherit; font-size: 12px; padding: 5px 8px; cursor: pointer }
+.gpv-mais.on { background: #191528; color: #fff; border-color: #191528; font-weight: 600 }
+.gpv-mais:disabled { opacity: .45; cursor: not-allowed }
 .gpv-cel.gpv-frac { cursor: pointer; text-decoration: underline dotted 1px;
   text-underline-offset: 3px }
 .gpv-chip { display: inline-flex; align-items: center; gap: 9px; background: #191528;

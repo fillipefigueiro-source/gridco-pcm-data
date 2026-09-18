@@ -147,6 +147,20 @@ function gpvMpTd(nomeUsina) {
 
 const GPV_SIGLAS = ['MPM', 'MPT', 'MPS', 'MPA'];   // ordem de cadência (MPT entrou em 26/08)
 const GPV_RX = /\b(MP[MSAT])\b/;
+const gpvSem = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+// Demais tipos de tarefa (18/09, spec design+narrativa): o seletor Tipo cobre a
+// base inteira. Demanda (corretiva etc.) conta o MÊS PELA DATA DE CRIAÇÃO e a
+// célula vira resolvidas/criadas — preventiva mede cumprimento de plano,
+// demanda mede resposta. Religamento agrupa o Remoto ("religou?" é a pergunta).
+// 'Teste' fica fora (lixo de cadastro); Preventiva SEM sigla segue fora, como sempre.
+const GPV_DEMANDA = { 'corretiva': 'corr', 'corretiva emergencial': 'emerg',
+  'religamento': 'relig', 'religamento remoto': 'relig', 'inspecao': 'insp',
+  'preditiva': 'pred', 'administrativa': 'adm', 'zeladoria': 'zel', 'handover': 'hand' };
+const GPV_ROT_TIPO = { prev: 'Preventivas', corr: 'Corretiva', emerg: 'Emergencial',
+  relig: 'Religamento', insp: 'Inspeção', pred: 'Preditiva', adm: 'Administrativa',
+  zel: 'Zeladoria', hand: 'Handover' };
+const GPV_MAIS = ['insp', 'pred', 'adm', 'zel', 'hand'];
+const gpvEhDemanda = v => !!GPV_ROT_TIPO[v] && v !== 'prev';
 const GPV_MESNOME = ['', 'jan', 'fev', 'mar', 'abr', 'mai', 'jun',
                      'jul', 'ago', 'set', 'out', 'nov', 'dez'];
 
@@ -170,7 +184,15 @@ const gpvHoje = () => new Date().toISOString().slice(0, 10);
 // gpFilteredTarefas = multi-seleção + OS/Solicitação + período; GP.soAtrasadas
 // é aplicado à parte (na aba ele troca a árvore por lista, não entra no filtro).
 function gpvTarefasTop() {
-  let arr = (typeof gpFilteredTarefas === 'function') ? gpFilteredTarefas() : gpScopedTarefas();
+  let arr;
+  if (typeof gpFilteredTarefas === 'function') {
+    // o Tipo LOCAL sobrepõe o Tipo do topo (compor os dois daria matriz vazia
+    // inexplicável: global=Corretiva + local=Preventivas) — spec do design 18/09
+    let bak = null;
+    if (GPV.tipo !== 'todos' && typeof GP_SEL !== 'undefined'
+        && GP_SEL.tipo && GP_SEL.tipo.size) { bak = GP_SEL.tipo; GP_SEL.tipo = new Set(); }
+    try { arr = gpFilteredTarefas(); } finally { if (bak) GP_SEL.tipo = bak; }
+  } else arr = gpScopedTarefas();
   if (typeof GP !== 'undefined' && GP && GP.soAtrasadas) arr = arr.filter(t => t.aberta && t.atrasado);
   return arr;
 }
@@ -220,15 +242,21 @@ function gpvFilaTopOk(x) {
 let _gpvCacheKey = null, _gpvBase = null;
 
 function gpvBase() {
-  const key = ((GESTAO_DB && GESTAO_DB.geradoEm) || '') + '|' + (S.user || '') + '|' + gpvFiltroKey();
+  // o bit local/global entra na chave: com Tipo local o filtro global de tipo é ignorado
+  const key = ((GESTAO_DB && GESTAO_DB.geradoEm) || '') + '|' + (S.user || '') + '|'
+    + (GPV.tipo === 'todos' ? 'g' : 'l') + '|' + gpvFiltroKey();
   if (_gpvBase && _gpvCacheKey === key) return _gpvBase;
   const MESES = gpvMeses(), reg = new Map();
   gpvTarefasTop().forEach(t => {
     const m = GPV_RX.exec(String(t.tarefa || ''));
-    if (!m) return;
-    const mes = String(t.dataProg || '').slice(0, 7);
+    let sig, mes;
+    if (m) { sig = m[1]; mes = String(t.dataProg || '').slice(0, 7); }
+    else {
+      sig = GPV_DEMANDA[gpvSem(t.tipo)];
+      if (!sig) return;                            // Teste / Preventiva sem sigla: fora
+      mes = String(t.criacao || '').slice(0, 7);   // demanda: mês pela CRIAÇÃO
+    }
     if (MESES.indexOf(mes) < 0) return;
-    const sig = m[1];
     const k = [t.cliente || '—', t.usina || '—', t.cluster || '—',
                t.responsavel || '—', sig, mes].join('');
     let c = reg.get(k);
@@ -251,17 +279,24 @@ function gpvBase() {
 
 // ── pivô (modo Plano) ───────────────────────────────────────────────────────
 const gpvCols = () => {
-  const base = GPV.col === 'sig' ? GPV_SIGLAS : gpvMeses();
-  return (GPV.col === 'sig' && GPV.tipo !== 'todos') ? [GPV.tipo] : base;
+  if (gpvEhDemanda(GPV.tipo)) return gpvMeses();          // demanda: sempre por mês
+  if (GPV.col === 'mes') return gpvMeses();
+  if (GPV.tipo === 'todos') return GPV_SIGLAS.concat(['CORR']);  // + contraponto demanda
+  if (GPV.tipo === 'prev') return GPV_SIGLAS.slice();
+  return [GPV.tipo];
 };
-const gpvRotCol = c => GPV.col === 'sig' ? c : gpvRotMes(c);
+const gpvRotCol = c => c === 'CORR' ? 'Corretivas'
+  : (GPV_SIGLAS.indexOf(c) >= 0 ? c : gpvRotMes(c));
 const gpvFaixa = p => p === null ? 'nulo' : (p >= 100 ? 'ok' : (p < 40 ? 'crit' : 'and'));
 const gpvSoma = arr => { const o = { f: 0, t: 0 }; arr.forEach(c => { if (c) { o.f += c.f; o.t += c.t; } }); return o; };
 const gpvPct = c => (c && c.t) ? Math.round(100 * c.f / c.t) : null;
 
 function gpvPivo() {
   let R = gpvBase();
-  if (GPV.tipo !== 'todos') R = R.filter(r => r.sig === GPV.tipo);
+  const FS = GPV.tipo === 'todos' ? GPV_SIGLAS.concat(['corr', 'emerg'])
+           : GPV.tipo === 'prev' ? GPV_SIGLAS
+           : [GPV.tipo];
+  R = R.filter(r => FS.indexOf(r.sig) >= 0);
   if (GPV.mes !== 'todos') R = R.filter(r => r.mes === GPV.mes);
   if (GPV.busca) {
     // sem acento dos dois lados: "jacunda" tem que achar "Jacundá"
@@ -276,7 +311,10 @@ function gpvPivo() {
     if (!G.has(g)) G.set(g, new Map());
     const M = G.get(g);
     if (!M.has(r.usi)) M.set(r.usi, {});
-    const cel = M.get(r.usi), k = GPV.col === 'sig' ? r.sig : r.mes;
+    const porSig = GPV.col === 'sig' && !gpvEhDemanda(GPV.tipo);
+    // corr+emerg somam na coluna única 'CORR' da visão padrão
+    const cel = M.get(r.usi),
+          k = porSig ? ((r.sig === 'corr' || r.sig === 'emerg') ? 'CORR' : r.sig) : r.mes;
     if (!cel[k]) cel[k] = { f: 0, t: 0, os: [] };
     cel[k].f += r.f; cel[k].t += r.t;
     cel[k].os = cel[k].os.concat(r.os);
@@ -413,10 +451,10 @@ function gpvRender() {
 
   // ── cabeçalho do bloco ──
   const subt = GPV.modo === 'plano'
-    ? 'Plano: % de conclusão por OS · obedece os filtros do topo da aba + controles próprios'
+    ? 'Plano: preventivas, corretivas e demais atividades por usina · obedece os filtros do topo (o Tipo daqui sobrepõe o Tipo de cima)'
     : 'Fila: envelhecimento de MPA/MPS, da mais antiga para a mais nova · obedece Cliente, Usina, Cluster, OS, Período e Só atrasadas do topo';
   let h = '<div class="gpv-box"><div class="gpv-top" onclick="gpvTog()">'
-    + '<div><div class="gpv-tit">&#128202; Preventivas — Plano &amp; Fila <span class="gpv-mat">'
+    + '<div><div class="gpv-tit">&#128202; Manutenções — Plano &amp; Fila <span class="gpv-mat">'
     + (GPV.modo === 'plano' ? 'matriz por OS' : 'Gerencial + Fracttal') + '</span></div>'
     + '<div class="gpv-sub">' + subt + '</div></div>'
     + '<span class="gpv-chev">' + (GPV.aberto ? '&#9662;' : '&#9656;') + '</span></div>';
@@ -431,11 +469,28 @@ function gpvRender() {
       + (off ? 'title="sem data prevista na Gerencial — acompanhe no Plano" disabled ' : '')
       + 'onclick="gpvSet(&quot;' + id + '&quot;,&quot;' + v + '&quot;)">' + r + '</button>';
   }).join('') + '</div>';
-  const tiposOff = GPV.modo === 'fila' ? ['MPM', 'MPT'] : [];
+  // Tipo em DOIS níveis (spec 18/09): primários + "Mais…" (cauda de volume) e,
+  // com Preventivas ativo, o subnível MPM/MPT/MPS/MPA de sempre.
+  const noFila = GPV.modo === 'fila';
+  const emPrev = GPV.tipo === 'prev' || GPV_SIGLAS.indexOf(GPV.tipo) >= 0;
+  const atualPrim = emPrev ? 'prev' : GPV.tipo;
+  const offDem = noFila ? ['corr', 'emerg', 'relig'] : [];
+  const maisOps = GPV_MAIS.filter(v => !(ehCliente && v === 'hand'));  // Handover é jargão interno
+  const maisSel = maisOps.indexOf(GPV.tipo) >= 0;
+  const maisHtml = '<select class="gpv-mais' + (maisSel ? ' on' : '') + '"'
+    + (noFila ? ' disabled title="sem data prevista na Gerencial — acompanhe no Plano"' : '')
+    + ' onchange="if(this.value)gpvSet(&quot;tipo&quot;,this.value)">'
+    + '<option value=""' + (maisSel ? '' : ' selected') + '>Mais&hellip;</option>'
+    + maisOps.map(v => '<option value="' + v + '"' + (GPV.tipo === v ? ' selected' : '') + '>'
+        + GPV_ROT_TIPO[v] + '</option>').join('') + '</select>';
   h += '<div class="gpv-ctl" onclick="event.stopPropagation()">'
     + '<span class="gpv-rot">Modo</span>' + seg('modo', [['plano', 'Plano'], ['fila', 'Fila']], GPV.modo)
     + '<span class="gpv-rot">Tipo</span>' + seg('tipo',
-        [['todos', 'Todos']].concat(GPV_SIGLAS.map(s => [s, s])), GPV.tipo, tiposOff)
+        [['todos', 'Todos'], ['prev', 'Preventivas'], ['corr', 'Corretiva'],
+         ['emerg', 'Emergencial'], ['relig', 'Religamento']], atualPrim, offDem)
+    + maisHtml
+    + (emPrev ? seg('tipo', [['prev', 'Todas']].concat(GPV_SIGLAS.map(s => [s, s])),
+                    GPV.tipo, noFila ? ['MPM', 'MPT'] : []) : '')
     + '<input class="gpv-busca" placeholder="filtrar usina, cliente ou OS&hellip;" value="' + gpEsc(GPV.busca) + '" '
     + 'oninput="GPV.busca=this.value;gpvRender();'
     + 'var i=document.querySelector(\'#gp-preventivas .gpv-busca\');if(i){i.focus();i.setSelectionRange(i.value.length,i.value.length);}">'
@@ -452,7 +507,9 @@ function gpvRender() {
 
 // ── modo PLANO (a matriz de sempre + frações MPA/MPS) ───────────────────────
 function gpvRenderPlano() {
-  const CS = gpvCols(), G = gpvPivo();
+  // CSG = colunas que entram no Geral/Pendentes: a CORR fica de fora (o Geral
+  // continua sendo "as quatro preventivas somadas" — plano, não demanda)
+  const CS = gpvCols(), CSG = CS.filter(c => c !== 'CORR'), G = gpvPivo();
   if (GPV._dimAnterior !== GPV.dim) {
     GPV.fechados = new Set(G.keys());
     GPV._dimAnterior = GPV.dim;
@@ -460,10 +517,10 @@ function gpvRenderPlano() {
   let grupos = [];
   G.forEach((M, g) => {
     const filhos = [];
-    M.forEach((cel, usi) => filhos.push({ nome: usi, cel, tudo: gpvSoma(CS.map(c => cel[c])) }));
+    M.forEach((cel, usi) => filhos.push({ nome: usi, cel, tudo: gpvSoma(CSG.map(c => cel[c])) }));
     const cel = {};
     CS.forEach(c => { cel[c] = gpvSoma(filhos.map(x => x.cel[c])); });
-    grupos.push({ nome: g, filhos, cel, tudo: gpvSoma(CS.map(c => cel[c])) });
+    grupos.push({ nome: g, filhos, cel, tudo: gpvSoma(CSG.map(c => cel[c])) });
   });
   const chave = x => {
     if (GPV.ordem === 'nome') return null;
@@ -488,17 +545,34 @@ function gpvRenderPlano() {
     + '<span class="gpv-rot">Linhas</span>' + seg('dim',
         [['cli', 'Cliente &#9656; Usina'], ['clu', 'Cluster &#9656; Usina'],
          ['res', 'Responsável &#9656; Usina'], ['usi', 'Só usina']], GPV.dim)
-    + '<span class="gpv-rot">Colunas</span>' + seg('col', [['sig', 'Tipo'], ['mes', 'Mês']], GPV.col)
+    + '<span class="gpv-rot">Colunas</span>' + (gpvEhDemanda(GPV.tipo)
+        ? '<div class="gpv-seg"><button type="button" class="off" disabled '
+          + 'title="siglas só existem em preventivas — demanda é sempre por mês">Tipo</button>'
+          + '<button type="button" class="on">Mês</button></div>'
+        : seg('col', [['sig', 'Tipo'], ['mes', 'Mês']], GPV.col))
     + '<span class="gpv-rot">Valor</span>' + seg('val',
         [['pct', '%'], ['pend', 'Pendentes'], ['fei', 'Feitas'], ['tot', 'Total']], GPV.val)
     + '<span class="gpv-rot">Mês</span>' + seg('mes',
         [['todos', 'Todos']].concat(gpvMeses().map(m => [m, gpvRotMes(m)])), GPV.mes)
     + '</div>';
 
-  h += '<div class="gpv-guia">'
-    + '<div><b>MPM</b> mensal</div><div><b>MPT</b> trimestral</div><div><b>MPS</b> semestral</div><div><b>MPA</b> anual</div>'
-    + '<div><b>Geral</b> as quatro somadas</div><div><b>Pendentes</b> o que falta, em número</div>'
-    + '<div><b>Célula</b> ' + VAL_ROT[GPV.val] + '; MPA/MPS em <b>fração feitas/total</b> — clique nela p/ abrir a Fila</div></div>';
+  // guia muda de história com o tipo: preventiva mede CUMPRIMENTO do plano,
+  // demanda mede RESPOSTA às ocorrências (frases da spec de narrativa, 18/09)
+  if (gpvEhDemanda(GPV.tipo)) {
+    h += '<div class="gpv-guia">'
+      + '<div><b>' + GPV_ROT_TIPO[GPV.tipo] + '</b> demanda — o mês é o da <b>criação</b> da tarefa</div>'
+      + '<div>% das ocorrências do mês já resolvidas — volume alto indica pressão na usina, não plano descumprido</div>'
+      + '<div><b>Pendentes</b> o que falta, em número</div>'
+      + '<div><b>Célula</b> ' + VAL_ROT[GPV.val] + '</div></div>';
+  } else {
+    h += '<div class="gpv-guia">'
+      + '<div><b>MPM</b> mensal</div><div><b>MPT</b> trimestral</div><div><b>MPS</b> semestral</div><div><b>MPA</b> anual</div>'
+      + (GPV.tipo === 'todos' && GPV.col === 'sig'
+        ? '<div><b>Corretivas</b> resolvidas/criadas (demanda; fora do Geral)</div>' : '')
+      + '<div><b>Geral</b> as quatro preventivas somadas</div>'
+      + '<div><b>Pendentes</b> o que falta, em número</div>'
+      + '<div><b>Célula</b> ' + VAL_ROT[GPV.val] + '; MPA/MPS em <b>fração</b> — clique p/ abrir a Fila</div></div>';
+  }
 
   const rotL = GPV.dim === 'cli' ? 'Cliente &#9656; Usina' : GPV.dim === 'clu' ? 'Equipe Cluster &#9656; Usina'
              : GPV.dim === 'res' ? 'Responsável &#9656; Usina' : 'Usina';
@@ -524,6 +598,9 @@ function gpvRenderPlano() {
     if (!c || !c.t) return '<td><span class="gpv-cel nulo">—</span></td>';
     const p = Math.round(100 * c.f / c.t);
     const tit = (c.os && c.os.length ? 'OS — ' + Array.from(new Set(c.os)).sort().join('   ') : '');
+    if (sig === 'CORR')
+      return '<td><span class="gpv-cel ' + gpvFaixa(p) + '" title="'
+        + gpEsc('corretivas: resolvidas/criadas no período · ' + tit) + '">' + c.f + '/' + c.t + '</span></td>';
     if (grande && GPV.val === 'pct') {
       const drill = usina ? ' gpv-frac" onclick="event.stopPropagation();gpvDrill(\''
         + gpEsc(usina).replace(/'/g, '&#39;') + '\',\'' + sig + '\')' : '"';
@@ -565,7 +642,7 @@ function gpvRenderPlano() {
   if (!linhas) h += '<tr><td colspan="' + (CS.length + 3 + (mpAtivo ? 1 : 0)) + '" class="gpv-vazio">Nada com esse filtro.</td></tr>';
 
   const totCol = {}; CS.forEach(c => { totCol[c] = gpvSoma(grupos.map(g => g.cel[c])); });
-  const totG = gpvSoma(CS.map(c => totCol[c]));
+  const totG = gpvSoma(CSG.map(c => totCol[c]));
   h += '<tr class="gpv-total"><td class="rotlin"><b>TOTAL GERAL</b> <span class="gpv-mini">'
     + grupos.reduce((s, g) => s + g.filhos.length, 0) + ' usinas</span></td>'
     + CS.map(c => celTd(totCol[c], c, null)).join('') + fimTd({ tudo: totG })
@@ -725,8 +802,10 @@ function gpvSet(campo, v) {
   GPV[campo] = v;
   if (campo === 'modo') {
     try { sessionStorage.setItem('gc_gpv_modo', v); } catch (e) {}
-    // MPM/MPT não existem na Fila: cair no Todos evita tela vazia sem explicação
-    if (v === 'fila' && (GPV.tipo === 'MPM' || GPV.tipo === 'MPT')) GPV.tipo = 'todos';
+    // MPM/MPT e os tipos de demanda não existem na Fila: cair no Todos evita
+    // tela vazia sem explicação
+    if (v === 'fila' && (GPV.tipo === 'MPM' || GPV.tipo === 'MPT'
+        || gpvEhDemanda(GPV.tipo))) GPV.tipo = 'todos';
   }
   GPV.abertoF = null;
   gpvRender();
