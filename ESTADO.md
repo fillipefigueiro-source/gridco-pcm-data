@@ -1118,3 +1118,16 @@ semana) é removida. Estimativa acima de `MAX_TAREFA_PROMOVIDA_H` (8 h) vira a f
 MPS; calibrar com tempo real quando houver amostra) e `MAX_TAREFA_H` = 8 h capando a
 estimativa do Fracttal, com lista no log. Herdado e não mexido: `_achar_slot_livre` pode
 começar uma tarefa dentro do almoço. Teste: `_teste_promocao.py` numa cópia da Semana 38.
+
+### Aderência da preventiva com fração (18/09) — R-18 e R-19 da especificação
+
+Pedido do PCM: "aderência mensal para preventivas em porcentagem e 2/10". Na aba **Aderência do
+plano** do módulo Gerencial (`grAderencia` no novo.html), toda medida passou a exibir a fração ao
+lado do percentual: os 4 indicadores do topo (nova classe `.gr-kpi .fr`), o eixo do gráfico mês a
+mês (era "N prog.", virou "finalizadas/programadas"), as barras por sigla e as células da tabela
+por cliente (`.gr-cel em`), incluindo a coluna "fechados" e a linha PORTFÓLIO.
+**Detalhe que não é óbvio:** a tabela tem o botão Cumprimento / No prazo (`AD_MED`), e a fração
+precisa seguir o medidor — por isso o helper `fra(c, med)` ao lado do `val(c, med)` existente.
+Testado com os dois medidores. O 4º indicador deixou de ser a contagem de programadas do mês e
+virou o percentual parcial com fração, conforme o mockup aprovado. Nas barras por sigla, "no prazo"
+foi para a legenda da esquerda porque percentual + fração + prazo não cabiam em uma linha.
