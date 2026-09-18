@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-18T18:52:29Z",
+  "geradoEm": "2026-09-18T18:59:02Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4486,
-        "emAberto": 25,
+        "total": 4487,
+        "emAberto": 26,
         "atrasadas": 19,
         "concluidas30d": 740,
         "concluidas7d": 204,
-        "naSemanaCorrente": 129
+        "naSemanaCorrente": 130
       },
       "mttr": {
         "horas": 19.43,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 129,
+          "criadas": 130,
           "finalizadas": 136
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4486,
-            "emAberto": 25
+            "total": 4487,
+            "emAberto": 26
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 25,
+      "total": 26,
       "atrasadas": 19,
       "porStatus": {
         "naoIniciada": 19,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 25
+        "(sem equipe)": 26
       },
       "oss": [
         {
@@ -438,6 +438,24 @@
           "atrasada": true
         },
         {
+          "osId": "13860",
+          "ativo": "Inversor 5.7 Huawei     { MAB200-INVR5.7 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 5.7] - Religamento do Inversor 5.7",
+          "criticidade": "",
+          "dataProgramada": "2026-09-18",
+          "dataCriacao": "2026-09-18",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "13850",
           "ativo": "Inversor 1.4 Huawei     { THPN-NVL100-INVR1.4 }",
           "equipe": "",
@@ -462,14 +480,15 @@
           "responsavel": "Valdério Paz ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Valdério Paz ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-09-18",
           "dataCriacao": "2026-09-18",
-          "dataInicial": "",
+          "dataInicial": "2026-09-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3552,9 +3571,9 @@
       "historicoTotal": 1861,
       "subClassificacao": {
         "remoto": 758,
-        "local": 3728,
+        "local": 3729,
         "remotoEmAberto": 10,
-        "localEmAberto": 15,
+        "localEmAberto": 16,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -4901,23 +4920,6 @@
           "atrasada": false
         },
         {
-          "osId": "13859",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-IND100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-09-22",
-          "dataCriacao": "2026-09-18",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "13830",
           "ativo": "Transformador 1 WEG     { 2C-UNI100-TRFR1 }",
           "equipe": "",
@@ -5031,6 +5033,23 @@
           "criticidade": "",
           "dataProgramada": "2026-09-28",
           "dataCriacao": "2026-08-31",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "13862",
+          "ativo": "Transformador 4 Gazquez     { IND100-TRFR4 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Felipe  Lima",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-09-29",
+          "dataCriacao": "2026-09-18",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -8003,8 +8022,8 @@
       "total": 13,
       "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 10,
-        "emProgresso": 0,
+        "naoIniciada": 9,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
@@ -8123,14 +8142,15 @@
           "responsavel": "Cláudio  Ferreira",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Cláudio  Ferreira",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Morada Nova 1][Inversor 1.8 Huawei] - Abertura de chamado de garantia",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
           "dataCriacao": "2026-09-09",
-          "dataInicial": "",
+          "dataInicial": "2026-09-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 216.0,
           "atrasada": true
         },
         {
@@ -8721,8 +8741,8 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 757,
-        "emAberto": 67,
+        "total": 758,
+        "emAberto": 68,
         "atrasadas": 58,
         "concluidas30d": 243,
         "concluidas7d": 53,
@@ -8751,7 +8771,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 35,
+          "criadas": 36,
           "finalizadas": 50
         }
       ],
@@ -8759,8 +8779,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 757,
-            "emAberto": 67
+            "total": 758,
+            "emAberto": 68
           }
         ],
         "responsaveis": [
@@ -8791,16 +8811,16 @@
           }
         ]
       },
-      "total": 67,
+      "total": 68,
       "atrasadas": 58,
       "porStatus": {
-        "naoIniciada": 61,
+        "naoIniciada": 62,
         "emProgresso": 0,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 67
+        "(sem equipe)": 68
       },
       "oss": [
         {
@@ -9841,6 +9861,23 @@
           "criticidade": "",
           "dataProgramada": "2026-09-18",
           "dataCriacao": "2026-09-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "13861",
+          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H3    { MCB100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Valdério Paz ",
+          "status": "Não Iniciada",
+          "tarefa": "Inspeção Geral do Inversor que não está atingindo a potência esperada",
+          "criticidade": "",
+          "dataProgramada": "2026-09-21",
+          "dataCriacao": "2026-09-18",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -14976,20 +15013,53 @@
   },
   "ossPublicas": [
     {
-      "osId": "13859",
-      "ativo": "Preventiva Grupo de Inversores      { THPN-IND100-PGINVR1 }",
+      "osId": "13862",
+      "ativo": "Transformador 4 Gazquez     { IND100-TRFR4 }",
       "equipe": "",
       "responsavel": "Felipe  Lima",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Felipe  Lima",
       "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
-      "dataProgramada": "2026-09-22",
+      "dataProgramada": "2026-09-29",
       "dataCriacao": "2026-09-18",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
+    },
+    {
+      "osId": "13861",
+      "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H3    { MCB100-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Valdério Paz ",
+      "status": "Não Iniciada",
+      "tarefa": "Inspeção Geral do Inversor que não está atingindo a potência esperada",
+      "criticidade": "",
+      "dataProgramada": "2026-09-21",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "13860",
+      "ativo": "Inversor 5.7 Huawei     { MAB200-INVR5.7 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 5.7] - Religamento do Inversor 5.7",
+      "criticidade": "",
+      "dataProgramada": "2026-09-18",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
     },
     {
       "osId": "13858",
@@ -15095,14 +15165,15 @@
       "responsavel": "Valdério Paz ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Valdério Paz ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-09-18",
       "dataCriacao": "2026-09-18",
-      "dataInicial": "",
+      "dataInicial": "2026-09-18",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15973,14 +16044,15 @@
       "responsavel": "Cláudio  Ferreira",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Cláudio  Ferreira",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Morada Nova 1][Inversor 1.8 Huawei] - Abertura de chamado de garantia",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
       "dataCriacao": "2026-09-09",
-      "dataInicial": "",
+      "dataInicial": "2026-09-18",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 216.0
     },
     {
       "osId": "13310",
@@ -21051,7 +21123,7 @@
     }
   ],
   "historicoTotal": 2979,
-  "totalGeral": 6340,
+  "totalGeral": 6342,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
