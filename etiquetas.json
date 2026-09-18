@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-18T11:33:02Z",
+  "geradoEm": "2026-09-18T12:04:16Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4470,
-        "emAberto": 33,
+        "emAberto": 32,
         "atrasadas": 31,
-        "concluidas30d": 718,
-        "concluidas7d": 182,
+        "concluidas30d": 719,
+        "concluidas7d": 183,
         "naSemanaCorrente": 113
       },
       "mttr": {
-        "horas": 19.69,
-        "label": "19h 42min",
-        "amostra": 718
+        "horas": 19.67,
+        "label": "19h 40min",
+        "amostra": 719
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W38",
           "criadas": 113,
-          "finalizadas": 114
+          "finalizadas": 115
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4470,
-            "emAberto": 33
+            "emAberto": 32
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 33,
+      "total": 32,
       "atrasadas": 31,
       "porStatus": {
         "naoIniciada": 30,
         "emProgresso": 0,
-        "pausada": 3,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 33
+        "(sem equipe)": 32
       },
       "oss": [
         {
@@ -279,15 +279,14 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valdir Silva ",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
           "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-16",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 312.0,
           "modalidade": "remoto",
           "atrasada": true
         },
@@ -668,7 +667,9 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "13827",
           "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
@@ -676,19 +677,19 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "LuelySantos",
           "supervisor": "Valdir Silva ",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "[Thopen - Santo Antônio da Platina 1 - PR] - Religamento do Thopen - Santo Antônio da Platina 1 - PR",
           "criticidade": "",
           "dataProgramada": "2026-09-18",
           "dataCriacao": "2026-09-18",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-09-18",
+          "dataFinal": "2026-09-18",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "13810",
           "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
@@ -3668,34 +3669,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13104",
-          "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
-          "equipe": "",
-          "responsavel": "Henri Almeida ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Henri Almeida ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-STI100] - Religamento do THPN-STI100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-05",
-          "dataCriacao": "2026-09-06",
-          "dataInicial": "2026-09-06",
-          "dataFinal": "2026-09-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1839,
+      "historicoTotal": 1840,
       "subClassificacao": {
         "remoto": 758,
         "local": 3712,
         "remotoEmAberto": 10,
-        "localEmAberto": 23,
+        "localEmAberto": 22,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -3758,14 +3739,6 @@
             "linkFracttal": ""
           },
           {
-            "osId": "12907",
-            "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
-            "criadoPor": "Davi Damasceno",
-            "responsavel": "Valdir Silva ",
-            "horas": 312.0,
-            "linkFracttal": ""
-          },
-          {
             "osId": "8829",
             "ativo": "Infraestrutura Civil Sítio Olho D'água s/n Alto Paraná  Paraná Brasil { THPN-APR100-INFC1 }",
             "criadoPor": "Juliana Cândido",
@@ -3779,6 +3752,14 @@
             "criadoPor": "ItaloLustosa",
             "responsavel": "Janderson Miranda ",
             "horas": 216.0,
+            "linkFracttal": ""
+          },
+          {
+            "osId": "2269",
+            "ativo": "Athon - Matões 1 - MA Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { ATHN-MTS100 }",
+            "criadoPor": "Raphael Vitoriano ",
+            "responsavel": "Raphael Vitoriano ",
+            "horas": 192.0,
             "linkFracttal": ""
           }
         ],
@@ -3864,9 +3845,9 @@
             "linkFracttal": ""
           }
         ],
-        "medHorasAbrir": 11.7,
+        "medHorasAbrir": 11.3,
         "medHorasFechar": 2.6,
-        "amostraAbrir": 743,
+        "amostraAbrir": 742,
         "amostraFechar": 741,
         "topAbridores": [
           {
@@ -8210,9 +8191,9 @@
       "total": 13,
       "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 9,
+        "naoIniciada": 10,
         "emProgresso": 0,
-        "pausada": 4,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
@@ -8416,15 +8397,14 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "Davi Damasceno ",
           "supervisor": "Carlos  Godoi",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "Abertura de chamado para Garantia [Testes em campo - Backtraking ]",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
           "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-17",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 24.0,
           "atrasada": true
         },
         {
@@ -15201,23 +15181,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "13827",
-      "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
-      "equipe": "",
-      "responsavel": "Valdir Silva ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Valdir Silva ",
-      "status": "Não Iniciada",
-      "tarefa": "[Thopen - Santo Antônio da Platina 1 - PR] - Religamento do Thopen - Santo Antônio da Platina 1 - PR",
-      "criticidade": "",
-      "dataProgramada": "2026-09-18",
-      "dataCriacao": "2026-09-18",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "13801",
       "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
       "equipe": "",
@@ -15685,15 +15648,14 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "Davi Damasceno ",
       "supervisor": "Carlos  Godoi",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "Abertura de chamado para Garantia [Testes em campo - Backtraking ]",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
       "dataCriacao": "2026-09-16",
-      "dataInicial": "2026-09-17",
+      "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0
+      "linkFracttal": ""
     },
     {
       "osId": "13680",
@@ -16816,15 +16778,14 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valdir Silva ",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
       "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-16",
+      "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 312.0,
       "modalidade": "remoto"
     },
     {
@@ -19055,6 +19016,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 792.0,
       "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "13827",
+      "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
+      "equipe": "",
+      "responsavel": "Valdir Silva ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Valdir Silva ",
+      "status": "Finalizados",
+      "tarefa": "[Thopen - Santo Antônio da Platina 1 - PR] - Religamento do Thopen - Santo Antônio da Platina 1 - PR",
+      "criticidade": "",
+      "dataProgramada": "2026-09-18",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "2026-09-18",
+      "dataFinal": "2026-09-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -21399,28 +21380,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13462",
-      "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-SON200-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Felipe Xavier ",
-      "criadoPor": "Ana Barros",
-      "supervisor": "Felipe Xavier ",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-16",
-      "dataCriacao": "2026-09-11",
-      "dataInicial": "2026-09-17",
-      "dataFinal": "2026-09-17",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2948,
+  "historicoTotal": 2949,
   "totalGeral": 6318,
   "verificacao": {
     "total": 0,
