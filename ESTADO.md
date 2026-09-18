@@ -1131,3 +1131,25 @@ precisa seguir o medidor — por isso o helper `fra(c, med)` ao lado do `val(c, 
 Testado com os dois medidores. O 4º indicador deixou de ser a contagem de programadas do mês e
 virou o percentual parcial com fração, conforme o mockup aprovado. Nas barras por sigla, "no prazo"
 foi para a legenda da esquerda porque percentual + fração + prazo não cabiam em uma linha.
+
+### Filtro por sigla de preventiva no Gestão PCM (18/09)
+
+`GP_CAMPOS` ganhou a dimensão `["sig","Sigla","Todas"]`, logo depois de Tipo — o campo `sig`
+já era derivado na carga (`gpSigla`), só não era filtrável. Três correções junto:
+`GP_RX` passou de `/\b(MP[MSAT])\b/` para `/\b(MP[MSQWAT])\b/` (MPQ e MPW ficavam sem sigla,
+261 tarefas); a preventiva anual escrita por extenso ("Manutenção Preventiva Anual GRID CO.",
+197 tarefas) passa a contar como MPA via `GP_RX_ANUAL` — o PCM confirmou em 17/09 que as DUAS
+grafias são o padrão, então qualquer leitura de anual precisa aceitar as duas; e `GP_SIGLAS`
+foi para a ordem de cadência real (MPW semanal, MPQ quinzenal, MPM mensal, MPT trimestral,
+MPS semestral, MPA anual — ver programacao_v7.py l.394). As duas legendas de sigla na tela
+foram atualizadas. Filtrar por MPA dá 1.589 de 24.621 tarefas.
+
+### Calibração de durações na nuvem — workflow duracoes.yml (18/09)
+
+`aprender_duracoes.py` precisa das credenciais do Fracttal, que só existem nos Secrets, mas o
+`programacao_v7.py` roda na máquina do Fillipe e lê `duracoes_aprendidas.json` do `BASE_DIR`
+(pasta do OneDrive). Por isso a calibração roda na nuvem (sexta 08:00 UTC = 05:00 BRT) e
+commita o JSON no repositório; o arquivo precisa ser copiado para a pasta do OneDrive antes de
+gerar a semana. **Modo sombra:** a presença do arquivo não muda nada — o v7 só consome a
+duração medida com `PCM_DURACAO_APRENDIDA=1`; sem isso ele só preenche a coluna "Duração
+aprendida (h)" ao lado da estimativa atual. Anti-churn por hash do conteúdo sem o `geradoEm`.

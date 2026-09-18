@@ -1472,7 +1472,8 @@ function arrancar(){
   let GP_ERRO = "";
   const GP_CAMPOS = [["cliente","Cliente","Todos"], ["usina","Usina","Todas"],
     ["cluster","Equipe Cluster","Todas"], ["responsavel","Responsável O&M","Todos"],
-    ["tipo","Tipo","Todos"], ["etq","Etiqueta","Todas"], ["estado","Estado","Todos"]];
+    ["tipo","Tipo","Todos"], ["sig","Sigla","Todas"],
+    ["etq","Etiqueta","Todas"], ["estado","Estado","Todos"]];
   const GPSEL = {}; GP_CAMPOS.forEach(([k]) => GPSEL[k] = new Set());
   const GPFT = { os:"", ss:"", de:"", ate:"", considerar:"qualquer", soAtrasadas:false };
   let GPORD = { c:"tot", asc:false };
@@ -1961,7 +1962,7 @@ function arrancar(){
     const total = dados.length, feitas = dados.filter(x=>x.t.st==="Finalizada").length;
     return barraFiltros(total) + `
     <div class="pv-rolo">
-      <div class="pv-leg"><b>MPM</b> mensal · <b>MPS</b> semestral · <b>MPA</b> anual
+      <div class="pv-leg"><b>MPW</b> semanal · <b>MPQ</b> quinzenal · <b>MPM</b> mensal · <b>MPT</b> trimestral · <b>MPS</b> semestral · <b>MPA</b> anual
         · célula = % de tarefas finalizadas na semana, com a fração embaixo
         · <b>${feitas}/${total}</b> no total · clique no cliente para recolher</div>
       <table class="pv"><thead><tr>
@@ -2300,9 +2301,14 @@ function arrancar(){
      TEXTO da tarefa. Hoje isso casa com 6.733 de 20.668 (33%) — as demais
      preventivas ficam fora da matriz. Mantive o mesmo critério para não
      divergir do painel atual, e a tela diz o denominador em voz alta. */
-  const GP_RX = /\b(MP[MSAT])\b/;
-  const GP_SIGLAS = ["MPM", "MPT", "MPS", "MPA"];       // ordem de cadência
-  const gpSigla = x => { const m = GP_RX.exec(String(x.tarefa || "")); return m ? m[1] : null; };
+  /* 18/09/2026: MPQ e MPW entraram (ficavam sem sigla). A preventiva anual tem DUAS
+     grafias na base, a sigla e o nome por extenso — o PCM confirmou que as duas são o
+     padrão, então as duas viram MPA. Ver a especificação OS Preventivas e Handover v2. */
+  const GP_RX = /\b(MP[MSQWAT])\b/;
+  const GP_RX_ANUAL = /manuten[çc][ãa]o\s+preventiva\s+anual/i;
+  const GP_SIGLAS = ["MPW", "MPQ", "MPM", "MPT", "MPS", "MPA"];   // ordem de cadência
+  const gpSigla = x => { const t = String(x.tarefa || ""); const m = GP_RX.exec(t);
+    return m ? m[1].toUpperCase() : (GP_RX_ANUAL.test(t) ? "MPA" : null); };
   const gpUsina = u => { const p = String(u || "").split(" - "); return p.length > 1 ? p.slice(1).join(" - ") : String(u || ""); };
   const gpEtq = x => Array.isArray(x.etiquetas) ? x.etiquetas.join(" | ") : String(x.etiquetas || "");
 
@@ -2867,7 +2873,7 @@ function arrancar(){
       <span class="gp-obs">respeita a barra · passe o mouse numa usina para ver o que falta</span></h3>
       ${gpControles("pv", GPPV.linhas, GPPV.colunas, GPPV.valor,
           [["pct","% concluído"],["abertas","Pendentes"],["finalizadas","Feitas"],["total","Total"]])}
-      <div class="pv-leg"><b>MPM</b> mensal · <b>MPT</b> trimestral · <b>MPS</b> semestral
+      <div class="pv-leg"><b>MPW</b> semanal · <b>MPQ</b> quinzenal · <b>MPM</b> mensal · <b>MPT</b> trimestral · <b>MPS</b> semestral
         · <b>MPA</b> anual · a sigla vem do texto da tarefa, e alcança
         <b>${pv.length.toLocaleString("pt-BR")}</b> das ${dados.length.toLocaleString("pt-BR")} tarefas</div>
       ${pvMat}</div>
