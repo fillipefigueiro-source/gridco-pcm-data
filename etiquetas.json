@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-19T11:10:08Z",
+  "geradoEm": "2026-09-19T11:21:10Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4506,
-        "emAberto": 27,
+        "total": 4507,
+        "emAberto": 28,
         "atrasadas": 21,
         "concluidas30d": 733,
         "concluidas7d": 200,
-        "naSemanaCorrente": 149
+        "naSemanaCorrente": 150
       },
       "mttr": {
         "horas": 19.55,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 149,
+          "criadas": 150,
           "finalizadas": 154
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4506,
-            "emAberto": 27
+            "total": 4507,
+            "emAberto": 28
           }
         ],
         "responsaveis": [
@@ -73,21 +73,21 @@
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 197,
-            "emAberto": 2
+            "total": 198,
+            "emAberto": 3
           }
         ]
       },
-      "total": 27,
+      "total": 28,
       "atrasadas": 21,
       "porStatus": {
         "naoIniciada": 20,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 27
+        "(sem equipe)": 28
       },
       "oss": [
         {
@@ -462,16 +462,35 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Raphael Vitoriano",
           "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 5.7] - Religamento do Inversor 5.7",
           "criticidade": "",
           "dataProgramada": "2026-09-18",
           "dataCriacao": "2026-09-18",
+          "dataInicial": "2026-09-19",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "13934",
+          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Wesllen  Castro",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-19",
+          "dataCriacao": "2026-09-19",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": true
+          "atrasada": false
         },
         {
           "osId": "13933",
@@ -3589,9 +3608,9 @@
       "historicoTotal": 1870,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3747,
+        "local": 3748,
         "remotoEmAberto": 11,
-        "localEmAberto": 16,
+        "localEmAberto": 17,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -15086,6 +15105,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13934",
+      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Wesllen  Castro",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-19",
+      "dataCriacao": "2026-09-19",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13933",
       "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
       "equipe": "",
@@ -15341,14 +15377,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Raphael Vitoriano",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 5.7] - Religamento do Inversor 5.7",
       "criticidade": "",
       "dataProgramada": "2026-09-18",
       "dataCriacao": "2026-09-18",
-      "dataInicial": "",
+      "dataInicial": "2026-09-19",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -21208,7 +21245,7 @@
     }
   ],
   "historicoTotal": 2994,
-  "totalGeral": 6367,
+  "totalGeral": 6368,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
