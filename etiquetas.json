@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-19T16:49:29Z",
+  "geradoEm": "2026-09-19T17:16:09Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-14 .. 2026-09-20",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4512,
-        "emAberto": 25,
-        "atrasadas": 20,
-        "concluidas30d": 741,
-        "concluidas7d": 208,
+        "emAberto": 23,
+        "atrasadas": 19,
+        "concluidas30d": 743,
+        "concluidas7d": 210,
         "naSemanaCorrente": 155
       },
       "mttr": {
-        "horas": 19.37,
-        "label": "19h 22min",
-        "amostra": 741
+        "horas": 19.35,
+        "label": "19h 21min",
+        "amostra": 743
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W38",
           "criadas": 155,
-          "finalizadas": 162
+          "finalizadas": 164
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4512,
-            "emAberto": 25
+            "emAberto": 23
           }
         ],
         "responsaveis": [
@@ -59,7 +59,7 @@
           {
             "nome": "Marcos  Camargo",
             "total": 490,
-            "emAberto": 3
+            "emAberto": 1
           },
           {
             "nome": "Felipe Silva",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 25,
-      "atrasadas": 20,
+      "total": 23,
+      "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 20,
-        "emProgresso": 0,
+        "naoIniciada": 16,
+        "emProgresso": 2,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 25
+        "(sem equipe)": 23
       },
       "oss": [
         {
@@ -438,56 +438,21 @@
           "atrasada": true
         },
         {
-          "osId": "13905",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Marcos  Camargo",
-          "status": "Não Iniciada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-09-18",
-          "dataCriacao": "2026-09-18",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "13939",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Marcos  Camargo",
-          "status": "Não Iniciada",
-          "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-19",
-          "dataCriacao": "2026-09-19",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "13937",
           "ativo": "Inversor 1.4  SUN2000-250KTL-H1    { THPN-STA100-INVR1.4 }",
           "equipe": "",
           "responsavel": "Carlos  Godoi",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Carlos  Godoi",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
           "criticidade": "",
           "dataProgramada": "2026-09-19",
           "dataCriacao": "2026-09-19",
-          "dataInicial": "",
+          "dataInicial": "2026-09-19",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -498,14 +463,15 @@
           "responsavel": "Adriano Silva ",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Adriano Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Alves Lima - Morada Nova 1 - CE] - Religamento do Alves Lima - Morada Nova 1 - CE",
           "criticidade": "",
           "dataProgramada": "2026-09-19",
           "dataCriacao": "2026-09-19",
-          "dataInicial": "",
+          "dataInicial": "2026-09-19",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -547,6 +513,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13939",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Marcos  Camargo",
+          "status": "Finalizados",
+          "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-19",
+          "dataCriacao": "2026-09-19",
+          "dataInicial": "2026-09-19",
+          "dataFinal": "2026-09-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "13936",
           "ativo": "Athon - Matões 1 - MA Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { ATHN-MTS100 }",
@@ -683,6 +669,26 @@
           "dataFinal": "2026-09-19",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13905",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Marcos  Camargo",
+          "status": "Finalizados",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-09-18",
+          "dataCriacao": "2026-09-18",
+          "dataInicial": "2026-09-19",
+          "dataFinal": "2026-09-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -2788,26 +2794,6 @@
           "atrasada": false
         },
         {
-          "osId": "13377",
-          "ativo": "Inversor 1.9 Huawei SUN2000-330KTL-H1    { VRG100-INVR1.9 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Marcos Duarte ",
-          "status": "Finalizados",
-          "tarefa": "[VRG100-INVR1.9] - Religamento do VRG100-INVR1.9",
-          "criticidade": "",
-          "dataProgramada": "2026-08-30",
-          "dataCriacao": "2026-09-10",
-          "dataInicial": "2026-09-14",
-          "dataFinal": "2026-09-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "13549",
           "ativo": "Inversor 5.7 Huawei     { MAB200-INVR5.7 }",
           "equipe": "",
@@ -3526,34 +3512,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13378",
-          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
-          "equipe": "",
-          "responsavel": "Cleiton  Farias",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Cleiton  Farias",
-          "status": "Finalizados",
-          "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-10",
-          "dataCriacao": "2026-09-10",
-          "dataInicial": "2026-09-10",
-          "dataFinal": "2026-09-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1878,
+      "historicoTotal": 1880,
       "subClassificacao": {
         "remoto": 759,
         "local": 3753,
         "remotoEmAberto": 11,
-        "localEmAberto": 14,
+        "localEmAberto": 12,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -15048,37 +15014,21 @@
   },
   "ossPublicas": [
     {
-      "osId": "13939",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Marcos  Camargo",
-      "status": "Não Iniciada",
-      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-19",
-      "dataCriacao": "2026-09-19",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "13937",
       "ativo": "Inversor 1.4  SUN2000-250KTL-H1    { THPN-STA100-INVR1.4 }",
       "equipe": "",
       "responsavel": "Carlos  Godoi",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Carlos  Godoi",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
       "criticidade": "",
       "dataProgramada": "2026-09-19",
       "dataCriacao": "2026-09-19",
-      "dataInicial": "",
+      "dataInicial": "2026-09-19",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15088,14 +15038,15 @@
       "responsavel": "Adriano Silva ",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Adriano Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Alves Lima - Morada Nova 1 - CE] - Religamento do Alves Lima - Morada Nova 1 - CE",
       "criticidade": "",
       "dataProgramada": "2026-09-19",
       "dataCriacao": "2026-09-19",
-      "dataInicial": "",
+      "dataInicial": "2026-09-19",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15131,23 +15082,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "modalidade": "remoto"
-    },
-    {
-      "osId": "13905",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Marcos  Camargo",
-      "status": "Não Iniciada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-09-18",
-      "dataCriacao": "2026-09-18",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "13903",
@@ -18790,6 +18724,26 @@
       "atrasada": false
     },
     {
+      "osId": "13939",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Marcos  Camargo",
+      "status": "Finalizados",
+      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-19",
+      "dataCriacao": "2026-09-19",
+      "dataInicial": "2026-09-19",
+      "dataFinal": "2026-09-19",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13936",
       "ativo": "Athon - Matões 1 - MA Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { ATHN-MTS100 }",
       "equipe": "",
@@ -18925,6 +18879,26 @@
       "dataFinal": "2026-09-19",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "13905",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Marcos  Camargo",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-09-18",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "2026-09-19",
+      "dataFinal": "2026-09-19",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -21091,49 +21065,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13549",
-      "ativo": "Inversor 5.7 Huawei     { MAB200-INVR5.7 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "James Chaves ",
-      "status": "Finalizados",
-      "tarefa": "[MAB200-INVR5.7] - Religamento do MAB200-INVR5.7",
-      "criticidade": "",
-      "dataProgramada": "2026-09-13",
-      "dataCriacao": "2026-09-13",
-      "dataInicial": "2026-09-13",
-      "dataFinal": "2026-09-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "13546",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizados",
-      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-13",
-      "dataCriacao": "2026-09-13",
-      "dataInicial": "2026-09-13",
-      "dataFinal": "2026-09-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3002,
+  "historicoTotal": 3004,
   "totalGeral": 6373,
   "verificacao": {
     "total": 0,
