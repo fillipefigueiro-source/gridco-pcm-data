@@ -262,6 +262,70 @@ function rexModelo() {
            osFin: new Set(finalizadas.map(t => t.os)).size };
 }
 
+// ── confiabilidade por FAMÍLIA de ativo (pedido Athon 21/09) ─────────────────
+// confiabilidade.json: clientes → usinas → ativos {mtbf, mttr, disp, n}.
+// Família = palavra-chave no nome do ativo. Agregação ponderada pelo nº de
+// falhas: mtbf_fam = Σ(mtbf·n)/Σn (= uptime total ÷ falhas totais — mantém a
+// fórmula oficial), idem mttr; disp_fam = mtbf/(mtbf+mttr).
+let REX_CF = { estado: 'nao', dados: null };
+async function rexCfCarregar() {
+  if (REX_CF.estado !== 'nao') return REX_CF.dados;
+  try {
+    const r = await fetch('confiabilidade.json', { cache: 'no-store' });
+    REX_CF.dados = await r.json();
+    REX_CF.estado = 'ok';
+  } catch (e) { REX_CF.estado = 'erro'; REX_CF.dados = null; }
+  return REX_CF.dados;
+}
+function rexFamilia(ativo, usina) {
+  const a = String(ativo || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  if (ativo && usina && ativo === usina) return 'Usina (religamentos)';
+  if (a.indexOf('inversor') >= 0) return 'Inversores';
+  if (a.indexOf('cabine') >= 0) return 'Cabines';
+  if (a.indexOf('transformador') >= 0 || a.indexOf('trafo') >= 0) return 'Transformadores';
+  if (a.indexOf('tracker') >= 0 || a.indexOf('rastread') >= 0) return 'Trackers';
+  if (a.indexOf('meteo') >= 0 || a.indexOf('estacao') >= 0) return 'Estação Meteorológica';
+  if (a.indexOf('string') >= 0 || a.indexOf('modulo') >= 0) return 'Strings / Módulos';
+  if (a.indexOf('qgbt') >= 0) return 'QGBT';
+  if (a.indexOf('cftv') >= 0 || a.indexOf('camera') >= 0) return 'CFTV / Segurança';
+  return 'Outros';
+}
+function rexFamilias(cf) {
+  if (!cf || !cf.clientes) return null;
+  // cluster não existe no confiabilidade.json — derivamos as usinas do cluster
+  // a partir do gestao_pcm.json quando o recorte pede
+  let usinasCluster = null;
+  if (REX.cluster) {
+    usinasCluster = new Set();
+    gpScopedTarefas().forEach(t => { if (t.cluster === REX.cluster) usinasCluster.add(t.usina); });
+  }
+  const fam = {}, ativos = [];
+  cf.clientes.forEach(c => {
+    if (REX.cliente && c.cliente !== REX.cliente) return;
+    (c.usinas || []).forEach(u => {
+      if (REX.usinas.length && REX.usinas.indexOf(u.usina) < 0) return;
+      if (usinasCluster && !usinasCluster.has(u.usina)) return;
+      (u.ativos || []).forEach(at => {
+        const n = +at.n || 0;
+        if (!n) return;
+        const f = rexFamilia(at.ativo, u.usina);
+        const o = fam[f] || (fam[f] = { n: 0, up: 0, rep: 0, ativos: 0 });
+        o.n += n; o.up += (+at.mtbf || 0) * n; o.rep += (+at.mttr || 0) * n; o.ativos++;
+        ativos.push({ ativo: at.ativo, usina: u.usina, n, mtbf: +at.mtbf || 0,
+                      mttr: +at.mttr || 0, disp: +at.disp || 0 });
+      });
+    });
+  });
+  const linhas = Object.entries(fam).map(([f, o]) => {
+    const mtbf = o.up / o.n, mttr = o.rep / o.n;
+    return { fam: f, ativos: o.ativos, n: o.n, mtbf, mttr,
+             disp: (mtbf + mttr) ? mtbf / (mtbf + mttr) : 0 };
+  }).sort((x, y) => y.n - x.n);
+  // piores ativos individuais (mín. 3 falhas — 1 azar não é tendência)
+  const piores = ativos.filter(x => x.n >= 3).sort((x, y) => x.disp - y.disp).slice(0, 5);
+  return linhas.length ? { linhas, piores, geradoEm: cf.geradoEm || '' } : null;
+}
+
 // ── render do relatório ─────────────────────────────────────────────────────
 async function rexGerar() {
   REX.de = (document.getElementById('rex-de') || {}).value || REX.de;
@@ -277,6 +341,7 @@ async function rexGerar() {
   const modoCliente = ehCliente || !!REX.cliente;   // 1 cliente no recorte = versão cliente
   const M = rexModelo();
   const SEM = rexSemanas(await rexBdCarregar());    // semanas do programador no período
+  const CF = rexFamilias(await rexCfCarregar());    // confiabilidade por família
   let nsec = 0;
   const sec = t => (++nsec) + ' · ' + t;
   const escopo = [REX.cliente || (ehCliente ? S.user : 'Todos os clientes'),
@@ -379,6 +444,30 @@ async function rexGerar() {
   h += '<section><h2>' + sec('Volume por tipo') + '</h2><table class="rex-tbl"><tr><th>Tipo</th><th>Criadas</th><th>Finalizadas</th><th>Abertas hoje</th></tr>'
     + ordTipos.map(k => { const o = M.tipos[k]; return '<tr><td>' + k + '</td><td>' + rexN(o.criadas) + '</td><td>' + rexN(o.fin) + '</td><td>' + (o.abertas ? '<b class="rex-red">' + rexN(o.abertas) + '</b>' : '0') + '</td></tr>'; }).join('')
     + '</table></section>';
+
+  // confiabilidade por família de equipamento (base histórica — não recorta pelo período)
+  if (CF) {
+    const nfmt = (v, c) => v.toFixed(c).replace('.', ',');
+    const dispMin = Math.min(...CF.linhas.filter(x => x.n >= 10).map(x => x.disp), 1);
+    h += '<section><h2>' + sec('Confiabilidade por família de equipamento')
+      + ' <small>falhas = corretivas, emergenciais e religamentos · base histórica desde a mobilização de cada usina</small></h2>'
+      + '<table class="rex-tbl"><tr><th>Família</th><th>Ativos</th><th>Falhas</th><th>MTBF (h)</th><th>MTTR (h)</th><th>Disp. inerente</th></tr>'
+      + CF.linhas.map(x => '<tr><td class="rex-esq">' + rexEsc(x.fam) + '</td>'
+        + '<td>' + rexN(x.ativos) + '</td><td>' + rexN(x.n) + '</td>'
+        + '<td>' + nfmt(x.mtbf, 1) + '</td><td>' + nfmt(x.mttr, 2) + '</td>'
+        + '<td class="' + (x.n >= 10 && x.disp === dispMin ? 'rex-red' : '') + '"><b>'
+        + nfmt(100 * x.disp, 1) + '%</b></td></tr>').join('')
+      + '</table>'
+      + (CF.piores.length ? '<table class="rex-tbl" style="margin-top:8px"><tr>'
+        + '<th>Ativos com pior disponibilidade <small>(mín. 3 falhas)</small></th><th>Usina</th><th>Falhas</th><th>MTTR (h)</th><th>Disp.</th></tr>'
+        + CF.piores.map(p => '<tr><td class="rex-esq">' + rexEsc(String(p.ativo).slice(0, 45)) + '</td>'
+          + '<td class="rex-esq">' + rexEsc(rexUsiCurta(p.usina)) + '</td><td>' + p.n + '</td>'
+          + '<td>' + nfmt(p.mttr, 2) + '</td><td class="rex-red"><b>' + nfmt(100 * p.disp, 1) + '%</b></td></tr>').join('')
+        + '</table>' : '')
+      + '<div class="rex-nota">MTBF = tempo médio entre falhas · MTTR = tempo médio de reparo · '
+      + 'Disp. inerente = MTBF ÷ (MTBF + MTTR) · agregação ponderada pelo nº de falhas de cada ativo · '
+      + 'dados de ' + rexEsc(String(CF.geradoEm).slice(0, 16).replace('T', ' ')) + '.</div></section>';
+  }
 
   // P2 — ranking (a estrela)
   const top = M.rank.slice(0, 10);
