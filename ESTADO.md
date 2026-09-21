@@ -1175,3 +1175,22 @@ em MPM/MPS/Handover. A correção precisa vir do apontamento no campo, não do m
 Correção de rumo: a simulação de 17/09 leu o `BD_Relatório Semanal.xlsx` local (as credenciais
 do Fracttal não estão na máquina) e deu MPA 5,02 h com 353 amostras, sugerindo que 4,0 h era
 pouco. A medição real deu 2,27 h com 538 amostras — a MPA está superestimada, não subestimada.
+
+### Gestão PCM: o botão de coluna "Tipo" da matriz de preventivas virou "Sigla" (21/09)
+
+O Fillipe pediu para filtrar por MPA/MPS/MPM e ver a evolução mês a mês — e **isso já funcionava**
+desde o filtro de sigla de 18/09: a matriz chama `gpFiltrada()`, que aplica todo o `GP_CAMPOS`,
+inclusive `sig`. O que faltava era a tela dizer isso. Havia uma colisão de nome real: `gpControles()`
+desenha as duas matrizes, e o botão de coluna "tipo" significa `GP_TIPOS` na "PCM geral"
+(preventiva, corretiva, religamento) mas `GP_SIGLAS` na de preventivas. Duas coisas com o mesmo
+rótulo, ao lado de um filtro TIPO na barra que é a primeira delas.
+
+Três mudanças, **nenhum cálculo alterado**: o rótulo do botão passa a depender do `pref`
+(`pv` → "Sigla", `gp` → "Tipo"); o cabeçalho da matriz ganha `.pv-pil` com a sigla ativa e o nome
+por extenso (`GP_SIG_NOME`), lida de `GPSEL.sig`; e a legenda ensina o caminho em vez de repetir
+que a sigla vem do texto da tarefa.
+
+Verificado servindo o repositório em localhost e clicando pela interface: com SIGLA=MPA a barra
+mostra 1.589 de 24.692 tarefas, a etiqueta diz "Sigla: MPA · anual", a matriz de preventivas
+rotula "Sigla" e a "PCM geral" segue rotulando "Tipo". Athon fecha 94% (506/536) nas anuais, com
+queda para 69% em setembro — recorte que some quando MPM, MPS e MPA aparecem somadas.

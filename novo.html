@@ -232,6 +232,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-a
   font-weight:800;margin:0;padding:12px 16px;border-bottom:1px solid var(--line);
   letter-spacing:-.01em}
 .gp-obs{margin-left:auto;font-size:10.5px;font-weight:600;color:var(--ink3)}
+/* 21/09/2026: etiqueta da sigla ativa no cabeçalho da matriz de preventivas */
+.pv-pil{font-size:10px;font-weight:800;letter-spacing:.04em;padding:2px 9px;
+  border-radius:20px;background:var(--navy);color:#fff;white-space:nowrap}
 .gp-b.amb{background:var(--surf)}
 .gp-b.amb > h3{color:var(--aviso)}
 .ctr{display:flex;gap:15px;flex-wrap:wrap;padding:10px 16px;background:var(--surf2);
@@ -2307,6 +2310,8 @@ function arrancar(){
   const GP_RX = /\b(MP[MSQWAT])\b/;
   const GP_RX_ANUAL = /manuten[çc][ãa]o\s+preventiva\s+anual/i;
   const GP_SIGLAS = ["MPW", "MPQ", "MPM", "MPT", "MPS", "MPA"];   // ordem de cadência
+  const GP_SIG_NOME = { MPW:"semanal", MPQ:"quinzenal", MPM:"mensal",
+                        MPT:"trimestral", MPS:"semestral", MPA:"anual" };
   const gpSigla = x => { const t = String(x.tarefa || ""); const m = GP_RX.exec(t);
     return m ? m[1].toUpperCase() : (GP_RX_ANUAL.test(t) ? "MPA" : null); };
   const gpUsina = u => { const p = String(u || "").split(" - "); return p.length > 1 ? p.slice(1).join(" - ") : String(u || ""); };
@@ -2451,7 +2456,10 @@ function arrancar(){
       <div class="ctr-g"><span class="ctr-l">Linhas</span>
         ${GP_DIMS.map(([k,l]) => bt("lin", k, k==="usina"?l:l+" ▸ Usina", dim===k)).join("")}</div>
       <div class="ctr-g"><span class="ctr-l">Colunas</span>
-        ${bt("col","tipo","Tipo",col==="tipo")}${bt("col","mes","Mês",col==="mes")}</div>
+        ${/* na matriz de preventivas a coluna "tipo" é GP_SIGLAS, não GP_TIPOS — o rótulo
+             "Tipo" colidia com o filtro TIPO da barra, que é outra coisa (21/09/2026) */
+          bt("col","tipo",pref==="pv"?"Sigla":"Tipo",col==="tipo")
+         }${bt("col","mes","Mês",col==="mes")}</div>
       <div class="ctr-g"><span class="ctr-l">Valor</span>
         ${vals.map(([k,l]) => bt("val", k, l, val===k)).join("")}</div>
     </div>`;
@@ -2833,6 +2841,14 @@ function arrancar(){
        pedido do PCM (28/08). Os controles de agrupamento/valor seguem próprios. */
     const pv = dados.filter(x => x.sig);
     GP._pv = pv;   // o popup de tarefas faltantes lê daqui
+
+    /* Etiqueta da sigla ativa: a matriz sempre respeitou a barra, mas nada na tela dizia
+       isso. Com uma sigla escolhida mostra o nome por extenso; com várias, só a lista. */
+    const sigAtiva = [...GPSEL.sig].sort((a,b) => GP_SIGLAS.indexOf(a) - GP_SIGLAS.indexOf(b));
+    const pvPil = !sigAtiva.length ? ""
+      : `<span class="pv-pil">Sigla: ${esc(sigAtiva.join(", "))}${
+           sigAtiva.length === 1 && GP_SIG_NOME[sigAtiva[0]]
+             ? " · " + GP_SIG_NOME[sigAtiva[0]] : ""}</span>`;
     const pvMat = (() => {
       const colunas = GPPV.colunas === "mes" ? GP_MESES : GP_SIGLAS;
       const chave = GPPV.colunas === "mes"
@@ -2869,13 +2885,14 @@ function arrancar(){
     const maxM = clus.length ? clus[0].mttr : 1;
 
     return gpBarra(dados.length) + `
-    <div class="gp-b"><h3>Conclusão das preventivas
+    <div class="gp-b"><h3>Conclusão das preventivas${pvPil}
       <span class="gp-obs">respeita a barra · passe o mouse numa usina para ver o que falta</span></h3>
       ${gpControles("pv", GPPV.linhas, GPPV.colunas, GPPV.valor,
           [["pct","% concluído"],["abertas","Pendentes"],["finalizadas","Feitas"],["total","Total"]])}
       <div class="pv-leg"><b>MPW</b> semanal · <b>MPQ</b> quinzenal · <b>MPM</b> mensal · <b>MPT</b> trimestral · <b>MPS</b> semestral
-        · <b>MPA</b> anual · a sigla vem do texto da tarefa, e alcança
-        <b>${pv.length.toLocaleString("pt-BR")}</b> das ${dados.length.toLocaleString("pt-BR")} tarefas</div>
+        · <b>MPA</b> anual · alcança <b>${pv.length.toLocaleString("pt-BR")}</b> das
+        ${dados.length.toLocaleString("pt-BR")} tarefas · <b>para ver uma sigla ao longo do
+        tempo, escolha-a em SIGLA na barra e deixe Colunas em Mês</b></div>
       ${pvMat}</div>
 
     <div class="gp-b amb"><h3>Não finalizadas no período
