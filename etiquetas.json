@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T17:22:22Z",
+  "geradoEm": "2026-09-21T17:34:18Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4552,
-        "emAberto": 25,
+        "total": 4553,
+        "emAberto": 24,
         "atrasadas": 19,
-        "concluidas30d": 737,
-        "concluidas7d": 202,
-        "naSemanaCorrente": 12
+        "concluidas30d": 739,
+        "concluidas7d": 204,
+        "naSemanaCorrente": 13
       },
       "mttr": {
-        "horas": 19.71,
-        "label": "19h 43min",
-        "amostra": 737
+        "horas": 19.65,
+        "label": "19h 39min",
+        "amostra": 739
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W39",
-          "criadas": 15,
-          "finalizadas": 11
+          "criadas": 16,
+          "finalizadas": 13
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4552,
-            "emAberto": 25
+            "total": 4553,
+            "emAberto": 24
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 25,
+      "total": 24,
       "atrasadas": 19,
       "porStatus": {
         "naoIniciada": 20,
-        "emProgresso": 3,
+        "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 25
+        "(sem equipe)": 24
       },
       "oss": [
         {
@@ -436,6 +436,24 @@
           "atrasada": true
         },
         {
+          "osId": "14262",
+          "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Thiago Morais ",
+          "status": "Não Iniciada",
+          "tarefa": "[IBI200-INVR1.3] - Religamento do IBI200-INVR1.3",
+          "criticidade": "",
+          "dataProgramada": "2026-09-21",
+          "dataCriacao": "2026-09-21",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "14257",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -462,43 +480,6 @@
           "supervisor": "Marcos  Camargo",
           "status": "Não Iniciada",
           "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-21",
-          "dataCriacao": "2026-09-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "14243",
-          "ativo": "Thopen - Ibaté 2 - SP  Ibaté  São Paulo Brasil { THPN-IBT200 }",
-          "equipe": "",
-          "responsavel": "Rogério Aparecido Paravani ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Rogério Aparecido Paravani ",
-          "status": "Em progresso",
-          "tarefa": "[THPN-IBT200] - Religamento do THPN-IBT200",
-          "criticidade": "",
-          "dataProgramada": "2026-09-21",
-          "dataCriacao": "2026-09-21",
-          "dataInicial": "2026-09-21",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "14238",
-          "ativo": "Thopen - Ibaté 1 - SP  Ibaté  São Paulo Brasil { THPN-IBT100 }",
-          "equipe": "",
-          "responsavel": "Rogério Aparecido Paravani ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Rogério Aparecido Paravani ",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-IBT100] - Religamento do THPN-IBT100",
           "criticidade": "",
           "dataProgramada": "2026-09-21",
           "dataCriacao": "2026-09-21",
@@ -547,6 +528,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14243",
+          "ativo": "Thopen - Ibaté 2 - SP  Ibaté  São Paulo Brasil { THPN-IBT200 }",
+          "equipe": "",
+          "responsavel": "Rogério Aparecido Paravani ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Rogério Aparecido Paravani ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-IBT200] - Religamento do THPN-IBT200",
+          "criticidade": "",
+          "dataProgramada": "2026-09-21",
+          "dataCriacao": "2026-09-21",
+          "dataInicial": "2026-09-21",
+          "dataFinal": "2026-09-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14238",
+          "ativo": "Thopen - Ibaté 1 - SP  Ibaté  São Paulo Brasil { THPN-IBT100 }",
+          "equipe": "",
+          "responsavel": "Rogério Aparecido Paravani ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Rogério Aparecido Paravani ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-IBT100] - Religamento do THPN-IBT100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-21",
+          "dataCriacao": "2026-09-21",
+          "dataInicial": "2026-09-21",
+          "dataFinal": "2026-09-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "14121",
           "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
@@ -3468,26 +3489,6 @@
           "atrasada": false
         },
         {
-          "osId": "13508",
-          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
-          "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Frank  Melo",
-          "status": "Finalizados",
-          "tarefa": "Religamento da cabine 3 de CPP100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-12",
-          "dataCriacao": "2026-09-12",
-          "dataInicial": "2026-09-12",
-          "dataFinal": "2026-09-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "13524",
           "ativo": "Thopen - Coração 1 e 2 - SC Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100 }",
           "equipe": "",
@@ -3526,34 +3527,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13515",
-          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
-          "equipe": "",
-          "responsavel": "Cleiton  Farias",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Cleiton  Farias",
-          "status": "Finalizados",
-          "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-12",
-          "dataCriacao": "2026-09-12",
-          "dataInicial": "2026-09-12",
-          "dataFinal": "2026-09-12",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1876,
+      "historicoTotal": 1878,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3793,
+        "local": 3794,
         "remotoEmAberto": 11,
-        "localEmAberto": 14,
+        "localEmAberto": 13,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -15000,6 +14981,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14262",
+      "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Thiago Morais ",
+      "status": "Não Iniciada",
+      "tarefa": "[IBI200-INVR1.3] - Religamento do IBI200-INVR1.3",
+      "criticidade": "",
+      "dataProgramada": "2026-09-21",
+      "dataCriacao": "2026-09-21",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14258",
       "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { THPN-JNC100-INVR1.3 }",
       "equipe": "",
@@ -15041,41 +15039,6 @@
       "supervisor": "Marcos  Camargo",
       "status": "Não Iniciada",
       "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-21",
-      "dataCriacao": "2026-09-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "14243",
-      "ativo": "Thopen - Ibaté 2 - SP  Ibaté  São Paulo Brasil { THPN-IBT200 }",
-      "equipe": "",
-      "responsavel": "Rogério Aparecido Paravani ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Rogério Aparecido Paravani ",
-      "status": "Em progresso",
-      "tarefa": "[THPN-IBT200] - Religamento do THPN-IBT200",
-      "criticidade": "",
-      "dataProgramada": "2026-09-21",
-      "dataCriacao": "2026-09-21",
-      "dataInicial": "2026-09-21",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
-      "osId": "14238",
-      "ativo": "Thopen - Ibaté 1 - SP  Ibaté  São Paulo Brasil { THPN-IBT100 }",
-      "equipe": "",
-      "responsavel": "Rogério Aparecido Paravani ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Rogério Aparecido Paravani ",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-IBT100] - Religamento do THPN-IBT100",
       "criticidade": "",
       "dataProgramada": "2026-09-21",
       "dataCriacao": "2026-09-21",
@@ -18698,6 +18661,46 @@
       "atrasada": false
     },
     {
+      "osId": "14243",
+      "ativo": "Thopen - Ibaté 2 - SP  Ibaté  São Paulo Brasil { THPN-IBT200 }",
+      "equipe": "",
+      "responsavel": "Rogério Aparecido Paravani ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Rogério Aparecido Paravani ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-IBT200] - Religamento do THPN-IBT200",
+      "criticidade": "",
+      "dataProgramada": "2026-09-21",
+      "dataCriacao": "2026-09-21",
+      "dataInicial": "2026-09-21",
+      "dataFinal": "2026-09-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "14238",
+      "ativo": "Thopen - Ibaté 1 - SP  Ibaté  São Paulo Brasil { THPN-IBT100 }",
+      "equipe": "",
+      "responsavel": "Rogério Aparecido Paravani ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Rogério Aparecido Paravani ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-IBT100] - Religamento do THPN-IBT100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-21",
+      "dataCriacao": "2026-09-21",
+      "dataInicial": "2026-09-21",
+      "dataFinal": "2026-09-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "14121",
       "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
       "equipe": "",
@@ -20982,50 +20985,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13668",
-      "ativo": "Thopen - Poconé 1 - MT  Poconé  Mato Grosso Brasil { THPN-PCN100 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Adriano  Moraes",
-      "status": "Finalizados",
-      "tarefa": "[Thopen - Poconé 1 - MT] - Religamento do Thopen - Poconé 1 - MT",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
-      "dataCriacao": "2026-09-16",
-      "dataInicial": "2026-09-20",
-      "dataFinal": "2026-09-20",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "13666",
-      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Adriano  Moraes",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
-      "dataCriacao": "2026-09-16",
-      "dataInicial": "2026-09-16",
-      "dataFinal": "2026-09-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3001,
-  "totalGeral": 6416,
+  "historicoTotal": 3003,
+  "totalGeral": 6417,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
