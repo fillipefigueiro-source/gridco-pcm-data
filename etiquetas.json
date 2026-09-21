@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T17:10:20Z",
+  "geradoEm": "2026-09-21T17:22:22Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -82,8 +82,8 @@
       "atrasadas": 19,
       "porStatus": {
         "naoIniciada": 20,
-        "emProgresso": 2,
-        "pausada": 3,
+        "emProgresso": 3,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
@@ -279,15 +279,15 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valdir Silva ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
           "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-18",
+          "dataInicial": "2026-09-21",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 360.0,
+          "horasAteAbrir": 432.0,
           "modalidade": "remoto",
           "atrasada": true
         },
@@ -352,15 +352,14 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valdir Silva ",
-          "status": "Em progresso",
+          "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
           "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-21",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 432.0,
           "modalidade": "remoto",
           "atrasada": true
         },
@@ -479,14 +478,15 @@
           "responsavel": "Rogério Aparecido Paravani ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Rogério Aparecido Paravani ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-IBT200] - Religamento do THPN-IBT200",
           "criticidade": "",
           "dataProgramada": "2026-09-21",
           "dataCriacao": "2026-09-21",
-          "dataInicial": "",
+          "dataInicial": "2026-09-21",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3600,19 +3600,11 @@
             "linkFracttal": ""
           },
           {
-            "osId": "12905",
-            "ativo": "Thopen - Pharmas 3 - PR Rodovia Tsuneto Matsubara, km 4,5 Jacutinga Bandeirantes  Paraná Brasil { THPN-PHS300 }",
-            "criadoPor": "Davi Damasceno",
-            "responsavel": "Valdir Silva ",
-            "horas": 432.0,
-            "linkFracttal": ""
-          },
-          {
             "osId": "12907",
             "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
             "criadoPor": "Davi Damasceno",
             "responsavel": "Valdir Silva ",
-            "horas": 360.0,
+            "horas": 432.0,
             "linkFracttal": ""
           },
           {
@@ -3637,6 +3629,14 @@
             "criadoPor": "Juliana Cândido",
             "responsavel": "Ronaldo  Silva",
             "horas": 288.0,
+            "linkFracttal": ""
+          },
+          {
+            "osId": "5481",
+            "ativo": "Cabine 5 BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100-CABN5 }",
+            "criadoPor": "ItaloLustosa",
+            "responsavel": "Janderson Miranda ",
+            "horas": 216.0,
             "linkFracttal": ""
           }
         ],
@@ -3722,9 +3722,9 @@
             "linkFracttal": ""
           }
         ],
-        "medHorasAbrir": 12.4,
+        "medHorasAbrir": 11.9,
         "medHorasFechar": 2.6,
-        "amostraAbrir": 744,
+        "amostraAbrir": 743,
         "amostraFechar": 741,
         "topAbridores": [
           {
@@ -8725,17 +8725,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 763,
+        "total": 764,
         "emAberto": 69,
         "atrasadas": 58,
-        "concluidas30d": 222,
-        "concluidas7d": 54,
-        "naSemanaCorrente": 14
+        "concluidas30d": 223,
+        "concluidas7d": 55,
+        "naSemanaCorrente": 15
       },
       "mttr": {
-        "horas": 263.14,
-        "label": "10d 23h",
-        "amostra": 222
+        "horas": 261.96,
+        "label": "10d 21h",
+        "amostra": 223
       },
       "tendencia4Semanas": [
         {
@@ -8755,15 +8755,15 @@
         },
         {
           "semana": "W39",
-          "criadas": 2,
-          "finalizadas": 3
+          "criadas": 3,
+          "finalizadas": 4
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 763,
+            "total": 764,
             "emAberto": 69
           }
         ],
@@ -9989,6 +9989,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14259",
+          "ativo": "Inversor 1.1 Huawei     { TESTE100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Levi Maia ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Levi Maia ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-09-21",
+          "dataCriacao": "2026-09-21",
+          "dataInicial": "2026-09-21",
+          "dataFinal": "2026-09-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13861",
           "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H3    { MCB100-INVR1.6 }",
@@ -12819,28 +12838,9 @@
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "9105",
-          "ativo": "SKID 3  Crateús  Ceará Brasil { CTS100-SKID3 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Railson Gomes ",
-          "status": "Finalizados",
-          "tarefa": "[Crateús 01][Skid 03] - Verificação de temperatura",
-          "criticidade": "",
-          "dataProgramada": "2026-07-07",
-          "dataCriacao": "2026-07-07",
-          "dataInicial": "2026-07-08",
-          "dataFinal": "2026-07-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 639
+      "historicoTotal": 640
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15056,14 +15056,15 @@
       "responsavel": "Rogério Aparecido Paravani ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Rogério Aparecido Paravani ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-IBT200] - Religamento do THPN-IBT200",
       "criticidade": "",
       "dataProgramada": "2026-09-21",
       "dataCriacao": "2026-09-21",
-      "dataInicial": "",
+      "dataInicial": "2026-09-21",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16482,15 +16483,15 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valdir Silva ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
       "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-18",
+      "dataInicial": "2026-09-21",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 360.0,
+      "horasAteAbrir": 432.0,
       "modalidade": "remoto"
     },
     {
@@ -16517,15 +16518,14 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valdir Silva ",
-      "status": "Em progresso",
+      "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
       "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-21",
+      "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 432.0,
       "modalidade": "remoto"
     },
     {
@@ -18070,6 +18070,25 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "14259",
+      "ativo": "Inversor 1.1 Huawei     { TESTE100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Levi Maia ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Levi Maia ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.1] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-09-21",
+      "dataCriacao": "2026-09-21",
+      "dataInicial": "2026-09-21",
+      "dataFinal": "2026-09-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
     {
       "osId": "13794",
       "ativo": "QGBT 1  Irecê  Bahia Brasil { IRC100-QGBT1 }",
@@ -21003,30 +21022,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13663",
-      "ativo": "RenoGrid - Nova Xavantina 2 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso Brasil { RNGD-NVX200 }",
-      "equipe": "",
-      "responsavel": "Gabriel Oliveira ",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Gabriel Oliveira ",
-      "status": "Finalizados",
-      "tarefa": "[RNGD-NVX200] - Religamento do RNGD-NVX200",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
-      "dataCriacao": "2026-09-15",
-      "dataInicial": "2026-09-15",
-      "dataFinal": "2026-09-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3000,
-  "totalGeral": 6415,
+  "historicoTotal": 3001,
+  "totalGeral": 6416,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
