@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T19:28:58Z",
+  "geradoEm": "2026-09-21T19:35:51Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -82,8 +82,8 @@
       "atrasadas": 19,
       "porStatus": {
         "naoIniciada": 20,
-        "emProgresso": 2,
-        "pausada": 2,
+        "emProgresso": 1,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
@@ -496,7 +496,7 @@
           "responsavel": "Matheus Gois ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Matheus Gois ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[THPN-PRV100] - Religamento do THPN-PRV100",
           "criticidade": "",
           "dataProgramada": "2026-09-21",
@@ -8708,16 +8708,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 763,
-        "emAberto": 63,
-        "atrasadas": 57,
-        "concluidas30d": 228,
-        "concluidas7d": 60,
+        "emAberto": 62,
+        "atrasadas": 56,
+        "concluidas30d": 229,
+        "concluidas7d": 61,
         "naSemanaCorrente": 15
       },
       "mttr": {
-        "horas": 257.16,
-        "label": "10d 17h",
-        "amostra": 228
+        "horas": 258.86,
+        "label": "10d 18h",
+        "amostra": 229
       },
       "tendencia4Semanas": [
         {
@@ -8738,7 +8738,7 @@
         {
           "semana": "W39",
           "criadas": 3,
-          "finalizadas": 9
+          "finalizadas": 10
         }
       ],
       "topOfensores": {
@@ -8746,7 +8746,7 @@
           {
             "nome": "(sem equipe)",
             "total": 763,
-            "emAberto": 63
+            "emAberto": 62
           }
         ],
         "responsaveis": [
@@ -8763,7 +8763,7 @@
           {
             "nome": "James Chaves",
             "total": 47,
-            "emAberto": 10
+            "emAberto": 9
           },
           {
             "nome": "Luiz  Silva",
@@ -8777,16 +8777,16 @@
           }
         ]
       },
-      "total": 63,
-      "atrasadas": 57,
+      "total": 62,
+      "atrasadas": 56,
       "porStatus": {
         "naoIniciada": 58,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 63
+        "(sem equipe)": 62
       },
       "oss": [
         {
@@ -9233,24 +9233,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "12187",
-          "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "James Chaves ",
-          "status": "Em progresso",
-          "tarefa": "[Tracker 07.105] - Verificação de tracker parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-26",
-          "dataCriacao": "2026-08-25",
-          "dataInicial": "2026-09-21",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 648.0,
           "atrasada": true
         },
         {
@@ -10035,6 +10017,25 @@
           "dataFinal": "2026-09-21",
           "linkFracttal": "",
           "horasAteAbrir": 288.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12187",
+          "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 07.105] - Verificação de tracker parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-26",
+          "dataCriacao": "2026-08-25",
+          "dataInicial": "2026-09-21",
+          "dataFinal": "2026-09-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 648.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -12642,25 +12643,6 @@
           "atrasada": false
         },
         {
-          "osId": "9258",
-          "ativo": "Inversor 2.1 Sungrow SG330HX    { THPN-INP100-INVR2.1 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ricardo Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Inhapi] [Inversor 2.1] - Análise Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-14",
-          "dataCriacao": "2026-07-10",
-          "dataInicial": "2026-07-14",
-          "dataFinal": "2026-07-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 168.0,
-          "atrasada": false
-        },
-        {
           "osId": "9099",
           "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID1 }",
           "equipe": "",
@@ -12718,7 +12700,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 645
+      "historicoTotal": 646
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14935,7 +14917,7 @@
       "responsavel": "Matheus Gois ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Matheus Gois ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[THPN-PRV100] - Religamento do THPN-PRV100",
       "criticidade": "",
       "dataProgramada": "2026-09-21",
@@ -16913,23 +16895,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "12187",
-      "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "James Chaves ",
-      "status": "Em progresso",
-      "tarefa": "[Tracker 07.105] - Verificação de tracker parado",
-      "criticidade": "",
-      "dataProgramada": "2026-08-26",
-      "dataCriacao": "2026-08-25",
-      "dataInicial": "2026-09-21",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 648.0
     },
     {
       "osId": "12186",
@@ -20765,7 +20730,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3010,
+  "historicoTotal": 3011,
   "totalGeral": 6417,
   "verificacao": {
     "total": 0,
