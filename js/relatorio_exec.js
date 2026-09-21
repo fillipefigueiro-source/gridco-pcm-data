@@ -232,12 +232,14 @@ function rexModelo() {
   const tipos = {};
   const tipoDe = t => rexEmerg(t) ? 'Corretiva Emergencial' : rexCorretiva(t) ? 'Corretiva'
     : rexRelig(t) ? 'Religamentos' : /prevent|inspe|predit/i.test(t.tipo || '') ? 'Preventiva/Inspeção' : 'Outros';
+  // "abertas" = das CRIADAS NO PERÍODO, as que seguem abertas (não a foto de
+  // hoje inteira — senão preventivas futuras programadas inflavam o número)
   T.forEach(t => {
     const cri = rexRange(t.criacao, a, b), fin = rexFin(t) && rexRange(t.dataFinal, a, b);
-    if (!cri && !fin && !t.aberta) return;
+    if (!cri && !fin) return;
     const k = tipoDe(t);
     const o = tipos[k] || (tipos[k] = { criadas: 0, fin: 0, abertas: 0 });
-    if (cri) o.criadas++; if (fin) o.fin++; if (t.aberta) o.abertas++;
+    if (cri) o.criadas++; if (fin) o.fin++; if (cri && t.aberta) o.abertas++;
   });
 
   // grandes (Gerencial), quando decifrada — respeitando o escopo
@@ -441,9 +443,11 @@ async function rexGerar() {
 
   // volume por tipo
   const ordTipos = ['Corretiva', 'Corretiva Emergencial', 'Preventiva/Inspeção', 'Religamentos', 'Outros'].filter(k => M.tipos[k]);
-  h += '<section><h2>' + sec('Volume por tipo') + '</h2><table class="rex-tbl"><tr><th>Tipo</th><th>Criadas</th><th>Finalizadas</th><th>Abertas hoje</th></tr>'
+  h += '<section><h2>' + sec('Volume por tipo') + ' <small>tarefas do período</small></h2>'
+    + '<table class="rex-tbl"><tr><th>Tipo</th><th>Criadas</th><th>Finalizadas</th><th>Criadas e ainda abertas</th></tr>'
     + ordTipos.map(k => { const o = M.tipos[k]; return '<tr><td>' + k + '</td><td>' + rexN(o.criadas) + '</td><td>' + rexN(o.fin) + '</td><td>' + (o.abertas ? '<b class="rex-red">' + rexN(o.abertas) + '</b>' : '0') + '</td></tr>'; }).join('')
-    + '</table></section>';
+    + '</table><div class="rex-nota">Finalizadas pode superar Criadas: conta tudo que foi concluído no período, '
+    + 'inclusive OSs criadas antes dele. "Criadas e ainda abertas" = das criadas no período, as que seguem sem conclusão.</div></section>';
 
   // confiabilidade por família de equipamento (base histórica — não recorta pelo período)
   if (CF) {
