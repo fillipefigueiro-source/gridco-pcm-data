@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T18:22:26Z",
+  "geradoEm": "2026-09-21T18:33:33Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4553,
-        "emAberto": 24,
+        "total": 4554,
+        "emAberto": 25,
         "atrasadas": 19,
         "concluidas30d": 739,
         "concluidas7d": 204,
-        "naSemanaCorrente": 13
+        "naSemanaCorrente": 14
       },
       "mttr": {
         "horas": 19.65,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 16,
+          "criadas": 17,
           "finalizadas": 13
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4553,
-            "emAberto": 24
+            "total": 4554,
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 25,
       "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 20,
+        "naoIniciada": 21,
         "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -434,6 +434,24 @@
           "linkFracttal": "",
           "modalidade": "remoto",
           "atrasada": true
+        },
+        {
+          "osId": "14263",
+          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Adriano  Moraes",
+          "status": "Não Iniciada",
+          "tarefa": "[2C-APG100] - Religamento do 2C-APG100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-21",
+          "dataCriacao": "2026-09-21",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "14262",
@@ -3532,9 +3550,9 @@
       "historicoTotal": 1878,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3794,
+        "local": 3795,
         "remotoEmAberto": 11,
-        "localEmAberto": 13,
+        "localEmAberto": 14,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -7910,16 +7928,16 @@
       "cor": "#ef4444",
       "kpis": {
         "total": 157,
-        "emAberto": 10,
-        "atrasadas": 10,
-        "concluidas30d": 12,
-        "concluidas7d": 4,
+        "emAberto": 9,
+        "atrasadas": 9,
+        "concluidas30d": 13,
+        "concluidas7d": 5,
         "naSemanaCorrente": 0
       },
       "mttr": {
-        "horas": 420.0,
-        "label": "17d 12h",
-        "amostra": 12
+        "horas": 396.92,
+        "label": "16d 12h",
+        "amostra": 13
       },
       "tendencia4Semanas": [
         {
@@ -7940,7 +7958,7 @@
         {
           "semana": "W39",
           "criadas": 0,
-          "finalizadas": 1
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
@@ -7948,7 +7966,7 @@
           {
             "nome": "(sem equipe)",
             "total": 157,
-            "emAberto": 10
+            "emAberto": 9
           }
         ],
         "responsaveis": [
@@ -7979,16 +7997,16 @@
           }
         ]
       },
-      "total": 10,
-      "atrasadas": 10,
+      "total": 9,
+      "atrasadas": 9,
       "porStatus": {
         "naoIniciada": 7,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 10
+        "(sem equipe)": 9
       },
       "oss": [
         {
@@ -8130,24 +8148,6 @@
           "atrasada": true
         },
         {
-          "osId": "13683",
-          "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Davi Damasceno ",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "Abertura de chamado para garantia [Testes em Campo] SN: BN2361031181",
-          "criticidade": "",
-          "dataProgramada": "2026-09-16",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-21",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "atrasada": true
-        },
-        {
           "osId": "13680",
           "ativo": "Preventiva Grupo de Inversores      { RNGD-ELF100-PGINVR1 }",
           "equipe": "",
@@ -8166,6 +8166,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13683",
+          "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Davi Damasceno ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "Abertura de chamado para garantia [Testes em Campo] SN: BN2361031181",
+          "criticidade": "",
+          "dataProgramada": "2026-09-16",
+          "dataCriacao": "2026-09-16",
+          "dataInicial": "2026-09-21",
+          "dataFinal": "2026-09-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13313",
           "ativo": "Inversor 1.8 Huawei     { ALLM-MRN100-INVR1.8 }",
@@ -8699,16 +8718,16 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 28
+      "historicoTotal": 29
     },
     "performance": {
       "label": "Performance",
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 764,
-        "emAberto": 66,
-        "atrasadas": 58,
+        "total": 763,
+        "emAberto": 65,
+        "atrasadas": 57,
         "concluidas30d": 226,
         "concluidas7d": 58,
         "naSemanaCorrente": 15
@@ -8744,15 +8763,15 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 764,
-            "emAberto": 66
+            "total": 763,
+            "emAberto": 65
           }
         ],
         "responsaveis": [
           {
             "nome": "Gilson Souza",
-            "total": 55,
-            "emAberto": 2
+            "total": 54,
+            "emAberto": 1
           },
           {
             "nome": "Marcos Duarte",
@@ -8776,16 +8795,16 @@
           }
         ]
       },
-      "total": 66,
-      "atrasadas": 58,
+      "total": 65,
+      "atrasadas": 57,
       "porStatus": {
-        "naoIniciada": 60,
+        "naoIniciada": 59,
         "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 66
+        "(sem equipe)": 65
       },
       "oss": [
         {
@@ -8799,23 +8818,6 @@
           "tarefa": "[TIM100][Trackers] - Verificar e mapear trackers parados",
           "criticidade": "",
           "dataProgramada": "2026-06-24",
-          "dataCriacao": "2026-06-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "8282",
-          "ativo": "Inversor 6.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR6.2 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
-          "tarefa": "[CPP100][Inversor 6.2] - Avaliação de módulos e string do inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-06-25",
           "dataCriacao": "2026-06-24",
           "dataInicial": "",
           "dataFinal": "",
@@ -14929,6 +14931,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14263",
+      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Adriano  Moraes",
+      "status": "Não Iniciada",
+      "tarefa": "[2C-APG100] - Religamento do 2C-APG100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-21",
+      "dataCriacao": "2026-09-21",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14262",
       "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
       "equipe": "",
@@ -15450,23 +15469,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "13683",
-      "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Davi Damasceno ",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "Abertura de chamado para garantia [Testes em Campo] SN: BN2361031181",
-      "criticidade": "",
-      "dataProgramada": "2026-09-16",
-      "dataCriacao": "2026-09-16",
-      "dataInicial": "2026-09-21",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0
     },
     {
       "osId": "13680",
@@ -17893,22 +17895,6 @@
       "tarefa": "[TIM100][Trackers] - Verificar e mapear trackers parados",
       "criticidade": "",
       "dataProgramada": "2026-06-24",
-      "dataCriacao": "2026-06-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "8282",
-      "ativo": "Inversor 6.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR6.2 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
-      "tarefa": "[CPP100][Inversor 6.2] - Avaliação de módulos e string do inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-06-25",
       "dataCriacao": "2026-06-24",
       "dataInicial": "",
       "dataFinal": "",
@@ -20824,6 +20810,25 @@
       "atrasada": false
     },
     {
+      "osId": "13683",
+      "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Davi Damasceno ",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "Abertura de chamado para garantia [Testes em Campo] SN: BN2361031181",
+      "criticidade": "",
+      "dataProgramada": "2026-09-16",
+      "dataCriacao": "2026-09-16",
+      "dataInicial": "2026-09-21",
+      "dataFinal": "2026-09-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13681",
       "ativo": "Estrutura Trackers  Tupi Paulista  São Paulo Brasil { TPP100-ETKR1 }",
       "equipe": "",
@@ -20861,29 +20866,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13676",
-      "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Frank  Melo",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
-      "criticidade": "",
-      "dataProgramada": "2026-09-16",
-      "dataCriacao": "2026-09-16",
-      "dataInicial": "2026-09-16",
-      "dataFinal": "2026-09-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3006,
+  "historicoTotal": 3007,
   "totalGeral": 6417,
   "verificacao": {
     "total": 0,
