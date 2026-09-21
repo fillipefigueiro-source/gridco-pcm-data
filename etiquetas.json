@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T13:21:53Z",
+  "geradoEm": "2026-09-21T13:34:24Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 22,
       "atrasadas": 20,
       "porStatus": {
-        "naoIniciada": 18,
-        "emProgresso": 2,
+        "naoIniciada": 17,
+        "emProgresso": 3,
         "pausada": 2,
         "verificacao": 0
       },
@@ -461,14 +461,15 @@
           "responsavel": "Matheus Gois ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Matheus Gois ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-PRV100] - Religamento do THPN-PRV100",
           "criticidade": "",
           "dataProgramada": "2026-09-21",
           "dataCriacao": "2026-09-21",
-          "dataInicial": "",
+          "dataInicial": "2026-09-21",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3721,16 +3722,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 797,
-        "emAberto": 72,
-        "atrasadas": 59,
-        "concluidas30d": 168,
-        "concluidas7d": 23,
+        "emAberto": 71,
+        "atrasadas": 58,
+        "concluidas30d": 169,
+        "concluidas7d": 24,
         "naSemanaCorrente": 10
       },
       "mttr": {
-        "horas": 305.14,
+        "horas": 305.75,
         "label": "12d 17h",
-        "amostra": 168
+        "amostra": 169
       },
       "tendencia4Semanas": [
         {
@@ -3751,7 +3752,7 @@
         {
           "semana": "W39",
           "criadas": 1,
-          "finalizadas": 1
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
@@ -3759,7 +3760,7 @@
           {
             "nome": "(sem equipe)",
             "total": 797,
-            "emAberto": 72
+            "emAberto": 71
           }
         ],
         "responsaveis": [
@@ -3790,16 +3791,16 @@
           }
         ]
       },
-      "total": 72,
-      "atrasadas": 59,
+      "total": 71,
+      "atrasadas": 58,
       "porStatus": {
         "naoIniciada": 68,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 72
+        "(sem equipe)": 71
       },
       "oss": [
         {
@@ -4313,24 +4314,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "13051",
-          "ativo": "Transformador 4 WTS     { THPN-CLN200-TRFR4 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Janderson Miranda ",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-09-10",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "2026-09-21",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 408.0,
           "atrasada": true
         },
         {
@@ -5032,6 +5015,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13051",
+          "ativo": "Transformador 4 WTS     { THPN-CLN200-TRFR4 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-09-10",
+          "dataCriacao": "2026-09-04",
+          "dataInicial": "2026-09-21",
+          "dataFinal": "2026-09-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 408.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13981",
           "ativo": "SPDA    TESTE TESTE { TESTE100-SPDA1 }",
@@ -5964,25 +5966,6 @@
           "atrasada": false
         },
         {
-          "osId": "12665",
-          "ativo": "Nobreak 1      { THPN-NVL100-NBRK1 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Nobreak e Banco de Baterias",
-          "criticidade": "",
-          "dataProgramada": "2026-09-09",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-08",
-          "dataFinal": "2026-09-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13130",
           "ativo": "Preventiva Grupo de Inversores      { ULTG-IBI100-PGINVR1 }",
           "equipe": "",
@@ -6050,6 +6033,25 @@
           "tarefa": "[Grid Co.] - MPM - String e Conjunto de Módulos",
           "criticidade": "",
           "dataProgramada": "2026-09-08",
+          "dataCriacao": "2026-09-01",
+          "dataInicial": "2026-09-08",
+          "dataFinal": "2026-09-08",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12665",
+          "ativo": "Nobreak 1      { THPN-NVL100-NBRK1 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Nobreak e Banco de Baterias",
+          "criticidade": "",
+          "dataProgramada": "2026-09-09",
           "dataCriacao": "2026-09-01",
           "dataInicial": "2026-09-08",
           "dataFinal": "2026-09-08",
@@ -7332,25 +7334,6 @@
           "atrasada": false
         },
         {
-          "osId": "11906",
-          "ativo": "Infraestrutura Civil  Araputanga  Mato Grosso Brasil { APG100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-26",
-          "dataFinal": "2026-08-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11523",
           "ativo": "Inversor 1.1 Sungrow     { JCD100-INVR1.1 }",
           "equipe": "",
@@ -7883,7 +7866,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 360
+      "historicoTotal": 361
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8760,8 +8743,8 @@
       "total": 70,
       "atrasadas": 59,
       "porStatus": {
-        "naoIniciada": 65,
-        "emProgresso": 1,
+        "naoIniciada": 64,
+        "emProgresso": 2,
         "pausada": 4,
         "verificacao": 0
       },
@@ -9801,14 +9784,15 @@
           "responsavel": "Valdério Paz ",
           "criadoPor": "Gabriela Dias",
           "supervisor": "Valdério Paz ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Inspeção Geral do Inversor que não está atingindo a potência esperada",
           "criticidade": "",
           "dataProgramada": "2026-09-21",
           "dataCriacao": "2026-09-18",
-          "dataInicial": "",
+          "dataInicial": "2026-09-21",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 72.0,
           "atrasada": false
         },
         {
@@ -14981,14 +14965,15 @@
       "responsavel": "Matheus Gois ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Matheus Gois ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-PRV100] - Religamento do THPN-PRV100",
       "criticidade": "",
       "dataProgramada": "2026-09-21",
       "dataCriacao": "2026-09-21",
-      "dataInicial": "",
+      "dataInicial": "2026-09-21",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15194,14 +15179,15 @@
       "responsavel": "Valdério Paz ",
       "criadoPor": "Gabriela Dias",
       "supervisor": "Valdério Paz ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Inspeção Geral do Inversor que não está atingindo a potência esperada",
       "criticidade": "",
       "dataProgramada": "2026-09-21",
       "dataCriacao": "2026-09-18",
-      "dataInicial": "",
+      "dataInicial": "2026-09-21",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0
     },
     {
       "osId": "13858",
@@ -16265,23 +16251,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "13051",
-      "ativo": "Transformador 4 WTS     { THPN-CLN200-TRFR4 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Janderson Miranda ",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-09-10",
-      "dataCriacao": "2026-09-04",
-      "dataInicial": "2026-09-21",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 408.0
     },
     {
       "osId": "13043",
@@ -18135,6 +18104,25 @@
       "atrasada": false
     },
     {
+      "osId": "13051",
+      "ativo": "Transformador 4 WTS     { THPN-CLN200-TRFR4 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "Fabricio Barreto",
+      "supervisor": "Janderson Miranda ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-09-10",
+      "dataCriacao": "2026-09-04",
+      "dataInicial": "2026-09-21",
+      "dataFinal": "2026-09-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 408.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13039",
       "ativo": "Transformador 1 WEG     { MRO100-TRFR1 }",
       "equipe": "",
@@ -18359,25 +18347,6 @@
       "dataFinal": "2026-09-03",
       "linkFracttal": "",
       "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "12665",
-      "ativo": "Nobreak 1      { THPN-NVL100-NBRK1 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Nobreak e Banco de Baterias",
-      "criticidade": "",
-      "dataProgramada": "2026-09-09",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "2026-09-08",
-      "dataFinal": "2026-09-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -20995,7 +20964,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 2993,
+  "historicoTotal": 2994,
   "totalGeral": 6408,
   "verificacao": {
     "total": 0,
