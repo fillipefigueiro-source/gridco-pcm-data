@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T10:34:13Z",
+  "geradoEm": "2026-09-21T10:55:12Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4546,
-        "emAberto": 26,
-        "atrasadas": 23,
-        "concluidas30d": 730,
-        "concluidas7d": 195,
+        "emAberto": 25,
+        "atrasadas": 22,
+        "concluidas30d": 731,
+        "concluidas7d": 196,
         "naSemanaCorrente": 5
       },
       "mttr": {
-        "horas": 19.8,
-        "label": "19h 48min",
-        "amostra": 730
+        "horas": 19.84,
+        "label": "19h 50min",
+        "amostra": 731
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W39",
           "criadas": 8,
-          "finalizadas": 4
+          "finalizadas": 5
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4546,
-            "emAberto": 26
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 26,
-      "atrasadas": 23,
+      "total": 25,
+      "atrasadas": 22,
       "porStatus": {
         "naoIniciada": 20,
-        "emProgresso": 1,
-        "pausada": 5,
+        "emProgresso": 3,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 26
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -279,7 +279,7 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valdir Silva ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
@@ -334,15 +334,14 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valdir Silva ",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
           "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-18",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 360.0,
           "modalidade": "remoto",
           "atrasada": true
         },
@@ -371,15 +370,14 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valdir Silva ",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
           "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-18",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 360.0,
           "modalidade": "remoto",
           "atrasada": true
         },
@@ -395,24 +393,6 @@
           "criticidade": "",
           "dataProgramada": "2026-09-17",
           "dataCriacao": "2026-09-17",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "13950",
-          "ativo": "Cabine 1 HGR5+5M9 Assis Chateaubriand, PR Assis Chateaubriand  Paraná Brasil { THPN-ACB100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Gilson  Milhomem",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Gilson  Milhomem",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-ACB100-CABN1] - Religamento do THPN-ACB100-CABN1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-19",
-          "dataCriacao": "2026-09-19",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -517,14 +497,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[2C-IPX100-QGBT2] - Religamento do 2C-IPX100-QGBT2",
           "criticidade": "",
           "dataProgramada": "2026-09-21",
           "dataCriacao": "2026-09-21",
-          "dataInicial": "",
+          "dataInicial": "2026-09-21",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -642,6 +623,26 @@
           "dataFinal": "2026-09-21",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13950",
+          "ativo": "Cabine 1 HGR5+5M9 Assis Chateaubriand, PR Assis Chateaubriand  Paraná Brasil { THPN-ACB100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Gilson  Milhomem",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Gilson  Milhomem",
+          "status": "Finalizados",
+          "tarefa": "[THPN-ACB100-CABN1] - Religamento do THPN-ACB100-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-19",
+          "dataCriacao": "2026-09-19",
+          "dataInicial": "2026-09-21",
+          "dataFinal": "2026-09-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3227,26 +3228,6 @@
           "atrasada": false
         },
         {
-          "osId": "13498",
-          "ativo": "Thopen - Santo Anastácio - SP X9J5+542 Santo Anastácio, São Paulo Santo Anastácio  São Paulo Brasil { THPN-STA100 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Carlos  Godoi",
-          "status": "Finalizados",
-          "tarefa": "[THPN-STA100] - Religamento do THPN-STA100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-12",
-          "dataCriacao": "2026-09-12",
-          "dataInicial": "2026-09-14",
-          "dataFinal": "2026-09-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "13549",
           "ativo": "Inversor 5.7 Huawei     { MAB200-INVR5.7 }",
           "equipe": "",
@@ -3567,12 +3548,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1869,
+      "historicoTotal": 1870,
       "subClassificacao": {
         "remoto": 759,
         "local": 3787,
         "remotoEmAberto": 11,
-        "localEmAberto": 15,
+        "localEmAberto": 14,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -3627,22 +3608,6 @@
             "linkFracttal": ""
           },
           {
-            "osId": "12906",
-            "ativo": "Thopen - Pharmas 2 - PR Rodovia Tsuneto Matsubara, km 4,5 Jacutinga Bandeirantes  Paraná Brasil { THPN-PHS200 }",
-            "criadoPor": "Davi Damasceno",
-            "responsavel": "Valdir Silva ",
-            "horas": 360.0,
-            "linkFracttal": ""
-          },
-          {
-            "osId": "12903",
-            "ativo": "Thopen - Pharmas 4 - PR Rodovia Tsuneto Matsubara, km 4,5 Jacutinga Bandeirantes  Paraná Brasil { THPN-PHS400 }",
-            "criadoPor": "Davi Damasceno",
-            "responsavel": "Valdir Silva ",
-            "horas": 360.0,
-            "linkFracttal": ""
-          },
-          {
             "osId": "9263",
             "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
             "criadoPor": "Juliana Cândido",
@@ -3656,6 +3621,22 @@
             "criadoPor": "Juliana Cândido",
             "responsavel": "Wesllen  Castro",
             "horas": 336.0,
+            "linkFracttal": ""
+          },
+          {
+            "osId": "8829",
+            "ativo": "Infraestrutura Civil Sítio Olho D'água s/n Alto Paraná  Paraná Brasil { THPN-APR100-INFC1 }",
+            "criadoPor": "Juliana Cândido",
+            "responsavel": "Ronaldo  Silva",
+            "horas": 288.0,
+            "linkFracttal": ""
+          },
+          {
+            "osId": "5481",
+            "ativo": "Cabine 5 BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100-CABN5 }",
+            "criadoPor": "ItaloLustosa",
+            "responsavel": "Janderson Miranda ",
+            "horas": 216.0,
             "linkFracttal": ""
           }
         ],
@@ -3741,9 +3722,9 @@
             "linkFracttal": ""
           }
         ],
-        "medHorasAbrir": 12.7,
+        "medHorasAbrir": 11.8,
         "medHorasFechar": 2.6,
-        "amostraAbrir": 745,
+        "amostraAbrir": 743,
         "amostraFechar": 741,
         "topAbridores": [
           {
@@ -15052,14 +15033,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[2C-IPX100-QGBT2] - Religamento do 2C-IPX100-QGBT2",
       "criticidade": "",
       "dataProgramada": "2026-09-21",
       "dataCriacao": "2026-09-21",
-      "dataInicial": "",
+      "dataInicial": "2026-09-21",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15143,23 +15125,6 @@
       "criticidade": "",
       "dataProgramada": "2026-09-20",
       "dataCriacao": "2026-09-20",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "13950",
-      "ativo": "Cabine 1 HGR5+5M9 Assis Chateaubriand, PR Assis Chateaubriand  Paraná Brasil { THPN-ACB100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Gilson  Milhomem",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Gilson  Milhomem",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-ACB100-CABN1] - Religamento do THPN-ACB100-CABN1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-19",
-      "dataCriacao": "2026-09-19",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
@@ -16606,7 +16571,7 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valdir Silva ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
@@ -16624,15 +16589,14 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valdir Silva ",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
       "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-18",
+      "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 360.0,
       "modalidade": "remoto"
     },
     {
@@ -16659,15 +16623,14 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valdir Silva ",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
       "criticidade": "",
       "dataProgramada": "2026-09-16",
       "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-18",
+      "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 360.0,
       "modalidade": "remoto"
     },
     {
@@ -19104,6 +19067,26 @@
       "atrasada": false
     },
     {
+      "osId": "13950",
+      "ativo": "Cabine 1 HGR5+5M9 Assis Chateaubriand, PR Assis Chateaubriand  Paraná Brasil { THPN-ACB100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Gilson  Milhomem",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Gilson  Milhomem",
+      "status": "Finalizados",
+      "tarefa": "[THPN-ACB100-CABN1] - Religamento do THPN-ACB100-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-19",
+      "dataCriacao": "2026-09-19",
+      "dataInicial": "2026-09-21",
+      "dataFinal": "2026-09-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13949",
       "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
       "equipe": "",
@@ -21129,29 +21112,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13647",
-      "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-      "equipe": "",
-      "responsavel": "Felipe Silva ",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Felipe Silva ",
-      "status": "Finalizados",
-      "tarefa": "[Cabine 6] - Religamento da Cabine 6",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
-      "dataCriacao": "2026-09-15",
-      "dataInicial": "2026-09-15",
-      "dataFinal": "2026-09-15",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2987,
+  "historicoTotal": 2988,
   "totalGeral": 6407,
   "verificacao": {
     "total": 0,
