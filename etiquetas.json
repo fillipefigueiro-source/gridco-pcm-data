@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T09:55:19Z",
+  "geradoEm": "2026-09-21T10:18:32Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4545,
+        "total": 4546,
         "emAberto": 27,
-        "atrasadas": 24,
-        "concluidas30d": 728,
-        "concluidas7d": 193,
-        "naSemanaCorrente": 4
+        "atrasadas": 23,
+        "concluidas30d": 729,
+        "concluidas7d": 194,
+        "naSemanaCorrente": 5
       },
       "mttr": {
-        "horas": 19.86,
-        "label": "19h 51min",
-        "amostra": 728
+        "horas": 19.83,
+        "label": "19h 50min",
+        "amostra": 729
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W39",
-          "criadas": 7,
-          "finalizadas": 2
+          "criadas": 8,
+          "finalizadas": 3
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4545,
+            "total": 4546,
             "emAberto": 27
           }
         ],
@@ -73,16 +73,16 @@
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 199,
-            "emAberto": 0
+            "total": 200,
+            "emAberto": 1
           }
         ]
       },
       "total": 27,
-      "atrasadas": 24,
+      "atrasadas": 23,
       "porStatus": {
-        "naoIniciada": 22,
-        "emProgresso": 0,
+        "naoIniciada": 21,
+        "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
@@ -444,32 +444,15 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "David  Nascimento",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-09-20",
           "dataCriacao": "2026-09-21",
-          "dataInicial": "",
+          "dataInicial": "2026-09-21",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "13973",
-          "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "David  Nascimento",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-09-20",
-          "dataCriacao": "2026-09-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -526,6 +509,24 @@
           "linkFracttal": "",
           "modalidade": "remoto",
           "atrasada": true
+        },
+        {
+          "osId": "13979",
+          "ativo": "QGBT 2 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-QGBT2 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Felipe Silva ",
+          "supervisor": "Wesllen  Castro",
+          "status": "Não Iniciada",
+          "tarefa": "[2C-IPX100-QGBT2] - Religamento do 2C-IPX100-QGBT2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-21",
+          "dataCriacao": "2026-09-21",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "13978",
@@ -594,6 +595,26 @@
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-09-21",
+          "dataCriacao": "2026-09-21",
+          "dataInicial": "2026-09-21",
+          "dataFinal": "2026-09-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13973",
+          "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "David  Nascimento",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-09-20",
           "dataCriacao": "2026-09-21",
           "dataInicial": "2026-09-21",
           "dataFinal": "2026-09-21",
@@ -3244,26 +3265,6 @@
           "atrasada": false
         },
         {
-          "osId": "13488",
-          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Thopen - Mandaguaçu 1 - PR] - Religamento do Thopen - Mandaguaçu 1 - PR",
-          "criticidade": "",
-          "dataProgramada": "2026-09-11",
-          "dataCriacao": "2026-09-11",
-          "dataInicial": "2026-09-14",
-          "dataFinal": "2026-09-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "13549",
           "ativo": "Inversor 5.7 Huawei     { MAB200-INVR5.7 }",
           "equipe": "",
@@ -3584,10 +3585,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1867,
+      "historicoTotal": 1868,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3786,
+        "local": 3787,
         "remotoEmAberto": 11,
         "localEmAberto": 16,
         "pctRemoto": 17,
@@ -15064,6 +15065,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "13979",
+      "ativo": "QGBT 2 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-QGBT2 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Wesllen  Castro",
+      "status": "Não Iniciada",
+      "tarefa": "[2C-IPX100-QGBT2] - Religamento do 2C-IPX100-QGBT2",
+      "criticidade": "",
+      "dataProgramada": "2026-09-21",
+      "dataCriacao": "2026-09-21",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "13978",
       "ativo": "Thopen - Brodowski 1 - SP Rodovia SP 334 S/N Batatais  São Paulo Brasil { THPN-BWK100 }",
       "equipe": "",
@@ -15121,31 +15139,15 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "David  Nascimento",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-09-20",
       "dataCriacao": "2026-09-21",
-      "dataInicial": "",
+      "dataInicial": "2026-09-21",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "13973",
-      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "David  Nascimento",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-09-20",
-      "dataCriacao": "2026-09-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -18859,6 +18861,26 @@
       "atrasada": false
     },
     {
+      "osId": "13973",
+      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "David  Nascimento",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-09-20",
+      "dataCriacao": "2026-09-21",
+      "dataInicial": "2026-09-21",
+      "dataFinal": "2026-09-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13972",
       "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
       "equipe": "",
@@ -21164,30 +21186,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13632",
-      "ativo": "Inversor 1.5 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.5 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Frank  Melo",
-      "status": "Finalizados",
-      "tarefa": "[MRO100-INVR1.5] - Religamento do MRO100-INVR1.5",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
-      "dataCriacao": "2026-09-15",
-      "dataInicial": "2026-09-15",
-      "dataFinal": "2026-09-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2985,
-  "totalGeral": 6406,
+  "historicoTotal": 2986,
+  "totalGeral": 6407,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
