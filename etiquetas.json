@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T14:34:24Z",
+  "geradoEm": "2026-09-21T14:45:40Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8671,16 +8671,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 762,
-        "emAberto": 70,
+        "emAberto": 69,
         "atrasadas": 59,
-        "concluidas30d": 220,
-        "concluidas7d": 52,
+        "concluidas30d": 221,
+        "concluidas7d": 53,
         "naSemanaCorrente": 13
       },
       "mttr": {
-        "horas": 264.55,
-        "label": "11d 0h",
-        "amostra": 220
+        "horas": 263.67,
+        "label": "10d 23h",
+        "amostra": 221
       },
       "tendencia4Semanas": [
         {
@@ -8701,7 +8701,7 @@
         {
           "semana": "W39",
           "criadas": 1,
-          "finalizadas": 1
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
@@ -8709,7 +8709,7 @@
           {
             "nome": "(sem equipe)",
             "total": 762,
-            "emAberto": 70
+            "emAberto": 69
           }
         ],
         "responsaveis": [
@@ -8740,16 +8740,16 @@
           }
         ]
       },
-      "total": 70,
+      "total": 69,
       "atrasadas": 59,
       "porStatus": {
         "naoIniciada": 63,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 70
+        "(sem equipe)": 69
       },
       "oss": [
         {
@@ -9779,24 +9779,6 @@
           "atrasada": false
         },
         {
-          "osId": "13861",
-          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H3    { MCB100-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Gabriela Dias",
-          "supervisor": "Valdério Paz ",
-          "status": "Em progresso",
-          "tarefa": "Inspeção Geral do Inversor que não está atingindo a potência esperada",
-          "criticidade": "",
-          "dataProgramada": "2026-09-21",
-          "dataCriacao": "2026-09-18",
-          "dataInicial": "2026-09-21",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "atrasada": false
-        },
-        {
           "osId": "13738",
           "ativo": "Inversor 1.1 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.1 }",
           "equipe": "",
@@ -9951,6 +9933,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13861",
+          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H3    { MCB100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Valdério Paz ",
+          "status": "Finalizados",
+          "tarefa": "Inspeção Geral do Inversor que não está atingindo a potência esperada",
+          "criticidade": "",
+          "dataProgramada": "2026-09-21",
+          "dataCriacao": "2026-09-18",
+          "dataInicial": "2026-09-21",
+          "dataFinal": "2026-09-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13297",
           "ativo": "Inversor 5.2 Huawei SUN2000-250KTL-H1    { SMP100-INVR5.2 }",
@@ -12781,28 +12782,9 @@
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "9103",
-          "ativo": "SKID 1  Crateús  Ceará Brasil { CTS100-SKID1 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Railson Gomes ",
-          "status": "Finalizados",
-          "tarefa": "[Crateús 01][Skid 01] - Verificação de temperatura",
-          "criticidade": "",
-          "dataProgramada": "2026-07-07",
-          "dataCriacao": "2026-07-07",
-          "dataInicial": "2026-07-08",
-          "dataFinal": "2026-07-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 637
+      "historicoTotal": 638
     },
     "engenharia": {
       "label": "Engenharia",
@@ -13727,7 +13709,7 @@
           "responsavel": "Francisco  Santos",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Francisco  Santos",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Junco] - Regularização do sensor POA",
           "criticidade": "",
           "dataProgramada": "2026-08-15",
@@ -13746,7 +13728,7 @@
           "responsavel": "Renato  Julien",
           "criadoPor": "Juliana Cândido ",
           "supervisor": "Renato  Julien",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Ibirapuã 02] - Regularização de Termografia da ETM (Pendências MPS)",
           "criticidade": "",
           "dataProgramada": "2026-08-06",
@@ -13778,13 +13760,32 @@
           "atrasada": false
         },
         {
+          "osId": "9809",
+          "ativo": "Transformador 1 COMTRAFO     { MAB200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Ailton Leal ",
+          "status": "Finalizados",
+          "tarefa": "[Athon] - MPA - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-06-22",
+          "dataCriacao": "2026-07-21",
+          "dataInicial": "2026-08-14",
+          "dataFinal": "2026-08-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 576.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "11000",
           "ativo": "Estação Meteorológica Fazenda Umburana, s/n Castelo do Piauí  Piauí Brasil { GY-CDP100-ESTM1 }",
           "equipe": "",
           "responsavel": "Railson Gomes ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Railson Gomes ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Castelo] - Regularização dos sensores da ETM",
           "criticidade": "",
           "dataProgramada": "2026-08-11",
@@ -13803,7 +13804,7 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "Levi Maia",
           "supervisor": "Janderson Miranda ",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[ETM] - Análise de sensores",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
@@ -13812,25 +13813,6 @@
           "dataFinal": "2026-08-14",
           "linkFracttal": "",
           "horasAteAbrir": 168.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9809",
-          "ativo": "Transformador 1 COMTRAFO     { MAB200-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Ailton Leal ",
-          "status": "Finalizados",
-          "tarefa": "[Athon] - MPA - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-06-22",
-          "dataCriacao": "2026-07-21",
-          "dataInicial": "2026-08-14",
-          "dataFinal": "2026-08-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 576.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -13930,25 +13912,6 @@
           "atrasada": false
         },
         {
-          "osId": "10896",
-          "ativo": "Estação Meteorológica  Poconé  Mato Grosso Brasil { PCN100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizados",
-          "tarefa": "[ETM] - Limpeza e análise dos sensores",
-          "criticidade": "",
-          "dataProgramada": "2026-08-01",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-11",
-          "dataFinal": "2026-08-11",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8040",
           "ativo": "Disjuntor do Transformador 1      { PTL300-DTRF1 }",
           "equipe": "",
@@ -13978,6 +13941,25 @@
           "tarefa": "[ETM] - Coleta e análise de dados",
           "criticidade": "",
           "dataProgramada": "2026-08-10",
+          "dataCriacao": "2026-08-07",
+          "dataInicial": "2026-08-11",
+          "dataFinal": "2026-08-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10896",
+          "ativo": "Estação Meteorológica  Poconé  Mato Grosso Brasil { PCN100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Adriano  Moraes",
+          "status": "Finalizada",
+          "tarefa": "[ETM] - Limpeza e análise dos sensores",
+          "criticidade": "",
+          "dataProgramada": "2026-08-01",
           "dataCriacao": "2026-08-07",
           "dataInicial": "2026-08-11",
           "dataFinal": "2026-08-11",
@@ -14221,7 +14203,7 @@
           "responsavel": "Adriano  Moraes",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Adriano  Moraes",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Araputanga 1] - Regularização de Termografia da ETM (Pendências MPS)",
           "criticidade": "",
           "dataProgramada": "2026-08-04",
@@ -14443,25 +14425,6 @@
           "atrasada": false
         },
         {
-          "osId": "9911",
-          "ativo": "Estação Meteorológica Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { SNE100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Cleiton  Farias",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Cleiton  Farias",
-          "status": "Finalizados",
-          "tarefa": "Verificação do sensor POA- Senador Elói",
-          "criticidade": "",
-          "dataProgramada": "2026-07-24",
-          "dataCriacao": "2026-07-23",
-          "dataInicial": "2026-07-24",
-          "dataFinal": "2026-07-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "9353",
           "ativo": "Estrutura Trackers  Ipixuna  Pará Brasil { IPX100-ETKR1 }",
           "equipe": "",
@@ -14497,6 +14460,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 840.0,
           "horasAteFechar": 48.0,
+          "atrasada": false
+        },
+        {
+          "osId": "9911",
+          "ativo": "Estação Meteorológica Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { SNE100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Cleiton  Farias",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Cleiton  Farias",
+          "status": "Finalizada",
+          "tarefa": "Verificação do sensor POA- Senador Elói",
+          "criticidade": "",
+          "dataProgramada": "2026-07-24",
+          "dataCriacao": "2026-07-23",
+          "dataInicial": "2026-07-24",
+          "dataFinal": "2026-07-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -14772,7 +14754,7 @@
           "responsavel": "Cleiton  Farias",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Cleiton  Farias",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Senador Elói] - Ações Corretivas no sistema de SPDA e aterramento.",
           "criticidade": "",
           "dataProgramada": "2026-07-07",
@@ -15173,23 +15155,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "13861",
-      "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H3    { MCB100-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Valdério Paz ",
-      "status": "Em progresso",
-      "tarefa": "Inspeção Geral do Inversor que não está atingindo a potência esperada",
-      "criticidade": "",
-      "dataProgramada": "2026-09-21",
-      "dataCriacao": "2026-09-18",
-      "dataInicial": "2026-09-21",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0
     },
     {
       "osId": "13858",
@@ -18012,6 +17977,25 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "13861",
+      "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H3    { MCB100-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Valdério Paz ",
+      "status": "Finalizados",
+      "tarefa": "Inspeção Geral do Inversor que não está atingindo a potência esperada",
+      "criticidade": "",
+      "dataProgramada": "2026-09-21",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "2026-09-21",
+      "dataFinal": "2026-09-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
     {
       "osId": "13794",
       "ativo": "QGBT 1  Irecê  Bahia Brasil { IRC100-QGBT1 }",
@@ -20946,29 +20930,9 @@
       "horasAteFechar": 24.0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13660",
-      "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
-      "equipe": "",
-      "responsavel": "Valdir Silva ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Valdir Silva ",
-      "status": "Finalizados",
-      "tarefa": "[THPN-SAP100] - Religamento do THPN-SAP100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
-      "dataCriacao": "2026-09-15",
-      "dataInicial": "2026-09-18",
-      "dataFinal": "2026-09-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2995,
+  "historicoTotal": 2996,
   "totalGeral": 6409,
   "verificacao": {
     "total": 0,
