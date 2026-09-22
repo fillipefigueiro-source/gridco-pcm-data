@@ -1,0 +1,169 @@
+# -*- coding: utf-8 -*-
+"""
+publicar_gestao_pcm_github.py
+-----------------------------
+Lê gestao_pcm.json (gerado por gerar_gestao_pcm_json.py) e publica em
+   https://github.com/fillipefigueiro-source/gridco-pcm-data/gestao_pcm.json
+via API REST do GitHub (PUT contents).
+
+Lê o token do .env: GITHUB_TOKEN=ghp_xxxxx
+
+Uso:
+   python publicar_gestao_pcm_github.py
+"""
+from __future__ import annotations
+import os, sys, json, base64, datetime as dt
+from pathlib import Path
+
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
+GITHUB_OWNER  = "fillipefigueiro-source"
+GITHUB_REPO   = "gridco-pcm-data"
+GITHUB_PATH   = "gestao_pcm.json"
+GITHUB_BRANCH = "main"
+
+
+def _log(msg):
+    ts = dt.datetime.now().strftime("%H:%M:%S")
+    print(f"[{ts}] {msg}", flush=True)
+
+
+def _detectar_pasta() -> Path:
+    env = os.getenv("PCM_PROG_DIR")
+    if env and Path(env).exists():
+        return Path(env)
+    here = Path(__file__).resolve().parent
+    if (here / "atualizacao_semanal.py").exists():
+        return here
+    for c in [
+        Path.home() / "GRID CO" / "Grid Co. - Gridco" / "4. O&M"
+            / "11.Pré-Operação" / "6. PCM" / "09. Programação Semanal",
+    ]:
+        if c.exists():
+            return c
+    raise FileNotFoundError("Pasta PCM não encontrada.")
+
+
+def _carregar_env(pasta: Path) -> dict:
+    env_path = pasta / ".env"
+    out = {}
+    if not env_path.exists():
+        return out
+    for line in env_path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, _, v = line.partition("=")
+        out[k.strip()] = v.strip().strip('"').strip("'")
+    return out
+
+
+def publicar(token: str, payload_json_str: str, total: int) -> None:
+    import urllib.request, urllib.error
+
+    api_url = (
+        f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}"
+        f"/contents/{GITHUB_PATH}?ref={GITHUB_BRANCH}"
+    )
+    req = urllib.request.Request(api_url, method="GET")
+    req.add_header("Authorization", f"Bearer {token}")
+    req.add_header("Accept", "application/vnd.github+json")
+    req.add_header("X-GitHub-Api-Version", "2022-11-28")
+    req.add_header("User-Agent", "GridCo-PCM-Publisher")
+    sha = None
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            sha = data.get("sha")
+            _log(f"  → SHA atual: {sha[:12] if sha else '(novo)'}...")
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            _log("  → Arquivo ainda não existe no repo, será criado.")
+        else:
+            raise
+
+    content_b64 = base64.b64encode(payload_json_str.encode("utf-8")).decode("ascii")
+    put_body = {
+        "message": f"chore: refresh gestao_pcm.json [{total} tarefas]",
+        "content": content_b64,
+        "branch":  GITHUB_BRANCH,
+    }
+    if sha:
+        put_body["sha"] = sha
+
+    put_req = urllib.request.Request(
+        f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/contents/{GITHUB_PATH}",
+        data=json.dumps(put_body).encode("utf-8"),
+        method="PUT",
+    )
+    put_req.add_header("Authorization", f"Bearer {token}")
+    put_req.add_header("Accept", "application/vnd.github+json")
+    put_req.add_header("X-GitHub-Api-Version", "2022-11-28")
+    put_req.add_header("Content-Type", "application/json")
+    put_req.add_header("User-Agent", "GridCo-PCM-Publisher")
+
+    with urllib.request.urlopen(put_req, timeout=60) as resp:
+        out = json.loads(resp.read().decode("utf-8"))
+        commit = out.get("commit", {}).get("sha", "")[:12]
+        _log(f"  → Publicado! Commit {commit}")
+
+
+def main() -> int:
+    pasta = _detectar_pasta()
+    _log(f"Pasta: {pasta}")
+    jpath = pasta / "gestao_pcm.json"
+    if not jpath.exists():
+        _log(f"ERRO: {jpath.name} não existe. Rode gerar_gestao_pcm_json.py primeiro.")
+        return 2
+
+    raw = jpath.read_text(encoding="utf-8")
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError as e:
+        _log(f"ERRO: gestao_pcm.json corrompido: {e}")
+        return 2
+
+    total = data.get("totalTarefas", 0)
+
+    # Otimização anti-churn: só publica se os DADOS mudaram (compara dataHash com
+    # o do último publish). Evita reconstruir o Pages a cada 15 min à toa.
+    force = "--force" in sys.argv
+    data_hash = data.get("dataHash", "")
+    hash_file = pasta / "_gestao_pcm_published_hash.txt"
+    if data_hash and not force and hash_file.exists():
+        try:
+            if hash_file.read_text(encoding="utf-8").strip() == data_hash:
+                _log(f"Dados sem mudança (hash {data_hash[:10]}…) — publicação pulada. "
+                     f"Use --force para publicar mesmo assim.")
+                return 0
+        except Exception:
+            pass
+
+    env = _carregar_env(pasta)
+    token = env.get("GITHUB_TOKEN") or os.getenv("GITHUB_TOKEN")
+    if not token:
+        _log("ERRO: GITHUB_TOKEN não definido no .env nem no ambiente.")
+        return 3
+
+    try:
+        publicar(token, raw, total)
+    except Exception as e:
+        _log(f"ERRO ao publicar: {type(e).__name__}: {e}")
+        return 4
+
+    if data_hash:
+        try:
+            hash_file.write_text(data_hash, encoding="utf-8")
+        except Exception as e:
+            _log(f"Aviso: não consegui gravar hash publicado: {e}")
+
+    _log(f"OK: {total} tarefas publicadas em {GITHUB_PATH}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

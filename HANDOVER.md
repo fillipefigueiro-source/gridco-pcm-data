@@ -57,6 +57,26 @@ A origem de tudo é o **Fracttal**, o CMMS da Grid Co. Nada é digitado à mão 
 > estão sempre em dia; as quatro daqui dependem de alguém lembrar de rodar. Duas estão
 > paradas há 52 dias e ninguém percebeu — porque **sombra não faz barulho**.
 
+### Os scripts que vieram para o git na transição
+
+Até 22/09/2026 havia **33 scripts que só existiam numa máquina**. Todos foram versionados.
+Vinte ficaram **na raiz**, porque resolvem caminho por `__file__` e mover mudaria onde
+gravam. Treze foram para `ferramentas/descontinuado/`, que tem um README explicando cada um
+— **não rode nada de lá**: três deles ainda funcionam e brigariam com os robôs.
+
+Dos que ficaram na raiz, os que importam no dia a dia:
+
+| Script | Para quê |
+|---|---|
+| `gerar_confiabilidade_json.py` | regenera o `confiabilidade.json` do módulo Confiabilidade |
+| `gerar_supervisores_json.py` | regenera o `supervisores.json` |
+| `gerar_mpas_json.py` / `atualizar_mpas.py` | regeneram a aba MPAS — **precisam da senha de cifra** |
+| `cadastro_usina_fracttal.py` | cadastra usina nova no Fracttal (a maior ferramenta, 50 KB) |
+| `relatorio_clientes.py` | relatório do cliente; lê contatos de arquivo fora do git |
+| `lancamento_desembolsos.py` + `desembolsos_core.py` | módulo de desembolsos |
+| `gui_pcm.py` / `gui_relatorios.py` | interfaces locais do PCM |
+| `publicar_*_github.py` | publicam à mão o que nenhum robô publica |
+
 ### Não é nosso
 
 O aplicativo de campo é servido por **`gridco-campo-mw`**, uma Function App em Python na mesma
