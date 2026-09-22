@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-22T13:31:16Z",
+  "geradoEm": "2026-09-22T13:43:19Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4573,
-        "emAberto": 31,
-        "atrasadas": 24,
-        "concluidas30d": 733,
-        "concluidas7d": 187,
+        "emAberto": 30,
+        "atrasadas": 23,
+        "concluidas30d": 734,
+        "concluidas7d": 188,
         "naSemanaCorrente": 33
       },
       "mttr": {
-        "horas": 19.95,
+        "horas": 19.96,
         "label": "19h 57min",
-        "amostra": 733
+        "amostra": 734
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W39",
           "criadas": 36,
-          "finalizadas": 26
+          "finalizadas": 27
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4573,
-            "emAberto": 31
+            "emAberto": 30
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 31,
-      "atrasadas": 24,
+      "total": 30,
+      "atrasadas": 23,
       "porStatus": {
-        "naoIniciada": 28,
-        "emProgresso": 0,
+        "naoIniciada": 26,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 31
+        "(sem equipe)": 30
       },
       "oss": [
         {
@@ -508,38 +508,21 @@
           "atrasada": true
         },
         {
-          "osId": "13978",
-          "ativo": "Thopen - Brodowski 1 - SP Rodovia SP 334 S/N Batatais  São Paulo Brasil { THPN-BWK100 }",
-          "equipe": "",
-          "responsavel": "Luis  Moura",
-          "criadoPor": "David  Nascimento",
-          "supervisor": "Luis  Moura",
-          "status": "Não Iniciada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-09-21",
-          "dataCriacao": "2026-09-21",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "14322",
           "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
           "equipe": "",
           "responsavel": "Wesllen  Castro",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
           "criticidade": "",
           "dataProgramada": "2026-09-22",
           "dataCriacao": "2026-09-22",
-          "dataInicial": "",
+          "dataInicial": "2026-09-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -770,6 +753,26 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 24.0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "13978",
+          "ativo": "Thopen - Brodowski 1 - SP Rodovia SP 334 S/N Batatais  São Paulo Brasil { THPN-BWK100 }",
+          "equipe": "",
+          "responsavel": "Luis  Moura",
+          "criadoPor": "David  Nascimento",
+          "supervisor": "Luis  Moura",
+          "status": "Finalizados",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-09-21",
+          "dataCriacao": "2026-09-21",
+          "dataInicial": "2026-09-22",
+          "dataFinal": "2026-09-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3632,34 +3635,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13541",
-          "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Thopen - Junco 1 - PI] - Religamento do Thopen - Junco 1 - PI",
-          "criticidade": "",
-          "dataProgramada": "2026-09-13",
-          "dataCriacao": "2026-09-13",
-          "dataInicial": "2026-09-13",
-          "dataFinal": "2026-09-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1867,
+      "historicoTotal": 1868,
       "subClassificacao": {
         "remoto": 759,
         "local": 3814,
         "remotoEmAberto": 10,
-        "localEmAberto": 21,
+        "localEmAberto": 20,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -3954,8 +3937,8 @@
       "total": 70,
       "atrasadas": 59,
       "porStatus": {
-        "naoIniciada": 65,
-        "emProgresso": 0,
+        "naoIniciada": 64,
+        "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
@@ -4978,14 +4961,15 @@
           "responsavel": "Ailton Leal ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Ailton Leal ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-09-22",
           "dataCriacao": "2026-09-18",
-          "dataInicial": "",
+          "dataInicial": "2026-09-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "atrasada": false
         },
         {
@@ -14992,14 +14976,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
       "criticidade": "",
       "dataProgramada": "2026-09-22",
       "dataCriacao": "2026-09-22",
-      "dataInicial": "",
+      "dataInicial": "2026-09-22",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15222,23 +15207,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "13978",
-      "ativo": "Thopen - Brodowski 1 - SP Rodovia SP 334 S/N Batatais  São Paulo Brasil { THPN-BWK100 }",
-      "equipe": "",
-      "responsavel": "Luis  Moura",
-      "criadoPor": "David  Nascimento",
-      "supervisor": "Luis  Moura",
-      "status": "Não Iniciada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-09-21",
-      "dataCriacao": "2026-09-21",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "13965",
       "ativo": "Thopen - Poconé 1 - MT  Poconé  Mato Grosso Brasil { THPN-PCN100 }",
       "equipe": "",
@@ -15391,14 +15359,15 @@
       "responsavel": "Ailton Leal ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Ailton Leal ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-22",
       "dataCriacao": "2026-09-18",
-      "dataInicial": "",
+      "dataInicial": "2026-09-22",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0
     },
     {
       "osId": "13766",
@@ -19008,6 +18977,26 @@
       "atrasada": false
     },
     {
+      "osId": "13978",
+      "ativo": "Thopen - Brodowski 1 - SP Rodovia SP 334 S/N Batatais  São Paulo Brasil { THPN-BWK100 }",
+      "equipe": "",
+      "responsavel": "Luis  Moura",
+      "criadoPor": "David  Nascimento",
+      "supervisor": "Luis  Moura",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-09-21",
+      "dataCriacao": "2026-09-21",
+      "dataInicial": "2026-09-22",
+      "dataFinal": "2026-09-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "13976",
       "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
       "equipe": "",
@@ -20977,28 +20966,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13720",
-      "ativo": "Tracker 14.100      { ADS100-ETKR14.100 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Eduardo  Mendes",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 14.100] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-09-17",
-      "dataCriacao": "2026-09-16",
-      "dataInicial": "2026-09-16",
-      "dataFinal": "2026-09-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 2991,
+  "historicoTotal": 2992,
   "totalGeral": 6437,
   "verificacao": {
     "total": 0,
