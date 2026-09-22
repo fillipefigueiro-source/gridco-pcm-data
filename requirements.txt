@@ -1,0 +1,14 @@
+# Dependências dos scripts deste repositório.
+# Mantenha em sincronia com o `pip install` dos workflows em .github/workflows/.
+#
+# A pasta do PCM no OneDrive tem um requirements.txt maior, com o que as
+# ferramentas locais de apoio usam (matplotlib, python-docx, pyinstaller...).
+# Aqui fica só o que o repositório precisa para rodar.
+
+pandas>=1.5
+openpyxl>=3.0
+requests>=2.31
+
+# leitor rápido de .xlsx; o aprender_duracoes.py e o atualizacao_semanal.py
+# dependem dele na nuvem para não estourar o tempo do workflow
+python-calamine>=0.2
