@@ -30,7 +30,12 @@ try:
 except Exception:
     pass
 
-AQUI = Path(__file__).resolve().parent
+# 22/09/2026: rodando pelo shim, o codigo vem do repositorio mas a geracao continua
+# na pasta do OneDrive -- e precisa continuar, porque o passo seguinte copia dali
+# para o checkout. Sem isso, AQUI viraria o proprio checkout e a copia seria
+# sobre o mesmo arquivo.
+_ENV = os.environ.get("PCM_PROG_DIR")
+AQUI = Path(_ENV) if (_ENV and Path(_ENV).is_dir()) else Path(__file__).resolve().parent
 CHECKOUT = Path.home() / "gridco-pcm-data"
 
 
@@ -94,7 +99,9 @@ def main() -> int:
         log(f"ERRO: checkout git não encontrado em {CHECKOUT} — não publiquei.")
         return 1
 
-    shutil.copy2(saida, CHECKOUT / "mpas.json")
+    destino = CHECKOUT / "mpas.json"
+    if saida.resolve() != destino.resolve():   # rodando de dentro do checkout, ja esta la
+        shutil.copy2(saida, destino)
     log("Publicando...")
     r = subprocess.run([sys.executable, str(CHECKOUT / "sync_repo.py")], cwd=str(CHECKOUT))
     if r.returncode != 0:

@@ -34,7 +34,10 @@ import getpass
 import argparse
 import datetime
 
-AQUI = os.path.dirname(os.path.abspath(__file__))
+# 22/09/2026: rodando pelo shim, o codigo vem do repositorio mas o dado (o
+# Site_Gestao_MPAS e o mpas.json) continua no OneDrive -- por isso PCM_PROG_DIR manda.
+AQUI = (os.environ.get("PCM_PROG_DIR") if os.path.isdir(os.environ.get("PCM_PROG_DIR") or "")
+        else None) or os.path.dirname(os.path.abspath(__file__))
 SITE_DIR = os.path.join(AQUI, "Site_Gestao_MPAS")
 SAIDA = os.path.join(AQUI, "mpas.json")
 

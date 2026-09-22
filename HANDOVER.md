@@ -126,9 +126,16 @@ Detector: o arquivo tem que conter `_semanaEscolhida`, `trocarSemana` e `_semPap
 shim não tem efeito nenhum. **Se algum passar de ~1,5 KB, alguém sobrescreveu o shim com o
 arquivo real** — e a partir dali as duas cópias divergem em silêncio.
 
-São doze shims. Os três mais usados viraram shim em 22/09/2026 (`gui_pcm.py`,
-`cadastro_usina_fracttal.py`, `relatorio_clientes.py`); os originais estão em
-`_backup_pre_shim_2026-09-22/`, na pasta do OneDrive. Os demais scripts da raiz do
+São dezesseis shims. Os três mais usados viraram shim em 22/09/2026 (`gui_pcm.py`,
+`cadastro_usina_fracttal.py`, `relatorio_clientes.py`), e os quatro geradores de dado do
+painel no mesmo dia (`gerar_confiabilidade_json.py`, `gerar_supervisores_json.py`,
+`gerar_mpas_json.py`, `atualizar_mpas.py`). Os originais estão em
+`_backup_pre_shim_2026-09-22/`, na pasta do OneDrive.
+
+> **O MPAS gera em duas etapas, de propósito.** O `atualizar_mpas.py` gera o `mpas.json`
+> na pasta do OneDrive e só depois copia para o checkout e publica. Por isso `AQUI` tem
+> que continuar apontando para o OneDrive mesmo com o código vindo do repositório — se
+> virasse o próprio checkout, a cópia seria sobre o mesmo arquivo. Os demais scripts da raiz do
 repositório **ainda têm cópia no OneDrive** — ao editar um deles, edite o do repositório e
 sobrescreva a cópia, ou converta em shim também.
 
