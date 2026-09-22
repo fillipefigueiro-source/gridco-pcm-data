@@ -72,7 +72,7 @@ Dos que ficaram na raiz, os que importam no dia a dia:
 | `gerar_supervisores_json.py` | regenera o `supervisores.json` |
 | `gerar_mpas_json.py` / `atualizar_mpas.py` | regeneram a aba MPAS — **precisam da senha de cifra** |
 | `cadastro_usina_fracttal.py` | cadastra usina nova no Fracttal (a maior ferramenta, 50 KB) |
-| `relatorio_clientes.py` | relatório do cliente; lê contatos de arquivo fora do git |
+| `relatorio_clientes.py` | relatório do cliente; lê contatos de arquivo fora do git, e as imagens de `assets/` |
 | `lancamento_desembolsos.py` + `desembolsos_core.py` | módulo de desembolsos |
 | `gui_pcm.py` / `gui_relatorios.py` | interfaces locais do PCM |
 | `publicar_*_github.py` | publicam à mão o que nenhum robô publica |
@@ -125,6 +125,12 @@ Detector: o arquivo tem que conter `_semanaEscolhida`, `trocarSemana` e `_semPap
 **3. Os arquivos na pasta do OneDrive são _shims_.** Eles delegam para o repositório. Editar o
 shim não tem efeito nenhum. **Se algum passar de ~1,5 KB, alguém sobrescreveu o shim com o
 arquivo real** — e a partir dali as duas cópias divergem em silêncio.
+
+São doze shims. Os três mais usados viraram shim em 22/09/2026 (`gui_pcm.py`,
+`cadastro_usina_fracttal.py`, `relatorio_clientes.py`); os originais estão em
+`_backup_pre_shim_2026-09-22/`, na pasta do OneDrive. Os demais scripts da raiz do
+repositório **ainda têm cópia no OneDrive** — ao editar um deles, edite o do repositório e
+sobrescreva a cópia, ou converta em shim também.
 
 **4. O `GITHUB_TOKEN` padrão do Actions não dispara outro workflow.** Se um robô commita e você
 espera que isso acione o deploy, não aciona. É por isso que existe o encadeamento explícito por

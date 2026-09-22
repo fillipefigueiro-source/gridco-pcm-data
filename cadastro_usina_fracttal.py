@@ -36,9 +36,17 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 # ====================== Caminhos ======================
 
 def pasta_base():
-    """Pasta onde o .exe/.py está (é onde ficam o template e os relatórios)."""
+    """Pasta onde ficam o template, o App_Campo e os relatórios de cadastro.
+
+    Rodando pelo shim da pasta do OneDrive, o código vem do repositório mas o dado
+    continua no OneDrive — por isso PCM_PROG_DIR manda quando está definido. Sem ele,
+    cai no comportamento antigo: a pasta do próprio arquivo. (22/09/2026)
+    """
     if getattr(sys, "frozen", False):
         return pathlib.Path(sys.executable).parent
+    env = os.environ.get("PCM_PROG_DIR")
+    if env and pathlib.Path(env).is_dir():
+        return pathlib.Path(env)
     return pathlib.Path(__file__).resolve().parent
 
 
