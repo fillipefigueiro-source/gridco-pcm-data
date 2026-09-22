@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-22T17:54:33Z",
+  "geradoEm": "2026-09-22T18:06:56Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 26,
       "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 23,
-        "emProgresso": 0,
+        "naoIniciada": 22,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
@@ -460,14 +460,15 @@
           "responsavel": "Marcos  Camargo",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Marcos  Camargo",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
           "criticidade": "",
           "dataProgramada": "2026-09-22",
           "dataCriacao": "2026-09-22",
-          "dataInicial": "",
+          "dataInicial": "2026-09-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3864,9 +3865,9 @@
       "total": 68,
       "atrasadas": 58,
       "porStatus": {
-        "naoIniciada": 62,
+        "naoIniciada": 63,
         "emProgresso": 0,
-        "pausada": 6,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4751,15 +4752,14 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Carlos  Godoi",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - MPA - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-09-17",
           "dataCriacao": "2026-09-08",
-          "dataInicial": "2026-09-22",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 336.0,
           "atrasada": true
         },
         {
@@ -8675,16 +8675,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 766,
-        "emAberto": 64,
+        "emAberto": 63,
         "atrasadas": 57,
-        "concluidas30d": 230,
-        "concluidas7d": 54,
+        "concluidas30d": 231,
+        "concluidas7d": 55,
         "naSemanaCorrente": 18
       },
       "mttr": {
-        "horas": 258.16,
-        "label": "10d 18h",
-        "amostra": 230
+        "horas": 257.04,
+        "label": "10d 17h",
+        "amostra": 231
       },
       "tendencia4Semanas": [
         {
@@ -8705,7 +8705,7 @@
         {
           "semana": "W39",
           "criadas": 6,
-          "finalizadas": 11
+          "finalizadas": 12
         }
       ],
       "topOfensores": {
@@ -8713,7 +8713,7 @@
           {
             "nome": "(sem equipe)",
             "total": 766,
-            "emAberto": 64
+            "emAberto": 63
           }
         ],
         "responsaveis": [
@@ -8744,16 +8744,16 @@
           }
         ]
       },
-      "total": 64,
+      "total": 63,
       "atrasadas": 57,
       "porStatus": {
         "naoIniciada": 58,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 64
+        "(sem equipe)": 63
       },
       "oss": [
         {
@@ -9748,24 +9748,6 @@
           "atrasada": false
         },
         {
-          "osId": "14309",
-          "ativo": "Inversor 6.1 SOLIS SOLIS-110K-5G    { SALE-SNP100-INVR6.1 }",
-          "equipe": "",
-          "responsavel": "Adriano Silva ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Adriano Silva ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 6.1] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-22",
-          "dataCriacao": "2026-09-22",
-          "dataInicial": "2026-09-22",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "atrasada": false
-        },
-        {
           "osId": "14268",
           "ativo": "Inversor 1.7 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.7 }",
           "equipe": "",
@@ -9852,6 +9834,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14309",
+          "ativo": "Inversor 6.1 SOLIS SOLIS-110K-5G    { SALE-SNP100-INVR6.1 }",
+          "equipe": "",
+          "responsavel": "Adriano Silva ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Adriano Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 6.1] - Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-22",
+          "dataCriacao": "2026-09-22",
+          "dataInicial": "2026-09-22",
+          "dataFinal": "2026-09-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13858",
           "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
@@ -11848,25 +11849,6 @@
           "atrasada": false
         },
         {
-          "osId": "11506",
-          "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 6.1] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-21",
-          "dataCriacao": "2026-08-19",
-          "dataInicial": "2026-08-21",
-          "dataFinal": "2026-08-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 72.0,
-          "atrasada": false
-        },
-        {
           "osId": "11421",
           "ativo": "Tracker 06.104 Brametal Bi-motor    { SMP100-ETKR6.104 }",
           "equipe": "",
@@ -12570,25 +12552,6 @@
           "atrasada": false
         },
         {
-          "osId": "9849",
-          "ativo": "Inversor 3.4 SOLAREDGE     { CLD200-INVR3.4 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Finalizados",
-          "tarefa": "[Colíder 2][Inversor 3.4] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-07-22",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-08-07",
-          "dataFinal": "2026-08-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 384.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10341",
           "ativo": "Inversor 2.2 Sungrow SG125-20-1500VDC    { MNG100-INVR2.2 }",
           "equipe": "",
@@ -12642,6 +12605,25 @@
           "dataFinal": "2026-07-28",
           "linkFracttal": "",
           "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "9774",
+          "ativo": "Inversor 1.10 Sungrow     { MAB100-INVR1.10 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "[Marabá 1][Inversor 1.10] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-07-20",
+          "dataCriacao": "2026-07-21",
+          "dataInicial": "2026-07-24",
+          "dataFinal": "2026-07-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -12703,7 +12685,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 647
+      "historicoTotal": 648
     },
     "engenharia": {
       "label": "Engenharia",
@@ -12916,9 +12898,9 @@
           "osId": "13674",
           "ativo": "Inversor 1.2 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.2 }",
           "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
+          "responsavel": "Frank  Melo",
           "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Raphael Vitoriano ",
+          "supervisor": "Frank  Melo",
           "status": "Não Iniciada",
           "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
           "criticidade": "",
@@ -14936,14 +14918,15 @@
       "responsavel": "Marcos  Camargo",
       "criadoPor": "Raphael Vitoriano ",
       "supervisor": "Marcos  Camargo",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
       "criticidade": "",
       "dataProgramada": "2026-09-22",
       "dataCriacao": "2026-09-22",
-      "dataInicial": "",
+      "dataInicial": "2026-09-22",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15046,23 +15029,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "14309",
-      "ativo": "Inversor 6.1 SOLIS SOLIS-110K-5G    { SALE-SNP100-INVR6.1 }",
-      "equipe": "",
-      "responsavel": "Adriano Silva ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Adriano Silva ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 6.1] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-22",
-      "dataCriacao": "2026-09-22",
-      "dataInicial": "2026-09-22",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
     },
     {
       "osId": "14282",
@@ -15473,9 +15439,9 @@
       "osId": "13674",
       "ativo": "Inversor 1.2 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.2 }",
       "equipe": "",
-      "responsavel": "Raphael Vitoriano ",
+      "responsavel": "Frank  Melo",
       "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Raphael Vitoriano ",
+      "supervisor": "Frank  Melo",
       "status": "Não Iniciada",
       "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
       "criticidade": "",
@@ -16055,15 +16021,14 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Carlos  Godoi",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - MPA - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-17",
       "dataCriacao": "2026-09-08",
-      "dataInicial": "2026-09-22",
+      "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 336.0
+      "linkFracttal": ""
     },
     {
       "osId": "13111",
@@ -18540,6 +18505,25 @@
       "atrasada": false
     },
     {
+      "osId": "14309",
+      "ativo": "Inversor 6.1 SOLIS SOLIS-110K-5G    { SALE-SNP100-INVR6.1 }",
+      "equipe": "",
+      "responsavel": "Adriano Silva ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Adriano Silva ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 6.1] - Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-09-22",
+      "dataCriacao": "2026-09-22",
+      "dataInicial": "2026-09-22",
+      "dataFinal": "2026-09-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "14306",
       "ativo": "Thopen - Alto Paraná 2 - PR Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200 }",
       "equipe": "",
@@ -20806,29 +20790,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13745",
-      "ativo": "Inversor 2.2 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.2 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Wesllen  Castro",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 2.2] - Religamento do Inversor 2.2",
-      "criticidade": "",
-      "dataProgramada": "2026-09-17",
-      "dataCriacao": "2026-09-17",
-      "dataInicial": "2026-09-17",
-      "dataFinal": "2026-09-17",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3008,
+  "historicoTotal": 3009,
   "totalGeral": 6449,
   "verificacao": {
     "total": 0,
