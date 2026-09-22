@@ -105,8 +105,13 @@
 .rex-ade-l i b { display: block; height: 100% }
 .rex-ade-l i b.ok { background: #a9db21 } .rex-ade-l i b.and { background: #ecc94b } .rex-ade-l i b.crit { background: #e07070 }
 .rex-ade-l em { font-style: normal; font-weight: 700; color: #191528; min-width: 82px; text-align: right }
-/* cabeçalho de grupo (Do plano | Fora do plano) */
-.rex-tbl th.rex-th-g { text-align: center; background: #2a2440; letter-spacing: .08em }
+/* tabela de tipos da semana: grupos Do plano | Fora do plano */
+.rex-tbl th.rex-th-g { text-align: center; background: #191528; letter-spacing: .08em }
+.rex-tbl th.rex-th-g2 { background: #55506b }
+.rex-tipos td.rex-div, .rex-tipos th.rex-div { border-left: 2px solid #cfd1dc }
+.rex-tipos td { position: relative }
+.rex-tipos tr.rex-total td { background: #eef0f5 !important; border-top: 2px solid #cfd1dc }
+.rex-mut { color: #c4c2ce }
 .rex-acoes .rex-acao-l { border-bottom: 1px dotted #b9bbc9; padding: 9px 2px 3px;
   font-size: 9.5pt; color: #504c63 }
 .rex-pe { margin-top: 16px; border-top: 1px solid #e2e3ea; padding-top: 6px;

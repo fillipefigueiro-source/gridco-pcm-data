@@ -463,18 +463,38 @@ async function rexGerar() {
         + '<div class="rex-ade-l"><span>Resposta ao imprevisto <small>resolvidas ÷ surgidas fora do plano</small></span>'
         + '<i><b class="' + rexFx(adN) + '" style="width:' + adN + '%"></b></i><em>' + adN + '% · ' + rexN(s.npF) + '/' + rexN(s.npT) + '</em></div>'
         + '</div></div>'
-        // tabela de tipos — cabeçalho em duas camadas: Do plano | Fora do plano
-        + '<table class="rex-tbl rex-rank"><tr><th rowspan="2" style="vertical-align:bottom">Tipo</th>'
-        + '<th colspan="3" class="rex-th-g">Do plano</th><th colspan="2" class="rex-th-g">Fora do plano</th></tr>'
-        + '<tr><th>Planejadas</th><th>Executadas</th><th>%</th><th>Surgidas</th><th>Executadas</th></tr>'
-        + REX_GRUPOS.filter(g => s.G[g] || s.NP[g]).map(g => {
-            const x = s.G[g] || { p: 0, f: 0 }, n = s.NP[g] || { p: 0, f: 0 }, p = pctT(x.f, x.p);
-            return '<tr><td class="rex-esq">' + g + '</td><td>' + (x.p ? rexN(x.p) : '—') + '</td>'
-              + '<td class="rex-esq">' + (x.p ? '<i class="rex-barra" style="width:' + p + '%"></i><b>' + rexN(x.f) + '</b>' : '—') + '</td>'
-              + '<td class="' + (x.p ? (p < 60 ? 'rex-red' : p >= 85 ? 'rex-grn' : '') : '') + '">' + (x.p ? p + '%' : '—') + '</td>'
-              + '<td>' + (n.p ? rexN(n.p) : '—') + '</td><td>' + (n.p ? rexN(n.f) : '—') + '</td></tr>';
-          }).join('')
-        + '</table>'
+        // tabela de tipos — grupos "Do plano | Fora do plano" com divisória
+        // vertical, "Resolvidas" à direita (evita 2× "Executadas") e TOTAL
+        + (function () {
+            const gs = REX_GRUPOS.filter(g => s.G[g] || s.NP[g]);
+            const tot = { p: 0, f: 0, np: 0, nf: 0 };
+            const linhas = gs.map(g => {
+              const x = s.G[g] || { p: 0, f: 0 }, n = s.NP[g] || { p: 0, f: 0 }, p = pctT(x.f, x.p);
+              tot.p += x.p; tot.f += x.f; tot.np += n.p; tot.nf += n.f;
+              const mut = '<span class="rex-mut">—</span>';
+              return '<tr><td class="rex-esq">' + g + '</td>'
+                + '<td class="rex-div">' + (x.p ? rexN(x.p) : mut) + '</td>'
+                + '<td class="rex-esq">' + (x.p ? '<i class="rex-barra" style="width:' + p + '%"></i><b>' + rexN(x.f) + '</b>' : mut) + '</td>'
+                + '<td class="' + (x.p ? (p < 60 ? 'rex-red' : p >= 85 ? 'rex-grn' : '') : '') + '">' + (x.p ? p + '%' : mut) + '</td>'
+                + '<td class="rex-div">' + (n.p ? rexN(n.p) : mut) + '</td>'
+                + '<td>' + (n.p ? '<b>' + rexN(n.f) + '</b>' : mut) + '</td></tr>';
+            }).join('');
+            const pT = pctT(tot.f, tot.p);
+            return '<table class="rex-tbl rex-rank rex-tipos">'
+              + '<colgroup><col style="width:26%"><col style="width:14%"><col style="width:20%">'
+              + '<col style="width:10%"><col style="width:15%"><col style="width:15%"></colgroup>'
+              + '<tr><th rowspan="2" style="vertical-align:bottom">Tipo</th>'
+              + '<th colspan="3" class="rex-th-g rex-div">Do plano da semana</th>'
+              + '<th colspan="2" class="rex-th-g rex-th-g2 rex-div">Fora do plano</th></tr>'
+              + '<tr><th class="rex-div">Planejadas</th><th>Executadas</th><th>%</th>'
+              + '<th class="rex-div rex-th-g2">Surgidas</th><th class="rex-th-g2">Resolvidas</th></tr>'
+              + linhas
+              + '<tr class="rex-total"><td class="rex-esq"><b>TOTAL</b></td>'
+              + '<td class="rex-div"><b>' + rexN(tot.p) + '</b></td><td class="rex-esq"><b>' + rexN(tot.f) + '</b></td>'
+              + '<td class="' + (pT < 60 ? 'rex-red' : pT >= 85 ? 'rex-grn' : '') + '"><b>' + pT + '%</b></td>'
+              + '<td class="rex-div"><b>' + rexN(tot.np) + '</b></td><td><b>' + rexN(tot.nf) + '</b></td></tr>'
+              + '</table>';
+          })()
         + '<div class="rex-nota"><b>Religamentos remotos na semana: ' + rexN(s.remotos)
         + '</b> — não entram no cálculo: atendimento remoto, sem mobilização do time de campo.</div>'
         + (s.pend ? '<div class="rex-nota"><b>Não coube na semana:</b> ' + rexN(s.pend) + ' tarefa(s)'
