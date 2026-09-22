@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-22T08:06:28Z",
+  "geradoEm": "2026-09-22T08:52:18Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4563,
-        "emAberto": 28,
+        "total": 4564,
+        "emAberto": 29,
         "atrasadas": 26,
         "concluidas30d": 726,
         "concluidas7d": 180,
-        "naSemanaCorrente": 23
+        "naSemanaCorrente": 24
       },
       "mttr": {
         "horas": 20.08,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 26,
+          "criadas": 27,
           "finalizadas": 19
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4563,
-            "emAberto": 28
+            "total": 4564,
+            "emAberto": 29
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 28,
+      "total": 29,
       "atrasadas": 26,
       "porStatus": {
         "naoIniciada": 24,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 28
+        "(sem equipe)": 29
       },
       "oss": [
         {
@@ -478,14 +478,15 @@
           "responsavel": "Cícero  Willian",
           "criadoPor": "CíceroWillian",
           "supervisor": "Cícero  Willian",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[RNGD-CTS100] - Religamento do RNGD-CTS100",
           "criticidade": "",
           "dataProgramada": "2026-09-21",
           "dataCriacao": "2026-09-21",
-          "dataInicial": "",
+          "dataInicial": "2026-09-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -561,6 +562,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "14288",
+          "ativo": "Thopen - Salto Pirapora 3 - SP    São Paulo Brasil { THPN-SPP300 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "[Thopen - Salto Pirapora 3 - SP] - Religamento do Thopen - Salto Pirapora 3 - SP",
+          "criticidade": "",
+          "dataProgramada": "2026-09-22",
+          "dataCriacao": "2026-09-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "14286",
@@ -3604,9 +3623,9 @@
       "historicoTotal": 1860,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3804,
+        "local": 3805,
         "remotoEmAberto": 10,
-        "localEmAberto": 18,
+        "localEmAberto": 19,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -14930,6 +14949,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14288",
+      "ativo": "Thopen - Salto Pirapora 3 - SP    São Paulo Brasil { THPN-SPP300 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "[Thopen - Salto Pirapora 3 - SP] - Religamento do Thopen - Salto Pirapora 3 - SP",
+      "criticidade": "",
+      "dataProgramada": "2026-09-22",
+      "dataCriacao": "2026-09-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14286",
       "ativo": "Thopen - Colorado 1 - PR Zona Rural S/N Colorado  Paraná Brasil { THPN-CLR100 }",
       "equipe": "",
@@ -15021,14 +15057,15 @@
       "responsavel": "Cícero  Willian",
       "criadoPor": "CíceroWillian",
       "supervisor": "Cícero  Willian",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[RNGD-CTS100] - Religamento do RNGD-CTS100",
       "criticidade": "",
       "dataProgramada": "2026-09-21",
       "dataCriacao": "2026-09-21",
-      "dataInicial": "",
+      "dataInicial": "2026-09-22",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -20886,7 +20923,7 @@
     }
   ],
   "historicoTotal": 2984,
-  "totalGeral": 6427,
+  "totalGeral": 6428,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
