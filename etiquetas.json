@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-22T15:45:01Z",
+  "geradoEm": "2026-09-22T15:57:26Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4575,
-        "emAberto": 27,
+        "total": 4576,
+        "emAberto": 26,
         "atrasadas": 22,
-        "concluidas30d": 739,
-        "concluidas7d": 193,
-        "naSemanaCorrente": 35
+        "concluidas30d": 741,
+        "concluidas7d": 195,
+        "naSemanaCorrente": 36
       },
       "mttr": {
-        "horas": 19.88,
-        "label": "19h 53min",
-        "amostra": 739
+        "horas": 19.83,
+        "label": "19h 50min",
+        "amostra": 741
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W39",
-          "criadas": 38,
-          "finalizadas": 32
+          "criadas": 39,
+          "finalizadas": 34
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4575,
-            "emAberto": 27
+            "total": 4576,
+            "emAberto": 26
           }
         ],
         "responsaveis": [
@@ -58,8 +58,8 @@
           },
           {
             "nome": "Marcos  Camargo",
-            "total": 498,
-            "emAberto": 6
+            "total": 499,
+            "emAberto": 5
           },
           {
             "nome": "Felipe Silva",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 27,
+      "total": 26,
       "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 23,
-        "emProgresso": 0,
+        "naoIniciada": 21,
+        "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 27
+        "(sem equipe)": 26
       },
       "oss": [
         {
@@ -478,14 +478,15 @@
           "responsavel": "Marcos  Camargo",
           "criadoPor": "Felipe Silva ",
           "supervisor": "Marcos  Camargo",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
           "criticidade": "",
           "dataProgramada": "2026-09-21",
           "dataCriacao": "2026-09-21",
-          "dataInicial": "",
+          "dataInicial": "2026-09-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -561,27 +562,29 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
-        },
+        }
+      ],
+      "ossHistorico": [
         {
-          "osId": "14284",
+          "osId": "14350",
           "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
           "equipe": "",
           "responsavel": "Marcos  Camargo",
-          "criadoPor": "GerdesonAraújo",
+          "criadoPor": "ItaloLustosa",
           "supervisor": "Marcos  Camargo",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "[Thopen - Mandaguaçu 1 - PR] - Religamento do Thopen - Mandaguaçu 1 - PR",
           "criticidade": "",
           "dataProgramada": "2026-09-22",
           "dataCriacao": "2026-09-22",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-09-22",
+          "dataFinal": "2026-09-22",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "14322",
           "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
@@ -731,6 +734,26 @@
           "supervisor": "Eduardo  Mendes",
           "status": "Finalizados",
           "tarefa": "[Thopen - Salto Pirapora 3 - SP] - Religamento do Thopen - Salto Pirapora 3 - SP",
+          "criticidade": "",
+          "dataProgramada": "2026-09-22",
+          "dataCriacao": "2026-09-22",
+          "dataInicial": "2026-09-22",
+          "dataFinal": "2026-09-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14284",
+          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Marcos  Camargo",
+          "status": "Finalizados",
+          "tarefa": "[Thopen - Mandaguaçu 1 - PR] - Religamento do Thopen - Mandaguaçu 1 - PR",
           "criticidade": "",
           "dataProgramada": "2026-09-22",
           "dataCriacao": "2026-09-22",
@@ -3541,54 +3564,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13557",
-          "ativo": "Inversor 5.8 Huawei     { TIM100-INVR5.8 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 5.8] - Religamento do Inversor 5.8",
-          "criticidade": "",
-          "dataProgramada": "2026-09-14",
-          "dataCriacao": "2026-09-14",
-          "dataInicial": "2026-09-14",
-          "dataFinal": "2026-09-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "13554",
-          "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
-          "equipe": "",
-          "responsavel": "Valdir Silva ",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Valdir Silva ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-SAP100] - Religamento do THPN-SAP100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-14",
-          "dataCriacao": "2026-09-14",
-          "dataInicial": "2026-09-14",
-          "dataFinal": "2026-09-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1873,
+      "historicoTotal": 1875,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3816,
+        "local": 3817,
         "remotoEmAberto": 10,
-        "localEmAberto": 17,
+        "localEmAberto": 16,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -14981,23 +14964,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "14284",
-      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Marcos  Camargo",
-      "status": "Não Iniciada",
-      "tarefa": "[Thopen - Mandaguaçu 1 - PR] - Religamento do Thopen - Mandaguaçu 1 - PR",
-      "criticidade": "",
-      "dataProgramada": "2026-09-22",
-      "dataCriacao": "2026-09-22",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "14282",
       "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
       "equipe": "",
@@ -15088,14 +15054,15 @@
       "responsavel": "Marcos  Camargo",
       "criadoPor": "Felipe Silva ",
       "supervisor": "Marcos  Camargo",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
       "criticidade": "",
       "dataProgramada": "2026-09-21",
       "dataCriacao": "2026-09-21",
-      "dataInicial": "",
+      "dataInicial": "2026-09-22",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -18465,6 +18432,26 @@
       "atrasada": false
     },
     {
+      "osId": "14350",
+      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Marcos  Camargo",
+      "status": "Finalizados",
+      "tarefa": "[Thopen - Mandaguaçu 1 - PR] - Religamento do Thopen - Mandaguaçu 1 - PR",
+      "criticidade": "",
+      "dataProgramada": "2026-09-22",
+      "dataCriacao": "2026-09-22",
+      "dataInicial": "2026-09-22",
+      "dataFinal": "2026-09-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "14322",
       "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
       "equipe": "",
@@ -18613,6 +18600,26 @@
       "supervisor": "Eduardo  Mendes",
       "status": "Finalizados",
       "tarefa": "[Thopen - Salto Pirapora 3 - SP] - Religamento do Thopen - Salto Pirapora 3 - SP",
+      "criticidade": "",
+      "dataProgramada": "2026-09-22",
+      "dataCriacao": "2026-09-22",
+      "dataInicial": "2026-09-22",
+      "dataFinal": "2026-09-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "14284",
+      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Marcos  Camargo",
+      "status": "Finalizados",
+      "tarefa": "[Thopen - Mandaguaçu 1 - PR] - Religamento do Thopen - Mandaguaçu 1 - PR",
       "criticidade": "",
       "dataProgramada": "2026-09-22",
       "dataCriacao": "2026-09-22",
@@ -20751,50 +20758,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13741",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizados",
-      "tarefa": "[Axis - Marialva 1 - PR] - Religamento do Axis - Marialva 1 - PR",
-      "criticidade": "",
-      "dataProgramada": "2026-09-16",
-      "dataCriacao": "2026-09-16",
-      "dataInicial": "2026-09-18",
-      "dataFinal": "2026-09-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "13739",
-      "ativo": "Cabine 3 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN3 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Luiz  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Cabine 3] - Religamento da Cabine 3",
-      "criticidade": "",
-      "dataProgramada": "2026-09-16",
-      "dataCriacao": "2026-09-16",
-      "dataInicial": "2026-09-17",
-      "dataFinal": "2026-09-17",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3000,
-  "totalGeral": 6440,
+  "historicoTotal": 3002,
+  "totalGeral": 6441,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
