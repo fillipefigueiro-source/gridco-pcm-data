@@ -120,13 +120,23 @@ function rexSemanaSeg(week) {          // '2026-W38' -> segunda-feira ISO
   return d.toISOString().slice(0, 10);
 }
 const rexFinBd = s => String(s || '').toLowerCase().indexOf('finaliz') >= 0;
+// grupos da tabela da semana. Religamento REMOTO é tratado à parte: não entra
+// em nenhum cálculo (não mobiliza campo) — vira só nota informativa.
+const REX_GRUPOS = ['Preventivas', 'Corretiva', 'Corretiva Emergencial', 'Religamento', 'Demais'];
 function rexGrupoBd(tipo) {
   const t = String(tipo || '');
+  if (/^Religamento Remoto/i.test(t)) return 'Remoto';
+  if (/^Religamento/i.test(t)) return 'Religamento';
+  if (/^Corretiva Emergencial/i.test(t)) return 'Corretiva Emergencial';
+  if (/^Corretiva/i.test(t)) return 'Corretiva';
   if (/^MP/i.test(t) || /^Preventiva/i.test(t)) return 'Preventivas';
-  if (/^Corretiva/i.test(t)) return 'Corretivas';
-  if (/^Religamento/i.test(t)) return 'Religamentos';
   return 'Demais';                     // Handover, Inspeção, Administrativa, Zeladoria…
 }
+const REX_DIA = { 'Segunda-feira': 'Seg', 'Terça-feira': 'Ter', 'Quarta-feira': 'Qua',
+                  'Quinta-feira': 'Qui', 'Sexta-feira': 'Sex', 'Sábado': 'Sáb', 'Domingo': 'Dom' };
+const REX_DIAS = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex'];
+// aderência: meta 85% (verde), 60–84 âmbar, <60 vermelho — reusa as classes gpv-cel
+const rexFx = p => p >= 85 ? 'ok' : p >= 60 ? 'and' : 'crit';
 const rexUsiCurta = u => String(u || '').replace(/\s*-\s*[A-Z]{2}\s*$/, '').replace(/^[^-]+-\s*/, '');
 function rexSemanas(bd) {
   if (!bd || !bd.semanas) return [];
@@ -140,39 +150,65 @@ function rexSemanas(bd) {
     // contam — não é foto de sexta 8h). O gerador injeta linhas extras com
     // foraDoPlano:true, mas só de seg→sáb 00h; por isso o "fora do plano"
     // daqui é recalculado do Fracttal com a semana CHEIA (seg→dom).
-    const rows = (w.rows || []).filter(r => rexEscopoFiltro(r) && !r.foraDoPlano);
-    if (!rows.length) return;
+    const rowsAll = (w.rows || []).filter(r => rexEscopoFiltro(r) && !r.foraDoPlano);
+    if (!rowsAll.length) return;
+    const rows = rowsAll.filter(r => rexGrupoBd(r.tipo) !== 'Remoto');   // remoto fora do cálculo
     const dom = rexIso(new Date(new Date(seg + 'T12:00:00').getTime() + 6 * 86400000));
-    const osPlan = new Set(rows.map(r => String(r.os_id)));
-    const G = {};
-    let plan = 0, fin = 0, emergPlan = 0;
+    const osPlan = new Set(rowsAll.map(r => String(r.os_id)));
+    // plano da semana: por grupo + por cluster/dia (tático) + abertas do plano
+    const G = {}, CLM = new Map(), abertasPlano = [];
+    let plan = 0, fin = 0;
     rows.forEach(r => {
+      const feito = rexFinBd(r.status);
       const g = G[rexGrupoBd(r.tipo)] || (G[rexGrupoBd(r.tipo)] = { p: 0, f: 0 });
       g.p++; plan++;
-      if (rexFinBd(r.status)) { g.f++; fin++; }
-      if (/emergencial/i.test(r.tipo || '')) emergPlan++;
+      if (feito) { g.f++; fin++; }
+      const cl = CLM.get(r.cluster) || { cluster: r.cluster || '—', usinas: new Set(), p: 0, f: 0, dias: {} };
+      cl.usinas.add(rexUsiCurta(r.usina)); cl.p++;
+      const dk = REX_DIA[String(r.dia || '')] || '—';
+      const dd = cl.dias[dk] || (cl.dias[dk] = { p: 0, f: 0 });
+      dd.p++;
+      if (feito) { cl.f++; dd.f++; }
+      CLM.set(r.cluster, cl);
+      if (!feito) abertasPlano.push({ tarefa: r.tarefa, usina: rexUsiCurta(r.usina),
+        cluster: r.cluster || '—', tipo: r.tipo, dia: dk, os: String(r.os_id) });
     });
-    // fora do plano — executadas na semana (seg→dom) sem estar na planilha
+    const CL = Array.from(CLM.values()).map(c => ({ ...c, usinas: Array.from(c.usinas).sort() }))
+      .sort((x, y) => (x.p ? x.f / x.p : 1) - (y.p ? y.f / y.p : 1) || String(x.cluster).localeCompare(y.cluster));
+    // não planejadas: tarefas com atividade na semana CHEIA (seg→dom) fora da
+    // planilha — criadas na semana ou finalizadas nela; remoto vira só a nota
     const T = gpScopedTarefas().filter(rexEscopoFiltro);
-    const fora = T.filter(t => rexFin(t) && rexRange(t.dataFinal, seg, dom) && !osPlan.has(String(t.os)));
+    const NP = {};
+    let npT = 0, npF = 0, remotos = 0;
+    T.forEach(t => {
+      const g = rexGrupoBd(t.tipo);
+      const fimSem = rexFin(t) && rexRange(t.dataFinal, seg, dom);
+      if (g === 'Remoto') { if (fimSem) remotos++; return; }
+      if (osPlan.has(String(t.os))) return;
+      const criSem = rexRange(t.criacao, seg, dom);
+      if (!criSem && !fimSem) return;
+      const o = NP[g] || (NP[g] = { p: 0, f: 0 });
+      o.p++; npT++;
+      if (fimSem) { o.f++; npF++; }
+    });
     // reprogramadas: 1 linha por OS, com o maior nº de vezes
     const porOS = new Map();
     rows.forEach(r => {
       const v = +r.vezes || 0, k = String(r.os_id);
       const cur = porOS.get(k);
       if (!cur || v > cur.vezes)
-        porOS.set(k, { os: k, usina: r.usina, vezes: v, fin: rexFinBd(r.status) });
+        porOS.set(k, { os: k, usina: r.usina, tarefa: r.tarefa, tipo: r.tipo,
+                       vezes: v, fin: rexFinBd(r.status) });
     });
-    const rolagens = Array.from(porOS.values()).filter(x => x.vezes >= 4)
-      .sort((x, y) => y.vezes - x.vezes).slice(0, 6);
+    const rolagens = Array.from(porOS.values()).filter(x => x.vezes >= 2)
+      .sort((x, y) => y.vezes - x.vezes).slice(0, 10);
     // não coube na semana + motivos (o programador registra o porquê)
     const pend = (w.pendentes || []).filter(rexEscopoFiltro);
     const motivos = {};
     pend.forEach(p => { const m = String(p.motivo || '—'); motivos[m] = (motivos[m] || 0) + 1; });
     const topMot = Object.entries(motivos).sort((x, y) => y[1] - x[1]).slice(0, 3);
-    out.push({ week: w.week, label: w.label, seg, sex, plan, fin, G, emergPlan,
-      fora: fora.length, foraCorr: new Set(fora.filter(rexCorretiva).map(t => t.os)).size,
-      rolagens, pend: pend.length, topMot,
+    out.push({ week: w.week, label: w.label, seg, sex, plan, fin, G, NP, npT, npF,
+      remotos, CL, abertasPlano, rolagens, pend: pend.length, topMot,
       atual: bd.semana_ativa === w.week });
   });
   return out.sort((x, y) => (x.week < y.week ? -1 : 1));
@@ -198,24 +234,30 @@ function rexModelo() {
     s.t++; if (rexFin(t)) s.f++;
   });
 
-  // ranking: OS DISTINTA de corretiva por usina, criada no período
-  const len = Math.round((new Date(b) - new Date(a)) / 86400000) + 1;
-  const aPrev = rexIso(new Date(new Date(a + 'T12:00:00').getTime() - len * 86400000));
-  const bPrev = rexIso(new Date(new Date(a + 'T12:00:00').getTime() - 86400000));
+  // ranking "usinas que pedem atenção": TAREFAS EM ABERTO hoje (todos os
+  // tipos) ordena; mais antiga dá a profundidade; OSs corretivas criadas no
+  // período ficam de contexto (spec 22/09 — antes ordenava por criadas)
   const porUsina = new Map();
-  const u = n => { let x = porUsina.get(n); if (!x) { x = { criadas: new Set(), emerg: new Set(), prev: new Set(), abertas: new Set(), maisAntiga: 0 }; porUsina.set(n, x); } return x; };
+  const u = n => { let x = porUsina.get(n); if (!x) { x = { abertas: 0, corrAb: new Set(), criadas: new Set(), emerg: new Set(), maisAntiga: 0, tarefas: [] }; porUsina.set(n, x); } return x; };
   T.forEach(t => {
-    if (!rexCorretiva(t)) return;
     const x = u(t.usina);
-    if (rexRange(t.criacao, a, b)) { x.criadas.add(t.os); if (rexEmerg(t)) x.emerg.add(t.os); }
-    if (rexRange(t.criacao, aPrev, bPrev)) x.prev.add(t.os);
-    if (t.aberta) { x.abertas.add(t.os); if ((t.dias || 0) > x.maisAntiga) x.maisAntiga = t.dias || 0; }
+    if (t.aberta) {
+      x.abertas++;
+      if (rexCorretiva(t)) x.corrAb.add(t.os);
+      if ((t.dias || 0) > x.maisAntiga) x.maisAntiga = t.dias || 0;
+      x.tarefas.push(t);                       // p/ a lista tática das críticas
+    }
+    if (rexCorretiva(t) && rexRange(t.criacao, a, b)) {
+      x.criadas.add(t.os);
+      if (rexEmerg(t)) x.emerg.add(t.os);
+    }
   });
   let rank = Array.from(porUsina, ([usina, x]) => ({ usina,
-    criadas: x.criadas.size, emerg: x.emerg.size, prev: x.prev.size,
-    abertas: x.abertas.size, maisAntiga: x.maisAntiga }))
-    .filter(x => x.criadas > 0 || x.abertas > 0)
-    .sort((x, y) => y.criadas - x.criadas || y.abertas - x.abertas);
+    abertas: x.abertas, corrAb: x.corrAb.size, criadas: x.criadas.size,
+    emerg: x.emerg.size, maisAntiga: x.maisAntiga,
+    tarefas: x.tarefas.sort((p, q) => (q.dias || 0) - (p.dias || 0)) }))
+    .filter(x => x.abertas > 0 || x.criadas > 0)
+    .sort((x, y) => y.abertas - x.abertas || y.maisAntiga - x.maisAntiga);
 
   // emergenciais do período (OS distinta)
   const emergVistas = new Set();
@@ -304,23 +346,30 @@ function rexFamilias(cf) {
     usinasCluster = new Set();
     gpScopedTarefas().forEach(t => { if (t.cluster === REX.cluster) usinasCluster.add(t.usina); });
   }
-  const fam = {}, ativos = [];
+  const fam = {}, ativos = [], porUsina = [];
   cf.clientes.forEach(c => {
     if (REX.cliente && c.cliente !== REX.cliente) return;
     (c.usinas || []).forEach(u => {
       if (REX.usinas.length && REX.usinas.indexOf(u.usina) < 0) return;
       if (usinasCluster && !usinasCluster.has(u.usina)) return;
+      const ativosU = [];
       (u.ativos || []).forEach(at => {
         const n = +at.n || 0;
         if (!n) return;
         const f = rexFamilia(at.ativo, u.usina);
         const o = fam[f] || (fam[f] = { n: 0, up: 0, rep: 0, ativos: 0 });
         o.n += n; o.up += (+at.mtbf || 0) * n; o.rep += (+at.mttr || 0) * n; o.ativos++;
-        ativos.push({ ativo: at.ativo, usina: u.usina, n, mtbf: +at.mtbf || 0,
-                      mttr: +at.mttr || 0, disp: +at.disp || 0 });
+        const reg = { ativo: at.ativo, usina: u.usina, n, mtbf: +at.mtbf || 0,
+                      mttr: +at.mttr || 0, disp: +at.disp || 0 };
+        ativos.push(reg); ativosU.push(reg);
       });
+      if (ativosU.length)
+        porUsina.push({ usina: u.usina, mtbf: +u.mtbf || 0, mttr: +u.mttr || 0,
+          disp: +u.disp || 0, n: +u.n || 0,
+          ativos: ativosU.sort((x, y) => y.n - x.n) });
     });
   });
+  porUsina.sort((x, y) => y.n - x.n);
   const linhas = Object.entries(fam).map(([f, o]) => {
     const mtbf = o.up / o.n, mttr = o.rep / o.n;
     return { fam: f, ativos: o.ativos, n: o.n, mtbf, mttr,
@@ -328,7 +377,7 @@ function rexFamilias(cf) {
   }).sort((x, y) => y.n - x.n);
   // piores ativos individuais (mín. 3 falhas — 1 azar não é tendência)
   const piores = ativos.filter(x => x.n >= 3).sort((x, y) => x.disp - y.disp).slice(0, 5);
-  return linhas.length ? { linhas, piores, geradoEm: cf.geradoEm || '' } : null;
+  return linhas.length ? { linhas, piores, porUsina, geradoEm: cf.geradoEm || '' } : null;
 }
 
 // ── render do relatório ─────────────────────────────────────────────────────
@@ -356,15 +405,16 @@ async function rexGerar() {
 
   // síntese automática (template da narrativa)
   const topo = M.rank[0];
-  const tend = topo ? (topo.criadas > topo.prev ? '▲' : topo.criadas < topo.prev ? '▼' : '=') : '';
+  const pctT = (f, t) => t ? Math.round(100 * f / t) : 0;
+  const SW = SEM.length ? SEM[SEM.length - 1] : null;   // semana mais recente (Tático)
   const sintese = 'Em ' + rexFmt(M.a) + '–' + rexFmt(M.b) + ', ' + escopo + ' executou <b>'
-    + rexN(M.osFin) + ' OSs</b>' + (pctPlano !== null ? ' (' + pctPlano + '% do plano programado do período)' : '')
+    + rexN(M.osFin) + ' OSs</b>' + (pctPlano !== null ? ' (' + pctPlano + '% do programado no período)' : '')
+    + (SW && SW.plan ? '; execução total da ' + rexEsc(SW.label.split(' · ')[0]).toLowerCase()
+      + ': <b>' + pctT(SW.fin + SW.npF, SW.plan + SW.npT) + '%</b>' : '')
     + '; <b>' + rexN(new Set(M.corrAbertas.map(t => t.os)).size) + ' corretivas abertas</b>'
-    + (topo ? ', <b>' + rexEsc(topo.usina.replace(/\s*-\s*[A-Z]{2}\s*$/, '')) + '</b> concentra a maior pressão ('
-      + topo.criadas + ' OSs no período, ' + tend + ' vs anterior)' : '') + '.'
-    + (SEM.length === 1 && SEM[0].plan
-      ? ' Aderência da programação na ' + rexEsc(SEM[0].label.split(' · ')[0]).toLowerCase()
-        + ': <b>' + Math.round(100 * SEM[0].fin / SEM[0].plan) + '%</b>.' : '');
+    + (topo && topo.abertas ? ' — <b>' + rexEsc(topo.usina.replace(/\s*-\s*[A-Z]{2}\s*$/, ''))
+      + '</b> lidera o backlog (' + topo.abertas + ' tarefas em aberto, mais antiga '
+      + topo.maisAntiga + ' d)' : '') + '.';
 
   const kpi = (v, l, cls) => '<div class="rex-kpi ' + (cls || '') + '"><b>' + v + '</b><span>' + l + '</span></div>';
   const logo = (document.querySelector('.a-logo, .l-logo') || {}).src || '';
@@ -389,67 +439,47 @@ async function rexGerar() {
     + (M.ger && !modoCliente ? kpi(rexN(M.ger.atr.length), 'MPA/MPS atrasadas', 'amb') : kpi(rexN(M.mais30.length), 'tarefas abertas há +30 dias', 'amb'))
     + '</div>';
 
-  // saúde do plano preventivo
-  const sigRow = ['MPM', 'MPT', 'MPS', 'MPA'].filter(s => M.sig[s]).map(s => {
-    const x = M.sig[s], p = Math.round(100 * x.f / x.t);
-    const txt = (s === 'MPA' || s === 'MPS') ? x.f + '/' + x.t : p + '%';
-    const cls = p >= 100 ? 'ok' : p < 40 ? 'crit' : 'and';
-    return '<div class="rex-sig"><b>' + s + '</b><span class="gpv-cel ' + cls + '">' + txt + '</span></div>';
-  }).join('');
-  if (sigRow) h += '<section><h2>' + sec('Saúde do plano preventivo') + ' <small>tarefas programadas no período</small></h2>'
-    + '<div class="rex-sigs">' + sigRow + '</div></section>';
+  // ═════════ PARTE 1 · VISÃO GERENCIAL ═════════
+  h += '<div class="rex-parte">Visão Gerencial — a semana em um olhar</div>';
 
-  // programação da semana: planejado × executado (foto do programador)
+  // G1+G2 — programação da semana: execução total + tabela de tipos
   if (SEM.length) {
     h += '<section><h2>' + sec('Programação da semana — planejado × executado')
-      + ' <small>foto do programador semanal · semanas dentro do período</small></h2>';
+      + ' <small>foto do programador semanal · religamentos remotos fora do cálculo</small></h2>';
     SEM.forEach(s => {
-      const ad = s.plan ? Math.round(100 * s.fin / s.plan) : 0;
+      const adP = pctT(s.fin, s.plan), adN = pctT(s.npF, s.npT), adT = pctT(s.fin + s.npF, s.plan + s.npT);
       h += '<div class="rex-h3">' + rexEsc(s.label) + (s.atual ? ' <em>— semana corrente, parcial</em>' : '') + '</div>'
-        + '<div class="rex-kpis">'
-        + kpi(ad + '%', 'aderência ao plano da semana', ad < 60 ? 'red' : ad < 85 ? 'amb' : 'grn')
-        + kpi(rexN(s.plan), 'tarefas no plano')
-        + kpi(rexN(s.fin), 'executadas do plano', 'grn')
-        + kpi(rexN(s.fora), 'executadas fora do plano · ' + s.foraCorr + ' OSs corretivas', 'amb')
-        + '</div>'
-        + '<table class="rex-tbl rex-rank"><tr><th>Tipo</th><th>Planejadas</th><th>Executadas</th><th>%</th></tr>'
-        + ['Preventivas', 'Corretivas', 'Religamentos', 'Demais'].filter(g => s.G[g]).map(g => {
-            const x = s.G[g], p = Math.round(100 * x.f / x.p);
-            return '<tr><td class="rex-esq">' + g
-              + (g === 'Corretivas' && s.emergPlan ? ' <small>(' + s.emergPlan + ' emergenciais)</small>' : '') + '</td>'
-              + '<td>' + rexN(x.p) + '</td>'
-              + '<td class="rex-esq"><i class="rex-barra" style="width:' + p + '%"></i><b>' + rexN(x.f) + '</b></td>'
-              + '<td class="' + (p < 60 ? 'rex-red' : p >= 85 ? 'rex-grn' : '') + '">' + p + '%</td></tr>';
+        // card largo: manchete "Execução total" + as duas componentes com micro-barras
+        + '<div class="rex-ade"><div class="rex-ade-m"><b class="' + rexFx(adT) + '">' + adT + '%</b>'
+        + '<span>Execução total<br><small>tudo que foi feito ÷ tudo que havia · '
+        + rexN(s.fin + s.npF) + '/' + rexN(s.plan + s.npT) + '</small></span></div>'
+        + '<div class="rex-ade-c">'
+        + '<div class="rex-ade-l"><span>Aderência ao plano <small>executadas ÷ planejadas na semana</small></span>'
+        + '<i><b class="' + rexFx(adP) + '" style="width:' + adP + '%"></b></i><em>' + adP + '% · ' + rexN(s.fin) + '/' + rexN(s.plan) + '</em></div>'
+        + '<div class="rex-ade-l"><span>Resposta ao imprevisto <small>resolvidas ÷ surgidas fora do plano</small></span>'
+        + '<i><b class="' + rexFx(adN) + '" style="width:' + adN + '%"></b></i><em>' + adN + '% · ' + rexN(s.npF) + '/' + rexN(s.npT) + '</em></div>'
+        + '</div></div>'
+        // tabela de tipos — cabeçalho em duas camadas: Do plano | Fora do plano
+        + '<table class="rex-tbl rex-rank"><tr><th rowspan="2" style="vertical-align:bottom">Tipo</th>'
+        + '<th colspan="3" class="rex-th-g">Do plano</th><th colspan="2" class="rex-th-g">Fora do plano</th></tr>'
+        + '<tr><th>Planejadas</th><th>Executadas</th><th>%</th><th>Surgidas</th><th>Executadas</th></tr>'
+        + REX_GRUPOS.filter(g => s.G[g] || s.NP[g]).map(g => {
+            const x = s.G[g] || { p: 0, f: 0 }, n = s.NP[g] || { p: 0, f: 0 }, p = pctT(x.f, x.p);
+            return '<tr><td class="rex-esq">' + g + '</td><td>' + (x.p ? rexN(x.p) : '—') + '</td>'
+              + '<td class="rex-esq">' + (x.p ? '<i class="rex-barra" style="width:' + p + '%"></i><b>' + rexN(x.f) + '</b>' : '—') + '</td>'
+              + '<td class="' + (x.p ? (p < 60 ? 'rex-red' : p >= 85 ? 'rex-grn' : '') : '') + '">' + (x.p ? p + '%' : '—') + '</td>'
+              + '<td>' + (n.p ? rexN(n.p) : '—') + '</td><td>' + (n.p ? rexN(n.f) : '—') + '</td></tr>';
           }).join('')
         + '</table>'
-        + (s.rolagens.length ? '<div class="rex-nota"><b>Reprogramadas 4× ou mais:</b> '
-            + s.rolagens.map(x => '#' + x.os + ' ' + rexEsc(rexUsiCurta(x.usina)) + ' (' + x.vezes + '×' + (x.fin ? ', feita' : '') + ')').join(' · ') + '</div>' : '')
+        + '<div class="rex-nota"><b>Religamentos remotos na semana: ' + rexN(s.remotos)
+        + '</b> — não entram no cálculo: atendimento remoto, sem mobilização do time de campo.</div>'
         + (s.pend ? '<div class="rex-nota"><b>Não coube na semana:</b> ' + rexN(s.pend) + ' tarefa(s)'
             + (s.topMot.length ? ' — motivos: ' + s.topMot.map(([m, n]) => rexEsc(m) + ' (' + n + ')').join('; ') : '') + '</div>' : '');
     });
     h += '<div class="rex-nota">Plano = a planilha da Programação da semana (ajustes até o fechamento contam; '
-      + 'não é a foto de sexta 8h) · executado = tarefa Finalizada · fora do plano = finalizadas de segunda a '
-      + 'DOMINGO sem estar na planilha · preventiva mede cumprimento do plano; corretiva mede resposta à demanda.</div></section>';
+      + 'não é a foto de sexta 8h) · executado = tarefa Finalizada · fora do plano = com atividade de segunda a '
+      + 'domingo sem estar na planilha · preventiva mede cumprimento do plano; corretiva mede resposta à demanda.</div></section>';
   }
-
-  // tendência semanal
-  if (M.semanas.length > 1) {
-    const mx = Math.max(1, ...M.semanas.map(s => Math.max(s.criadas, s.fin)));
-    h += '<section><h2>' + sec('Ritmo do período') + ' <small>OSs criadas × finalizadas por semana</small></h2>'
-      + '<div class="rex-sems">' + M.semanas.map(s =>
-        '<div class="rex-sem"><div class="rex-sem-b"><i style="height:' + Math.round(64 * s.criadas / mx) + 'px"></i>'
-        + '<i class="f" style="height:' + Math.round(64 * s.fin / mx) + 'px"></i></div>'
-        + '<span>' + s.rot + '</span><small>' + s.criadas + '·' + s.fin + '</small></div>').join('')
-      + '</div><div class="rex-leg"><span><i class="c1"></i>criadas</span><span><i class="c2"></i>finalizadas</span></div></section>';
-  }
-
-  // volume por tipo
-  const ordTipos = ['Corretiva', 'Corretiva Emergencial', 'Preventiva/Inspeção', 'Religamentos', 'Outros'].filter(k => M.tipos[k]);
-  h += '<section><h2>' + sec('Volume por tipo') + ' <small>tarefas do período</small></h2>'
-    + '<table class="rex-tbl"><tr><th>Tipo</th><th>Criadas</th><th>Finalizadas</th><th>Criadas e ainda abertas</th></tr>'
-    + ordTipos.map(k => { const o = M.tipos[k]; return '<tr><td>' + k + '</td><td>' + rexN(o.criadas) + '</td><td>' + rexN(o.fin) + '</td><td>' + (o.abertas ? '<b class="rex-red">' + rexN(o.abertas) + '</b>' : '0') + '</td></tr>'; }).join('')
-    + '</table><div class="rex-nota">Finalizadas pode superar Criadas: conta tudo que foi concluído no período, '
-    + 'inclusive OSs criadas antes dele. "Criadas e ainda abertas" = das criadas no período, as que seguem sem conclusão.</div></section>';
 
   // confiabilidade por família de equipamento (base histórica — não recorta pelo período)
   if (CF) {
@@ -470,38 +500,130 @@ async function rexGerar() {
           + '<td class="rex-esq">' + rexEsc(rexUsiCurta(p.usina)) + '</td><td>' + p.n + '</td>'
           + '<td>' + nfmt(p.mttr, 2) + '</td><td class="rex-red"><b>' + nfmt(100 * p.disp, 1) + '%</b></td></tr>').join('')
         + '</table>' : '')
-      + '<div class="rex-nota">MTBF = tempo médio entre falhas · MTTR = tempo médio de reparo · '
-      + 'Disp. inerente = MTBF ÷ (MTBF + MTTR) · agregação ponderada pelo nº de falhas de cada ativo · '
-      + 'dados de ' + rexEsc(String(CF.geradoEm).slice(0, 16).replace('T', ' ')) + '.</div></section>';
+      + '<div class="rex-nota"><b>Os indicadores por família são um termômetro da tendência geral; a leitura '
+      + 'conclusiva de confiabilidade é feita ativo a ativo</b> (Parte Tática) — o agregado não substitui essa análise. '
+      + 'MTBF = tempo médio entre falhas · MTTR = tempo médio de reparo · Disp. inerente = MTBF ÷ (MTBF + MTTR) · '
+      + 'agregação ponderada pelo nº de falhas · dados de ' + rexEsc(String(CF.geradoEm).slice(0, 16).replace('T', ' ')) + '.</div></section>';
   }
 
-  // P2 — ranking (a estrela)
+  // G4 — usinas que pedem atenção (ordena por TAREFAS EM ABERTO — spec 22/09)
   const top = M.rank.slice(0, 10);
   const resto = M.rank.slice(10);
-  const mxR = Math.max(1, ...top.map(x => x.criadas));
-  h += '<section class="rex-quebra"><h2>' + sec('Usinas que pedem atenção') + ' <small>corretivas por OS distinta · ordenado pelas criadas no período</small></h2>'
-    + '<table class="rex-tbl rex-rank"><tr><th>#</th><th>Usina</th><th>Criadas no período</th><th>Emerg.</th><th>Tend.</th><th>Abertas hoje</th><th>Mais antiga</th></tr>'
+  const mxR = Math.max(1, ...top.map(x => x.abertas));
+  h += '<section class="rex-quebra"><h2>' + sec('Usinas que pedem atenção')
+    + ' <small>ordenado por tarefas em aberto hoje · detalhe das tarefas na Parte Tática</small></h2>'
+    + '<table class="rex-tbl rex-rank"><tr><th>#</th><th>Usina</th><th>Tarefas em aberto</th><th>OSs corretivas abertas</th><th>Mais antiga</th><th>OSs corretivas criadas no período</th></tr>'
     + top.map((x, i) => '<tr><td>' + (i + 1) + '</td><td class="rex-esq">' + rexEsc(x.usina) + '</td>'
-      + '<td class="rex-esq"><i class="rex-barra" style="width:' + Math.round(100 * x.criadas / mxR) + '%"></i><b>' + x.criadas + '</b></td>'
-      + '<td>' + (x.emerg || '—') + '</td>'
-      + '<td class="' + (x.criadas > x.prev ? 'rex-red' : x.criadas < x.prev ? 'rex-grn' : '') + '">'
-      + (x.criadas > x.prev ? '▲ +' + (x.criadas - x.prev) : x.criadas < x.prev ? '▼ −' + (x.prev - x.criadas) : '=') + '</td>'
-      + '<td>' + (x.abertas ? '<b class="rex-red">' + x.abertas + '</b>' : '0') + '</td>'
-      + '<td>' + (x.maisAntiga ? x.maisAntiga + ' d' : '—') + '</td></tr>').join('')
+      + '<td class="rex-esq"><i class="rex-barra" style="width:' + Math.round(100 * x.abertas / mxR) + '%"></i><b>' + rexN(x.abertas) + '</b></td>'
+      + '<td>' + (x.corrAb ? '<b class="rex-red">' + x.corrAb + '</b>' : '—') + '</td>'
+      + '<td>' + (x.maisAntiga ? x.maisAntiga + ' d' : '—') + '</td>'
+      + '<td>' + (x.criadas || '—') + (x.emerg ? ' <small>(' + x.emerg + ' emerg.)</small>' : '') + '</td></tr>').join('')
     + (resto.length ? '<tr class="rex-resto"><td></td><td class="rex-esq">demais usinas (' + resto.length + ')</td><td class="rex-esq"><b>'
-      + resto.reduce((s, x) => s + x.criadas, 0) + '</b></td><td>' + resto.reduce((s, x) => s + x.emerg, 0) + '</td><td></td><td>'
-      + resto.reduce((s, x) => s + x.abertas, 0) + '</td><td></td></tr>' : '')
-    + '</table><div class="rex-nota">Tend. = criadas neste período vs período anterior de mesmo tamanho (' + rexFmt(M.a) + ' p/ trás).</div></section>';
+      + resto.reduce((s, x) => s + x.abertas, 0) + '</b></td><td>' + resto.reduce((s, x) => s + x.corrAb, 0) + '</td><td></td><td>'
+      + resto.reduce((s, x) => s + x.criadas, 0) + '</td></tr>' : '')
+    + '</table></section>';
 
-  // emergenciais
-  if (M.emergs.length) {
-    h += '<section><h2>' + sec('Corretivas emergenciais do período') + ' <small>' + M.emergs.length + ' OS</small></h2>'
-      + '<table class="rex-tbl"><tr><th>OS</th><th>Usina</th><th>Tarefa</th><th>Situação</th></tr>'
-      + M.emergs.slice(0, 8).map(t => '<tr><td>' + rexEsc(t.os) + '</td><td class="rex-esq">' + rexEsc(t.usina) + '</td>'
-        + '<td class="rex-esq">' + rexEsc(String(t.tarefa || '').slice(0, 60)) + '</td>'
-        + '<td>' + (rexFin(t) ? '<span class="gpv-cel ok">resolvida</span>' : t.aberta ? '<span class="gpv-cel crit">aberta' + (t.dias ? ' · ' + t.dias + 'd' : '') + '</span>' : rexEsc(t.estado)) + '</td></tr>').join('')
-      + (M.emergs.length > 8 ? '<tr class="rex-resto"><td></td><td class="rex-esq" colspan="3">+' + (M.emergs.length - 8) + ' não listadas</td></tr>' : '')
+  // G5 — top 10 que mais rolaram (todas as semanas do período, 1 linha por OS)
+  const rolMap = new Map();
+  SEM.forEach(s => s.rolagens.forEach(x => {
+    const cur = rolMap.get(x.os);
+    if (!cur || x.vezes > cur.vezes) rolMap.set(x.os, x);
+  }));
+  const rol10 = Array.from(rolMap.values()).sort((x, y) => y.vezes - x.vezes).slice(0, 10);
+  if (rol10.length) {
+    h += '<section><h2>' + sec('Top 10 — tarefas que mais rolaram')
+      + ' <small>nº de semanas em que a OS entrou na programação</small></h2>'
+      + '<table class="rex-tbl"><tr><th>OS</th><th>Usina</th><th>Tarefa</th><th>Tipo</th><th>Rolagens</th><th>Situação</th></tr>'
+      + rol10.map(x => '<tr><td>' + rexEsc(x.os) + '</td><td class="rex-esq">' + rexEsc(rexUsiCurta(x.usina)) + '</td>'
+        + '<td class="rex-esq">' + rexEsc(String(x.tarefa || '').replace(/^\[[^\]]*\]\s*-?\s*/, '').slice(0, 55)) + '</td>'
+        + '<td>' + rexEsc(x.tipo) + '</td><td><b class="' + (x.vezes >= 6 ? 'rex-red' : '') + '">' + x.vezes + '×</b></td>'
+        + '<td>' + (x.fin ? '<span class="gpv-cel ok">feita</span>' : '<span class="gpv-cel crit">em aberto</span>') + '</td></tr>').join('')
       + '</table></section>';
+  }
+
+  // ═════════ PARTE 2 · VISÃO TÁTICA ═════════
+  if (SW || (CF && CF.porUsina && CF.porUsina.length)) {
+    h += '<div class="rex-parte rex-quebra">Visão Tática — cluster a cluster, usina a usina'
+      + '<small>A partir daqui, os mesmos resultados abertos no detalhe: cada cluster, cada usina, cada atividade em aberto.</small></div>';
+  }
+
+  // T1 — programação por cluster × dia (heatmap da semana mais recente)
+  if (SW && SW.CL.length) {
+    h += '<section><h2>' + sec('Programação por cluster e dia') + ' <small>' + rexEsc(SW.label)
+      + ' · executadas/planejadas por dia · pior aderência primeiro</small></h2>'
+      + '<table class="rex-tbl"><tr><th>Cluster</th>' + REX_DIAS.map(d => '<th>' + d + '</th>').join('')
+      + '<th>Semana</th></tr>'
+      + SW.CL.map(c => {
+          const p = pctT(c.f, c.p);
+          return '<tr><td class="rex-esq"><b>' + rexEsc(c.cluster) + '</b><br><small>'
+            + rexEsc(c.usinas.join(', ').slice(0, 90)) + '</small></td>'
+            + REX_DIAS.map(d => {
+                const x = c.dias[d];
+                if (!x || !x.p) return '<td><span class="gpv-cel nulo">—</span></td>';
+                return '<td><span class="gpv-cel ' + rexFx(pctT(x.f, x.p)) + '">' + x.f + '/' + x.p + '</span></td>';
+              }).join('')
+            + '<td><span class="gpv-cel ' + rexFx(p) + '"><b>' + p + '%</b></span></td></tr>';
+        }).join('')
+      + '</table></section>';
+  }
+
+  // T2 — tarefas do plano da semana ainda em aberto
+  if (SW && SW.abertasPlano.length) {
+    const ab = SW.abertasPlano.slice(0, 40);
+    h += '<section><h2>' + sec('O que ficou em aberto do plano da semana')
+      + ' <small>' + rexN(SW.abertasPlano.length) + ' tarefa(s) · ' + rexEsc(SW.label) + '</small></h2>'
+      + '<table class="rex-tbl"><tr><th>Cluster</th><th>Usina</th><th>Tarefa</th><th>Tipo</th><th>Dia</th><th>OS</th></tr>'
+      + ab.map(x => '<tr><td class="rex-esq">' + rexEsc(x.cluster) + '</td><td class="rex-esq">' + rexEsc(x.usina) + '</td>'
+        + '<td class="rex-esq">' + rexEsc(String(x.tarefa || '').replace(/^\[[^\]]*\]\s*-?\s*/, '').slice(0, 50)) + '</td>'
+        + '<td>' + rexEsc(x.tipo) + '</td><td>' + x.dia + '</td><td>' + rexEsc(x.os) + '</td></tr>').join('')
+      + (SW.abertasPlano.length > 40 ? '<tr class="rex-resto"><td></td><td class="rex-esq" colspan="5">+'
+        + (SW.abertasPlano.length - 40) + ' não listadas — a lista completa vai no Excel da semana</td></tr>' : '')
+      + '</table></section>';
+  }
+
+  // T3 — confiabilidade por usina: top 5 usinas (por falhas) × top 5 ativos
+  if (CF && CF.porUsina && CF.porUsina.length) {
+    const nf = (v, c) => (+v).toFixed(c).replace('.', ',');
+    const topU = CF.porUsina.slice(0, 5);
+    const restoU = CF.porUsina.slice(5);
+    h += '<section><h2>' + sec('Confiabilidade ativo a ativo — usinas com mais falhas')
+      + ' <small>top 5 usinas · top 5 ativos de cada · ordem por nº de falhas</small></h2>';
+    topU.forEach(u => {
+      const at = u.ativos.slice(0, 5);
+      const restoN = u.ativos.slice(5).reduce((s, x) => s + x.n, 0);
+      h += '<div class="rex-h3">' + rexEsc(u.usina) + ' <em>· MTBF ' + nf(u.mtbf, 0) + ' h · MTTR '
+        + nf(u.mttr, 2) + ' h · Disp. ' + nf(100 * u.disp, 1) + '% · ' + rexN(u.n) + ' falhas</em></div>'
+        + '<table class="rex-tbl"><tr><th>Ativo</th><th>Falhas</th><th>MTBF (h)</th><th>MTTR (h)</th><th>Disp. inerente</th></tr>'
+        + at.map(x => '<tr><td class="rex-esq">' + rexEsc(String(x.ativo).slice(0, 55)) + '</td><td>' + rexN(x.n) + '</td>'
+          + '<td>' + nf(x.mtbf, 0) + '</td><td>' + nf(x.mttr, 2) + '</td>'
+          + '<td class="' + (x.disp < 0.9 ? 'rex-red' : '') + '"><b>' + nf(100 * x.disp, 1) + '%</b></td></tr>').join('')
+        + (restoN ? '<tr class="rex-resto"><td class="rex-esq">demais ativos (' + (u.ativos.length - 5) + ')</td><td>'
+          + rexN(restoN) + '</td><td></td><td></td><td></td></tr>' : '')
+        + '</table>';
+    });
+    if (restoU.length)
+      h += '<div class="rex-nota">Demais usinas do recorte (falhas): '
+        + restoU.slice(0, 30).map(u => rexEsc(rexUsiCurta(u.usina)) + ' (' + u.n + ')').join(', ')
+        + (restoU.length > 30 ? '…' : '') + '.</div>';
+    h += '</section>';
+  }
+
+  // T4 — tarefas em aberto das usinas críticas (top 5 do ranking)
+  const criticas = M.rank.filter(x => x.abertas > 0).slice(0, 5);
+  if (criticas.length) {
+    h += '<section><h2>' + sec('Usinas críticas — o que está em aberto')
+      + ' <small>top 5 do ranking · até 8 tarefas por usina, da mais antiga para a mais nova</small></h2>';
+    criticas.forEach(x => {
+      h += '<div class="rex-h3">' + rexEsc(x.usina) + ' <em>· ' + rexN(x.abertas) + ' em aberto · mais antiga '
+        + (x.maisAntiga || 0) + ' d</em></div>'
+        + '<table class="rex-tbl"><tr><th>Tarefa</th><th>Tipo</th><th>Aberta há</th><th>OS</th></tr>'
+        + x.tarefas.slice(0, 8).map(t => '<tr><td class="rex-esq">'
+          + rexEsc(String(t.tarefa || '').replace(/^\[[^\]]*\]\s*-?\s*/, '').slice(0, 60)) + '</td>'
+          + '<td>' + rexEsc(t.tipo) + '</td><td>' + ((t.dias || 0) + ' d') + '</td><td>' + rexEsc(t.os) + '</td></tr>').join('')
+        + (x.abertas > 8 ? '<tr class="rex-resto"><td class="rex-esq" colspan="4">+' + (x.abertas - 8) + ' tarefas não listadas</td></tr>' : '')
+        + '</table>';
+    });
+    h += '</section>';
   }
 
   // grandes manutenções (interno + Gerencial decifrada)
