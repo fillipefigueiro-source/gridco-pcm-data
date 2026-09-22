@@ -1194,3 +1194,29 @@ Verificado servindo o repositório em localhost e clicando pela interface: com S
 mostra 1.589 de 24.692 tarefas, a etiqueta diz "Sigla: MPA · anual", a matriz de preventivas
 rotula "Sigla" e a "PCM geral" segue rotulando "Tipo". Athon fecha 94% (506/536) nas anuais, com
 queda para 69% em setembro — recorte que some quando MPM, MPS e MPA aparecem somadas.
+
+### O mpas.json é publicado de fora deste repositório (22/09)
+
+Descoberto ao testar os shims com `py -3 atualizar_mpas.py --so-gerar`. A rodada local
+terminou bem (exit 0), mas produziu **172 manutenções / 141 KB**, enquanto o `mpas.json`
+publicado traz **239 / 766 KB** — e é republicado 2 a 3 vezes por dia, com a mensagem
+`mpas.json atualizado (N manutencoes)`.
+
+**Nenhum script deste repositório escreve essa mensagem**, e as três tarefas agendadas
+desta máquina estão **Disabled** e não tocam em MPAS. Ou seja: existe um publicador do
+`mpas.json` **rodando em outro lugar**, que não está versionado aqui e que ninguém
+mapeou. É a quinta fonte manual do painel, além das quatro já conhecidas.
+
+Por que a contagem difere: a Gerencial desta máquina é de **15/04/2026**, já sem a aba
+`MPAS` (virou `Zeladoria e MPAS` em 24/08) e sem a `Compra Equip MPA 2026`. O gerador
+trata isso — o comentário dele prevê "312 brutos contra 172 coletadas" —, então **172 é
+o número correto para esta planilha**. Quem produz 239 está lendo outra.
+
+⚠ **Risco imediato:** rodar `atualizar_mpas.py` **sem** `--so-gerar` nesta máquina publica
+as 172 por cima das 239, degradando a aba Gestão MPAS sem erro nenhum. Não rode sem
+antes achar o publicador.
+
+A conversão em shim **não causou nada disso**: a única diferença entre o original e a
+cópia do repositório é a linha do `AQUI`, e ela resolve para a mesma pasta do OneDrive.
+O caminho da Gerencial nem passa por `AQUI` — vem de `GERENCIAL_PCM_PATH` ou de um
+caminho absoluto dentro do `Site_Gestao_MPAS/gerar_calendario_mpas.py`.
