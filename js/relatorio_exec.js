@@ -136,31 +136,25 @@ function rexSemanas(bd) {
     if (!seg) return;
     const sex = rexIso(new Date(new Date(seg + 'T12:00:00').getTime() + 4 * 86400000));
     if (sex < REX.de || seg > REX.ate) return;             // fora do período pedido
-    const rows = (w.rows || []).filter(rexEscopoFiltro);
+    // PLANO = a planilha da Programação da semana (ajustes até o fechamento
+    // contam — não é foto de sexta 8h). O gerador injeta linhas extras com
+    // foraDoPlano:true, mas só de seg→sáb 00h; por isso o "fora do plano"
+    // daqui é recalculado do Fracttal com a semana CHEIA (seg→dom).
+    const rows = (w.rows || []).filter(r => rexEscopoFiltro(r) && !r.foraDoPlano);
     if (!rows.length) return;
+    const dom = rexIso(new Date(new Date(seg + 'T12:00:00').getTime() + 6 * 86400000));
     const osPlan = new Set(rows.map(r => String(r.os_id)));
-    // rolagem (campo `vezes`): ≥1 = estava no PLANO DA SEXTA; 0 = foi ENCAIXADA
-    // na semana depois do plano fechado (regra do programador, conf. Davi 21/09).
-    // A aderência mede só o plano da sexta; as encaixadas têm conta própria.
     const G = {};
-    let plan = 0, fin = 0, emergPlan = 0, encx = 0, encxFin = 0;
-    const encxCorrOS = new Set();
+    let plan = 0, fin = 0, emergPlan = 0;
     rows.forEach(r => {
-      const feito = rexFinBd(r.status);
-      if ((+r.vezes || 0) >= 1) {
-        const g = G[rexGrupoBd(r.tipo)] || (G[rexGrupoBd(r.tipo)] = { p: 0, f: 0 });
-        g.p++; plan++;
-        if (feito) { g.f++; fin++; }
-        if (/emergencial/i.test(r.tipo || '')) emergPlan++;
-      } else {
-        encx++;
-        if (feito) encxFin++;
-        if (rexGrupoBd(r.tipo) === 'Corretivas') encxCorrOS.add(String(r.os_id));
-      }
+      const g = G[rexGrupoBd(r.tipo)] || (G[rexGrupoBd(r.tipo)] = { p: 0, f: 0 });
+      g.p++; plan++;
+      if (rexFinBd(r.status)) { g.f++; fin++; }
+      if (/emergencial/i.test(r.tipo || '')) emergPlan++;
     });
-    // fora do plano — executadas na semana sem passar pela programação (gestao_pcm)
+    // fora do plano — executadas na semana (seg→dom) sem estar na planilha
     const T = gpScopedTarefas().filter(rexEscopoFiltro);
-    const fora = T.filter(t => rexFin(t) && rexRange(t.dataFinal, seg, sex) && !osPlan.has(String(t.os)));
+    const fora = T.filter(t => rexFin(t) && rexRange(t.dataFinal, seg, dom) && !osPlan.has(String(t.os)));
     // reprogramadas: 1 linha por OS, com o maior nº de vezes
     const porOS = new Map();
     rows.forEach(r => {
@@ -177,8 +171,8 @@ function rexSemanas(bd) {
     pend.forEach(p => { const m = String(p.motivo || '—'); motivos[m] = (motivos[m] || 0) + 1; });
     const topMot = Object.entries(motivos).sort((x, y) => y[1] - x[1]).slice(0, 3);
     out.push({ week: w.week, label: w.label, seg, sex, plan, fin, G, emergPlan,
-      fora: fora.length, foraCorr: fora.filter(rexCorretiva).length,
-      encx, encxFin, encxCorr: encxCorrOS.size, rolagens, pend: pend.length, topMot,
+      fora: fora.length, foraCorr: new Set(fora.filter(rexCorretiva).map(t => t.os)).size,
+      rolagens, pend: pend.length, topMot,
       atual: bd.semana_ativa === w.week });
   });
   return out.sort((x, y) => (x.week < y.week ? -1 : 1));
@@ -413,11 +407,10 @@ async function rexGerar() {
       const ad = s.plan ? Math.round(100 * s.fin / s.plan) : 0;
       h += '<div class="rex-h3">' + rexEsc(s.label) + (s.atual ? ' <em>— semana corrente, parcial</em>' : '') + '</div>'
         + '<div class="rex-kpis">'
-        + kpi(ad + '%', 'aderência ao plano da sexta', ad < 60 ? 'red' : ad < 85 ? 'amb' : 'grn')
-        + kpi(rexN(s.plan), 'planejadas na sexta')
+        + kpi(ad + '%', 'aderência ao plano da semana', ad < 60 ? 'red' : ad < 85 ? 'amb' : 'grn')
+        + kpi(rexN(s.plan), 'tarefas no plano')
         + kpi(rexN(s.fin), 'executadas do plano', 'grn')
-        + kpi(rexN(s.encx), 'encaixadas na semana · ' + s.encxCorr + ' OSs corretivas · ' + s.encxFin + ' já executadas')
-        + kpi(rexN(s.fora), 'fora do plano · ' + s.foraCorr + ' corretivas', 'amb')
+        + kpi(rexN(s.fora), 'executadas fora do plano · ' + s.foraCorr + ' OSs corretivas', 'amb')
         + '</div>'
         + '<table class="rex-tbl rex-rank"><tr><th>Tipo</th><th>Planejadas</th><th>Executadas</th><th>%</th></tr>'
         + ['Preventivas', 'Corretivas', 'Religamentos', 'Demais'].filter(g => s.G[g]).map(g => {
@@ -434,10 +427,9 @@ async function rexGerar() {
         + (s.pend ? '<div class="rex-nota"><b>Não coube na semana:</b> ' + rexN(s.pend) + ' tarefa(s)'
             + (s.topMot.length ? ' — motivos: ' + s.topMot.map(([m, n]) => rexEsc(m) + ' (' + n + ')').join('; ') : '') + '</div>' : '');
     });
-    h += '<div class="rex-nota">Planejado = o que estava no plano fechado na sexta (rolagem ≥ 1) · '
-      + 'encaixada = entrou na programação depois do plano (rolagem 0) · executado = tarefa Finalizada · '
-      + '"fora do plano" = finalizadas na semana sem passar pela programação · '
-      + 'preventiva mede cumprimento do plano; corretiva mede resposta à demanda.</div></section>';
+    h += '<div class="rex-nota">Plano = a planilha da Programação da semana (ajustes até o fechamento contam; '
+      + 'não é a foto de sexta 8h) · executado = tarefa Finalizada · fora do plano = finalizadas de segunda a '
+      + 'DOMINGO sem estar na planilha · preventiva mede cumprimento do plano; corretiva mede resposta à demanda.</div></section>';
   }
 
   // tendência semanal
