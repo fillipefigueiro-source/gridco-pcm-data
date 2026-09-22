@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-22T17:43:14Z",
+  "geradoEm": "2026-09-22T17:54:33Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,9 +8,9 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4583,
-        "emAberto": 27,
-        "atrasadas": 20,
+        "total": 4582,
+        "emAberto": 26,
+        "atrasadas": 19,
         "concluidas30d": 747,
         "concluidas7d": 201,
         "naSemanaCorrente": 43
@@ -33,7 +33,7 @@
         },
         {
           "semana": "W38",
-          "criadas": 180,
+          "criadas": 179,
           "finalizadas": 191
         },
         {
@@ -46,15 +46,15 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4583,
-            "emAberto": 27
+            "total": 4582,
+            "emAberto": 26
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 600,
-            "emAberto": 4
+            "total": 599,
+            "emAberto": 3
           },
           {
             "nome": "Marcos  Camargo",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 27,
-      "atrasadas": 20,
+      "total": 26,
+      "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 24,
+        "naoIniciada": 23,
         "emProgresso": 0,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 27
+        "(sem equipe)": 26
       },
       "oss": [
         {
@@ -300,24 +300,6 @@
           "supervisor": "Raphael Vitoriano ",
           "status": "Não Iniciada",
           "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
-          "criticidade": "",
-          "dataProgramada": "2026-09-16",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "13674",
-          "ativo": "Inversor 1.2 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
           "criticidade": "",
           "dataProgramada": "2026-09-16",
           "dataCriacao": "2026-09-16",
@@ -3585,9 +3567,9 @@
       "historicoTotal": 1881,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3824,
+        "local": 3823,
         "remotoEmAberto": 10,
-        "localEmAberto": 17,
+        "localEmAberto": 16,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -3882,9 +3864,9 @@
       "total": 68,
       "atrasadas": 58,
       "porStatus": {
-        "naoIniciada": 63,
+        "naoIniciada": 62,
         "emProgresso": 0,
-        "pausada": 5,
+        "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4872,14 +4854,15 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPA - RSU",
           "criticidade": "",
           "dataProgramada": "2026-09-21",
           "dataCriacao": "2026-09-18",
-          "dataInicial": "",
+          "dataInicial": "2026-09-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "atrasada": true
         },
         {
@@ -8614,7 +8597,7 @@
           "responsavel": "Luis  Moura",
           "criadoPor": "Juliana Cândido ",
           "supervisor": "Luis  Moura",
-          "status": "Finalizados",
+          "status": "Finalizada",
           "tarefa": "[Garantia] - Trackers com falha de operação - Brdowski",
           "criticidade": "",
           "dataProgramada": "2026-07-07",
@@ -12727,12 +12710,12 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 146,
-        "emAberto": 14,
-        "atrasadas": 14,
+        "total": 148,
+        "emAberto": 16,
+        "atrasadas": 15,
         "concluidas30d": 27,
         "concluidas7d": 12,
-        "naSemanaCorrente": 0
+        "naSemanaCorrente": 1
       },
       "mttr": {
         "horas": 447.11,
@@ -12752,12 +12735,12 @@
         },
         {
           "semana": "W38",
-          "criadas": 13,
+          "criadas": 14,
           "finalizadas": 11
         },
         {
           "semana": "W39",
-          "criadas": 0,
+          "criadas": 1,
           "finalizadas": 1
         }
       ],
@@ -12765,15 +12748,15 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 146,
-            "emAberto": 14
+            "total": 148,
+            "emAberto": 16
           }
         ],
         "responsaveis": [
           {
             "nome": "João Vieira",
-            "total": 38,
-            "emAberto": 8
+            "total": 39,
+            "emAberto": 9
           },
           {
             "nome": "Carlos Bruno  Pessanha Pereira",
@@ -12797,16 +12780,16 @@
           }
         ]
       },
-      "total": 14,
-      "atrasadas": 14,
+      "total": 16,
+      "atrasadas": 15,
       "porStatus": {
-        "naoIniciada": 13,
+        "naoIniciada": 15,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 14
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -12930,6 +12913,23 @@
           "atrasada": true
         },
         {
+          "osId": "13674",
+          "ativo": "Inversor 1.2 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-16",
+          "dataCriacao": "2026-09-16",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
           "osId": "13590",
           "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { SBT500-INVR1.1 }",
           "equipe": "",
@@ -13047,6 +13047,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "14360",
+          "ativo": "Estação Meteorológica  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "João Vieira ",
+          "status": "Não Iniciada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-09-25",
+          "dataCriacao": "2026-09-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -14880,6 +14897,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "14360",
+      "ativo": "Estação Meteorológica  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "João Vieira ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "João Vieira ",
+      "status": "Não Iniciada",
+      "tarefa": "[ETM] - Coleta e análise de dados",
+      "criticidade": "",
+      "dataProgramada": "2026-09-25",
+      "dataCriacao": "2026-09-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "14358",
       "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
       "equipe": "",
@@ -15109,22 +15142,6 @@
       "tarefa": "[Tracker 30.100] - Verificação de Tracker 1.30",
       "criticidade": "",
       "dataProgramada": "2026-09-23",
-      "dataCriacao": "2026-09-18",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "13880",
-      "ativo": "RSU 1      { THPN-SPP300-RSU1 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPA - RSU",
-      "criticidade": "",
-      "dataProgramada": "2026-09-21",
       "dataCriacao": "2026-09-18",
       "dataInicial": "",
       "dataFinal": "",
@@ -15466,8 +15483,7 @@
       "dataCriacao": "2026-09-16",
       "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
+      "linkFracttal": ""
     },
     {
       "osId": "13657",
@@ -17818,6 +17834,23 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
+    },
+    {
+      "osId": "13880",
+      "ativo": "RSU 1      { THPN-SPP300-RSU1 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Eduardo  Mendes",
+      "status": "pausado",
+      "tarefa": "[Grid Co.] - MPA - RSU",
+      "criticidade": "",
+      "dataProgramada": "2026-09-21",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "2026-09-22",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0
     },
     {
       "osId": "7103",
@@ -20796,7 +20829,7 @@
     }
   ],
   "historicoTotal": 3008,
-  "totalGeral": 6448,
+  "totalGeral": 6449,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
