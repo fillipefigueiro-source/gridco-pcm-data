@@ -88,6 +88,10 @@ const rexCorretiva = t => String(t.tipo || '').toLowerCase().indexOf('corretiva'
 const rexEmerg = t => String(t.tipo || '').toLowerCase().indexOf('emergencial') >= 0;
 const rexRelig = t => String(t.tipo || '').toLowerCase().indexOf('religa') >= 0;
 const rexFin = t => String(t.estado || '') === 'Finalizada';
+// "aberta de verdade" = tarefa aberta E a OS ainda viva. Tarefa aberta dentro
+// de OS já concluída é registro histórico (ninguém vai agir nela) — não entra
+// em ranking, listas nem cards de backlog (pedido de 22/09, caso OS 6308).
+const rexAbertaViva = t => t.aberta && String(t.osStatus || '') !== 'Finalizados';
 const rexRange = (v, a, b) => { const d = String(v || '').slice(0, 10); return d >= a && d <= b; };
 
 function rexEscopoFiltro(t) {
@@ -221,8 +225,8 @@ function rexModelo() {
   const finalizadas = T.filter(t => rexFin(t) && rexRange(t.dataFinal, a, b));
   const prog = T.filter(t => rexRange(t.dataProg, a, b));
   const progFin = prog.filter(rexFin);
-  const corrAbertas = T.filter(t => rexCorretiva(t) && t.aberta);
-  const mais30 = T.filter(t => t.aberta && (t.dias || 0) > 30);
+  const corrAbertas = T.filter(t => rexCorretiva(t) && rexAbertaViva(t));
+  const mais30 = T.filter(t => rexAbertaViva(t) && (t.dias || 0) > 30);
   const horas = finalizadas.reduce((s, t) => s + (+t.dur || 0), 0);
 
   // plano preventivo do período, por sigla (fração p/ MPA/MPS — spec Plano&Fila)
@@ -241,7 +245,7 @@ function rexModelo() {
   const u = n => { let x = porUsina.get(n); if (!x) { x = { abertas: 0, corrAb: new Set(), criadas: new Set(), emerg: new Set(), maisAntiga: 0, tarefas: [] }; porUsina.set(n, x); } return x; };
   T.forEach(t => {
     const x = u(t.usina);
-    if (t.aberta) {
+    if (rexAbertaViva(t)) {
       x.abertas++;
       if (rexCorretiva(t)) x.corrAb.add(t.os);
       if ((t.dias || 0) > x.maisAntiga) x.maisAntiga = t.dias || 0;
@@ -284,7 +288,7 @@ function rexModelo() {
     if (!cri && !fin) return;
     const k = tipoDe(t);
     const o = tipos[k] || (tipos[k] = { criadas: 0, fin: 0, abertas: 0 });
-    if (cri) o.criadas++; if (fin) o.fin++; if (cri && t.aberta) o.abertas++;
+    if (cri) o.criadas++; if (fin) o.fin++; if (cri && rexAbertaViva(t)) o.abertas++;
   });
 
   // grandes (Gerencial), quando decifrada — respeitando o escopo
@@ -660,7 +664,8 @@ async function rexGerar() {
   h += '<footer class="rex-pe">Fonte: CMMS Fracttal via gestao_pcm.json (dados de '
     + rexEsc((GESTAO_DB && GESTAO_DB.geradoEm || '').slice(0, 16).replace('T', ' ')) + ')'
     + (M.ger && !modoCliente ? ' + Gerencial (aba MPAS)' : '')
-    + ' · corretivas contadas por OS distinta · concluído = tarefa Finalizada (nunca o Status da OS) · Grid Co. — PCM</footer>'
+    + ' · corretivas contadas por OS distinta · concluído = tarefa Finalizada (nunca o Status da OS) · '
+    + 'tarefas de OS já concluída não contam como abertas · Grid Co. — PCM</footer>'
     + '</div>';
 
   let v = document.getElementById('rex-view');
