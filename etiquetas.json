@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-23T19:25:06Z",
+  "geradoEm": "2026-09-23T19:36:36Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4608,
+        "total": 4609,
         "emAberto": 26,
         "atrasadas": 18,
-        "concluidas30d": 756,
-        "concluidas7d": 212,
-        "naSemanaCorrente": 69
+        "concluidas30d": 757,
+        "concluidas7d": 213,
+        "naSemanaCorrente": 70
       },
       "mttr": {
-        "horas": 19.91,
-        "label": "19h 55min",
-        "amostra": 756
+        "horas": 19.89,
+        "label": "19h 53min",
+        "amostra": 757
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W39",
-          "criadas": 72,
-          "finalizadas": 66
+          "criadas": 73,
+          "finalizadas": 67
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4608,
+            "total": 4609,
             "emAberto": 26
           }
         ],
@@ -59,7 +59,7 @@
           {
             "nome": "Marcos  Camargo",
             "total": 506,
-            "emAberto": 3
+            "emAberto": 2
           },
           {
             "nome": "Felipe Silva",
@@ -81,8 +81,8 @@
       "total": 26,
       "atrasadas": 18,
       "porStatus": {
-        "naoIniciada": 22,
-        "emProgresso": 1,
+        "naoIniciada": 21,
+        "emProgresso": 2,
         "pausada": 3,
         "verificacao": 0
       },
@@ -418,6 +418,24 @@
           "atrasada": true
         },
         {
+          "osId": "14463",
+          "ativo": "Inversor 1.1 Huaweii SUN2000-330KTL-H1    { GYT100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Não Iniciada",
+          "tarefa": "[GYT100-INVR1.1] - Religamento do GYT100-INVR1.1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "14462",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -436,38 +454,21 @@
           "atrasada": false
         },
         {
-          "osId": "14461",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Marcos  Camargo",
-          "status": "Não Iniciada",
-          "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-23",
-          "dataCriacao": "2026-09-23",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "14460",
           "ativo": "Inversor 1.1 Huawei SUN2000-330KTL-H1    { VRG100-INVR1.1 }",
           "equipe": "",
           "responsavel": "Marcos Duarte ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Marcos Duarte ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[VRG100-INVR1.1] - Religamento do VRG100-INVR1.1",
           "criticidade": "",
           "dataProgramada": "2026-09-23",
           "dataCriacao": "2026-09-23",
-          "dataInicial": "",
+          "dataInicial": "2026-09-23",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -564,6 +565,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14461",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Marcos  Camargo",
+          "status": "Finalizados",
+          "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-23",
+          "dataInicial": "2026-09-23",
+          "dataFinal": "2026-09-23",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "14450",
           "ativo": "Inversor 5.7 Huawei     { MAB200-INVR5.7 }",
@@ -1941,26 +1962,6 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "13668",
-          "ativo": "Thopen - Poconé 1 - MT  Poconé  Mato Grosso Brasil { THPN-PCN100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizados",
-          "tarefa": "[Thopen - Poconé 1 - MT] - Religamento do Thopen - Poconé 1 - MT",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-20",
-          "dataFinal": "2026-09-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3565,10 +3566,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1881,
+      "historicoTotal": 1882,
       "subClassificacao": {
         "remoto": 760,
-        "local": 3848,
+        "local": 3849,
         "remotoEmAberto": 11,
         "localEmAberto": 15,
         "pctRemoto": 16,
@@ -14815,6 +14816,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14463",
+      "ativo": "Inversor 1.1 Huaweii SUN2000-330KTL-H1    { GYT100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Não Iniciada",
+      "tarefa": "[GYT100-INVR1.1] - Religamento do GYT100-INVR1.1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14462",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -14832,37 +14850,21 @@
       "modalidade": "local"
     },
     {
-      "osId": "14461",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Marcos  Camargo",
-      "status": "Não Iniciada",
-      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-23",
-      "dataCriacao": "2026-09-23",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "14460",
       "ativo": "Inversor 1.1 Huawei SUN2000-330KTL-H1    { VRG100-INVR1.1 }",
       "equipe": "",
       "responsavel": "Marcos Duarte ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Marcos Duarte ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[VRG100-INVR1.1] - Religamento do VRG100-INVR1.1",
       "criticidade": "",
       "dataProgramada": "2026-09-23",
       "dataCriacao": "2026-09-23",
-      "dataInicial": "",
+      "dataInicial": "2026-09-23",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -18197,6 +18199,26 @@
       "atrasada": false
     },
     {
+      "osId": "14461",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Marcos  Camargo",
+      "status": "Finalizados",
+      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-23",
+      "dataInicial": "2026-09-23",
+      "dataFinal": "2026-09-23",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "14450",
       "ativo": "Inversor 5.7 Huawei     { MAB200-INVR5.7 }",
       "equipe": "",
@@ -20483,30 +20505,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13805",
-      "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-      "equipe": "",
-      "responsavel": "Luely  Santos",
-      "criadoPor": "Luely  Santos",
-      "supervisor": "Luely  Santos",
-      "status": "Finalizados",
-      "tarefa": "[Cabine 6] - Religamento da Cabine 6",
-      "criticidade": "",
-      "dataProgramada": "2026-09-17",
-      "dataCriacao": "2026-09-17",
-      "dataInicial": "2026-09-17",
-      "dataFinal": "2026-09-17",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3025,
-  "totalGeral": 6481,
+  "historicoTotal": 3026,
+  "totalGeral": 6482,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
