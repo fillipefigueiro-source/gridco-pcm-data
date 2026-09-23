@@ -104,18 +104,29 @@ Quem mantém é outro time. Se a demanda for sobre o app do técnico, o endereç
 ## 3. Primeiro dia — ambiente
 
 ```bash
-git clone https://github.com/<organização>/gridco-pcm-data.git
+git config --global core.longpaths true      # Windows: evita "Filename too long" no clone
+git clone --depth 1 https://github.com/<organização>/gridco-pcm-data.git
 cd gridco-pcm-data
 pip install -r requirements.txt
 ```
+
+> **Clone raso (`--depth 1`) de propósito.** O histórico tem 157 MB porque o robô commita
+> um `gestao_pcm.json` de 12 MB a cada 15 minutos. O clone raso baixa 46 MB. Se um dia
+> precisar do histórico completo, `git fetch --unshallow`.
 
 Depois, **as variáveis de ambiente**. Nenhuma delas vai para o git:
 
 | Variável | Para quê | Onde conseguir |
 |---|---|---|
-| `FRACTTAL_CLIENT_ID` / `FRACTTAL_CLIENT_SECRET` | ler o CMMS | Secrets do repositório |
+| `FRACTTAL_CLIENT_ID` / `FRACTTAL_CLIENT_SECRET` | ler o CMMS | Secrets do repositório (peça ao dono) |
 | `GITHUB_TOKEN` | `sync_repo.py` publicar | token próprio seu, escopo `repo` + `workflow` |
 | `PCM_PROG_DIR` | achar a pasta do PCM no OneDrive | sua própria sincronização |
+
+**Como os scripts as leem:** `gerar_bd_via_api.carregar_env()` procura um arquivo `.env`
+nesta ordem — ao lado do script, em `$PCM_PROG_DIR/.env`, no diretório atual — e popula as
+variáveis. O jeito mais simples é **um `.env` na sua pasta do PCM no OneDrive**, com as três
+linhas `CHAVE=valor`. Ele está no `.gitignore` e o `.claude/settings.json` proíbe o Claude de
+lê-lo. **Nunca o coloque no checkout do repositório.**
 
 Para conferir que ficou de pé, sem escrever nada:
 
