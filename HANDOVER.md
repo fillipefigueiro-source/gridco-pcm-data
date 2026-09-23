@@ -8,7 +8,7 @@ aponta para lá e diz **em que ordem ler**.
 | Arquivo | O que é | Quando ler |
 |---|---|---|
 | `HANDOVER.md` | este arquivo, o mapa | primeiro |
-| `CLAUDE.md` | as regras que não se violam | antes do primeiro commit |
+| `CLAUDE.md` | as regras que não se violam — o Claude Code lê sozinho | antes do primeiro commit |
 | `ESTADO.md` | 1.196 linhas de tudo que custou caro descobrir | §6 no primeiro dia, o resto ao longo da semana |
 
 > **A leitura mais importante do repositório é a `§6` do `ESTADO.md`.** São falhas que
@@ -24,7 +24,7 @@ Sustenta a programação de manutenção da Grid Co., de ponta a ponta:
 - o **painel** `pcm.gridco.com.br` — página única, login Microsoft, módulos de Semana,
   Gestão PCM, Confiabilidade, Gerencial e Relatórios;
 - **três robôs** no GitHub Actions que mantêm o dado vivo sem ninguém tocar;
-- **dez funções de API** no Azure (pasta `api/`), que fazem o que o navegador não pode:
+- **nove funções de API** no Azure (pasta `api/`), que fazem o que o navegador não pode:
   falar com o Fracttal com credencial, gravar ticket, ler papéis;
 - a **geração da programação semanal**, hoje ainda na máquina do responsável (ver §6).
 
@@ -124,6 +124,27 @@ python aprender_duracoes.py --dry-run
 ```
 
 Se ele listar durações por categoria, o acesso ao Fracttal está bom.
+
+---
+
+## 3b. Trabalhando com o Claude Code
+
+O repositório já vem configurado. Ao rodar `claude` na raiz do checkout:
+
+- o **`CLAUDE.md`** é lido sozinho, em toda sessão. É o contrato: o que nunca fazer, as
+  armadilhas técnicas e as fontes de verdade. **Mantenha-o curto** — ele entra no contexto
+  toda vez, então cada linha ali custa. Detalhe vai para este arquivo ou para o `ESTADO.md`.
+- **`.claude/launch.json`** deixa o preview do painel subir com um comando, servindo a raiz
+  do repositório na porta 8765.
+- **`.claude/settings.json`** libera de antemão o que é só leitura (`git status`, `git log`,
+  `git diff`, o `--dry-run`) e **bloqueia a leitura do `.env` e do `contatos_relatorio.json`**,
+  que têm segredo e e-mail de cliente.
+
+O `.claude/settings.local.json` é por máquina e está no `.gitignore` — é onde as suas
+permissões pessoais se acumulam, e não deve ser versionado.
+
+> Quando descobrir uma armadilha nova, o lugar dela é o `ESTADO.md`. Só suba para o
+> `CLAUDE.md` o que faria o Claude **errar na próxima sessão** se não estivesse lá.
 
 ---
 

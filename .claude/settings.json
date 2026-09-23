@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git show:*)",
+      "Bash(git fetch:*)",
+      "Bash(git ls-files:*)",
+      "Bash(git blame:*)",
+      "Bash(python aprender_duracoes.py --dry-run)",
+      "Bash(python -m http.server:*)",
+      "Bash(python -m json.tool:*)",
+      "Bash(pip install -r requirements.txt)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./**/.env)",
+      "Read(./contatos_relatorio.json)"
+    ]
+  }
+}
