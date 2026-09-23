@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-23T16:52:32Z",
+  "geradoEm": "2026-09-23T16:59:46Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4596,
-        "emAberto": 24,
+        "total": 4597,
+        "emAberto": 25,
         "atrasadas": 22,
         "concluidas30d": 746,
         "concluidas7d": 202,
-        "naSemanaCorrente": 57
+        "naSemanaCorrente": 58
       },
       "mttr": {
         "horas": 19.83,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 60,
+          "criadas": 61,
           "finalizadas": 56
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4596,
-            "emAberto": 24
+            "total": 4597,
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 25,
       "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 18,
+        "naoIniciada": 19,
         "emProgresso": 3,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -489,6 +489,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "14435",
+          "ativo": "QGBT 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-QGBT2 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ricardo Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-INP100-QGBT2] - Religamento do THPN-INP100-QGBT2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "14434",
@@ -3534,9 +3552,9 @@
       "historicoTotal": 1871,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3837,
+        "local": 3838,
         "remotoEmAberto": 10,
-        "localEmAberto": 14,
+        "localEmAberto": 15,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -8665,8 +8683,8 @@
       "total": 61,
       "atrasadas": 55,
       "porStatus": {
-        "naoIniciada": 54,
-        "emProgresso": 2,
+        "naoIniciada": 53,
+        "emProgresso": 3,
         "pausada": 5,
         "verificacao": 0
       },
@@ -9640,14 +9658,15 @@
           "responsavel": "Adriano Silva ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Adriano Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 6.2] - Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-09-24",
           "dataCriacao": "2026-09-23",
-          "dataInicial": "",
+          "dataInicial": "2026-09-23",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -14763,6 +14782,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14435",
+      "ativo": "QGBT 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-QGBT2 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Ricardo Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-INP100-QGBT2] - Religamento do THPN-INP100-QGBT2",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14434",
       "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
       "equipe": "",
@@ -14787,14 +14823,15 @@
       "responsavel": "Adriano Silva ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Adriano Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 6.2] - Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-09-24",
       "dataCriacao": "2026-09-23",
-      "dataInicial": "",
+      "dataInicial": "2026-09-23",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "14416",
@@ -20424,7 +20461,7 @@
     }
   ],
   "historicoTotal": 3011,
-  "totalGeral": 6465,
+  "totalGeral": 6466,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
