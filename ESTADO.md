@@ -1245,3 +1245,23 @@ perguntar**.
 ⚠ O risco prático não muda: gerar o `mpas.json` nesta máquina dá **172** contra as **239**
 publicadas, porque a Gerencial daqui é de 15/04. Rodar `atualizar_mpas.py` **sem**
 `--so-gerar` publica as 172 por cima e degrada a aba, sem erro nenhum.
+
+### ⚠ O GitHub Pages voltou a servir a plataforma sem login (achado em 23/09)
+
+A §6g registra, em 24/08, que o Pages foi desligado e que a exposição residual era só o
+`raw.githubusercontent` — que serve `text/plain` com `nosniff` e por isso **não executa** o
+painel. Verificado hoje, sem nenhuma credencial:
+
+    https://fillipefigueiro-source.github.io/gridco-pcm-data/novo.html        200
+    https://fillipefigueiro-source.github.io/gridco-pcm-data/banco_dados.json 200   5,98 MB
+    https://fillipefigueiro-source.github.io/gridco-pcm-data/gestao_pcm.json  200  12,49 MB
+
+**O Pages serve com o Content-Type correto**, então ali o painel roda — é exatamente a
+diferença que tornava o desligamento uma redução real e não cosmética. Todo o banco de
+ordens de todos os clientes está navegável por quem souber a URL, sem login Microsoft.
+
+Não se sabe se foi reativado depois de 24/08 ou se o desligamento nunca chegou a valer.
+
+**Ação:** desligar em *Settings → Pages → Source: None*, antes ou junto com a transferência
+do repositório. Depois conferir que as três URLs acima devolvem 404. Isso não substitui a
+§6f (tirar o dado do git) — apenas fecha de novo o que já tinha sido decidido fechar.
