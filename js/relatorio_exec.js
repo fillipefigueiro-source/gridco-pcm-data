@@ -468,32 +468,36 @@ async function rexGerar() {
         + (function () {
             const gs = REX_GRUPOS.filter(g => s.G[g] || s.NP[g]);
             const tot = { p: 0, f: 0, np: 0, nf: 0 };
+            const mut = '<span class="rex-mut">—</span>';
+            // célula de % no formato pedido: "50% (20/40)"
+            const pctCel = (f, t, div) => {
+              if (!t) return '<td class="' + (div || '') + '">' + mut + '</td>';
+              const p = pctT(f, t);
+              return '<td class="' + (div ? div + ' ' : '') + (p < 60 ? 'rex-red' : p >= 85 ? 'rex-grn' : '')
+                + '"><b>' + p + '%</b> <small>(' + rexN(f) + '/' + rexN(t) + ')</small></td>';
+            };
             const linhas = gs.map(g => {
-              const x = s.G[g] || { p: 0, f: 0 }, n = s.NP[g] || { p: 0, f: 0 }, p = pctT(x.f, x.p);
+              const x = s.G[g] || { p: 0, f: 0 }, n = s.NP[g] || { p: 0, f: 0 };
               tot.p += x.p; tot.f += x.f; tot.np += n.p; tot.nf += n.f;
-              const mut = '<span class="rex-mut">—</span>';
               return '<tr><td class="rex-esq">' + g + '</td>'
                 + '<td class="rex-div">' + (x.p ? rexN(x.p) : mut) + '</td>'
-                + '<td class="rex-esq">' + (x.p ? '<i class="rex-barra" style="width:' + p + '%"></i><b>' + rexN(x.f) + '</b>' : mut) + '</td>'
-                + '<td class="' + (x.p ? (p < 60 ? 'rex-red' : p >= 85 ? 'rex-grn' : '') : '') + '">' + (x.p ? p + '%' : mut) + '</td>'
+                + '<td>' + (x.p ? rexN(x.f) : mut) + '</td>' + pctCel(x.f, x.p)
                 + '<td class="rex-div">' + (n.p ? rexN(n.p) : mut) + '</td>'
-                + '<td>' + (n.p ? '<b>' + rexN(n.f) + '</b>' : mut) + '</td></tr>';
+                + '<td>' + (n.p ? rexN(n.f) : mut) + '</td>' + pctCel(n.f, n.p) + '</tr>';
             }).join('');
-            const pT = pctT(tot.f, tot.p);
-            return '<table class="rex-tbl rex-rank rex-tipos">'
-              + '<colgroup><col style="width:26%"><col style="width:14%"><col style="width:20%">'
-              + '<col style="width:10%"><col style="width:15%"><col style="width:15%"></colgroup>'
+            return '<table class="rex-tbl rex-tipos">'
+              + '<colgroup><col style="width:22%"><col style="width:12%"><col style="width:12%">'
+              + '<col style="width:15%"><col style="width:12%"><col style="width:12%"><col style="width:15%"></colgroup>'
               + '<tr><th rowspan="2" style="vertical-align:bottom">Tipo</th>'
               + '<th colspan="3" class="rex-th-g rex-div">Do plano da semana</th>'
-              + '<th colspan="2" class="rex-th-g rex-th-g2 rex-div">Fora do plano</th></tr>'
+              + '<th colspan="3" class="rex-th-g rex-th-g2 rex-div">Fora do plano</th></tr>'
               + '<tr><th class="rex-div">Planejadas</th><th>Executadas</th><th>%</th>'
-              + '<th class="rex-div rex-th-g2">Surgidas</th><th class="rex-th-g2">Resolvidas</th></tr>'
+              + '<th class="rex-div rex-th-g2">Não planejadas</th><th class="rex-th-g2">Executadas</th><th class="rex-th-g2">%</th></tr>'
               + linhas
               + '<tr class="rex-total"><td class="rex-esq"><b>TOTAL</b></td>'
-              + '<td class="rex-div"><b>' + rexN(tot.p) + '</b></td><td class="rex-esq"><b>' + rexN(tot.f) + '</b></td>'
-              + '<td class="' + (pT < 60 ? 'rex-red' : pT >= 85 ? 'rex-grn' : '') + '"><b>' + pT + '%</b></td>'
-              + '<td class="rex-div"><b>' + rexN(tot.np) + '</b></td><td><b>' + rexN(tot.nf) + '</b></td></tr>'
-              + '</table>';
+              + '<td class="rex-div"><b>' + rexN(tot.p) + '</b></td><td><b>' + rexN(tot.f) + '</b></td>' + pctCel(tot.f, tot.p)
+              + '<td class="rex-div"><b>' + rexN(tot.np) + '</b></td><td><b>' + rexN(tot.nf) + '</b></td>' + pctCel(tot.nf, tot.np)
+              + '</tr></table>';
           })()
         + '<div class="rex-nota"><b>Religamentos remotos na semana: ' + rexN(s.remotos)
         + '</b> — não entram no cálculo: atendimento remoto, sem mobilização do time de campo.</div>'
