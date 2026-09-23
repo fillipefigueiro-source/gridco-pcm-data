@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-23T17:45:35Z",
+  "geradoEm": "2026-09-23T17:57:56Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4601,
-        "emAberto": 26,
+        "total": 4602,
+        "emAberto": 25,
         "atrasadas": 21,
-        "concluidas30d": 749,
-        "concluidas7d": 205,
-        "naSemanaCorrente": 62
+        "concluidas30d": 751,
+        "concluidas7d": 207,
+        "naSemanaCorrente": 63
       },
       "mttr": {
-        "horas": 19.97,
-        "label": "19h 58min",
-        "amostra": 749
+        "horas": 19.92,
+        "label": "19h 55min",
+        "amostra": 751
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W39",
-          "criadas": 65,
-          "finalizadas": 59
+          "criadas": 66,
+          "finalizadas": 61
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4601,
-            "emAberto": 26
+            "total": 4602,
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 26,
+      "total": 25,
       "atrasadas": 21,
       "porStatus": {
-        "naoIniciada": 22,
-        "emProgresso": 1,
+        "naoIniciada": 20,
+        "emProgresso": 2,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 26
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -472,6 +472,24 @@
           "atrasada": true
         },
         {
+          "osId": "14450",
+          "ativo": "Inversor 5.7 Huawei     { MAB200-INVR5.7 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 5.7] - Religamento do Inversor 5.7",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "14442",
           "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
           "equipe": "",
@@ -490,56 +508,21 @@
           "atrasada": false
         },
         {
-          "osId": "14441",
-          "ativo": "Utragaz - Ibirapuã 2 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI200 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Thiago Morais ",
-          "status": "Não Iniciada",
-          "tarefa": "[Utragaz - Ibirapuã 2 - BA] - Religamento do Utragaz - Ibirapuã 2 - BA",
-          "criticidade": "",
-          "dataProgramada": "2026-09-23",
-          "dataCriacao": "2026-09-23",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "14440",
-          "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Thiago Morais ",
-          "status": "Não Iniciada",
-          "tarefa": "[Utragaz - Ibirapuã 1 - BA] - Religamento do Utragaz - Ibirapuã 1 - BA",
-          "criticidade": "",
-          "dataProgramada": "2026-09-23",
-          "dataCriacao": "2026-09-23",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "14435",
           "ativo": "QGBT 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-QGBT2 }",
           "equipe": "",
           "responsavel": "Ricardo Silva ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-INP100-QGBT2] - Religamento do THPN-INP100-QGBT2",
           "criticidade": "",
           "dataProgramada": "2026-09-23",
           "dataCriacao": "2026-09-23",
-          "dataInicial": "",
+          "dataInicial": "2026-09-23",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -564,6 +547,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14441",
+          "ativo": "Utragaz - Ibirapuã 2 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI200 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[Utragaz - Ibirapuã 2 - BA] - Religamento do Utragaz - Ibirapuã 2 - BA",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-23",
+          "dataInicial": "2026-09-23",
+          "dataFinal": "2026-09-23",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14440",
+          "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[Utragaz - Ibirapuã 1 - BA] - Religamento do Utragaz - Ibirapuã 1 - BA",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-23",
+          "dataInicial": "2026-09-23",
+          "dataFinal": "2026-09-23",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "14437",
           "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
@@ -3523,54 +3546,14 @@
           "horasAteFechar": 24.0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13656",
-          "ativo": "SKID 1  Ponto Belo  Espírito Santo Brasil { PTB100-SKID1 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Thiago Morais ",
-          "status": "Finalizados",
-          "tarefa": "[PTB100-SKID1] - Religamento do PTB100-SKID1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-15",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "13648",
-          "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[CPP100-CABN3] - Religamento do CPP100-CABN3",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-15",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1874,
+      "historicoTotal": 1876,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3842,
+        "local": 3843,
         "remotoEmAberto": 10,
-        "localEmAberto": 16,
+        "localEmAberto": 15,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -3792,12 +3775,12 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 796,
-        "emAberto": 65,
+        "total": 797,
+        "emAberto": 66,
         "atrasadas": 56,
         "concluidas30d": 174,
         "concluidas7d": 21,
-        "naSemanaCorrente": 10
+        "naSemanaCorrente": 11
       },
       "mttr": {
         "horas": 307.45,
@@ -3822,7 +3805,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 2,
+          "criadas": 3,
           "finalizadas": 7
         }
       ],
@@ -3830,8 +3813,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 796,
-            "emAberto": 65
+            "total": 797,
+            "emAberto": 66
           }
         ],
         "responsaveis": [
@@ -3841,14 +3824,14 @@
             "emAberto": 6
           },
           {
+            "nome": "Felipe  Lima",
+            "total": 33,
+            "emAberto": 8
+          },
+          {
             "nome": "James Chaves",
             "total": 33,
             "emAberto": 3
-          },
-          {
-            "nome": "Felipe  Lima",
-            "total": 32,
-            "emAberto": 7
           },
           {
             "nome": "Francisco  Santos",
@@ -3862,16 +3845,16 @@
           }
         ]
       },
-      "total": 65,
+      "total": 66,
       "atrasadas": 56,
       "porStatus": {
-        "naoIniciada": 59,
+        "naoIniciada": 60,
         "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 65
+        "(sem equipe)": 66
       },
       "oss": [
         {
@@ -4831,6 +4814,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "14451",
+          "ativo": "Estação Meteorológica  Caxambu  São Paulo Brasil { CXB100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Felipe  Lima",
+          "status": "Não Iniciada",
+          "tarefa": "[Caxambu] - Investigação de possível Hotspot na ETM (Pendências MPS)",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "14374",
@@ -8626,12 +8626,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 768,
-        "emAberto": 59,
+        "total": 769,
+        "emAberto": 60,
         "atrasadas": 54,
         "concluidas30d": 237,
         "concluidas7d": 50,
-        "naSemanaCorrente": 20
+        "naSemanaCorrente": 21
       },
       "mttr": {
         "horas": 260.25,
@@ -8656,7 +8656,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 8,
+          "criadas": 9,
           "finalizadas": 19
         }
       ],
@@ -8664,8 +8664,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 768,
-            "emAberto": 59
+            "total": 769,
+            "emAberto": 60
           }
         ],
         "responsaveis": [
@@ -8696,16 +8696,16 @@
           }
         ]
       },
-      "total": 59,
+      "total": 60,
       "atrasadas": 54,
       "porStatus": {
-        "naoIniciada": 53,
+        "naoIniciada": 54,
         "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 59
+        "(sem equipe)": 60
       },
       "oss": [
         {
@@ -9631,6 +9631,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "14447",
+          "ativo": "Estação Meteorológica  Ibaté  São Paulo Brasil { IBT200-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Rogério Aparecido Paravani ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Rogério Aparecido Paravani ",
+          "status": "Não Iniciada",
+          "tarefa": "[Ibaté 2] - Regularização de comunicação com o CLP",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "13882",
@@ -14763,6 +14780,55 @@
   },
   "ossPublicas": [
     {
+      "osId": "14451",
+      "ativo": "Estação Meteorológica  Caxambu  São Paulo Brasil { CXB100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Felipe  Lima",
+      "status": "Não Iniciada",
+      "tarefa": "[Caxambu] - Investigação de possível Hotspot na ETM (Pendências MPS)",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "14450",
+      "ativo": "Inversor 5.7 Huawei     { MAB200-INVR5.7 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 5.7] - Religamento do Inversor 5.7",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "14447",
+      "ativo": "Estação Meteorológica  Ibaté  São Paulo Brasil { IBT200-ESTM1 }",
+      "equipe": "",
+      "responsavel": "Rogério Aparecido Paravani ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Rogério Aparecido Paravani ",
+      "status": "Não Iniciada",
+      "tarefa": "[Ibaté 2] - Regularização de comunicação com o CLP",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "14442",
       "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
       "equipe": "",
@@ -14780,54 +14846,21 @@
       "modalidade": "local"
     },
     {
-      "osId": "14441",
-      "ativo": "Utragaz - Ibirapuã 2 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI200 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Thiago Morais ",
-      "status": "Não Iniciada",
-      "tarefa": "[Utragaz - Ibirapuã 2 - BA] - Religamento do Utragaz - Ibirapuã 2 - BA",
-      "criticidade": "",
-      "dataProgramada": "2026-09-23",
-      "dataCriacao": "2026-09-23",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "14440",
-      "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Thiago Morais ",
-      "status": "Não Iniciada",
-      "tarefa": "[Utragaz - Ibirapuã 1 - BA] - Religamento do Utragaz - Ibirapuã 1 - BA",
-      "criticidade": "",
-      "dataProgramada": "2026-09-23",
-      "dataCriacao": "2026-09-23",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "14435",
       "ativo": "QGBT 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-QGBT2 }",
       "equipe": "",
       "responsavel": "Ricardo Silva ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-INP100-QGBT2] - Religamento do THPN-INP100-QGBT2",
       "criticidade": "",
       "dataProgramada": "2026-09-23",
       "dataCriacao": "2026-09-23",
-      "dataInicial": "",
+      "dataInicial": "2026-09-23",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -18077,6 +18110,46 @@
       "atrasada": false
     },
     {
+      "osId": "14441",
+      "ativo": "Utragaz - Ibirapuã 2 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI200 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[Utragaz - Ibirapuã 2 - BA] - Religamento do Utragaz - Ibirapuã 2 - BA",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-23",
+      "dataInicial": "2026-09-23",
+      "dataFinal": "2026-09-23",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "14440",
+      "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[Utragaz - Ibirapuã 1 - BA] - Religamento do Utragaz - Ibirapuã 1 - BA",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-23",
+      "dataInicial": "2026-09-23",
+      "dataFinal": "2026-09-23",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "14437",
       "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
       "equipe": "",
@@ -20362,50 +20435,10 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "13789",
-      "ativo": "Inversor 3.7 CANANDIAN SOLAR     { MTS100-INVR3.7 }",
-      "equipe": "",
-      "responsavel": "Francisco  Santos",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Francisco  Santos",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 3.7] - Religamento do Inversor 3.7",
-      "criticidade": "",
-      "dataProgramada": "2026-09-17",
-      "dataCriacao": "2026-09-17",
-      "dataInicial": "2026-09-19",
-      "dataFinal": "2026-09-19",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "13787",
-      "ativo": "RenoGrid - Colíder 2 - MT Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { RNGD-CLD200 }",
-      "equipe": "",
-      "responsavel": "Deivity Jhon Cunha Saugo ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Deivity Jhon Cunha Saugo ",
-      "status": "Finalizados",
-      "tarefa": "[RNGD-CLD200] - Religamento do RNGD-CLD200",
-      "criticidade": "",
-      "dataProgramada": "2026-09-17",
-      "dataCriacao": "2026-09-17",
-      "dataInicial": "2026-09-18",
-      "dataFinal": "2026-09-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3017,
-  "totalGeral": 6470,
+  "historicoTotal": 3019,
+  "totalGeral": 6473,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
