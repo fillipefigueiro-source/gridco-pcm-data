@@ -45,24 +45,40 @@ A origem de tudo é o **Fracttal**, o CMMS da Grid Co. Nada é digitado à mão 
 
 ### Roda na máquina de uma pessoa — **é o que esta transição tem que acabar**
 
-| O quê | Produz | Situação em 22/09 |
+| O quê | Produz | Situação em 23/09 |
 |---|---|---|
 | `programacao_v7.py` | `Programação Semana XX.xlsx` | sexta-feira, manual. **Fase 3 leva para a nuvem** |
-| `gerar_mpas_json.py` | `mpas.json` | script **fora do git** + senha de cifra |
-| `gerar_confiabilidade_json.py` | `confiabilidade.json` | script **fora do git** — dado parado desde 31/07 |
-| `gerar_supervisores_json.py` | `supervisores.json` | script **fora do git** — parado desde 31/07 |
+| `gerar_confiabilidade_json.py` | `confiabilidade.json` | no git e com shim. Em dia — mas veja o aviso |
+| `gerar_supervisores_json.py` | `supervisores.json` | no git e com shim. **Parado desde 31/07** |
+| `gerar_mpas_json.py` + `atualizar_mpas.py` | `mpas.json` | no git e com shim. Em dia — veja o aviso |
 | `exportar_operacoes.py` | `operacoes.json` | manual |
 
 > **Se um dado do painel parece velho, comece por esta tabela.** Seis fontes são de robô e
-> estão sempre em dia; as quatro daqui dependem de alguém lembrar de rodar. Duas estão
-> paradas há 52 dias e ninguém percebeu — porque **sombra não faz barulho**.
+> estão sempre em dia; estas dependem de alguém lembrar de rodar. O `supervisores.json` está
+> parado desde 31/07 e ninguém percebeu — porque **sombra não faz barulho**.
+
+> ⚠ **`mpas.json` e `confiabilidade.json` têm um publicador não identificado.** Os dois são
+> republicados juntos, 2 a 3 vezes por dia, com mensagens (`mpas.json atualizado (N
+> manutencoes)`, `chore: refresh confiabilidade.json [N usinas]`) que **nenhum script deste
+> repositório nem da pasta do PCM escreve**. Os commits saem sob duas identidades: a do git
+> local (`PCM Grid Co.`, configurada com o e-mail do Fabrício) e a do token do GitHub. Não dá
+> para dizer de qual máquina saem — **pergunte ao Fabrício antes de mexer**.
+>
+> Consequência prática: gerar o `mpas.json` localmente hoje dá **172 manutenções** contra as
+> **239** publicadas, porque a Gerencial desta máquina é de 15/04. Enquanto isso não for
+> esclarecido, rode o `atualizar_mpas.py` **apenas com `--so-gerar`** — sem a flag ele publica
+> as 172 por cima das 239 e a aba Gestão MPAS perde dado, sem erro nenhum.
 
 ### Os scripts que vieram para o git na transição
 
-Até 22/09/2026 havia **33 scripts que só existiam numa máquina**. Todos foram versionados.
-Vinte ficaram **na raiz**, porque resolvem caminho por `__file__` e mover mudaria onde
-gravam. Treze foram para `ferramentas/descontinuado/`, que tem um README explicando cada um
-— **não rode nada de lá**: três deles ainda funcionam e brigariam com os robôs.
+Até 22/09/2026 havia **33 scripts que só existiam numa máquina**, 515 KB. Todos foram
+versionados. Vinte ficaram **na raiz**, porque resolvem caminho por `__file__` e mover mudaria
+onde gravam. Treze foram para `ferramentas/descontinuado/`, que tem um README explicando cada
+um — **não rode nada de lá**: três deles ainda funcionam e brigariam com os robôs.
+
+Antes de subir, os 33 passaram por auditoria de conteúdo, porque o repositório é público:
+nenhum segredo, e-mail, CPF, CNPJ, telefone ou URL com assinatura. Repita essa auditoria
+antes de versionar qualquer script novo vindo de uma máquina.
 
 Dos que ficaram na raiz, os que importam no dia a dia:
 
@@ -135,9 +151,11 @@ painel no mesmo dia (`gerar_confiabilidade_json.py`, `gerar_supervisores_json.py
 > **O MPAS gera em duas etapas, de propósito.** O `atualizar_mpas.py` gera o `mpas.json`
 > na pasta do OneDrive e só depois copia para o checkout e publica. Por isso `AQUI` tem
 > que continuar apontando para o OneDrive mesmo com o código vindo do repositório — se
-> virasse o próprio checkout, a cópia seria sobre o mesmo arquivo. Os demais scripts da raiz do
-repositório **ainda têm cópia no OneDrive** — ao editar um deles, edite o do repositório e
-sobrescreva a cópia, ou converta em shim também.
+> virasse o próprio checkout, a cópia seria sobre o mesmo arquivo.
+
+Os demais scripts da raiz do repositório **ainda têm cópia no OneDrive** — 25 deles. Ao editar
+um desses, edite o do repositório e sobrescreva a cópia, ou converta em shim também. Nenhum
+dos 25 produz dado que o painel serve; esse risco foi zerado.
 
 **4. O `GITHUB_TOKEN` padrão do Actions não dispara outro workflow.** Se um robô commita e você
 espera que isso acione o deploy, não aciona. É por isso que existe o encadeamento explícito por
@@ -172,14 +190,17 @@ python sync_repo.py "mensagem do commit"
 
 ## 6. O que está pendente
 
-| Pendência | Onde está |
+| Pendência | Situação |
 |---|---|
+| **Achar quem publica `mpas.json` e `confiabilidade.json`** | aberta, e é a mais urgente — começar pelo Fabrício |
+| Regenerar o `supervisores.json` | aberta; parado desde 31/07 |
 | Levar o `programacao_v7.py` para a nuvem | fase 3 do plano de transição |
-| Versionar os 33 scripts que só existem numa máquina | fase 1 |
-| Regenerar `confiabilidade.json` e `supervisores.json` | fase 2 |
 | Cadastrar os Secrets de SMTP | os relatórios já geram PDF; o e-mail está dormente |
-| Especificação "OS Preventivas e Handover" v2 | para o time do `gridco-campo-mw` |
+| Especificação "OS Preventivas e Handover" v2 | entregue ao time do `gridco-campo-mw` |
+| Converter em shim os 25 scripts que ainda têm cópia dupla | opcional; nenhum serve o painel |
 | Duração aprendida ligada (`PCM_DURACAO_APRENDIDA`) | **não ligar** — ver abaixo |
+| ~~Versionar os 33 scripts~~ | **concluída em 22/09** |
+| ~~`requirements.txt` ausente do repositório~~ | **concluída em 22/09** |
 
 > **Sobre a duração aprendida:** o `duracoes.yml` mede a duração real toda sexta, mas o motor
 > **não a consome**. É proposital. A medição de 18/09 mostrou que o número reflete o hábito de

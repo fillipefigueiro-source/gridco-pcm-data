@@ -1220,3 +1220,28 @@ A conversão em shim **não causou nada disso**: a única diferença entre o ori
 cópia do repositório é a linha do `AQUI`, e ela resolve para a mesma pasta do OneDrive.
 O caminho da Gerencial nem passa por `AQUI` — vem de `GERENCIAL_PCM_PATH` ou de um
 caminho absoluto dentro do `Site_Gestao_MPAS/gerar_calendario_mpas.py`.
+
+### Correção de 23/09 ao registro anterior — checkout atrasado e autor enganoso
+
+Duas afirmações da entrada de 22/09 estavam erradas. As duas por método, não por dado.
+
+**1. "`confiabilidade.json` parado há 52 dias" — falso.** O checkout local estava **104
+commits atrás** do remoto quando a medição foi feita. O arquivo é republicado 2 a 3 vezes
+por dia, hoje com 127 usinas (eram 103 em julho). O único realmente parado é o
+`supervisores.json`, desde 31/07. **Medir frescor sem `git fetch` antes mede o passado.**
+
+**2. "o publicador está rodando em outro lugar" — não sustentado.** A conclusão veio do
+autor dos commits, `PCM Grid Co.`, tratado como "não é daqui". Mas essa é a **identidade
+git desta própria máquina** (`user.name = PCM Grid Co.`, `user.email = fabricio.barreto@`),
+a mesma que assinou os commits de shim de ontem. **Autor de commit não identifica máquina**
+— identifica configuração, e essa configuração é compartilhada.
+
+O que continua valendo, e é o essencial: `mpas.json` e `confiabilidade.json` são
+republicados juntos, 2 a 3 vezes por dia, com mensagens que **nenhum script do repositório
+nem da pasta do PCM escreve** — procurado por conteúdo nos dois lugares. O publicador segue
+não identificado. Como a identidade git carrega o e-mail do Fabrício, **ele é a pessoa a
+perguntar**.
+
+⚠ O risco prático não muda: gerar o `mpas.json` nesta máquina dá **172** contra as **239**
+publicadas, porque a Gerencial daqui é de 15/04. Rodar `atualizar_mpas.py` **sem**
+`--so-gerar` publica as 172 por cima e degrada a aba, sem erro nenhum.
