@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-23T16:13:12Z",
+  "geradoEm": "2026-09-23T16:24:34Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4595,
-        "emAberto": 24,
+        "total": 4596,
+        "emAberto": 25,
         "atrasadas": 23,
         "concluidas30d": 745,
         "concluidas7d": 201,
-        "naSemanaCorrente": 56
+        "naSemanaCorrente": 57
       },
       "mttr": {
         "horas": 19.85,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 59,
+          "criadas": 60,
           "finalizadas": 55
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4595,
-            "emAberto": 24
+            "total": 4596,
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 25,
       "atrasadas": 23,
       "porStatus": {
         "naoIniciada": 19,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -425,14 +425,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-09-22",
           "dataCriacao": "2026-09-23",
-          "dataInicial": "",
+          "dataInicial": "2026-09-23",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -507,6 +508,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "14434",
+          "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-ADS200] - Religamento do THPN-ADS200",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-23",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "14416",
@@ -3533,9 +3552,9 @@
       "historicoTotal": 1870,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3836,
+        "local": 3837,
         "remotoEmAberto": 10,
-        "localEmAberto": 14,
+        "localEmAberto": 15,
         "pctRemoto": 17,
         "alerta": true
       },
@@ -3830,9 +3849,9 @@
       "total": 65,
       "atrasadas": 56,
       "porStatus": {
-        "naoIniciada": 58,
+        "naoIniciada": 59,
         "emProgresso": 1,
-        "pausada": 6,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4821,15 +4840,14 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Felipe  Lima",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - MPA - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-09-23",
           "dataCriacao": "2026-09-11",
-          "dataInicial": "2026-09-22",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 264.0,
           "atrasada": false
         },
         {
@@ -12801,25 +12819,6 @@
       ],
       "ossHistorico": [
         {
-          "osId": "13737",
-          "ativo": "Estação Meteorológica  Ibaté  São Paulo Brasil { IBT200-ESTM1 }",
-          "equipe": "",
-          "responsavel": "João Vieira ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "João Vieira ",
-          "status": "Finalizados",
-          "tarefa": "[ETM] - Coleta e análise de dados",
-          "criticidade": "",
-          "dataProgramada": "2026-09-18",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-22",
-          "dataFinal": "2026-09-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13709",
           "ativo": "Estação Meteorológica Estr. Água Do Cateto - Cambé, PR Cambé  Paraná Brasil { THPN-CMB100-ESTM1 }",
           "equipe": "",
@@ -12930,6 +12929,25 @@
           "dataFinal": "2026-09-22",
           "linkFracttal": "",
           "horasAteAbrir": 288.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "13737",
+          "ativo": "Estação Meteorológica  Ibaté  São Paulo Brasil { IBT200-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "João Vieira ",
+          "status": "Finalizada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-09-18",
+          "dataCriacao": "2026-09-16",
+          "dataInicial": "2026-09-22",
+          "dataFinal": "2026-09-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -14763,6 +14781,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14434",
+      "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-ADS200] - Religamento do THPN-ADS200",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14431",
       "ativo": "Inversor 6.2 SOLIS SOLIS-110K-5G    { SALE-SNP100-INVR6.2 }",
       "equipe": "",
@@ -14803,14 +14838,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Lucas  Nascimento",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-09-22",
       "dataCriacao": "2026-09-23",
-      "dataInicial": "",
+      "dataInicial": "2026-09-23",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15408,15 +15444,14 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Felipe  Lima",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - MPA - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-23",
       "dataCriacao": "2026-09-11",
-      "dataInicial": "2026-09-22",
+      "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 264.0
+      "linkFracttal": ""
     },
     {
       "osId": "13476",
@@ -20424,7 +20459,7 @@
     }
   ],
   "historicoTotal": 3010,
-  "totalGeral": 6464,
+  "totalGeral": 6465,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
