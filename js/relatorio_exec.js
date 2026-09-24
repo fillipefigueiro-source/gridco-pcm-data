@@ -159,12 +159,22 @@ function rexSemanas(bd) {
     const rows = rowsAll.filter(r => rexGrupoBd(r.tipo) !== 'Remoto');   // remoto fora do cálculo
     const dom = rexIso(new Date(new Date(seg + 'T12:00:00').getTime() + 6 * 86400000));
     const osPlan = new Set(rowsAll.map(r => String(r.os_id)));
-    // plano da semana: por grupo + por cluster/dia (tático) + abertas do plano
-    const G = {}, CLM = new Map(), abertasPlano = [];
-    let plan = 0, fin = 0;
+    // plano da semana: por grupo + por cluster/dia (tático) + abertas do plano.
+    // OS CRIADA DEPOIS DE A SEMANA COMEÇAR não pode ter estado no plano da
+    // sexta — mesmo encaixada na planilha (relida continuamente), conta como
+    // NÃO PLANEJADA (caso OS 14478, 24/09; o congelamento real fica p/ depois)
+    const G = {}, NP = {}, CLM = new Map(), abertasPlano = [];
+    let plan = 0, fin = 0, npT = 0, npF = 0;
     rows.forEach(r => {
       const feito = rexFinBd(r.status);
-      const g = G[rexGrupoBd(r.tipo)] || (G[rexGrupoBd(r.tipo)] = { p: 0, f: 0 });
+      const gk = rexGrupoBd(r.tipo);
+      if (String(r.dataCriacao || '').slice(0, 10) >= seg) {   // nasceu na semana
+        const o = NP[gk] || (NP[gk] = { p: 0, f: 0 });
+        o.p++; npT++;
+        if (feito) { o.f++; npF++; }
+        return;
+      }
+      const g = G[gk] || (G[gk] = { p: 0, f: 0 });
       g.p++; plan++;
       if (feito) { g.f++; fin++; }
       const cl = CLM.get(r.cluster) || { cluster: r.cluster || '—', usinas: new Set(), p: 0, f: 0, dias: {} };
@@ -182,8 +192,7 @@ function rexSemanas(bd) {
     // não planejadas: tarefas com atividade na semana CHEIA (seg→dom) fora da
     // planilha — criadas na semana ou finalizadas nela; remoto vira só a nota
     const T = gpScopedTarefas().filter(rexEscopoFiltro);
-    const NP = {};
-    let npT = 0, npF = 0, remotos = 0;
+    let remotos = 0;
     T.forEach(t => {
       const g = rexGrupoBd(t.tipo);
       const fimSem = rexFin(t) && rexRange(t.dataFinal, seg, dom);
@@ -504,9 +513,10 @@ async function rexGerar() {
         + (s.pend ? '<div class="rex-nota"><b>Não coube na semana:</b> ' + rexN(s.pend) + ' tarefa(s)'
             + (s.topMot.length ? ' — motivos: ' + s.topMot.map(([m, n]) => rexEsc(m) + ' (' + n + ')').join('; ') : '') + '</div>' : '');
     });
-    h += '<div class="rex-nota">Plano = a planilha da Programação da semana (ajustes até o fechamento contam; '
-      + 'não é a foto de sexta 8h) · executado = tarefa Finalizada · fora do plano = com atividade de segunda a '
-      + 'domingo sem estar na planilha · preventiva mede cumprimento do plano; corretiva mede resposta à demanda.</div></section>';
+    h += '<div class="rex-nota">Plano = a planilha da Programação da semana; OS criada DEPOIS de a semana começar '
+      + '(segunda 00h) conta como não planejada, mesmo quando encaixada na planilha · executado = tarefa Finalizada · '
+      + 'não planejada = criada na semana ou executada sem estar na planilha (segunda a domingo) · '
+      + 'preventiva mede cumprimento do plano; corretiva mede resposta à demanda.</div></section>';
   }
 
   // confiabilidade por família de equipamento (base histórica — não recorta pelo período)
