@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-24T17:15:53Z",
+  "geradoEm": "2026-09-24T17:28:02Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4622,
-        "emAberto": 24,
+        "total": 4624,
+        "emAberto": 25,
         "atrasadas": 19,
-        "concluidas30d": 758,
-        "concluidas7d": 190,
-        "naSemanaCorrente": 83
+        "concluidas30d": 759,
+        "concluidas7d": 191,
+        "naSemanaCorrente": 85
       },
       "mttr": {
-        "horas": 20.15,
-        "label": "20h 9min",
-        "amostra": 758
+        "horas": 20.12,
+        "label": "20h 7min",
+        "amostra": 759
       },
       "tendencia4Semanas": [
         {
@@ -38,22 +38,22 @@
         },
         {
           "semana": "W39",
-          "criadas": 86,
-          "finalizadas": 82
+          "criadas": 88,
+          "finalizadas": 83
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4622,
-            "emAberto": 24
+            "total": 4624,
+            "emAberto": 25
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 599,
+            "total": 600,
             "emAberto": 2
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 25,
       "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 19,
+        "naoIniciada": 20,
         "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -435,6 +435,24 @@
           "horasAteAbrir": 24.0,
           "modalidade": "remoto",
           "atrasada": true
+        },
+        {
+          "osId": "14553",
+          "ativo": "Inversor 5.4  SUN2000-250KTL-H1    { THPN-ACB100-INVR5.4 }",
+          "equipe": "",
+          "responsavel": "Gilson  Milhomem",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Gilson  Milhomem",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 5.4] - Religamento do Inversor 5.4",
+          "criticidade": "",
+          "dataProgramada": "2026-09-24",
+          "dataCriacao": "2026-09-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "14544",
@@ -3530,12 +3548,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1876,
+      "historicoTotal": 1877,
       "subClassificacao": {
         "remoto": 760,
-        "local": 3862,
+        "local": 3864,
         "remotoEmAberto": 11,
-        "localEmAberto": 13,
+        "localEmAberto": 14,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -14786,6 +14804,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14553",
+      "ativo": "Inversor 5.4  SUN2000-250KTL-H1    { THPN-ACB100-INVR5.4 }",
+      "equipe": "",
+      "responsavel": "Gilson  Milhomem",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Gilson  Milhomem",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 5.4] - Religamento do Inversor 5.4",
+      "criticidade": "",
+      "dataProgramada": "2026-09-24",
+      "dataCriacao": "2026-09-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14544",
       "ativo": "Inversor 1.1 Huawei     { THPN-NVL100-INVR1.1 }",
       "equipe": "",
@@ -17568,25 +17603,6 @@
       "dataFinal": "2026-09-23",
       "linkFracttal": "",
       "horasAteAbrir": 336.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "13272",
-      "ativo": "Transformador 1      { SALE-VTS200-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-09-16",
-      "dataCriacao": "2026-09-09",
-      "dataInicial": "2026-09-16",
-      "dataFinal": "2026-09-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -20427,10 +20443,30 @@
       "horasAteAbrir": 96.0,
       "horasAteFechar": 0,
       "atrasada": false
+    },
+    {
+      "osId": "13850",
+      "ativo": "Inversor 1.4 Huawei     { THPN-NVL100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
+      "criticidade": "",
+      "dataProgramada": "2026-09-18",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "2026-09-18",
+      "dataFinal": "2026-09-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
     }
   ],
-  "historicoTotal": 3024,
-  "totalGeral": 6501,
+  "historicoTotal": 3025,
+  "totalGeral": 6503,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
