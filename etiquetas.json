@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-24T14:43:21Z",
+  "geradoEm": "2026-09-24T14:55:23Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -4902,9 +4902,9 @@
           "osId": "14518",
           "ativo": "Módulo Fotovoltaico Risen RSM132-8-640BMDG-660BMDG    { CPP100-MDFV }",
           "equipe": "",
-          "responsavel": "Gilson Souza ",
+          "responsavel": "Bruno Vinícius Pupo",
           "criadoPor": "Davi Damasceno",
-          "supervisor": "Gilson Souza ",
+          "supervisor": "Bruno Vinícius Pupo",
           "status": "Não Iniciada",
           "tarefa": "[Athon] - MPM - Módulos fotovoltaicos e trackers",
           "criticidade": "",
@@ -8575,16 +8575,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 771,
-        "emAberto": 59,
-        "atrasadas": 52,
-        "concluidas30d": 232,
-        "concluidas7d": 42,
+        "emAberto": 58,
+        "atrasadas": 51,
+        "concluidas30d": 233,
+        "concluidas7d": 43,
         "naSemanaCorrente": 23
       },
       "mttr": {
-        "horas": 264.31,
-        "label": "11d 0h",
-        "amostra": 232
+        "horas": 263.28,
+        "label": "10d 23h",
+        "amostra": 233
       },
       "tendencia4Semanas": [
         {
@@ -8605,7 +8605,7 @@
         {
           "semana": "W39",
           "criadas": 13,
-          "finalizadas": 22
+          "finalizadas": 23
         }
       ],
       "topOfensores": {
@@ -8613,7 +8613,7 @@
           {
             "nome": "(sem equipe)",
             "total": 771,
-            "emAberto": 59
+            "emAberto": 58
           }
         ],
         "responsaveis": [
@@ -8644,16 +8644,16 @@
           }
         ]
       },
-      "total": 59,
-      "atrasadas": 52,
+      "total": 58,
+      "atrasadas": 51,
       "porStatus": {
-        "naoIniciada": 51,
-        "emProgresso": 2,
+        "naoIniciada": 49,
+        "emProgresso": 3,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 59
+        "(sem equipe)": 58
       },
       "oss": [
         {
@@ -9513,23 +9513,6 @@
           "atrasada": true
         },
         {
-          "osId": "14447",
-          "ativo": "Estação Meteorológica  Ibaté  São Paulo Brasil { IBT200-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Rogério Aparecido Paravani ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Rogério Aparecido Paravani ",
-          "status": "Não Iniciada",
-          "tarefa": "[Ibaté 2] - Regularização de comunicação com o CLP",
-          "criticidade": "",
-          "dataProgramada": "2026-09-23",
-          "dataCriacao": "2026-09-23",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "13882",
           "ativo": "Tracker 30.100 STI H250    { GY-CDP100-ETKR30.100 }",
           "equipe": "",
@@ -9605,14 +9588,15 @@
           "responsavel": "Lucas Alberto Freitas de Faria ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.1] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-09-25",
           "dataCriacao": "2026-09-24",
-          "dataInicial": "",
+          "dataInicial": "2026-09-24",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -9669,6 +9653,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14447",
+          "ativo": "Estação Meteorológica  Ibaté  São Paulo Brasil { IBT200-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Rogério Aparecido Paravani ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Rogério Aparecido Paravani ",
+          "status": "Finalizados",
+          "tarefa": "[Ibaté 2] - Regularização de comunicação com o CLP",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-23",
+          "dataInicial": "2026-09-24",
+          "dataFinal": "2026-09-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "14385",
           "ativo": "Inversor 1.4      { THPN-CAI100-INVR1.4 }",
@@ -11399,25 +11402,6 @@
           "atrasada": false
         },
         {
-          "osId": "9840",
-          "ativo": "Inversor 1.8 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.8 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Andrick Gouveia ",
-          "status": "Finalizados",
-          "tarefa": "[Ibaté 2][Inversor 1.8] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-22",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "2026-08-31",
-          "linkFracttal": "",
-          "horasAteAbrir": 888.0,
-          "horasAteFechar": 72.0,
-          "atrasada": false
-        },
-        {
           "osId": "12195",
           "ativo": "Tracker 05.103 Brametal Bi-motor    { SMP100-ETKR5.103 }",
           "equipe": "",
@@ -12520,7 +12504,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 656
+      "historicoTotal": 657
     },
     "engenharia": {
       "label": "Engenharia",
@@ -12601,8 +12585,8 @@
       "atrasadas": 7,
       "porStatus": {
         "naoIniciada": 9,
-        "emProgresso": 1,
-        "pausada": 1,
+        "emProgresso": 0,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
@@ -12719,7 +12703,7 @@
           "responsavel": "Marcos Duarte ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Marcos Duarte ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "Readequação das strings",
           "criticidade": "",
           "dataProgramada": "2026-09-23",
@@ -14840,22 +14824,23 @@
       "responsavel": "Lucas Alberto Freitas de Faria ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.1] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-09-25",
       "dataCriacao": "2026-09-24",
-      "dataInicial": "",
+      "dataInicial": "2026-09-24",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "14518",
       "ativo": "Módulo Fotovoltaico Risen RSM132-8-640BMDG-660BMDG    { CPP100-MDFV }",
       "equipe": "",
-      "responsavel": "Gilson Souza ",
+      "responsavel": "Bruno Vinícius Pupo",
       "criadoPor": "Davi Damasceno",
-      "supervisor": "Gilson Souza ",
+      "supervisor": "Bruno Vinícius Pupo",
       "status": "Não Iniciada",
       "tarefa": "[Athon] - MPM - Módulos fotovoltaicos e trackers",
       "criticidade": "",
@@ -15055,7 +15040,7 @@
       "responsavel": "Marcos Duarte ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Marcos Duarte ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "Readequação das strings",
       "criticidade": "",
       "dataProgramada": "2026-09-23",
@@ -15074,22 +15059,6 @@
       "supervisor": "Felipe  Lima",
       "status": "Não Iniciada",
       "tarefa": "[Caxambu] - Investigação de possível Hotspot na ETM (Pendências MPS)",
-      "criticidade": "",
-      "dataProgramada": "2026-09-23",
-      "dataCriacao": "2026-09-23",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "14447",
-      "ativo": "Estação Meteorológica  Ibaté  São Paulo Brasil { IBT200-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Rogério Aparecido Paravani ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Rogério Aparecido Paravani ",
-      "status": "Não Iniciada",
-      "tarefa": "[Ibaté 2] - Regularização de comunicação com o CLP",
       "criticidade": "",
       "dataProgramada": "2026-09-23",
       "dataCriacao": "2026-09-23",
@@ -18353,6 +18322,25 @@
       "atrasada": false
     },
     {
+      "osId": "14447",
+      "ativo": "Estação Meteorológica  Ibaté  São Paulo Brasil { IBT200-ESTM1 }",
+      "equipe": "",
+      "responsavel": "Rogério Aparecido Paravani ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Rogério Aparecido Paravani ",
+      "status": "Finalizados",
+      "tarefa": "[Ibaté 2] - Regularização de comunicação com o CLP",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-23",
+      "dataInicial": "2026-09-24",
+      "dataFinal": "2026-09-24",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "14442",
       "ativo": "Thopen - Santana do Ipanema 1 - AL PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100 }",
       "equipe": "",
@@ -20419,28 +20407,9 @@
       "horasAteAbrir": 72.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "13846",
-      "ativo": "Inversor 1.5 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.5 }",
-      "equipe": "",
-      "responsavel": "Felipe Xavier ",
-      "criadoPor": "Ana Barros",
-      "supervisor": "Felipe Xavier ",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-23",
-      "dataCriacao": "2026-09-18",
-      "dataInicial": "2026-09-21",
-      "dataFinal": "2026-09-21",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3020,
+  "historicoTotal": 3021,
   "totalGeral": 6498,
   "verificacao": {
     "total": 0,
