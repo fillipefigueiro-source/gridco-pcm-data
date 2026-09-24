@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-24T17:04:20Z",
+  "geradoEm": "2026-09-24T17:15:53Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4621,
-        "emAberto": 23,
+        "total": 4622,
+        "emAberto": 24,
         "atrasadas": 19,
         "concluidas30d": 758,
         "concluidas7d": 190,
-        "naSemanaCorrente": 82
+        "naSemanaCorrente": 83
       },
       "mttr": {
         "horas": 20.15,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 85,
+          "criadas": 86,
           "finalizadas": 82
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4621,
-            "emAberto": 23
+            "total": 4622,
+            "emAberto": 24
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 23,
+      "total": 24,
       "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 18,
+        "naoIniciada": 19,
         "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 23
+        "(sem equipe)": 24
       },
       "oss": [
         {
@@ -435,6 +435,24 @@
           "horasAteAbrir": 24.0,
           "modalidade": "remoto",
           "atrasada": true
+        },
+        {
+          "osId": "14544",
+          "ativo": "Inversor 1.1 Huawei     { THPN-NVL100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.1] - Religamento do Inversor 1.1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-24",
+          "dataCriacao": "2026-09-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "14543",
@@ -3515,9 +3533,9 @@
       "historicoTotal": 1876,
       "subClassificacao": {
         "remoto": 760,
-        "local": 3861,
+        "local": 3862,
         "remotoEmAberto": 11,
-        "localEmAberto": 12,
+        "localEmAberto": 13,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -8666,8 +8684,8 @@
       "total": 57,
       "atrasadas": 51,
       "porStatus": {
-        "naoIniciada": 49,
-        "emProgresso": 1,
+        "naoIniciada": 48,
+        "emProgresso": 2,
         "pausada": 7,
         "verificacao": 0
       },
@@ -9521,14 +9539,15 @@
           "responsavel": "Rogério Aparecido Paravani ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Rogério Aparecido Paravani ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.1] - Inspeção das strings caindo depois das 16h",
           "criticidade": "",
           "dataProgramada": "2026-09-21",
           "dataCriacao": "2026-09-16",
-          "dataInicial": "",
+          "dataInicial": "2026-09-24",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "atrasada": true
         },
         {
@@ -14767,6 +14786,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14544",
+      "ativo": "Inversor 1.1 Huawei     { THPN-NVL100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.1] - Religamento do Inversor 1.1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-24",
+      "dataCriacao": "2026-09-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14543",
       "ativo": "Thopen - Santa Bárbara 1 - SP  Santa Bárbara d'Oeste  São Paulo Brasil { THPN-STB100 }",
       "equipe": "",
@@ -15220,14 +15256,15 @@
       "responsavel": "Rogério Aparecido Paravani ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Rogério Aparecido Paravani ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.1] - Inspeção das strings caindo depois das 16h",
       "criticidade": "",
       "dataProgramada": "2026-09-21",
       "dataCriacao": "2026-09-16",
-      "dataInicial": "",
+      "dataInicial": "2026-09-24",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 192.0
     },
     {
       "osId": "13736",
@@ -20393,7 +20430,7 @@
     }
   ],
   "historicoTotal": 3024,
-  "totalGeral": 6500,
+  "totalGeral": 6501,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
