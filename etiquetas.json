@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-24T14:31:23Z",
+  "geradoEm": "2026-09-24T14:43:21Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4618,
-        "emAberto": 21,
+        "total": 4619,
+        "emAberto": 22,
         "atrasadas": 19,
         "concluidas30d": 757,
         "concluidas7d": 189,
-        "naSemanaCorrente": 79
+        "naSemanaCorrente": 80
       },
       "mttr": {
         "horas": 20.18,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 82,
+          "criadas": 83,
           "finalizadas": 81
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4618,
-            "emAberto": 21
+            "total": 4619,
+            "emAberto": 22
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 21,
+      "total": 22,
       "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 16,
+        "naoIniciada": 17,
         "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 21
+        "(sem equipe)": 22
       },
       "oss": [
         {
@@ -435,6 +435,24 @@
           "horasAteAbrir": 24.0,
           "modalidade": "remoto",
           "atrasada": true
+        },
+        {
+          "osId": "14532",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "[Athon - Capitão Poço 1 - PA] - Religamento do Athon - Capitão Poço 1 - PA",
+          "criticidade": "",
+          "dataProgramada": "2026-09-24",
+          "dataCriacao": "2026-09-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "14521",
@@ -3479,9 +3497,9 @@
       "historicoTotal": 1875,
       "subClassificacao": {
         "remoto": 760,
-        "local": 3858,
+        "local": 3859,
         "remotoEmAberto": 11,
-        "localEmAberto": 10,
+        "localEmAberto": 11,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -8557,16 +8575,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 771,
-        "emAberto": 60,
+        "emAberto": 59,
         "atrasadas": 52,
-        "concluidas30d": 231,
-        "concluidas7d": 41,
+        "concluidas30d": 232,
+        "concluidas7d": 42,
         "naSemanaCorrente": 23
       },
       "mttr": {
-        "horas": 265.25,
-        "label": "11d 1h",
-        "amostra": 231
+        "horas": 264.31,
+        "label": "11d 0h",
+        "amostra": 232
       },
       "tendencia4Semanas": [
         {
@@ -8587,7 +8605,7 @@
         {
           "semana": "W39",
           "criadas": 13,
-          "finalizadas": 21
+          "finalizadas": 22
         }
       ],
       "topOfensores": {
@@ -8595,7 +8613,7 @@
           {
             "nome": "(sem equipe)",
             "total": 771,
-            "emAberto": 60
+            "emAberto": 59
           }
         ],
         "responsaveis": [
@@ -8626,16 +8644,16 @@
           }
         ]
       },
-      "total": 60,
+      "total": 59,
       "atrasadas": 52,
       "porStatus": {
-        "naoIniciada": 52,
+        "naoIniciada": 51,
         "emProgresso": 2,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 60
+        "(sem equipe)": 59
       },
       "oss": [
         {
@@ -9564,24 +9582,6 @@
           "atrasada": false
         },
         {
-          "osId": "14385",
-          "ativo": "Inversor 1.4      { THPN-CAI100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Silva",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Cláudio  Silva",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.4] - Inspeção das strings entre 10h e 13h",
-          "criticidade": "",
-          "dataProgramada": "2026-09-24",
-          "dataCriacao": "2026-09-22",
-          "dataInicial": "2026-09-24",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "atrasada": false
-        },
-        {
           "osId": "13843",
           "ativo": "Inversor 1.9 Huawei SUN2000 – 250KTL – H1    { AXIS-LHN100-INVR1.9 }",
           "equipe": "",
@@ -9639,14 +9639,15 @@
           "responsavel": "Frank  Melo",
           "criadoPor": "Ana Barros",
           "supervisor": "Frank  Melo",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Coleta de Dados de Geração",
           "criticidade": "",
           "dataProgramada": "2026-09-28",
           "dataCriacao": "2026-09-24",
-          "dataInicial": "",
+          "dataInicial": "2026-09-24",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -9668,6 +9669,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14385",
+          "ativo": "Inversor 1.4      { THPN-CAI100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Silva",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Cláudio  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.4] - Inspeção das strings entre 10h e 13h",
+          "criticidade": "",
+          "dataProgramada": "2026-09-24",
+          "dataCriacao": "2026-09-22",
+          "dataInicial": "2026-09-24",
+          "dataFinal": "2026-09-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13863",
           "ativo": "Inversor 1.2 Huawei SUN2000-215KTL-H3    { MCB100-INVR1.2 }",
@@ -11398,25 +11418,6 @@
           "atrasada": false
         },
         {
-          "osId": "9836",
-          "ativo": "Inversor 1.10 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.10 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Andrick Gouveia ",
-          "status": "Finalizados",
-          "tarefa": "[Ibaté 2][Inversor 1.10] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-22",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "2026-08-31",
-          "linkFracttal": "",
-          "horasAteAbrir": 888.0,
-          "horasAteFechar": 72.0,
-          "atrasada": false
-        },
-        {
           "osId": "12195",
           "ativo": "Tracker 05.103 Brametal Bi-motor    { SMP100-ETKR5.103 }",
           "equipe": "",
@@ -12519,7 +12520,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 655
+      "historicoTotal": 656
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14781,6 +14782,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14532",
+      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "[Athon - Capitão Poço 1 - PA] - Religamento do Athon - Capitão Poço 1 - PA",
+      "criticidade": "",
+      "dataProgramada": "2026-09-24",
+      "dataCriacao": "2026-09-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14531",
       "ativo": "Inversor 2.17 Sungrow SG125-HV    { THPN-SAP100-INVR2.17 }",
       "equipe": "",
@@ -14854,14 +14872,15 @@
       "responsavel": "Frank  Melo",
       "criadoPor": "Ana Barros",
       "supervisor": "Frank  Melo",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Coleta de Dados de Geração",
       "criticidade": "",
       "dataProgramada": "2026-09-28",
       "dataCriacao": "2026-09-24",
-      "dataInicial": "",
+      "dataInicial": "2026-09-24",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "14492",
@@ -15077,23 +15096,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "14385",
-      "ativo": "Inversor 1.4      { THPN-CAI100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Silva",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Cláudio  Silva",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.4] - Inspeção das strings entre 10h e 13h",
-      "criticidade": "",
-      "dataProgramada": "2026-09-24",
-      "dataCriacao": "2026-09-22",
-      "dataInicial": "2026-09-24",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
     },
     {
       "osId": "14360",
@@ -18590,6 +18592,25 @@
       "atrasada": false
     },
     {
+      "osId": "14385",
+      "ativo": "Inversor 1.4      { THPN-CAI100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Silva",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Cláudio  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.4] - Inspeção das strings entre 10h e 13h",
+      "criticidade": "",
+      "dataProgramada": "2026-09-24",
+      "dataCriacao": "2026-09-22",
+      "dataInicial": "2026-09-24",
+      "dataFinal": "2026-09-24",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "14376",
       "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
       "equipe": "",
@@ -20417,29 +20438,10 @@
       "horasAteAbrir": 72.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "13845",
-      "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Felipe Xavier ",
-      "criadoPor": "Ana Barros",
-      "supervisor": "Felipe Xavier ",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-09-23",
-      "dataCriacao": "2026-09-18",
-      "dataInicial": "2026-09-21",
-      "dataFinal": "2026-09-21",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3019,
-  "totalGeral": 6497,
+  "historicoTotal": 3020,
+  "totalGeral": 6498,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
