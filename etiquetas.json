@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-24T14:15:43Z",
+  "geradoEm": "2026-09-24T14:31:23Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4617,
-        "emAberto": 20,
-        "atrasadas": 18,
+        "total": 4618,
+        "emAberto": 21,
+        "atrasadas": 19,
         "concluidas30d": 757,
         "concluidas7d": 189,
-        "naSemanaCorrente": 78
+        "naSemanaCorrente": 79
       },
       "mttr": {
         "horas": 20.18,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 81,
+          "criadas": 82,
           "finalizadas": 81
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4617,
-            "emAberto": 20
+            "total": 4618,
+            "emAberto": 21
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 20,
-      "atrasadas": 18,
+      "total": 21,
+      "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 15,
+        "naoIniciada": 16,
         "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 20
+        "(sem equipe)": 21
       },
       "oss": [
         {
@@ -375,6 +375,24 @@
           "criticidade": "",
           "dataProgramada": "2026-09-22",
           "dataCriacao": "2026-09-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "14531",
+          "ativo": "Inversor 2.17 Sungrow SG125-HV    { THPN-SAP100-INVR2.17 }",
+          "equipe": "",
+          "responsavel": "Valdir Silva ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Valdir Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 2.17] - Religamento do Inversor 2.17",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-24",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -3461,9 +3479,9 @@
       "historicoTotal": 1875,
       "subClassificacao": {
         "remoto": 760,
-        "local": 3857,
+        "local": 3858,
         "remotoEmAberto": 11,
-        "localEmAberto": 9,
+        "localEmAberto": 10,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -3686,16 +3704,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 798,
-        "emAberto": 66,
-        "atrasadas": 59,
-        "concluidas30d": 170,
-        "concluidas7d": 18,
+        "emAberto": 65,
+        "atrasadas": 58,
+        "concluidas30d": 171,
+        "concluidas7d": 19,
         "naSemanaCorrente": 11
       },
       "mttr": {
-        "horas": 308.05,
-        "label": "12d 20h",
-        "amostra": 170
+        "horas": 306.53,
+        "label": "12d 18h",
+        "amostra": 171
       },
       "tendencia4Semanas": [
         {
@@ -3716,7 +3734,7 @@
         {
           "semana": "W39",
           "criadas": 4,
-          "finalizadas": 8
+          "finalizadas": 9
         }
       ],
       "topOfensores": {
@@ -3724,7 +3742,7 @@
           {
             "nome": "(sem equipe)",
             "total": 798,
-            "emAberto": 66
+            "emAberto": 65
           }
         ],
         "responsaveis": [
@@ -3755,16 +3773,16 @@
           }
         ]
       },
-      "total": 66,
-      "atrasadas": 59,
+      "total": 65,
+      "atrasadas": 58,
       "porStatus": {
         "naoIniciada": 58,
-        "emProgresso": 3,
+        "emProgresso": 2,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 66
+        "(sem equipe)": 65
       },
       "oss": [
         {
@@ -4726,24 +4744,6 @@
           "atrasada": true
         },
         {
-          "osId": "14374",
-          "ativo": "Preventiva Grupo de Inversores      { AXIS-MRV100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Marcos  Camargo",
-          "status": "Em progresso",
-          "tarefa": "[Axis] - MPA - Inversores - Pendências",
-          "criticidade": "",
-          "dataProgramada": "2026-09-23",
-          "dataCriacao": "2026-09-22",
-          "dataInicial": "2026-09-24",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "atrasada": true
-        },
-        {
           "osId": "13480",
           "ativo": "Transformador 1      { STB100-TRFR1 }",
           "equipe": "",
@@ -4899,6 +4899,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14374",
+          "ativo": "Preventiva Grupo de Inversores      { AXIS-MRV100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Marcos  Camargo",
+          "status": "Finalizados",
+          "tarefa": "[Axis] - MPA - Inversores - Pendências",
+          "criticidade": "",
+          "dataProgramada": "2026-09-23",
+          "dataCriacao": "2026-09-22",
+          "dataInicial": "2026-09-24",
+          "dataFinal": "2026-09-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13306",
           "ativo": "Transformador 1 WEG     { MRO100-TRFR1 }",
@@ -6382,25 +6401,6 @@
           "atrasada": false
         },
         {
-          "osId": "11959",
-          "ativo": "Infraestrutura Civil  Araçoiaba  São Paulo Brasil { ADS100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-09-03",
-          "dataFinal": "2026-09-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "12685",
           "ativo": "Cabine 1  Santo Inácio  São Paulo Brasil { STI100-CABN1 }",
           "equipe": "",
@@ -7750,7 +7750,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 355
+      "historicoTotal": 356
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8629,8 +8629,8 @@
       "total": 60,
       "atrasadas": 52,
       "porStatus": {
-        "naoIniciada": 51,
-        "emProgresso": 3,
+        "naoIniciada": 52,
+        "emProgresso": 2,
         "pausada": 6,
         "verificacao": 0
       },
@@ -9501,15 +9501,14 @@
           "responsavel": "Rogério Aparecido Paravani ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Rogério Aparecido Paravani ",
-          "status": "Em progresso",
+          "status": "Não Iniciada",
           "tarefa": "[Ibaté 2] - Regularização de comunicação com o CLP",
           "criticidade": "",
           "dataProgramada": "2026-09-23",
           "dataCriacao": "2026-09-23",
-          "dataInicial": "2026-09-24",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 24.0,
           "atrasada": true
         },
         {
@@ -14782,6 +14781,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14531",
+      "ativo": "Inversor 2.17 Sungrow SG125-HV    { THPN-SAP100-INVR2.17 }",
+      "equipe": "",
+      "responsavel": "Valdir Silva ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Valdir Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 2.17] - Religamento do Inversor 2.17",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14521",
       "ativo": "Thopen - Caxambu 1 - SP  Caxambu  São Paulo Brasil { THPN-CXB100 }",
       "equipe": "",
@@ -15053,15 +15069,14 @@
       "responsavel": "Rogério Aparecido Paravani ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Rogério Aparecido Paravani ",
-      "status": "Em progresso",
+      "status": "Não Iniciada",
       "tarefa": "[Ibaté 2] - Regularização de comunicação com o CLP",
       "criticidade": "",
       "dataProgramada": "2026-09-23",
       "dataCriacao": "2026-09-23",
-      "dataInicial": "2026-09-24",
+      "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0
+      "linkFracttal": ""
     },
     {
       "osId": "14385",
@@ -15074,23 +15089,6 @@
       "tarefa": "[Inversor 1.4] - Inspeção das strings entre 10h e 13h",
       "criticidade": "",
       "dataProgramada": "2026-09-24",
-      "dataCriacao": "2026-09-22",
-      "dataInicial": "2026-09-24",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
-    },
-    {
-      "osId": "14374",
-      "ativo": "Preventiva Grupo de Inversores      { AXIS-MRV100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Marcos  Camargo",
-      "status": "Em progresso",
-      "tarefa": "[Axis] - MPA - Inversores - Pendências",
-      "criticidade": "",
-      "dataProgramada": "2026-09-23",
       "dataCriacao": "2026-09-22",
       "dataInicial": "2026-09-24",
       "dataFinal": "",
@@ -17486,6 +17484,25 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "14374",
+      "ativo": "Preventiva Grupo de Inversores      { AXIS-MRV100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "Fabricio Barreto",
+      "supervisor": "Marcos  Camargo",
+      "status": "Finalizados",
+      "tarefa": "[Axis] - MPA - Inversores - Pendências",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-22",
+      "dataInicial": "2026-09-24",
+      "dataFinal": "2026-09-24",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
     {
       "osId": "13830",
       "ativo": "Transformador 1 WEG     { 2C-UNI100-TRFR1 }",
@@ -20419,30 +20436,10 @@
       "horasAteAbrir": 72.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "13842",
-      "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Valdério Paz ",
-      "status": "Finalizados",
-      "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-18",
-      "dataCriacao": "2026-09-18",
-      "dataInicial": "2026-09-18",
-      "dataFinal": "2026-09-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3018,
-  "totalGeral": 6496,
+  "historicoTotal": 3019,
+  "totalGeral": 6497,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
