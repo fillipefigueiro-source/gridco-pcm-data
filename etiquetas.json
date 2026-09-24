@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-24T16:22:21Z",
+  "geradoEm": "2026-09-24T16:39:58Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4620,
-        "emAberto": 22,
+        "total": 4621,
+        "emAberto": 23,
         "atrasadas": 19,
         "concluidas30d": 758,
         "concluidas7d": 190,
-        "naSemanaCorrente": 81
+        "naSemanaCorrente": 82
       },
       "mttr": {
         "horas": 20.15,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 84,
+          "criadas": 85,
           "finalizadas": 82
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4620,
-            "emAberto": 22
+            "total": 4621,
+            "emAberto": 23
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 22,
+      "total": 23,
       "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 17,
+        "naoIniciada": 18,
         "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 22
+        "(sem equipe)": 23
       },
       "oss": [
         {
@@ -435,6 +435,24 @@
           "horasAteAbrir": 24.0,
           "modalidade": "remoto",
           "atrasada": true
+        },
+        {
+          "osId": "14543",
+          "ativo": "Thopen - Santa Bárbara 1 - SP  Santa Bárbara d'Oeste  São Paulo Brasil { THPN-STB100 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Felipe  Lima",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-STB100] - Religamento do THPN-STB100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-24",
+          "dataCriacao": "2026-09-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "14537",
@@ -3497,9 +3515,9 @@
       "historicoTotal": 1876,
       "subClassificacao": {
         "remoto": 760,
-        "local": 3860,
+        "local": 3861,
         "remotoEmAberto": 11,
-        "localEmAberto": 11,
+        "localEmAberto": 12,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -7776,16 +7794,16 @@
       "cor": "#ef4444",
       "kpis": {
         "total": 158,
-        "emAberto": 9,
-        "atrasadas": 9,
-        "concluidas30d": 14,
-        "concluidas7d": 5,
+        "emAberto": 8,
+        "atrasadas": 8,
+        "concluidas30d": 15,
+        "concluidas7d": 6,
         "naSemanaCorrente": 1
       },
       "mttr": {
-        "horas": 390.86,
-        "label": "16d 6h",
-        "amostra": 14
+        "horas": 366.4,
+        "label": "15d 6h",
+        "amostra": 15
       },
       "tendencia4Semanas": [
         {
@@ -7806,7 +7824,7 @@
         {
           "semana": "W39",
           "criadas": 1,
-          "finalizadas": 3
+          "finalizadas": 4
         }
       ],
       "topOfensores": {
@@ -7814,7 +7832,7 @@
           {
             "nome": "(sem equipe)",
             "total": 158,
-            "emAberto": 9
+            "emAberto": 8
           }
         ],
         "responsaveis": [
@@ -7845,16 +7863,16 @@
           }
         ]
       },
-      "total": 9,
-      "atrasadas": 9,
+      "total": 8,
+      "atrasadas": 8,
       "porStatus": {
         "naoIniciada": 6,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 9
+        "(sem equipe)": 8
       },
       "oss": [
         {
@@ -7994,7 +8012,9 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "14459",
           "ativo": "Inversor 1.8 Huawei     { ALLM-MRN100-INVR1.8 }",
@@ -8002,19 +8022,18 @@
           "responsavel": "Cláudio  Ferreira",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Cláudio  Ferreira",
-          "status": "Em progresso",
+          "status": "Finalizados",
           "tarefa": "[Morada Nova 1][Inversor 1.8 Huawei] - Abertura de chamado de garantia",
           "criticidade": "",
           "dataProgramada": "2026-09-23",
           "dataCriacao": "2026-09-23",
           "dataInicial": "2026-09-24",
-          "dataFinal": "",
+          "dataFinal": "2026-09-24",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
-          "atrasada": true
-        }
-      ],
-      "ossHistorico": [
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13380",
           "ativo": "Inversor 1.9 Huawei SUN2000-330KTL-H1    { VRG100-INVR1.9 }",
@@ -8567,7 +8586,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 29
+      "historicoTotal": 30
     },
     "performance": {
       "label": "Performance",
@@ -14748,6 +14767,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14543",
+      "ativo": "Thopen - Santa Bárbara 1 - SP  Santa Bárbara d'Oeste  São Paulo Brasil { THPN-STB100 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Felipe  Lima",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-STB100] - Religamento do THPN-STB100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-24",
+      "dataCriacao": "2026-09-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14537",
       "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
       "equipe": "",
@@ -14962,23 +14998,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "14459",
-      "ativo": "Inversor 1.8 Huawei     { ALLM-MRN100-INVR1.8 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Em progresso",
-      "tarefa": "[Morada Nova 1][Inversor 1.8 Huawei] - Abertura de chamado de garantia",
-      "criticidade": "",
-      "dataProgramada": "2026-09-23",
-      "dataCriacao": "2026-09-23",
-      "dataInicial": "2026-09-24",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0
     },
     {
       "osId": "14458",
@@ -18266,6 +18285,25 @@
       "atrasada": false
     },
     {
+      "osId": "14459",
+      "ativo": "Inversor 1.8 Huawei     { ALLM-MRN100-INVR1.8 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Finalizados",
+      "tarefa": "[Morada Nova 1][Inversor 1.8 Huawei] - Abertura de chamado de garantia",
+      "criticidade": "",
+      "dataProgramada": "2026-09-23",
+      "dataCriacao": "2026-09-23",
+      "dataInicial": "2026-09-24",
+      "dataFinal": "2026-09-24",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "14456",
       "ativo": "Inversor 8.2 Sungrow     { JCD100-INVR8.2 }",
       "equipe": "",
@@ -20352,30 +20390,10 @@
       "horasAteAbrir": 96.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "13850",
-      "ativo": "Inversor 1.4 Huawei     { THPN-NVL100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
-      "criticidade": "",
-      "dataProgramada": "2026-09-18",
-      "dataCriacao": "2026-09-18",
-      "dataInicial": "2026-09-18",
-      "dataFinal": "2026-09-18",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3023,
-  "totalGeral": 6499,
+  "historicoTotal": 3024,
+  "totalGeral": 6500,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
