@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-25T13:30:28Z",
+  "geradoEm": "2026-09-25T13:54:33Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4646,
-        "emAberto": 26,
-        "atrasadas": 24,
-        "concluidas30d": 753,
-        "concluidas7d": 179,
-        "naSemanaCorrente": 107
+        "total": 4648,
+        "emAberto": 27,
+        "atrasadas": 23,
+        "concluidas30d": 754,
+        "concluidas7d": 180,
+        "naSemanaCorrente": 109
       },
       "mttr": {
-        "horas": 20.32,
-        "label": "20h 19min",
-        "amostra": 753
+        "horas": 20.33,
+        "label": "20h 20min",
+        "amostra": 754
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W39",
-          "criadas": 110,
-          "finalizadas": 104
+          "criadas": 112,
+          "finalizadas": 105
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4646,
-            "emAberto": 26
+            "total": 4648,
+            "emAberto": 27
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 26,
-      "atrasadas": 24,
+      "total": 27,
+      "atrasadas": 23,
       "porStatus": {
-        "naoIniciada": 20,
-        "emProgresso": 2,
-        "pausada": 4,
+        "naoIniciada": 23,
+        "emProgresso": 1,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 26
+        "(sem equipe)": 27
       },
       "oss": [
         {
@@ -279,15 +279,14 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valdir Silva ",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
           "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-21",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 432.0,
           "modalidade": "remoto",
           "atrasada": true
         },
@@ -454,25 +453,6 @@
           "atrasada": true
         },
         {
-          "osId": "14569",
-          "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 6.1] - Religamento do Inversor 6.1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-24",
-          "dataCriacao": "2026-09-24",
-          "dataInicial": "2026-09-25",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "14554",
           "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
           "equipe": "",
@@ -526,6 +506,42 @@
           "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "14613",
+          "ativo": "Cabine 1 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Lucas Alberto Freitas de Faria ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Lucas Alberto Freitas de Faria ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-EBG100-CABN1] - Religamento do THPN-EBG100-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-25",
+          "dataCriacao": "2026-09-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14612",
+          "ativo": "QGBT 1 Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100-QGBT1 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Eduardo Souza",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-TPZ100-QGBT1] - Religamento do THPN-TPZ100-QGBT1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-25",
+          "dataCriacao": "2026-09-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "14605",
@@ -582,6 +598,26 @@
           "dataFinal": "2026-09-25",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14569",
+          "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 6.1] - Religamento do Inversor 6.1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-24",
+          "dataCriacao": "2026-09-24",
+          "dataInicial": "2026-09-25",
+          "dataFinal": "2026-09-25",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3307,26 +3343,6 @@
           "atrasada": false
         },
         {
-          "osId": "13773",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Axis - Marialva 1 - PR] - Religamento do Axis - Marialva 1 - PR",
-          "criticidade": "",
-          "dataProgramada": "2026-09-17",
-          "dataCriacao": "2026-09-17",
-          "dataInicial": "2026-09-18",
-          "dataFinal": "2026-09-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "13806",
           "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
           "equipe": "",
@@ -3567,12 +3583,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1887,
+      "historicoTotal": 1888,
       "subClassificacao": {
         "remoto": 760,
-        "local": 3886,
+        "local": 3888,
         "remotoEmAberto": 10,
-        "localEmAberto": 16,
+        "localEmAberto": 17,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -3619,14 +3635,6 @@
             "linkFracttal": ""
           },
           {
-            "osId": "12907",
-            "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
-            "criadoPor": "Davi Damasceno",
-            "responsavel": "Valdir Silva ",
-            "horas": 432.0,
-            "linkFracttal": ""
-          },
-          {
             "osId": "9263",
             "ativo": "Infraestrutura Civil PV. Caiçara, S/N, Zona Rural Santana do Ipanema  Alagoas Brasil { THPN-SDI100-INFC1 }",
             "criadoPor": "Juliana Cândido",
@@ -3656,6 +3664,14 @@
             "criadoPor": "ItaloLustosa",
             "responsavel": "Janderson Miranda ",
             "horas": 216.0,
+            "linkFracttal": ""
+          },
+          {
+            "osId": "2269",
+            "ativo": "Athon - Matões 1 - MA Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { ATHN-MTS100 }",
+            "criadoPor": "Raphael Vitoriano ",
+            "responsavel": "Raphael Vitoriano ",
+            "horas": 192.0,
             "linkFracttal": ""
           }
         ],
@@ -3741,9 +3757,9 @@
             "linkFracttal": ""
           }
         ],
-        "medHorasAbrir": 12.0,
+        "medHorasAbrir": 11.4,
         "medHorasFechar": 2.6,
-        "amostraAbrir": 745,
+        "amostraAbrir": 744,
         "amostraFechar": 743,
         "topAbridores": [
           {
@@ -3797,14 +3813,14 @@
         "total": 799,
         "emAberto": 64,
         "atrasadas": 57,
-        "concluidas30d": 163,
-        "concluidas7d": 17,
+        "concluidas30d": 164,
+        "concluidas7d": 18,
         "naSemanaCorrente": 12
       },
       "mttr": {
-        "horas": 313.91,
-        "label": "13d 1h",
-        "amostra": 163
+        "horas": 324.73,
+        "label": "13d 12h",
+        "amostra": 164
       },
       "tendencia4Semanas": [
         {
@@ -3825,7 +3841,7 @@
         {
           "semana": "W39",
           "criadas": 5,
-          "finalizadas": 11
+          "finalizadas": 12
         }
       ],
       "topOfensores": {
@@ -5008,6 +5024,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 576.0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "8657",
+          "ativo": "Cabine 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Deivity Jhon Cunha Saugo ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Deivity Jhon Cunha Saugo ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPA - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-07-10",
+          "dataCriacao": "2026-06-30",
+          "dataInicial": "2026-07-08",
+          "dataFinal": "2026-09-25",
+          "linkFracttal": "",
+          "horasAteAbrir": 192.0,
+          "horasAteFechar": 1896.0,
           "atrasada": false
         },
         {
@@ -7310,25 +7345,6 @@
           "atrasada": false
         },
         {
-          "osId": "8657",
-          "ativo": "Cabine 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPA - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-07-10",
-          "dataCriacao": "2026-06-30",
-          "dataInicial": "2026-07-08",
-          "dataFinal": "2026-08-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 192.0,
-          "horasAteFechar": 1152.0,
-          "atrasada": false
-        },
-        {
           "osId": "12032",
           "ativo": "Infraestrutura Civil Fazenda Veneza, S/N, Zona rural, Distrito de Boto Quixadá  Ceará Brasil { SALE-VTS200-INFC1 }",
           "equipe": "",
@@ -8703,9 +8719,9 @@
       "total": 50,
       "atrasadas": 48,
       "porStatus": {
-        "naoIniciada": 42,
+        "naoIniciada": 43,
         "emProgresso": 1,
-        "pausada": 7,
+        "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
@@ -9472,15 +9488,14 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Valdir Silva ",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-09-18",
           "dataCriacao": "2026-09-17",
-          "dataInicial": "2026-09-23",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -14649,6 +14664,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "14613",
+      "ativo": "Cabine 1 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Lucas Alberto Freitas de Faria ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Lucas Alberto Freitas de Faria ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-EBG100-CABN1] - Religamento do THPN-EBG100-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-25",
+      "dataCriacao": "2026-09-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "14612",
+      "ativo": "QGBT 1 Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100-QGBT1 }",
+      "equipe": "",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Eduardo Souza",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-TPZ100-QGBT1] - Religamento do THPN-TPZ100-QGBT1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-25",
+      "dataCriacao": "2026-09-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14605",
       "ativo": "Cabine 3 HGR5+5M9 Assis Chateaubriand, PR Assis Chateaubriand  Paraná Brasil { THPN-ACB100-CABN3 }",
       "equipe": "",
@@ -14764,24 +14813,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "14569",
-      "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 6.1] - Religamento do Inversor 6.1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-24",
-      "dataCriacao": "2026-09-24",
-      "dataInicial": "2026-09-25",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -15104,15 +15135,14 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Valdir Silva ",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-09-18",
       "dataCriacao": "2026-09-17",
-      "dataInicial": "2026-09-23",
+      "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
+      "linkFracttal": ""
     },
     {
       "osId": "13763",
@@ -15832,15 +15862,14 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valdir Silva ",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - RR - Religamento Remoto em Usina (COS)",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
       "dataCriacao": "2026-09-03",
-      "dataInicial": "2026-09-21",
+      "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 432.0,
       "modalidade": "remoto"
     },
     {
@@ -17702,6 +17731,26 @@
       "dataFinal": "2026-09-24",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "14569",
+      "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 6.1] - Religamento do Inversor 6.1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-24",
+      "dataCriacao": "2026-09-24",
+      "dataInicial": "2026-09-25",
+      "dataFinal": "2026-09-25",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -20173,30 +20222,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13928",
-      "ativo": "QGBT 2 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-QGBT2 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Wesllen  Castro",
-      "status": "Finalizados",
-      "tarefa": "[QGBT 2] - Religamento do QGBT 2",
-      "criticidade": "",
-      "dataProgramada": "2026-09-19",
-      "dataCriacao": "2026-09-19",
-      "dataInicial": "2026-09-19",
-      "dataFinal": "2026-09-19",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3033,
-  "totalGeral": 6522,
+  "historicoTotal": 3034,
+  "totalGeral": 6524,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
