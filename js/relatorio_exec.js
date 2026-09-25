@@ -205,7 +205,11 @@ function rexSemanas(bd) {
       const fimSem = rexFin(t) && rexRange(t.dataFinal, seg, dom);
       if (g === 'Remoto') { if (fimSem) remotos++; return; }
       if (osPlan.has(String(t.os))) return;
-      const criSem = rexRange(t.criacao, corte.slice(0, 10), dom);
+      // criada após o corte conta como surgida NESTA semana só se ainda estava
+      // viva na segunda: o que nasceu e foi resolvido entre o corte e domingo
+      // anterior é trabalho da semana passada (65 religamentos na S39, 24/09)
+      const fimAntes = rexFin(t) && String(t.dataFinal || '').slice(0, 10) < seg;
+      const criSem = rexRange(t.criacao, corte.slice(0, 10), dom) && !fimAntes;
       if (!criSem && !fimSem) return;
       const o = NP[g] || (NP[g] = { p: 0, f: 0 });
       o.p++; npT++;
