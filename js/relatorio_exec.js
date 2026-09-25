@@ -95,6 +95,7 @@ const rexAbertaViva = t => t.aberta && String(t.osStatus || '') !== 'Finalizados
 const rexRange = (v, a, b) => { const d = String(v || '').slice(0, 10); return d >= a && d <= b; };
 
 function rexEscopoFiltro(t) {
+  if (/^\s*teste\s*$/i.test(String(t.tipo || ''))) return false;   // cadastro de teste: nunca conta
   if (REX.cliente && t.cliente !== REX.cliente) return false;
   if (REX.cluster && t.cluster !== REX.cluster) return false;
   if (REX.usinas.length && REX.usinas.indexOf(t.usina) < 0) return false;
