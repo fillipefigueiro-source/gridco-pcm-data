@@ -18,7 +18,14 @@
 // Prefixo rex- em tudo.
 // ─────────────────────────────────────────────────────────────────────────────
 
-let REX = { de: '', ate: '', cliente: '', cluster: '', usinas: [] };
+let REX = { de: '', ate: '', cliente: '', cluster: '', usinas: [], tipo: 'interno' };
+// tipo: 'cliente' = sem dados internos (responsáveis, Gerencial, esforço,
+// cliente×supervisor) · 'interno' = versão Grid completa. Login de cliente é
+// SEMPRE 'cliente', sem escolha.
+function rexTipo(t) {
+  REX.tipo = t;
+  document.querySelectorAll('#rex-modal .rex-chip-t').forEach(b => b.classList.toggle('on', b.dataset.t === t));
+}
 
 const rexEsc = s => String(s == null ? '' : s).replace(/[&<>"']/g,
   c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -38,7 +45,7 @@ function rexPreset(p) {
   else if (p === '30d') { d.setDate(d.getDate() - 29); REX.de = rexIso(d); REX.ate = rexHoje(); }
   const de = document.getElementById('rex-de'), ate = document.getElementById('rex-ate');
   if (de) de.value = REX.de; if (ate) ate.value = REX.ate;
-  document.querySelectorAll('#rex-modal .rex-chip').forEach(b => b.classList.toggle('on', b.dataset.p === p));
+  document.querySelectorAll('#rex-modal .rex-chip[data-p]').forEach(b => b.classList.toggle('on', b.dataset.p === p));
 }
 
 // ── modal ────────────────────────────────────────────────────────────────────
@@ -53,6 +60,11 @@ function rexAbrirModal() {
   m.innerHTML = '<div class="rex-m-fundo" onclick="rexFecharModal()"></div>'
     + '<div class="rex-m-caixa">'
     + '<h3>&#128196; Relatório executivo</h3>'
+    + (ehCliente ? '' : '<div class="rex-m-sec">Tipo de relatório</div><div class="rex-chips">'
+      + [['interno', '&#127970; Interno Grid'], ['cliente', '&#129309; Cliente']].map(([t, r]) =>
+          '<button type="button" class="rex-chip rex-chip-t' + (REX.tipo === t ? ' on' : '') + '" data-t="' + t
+          + '" onclick="rexTipo(&quot;' + t + '&quot;)">' + r + '</button>').join('')
+      + '</div>')
     + '<div class="rex-m-sec">Período</div>'
     + '<div class="rex-chips">'
     + [['sem', 'Esta semana'], ['semp', 'Semana passada'], ['mes', 'Este mês'], ['mesp', 'Mês passado'], ['30d', 'Últimos 30 dias']]
@@ -179,6 +191,13 @@ function rexSemanas(bd) {
     // sexta — mesmo encaixada na planilha (relida continuamente), conta como
     // NÃO PLANEJADA (caso OS 14478, 24/09; o congelamento real fica p/ depois)
     const G = {}, NP = {}, CLM = new Map(), abertasPlano = [];
+    // mesmas contas abertas por CLIENTE e por SUPERVISOR (Responsável O&M) —
+    // só no relatório interno; {p,f} = do plano, {np,nf} = fora do plano
+    const GC = {}, GR = {};
+    const dim = (M, k, plano, feito) => {
+      const o = M[k || '—'] || (M[k || '—'] = { p: 0, f: 0, np: 0, nf: 0 });
+      if (plano) { o.p++; if (feito) o.f++; } else { o.np++; if (feito) o.nf++; }
+    };
     let plan = 0, fin = 0, npT = 0, npF = 0;
     rows.forEach(r => {
       const feito = rexFinBd(r.status);
@@ -187,11 +206,13 @@ function rexSemanas(bd) {
         const o = NP[gk] || (NP[gk] = { p: 0, f: 0 });
         o.p++; npT++;
         if (feito) { o.f++; npF++; }
+        dim(GC, r.cliente, false, feito); dim(GR, r.responsavel, false, feito);
         return;
       }
       const g = G[gk] || (G[gk] = { p: 0, f: 0 });
       g.p++; plan++;
       if (feito) { g.f++; fin++; }
+      dim(GC, r.cliente, true, feito); dim(GR, r.responsavel, true, feito);
       const cl = CLM.get(r.cluster) || { cluster: r.cluster || '—', usinas: new Set(), p: 0, f: 0, dias: {} };
       cl.usinas.add(rexUsiCurta(r.usina)); cl.p++;
       const dk = REX_DIA[String(r.dia || '')] || '—';
@@ -222,6 +243,7 @@ function rexSemanas(bd) {
       const o = NP[g] || (NP[g] = { p: 0, f: 0 });
       o.p++; npT++;
       if (fimSem) { o.f++; npF++; }
+      dim(GC, t.cliente, false, fimSem); dim(GR, t.responsavel, false, fimSem);
     });
     // reprogramadas: 1 linha por OS, com o maior nº de vezes
     const porOS = new Map();
@@ -240,7 +262,7 @@ function rexSemanas(bd) {
     pend.forEach(p => { const m = String(p.motivo || '—'); motivos[m] = (motivos[m] || 0) + 1; });
     const topMot = Object.entries(motivos).sort((x, y) => y[1] - x[1]).slice(0, 3);
     out.push({ week: w.week, label: w.label, seg, sex, plan, fin, G, NP, npT, npF,
-      remotos, CL, abertasPlano, rolagens, corte, pend: pend.length, topMot,
+      remotos, CL, abertasPlano, rolagens, corte, GC, GR, pend: pend.length, topMot,
       atual: bd.semana_ativa === w.week });
   });
   return out.sort((x, y) => (x.week < y.week ? -1 : 1));
@@ -412,6 +434,41 @@ function rexFamilias(cf) {
   return linhas.length ? { linhas, piores, porUsina, geradoEm: cf.geradoEm || '' } : null;
 }
 
+// ── tabela "Do plano | Fora do plano" genérica (tipo, cliente, supervisor) ──
+// linhas = [[rótulo, {p, f, np, nf}]]; % no formato "50% (20/40)" + TOTAL
+function rexTabAdesao(rotulo, linhas) {
+  const pc = (f, t) => t ? Math.round(100 * f / t) : 0;
+  const mut = '<span class="rex-mut">—</span>';
+  const pctCel = (f, t) => {
+    if (!t) return '<td>' + mut + '</td>';
+    const p = pc(f, t);
+    return '<td class="' + (p < 60 ? 'rex-red' : p >= 85 ? 'rex-grn' : '') + '"><b>' + p + '%</b> <small>('
+      + rexN(f) + '/' + rexN(t) + ')</small></td>';
+  };
+  const tot = { p: 0, f: 0, np: 0, nf: 0 };
+  const corpo = linhas.map(([k, x]) => {
+    tot.p += x.p; tot.f += x.f; tot.np += x.np; tot.nf += x.nf;
+    return '<tr><td class="rex-esq">' + rexEsc(k) + '</td>'
+      + '<td class="rex-div">' + (x.p ? rexN(x.p) : mut) + '</td>'
+      + '<td>' + (x.p ? rexN(x.f) : mut) + '</td>' + pctCel(x.f, x.p)
+      + '<td class="rex-div">' + (x.np ? rexN(x.np) : mut) + '</td>'
+      + '<td>' + (x.np ? rexN(x.nf) : mut) + '</td>' + pctCel(x.nf, x.np) + '</tr>';
+  }).join('');
+  return '<table class="rex-tbl rex-tipos">'
+    + '<colgroup><col style="width:22%"><col style="width:12%"><col style="width:12%">'
+    + '<col style="width:15%"><col style="width:12%"><col style="width:12%"><col style="width:15%"></colgroup>'
+    + '<tr><th rowspan="2" style="vertical-align:bottom">' + rotulo + '</th>'
+    + '<th colspan="3" class="rex-th-g rex-div">Do plano da semana</th>'
+    + '<th colspan="3" class="rex-th-g rex-th-g2 rex-div">Fora do plano</th></tr>'
+    + '<tr><th class="rex-div">Planejadas</th><th>Executadas</th><th>%</th>'
+    + '<th class="rex-div rex-th-g2">Não planejadas</th><th class="rex-th-g2">Executadas</th><th class="rex-th-g2">%</th></tr>'
+    + corpo
+    + '<tr class="rex-total"><td class="rex-esq"><b>TOTAL</b></td>'
+    + '<td class="rex-div"><b>' + rexN(tot.p) + '</b></td><td><b>' + rexN(tot.f) + '</b></td>' + pctCel(tot.f, tot.p)
+    + '<td class="rex-div"><b>' + rexN(tot.np) + '</b></td><td><b>' + rexN(tot.nf) + '</b></td>' + pctCel(tot.nf, tot.np)
+    + '</tr></table>';
+}
+
 // ── render do relatório ─────────────────────────────────────────────────────
 async function rexGerar() {
   REX.de = (document.getElementById('rex-de') || {}).value || REX.de;
@@ -424,7 +481,7 @@ async function rexGerar() {
   rexFecharModal();
 
   const ehCliente = (typeof S !== 'undefined' && S && S.isAdmin === false);
-  const modoCliente = ehCliente || !!REX.cliente;   // 1 cliente no recorte = versão cliente
+  const modoCliente = ehCliente || REX.tipo === 'cliente';   // escolha explícita no modal
   const M = rexModelo();
   const SEM = rexSemanas(await rexBdCarregar());    // semanas do programador no período
   const CF = rexFamilias(await rexCfCarregar());    // confiabilidade por família
@@ -501,44 +558,22 @@ async function rexGerar() {
         + '</div></div>'
         // tabela de tipos — grupos "Do plano | Fora do plano" com divisória
         // vertical, "Resolvidas" à direita (evita 2× "Executadas") e TOTAL
-        + (function () {
-            const gs = REX_GRUPOS.filter(g => s.G[g] || s.NP[g]);
-            const tot = { p: 0, f: 0, np: 0, nf: 0 };
-            const mut = '<span class="rex-mut">—</span>';
-            // célula de % no formato pedido: "50% (20/40)"
-            const pctCel = (f, t, div) => {
-              if (!t) return '<td class="' + (div || '') + '">' + mut + '</td>';
-              const p = pctT(f, t);
-              return '<td class="' + (div ? div + ' ' : '') + (p < 60 ? 'rex-red' : p >= 85 ? 'rex-grn' : '')
-                + '"><b>' + p + '%</b> <small>(' + rexN(f) + '/' + rexN(t) + ')</small></td>';
-            };
-            const linhas = gs.map(g => {
-              const x = s.G[g] || { p: 0, f: 0 }, n = s.NP[g] || { p: 0, f: 0 };
-              tot.p += x.p; tot.f += x.f; tot.np += n.p; tot.nf += n.f;
-              return '<tr><td class="rex-esq">' + g + '</td>'
-                + '<td class="rex-div">' + (x.p ? rexN(x.p) : mut) + '</td>'
-                + '<td>' + (x.p ? rexN(x.f) : mut) + '</td>' + pctCel(x.f, x.p)
-                + '<td class="rex-div">' + (n.p ? rexN(n.p) : mut) + '</td>'
-                + '<td>' + (n.p ? rexN(n.f) : mut) + '</td>' + pctCel(n.f, n.p) + '</tr>';
-            }).join('');
-            return '<table class="rex-tbl rex-tipos">'
-              + '<colgroup><col style="width:22%"><col style="width:12%"><col style="width:12%">'
-              + '<col style="width:15%"><col style="width:12%"><col style="width:12%"><col style="width:15%"></colgroup>'
-              + '<tr><th rowspan="2" style="vertical-align:bottom">Tipo</th>'
-              + '<th colspan="3" class="rex-th-g rex-div">Do plano da semana</th>'
-              + '<th colspan="3" class="rex-th-g rex-th-g2 rex-div">Fora do plano</th></tr>'
-              + '<tr><th class="rex-div">Planejadas</th><th>Executadas</th><th>%</th>'
-              + '<th class="rex-div rex-th-g2">Não planejadas</th><th class="rex-th-g2">Executadas</th><th class="rex-th-g2">%</th></tr>'
-              + linhas
-              + '<tr class="rex-total"><td class="rex-esq"><b>TOTAL</b></td>'
-              + '<td class="rex-div"><b>' + rexN(tot.p) + '</b></td><td><b>' + rexN(tot.f) + '</b></td>' + pctCel(tot.f, tot.p)
-              + '<td class="rex-div"><b>' + rexN(tot.np) + '</b></td><td><b>' + rexN(tot.nf) + '</b></td>' + pctCel(tot.nf, tot.np)
-              + '</tr></table>';
-          })()
+        + rexTabAdesao('Tipo', REX_GRUPOS.filter(g => s.G[g] || s.NP[g]).map(g => {
+            const x = s.G[g] || { p: 0, f: 0 }, n = s.NP[g] || { p: 0, f: 0 };
+            return [g, { p: x.p, f: x.f, np: n.p, nf: n.f }];
+          }))
         + '<div class="rex-nota"><b>Religamentos remotos na semana: ' + rexN(s.remotos)
         + '</b> — não entram no cálculo: atendimento remoto, sem mobilização do time de campo.</div>'
         + (s.pend ? '<div class="rex-nota"><b>Não coube na semana:</b> ' + rexN(s.pend) + ' tarefa(s)'
             + (s.topMot.length ? ' — motivos: ' + s.topMot.map(([m, n]) => rexEsc(m) + ' (' + n + ')').join('; ') : '') + '</div>' : '');
+      if (!modoCliente) {
+        const ordena = M_ => Object.entries(M_).filter(([, v]) => v.p + v.np > 0)
+          .sort((a, b) => (b[1].p - a[1].p) || (b[1].np - a[1].np));
+        h += '<div class="rex-h3">Aderência por cliente <em>· mesma régua da tabela acima</em></div>'
+          + rexTabAdesao('Cliente', ordena(s.GC))
+          + '<div class="rex-h3">Aderência por supervisor (Responsável O&amp;M) <em>· mesma régua</em></div>'
+          + rexTabAdesao('Supervisor', ordena(s.GR).map(([k, v]) => [k === '—' ? 'sem responsável no Fracttal' : k, v]));
+      }
     });
     h += '<div class="rex-nota">Plano = a planilha da Programação da semana; tarefa criada DEPOIS do fechamento do plano '
       + '(momento em que a planilha foi gerada) conta como não planejada, mesmo quando encaixada nela · executado = tarefa Finalizada · '
