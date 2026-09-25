@@ -126,7 +126,8 @@ function rexSemanaSeg(week) {          // '2026-W38' -> segunda-feira ISO
 const rexFinBd = s => String(s || '').toLowerCase().indexOf('finaliz') >= 0;
 // grupos da tabela da semana. Religamento REMOTO é tratado à parte: não entra
 // em nenhum cálculo (não mobiliza campo) — vira só nota informativa.
-const REX_GRUPOS = ['Preventivas', 'Corretiva', 'Corretiva Emergencial', 'Religamento', 'Demais'];
+const REX_GRUPOS = ['Preventivas', 'Corretiva', 'Corretiva Emergencial', 'Religamento',
+                    'Inspeção', 'Handover', 'Administrativa', 'Zeladoria', 'Preditiva', 'Outros'];
 function rexGrupoBd(tipo) {
   const t = String(tipo || '');
   if (/^Religamento Remoto/i.test(t)) return 'Remoto';
@@ -134,7 +135,13 @@ function rexGrupoBd(tipo) {
   if (/^Corretiva Emergencial/i.test(t)) return 'Corretiva Emergencial';
   if (/^Corretiva/i.test(t)) return 'Corretiva';
   if (/^MP/i.test(t) || /^Preventiva/i.test(t)) return 'Preventivas';
-  return 'Demais';                     // Handover, Inspeção, Administrativa, Zeladoria…
+  const sem = t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  if (sem.startsWith('inspec')) return 'Inspeção';
+  if (sem.startsWith('handover')) return 'Handover';
+  if (sem.startsWith('administ')) return 'Administrativa';
+  if (sem.startsWith('zelad')) return 'Zeladoria';
+  if (sem.startsWith('predit')) return 'Preditiva';
+  return 'Outros';
 }
 const REX_DIA = { 'Segunda-feira': 'Seg', 'Terça-feira': 'Ter', 'Quarta-feira': 'Qua',
                   'Quinta-feira': 'Qui', 'Sexta-feira': 'Sex', 'Sábado': 'Sáb', 'Domingo': 'Dom' };
