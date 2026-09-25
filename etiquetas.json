@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-25T20:29:51Z",
+  "geradoEm": "2026-09-25T20:43:24Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 24,
       "atrasadas": 16,
       "porStatus": {
-        "naoIniciada": 22,
-        "emProgresso": 0,
+        "naoIniciada": 21,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
@@ -387,14 +387,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[TIM100-CABN3] - Religamento do TIM100-CABN3",
           "criticidade": "",
           "dataProgramada": "2026-09-25",
           "dataCriacao": "2026-09-25",
-          "dataInicial": "",
+          "dataInicial": "2026-09-25",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -8573,8 +8574,8 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 780,
-        "emAberto": 59,
+        "total": 781,
+        "emAberto": 60,
         "atrasadas": 42,
         "concluidas30d": 228,
         "concluidas7d": 39,
@@ -8603,7 +8604,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 28,
+          "criadas": 29,
           "finalizadas": 34
         }
       ],
@@ -8611,8 +8612,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 780,
-            "emAberto": 59
+            "total": 781,
+            "emAberto": 60
           }
         ],
         "responsaveis": [
@@ -8643,16 +8644,16 @@
           }
         ]
       },
-      "total": 59,
+      "total": 60,
       "atrasadas": 42,
       "porStatus": {
-        "naoIniciada": 51,
+        "naoIniciada": 52,
         "emProgresso": 2,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 59
+        "(sem equipe)": 60
       },
       "oss": [
         {
@@ -9523,6 +9524,23 @@
           "tarefa": "[Inversor 1.10] - Inspeção da PV 27 após as 15h45",
           "criticidade": "",
           "dataProgramada": "2026-09-29",
+          "dataCriacao": "2026-09-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "14672",
+          "ativo": "Inversor 1.7 Huawei SUN2000-250KTL-H1    { PTL300-INVR1.7 }",
+          "equipe": "",
+          "responsavel": "Rodrigo  Silva",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Rodrigo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.7] - Inspeção das PV 10 e PV 8 nos horários indicados",
+          "criticidade": "",
+          "dataProgramada": "2026-09-30",
           "dataCriacao": "2026-09-25",
           "dataInicial": "",
           "dataFinal": "",
@@ -14779,20 +14797,37 @@
   },
   "ossPublicas": [
     {
+      "osId": "14672",
+      "ativo": "Inversor 1.7 Huawei SUN2000-250KTL-H1    { PTL300-INVR1.7 }",
+      "equipe": "",
+      "responsavel": "Rodrigo  Silva",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Rodrigo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.7] - Inspeção das PV 10 e PV 8 nos horários indicados",
+      "criticidade": "",
+      "dataProgramada": "2026-09-30",
+      "dataCriacao": "2026-09-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "14671",
       "ativo": "Cabine 3 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN3 }",
       "equipe": "",
       "responsavel": "Luiz  Silva",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[TIM100-CABN3] - Religamento do TIM100-CABN3",
       "criticidade": "",
       "dataProgramada": "2026-09-25",
       "dataCriacao": "2026-09-25",
-      "dataInicial": "",
+      "dataInicial": "2026-09-25",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -20455,7 +20490,7 @@
     }
   ],
   "historicoTotal": 3047,
-  "totalGeral": 6544,
+  "totalGeral": 6545,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
