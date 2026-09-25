@@ -428,9 +428,11 @@ async function rexGerar() {
   const pctT = (f, t) => t ? Math.round(100 * f / t) : 0;
   const SW = SEM.length ? SEM[SEM.length - 1] : null;   // semana mais recente (Tático)
   const sintese = 'Em ' + rexFmt(M.a) + '–' + rexFmt(M.b) + ', ' + escopo + ' executou <b>'
-    + rexN(M.osFin) + ' OSs</b>' + (pctPlano !== null ? ' (' + pctPlano + '% do programado no período)' : '')
-    + (SW && SW.plan ? '; execução total da ' + rexEsc(SW.label.split(' · ')[0]).toLowerCase()
-      + ': <b>' + pctT(SW.fin + SW.npF, SW.plan + SW.npT) + '%</b>' : '')
+    + rexN(M.osFin) + ' OSs</b>'
+    + (SW && SW.plan
+      ? '; na ' + rexEsc(SW.label.split(' · ')[0]).toLowerCase() + ', aderência ao plano <b>'
+        + pctT(SW.fin, SW.plan) + '%</b> e execução total <b>' + pctT(SW.fin + SW.npF, SW.plan + SW.npT) + '%</b>'
+      : (pctPlano !== null ? ' (' + pctPlano + '% do programado no Fracttal no período)' : ''))
     + '; <b>' + rexN(new Set(M.corrAbertas.map(t => t.os)).size) + ' corretivas abertas</b>'
     + (topo && topo.abertas ? ' — <b>' + rexEsc(topo.usina.replace(/\s*-\s*[A-Z]{2}\s*$/, ''))
       + '</b> lidera o backlog (' + topo.abertas + ' tarefas em aberto, mais antiga '
@@ -454,7 +456,11 @@ async function rexGerar() {
     + '<div class="rex-kpis">'
     + kpi(rexN(M.osCriadas), 'OSs criadas no período')
     + kpi(rexN(M.osFin), 'OSs finalizadas', 'grn')
-    + kpi(pctPlano === null ? '—' : pctPlano + '%', 'do plano programado concluído', pctPlano !== null && pctPlano < 60 ? 'red' : pctPlano < 85 ? 'amb' : 'grn')
+    + (SW && SW.plan
+      ? kpi(pctT(SW.fin, SW.plan) + '%', 'aderência ao plano da semana · ' + rexN(SW.fin) + '/' + rexN(SW.plan),
+            pctT(SW.fin, SW.plan) < 60 ? 'red' : pctT(SW.fin, SW.plan) < 85 ? 'amb' : 'grn')
+      : kpi(pctPlano === null ? '—' : pctPlano + '%', 'do programado no Fracttal concluído (sem planilha no período)',
+            pctPlano !== null && pctPlano < 60 ? 'red' : pctPlano < 85 ? 'amb' : 'grn'))
     + kpi(rexN(new Set(M.corrAbertas.map(t => t.os)).size), 'corretivas abertas hoje', 'red')
     + (M.ger && !modoCliente ? kpi(rexN(M.ger.atr.length), 'MPA/MPS atrasadas', 'amb') : kpi(rexN(M.mais30.length), 'tarefas abertas há +30 dias', 'amb'))
     + '</div>';
