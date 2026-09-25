@@ -32,6 +32,30 @@ from typing import Any, Dict, List, Optional
 import pandas as pd
 import requests
 
+
+# Limite do Fracttal, 25/09/2026: 200 requisições/minuto para a EMPRESA INTEIRA —
+# "Too many requests (200) created from this company (id_company=4987)". Em 19/08 o limite
+# era POR IP ("created from this IP", ver fonte_bd_api.py): cada robô no Actions tinha a sua
+# cota. Agora os robôs, o App de Campo, a plataforma e o OS Creator dividem os mesmos
+# 200/min. No Actions o ritmo cai para 1 pedido/s; na máquina de quem gera a semana fica o
+# de sempre (roda à noite, sem disputa). Os dois se trocam por FRACTTAL_INTERVALO_S.
+_NO_ACTIONS = os.environ.get("GITHUB_ACTIONS") == "true"
+_INTERVALO_S = float(os.environ.get("FRACTTAL_INTERVALO_S") or ("1.0" if _NO_ACTIONS else "0.15"))
+_LIMITE_ESPERAS = int(os.environ.get("FRACTTAL_429_ESPERAS") or "4")
+
+
+def _espera_limite(r):
+    """Segundos que o Fracttal pede para esperar (cabeçalho); sem cabeçalho, o minuto da
+    mensagem ("please try again after 1 minute")."""
+    for h in ("retry-after", "ratelimit-reset", "x-ratelimit-reset"):
+        try:
+            s = int(float((r.headers or {}).get(h) or 0))
+        except (TypeError, ValueError):
+            s = 0
+        if s > 0:
+            return min(max(s, 1), 90)
+    return 61
+
 # ============================================================
 # Configuração (carrega de .env, NUNCA hardcoded)
 # ============================================================
@@ -235,7 +259,13 @@ class FracttalClient:
         # Lista de URLs completas pra tentar, na ordem de prioridade
         urls_candidatas = []
 
-        # 1. Primeiro tenta o que estava em base_url (com endpoint padrão)
+        # 0. O endereço documentado primeiro (25/09/2026): a credencial nova só entrega token
+        #    em https://app.fracttal.com/oauth/token — em /api/oauth/token ela recebe
+        #    INVALID_ENDPOINT. É o mesmo que o App de Campo usa. Sem isto, cada rodada gastava
+        #    20 pedidos recusados da cota da empresa antes de chegar nele.
+        urls_candidatas.append(self.HOSTS_CANDIDATOS[0] + "/oauth/token")
+
+        # 1. Depois tenta o que estava em base_url (com endpoint padrão)
         if self.base_url:
             base_lim = self.base_url.rstrip("/")
             for ep in self.OAUTH_ENDPOINTS:
@@ -352,12 +382,26 @@ class FracttalClient:
 
     def get(self, path, params=None, max_tentativas=3):
         url = self.base_url + path.lstrip("/")
-        time.sleep(0.15)
+        time.sleep(_INTERVALO_S)
         last_err = None
-        for tentativa in range(1, max_tentativas + 1):
+        tentativa = 0
+        esperas = 0
+        while tentativa < max_tentativas:
+            tentativa += 1
             try:
                 r = self.session.get(url, headers=self._headers(),
                                      params=params, timeout=60)
+                if r.status_code in (406, 429) and esperas < _LIMITE_ESPERAS:
+                    # Limite da EMPRESA (ver _INTERVALO_S). O Fracttal pede "try again after
+                    # 1 minute": esperar o que ele pede, sem gastar tentativa. Com 3 s e 6 s,
+                    # como antes, a rodada de 25/09 12:12 caiu na primeira página de items.
+                    esperas += 1
+                    espera = _espera_limite(r)
+                    log(f"  HTTP {r.status_code} (limite do Fracttal) em {path}: "
+                        f"esperando {espera}s ({esperas}/{_LIMITE_ESPERAS})", "WARN")
+                    time.sleep(espera)
+                    tentativa -= 1
+                    continue
                 if r.status_code == 401:
                     log("  401 → reautenticando...", "WARN")
                     self.token = None

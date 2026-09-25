@@ -191,7 +191,10 @@ _RITMO_ULTIMO = [0.0]
 
 
 def _ritmo():
-    intervalo = float(os.environ.get("PROG_API_INTERVALO_S", "0.42"))
+    # No Actions, 1 pedido/s: desde 25/09/2026 o limite de 200/min é da EMPRESA, não do IP
+    # (ver gerar_bd_via_api._INTERVALO_S). Na máquina de quem gera a semana, o de sempre.
+    intervalo = float(os.environ.get("PROG_API_INTERVALO_S")
+                      or ("1.0" if os.environ.get("GITHUB_ACTIONS") == "true" else "0.42"))
     with _RITMO_TRAVA:
         agora = time.monotonic()
         espera = _RITMO_ULTIMO[0] + intervalo - agora
