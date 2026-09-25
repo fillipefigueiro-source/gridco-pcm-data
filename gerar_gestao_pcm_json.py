@@ -124,11 +124,28 @@ def carregar_auxiliar(path: str):
         log(f"AUXILIAR não encontrado: {path} — responsável ficará vazio.", "WARN")
         return {}, {}
     wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
-    ws = wb["Operacoes_1"]
+    ws = wb["Operacoes_1"] if "Operacoes_1" in wb.sheetnames else wb[wb.sheetnames[0]]
     usina_idx: dict = {}
     cluster_resp = defaultdict(Counter)
-    for r in ws.iter_rows(min_row=2, values_only=True):
-        ufv, cliente, cluster, resp, oper = r[0], r[3], r[4], r[5], r[9]
+    # Colunas POR NOME: a AUXILIAR ganhou/perdeu colunas ("Contrato Assinado",
+    # UFV→N1) e a leitura por posição passava a ler o cluster como supervisor.
+    # Sem cabeçalho reconhecível, cai no layout antigo (0,3,4,5,9).
+    it = ws.iter_rows(values_only=True)
+    cab = [_norm(c) for c in (next(it, None) or [])]
+    def _col(*nomes, pad=None):
+        for n in nomes:
+            if n in cab:
+                return cab.index(n)
+        return pad
+    i_ufv = _col("ufv", "n1", pad=0)
+    i_cli = _col("cliente", pad=3)
+    i_clu = _col("equipe cluster", "cluster", pad=4)
+    i_rsp = _col("responsavel o&m", pad=5)
+    i_opr = _col("operacao", "oper", pad=9)
+    pega = lambda r, i: r[i] if i is not None and i < len(r) else None
+    for r in it:
+        ufv, cliente, cluster, resp, oper = (pega(r, i_ufv), pega(r, i_cli), pega(r, i_clu),
+                                             pega(r, i_rsp), pega(r, i_opr))
         clu = str(cluster).strip() if cluster else ""
         rsp = str(resp).strip() if resp else ""
         val = (clu, rsp)

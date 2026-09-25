@@ -608,6 +608,14 @@ def linhas_fora_do_plano(df, mon: dt.date, plan_keys: set) -> list:
     d0, d1 = pd.Timestamp(mon), pd.Timestamp(mon) + pd.Timedelta(days=5)  # seg 00h → sáb 00h
     dfin = pd.to_datetime(df.get('Data final'), errors='coerce')
     di = pd.to_datetime(df.get('Data inicial'), errors='coerce')
+    # supervisor (Responsável O&M) pela MESMA regra do plano: AUXILIAR por usina,
+    # senão o majoritário do cluster. Antes saía "" fixo e essas execuções sumiam
+    # da tabela "por supervisor" (25/09 — Guaratinguetá/Marajoara da Danuth)
+    try:
+        import gerar_gestao_pcm_json as _gp
+        _uidx, _cmaj = _gp.carregar_auxiliar(_gp.AUXILIAR_PATH)
+    except Exception:
+        _gp, _uidx, _cmaj = None, {}, {}
     out = []
     for i, r in enumerate(df.to_dict("records")):
         if str(r.get('Status') or '').strip() == 'Cancelado':
@@ -636,7 +644,9 @@ def linhas_fora_do_plano(df, mon: dt.date, plan_keys: set) -> list:
             "cluster": _cluster_norm(r.get('Ativo Classificação 2')),
             "tipo": str(r.get('Tipo de tarefa') or '').strip(),
             "dia": _DIA_FULL[fim.weekday()], "os_id": os_id, "codigo": cod,
-            "tarefa": str(r.get('Tarefa') or ''), "responsavel": "",
+            "tarefa": str(r.get('Tarefa') or ''),
+            "responsavel": (_gp.resolver_responsavel(usina, str(r.get('Ativo Classificação 2') or ''),
+                                                     _uidx, _cmaj) if _gp else ""),
             "resp_os": " ".join(str(r.get('Responsável') or '').split()),
             "criticidade": str(r.get('Tarefa -> Criticidade') or ''),
             "etiquetas": str(r.get('Etiquetas') or ''),
