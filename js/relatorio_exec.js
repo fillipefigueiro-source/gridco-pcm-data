@@ -158,9 +158,16 @@ function rexSemanas(bd) {
     if (!rowsAll.length) return;
     const rows = rowsAll.filter(r => rexGrupoBd(r.tipo) !== 'Remoto');   // remoto fora do cálculo
     const dom = rexIso(new Date(new Date(seg + 'T12:00:00').getTime() + 6 * 86400000));
+    // CORTE DO PLANO = quando a planilha da semana foi GERADA (carimbo interno
+    // do xlsx, w.geradaEm, em UTC) — mesma régua do card "criadas após o plano"
+    // do pcm.gridco.com.br. Sem carimbo (semanas antigas): sexta anterior 00h.
+    const _loc = d => new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 19);
+    const corte = w.geradaEm && !isNaN(new Date(w.geradaEm))
+      ? _loc(new Date(w.geradaEm))
+      : rexIso(new Date(new Date(seg + 'T12:00:00').getTime() - 3 * 86400000)) + 'T00:00:00';
     const osPlan = new Set(rowsAll.map(r => String(r.os_id)));
     // plano da semana: por grupo + por cluster/dia (tático) + abertas do plano.
-    // OS CRIADA DEPOIS DE A SEMANA COMEÇAR não pode ter estado no plano da
+    // OS CRIADA DEPOIS DO CORTE (geração da planilha) não pode ter estado no plano da
     // sexta — mesmo encaixada na planilha (relida continuamente), conta como
     // NÃO PLANEJADA (caso OS 14478, 24/09; o congelamento real fica p/ depois)
     const G = {}, NP = {}, CLM = new Map(), abertasPlano = [];
@@ -168,7 +175,7 @@ function rexSemanas(bd) {
     rows.forEach(r => {
       const feito = rexFinBd(r.status);
       const gk = rexGrupoBd(r.tipo);
-      if (String(r.dataCriacao || '').slice(0, 10) >= seg) {   // nasceu na semana
+      if (String(r.dataCriacao || '').slice(0, 19) >= corte) {   // nasceu depois do plano
         const o = NP[gk] || (NP[gk] = { p: 0, f: 0 });
         o.p++; npT++;
         if (feito) { o.f++; npF++; }
@@ -198,7 +205,7 @@ function rexSemanas(bd) {
       const fimSem = rexFin(t) && rexRange(t.dataFinal, seg, dom);
       if (g === 'Remoto') { if (fimSem) remotos++; return; }
       if (osPlan.has(String(t.os))) return;
-      const criSem = rexRange(t.criacao, seg, dom);
+      const criSem = rexRange(t.criacao, corte.slice(0, 10), dom);
       if (!criSem && !fimSem) return;
       const o = NP[g] || (NP[g] = { p: 0, f: 0 });
       o.p++; npT++;
@@ -221,7 +228,7 @@ function rexSemanas(bd) {
     pend.forEach(p => { const m = String(p.motivo || '—'); motivos[m] = (motivos[m] || 0) + 1; });
     const topMot = Object.entries(motivos).sort((x, y) => y[1] - x[1]).slice(0, 3);
     out.push({ week: w.week, label: w.label, seg, sex, plan, fin, G, NP, npT, npF,
-      remotos, CL, abertasPlano, rolagens, pend: pend.length, topMot,
+      remotos, CL, abertasPlano, rolagens, corte, pend: pend.length, topMot,
       atual: bd.semana_ativa === w.week });
   });
   return out.sort((x, y) => (x.week < y.week ? -1 : 1));
@@ -461,7 +468,9 @@ async function rexGerar() {
       + ' <small>foto do programador semanal · religamentos remotos fora do cálculo</small></h2>';
     SEM.forEach(s => {
       const adP = pctT(s.fin, s.plan), adN = pctT(s.npF, s.npT), adT = pctT(s.fin + s.npF, s.plan + s.npT);
-      h += '<div class="rex-h3">' + rexEsc(s.label) + (s.atual ? ' <em>— semana corrente, parcial</em>' : '') + '</div>'
+      const _c = s.corte || '';
+      h += '<div class="rex-h3">' + rexEsc(s.label) + (s.atual ? ' <em>— semana corrente, parcial</em>' : '')
+        + (_c ? ' <em>· plano fechado em ' + _c.slice(8, 10) + '/' + _c.slice(5, 7) + ' às ' + _c.slice(11, 16) + '</em>' : '') + '</div>'
         // card largo: manchete "Execução total" + as duas componentes com micro-barras
         + '<div class="rex-ade"><div class="rex-ade-m"><b class="' + rexFx(adT) + '">' + adT + '%</b>'
         + '<span>Execução total<br><small>tudo que foi feito ÷ tudo que havia · '
@@ -513,9 +522,9 @@ async function rexGerar() {
         + (s.pend ? '<div class="rex-nota"><b>Não coube na semana:</b> ' + rexN(s.pend) + ' tarefa(s)'
             + (s.topMot.length ? ' — motivos: ' + s.topMot.map(([m, n]) => rexEsc(m) + ' (' + n + ')').join('; ') : '') + '</div>' : '');
     });
-    h += '<div class="rex-nota">Plano = a planilha da Programação da semana; OS criada DEPOIS de a semana começar '
-      + '(segunda 00h) conta como não planejada, mesmo quando encaixada na planilha · executado = tarefa Finalizada · '
-      + 'não planejada = criada na semana ou executada sem estar na planilha (segunda a domingo) · '
+    h += '<div class="rex-nota">Plano = a planilha da Programação da semana; tarefa criada DEPOIS do fechamento do plano '
+      + '(momento em que a planilha foi gerada) conta como não planejada, mesmo quando encaixada nela · executado = tarefa Finalizada · '
+      + 'não planejada = criada após o fechamento ou executada sem estar na planilha (até domingo) · '
       + 'preventiva mede cumprimento do plano; corretiva mede resposta à demanda.</div></section>';
   }
 
