@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-26T10:52:52Z",
+  "geradoEm": "2026-09-26T11:07:26Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -81,8 +81,8 @@
       "total": 30,
       "atrasadas": 25,
       "porStatus": {
-        "naoIniciada": 28,
-        "emProgresso": 0,
+        "naoIniciada": 27,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
@@ -585,14 +585,15 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-09-26",
           "dataCriacao": "2026-09-26",
-          "dataInicial": "",
+          "dataInicial": "2026-09-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -8682,16 +8683,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 782,
-        "emAberto": 59,
-        "atrasadas": 42,
-        "concluidas30d": 215,
-        "concluidas7d": 36,
+        "emAberto": 58,
+        "atrasadas": 41,
+        "concluidas30d": 216,
+        "concluidas7d": 37,
         "naSemanaCorrente": 24
       },
       "mttr": {
-        "horas": 269.92,
-        "label": "11d 5h",
-        "amostra": 215
+        "horas": 270.0,
+        "label": "11d 6h",
+        "amostra": 216
       },
       "tendencia4Semanas": [
         {
@@ -8712,7 +8713,7 @@
         {
           "semana": "W39",
           "criadas": 30,
-          "finalizadas": 36
+          "finalizadas": 37
         }
       ],
       "topOfensores": {
@@ -8720,7 +8721,7 @@
           {
             "nome": "(sem equipe)",
             "total": 782,
-            "emAberto": 59
+            "emAberto": 58
           }
         ],
         "responsaveis": [
@@ -8751,16 +8752,16 @@
           }
         ]
       },
-      "total": 59,
-      "atrasadas": 42,
+      "total": 58,
+      "atrasadas": 41,
       "porStatus": {
-        "naoIniciada": 51,
+        "naoIniciada": 50,
         "emProgresso": 2,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 59
+        "(sem equipe)": 58
       },
       "oss": [
         {
@@ -9336,25 +9337,8 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Levi Maia ",
           "supervisor": "Anderson  Parente",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 4.3] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-14",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "13581",
-          "ativo": "Inversor 4.2 Sungrow     { ALT100-INVR4.2 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Anderson  Parente",
           "status": "Em progresso",
-          "tarefa": "[Inversor 4.2] - Recomposição de String",
+          "tarefa": "[Inversor 4.3] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-09-15",
           "dataCriacao": "2026-09-14",
@@ -9776,6 +9760,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13581",
+          "ativo": "Inversor 4.2 Sungrow     { ALT100-INVR4.2 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 4.2] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-09-15",
+          "dataCriacao": "2026-09-14",
+          "dataInicial": "2026-09-26",
+          "dataFinal": "2026-09-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 288.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13573",
           "ativo": "Inversor 1.8 Sungrow     { ALT100-INVR1.8 }",
@@ -11563,25 +11566,6 @@
           "atrasada": false
         },
         {
-          "osId": "9836",
-          "ativo": "Inversor 1.10 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.10 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Andrick Gouveia ",
-          "status": "Finalizados",
-          "tarefa": "[Ibaté 2][Inversor 1.10] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-07-22",
-          "dataCriacao": "2026-07-22",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "2026-08-31",
-          "linkFracttal": "",
-          "horasAteAbrir": 888.0,
-          "horasAteFechar": 72.0,
-          "atrasada": false
-        },
-        {
           "osId": "12195",
           "ativo": "Tracker 05.103 Brametal Bi-motor    { SMP100-ETKR5.103 }",
           "equipe": "",
@@ -12627,7 +12611,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 665
+      "historicoTotal": 666
     },
     "engenharia": {
       "label": "Engenharia",
@@ -12708,8 +12692,8 @@
       "atrasadas": 9,
       "porStatus": {
         "naoIniciada": 10,
-        "emProgresso": 0,
-        "pausada": 2,
+        "emProgresso": 1,
+        "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
@@ -12826,7 +12810,7 @@
           "responsavel": "Marcos Duarte ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Marcos Duarte ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "Readequação das strings",
           "criticidade": "",
           "dataProgramada": "2026-09-23",
@@ -14927,14 +14911,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Lucas  Nascimento",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-09-26",
       "dataCriacao": "2026-09-26",
-      "dataInicial": "",
+      "dataInicial": "2026-09-26",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15553,7 +15538,7 @@
       "responsavel": "Marcos Duarte ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Marcos Duarte ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "Readequação das strings",
       "criticidade": "",
       "dataProgramada": "2026-09-23",
@@ -15812,24 +15797,8 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Levi Maia ",
       "supervisor": "Anderson  Parente",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 4.3] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
-      "dataCriacao": "2026-09-14",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "13581",
-      "ativo": "Inversor 4.2 Sungrow     { ALT100-INVR4.2 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Anderson  Parente",
       "status": "Em progresso",
-      "tarefa": "[Inversor 4.2] - Recomposição de String",
+      "tarefa": "[Inversor 4.3] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-09-15",
       "dataCriacao": "2026-09-14",
@@ -20663,7 +20632,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3039,
+  "historicoTotal": 3040,
   "totalGeral": 6554,
   "verificacao": {
     "total": 0,
