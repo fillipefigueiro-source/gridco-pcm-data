@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-26T19:07:34Z",
+  "geradoEm": "2026-09-26T19:20:50Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4678,
-        "emAberto": 28,
+        "total": 4679,
+        "emAberto": 29,
         "atrasadas": 21,
         "concluidas30d": 767,
         "concluidas7d": 170,
-        "naSemanaCorrente": 140
+        "naSemanaCorrente": 141
       },
       "mttr": {
         "horas": 22.16,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 143,
+          "criadas": 144,
           "finalizadas": 132
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4678,
-            "emAberto": 28
+            "total": 4679,
+            "emAberto": 29
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 28,
+      "total": 29,
       "atrasadas": 21,
       "porStatus": {
         "naoIniciada": 26,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 28
+        "(sem equipe)": 29
       },
       "oss": [
         {
@@ -471,6 +471,24 @@
           "atrasada": true
         },
         {
+          "osId": "14711",
+          "ativo": "Thopen - Ceilândia 1 - DF BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Janderson Miranda ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-CLN100] - Religamento do THPN-CLN100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-26",
+          "dataCriacao": "2026-09-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "14710",
           "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
           "equipe": "",
@@ -531,14 +549,15 @@
           "responsavel": "Lucas Alberto Freitas de Faria ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[CGU100-CABN3] - Religamento do CGU100-CABN3",
           "criticidade": "",
           "dataProgramada": "2026-09-26",
           "dataCriacao": "2026-09-26",
-          "dataInicial": "",
+          "dataInicial": "2026-09-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3602,9 +3621,9 @@
       "historicoTotal": 1905,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3919,
+        "local": 3920,
         "remotoEmAberto": 7,
-        "localEmAberto": 21,
+        "localEmAberto": 22,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -14765,6 +14784,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14711",
+      "ativo": "Thopen - Ceilândia 1 - DF BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Janderson Miranda ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-CLN100] - Religamento do THPN-CLN100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-26",
+      "dataCriacao": "2026-09-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14710",
       "ativo": "Thopen - Ceilândia 2 - DF Núcleo Rural Alexandre Gusmão, GB 3 380 RS Ceilândia  Distrito Federal Brasil { THPN-CLN200 }",
       "equipe": "",
@@ -14822,14 +14858,15 @@
       "responsavel": "Lucas Alberto Freitas de Faria ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[CGU100-CABN3] - Religamento do CGU100-CABN3",
       "criticidade": "",
       "dataProgramada": "2026-09-26",
       "dataCriacao": "2026-09-26",
-      "dataInicial": "",
+      "dataInicial": "2026-09-26",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -20425,7 +20462,7 @@
     }
   ],
   "historicoTotal": 3062,
-  "totalGeral": 6570,
+  "totalGeral": 6571,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
