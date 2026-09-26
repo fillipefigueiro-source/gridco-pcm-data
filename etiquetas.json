@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-26T14:42:42Z",
+  "geradoEm": "2026-09-26T14:55:30Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4665,
-        "emAberto": 24,
+        "total": 4667,
+        "emAberto": 26,
         "atrasadas": 22,
         "concluidas30d": 758,
         "concluidas7d": 161,
-        "naSemanaCorrente": 127
+        "naSemanaCorrente": 129
       },
       "mttr": {
         "horas": 22.4,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 130,
+          "criadas": 132,
           "finalizadas": 123
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4665,
-            "emAberto": 24
+            "total": 4667,
+            "emAberto": 26
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 26,
       "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 22,
+        "naoIniciada": 24,
         "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 26
       },
       "oss": [
         {
@@ -487,6 +487,42 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "14698",
+          "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Carlos  Godoi",
+          "status": "Não Iniciada",
+          "tarefa": "[QGBT 2] - Religamento do QGBT 2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-26",
+          "dataCriacao": "2026-09-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14697",
+          "ativo": "QGBT 1  Tupi Paulista  São Paulo Brasil { TPP100-QGBT1 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Carlos  Godoi",
+          "status": "Não Iniciada",
+          "tarefa": "[QGBT 1] - Religamento do QGBT 1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-26",
+          "dataCriacao": "2026-09-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "14691",
@@ -3530,9 +3566,9 @@
       "historicoTotal": 1896,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3906,
+        "local": 3908,
         "remotoEmAberto": 7,
-        "localEmAberto": 17,
+        "localEmAberto": 19,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -14728,6 +14764,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "14698",
+      "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
+      "equipe": "",
+      "responsavel": "Carlos  Godoi",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Carlos  Godoi",
+      "status": "Não Iniciada",
+      "tarefa": "[QGBT 2] - Religamento do QGBT 2",
+      "criticidade": "",
+      "dataProgramada": "2026-09-26",
+      "dataCriacao": "2026-09-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "14697",
+      "ativo": "QGBT 1  Tupi Paulista  São Paulo Brasil { TPP100-QGBT1 }",
+      "equipe": "",
+      "responsavel": "Carlos  Godoi",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Carlos  Godoi",
+      "status": "Não Iniciada",
+      "tarefa": "[QGBT 1] - Religamento do QGBT 1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-26",
+      "dataCriacao": "2026-09-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14691",
       "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
       "equipe": "",
@@ -20355,7 +20425,7 @@
     }
   ],
   "historicoTotal": 3051,
-  "totalGeral": 6557,
+  "totalGeral": 6559,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
