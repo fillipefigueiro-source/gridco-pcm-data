@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-26T16:35:54Z",
+  "geradoEm": "2026-09-26T16:50:06Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4668,
+        "total": 4669,
         "emAberto": 25,
         "atrasadas": 22,
-        "concluidas30d": 760,
-        "concluidas7d": 163,
-        "naSemanaCorrente": 130
+        "concluidas30d": 761,
+        "concluidas7d": 164,
+        "naSemanaCorrente": 131
       },
       "mttr": {
-        "horas": 22.34,
-        "label": "22h 20min",
-        "amostra": 760
+        "horas": 22.31,
+        "label": "22h 19min",
+        "amostra": 761
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W39",
-          "criadas": 133,
-          "finalizadas": 125
+          "criadas": 134,
+          "finalizadas": 126
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4668,
+            "total": 4669,
             "emAberto": 25
           }
         ],
@@ -351,14 +351,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "GerdesonAraújo",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
           "criticidade": "",
           "dataProgramada": "2026-09-25",
           "dataCriacao": "2026-09-25",
-          "dataInicial": "",
+          "dataInicial": "2026-09-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -489,6 +490,24 @@
           "atrasada": true
         },
         {
+          "osId": "14700",
+          "ativo": "Cabine 1 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-TNB100-CABN1] - Religamento do THPN-TNB100-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-26",
+          "dataCriacao": "2026-09-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "14699",
           "ativo": "Thopen - Alvares Machado - SP WHG8+949 Álvares Machado, SP Álvares Machado  São Paulo Brasil { THPN-ALM100 }",
           "equipe": "",
@@ -503,25 +522,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "14698",
-          "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Carlos  Godoi",
-          "status": "Em progresso",
-          "tarefa": "[QGBT 2] - Religamento do QGBT 2",
-          "criticidade": "",
-          "dataProgramada": "2026-09-26",
-          "dataCriacao": "2026-09-26",
-          "dataInicial": "2026-09-26",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -545,6 +545,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14698",
+          "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Carlos  Godoi",
+          "status": "Finalizados",
+          "tarefa": "[QGBT 2] - Religamento do QGBT 2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-26",
+          "dataCriacao": "2026-09-26",
+          "dataInicial": "2026-09-26",
+          "dataFinal": "2026-09-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "14697",
           "ativo": "QGBT 1  Tupi Paulista  São Paulo Brasil { TPP100-QGBT1 }",
@@ -3524,32 +3544,12 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13809",
-          "ativo": "Thopen - Inhapi 1 - AL Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Ricardo Silva ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-INP100] - Religamento do THPN-INP100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-17",
-          "dataCriacao": "2026-09-17",
-          "dataInicial": "2026-09-18",
-          "dataFinal": "2026-09-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1898,
+      "historicoTotal": 1899,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3909,
+        "local": 3910,
         "remotoEmAberto": 7,
         "localEmAberto": 18,
         "pctRemoto": 16,
@@ -14712,6 +14712,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14700",
+      "ativo": "Cabine 1 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-TNB100-CABN1] - Religamento do THPN-TNB100-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-26",
+      "dataCriacao": "2026-09-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14699",
       "ativo": "Thopen - Alvares Machado - SP WHG8+949 Álvares Machado, SP Álvares Machado  São Paulo Brasil { THPN-ALM100 }",
       "equipe": "",
@@ -14726,24 +14743,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "14698",
-      "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
-      "equipe": "",
-      "responsavel": "Carlos  Godoi",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Carlos  Godoi",
-      "status": "Em progresso",
-      "tarefa": "[QGBT 2] - Religamento do QGBT 2",
-      "criticidade": "",
-      "dataProgramada": "2026-09-26",
-      "dataCriacao": "2026-09-26",
-      "dataInicial": "2026-09-26",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -14770,14 +14769,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "GerdesonAraújo",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
       "criticidade": "",
       "dataProgramada": "2026-09-25",
       "dataCriacao": "2026-09-25",
-      "dataInicial": "",
+      "dataInicial": "2026-09-26",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -17694,6 +17694,26 @@
       "atrasada": false
     },
     {
+      "osId": "14698",
+      "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
+      "equipe": "",
+      "responsavel": "Carlos  Godoi",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Carlos  Godoi",
+      "status": "Finalizados",
+      "tarefa": "[QGBT 2] - Religamento do QGBT 2",
+      "criticidade": "",
+      "dataProgramada": "2026-09-26",
+      "dataCriacao": "2026-09-26",
+      "dataInicial": "2026-09-26",
+      "dataFinal": "2026-09-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "14697",
       "ativo": "QGBT 1  Tupi Paulista  São Paulo Brasil { TPP100-QGBT1 }",
       "equipe": "",
@@ -20299,30 +20319,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13942",
-      "ativo": "SKID 1  Tupi Paulista  São Paulo Brasil { TPP100-SKID1 }",
-      "equipe": "",
-      "responsavel": "Carlos  Godoi",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Carlos  Godoi",
-      "status": "Finalizados",
-      "tarefa": "[TPP100-SKID1] - Religamento do TPP100-SKID1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-19",
-      "dataCriacao": "2026-09-19",
-      "dataInicial": "2026-09-19",
-      "dataFinal": "2026-09-19",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3055,
-  "totalGeral": 6560,
+  "historicoTotal": 3056,
+  "totalGeral": 6561,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
