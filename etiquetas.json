@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-26T18:11:19Z",
+  "geradoEm": "2026-09-26T18:32:13Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4676,
-        "emAberto": 28,
+        "total": 4677,
+        "emAberto": 29,
         "atrasadas": 21,
         "concluidas30d": 765,
         "concluidas7d": 168,
-        "naSemanaCorrente": 138
+        "naSemanaCorrente": 139
       },
       "mttr": {
         "horas": 22.22,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 141,
+          "criadas": 142,
           "finalizadas": 130
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4676,
-            "emAberto": 28
+            "total": 4677,
+            "emAberto": 29
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 28,
+      "total": 29,
       "atrasadas": 21,
       "porStatus": {
         "naoIniciada": 26,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 28
+        "(sem equipe)": 29
       },
       "oss": [
         {
@@ -471,6 +471,24 @@
           "atrasada": true
         },
         {
+          "osId": "14708",
+          "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-FZL100] - Religamento do THPN-FZL100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-26",
+          "dataCriacao": "2026-09-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "14707",
           "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
           "equipe": "",
@@ -549,14 +567,15 @@
           "responsavel": "Paulo  Ribeiro",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Paulo  Ribeiro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-TNB100-CABN1] - Religamento do THPN-TNB100-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-09-26",
           "dataCriacao": "2026-09-26",
-          "dataInicial": "",
+          "dataInicial": "2026-09-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3602,9 +3621,9 @@
       "historicoTotal": 1903,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3917,
+        "local": 3918,
         "remotoEmAberto": 7,
-        "localEmAberto": 21,
+        "localEmAberto": 22,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -14765,6 +14784,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14708",
+      "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-FZL100] - Religamento do THPN-FZL100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-26",
+      "dataCriacao": "2026-09-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14707",
       "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
       "equipe": "",
@@ -14839,14 +14875,15 @@
       "responsavel": "Paulo  Ribeiro",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Paulo  Ribeiro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-TNB100-CABN1] - Religamento do THPN-TNB100-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-09-26",
       "dataCriacao": "2026-09-26",
-      "dataInicial": "",
+      "dataInicial": "2026-09-26",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -20425,7 +20462,7 @@
     }
   ],
   "historicoTotal": 3060,
-  "totalGeral": 6568,
+  "totalGeral": 6569,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
