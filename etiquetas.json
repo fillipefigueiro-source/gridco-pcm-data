@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-27T18:51:14Z",
+  "geradoEm": "2026-09-27T19:19:05Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-21 .. 2026-09-27",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4698,
-        "emAberto": 34,
+        "total": 4699,
+        "emAberto": 35,
         "atrasadas": 28,
         "concluidas30d": 742,
         "concluidas7d": 162,
-        "naSemanaCorrente": 160
+        "naSemanaCorrente": 161
       },
       "mttr": {
         "horas": 17.16,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W39",
-          "criadas": 163,
+          "criadas": 164,
           "finalizadas": 146
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4698,
-            "emAberto": 34
+            "total": 4699,
+            "emAberto": 35
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 34,
+      "total": 35,
       "atrasadas": 28,
       "porStatus": {
         "naoIniciada": 31,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 34
+        "(sem equipe)": 35
       },
       "oss": [
         {
@@ -597,20 +597,39 @@
           "atrasada": true
         },
         {
-          "osId": "14738",
-          "ativo": "Cabine 1  Sete Lagoas  Minas Gerais Brasil { SLG200-CABN1 }",
+          "osId": "14739",
+          "ativo": "Thopen - Altair 1 - SP Fazenda Cresciuma S/N Altair  São Paulo Brasil { THPN-ALT100 }",
           "equipe": "",
-          "responsavel": "Daniel de Paula ",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Daniel de Paula ",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Anderson  Parente",
           "status": "Não Iniciada",
-          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "tarefa": "[THPN-ALT100] - Religamento do THPN-ALT100",
           "criticidade": "",
           "dataProgramada": "2026-09-27",
           "dataCriacao": "2026-09-27",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14738",
+          "ativo": "Cabine 1  Sete Lagoas  Minas Gerais Brasil { SLG200-CABN1 }",
+          "equipe": "",
+          "responsavel": "Daniel de Paula ",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Daniel de Paula ",
+          "status": "Em progresso",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-27",
+          "dataCriacao": "2026-09-27",
+          "dataInicial": "2026-09-27",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3711,9 +3730,9 @@
       "historicoTotal": 1906,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3939,
+        "local": 3940,
         "remotoEmAberto": 7,
-        "localEmAberto": 27,
+        "localEmAberto": 28,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -14874,20 +14893,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "14738",
-      "ativo": "Cabine 1  Sete Lagoas  Minas Gerais Brasil { SLG200-CABN1 }",
+      "osId": "14739",
+      "ativo": "Thopen - Altair 1 - SP Fazenda Cresciuma S/N Altair  São Paulo Brasil { THPN-ALT100 }",
       "equipe": "",
-      "responsavel": "Daniel de Paula ",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Daniel de Paula ",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Anderson  Parente",
       "status": "Não Iniciada",
-      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "tarefa": "[THPN-ALT100] - Religamento do THPN-ALT100",
       "criticidade": "",
       "dataProgramada": "2026-09-27",
       "dataCriacao": "2026-09-27",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "14738",
+      "ativo": "Cabine 1  Sete Lagoas  Minas Gerais Brasil { SLG200-CABN1 }",
+      "equipe": "",
+      "responsavel": "Daniel de Paula ",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Daniel de Paula ",
+      "status": "Em progresso",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-27",
+      "dataCriacao": "2026-09-27",
+      "dataInicial": "2026-09-27",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -20637,7 +20674,7 @@
     }
   ],
   "historicoTotal": 3063,
-  "totalGeral": 6590,
+  "totalGeral": 6591,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
