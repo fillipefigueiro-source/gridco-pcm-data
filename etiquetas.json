@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-28T14:58:52Z",
+  "geradoEm": "2026-09-28T15:15:41Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-28 .. 2026-10-04",
   "tipologias": {
@@ -3737,16 +3737,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 799,
-        "emAberto": 61,
+        "emAberto": 60,
         "atrasadas": 55,
-        "concluidas30d": 120,
-        "concluidas7d": 15,
+        "concluidas30d": 121,
+        "concluidas7d": 16,
         "naSemanaCorrente": 6
       },
       "mttr": {
-        "horas": 352.6,
-        "label": "14d 16h",
-        "amostra": 120
+        "horas": 351.67,
+        "label": "14d 15h",
+        "amostra": 121
       },
       "tendencia4Semanas": [
         {
@@ -3767,7 +3767,7 @@
         {
           "semana": "W40",
           "criadas": 0,
-          "finalizadas": 2
+          "finalizadas": 3
         }
       ],
       "topOfensores": {
@@ -3775,7 +3775,7 @@
           {
             "nome": "(sem equipe)",
             "total": 799,
-            "emAberto": 61
+            "emAberto": 60
           }
         ],
         "responsaveis": [
@@ -3785,14 +3785,14 @@
             "emAberto": 6
           },
           {
-            "nome": "Felipe  Lima",
-            "total": 33,
-            "emAberto": 8
-          },
-          {
             "nome": "James Chaves",
             "total": 33,
             "emAberto": 3
+          },
+          {
+            "nome": "Felipe  Lima",
+            "total": 32,
+            "emAberto": 7
           },
           {
             "nome": "Francisco  Santos",
@@ -3806,16 +3806,16 @@
           }
         ]
       },
-      "total": 61,
+      "total": 60,
       "atrasadas": 55,
       "porStatus": {
         "naoIniciada": 54,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 61
+        "(sem equipe)": 60
       },
       "oss": [
         {
@@ -4811,24 +4811,6 @@
           "atrasada": false
         },
         {
-          "osId": "13862",
-          "ativo": "Transformador 4 Gazquez     { IND100-TRFR4 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Felipe  Lima",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-09-29",
-          "dataCriacao": "2026-09-18",
-          "dataInicial": "2026-09-28",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
-          "atrasada": false
-        },
-        {
           "osId": "13606",
           "ativo": "Transformador 1 Weg     { STN100-TRFR1 }",
           "equipe": "",
@@ -4864,6 +4846,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13862",
+          "ativo": "Transformador 4 Gazquez     { IND100-TRFR4 }",
+          "equipe": "",
+          "responsavel": "Igor Silva ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Igor Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-09-29",
+          "dataCriacao": "2026-09-18",
+          "dataInicial": "2026-09-28",
+          "dataFinal": "2026-09-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 240.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13061",
           "ativo": "Transformador 3 COMTRAFO     { FRN100-TRFR3 }",
@@ -6955,25 +6956,6 @@
           "atrasada": false
         },
         {
-          "osId": "11966",
-          "ativo": "Infraestrutura Civil Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200-INFC1 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "2026-08-28",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "12057",
           "ativo": "Infraestrutura Civil  Demerval Lobão  Piauí Brasil { DML100-INFC1 }",
           "equipe": "",
@@ -7715,19 +7697,19 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 352
+      "historicoTotal": 353
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
       "icone": "ti-shield-check",
       "cor": "#ef4444",
       "kpis": {
-        "total": 165,
-        "emAberto": 15,
+        "total": 166,
+        "emAberto": 16,
         "atrasadas": 8,
         "concluidas30d": 10,
         "concluidas7d": 4,
-        "naSemanaCorrente": 7
+        "naSemanaCorrente": 8
       },
       "mttr": {
         "horas": 105.6,
@@ -7752,7 +7734,7 @@
         },
         {
           "semana": "W40",
-          "criadas": 7,
+          "criadas": 8,
           "finalizadas": 0
         }
       ],
@@ -7760,8 +7742,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 165,
-            "emAberto": 15
+            "total": 166,
+            "emAberto": 16
           }
         ],
         "responsaveis": [
@@ -7781,27 +7763,27 @@
             "emAberto": 6
           },
           {
-            "nome": "Francisco  Santos",
-            "total": 9,
-            "emAberto": 0
+            "nome": "Luiz  Silva",
+            "total": 10,
+            "emAberto": 1
           },
           {
-            "nome": "Luiz  Silva",
+            "nome": "Francisco  Santos",
             "total": 9,
             "emAberto": 0
           }
         ]
       },
-      "total": 15,
+      "total": 16,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 13,
+        "naoIniciada": 14,
         "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 15
+        "(sem equipe)": 16
       },
       "oss": [
         {
@@ -7941,6 +7923,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "14780",
+          "ativo": "Inversor 5.2 Huawei     { TIM100-INVR5.2 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Luiz  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Timon 1][Inversor 5.2 Huawei] - Abertura de chamado de garantia",
+          "criticidade": "",
+          "dataProgramada": "2026-09-28",
+          "dataCriacao": "2026-09-28",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "14779",
@@ -8642,16 +8641,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 782,
-        "emAberto": 51,
-        "atrasadas": 37,
-        "concluidas30d": 205,
-        "concluidas7d": 44,
+        "emAberto": 50,
+        "atrasadas": 36,
+        "concluidas30d": 206,
+        "concluidas7d": 45,
         "naSemanaCorrente": 19
       },
       "mttr": {
-        "horas": 275.24,
+        "horas": 275.53,
         "label": "11d 11h",
-        "amostra": 205
+        "amostra": 206
       },
       "tendencia4Semanas": [
         {
@@ -8672,7 +8671,7 @@
         {
           "semana": "W40",
           "criadas": 1,
-          "finalizadas": 2
+          "finalizadas": 3
         }
       ],
       "topOfensores": {
@@ -8680,7 +8679,7 @@
           {
             "nome": "(sem equipe)",
             "total": 782,
-            "emAberto": 51
+            "emAberto": 50
           }
         ],
         "responsaveis": [
@@ -8711,16 +8710,16 @@
           }
         ]
       },
-      "total": 51,
-      "atrasadas": 37,
+      "total": 50,
+      "atrasadas": 36,
       "porStatus": {
         "naoIniciada": 45,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 51
+        "(sem equipe)": 50
       },
       "oss": [
         {
@@ -9220,24 +9219,6 @@
           "atrasada": true
         },
         {
-          "osId": "13585",
-          "ativo": "Inversor 2.8 Sungrow     { ALT100-INVR2.8 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Anderson  Parente",
-          "status": "Em progresso",
-          "tarefa": "Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-14",
-          "dataInicial": "2026-09-28",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "atrasada": true
-        },
-        {
           "osId": "13476",
           "ativo": "Inversor 1.10 Sofar 250KTL-HV-PRO    { IBI200-INVR1.10 }",
           "equipe": "",
@@ -9598,6 +9579,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "13585",
+          "ativo": "Inversor 2.8 Sungrow     { ALT100-INVR2.8 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-09-15",
+          "dataCriacao": "2026-09-14",
+          "dataInicial": "2026-09-28",
+          "dataFinal": "2026-09-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 336.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "12182",
           "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
@@ -11784,25 +11784,6 @@
           "atrasada": false
         },
         {
-          "osId": "10648",
-          "ativo": "Tracker 44.100 Axial Tracker 1VTwin    { THPN-CLR100-ETKR44.100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 44.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-07",
-          "dataCriacao": "2026-08-04",
-          "dataInicial": "2026-08-25",
-          "dataFinal": "2026-08-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 504.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11421",
           "ativo": "Tracker 06.104 Brametal Bi-motor    { SMP100-ETKR6.104 }",
           "equipe": "",
@@ -12449,7 +12430,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 672
+      "historicoTotal": 673
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14707,6 +14688,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "14780",
+      "ativo": "Inversor 5.2 Huawei     { TIM100-INVR5.2 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Luiz  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Timon 1][Inversor 5.2 Huawei] - Abertura de chamado de garantia",
+      "criticidade": "",
+      "dataProgramada": "2026-09-28",
+      "dataCriacao": "2026-09-28",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "14779",
       "ativo": "Inversor 1.8 SOLAREDGE     { NVX200-INVR1.8 }",
       "equipe": "",
@@ -15475,23 +15472,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "13862",
-      "ativo": "Transformador 4 Gazquez     { IND100-TRFR4 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Felipe  Lima",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-09-29",
-      "dataCriacao": "2026-09-18",
-      "dataInicial": "2026-09-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 240.0
-    },
-    {
       "osId": "13766",
       "ativo": "Inversor 2.2  SUN2000-250KTL-H1    { THPN-TGI100-INVR2.2 }",
       "equipe": "",
@@ -15619,23 +15599,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "13585",
-      "ativo": "Inversor 2.8 Sungrow     { ALT100-INVR2.8 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Anderson  Parente",
-      "status": "Em progresso",
-      "tarefa": "Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
-      "dataCriacao": "2026-09-14",
-      "dataInicial": "2026-09-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 336.0
     },
     {
       "osId": "13480",
@@ -17394,6 +17357,25 @@
       "dataFinal": "2026-09-24",
       "linkFracttal": "",
       "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "13862",
+      "ativo": "Transformador 4 Gazquez     { IND100-TRFR4 }",
+      "equipe": "",
+      "responsavel": "Igor Silva ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Igor Silva ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-09-29",
+      "dataCriacao": "2026-09-18",
+      "dataInicial": "2026-09-28",
+      "dataFinal": "2026-09-28",
+      "linkFracttal": "",
+      "horasAteAbrir": 240.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -20308,30 +20290,10 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "14257",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Felipe Silva ",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizados",
-      "tarefa": "[Axis - Marialva 1 - PR] - Religamento do Axis - Marialva 1 - PR",
-      "criticidade": "",
-      "dataProgramada": "2026-09-21",
-      "dataCriacao": "2026-09-21",
-      "dataInicial": "2026-09-23",
-      "dataFinal": "2026-09-23",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3067,
-  "totalGeral": 6607,
+  "historicoTotal": 3069,
+  "totalGeral": 6608,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
