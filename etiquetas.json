@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-28T12:39:04Z",
+  "geradoEm": "2026-09-28T13:19:29Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-28 .. 2026-10-04",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4705,
-        "emAberto": 23,
+        "total": 4706,
+        "emAberto": 24,
         "atrasadas": 21,
         "concluidas30d": 745,
         "concluidas7d": 164,
-        "naSemanaCorrente": 4
+        "naSemanaCorrente": 5
       },
       "mttr": {
         "horas": 15.26,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W40",
-          "criadas": 4,
+          "criadas": 5,
           "finalizadas": 8
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4705,
-            "emAberto": 23
+            "total": 4706,
+            "emAberto": 24
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 23,
+      "total": 24,
       "atrasadas": 21,
       "porStatus": {
         "naoIniciada": 21,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 23
+        "(sem equipe)": 24
       },
       "oss": [
         {
@@ -471,20 +471,39 @@
           "atrasada": true
         },
         {
-          "osId": "14743",
-          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+          "osId": "14761",
+          "ativo": "Cabine 1  Araçoiaba  São Paulo Brasil { ADS100-CABN1 }",
           "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Valdério Paz ",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Eduardo  Mendes",
           "status": "Não Iniciada",
-          "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
+          "tarefa": "[Araçoiaba 1A] - Verificação do relé e realização do teste de religamento",
           "criticidade": "",
           "dataProgramada": "2026-09-28",
           "dataCriacao": "2026-09-28",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14743",
+          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Valdério Paz ",
+          "status": "Em progresso",
+          "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-28",
+          "dataCriacao": "2026-09-28",
+          "dataInicial": "2026-09-28",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3512,9 +3531,9 @@
       "historicoTotal": 1909,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3946,
+        "local": 3947,
         "remotoEmAberto": 7,
-        "localEmAberto": 16,
+        "localEmAberto": 17,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -3810,8 +3829,8 @@
       "atrasadas": 57,
       "porStatus": {
         "naoIniciada": 56,
-        "emProgresso": 1,
-        "pausada": 6,
+        "emProgresso": 2,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4749,15 +4768,14 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Felipe  Lima",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - MPA - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-09-23",
           "dataCriacao": "2026-09-11",
-          "dataInicial": "2026-09-23",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 288.0,
           "atrasada": true
         },
         {
@@ -4852,14 +4870,15 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-09-29",
           "dataCriacao": "2026-09-18",
-          "dataInicial": "",
+          "dataInicial": "2026-09-28",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 240.0,
           "atrasada": false
         },
         {
@@ -8556,17 +8575,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 781,
-        "emAberto": 52,
-        "atrasadas": 39,
-        "concluidas30d": 203,
-        "concluidas7d": 42,
-        "naSemanaCorrente": 18
+        "total": 782,
+        "emAberto": 51,
+        "atrasadas": 37,
+        "concluidas30d": 205,
+        "concluidas7d": 44,
+        "naSemanaCorrente": 19
       },
       "mttr": {
-        "horas": 268.37,
-        "label": "11d 4h",
-        "amostra": 203
+        "horas": 275.24,
+        "label": "11d 11h",
+        "amostra": 205
       },
       "tendencia4Semanas": [
         {
@@ -8586,23 +8605,23 @@
         },
         {
           "semana": "W40",
-          "criadas": 0,
-          "finalizadas": 0
+          "criadas": 1,
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 781,
-            "emAberto": 52
+            "total": 782,
+            "emAberto": 51
           }
         ],
         "responsaveis": [
           {
             "nome": "Gilson Souza",
-            "total": 54,
-            "emAberto": 0
+            "total": 55,
+            "emAberto": 1
           },
           {
             "nome": "Marcos Duarte",
@@ -8612,7 +8631,7 @@
           {
             "nome": "James Chaves",
             "total": 48,
-            "emAberto": 9
+            "emAberto": 7
           },
           {
             "nome": "Luiz  Silva",
@@ -8626,16 +8645,16 @@
           }
         ]
       },
-      "total": 52,
-      "atrasadas": 39,
+      "total": 51,
+      "atrasadas": 37,
       "porStatus": {
         "naoIniciada": 46,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 52
+        "(sem equipe)": 51
       },
       "oss": [
         {
@@ -8809,24 +8828,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "11119",
-          "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "James Chaves ",
-          "status": "Em progresso",
-          "tarefa": "[MAB100-ETK65.102] - Verificação de Tracker com oscilação de ângulo alvo",
-          "criticidade": "",
-          "dataProgramada": "2026-08-14",
-          "dataCriacao": "2026-08-12",
-          "dataInicial": "2026-09-28",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 1128.0,
           "atrasada": true
         },
         {
@@ -9025,23 +9026,6 @@
           "supervisor": "James Chaves ",
           "status": "Não Iniciada",
           "tarefa": "[Tracker 117.104] - Verificação de tracker parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-26",
-          "dataCriacao": "2026-08-25",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "12182",
-          "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
-          "tarefa": "[Tracker 11.105] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-26",
           "dataCriacao": "2026-08-25",
@@ -9410,6 +9394,23 @@
           "atrasada": false
         },
         {
+          "osId": "14764",
+          "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Ana Barros",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-09-29",
+          "dataCriacao": "2026-09-28",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "14636",
           "ativo": "Inversor 1.10 Huawei     { THPN-SBU100-INVR1.10 }",
           "equipe": "",
@@ -9530,6 +9531,44 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "12182",
+          "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 11.105] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-08-26",
+          "dataCriacao": "2026-08-25",
+          "dataInicial": "2026-09-28",
+          "dataFinal": "2026-09-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 816.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "11119",
+          "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "[MAB100-ETK65.102] - Verificação de Tracker com oscilação de ângulo alvo",
+          "criticidade": "",
+          "dataProgramada": "2026-08-14",
+          "dataCriacao": "2026-08-12",
+          "dataInicial": "2026-09-28",
+          "dataFinal": "2026-09-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 1128.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13580",
           "ativo": "Inversor 4.1 Sungrow     { ALT100-INVR4.1 }",
@@ -12341,47 +12380,9 @@
           "horasAteAbrir": 96.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "10414",
-          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H3    { IRC100-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Olimpio Lima ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Olimpio Lima ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.6] - Avaliação de sombreamento externo",
-          "criticidade": "",
-          "dataProgramada": "2026-07-31",
-          "dataCriacao": "2026-07-30",
-          "dataInicial": "2026-07-31",
-          "dataFinal": "2026-08-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 168.0,
-          "atrasada": false
-        },
-        {
-          "osId": "10341",
-          "ativo": "Inversor 2.2 Sungrow SG125-20-1500VDC    { MNG100-INVR2.2 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 2.2] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-07-30",
-          "dataCriacao": "2026-07-29",
-          "dataInicial": "2026-08-03",
-          "dataFinal": "2026-08-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 670
+      "historicoTotal": 672
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14622,20 +14623,54 @@
   },
   "ossPublicas": [
     {
-      "osId": "14743",
-      "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+      "osId": "14764",
+      "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
       "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Valdério Paz ",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Ana Barros",
+      "supervisor": "Gilson Souza ",
       "status": "Não Iniciada",
-      "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-09-29",
+      "dataCriacao": "2026-09-28",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "14761",
+      "ativo": "Cabine 1  Araçoiaba  São Paulo Brasil { ADS100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "[Araçoiaba 1A] - Verificação do relé e realização do teste de religamento",
       "criticidade": "",
       "dataProgramada": "2026-09-28",
       "dataCriacao": "2026-09-28",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "14743",
+      "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Valdério Paz ",
+      "status": "Em progresso",
+      "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-28",
+      "dataCriacao": "2026-09-28",
+      "dataInicial": "2026-09-28",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15251,14 +15286,15 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-29",
       "dataCriacao": "2026-09-18",
-      "dataInicial": "",
+      "dataInicial": "2026-09-28",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 240.0
     },
     {
       "osId": "13766",
@@ -15413,15 +15449,14 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Felipe  Lima",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Grid Co.] - MPA - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-09-23",
       "dataCriacao": "2026-09-11",
-      "dataInicial": "2026-09-23",
+      "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 288.0
+      "linkFracttal": ""
     },
     {
       "osId": "13476",
@@ -16440,22 +16475,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "12182",
-      "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
-      "tarefa": "[Tracker 11.105] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-08-26",
-      "dataCriacao": "2026-08-25",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "12153",
       "ativo": "Inversor 3.3 SOLAREDGE     { NVX200-INVR3.3 }",
       "equipe": "",
@@ -16782,23 +16801,6 @@
       "linkFracttal": "",
       "horasAteAbrir": 840.0,
       "modalidade": "local"
-    },
-    {
-      "osId": "11119",
-      "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "James Chaves ",
-      "status": "Em progresso",
-      "tarefa": "[MAB100-ETK65.102] - Verificação de Tracker com oscilação de ângulo alvo",
-      "criticidade": "",
-      "dataProgramada": "2026-08-14",
-      "dataCriacao": "2026-08-12",
-      "dataInicial": "2026-09-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 1128.0
     },
     {
       "osId": "11016",
@@ -17458,25 +17460,6 @@
       "linkFracttal": "",
       "horasAteAbrir": 408.0,
       "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "10319",
-      "ativo": "Transformador 2      { IBI100-TRFR2 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Thiago Morais ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPA - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-17",
-      "dataCriacao": "2026-07-29",
-      "dataInicial": "2026-09-11",
-      "dataFinal": "2026-09-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 1056.0,
-      "horasAteFechar": 24.0,
       "atrasada": false
     },
     {
@@ -20164,10 +20147,30 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
+    },
+    {
+      "osId": "14121",
+      "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Felipe Silva ",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[IBI200-INVR1.5] - Religamento do IBI200-INVR1.5",
+      "criticidade": "",
+      "dataProgramada": "2026-09-21",
+      "dataCriacao": "2026-09-21",
+      "dataInicial": "2026-09-21",
+      "dataFinal": "2026-09-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
     }
   ],
-  "historicoTotal": 3061,
-  "totalGeral": 6596,
+  "historicoTotal": 3063,
+  "totalGeral": 6598,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
