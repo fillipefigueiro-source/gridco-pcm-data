@@ -1,7 +1,7 @@
 {
-  "geradoEm": "2026-09-27T23:00:12Z",
+  "geradoEm": "2026-09-28T00:04:17Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
-  "semana": "2026-09-21 .. 2026-09-27",
+  "semana": "2026-09-28 .. 2026-10-04",
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
@@ -9,23 +9,18 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4701,
-        "emAberto": 28,
-        "atrasadas": 25,
-        "concluidas30d": 751,
-        "concluidas7d": 171,
-        "naSemanaCorrente": 163
+        "emAberto": 27,
+        "atrasadas": 27,
+        "concluidas30d": 737,
+        "concluidas7d": 156,
+        "naSemanaCorrente": 0
       },
       "mttr": {
-        "horas": 17.08,
-        "label": "17h 5min",
-        "amostra": 751
+        "horas": 14.8,
+        "label": "14h 48min",
+        "amostra": 737
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W36",
-          "criadas": 207,
-          "finalizadas": 197
-        },
         {
           "semana": "W37",
           "criadas": 174,
@@ -39,7 +34,12 @@
         {
           "semana": "W39",
           "criadas": 166,
-          "finalizadas": 155
+          "finalizadas": 156
+        },
+        {
+          "semana": "W40",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4701,
-            "emAberto": 28
+            "emAberto": 27
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 28,
-      "atrasadas": 25,
+      "total": 27,
+      "atrasadas": 27,
       "porStatus": {
         "naoIniciada": 24,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 28
+        "(sem equipe)": 27
       },
       "oss": [
         {
@@ -558,26 +558,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "14732",
-          "ativo": "Cabine 3 Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { CGU100-CABN3 }",
-          "equipe": "",
-          "responsavel": "Igor Silva ",
-          "criadoPor": "Maria Emanuella de Souza Mota ",
-          "supervisor": "Igor Silva ",
-          "status": "Em progresso",
-          "tarefa": "[CGU100-CABN3] - Religamento do CGU100-CABN3",
-          "criticidade": "",
-          "dataProgramada": "2026-09-27",
-          "dataCriacao": "2026-09-27",
-          "dataInicial": "2026-09-27",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "14723",
@@ -596,7 +577,7 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         }
       ],
       "ossHistorico": [
@@ -689,6 +670,26 @@
           "supervisor": "Matheus Gois ",
           "status": "Finalizados",
           "tarefa": "[THPN-CLR100-QGBT1] - Religamento do THPN-CLR100-QGBT1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-27",
+          "dataCriacao": "2026-09-27",
+          "dataInicial": "2026-09-27",
+          "dataFinal": "2026-09-27",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14732",
+          "ativo": "Cabine 3 Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { CGU100-CABN3 }",
+          "equipe": "",
+          "responsavel": "Igor Silva ",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Igor Silva ",
+          "status": "Finalizados",
+          "tarefa": "[CGU100-CABN3] - Religamento do CGU100-CABN3",
           "criticidade": "",
           "dataProgramada": "2026-09-27",
           "dataCriacao": "2026-09-27",
@@ -3579,34 +3580,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13935",
-          "ativo": "Cabine 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-CABN4 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Ricardo Silva ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-ORB100-CABN4] - Religamento do THPN-ORB100-CABN4",
-          "criticidade": "",
-          "dataProgramada": "2026-09-19",
-          "dataCriacao": "2026-09-19",
-          "dataInicial": "2026-09-19",
-          "dataFinal": "2026-09-19",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1915,
+      "historicoTotal": 1901,
       "subClassificacao": {
         "remoto": 759,
         "local": 3942,
         "remotoEmAberto": 7,
-        "localEmAberto": 21,
+        "localEmAberto": 20,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -3831,21 +3812,16 @@
         "total": 799,
         "emAberto": 63,
         "atrasadas": 57,
-        "concluidas30d": 139,
+        "concluidas30d": 118,
         "concluidas7d": 13,
-        "naSemanaCorrente": 12
+        "naSemanaCorrente": 6
       },
       "mttr": {
-        "horas": 333.93,
-        "label": "13d 21h",
-        "amostra": 139
+        "horas": 348.41,
+        "label": "14d 12h",
+        "amostra": 118
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W36",
-          "criadas": 86,
-          "finalizadas": 45
-        },
         {
           "semana": "W37",
           "criadas": 20,
@@ -3860,6 +3836,11 @@
           "semana": "W39",
           "criadas": 5,
           "finalizadas": 13
+        },
+        {
+          "semana": "W40",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -7840,7 +7821,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 354
+      "historicoTotal": 350
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -7850,21 +7831,16 @@
         "total": 158,
         "emAberto": 8,
         "atrasadas": 8,
-        "concluidas30d": 13,
+        "concluidas30d": 10,
         "concluidas7d": 4,
-        "naSemanaCorrente": 1
+        "naSemanaCorrente": 0
       },
       "mttr": {
-        "horas": 420.92,
-        "label": "17d 12h",
-        "amostra": 13
+        "horas": 105.6,
+        "label": "4d 9h",
+        "amostra": 10
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W36",
-          "criadas": 3,
-          "finalizadas": 1
-        },
         {
           "semana": "W37",
           "criadas": 5,
@@ -7879,6 +7855,11 @@
           "semana": "W39",
           "criadas": 1,
           "finalizadas": 4
+        },
+        {
+          "semana": "W40",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -8650,21 +8631,16 @@
         "total": 781,
         "emAberto": 52,
         "atrasadas": 39,
-        "concluidas30d": 215,
+        "concluidas30d": 203,
         "concluidas7d": 42,
-        "naSemanaCorrente": 24
+        "naSemanaCorrente": 18
       },
       "mttr": {
-        "horas": 265.23,
-        "label": "11d 1h",
-        "amostra": 215
+        "horas": 268.37,
+        "label": "11d 4h",
+        "amostra": 203
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W36",
-          "criadas": 26,
-          "finalizadas": 84
-        },
         {
           "semana": "W37",
           "criadas": 43,
@@ -8679,6 +8655,11 @@
           "semana": "W39",
           "criadas": 30,
           "finalizadas": 42
+        },
+        {
+          "semana": "W40",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -12470,7 +12451,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 671
+      "historicoTotal": 670
     },
     "engenharia": {
       "label": "Engenharia",
@@ -12480,21 +12461,16 @@
         "total": 153,
         "emAberto": 12,
         "atrasadas": 9,
-        "concluidas30d": 31,
+        "concluidas30d": 26,
         "concluidas7d": 10,
         "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 398.71,
-        "label": "16d 14h",
-        "amostra": 31
+        "horas": 213.23,
+        "label": "8d 21h",
+        "amostra": 26
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W36",
-          "criadas": 5,
-          "finalizadas": 1
-        },
         {
           "semana": "W37",
           "criadas": 5,
@@ -12509,6 +12485,11 @@
           "semana": "W39",
           "criadas": 6,
           "finalizadas": 10
+        },
+        {
+          "semana": "W40",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -14704,28 +14685,9 @@
           "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "8361",
-          "ativo": "SKID 2 Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso Brasil { NVX200-SKID2 }",
-          "equipe": "",
-          "responsavel": "Gabriel Oliveira ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Gabriel Oliveira ",
-          "status": "Finalizada",
-          "tarefa": "Manutenção corretiva e ensaios dos SKIDS",
-          "criticidade": "",
-          "dataProgramada": "2026-06-25",
-          "dataCriacao": "2026-06-25",
-          "dataInicial": "2026-06-29",
-          "dataFinal": "2026-06-29",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 103
+      "historicoTotal": 102
     }
   },
   "ossPublicas": [
@@ -14744,24 +14706,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "14732",
-      "ativo": "Cabine 3 Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { CGU100-CABN3 }",
-      "equipe": "",
-      "responsavel": "Igor Silva ",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Igor Silva ",
-      "status": "Em progresso",
-      "tarefa": "[CGU100-CABN3] - Religamento do CGU100-CABN3",
-      "criticidade": "",
-      "dataProgramada": "2026-09-27",
-      "dataCriacao": "2026-09-27",
-      "dataInicial": "2026-09-27",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -17810,6 +17754,26 @@
       "atrasada": false
     },
     {
+      "osId": "14732",
+      "ativo": "Cabine 3 Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { CGU100-CABN3 }",
+      "equipe": "",
+      "responsavel": "Igor Silva ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Igor Silva ",
+      "status": "Finalizados",
+      "tarefa": "[CGU100-CABN3] - Religamento do CGU100-CABN3",
+      "criticidade": "",
+      "dataProgramada": "2026-09-27",
+      "dataCriacao": "2026-09-27",
+      "dataInicial": "2026-09-27",
+      "dataFinal": "2026-09-27",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "14730",
       "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
       "equipe": "",
@@ -20334,29 +20298,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "13976",
-      "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "David  Nascimento",
-      "supervisor": "Thiago Morais ",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-09-21",
-      "dataCriacao": "2026-09-21",
-      "dataInicial": "2026-09-21",
-      "dataFinal": "2026-09-21",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3073,
+  "historicoTotal": 3053,
   "totalGeral": 6592,
   "verificacao": {
     "total": 0,
