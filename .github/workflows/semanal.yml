@@ -20,6 +20,9 @@ name: Atualiza Programação Semanal (a cada 15 min)
 #
 # Mudança de CÓDIGO não dispara de propósito. O cron pega na próxima, e quem tiver
 # pressa usa o Run workflow — melhor que cada commit custar 6 min de execução.
+#
+# DESDE 28/09/2026: o cron e o amortecedor só ACORDAM o robô; quem decide se a
+# rodada acontece é o job `ritmo`, que exige 30 min de descanso depois da última.
 on:
   schedule:
     - cron: '*/15 * * * *'
@@ -48,7 +51,107 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # DESCANSO ENTRE RODADAS AUTOMÁTICAS (Levi, 28/09/2026: "reduza para a cada 30 min").
+  # Desde 24/09 o limite do Fracttal é de 200 pedidos/min para a EMPRESA inteira: este
+  # robô, o da Gestão PCM e o App de Campo dividem a mesma cota. Rodando sem parar, os
+  # robôs chegavam a levar 120 dos 200 e o campo ficava com o resto. Em 28/09 o App levou
+  # 1.054 recusas em 15 min, e técnico em campo não conseguiu sincronizar.
+  #
+  # O descanso conta do FIM da última rodada, não do início: em 28/09 a rodada daqui
+  # chegou a 43 min. Com "30 min desde o início" ela seguiria emendada, e o campo
+  # não ganharia nada.
+  #
+  # Só o que é automático espera (cron e o amortecedor do webhook). Publicar a semana
+  # (push) e o "Run workflow" rodam na hora. Para mudar o descanso, troque o PAUSA_MIN.
+  #
+  # O nome do workflow continua "(a cada 15 min)" de propósito: o azure-swa.yml o procura
+  # pelo nome, e trocar só um dos dois faria o deploy do painel parar sem erro nenhum.
+  ritmo:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+    outputs:
+      rodar: ${{ steps.decide.outputs.rodar }}
+    steps:
+      - name: Decidir se esta rodada acontece (descanso de 30 min)
+        id: decide
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAUSA_MIN: '30'
+        run: |
+          python3 - <<'PY'
+          import datetime as dt, json, os, sys, urllib.request
+
+          PAUSA = int(os.environ.get("PAUSA_MIN") or "30")
+          EVENTO = os.environ.get("GITHUB_EVENT_NAME", "")
+
+
+          def decidir(rodar, motivo):
+              print(motivo)
+              with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+                  f.write("rodar=%s\n" % ("1" if rodar else "0"))
+              sys.exit(0)
+
+
+          # Publicar a semana (push) e o "Run workflow" (manual) nunca esperam: é gente
+          # pedindo o dado agora. Só o que é automático respeita o descanso.
+          if EVENTO not in ("schedule", "repository_dispatch"):
+              decidir(True, "gatilho '%s': roda agora, sem esperar o descanso" % EVENTO)
+
+
+          def api(caminho):
+              req = urllib.request.Request(
+                  "https://api.github.com/repos/%s/%s" % (os.environ["GITHUB_REPOSITORY"], caminho),
+                  headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                           "Accept": "application/vnd.github+json",
+                           "X-GitHub-Api-Version": "2022-11-28"})
+              with urllib.request.urlopen(req, timeout=20) as r:
+                  return json.load(r)
+
+
+          def utc(s):
+              return dt.datetime.strptime(s, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc)
+
+
+          # A rodada que conta é a que TRABALHOU: a deste mesmo robô cujo job `atualizar`
+          # chegou a rodar numa máquina (tem passo concluído), tenha ele terminado bem, mal ou
+          # cancelado no meio — as três gastaram a cota. As que esta trava deixou de fora
+          # terminam com o job "skipped", sem passo nenhum, e não contam; se contassem, o
+          # descanso recomeçaria a cada gatilho e o robô nunca mais rodaria. A cancelada
+          # ainda na fila também não tem passo e fica de fora.
+          try:
+              wid = api("actions/runs/%s" % os.environ["GITHUB_RUN_ID"])["workflow_id"]
+              fim = None
+              # SEM `status=completed` na consulta: com esse filtro o GitHub devolveu, na mesma
+              # hora, ora a rodada de 5 min atrás, ora uma de 14/09 (medido em 28/09/2026 neste
+              # repositório, que tem dezenas de milhares de rodadas). A lista sem filtro vem na
+              # ordem certa; as que ainda não terminaram ficam de fora aqui.
+              for run in api("actions/workflows/%s/runs?per_page=30" % wid)["workflow_runs"]:
+                  if run.get("status") != "completed":
+                      continue
+                  for job in api("actions/runs/%s/jobs" % run["id"])["jobs"]:
+                      if (job.get("name") == "atualizar" and job.get("completed_at")
+                              and any(p.get("conclusion") == "success" for p in job.get("steps") or [])):
+                          fim = utc(job["completed_at"])
+                          break
+                  if fim:
+                      break
+          except Exception as e:
+              # Não saber não é motivo para parar o painel: na dúvida, roda.
+              decidir(True, "não consegui ler as rodadas anteriores (%s): roda" % e)
+
+          if fim is None:
+              decidir(True, "nenhuma rodada de verdade entre as 30 últimas: roda")
+          passou = (dt.datetime.now(dt.timezone.utc) - fim).total_seconds() / 60
+          if passou < PAUSA:
+              decidir(False, "a última rodada terminou às %s UTC, há %.0f min; o descanso é de %d min: "
+                             "esta fica de fora" % (fim.strftime("%H:%M"), passou, PAUSA))
+          decidir(True, "a última rodada terminou às %s UTC, há %.0f min: roda" % (fim.strftime("%H:%M"), passou))
+          PY
+
   atualizar:
+    needs: ritmo
+    if: needs.ritmo.outputs.rodar == '1'
     runs-on: ubuntu-latest
     steps:
       - name: Baixar o repositório
