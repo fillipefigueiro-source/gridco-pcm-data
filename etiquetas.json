@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-28T16:37:19Z",
+  "geradoEm": "2026-09-28T17:00:48Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-28 .. 2026-10-04",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4709,
-        "emAberto": 24,
+        "total": 4713,
+        "emAberto": 26,
         "atrasadas": 21,
-        "concluidas30d": 748,
-        "concluidas7d": 167,
-        "naSemanaCorrente": 8
+        "concluidas30d": 750,
+        "concluidas7d": 169,
+        "naSemanaCorrente": 12
       },
       "mttr": {
-        "horas": 15.2,
-        "label": "15h 12min",
-        "amostra": 748
+        "horas": 15.16,
+        "label": "15h 9min",
+        "amostra": 750
       },
       "tendencia4Semanas": [
         {
@@ -38,22 +38,22 @@
         },
         {
           "semana": "W40",
-          "criadas": 8,
-          "finalizadas": 11
+          "criadas": 12,
+          "finalizadas": 13
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4709,
-            "emAberto": 24
+            "total": 4713,
+            "emAberto": 26
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 606,
+            "total": 608,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 26,
       "atrasadas": 21,
       "porStatus": {
-        "naoIniciada": 22,
-        "emProgresso": 0,
+        "naoIniciada": 23,
+        "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 26
       },
       "oss": [
         {
@@ -471,20 +471,57 @@
           "atrasada": true
         },
         {
-          "osId": "14783",
-          "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
+          "osId": "14787",
+          "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
           "equipe": "",
-          "responsavel": "Carlos  Godoi",
+          "responsavel": "Gilson Souza ",
           "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Carlos  Godoi",
+          "supervisor": "Gilson Souza ",
           "status": "Não Iniciada",
-          "tarefa": "[QGBT 2] - Religamento do QGBT 2",
+          "tarefa": "[Cabine 3] - Religamento da Cabine 3",
           "criticidade": "",
           "dataProgramada": "2026-09-28",
           "dataCriacao": "2026-09-28",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14786",
+          "ativo": "Cabine 3 Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { CGU100-CABN3 }",
+          "equipe": "",
+          "responsavel": "Lucas Alberto Freitas de Faria ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Lucas Alberto Freitas de Faria ",
+          "status": "Não Iniciada",
+          "tarefa": "[CGU100-CABN3] - Religamento do CGU100-CABN3",
+          "criticidade": "",
+          "dataProgramada": "2026-09-28",
+          "dataCriacao": "2026-09-28",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14783",
+          "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Carlos  Godoi",
+          "status": "Em progresso",
+          "tarefa": "[QGBT 2] - Religamento do QGBT 2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-28",
+          "dataCriacao": "2026-09-28",
+          "dataInicial": "2026-09-28",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3527,12 +3564,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1912,
+      "historicoTotal": 1914,
       "subClassificacao": {
         "remoto": 759,
-        "local": 3950,
+        "local": 3954,
         "remotoEmAberto": 7,
-        "localEmAberto": 17,
+        "localEmAberto": 19,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -14707,20 +14744,55 @@
   },
   "ossPublicas": [
     {
-      "osId": "14783",
-      "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
+      "osId": "14787",
+      "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
       "equipe": "",
-      "responsavel": "Carlos  Godoi",
+      "responsavel": "Gilson Souza ",
       "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Carlos  Godoi",
+      "supervisor": "Gilson Souza ",
       "status": "Não Iniciada",
-      "tarefa": "[QGBT 2] - Religamento do QGBT 2",
+      "tarefa": "[Cabine 3] - Religamento da Cabine 3",
       "criticidade": "",
       "dataProgramada": "2026-09-28",
       "dataCriacao": "2026-09-28",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "14786",
+      "ativo": "Cabine 3 Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { CGU100-CABN3 }",
+      "equipe": "",
+      "responsavel": "Lucas Alberto Freitas de Faria ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Lucas Alberto Freitas de Faria ",
+      "status": "Não Iniciada",
+      "tarefa": "[CGU100-CABN3] - Religamento do CGU100-CABN3",
+      "criticidade": "",
+      "dataProgramada": "2026-09-28",
+      "dataCriacao": "2026-09-28",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "14783",
+      "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
+      "equipe": "",
+      "responsavel": "Carlos  Godoi",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Carlos  Godoi",
+      "status": "Em progresso",
+      "tarefa": "[QGBT 2] - Religamento do QGBT 2",
+      "criticidade": "",
+      "dataProgramada": "2026-09-28",
+      "dataCriacao": "2026-09-28",
+      "dataInicial": "2026-09-28",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -20330,8 +20402,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3070,
-  "totalGeral": 6610,
+  "historicoTotal": 3072,
+  "totalGeral": 6614,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
