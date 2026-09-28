@@ -254,7 +254,13 @@ function rexSemanas(bd) {
         porOS.set(k, { os: k, usina: r.usina, tarefa: r.tarefa, tipo: r.tipo,
                        vezes: v, fin: rexFinBd(r.status) });
     });
-    const rolagens = Array.from(porOS.values()).filter(x => x.vezes >= 2)
+    // situação ATUAL pelo Fracttal (gestao_pcm), não pela foto da planilha:
+    // OS cancelada some da base do painel → sai do Top 10; finalizada → "feita"
+    const atual = new Map();
+    T.forEach(t => { const k = String(t.os); const a = atual.get(k) || { n: 0, fin: 0 };
+      a.n++; if (rexFin(t)) a.fin++; atual.set(k, a); });
+    porOS.forEach(x => { const a = atual.get(x.os); x.cancel = !a; if (a) x.fin = a.fin === a.n; });
+    const rolagens = Array.from(porOS.values()).filter(x => x.vezes >= 2 && !x.cancel)
       .sort((x, y) => y.vezes - x.vezes).slice(0, 10);
     // não coube na semana + motivos (o programador registra o porquê)
     const pend = (w.pendentes || []).filter(rexEscopoFiltro);
