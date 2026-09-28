@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-28T20:59:17Z",
+  "geradoEm": "2026-09-28T23:58:30Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-28 .. 2026-10-04",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4722,
-        "emAberto": 25,
+        "total": 4724,
+        "emAberto": 23,
         "atrasadas": 21,
-        "concluidas30d": 760,
-        "concluidas7d": 179,
-        "naSemanaCorrente": 19
+        "concluidas30d": 764,
+        "concluidas7d": 183,
+        "naSemanaCorrente": 21
       },
       "mttr": {
-        "horas": 15.08,
-        "label": "15h 5min",
-        "amostra": 760
+        "horas": 15.0,
+        "label": "15h 0min",
+        "amostra": 764
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W40",
-          "criadas": 21,
-          "finalizadas": 23
+          "criadas": 23,
+          "finalizadas": 27
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4722,
-            "emAberto": 25
+            "total": 4724,
+            "emAberto": 23
           }
         ],
         "responsaveis": [
@@ -68,26 +68,26 @@
           },
           {
             "nome": "Italo  Lustosa",
-            "total": 241,
+            "total": 242,
             "emAberto": 0
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 205,
-            "emAberto": 1
+            "total": 206,
+            "emAberto": 2
           }
         ]
       },
-      "total": 25,
+      "total": 23,
       "atrasadas": 21,
       "porStatus": {
-        "naoIniciada": 20,
-        "emProgresso": 3,
+        "naoIniciada": 21,
+        "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 25
+        "(sem equipe)": 23
       },
       "oss": [
         {
@@ -471,6 +471,24 @@
           "atrasada": true
         },
         {
+          "osId": "14814",
+          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Wesllen  Castro",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-09-28",
+          "dataCriacao": "2026-09-28",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "14812",
           "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
           "equipe": "",
@@ -487,7 +505,9 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "14806",
           "ativo": "Cabine 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN2 }",
@@ -495,58 +515,19 @@
           "responsavel": "Ailton Leal ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Ailton Leal ",
-          "status": "Em progresso",
+          "status": "Finalizados",
           "tarefa": "[THPN-JNC100-CABN2] - Religamento do THPN-JNC100-CABN2",
           "criticidade": "",
           "dataProgramada": "2026-09-28",
           "dataCriacao": "2026-09-28",
           "dataInicial": "2026-09-28",
-          "dataFinal": "",
+          "dataFinal": "2026-09-28",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
-        {
-          "osId": "14790",
-          "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Em progresso",
-          "tarefa": "testes de religamento remoto UFV - Araçoiaba da serra IB",
-          "criticidade": "",
-          "dataProgramada": "2026-09-28",
-          "dataCriacao": "2026-09-28",
-          "dataInicial": "2026-09-28",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "remoto",
-          "atrasada": false
-        },
-        {
-          "osId": "14761",
-          "ativo": "Cabine 1  Araçoiaba  São Paulo Brasil { ADS100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Em progresso",
-          "tarefa": "[Araçoiaba 1A] - Verificação do relé e realização do teste de religamento",
-          "criticidade": "",
-          "dataProgramada": "2026-09-28",
-          "dataCriacao": "2026-09-28",
-          "dataInicial": "2026-09-28",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
-        }
-      ],
-      "ossHistorico": [
         {
           "osId": "14804",
           "ativo": "Utragaz - Ibirapuã 2 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI200 }",
@@ -585,6 +566,26 @@
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14790",
+          "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Finalizados",
+          "tarefa": "testes de religamento remoto UFV - Araçoiaba da serra IB",
+          "criticidade": "",
+          "dataProgramada": "2026-09-28",
+          "dataCriacao": "2026-09-28",
+          "dataInicial": "2026-09-28",
+          "dataFinal": "2026-09-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "remoto",
           "atrasada": false
         },
         {
@@ -696,6 +697,26 @@
           "supervisor": "Andrick Gouveia ",
           "status": "Finalizados",
           "tarefa": "[Inversor 2.1] - Religamento do Inversor 2.1",
+          "criticidade": "",
+          "dataProgramada": "2026-09-28",
+          "dataCriacao": "2026-09-28",
+          "dataInicial": "2026-09-28",
+          "dataFinal": "2026-09-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14761",
+          "ativo": "Cabine 1  Araçoiaba  São Paulo Brasil { ADS100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Finalizados",
+          "tarefa": "[Araçoiaba 1A] - Verificação do relé e realização do teste de religamento",
           "criticidade": "",
           "dataProgramada": "2026-09-28",
           "dataCriacao": "2026-09-28",
@@ -3148,26 +3169,6 @@
           "atrasada": false
         },
         {
-          "osId": "13965",
-          "ativo": "Thopen - Poconé 1 - MT  Poconé  Mato Grosso Brasil { THPN-PCN100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizados",
-          "tarefa": "[THPN-PCN100] - Religamento do THPN-PCN100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-20",
-          "dataCriacao": "2026-09-20",
-          "dataInicial": "2026-09-22",
-          "dataFinal": "2026-09-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "14272",
           "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
           "equipe": "",
@@ -3506,54 +3507,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13966",
-          "ativo": "Cabine 1 BR 226/304, S/N, Zona Rural Macaíba  Rio Grande do Norte Brasil { MCB100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Valdério Paz ",
-          "status": "Finalizados",
-          "tarefa": "[MCB100-CABN1] - Religamento do MCB100-CABN1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-20",
-          "dataCriacao": "2026-09-20",
-          "dataInicial": "2026-09-20",
-          "dataFinal": "2026-09-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "13961",
-          "ativo": "Thopen - Santo Anastácio - SP X9J5+542 Santo Anastácio, São Paulo Santo Anastácio  São Paulo Brasil { THPN-STA100 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Carlos  Godoi",
-          "status": "Finalizados",
-          "tarefa": "[THPN-STA100] - Religamento do THPN-STA100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-20",
-          "dataCriacao": "2026-09-20",
-          "dataInicial": "2026-09-20",
-          "dataFinal": "2026-09-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1924,
+      "historicoTotal": 1928,
       "subClassificacao": {
         "remoto": 760,
-        "local": 3962,
-        "remotoEmAberto": 8,
-        "localEmAberto": 17,
+        "local": 3964,
+        "remotoEmAberto": 7,
+        "localEmAberto": 16,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -3725,7 +3686,7 @@
         "medHorasAbrir": 13.4,
         "medHorasFechar": 2.6,
         "amostraAbrir": 747,
-        "amostraFechar": 745,
+        "amostraFechar": 746,
         "topAbridores": [
           {
             "nome": "ItaloLustosa",
@@ -3776,16 +3737,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 798,
-        "emAberto": 59,
-        "atrasadas": 54,
-        "concluidas30d": 121,
-        "concluidas7d": 17,
+        "emAberto": 57,
+        "atrasadas": 52,
+        "concluidas30d": 123,
+        "concluidas7d": 19,
         "naSemanaCorrente": 6
       },
       "mttr": {
-        "horas": 355.83,
-        "label": "14d 19h",
-        "amostra": 121
+        "horas": 366.05,
+        "label": "15d 6h",
+        "amostra": 123
       },
       "tendencia4Semanas": [
         {
@@ -3806,7 +3767,7 @@
         {
           "semana": "W40",
           "criadas": 0,
-          "finalizadas": 4
+          "finalizadas": 6
         }
       ],
       "topOfensores": {
@@ -3814,7 +3775,7 @@
           {
             "nome": "(sem equipe)",
             "total": 798,
-            "emAberto": 59
+            "emAberto": 57
           }
         ],
         "responsaveis": [
@@ -3845,16 +3806,16 @@
           }
         ]
       },
-      "total": 59,
-      "atrasadas": 54,
+      "total": 57,
+      "atrasadas": 52,
       "porStatus": {
-        "naoIniciada": 52,
-        "emProgresso": 1,
-        "pausada": 6,
+        "naoIniciada": 50,
+        "emProgresso": 0,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 59
+        "(sem equipe)": 57
       },
       "oss": [
         {
@@ -3990,23 +3951,6 @@
           "criticidade": "",
           "dataProgramada": "2026-08-13",
           "dataCriacao": "2026-07-27",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "10245",
-          "ativo": "Transformador 3 Blutrafo     { CLD200-TRFR3 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPA - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
-          "dataCriacao": "2026-07-28",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -4475,23 +4419,6 @@
           "atrasada": true
         },
         {
-          "osId": "13251",
-          "ativo": "Preventiva Grupo de Inversores      { RNGD-CLD200-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-08",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "12721",
           "ativo": "Transformador 2 WEG     { THPN-TNB100-TRFR2 }",
           "equipe": "",
@@ -4788,7 +4715,7 @@
           "responsavel": "Matheus Leite ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Matheus Leite ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "MPA - Módulos Fotovoltaicos (Axis São José do Egito 1)",
           "criticidade": "",
           "dataProgramada": "2026-09-28",
@@ -4889,6 +4816,25 @@
           "atrasada": false
         },
         {
+          "osId": "13251",
+          "ativo": "Preventiva Grupo de Inversores      { RNGD-CLD200-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Deivity Jhon Cunha Saugo ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Deivity Jhon Cunha Saugo ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-09-15",
+          "dataCriacao": "2026-09-08",
+          "dataInicial": "2026-09-28",
+          "dataFinal": "2026-09-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 480.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "13061",
           "ativo": "Transformador 3 COMTRAFO     { FRN100-TRFR3 }",
           "equipe": "",
@@ -4923,6 +4869,25 @@
           "dataFinal": "2026-09-28",
           "linkFracttal": "",
           "horasAteAbrir": 624.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10245",
+          "ativo": "Transformador 3 Blutrafo     { CLD200-TRFR3 }",
+          "equipe": "",
+          "responsavel": "Deivity Jhon Cunha Saugo ",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Deivity Jhon Cunha Saugo ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPA - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-08-17",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "2026-09-28",
+          "dataFinal": "2026-09-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 1488.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -6941,44 +6906,6 @@
           "atrasada": false
         },
         {
-          "osId": "11968",
-          "ativo": "Infraestrutura Civil  Guaratinguetá  São Paulo Brasil { GTA500-INFC1 }",
-          "equipe": "",
-          "responsavel": "Henri Almeida ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Henri Almeida ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "2026-08-28",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "11967",
-          "ativo": "Infraestrutura Civil Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Marcos Duarte ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "2026-08-28",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "12057",
           "ativo": "Infraestrutura Civil  Demerval Lobão  Piauí Brasil { DML100-INFC1 }",
           "equipe": "",
@@ -7720,7 +7647,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 353
+      "historicoTotal": 355
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8663,12 +8590,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 780,
-        "emAberto": 44,
+        "total": 781,
+        "emAberto": 45,
         "atrasadas": 30,
         "concluidas30d": 210,
         "concluidas7d": 49,
-        "naSemanaCorrente": 20
+        "naSemanaCorrente": 21
       },
       "mttr": {
         "horas": 284.69,
@@ -8693,7 +8620,7 @@
         },
         {
           "semana": "W40",
-          "criadas": 2,
+          "criadas": 3,
           "finalizadas": 7
         }
       ],
@@ -8701,8 +8628,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 780,
-            "emAberto": 44
+            "total": 781,
+            "emAberto": 45
           }
         ],
         "responsaveis": [
@@ -8713,8 +8640,8 @@
           },
           {
             "nome": "Marcos Duarte",
-            "total": 49,
-            "emAberto": 0
+            "total": 50,
+            "emAberto": 1
           },
           {
             "nome": "James Chaves",
@@ -8733,16 +8660,16 @@
           }
         ]
       },
-      "total": 44,
+      "total": 45,
       "atrasadas": 30,
       "porStatus": {
-        "naoIniciada": 39,
+        "naoIniciada": 40,
         "emProgresso": 0,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 44
+        "(sem equipe)": 45
       },
       "oss": [
         {
@@ -9373,6 +9300,23 @@
           "criticidade": "",
           "dataProgramada": "2026-09-29",
           "dataCriacao": "2026-09-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "14815",
+          "ativo": "SKID 2 Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100-SKID2 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "Verificar operação dos inversores do SKID 2",
+          "criticidade": "",
+          "dataProgramada": "2026-09-30",
+          "dataCriacao": "2026-09-28",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -12359,16 +12303,16 @@
       "cor": "#3b82f6",
       "kpis": {
         "total": 156,
-        "emAberto": 13,
-        "atrasadas": 9,
-        "concluidas30d": 28,
-        "concluidas7d": 11,
+        "emAberto": 12,
+        "atrasadas": 8,
+        "concluidas30d": 29,
+        "concluidas7d": 12,
         "naSemanaCorrente": 5
       },
       "mttr": {
-        "horas": 203.14,
-        "label": "8d 11h",
-        "amostra": 28
+        "horas": 247.45,
+        "label": "10d 7h",
+        "amostra": 29
       },
       "tendencia4Semanas": [
         {
@@ -12389,7 +12333,7 @@
         {
           "semana": "W40",
           "criadas": 2,
-          "finalizadas": 1
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
@@ -12397,7 +12341,7 @@
           {
             "nome": "(sem equipe)",
             "total": 156,
-            "emAberto": 13
+            "emAberto": 12
           }
         ],
         "responsaveis": [
@@ -12428,36 +12372,18 @@
           }
         ]
       },
-      "total": 13,
-      "atrasadas": 9,
+      "total": 12,
+      "atrasadas": 8,
       "porStatus": {
         "naoIniciada": 9,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 12
       },
       "oss": [
-        {
-          "osId": "10297",
-          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Adriano  Moraes",
-          "status": "Em progresso",
-          "tarefa": "Analise e testes de religamento remoto UFV - Araputanga",
-          "criticidade": "",
-          "dataProgramada": "2026-07-29",
-          "dataCriacao": "2026-07-28",
-          "dataInicial": "2026-09-28",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 1488.0,
-          "atrasada": true
-        },
         {
           "osId": "11524",
           "ativo": "Athon - Matões  2 - MA Rodovia MA-262Km  Nº 01 Matões  Maranhão Brasil { ATHN-MTS200 }",
@@ -12683,6 +12609,25 @@
           "dataFinal": "2026-09-28",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10297",
+          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Juliana Cândido",
+          "supervisor": "Adriano  Moraes",
+          "status": "Finalizados",
+          "tarefa": "Analise e testes de religamento remoto UFV - Araputanga",
+          "criticidade": "",
+          "dataProgramada": "2026-07-29",
+          "dataCriacao": "2026-07-28",
+          "dataInicial": "2026-09-28",
+          "dataFinal": "2026-09-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 1488.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -14644,10 +14589,43 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 104
+      "historicoTotal": 105
     }
   },
   "ossPublicas": [
+    {
+      "osId": "14815",
+      "ativo": "SKID 2 Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100-SKID2 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "Verificar operação dos inversores do SKID 2",
+      "criticidade": "",
+      "dataProgramada": "2026-09-30",
+      "dataCriacao": "2026-09-28",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "14814",
+      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Wesllen  Castro",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-09-28",
+      "dataCriacao": "2026-09-28",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
     {
       "osId": "14812",
       "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
@@ -14663,24 +14641,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "14806",
-      "ativo": "Cabine 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Ailton Leal ",
-      "status": "Em progresso",
-      "tarefa": "[THPN-JNC100-CABN2] - Religamento do THPN-JNC100-CABN2",
-      "criticidade": "",
-      "dataProgramada": "2026-09-28",
-      "dataCriacao": "2026-09-28",
-      "dataInicial": "2026-09-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -14732,24 +14692,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "14790",
-      "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Eduardo  Mendes",
-      "status": "Em progresso",
-      "tarefa": "testes de religamento remoto UFV - Araçoiaba da serra IB",
-      "criticidade": "",
-      "dataProgramada": "2026-09-28",
-      "dataCriacao": "2026-09-28",
-      "dataInicial": "2026-09-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "remoto"
     },
     {
       "osId": "14789",
@@ -14911,24 +14853,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "14761",
-      "ativo": "Cabine 1  Araçoiaba  São Paulo Brasil { ADS100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Eduardo  Mendes",
-      "status": "Em progresso",
-      "tarefa": "[Araçoiaba 1A] - Verificação do relé e realização do teste de religamento",
-      "criticidade": "",
-      "dataProgramada": "2026-09-28",
-      "dataCriacao": "2026-09-28",
-      "dataInicial": "2026-09-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
     },
     {
       "osId": "14741",
@@ -15315,7 +15239,7 @@
       "responsavel": "Matheus Leite ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Matheus Leite ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "MPA - Módulos Fotovoltaicos (Axis São José do Egito 1)",
       "criticidade": "",
       "dataProgramada": "2026-09-28",
@@ -15744,22 +15668,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 336.0
-    },
-    {
-      "osId": "13251",
-      "ativo": "Preventiva Grupo de Inversores      { RNGD-CLD200-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Deivity Jhon Cunha Saugo ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Deivity Jhon Cunha Saugo ",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-09-15",
-      "dataCriacao": "2026-09-08",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
     },
     {
       "osId": "13248",
@@ -16895,39 +16803,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "10297",
-      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Adriano  Moraes",
-      "status": "Em progresso",
-      "tarefa": "Analise e testes de religamento remoto UFV - Araputanga",
-      "criticidade": "",
-      "dataProgramada": "2026-07-29",
-      "dataCriacao": "2026-07-28",
-      "dataInicial": "2026-09-28",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 1488.0
-    },
-    {
-      "osId": "10245",
-      "ativo": "Transformador 3 Blutrafo     { CLD200-TRFR3 }",
-      "equipe": "",
-      "responsavel": "Deivity Jhon Cunha Saugo ",
-      "criadoPor": "Juliana Cândido",
-      "supervisor": "Deivity Jhon Cunha Saugo ",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPA - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-08-17",
-      "dataCriacao": "2026-07-28",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "10189",
       "ativo": "Transformador 1 WEG     { ADS200-TRFR1 }",
       "equipe": "",
@@ -17326,6 +17201,25 @@
       "atrasada": false
     },
     {
+      "osId": "13251",
+      "ativo": "Preventiva Grupo de Inversores      { RNGD-CLD200-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Deivity Jhon Cunha Saugo ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Deivity Jhon Cunha Saugo ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-09-15",
+      "dataCriacao": "2026-09-08",
+      "dataInicial": "2026-09-28",
+      "dataFinal": "2026-09-28",
+      "linkFracttal": "",
+      "horasAteAbrir": 480.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "13201",
       "ativo": "Estrutura Fixa      { RNGD-CTS100-EFIX1 }",
       "equipe": "",
@@ -17535,6 +17429,25 @@
       "atrasada": false
     },
     {
+      "osId": "10245",
+      "ativo": "Transformador 3 Blutrafo     { CLD200-TRFR3 }",
+      "equipe": "",
+      "responsavel": "Deivity Jhon Cunha Saugo ",
+      "criadoPor": "Juliana Cândido",
+      "supervisor": "Deivity Jhon Cunha Saugo ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPA - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-08-17",
+      "dataCriacao": "2026-07-28",
+      "dataInicial": "2026-09-28",
+      "dataFinal": "2026-09-28",
+      "linkFracttal": "",
+      "horasAteAbrir": 1488.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "8626",
       "ativo": "Transformador 1 WEG     { THPN-TPZ100-TRFR1 }",
       "equipe": "",
@@ -17570,6 +17483,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 792.0,
       "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "14806",
+      "ativo": "Cabine 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Ailton Leal ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-JNC100-CABN2] - Religamento do THPN-JNC100-CABN2",
+      "criticidade": "",
+      "dataProgramada": "2026-09-28",
+      "dataCriacao": "2026-09-28",
+      "dataInicial": "2026-09-28",
+      "dataFinal": "2026-09-28",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -17610,6 +17543,26 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "14790",
+      "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Finalizados",
+      "tarefa": "testes de religamento remoto UFV - Araçoiaba da serra IB",
+      "criticidade": "",
+      "dataProgramada": "2026-09-28",
+      "dataCriacao": "2026-09-28",
+      "dataInicial": "2026-09-28",
+      "dataFinal": "2026-09-28",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "remoto",
       "atrasada": false
     },
     {
@@ -17740,6 +17693,26 @@
       "supervisor": "Andrick Gouveia ",
       "status": "Finalizados",
       "tarefa": "[Inversor 2.1] - Religamento do Inversor 2.1",
+      "criticidade": "",
+      "dataProgramada": "2026-09-28",
+      "dataCriacao": "2026-09-28",
+      "dataInicial": "2026-09-28",
+      "dataFinal": "2026-09-28",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "14761",
+      "ativo": "Cabine 1  Araçoiaba  São Paulo Brasil { ADS100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Finalizados",
+      "tarefa": "[Araçoiaba 1A] - Verificação do relé e realização do teste de religamento",
       "criticidade": "",
       "dataProgramada": "2026-09-28",
       "dataCriacao": "2026-09-28",
@@ -20079,110 +20052,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "14293",
-      "ativo": "RenoGrid - Nobres 1 - MT Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { RNGD-NBS100 }",
-      "equipe": "",
-      "responsavel": "Valmir  Júnior",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Valmir  Júnior",
-      "status": "Finalizados",
-      "tarefa": "[RenoGrid - Nobres 1 - MT] - Religamento do RenoGrid - Nobres 1 - MT",
-      "criticidade": "",
-      "dataProgramada": "2026-09-22",
-      "dataCriacao": "2026-09-22",
-      "dataInicial": "2026-09-22",
-      "dataFinal": "2026-09-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "14292",
-      "ativo": "Inversor 1.6 Huaweii SUN2000-330KTL-H6    { GYT100-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Finalizados",
-      "tarefa": "[GYT100-INVR1.6] - Religamento do GYT100-INVR1.6",
-      "criticidade": "",
-      "dataProgramada": "2026-09-22",
-      "dataCriacao": "2026-09-22",
-      "dataInicial": "2026-09-22",
-      "dataFinal": "2026-09-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "14290",
-      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Railson Gomes ",
-      "status": "Finalizados",
-      "tarefa": "[RNGD-CTS100] - Religamento do RNGD-CTS100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-22",
-      "dataCriacao": "2026-09-22",
-      "dataInicial": "2026-09-22",
-      "dataFinal": "2026-09-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "14289",
-      "ativo": "Cabine 3 Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { CGU100-CABN3 }",
-      "equipe": "",
-      "responsavel": "Lucas Alberto Freitas de Faria ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Finalizados",
-      "tarefa": "[CGU100-CABN3] - Religamento do CGU100-CABN3",
-      "criticidade": "",
-      "dataProgramada": "2026-09-21",
-      "dataCriacao": "2026-09-22",
-      "dataInicial": "2026-09-22",
-      "dataFinal": "2026-09-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "14288",
-      "ativo": "Thopen - Salto Pirapora 3 - SP    São Paulo Brasil { THPN-SPP300 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Eduardo  Mendes",
-      "status": "Finalizados",
-      "tarefa": "[Thopen - Salto Pirapora 3 - SP] - Religamento do Thopen - Salto Pirapora 3 - SP",
-      "criticidade": "",
-      "dataProgramada": "2026-09-22",
-      "dataCriacao": "2026-09-22",
-      "dataInicial": "2026-09-22",
-      "dataFinal": "2026-09-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3088,
-  "totalGeral": 6622,
+  "historicoTotal": 3095,
+  "totalGeral": 6625,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
