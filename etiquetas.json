@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-29T15:26:16Z",
+  "geradoEm": "2026-09-29T16:18:04Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-28 .. 2026-10-04",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4747,
-        "emAberto": 19,
+        "emAberto": 18,
         "atrasadas": 11,
-        "concluidas30d": 779,
-        "concluidas7d": 191,
+        "concluidas30d": 780,
+        "concluidas7d": 192,
         "naSemanaCorrente": 44
       },
       "mttr": {
-        "horas": 15.69,
-        "label": "15h 41min",
-        "amostra": 779
+        "horas": 15.67,
+        "label": "15h 40min",
+        "amostra": 780
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W40",
           "criadas": 46,
-          "finalizadas": 54
+          "finalizadas": 55
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4747,
-            "emAberto": 19
+            "emAberto": 18
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 19,
+      "total": 18,
       "atrasadas": 11,
       "porStatus": {
-        "naoIniciada": 18,
-        "emProgresso": 0,
+        "naoIniciada": 16,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 19
+        "(sem equipe)": 18
       },
       "oss": [
         {
@@ -308,38 +308,21 @@
           "atrasada": false
         },
         {
-          "osId": "14874",
-          "ativo": "Cabine 3 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN3 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Ailton Leal ",
-          "status": "Não Iniciada",
-          "tarefa": "[TIM200-CABN3] - Religamento do TIM200-CABN3",
-          "criticidade": "",
-          "dataProgramada": "2026-09-29",
-          "dataCriacao": "2026-09-29",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "14865",
           "ativo": "Inversor 6.2 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.2 }",
           "equipe": "",
           "responsavel": "Frank  Melo",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Frank  Melo",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 6.2] - Religamento do Inversor 6.2",
           "criticidade": "",
           "dataProgramada": "2026-09-29",
           "dataCriacao": "2026-09-29",
-          "dataInicial": "",
+          "dataInicial": "2026-09-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -435,6 +418,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14874",
+          "ativo": "Cabine 3 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN3 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Ailton Leal ",
+          "status": "Finalizados",
+          "tarefa": "[TIM200-CABN3] - Religamento do TIM200-CABN3",
+          "criticidade": "",
+          "dataProgramada": "2026-09-29",
+          "dataCriacao": "2026-09-29",
+          "dataInicial": "2026-09-29",
+          "dataFinal": "2026-09-29",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "14605",
           "ativo": "Cabine 3 HGR5+5M9 Assis Chateaubriand, PR Assis Chateaubriand  Paraná Brasil { THPN-ACB100-CABN3 }",
@@ -3414,34 +3417,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14262",
-          "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Felipe Silva ",
-          "supervisor": "Thiago Morais ",
-          "status": "Finalizados",
-          "tarefa": "[IBI200-INVR1.3] - Religamento do IBI200-INVR1.3",
-          "criticidade": "",
-          "dataProgramada": "2026-09-21",
-          "dataCriacao": "2026-09-21",
-          "dataInicial": "2026-09-21",
-          "dataFinal": "2026-09-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1947,
+      "historicoTotal": 1948,
       "subClassificacao": {
         "remoto": 760,
         "local": 3987,
         "remotoEmAberto": 7,
-        "localEmAberto": 12,
+        "localEmAberto": 11,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -3664,16 +3647,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 798,
-        "emAberto": 55,
-        "atrasadas": 53,
-        "concluidas30d": 125,
-        "concluidas7d": 19,
+        "emAberto": 54,
+        "atrasadas": 52,
+        "concluidas30d": 126,
+        "concluidas7d": 20,
         "naSemanaCorrente": 6
       },
       "mttr": {
-        "horas": 368.45,
-        "label": "15d 8h",
-        "amostra": 125
+        "horas": 370.86,
+        "label": "15d 10h",
+        "amostra": 126
       },
       "tendencia4Semanas": [
         {
@@ -3694,7 +3677,7 @@
         {
           "semana": "W40",
           "criadas": 0,
-          "finalizadas": 8
+          "finalizadas": 9
         }
       ],
       "topOfensores": {
@@ -3702,7 +3685,7 @@
           {
             "nome": "(sem equipe)",
             "total": 798,
-            "emAberto": 55
+            "emAberto": 54
           }
         ],
         "responsaveis": [
@@ -3733,16 +3716,16 @@
           }
         ]
       },
-      "total": 55,
-      "atrasadas": 53,
+      "total": 54,
+      "atrasadas": 52,
       "porStatus": {
         "naoIniciada": 48,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 55
+        "(sem equipe)": 54
       },
       "oss": [
         {
@@ -3967,24 +3950,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "12686",
-          "ativo": "Cabine 1  Barretos  São Paulo Brasil { BRS100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Anderson  Parente",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-09-02",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-29",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 672.0,
           "atrasada": true
         },
         {
@@ -4705,6 +4670,25 @@
           "dataFinal": "2026-09-29",
           "linkFracttal": "",
           "horasAteAbrir": 552.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12686",
+          "ativo": "Cabine 1  Barretos  São Paulo Brasil { BRS100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-09-02",
+          "dataCriacao": "2026-09-01",
+          "dataInicial": "2026-09-29",
+          "dataFinal": "2026-09-29",
+          "linkFracttal": "",
+          "horasAteAbrir": 672.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -6951,25 +6935,6 @@
           "atrasada": false
         },
         {
-          "osId": "11971",
-          "ativo": "Infraestrutura Civil  Ipixuna  Pará Brasil { IPX100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-08-27",
-          "dataFinal": "2026-08-27",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10136",
           "ativo": "Transformador 9 COMTRAFO     { JCD100-TRFR9 }",
           "equipe": "",
@@ -7540,7 +7505,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 352
+      "historicoTotal": 353
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8495,8 +8460,8 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 784,
-        "emAberto": 48,
+        "total": 785,
+        "emAberto": 49,
         "atrasadas": 34,
         "concluidas30d": 210,
         "concluidas7d": 40,
@@ -8525,7 +8490,7 @@
         },
         {
           "semana": "W40",
-          "criadas": 6,
+          "criadas": 7,
           "finalizadas": 8
         }
       ],
@@ -8533,8 +8498,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 784,
-            "emAberto": 48
+            "total": 785,
+            "emAberto": 49
           }
         ],
         "responsaveis": [
@@ -8565,16 +8530,16 @@
           }
         ]
       },
-      "total": 48,
+      "total": 49,
       "atrasadas": 34,
       "porStatus": {
-        "naoIniciada": 42,
+        "naoIniciada": 43,
         "emProgresso": 0,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 48
+        "(sem equipe)": 49
       },
       "oss": [
         {
@@ -9394,6 +9359,23 @@
           "criticidade": "",
           "dataProgramada": "2026-10-02",
           "dataCriacao": "2026-09-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "14880",
+          "ativo": "Greenyellow - Irecê 1 - BA  Irecê  Bahia Brasil { GY-IRC100 }",
+          "equipe": "",
+          "responsavel": "Olimpio Lima ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Olimpio Lima ",
+          "status": "Não Iniciada",
+          "tarefa": "[GreenYellow][Irecê] - Coletar Numeração dos Inversores em Campo",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-09-29",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -10557,25 +10539,6 @@
           "dataFinal": "2026-09-10",
           "linkFracttal": "",
           "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "13029",
-          "ativo": "Inversor 1.8 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR1.8 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Gabriela Dias",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizados",
-          "tarefa": "Coletar log de histórico dos inversores",
-          "criticidade": "",
-          "dataProgramada": "2026-09-09",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "2026-09-10",
-          "dataFinal": "2026-09-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -12249,6 +12212,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 96.0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "10414",
+          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H3    { IRC100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Olimpio Lima ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Olimpio Lima ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.6] - Avaliação de sombreamento externo",
+          "criticidade": "",
+          "dataProgramada": "2026-07-31",
+          "dataCriacao": "2026-07-30",
+          "dataInicial": "2026-07-31",
+          "dataFinal": "2026-08-07",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 168.0,
           "atrasada": false
         }
       ],
@@ -14551,6 +14533,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "14880",
+      "ativo": "Greenyellow - Irecê 1 - BA  Irecê  Bahia Brasil { GY-IRC100 }",
+      "equipe": "",
+      "responsavel": "Olimpio Lima ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Olimpio Lima ",
+      "status": "Não Iniciada",
+      "tarefa": "[GreenYellow][Irecê] - Coletar Numeração dos Inversores em Campo",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-09-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "14876",
       "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
       "equipe": "",
@@ -14559,23 +14557,6 @@
       "supervisor": "Eduardo  Mendes",
       "status": "Não Iniciada",
       "tarefa": "[THPN-ADS200] - Religamento do THPN-ADS200",
-      "criticidade": "",
-      "dataProgramada": "2026-09-29",
-      "dataCriacao": "2026-09-29",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "14874",
-      "ativo": "Cabine 3 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN3 }",
-      "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Ailton Leal ",
-      "status": "Não Iniciada",
-      "tarefa": "[TIM200-CABN3] - Religamento do TIM200-CABN3",
       "criticidade": "",
       "dataProgramada": "2026-09-29",
       "dataCriacao": "2026-09-29",
@@ -14607,14 +14588,15 @@
       "responsavel": "Frank  Melo",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Frank  Melo",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 6.2] - Religamento do Inversor 6.2",
       "criticidade": "",
       "dataProgramada": "2026-09-29",
       "dataCriacao": "2026-09-29",
-      "dataInicial": "",
+      "dataInicial": "2026-09-29",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15981,23 +15963,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "12686",
-      "ativo": "Cabine 1  Barretos  São Paulo Brasil { BRS100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Anderson  Parente",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-09-02",
-      "dataCriacao": "2026-09-01",
-      "dataInicial": "2026-09-29",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 672.0
-    },
-    {
       "osId": "12659",
       "ativo": "Cabine 1  Santa Maria do Pará  Pará Brasil { SMP100-CABN1 }",
       "equipe": "",
@@ -16895,6 +16860,26 @@
   ],
   "ossHistorico": [
     {
+      "osId": "14874",
+      "ativo": "Cabine 3 LOT Sucessão, ROD. MA 040, S/N, Jóia Timon  Maranhão Brasil { TIM200-CABN3 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Ailton Leal ",
+      "status": "Finalizados",
+      "tarefa": "[TIM200-CABN3] - Religamento do TIM200-CABN3",
+      "criticidade": "",
+      "dataProgramada": "2026-09-29",
+      "dataCriacao": "2026-09-29",
+      "dataInicial": "2026-09-29",
+      "dataFinal": "2026-09-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "14613",
       "ativo": "Cabine 1 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-CABN1 }",
       "equipe": "",
@@ -17197,6 +17182,25 @@
       "dataFinal": "2026-09-04",
       "linkFracttal": "",
       "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "12686",
+      "ativo": "Cabine 1  Barretos  São Paulo Brasil { BRS100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Anderson  Parente",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-09-02",
+      "dataCriacao": "2026-09-01",
+      "dataInicial": "2026-09-29",
+      "dataFinal": "2026-09-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 672.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -19818,50 +19822,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "14433",
-      "ativo": "QGBT 1 Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100-QGBT1 }",
-      "equipe": "",
-      "responsavel": "Matheus Leite ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Matheus Leite ",
-      "status": "Finalizados",
-      "tarefa": "[THPN-BJD100-QGBT1] - Religamento do THPN-BJD100-QGBT1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-23",
-      "dataCriacao": "2026-09-23",
-      "dataInicial": "2026-09-23",
-      "dataFinal": "2026-09-23",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "14430",
-      "ativo": "RenoGrid - Nobres 1 - MT Avenida Presidente Getúlio Vargas, Nobres – MT Nobres  Mato Grosso Brasil { RNGD-NBS100 }",
-      "equipe": "",
-      "responsavel": "Valmir  Júnior",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Valmir  Júnior",
-      "status": "Finalizados",
-      "tarefa": "[RNGD-NBS100] - Religamento do RNGD-NBS100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-23",
-      "dataCriacao": "2026-09-23",
-      "dataInicial": "2026-09-23",
-      "dataFinal": "2026-09-23",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3115,
-  "totalGeral": 6651,
+  "historicoTotal": 3117,
+  "totalGeral": 6652,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
