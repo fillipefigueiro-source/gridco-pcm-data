@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-30T08:47:53Z",
+  "geradoEm": "2026-09-30T10:24:34Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-28 .. 2026-10-04",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4772,
-        "emAberto": 24,
+        "total": 4774,
+        "emAberto": 25,
         "atrasadas": 22,
-        "concluidas30d": 791,
-        "concluidas7d": 183,
-        "naSemanaCorrente": 69
+        "concluidas30d": 792,
+        "concluidas7d": 184,
+        "naSemanaCorrente": 71
       },
       "mttr": {
-        "horas": 15.38,
-        "label": "15h 23min",
-        "amostra": 791
+        "horas": 15.36,
+        "label": "15h 22min",
+        "amostra": 792
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W40",
-          "criadas": 71,
-          "finalizadas": 74
+          "criadas": 73,
+          "finalizadas": 75
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4772,
-            "emAberto": 24
+            "total": 4774,
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 25,
       "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 23,
-        "emProgresso": 0,
+        "naoIniciada": 22,
+        "emProgresso": 2,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -332,14 +332,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Maria Emanuella de Souza Mota ",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
           "criticidade": "",
           "dataProgramada": "2026-09-29",
           "dataCriacao": "2026-09-29",
-          "dataInicial": "",
+          "dataInicial": "2026-09-30",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -368,14 +369,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[2C - Ipixuna do Pará 1 - PA] - Religamento do 2C - Ipixuna do Pará 1 - PA",
           "criticidade": "",
           "dataProgramada": "2026-09-29",
           "dataCriacao": "2026-09-29",
-          "dataInicial": "",
+          "dataInicial": "2026-09-30",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -486,6 +488,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "14929",
+          "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-NVL100] - Religamento do THPN-NVL100",
+          "criticidade": "",
+          "dataProgramada": "2026-09-30",
+          "dataCriacao": "2026-09-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "14928",
@@ -3526,12 +3546,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1946,
+      "historicoTotal": 1947,
       "subClassificacao": {
         "remoto": 760,
-        "local": 4012,
+        "local": 4014,
         "remotoEmAberto": 7,
-        "localEmAberto": 17,
+        "localEmAberto": 18,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -14549,6 +14569,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "14929",
+      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-NVL100] - Religamento do THPN-NVL100",
+      "criticidade": "",
+      "dataProgramada": "2026-09-30",
+      "dataCriacao": "2026-09-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "14928",
       "ativo": "Thopen - Senador Elói 1 - RN Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { THPN-SNE100 }",
       "equipe": "",
@@ -14623,14 +14660,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Maria Emanuella de Souza Mota ",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
       "criticidade": "",
       "dataProgramada": "2026-09-29",
       "dataCriacao": "2026-09-29",
-      "dataInicial": "",
+      "dataInicial": "2026-09-30",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -14657,14 +14695,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[2C - Ipixuna do Pará 1 - PA] - Religamento do 2C - Ipixuna do Pará 1 - PA",
       "criticidade": "",
       "dataProgramada": "2026-09-29",
       "dataCriacao": "2026-09-29",
-      "dataInicial": "",
+      "dataInicial": "2026-09-30",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -19874,8 +19913,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3108,
-  "totalGeral": 6679,
+  "historicoTotal": 3109,
+  "totalGeral": 6681,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
