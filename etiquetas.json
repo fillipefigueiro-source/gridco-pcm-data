@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-01T08:45:31Z",
+  "geradoEm": "2026-10-01T09:36:15Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-28 .. 2026-10-04",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 4815,
-        "emAberto": 39,
+        "emAberto": 38,
         "atrasadas": 36,
-        "concluidas30d": 778,
-        "concluidas7d": 187,
+        "concluidas30d": 779,
+        "concluidas7d": 188,
         "naSemanaCorrente": 112
       },
       "mttr": {
-        "horas": 14.52,
-        "label": "14h 31min",
-        "amostra": 778
+        "horas": 14.5,
+        "label": "14h 30min",
+        "amostra": 779
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W40",
           "criadas": 114,
-          "finalizadas": 102
+          "finalizadas": 103
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 4815,
-            "emAberto": 39
+            "emAberto": 38
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 39,
+      "total": 38,
       "atrasadas": 36,
       "porStatus": {
-        "naoIniciada": 37,
-        "emProgresso": 0,
-        "pausada": 2,
+        "naoIniciada": 35,
+        "emProgresso": 2,
+        "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 39
+        "(sem equipe)": 38
       },
       "oss": [
         {
@@ -404,14 +404,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Lucas  Nascimento",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-09-30",
           "dataCriacao": "2026-09-30",
-          "dataInicial": "",
+          "dataInicial": "2026-10-01",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -476,7 +477,7 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Raphael Vitoriano",
           "supervisor": "Wesllen  Castro",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Usina] - Religamento da Usina",
           "criticidade": "",
           "dataProgramada": "2026-09-30",
@@ -759,24 +760,6 @@
           "atrasada": false
         },
         {
-          "osId": "15041",
-          "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-10-01",
-          "dataCriacao": "2026-10-01",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "15040",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -796,6 +779,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "15041",
+          "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Lucas  Nascimento",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-10-01",
+          "dataCriacao": "2026-10-01",
+          "dataInicial": "2026-10-01",
+          "dataFinal": "2026-10-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "14998",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
@@ -3775,34 +3778,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14316",
-          "ativo": "Thopen - Cidade Gaúcha 1 - PR 2ª Seção Colônia Tapejara, Lote N 152-Re, 153 e 154 Cidade Gaúcha  Paraná Brasil { THPN-CGH100 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
-          "tarefa": "[THPN-CGH100] - Religamento do THPN-CGH100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-22",
-          "dataCriacao": "2026-09-22",
-          "dataInicial": "2026-09-22",
-          "dataFinal": "2026-09-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1960,
+      "historicoTotal": 1961,
       "subClassificacao": {
         "remoto": 760,
         "local": 4055,
         "remotoEmAberto": 7,
-        "localEmAberto": 32,
+        "localEmAberto": 31,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -14935,23 +14918,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "15041",
-      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Lucas  Nascimento",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-10-01",
-      "dataCriacao": "2026-10-01",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "15040",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -14975,14 +14941,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Lucas  Nascimento",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-09-30",
       "dataCriacao": "2026-09-30",
-      "dataInicial": "",
+      "dataInicial": "2026-10-01",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -15139,7 +15106,7 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Raphael Vitoriano",
       "supervisor": "Wesllen  Castro",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Usina] - Religamento da Usina",
       "criticidade": "",
       "dataProgramada": "2026-09-30",
@@ -17970,6 +17937,26 @@
       "atrasada": false
     },
     {
+      "osId": "15041",
+      "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "Lucas  Nascimento",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-10-01",
+      "dataCriacao": "2026-10-01",
+      "dataInicial": "2026-10-01",
+      "dataFinal": "2026-10-01",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "14998",
       "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
       "equipe": "",
@@ -20576,29 +20563,9 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "14458",
-      "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Railson Gomes ",
-      "status": "Finalizados",
-      "tarefa": "Configuração e testes de religamento remoto UFV - Crateús",
-      "criticidade": "",
-      "dataProgramada": "2026-09-23",
-      "dataCriacao": "2026-09-23",
-      "dataInicial": "2026-09-24",
-      "dataFinal": "2026-09-24",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "remoto",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3125,
+  "historicoTotal": 3126,
   "totalGeral": 6737,
   "verificacao": {
     "total": 0,
