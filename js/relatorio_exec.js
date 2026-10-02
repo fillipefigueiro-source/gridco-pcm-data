@@ -78,6 +78,8 @@ function rexAbrirModal() {
       + '<label>Equipe Cluster <select id="rex-clu"><option value="">Todos</option>' + opt(F.clusters || []) + '</select></label></div>')
     + '<label class="rex-m-usinas">Usinas <small>(ctrl+clique para várias; vazio = todas do escopo)</small>'
     + '<select id="rex-usi" multiple size="7">' + opt(F.usinas || []) + '</select></label>'
+    + '<label class="rex-m-op"><input type="checkbox" id="rex-semprev"' + (REX.semPrevNovas ? ' checked' : '') + '> '
+    + 'Desconsiderar preventivas <b>criadas no período</b> <small>(ex.: MPMs do mês seguinte já lançadas)</small></label>'
     + '<div class="rex-m-acoes"><button type="button" class="rex-btn-2" onclick="rexFecharModal()">Cancelar</button>'
     + '<button type="button" class="rex-btn" onclick="rexGerar()">Gerar relatório</button></div>'
     + '</div>';
@@ -108,6 +110,10 @@ const rexRange = (v, a, b) => { const d = String(v || '').slice(0, 10); return d
 
 function rexEscopoFiltro(t) {
   if (/^\s*teste\s*$/i.test(String(t.tipo || ''))) return false;   // cadastro de teste: nunca conta
+  // opção do modal: preventivas CRIADAS dentro do período (ex.: MPMs do mês
+  // seguinte lançadas antes da semana delas) saem de todas as contas — 02/10
+  if (REX.semPrevNovas && rexGrupoBd(t.tipo) === 'Preventivas'
+      && rexRange(t.criacao || t.dataCriacao, REX.de, REX.ate)) return false;
   if (REX.cliente && t.cliente !== REX.cliente) return false;
   if (REX.cluster && t.cluster !== REX.cluster) return false;
   if (REX.usinas.length && REX.usinas.indexOf(t.usina) < 0) return false;
@@ -483,6 +489,7 @@ async function rexGerar() {
   REX.cluster = (document.getElementById('rex-clu') || {}).value || '';
   const sel = document.getElementById('rex-usi');
   REX.usinas = sel ? Array.from(sel.selectedOptions).map(o => o.value) : [];
+  REX.semPrevNovas = !!(document.getElementById('rex-semprev') || {}).checked;
   if (!REX.de || !REX.ate || REX.de > REX.ate) { alert('Confira o período.'); return; }
   rexFecharModal();
 
@@ -494,7 +501,8 @@ async function rexGerar() {
   let nsec = 0;
   const sec = t => (++nsec) + ' · ' + t;
   const escopo = [REX.cliente || (ehCliente ? S.user : 'Todos os clientes'),
-                  REX.cluster, REX.usinas.length ? REX.usinas.length + ' usina(s)' : '']
+                  REX.cluster, REX.usinas.length ? REX.usinas.length + ' usina(s)' : '',
+                  REX.semPrevNovas ? 'sem preventivas criadas no período' : '']
                  .filter(Boolean).join(' · ');
   const pctPlano = M.prog.length ? Math.round(100 * M.progFin.length / M.prog.length) : null;
 
