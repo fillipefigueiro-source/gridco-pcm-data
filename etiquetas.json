@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-02T19:23:52Z",
+  "geradoEm": "2026-10-02T20:09:22Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-28 .. 2026-10-04",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4854,
+        "total": 4857,
         "emAberto": 31,
         "atrasadas": 28,
-        "concluidas30d": 800,
-        "concluidas7d": 209,
-        "naSemanaCorrente": 148
+        "concluidas30d": 803,
+        "concluidas7d": 212,
+        "naSemanaCorrente": 151
       },
       "mttr": {
-        "horas": 14.75,
-        "label": "14h 45min",
-        "amostra": 800
+        "horas": 14.7,
+        "label": "14h 42min",
+        "amostra": 803
       },
       "tendencia4Semanas": [
         {
@@ -38,22 +38,22 @@
         },
         {
           "semana": "W40",
-          "criadas": 153,
-          "finalizadas": 149
+          "criadas": 156,
+          "finalizadas": 152
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4854,
+            "total": 4857,
             "emAberto": 31
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 617,
+            "total": 620,
             "emAberto": 0
           },
           {
@@ -3652,10 +3652,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1982,
+      "historicoTotal": 1985,
       "subClassificacao": {
         "remoto": 760,
-        "local": 4094,
+        "local": 4097,
         "remotoEmAberto": 7,
         "localEmAberto": 24,
         "pctRemoto": 16,
@@ -3879,8 +3879,8 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 850,
-        "emAberto": 90,
+        "total": 862,
+        "emAberto": 102,
         "atrasadas": 45,
         "concluidas30d": 122,
         "concluidas7d": 29,
@@ -3909,7 +3909,7 @@
         },
         {
           "semana": "W40",
-          "criadas": 52,
+          "criadas": 64,
           "finalizadas": 25
         }
       ],
@@ -3917,8 +3917,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 850,
-            "emAberto": 90
+            "total": 862,
+            "emAberto": 102
           }
         ],
         "responsaveis": [
@@ -3949,16 +3949,16 @@
           }
         ]
       },
-      "total": 90,
+      "total": 102,
       "atrasadas": 45,
       "porStatus": {
-        "naoIniciada": 85,
+        "naoIniciada": 96,
         "emProgresso": 1,
-        "pausada": 4,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 90
+        "(sem equipe)": 102
       },
       "oss": [
         {
@@ -4534,14 +4534,15 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPA - SPDA - Pendências",
           "criticidade": "",
           "dataProgramada": "2026-09-18",
           "dataCriacao": "2026-09-16",
-          "dataInicial": "",
+          "dataInicial": "2026-10-02",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 384.0,
           "atrasada": true
         },
         {
@@ -5055,6 +5056,40 @@
           "atrasada": false
         },
         {
+          "osId": "15262",
+          "ativo": "Transformador 3      { Transformador 3 }",
+          "equipe": "",
+          "responsavel": "Valmir  Júnior",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Valmir  Júnior",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-10-07",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15244",
+          "ativo": "Transformador 1      { SALE-CRS200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Adriano Silva ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Adriano Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-10-07",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "15138",
           "ativo": "Nobreak 1      { THPN-NVL100-NBRK1 }",
           "equipe": "",
@@ -5208,6 +5243,57 @@
           "atrasada": false
         },
         {
+          "osId": "15256",
+          "ativo": "Transformador 1 WEG     { THPN-BJD100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-10-08",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15249",
+          "ativo": "Transformador 1      { SALE-HRT100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-10-08",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15248",
+          "ativo": "Transformador 1      { SALE-SVL100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Adriano Silva ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Adriano Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-10-08",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "15230",
           "ativo": "SPDA Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR100-SPDA1 }",
           "equipe": "",
@@ -5287,6 +5373,23 @@
           "criticidade": "",
           "dataProgramada": "2026-10-08",
           "dataCriacao": "2026-09-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15250",
+          "ativo": "Transformador 1      { SALE-VTS200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-10-09",
+          "dataCriacao": "2026-10-02",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -5446,6 +5549,91 @@
           "atrasada": false
         },
         {
+          "osId": "15266",
+          "ativo": "Transformador 9      { THPN-ORB100-TRFR9 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Ricardo Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador Aéreo",
+          "criticidade": "",
+          "dataProgramada": "2026-10-12",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15258",
+          "ativo": "Transformador 1 WEG     { THPN-VRT200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-10-12",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15243",
+          "ativo": "Transformador 6      { SALE-SNP100-TRFR6 }",
+          "equipe": "",
+          "responsavel": "Adriano Silva ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Adriano Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador Aéreo",
+          "criticidade": "",
+          "dataProgramada": "2026-10-12",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15255",
+          "ativo": "Preventiva Grupo de Inversores      { 2C-TPP100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Carlos  Godoi",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-10-13",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15254",
+          "ativo": "Cabine 1 Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { STN100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-10-13",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "15098",
           "ativo": "Preventiva Grupo de Inversores      { RNGD-CLD200-PGINVR1 }",
           "equipe": "",
@@ -5474,6 +5662,23 @@
           "criticidade": "",
           "dataProgramada": "2026-10-13",
           "dataCriacao": "2026-10-01",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15257",
+          "ativo": "Sistema de Segurança Zona Rural, s/n São Bento do Una  Pernambuco Brasil { THPN-SBU100-SSEG1 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Sistema de Segurança",
+          "criticidade": "",
+          "dataProgramada": "2026-10-14",
+          "dataCriacao": "2026-10-02",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -5670,25 +5875,6 @@
           "atrasada": false
         },
         {
-          "osId": "12719",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-CXB100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Felipe  Lima",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-09-10",
-          "dataCriacao": "2026-09-02",
-          "dataInicial": "2026-09-30",
-          "dataFinal": "2026-09-30",
-          "linkFracttal": "",
-          "horasAteAbrir": 672.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13011",
           "ativo": "Transformador 1 TOTEX     { AXIS-LHN100-TRFR1 }",
           "equipe": "",
@@ -5704,6 +5890,25 @@
           "dataFinal": "2026-09-30",
           "linkFracttal": "",
           "horasAteAbrir": 624.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "12719",
+          "ativo": "Preventiva Grupo de Inversores      { THPN-CXB100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-09-10",
+          "dataCriacao": "2026-09-02",
+          "dataInicial": "2026-09-30",
+          "dataFinal": "2026-09-30",
+          "linkFracttal": "",
+          "horasAteAbrir": 672.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -5860,25 +6065,6 @@
           "atrasada": false
         },
         {
-          "osId": "13862",
-          "ativo": "Transformador 4 Gazquez     { IND100-TRFR4 }",
-          "equipe": "",
-          "responsavel": "Igor Silva ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Igor Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-09-29",
-          "dataCriacao": "2026-09-18",
-          "dataInicial": "2026-09-28",
-          "dataFinal": "2026-09-28",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13061",
           "ativo": "Transformador 3 COMTRAFO     { FRN100-TRFR3 }",
           "equipe": "",
@@ -5913,6 +6099,25 @@
           "dataFinal": "2026-09-28",
           "linkFracttal": "",
           "horasAteAbrir": 624.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "13862",
+          "ativo": "Transformador 4 Gazquez     { IND100-TRFR4 }",
+          "equipe": "",
+          "responsavel": "Igor Silva ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Igor Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-09-29",
+          "dataCriacao": "2026-09-18",
+          "dataInicial": "2026-09-28",
+          "dataFinal": "2026-09-28",
+          "linkFracttal": "",
+          "horasAteAbrir": 240.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -9323,17 +9528,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 809,
-        "emAberto": 49,
+        "total": 816,
+        "emAberto": 54,
         "atrasadas": 40,
-        "concluidas30d": 205,
-        "concluidas7d": 45,
-        "naSemanaCorrente": 42
+        "concluidas30d": 207,
+        "concluidas7d": 47,
+        "naSemanaCorrente": 43
       },
       "mttr": {
-        "horas": 260.37,
-        "label": "10d 20h",
-        "amostra": 205
+        "horas": 258.09,
+        "label": "10d 18h",
+        "amostra": 207
       },
       "tendencia4Semanas": [
         {
@@ -9353,16 +9558,16 @@
         },
         {
           "semana": "W40",
-          "criadas": 31,
-          "finalizadas": 32
+          "criadas": 38,
+          "finalizadas": 34
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 809,
-            "emAberto": 49
+            "total": 816,
+            "emAberto": 54
           }
         ],
         "responsaveis": [
@@ -9382,27 +9587,27 @@
             "emAberto": 3
           },
           {
+            "nome": "Felipe Xavier",
+            "total": 43,
+            "emAberto": 6
+          },
+          {
             "nome": "Luiz  Silva",
             "total": 42,
             "emAberto": 2
-          },
-          {
-            "nome": "Felipe Xavier",
-            "total": 37,
-            "emAberto": 0
           }
         ]
       },
-      "total": 49,
+      "total": 54,
       "atrasadas": 40,
       "porStatus": {
-        "naoIniciada": 45,
+        "naoIniciada": 51,
         "emProgresso": 0,
-        "pausada": 4,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 49
+        "(sem equipe)": 54
       },
       "oss": [
         {
@@ -10140,6 +10345,108 @@
           "atrasada": false
         },
         {
+          "osId": "15265",
+          "ativo": "GD Energy - Guajirú 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-GJR100 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Coleta e análise de dados de geração",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15264",
+          "ativo": "GD Energy - Sol do Norte 2 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON200 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Coleta e análise de dados de geração",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15263",
+          "ativo": "GD Energy - Sol do Norte 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON100 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Coleta e análise de dados de geração",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15261",
+          "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Ana Barros",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15260",
+          "ativo": "Inversor 1.5 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Ana Barros",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15259",
+          "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-SON200-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Ana Barros",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "15211",
           "ativo": "Inversor 1.1 Huawei SUN2000-330KTL-H1    { ADS100-INVR1.1 }",
           "equipe": "",
@@ -10191,24 +10498,6 @@
           "atrasada": false
         },
         {
-          "osId": "15020",
-          "ativo": "Estrutura de Trackers      { THPN-FZL100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "pausado",
-          "tarefa": "[Estrutura de Trackers] - Verificar operação dos trackers",
-          "criticidade": "",
-          "dataProgramada": "2026-10-05",
-          "dataCriacao": "2026-09-30",
-          "dataInicial": "2026-10-02",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "atrasada": false
-        },
-        {
           "osId": "15000",
           "ativo": "Inversor 1.10 Sungrow SG125HV    { THPN-TNB100-INVR1.10 }",
           "equipe": "",
@@ -10245,6 +10534,25 @@
       ],
       "ossHistorico": [
         {
+          "osId": "15253",
+          "ativo": "Inversor 1.7 Sungrow     { IND100-INVR1.7 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.7] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-10-02",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "2026-10-02",
+          "dataFinal": "2026-10-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "15117",
           "ativo": "Estrutura Trackers Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200-ETKR1 }",
           "equipe": "",
@@ -10261,6 +10569,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 24.0,
+          "atrasada": false
+        },
+        {
+          "osId": "15020",
+          "ativo": "Estrutura de Trackers      { THPN-FZL100-ETKR1 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "[Estrutura de Trackers] - Verificar operação dos trackers",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-09-30",
+          "dataInicial": "2026-10-02",
+          "dataFinal": "2026-10-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -12221,25 +12548,6 @@
           "atrasada": false
         },
         {
-          "osId": "10836",
-          "ativo": "Inversor 1.2 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Felipe Xavier ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Felipe Xavier ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-27",
-          "dataFinal": "2026-09-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 480.0,
-          "horasAteFechar": 144.0,
-          "atrasada": false
-        },
-        {
           "osId": "12142",
           "ativo": "Estrutura Trackers  Ibaté  São Paulo Brasil { IBT200-ETKR1 }",
           "equipe": "",
@@ -13074,28 +13382,9 @@
           "horasAteAbrir": 96.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "10826",
-          "ativo": "Inversor 2.5 Huawei     { TIM100-INVR2.5 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 2.5] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-08-08",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-10",
-          "dataFinal": "2026-08-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 690
+      "historicoTotal": 692
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15380,6 +15669,294 @@
   },
   "ossPublicas": [
     {
+      "osId": "15266",
+      "ativo": "Transformador 9      { THPN-ORB100-TRFR9 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Ricardo Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador Aéreo",
+      "criticidade": "",
+      "dataProgramada": "2026-10-12",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15265",
+      "ativo": "GD Energy - Guajirú 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-GJR100 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Coleta e análise de dados de geração",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15264",
+      "ativo": "GD Energy - Sol do Norte 2 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON200 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Coleta e análise de dados de geração",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15263",
+      "ativo": "GD Energy - Sol do Norte 1 - CE Sítio Serrote, s/n - Setor C, Zona Rural Trairi  Ceará Brasil { GDEN-SON100 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Coleta e análise de dados de geração",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15262",
+      "ativo": "Transformador 3      { Transformador 3 }",
+      "equipe": "",
+      "responsavel": "Valmir  Júnior",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Valmir  Júnior",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-10-07",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15261",
+      "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "Ana Barros",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15260",
+      "ativo": "Inversor 1.5 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "Ana Barros",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15259",
+      "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-SON200-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "Ana Barros",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15258",
+      "ativo": "Transformador 1 WEG     { THPN-VRT200-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-10-12",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15257",
+      "ativo": "Sistema de Segurança Zona Rural, s/n São Bento do Una  Pernambuco Brasil { THPN-SBU100-SSEG1 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Sistema de Segurança",
+      "criticidade": "",
+      "dataProgramada": "2026-10-14",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15256",
+      "ativo": "Transformador 1 WEG     { THPN-BJD100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-10-08",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15255",
+      "ativo": "Preventiva Grupo de Inversores      { 2C-TPP100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Carlos  Godoi",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Carlos  Godoi",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-10-13",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15254",
+      "ativo": "Cabine 1 Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { STN100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-10-13",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15250",
+      "ativo": "Transformador 1      { SALE-VTS200-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-10-09",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15249",
+      "ativo": "Transformador 1      { SALE-HRT100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-10-08",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15248",
+      "ativo": "Transformador 1      { SALE-SVL100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Adriano Silva ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Adriano Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-10-08",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15244",
+      "ativo": "Transformador 1      { SALE-CRS200-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Adriano Silva ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Adriano Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-10-07",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "15243",
+      "ativo": "Transformador 6      { SALE-SNP100-TRFR6 }",
+      "equipe": "",
+      "responsavel": "Adriano Silva ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Adriano Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador Aéreo",
+      "criticidade": "",
+      "dataProgramada": "2026-10-12",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "15237",
       "ativo": "Cabine 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-CABN2 }",
       "equipe": "",
@@ -16448,23 +17025,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "15020",
-      "ativo": "Estrutura de Trackers      { THPN-FZL100-ETKR1 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "pausado",
-      "tarefa": "[Estrutura de Trackers] - Verificar operação dos trackers",
-      "criticidade": "",
-      "dataProgramada": "2026-10-05",
-      "dataCriacao": "2026-09-30",
-      "dataInicial": "2026-10-02",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
-    },
-    {
       "osId": "15000",
       "ativo": "Inversor 1.10 Sungrow SG125HV    { THPN-TNB100-INVR1.10 }",
       "equipe": "",
@@ -17111,14 +17671,15 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - MPA - SPDA - Pendências",
       "criticidade": "",
       "dataProgramada": "2026-09-18",
       "dataCriacao": "2026-09-16",
-      "dataInicial": "",
+      "dataInicial": "2026-10-02",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 384.0
     },
     {
       "osId": "13714",
@@ -18641,25 +19202,6 @@
       "atrasada": false
     },
     {
-      "osId": "13862",
-      "ativo": "Transformador 4 Gazquez     { IND100-TRFR4 }",
-      "equipe": "",
-      "responsavel": "Igor Silva ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Igor Silva ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-09-29",
-      "dataCriacao": "2026-09-18",
-      "dataInicial": "2026-09-28",
-      "dataFinal": "2026-09-28",
-      "linkFracttal": "",
-      "horasAteAbrir": 240.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "13310",
       "ativo": "Estrutura Fixa      { RNGD-NBS100-EFIX1 }",
       "equipe": "",
@@ -18812,25 +19354,6 @@
       "atrasada": false
     },
     {
-      "osId": "12719",
-      "ativo": "Preventiva Grupo de Inversores      { THPN-CXB100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Felipe  Lima",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-09-10",
-      "dataCriacao": "2026-09-02",
-      "dataInicial": "2026-09-30",
-      "dataFinal": "2026-09-30",
-      "linkFracttal": "",
-      "horasAteAbrir": 672.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "12709",
       "ativo": "Transformador 9 WEG     { THPN-SDI100-TRFR9 }",
       "equipe": "",
@@ -18942,6 +19465,25 @@
       "linkFracttal": "",
       "horasAteAbrir": 480.0,
       "horasAteFechar": 1200.0,
+      "atrasada": false
+    },
+    {
+      "osId": "15253",
+      "ativo": "Inversor 1.7 Sungrow     { IND100-INVR1.7 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Felipe  Lima",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.7] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-10-02",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "2026-10-02",
+      "dataFinal": "2026-10-02",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -19476,6 +20018,25 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "15020",
+      "ativo": "Estrutura de Trackers      { THPN-FZL100-ETKR1 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Finalizados",
+      "tarefa": "[Estrutura de Trackers] - Verificar operação dos trackers",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-09-30",
+      "dataInicial": "2026-10-02",
+      "dataFinal": "2026-10-02",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -21430,8 +21991,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3164,
-  "totalGeral": 6838,
+  "historicoTotal": 3169,
+  "totalGeral": 6860,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
