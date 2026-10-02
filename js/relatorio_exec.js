@@ -244,7 +244,11 @@ function rexSemanas(bd) {
       // viva na segunda: o que nasceu e foi resolvido entre o corte e domingo
       // anterior é trabalho da semana passada (65 religamentos na S39, 24/09)
       const fimAntes = rexFin(t) && String(t.dataFinal || '').slice(0, 10) < seg;
-      const criSem = rexRange(t.criacao, corte.slice(0, 10), dom) && !fimAntes;
+      // surgida = criada na janela E programada PARA a própria semana (02/10):
+      // criada agora mas programada p/ semanas futuras é planejamento, não imprevisto.
+      // Executada na semana fora da planilha (fimSem) continua contando sempre.
+      const criSem = rexRange(t.criacao, corte.slice(0, 10), dom) && !fimAntes
+        && rexRange(t.dataProg, seg, dom);
       if (!criSem && !fimSem) return;
       const o = NP[g] || (NP[g] = { p: 0, f: 0 });
       o.p++; npT++;
@@ -591,7 +595,7 @@ async function rexGerar() {
     });
     h += '<div class="rex-nota">Plano = a planilha da Programação da semana; tarefa criada DEPOIS do fechamento do plano '
       + '(momento em que a planilha foi gerada) conta como não planejada, mesmo quando encaixada nela · executado = tarefa Finalizada · '
-      + 'não planejada = criada após o fechamento ou executada sem estar na planilha (até domingo) · '
+      + 'não planejada = criada após o fechamento E programada para a própria semana, ou executada sem estar na planilha (até domingo) · '
       + 'preventiva mede cumprimento do plano; corretiva mede resposta à demanda.</div></section>';
   }
 
