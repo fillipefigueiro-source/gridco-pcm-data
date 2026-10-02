@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-02T13:48:39Z",
+  "geradoEm": "2026-10-02T14:52:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-28 .. 2026-10-04",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4844,
-        "emAberto": 31,
+        "total": 4845,
+        "emAberto": 30,
         "atrasadas": 29,
-        "concluidas30d": 790,
-        "concluidas7d": 199,
-        "naSemanaCorrente": 138
+        "concluidas30d": 792,
+        "concluidas7d": 201,
+        "naSemanaCorrente": 139
       },
       "mttr": {
-        "horas": 14.94,
-        "label": "14h 57min",
-        "amostra": 790
+        "horas": 14.9,
+        "label": "14h 54min",
+        "amostra": 792
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W40",
-          "criadas": 143,
-          "finalizadas": 139
+          "criadas": 144,
+          "finalizadas": 141
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4844,
-            "emAberto": 31
+            "total": 4845,
+            "emAberto": 30
           }
         ],
         "responsaveis": [
@@ -68,7 +68,7 @@
           },
           {
             "nome": "Italo  Lustosa",
-            "total": 248,
+            "total": 249,
             "emAberto": 1
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 31,
+      "total": 30,
       "atrasadas": 29,
       "porStatus": {
-        "naoIniciada": 30,
+        "naoIniciada": 29,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 31
+        "(sem equipe)": 30
       },
       "oss": [
         {
@@ -614,24 +614,6 @@
           "atrasada": true
         },
         {
-          "osId": "15191",
-          "ativo": "Inversor 1.1 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Andrick Gouveia ",
-          "status": "Não Iniciada",
-          "tarefa": "[IBT200-INVR1.1] - Religamento do IBT200-INVR1.1",
-          "criticidade": "",
-          "dataProgramada": "2026-10-02",
-          "dataCriacao": "2026-10-02",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "15171",
           "ativo": "QGBT 2 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-QGBT2 }",
           "equipe": "",
@@ -667,6 +649,26 @@
           "dataFinal": "2026-10-02",
           "linkFracttal": "",
           "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "15191",
+          "ativo": "Inversor 1.1 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Andrick Gouveia ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Andrick Gouveia ",
+          "status": "Finalizados",
+          "tarefa": "[IBT200-INVR1.1] - Religamento do IBT200-INVR1.1",
+          "criticidade": "",
+          "dataProgramada": "2026-10-02",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "2026-10-02",
+          "dataFinal": "2026-10-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3592,26 +3594,6 @@
           "atrasada": false
         },
         {
-          "osId": "14455",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-23",
-          "dataCriacao": "2026-09-23",
-          "dataInicial": "2026-09-24",
-          "dataFinal": "2026-09-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "14461",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -3652,12 +3634,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1972,
+      "historicoTotal": 1974,
       "subClassificacao": {
         "remoto": 760,
-        "local": 4084,
+        "local": 4085,
         "remotoEmAberto": 7,
-        "localEmAberto": 24,
+        "localEmAberto": 23,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -3880,16 +3862,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 848,
-        "emAberto": 91,
+        "emAberto": 90,
         "atrasadas": 45,
-        "concluidas30d": 119,
-        "concluidas7d": 26,
+        "concluidas30d": 120,
+        "concluidas7d": 27,
         "naSemanaCorrente": 8
       },
       "mttr": {
-        "horas": 368.47,
-        "label": "15d 8h",
-        "amostra": 119
+        "horas": 365.6,
+        "label": "15d 5h",
+        "amostra": 120
       },
       "tendencia4Semanas": [
         {
@@ -3910,7 +3892,7 @@
         {
           "semana": "W40",
           "criadas": 50,
-          "finalizadas": 22
+          "finalizadas": 23
         }
       ],
       "topOfensores": {
@@ -3918,7 +3900,7 @@
           {
             "nome": "(sem equipe)",
             "total": 848,
-            "emAberto": 91
+            "emAberto": 90
           }
         ],
         "responsaveis": [
@@ -3949,16 +3931,16 @@
           }
         ]
       },
-      "total": 91,
+      "total": 90,
       "atrasadas": 45,
       "porStatus": {
-        "naoIniciada": 86,
-        "emProgresso": 1,
+        "naoIniciada": 84,
+        "emProgresso": 2,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 91
+        "(sem equipe)": 90
       },
       "oss": [
         {
@@ -4953,23 +4935,6 @@
           "atrasada": false
         },
         {
-          "osId": "15078",
-          "ativo": "Caixa d'água      { SNE100-CXDA1 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Breno Andrade",
-          "supervisor": "Valdério Paz ",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPM - Caixa d'água",
-          "criticidade": "",
-          "dataProgramada": "2026-10-06",
-          "dataCriacao": "2026-10-01",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "15070",
           "ativo": "Estrutura Trackers  Petrolina  Pernambuco Brasil { PTL200-ETKR1 }",
           "equipe": "",
@@ -5078,14 +5043,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Milena Araújo",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-10-07",
           "dataCriacao": "2026-10-01",
-          "dataInicial": "",
+          "dataInicial": "2026-10-02",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": false
         },
         {
@@ -5515,6 +5481,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "15078",
+          "ativo": "Caixa d'água      { SNE100-CXDA1 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "Breno Andrade",
+          "supervisor": "Valdério Paz ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Caixa d'água",
+          "criticidade": "",
+          "dataProgramada": "2026-10-06",
+          "dataCriacao": "2026-10-01",
+          "dataInicial": "2026-10-02",
+          "dataFinal": "2026-10-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "15030",
           "ativo": "Cabine 1  Araputanga  Mato Grosso Brasil { APG100-CABN1 }",
@@ -6823,25 +6808,6 @@
           "dataFinal": "2026-09-10",
           "linkFracttal": "",
           "horasAteAbrir": 216.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "11986",
-          "ativo": "Infraestrutura Civil  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-INFC1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Felipe  Lima",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Spare Parts",
-          "criticidade": "",
-          "dataProgramada": "2026-08-28",
-          "dataCriacao": "2026-08-24",
-          "dataInicial": "2026-09-10",
-          "dataFinal": "2026-09-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 408.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -8366,7 +8332,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 346
+      "historicoTotal": 347
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9338,17 +9304,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 809,
+        "total": 810,
         "emAberto": 51,
-        "atrasadas": 42,
-        "concluidas30d": 203,
-        "concluidas7d": 43,
+        "atrasadas": 41,
+        "concluidas30d": 204,
+        "concluidas7d": 44,
         "naSemanaCorrente": 42
       },
       "mttr": {
-        "horas": 262.46,
-        "label": "10d 22h",
-        "amostra": 203
+        "horas": 261.41,
+        "label": "10d 21h",
+        "amostra": 204
       },
       "tendencia4Semanas": [
         {
@@ -9368,15 +9334,15 @@
         },
         {
           "semana": "W40",
-          "criadas": 31,
-          "finalizadas": 30
+          "criadas": 32,
+          "finalizadas": 31
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 809,
+            "total": 810,
             "emAberto": 51
           }
         ],
@@ -9409,11 +9375,11 @@
         ]
       },
       "total": 51,
-      "atrasadas": 42,
+      "atrasadas": 41,
       "porStatus": {
-        "naoIniciada": 46,
-        "emProgresso": 2,
-        "pausada": 3,
+        "naoIniciada": 48,
+        "emProgresso": 1,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
@@ -9921,15 +9887,14 @@
           "responsavel": "Andrick Gouveia ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Andrick Gouveia ",
-          "status": "pausado",
+          "status": "Não Iniciada",
           "tarefa": "[Inversor 1.6] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-09-30",
           "dataCriacao": "2026-09-29",
-          "dataInicial": "2026-10-01",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -10070,24 +10035,6 @@
           "atrasada": true
         },
         {
-          "osId": "15015",
-          "ativo": "Inversor 1.4 Sungrow SG250HX    { SNE100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Valdério Paz ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.4] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-10-01",
-          "dataCriacao": "2026-09-30",
-          "dataInicial": "2026-10-02",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "atrasada": true
-        },
-        {
           "osId": "14952",
           "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { THPN-CLR200-INVR1.3 }",
           "equipe": "",
@@ -10184,6 +10131,23 @@
           "criticidade": "",
           "dataProgramada": "2026-10-02",
           "dataCriacao": "2026-10-01",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "15211",
+          "ativo": "Inversor 1.1 Huawei SUN2000-330KTL-H1    { ADS100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.1] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-10-02",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -10311,6 +10275,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 24.0,
+          "atrasada": false
+        },
+        {
+          "osId": "15015",
+          "ativo": "Inversor 1.4 Sungrow SG250HX    { SNE100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Valdério Paz ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.4] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-10-01",
+          "dataCriacao": "2026-09-30",
+          "dataInicial": "2026-10-02",
+          "dataFinal": "2026-10-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -13107,25 +13090,6 @@
           "atrasada": false
         },
         {
-          "osId": "10823",
-          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { BES100-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Andrick Gouveia ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.1] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-11",
-          "dataFinal": "2026-08-11",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "10826",
           "ativo": "Inversor 2.5 Huawei     { TIM100-INVR2.5 }",
           "equipe": "",
@@ -13145,7 +13109,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 688
+      "historicoTotal": 689
     },
     "engenharia": {
       "label": "Engenharia",
@@ -13153,16 +13117,16 @@
       "cor": "#3b82f6",
       "kpis": {
         "total": 158,
-        "emAberto": 11,
-        "atrasadas": 11,
-        "concluidas30d": 32,
-        "concluidas7d": 4,
+        "emAberto": 10,
+        "atrasadas": 10,
+        "concluidas30d": 33,
+        "concluidas7d": 5,
         "naSemanaCorrente": 6
       },
       "mttr": {
-        "horas": 231.75,
-        "label": "9d 15h",
-        "amostra": 32
+        "horas": 257.45,
+        "label": "10d 17h",
+        "amostra": 33
       },
       "tendencia4Semanas": [
         {
@@ -13183,7 +13147,7 @@
         {
           "semana": "W40",
           "criadas": 3,
-          "finalizadas": 4
+          "finalizadas": 5
         }
       ],
       "topOfensores": {
@@ -13191,7 +13155,7 @@
           {
             "nome": "(sem equipe)",
             "total": 158,
-            "emAberto": 11
+            "emAberto": 10
           }
         ],
         "responsaveis": [
@@ -13222,16 +13186,16 @@
           }
         ]
       },
-      "total": 11,
-      "atrasadas": 11,
+      "total": 10,
+      "atrasadas": 10,
       "porStatus": {
-        "naoIniciada": 7,
+        "naoIniciada": 6,
         "emProgresso": 0,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 11
+        "(sem equipe)": 10
       },
       "oss": [
         {
@@ -13250,23 +13214,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 648.0,
-          "atrasada": true
-        },
-        {
-          "osId": "11454",
-          "ativo": "Estação Meteorológica Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Aury  Albuquerque",
-          "criadoPor": "Gabriela Dias",
-          "supervisor": "Aury  Albuquerque",
-          "status": "Não Iniciada",
-          "tarefa": "Análise do descasamento da geração com a irradiância de Tucano 1",
-          "criticidade": "",
-          "dataProgramada": "2026-08-21",
-          "dataCriacao": "2026-08-18",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
           "atrasada": true
         },
         {
@@ -13443,6 +13390,25 @@
           "dataFinal": "2026-10-02",
           "linkFracttal": "",
           "horasAteAbrir": 216.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "11454",
+          "ativo": "Estação Meteorológica Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Aury  Albuquerque",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Aury  Albuquerque",
+          "status": "Finalizada",
+          "tarefa": "Análise do descasamento da geração com a irradiância de Tucano 1",
+          "criticidade": "",
+          "dataProgramada": "2026-08-21",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "2026-10-02",
+          "dataFinal": "2026-10-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 1080.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -15423,10 +15389,26 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 105
+      "historicoTotal": 106
     }
   },
   "ossPublicas": [
+    {
+      "osId": "15211",
+      "ativo": "Inversor 1.1 Huawei SUN2000-330KTL-H1    { ADS100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.1] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
     {
       "osId": "15202",
       "ativo": "Cabine 1 Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { CGU100-CABN1 }",
@@ -15526,23 +15508,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "15191",
-      "ativo": "Inversor 1.1 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Andrick Gouveia ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Andrick Gouveia ",
-      "status": "Não Iniciada",
-      "tarefa": "[IBT200-INVR1.1] - Religamento do IBT200-INVR1.1",
-      "criticidade": "",
-      "dataProgramada": "2026-10-02",
-      "dataCriacao": "2026-10-02",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "15171",
       "ativo": "QGBT 2 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-QGBT2 }",
       "equipe": "",
@@ -15599,14 +15564,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Milena Araújo",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-10-07",
       "dataCriacao": "2026-10-01",
-      "dataInicial": "",
+      "dataInicial": "2026-10-02",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "15153",
@@ -16173,22 +16139,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "15078",
-      "ativo": "Caixa d'água      { SNE100-CXDA1 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "Breno Andrade",
-      "supervisor": "Valdério Paz ",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPM - Caixa d'água",
-      "criticidade": "",
-      "dataProgramada": "2026-10-06",
-      "dataCriacao": "2026-10-01",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "15077",
       "ativo": "Preventiva Grupo de Inversores      { GY-MCB100-PGINVR1 }",
       "equipe": "",
@@ -16512,23 +16462,6 @@
       "horasAteAbrir": 48.0
     },
     {
-      "osId": "15015",
-      "ativo": "Inversor 1.4 Sungrow SG250HX    { SNE100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Valdério Paz ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.4] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-10-01",
-      "dataCriacao": "2026-09-30",
-      "dataInicial": "2026-10-02",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
-    },
-    {
       "osId": "15010",
       "ativo": "Inversor 1.9 Huawei SUN2000-215KTL-H0    { STI100-INVR1.9 }",
       "equipe": "",
@@ -16833,15 +16766,14 @@
       "responsavel": "Andrick Gouveia ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Andrick Gouveia ",
-      "status": "pausado",
+      "status": "Não Iniciada",
       "tarefa": "[Inversor 1.6] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-09-30",
       "dataCriacao": "2026-09-29",
-      "dataInicial": "2026-10-01",
+      "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
+      "linkFracttal": ""
     },
     {
       "osId": "14844",
@@ -18320,22 +18252,6 @@
       "horasAteAbrir": 648.0
     },
     {
-      "osId": "11454",
-      "ativo": "Estação Meteorológica Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Aury  Albuquerque",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Aury  Albuquerque",
-      "status": "Não Iniciada",
-      "tarefa": "Análise do descasamento da geração com a irradiância de Tucano 1",
-      "criticidade": "",
-      "dataProgramada": "2026-08-21",
-      "dataCriacao": "2026-08-18",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "11016",
       "ativo": "Inversor 3.2 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR3.2 }",
       "equipe": "",
@@ -18613,6 +18529,25 @@
       "dataFinal": "2026-10-01",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "15078",
+      "ativo": "Caixa d'água      { SNE100-CXDA1 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "Breno Andrade",
+      "supervisor": "Valdério Paz ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Caixa d'água",
+      "criticidade": "",
+      "dataProgramada": "2026-10-06",
+      "dataCriacao": "2026-10-01",
+      "dataInicial": "2026-10-02",
+      "dataFinal": "2026-10-02",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -19014,6 +18949,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 480.0,
       "horasAteFechar": 1200.0,
+      "atrasada": false
+    },
+    {
+      "osId": "15191",
+      "ativo": "Inversor 1.1 Huawei SUN2000-215KTL-H0    { IBT200-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Andrick Gouveia ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Andrick Gouveia ",
+      "status": "Finalizados",
+      "tarefa": "[IBT200-INVR1.1] - Religamento do IBT200-INVR1.1",
+      "criticidade": "",
+      "dataProgramada": "2026-10-02",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "2026-10-02",
+      "dataFinal": "2026-10-02",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -19467,6 +19422,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 24.0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "15015",
+      "ativo": "Inversor 1.4 Sungrow SG250HX    { SNE100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Valdério Paz ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.4] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-10-01",
+      "dataCriacao": "2026-09-30",
+      "dataInicial": "2026-10-02",
+      "dataFinal": "2026-10-02",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -21497,69 +21471,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "14634",
-      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { THPN-BJD100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Matheus Leite ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Matheus Leite ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.1] - Inspeção do inversor após as 14h",
-      "criticidade": "",
-      "dataProgramada": "2026-09-28",
-      "dataCriacao": "2026-09-25",
-      "dataInicial": "2026-10-01",
-      "dataFinal": "2026-10-01",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "14632",
-      "ativo": "QGBT 3 Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { CGU100-QGBT3 }",
-      "equipe": "",
-      "responsavel": "Lucas Alberto Freitas de Faria ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Finalizados",
-      "tarefa": "[CGU100-QGBT3] - Religamento do CGU100-QGBT3",
-      "criticidade": "",
-      "dataProgramada": "2026-09-25",
-      "dataCriacao": "2026-09-25",
-      "dataInicial": "2026-09-25",
-      "dataFinal": "2026-09-25",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "14631",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizados",
-      "tarefa": "Religamento da UFV Marialva",
-      "criticidade": "",
-      "dataProgramada": "2026-09-25",
-      "dataCriacao": "2026-09-25",
-      "dataInicial": "2026-09-29",
-      "dataFinal": "2026-09-29",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3147,
-  "totalGeral": 6826,
+  "historicoTotal": 3152,
+  "totalGeral": 6828,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
