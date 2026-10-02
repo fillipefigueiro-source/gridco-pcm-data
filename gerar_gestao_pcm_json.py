@@ -365,6 +365,11 @@ def coletar(client, usina_idx, cluster_major, ativos, max_items=None):
             "osStatus": bd.STATUS_OS_MAP.get(st_wo, str(st_wo or "")),
             "etiquetas": sorted(_labels_para_lista(row.get("labels"))),
             "ss": str(row.get("id_request") or "").strip(),
+            # Observação da OS (senão a da tarefa) — só p/ tarefas EM ABERTO e
+            # cortada, p/ não inflar o JSON público. Usada no Relatório Executivo
+            # (seção "Atrasadas há +35 dias", versão Interno Grid). 02/10/2026.
+            "obs": (" ".join(str(row.get("note") or row.get("task_note") or "").split())[:240]
+                    if aberta else ""),
             "dataProg": data_prog,
             # Data de início = quando a TAREFA começou a ser executada
             # (campo API initial_date). Usada pelo filtro "Período" do painel.

@@ -673,8 +673,35 @@ async function rexGerar() {
       + '</table></section>';
   }
 
-  // T2 — tarefas do plano da semana ainda em aberto
-  if (SW && SW.abertasPlano.length) {
+  // T2 — INTERNO GRID: todas as atrasadas há +35 dias (pedido 02/10), com
+  // etiqueta e observação da OS. Dias = desde a data programada (régua do
+  // painel "Só atrasadas"); só tarefa viva (OS ainda aberta). A observação
+  // aparece uma vez por OS, na primeira linha dela.
+  if (!modoCliente) {
+    const LIM = 35;
+    const at = M.T.filter(t => rexAbertaViva(t) && (t.dias || 0) > LIM)
+      .sort((a, b) => (b.dias || 0) - (a.dias || 0) || String(a.os).localeCompare(String(b.os)));
+    const nOS = new Set(at.map(t => t.os)).size;
+    const vista = new Set();
+    h += '<section><h2>' + sec('Atrasadas há mais de ' + LIM + ' dias')
+      + ' <small>' + rexN(at.length) + ' tarefa(s) em ' + rexN(nOS) + ' OS · da mais antiga para a mais nova · foto de hoje</small></h2>'
+      + (at.length ? '<table class="rex-tbl rex-atr"><tr><th>Dias</th><th>OS</th><th>Cliente – Usina</th><th>Tarefa</th><th>Etiqueta</th><th>Observação da OS</th></tr>'
+        + at.map(t => {
+            const prim = !vista.has(t.os); vista.add(t.os);
+            const etq = (t.etiquetas || []).join(', ');
+            return '<tr><td class="rex-red"><b>' + (t.dias || 0) + ' d</b></td><td>' + rexEsc(t.os) + '</td>'
+              + '<td class="rex-esq">' + rexEsc(String(t.usina || '').replace(/\s*-\s*[A-Z]{2}\s*$/, '')) + '</td>'
+              + '<td class="rex-esq">' + rexEsc(String(t.tarefa || '').replace(/^\[[^\]]*\]\s*-?\s*/, '')) + '</td>'
+              + '<td class="rex-esq rex-obs">' + (etq ? rexEsc(etq) : '<span class="rex-mut">—</span>') + '</td>'
+              + '<td class="rex-esq rex-obs">' + (prim ? (t.obs ? rexEsc(t.obs) : '<span class="rex-mut">sem observação</span>')
+                                                       : '<span class="rex-mut">〃</span>') + '</td></tr>';
+          }).join('') + '</table>'
+        : '<p class="rex-nota">Nenhuma tarefa atrasada há mais de ' + LIM + ' dias no recorte.</p>')
+      + '</section>';
+  }
+
+  // T2 (versão Cliente) — tarefas do plano da semana ainda em aberto
+  if (modoCliente && SW && SW.abertasPlano.length) {
     const ab = SW.abertasPlano.slice(0, 40);
     h += '<section><h2>' + sec('O que ficou em aberto do plano da semana')
       + ' <small>' + rexN(SW.abertasPlano.length) + ' tarefa(s) · ' + rexEsc(SW.label) + '</small></h2>'
