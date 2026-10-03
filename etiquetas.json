@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-03T21:31:00Z",
+  "geradoEm": "2026-10-03T22:51:27Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-28 .. 2026-10-04",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4874,
-        "emAberto": 32,
+        "total": 4876,
+        "emAberto": 33,
         "atrasadas": 26,
-        "concluidas30d": 791,
-        "concluidas7d": 210,
-        "naSemanaCorrente": 168
+        "concluidas30d": 792,
+        "concluidas7d": 211,
+        "naSemanaCorrente": 170
       },
       "mttr": {
-        "horas": 15.99,
-        "label": "15h 59min",
-        "amostra": 791
+        "horas": 15.97,
+        "label": "15h 58min",
+        "amostra": 792
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W40",
-          "criadas": 173,
-          "finalizadas": 168
+          "criadas": 175,
+          "finalizadas": 169
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4874,
-            "emAberto": 32
+            "total": 4876,
+            "emAberto": 33
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 32,
+      "total": 33,
       "atrasadas": 26,
       "porStatus": {
-        "naoIniciada": 28,
-        "emProgresso": 2,
-        "pausada": 2,
+        "naoIniciada": 30,
+        "emProgresso": 0,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 32
+        "(sem equipe)": 33
       },
       "oss": [
         {
@@ -560,21 +560,38 @@
           "atrasada": true
         },
         {
-          "osId": "15327",
+          "osId": "15333",
           "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
           "equipe": "",
           "responsavel": "Frank  Melo",
-          "criadoPor": "Juliana Rogério ",
+          "criadoPor": "GerdesonAraújo",
           "supervisor": "Frank  Melo",
-          "status": "Em progresso",
+          "status": "Não Iniciada",
           "tarefa": "[Athon - Capitão Poço 1 - PA] - Religamento do Athon - Capitão Poço 1 - PA",
           "criticidade": "",
           "dataProgramada": "2026-10-03",
           "dataCriacao": "2026-10-03",
-          "dataInicial": "2026-10-03",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "15332",
+          "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Thiago Morais ",
+          "status": "Não Iniciada",
+          "tarefa": "[Utragaz - Ibirapuã 1 - BA] - Religamento do Utragaz - Ibirapuã 1 - BA",
+          "criticidade": "",
+          "dataProgramada": "2026-10-03",
+          "dataCriacao": "2026-10-03",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
         },
@@ -621,7 +638,7 @@
           "responsavel": "Luis  Moura",
           "criadoPor": "CíceroWillian",
           "supervisor": "Luis  Moura",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[THPN-MTO100] - Religamento do THPN-MTO100",
           "criticidade": "",
           "dataProgramada": "2026-10-03",
@@ -672,6 +689,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "15327",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Frank  Melo",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Frank  Melo",
+          "status": "Finalizados",
+          "tarefa": "[Athon - Capitão Poço 1 - PA] - Religamento do Athon - Capitão Poço 1 - PA",
+          "criticidade": "",
+          "dataProgramada": "2026-10-03",
+          "dataCriacao": "2026-10-03",
+          "dataInicial": "2026-10-03",
+          "dataFinal": "2026-10-03",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "15324",
           "ativo": "Thopen - Parelhas 1 - RN Rodovia RN 088, nº 01, Zona Rural Parelhas  Rio Grande do Norte Brasil { THPN-PRL100 }",
@@ -3651,34 +3688,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14544",
-          "ativo": "Inversor 1.1 Huawei     { THPN-NVL100-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.1] - Religamento do Inversor 1.1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-24",
-          "dataCriacao": "2026-09-24",
-          "dataInicial": "2026-09-24",
-          "dataFinal": "2026-09-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 1980,
+      "historicoTotal": 1981,
       "subClassificacao": {
         "remoto": 760,
-        "local": 4114,
+        "local": 4116,
         "remotoEmAberto": 7,
-        "localEmAberto": 25,
+        "localEmAberto": 26,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -15774,21 +15791,37 @@
   },
   "ossPublicas": [
     {
-      "osId": "15327",
+      "osId": "15333",
       "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
       "equipe": "",
       "responsavel": "Frank  Melo",
-      "criadoPor": "Juliana Rogério ",
+      "criadoPor": "GerdesonAraújo",
       "supervisor": "Frank  Melo",
-      "status": "Em progresso",
+      "status": "Não Iniciada",
       "tarefa": "[Athon - Capitão Poço 1 - PA] - Religamento do Athon - Capitão Poço 1 - PA",
       "criticidade": "",
       "dataProgramada": "2026-10-03",
       "dataCriacao": "2026-10-03",
-      "dataInicial": "2026-10-03",
+      "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
+      "osId": "15332",
+      "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Thiago Morais ",
+      "status": "Não Iniciada",
+      "tarefa": "[Utragaz - Ibirapuã 1 - BA] - Religamento do Utragaz - Ibirapuã 1 - BA",
+      "criticidade": "",
+      "dataProgramada": "2026-10-03",
+      "dataCriacao": "2026-10-03",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
       "modalidade": "local"
     },
     {
@@ -15832,7 +15865,7 @@
       "responsavel": "Luis  Moura",
       "criadoPor": "CíceroWillian",
       "supervisor": "Luis  Moura",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[THPN-MTO100] - Religamento do THPN-MTO100",
       "criticidade": "",
       "dataProgramada": "2026-10-03",
@@ -19234,6 +19267,26 @@
   ],
   "ossHistorico": [
     {
+      "osId": "15327",
+      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+      "equipe": "",
+      "responsavel": "Frank  Melo",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Frank  Melo",
+      "status": "Finalizados",
+      "tarefa": "[Athon - Capitão Poço 1 - PA] - Religamento do Athon - Capitão Poço 1 - PA",
+      "criticidade": "",
+      "dataProgramada": "2026-10-03",
+      "dataCriacao": "2026-10-03",
+      "dataInicial": "2026-10-03",
+      "dataFinal": "2026-10-03",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "15155",
       "ativo": "Cabine 1 Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-CABN1 }",
       "equipe": "",
@@ -22173,30 +22226,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "14699",
-      "ativo": "Thopen - Alvares Machado - SP WHG8+949 Álvares Machado, SP Álvares Machado  São Paulo Brasil { THPN-ALM100 }",
-      "equipe": "",
-      "responsavel": "Carlos  Godoi",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Carlos  Godoi",
-      "status": "Finalizados",
-      "tarefa": "[THPN-ALM100] - Religamento do THPN-ALM100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-26",
-      "dataCriacao": "2026-09-26",
-      "dataInicial": "2026-09-27",
-      "dataFinal": "2026-09-27",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3165,
-  "totalGeral": 6883,
+  "historicoTotal": 3166,
+  "totalGeral": 6885,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
