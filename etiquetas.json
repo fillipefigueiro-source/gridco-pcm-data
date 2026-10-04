@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-04T15:38:04Z",
+  "geradoEm": "2026-10-04T16:24:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-09-28 .. 2026-10-04",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4898,
-        "emAberto": 43,
+        "total": 4900,
+        "emAberto": 44,
         "atrasadas": 32,
-        "concluidas30d": 776,
-        "concluidas7d": 202,
-        "naSemanaCorrente": 192
+        "concluidas30d": 777,
+        "concluidas7d": 203,
+        "naSemanaCorrente": 194
       },
       "mttr": {
-        "horas": 16.15,
-        "label": "16h 9min",
-        "amostra": 776
+        "horas": 16.13,
+        "label": "16h 8min",
+        "amostra": 777
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W40",
-          "criadas": 197,
-          "finalizadas": 181
+          "criadas": 199,
+          "finalizadas": 182
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4898,
-            "emAberto": 43
+            "total": 4900,
+            "emAberto": 44
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 43,
+      "total": 44,
       "atrasadas": 32,
       "porStatus": {
         "naoIniciada": 38,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 43
+        "(sem equipe)": 44
       },
       "oss": [
         {
@@ -670,6 +670,42 @@
           "atrasada": true
         },
         {
+          "osId": "15368",
+          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Adriano  Moraes",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-10-04",
+          "dataCriacao": "2026-10-04",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "15367",
+          "ativo": "Thopen - Fernandópolis 1 - SP Rodovia João Carlos Stuqui S/N Fernandópolis  São Paulo Brasil { THPN-FRN100 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-FRN100] - Religamento do THPN-FRN100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-04",
+          "dataCriacao": "2026-10-04",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "15366",
           "ativo": "Thopen - Senador Elói 1 - RN Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { THPN-SNE100 }",
           "equipe": "",
@@ -748,14 +784,15 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-ORB100-INVR2.2] - Religamento do THPN-ORB100-INVR2.2",
           "criticidade": "",
           "dataProgramada": "2026-10-04",
           "dataCriacao": "2026-10-04",
-          "dataInicial": "",
+          "dataInicial": "2026-10-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -768,24 +805,6 @@
           "supervisor": "Eduardo  Mendes",
           "status": "Não Iniciada",
           "tarefa": "[THPN-EBG100-QGBT3] - Religamento do THPN-EBG100-QGBT3",
-          "criticidade": "",
-          "dataProgramada": "2026-10-04",
-          "dataCriacao": "2026-10-04",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "15355",
-          "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Thiago Morais ",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
           "criticidade": "",
           "dataProgramada": "2026-10-04",
           "dataCriacao": "2026-10-04",
@@ -871,6 +890,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "15355",
+          "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
+          "criticidade": "",
+          "dataProgramada": "2026-10-04",
+          "dataCriacao": "2026-10-04",
+          "dataInicial": "2026-10-04",
+          "dataFinal": "2026-10-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "15351",
           "ativo": "Inversor 1.3 Huawei SUN-330KTL-H1    { GTA500-INVR1.3 }",
@@ -3772,26 +3811,6 @@
           "atrasada": false
         },
         {
-          "osId": "14562",
-          "ativo": "Athon - Mãe do Rio 1 - PA  Mãe do Rio  Pará Brasil { ATHN-MRO100 }",
-          "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Frank  Melo",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-09-24",
-          "dataCriacao": "2026-09-24",
-          "dataInicial": "2026-09-24",
-          "dataFinal": "2026-09-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "14577",
           "ativo": "RenoGrid - Crateús 1 - CE  Crateús  Ceará Brasil { RNGD-CTS100 }",
           "equipe": "",
@@ -3872,12 +3891,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 1979,
+      "historicoTotal": 1980,
       "subClassificacao": {
         "remoto": 760,
-        "local": 4138,
+        "local": 4140,
         "remotoEmAberto": 7,
-        "localEmAberto": 36,
+        "localEmAberto": 37,
         "pctRemoto": 16,
         "alerta": true
       },
@@ -15973,6 +15992,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "15368",
+      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Adriano  Moraes",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-10-04",
+      "dataCriacao": "2026-10-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "15367",
+      "ativo": "Thopen - Fernandópolis 1 - SP Rodovia João Carlos Stuqui S/N Fernandópolis  São Paulo Brasil { THPN-FRN100 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-FRN100] - Religamento do THPN-FRN100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-04",
+      "dataCriacao": "2026-10-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "15366",
       "ativo": "Thopen - Senador Elói 1 - RN Rodovia RN 120, Nº 01, Zona Rural Senador Elói de Souza  Rio Grande do Norte Brasil { THPN-SNE100 }",
       "equipe": "",
@@ -16047,14 +16100,15 @@
       "responsavel": "Ricardo Silva ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-ORB100-INVR2.2] - Religamento do THPN-ORB100-INVR2.2",
       "criticidade": "",
       "dataProgramada": "2026-10-04",
       "dataCriacao": "2026-10-04",
-      "dataInicial": "",
+      "dataInicial": "2026-10-04",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16066,23 +16120,6 @@
       "supervisor": "Eduardo  Mendes",
       "status": "Não Iniciada",
       "tarefa": "[THPN-EBG100-QGBT3] - Religamento do THPN-EBG100-QGBT3",
-      "criticidade": "",
-      "dataProgramada": "2026-10-04",
-      "dataCriacao": "2026-10-04",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "15355",
-      "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Thiago Morais ",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
       "criticidade": "",
       "dataProgramada": "2026-10-04",
       "dataCriacao": "2026-10-04",
@@ -20039,6 +20076,26 @@
       "atrasada": false
     },
     {
+      "osId": "15355",
+      "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
+      "criticidade": "",
+      "dataProgramada": "2026-10-04",
+      "dataCriacao": "2026-10-04",
+      "dataInicial": "2026-10-04",
+      "dataFinal": "2026-10-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "15351",
       "ativo": "Inversor 1.3 Huawei SUN-330KTL-H1    { GTA500-INVR1.3 }",
       "equipe": "",
@@ -22560,30 +22617,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "14707",
-      "ativo": "QGBT 2  Tupi Paulista  São Paulo Brasil { TPP100-QGBT2 }",
-      "equipe": "",
-      "responsavel": "Carlos  Godoi",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Carlos  Godoi",
-      "status": "Finalizados",
-      "tarefa": "[QGBT 2] - Religamento do QGBT 2",
-      "criticidade": "",
-      "dataProgramada": "2026-09-26",
-      "dataCriacao": "2026-09-26",
-      "dataInicial": "2026-09-27",
-      "dataFinal": "2026-09-27",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3164,
-  "totalGeral": 6907,
+  "historicoTotal": 3165,
+  "totalGeral": 6909,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
