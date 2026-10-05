@@ -685,30 +685,52 @@ async function rexGerar() {
       + '</table></section>';
   }
 
-  // T2 — INTERNO GRID: todas as atrasadas há +35 dias (pedido 02/10), com
-  // etiqueta e observação da OS. Dias = desde a data programada (régua do
-  // painel "Só atrasadas"); só tarefa viva (OS ainda aberta). A observação
-  // aparece uma vez por OS, na primeira linha dela.
+  // T2 — INTERNO GRID: OS com tarefa atrasada há +35 dias (pedido 02/10;
+  // agrupado POR OS em 05/10). Dias = tarefa mais antiga da OS (régua do
+  // "Só atrasadas"); Faltam = tarefas abertas / total da OS; Tarefa = sigla
+  // comum uma vez + nomes do que FALTA; etiquetas unidas; obs da OS.
   if (!modoCliente) {
     const LIM = 35;
-    const at = M.T.filter(t => rexAbertaViva(t) && (t.dias || 0) > LIM)
-      .sort((a, b) => (b.dias || 0) - (a.dias || 0) || String(a.os).localeCompare(String(b.os)));
-    const nOS = new Set(at.map(t => t.os)).size;
-    const vista = new Set();
+    const limpa = x => String(x || '').replace(/^(\s*\[[^\]]*\])+\s*[-–—]?\s*/, '').trim();
+    const porOS = new Map();
+    M.T.forEach(t => {
+      const k = String(t.os);
+      const o = porOS.get(k) || { os: k, usina: t.usina, tot: 0, ab: [], dias: 0, etq: new Set(), obs: '' };
+      o.tot++;
+      if (rexAbertaViva(t)) { o.ab.push(t); o.dias = Math.max(o.dias, t.dias || 0); }
+      (t.etiquetas || []).forEach(e => o.etq.add(e));
+      if (!o.obs && t.obs) o.obs = t.obs;
+      porOS.set(k, o);
+    });
+    const linhas = Array.from(porOS.values()).filter(o => o.ab.length && o.dias > LIM)
+      .sort((a, b) => b.dias - a.dias || a.os.localeCompare(b.os));
+    const titulo = o => {
+      const nomes = [...new Set(o.ab.map(t => limpa(t.tarefa)).filter(Boolean))];
+      const m = nomes.map(n => /^(MP[MSAT])\s*[-–—]\s*(.+)$/.exec(n));
+      let pre = '', itens = nomes;
+      if (m.length && m.every(x => x && x[1] === m[0][1])) { pre = m[0][1] + ' — '; itens = m.map(x => x[2]); }
+      let txt = pre, n = 0;
+      for (const it of itens) {
+        if ((txt + it).length > 130 && n) break;
+        txt += (n ? ', ' : '') + it; n++;
+      }
+      return txt + (itens.length > n ? ' (+' + (itens.length - n) + ')' : '');
+    };
+    const nTar = linhas.reduce((s, o) => s + o.ab.length, 0);
     h += '<section><h2>' + sec('Atrasadas há mais de ' + LIM + ' dias')
-      + ' <small>' + rexN(at.length) + ' tarefa(s) em ' + rexN(nOS) + ' OS · da mais antiga para a mais nova · foto de hoje</small></h2>'
-      + (at.length ? '<table class="rex-tbl rex-atr"><tr><th>Dias</th><th>OS</th><th>Cliente – Usina</th><th>Tarefa</th><th>Etiqueta</th><th>Observação da OS</th></tr>'
-        + at.map(t => {
-            const prim = !vista.has(t.os); vista.add(t.os);
-            const etq = (t.etiquetas || []).join(', ');
-            return '<tr><td class="rex-red"><b>' + (t.dias || 0) + ' d</b></td><td>' + rexEsc(t.os) + '</td>'
-              + '<td class="rex-esq">' + rexEsc(String(t.usina || '').replace(/\s*-\s*[A-Z]{2}\s*$/, '')) + '</td>'
-              + '<td class="rex-esq">' + rexEsc(String(t.tarefa || '').replace(/^\[[^\]]*\]\s*-?\s*/, '')) + '</td>'
+      + ' <small>' + rexN(linhas.length) + ' OS · ' + rexN(nTar) + ' tarefa(s) em aberto · da mais antiga para a mais nova · foto de hoje</small></h2>'
+      + (linhas.length ? '<table class="rex-tbl rex-atr"><tr><th>Dias</th><th>OS</th><th>Cliente – Usina</th><th>Tarefa(s) em aberto</th><th>Faltam</th><th>Etiqueta</th><th>Observação da OS</th></tr>'
+        + linhas.map(o => {
+            const etq = [...o.etq].join(', ');
+            return '<tr><td class="rex-red"><b>' + o.dias + ' d</b></td><td>' + rexEsc(o.os) + '</td>'
+              + '<td class="rex-esq">' + rexEsc(String(o.usina || '').replace(/\s*-\s*[A-Z]{2}\s*$/, '')) + '</td>'
+              + '<td class="rex-esq">' + rexEsc(titulo(o)) + '</td>'
+              + '<td title="tarefas em aberto / total da OS"><b>' + o.ab.length + '/' + o.tot + '</b></td>'
               + '<td class="rex-esq rex-obs">' + (etq ? rexEsc(etq) : '<span class="rex-mut">—</span>') + '</td>'
-              + '<td class="rex-esq rex-obs">' + (prim ? (t.obs ? rexEsc(t.obs) : '<span class="rex-mut">sem observação</span>')
-                                                       : '<span class="rex-mut">〃</span>') + '</td></tr>';
+              + '<td class="rex-esq rex-obs">' + (o.obs ? rexEsc(o.obs) : '<span class="rex-mut">sem observação</span>') + '</td></tr>';
           }).join('') + '</table>'
-        : '<p class="rex-nota">Nenhuma tarefa atrasada há mais de ' + LIM + ' dias no recorte.</p>')
+          + '<div class="rex-nota">Faltam = tarefas em aberto ÷ total de tarefas da OS · dias contados desde a data programada da tarefa mais antiga.</div>'
+        : '<p class="rex-nota">Nenhuma OS com tarefa atrasada há mais de ' + LIM + ' dias no recorte.</p>')
       + '</section>';
   }
 
