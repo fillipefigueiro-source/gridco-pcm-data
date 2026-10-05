@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-05T10:49:24Z",
+  "geradoEm": "2026-10-05T12:22:52Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-05 .. 2026-10-11",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4923,
+        "total": 4926,
         "emAberto": 35,
-        "atrasadas": 35,
-        "concluidas30d": 775,
-        "concluidas7d": 214,
-        "naSemanaCorrente": 1
+        "atrasadas": 34,
+        "concluidas30d": 778,
+        "concluidas7d": 217,
+        "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 16.23,
-        "label": "16h 14min",
-        "amostra": 775
+        "horas": 16.39,
+        "label": "16h 23min",
+        "amostra": 778
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W41",
-          "criadas": 1,
-          "finalizadas": 4
+          "criadas": 4,
+          "finalizadas": 7
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4923,
+            "total": 4926,
             "emAberto": 35
           }
         ],
@@ -79,10 +79,10 @@
         ]
       },
       "total": 35,
-      "atrasadas": 35,
+      "atrasadas": 34,
       "porStatus": {
-        "naoIniciada": 31,
-        "emProgresso": 0,
+        "naoIniciada": 30,
+        "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
@@ -298,24 +298,6 @@
           "supervisor": "Maria Emanuella de Souza Mota ",
           "status": "Não Iniciada",
           "tarefa": "[THPN-ACB100] - Religamento do THPN-ACB100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-29",
-          "dataCriacao": "2026-09-29",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "14838",
-          "ativo": "Thopen - Pharmas 4 - PR Rodovia Tsuneto Matsubara, km 4,5 Jacutinga Bandeirantes  Paraná Brasil { THPN-PHS400 }",
-          "equipe": "",
-          "responsavel": "Valdir Silva ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Valdir Silva ",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-PHS400] - Religamento do THPN-PHS400",
           "criticidade": "",
           "dataProgramada": "2026-09-29",
           "dataCriacao": "2026-09-29",
@@ -566,14 +548,15 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "GerdesonAraújo",
           "supervisor": "Carlos  Godoi",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Thopen - Santo Anastácio - SP] - Religamento do Thopen - Santo Anastácio - SP",
           "criticidade": "",
           "dataProgramada": "2026-10-03",
           "dataCriacao": "2026-10-04",
-          "dataInicial": "",
+          "dataInicial": "2026-10-05",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -633,17 +616,17 @@
           "atrasada": true
         },
         {
-          "osId": "15391",
-          "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
+          "osId": "15399",
+          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.1 }",
           "equipe": "",
-          "responsavel": "Hélio Silva ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Hélio Silva ",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Luiz  Silva",
           "status": "Não Iniciada",
-          "tarefa": "[Thopen - Santo Inácio 1 e 2 - SP] - Religamento do Thopen - Santo Inácio 1 e 2 - SP",
+          "tarefa": "[2C-UNI100-INVR1.1] - Religamento do 2C-UNI100-INVR1.1",
           "criticidade": "",
           "dataProgramada": "2026-10-04",
-          "dataCriacao": "2026-10-04",
+          "dataCriacao": "2026-10-05",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -712,7 +695,7 @@
           "responsavel": "Matheus Gois ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Matheus Gois ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Thopen - Paranavaí 1 - PR] - Religamento do Thopen - Paranavaí 1 - PR",
           "criticidade": "",
           "dataProgramada": "2026-10-04",
@@ -723,6 +706,24 @@
           "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "15403",
+          "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { PTL300-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-10-05",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -735,6 +736,26 @@
           "supervisor": "Marcos  Camargo",
           "status": "Finalizados",
           "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-04",
+          "dataCriacao": "2026-10-04",
+          "dataInicial": "2026-10-05",
+          "dataFinal": "2026-10-05",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "15391",
+          "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
+          "equipe": "",
+          "responsavel": "Hélio Silva ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Hélio Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Thopen - Santo Inácio 1 e 2 - SP] - Religamento do Thopen - Santo Inácio 1 e 2 - SP",
           "criticidade": "",
           "dataProgramada": "2026-10-04",
           "dataCriacao": "2026-10-04",
@@ -782,6 +803,26 @@
           "dataFinal": "2026-10-05",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "14838",
+          "ativo": "Thopen - Pharmas 4 - PR Rodovia Tsuneto Matsubara, km 4,5 Jacutinga Bandeirantes  Paraná Brasil { THPN-PHS400 }",
+          "equipe": "",
+          "responsavel": "Valdir Silva ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Valdir Silva ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-PHS400] - Religamento do THPN-PHS400",
+          "criticidade": "",
+          "dataProgramada": "2026-09-29",
+          "dataCriacao": "2026-09-29",
+          "dataInicial": "2026-10-05",
+          "dataFinal": "2026-10-05",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -2022,26 +2063,6 @@
           "dataFinal": "2026-10-01",
           "linkFracttal": "",
           "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "14635",
-          "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
-          "equipe": "",
-          "responsavel": "Ademir Necker ",
-          "criadoPor": "Maria Emanuella de Souza Mota ",
-          "supervisor": "Ademir Necker ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-25",
-          "dataCriacao": "2026-09-25",
-          "dataInicial": "2026-10-01",
-          "dataFinal": "2026-10-01",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3705,32 +3726,12 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14632",
-          "ativo": "QGBT 3 Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { CGU100-QGBT3 }",
-          "equipe": "",
-          "responsavel": "Lucas Alberto Freitas de Faria ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Finalizados",
-          "tarefa": "[CGU100-QGBT3] - Religamento do CGU100-QGBT3",
-          "criticidade": "",
-          "dataProgramada": "2026-09-25",
-          "dataCriacao": "2026-09-25",
-          "dataInicial": "2026-09-25",
-          "dataFinal": "2026-09-25",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2007,
+      "historicoTotal": 2010,
       "subClassificacao": {
         "remoto": 760,
-        "local": 4163,
+        "local": 4166,
         "remotoEmAberto": 7,
         "localEmAberto": 28,
         "pctRemoto": 15,
@@ -9654,16 +9655,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 818,
-        "emAberto": 56,
-        "atrasadas": 43,
-        "concluidas30d": 153,
-        "concluidas7d": 34,
+        "emAberto": 55,
+        "atrasadas": 42,
+        "concluidas30d": 154,
+        "concluidas7d": 35,
         "naSemanaCorrente": 14
       },
       "mttr": {
-        "horas": 231.22,
-        "label": "9d 15h",
-        "amostra": 153
+        "horas": 230.65,
+        "label": "9d 14h",
+        "amostra": 154
       },
       "tendencia4Semanas": [
         {
@@ -9684,7 +9685,7 @@
         {
           "semana": "W41",
           "criadas": 0,
-          "finalizadas": 0
+          "finalizadas": 1
         }
       ],
       "topOfensores": {
@@ -9692,7 +9693,7 @@
           {
             "nome": "(sem equipe)",
             "total": 818,
-            "emAberto": 56
+            "emAberto": 55
           }
         ],
         "responsaveis": [
@@ -9723,16 +9724,16 @@
           }
         ]
       },
-      "total": 56,
-      "atrasadas": 43,
+      "total": 55,
+      "atrasadas": 42,
       "porStatus": {
-        "naoIniciada": 53,
-        "emProgresso": 0,
+        "naoIniciada": 51,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 56
+        "(sem equipe)": 55
       },
       "oss": [
         {
@@ -10230,37 +10231,21 @@
           "atrasada": true
         },
         {
-          "osId": "14872",
-          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { BES100-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Andrick Gouveia ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Andrick Gouveia ",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.6] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-09-30",
-          "dataCriacao": "2026-09-29",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "14844",
           "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { BES100-INVR1.9 }",
           "equipe": "",
           "responsavel": "Andrick Gouveia ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Andrick Gouveia ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.9] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-09-30",
           "dataCriacao": "2026-09-29",
-          "dataInicial": "",
+          "dataInicial": "2026-10-05",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -10692,6 +10677,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14872",
+          "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { BES100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Andrick Gouveia ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Andrick Gouveia ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.6] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-09-30",
+          "dataCriacao": "2026-09-29",
+          "dataInicial": "2026-10-05",
+          "dataFinal": "2026-10-05",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "15253",
           "ativo": "Inversor 1.7 Sungrow     { IND100-INVR1.7 }",
@@ -13505,25 +13509,6 @@
           "atrasada": false
         },
         {
-          "osId": "10840",
-          "ativo": "Tracker 31.100 STI STI-H250    { THPN-TNB100-ETKR31.100 }",
-          "equipe": "",
-          "responsavel": "Luis  Moura",
-          "criadoPor": "Juliana Cândido ",
-          "supervisor": "Luis  Moura",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 31.100] - Inspeção em Tracker - Solicitação Thopen",
-          "criticidade": "",
-          "dataProgramada": "2026-08-12",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-10",
-          "dataFinal": "2026-08-12",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 48.0,
-          "atrasada": false
-        },
-        {
           "osId": "10894",
           "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { BES100-INVR1.9 }",
           "equipe": "",
@@ -13543,7 +13528,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 690
+      "historicoTotal": 691
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15809,17 +15794,34 @@
   },
   "ossPublicas": [
     {
-      "osId": "15391",
-      "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
+      "osId": "15403",
+      "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { PTL300-INVR1.2 }",
       "equipe": "",
-      "responsavel": "Hélio Silva ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Hélio Silva ",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Matheus Leite ",
       "status": "Não Iniciada",
-      "tarefa": "[Thopen - Santo Inácio 1 e 2 - SP] - Religamento do Thopen - Santo Inácio 1 e 2 - SP",
+      "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-10-05",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "15399",
+      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Luiz  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[2C-UNI100-INVR1.1] - Religamento do 2C-UNI100-INVR1.1",
       "criticidade": "",
       "dataProgramada": "2026-10-04",
-      "dataCriacao": "2026-10-04",
+      "dataCriacao": "2026-10-05",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
@@ -15884,7 +15886,7 @@
       "responsavel": "Matheus Gois ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Matheus Gois ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Thopen - Paranavaí 1 - PR] - Religamento do Thopen - Paranavaí 1 - PR",
       "criticidade": "",
       "dataProgramada": "2026-10-04",
@@ -15902,14 +15904,15 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "GerdesonAraújo",
       "supervisor": "Carlos  Godoi",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Thopen - Santo Anastácio - SP] - Religamento do Thopen - Santo Anastácio - SP",
       "criticidade": "",
       "dataProgramada": "2026-10-03",
       "dataCriacao": "2026-10-04",
-      "dataInicial": "",
+      "dataInicial": "2026-10-05",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -17615,53 +17618,21 @@
       "linkFracttal": ""
     },
     {
-      "osId": "14872",
-      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { BES100-INVR1.6 }",
-      "equipe": "",
-      "responsavel": "Andrick Gouveia ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Andrick Gouveia ",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.6] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-09-30",
-      "dataCriacao": "2026-09-29",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "14844",
       "ativo": "Inversor 1.9 Huawei SUN2000-250KTL-H1    { BES100-INVR1.9 }",
       "equipe": "",
       "responsavel": "Andrick Gouveia ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Andrick Gouveia ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.9] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-09-30",
       "dataCriacao": "2026-09-29",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "14838",
-      "ativo": "Thopen - Pharmas 4 - PR Rodovia Tsuneto Matsubara, km 4,5 Jacutinga Bandeirantes  Paraná Brasil { THPN-PHS400 }",
-      "equipe": "",
-      "responsavel": "Valdir Silva ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Valdir Silva ",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-PHS400] - Religamento do THPN-PHS400",
-      "criticidade": "",
-      "dataProgramada": "2026-09-29",
-      "dataCriacao": "2026-09-29",
-      "dataInicial": "",
+      "dataInicial": "2026-10-05",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "14835",
@@ -19758,6 +19729,26 @@
       "atrasada": false
     },
     {
+      "osId": "15391",
+      "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
+      "equipe": "",
+      "responsavel": "Hélio Silva ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Hélio Silva ",
+      "status": "Finalizados",
+      "tarefa": "[Thopen - Santo Inácio 1 e 2 - SP] - Religamento do Thopen - Santo Inácio 1 e 2 - SP",
+      "criticidade": "",
+      "dataProgramada": "2026-10-04",
+      "dataCriacao": "2026-10-04",
+      "dataInicial": "2026-10-05",
+      "dataFinal": "2026-10-05",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "15377",
       "ativo": "Thopen - Indaiatuba 1 - SP Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { THPN-IND100 }",
       "equipe": "",
@@ -21626,6 +21617,25 @@
       "atrasada": false
     },
     {
+      "osId": "14872",
+      "ativo": "Inversor 1.6 Huawei SUN2000-250KTL-H1    { BES100-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Andrick Gouveia ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Andrick Gouveia ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.6] - Inspeção Geral do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-09-30",
+      "dataCriacao": "2026-09-29",
+      "dataInicial": "2026-10-05",
+      "dataFinal": "2026-10-05",
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "14865",
       "ativo": "Inversor 6.2 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.2 }",
       "equipe": "",
@@ -21740,6 +21750,26 @@
       "dataFinal": "2026-09-29",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "14838",
+      "ativo": "Thopen - Pharmas 4 - PR Rodovia Tsuneto Matsubara, km 4,5 Jacutinga Bandeirantes  Paraná Brasil { THPN-PHS400 }",
+      "equipe": "",
+      "responsavel": "Valdir Silva ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Valdir Silva ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-PHS400] - Religamento do THPN-PHS400",
+      "criticidade": "",
+      "dataProgramada": "2026-09-29",
+      "dataCriacao": "2026-09-29",
+      "dataInicial": "2026-10-05",
+      "dataFinal": "2026-10-05",
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -22219,70 +22249,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "14741",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizados",
-      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-27",
-      "dataCriacao": "2026-09-27",
-      "dataInicial": "2026-09-29",
-      "dataFinal": "2026-09-29",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "14740",
-      "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
-      "equipe": "",
-      "responsavel": "Eduardo Souza",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Eduardo Souza",
-      "status": "Finalizados",
-      "tarefa": "[THPN-TPZ100] - Religamento do THPN-TPZ100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-27",
-      "dataCriacao": "2026-09-27",
-      "dataInicial": "2026-09-27",
-      "dataFinal": "2026-09-27",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "14739",
-      "ativo": "Thopen - Altair 1 - SP Fazenda Cresciuma S/N Altair  São Paulo Brasil { THPN-ALT100 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Anderson  Parente",
-      "status": "Finalizados",
-      "tarefa": "[THPN-ALT100] - Religamento do THPN-ALT100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-27",
-      "dataCriacao": "2026-09-27",
-      "dataInicial": "2026-09-27",
-      "dataFinal": "2026-09-27",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3181,
-  "totalGeral": 6932,
+  "historicoTotal": 3185,
+  "totalGeral": 6935,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
