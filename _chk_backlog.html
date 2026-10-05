@@ -1,0 +1,431 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+  @page { size: 470mm 275mm; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Calibri, sans-serif; color: #23203A; background: #fff;
+         width: 1740px; padding: 30px 42px 16px; }
+  .kicker { font-size: 13px; font-weight: 700; letter-spacing: 3px; color: #7a9a2e; }
+  h1 { font-size: 32px; font-weight: 800; margin: 5px 0 4px; }
+  .sub { font-size: 14px; color: #6B6880; }
+  .head { display: flex; justify-content: space-between; align-items: flex-start; }
+  .chips { display: flex; gap: 8px; margin-top: 6px; }
+  .chip { font-size: 12.5px; font-weight: 700; padding: 5px 14px; border-radius: 14px; white-space: nowrap; }
+  .chip.dark { background: #1C1F3B; color: #fff; }
+  .chip.line { border: 1.5px solid #A2CA40; color: #4a6b10; }
+  .chip.soft { border: 1.5px solid #d8d8e0; color: #6B6880; }
+  .meta { font-size: 12px; color: #9a97a8; margin-top: 8px; text-align: right; }
+  .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 14px; }
+  .kpi { border: 1px solid #E3E3EA; border-radius: 10px; padding: 10px 14px 8px; }
+  .kpi .v { font-size: 28px; font-weight: 800; line-height: 1.05; }
+  .kpi .l { font-size: 11.6px; color: #6B6880; margin-top: 3px; line-height: 1.25; }
+  .v.amber { color: #B9770E; } .v.red { color: #B3261E; } .v.navy { color: #1C1F3B; } .v.green { color: #2E7D32; }
+  .row { display: grid; gap: 12px; margin-top: 12px; }
+  .rowA { grid-template-columns: 1fr 1.18fr; }
+  .rowB { grid-template-columns: 1.52fr 1fr; }
+  .card { border: 1px solid #E3E3EA; border-radius: 10px; padding: 11px 14px; break-inside: avoid; }
+  .card h2 { font-size: 14.5px; font-weight: 800; }
+  .card .tag { font-size: 10.5px; font-weight: 800; letter-spacing: 1.6px; color: #9a97a8; }
+  .card .nota { font-size: 10.8px; color: #9a97a8; margin-top: 5px; line-height: 1.3; }
+  table { width: 100%; border-collapse: collapse; font-size: 11.8px; margin-top: 6px; }
+  th { text-align: left; font-size: 10px; letter-spacing: .5px; color: #9a97a8; font-weight: 800;
+       border-bottom: 1.5px solid #E3E3EA; padding: 3px 5px 4px; }
+  td { padding: 3.6px 5px; border-bottom: 1px solid #F0F0F4; vertical-align: top; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .red { color: #B3261E; font-weight: 800; } .amber { color: #B9770E; font-weight: 700; }
+  .green { color: #2E7D32; font-weight: 700; } .navy { color: #1C1F3B; font-weight: 700; }
+  .etq { display: inline-block; font-size: 9.5px; font-weight: 800; letter-spacing: .4px;
+         border: 1px solid #c9cbd6; border-radius: 8px; padding: 1px 7px; color: #6B6880; }
+  .obs { color: #55526a; font-size: 11.2px; line-height: 1.3; }
+  .ublock { margin-top: 8px; padding: 8px 10px; background: #F7F7FA; border-radius: 8px; }
+  .ublock .u { font-size: 12.3px; font-weight: 800; }
+  .ublock .u small { font-weight: 700; color: #B3261E; }
+  .ublock .itens { font-size: 11.2px; color: #55526a; line-height: 1.38; margin-top: 2px; }
+  .foot { display: flex; justify-content: space-between; gap: 30px; margin-top: 12px;
+          font-size: 11px; color: #9a97a8; line-height: 1.35; }
+  .page2 { break-before: page; padding-top: 6px; }
+  .minihead { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+  .minihead .t { font-size: 17px; font-weight: 800; }
+
+  .cols { column-count: 3; column-gap: 14px; margin-top: 10px; }
+  .regblk { break-inside: avoid-column; margin-bottom: 12px; }
+  .reghead { background: #1C1F3B; color: #fff; font-size: 12.5px; font-weight: 800;
+             letter-spacing: .8px; border-radius: 8px; padding: 6px 11px; margin-bottom: 6px; }
+  .clblk { border: 1px solid #E3E3EA; border-radius: 8px; padding: 7px 9px 4px;
+           margin-bottom: 7px; break-inside: avoid; }
+  .clhead { display: flex; justify-content: space-between; font-size: 11.3px;
+            font-weight: 800; color: #1C1F3B; }
+  .clhead span:last-child { font-weight: 700; color: #7a9a2e; font-size: 10.3px; }
+  table.mini { font-size: 10.8px; margin-top: 3px; }
+  table.mini td { padding: 2.2px 4px; border-bottom: 1px solid #F4F4F7; }
+  .cli { color: #9a97a8; font-size: 9.8px; }
+</style></head><body><div class="page2">
+<div class="minihead"><div>
+<div class="kicker">GRID CO. · OPERAÇÃO DE ATIVOS · PCM · SEMANA 41 · CONTINUAÇÃO</div>
+<div class="t">7 · Backlog por cluster e usina, agrupado por região</div>
+</div><div class="meta">Região = UF do cluster · regiões e clusters do maior backlog para o menor · tarefas abertas hoje · foto de 05/10, 11h42</div></div>
+<div class="cols">
+<div class="regblk"><div class="reghead">PA · 767 tarefas em aberto · 5 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>PA Norte 01</span><span>367 abertas · 336 atrasadas · mais antiga 266d</span></div>
+<table class="mini">
+<tr><td>Santa Maria do Pará 1 <span class="cli">(Athon)</span></td><td class="n">209</td><td class="n">205</td><td class="n red">256d</td></tr>
+<tr><td>Capitão Poço 1 <span class="cli">(Athon)</span></td><td class="n">158</td><td class="n">131</td><td class="n red">266d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>PA Leste 01</span><span>332 abertas · 328 atrasadas · mais antiga 243d</span></div>
+<table class="mini">
+<tr><td>Jacundá 1 <span class="cli">(Athon)</span></td><td class="n">166</td><td class="n">166</td><td class="n red">243d</td></tr>
+<tr><td>Marabá 2 <span class="cli">(Athon)</span></td><td class="n">112</td><td class="n">111</td><td class="n red">207d</td></tr>
+<tr><td>Marabá 1 <span class="cli">(Athon)</span></td><td class="n">54</td><td class="n">51</td><td class="n red">242d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>PA Norte 03</span><span>33 abertas · 7 atrasadas · mais antiga 255d</span></div>
+<table class="mini">
+<tr><td>Ipixuna 1 e 2 <span class="cli">(Thopen)</span></td><td class="n">18</td><td class="n">5</td><td class="n ">21d</td></tr>
+<tr><td>Ipixuna do Pará 1 <span class="cli">(2C)</span></td><td class="n">15</td><td class="n">2</td><td class="n red">255d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>PA Oeste 01</span><span>24 abertas · 6 atrasadas · mais antiga 225d</span></div>
+<table class="mini">
+<tr><td>Santarém 1 e 2 <span class="cli">(Thopen)</span></td><td class="n">24</td><td class="n">6</td><td class="n red">225d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>PA Norte 02</span><span>11 abertas · 1 atrasadas · mais antiga 110d</span></div>
+<table class="mini">
+<tr><td>Mãe do Rio 1 <span class="cli">(Athon)</span></td><td class="n">11</td><td class="n">1</td><td class="n red">110d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">PR · 692 tarefas em aberto · 4 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>PR Norte 01</span><span>273 abertas · 190 atrasadas · mais antiga 189d</span></div>
+<table class="mini">
+<tr><td>Mandaguaçu 1 <span class="cli">(Thopen)</span></td><td class="n">141</td><td class="n">100</td><td class="n red">152d</td></tr>
+<tr><td>Colorado 1 <span class="cli">(Thopen)</span></td><td class="n">44</td><td class="n">44</td><td class="n amber">60d</td></tr>
+<tr><td>Sarandi 1 <span class="cli">(Thopen)</span></td><td class="n">40</td><td class="n">0</td><td class="n ">4d</td></tr>
+<tr><td>Marialva 1 <span class="cli">(Axis)</span></td><td class="n">28</td><td class="n">27</td><td class="n red">189d</td></tr>
+<tr><td>Colorado 2 <span class="cli">(Thopen)</span></td><td class="n">20</td><td class="n">19</td><td class="n ">33d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>PR Norte 02</span><span>177 abertas · 145 atrasadas · mais antiga 27d</span></div>
+<table class="mini">
+<tr><td>Santo Antônio da Platina 1 <span class="cli">(Thopen)</span></td><td class="n">83</td><td class="n">53</td><td class="n ">27d</td></tr>
+<tr><td>Pharmas 2 <span class="cli">(Thopen)</span></td><td class="n">26</td><td class="n">24</td><td class="n ">21d</td></tr>
+<tr><td>Pharmas 3 <span class="cli">(Thopen)</span></td><td class="n">24</td><td class="n">24</td><td class="n ">20d</td></tr>
+<tr><td>Pharmas 4 <span class="cli">(Thopen)</span></td><td class="n">24</td><td class="n">24</td><td class="n ">19d</td></tr>
+<tr><td>Santo Antônio da Platina <span class="cli">(Thopen)</span></td><td class="n">12</td><td class="n">12</td><td class="n ">27d</td></tr>
+<tr><td>Taguai 1 e 2 <span class="cli">(Thopen)</span></td><td class="n">6</td><td class="n">6</td><td class="n ">17d</td></tr>
+<tr><td>Bernardino de Campos <span class="cli">(Thopen)</span></td><td class="n">2</td><td class="n">2</td><td class="n ">17d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>PR Oeste 01</span><span>139 abertas · 58 atrasadas · mais antiga 153d</span></div>
+<table class="mini">
+<tr><td>Cidade Gaúcha 1 <span class="cli">(Thopen)</span></td><td class="n">49</td><td class="n">35</td><td class="n red">63d</td></tr>
+<tr><td>Alto Paraná 2 <span class="cli">(Thopen)</span></td><td class="n">26</td><td class="n">12</td><td class="n red">153d</td></tr>
+<tr><td>Nova Londrina 2 <span class="cli">(Thopen)</span></td><td class="n">24</td><td class="n">11</td><td class="n red">136d</td></tr>
+<tr><td>Paranavaí 1 <span class="cli">(Thopen)</span></td><td class="n">14</td><td class="n">0</td><td class="n ">1d</td></tr>
+<tr><td>Alto Paraná 1 <span class="cli">(Thopen)</span></td><td class="n">13</td><td class="n">0</td><td class="n ">0d</td></tr>
+<tr><td>Nova Londrina 1 <span class="cli">(Thopen)</span></td><td class="n">13</td><td class="n">0</td><td class="n ">0d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>PR Sul 01</span><span>103 abertas · 48 atrasadas · mais antiga 153d</span></div>
+<table class="mini">
+<tr><td>Assis Chateaubriand <span class="cli">(Thopen)</span></td><td class="n">64</td><td class="n">13</td><td class="n ">15d</td></tr>
+<tr><td>Céu Azul 1 <span class="cli">(Thopen)</span></td><td class="n">39</td><td class="n">35</td><td class="n red">153d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">SP · 583 tarefas em aberto · 11 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>SP Oeste 02</span><span>106 abertas · 103 atrasadas · mais antiga 145d</span></div>
+<table class="mini">
+<tr><td>Fernandópolis 1 <span class="cli">(Thopen)</span></td><td class="n">59</td><td class="n">58</td><td class="n red">145d</td></tr>
+<tr><td>Tanabi 1 <span class="cli">(Thopen)</span></td><td class="n">47</td><td class="n">45</td><td class="n red">96d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>SP Oeste 01</span><span>72 abertas · 54 atrasadas · mais antiga 27d</span></div>
+<table class="mini">
+<tr><td>Tupi Paulista 1 e 2 <span class="cli">(2C)</span></td><td class="n">42</td><td class="n">26</td><td class="n ">27d</td></tr>
+<tr><td>Alvares Machado <span class="cli">(Thopen)</span></td><td class="n">27</td><td class="n">26</td><td class="n ">13d</td></tr>
+<tr><td>Santo Anastácio <span class="cli">(Thopen)</span></td><td class="n">3</td><td class="n">2</td><td class="n ">16d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>SP Norte 02</span><span>71 abertas · 33 atrasadas · mais antiga 133d</span></div>
+<table class="mini">
+<tr><td>Barretos 1 <span class="cli">(Thopen)</span></td><td class="n">47</td><td class="n">31</td><td class="n red">133d</td></tr>
+<tr><td>Altair 1 <span class="cli">(Thopen)</span></td><td class="n">24</td><td class="n">2</td><td class="n ">27d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>SP Centro 01</span><span>67 abertas · 31 atrasadas · mais antiga 118d</span></div>
+<table class="mini">
+<tr><td>Boa Esperança do Sul 1 e 2 <span class="cli">(Thopen)</span></td><td class="n">43</td><td class="n">24</td><td class="n red">118d</td></tr>
+<tr><td>Ibaté 2 <span class="cli">(Thopen)</span></td><td class="n">20</td><td class="n">7</td><td class="n red">96d</td></tr>
+<tr><td>Ibaté 1 <span class="cli">(Thopen)</span></td><td class="n">4</td><td class="n">0</td><td class="n ">0d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>SP Leste 05</span><span>65 abertas · 43 atrasadas · mais antiga 63d</span></div>
+<table class="mini">
+<tr><td>Cipó Guaçu <span class="cli">(Thopen)</span></td><td class="n">37</td><td class="n">37</td><td class="n ">24d</td></tr>
+<tr><td>Embu Guaçu 1 <span class="cli">(Thopen)</span></td><td class="n">28</td><td class="n">6</td><td class="n red">63d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>SP Leste 02</span><span>63 abertas · 48 atrasadas · mais antiga 139d</span></div>
+<table class="mini">
+<tr><td>Araçoiaba da Serra 2 <span class="cli">(Thopen)</span></td><td class="n">25</td><td class="n">24</td><td class="n red">63d</td></tr>
+<tr><td>Salto Pirapora 3 <span class="cli">(Thopen)</span></td><td class="n">21</td><td class="n">21</td><td class="n red">139d</td></tr>
+<tr><td>Sorocaba 1 <span class="cli">(Thopen)</span></td><td class="n">12</td><td class="n">0</td><td class="n ">0d</td></tr>
+<tr><td>Araçoiaba da Serra 1 <span class="cli">(Thopen)</span></td><td class="n">5</td><td class="n">3</td><td class="n red">96d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>SP Leste 03</span><span>50 abertas · 25 atrasadas · mais antiga 70d</span></div>
+<table class="mini">
+<tr><td>Santa Bárbara 1 <span class="cli">(Thopen)</span></td><td class="n">27</td><td class="n">21</td><td class="n ">33d</td></tr>
+<tr><td>Caxambu 1 <span class="cli">(Thopen)</span></td><td class="n">17</td><td class="n">1</td><td class="n ">12d</td></tr>
+<tr><td>Piracicaba 1 <span class="cli">(Thopen)</span></td><td class="n">4</td><td class="n">2</td><td class="n red">70d</td></tr>
+<tr><td>Indaiatuba 1 <span class="cli">(Thopen)</span></td><td class="n">2</td><td class="n">1</td><td class="n ">35d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>SP Norte 03</span><span>37 abertas · 6 atrasadas · mais antiga 53d</span></div>
+<table class="mini">
+<tr><td>Brodowski 1 <span class="cli">(Thopen)</span></td><td class="n">37</td><td class="n">6</td><td class="n amber">53d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>SP Leste 07</span><span>20 abertas · 18 atrasadas · mais antiga 31d</span></div>
+<table class="mini">
+<tr><td>Elias Fausto 1 <span class="cli">(RenoGrid)</span></td><td class="n">20</td><td class="n">18</td><td class="n ">31d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>SP Leste 01</span><span>17 abertas · 0 atrasadas · mais antiga 4d</span></div>
+<table class="mini">
+<tr><td>Guaratingueta 5 <span class="cli">(Thopen)</span></td><td class="n">17</td><td class="n">0</td><td class="n ">4d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>SP Centro 02</span><span>15 abertas · 1 atrasadas · mais antiga 77d</span></div>
+<table class="mini">
+<tr><td>Topázio (Matão 2) <span class="cli">(Thopen)</span></td><td class="n">14</td><td class="n">1</td><td class="n red">77d</td></tr>
+<tr><td>Matão 1 <span class="cli">(Thopen)</span></td><td class="n">1</td><td class="n">0</td><td class="n ">0d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">MT · 295 tarefas em aberto · 4 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>MT Leste 01</span><span>201 abertas · 175 atrasadas · mais antiga 256d</span></div>
+<table class="mini">
+<tr><td>Nova Xavantina 2 <span class="cli">(RenoGrid)</span></td><td class="n">98</td><td class="n">78</td><td class="n red">256d</td></tr>
+<tr><td>Nova Xavantina 1 <span class="cli">(RenoGrid)</span></td><td class="n">50</td><td class="n">49</td><td class="n amber">39d</td></tr>
+<tr><td>Canarana 1 <span class="cli">(Thopen)</span></td><td class="n">25</td><td class="n">22</td><td class="n ">20d</td></tr>
+<tr><td>Canarana 2 <span class="cli">(Thopen)</span></td><td class="n">24</td><td class="n">24</td><td class="n ">14d</td></tr>
+<tr><td>Ribeirão Cascalheiras <span class="cli">(Thopen)</span></td><td class="n">4</td><td class="n">2</td><td class="n ">12d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>MT Norte 01</span><span>49 abertas · 32 atrasadas · mais antiga 238d</span></div>
+<table class="mini">
+<tr><td>Colíder 2 <span class="cli">(RenoGrid)</span></td><td class="n">47</td><td class="n">30</td><td class="n red">238d</td></tr>
+<tr><td>Colíder 1 <span class="cli">(RenoGrid)</span></td><td class="n">2</td><td class="n">2</td><td class="n ">26d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>MT Sul 03</span><span>29 abertas · 15 atrasadas · mais antiga 56d</span></div>
+<table class="mini">
+<tr><td>Nobres 1 <span class="cli">(RenoGrid)</span></td><td class="n">15</td><td class="n">1</td><td class="n ">26d</td></tr>
+<tr><td>Diamantino 1 <span class="cli">(Thopen)</span></td><td class="n">14</td><td class="n">14</td><td class="n amber">56d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>MT Sul 01</span><span>16 abertas · 0 atrasadas · mais antiga 1d</span></div>
+<table class="mini">
+<tr><td>Poconé 1 <span class="cli">(Thopen)</span></td><td class="n">14</td><td class="n">0</td><td class="n ">1d</td></tr>
+<tr><td>Araputanga 1 <span class="cli">(2C)</span></td><td class="n">2</td><td class="n">0</td><td class="n ">0d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">CE · 214 tarefas em aberto · 5 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>CE Norte 01</span><span>63 abertas · 3 atrasadas · mais antiga 77d</span></div>
+<table class="mini">
+<tr><td>Sol do Norte 1 <span class="cli">(GD Energy)</span></td><td class="n">24</td><td class="n">0</td><td class="n ">3d</td></tr>
+<tr><td>Guajirú 1 <span class="cli">(GD Energy)</span></td><td class="n">20</td><td class="n">3</td><td class="n red">77d</td></tr>
+<tr><td>Sol do Norte 2 <span class="cli">(GD Energy)</span></td><td class="n">19</td><td class="n">0</td><td class="n ">3d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>CE Oeste 02</span><span>46 abertas · 43 atrasadas · mais antiga 45d</span></div>
+<table class="mini">
+<tr><td>Crateús 1 <span class="cli">(RenoGrid)</span></td><td class="n">41</td><td class="n">41</td><td class="n amber">45d</td></tr>
+<tr><td>Castelo do Piauí 1 <span class="cli">(Greenyellow)</span></td><td class="n">5</td><td class="n">2</td><td class="n ">26d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>CE Leste 02</span><span>41 abertas · 9 atrasadas · mais antiga 47d</span></div>
+<table class="mini">
+<tr><td>Cascavel 1 (Sunpower) <span class="cli">(Sal Energia)</span></td><td class="n">16</td><td class="n">4</td><td class="n amber">39d</td></tr>
+<tr><td>Aquiraz 1 (Salvales) <span class="cli">(Sal Energia)</span></td><td class="n">13</td><td class="n">3</td><td class="n amber">47d</td></tr>
+<tr><td>Aquiraz 2 (Carosa) <span class="cli">(Sal Energia)</span></td><td class="n">12</td><td class="n">2</td><td class="n amber">47d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>CE Leste 01</span><span>39 abertas · 5 atrasadas · mais antiga 25d</span></div>
+<table class="mini">
+<tr><td>Morada Nova 1 <span class="cli">(Alves Lima)</span></td><td class="n">13</td><td class="n">1</td><td class="n ">13d</td></tr>
+<tr><td>Quixadá 1 (Hortina) <span class="cli">(Sal Energia)</span></td><td class="n">10</td><td class="n">0</td><td class="n ">0d</td></tr>
+<tr><td>Quixadá 2 (Vitesse) <span class="cli">(Sal Energia)</span></td><td class="n">10</td><td class="n">0</td><td class="n ">0d</td></tr>
+<tr><td>Bonfim Limoeiro do Norte 1 <span class="cli">(Thopen)</span></td><td class="n">6</td><td class="n">4</td><td class="n ">25d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>CE Sul 01</span><span>25 abertas · 6 atrasadas · mais antiga 94d</span></div>
+<table class="mini">
+<tr><td>Cedro 2 <span class="cli">(Greenyellow)</span></td><td class="n">20</td><td class="n">3</td><td class="n red">90d</td></tr>
+<tr><td>Cedro 1 <span class="cli">(Greenyellow)</span></td><td class="n">5</td><td class="n">3</td><td class="n red">94d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">MA · 185 tarefas em aberto · 2 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>MA Leste 01</span><span>147 abertas · 145 atrasadas · mais antiga 238d</span></div>
+<table class="mini">
+<tr><td>Timon 2 <span class="cli">(Athon)</span></td><td class="n">75</td><td class="n">75</td><td class="n red">238d</td></tr>
+<tr><td>Timon 1 <span class="cli">(Athon)</span></td><td class="n">72</td><td class="n">70</td><td class="n red">235d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>MA Leste 02</span><span>38 abertas · 3 atrasadas · mais antiga 47d</span></div>
+<table class="mini">
+<tr><td>Matões 1 <span class="cli">(Athon)</span></td><td class="n">28</td><td class="n">2</td><td class="n ">19d</td></tr>
+<tr><td>Matões 2 <span class="cli">(Athon)</span></td><td class="n">10</td><td class="n">1</td><td class="n amber">47d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">PE · 160 tarefas em aberto · 2 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>PE Leste 01</span><span>99 abertas · 55 atrasadas · mais antiga 217d</span></div>
+<table class="mini">
+<tr><td>São Bento do Una 1 <span class="cli">(Thopen)</span></td><td class="n">50</td><td class="n">37</td><td class="n red">194d</td></tr>
+<tr><td>Vertentes 2 <span class="cli">(Thopen)</span></td><td class="n">31</td><td class="n">17</td><td class="n red">203d</td></tr>
+<tr><td>Belo Jardim 1 <span class="cli">(Thopen)</span></td><td class="n">18</td><td class="n">1</td><td class="n red">217d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>PE Oeste 01</span><span>61 abertas · 26 atrasadas · mais antiga 241d</span></div>
+<table class="mini">
+<tr><td>Petrolina 3 <span class="cli">(Axis)</span></td><td class="n">33</td><td class="n">11</td><td class="n red">191d</td></tr>
+<tr><td>Petrolina 2 <span class="cli">(Axis)</span></td><td class="n">27</td><td class="n">14</td><td class="n red">154d</td></tr>
+<tr><td>São José do Egito 1 <span class="cli">(Axis)</span></td><td class="n">1</td><td class="n">1</td><td class="n red">241d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">SC · 118 tarefas em aberto · 1 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>SC Oeste 01</span><span>118 abertas · 101 atrasadas · mais antiga 80d</span></div>
+<table class="mini">
+<tr><td>Guatambú 1 <span class="cli">(Thopen)</span></td><td class="n">69</td><td class="n">61</td><td class="n amber">54d</td></tr>
+<tr><td>Coração 1 e 2 <span class="cli">(Thopen)</span></td><td class="n">49</td><td class="n">40</td><td class="n red">80d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">BA · 103 tarefas em aberto · 3 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>BA Sul 01</span><span>55 abertas · 25 atrasadas · mais antiga 198d</span></div>
+<table class="mini">
+<tr><td>Ibirapuã 2 <span class="cli">(Utragaz)</span></td><td class="n">40</td><td class="n">24</td><td class="n amber">46d</td></tr>
+<tr><td>Ibirapuã 1 <span class="cli">(Utragaz)</span></td><td class="n">14</td><td class="n">0</td><td class="n ">0d</td></tr>
+<tr><td>Ponto Belo 1 <span class="cli">(Axis)</span></td><td class="n">1</td><td class="n">1</td><td class="n red">198d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>BA Centro 01</span><span>25 abertas · 20 atrasadas · mais antiga 276d</span></div>
+<table class="mini">
+<tr><td>Irecê 1 <span class="cli">(Greenyellow)</span></td><td class="n">25</td><td class="n">20</td><td class="n red">276d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>BA Norte 01</span><span>23 abertas · 3 atrasadas · mais antiga 158d</span></div>
+<table class="mini">
+<tr><td>Tucano 1 <span class="cli">(Semp)</span></td><td class="n">19</td><td class="n">3</td><td class="n red">158d</td></tr>
+<tr><td>Tucano 2 <span class="cli">(Semp)</span></td><td class="n">4</td><td class="n">0</td><td class="n ">0d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">DF · 97 tarefas em aberto · 1 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>DF Centro 01</span><span>97 abertas · 1 atrasadas · mais antiga 34d</span></div>
+<table class="mini">
+<tr><td>Ceilândia 1 <span class="cli">(Thopen)</span></td><td class="n">68</td><td class="n">1</td><td class="n ">34d</td></tr>
+<tr><td>Ceilândia 2 <span class="cli">(Thopen)</span></td><td class="n">29</td><td class="n">0</td><td class="n ">5d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">AL · 84 tarefas em aberto · 1 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>AL Oeste 01</span><span>84 abertas · 31 atrasadas · mais antiga 91d</span></div>
+<table class="mini">
+<tr><td>Ouro Branco 1 <span class="cli">(Thopen)</span></td><td class="n">58</td><td class="n">30</td><td class="n red">91d</td></tr>
+<tr><td>Inhapi 1 <span class="cli">(Thopen)</span></td><td class="n">23</td><td class="n">0</td><td class="n ">0d</td></tr>
+<tr><td>Santana do Ipanema 1 <span class="cli">(Thopen)</span></td><td class="n">3</td><td class="n">1</td><td class="n ">24d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">RJ · 84 tarefas em aberto · 2 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>RJ Norte 01</span><span>72 abertas · 27 atrasadas · mais antiga 225d</span></div>
+<table class="mini">
+<tr><td>Saturnino 1 <span class="cli">(Thopen)</span></td><td class="n">40</td><td class="n">24</td><td class="n red">225d</td></tr>
+<tr><td>Fazenda Limão 1 <span class="cli">(Thopen)</span></td><td class="n">18</td><td class="n">2</td><td class="n amber">49d</td></tr>
+<tr><td>Campos dos Goytacazes 1 <span class="cli">(Thopen)</span></td><td class="n">14</td><td class="n">1</td><td class="n ">17d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>RJ Sul 01</span><span>12 abertas · 0 atrasadas · mais antiga 3d</span></div>
+<table class="mini">
+<tr><td>São Bento 5 <span class="cli">(Thopen)</span></td><td class="n">12</td><td class="n">0</td><td class="n ">3d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">ES · 79 tarefas em aberto · 2 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>ES Norte 01</span><span>66 abertas · 60 atrasadas · mais antiga 26d</span></div>
+<table class="mini">
+<tr><td>Córrego do Sapucaia 1 <span class="cli">(Thopen)</span></td><td class="n">17</td><td class="n">15</td><td class="n ">17d</td></tr>
+<tr><td>Primavera 2 <span class="cli">(Thopen)</span></td><td class="n">13</td><td class="n">13</td><td class="n ">25d</td></tr>
+<tr><td>Vargem Grande 1 <span class="cli">(Thopen)</span></td><td class="n">13</td><td class="n">11</td><td class="n ">24d</td></tr>
+<tr><td>Linhares 1 <span class="cli">(Thopen)</span></td><td class="n">12</td><td class="n">11</td><td class="n ">26d</td></tr>
+<tr><td>Primavera 1 <span class="cli">(Thopen)</span></td><td class="n">11</td><td class="n">10</td><td class="n ">25d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>ES Norte 02</span><span>13 abertas · 0 atrasadas · mais antiga 0d</span></div>
+<table class="mini">
+<tr><td>Linhares 1 <span class="cli">(Axis)</span></td><td class="n">13</td><td class="n">0</td><td class="n ">0d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">PI · 70 tarefas em aberto · 1 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>PI Oeste 01</span><span>70 abertas · 33 atrasadas · mais antiga 204d</span></div>
+<table class="mini">
+<tr><td>Demerval Lobão 1 <span class="cli">(Greenyellow)</span></td><td class="n">31</td><td class="n">28</td><td class="n red">77d</td></tr>
+<tr><td>Junco 1 <span class="cli">(Thopen)</span></td><td class="n">25</td><td class="n">5</td><td class="n red">204d</td></tr>
+<tr><td>União 1 <span class="cli">(2C)</span></td><td class="n">14</td><td class="n">0</td><td class="n ">4d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">MS · 47 tarefas em aberto · 1 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>MS Leste 01</span><span>47 abertas · 43 atrasadas · mais antiga 179d</span></div>
+<table class="mini">
+<tr><td>Aparecida do Taboado 1 e 2 <span class="cli">(Thopen)</span></td><td class="n">47</td><td class="n">43</td><td class="n red">179d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">RN · 46 tarefas em aberto · 3 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>RN Leste 01</span><span>28 abertas · 14 atrasadas · mais antiga 33d</span></div>
+<table class="mini">
+<tr><td>Rodrigues 2 <span class="cli">(Thopen)</span></td><td class="n">13</td><td class="n">11</td><td class="n ">26d</td></tr>
+<tr><td>Senador Elói 1 <span class="cli">(Thopen)</span></td><td class="n">11</td><td class="n">2</td><td class="n ">33d</td></tr>
+<tr><td>Macaíba 1 <span class="cli">(Greenyellow)</span></td><td class="n">4</td><td class="n">1</td><td class="n ">31d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>RN Sul 01</span><span>16 abertas · 2 atrasadas · mais antiga 31d</span></div>
+<table class="mini">
+<tr><td>Rodrigues 1 <span class="cli">(Thopen)</span></td><td class="n">14</td><td class="n">1</td><td class="n ">27d</td></tr>
+<tr><td>Parelhas 1 <span class="cli">(Thopen)</span></td><td class="n">1</td><td class="n">1</td><td class="n ">31d</td></tr>
+<tr><td>Caicó <span class="cli">(Thopen)</span></td><td class="n">1</td><td class="n">0</td><td class="n ">7d</td></tr>
+</table></div>
+<div class="clblk">
+<div class="clhead"><span>RN Oeste 01</span><span>2 abertas · 0 atrasadas · mais antiga 7d</span></div>
+<table class="mini">
+<tr><td>Jucurutu 1 <span class="cli">(Thopen)</span></td><td class="n">1</td><td class="n">0</td><td class="n ">7d</td></tr>
+<tr><td>Itajá 1 e 2 <span class="cli">(Thopen)</span></td><td class="n">1</td><td class="n">0</td><td class="n ">0d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">GO · 27 tarefas em aberto · 1 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>GO Centro 01</span><span>27 abertas · 1 atrasadas · mais antiga 21d</span></div>
+<table class="mini">
+<tr><td>Sítio dos Nogueiras 1 <span class="cli">(Thopen)</span></td><td class="n">27</td><td class="n">1</td><td class="n ">21d</td></tr>
+</table></div>
+</div>
+<div class="regblk"><div class="reghead">MG · 1 tarefas em aberto · 1 clusters</div>
+<div class="clblk">
+<div class="clhead"><span>MG Centro 01</span><span>1 abertas · 1 atrasadas · mais antiga 70d</span></div>
+<table class="mini">
+<tr><td>Sete Lagoas 2 <span class="cli">(2C)</span></td><td class="n">1</td><td class="n">1</td><td class="n red">70d</td></tr>
+</table></div>
+</div>
+</div>
+<div class="foot"><span>Grid Co. · PCM · Semana 41 · Backlog por cluster · colunas: abertas · atrasadas · idade da mais antiga</span><span>Fonte: Gestão PCM (nuvem) · usinas sem tarefa aberta não aparecem</span></div>
+</div>
+</body></html>

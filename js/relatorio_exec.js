@@ -793,37 +793,54 @@ async function rexGerar() {
     h += '</section>';
   }
 
-  // grandes manutenções (interno + Gerencial decifrada)
-  if (M.ger && !modoCliente) {
-    h += '<section><h2>' + sec('Grandes manutenções (MPA/MPS)') + ' <small>Gerencial + Fracttal, foto de hoje</small></h2>'
-      + '<div class="rex-kpis rex-kpis-3">'
-      + kpi(rexN(M.ger.atr.length), 'atrasadas', 'red') + kpi(rexN(M.ger.semos), 'sem OS no Fracttal', 'amb')
-      + kpi(rexN(M.ger.csd.length), 'críticas sem data futura', 'amb') + '</div>'
-      + (M.ger.csd.length ? '<table class="rex-tbl"><tr><th>Usina</th><th>OS</th><th>Tipo</th><th>Criticidade</th><th>Atraso</th><th>Última observação</th></tr>'
-        + M.ger.csd.slice(0, 5).map(x => '<tr><td class="rex-esq">' + rexEsc(x.nome) + '</td>'
-          + '<td>' + (x.os ? rexEsc(x.os) : '<span class="rex-mut">sem OS</span>') + '</td><td>' + x.tipo + '</td>'
-          + '<td><span class="gpv-crit ' + x.critCls + '">' + rexEsc(x.crit) + '</span></td>'
-          + '<td>' + (x.atraso != null ? x.atraso + ' d' : '—') + '</td>'
-          + '<td class="rex-esq rex-obs">' + rexEsc(String(x.obs || '').slice(0, 80)) + '</td></tr>').join('') + '</table>' : '');
-    h += '</section>';
-  }
-
-  // esforço (interno)
+  // INTERNO GRID: HH empregado por usina (05/10 — substituiu Grandes
+  // manutenções, Esforço e Ações). HH = tempo REAL de execução (campo hh) das
+  // tarefas FINALIZADAS no período; cronômetro esquecido aberto (>24 h numa
+  // tarefa) cai p/ a duração estimada, se ela for razoável, senão fica fora.
   if (!modoCliente) {
-    const porResp = {};
-    M.finalizadas.forEach(t => { const r = t.responsavel || '—'; porResp[r] = (porResp[r] || 0) + (+t.dur || 0); });
-    const resp = Object.entries(porResp).sort((x, y) => y[1] - x[1]).slice(0, 8);
-    h += '<section><h2>' + sec('Esforço do período') + ' <small>' + rexN(Math.round(M.horas)) + ' h executadas</small></h2>'
-      + '<table class="rex-tbl"><tr><th>Supervisão / Responsável</th><th>Horas</th></tr>'
-      + resp.map(([r, hrs]) => '<tr><td class="rex-esq">' + rexEsc(r) + '</td><td>' + rexN(Math.round(hrs)) + ' h</td></tr>').join('')
-      + '</table></section>';
+    const col = t => { const g = rexGrupoBd(t.tipo);
+      return g === 'Preventivas' ? 'prev' : (g === 'Corretiva' || g === 'Corretiva Emergencial') ? 'corr'
+           : (g === 'Religamento' || g === 'Remoto') ? 'relig' : g === 'Inspeção' ? 'insp' : 'out'; };
+    let corrigidas = 0, semHH = 0;
+    const hhDe = t => {
+      let v = +t.hh || 0;
+      if (v > 24) { corrigidas++; v = (+t.dur || 0) <= 24 ? (+t.dur || 0) : 0; }
+      if (!t.hh && t.hh !== 0) semHH++;
+      return v;
+    };
+    const U = new Map();
+    M.finalizadas.forEach(t => {
+      const u = U.get(t.usina) || { usina: t.usina, cluster: t.cluster, n: 0, tot: 0, prev: 0, corr: 0, relig: 0, insp: 0, out: 0 };
+      const v = hhDe(t); u.n++; u.tot += v; u[col(t)] += v; U.set(t.usina, u);
+    });
+    const L = Array.from(U.values()).sort((a, b) => b.tot - a.tot);
+    const T0 = L.reduce((s, u) => { ['n', 'tot', 'prev', 'corr', 'relig', 'insp', 'out'].forEach(k => s[k] += u[k]); return s; },
+      { n: 0, tot: 0, prev: 0, corr: 0, relig: 0, insp: 0, out: 0 });
+    const f = v => v ? (v >= 10 ? rexN(Math.round(v)) : v.toFixed(1).replace('.', ',')) : '<span class="rex-mut">—</span>';
+    const mx = Math.max(1, ...L.map(u => u.tot));
+    h += '<section><h2>' + sec('HH empregado por usina') + ' <small>' + f(T0.tot) + ' h em ' + rexN(T0.n)
+      + ' tarefas finalizadas no período · tempo real de execução</small></h2>'
+      + '<table class="rex-tbl rex-rank"><tr><th>Cliente – Usina</th><th>Cluster</th><th>Tarefas</th><th>HH total</th>'
+      + '<th>Preventiva</th><th>Corretiva</th><th>Religamento</th><th>Inspeção</th><th>Outros</th></tr>'
+      + L.map(u => '<tr><td class="rex-esq">' + rexEsc(String(u.usina || '').replace(/\s*-\s*[A-Z]{2}\s*$/, '')) + '</td>'
+        + '<td class="rex-esq">' + rexEsc(u.cluster || '—') + '</td><td>' + rexN(u.n) + '</td>'
+        + '<td class="rex-esq"><i class="rex-barra" style="width:' + Math.round(100 * u.tot / mx) + '%"></i><b>' + f(u.tot) + ' h</b></td>'
+        + '<td>' + f(u.prev) + '</td><td>' + f(u.corr) + '</td><td>' + f(u.relig) + '</td><td>' + f(u.insp) + '</td><td>' + f(u.out) + '</td></tr>').join('')
+      + '<tr class="rex-total"><td class="rex-esq"><b>TOTAL</b></td><td></td><td><b>' + rexN(T0.n) + '</b></td><td class="rex-esq"><b>' + f(T0.tot) + ' h</b></td>'
+      + '<td><b>' + f(T0.prev) + '</b></td><td><b>' + f(T0.corr) + '</b></td><td><b>' + f(T0.relig) + '</b></td><td><b>' + f(T0.insp) + '</b></td><td><b>' + f(T0.out) + '</b></td></tr>'
+      + '</table><div class="rex-nota">HH = tempo real de execução registrado no Fracttal (tarefas finalizadas no período) · '
+      + 'Corretiva inclui emergenciais; Religamento inclui remotos · '
+      + (corrigidas ? corrigidas + ' tarefa(s) com cronômetro acima de 24 h usaram a duração estimada · ' : '')
+      + (semHH ? semHH + ' tarefa(s) sem tempo registrado contam 0 h.' : '') + '</div></section>';
   }
 
-  // ações — termina em ação, não em dado
-  h += '<section class="rex-acoes"><h2>' + sec('Ações e compromissos') + '</h2>'
-    + '<div class="rex-acao-l">1. ____________________________________________ resp.: __________ até __/__</div>'
-    + '<div class="rex-acao-l">2. ____________________________________________ resp.: __________ até __/__</div>'
-    + '<div class="rex-acao-l">3. ____________________________________________ resp.: __________ até __/__</div></section>';
+  // ações — só na versão Cliente (no Interno Grid saiu em 05/10)
+  if (modoCliente) {
+    h += '<section class="rex-acoes"><h2>' + sec('Ações e compromissos') + '</h2>'
+      + '<div class="rex-acao-l">1. ____________________________________________ resp.: __________ até __/__</div>'
+      + '<div class="rex-acao-l">2. ____________________________________________ resp.: __________ até __/__</div>'
+      + '<div class="rex-acao-l">3. ____________________________________________ resp.: __________ até __/__</div></section>';
+  }
 
   h += '<footer class="rex-pe">Fonte: CMMS Fracttal via gestao_pcm.json (dados de '
     + rexEsc((GESTAO_DB && GESTAO_DB.geradoEm || '').slice(0, 16).replace('T', ' ')) + ')'

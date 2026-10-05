@@ -383,6 +383,10 @@ def coletar(client, usina_idx, cluster_major, ativos, max_items=None):
             # Duração estimada da tarefa (API `duration`, em segundos) → horas.
             # Alimenta o "backlog em semanas" do Gerencial (HH necessário).
             "dur": round((row.get("duration") or 0) / 3600, 2) if row.get("duration") else None,
+            # HH REAL de execução (API `real_duration`, s) — só p/ tarefa finalizada.
+            # Usado no "HH empregado por usina" do Relatório Executivo (05/10/2026).
+            "hh": (round((row.get("real_duration") or 0) / 3600, 2)
+                   if (not aberta and row.get("real_duration")) else None),
         })
     log(f"  -> {total_bruto} linhas brutas | {len(tarefas)} tarefas no escopo")
     return tarefas
