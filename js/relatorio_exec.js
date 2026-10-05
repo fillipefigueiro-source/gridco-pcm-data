@@ -430,7 +430,8 @@ function rexFamilias(cf) {
         const o = fam[f] || (fam[f] = { n: 0, up: 0, rep: 0, ativos: 0 });
         o.n += n; o.up += (+at.mtbf || 0) * n; o.rep += (+at.mttr || 0) * n; o.ativos++;
         const reg = { ativo: at.ativo, usina: u.usina, n, mtbf: +at.mtbf || 0,
-                      mttr: +at.mttr || 0, disp: +at.disp || 0 };
+                      mttr: +at.mttr || 0, disp: +at.disp || 0, tarefas: at.tarefas || [],
+                      fam: rexFamilia(at.ativo, u.usina) };
         ativos.push(reg); ativosU.push(reg);
       });
       if (ativosU.length)
@@ -447,7 +448,44 @@ function rexFamilias(cf) {
   }).sort((x, y) => y.n - x.n);
   // piores ativos individuais (mín. 3 falhas — 1 azar não é tendência)
   const piores = ativos.filter(x => x.n >= 3).sort((x, y) => x.disp - y.disp).slice(0, 5);
-  return linhas.length ? { linhas, piores, porUsina, geradoEm: cf.geradoEm || '' } : null;
+
+  // ── RECORTE DO PERÍODO (05/10): mesma régua do gerar_confiabilidade_json,
+  // mas a janela é De→Até do modal (até "agora" se o Até for hoje/futuro).
+  // falha = tarefa com início dentro da janela · MTTR = média das horas de
+  // reparo (incidente→conclusão, regra 12 h/dia) · MTBF = (h da janela −
+  // h paradas) ÷ falhas · Disp = MTBF ÷ (MTBF + MTTR). No período o MTBF
+  // usa janela ÷ falhas (sem descontar paradas sobrepostas — ver nota).
+  const W0 = new Date(REX.de + 'T00:00:00'), W1 = new Date(Math.min(new Date(REX.ate + 'T23:59:59'), new Date()));
+  const winH = Math.max(0, (W1 - W0) / 3600000);
+  const perAt = ativos.map(a => {
+    const F = a.tarefas.filter(t => t.inicio && rexRange(t.inicio, REX.de, REX.ate));
+    if (!F.length) return null;
+    const rep = F.reduce((s2, t) => s2 + (+t.horas || 0), 0);
+    const comH = F.filter(t => t.horas != null && !isNaN(+t.horas));
+    const mttr = comH.length ? comH.reduce((s2, t) => s2 + (+t.horas), 0) / comH.length : null;
+    // janela curta: reparos SOBREPOSTOS (vários religamentos ao mesmo tempo)
+    // somam mais que a janela e zerariam o MTBF — no período usa janela ÷ falhas
+    const up = winH;
+    const mtbf = up / F.length;
+    return { ...a, pn: F.length, pup: up, prep: rep, pnh: comH.length, pmtbf: mtbf, pmttr: mttr,
+             pdisp: mttr != null && (mtbf + mttr) > 0 ? mtbf / (mtbf + mttr) : null };
+  }).filter(Boolean);
+  const famP = {};
+  perAt.forEach(a => {
+    const o = famP[a.fam] || (famP[a.fam] = { n: 0, up: 0, rep: 0, nh: 0, ativos: 0 });
+    o.n += a.pn; o.up += a.pup; o.rep += (a.pmttr != null ? a.pmttr * a.pnh : 0); o.nh += a.pnh; o.ativos++;
+  });
+  const linhasP = Object.entries(famP).map(([f, o]) => {
+    const mtbf = o.up / o.n, mttr = o.nh ? o.rep / o.nh : null;
+    return { fam: f, ativos: o.ativos, n: o.n, mtbf, mttr,
+             disp: mttr != null && (mtbf + mttr) ? mtbf / (mtbf + mttr) : null };
+  }).sort((x, y) => y.n - x.n);
+  const pioresP = perAt.filter(x => x.pn >= 2 && x.pdisp != null).sort((x, y) => x.pdisp - y.pdisp).slice(0, 5);
+  const porUsinaP = new Map();
+  perAt.forEach(a => { (porUsinaP.get(a.usina) || porUsinaP.set(a.usina, []).get(a.usina)).push(a); });
+  porUsinaP.forEach(L => L.sort((x, y) => y.pn - x.pn));
+  const periodo = { linhas: linhasP, piores: pioresP, porUsina: porUsinaP, winH };
+  return linhas.length ? { linhas, piores, porUsina, periodo, geradoEm: cf.geradoEm || '' } : null;
 }
 
 // ── tabela "Do plano | Fora do plano" genérica (tipo, cliente, supervisor) ──
@@ -622,6 +660,30 @@ async function rexGerar() {
       + 'conclusiva de confiabilidade é feita ativo a ativo</b> (Parte Tática) — o agregado não substitui essa análise. '
       + 'MTBF = tempo médio entre falhas · MTTR = tempo médio de reparo · Disp. inerente = MTBF ÷ (MTBF + MTTR) · '
       + 'agregação ponderada pelo nº de falhas · dados de ' + rexEsc(String(CF.geradoEm).slice(0, 16).replace('T', ' ')) + '.</div></section>';
+
+    // mesma leitura, só com as falhas do PERÍODO do relatório (05/10)
+    const P = CF.periodo, nf2 = (v, c) => v == null ? '<span class="rex-mut">—</span>' : nfmt(v, c);
+    const pc = v => v == null ? '<span class="rex-mut">—</span>' : nfmt(100 * v, 1) + '%';
+    h += '<section><h2>' + sec('Confiabilidade no período') + ' <small>' + rexFmt(REX.de) + ' a ' + rexFmt(REX.ate)
+      + ' · só as falhas que começaram dentro do período</small></h2>'
+      + (P && P.linhas.length
+        ? '<table class="rex-tbl"><tr><th>Família</th><th>Ativos com falha</th><th>Falhas</th><th>MTBF (h)</th><th>MTTR (h)</th><th>Disp. inerente</th></tr>'
+          + P.linhas.map(x => '<tr><td class="rex-esq">' + rexEsc(x.fam) + '</td><td>' + rexN(x.ativos) + '</td><td>' + rexN(x.n) + '</td>'
+            + '<td>' + nf2(x.mtbf, 1) + '</td><td>' + nf2(x.mttr, 2) + '</td>'
+            + '<td class="' + (x.disp != null && x.disp < 0.9 ? 'rex-red' : '') + '"><b>' + pc(x.disp) + '</b></td></tr>').join('')
+          + '</table>'
+          + (P.piores.length ? '<table class="rex-tbl" style="margin-top:8px"><tr>'
+            + '<th>Ativos com pior disponibilidade no período <small>(mín. 2 falhas)</small></th><th>Usina</th><th>Falhas</th><th>MTBF (h)</th><th>MTTR (h)</th><th>Disp.</th></tr>'
+            + P.piores.map(a => '<tr><td class="rex-esq">' + rexEsc(String(a.ativo).slice(0, 45)) + '</td>'
+              + '<td class="rex-esq">' + rexEsc(rexUsiCurta(a.usina)) + '</td><td>' + a.pn + '</td>'
+              + '<td>' + nf2(a.pmtbf, 1) + '</td><td>' + nf2(a.pmttr, 2) + '</td><td class="rex-red"><b>' + pc(a.pdisp) + '</b></td></tr>').join('')
+            + '</table>' : '')
+          + '<div class="rex-nota">Janela de ' + rexN(Math.round(P.winH)) + ' h: o MTBF do período nunca passa do tamanho da janela '
+            + '(com 1 falha numa semana, MTBF ≈ 168 h). Compare família com família e com a base histórica acima, não com períodos de tamanho diferente. '
+            + 'MTTR na régua oficial (incidente à conclusão, 12 h/dia em eventos de vários dias); no período, MTBF = horas da janela ÷ falhas, '
+            + 'sem descontar o tempo parado, porque reparos simultâneos se sobrepõem e somariam mais que a própria janela.</div>'
+        : '<p class="rex-nota">Nenhuma falha (corretiva, emergencial ou religamento) começou dentro do período no recorte.</p>')
+      + '</section>';
   }
 
   // G4 — usinas que pedem atenção (ordena por TAREFAS EM ABERTO — spec 22/09)
@@ -767,6 +829,19 @@ async function rexGerar() {
         + (restoN ? '<tr class="rex-resto"><td class="rex-esq">demais ativos (' + (u.ativos.length - 5) + ')</td><td>'
           + rexN(restoN) + '</td><td></td><td></td><td></td></tr>' : '')
         + '</table>';
+      // mesma usina, só as falhas do período do relatório (05/10)
+      const LP = (CF.periodo && CF.periodo.porUsina.get(u.usina)) || [];
+      const nfp = (v, c) => v == null ? '—' : nf(v, c);
+      h += '<div class="rex-sub-per">No período ' + rexFmt(REX.de) + ' a ' + rexFmt(REX.ate) + '</div>'
+        + (LP.length
+          ? '<table class="rex-tbl rex-tbl-per"><tr><th>Ativo</th><th>Falhas</th><th>MTBF (h)</th><th>MTTR (h)</th><th>Disp. inerente</th></tr>'
+            + LP.slice(0, 5).map(x => '<tr><td class="rex-esq">' + rexEsc(String(x.ativo).slice(0, 55)) + '</td><td>' + rexN(x.pn) + '</td>'
+              + '<td>' + nfp(x.pmtbf, 0) + '</td><td>' + nfp(x.pmttr, 2) + '</td>'
+              + '<td class="' + (x.pdisp != null && x.pdisp < 0.9 ? 'rex-red' : '') + '"><b>' + (x.pdisp == null ? '—' : nf(100 * x.pdisp, 1) + '%') + '</b></td></tr>').join('')
+            + (LP.length > 5 ? '<tr class="rex-resto"><td class="rex-esq">demais ativos com falha no período (' + (LP.length - 5) + ')</td><td>'
+              + rexN(LP.slice(5).reduce((s2, x) => s2 + x.pn, 0)) + '</td><td></td><td></td><td></td></tr>' : '')
+            + '</table>'
+          : '<p class="rex-nota">Nenhuma falha nesta usina dentro do período.</p>');
     });
     if (restoU.length)
       h += '<div class="rex-nota">Demais usinas do recorte (falhas): '

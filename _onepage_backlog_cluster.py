@@ -8,7 +8,8 @@ from collections import defaultdict
 
 g = json.load(io.open('_nuvem_gestao_pcm.json', encoding='utf-8'))
 AB = [t for t in g['tarefas'] if t.get('aberta')
-      and 'teste' not in str(t.get('usina', '')).lower()]
+      and 'teste' not in str(t.get('usina', '')).lower()
+      and str(t.get('osStatus', '')).strip().lower() not in ('finalizados', 'finalizado')]
 
 
 def usina_curta(u):
@@ -92,7 +93,7 @@ for reg, cls in regioes:
 html.append('</div>')
 html.append('<div class="foot"><span>Grid Co. · PCM · Semana 41 · Backlog por cluster '
             '· colunas: abertas · atrasadas · idade da mais antiga</span>'
-            '<span>Fonte: Gestão PCM (nuvem) · usinas sem tarefa aberta não aparecem</span></div>')
+            '<span>Fonte: Gestão PCM (nuvem) · tarefas abertas dentro de OS já finalizada (erro de sistema) não contam · usinas sem tarefa aberta não aparecem</span></div>')
 html.append('</div>')
 SEC = '\n'.join(html)
 
@@ -112,10 +113,10 @@ CSS_EXTRA = '''
 '''
 
 base = io.open('_onepage_semana41_r04.html', encoding='utf-8').read()
-base = base.replace('Emitido em 05/10 · R04', 'Emitido em 05/10 · R05')
+base = base.replace('Emitido em 05/10 · R04', 'Emitido em 05/10 · R06')
 base = base.replace('</style>', CSS_EXTRA + '</style>')
 base = base.replace('</body>', SEC + '\n</body>')
-io.open('_onepage_semana41_r05.html', 'w', encoding='utf-8').write(base)
+io.open('_onepage_semana41_r06.html', 'w', encoding='utf-8').write(base)
 print('ok: regioes=%d clusters=%d usinas=%d tarefas=%d'
       % (len(regioes), len(clusters), len(US), sum(e['n'] for e in US.values())))
 print('ordem regioes:', [(r, sum(c['tot'] for c in cls)) for r, cls in regioes])

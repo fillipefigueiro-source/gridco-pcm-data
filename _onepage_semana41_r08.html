@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>PCM · Semana 41 em duas páginas</title>
+<style>
+  @page { size: 470mm 275mm; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Calibri, sans-serif; color: #23203A; background: #fff;
+         width: 1740px; padding: 30px 42px 16px; }
+  .kicker { font-size: 13px; font-weight: 700; letter-spacing: 3px; color: #7a9a2e; }
+  h1 { font-size: 32px; font-weight: 800; margin: 5px 0 4px; }
+  .sub { font-size: 14px; color: #6B6880; }
+  .head { display: flex; justify-content: space-between; align-items: flex-start; }
+  .chips { display: flex; gap: 8px; margin-top: 6px; }
+  .chip { font-size: 12.5px; font-weight: 700; padding: 5px 14px; border-radius: 14px; white-space: nowrap; }
+  .chip.dark { background: #1C1F3B; color: #fff; }
+  .chip.line { border: 1.5px solid #A2CA40; color: #4a6b10; }
+  .chip.soft { border: 1.5px solid #d8d8e0; color: #6B6880; }
+  .meta { font-size: 12px; color: #9a97a8; margin-top: 8px; text-align: right; }
+  .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 14px; }
+  .kpi { border: 1px solid #E3E3EA; border-radius: 10px; padding: 10px 14px 8px; }
+  .kpi .v { font-size: 28px; font-weight: 800; line-height: 1.05; }
+  .kpi .l { font-size: 11.6px; color: #6B6880; margin-top: 3px; line-height: 1.25; }
+  .v.amber { color: #B9770E; } .v.red { color: #B3261E; } .v.navy { color: #1C1F3B; } .v.green { color: #2E7D32; }
+  .row { display: grid; gap: 12px; margin-top: 12px; }
+  .rowA { grid-template-columns: 1fr 1.18fr; }
+  .rowB { grid-template-columns: 1.52fr 1fr; }
+  .card { border: 1px solid #E3E3EA; border-radius: 10px; padding: 11px 14px; break-inside: avoid; }
+  .card h2 { font-size: 14.5px; font-weight: 800; }
+  .card .tag { font-size: 10.5px; font-weight: 800; letter-spacing: 1.6px; color: #9a97a8; }
+  .card .nota { font-size: 10.8px; color: #9a97a8; margin-top: 5px; line-height: 1.3; }
+  table { width: 100%; border-collapse: collapse; font-size: 11.8px; margin-top: 6px; }
+  th { text-align: left; font-size: 10px; letter-spacing: .5px; color: #9a97a8; font-weight: 800;
+       border-bottom: 1.5px solid #E3E3EA; padding: 3px 5px 4px; }
+  td { padding: 3.6px 5px; border-bottom: 1px solid #F0F0F4; vertical-align: top; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .red { color: #B3261E; font-weight: 800; } .amber { color: #B9770E; font-weight: 700; }
+  .green { color: #2E7D32; font-weight: 700; } .navy { color: #1C1F3B; font-weight: 700; }
+  .etq { display: inline-block; font-size: 9.5px; font-weight: 800; letter-spacing: .4px;
+         border: 1px solid #c9cbd6; border-radius: 8px; padding: 1px 7px; color: #6B6880; }
+  .obs { color: #55526a; font-size: 11.2px; line-height: 1.3; }
+  .ublock { margin-top: 8px; padding: 8px 10px; background: #F7F7FA; border-radius: 8px; }
+  .ublock .u { font-size: 12.3px; font-weight: 800; }
+  .ublock .u small { font-weight: 700; color: #B3261E; }
+  .ublock .itens { font-size: 11.2px; color: #55526a; line-height: 1.38; margin-top: 2px; }
+  .foot { display: flex; justify-content: space-between; gap: 30px; margin-top: 12px;
+          font-size: 11px; color: #9a97a8; line-height: 1.35; }
+  .page2 { break-before: page; padding-top: 6px; }
+  .minihead { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+  .minihead .t { font-size: 17px; font-weight: 800; }
+
+  .umbloco { width: 1420px; margin: 10px auto 0; }
+  table.mini td.resp { width: 150px; font-weight: 700; color: #1C1F3B; }
+  table.mini td.supv { width: 130px; color: #9a97a8; }
+  .reghead { background: #1C1F3B; color: #fff; font-size: 13.5px; font-weight: 800;
+             letter-spacing: .8px; border-radius: 8px; padding: 7px 13px; margin: 14px 0 8px; }
+  .clblk { border: 1px solid #E3E3EA; border-radius: 8px; padding: 8px 12px 6px;
+           margin-bottom: 8px; break-inside: avoid; }
+  .clhead { display: flex; justify-content: space-between; font-size: 12.5px;
+            font-weight: 800; color: #1C1F3B; border-bottom: 1.5px solid #E3E3EA; padding-bottom: 4px; }
+  .clhead span:last-child { font-weight: 700; color: #7a9a2e; font-size: 11px; }
+  .usina { display: flex; justify-content: space-between; margin-top: 7px;
+           background: #F7F7FA; border-radius: 6px; padding: 4px 9px; }
+  .unome { font-size: 12.3px; font-weight: 800; }
+  .ustats { font-size: 11px; color: #55526a; }
+  .ustats b.red { color: #B3261E; } .ustats b.amber { color: #B9770E; }
+  .cli { color: #9a97a8; font-size: 10px; font-weight: 700; }
+  table.mini { font-size: 11px; margin: 2px 0 4px; }
+  table.mini td { padding: 2.4px 6px; border-bottom: 1px solid #F4F4F7; }
+  table.mini td.n { width: 44px; text-align: right; font-weight: 800; }
+  table.mini td.osn { width: 72px; font-weight: 800; color: #1C1F3B; }
+  table.mini td.tp { width: 150px; color: #7a9a2e; font-weight: 700; }
+  .xmul { color: #B9770E; font-weight: 800; }
+  .mais { color: #9a97a8; font-style: italic; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <div class="kicker">GRID CO. · OPERAÇÃO DE ATIVOS · PCM</div>
+    <h1>Semana 41: atenção, rolagens e atrasos</h1>
+    <div class="sub">Os mesmos blocos do Relatório Executivo, resumidos em duas folhas. Informativo para o time; prioridades e decisões com a coordenação.</div>
+  </div>
+  <div>
+    <div class="chips">
+      <span class="chip dark">Semana 41 · 05 a 09 Out</span>
+      <span class="chip line">Plano fechado em 02/10 às 18h54</span>
+      <span class="chip soft">Emitido em 05/10 · R08</span>
+    </div>
+    <div class="meta">Fontes: Relatório Executivo PCM e Gestão PCM (nuvem, robôs de 15 min) · foto de 05/10, 11h16</div>
+  </div>
+</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="v navy">1.535</div><div class="l">tarefas na programação da semana (plano + encaixes)</div></div>
+  <div class="kpi"><div class="v red">137</div><div class="l">corretivas abertas hoje, emergenciais incluídas</div></div>
+  <div class="kpi"><div class="v red">329</div><div class="l">tarefas atrasadas há mais de 35 dias, em 70 OS</div></div>
+  <div class="kpi"><div class="v red">442</div><div class="l">tarefas de MPA/MPS atrasadas, em 27 usinas (31 OS)</div></div>
+  <div class="kpi"><div class="v green">38</div><div class="l">religamentos em aberto com OS viva (37 OS); todos com menos de 35 dias</div></div>
+</div>
+
+<div class="row rowA">
+  <div class="card">
+    <div class="tag">1 · USINAS QUE PEDEM ATENÇÃO</div>
+    <h2>Ordenado por tarefas em aberto hoje</h2>
+    <table>
+      <tr><th>#</th><th>Usina</th><th class="n">Em aberto</th><th class="n">Corr.+Emerg.</th><th class="n">Mais antiga</th></tr>
+      <tr><td>1</td><td class="navy">Mandaguaçu 1 (Thopen)</td><td class="n">106</td><td class="n">4</td><td class="n red">96 d</td></tr>
+      <tr><td>2</td><td class="navy">Sto. Antônio da Platina 1 (Thopen)</td><td class="n">83</td><td class="n">—</td><td class="n">27 d</td></tr>
+      <tr><td>3</td><td class="navy">Guatambú 1 (Thopen)</td><td class="n">69</td><td class="n">9</td><td class="n amber">54 d</td></tr>
+      <tr><td>4</td><td class="navy">Ceilândia 1 (Thopen)</td><td class="n">68</td><td class="n">1</td><td class="n">34 d</td></tr>
+      <tr><td>5</td><td class="navy">Assis Chateaubriand (Thopen)</td><td class="n">64</td><td class="n">—</td><td class="n">15 d</td></tr>
+      <tr><td>6</td><td class="navy">Nova Xavantina 2 (RenoGrid)</td><td class="n">54</td><td class="n">1</td><td class="n">40 d</td></tr>
+      <tr><td>7</td><td class="navy">Nova Xavantina 1 (RenoGrid)</td><td class="n">50</td><td class="n">—</td><td class="n">39 d</td></tr>
+      <tr><td>8</td><td class="navy">Cidade Gaúcha 1 (Thopen)</td><td class="n">49</td><td class="n">—</td><td class="n red">63 d</td></tr>
+      <tr><td>9</td><td class="navy">Coração 1 e 2 (Thopen)</td><td class="n">48</td><td class="n">8</td><td class="n red">80 d</td></tr>
+      <tr><td>10</td><td class="navy">Colorado 1 (Thopen)</td><td class="n">44</td><td class="n">2</td><td class="n amber">60 d</td></tr>
+    </table>
+    <div class="nota">Corr.+Emerg. = OS corretivas abertas, emergenciais incluídas (ex.: Guatambú = 5 corretivas + 4 emergenciais). As demais 115 usinas somam 1.915 tarefas em aberto.</div>
+  </div>
+
+  <div class="card">
+    <div class="tag">2 · TOP 10 · TAREFAS QUE MAIS ROLARAM</div>
+    <h2>Nº de semanas em que a OS entrou na programação</h2>
+    <table>
+      <tr><th>OS</th><th>Usina</th><th>Tarefa</th><th>Tipo</th><th class="n">Rolagens</th></tr>
+      <tr><td class="navy">8338</td><td>Timon 1</td><td>[Trackers] Verificar e mapear trackers parados</td><td>Corretiva</td><td class="n red">12×</td></tr>
+      <tr><td class="navy">9058</td><td>Marabá 1</td><td>Galvanização a frio das estacas</td><td>Corretiva</td><td class="n red">12×</td></tr>
+      <tr><td class="navy">9489</td><td>Céu Azul 1</td><td>Instalação de amortecedores dos trackers</td><td>Corretiva</td><td class="n red">11×</td></tr>
+      <tr><td class="navy">9717</td><td>Guajirú 1</td><td>Tratamento de ferrugem em QGBT</td><td>Corretiva</td><td class="n red">10×</td></tr>
+      <tr><td class="navy">9718</td><td>Guajirú 1</td><td>Verificação e reparo de exaustores do transformador</td><td>Corretiva</td><td class="n red">10×</td></tr>
+      <tr><td class="navy">9915</td><td>Mandaguaçu 1</td><td>[Inversor 4.4] Recomposição de string</td><td>Corretiva</td><td class="n red">10×</td></tr>
+      <tr><td class="navy">8466</td><td>Mandaguaçu 1</td><td>MPA · Caixa d'água</td><td>MPA</td><td class="n red">10×</td></tr>
+      <tr><td class="navy">9723</td><td>Topázio (Matão 2)</td><td>Manutenção e instalação de câmeras de CFTV</td><td>Corretiva</td><td class="n red">10×</td></tr>
+      <tr><td class="navy">8799</td><td>Cedro 2</td><td>MPA · QGBT</td><td>MPA</td><td class="n amber">9×</td></tr>
+      <tr><td class="navy">10149</td><td>Sete Lagoas 2</td><td>Chamado STI (TCU do tracker)</td><td>Corretiva</td><td class="n amber">9×</td></tr>
+    </table>
+    <div class="nota">As 10 seguem em aberto. Rolagem = a OS voltou para a programação em outra semana sem ser concluída.</div>
+  </div>
+</div>
+
+<div class="row rowB">
+  <div class="card">
+    <div class="tag">3 · ATRASADAS HÁ MAIS DE 35 DIAS · AGRUPADAS POR OS</div>
+    <h2>As 8 OS mais antigas (de 70)</h2>
+    <table>
+      <tr><th class="n">Dias</th><th>OS</th><th>Cliente · usina</th><th>Tarefa(s) em aberto</th><th class="n">Faltam</th><th>Observação da OS</th></tr>
+      <tr><td class="n red">119 d</td><td class="navy">7103</td><td>Axis · Petrolina 2</td><td>MPA: Cabine MT, QGBT/QDMT/QSFV/QSA, Módulos, Cabos CA/CC</td><td class="n navy">4/12</td><td class="obs">Desligamento agendado para 17/08; a concessionária não compareceu à UFV para realizar o desligamento.</td></tr>
+      <tr><td class="n red">111 d</td><td class="navy">7104</td><td>Axis · Petrolina 3</td><td>MPA: Cabos CA/CC, Módulos Fotovoltaicos</td><td class="n navy">2/12</td><td class="obs">Na anual do painel QGBT foi identificado DPS com proteção atuada; em contato com fornecedores.</td></tr>
+      <tr><td class="n red">103 d</td><td class="navy">8338</td><td>Athon · Timon 1</td><td>Verificar e mapear trackers parados <span class="etq">PERFORMANCE</span></td><td class="n navy">1/1</td><td class="obs">39 trackers parados listados na OS; mapeamento necessário para a retomada.</td></tr>
+      <tr><td class="n red">96 d</td><td class="navy">8401</td><td>Thopen · Araçoiaba da Serra 1</td><td>MPS: SPDA <span class="etq">AGUARDANDO EQUIPAMENTO</span></td><td class="n navy">1/11</td><td class="obs">Aguarda empréstimo da câmera termográfica do cliente; termografia pausada por tempo nublado.</td></tr>
+      <tr><td class="n red">96 d</td><td class="navy">8466</td><td>Thopen · Mandaguaçu 1</td><td>MPA completa: caixa d'água, fossa, infra, SPDA, strings, tracker, cabines</td><td class="n red">23/23</td><td class="obs">Equipe desviada para emergências (trackers de Alto Paraná 2) e preparação de motores em garantia.</td></tr>
+      <tr><td class="n red">95 d</td><td class="navy">8830</td><td>Athon · Timon 1</td><td>Acompanhamento do retrofit de CFTV</td><td class="n navy">1/1</td><td class="obs">Acompanhamento contínuo do retrofit.</td></tr>
+      <tr><td class="n red">94 d</td><td class="navy">8796</td><td>Greenyellow · Cedro 1</td><td>MPA: Módulo</td><td class="n navy">3/16</td><td class="obs">Sem observação registrada na OS.</td></tr>
+      <tr><td class="n red">90 d</td><td class="navy">8799</td><td>Greenyellow · Cedro 2</td><td>MPA: Módulo, Quadro de Paralelismo, QGBT</td><td class="n navy">3/16</td><td class="obs">String Box aguarda peça/material (registro de 21/08).</td></tr>
+    </table>
+    <div class="nota">Faltam = tarefas abertas ÷ total da OS. Lista completa (329 tarefas em 70 OS) na seção 6 do Relatório Executivo.</div>
+  </div>
+
+  <div class="card">
+    <div class="tag">4 · RELIGAMENTOS EM ABERTO</div>
+    <h2>Em dia: 37 OS vivas, nenhuma acima de 35 dias</h2>
+    <table>
+      <tr><th class="n">Dias</th><th>OS</th><th>Usina</th><th>Tipo</th><th>Responsável</th><th>Supervisor</th></tr>
+      <tr><td class="n amber">33 d</td><td class="navy">12693</td><td>Brodowski 1 (Thopen)</td><td>Religamento</td><td class="navy">Luis Moura</td><td>Camila Viana</td></tr>
+      <tr><td class="n amber">26 d</td><td class="navy">12907</td><td>Sto. Ant. da Platina (Thopen)</td><td>Relig. Remoto</td><td class="navy">Valdir Silva</td><td>Pedro Candido</td></tr>
+      <tr><td class="n amber">24 d</td><td class="navy">13489</td><td>Sto. Ant. da Platina (Thopen)</td><td>Religamento</td><td class="navy">Valdir Silva</td><td>Pedro Candido</td></tr>
+      <tr><td class="n amber">24 d</td><td class="navy">15201</td><td>Cipó Guaçu (Thopen)</td><td>Religamento</td><td class="navy">Lucas de Faria</td><td>Danuth Fernandes</td></tr>
+      <tr><td class="n amber">24 d</td><td class="navy">15202</td><td>Cipó Guaçu (Thopen)</td><td>Religamento</td><td class="navy">Lucas de Faria</td><td>Danuth Fernandes</td></tr>
+      <tr><td class="n">19 d</td><td class="navy">12903</td><td>Pharmas 4 (Thopen)</td><td>Relig. Remoto</td><td class="navy">Valdir Silva</td><td>Pedro Candido</td></tr>
+      <tr><td class="n">19 d</td><td class="navy">12905</td><td>Pharmas 3 (Thopen)</td><td>Relig. Remoto</td><td class="navy">Valdir Silva</td><td>Pedro Candido</td></tr>
+      <tr><td class="n">19 d</td><td class="navy">12906</td><td>Pharmas 2 (Thopen)</td><td>Relig. Remoto</td><td class="navy">Valdir Silva</td><td>Pedro Candido</td></tr>
+      <tr><td class="n">15 d</td><td class="navy">13964</td><td>Sto. Ant. da Platina (Thopen)</td><td>Religamento</td><td class="navy">Valdir Silva</td><td>Pedro Candido</td></tr>
+      <tr><td class="n">10 d</td><td class="navy">14618</td><td>Pharmas 2 (Thopen)</td><td>Religamento</td><td class="navy">Valdir Silva</td><td>Pedro Candido</td></tr>
+    </table>
+    <div class="nota">Considera só religamentos cuja OS segue viva. 13 registros antigos (OS 3190, 3191, 4185, 4479, 4718, 4742, 4795, 4796, 9819, 9820, 10509, 13721 e 13722) têm a OS concluída com a tarefa aberta: erro de sistema sem ajuste possível no Fracttal, tratados como finalizados.</div>
+  </div>
+</div>
+
+<div class="foot"><span>Grid Co. · PCM · Semana 41 · página 1 de 2</span><span>continua na página 2: MPAS atrasadas por usina e usinas críticas</span></div>
+
+<div class="page2">
+<div class="minihead">
+  <div>
+    <div class="kicker">GRID CO. · OPERAÇÃO DE ATIVOS · PCM · SEMANA 41 · CONTINUAÇÃO</div>
+    <div class="t">MPAS atrasadas e usinas críticas</div>
+  </div>
+  <div class="meta">Página 2 de 2 · foto de 05/10, 11h16</div>
+</div>
+
+<div class="row rowB">
+  <div class="card">
+    <div class="tag">5 · MPAS ATRASADAS · UMA LINHA POR USINA</div>
+    <h2>Anuais e semestrais atrasadas: 12 usinas mais antigas (de 27)</h2>
+    <table>
+      <tr><th>Usina</th><th>Tipo</th><th>OS</th><th class="n">Tarefas abertas</th><th class="n">Mais antiga</th><th>Responsável</th><th>Supervisor</th></tr>
+      <tr><td class="navy">Petrolina 2 (Axis)</td><td>MPA</td><td>7103, 12328</td><td class="n">9</td><td class="n red">119 d</td><td class="navy">Rodrigo Silva</td><td>Vitor Valadares</td></tr>
+      <tr><td class="navy">Petrolina 3 (Axis)</td><td>MPA</td><td>7104, 12316</td><td class="n">8</td><td class="n red">111 d</td><td class="navy">Matheus Leite</td><td>Vitor Valadares</td></tr>
+      <tr><td class="navy">Mandaguaçu 1 (Thopen)</td><td>MPA</td><td>8466</td><td class="n">23</td><td class="n red">96 d</td><td class="navy">Marcos Camargo</td><td>Pedro Candido</td></tr>
+      <tr><td class="navy">Araçoiaba da Serra 1 (Thopen)</td><td>MPS</td><td>8401</td><td class="n">1</td><td class="n red">96 d</td><td class="navy">Eduardo Mendes</td><td>Danuth Fernandes</td></tr>
+      <tr><td class="navy">Cedro 1 (Greenyellow)</td><td>MPA</td><td>8796</td><td class="n">3</td><td class="n red">94 d</td><td class="navy">Leonardo Dias</td><td>Marcelo Martineli</td></tr>
+      <tr><td class="navy">Cedro 2 (Greenyellow)</td><td>MPA</td><td>8799</td><td class="n">3</td><td class="n red">90 d</td><td class="navy">Leonardo Dias</td><td>Marcelo Martineli</td></tr>
+      <tr><td class="navy">Demerval Lobão 1 (Greenyellow)</td><td>MPA</td><td>8783</td><td class="n">28</td><td class="n red">77 d</td><td class="navy">Ailton Leal</td><td>Marcelo Martineli</td></tr>
+      <tr><td class="navy">Piracicaba 1 (Thopen)</td><td>MPS</td><td>10157, 11358</td><td class="n">2</td><td class="n red">70 d</td><td class="navy">Felipe Lima</td><td>Danuth Fernandes</td></tr>
+      <tr><td class="navy">Cidade Gaúcha 1 (Thopen)</td><td>MPA</td><td>10185</td><td class="n">35</td><td class="n red">63 d</td><td class="navy">Marcos Camargo</td><td>Pedro Candido</td></tr>
+      <tr><td class="navy">Araçoiaba da Serra 2 (Thopen)</td><td>MPA</td><td>10189</td><td class="n">22</td><td class="n red">63 d</td><td class="navy">Eduardo Mendes</td><td>Danuth Fernandes</td></tr>
+      <tr><td class="navy">Santarém 1 e 2 (Thopen)</td><td>MPA</td><td>10169</td><td class="n">5</td><td class="n amber">49 d</td><td class="navy">Júlio Willers</td><td>Pedro Candido</td></tr>
+      <tr><td class="navy">Ibirapuã 2 (Ultragaz)</td><td>MPA</td><td>10322</td><td class="n">24</td><td class="n amber">46 d</td><td class="navy">Thiago Morais</td><td>Vitor Valadares</td></tr>
+    </table>
+    <div class="nota">Carteira toda: 442 tarefas de MPA/MPS atrasadas em 27 usinas (31 OS). Idade = tarefa mais antiga da usina. Responsável = designado da OS no Fracttal (da OS mais antiga da usina); Supervisor = Responsável O&M do cluster. Detalhe tarefa a tarefa na seção 9 do Relatório.</div>
+  </div>
+
+  <div class="card">
+    <div class="tag">6 · USINAS CRÍTICAS · O QUE ESTÁ EM ABERTO</div>
+    <h2>Top 4 do ranking, itens mais antigos</h2>
+    <div class="ublock"><div class="u">Mandaguaçu 1 (Thopen) · 106 em aberto · <small>mais antiga 96 d</small></div>
+      <div class="itens">OS 8466: MPA completa em aberto (23 tarefas: caixa d'água, fossa séptica, infraestrutura, SPDA, strings, tracker, cabines) + 4 corretivas, incluindo recomposição de string do inversor 4.4 (10 rolagens).</div></div>
+    <div class="ublock"><div class="u">Sto. Antônio da Platina 1 (Thopen) · 83 em aberto · <small>27 d</small></div>
+      <div class="itens">OS 12876: handover inteiro (PPCI, RSU, drenagem, ar condicionado, caixa d'água, fossa, NCU, nobreak e mais 75 tarefas).</div></div>
+    <div class="ublock"><div class="u">Guatambú 1 (Thopen) · 69 em aberto · <small>54 d</small></div>
+      <div class="itens">OS 10829: handover (CFTV/COS, supervisório, nobreak, PPCI, SPDA, drenagem) + recomposição de string (OS 11016, 54 d) e mais 8 corretivas/emergenciais.</div></div>
+    <div class="ublock"><div class="u">Ceilândia 1 (Thopen) · 68 em aberto · <small>34 d</small></div>
+      <div class="itens">Mapeamento dos trackers (OS 12612, 34 d), inversor 6 inoperante (OS 14957) e religamento do CLN100 (OS 14997). É também a usina com mais tarefas na W41 (69).</div></div>
+  </div>
+</div>
+
+<div class="foot">
+  <span>Grid Co. · PCM · Semana 41 · página 2 de 2 · distribuição: time de campo e coordenações · prioridades e decisões com a coordenação</span>
+  <span>Painel: pcm.gridco.com.br · Relatório Executivo completo: github.io/gridco-pcm-data · dúvidas: Fabrício (PCM)</span>
+</div>
+</div>
+
+<div class="page2">
+<div class="minihead"><div>
+<div class="kicker">GRID CO. · OPERAÇÃO DE ATIVOS · PCM · SEMANA 41 · CONTINUAÇÃO</div>
+<div class="t">7 · Backlog atrasado por região, cluster e usina</div>
+</div><div class="meta">Só tarefas atrasadas, de OS vivas · a usina mais pendente puxa o cluster e a região · OS com várias tarefas viram uma linha · colunas finais: responsável da OS e supervisor · foto de 05/10, 11h42</div></div>
+<div class="umbloco">
+<div class="reghead">PR · 351 tarefas atrasadas · 4 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>PR Norte 01</span><span>137 atrasadas · 220 abertas · mais antiga 96d</span></div>
+<div class="usina"><span class="unome">Mandaguaçu 1 <span class="cli">(Thopen)</span></span><span class="ustats">65 atrasadas de 106 abertas · mais antiga <b class="red">96d</b></span></div>
+<table class="mini">
+<tr><td class="n red">96d</td><td class="osn">OS 8466</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - SPDA <span class="xmul">· 23 tarefas</span></td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n red">77d</td><td class="osn">OS 9602</td><td class="tp">Administrativa</td><td>Abertura de chamado para garantia [Envio de…</td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n red">74d</td><td class="osn">OS 9915</td><td class="tp">Corretiva</td><td>[Mandaguaçu 1][Inversor 4.4] - Recomposição de String</td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">56d</td><td class="osn">OS 10790</td><td class="tp">Inspeção</td><td>Thopen - Mandaguaçu - Insp. Trackers <span class="xmul">· 7 tarefas</span></td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 12825</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">24d</td><td class="osn">OS 13421</td><td class="tp">Corretiva</td><td>Vedação da Cabine, borracha já está em campo</td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td></td><td colspan="5" class="mais">+ 4 OS atrasadas nesta usina</td></tr>
+</table>
+<div class="usina"><span class="unome">Colorado 1 <span class="cli">(Thopen)</span></span><span class="ustats">44 atrasadas de 44 abertas · mais antiga <b class="amber">60d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">60d</td><td class="osn">OS 10607</td><td class="tp">Handover</td><td>Handover – Transformador de Potência (Seco/Óleo) <span class="xmul">· 29 tarefas</span></td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">41d</td><td class="osn">OS 11784</td><td class="tp">Corretiva</td><td>[Tracker 35.100] - Verificação de Tracker Parado</td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">17d</td><td class="osn">OS 13277</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Transformador <span class="xmul">· 13 tarefas</span></td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">13d</td><td class="osn">OS 13852</td><td class="tp">Corretiva</td><td>Corretiva - Inspeção de CFTV</td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Colorado 2 <span class="cli">(Thopen)</span></span><span class="ustats">19 atrasadas de 20 abertas · mais antiga <b class="">33d</b></span></div>
+<table class="mini">
+<tr><td class="n ">33d</td><td class="osn">OS 12418</td><td class="tp">Administrativa</td><td>Coleta de Dados de Geração <span class="xmul">· 4 tarefas</span></td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">31d</td><td class="osn">OS 12885</td><td class="tp">Corretiva</td><td>[Inversor 1.2] - Recomposição de String</td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 12845</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">18d</td><td class="osn">OS 12705</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Transformador <span class="xmul">· 13 tarefas</span></td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Marialva 1 <span class="cli">(Axis)</span></span><span class="ustats">9 atrasadas de 10 abertas · mais antiga <b class="red">83d</b></span></div>
+<table class="mini">
+<tr><td class="n red">83d</td><td class="osn">OS 9442</td><td class="tp">Preventiva</td><td>Acompanhamento - Limpeza de Módulos (Termografia se…</td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">20d</td><td class="osn">OS 12704</td><td class="tp">Preventiva</td><td>[Axis] - MPM - Módulos Fotovoltaicos <span class="xmul">· 6 tarefas</span></td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">12d</td><td class="osn">OS 14374</td><td class="tp">Corretiva…</td><td>[Axis] - MPA - Rede de Aterramento - Pendências <span class="xmul">· 2 tarefas</span></td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>PR Norte 02</span><span>145 atrasadas · 177 abertas · mais antiga 27d</span></div>
+<div class="usina"><span class="unome">Santo Antônio da Platina 1 <span class="cli">(Thopen)</span></span><span class="ustats">53 atrasadas de 83 abertas · mais antiga <b class="">27d</b></span></div>
+<table class="mini">
+<tr><td class="n ">27d</td><td class="osn">OS 12876</td><td class="tp">Handover</td><td>Handover – Relé de Proteção <span class="xmul">· 53 tarefas</span></td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Pharmas 2 <span class="cli">(Thopen)</span></span><span class="ustats">24 atrasadas de 26 abertas · mais antiga <b class="">21d</b></span></div>
+<table class="mini">
+<tr><td class="n ">21d</td><td class="osn">OS 12900</td><td class="tp">Handover</td><td>Handover – Transformador de Potência (Seco/Óleo) <span class="xmul">· 23 tarefas</span></td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">19d</td><td class="osn">OS 12906</td><td class="tp">Religamento Remoto</td><td>[Grid Co.] - RR - Religamento Remoto em Usina (COS)</td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Pharmas 3 <span class="cli">(Thopen)</span></span><span class="ustats">24 atrasadas de 24 abertas · mais antiga <b class="">20d</b></span></div>
+<table class="mini">
+<tr><td class="n ">20d</td><td class="osn">OS 12901</td><td class="tp">Handover</td><td>Handover – Transformador de Potência (Seco/Óleo) <span class="xmul">· 23 tarefas</span></td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">19d</td><td class="osn">OS 12905</td><td class="tp">Religamento Remoto</td><td>[Grid Co.] - RR - Religamento Remoto em Usina (COS)</td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Pharmas 4 <span class="cli">(Thopen)</span></span><span class="ustats">24 atrasadas de 24 abertas · mais antiga <b class="">19d</b></span></div>
+<table class="mini">
+<tr><td class="n ">19d</td><td class="osn">OS 12903</td><td class="tp">Religamento Remoto</td><td>[Grid Co.] - RR - Religamento Remoto em Usina (COS)</td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">18d</td><td class="osn">OS 12902</td><td class="tp">Handover</td><td>Handover – Transformador de Potência (Seco/Óleo) <span class="xmul">· 23 tarefas</span></td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Santo Antônio da Platina <span class="cli">(Thopen)</span></span><span class="ustats">12 atrasadas de 12 abertas · mais antiga <b class="">27d</b></span></div>
+<table class="mini">
+<tr><td class="n ">27d</td><td class="osn">OS 12876</td><td class="tp">Handover</td><td>Handover – Trackers <span class="xmul">· 9 tarefas</span></td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 12907</td><td class="tp">Religamento Remoto</td><td>[Grid Co.] - RR - Religamento Remoto em Usina (COS)</td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">24d</td><td class="osn">OS 13489</td><td class="tp">Religamento</td><td>[Thopen - Santo Antônio da Platina 1 - PR]…</td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">15d</td><td class="osn">OS 13964</td><td class="tp">Religamento</td><td>[Thopen - Santo Antônio da Platina 1 - PR]…</td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Taguai 1 e 2 <span class="cli">(Thopen)</span></span><span class="ustats">6 atrasadas de 6 abertas · mais antiga <b class="">17d</b></span></div>
+<table class="mini">
+<tr><td class="n ">17d</td><td class="osn">OS 13766</td><td class="tp">Inspeção</td><td>Inspeção Geral do Inversor <span class="xmul">· 6 tarefas</span></td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Bernardino de Campos <span class="cli">(Thopen)</span></span><span class="ustats">2 atrasadas de 2 abertas · mais antiga <b class="">17d</b></span></div>
+<table class="mini">
+<tr><td class="n ">17d</td><td class="osn">OS 13765</td><td class="tp">Inspeção</td><td>[Inversor 1.2] - Inspeção Geral do Inversor</td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">11d</td><td class="osn">OS 14341</td><td class="tp">Corretiva</td><td>Verificação da comunicação do piranômetro</td><td class="resp">Valdir Silva</td><td class="supv">Pedro Candido</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>PR Oeste 01</span><span>35 atrasadas · 116 abertas · mais antiga 63d</span></div>
+<div class="usina"><span class="unome">Cidade Gaúcha 1 <span class="cli">(Thopen)</span></span><span class="ustats">35 atrasadas de 49 abertas · mais antiga <b class="red">63d</b></span></div>
+<table class="mini">
+<tr><td class="n red">63d</td><td class="osn">OS 10185</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - Ar Condicionado <span class="xmul">· 35 tarefas</span></td><td class="resp">Marcos Camargo</td><td class="supv">Pedro Candido</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>PR Sul 01</span><span>34 atrasadas · 89 abertas · mais antiga 82d</span></div>
+<div class="usina"><span class="unome">Céu Azul 1 <span class="cli">(Thopen)</span></span><span class="ustats">21 atrasadas de 25 abertas · mais antiga <b class="red">82d</b></span></div>
+<table class="mini">
+<tr><td class="n red">82d</td><td class="osn">OS 9489</td><td class="tp">Corretiva</td><td>Instalação amortecedores trackers</td><td class="resp">Gilson Milhomem</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">42d</td><td class="osn">OS 11771</td><td class="tp">Corretiva</td><td>[Tracker 21.100] - Verificação de Tracker Parado</td><td class="resp">Gilson Milhomem</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">42d</td><td class="osn">OS 11772</td><td class="tp">Corretiva</td><td>[Tracker 28.100] - Verificação de Tracker Parado</td><td class="resp">Gilson Milhomem</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">42d</td><td class="osn">OS 11773</td><td class="tp">Corretiva</td><td>[Tracker 35.100] - Verificação de Tracker Parado</td><td class="resp">Gilson Milhomem</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">42d</td><td class="osn">OS 11774</td><td class="tp">Corretiva</td><td>[Tracker 43.100] - Verificação de Tracker Parado</td><td class="resp">Gilson Milhomem</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">42d</td><td class="osn">OS 11775</td><td class="tp">Corretiva</td><td>[Tracker 5.100] - Verificação de Tracker Parado</td><td class="resp">Gilson Milhomem</td><td class="supv">Pedro Candido</td></tr>
+<tr><td></td><td colspan="5" class="mais">+ 4 OS atrasadas nesta usina</td></tr>
+</table>
+<div class="usina"><span class="unome">Assis Chateaubriand <span class="cli">(Thopen)</span></span><span class="ustats">13 atrasadas de 64 abertas · mais antiga <b class="">15d</b></span></div>
+<table class="mini">
+<tr><td class="n ">15d</td><td class="osn">OS 13980</td><td class="tp">Inspeção</td><td>[Cabine 1 HGR5+5M9 Assis Chateaubriand, PR Assis…</td><td class="resp">Gilson Milhomem</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">11d</td><td class="osn">OS 13835</td><td class="tp">Handover</td><td>Handover – Nobreak e Banco de Baterias <span class="xmul">· 12 tarefas</span></td><td class="resp">Gilson Milhomem</td><td class="supv">Pedro Candido</td></tr>
+</table>
+</div>
+<div class="reghead">SC · 100 tarefas atrasadas · 1 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>SC Oeste 01</span><span>100 atrasadas · 117 abertas · mais antiga 80d</span></div>
+<div class="usina"><span class="unome">Guatambú 1 <span class="cli">(Thopen)</span></span><span class="ustats">61 atrasadas de 69 abertas · mais antiga <b class="amber">54d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">54d</td><td class="osn">OS 10829</td><td class="tp">Handover</td><td>Handover – Nobreak e Banco de Baterias <span class="xmul">· 56 tarefas</span></td><td class="resp">Ademir Necker</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">54d</td><td class="osn">OS 11016</td><td class="tp">Corretiva</td><td>[Inversor 3.2] - Recomposição de String</td><td class="resp">Ademir Necker</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">33d</td><td class="osn">OS 12727</td><td class="tp">Corretiva</td><td>Instalação antena dos trackers</td><td class="resp">Ademir Necker</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">32d</td><td class="osn">OS 12728</td><td class="tp">Corretiva</td><td>[Inversor 4.3] - Recomposição de String</td><td class="resp">Ademir Necker</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 12861</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Ademir Necker</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">25d</td><td class="osn">OS 13427</td><td class="tp">Corretiva…</td><td>[Usina] - Inspeção e normalização da Usina</td><td class="resp">Ademir Necker</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Coração 1 e 2 <span class="cli">(Thopen)</span></span><span class="ustats">39 atrasadas de 48 abertas · mais antiga <b class="red">80d</b></span></div>
+<table class="mini">
+<tr><td class="n red">80d</td><td class="osn">OS 9534</td><td class="tp">Handover</td><td>Handover – INFRAESTRUTURA <span class="xmul">· 18 tarefas</span></td><td class="resp">Ademir Necker</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">42d</td><td class="osn">OS 11788</td><td class="tp">Corretiva</td><td>[Tracker 2.100] - Verificação de Tracker Parado</td><td class="resp">Ademir Necker</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">42d</td><td class="osn">OS 11789</td><td class="tp">Corretiva</td><td>[Tracker 38.100] - Verificação de Tracker Parado</td><td class="resp">Ademir Necker</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">42d</td><td class="osn">OS 11790</td><td class="tp">Corretiva</td><td>[Tracker 42.100] - Verificação de Tracker Parado</td><td class="resp">Ademir Necker</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">42d</td><td class="osn">OS 11791</td><td class="tp">Corretiva</td><td>[Tracker 50.100] - Verificação de Tracker Parado</td><td class="resp">Ademir Necker</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n amber">38d</td><td class="osn">OS 12331</td><td class="tp">Inspeção</td><td>Inspeção Geral do Inversor <span class="xmul">· 3 tarefas</span></td><td class="resp">Ademir Necker</td><td class="supv">Pedro Candido</td></tr>
+<tr><td></td><td colspan="5" class="mais">+ 3 OS atrasadas nesta usina</td></tr>
+</table>
+</div>
+<div class="reghead">MT · 149 tarefas atrasadas · 4 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>MT Leste 01</span><span>131 atrasadas · 157 abertas · mais antiga 40d</span></div>
+<div class="usina"><span class="unome">Nova Xavantina 1 <span class="cli">(RenoGrid)</span></span><span class="ustats">49 atrasadas de 50 abertas · mais antiga <b class="amber">39d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">39d</td><td class="osn">OS 12289</td><td class="tp">Inspeção</td><td>Inspeção e testes de funcionamento de Nobreaks</td><td class="resp">Gabriel Oliveira</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 12812</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Gabriel Oliveira</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">21d</td><td class="osn">OS 13203</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - Inversor <span class="xmul">· 47 tarefas</span></td><td class="resp">Gabriel Oliveira</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+<div class="usina"><span class="unome">Nova Xavantina 2 <span class="cli">(RenoGrid)</span></span><span class="ustats">34 atrasadas de 54 abertas · mais antiga <b class="amber">40d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">40d</td><td class="osn">OS 12152</td><td class="tp">Inspeção</td><td>Inspeção elétrica - Inversor SolarEdge com erro de…</td><td class="resp">Gabriel Oliveira</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n amber">40d</td><td class="osn">OS 12153</td><td class="tp">Inspeção</td><td>Inspeção elétrica - Inversor SolarEdge com alertas…</td><td class="resp">Gabriel Oliveira</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n amber">40d</td><td class="osn">OS 12149</td><td class="tp">Inspeção</td><td>Inspeção elétrica - Inversor SolarEdge em alta…</td><td class="resp">Gabriel Oliveira</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n amber">39d</td><td class="osn">OS 12290</td><td class="tp">Inspeção</td><td>Inspeção e testes de funcionamento de Nobreaks</td><td class="resp">Gabriel Oliveira</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 12813</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Gabriel Oliveira</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">18d</td><td class="osn">OS 13208</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - Infraestrutura <span class="xmul">· 29 tarefas</span></td><td class="resp">Gabriel Oliveira</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+<div class="usina"><span class="unome">Canarana 2 <span class="cli">(Thopen)</span></span><span class="ustats">24 atrasadas de 24 abertas · mais antiga <b class="">14d</b></span></div>
+<table class="mini">
+<tr><td class="n ">14d</td><td class="osn">OS 13624</td><td class="tp">Handover</td><td>Handover – Estação Meteorológica <span class="xmul">· 24 tarefas</span></td><td class="resp">Marcelo Lino de…</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+<div class="usina"><span class="unome">Canarana 1 <span class="cli">(Thopen)</span></span><span class="ustats">22 atrasadas de 25 abertas · mais antiga <b class="">20d</b></span></div>
+<table class="mini">
+<tr><td class="n ">20d</td><td class="osn">OS 13623</td><td class="tp">Handover</td><td>Handover – Trackers <span class="xmul">· 22 tarefas</span></td><td class="resp">Marcelo Lino de…</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+<div class="usina"><span class="unome">Ribeirão Cascalheiras <span class="cli">(Thopen)</span></span><span class="ustats">2 atrasadas de 4 abertas · mais antiga <b class="">12d</b></span></div>
+<table class="mini">
+<tr><td class="n ">12d</td><td class="osn">OS 14448</td><td class="tp">Corretiva</td><td>[Ribeirão Cascalheiras] - Regularização de…</td><td class="resp">Marcelo Lino de…</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">11d</td><td class="osn">OS 14548</td><td class="tp">Corretiva</td><td>Ensaio de Resistência de Isolamento em Cabos CA de…</td><td class="resp">Marcelo Lino de…</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>MT Sul 03</span><span>15 atrasadas · 29 abertas · mais antiga 56d</span></div>
+<div class="usina"><span class="unome">Diamantino 1 <span class="cli">(Thopen)</span></span><span class="ustats">14 atrasadas de 14 abertas · mais antiga <b class="amber">56d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">56d</td><td class="osn">OS 10971</td><td class="tp">Handover</td><td>Handover – INFRAESTRUTURA <span class="xmul">· 14 tarefas</span></td><td class="resp">Valmir Júnior</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+<div class="usina"><span class="unome">Nobres 1 <span class="cli">(RenoGrid)</span></span><span class="ustats">1 atrasadas de 15 abertas · mais antiga <b class="">26d</b></span></div>
+<table class="mini">
+<tr><td class="n ">26d</td><td class="osn">OS 12811</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Valmir Júnior</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>MT Norte 01</span><span>3 atrasadas · 20 abertas · mais antiga 26d</span></div>
+<div class="usina"><span class="unome">Colíder 1 <span class="cli">(RenoGrid)</span></span><span class="ustats">2 atrasadas de 2 abertas · mais antiga <b class="">26d</b></span></div>
+<table class="mini">
+<tr><td class="n ">26d</td><td class="osn">OS 12814</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Deivity Jhon Cunha…</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">19d</td><td class="osn">OS 13714</td><td class="tp">Corretiva</td><td>Abertura de Chamado para Garantia [ Inversor inversor…</td><td class="resp">Deivity Jhon Cunha…</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+<div class="usina"><span class="unome">Colíder 2 <span class="cli">(RenoGrid)</span></span><span class="ustats">1 atrasadas de 18 abertas · mais antiga <b class="">26d</b></span></div>
+<table class="mini">
+<tr><td class="n ">26d</td><td class="osn">OS 12815</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Deivity Jhon Cunha…</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+</div>
+<div class="reghead">CE · 66 tarefas atrasadas · 5 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>CE Oeste 02</span><span>43 atrasadas · 46 abertas · mais antiga 45d</span></div>
+<div class="usina"><span class="unome">Crateús 1 <span class="cli">(RenoGrid)</span></span><span class="ustats">41 atrasadas de 41 abertas · mais antiga <b class="amber">45d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">45d</td><td class="osn">OS 11512</td><td class="tp">Inspeção</td><td>Inspeção de inversor para abertura de chamado</td><td class="resp">Railson Gomes</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">21d</td><td class="osn">OS 13201</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - Inversor <span class="xmul">· 40 tarefas</span></td><td class="resp">Railson Gomes</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+<div class="usina"><span class="unome">Castelo do Piauí 1 <span class="cli">(Greenyellow)</span></span><span class="ustats">2 atrasadas de 5 abertas · mais antiga <b class="">26d</b></span></div>
+<table class="mini">
+<tr><td class="n ">26d</td><td class="osn">OS 12860</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Luiz Silva</td><td class="supv">Marcelo Martineli</td></tr>
+<tr><td class="n ">21d</td><td class="osn">OS 13413</td><td class="tp">Inspeção</td><td>Análise das falhas de Sobretensão da Rede</td><td class="resp">Luis Otavio Lima de…</td><td class="supv">Marcelo Martineli</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>CE Leste 02</span><span>9 atrasadas · 41 abertas · mais antiga 47d</span></div>
+<div class="usina"><span class="unome">Cascavel 1 (Sunpower) <span class="cli">(Sal Energia)</span></span><span class="ustats">4 atrasadas de 16 abertas · mais antiga <b class="amber">39d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">39d</td><td class="osn">OS 12064</td><td class="tp">Inspeção</td><td>Testes de religamento remoto UFV - Sunpower</td><td class="resp">Adriano Silva</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">27d</td><td class="osn">OS 13227</td><td class="tp">Corretiva</td><td>Substituição de datalogger de inversor</td><td class="resp">Adriano Silva</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">25d</td><td class="osn">OS 13268</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Infraestrutura <span class="xmul">· 2 tarefas</span></td><td class="resp">Adriano Silva</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+<div class="usina"><span class="unome">Aquiraz 1 (Salvales) <span class="cli">(Sal Energia)</span></span><span class="ustats">3 atrasadas de 13 abertas · mais antiga <b class="amber">47d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">47d</td><td class="osn">OS 11482</td><td class="tp">Corretiva</td><td>Reparo de estruturas de sustentação dos inversores</td><td class="resp">Adriano Silva</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n amber">40d</td><td class="osn">OS 12065</td><td class="tp">Inspeção</td><td>Testes de religamento remoto UFV - Salvales</td><td class="resp">Adriano Silva</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">20d</td><td class="osn">OS 13618</td><td class="tp">Corretiva</td><td>Substituição de transformador</td><td class="resp">Adriano Silva</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+<div class="usina"><span class="unome">Aquiraz 2 (Carosa) <span class="cli">(Sal Energia)</span></span><span class="ustats">2 atrasadas de 12 abertas · mais antiga <b class="amber">47d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">47d</td><td class="osn">OS 11483</td><td class="tp">Corretiva</td><td>Reparo de estruturas de sustentação dos inversores</td><td class="resp">Adriano Silva</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n amber">40d</td><td class="osn">OS 12066</td><td class="tp">Inspeção</td><td>Testes de religamento remoto UFV - Carosa</td><td class="resp">Adriano Silva</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>CE Sul 01</span><span>6 atrasadas · 25 abertas · mais antiga 94d</span></div>
+<div class="usina"><span class="unome">Cedro 1 <span class="cli">(Greenyellow)</span></span><span class="ustats">3 atrasadas de 5 abertas · mais antiga <b class="red">94d</b></span></div>
+<table class="mini">
+<tr><td class="n red">94d</td><td class="osn">OS 8796</td><td class="tp">Preventiva</td><td>[GreenYellow] - MPA - Módulo <span class="xmul">· 3 tarefas</span></td><td class="resp">Leonardo Dias</td><td class="supv">Marcelo Martineli</td></tr>
+</table>
+<div class="usina"><span class="unome">Cedro 2 <span class="cli">(Greenyellow)</span></span><span class="ustats">3 atrasadas de 20 abertas · mais antiga <b class="red">90d</b></span></div>
+<table class="mini">
+<tr><td class="n red">90d</td><td class="osn">OS 8799</td><td class="tp">Preventiva</td><td>[GreenYellow] - MPA - Módulo <span class="xmul">· 3 tarefas</span></td><td class="resp">Leonardo Dias</td><td class="supv">Marcelo Martineli</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>CE Leste 01</span><span>5 atrasadas · 39 abertas · mais antiga 25d</span></div>
+<div class="usina"><span class="unome">Bonfim Limoeiro do Norte 1 <span class="cli">(Thopen)</span></span><span class="ustats">4 atrasadas de 6 abertas · mais antiga <b class="">25d</b></span></div>
+<table class="mini">
+<tr><td class="n ">25d</td><td class="osn">OS 13111</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - QGBT <span class="xmul">· 3 tarefas</span></td><td class="resp">Cláudio Ferreira</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">11d</td><td class="osn">OS 14570</td><td class="tp">Corretiva</td><td>Substituição de Cabo LAN CFTV Bullet 03</td><td class="resp">Cláudio Ferreira</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+<div class="usina"><span class="unome">Morada Nova 1 <span class="cli">(Alves Lima)</span></span><span class="ustats">1 atrasadas de 13 abertas · mais antiga <b class="">13d</b></span></div>
+<table class="mini">
+<tr><td class="n ">13d</td><td class="osn">OS 13987</td><td class="tp">Administrativa</td><td>[Inversor 1.8 Huawei] - Acompanhamento de chamado…</td><td class="resp">Singrid Vieira</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>CE Norte 01</span><span>3 atrasadas · 63 abertas · mais antiga 77d</span></div>
+<div class="usina"><span class="unome">Guajirú 1 <span class="cli">(GD Energy)</span></span><span class="ustats">3 atrasadas de 20 abertas · mais antiga <b class="red">77d</b></span></div>
+<table class="mini">
+<tr><td class="n red">77d</td><td class="osn">OS 9717</td><td class="tp">Corretiva</td><td>Tratamento de ferrugem em QGBT</td><td class="resp">Felipe Xavier</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n red">77d</td><td class="osn">OS 9718</td><td class="tp">Corretiva</td><td>Verificação e reparo de exaustores de transformador</td><td class="resp">Felipe Xavier</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 12857</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Felipe Xavier</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+</div>
+<div class="reghead">SP · 242 tarefas atrasadas · 11 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>SP Leste 05</span><span>43 atrasadas · 65 abertas · mais antiga 63d</span></div>
+<div class="usina"><span class="unome">Cipó Guaçu <span class="cli">(Thopen)</span></span><span class="ustats">37 atrasadas de 37 abertas · mais antiga <b class="">24d</b></span></div>
+<table class="mini">
+<tr><td class="n ">24d</td><td class="osn">OS 15201</td><td class="tp">Religamento</td><td>[CGU100-CABN3] - Religamento do CGU100-CABN3</td><td class="resp">Lucas Alberto…</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n ">24d</td><td class="osn">OS 15202</td><td class="tp">Religamento</td><td>[Cabine 2] - Religamento da Cabine 2 <span class="xmul">· 2 tarefas</span></td><td class="resp">Lucas Alberto…</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n ">19d</td><td class="osn">OS 13633</td><td class="tp">Handover</td><td>Handover – FOSSA SEPTICA <span class="xmul">· 33 tarefas</span></td><td class="resp">Lucas Alberto…</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n ">12d</td><td class="osn">OS 14426</td><td class="tp">Corretiva</td><td>[Cipó Guaçu] - Inspeção de câmeras offline</td><td class="resp">Lucas Alberto…</td><td class="supv">Danuth Fernandes</td></tr>
+</table>
+<div class="usina"><span class="unome">Embu Guaçu 1 <span class="cli">(Thopen)</span></span><span class="ustats">6 atrasadas de 28 abertas · mais antiga <b class="red">63d</b></span></div>
+<table class="mini">
+<tr><td class="n red">63d</td><td class="osn">OS 10460</td><td class="tp">Zeladoria</td><td>Acompanhamento - Supressão Vegetal</td><td class="resp">Lucas Alberto…</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n ">31d</td><td class="osn">OS 12682</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - SPDA <span class="xmul">· 4 tarefas</span></td><td class="resp">Lucas Alberto…</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 12852</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Lucas Alberto…</td><td class="supv">Danuth Fernandes</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>SP Oeste 01</span><span>54 atrasadas · 72 abertas · mais antiga 27d</span></div>
+<div class="usina"><span class="unome">Tupi Paulista 1 e 2 <span class="cli">(2C)</span></span><span class="ustats">26 atrasadas de 42 abertas · mais antiga <b class="">27d</b></span></div>
+<table class="mini">
+<tr><td class="n ">27d</td><td class="osn">OS 13184</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - Tracker <span class="xmul">· 26 tarefas</span></td><td class="resp">Carlos Godoi</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Alvares Machado <span class="cli">(Thopen)</span></span><span class="ustats">26 atrasadas de 27 abertas · mais antiga <b class="">13d</b></span></div>
+<table class="mini">
+<tr><td class="n ">13d</td><td class="osn">OS 13758</td><td class="tp">Handover</td><td>Handover – Transformador de Potência (Seco/Óleo) <span class="xmul">· 26 tarefas</span></td><td class="resp">Carlos Godoi</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Santo Anastácio <span class="cli">(Thopen)</span></span><span class="ustats">2 atrasadas de 3 abertas · mais antiga <b class="">16d</b></span></div>
+<table class="mini">
+<tr><td class="n ">16d</td><td class="osn">OS 13926</td><td class="tp">Administrativa</td><td>[Inversor 1.4  SUN2000-250KTL-H1] - Acompanhamento de…</td><td class="resp">Singrid Vieira</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">16d</td><td class="osn">OS 13927</td><td class="tp">Administrativa</td><td>[Inversor 1.1  SUN2000-250KTL-H1] - Acompanhamento de…</td><td class="resp">Singrid Vieira</td><td class="supv">Pedro Candido</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>SP Oeste 02</span><span>45 atrasadas · 48 abertas · mais antiga 53d</span></div>
+<div class="usina"><span class="unome">Fernandópolis 1 <span class="cli">(Thopen)</span></span><span class="ustats">25 atrasadas de 26 abertas · mais antiga <b class="amber">53d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">53d</td><td class="osn">OS 10809</td><td class="tp">Administrativa</td><td>Visita de Segurança Thopen - Fernandopolis</td><td class="resp">Luis Moura</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">21d</td><td class="osn">OS 13061</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPS - Cabine de Medição <span class="xmul">· 24 tarefas</span></td><td class="resp">Paulo Ribeiro</td><td class="supv">Camila Viana</td></tr>
+</table>
+<div class="usina"><span class="unome">Tanabi 1 <span class="cli">(Thopen)</span></span><span class="ustats">20 atrasadas de 22 abertas · mais antiga <b class="amber">53d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">53d</td><td class="osn">OS 10810</td><td class="tp">Administrativa</td><td>Visita de Segurança THOPEN</td><td class="resp">Luis Moura</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">35d</td><td class="osn">OS 12405</td><td class="tp">Corretiva</td><td>Tracker 60 - acompanhamento de inject da TCU com a STI</td><td class="resp">Paulo Ribeiro</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">20d</td><td class="osn">OS 12721</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Transformador <span class="xmul">· 17 tarefas</span></td><td class="resp">Paulo Ribeiro</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">18d</td><td class="osn">OS 13657</td><td class="tp">Corretiva</td><td>[Tracker 110.100] - Verificar operação dos trackers…</td><td class="resp">Paulo Ribeiro</td><td class="supv">Camila Viana</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>SP Leste 02</span><span>43 atrasadas · 58 abertas · mais antiga 96d</span></div>
+<div class="usina"><span class="unome">Araçoiaba da Serra 2 <span class="cli">(Thopen)</span></span><span class="ustats">24 atrasadas de 25 abertas · mais antiga <b class="red">63d</b></span></div>
+<table class="mini">
+<tr><td class="n red">63d</td><td class="osn">OS 10189</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - Ar Condicionado <span class="xmul">· 22 tarefas</span></td><td class="resp">Eduardo Mendes</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n red">61d</td><td class="osn">OS 10636</td><td class="tp">Zeladoria</td><td>Acompanhamento - Supressão Vegetal</td><td class="resp">Eduardo Mendes</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n ">24d</td><td class="osn">OS 13043</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Estação Solarimétrica</td><td class="resp">Eduardo Mendes</td><td class="supv">Danuth Fernandes</td></tr>
+</table>
+<div class="usina"><span class="unome">Salto Pirapora 3 <span class="cli">(Thopen)</span></span><span class="ustats">16 atrasadas de 16 abertas · mais antiga <b class="">26d</b></span></div>
+<table class="mini">
+<tr><td class="n ">26d</td><td class="osn">OS 13238</td><td class="tp">Administrativa</td><td>[Estrutura de Trackers] - Acompanhamento de chamado…</td><td class="resp">Singrid Vieira</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n ">20d</td><td class="osn">OS 13060</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPS - SPDA <span class="xmul">· 14 tarefas</span></td><td class="resp">Eduardo Mendes</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n ">14d</td><td class="osn">OS 13880</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - RSU</td><td class="resp">Eduardo Mendes</td><td class="supv">Danuth Fernandes</td></tr>
+</table>
+<div class="usina"><span class="unome">Araçoiaba da Serra 1 <span class="cli">(Thopen)</span></span><span class="ustats">3 atrasadas de 5 abertas · mais antiga <b class="red">96d</b></span></div>
+<table class="mini">
+<tr><td class="n red">96d</td><td class="osn">OS 8401</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPS - SPDA</td><td class="resp">Eduardo Mendes</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n red">61d</td><td class="osn">OS 10635</td><td class="tp">Zeladoria</td><td>Acompanhamento - Supressão Vegetal</td><td class="resp">Eduardo Mendes</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n ">18d</td><td class="osn">OS 13732</td><td class="tp">Administrativa</td><td>[Tracker 14.100] - Acompanhamento de chamado Brametal</td><td class="resp">Singrid Vieira</td><td class="supv">Danuth Fernandes</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>SP Leste 03</span><span>25 atrasadas · 50 abertas · mais antiga 70d</span></div>
+<div class="usina"><span class="unome">Santa Bárbara 1 <span class="cli">(Thopen)</span></span><span class="ustats">21 atrasadas de 27 abertas · mais antiga <b class="">33d</b></span></div>
+<table class="mini">
+<tr><td class="n ">33d</td><td class="osn">OS 12570</td><td class="tp">Inspeção</td><td>Análise do relé e cabine - UFV Santa Bárbara</td><td class="resp">Felipe Lima</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 13217</td><td class="tp">Administrativa</td><td>[Estrutura Trackers  Santa Bárbara d'Oeste  São Paulo…</td><td class="resp">Singrid Vieira</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n ">19d</td><td class="osn">OS 13480</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - Tracker <span class="xmul">· 19 tarefas</span></td><td class="resp">Felipe Lima</td><td class="supv">Danuth Fernandes</td></tr>
+</table>
+<div class="usina"><span class="unome">Piracicaba 1 <span class="cli">(Thopen)</span></span><span class="ustats">2 atrasadas de 4 abertas · mais antiga <b class="red">70d</b></span></div>
+<table class="mini">
+<tr><td class="n red">70d</td><td class="osn">OS 10157</td><td class="tp">Corretiva</td><td>[Piracicaba] - Investigação de anomalia no TC da…</td><td class="resp">Felipe Lima</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n amber">40d</td><td class="osn">OS 11358</td><td class="tp">Corretiva</td><td>[Piracicaba] - Manutenção Corretiva e Investigação…</td><td class="resp">Felipe Lima</td><td class="supv">Danuth Fernandes</td></tr>
+</table>
+<div class="usina"><span class="unome">Indaiatuba 1 <span class="cli">(Thopen)</span></span><span class="ustats">1 atrasadas de 2 abertas · mais antiga <b class="">35d</b></span></div>
+<table class="mini">
+<tr><td class="n ">35d</td><td class="osn">OS 12234</td><td class="tp">Preventiva</td><td>[Indaiatuba] - Regularização Geral de Termografias:…</td><td class="resp">Felipe Lima</td><td class="supv">Danuth Fernandes</td></tr>
+</table>
+<div class="usina"><span class="unome">Caxambu 1 <span class="cli">(Thopen)</span></span><span class="ustats">1 atrasadas de 17 abertas · mais antiga <b class="">12d</b></span></div>
+<table class="mini">
+<tr><td class="n ">12d</td><td class="osn">OS 14451</td><td class="tp">Corretiva</td><td>[Caxambu] - Investigação de possível Hotspot na ETM…</td><td class="resp">Felipe Lima</td><td class="supv">Danuth Fernandes</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>SP Leste 07</span><span>18 atrasadas · 20 abertas · mais antiga 31d</span></div>
+<div class="usina"><span class="unome">Elias Fausto 1 <span class="cli">(RenoGrid)</span></span><span class="ustats">18 atrasadas de 20 abertas · mais antiga <b class="">31d</b></span></div>
+<table class="mini">
+<tr><td class="n ">31d</td><td class="osn">OS 12407</td><td class="tp">Zeladoria</td><td>Acompanhamento - Poda Química</td><td class="resp">Felipe Lima</td><td class="supv">Fred Alexandrino</td></tr>
+<tr><td class="n ">21d</td><td class="osn">OS 12720</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - SPDA <span class="xmul">· 17 tarefas</span></td><td class="resp">Felipe Lima</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>SP Norte 03</span><span>6 atrasadas · 37 abertas · mais antiga 53d</span></div>
+<div class="usina"><span class="unome">Brodowski 1 <span class="cli">(Thopen)</span></span><span class="ustats">6 atrasadas de 37 abertas · mais antiga <b class="amber">53d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">53d</td><td class="osn">OS 10885</td><td class="tp">Corretiva</td><td>Substituição de Ventiladores</td><td class="resp">Luis Moura</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">33d</td><td class="osn">OS 12693</td><td class="tp">Religamento</td><td>[THPN-BWK100] - Verificação de comunicação do…</td><td class="resp">Luis Moura</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">32d</td><td class="osn">OS 12688</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Inversor</td><td class="resp">Luis Moura</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">32d</td><td class="osn">OS 12911</td><td class="tp">Corretiva</td><td>Instalação de transformador auxiliar - SKID 2</td><td class="resp">Luis Moura</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">12d</td><td class="osn">OS 14449</td><td class="tp">Corretiva</td><td>[Brodowski] - Regularização de comunicação ethernet…</td><td class="resp">Luis Moura</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">11d</td><td class="osn">OS 14327</td><td class="tp">Corretiva</td><td>Retirada de duas câmeras do CFTV</td><td class="resp">Luis Moura</td><td class="supv">Camila Viana</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>SP Norte 02</span><span>5 atrasadas · 43 abertas · mais antiga 27d</span></div>
+<div class="usina"><span class="unome">Barretos 1 <span class="cli">(Thopen)</span></span><span class="ustats">3 atrasadas de 19 abertas · mais antiga <b class="">27d</b></span></div>
+<table class="mini">
+<tr><td class="n ">27d</td><td class="osn">OS 13187</td><td class="tp">Corretiva</td><td>Reposição de óleo do transformador - Transformador 01</td><td class="resp">Anderson Parente</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">27d</td><td class="osn">OS 13188</td><td class="tp">Corretiva</td><td>Reposição de óleo do transformador - Transformador 02</td><td class="resp">Anderson Parente</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">11d</td><td class="osn">OS 14330</td><td class="tp">Corretiva</td><td>Verificação das câmeras Bullet 06o, 07o, 9T e 10</td><td class="resp">Anderson Parente</td><td class="supv">Camila Viana</td></tr>
+</table>
+<div class="usina"><span class="unome">Altair 1 <span class="cli">(Thopen)</span></span><span class="ustats">2 atrasadas de 24 abertas · mais antiga <b class="">27d</b></span></div>
+<table class="mini">
+<tr><td class="n ">27d</td><td class="osn">OS 13186</td><td class="tp">Corretiva</td><td>Reposição de óleo do transformador</td><td class="resp">Anderson Parente</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">19d</td><td class="osn">OS 13653</td><td class="tp">Corretiva</td><td>Corretiva - Inspeção de CFTV</td><td class="resp">Anderson Parente</td><td class="supv">Camila Viana</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>SP Centro 01</span><span>2 atrasadas · 38 abertas · mais antiga 73d</span></div>
+<div class="usina"><span class="unome">Boa Esperança do Sul 1 e 2 <span class="cli">(Thopen)</span></span><span class="ustats">1 atrasadas de 20 abertas · mais antiga <b class="red">73d</b></span></div>
+<table class="mini">
+<tr><td class="n red">73d</td><td class="osn">OS 10016</td><td class="tp">Inspeção</td><td>Inspeção de integridade dos módulos fotovoltaicos</td><td class="resp">Andrick Gouveia</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+<div class="usina"><span class="unome">Ibaté 2 <span class="cli">(Thopen)</span></span><span class="ustats">1 atrasadas de 14 abertas · mais antiga <b class="">26d</b></span></div>
+<table class="mini">
+<tr><td class="n ">26d</td><td class="osn">OS 13294</td><td class="tp">Corretiva</td><td>Amarração de cabos CC</td><td class="resp">Rogério Aparecido…</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>SP Centro 02</span><span>1 atrasadas · 15 abertas · mais antiga 77d</span></div>
+<div class="usina"><span class="unome">Topázio (Matão 2) <span class="cli">(Thopen)</span></span><span class="ustats">1 atrasadas de 14 abertas · mais antiga <b class="red">77d</b></span></div>
+<table class="mini">
+<tr><td class="n red">77d</td><td class="osn">OS 9723</td><td class="tp">Corretiva</td><td>Manutenção e instalação de câmeras de CFTV</td><td class="resp">Eduardo Souza</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+</div>
+<div class="reghead">PI · 28 tarefas atrasadas · 1 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>PI Oeste 01</span><span>28 atrasadas · 65 abertas · mais antiga 77d</span></div>
+<div class="usina"><span class="unome">Demerval Lobão 1 <span class="cli">(Greenyellow)</span></span><span class="ustats">28 atrasadas de 31 abertas · mais antiga <b class="red">77d</b></span></div>
+<table class="mini">
+<tr><td class="n red">77d</td><td class="osn">OS 8783</td><td class="tp">Preventiva</td><td>[GreenYellow] - MPA - Infraestrutura <span class="xmul">· 28 tarefas</span></td><td class="resp">Ailton Leal</td><td class="supv">Marcelo Martineli</td></tr>
+</table>
+</div>
+<div class="reghead">BA · 24 tarefas atrasadas · 3 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>BA Sul 01</span><span>24 atrasadas · 54 abertas · mais antiga 46d</span></div>
+<div class="usina"><span class="unome">Ibirapuã 2 <span class="cli">(Ultragaz)</span></span><span class="ustats">24 atrasadas de 40 abertas · mais antiga <b class="amber">46d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">46d</td><td class="osn">OS 10322</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - Estação Solarimétrica <span class="xmul">· 24 tarefas</span></td><td class="resp">Thiago Morais</td><td class="supv">Vitor Valadares</td></tr>
+</table>
+</div>
+<div class="reghead">RJ · 26 tarefas atrasadas · 2 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>RJ Norte 01</span><span>26 atrasadas · 71 abertas · mais antiga 49d</span></div>
+<div class="usina"><span class="unome">Saturnino 1 <span class="cli">(Thopen)</span></span><span class="ustats">23 atrasadas de 39 abertas · mais antiga <b class="">20d</b></span></div>
+<table class="mini">
+<tr><td class="n ">20d</td><td class="osn">OS 13606</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - Tracker <span class="xmul">· 23 tarefas</span></td><td class="resp">Carlos Bruno…</td><td class="supv">Danuth Fernandes</td></tr>
+</table>
+<div class="usina"><span class="unome">Fazenda Limão 1 <span class="cli">(Thopen)</span></span><span class="ustats">2 atrasadas de 18 abertas · mais antiga <b class="amber">49d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">49d</td><td class="osn">OS 11318</td><td class="tp">Zeladoria</td><td>Acompanhamento - Limpeza de Módulos (Termografia se…</td><td class="resp">Carlos Bruno…</td><td class="supv">Danuth Fernandes</td></tr>
+<tr><td class="n ">17d</td><td class="osn">OS 13736</td><td class="tp">Corretiva…</td><td>[Grid Co.] - MPA - SPDA - Pendências</td><td class="resp">Carlos Bruno…</td><td class="supv">Danuth Fernandes</td></tr>
+</table>
+<div class="usina"><span class="unome">Campos dos Goytacazes 1 <span class="cli">(Thopen)</span></span><span class="ustats">1 atrasadas de 14 abertas · mais antiga <b class="">17d</b></span></div>
+<table class="mini">
+<tr><td class="n ">17d</td><td class="osn">OS 13764</td><td class="tp">Zeladoria</td><td>Acompanhamento - Supressão Vegetal</td><td class="resp">Carlos Bruno…</td><td class="supv">Danuth Fernandes</td></tr>
+</table>
+</div>
+<div class="reghead">MS · 21 tarefas atrasadas · 1 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>MS Leste 01</span><span>21 atrasadas · 25 abertas · mais antiga 60d</span></div>
+<div class="usina"><span class="unome">Aparecida do Taboado 1 e 2 <span class="cli">(Thopen)</span></span><span class="ustats">21 atrasadas de 25 abertas · mais antiga <b class="amber">60d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">60d</td><td class="osn">OS 11503</td><td class="tp">Inspeção</td><td>[Estrutura Trackers  Aparecida do Taboado  Mato…</td><td class="resp">Carlos Godoi</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n amber">54d</td><td class="osn">OS 10861</td><td class="tp">Corretiva</td><td>Substituição de Contatora</td><td class="resp">Paulo Ribeiro</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 12779</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Paulo Ribeiro</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">24d</td><td class="osn">OS 13248</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Transformador <span class="xmul">· 17 tarefas</span></td><td class="resp">Carlos Godoi</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">24d</td><td class="osn">OS 13362</td><td class="tp">Corretiva</td><td>[Inversor 1.1] - Recomposição de String</td><td class="resp">Carlos Godoi</td><td class="supv">Camila Viana</td></tr>
+</table>
+</div>
+<div class="reghead">PA · 83 tarefas atrasadas · 5 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>PA Leste 01</span><span>53 atrasadas · 57 abertas · mais antiga 82d</span></div>
+<div class="usina"><span class="unome">Marabá 2 <span class="cli">(Athon)</span></span><span class="ustats">21 atrasadas de 22 abertas · mais antiga <b class="amber">40d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">40d</td><td class="osn">OS 12192</td><td class="tp">Inspeção</td><td>[Tracker 117.104] - Verificação de tracker parado</td><td class="resp">James Chaves</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n amber">40d</td><td class="osn">OS 12193</td><td class="tp">Inspeção</td><td>[Tracker 124.105] - Verificação de tracker parado</td><td class="resp">James Chaves</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 12807</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">James Chaves</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">19d</td><td class="osn">OS 12701</td><td class="tp">Preventiva</td><td>[Athon] - MPM - Cabine <span class="xmul">· 18 tarefas</span></td><td class="resp">James Chaves</td><td class="supv">Camila Viana</td></tr>
+</table>
+<div class="usina"><span class="unome">Marabá 1 <span class="cli">(Athon)</span></span><span class="ustats">17 atrasadas de 20 abertas · mais antiga <b class="red">82d</b></span></div>
+<table class="mini">
+<tr><td class="n red">82d</td><td class="osn">OS 9058</td><td class="tp">Corretiva</td><td>MAB100 - Galvanização a frio das Estacas</td><td class="resp">James Chaves</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">34d</td><td class="osn">OS 12565</td><td class="tp">Inspeção</td><td>Abertura de chamado para garantia [Testes em Campo]…</td><td class="resp">James Chaves</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 12649</td><td class="tp">Preventiva</td><td>[Athon] - MPM - Transformador <span class="xmul">· 13 tarefas</span></td><td class="resp">James Chaves</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 13319</td><td class="tp">Corretiva</td><td>Abertura de chamado para garantia [Testes em Campo]…</td><td class="resp">James Chaves</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 13320</td><td class="tp">Teste</td><td>OS de teste</td><td class="resp">James Chaves</td><td class="supv">Camila Viana</td></tr>
+</table>
+<div class="usina"><span class="unome">Jacundá 1 <span class="cli">(Athon)</span></span><span class="ustats">15 atrasadas de 15 abertas · mais antiga <b class="">32d</b></span></div>
+<table class="mini">
+<tr><td class="n ">32d</td><td class="osn">OS 12603</td><td class="tp">Inspeção</td><td>[JCD100] - Inspeção e regularização do sensor de GHI</td><td class="resp">James Chaves</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">20d</td><td class="osn">OS 12700</td><td class="tp">Preventiva</td><td>[Athon] - MPM - Sistemas de segurança <span class="xmul">· 14 tarefas</span></td><td class="resp">James Chaves</td><td class="supv">Camila Viana</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>PA Norte 01</span><span>19 atrasadas · 50 abertas · mais antiga 27d</span></div>
+<div class="usina"><span class="unome">Santa Maria do Pará 1 <span class="cli">(Athon)</span></span><span class="ustats">18 atrasadas de 22 abertas · mais antiga <b class="">27d</b></span></div>
+<table class="mini">
+<tr><td class="n ">27d</td><td class="osn">OS 12909</td><td class="tp">Inspeção</td><td>[SMP100] - Trackers com range pequeno</td><td class="resp">Pedro Henrique</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">19d</td><td class="osn">OS 12659</td><td class="tp">Preventiva</td><td>[Athon] - MPM - Sistemas de segurança <span class="xmul">· 17 tarefas</span></td><td class="resp">Gilson Souza</td><td class="supv">Camila Viana</td></tr>
+</table>
+<div class="usina"><span class="unome">Capitão Poço 1 <span class="cli">(Athon)</span></span><span class="ustats">1 atrasadas de 28 abertas · mais antiga <b class="">26d</b></span></div>
+<table class="mini">
+<tr><td class="n ">26d</td><td class="osn">OS 12800</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Gilson Souza</td><td class="supv">Camila Viana</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>PA Norte 03</span><span>6 atrasadas · 32 abertas · mais antiga 21d</span></div>
+<div class="usina"><span class="unome">Ipixuna 1 e 2 <span class="cli">(Thopen)</span></span><span class="ustats">5 atrasadas de 18 abertas · mais antiga <b class="">21d</b></span></div>
+<table class="mini">
+<tr><td class="n ">21d</td><td class="osn">OS 13473</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - Transformador <span class="xmul">· 5 tarefas</span></td><td class="resp">Wesllen Castro</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Ipixuna do Pará 1 <span class="cli">(2C)</span></span><span class="ustats">1 atrasadas de 14 abertas · mais antiga <b class="">19d</b></span></div>
+<table class="mini">
+<tr><td class="n ">19d</td><td class="osn">OS 13692</td><td class="tp">Corretiva</td><td>[Ipixuna do Pará] - Solução de falha na comunicação…</td><td class="resp">Wesllen Castro</td><td class="supv">Pedro Candido</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>PA Oeste 01</span><span>5 atrasadas · 23 abertas · mais antiga 49d</span></div>
+<div class="usina"><span class="unome">Santarém 1 e 2 <span class="cli">(Thopen)</span></span><span class="ustats">5 atrasadas de 23 abertas · mais antiga <b class="amber">49d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">49d</td><td class="osn">OS 10169</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - Relé de Proteção <span class="xmul">· 5 tarefas</span></td><td class="resp">Júlio Willers</td><td class="supv">Pedro Candido</td></tr>
+</table>
+</div>
+<div class="reghead">PE · 43 tarefas atrasadas · 2 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>PE Leste 01</span><span>22 atrasadas · 66 abertas · mais antiga 33d</span></div>
+<div class="usina"><span class="unome">São Bento do Una 1 <span class="cli">(Thopen)</span></span><span class="ustats">20 atrasadas de 33 abertas · mais antiga <b class="">33d</b></span></div>
+<table class="mini">
+<tr><td class="n ">33d</td><td class="osn">OS 12429</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPA - Inversor <span class="xmul">· 18 tarefas</span></td><td class="resp">Matheus Leite</td><td class="supv">Vitor Valadares</td></tr>
+<tr><td class="n ">12d</td><td class="osn">OS 14337</td><td class="tp">Corretiva</td><td>Aplicação de espuma expansível nos inversores</td><td class="resp">Matheus Leite</td><td class="supv">Vitor Valadares</td></tr>
+<tr><td class="n ">12d</td><td class="osn">OS 14340</td><td class="tp">Corretiva</td><td>Limpeza das câmeras do CFTV</td><td class="resp">Matheus Leite</td><td class="supv">Vitor Valadares</td></tr>
+</table>
+<div class="usina"><span class="unome">Vertentes 2 <span class="cli">(Thopen)</span></span><span class="ustats">2 atrasadas de 16 abertas · mais antiga <b class="">12d</b></span></div>
+<table class="mini">
+<tr><td class="n ">12d</td><td class="osn">OS 14345</td><td class="tp">Corretiva</td><td>Limpeza dos filtros de ar dos skids <span class="xmul">· 2 tarefas</span></td><td class="resp">Matheus Leite</td><td class="supv">Vitor Valadares</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>PE Oeste 01</span><span>21 atrasadas · 56 abertas · mais antiga 119d</span></div>
+<div class="usina"><span class="unome">Petrolina 2 <span class="cli">(Axis)</span></span><span class="ustats">12 atrasadas de 25 abertas · mais antiga <b class="red">119d</b></span></div>
+<table class="mini">
+<tr><td class="n red">119d</td><td class="osn">OS 7103</td><td class="tp">Preventiva</td><td>[Axis] - MPA - QGBT/QDMT/QSFV/QSA <span class="xmul">· 4 tarefas</span></td><td class="resp">Rodrigo Silva</td><td class="supv">Vitor Valadares</td></tr>
+<tr><td class="n red">82d</td><td class="osn">OS 9456</td><td class="tp">Preventiva</td><td>Acompanhamento - Supressão Vegetal</td><td class="resp">Rodrigo Silva</td><td class="supv">Vitor Valadares</td></tr>
+<tr><td class="n amber">54d</td><td class="osn">OS 11120</td><td class="tp">Corretiva…</td><td>[Inversor 1.5] - Religamento do Inversor 1.5</td><td class="resp">Rodrigo Silva</td><td class="supv">Vitor Valadares</td></tr>
+<tr><td class="n ">32d</td><td class="osn">OS 12328</td><td class="tp">Preventiva</td><td>[Axis] - MPA - Módulos Fotovoltaicos <span class="xmul">· 5 tarefas</span></td><td class="resp">Rodrigo Silva</td><td class="supv">Vitor Valadares</td></tr>
+<tr><td class="n ">21d</td><td class="osn">OS 12932</td><td class="tp">Zeladoria</td><td>Acompanhamento - Limpeza de Módulos (Termografia se…</td><td class="resp">Rodrigo Silva</td><td class="supv">Vitor Valadares</td></tr>
+</table>
+<div class="usina"><span class="unome">Petrolina 3 <span class="cli">(Axis)</span></span><span class="ustats">9 atrasadas de 31 abertas · mais antiga <b class="red">111d</b></span></div>
+<table class="mini">
+<tr><td class="n red">111d</td><td class="osn">OS 7104</td><td class="tp">Preventiva</td><td>[Axis] - MPA - Cabos CA/CC <span class="xmul">· 2 tarefas</span></td><td class="resp">Matheus Leite</td><td class="supv">Vitor Valadares</td></tr>
+<tr><td class="n amber">39d</td><td class="osn">OS 12316</td><td class="tp">Preventiva</td><td>[Axis] - MPA - Módulos Fotovoltaicos <span class="xmul">· 6 tarefas</span></td><td class="resp">Matheus Leite</td><td class="supv">Vitor Valadares</td></tr>
+<tr><td class="n ">20d</td><td class="osn">OS 12933</td><td class="tp">Zeladoria</td><td>Acompanhamento - Limpeza de Módulos (Termografia se…</td><td class="resp">Rodrigo Silva</td><td class="supv">Vitor Valadares</td></tr>
+</table>
+</div>
+<div class="reghead">MA · 28 tarefas atrasadas · 2 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>MA Leste 01</span><span>25 atrasadas · 27 abertas · mais antiga 103d</span></div>
+<div class="usina"><span class="unome">Timon 2 <span class="cli">(Athon)</span></span><span class="ustats">18 atrasadas de 18 abertas · mais antiga <b class="amber">39d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">39d</td><td class="osn">OS 12311</td><td class="tp">Inspeção</td><td>ETM TIM200 - Avaliação do IPOA</td><td class="resp">Pedro Henrique</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 12804</td><td class="tp">Administrativa</td><td>Levantamento de EPC</td><td class="resp">Luiz Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">26d</td><td class="osn">OS 13013</td><td class="tp">Preventiva</td><td>[Athon] - MPM - Infraestrutura <span class="xmul">· 15 tarefas</span></td><td class="resp">Luiz Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">14d</td><td class="osn">OS 14011</td><td class="tp">Corretiva</td><td>Substituição TCU 32 do SKID 202</td><td class="resp">Luiz Silva</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Timon 1 <span class="cli">(Athon)</span></span><span class="ustats">7 atrasadas de 9 abertas · mais antiga <b class="red">103d</b></span></div>
+<table class="mini">
+<tr><td class="n red">103d</td><td class="osn">OS 8338</td><td class="tp">Corretiva</td><td>[TIM100][Trackers] - Verificar e mapear trackers…</td><td class="resp">Luiz Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n red">95d</td><td class="osn">OS 8830</td><td class="tp">Administrativa</td><td>Acompanhamento retrofit CFTV</td><td class="resp">Luiz Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">30d</td><td class="osn">OS 13611</td><td class="tp">Inspeção</td><td>[Tracker 117.100 STI Norland] - Inspeção para chamado…</td><td class="resp">Luiz Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">27d</td><td class="osn">OS 12945</td><td class="tp">Preventiva</td><td>[Athon] - MPM - Infraestrutura</td><td class="resp">Luiz Silva</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">20d</td><td class="osn">OS 13610</td><td class="tp">Administrativa</td><td>[Tracker 32.100 STI Norland] - Acompanhamento de…</td><td class="resp">Singrid Vieira</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">20d</td><td class="osn">OS 13612</td><td class="tp">Administrativa</td><td>[Tracker 117.100 STI Norland] - Acompanhamento de…</td><td class="resp">Singrid Vieira</td><td class="supv">Pedro Candido</td></tr>
+<tr><td></td><td colspan="5" class="mais">+ 1 OS atrasadas nesta usina</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>MA Leste 02</span><span>3 atrasadas · 38 abertas · mais antiga 47d</span></div>
+<div class="usina"><span class="unome">Matões 1 <span class="cli">(Athon)</span></span><span class="ustats">2 atrasadas de 28 abertas · mais antiga <b class="">19d</b></span></div>
+<table class="mini">
+<tr><td class="n ">19d</td><td class="osn">OS 13655</td><td class="tp">Administrativa</td><td>[Inversor 6.2 CANANDIAN SOLAR] - Acompanhamento de…</td><td class="resp">Singrid Vieira</td><td class="supv">Pedro Candido</td></tr>
+<tr><td class="n ">17d</td><td class="osn">OS 13800</td><td class="tp">Administrativa</td><td>[Tracker 06.101 Convert Italia SpA] - Acompanhamento…</td><td class="resp">Singrid Vieira</td><td class="supv">Pedro Candido</td></tr>
+</table>
+<div class="usina"><span class="unome">Matões 2 <span class="cli">(Athon)</span></span><span class="ustats">1 atrasadas de 10 abertas · mais antiga <b class="amber">47d</b></span></div>
+<table class="mini">
+<tr><td class="n amber">47d</td><td class="osn">OS 11524</td><td class="tp">Inspeção</td><td>[Inversores - MTS200] - Avaliação das correntes nulas</td><td class="resp">Luis Otavio Lima de…</td><td class="supv">Pedro Candido</td></tr>
+</table>
+</div>
+<div class="reghead">ES · 60 tarefas atrasadas · 2 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>ES Norte 01</span><span>60 atrasadas · 66 abertas · mais antiga 26d</span></div>
+<div class="usina"><span class="unome">Córrego do Sapucaia 1 <span class="cli">(Thopen)</span></span><span class="ustats">15 atrasadas de 17 abertas · mais antiga <b class="">17d</b></span></div>
+<table class="mini">
+<tr><td class="n ">17d</td><td class="osn">OS 13285</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Transformador <span class="xmul">· 15 tarefas</span></td><td class="resp">Marcos Duarte</td><td class="supv">Vitor Valadares</td></tr>
+</table>
+<div class="usina"><span class="unome">Primavera 2 <span class="cli">(Thopen)</span></span><span class="ustats">13 atrasadas de 13 abertas · mais antiga <b class="">25d</b></span></div>
+<table class="mini">
+<tr><td class="n ">25d</td><td class="osn">OS 12939</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Transformador <span class="xmul">· 13 tarefas</span></td><td class="resp">Marcos Duarte</td><td class="supv">Vitor Valadares</td></tr>
+</table>
+<div class="usina"><span class="unome">Linhares 1 <span class="cli">(Thopen)</span></span><span class="ustats">11 atrasadas de 12 abertas · mais antiga <b class="">26d</b></span></div>
+<table class="mini">
+<tr><td class="n ">26d</td><td class="osn">OS 12930</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Transformador <span class="xmul">· 11 tarefas</span></td><td class="resp">Marcos Duarte</td><td class="supv">Vitor Valadares</td></tr>
+</table>
+<div class="usina"><span class="unome">Vargem Grande 1 <span class="cli">(Thopen)</span></span><span class="ustats">11 atrasadas de 13 abertas · mais antiga <b class="">24d</b></span></div>
+<table class="mini">
+<tr><td class="n ">24d</td><td class="osn">OS 12929</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Transformador <span class="xmul">· 10 tarefas</span></td><td class="resp">Marcos Duarte</td><td class="supv">Vitor Valadares</td></tr>
+<tr><td class="n ">12d</td><td class="osn">OS 14457</td><td class="tp">Corretiva</td><td>Readequação das strings</td><td class="resp">Marcos Duarte</td><td class="supv">Vitor Valadares</td></tr>
+</table>
+<div class="usina"><span class="unome">Primavera 1 <span class="cli">(Thopen)</span></span><span class="ustats">10 atrasadas de 11 abertas · mais antiga <b class="">25d</b></span></div>
+<table class="mini">
+<tr><td class="n ">25d</td><td class="osn">OS 12928</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Transformador <span class="xmul">· 10 tarefas</span></td><td class="resp">Marcos Duarte</td><td class="supv">Vitor Valadares</td></tr>
+</table>
+</div>
+<div class="reghead">RN · 16 tarefas atrasadas · 3 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>RN Leste 01</span><span>14 atrasadas · 28 abertas · mais antiga 33d</span></div>
+<div class="usina"><span class="unome">Rodrigues 2 <span class="cli">(Thopen)</span></span><span class="ustats">11 atrasadas de 13 abertas · mais antiga <b class="">26d</b></span></div>
+<table class="mini">
+<tr><td class="n ">26d</td><td class="osn">OS 12996</td><td class="tp">Handover</td><td>Handover – Strings e Conjuntos de Módulos <span class="xmul">· 11 tarefas</span></td><td class="resp">Valdério Paz</td><td class="supv">Camila Viana</td></tr>
+</table>
+<div class="usina"><span class="unome">Senador Elói 1 <span class="cli">(Thopen)</span></span><span class="ustats">2 atrasadas de 11 abertas · mais antiga <b class="">33d</b></span></div>
+<table class="mini">
+<tr><td class="n ">33d</td><td class="osn">OS 12652</td><td class="tp">Zeladoria</td><td>Acompanhamento - Supressão Vegetal</td><td class="resp">Valdério Paz</td><td class="supv">Camila Viana</td></tr>
+<tr><td class="n ">27d</td><td class="osn">OS 13190</td><td class="tp">Zeladoria</td><td>Acompanhamento - Limpeza de Módulos (Termografia se…</td><td class="resp">Valdério Paz</td><td class="supv">Camila Viana</td></tr>
+</table>
+<div class="usina"><span class="unome">Macaíba 1 <span class="cli">(Greenyellow)</span></span><span class="ustats">1 atrasadas de 4 abertas · mais antiga <b class="">31d</b></span></div>
+<table class="mini">
+<tr><td class="n ">31d</td><td class="osn">OS 12875</td><td class="tp">Administrativa</td><td>[Tracker 40.100 STI Norland STI-H250 V05]…</td><td class="resp">Singrid Vieira</td><td class="supv">Marcelo Martineli</td></tr>
+</table>
+</div>
+<div class="clblk"><div class="clhead"><span>RN Sul 01</span><span>2 atrasadas · 16 abertas · mais antiga 31d</span></div>
+<div class="usina"><span class="unome">Parelhas 1 <span class="cli">(Thopen)</span></span><span class="ustats">1 atrasadas de 1 abertas · mais antiga <b class="">31d</b></span></div>
+<table class="mini">
+<tr><td class="n ">31d</td><td class="osn">OS 12892</td><td class="tp">Zeladoria</td><td>Acompanhamento - Limpeza de Módulos (Termografia se…</td><td class="resp">Cláudio Silva</td><td class="supv">Camila Viana</td></tr>
+</table>
+<div class="usina"><span class="unome">Rodrigues 1 <span class="cli">(Thopen)</span></span><span class="ustats">1 atrasadas de 14 abertas · mais antiga <b class="">27d</b></span></div>
+<table class="mini">
+<tr><td class="n ">27d</td><td class="osn">OS 13192</td><td class="tp">Zeladoria</td><td>Acompanhamento - Limpeza de Módulos (Termografia se…</td><td class="resp">Cláudio Silva</td><td class="supv">Camila Viana</td></tr>
+</table>
+</div>
+<div class="reghead">AL · 9 tarefas atrasadas · 1 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>AL Oeste 01</span><span>9 atrasadas · 62 abertas · mais antiga 26d</span></div>
+<div class="usina"><span class="unome">Ouro Branco 1 <span class="cli">(Thopen)</span></span><span class="ustats">8 atrasadas de 36 abertas · mais antiga <b class="">26d</b></span></div>
+<table class="mini">
+<tr><td class="n ">26d</td><td class="osn">OS 13004</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - QGBT <span class="xmul">· 8 tarefas</span></td><td class="resp">Ricardo Silva</td><td class="supv">Camila Viana</td></tr>
+</table>
+<div class="usina"><span class="unome">Santana do Ipanema 1 <span class="cli">(Thopen)</span></span><span class="ustats">1 atrasadas de 3 abertas · mais antiga <b class="">24d</b></span></div>
+<table class="mini">
+<tr><td class="n ">24d</td><td class="osn">OS 12709</td><td class="tp">Preventiva</td><td>[Grid Co.] - MPM - Nobreak e Banco de Baterias</td><td class="resp">Ricardo Silva</td><td class="supv">Camila Viana</td></tr>
+</table>
+</div>
+<div class="reghead">MG · 1 tarefas atrasadas · 1 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>MG Centro 01</span><span>1 atrasadas · 1 abertas · mais antiga 70d</span></div>
+<div class="usina"><span class="unome">Sete Lagoas 2 <span class="cli">(2C)</span></span><span class="ustats">1 atrasadas de 1 abertas · mais antiga <b class="red">70d</b></span></div>
+<table class="mini">
+<tr><td class="n red">70d</td><td class="osn">OS 10149</td><td class="tp">Corretiva</td><td>[Tracker 38.200] - Chamado STI — tcu</td><td class="resp">Singrid Vieira</td><td class="supv">Fred Alexandrino</td></tr>
+</table>
+</div>
+<div class="reghead">DF · 1 tarefas atrasadas · 1 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>DF Centro 01</span><span>1 atrasadas · 97 abertas · mais antiga 34d</span></div>
+<div class="usina"><span class="unome">Ceilândia 1 <span class="cli">(Thopen)</span></span><span class="ustats">1 atrasadas de 68 abertas · mais antiga <b class="">34d</b></span></div>
+<table class="mini">
+<tr><td class="n ">34d</td><td class="osn">OS 12612</td><td class="tp">Inspeção</td><td>UFV-Ceilandia1] - Mapeamento dos Trackers</td><td class="resp">Janderson Miranda</td><td class="supv">Vitor Valadares</td></tr>
+</table>
+</div>
+<div class="reghead">GO · 1 tarefas atrasadas · 1 cluster(s)</div>
+<div class="clblk"><div class="clhead"><span>GO Centro 01</span><span>1 atrasadas · 27 abertas · mais antiga 21d</span></div>
+<div class="usina"><span class="unome">Sítio dos Nogueiras 1 <span class="cli">(Thopen)</span></span><span class="ustats">1 atrasadas de 27 abertas · mais antiga <b class="">21d</b></span></div>
+<table class="mini">
+<tr><td class="n ">21d</td><td class="osn">OS 12936</td><td class="tp">Zeladoria</td><td>Acompanhamento - Limpeza de Módulos (Termografia se…</td><td class="resp">Janderson Miranda</td><td class="supv">Vitor Valadares</td></tr>
+</table>
+</div>
+</div>
+<div class="foot"><span>Grid Co. · PCM · Semana 41 · Backlog atrasado por região</span><span>Fonte: Gestão PCM (nuvem) · tarefas de OS já finalizada (erro de sistema) não contam</span></div>
+</div>
+</body>
+</html>
