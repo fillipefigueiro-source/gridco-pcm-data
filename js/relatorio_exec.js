@@ -777,8 +777,9 @@ async function rexGerar() {
       + '<div class="rex-kpis rex-kpis-3">'
       + kpi(rexN(M.ger.atr.length), 'atrasadas', 'red') + kpi(rexN(M.ger.semos), 'sem OS no Fracttal', 'amb')
       + kpi(rexN(M.ger.csd.length), 'críticas sem data futura', 'amb') + '</div>'
-      + (M.ger.csd.length ? '<table class="rex-tbl"><tr><th>Usina</th><th>Tipo</th><th>Criticidade</th><th>Atraso</th><th>Última observação</th></tr>'
-        + M.ger.csd.slice(0, 5).map(x => '<tr><td class="rex-esq">' + rexEsc(x.nome) + '</td><td>' + x.tipo + '</td>'
+      + (M.ger.csd.length ? '<table class="rex-tbl"><tr><th>Usina</th><th>OS</th><th>Tipo</th><th>Criticidade</th><th>Atraso</th><th>Última observação</th></tr>'
+        + M.ger.csd.slice(0, 5).map(x => '<tr><td class="rex-esq">' + rexEsc(x.nome) + '</td>'
+          + '<td>' + (x.os ? rexEsc(x.os) : '<span class="rex-mut">sem OS</span>') + '</td><td>' + x.tipo + '</td>'
           + '<td><span class="gpv-crit ' + x.critCls + '">' + rexEsc(x.crit) + '</span></td>'
           + '<td>' + (x.atraso != null ? x.atraso + ' d' : '—') + '</td>'
           + '<td class="rex-esq rex-obs">' + rexEsc(String(x.obs || '').slice(0, 80)) + '</td></tr>').join('') + '</table>' : '');
