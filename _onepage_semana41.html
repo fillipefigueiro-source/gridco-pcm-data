@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>PCM · Semana 41 em uma página</title>
+<style>
+  @page { size: 470mm 262mm; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Calibri, sans-serif; color: #23203A; background: #fff;
+         width: 1740px; padding: 32px 42px 18px; }
+  .kicker { font-size: 13px; font-weight: 700; letter-spacing: 3px; color: #7a9a2e; }
+  h1 { font-size: 33px; font-weight: 800; margin: 5px 0 4px; }
+  .sub { font-size: 14.5px; color: #6B6880; }
+  .head { display: flex; justify-content: space-between; align-items: flex-start; }
+  .chips { display: flex; gap: 8px; margin-top: 6px; }
+  .chip { font-size: 12.5px; font-weight: 700; padding: 5px 14px; border-radius: 14px; white-space: nowrap; }
+  .chip.dark { background: #1C1F3B; color: #fff; }
+  .chip.line { border: 1.5px solid #A2CA40; color: #4a6b10; }
+  .chip.soft { border: 1.5px solid #d8d8e0; color: #6B6880; }
+  .meta { font-size: 12px; color: #9a97a8; margin-top: 8px; text-align: right; }
+  .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 13px; margin-top: 16px; }
+  .kpi { border: 1px solid #E3E3EA; border-radius: 10px; padding: 11px 15px 9px; }
+  .kpi .v { font-size: 30px; font-weight: 800; line-height: 1.05; }
+  .kpi .l { font-size: 12px; color: #6B6880; margin-top: 3px; line-height: 1.25; }
+  .v.amber { color: #B9770E; } .v.red { color: #B3261E; } .v.navy { color: #1C1F3B; }
+  .grid { display: grid; grid-template-columns: 1.02fr 1.42fr 1fr; gap: 13px; margin-top: 14px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr 1.06fr; gap: 13px; margin-top: 13px; }
+  .card { border: 1px solid #E3E3EA; border-radius: 10px; padding: 12px 15px; }
+  .card h2 { font-size: 14.5px; font-weight: 800; }
+  .card .tag { font-size: 10.5px; font-weight: 800; letter-spacing: 1.6px; color: #9a97a8; }
+  .card .nota { font-size: 11px; color: #9a97a8; margin-top: 6px; line-height: 1.3; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.3px; margin-top: 7px; }
+  th { text-align: left; font-size: 10.5px; letter-spacing: .5px; color: #9a97a8; font-weight: 800;
+       border-bottom: 1.5px solid #E3E3EA; padding: 3px 6px 4px; }
+  td { padding: 4.2px 6px; border-bottom: 1px solid #F0F0F4; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.total td { border-top: 1.5px solid #1C1F3B; border-bottom: none; font-weight: 800; }
+  .red { color: #B3261E; font-weight: 800; } .amber { color: #B9770E; font-weight: 700; }
+  .green { color: #2E7D32; font-weight: 700; } .navy { color: #1C1F3B; font-weight: 700; }
+  .bar { display: inline-block; height: 9px; background: #A2CA40; border-radius: 3px; vertical-align: middle; }
+  .destaque { background: #EAF3DB; border: none; }
+  .destaque .big { font-size: 13.4px; line-height: 1.45; margin-top: 7px; }
+  .foot { display: flex; justify-content: space-between; gap: 30px; margin-top: 13px;
+          font-size: 11.2px; color: #9a97a8; line-height: 1.35; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <div class="kicker">GRID CO. · OPERAÇÃO DE ATIVOS · PCM</div>
+    <h1>Semana 41 em uma página: o plano e a fila</h1>
+    <div class="sub">O que está programado para 05 a 09/10, com quem está, e a fila que a semana encontra. Informativo para o time; prioridades e decisões com a coordenação.</div>
+  </div>
+  <div>
+    <div class="chips">
+      <span class="chip dark">Semana 41 · 05 a 09 Out</span>
+      <span class="chip line">Plano fechado em 02/10 às 18h54</span>
+      <span class="chip soft">Emitido em 05/10</span>
+    </div>
+    <div class="meta">Fontes: Programação Semanal (banco_dados) e Gestão PCM (gestao_pcm), nuvem · fotos de 05/10, 11h42 e 13h23</div>
+  </div>
+</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="v navy">1.535</div><div class="l">tarefas na programação da semana (1.490 do plano + religamentos e encaixes)</div></div>
+  <div class="kpi"><div class="v amber">1.296</div><div class="l">tarefas NÃO couberam na semana; maior motivo: sem capacidade nos dias da usina (478)</div></div>
+  <div class="kpi"><div class="v red">137</div><div class="l">corretivas abertas hoje na carteira</div></div>
+  <div class="kpi"><div class="v red">30</div><div class="l">MPA/MPS atrasadas (OS de anuais e semestrais)</div></div>
+  <div class="kpi"><div class="v amber">49</div><div class="l">corretivas desta semana já na 3ª rolagem ou mais</div></div>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <div class="tag">O PLANO DA SEMANA</div>
+    <h2>Composição por tipo de tarefa</h2>
+    <table>
+      <tr><th>Tipo</th><th class="n">Tarefas</th><th></th></tr>
+      <tr><td>Preventivas (MPM e inspeções)</td><td class="n">943</td><td><span class="bar" style="width:120px"></span></td></tr>
+      <tr><td>Corretivas</td><td class="n">151</td><td><span class="bar" style="width:19px; background:#B9770E"></span></td></tr>
+      <tr><td>Handover</td><td class="n">126</td><td><span class="bar" style="width:16px; background:#1C1F3B"></span></td></tr>
+      <tr><td>MPA (anuais)</td><td class="n">120</td><td><span class="bar" style="width:15px"></span></td></tr>
+      <tr><td>Administrativas</td><td class="n">85</td><td><span class="bar" style="width:11px; background:#c9cbd6"></span></td></tr>
+      <tr><td>Zeladoria</td><td class="n">66</td><td><span class="bar" style="width:8px; background:#c9cbd6"></span></td></tr>
+      <tr><td>MPS (semestrais)</td><td class="n">32</td><td><span class="bar" style="width:4px"></span></td></tr>
+      <tr><td>Religamentos</td><td class="n">12</td><td><span class="bar" style="width:2px; background:#c9cbd6"></span></td></tr>
+      <tr class="total"><td>Total</td><td class="n">1.535</td><td></td></tr>
+    </table>
+    <div class="nota">Religamentos remotos ficam fora do cálculo de aderência (atendimento remoto, sem mobilizar campo).</div>
+  </div>
+
+  <div class="card">
+    <div class="tag">QUEM FAZ O QUÊ, EM QUE DIA</div>
+    <h2>Tarefas programadas por supervisor e dia</h2>
+    <table>
+      <tr><th>Supervisor</th><th class="n">Seg</th><th class="n">Ter</th><th class="n">Qua</th><th class="n">Qui</th><th class="n">Sex</th><th class="n">Total</th></tr>
+      <tr><td class="navy">Pedro Candido</td><td class="n">122</td><td class="n">87</td><td class="n">94</td><td class="n">58</td><td class="n">85</td><td class="n navy">446</td></tr>
+      <tr><td class="navy">Camila Viana</td><td class="n">59</td><td class="n">66</td><td class="n">72</td><td class="n">54</td><td class="n">50</td><td class="n navy">301</td></tr>
+      <tr><td class="navy">Vitor Valadares</td><td class="n">116</td><td class="n">70</td><td class="n">34</td><td class="n">41</td><td class="n">37</td><td class="n navy">298</td></tr>
+      <tr><td class="navy">Fred Alexandrino</td><td class="n">83</td><td class="n">58</td><td class="n">38</td><td class="n">46</td><td class="n">54</td><td class="n navy">279</td></tr>
+      <tr><td class="navy">Danuth Fernandes</td><td class="n">32</td><td class="n">25</td><td class="n">32</td><td class="n">57</td><td class="n">13</td><td class="n navy">159</td></tr>
+      <tr><td class="navy">Marcelo Martineli</td><td class="n">21</td><td class="n">9</td><td class="n">6</td><td class="n">12</td><td class="n">4</td><td class="n navy">52</td></tr>
+      <tr class="total"><td>Total</td><td class="n">433</td><td class="n">315</td><td class="n">276</td><td class="n">268</td><td class="n">243</td><td class="n">1.535</td></tr>
+    </table>
+    <div class="nota">Conta tarefas da planilha da Programação (inclui as de OS herdadas). Segunda concentra 28% da semana.</div>
+  </div>
+
+  <div class="card">
+    <div class="tag">ONDE A SEMANA CONCENTRA</div>
+    <h2>Usinas com mais tarefas na W41</h2>
+    <table>
+      <tr><th>Usina</th><th class="n">Tarefas</th></tr>
+      <tr><td>Ceilândia 1 (Thopen)</td><td class="n">69</td></tr>
+      <tr><td>Mandaguaçu 1 (Thopen)</td><td class="n">54</td></tr>
+      <tr><td>Capitão Poço 1 (Athon)</td><td class="n">31</td></tr>
+      <tr><td>Brodowski 1 (Thopen)</td><td class="n">31</td></tr>
+      <tr><td>Petrolina 3 (Axis)</td><td class="n">29</td></tr>
+      <tr><td>Ibirapuã 2 (Ultragaz)</td><td class="n">28</td></tr>
+    </table>
+    <div class="nota">Mandaguaçu 1 também lidera o backlog da carteira: 106 tarefas em aberto, a mais antiga com 96 dias.</div>
+  </div>
+</div>
+
+<div class="grid2">
+  <div class="card">
+    <div class="tag">FILA · HANDOVER</div>
+    <h2>Handover em aberto: as 5 maiores usinas</h2>
+    <table>
+      <tr><th>Usina</th><th class="n">Tarefas</th><th class="n">HH est.</th><th class="n">Mais antiga</th></tr>
+      <tr><td>São Bento do Una 1</td><td class="n">17</td><td class="n">3.147</td><td class="n red">194d</td></tr>
+      <tr><td>Vertentes 2</td><td class="n">14</td><td class="n">2.592</td><td class="n red">203d</td></tr>
+      <tr><td>Guatambú 1</td><td class="n">56</td><td class="n">2.470</td><td class="n amber">54d</td></tr>
+      <tr><td>Alto Paraná 2</td><td class="n">12</td><td class="n">1.838</td><td class="n red">153d</td></tr>
+      <tr><td>Cipó Guaçu</td><td class="n">33</td><td class="n">1.110</td><td class="n">19d</td></tr>
+    </table>
+    <div class="nota">Carteira toda: 474 tarefas de handover em aberto (13,0 mil HH estimados). Na W41 estão programadas 126.</div>
+  </div>
+
+  <div class="card">
+    <div class="tag">FILA · MPA E MPS</div>
+    <h2>Anuais e semestrais em aberto: 5 maiores</h2>
+    <table>
+      <tr><th>Usina</th><th class="n">Tarefas</th><th class="n">HH est.</th><th class="n">Mais antiga</th></tr>
+      <tr><td>Cidade Gaúcha 1</td><td class="n">35</td><td class="n">3.728</td><td class="n red">63d</td></tr>
+      <tr><td>Brodowski 1</td><td class="n">27</td><td class="n">1.904</td><td class="n green">no prazo</td></tr>
+      <tr><td>Demerval Lobão 1</td><td class="n">28</td><td class="n">1.848</td><td class="n red">77d</td></tr>
+      <tr><td>Ibirapuã 2</td><td class="n">24</td><td class="n">1.692</td><td class="n red">46d</td></tr>
+      <tr><td>Tupi Paulista 1 e 2</td><td class="n">26</td><td class="n">1.296</td><td class="n amber">27d</td></tr>
+    </table>
+    <div class="nota">Carteira toda: 471 tarefas de MPA/MPS em aberto (14,7 mil HH estimados). Na W41 estão programadas 152.</div>
+  </div>
+
+  <div class="card destaque">
+    <div class="tag">COMO A SEXTA VAI LER A SEMANA</div>
+    <h2>A régua do Fechamento (sexta 15h30)</h2>
+    <div class="big"><b>Aderência ao plano</b> = executadas ÷ planejadas na semana (tarefa executada = Finalizada no Fracttal). Tarefa criada depois do fechamento do plano conta como fora do plano, mesmo encaixada na semana.</div>
+    <div class="big"><b>Preventiva mede cumprimento do plano; corretiva mede resposta à demanda.</b> Corretiva que rolar para a 4ª semana sem motivo registrado aparece em vermelho.</div>
+    <div class="big"><b>Fechar a tarefa no Fracttal no dia</b> é o que faz o número aparecer: feito em campo e aberto no sistema conta como não executado.</div>
+  </div>
+</div>
+
+<div class="foot">
+  <span>Grid Co. · PCM · Semana 41 em uma página · distribuição: time de campo e coordenações</span>
+  <span>Painel completo: pcm.gridco.com.br · Relatório Executivo: github.io/gridco-pcm-data · dúvidas de prioridade: Fabrício (PCM)</span>
+</div>
+
+</body>
+</html>

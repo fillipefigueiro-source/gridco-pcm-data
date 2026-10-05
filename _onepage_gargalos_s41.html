@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Gargalos do PCM · Semana 41</title>
+<style>
+  @page { size: 475mm 265mm; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Calibri, sans-serif; color: #23203A; background: #fff;
+         width: 1760px; padding: 34px 44px 20px; }
+  .kicker { font-size: 13px; font-weight: 700; letter-spacing: 3px; color: #7a9a2e; }
+  h1 { font-size: 34px; font-weight: 800; margin: 6px 0 4px; }
+  .sub { font-size: 14.5px; color: #6B6880; }
+  .head { display: flex; justify-content: space-between; align-items: flex-start; }
+  .chips { display: flex; gap: 8px; align-items: center; margin-top: 6px; }
+  .chip { font-size: 12.5px; font-weight: 700; padding: 5px 14px; border-radius: 14px; white-space: nowrap; }
+  .chip.dark { background: #1C1F3B; color: #fff; }
+  .chip.line { border: 1.5px solid #A2CA40; color: #4a6b10; }
+  .chip.soft { border: 1.5px solid #d8d8e0; color: #6B6880; }
+  .meta { font-size: 12px; color: #9a97a8; margin-top: 8px; text-align: right; }
+  .grid { display: grid; grid-template-columns: 1.14fr 1fr 1fr 1fr; gap: 14px; margin-top: 18px; }
+  .card { border: 1px solid #E3E3EA; border-radius: 10px; padding: 14px 16px; background: #fff; }
+  .card h2 { font-size: 15px; font-weight: 800; margin-bottom: 2px; }
+  .card .tag { font-size: 11px; font-weight: 800; letter-spacing: 1.6px; color: #9a97a8; }
+  .dark { background: #1C1F3B; color: #F0F1F4; border: none; }
+  .dark h2 { color: #A9DB21; }
+  .dark .tag { color: #8e93b4; }
+  .big { font-size: 15.5px; line-height: 1.45; font-weight: 600; margin: 8px 0 10px; }
+  .big b { color: #A9DB21; }
+  .stat { display: flex; justify-content: space-between; border-top: 1px solid #343854;
+          padding: 5.5px 0; font-size: 13px; color: #c9cbdd; }
+  .stat b { color: #fff; font-size: 13.5px; }
+  .acao { margin: 9px 0 0; padding-left: 10px; border-left: 3px solid #A2CA40; font-size: 13.2px; line-height: 1.38; }
+  .acao b { display: block; font-size: 13.2px; }
+  .acao .quem { color: #7a9a2e; font-weight: 700; font-size: 12px; }
+  .passo5 { margin-top: 10px; background: #F4F4F7; border-radius: 8px; padding: 9px 11px;
+            font-size: 12.3px; line-height: 1.35; color: #4b4860; }
+  .grid2 { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.15fr; gap: 14px; margin-top: 14px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.3px; margin-top: 7px; }
+  th { text-align: left; font-size: 10.5px; letter-spacing: .6px; color: #9a97a8; font-weight: 800;
+       border-bottom: 1.5px solid #E3E3EA; padding: 3px 6px 4px; }
+  td { padding: 4.5px 6px; border-bottom: 1px solid #F0F0F4; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .red { color: #B3261E; font-weight: 800; }
+  .amber { color: #B9770E; font-weight: 700; }
+  .green { color: #2E7D32; font-weight: 800; }
+  .navy { color: #1C1F3B; font-weight: 700; }
+  .limebox { background: #EAF3DB; border: none; }
+  .limebox h2 { color: #1C1F3B; }
+  .metrica { display: flex; gap: 9px; margin-top: 9px; font-size: 13px; line-height: 1.35; }
+  .metrica .num { flex: 0 0 22px; height: 22px; border-radius: 50%; background: #A2CA40;
+                  color: #1C1F3B; font-weight: 800; font-size: 12.5px; display: flex;
+                  align-items: center; justify-content: center; margin-top: 1px; }
+  .inercia { margin-top: 11px; padding-top: 9px; border-top: 1.5px dashed #b9cf8a;
+             font-size: 12.3px; line-height: 1.38; color: #4b4860; }
+  .foot { display: flex; justify-content: space-between; margin-top: 14px; font-size: 11.3px; color: #9a97a8; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <div class="kicker">GRID CO. · OPERAÇÃO DE ATIVOS · PCM</div>
+    <h1>Gargalos do PCM: a Semana 41 pela Teoria das Restrições</h1>
+    <div class="sub">A Meta (Goldratt) aplicada à fila do PCM: identificar a restrição, explorar, subordinar, elevar, repetir. Para a Mesa de segunda 05/10.</div>
+  </div>
+  <div>
+    <div class="chips">
+      <span class="chip dark">Mesa de segunda · item de alçada</span>
+      <span class="chip line">PCM · Fabrício</span>
+      <span class="chip soft">Proposta R00 · 05/10/2026</span>
+    </div>
+    <div class="meta">Fontes: gestao_pcm.json e banco_dados.json (nuvem, robôs de 15 min) · foto de 05/10 11h42</div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card dark">
+    <div class="tag">PASSO 1 · IDENTIFICAR</div>
+    <h2>A restrição</h2>
+    <div class="big">Capacidade de execução mal alocada: <b>47% da fila</b> (Handover + MPA/MPS) quase não entra na programação, e a carga não respeita a vazão de cada equipe.</div>
+    <div class="stat"><span>Fila aberta total</span><b>58,9 mil HH · 3.652 tarefas</b></div>
+    <div class="stat"><span>Vazão do sistema (S35 a S40)</span><b>1,9 a 6,4 mil HH/sem</b></div>
+    <div class="stat"><span>Handover na fila</span><b>13,0 mil HH · 474 tarefas</b></div>
+    <div class="stat"><span>MPA + MPS na fila</span><b>14,7 mil HH · 471 tarefas</b></div>
+    <div class="stat"><span>Handover + MPAS na W41</span><b>278 de 1.535 tarefas (18%)</b></div>
+    <div class="stat"><span>Pedro Candido (restrição)</span><b>fila de 50 semanas · W41 a 2,0x</b></div>
+  </div>
+
+  <div class="card">
+    <div class="tag">PASSO 2 · EXPLORAR</div>
+    <h2>Tirar mais da restrição, sem gastar</h2>
+    <div class="acao"><b>Reprogramar a semana do Pedro para 1,0x a vazão dele</b>
+      só itens de fila crítica (Handover e MPA das usinas da lista); o excedente sai hoje.
+      <div class="quem">Pedro + Fabrício · até terça</div></div>
+    <div class="acao"><b>Kit garantido na véspera para as 120 MPA programadas</b>
+      megôhmetro, luvas isolantes e drone conferidos antes do deslocamento: zero espera em campo.
+      <div class="quem">Coordenação + Supervisores · toda tarde</div></div>
+    <div class="acao"><b>49 corretivas na 3ª+ rolagem: fechar ou cancelar com causa</b>
+      rolagem sem decisão rouba janela da restrição toda semana.
+      <div class="quem">Cada supervisor no seu bloco · até sexta</div></div>
+  </div>
+
+  <div class="card">
+    <div class="tag">PASSO 3 · SUBORDINAR</div>
+    <h2>O resto do sistema serve a restrição</h2>
+    <div class="acao"><b>Fred vira pulmão da restrição</b>
+      opera a 0,2x da própria vazão: assume no mínimo 100 tarefas de Handover/MPM dos clusters de Pedro e Danuth via apoio mútuo.
+      <div class="quem">Fred · remanejo fechado até quarta</div></div>
+    <div class="acao"><b>Regra de programação: ninguém acima de 1,0x da vazão</b>
+      a Mesa não aprova semana programada acima da vazão medida do supervisor.
+      <div class="quem">Mesa de segunda · vigora na W42</div></div>
+    <div class="acao"><b>Camila e Marcelo completam a semana só com a lista crítica</b>
+      estão a 0,4x: o espaço livre vai para Handover e MPA das usinas do topo, não para tarefa nova.
+      <div class="quem">Camila + Marcelo · programação de hoje</div></div>
+  </div>
+
+  <div class="card">
+    <div class="tag">PASSO 4 · ELEVAR</div>
+    <h2>Aumentar a capacidade da restrição</h2>
+    <div class="acao"><b>Ferramental que trava MPA: comprar ou locar</b>
+      proposta para o bloqueio de Cedro e fila de equipamentos de medição na Mesa de sexta.
+      <div class="quem">Fabrício · proposta até sexta</div></div>
+    <div class="acao"><b>RenoGrid com 1 técnico: terceiro ou remanejo permanente</b>
+      cotação pronta para decisão na Mesa da próxima segunda (12/10).
+      <div class="quem">Dallas + Fabrício · cotação na semana</div></div>
+    <div class="acao"><b>Apoio mútuo vira rotina, não exceção</b>
+      formalizar os pares de cluster na planilha de Apoio Mútuo com gatilho: fila acima de 20 semanas aciona o par.
+      <div class="quem">Coordenação · registro até sexta</div></div>
+    <div class="passo5"><b>Passo 5 · repetir:</b> no Fechamento de sexta a restrição é reavaliada com a foto nova; se mudou de lugar, o plano muda junto (sem inércia).</div>
+  </div>
+</div>
+
+<div class="grid2">
+  <div class="card">
+    <div class="tag">ONDE A FILA ESTÁ</div>
+    <h2>Equipes: fila × vazão × carga da W41</h2>
+    <table>
+      <tr><th>Supervisor</th><th class="n">Fila (HH)</th><th class="n">Vazão HH/sem</th><th class="n">Fila em semanas</th><th class="n">W41 ÷ vazão</th></tr>
+      <tr><td class="navy">Pedro Candido</td><td class="n">18.420</td><td class="n">370</td><td class="n red">49,8</td><td class="n red">2,0x</td></tr>
+      <tr><td class="navy">Camila Viana</td><td class="n">23.027</td><td class="n">870</td><td class="n red">26,5</td><td class="n">0,4x</td></tr>
+      <tr><td class="navy">Vitor Valadares</td><td class="n">9.117</td><td class="n">470</td><td class="n amber">19,4</td><td class="n">0,7x</td></tr>
+      <tr><td class="navy">Danuth Fernandes</td><td class="n">2.882</td><td class="n">150</td><td class="n amber">19,2</td><td class="n red">1,9x</td></tr>
+      <tr><td class="navy">Marcelo Martineli</td><td class="n">2.463</td><td class="n">233</td><td class="n amber">10,6</td><td class="n">0,4x</td></tr>
+      <tr><td class="navy">Fred Alexandrino</td><td class="n">3.030</td><td class="n">1.563</td><td class="n green">1,9</td><td class="n green">0,2x</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="tag">GARGALO 1</div>
+    <h2>Handover: 13,0 mil HH parados</h2>
+    <table>
+      <tr><th>Usina</th><th class="n">Tarefas</th><th class="n">HH</th><th class="n">Idade</th></tr>
+      <tr><td>São Bento do Una 1</td><td class="n">17</td><td class="n">3.147</td><td class="n red">194d</td></tr>
+      <tr><td>Vertentes 2</td><td class="n">14</td><td class="n">2.592</td><td class="n red">203d</td></tr>
+      <tr><td>Guatambú 1</td><td class="n">56</td><td class="n">2.470</td><td class="n amber">54d</td></tr>
+      <tr><td>Alto Paraná 2</td><td class="n">12</td><td class="n">1.838</td><td class="n red">153d</td></tr>
+      <tr><td>Cipó Guaçu</td><td class="n">33</td><td class="n">1.110</td><td class="n">19d</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="tag">GARGALO 2</div>
+    <h2>MPAS: 14,7 mil HH na fila</h2>
+    <table>
+      <tr><th>Usina</th><th class="n">Tarefas</th><th class="n">HH</th><th class="n">Idade</th></tr>
+      <tr><td>Cidade Gaúcha 1</td><td class="n">35</td><td class="n">3.728</td><td class="n red">63d</td></tr>
+      <tr><td>Brodowski 1</td><td class="n">27</td><td class="n">1.904</td><td class="n green">no prazo</td></tr>
+      <tr><td>Demerval Lobão 1</td><td class="n">28</td><td class="n">1.848</td><td class="n red">77d</td></tr>
+      <tr><td>Ibirapuã 2</td><td class="n">24</td><td class="n">1.692</td><td class="n red">46d</td></tr>
+      <tr><td>Tupi Paulista 1 e 2</td><td class="n">26</td><td class="n">1.296</td><td class="n amber">27d</td></tr>
+    </table>
+  </div>
+
+  <div class="card limebox">
+    <div class="tag">A SEXTA COBRA</div>
+    <h2>Três métricas no Fechamento</h2>
+    <div class="metrica"><div class="num">1</div><div><b>Handover + MPA + MPS fechados na semana:</b> mínimo 80% das 278 tarefas programadas concluídas.</div></div>
+    <div class="metrica"><div class="num">2</div><div><b>Idade máxima do Handover:</b> São Bento do Una 1 e Vertentes 2 (194 a 203 dias) executados ou com data firmada.</div></div>
+    <div class="metrica"><div class="num">3</div><div><b>Carga da W42 por supervisor:</b> ninguém acima de 1,0x da vazão; Fred acima de 0,8x.</div></div>
+    <div class="inercia"><b>Alerta de inércia (passo 5):</b> se a regra de 1,0x virar dogma, a restrição migra para o planejamento (MPA sem janela de desligamento ou sem kit). Sinal: vazão do Fred caindo ou HH bloqueado por material subindo com a carga "equilibrada".</div>
+  </div>
+</div>
+
+<div class="foot">
+  <span>Grid Co. · PCM · Gargalos da Semana 41 · one page para o Head de Operação de Ativos</span>
+  <span>Regras do Modelo R03: sem dado = sem leitura · dono é pessoa e data é dia · a Mesa só recebe gatilho de alçada</span>
+</div>
+
+</body>
+</html>
