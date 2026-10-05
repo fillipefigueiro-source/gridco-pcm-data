@@ -1,31 +1,26 @@
 {
-  "geradoEm": "2026-10-04T22:05:03Z",
+  "geradoEm": "2026-10-05T00:45:22Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
-  "semana": "2026-09-28 .. 2026-10-04",
+  "semana": "2026-10-05 .. 2026-10-11",
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4921,
-        "emAberto": 37,
-        "atrasadas": 30,
-        "concluidas30d": 805,
-        "concluidas7d": 231,
-        "naSemanaCorrente": 215
+        "total": 4922,
+        "emAberto": 38,
+        "atrasadas": 38,
+        "concluidas30d": 771,
+        "concluidas7d": 210,
+        "naSemanaCorrente": 0
       },
       "mttr": {
-        "horas": 15.62,
-        "label": "15h 37min",
-        "amostra": 805
+        "horas": 16.22,
+        "label": "16h 13min",
+        "amostra": 771
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W37",
-          "criadas": 174,
-          "finalizadas": 173
-        },
         {
           "semana": "W38",
           "criadas": 179,
@@ -38,16 +33,21 @@
         },
         {
           "semana": "W40",
-          "criadas": 220,
+          "criadas": 221,
           "finalizadas": 210
+        },
+        {
+          "semana": "W41",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4921,
-            "emAberto": 37
+            "total": 4922,
+            "emAberto": 38
           }
         ],
         "responsaveis": [
@@ -58,8 +58,8 @@
           },
           {
             "nome": "Marcos  Camargo",
-            "total": 520,
-            "emAberto": 0
+            "total": 521,
+            "emAberto": 1
           },
           {
             "nome": "Felipe Silva",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 37,
-      "atrasadas": 30,
+      "total": 38,
+      "atrasadas": 38,
       "porStatus": {
         "naoIniciada": 34,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 37
+        "(sem equipe)": 38
       },
       "oss": [
         {
@@ -633,6 +633,24 @@
           "atrasada": true
         },
         {
+          "osId": "15394",
+          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Marcos  Camargo",
+          "status": "Não Iniciada",
+          "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-04",
+          "dataCriacao": "2026-10-04",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "15391",
           "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
           "equipe": "",
@@ -648,7 +666,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "15386",
@@ -666,7 +684,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "15378",
@@ -684,7 +702,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "15375",
@@ -693,16 +711,17 @@
           "responsavel": "Luis  Moura",
           "criadoPor": "LuelySantos",
           "supervisor": "Luis  Moura",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Thopen - Topázio (Matão 2) - SP] - Religamento do Thopen - Topázio (Matão 2) - SP",
           "criticidade": "",
           "dataProgramada": "2026-10-04",
           "dataCriacao": "2026-10-04",
-          "dataInicial": "",
+          "dataInicial": "2026-10-04",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "15367",
@@ -720,7 +739,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "15363",
@@ -738,7 +757,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "15344",
@@ -757,7 +776,7 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         }
       ],
       "ossHistorico": [
@@ -3762,12 +3781,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2008,
+      "historicoTotal": 2003,
       "subClassificacao": {
         "remoto": 760,
-        "local": 4161,
+        "local": 4162,
         "remotoEmAberto": 7,
-        "localEmAberto": 30,
+        "localEmAberto": 31,
         "pctRemoto": 15,
         "alerta": true
       },
@@ -3992,21 +4011,16 @@
         "total": 866,
         "emAberto": 105,
         "atrasadas": 44,
-        "concluidas30d": 105,
+        "concluidas30d": 97,
         "concluidas7d": 26,
-        "naSemanaCorrente": 8
+        "naSemanaCorrente": 56
       },
       "mttr": {
-        "horas": 370.06,
-        "label": "15d 10h",
-        "amostra": 105
+        "horas": 375.84,
+        "label": "15d 15h",
+        "amostra": 97
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W37",
-          "criadas": 20,
-          "finalizadas": 36
-        },
         {
           "semana": "W38",
           "criadas": 8,
@@ -4021,6 +4035,11 @@
           "semana": "W40",
           "criadas": 68,
           "finalizadas": 26
+        },
+        {
+          "semana": "W41",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -8714,7 +8733,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 350
+      "historicoTotal": 342
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8724,21 +8743,16 @@
         "total": 167,
         "emAberto": 10,
         "atrasadas": 10,
-        "concluidas30d": 17,
+        "concluidas30d": 16,
         "concluidas7d": 7,
-        "naSemanaCorrente": 9
+        "naSemanaCorrente": 0
       },
       "mttr": {
-        "horas": 93.18,
-        "label": "3d 21h",
-        "amostra": 17
+        "horas": 99.0,
+        "label": "4d 3h",
+        "amostra": 16
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W37",
-          "criadas": 5,
-          "finalizadas": 2
-        },
         {
           "semana": "W38",
           "criadas": 5,
@@ -8753,6 +8767,11 @@
           "semana": "W40",
           "criadas": 9,
           "finalizadas": 7
+        },
+        {
+          "semana": "W41",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -9691,21 +9710,16 @@
         "total": 818,
         "emAberto": 56,
         "atrasadas": 43,
-        "concluidas30d": 169,
-        "concluidas7d": 35,
-        "naSemanaCorrente": 43
+        "concluidas30d": 153,
+        "concluidas7d": 34,
+        "naSemanaCorrente": 14
       },
       "mttr": {
-        "horas": 254.77,
-        "label": "10d 14h",
-        "amostra": 169
+        "horas": 231.22,
+        "label": "9d 15h",
+        "amostra": 153
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W37",
-          "criadas": 43,
-          "finalizadas": 30
-        },
         {
           "semana": "W38",
           "criadas": 39,
@@ -9720,6 +9734,11 @@
           "semana": "W40",
           "criadas": 40,
           "finalizadas": 34
+        },
+        {
+          "semana": "W41",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -13578,7 +13597,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 692
+      "historicoTotal": 690
     },
     "engenharia": {
       "label": "Engenharia",
@@ -13590,7 +13609,7 @@
         "atrasadas": 10,
         "concluidas30d": 32,
         "concluidas7d": 5,
-        "naSemanaCorrente": 6
+        "naSemanaCorrente": 0
       },
       "mttr": {
         "horas": 265.5,
@@ -13598,11 +13617,6 @@
         "amostra": 32
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W37",
-          "criadas": 5,
-          "finalizadas": 5
-        },
         {
           "semana": "W38",
           "criadas": 14,
@@ -13617,6 +13631,11 @@
           "semana": "W40",
           "criadas": 3,
           "finalizadas": 5
+        },
+        {
+          "semana": "W41",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -15837,31 +15856,29 @@
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "8900",
-          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { STN100-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Finalizados",
-          "tarefa": "[Saturnino] - Regularização das termografias do Inversor 1.1 (Pendências MPS)",
-          "criticidade": "",
-          "dataProgramada": "2026-07-07",
-          "dataCriacao": "2026-07-03",
-          "dataInicial": "2026-07-06",
-          "dataFinal": "2026-07-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 106
+      "historicoTotal": 105
     }
   },
   "ossPublicas": [
+    {
+      "osId": "15394",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Marcos  Camargo",
+      "status": "Não Iniciada",
+      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-04",
+      "dataCriacao": "2026-10-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
     {
       "osId": "15391",
       "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
@@ -15920,14 +15937,15 @@
       "responsavel": "Luis  Moura",
       "criadoPor": "LuelySantos",
       "supervisor": "Luis  Moura",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Thopen - Topázio (Matão 2) - SP] - Religamento do Thopen - Topázio (Matão 2) - SP",
       "criticidade": "",
       "dataProgramada": "2026-10-04",
       "dataCriacao": "2026-10-04",
-      "dataInicial": "",
+      "dataInicial": "2026-10-04",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -22368,8 +22386,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3193,
-  "totalGeral": 6930,
+  "historicoTotal": 3177,
+  "totalGeral": 6931,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
