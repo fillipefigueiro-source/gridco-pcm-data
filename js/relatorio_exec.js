@@ -167,6 +167,8 @@ const REX_DIA = { 'Segunda-feira': 'Seg', 'Terça-feira': 'Ter', 'Quarta-feira':
 const REX_DIAS = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex'];
 // aderência: meta 85% (verde), 60–84 âmbar, <60 vermelho — reusa as classes gpv-cel
 const rexFx = p => p >= 85 ? 'ok' : p >= 60 ? 'and' : 'crit';
+// cluster com grafia única (Fracttal tem "PA Leste 01" e "PA LESTE 01" na mesma equipe)
+const rexClu = c => String(c || '').trim().replace(/\s+/g, ' ').toUpperCase() || '—';
 const rexUsiCurta = u => String(u || '').replace(/\s*-\s*[A-Z]{2}\s*$/, '').replace(/^[^-]+-\s*/, '');
 function rexSemanas(bd) {
   if (!bd || !bd.semanas) return [];
@@ -212,13 +214,13 @@ function rexSemanas(bd) {
         const o = NP[gk] || (NP[gk] = { p: 0, f: 0 });
         o.p++; npT++;
         if (feito) { o.f++; npF++; }
-        dim(GC, r.cliente, false, feito); dim(GR, r.responsavel, false, feito);
+        dim(GC, r.cliente, false, feito); dim(GR, rexClu(r.cluster), false, feito);
         return;
       }
       const g = G[gk] || (G[gk] = { p: 0, f: 0 });
       g.p++; plan++;
       if (feito) { g.f++; fin++; }
-      dim(GC, r.cliente, true, feito); dim(GR, r.responsavel, true, feito);
+      dim(GC, r.cliente, true, feito); dim(GR, rexClu(r.cluster), true, feito);
       const cl = CLM.get(r.cluster) || { cluster: r.cluster || '—', usinas: new Set(), p: 0, f: 0, dias: {} };
       cl.usinas.add(rexUsiCurta(r.usina)); cl.p++;
       const dk = REX_DIA[String(r.dia || '')] || '—';
@@ -253,7 +255,7 @@ function rexSemanas(bd) {
       const o = NP[g] || (NP[g] = { p: 0, f: 0 });
       o.p++; npT++;
       if (fimSem) { o.f++; npF++; }
-      dim(GC, t.cliente, false, fimSem); dim(GR, t.responsavel, false, fimSem);
+      dim(GC, t.cliente, false, fimSem); dim(GR, rexClu(t.cluster), false, fimSem);
     });
     // reprogramadas: 1 linha por OS, com o maior nº de vezes
     const porOS = new Map();
@@ -627,8 +629,8 @@ async function rexGerar() {
           .sort((a, b) => (b[1].p - a[1].p) || (b[1].np - a[1].np));
         h += '<div class="rex-h3">Aderência por cliente <em>· mesma régua da tabela acima</em></div>'
           + rexTabAdesao('Cliente', ordena(s.GC))
-          + '<div class="rex-h3">Aderência por supervisor (Responsável O&amp;M) <em>· mesma régua</em></div>'
-          + rexTabAdesao('Supervisor', ordena(s.GR).map(([k, v]) => [k === '—' ? 'sem responsável no Fracttal' : k, v]));
+          + '<div class="rex-h3">Aderência por cluster <em>· mesma régua</em></div>'
+          + rexTabAdesao('Cluster', ordena(s.GR).map(([k, v]) => [k === '—' ? 'sem cluster no Fracttal' : k, v]));
       }
     });
     h += '<div class="rex-nota">Plano = a planilha da Programação da semana; tarefa criada DEPOIS do fechamento do plano '
