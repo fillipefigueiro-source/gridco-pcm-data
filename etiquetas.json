@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-06T11:34:49Z",
+  "geradoEm": "2026-10-06T11:59:55Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-05 .. 2026-10-11",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4957,
-        "emAberto": 37,
-        "atrasadas": 32,
-        "concluidas30d": 787,
-        "concluidas7d": 217,
-        "naSemanaCorrente": 34
+        "total": 4958,
+        "emAberto": 36,
+        "atrasadas": 30,
+        "concluidas30d": 789,
+        "concluidas7d": 219,
+        "naSemanaCorrente": 35
       },
       "mttr": {
-        "horas": 16.86,
-        "label": "16h 52min",
-        "amostra": 787
+        "horas": 16.88,
+        "label": "16h 53min",
+        "amostra": 789
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W41",
-          "criadas": 35,
-          "finalizadas": 36
+          "criadas": 36,
+          "finalizadas": 38
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4957,
-            "emAberto": 37
+            "total": 4958,
+            "emAberto": 36
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 37,
-      "atrasadas": 32,
+      "total": 36,
+      "atrasadas": 30,
       "porStatus": {
-        "naoIniciada": 34,
+        "naoIniciada": 33,
         "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 37
+        "(sem equipe)": 36
       },
       "oss": [
         {
@@ -634,40 +634,22 @@
           "atrasada": true
         },
         {
-          "osId": "15437",
-          "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
+          "osId": "15513",
+          "ativo": "Inversor 3.5 Huawei     { MAB200-INVR3.5 }",
           "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Thiago Morais ",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "James Chaves ",
           "status": "Não Iniciada",
-          "tarefa": "[IBI200-INVR1.5] - Religamento do IBI200-INVR1.5",
+          "tarefa": "[Inversor 3.5] - Religamento do Inversor 3.5",
           "criticidade": "",
-          "dataProgramada": "2026-10-05",
-          "dataCriacao": "2026-10-05",
+          "dataProgramada": "2026-10-06",
+          "dataCriacao": "2026-10-06",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "15432",
-          "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Thiago Morais ",
-          "status": "Não Iniciada",
-          "tarefa": "[IBI200-INVR1.3] - Religamento do IBI200-INVR1.3",
-          "criticidade": "",
-          "dataProgramada": "2026-10-05",
-          "dataCriacao": "2026-10-05",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
+          "atrasada": false
         },
         {
           "osId": "15500",
@@ -777,6 +759,46 @@
           "dataFinal": "2026-10-06",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "15437",
+          "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[IBI200-INVR1.5] - Religamento do IBI200-INVR1.5",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-10-05",
+          "dataInicial": "2026-10-06",
+          "dataFinal": "2026-10-06",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "15432",
+          "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[IBI200-INVR1.3] - Religamento do IBI200-INVR1.3",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-10-05",
+          "dataInicial": "2026-10-06",
+          "dataFinal": "2026-10-06",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3720,54 +3742,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14706",
-          "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Cabine 3] - Religamento da Cabine 3",
-          "criticidade": "",
-          "dataProgramada": "2026-09-26",
-          "dataCriacao": "2026-09-26",
-          "dataInicial": "2026-09-27",
-          "dataFinal": "2026-09-27",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "14703",
-          "ativo": "Cabine 3 Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { CGU100-CABN3 }",
-          "equipe": "",
-          "responsavel": "Lucas Alberto Freitas de Faria ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Finalizados",
-          "tarefa": "[CGU100-CABN3] - Religamento do CGU100-CABN3",
-          "criticidade": "",
-          "dataProgramada": "2026-09-26",
-          "dataCriacao": "2026-09-26",
-          "dataInicial": "2026-09-26",
-          "dataFinal": "2026-09-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2032,
+      "historicoTotal": 2034,
       "subClassificacao": {
         "remoto": 760,
-        "local": 4197,
+        "local": 4198,
         "remotoEmAberto": 7,
-        "localEmAberto": 30,
+        "localEmAberto": 29,
         "pctRemoto": 15,
         "alerta": true
       },
@@ -4062,9 +4044,9 @@
       "total": 104,
       "atrasadas": 45,
       "porStatus": {
-        "naoIniciada": 97,
-        "emProgresso": 1,
-        "pausada": 6,
+        "naoIniciada": 96,
+        "emProgresso": 3,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4095,15 +4077,15 @@
           "responsavel": "Leonardo  Dias",
           "criadoPor": "Juliana Cândido",
           "supervisor": "Leonardo  Dias",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[GreenYellow] - MPA - QGBT",
           "criticidade": "",
           "dataProgramada": "2026-07-10",
           "dataCriacao": "2026-07-01",
-          "dataInicial": "2026-08-24",
+          "dataInicial": "2026-10-06",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 1296.0,
+          "horasAteAbrir": 2328.0,
           "atrasada": true
         },
         {
@@ -4781,14 +4763,15 @@
           "responsavel": "Rogério Aparecido Paravani ",
           "criadoPor": "Milena Araújo",
           "supervisor": "Rogério Aparecido Paravani ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Inversor",
           "criticidade": "",
           "dataProgramada": "2026-10-05",
           "dataCriacao": "2026-10-01",
-          "dataInicial": "",
+          "dataInicial": "2026-10-06",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 120.0,
           "atrasada": true
         },
         {
@@ -9725,8 +9708,8 @@
       "total": 50,
       "atrasadas": 44,
       "porStatus": {
-        "naoIniciada": 46,
-        "emProgresso": 0,
+        "naoIniciada": 45,
+        "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
@@ -10442,14 +10425,15 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Levi Maia ",
           "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.1] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-10-05",
           "dataCriacao": "2026-10-02",
-          "dataInicial": "",
+          "dataInicial": "2026-10-06",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "atrasada": true
         },
         {
@@ -15688,6 +15672,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "15513",
+      "ativo": "Inversor 3.5 Huawei     { MAB200-INVR3.5 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 3.5] - Religamento do Inversor 3.5",
+      "criticidade": "",
+      "dataProgramada": "2026-10-06",
+      "dataCriacao": "2026-10-06",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "15500",
       "ativo": "Inversor 3.1 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR3.1 }",
       "equipe": "",
@@ -16017,40 +16018,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "15437",
-      "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Thiago Morais ",
-      "status": "Não Iniciada",
-      "tarefa": "[IBI200-INVR1.5] - Religamento do IBI200-INVR1.5",
-      "criticidade": "",
-      "dataProgramada": "2026-10-05",
-      "dataCriacao": "2026-10-05",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "15432",
-      "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Thiago Morais ",
-      "status": "Não Iniciada",
-      "tarefa": "[IBI200-INVR1.3] - Religamento do IBI200-INVR1.3",
-      "criticidade": "",
-      "dataProgramada": "2026-10-05",
-      "dataCriacao": "2026-10-05",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "15431",
@@ -16513,14 +16480,15 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Levi Maia ",
       "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.1] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-10-05",
       "dataCriacao": "2026-10-02",
-      "dataInicial": "",
+      "dataInicial": "2026-10-06",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0
     },
     {
       "osId": "15202",
@@ -16775,14 +16743,15 @@
       "responsavel": "Rogério Aparecido Paravani ",
       "criadoPor": "Milena Araújo",
       "supervisor": "Rogério Aparecido Paravani ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Inversor",
       "criticidade": "",
       "dataProgramada": "2026-10-05",
       "dataCriacao": "2026-10-01",
-      "dataInicial": "",
+      "dataInicial": "2026-10-06",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0
     },
     {
       "osId": "15128",
@@ -18980,15 +18949,15 @@
       "responsavel": "Leonardo  Dias",
       "criadoPor": "Juliana Cândido",
       "supervisor": "Leonardo  Dias",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[GreenYellow] - MPA - QGBT",
       "criticidade": "",
       "dataProgramada": "2026-07-10",
       "dataCriacao": "2026-07-01",
-      "dataInicial": "2026-08-24",
+      "dataInicial": "2026-10-06",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 1296.0
+      "horasAteAbrir": 2328.0
     },
     {
       "osId": "8796",
@@ -19637,6 +19606,26 @@
       "atrasada": false
     },
     {
+      "osId": "15437",
+      "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[IBI200-INVR1.5] - Religamento do IBI200-INVR1.5",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-10-05",
+      "dataInicial": "2026-10-06",
+      "dataFinal": "2026-10-06",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "15433",
       "ativo": "Thopen - Taguai 1 e 2 - SP Taguaí - SP, CEP 18890-000 Taguai  São Paulo Brasil { THPN-TGI100 }",
       "equipe": "",
@@ -19652,6 +19641,26 @@
       "dataFinal": "2026-10-05",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "15432",
+      "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[IBI200-INVR1.3] - Religamento do IBI200-INVR1.3",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-10-05",
+      "dataInicial": "2026-10-06",
+      "dataFinal": "2026-10-06",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -22053,49 +22062,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "14859",
-      "ativo": "Thopen - Araçoiaba da Serra 1- SP  Araçoiaba  São Paulo Brasil { THPN-ADS100 }",
-      "equipe": "",
-      "responsavel": "Cícero  Willian",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Cícero  Willian",
-      "status": "Finalizados",
-      "tarefa": "[THPN-ADS100] - Religamento do THPN-ADS100",
-      "criticidade": "",
-      "dataProgramada": "2026-09-29",
-      "dataCriacao": "2026-09-29",
-      "dataInicial": "2026-09-29",
-      "dataFinal": "2026-09-29",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "14854",
-      "ativo": "Inversor 1.2  SUNGROW / SG250HX    { THPN-RDR200-INVR1.2 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Valdério Paz ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.2] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-09-30",
-      "dataCriacao": "2026-09-29",
-      "dataInicial": "2026-10-01",
-      "dataFinal": "2026-10-01",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3207,
-  "totalGeral": 6976,
+  "historicoTotal": 3209,
+  "totalGeral": 6977,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
