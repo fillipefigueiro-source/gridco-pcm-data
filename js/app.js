@@ -3249,7 +3249,7 @@ function gpFlatHTML(list){
   let h='<div class="gp-flat-hd">&#9201; Atrasadas <span class="cnt">'+arr.length+'</span>'
       +'<span class="hint">ordenadas por tempo em aberto &middot; vermelho = mais de '+lim+' dias</span></div>';
   h+='<table class="gp-flat"><thead><tr><th>Dias</th><th>OS</th><th>Cliente</th><th>Usina</th>'
-     +'<th>Tarefa</th><th>Tipo</th><th>Estado</th><th>Data Prog.</th></tr></thead><tbody>';
+     +'<th>Tarefa</th><th>Tipo</th><th>Estado</th><th>Data Prog.</th><th>Etiqueta</th><th>Observação da OS</th></tr></thead><tbody>';
   arr.forEach(t=>{
     const d=(t.dias!=null?t.dias:0);
     const cls=d>lim?'red':(d>=5?'amber':'');
@@ -3259,7 +3259,10 @@ function gpFlatHTML(list){
     h+='<tr'+crit+'><td class="dd '+cls+'">'+d+'d</td><td class="os">#'+gpEsc(t.os)+'</td>'
       +'<td>'+gpEsc(t.cliente)+'</td><td>'+gpEsc(t.usina)+'</td><td>'+tar+'</td>'
       +'<td>'+gpEsc(t.tipo||'—')+'</td><td>'+gpEstadoPill(t.estado)+'</td>'
-      +'<td class="gp-data">'+gpFmtData(t.dataProg)+'</td></tr>';
+      +'<td class="gp-data">'+gpFmtData(t.dataProg)+'</td>'
+      // etiqueta + observação da OS (campo obs do gestao_pcm.json, 06/10)
+      +'<td><div class="gp-etqs">'+((t.etiquetas||[]).map(e=>'<span class="gp-etq">'+gpEsc(e)+'</span>').join('')||'<span class="gp-data">—</span>')+'</div></td>'
+      +'<td class="gp-flat-obs" title="'+gpEsc(t.obs||'')+'">'+(t.obs?gpEsc(t.obs):'<span class="gp-data">—</span>')+'</td></tr>';
   });
   return h+'</tbody></table>';
 }
