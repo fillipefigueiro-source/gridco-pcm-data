@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-06T01:35:36Z",
+  "geradoEm": "2026-10-06T02:32:06Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-05 .. 2026-10-11",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 4946,
+        "total": 4947,
         "emAberto": 32,
         "atrasadas": 32,
-        "concluidas30d": 781,
-        "concluidas7d": 211,
-        "naSemanaCorrente": 23
+        "concluidas30d": 782,
+        "concluidas7d": 212,
+        "naSemanaCorrente": 24
       },
       "mttr": {
-        "horas": 16.95,
-        "label": "16h 57min",
-        "amostra": 781
+        "horas": 16.92,
+        "label": "16h 55min",
+        "amostra": 782
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W41",
-          "criadas": 24,
-          "finalizadas": 30
+          "criadas": 25,
+          "finalizadas": 31
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 4946,
+            "total": 4947,
             "emAberto": 32
           }
         ],
@@ -82,8 +82,8 @@
       "atrasadas": 32,
       "porStatus": {
         "naoIniciada": 29,
-        "emProgresso": 2,
-        "pausada": 1,
+        "emProgresso": 1,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
@@ -512,7 +512,7 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Luiz  Silva",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[2C-UNI100-INVR1.1] - Religamento do 2C-UNI100-INVR1.1",
           "criticidade": "",
           "dataProgramada": "2026-10-04",
@@ -536,6 +536,24 @@
           "criticidade": "",
           "dataProgramada": "2026-10-04",
           "dataCriacao": "2026-10-04",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "15485",
+          "ativo": "Thopen - Santo Anastácio - SP X9J5+542 Santo Anastácio, São Paulo Santo Anastácio  São Paulo Brasil { THPN-STA100 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Carlos  Godoi",
+          "status": "Não Iniciada",
+          "tarefa": "[Thopen - Santo Anastácio - SP] - Religamento do Thopen - Santo Anastácio - SP",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-10-05",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -642,24 +660,6 @@
           "supervisor": "Thiago Morais ",
           "status": "Não Iniciada",
           "tarefa": "[IBI200-INVR1.3] - Religamento do IBI200-INVR1.3",
-          "criticidade": "",
-          "dataProgramada": "2026-10-05",
-          "dataCriacao": "2026-10-05",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "15403",
-          "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { PTL300-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Matheus Leite ",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Matheus Leite ",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
           "criticidade": "",
           "dataProgramada": "2026-10-05",
           "dataCriacao": "2026-10-05",
@@ -780,6 +780,26 @@
           "supervisor": "Thiago Morais ",
           "status": "Finalizados",
           "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
+          "criticidade": "",
+          "dataProgramada": "2026-10-05",
+          "dataCriacao": "2026-10-05",
+          "dataInicial": "2026-10-05",
+          "dataFinal": "2026-10-05",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "15403",
+          "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { PTL300-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Matheus Leite ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
           "criticidade": "",
           "dataProgramada": "2026-10-05",
           "dataCriacao": "2026-10-05",
@@ -3650,32 +3670,12 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14701",
-          "ativo": "RenoGrid - Colíder 2 - MT Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { RNGD-CLD200 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Finalizados",
-          "tarefa": "[RNGD-CLD200] - Religamento do RNGD-CLD200",
-          "criticidade": "",
-          "dataProgramada": "2026-09-26",
-          "dataCriacao": "2026-09-26",
-          "dataInicial": "2026-09-26",
-          "dataFinal": "2026-09-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2026,
+      "historicoTotal": 2027,
       "subClassificacao": {
         "remoto": 760,
-        "local": 4186,
+        "local": 4187,
         "remotoEmAberto": 7,
         "localEmAberto": 25,
         "pctRemoto": 15,
@@ -9652,8 +9652,8 @@
       "atrasadas": 46,
       "porStatus": {
         "naoIniciada": 48,
-        "emProgresso": 1,
-        "pausada": 3,
+        "emProgresso": 0,
+        "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
@@ -10333,7 +10333,7 @@
           "responsavel": "Felipe Xavier ",
           "criadoPor": "Ana Barros ",
           "supervisor": "Felipe Xavier ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Usina] - Coleta e análise de dados de geração",
           "criticidade": "",
           "dataProgramada": "2026-10-05",
@@ -15648,6 +15648,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "15485",
+      "ativo": "Thopen - Santo Anastácio - SP X9J5+542 Santo Anastácio, São Paulo Santo Anastácio  São Paulo Brasil { THPN-STA100 }",
+      "equipe": "",
+      "responsavel": "Carlos  Godoi",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Carlos  Godoi",
+      "status": "Não Iniciada",
+      "tarefa": "[Thopen - Santo Anastácio - SP] - Religamento do Thopen - Santo Anastácio - SP",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-10-05",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "15484",
       "ativo": "RenoGrid - Nova Xavantina 1 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso  { RNGD-NVX100 }",
       "equipe": "",
@@ -15959,30 +15976,13 @@
       "linkFracttal": ""
     },
     {
-      "osId": "15403",
-      "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { PTL300-INVR1.2 }",
-      "equipe": "",
-      "responsavel": "Matheus Leite ",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Matheus Leite ",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
-      "criticidade": "",
-      "dataProgramada": "2026-10-05",
-      "dataCriacao": "2026-10-05",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "15399",
       "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.1 }",
       "equipe": "",
       "responsavel": "Luiz  Silva",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Luiz  Silva",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[2C-UNI100-INVR1.1] - Religamento do 2C-UNI100-INVR1.1",
       "criticidade": "",
       "dataProgramada": "2026-10-04",
@@ -16163,7 +16163,7 @@
       "responsavel": "Felipe Xavier ",
       "criadoPor": "Ana Barros ",
       "supervisor": "Felipe Xavier ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Usina] - Coleta e análise de dados de geração",
       "criticidade": "",
       "dataProgramada": "2026-10-05",
@@ -19599,6 +19599,26 @@
       "atrasada": false
     },
     {
+      "osId": "15403",
+      "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { PTL300-INVR1.2 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Matheus Leite ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
+      "criticidade": "",
+      "dataProgramada": "2026-10-05",
+      "dataCriacao": "2026-10-05",
+      "dataInicial": "2026-10-05",
+      "dataFinal": "2026-10-05",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "15394",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -21996,30 +22016,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "14836",
-      "ativo": "Thopen - Pharmas 2 - PR Rodovia Tsuneto Matsubara, km 4,5 Jacutinga Bandeirantes  Paraná Brasil { THPN-PHS200 }",
-      "equipe": "",
-      "responsavel": "Valdir Silva ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Valdir Silva ",
-      "status": "Finalizados",
-      "tarefa": "[THPN-PHS200] - Religamento do THPN-PHS200",
-      "criticidade": "",
-      "dataProgramada": "2026-09-29",
-      "dataCriacao": "2026-09-29",
-      "dataInicial": "2026-09-29",
-      "dataFinal": "2026-09-29",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3198,
-  "totalGeral": 6965,
+  "historicoTotal": 3199,
+  "totalGeral": 6966,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
