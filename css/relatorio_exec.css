@@ -139,3 +139,12 @@
 /* confiabilidade no período (tática): sub-tabela sob a histórica */
 .rex-sub-per { font-size: 8.5pt; font-weight: 700; color: #5a6b15; margin: 6px 0 2px; text-transform: uppercase; letter-spacing: .05em }
 .rex-tbl-per th { background: #5a6b15 }
+/* tabelas que precisam caber na folha A4 (06/10): colunas fixas, texto quebra */
+.rex-fit { table-layout: fixed; width: 100% }
+.rex-fit th, .rex-fit td { padding: 4px 6px; overflow: hidden }
+.rex-fit td.rex-esq { white-space: normal; word-break: break-word; line-height: 1.25 }
+.rex-top10 td, .rex-hh td { font-size: 8.5pt }
+.rex-top10 th, .rex-hh th { font-size: 7pt; letter-spacing: .02em }
+.rex-top10 td:last-child .gpv-cel { min-width: 0; padding: 1px 6px; font-size: 7.5pt; white-space: nowrap }
+.rex-hh td:nth-child(n+3) { white-space: nowrap }
+.rex-top10 th:nth-child(3), .rex-hh th:nth-child(2) { text-align: left }

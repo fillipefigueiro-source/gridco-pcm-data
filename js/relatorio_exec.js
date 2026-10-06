@@ -713,7 +713,9 @@ async function rexGerar() {
   if (rol10.length) {
     h += '<section><h2>' + sec('Top 10 — tarefas que mais rolaram')
       + ' <small>nº de semanas em que a OS entrou na programação</small></h2>'
-      + '<table class="rex-tbl"><tr><th>OS</th><th>Usina</th><th>Tarefa</th><th>Tipo</th><th>Rolagens</th><th>Situação</th></tr>'
+      + '<table class="rex-tbl rex-fit rex-top10"><colgroup><col style="width:8%"><col style="width:17%"><col style="width:41%">'
+      + '<col style="width:11%"><col style="width:9%"><col style="width:14%"></colgroup>'
+      + '<tr><th>OS</th><th>Usina</th><th>Tarefa</th><th>Tipo</th><th>Rolag.</th><th>Situação</th></tr>'
       + rol10.map(x => '<tr><td>' + rexEsc(x.os) + '</td><td class="rex-esq">' + rexEsc(rexUsiCurta(x.usina)) + '</td>'
         + '<td class="rex-esq">' + rexEsc(String(x.tarefa || '').replace(/^\[[^\]]*\]\s*-?\s*/, '').slice(0, 55)) + '</td>'
         + '<td>' + rexEsc(x.tipo) + '</td><td><b class="' + (x.vezes >= 6 ? 'rex-red' : '') + '">' + x.vezes + '×</b></td>'
@@ -895,8 +897,10 @@ async function rexGerar() {
     const mx = Math.max(1, ...L.map(u => u.tot));
     h += '<section><h2>' + sec('HH empregado por usina') + ' <small>' + f(T0.tot) + ' h em ' + rexN(T0.n)
       + ' tarefas finalizadas no período · tempo real de execução</small></h2>'
-      + '<table class="rex-tbl rex-rank"><tr><th>Cliente – Usina</th><th>Cluster</th><th>Tarefas</th><th>HH total</th>'
-      + '<th>Preventiva</th><th>Corretiva</th><th>Religamento</th><th>Inspeção</th><th>Outros</th></tr>'
+      + '<table class="rex-tbl rex-rank rex-fit rex-hh"><colgroup><col style="width:23%"><col style="width:12%"><col style="width:8%">'
+      + '<col style="width:13%"><col style="width:9%"><col style="width:9%"><col style="width:9%"><col style="width:9%"><col style="width:8%"></colgroup>'
+      + '<tr><th>Cliente – Usina</th><th>Cluster</th><th>Tarefas</th><th>HH total</th>'
+      + '<th>Prev.</th><th>Corr.</th><th>Relig.</th><th>Insp.</th><th>Outros</th></tr>'
       + L.map(u => '<tr><td class="rex-esq">' + rexEsc(String(u.usina || '').replace(/\s*-\s*[A-Z]{2}\s*$/, '')) + '</td>'
         + '<td class="rex-esq">' + rexEsc(u.cluster || '—') + '</td><td>' + rexN(u.n) + '</td>'
         + '<td class="rex-esq"><i class="rex-barra" style="width:' + Math.round(100 * u.tot / mx) + '%"></i><b>' + f(u.tot) + ' h</b></td>'
