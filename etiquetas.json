@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-09T20:32:20Z",
+  "geradoEm": "2026-10-09T20:55:00Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-05 .. 2026-10-11",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5098,
-        "emAberto": 51,
+        "total": 5100,
+        "emAberto": 52,
         "atrasadas": 35,
-        "concluidas30d": 836,
-        "concluidas7d": 243,
-        "naSemanaCorrente": 177
+        "concluidas30d": 837,
+        "concluidas7d": 244,
+        "naSemanaCorrente": 179
       },
       "mttr": {
-        "horas": 16.53,
-        "label": "16h 32min",
-        "amostra": 836
+        "horas": 16.51,
+        "label": "16h 30min",
+        "amostra": 837
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W41",
-          "criadas": 179,
-          "finalizadas": 162
+          "criadas": 181,
+          "finalizadas": 163
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5098,
-            "emAberto": 51
+            "total": 5100,
+            "emAberto": 52
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 51,
+      "total": 52,
       "atrasadas": 35,
       "porStatus": {
-        "naoIniciada": 45,
-        "emProgresso": 3,
-        "pausada": 3,
+        "naoIniciada": 46,
+        "emProgresso": 1,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 51
+        "(sem equipe)": 52
       },
       "oss": [
         {
@@ -723,6 +723,24 @@
           "atrasada": true
         },
         {
+          "osId": "16007",
+          "ativo": "Thopen - Sorocaba 1 - SP Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-SCB100] - Religamento do THPN-SCB100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-09",
+          "dataCriacao": "2026-10-09",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "15997",
           "ativo": "SKID 1 Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200-SKID1 }",
           "equipe": "",
@@ -947,7 +965,7 @@
           "responsavel": "Adriano Silva ",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Adriano Silva ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Sal Energia - Aquiraz 1 (Salvales) - CE] - Religamento do Sal Energia - Aquiraz 1 (Salvales) - CE",
           "criticidade": "",
           "dataProgramada": "2026-10-09",
@@ -966,7 +984,7 @@
           "responsavel": "Adriano Silva ",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Adriano Silva ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Sal Energia - Aquiraz 2 (Carosa) - CE] - Religamento do Sal Energia - Aquiraz 2 (Carosa) - CE",
           "criticidade": "",
           "dataProgramada": "2026-10-09",
@@ -4017,12 +4035,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2104,
+      "historicoTotal": 2105,
       "subClassificacao": {
         "remoto": 759,
-        "local": 4339,
+        "local": 4341,
         "remotoEmAberto": 6,
-        "localEmAberto": 45,
+        "localEmAberto": 46,
         "pctRemoto": 15,
         "alerta": true
       },
@@ -15763,6 +15781,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "16007",
+      "ativo": "Thopen - Sorocaba 1 - SP Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-SCB100] - Religamento do THPN-SCB100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-09",
+      "dataCriacao": "2026-10-09",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "15997",
       "ativo": "SKID 1 Recanto do Ratinho I Alto Paraná  Paraná Brasil { THPN-APR200-SKID1 }",
       "equipe": "",
@@ -16103,7 +16138,7 @@
       "responsavel": "Adriano Silva ",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Adriano Silva ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Sal Energia - Aquiraz 1 (Salvales) - CE] - Religamento do Sal Energia - Aquiraz 1 (Salvales) - CE",
       "criticidade": "",
       "dataProgramada": "2026-10-09",
@@ -16121,7 +16156,7 @@
       "responsavel": "Adriano Silva ",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Adriano Silva ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Sal Energia - Aquiraz 2 (Carosa) - CE] - Religamento do Sal Energia - Aquiraz 2 (Carosa) - CE",
       "criticidade": "",
       "dataProgramada": "2026-10-09",
@@ -22317,8 +22352,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3297,
-  "totalGeral": 7172,
+  "historicoTotal": 3298,
+  "totalGeral": 7174,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
