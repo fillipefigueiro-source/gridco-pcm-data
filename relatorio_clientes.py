@@ -217,8 +217,8 @@ def _carregar_auxiliar(pasta):
         if not ufv: continue
         cli=(str(g(r,'CLIENTE')).strip() if g(r,'CLIENTE') else "—")
         entry={"ufv":ufv,"cliente":cli,"status":g(r,'STATUS'),
-            "cap":g(r,'CAPACIDADE INSTALADA (MWp)'),"cidade":g(r,'CIDADE'),"uf":g(r,'UF'),
-            "resp":g(r,'RESPONSÁVEL O&M'),"cluster":g(r,'CLUSTER'),"mob":g(r,'Data Mobilização')}
+            "cap":(g(r,'POTÊNCIA CONTRATUAL (MWp)') or g(r,'CAPACIDADE INSTALADA (MWp)')),"cidade":g(r,'CIDADE'),"uf":g(r,'UF'),
+            "resp":(g(r,'Gestor de Contrato') or g(r,'RESPONSÁVEL O&M')),"cluster":g(r,'CLUSTER'),"mob":g(r,'Data Mobilização')}
         key=sa(ufv).lower().strip(); aux[key]=entry
         # alias N00->N: o AUXILIAR usa "Marabá 100/200", o Fracttal usa "Marabá 1/2"
         m=re.search(r"(.*?)(\d)00\s*$",key)

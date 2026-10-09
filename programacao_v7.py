@@ -602,9 +602,12 @@ def _carregar_map_responsavel():
             if str(c).strip().upper() == 'UFV':
                 col_ufv = c
             cn = str(c).strip().upper()
-            if ('RESPONS' in cn and ('O&M' in cn or 'OM' in cn)
+            if col_resp is None and ('RESPONS' in cn and ('O&M' in cn or 'OM' in cn)
                     and 'URL' not in cn and 'IMAGEM' not in cn):
                 col_resp = c
+        # 09/10/2026: supervisor = Gestor de Contrato (Responsável O&M virou região)
+        col_resp = next((c for c in df_aux.columns
+                         if str(c).strip().upper() == 'GESTOR DE CONTRATO'), col_resp)
         if col_ufv and col_resp:
             for _, r in df_aux.iterrows():
                 u = r.get(col_ufv)
@@ -1347,11 +1350,14 @@ def _carregar_mwp():
     try:
         df_aux = fonte_bd_api.df_auxiliar()
         cu = next((c for c in df_aux.columns if str(c).strip().upper() == 'UFV'), None)
-        cm = next((c for c in df_aux.columns if 'MWP' in str(c).upper()), None)
+        # 09/10/2026: Potência Contratual (sempre preenchida); fallback = 1ª coluna MWp
+        cm = next((c for c in df_aux.columns if 'CONTRATUAL' in str(c).upper() and 'MWP' in str(c).upper()),
+                  next((c for c in df_aux.columns if 'MWP' in str(c).upper()), None))
         if cu is not None and cm is not None:
             for _, _r in df_aux.iterrows():
-                if isinstance(_r[cu], str) and isinstance(_r[cm], (int, float)):
-                    mp[_chave_usina(_r[cu])] = float(_r[cm])
+                _v = pd.to_numeric(str(_r[cm]).replace(',', '.'), errors='coerce')
+                if isinstance(_r[cu], str) and not pd.isna(_v) and _v > 0:   # vazio/NaN não derruba o RPN
+                    mp[_chave_usina(_r[cu])] = float(_v)
     except Exception as e:
         print(f'[RPN] porte da usina indisponível ({e}) — Impacto usa neutro nesse componente')
     return mp

@@ -489,9 +489,12 @@ def carregar_map_responsavel(df_aux):
         cu = str(c).strip().upper()
         if cu == 'UFV':
             col_ufv = c
-        if ('RESPONS' in cu and ('O&M' in cu or 'OM' in cu)
+        if col_resp is None and ('RESPONS' in cu and ('O&M' in cu or 'OM' in cu)
                 and 'URL' not in cu and 'IMAGEM' not in cu):
             col_resp = c
+    # 09/10/2026: supervisor = Gestor de Contrato (Responsável O&M virou região)
+    col_resp = next((c for c in df_aux.columns
+                     if str(c).strip().upper() == 'GESTOR DE CONTRATO'), col_resp)
     if col_ufv and col_resp:
         for _, r in df_aux.iterrows():
             u = r.get(col_ufv)

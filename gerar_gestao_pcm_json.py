@@ -140,7 +140,7 @@ def carregar_auxiliar(path: str):
     i_ufv = _col("ufv", "n1", pad=0)
     i_cli = _col("cliente", pad=3)
     i_clu = _col("equipe cluster", "cluster", pad=4)
-    i_rsp = _col("responsavel o&m", pad=5)
+    i_rsp = _col("gestor de contrato", "responsavel o&m", pad=5)  # 09/10/2026
     i_opr = _col("operacao", "oper", pad=9)
     pega = lambda r, i: r[i] if i is not None and i < len(r) else None
     for r in it:
