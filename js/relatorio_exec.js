@@ -1060,7 +1060,7 @@ async function rexGerarSemana() {
   const nMpU = Z.mpU.length;
 
   let h = '<div class="rex-bar"><button class="rex-btn-2" onclick="rexFechar()">&#8592; Voltar ao painel</button>'
-    + '<span>Abertura da Semana — 2 páginas A4</span>'
+    + '<span>Abertura da Semana — A4 (páginas 1–2 + backlog por região)</span>'
     + '<button class="rex-btn" onclick="window.print()">&#128424; Imprimir / PDF</button></div>'
     + '<div class="rex-a4 rsw">';
   // ── página 1 ──
@@ -1118,11 +1118,11 @@ async function rexGerarSemana() {
       + ' (OS ' + Z.relMortas.slice(0, 15).join(', ') + (Z.relMortas.length > 15 ? '…' : '') + ').' : '')
     + ' Responsável = designado da OS na programação; Supervisor = responsável da tarefa no Fracttal.');
   h += '<div class="rsw-row">' + s1 + s2 + '</div>' + s3 + s4
-    + '<div class="rsw-foot"><span>Grid Co. · PCM · Semana ' + Z.num + ' · página 1 de 2</span><span>continua na página 2: MPAS atrasadas por usina e usinas críticas</span></div>';
+    + '<div class="rsw-foot"><span>Grid Co. · PCM · Semana ' + Z.num + ' · página 1</span><span>continua: MPAS atrasadas, usinas críticas, handovers e backlog atrasado por região</span></div>';
 
   // ── página 2 ──
   h += '<div class="rsw-p2"><div class="rsw-mini"><div><div class="rsw-kicker">GRID CO. · OPERAÇÃO DE ATIVOS · PCM · SEMANA ' + Z.num + ' · CONTINUAÇÃO</div>'
-    + '<div class="t">MPAS atrasadas e usinas críticas</div></div><div class="rsw-meta">Página 2 de 2 · foto de ' + foto + '</div></div>';
+    + '<div class="t">MPAS atrasadas, handovers em andamento e usinas críticas</div></div><div class="rsw-meta">Página 2 · foto de ' + foto + '</div></div>';
   const mp12 = Z.mpU.slice(0, 12);
   h += card('5 · MPAS ATRASADAS · UMA LINHA POR USINA',
     nMpU ? 'Anuais e semestrais atrasadas: ' + mp12.length + ' usinas mais antigas (de ' + nMpU + ')' : 'Nenhuma MPA/MPS atrasada no recorte',
@@ -1147,9 +1147,96 @@ async function rexGerarSemana() {
         + (L.length > 4 ? '<li class="mais">+ ' + (L.length - 4) + ' OS em aberto nesta usina' + (nCorr ? ' (' + nCorr + ' corretiva(s))' : '') + '</li>' : '')
         + '</ul></div>';
     }).join('') + '</div>');
-  h += '<div class="rsw-foot"><span>Grid Co. · PCM · Semana ' + Z.num + ' · página 2 de 2 · Fonte: Fracttal via gestao_pcm.json ('
+  // 7 · handovers em andamento: 1 linha por usina × OS (só OS vivas)
+  const HO = new Map();
+  Z.T.filter(t => rexAbertaViva(t) && rexGrupoBd(t.tipo) === 'Handover').forEach(t => {
+    const k = t.usina + '|' + t.os;
+    const o = HO.get(k) || { usina: t.usina, cliente: t.cliente, os: String(t.os), n: 0, atr: 0, dias: 0, sup: '' };
+    o.n++; if (t.atrasado) o.atr++;
+    if ((t.dias || 0) >= o.dias) { o.dias = t.dias || 0; o.sup = t.responsavel || o.sup; }
+    HO.set(k, o);
+  });
+  const hoL = Array.from(HO.values()).sort((a, b) => b.dias - a.dias || b.n - a.n);
+  if (hoL.length) {
+    const hoTar = hoL.reduce((s, o) => s + o.n, 0);
+    const hoU = new Set(hoL.map(o => o.usina)).size, hoOS = new Set(hoL.map(o => o.os)).size;
+    const hoCli = [...new Set(hoL.map(o => o.cliente))];
+    const maior = hoL.slice().sort((a, b) => b.n - a.n)[0];
+    h += card('7 · HANDOVERS EM ANDAMENTO',
+      'Entrada de usinas: ' + N(hoTar) + ' tarefas vivas em ' + hoU + ' usinas (' + hoOS + ' OS)' + (hoCli.length === 1 ? ', todas ' + E(hoCli[0]) : ''),
+      '<table><tr><th>Usina</th><th>OS</th><th class="n">Tarefas</th><th class="n">Atrasadas</th><th class="n">Mais antiga</th><th>Responsável</th><th>Supervisor</th></tr>'
+      + hoL.map(o => '<tr><td class="navy">' + E(rexUsiNome(o.usina)) + '</td><td class="navy">OS ' + E(o.os) + '</td><td class="n">' + N(o.n)
+        + '</td><td class="n">' + N(o.atr) + '</td>' + dcel(o.dias) + '<td class="navy">' + E(Z.respOS.get(o.os) || '—') + '</td><td>' + E(o.sup || '—') + '</td></tr>').join('')
+      + '</table>',
+      'Só OS vivas (handover de OS finalizada não conta). Maior pacote: ' + E(rexUsiNome(maior.usina)) + ' (' + maior.n + ' tarefas); mais antigo: '
+      + E(rexUsiNome(hoL[0].usina)) + ' (' + hoL[0].dias + ' d).');
+  }
+  h += '<div class="rsw-foot"><span>Grid Co. · PCM · Semana ' + Z.num + ' · página 2 · Fonte: Fracttal via gestao_pcm.json ('
     + E(dtGestao) + ') + programação semanal (banco_dados.json)</span><span>tarefas de OS já concluída não contam como abertas · '
-    + 'cadastros de Teste ficam fora</span></div></div></div>';
+    + 'cadastros de Teste ficam fora</span></div></div>';
+  // 8 · backlog atrasado por região → cluster → usina (só OS vivas). A usina
+  // com mais atrasadas puxa o cluster dela e depois a região (regra do one-page).
+  const US = new Map();
+  Z.T.filter(rexAbertaViva).forEach(t => {
+    const e = US.get(t.usina) || { usina: t.usina, n: 0, atr: 0, dias: 0, cluster: rexClu(t.cluster), sup: '', oss: new Map() };
+    e.n++; e.dias = Math.max(e.dias, t.dias || 0); e.sup = t.responsavel || e.sup;
+    if (t.atrasado) {
+      e.atr++;
+      const o = e.oss.get(String(t.os)) || { os: String(t.os), n: 0, dias: 0, tipo: '', tit: '' };
+      o.n++;
+      if ((t.dias || 0) >= o.dias) { o.dias = t.dias || 0; o.tipo = t.tipo || ''; o.tit = t.tarefa || ''; }
+      e.oss.set(o.os, o);
+    }
+    US.set(t.usina, e);
+  });
+  const CLs = new Map(), cluNome = new Map();
+  Z.T.forEach(t => { const k = rexClu(t.cluster); if (!cluNome.has(k) && t.cluster) cluNome.set(k, String(t.cluster).trim()); });
+  US.forEach(e => { (CLs.get(e.cluster) || CLs.set(e.cluster, []).get(e.cluster)).push(e); });
+  const cst = c => { const us = CLs.get(c);
+    return { atr: us.reduce((s, e) => s + e.atr, 0), n: us.reduce((s, e) => s + e.n, 0), dias: Math.max(0, ...us.map(e => e.dias)) }; };
+  const reg = c => (/^([A-Z]{2})\b/.exec(c) || [0, 'Outros'])[1];
+  const seq = [], feitas = new Set();
+  Array.from(US.values()).sort((a, b) => b.atr - a.atr || b.dias - a.dias || b.n - a.n).forEach(e => {
+    const r = reg(e.cluster);
+    if (feitas.has(r)) return;
+    feitas.add(r);
+    const resto = [...CLs.keys()].filter(c => reg(c) === r && c !== e.cluster)
+      .sort((a, b) => cst(b).atr - cst(a).atr || cst(b).dias - cst(a).dias);
+    seq.push([r, [e.cluster, ...resto]]);
+  });
+  const trunc = (s, n) => { s = String(s || '').trim(); if (s.length <= n) return s;
+    return s.slice(0, n).replace(/\s+\S*$/, '').replace(/[ ,;·-]+$/, '') + '…'; };
+  let b8 = '';
+  seq.forEach(([r, cls]) => {
+    const totR = cls.reduce((s, c) => s + cst(c).atr, 0);
+    if (!totR) return;
+    b8 += '<div class="rsw-reg">' + E(r) + ' · ' + N(totR) + ' tarefas atrasadas · ' + cls.filter(c => cst(c).atr).length + ' cluster(s)</div>';
+    cls.forEach(c => {
+      const s = cst(c);
+      if (!s.atr) return;
+      b8 += '<div class="rsw-cl"><div class="rsw-clh"><span>' + E(cluNome.get(c) || c) + '</span><span>' + N(s.atr) + ' atrasadas · ' + N(s.n)
+        + ' abertas · mais antiga ' + s.dias + 'd</span></div>';
+      CLs.get(c).filter(e => e.atr).sort((a, b) => b.atr - a.atr || b.dias - a.dias).forEach(e => {
+        const oss = Array.from(e.oss.values()).sort((a, b) => b.dias - a.dias);
+        b8 += '<div class="rsw-us"><span class="nm">' + E(rexUsiCurta(e.usina)) + ' <span class="cli">(' + E(String(e.usina).split(' - ')[0]) + ')</span></span>'
+          + '<span>' + N(e.atr) + ' atrasadas de ' + N(e.n) + ' abertas · mais antiga <b class="' + rexDiasCls(e.dias) + '">' + e.dias + 'd</b></span></div>'
+          + '<table class="rsw-bk">' + oss.slice(0, 6).map(o => '<tr><td class="n ' + rexDiasCls(o.dias) + '">' + o.dias + 'd</td>'
+            + '<td class="osn">OS ' + E(o.os) + '</td><td class="tp">' + E(trunc(o.tipo, 20)) + '</td>'
+            + '<td>' + E(trunc(o.tit, 54)) + (o.n > 1 ? ' <span class="xmul">· ' + o.n + ' tarefas</span>' : '') + '</td>'
+            + '<td class="resp">' + E(trunc(Z.respOS.get(o.os) || '—', 20)) + '</td><td class="supv">' + E(trunc(e.sup, 18)) + '</td></tr>').join('')
+          + (oss.length > 6 ? '<tr><td></td><td colspan="5" class="mais">+ ' + (oss.length - 6) + ' OS atrasadas nesta usina</td></tr>' : '')
+          + '</table>';
+      });
+      b8 += '</div>';
+    });
+  });
+  h += '<div class="rsw-p2"><div class="rsw-mini"><div><div class="rsw-kicker">GRID CO. · OPERAÇÃO DE ATIVOS · PCM · SEMANA ' + Z.num + ' · CONTINUAÇÃO</div>'
+    + '<div class="t">8 · Backlog atrasado por região, cluster e usina</div></div><div class="rsw-meta">Só tarefas atrasadas, de OS vivas · a usina mais pendente puxa o cluster e a região · '
+    + 'OS com várias tarefas viram uma linha · colunas finais: responsável da OS e supervisor · foto de ' + foto + '</div></div>'
+    + (b8 || '<p class="rsw-nota">Nenhuma tarefa atrasada no recorte.</p>')
+    + '<div class="rsw-foot"><span>Grid Co. · PCM · Semana ' + Z.num + ' · Backlog atrasado por região</span>'
+    + '<span>Fonte: Gestão PCM · tarefas de OS já finalizada não contam</span></div></div>';
+  h += '</div>';
 
   let v = document.getElementById('rex-view');
   if (!v) { v = document.createElement('div'); v.id = 'rex-view'; document.body.appendChild(v); }

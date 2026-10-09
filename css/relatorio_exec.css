@@ -198,3 +198,25 @@
   .rsw-chip, .rsw-ub, .rsw-kpi { print-color-adjust: exact; -webkit-print-color-adjust: exact }
 }
 @page rsw { size: A4; margin: 9mm }
+/* Abertura da Semana · seção 8: backlog atrasado região → cluster → usina */
+.rsw-reg { background: #191528; color: #fff; font-size: 8.5pt; font-weight: 800; letter-spacing: .5px;
+  border-radius: 6px; padding: 4px 9px; margin: 8px 0 5px; break-after: avoid }
+.rsw-cl { border: 1px solid #E3E3EA; border-radius: 6px; padding: 5px 8px 3px; margin-bottom: 5px }
+.rsw-clh { display: flex; justify-content: space-between; font-size: 8pt; font-weight: 800; color: #191528;
+  border-bottom: 1.5px solid #E3E3EA; padding-bottom: 2px; break-after: avoid }
+.rsw-clh span:last-child { font-weight: 700; color: #7a9a2e; font-size: 7pt }
+.rsw-us { display: flex; justify-content: space-between; margin-top: 4px; background: #F7F7FA;
+  border-radius: 4px; padding: 2px 6px; font-size: 7pt; color: #55526a; break-after: avoid }
+.rsw-us .nm { font-size: 7.8pt; font-weight: 800; color: #23203A }
+.rsw-us .cli { color: #9a97a8; font-size: 6.5pt; font-weight: 700 }
+.rsw-us b.red { color: #B3261E } .rsw-us b.amber { color: #B9770E }
+.rsw table.rsw-bk { font-size: 6.9pt; margin: 1px 0 3px; table-layout: fixed }
+.rsw-bk td { padding: 1.2px 4px; border-bottom: 1px solid #F4F4F7; overflow: hidden }
+.rsw-bk td.n { width: 9%; font-weight: 800 }
+.rsw-bk td.osn { width: 11%; font-weight: 800; color: #191528 }
+.rsw-bk td.tp { width: 15%; color: #7a9a2e; font-weight: 700 }
+.rsw-bk td.resp { width: 16%; font-weight: 700; color: #191528 }
+.rsw-bk td.supv { width: 14%; color: #9a97a8 }
+.rsw-bk tr { break-inside: avoid }
+.rsw .xmul { color: #B9770E; font-weight: 800 }
+.rsw .mais { color: #9a97a8; font-style: italic }
