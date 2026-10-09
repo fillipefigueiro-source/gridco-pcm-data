@@ -25,6 +25,10 @@ let REX = { de: '', ate: '', cliente: '', cluster: '', usinas: [], tipo: 'intern
 function rexTipo(t) {
   REX.tipo = t;
   document.querySelectorAll('#rex-modal .rex-chip-t').forEach(b => b.classList.toggle('on', b.dataset.t === t));
+  // Abertura da Semana: a semana vem do banco_dados (programador) — período não se aplica
+  const sem = t === 'semana';
+  ['rex-per', 'rex-per2'].forEach(id => { const e = document.getElementById(id); if (e) e.style.display = sem ? 'none' : ''; });
+  const n = document.getElementById('rex-semnota'); if (n) n.style.display = sem ? '' : 'none';
 }
 
 const rexEsc = s => String(s == null ? '' : s).replace(/[&<>"']/g,
@@ -61,24 +65,27 @@ function rexAbrirModal() {
     + '<div class="rex-m-caixa">'
     + '<h3>&#128196; Relatório executivo</h3>'
     + (ehCliente ? '' : '<div class="rex-m-sec">Tipo de relatório</div><div class="rex-chips">'
-      + [['interno', '&#127970; Interno Grid'], ['cliente', '&#129309; Cliente']].map(([t, r]) =>
+      + [['interno', '&#127970; Interno Grid'], ['cliente', '&#129309; Cliente'], ['semana', '&#128197; Abertura da Semana']].map(([t, r]) =>
           '<button type="button" class="rex-chip rex-chip-t' + (REX.tipo === t ? ' on' : '') + '" data-t="' + t
           + '" onclick="rexTipo(&quot;' + t + '&quot;)">' + r + '</button>').join('')
       + '</div>')
+    + '<div id="rex-semnota" class="rex-m-op"' + (REX.tipo === 'semana' && !ehCliente ? '' : ' style="display:none"')
+    + '>Abertura da Semana usa a semana mais recente da programação (banco de dados); o período é ignorado. O escopo abaixo vale.</div>'
+    + '<div id="rex-per"' + (REX.tipo === 'semana' && !ehCliente ? ' style="display:none"' : '') + '>'
     + '<div class="rex-m-sec">Período</div>'
     + '<div class="rex-chips">'
     + [['sem', 'Esta semana'], ['semp', 'Semana passada'], ['mes', 'Este mês'], ['mesp', 'Mês passado'], ['30d', 'Últimos 30 dias']]
       .map(([p, r]) => '<button type="button" class="rex-chip" data-p="' + p + '" onclick="rexPreset(\'' + p + '\')">' + r + '</button>').join('')
     + '</div>'
     + '<div class="rex-m-linha"><label>De <input type="date" id="rex-de"></label>'
-    + '<label>Até <input type="date" id="rex-ate"></label></div>'
+    + '<label>Até <input type="date" id="rex-ate"></label></div></div>'
     + '<div class="rex-m-sec">Escopo <small>(deixe em Todos para o portfólio)</small></div>'
     + (ehCliente ? '' : '<div class="rex-m-linha"><label>Cliente <select id="rex-cli" onchange="rexEscopoMuda()">'
       + '<option value="">Todos os clientes</option>' + opt(clientes) + '</select></label>'
       + '<label>Equipe Cluster <select id="rex-clu"><option value="">Todos</option>' + opt(F.clusters || []) + '</select></label></div>')
     + '<label class="rex-m-usinas">Usinas <small>(ctrl+clique para várias; vazio = todas do escopo)</small>'
     + '<select id="rex-usi" multiple size="7">' + opt(F.usinas || []) + '</select></label>'
-    + '<label class="rex-m-op"><input type="checkbox" id="rex-semprev"' + (REX.semPrevNovas ? ' checked' : '') + '> '
+    + '<label class="rex-m-op" id="rex-per2"' + (REX.tipo === 'semana' && !ehCliente ? ' style="display:none"' : '') + '><input type="checkbox" id="rex-semprev"' + (REX.semPrevNovas ? ' checked' : '') + '> '
     + 'Desconsiderar preventivas <b>criadas no período</b> <small>(ex.: MPMs do mês seguinte já lançadas)</small></label>'
     + '<div class="rex-m-acoes"><button type="button" class="rex-btn-2" onclick="rexFecharModal()">Cancelar</button>'
     + '<button type="button" class="rex-btn" onclick="rexGerar()">Gerar relatório</button></div>'
@@ -534,6 +541,11 @@ async function rexGerar() {
   const sel = document.getElementById('rex-usi');
   REX.usinas = sel ? Array.from(sel.selectedOptions).map(o => o.value) : [];
   REX.semPrevNovas = !!(document.getElementById('rex-semprev') || {}).checked;
+  if (REX.tipo === 'semana' && !(typeof S !== 'undefined' && S && S.isAdmin === false)) {
+    REX.semPrevNovas = false;                    // a semana é fixa; opção do período não se aplica
+    rexFecharModal();
+    return rexGerarSemana();
+  }
   if (!REX.de || !REX.ate || REX.de > REX.ate) { alert('Confira o período.'); return; }
   rexFecharModal();
 
@@ -929,6 +941,215 @@ async function rexGerar() {
     + ' · corretivas contadas por OS distinta · concluído = tarefa Finalizada (nunca o Status da OS) · '
     + 'tarefas de OS já concluída não contam como abertas · Grid Co. — PCM</footer>'
     + '</div>';
+
+  let v = document.getElementById('rex-view');
+  if (!v) { v = document.createElement('div'); v.id = 'rex-view'; document.body.appendChild(v); }
+  v.innerHTML = h;
+  document.body.classList.add('rex-on');
+  window.scrollTo(0, 0);
+}
+// ═════════ ABERTURA DA SEMANA (09/10) ═════════════════════════════════════════
+// Folha de 2 páginas A4 para abrir a semana com o time: mesma base do Interno
+// Grid, recortada na semana MAIS RECENTE do banco_dados (programador). Tudo
+// calculado dos dados — nenhum texto editorial escrito à mão.
+const REX_SW_LIM = 35;
+const rexUsiNome = u => { const s = String(u || ''); const c = s.split(' - ')[0];
+  return rexUsiCurta(s) + (c && c !== s ? ' (' + c + ')' : ''); };
+const rexLimpaTar = x => String(x || '').replace(/^(\s*\[[^\]]*\])+\s*[-–—]?\s*/, '').trim();
+const rexDiasCls = d => d > 60 ? 'red' : d > REX_SW_LIM ? 'amber' : '';
+// "MPA — Módulos, QGBT (+2)": texto curto gerado dos nomes das tarefas
+function rexSwItens(lista, max) {
+  const nomes = [...new Set(lista.map(t => rexLimpaTar(t.tarefa)).filter(Boolean))];
+  const m = nomes.map(n => /^(MP[MSAT])\s*[-–—]\s*(.+)$/.exec(n));
+  let pre = '', itens = nomes;
+  if (m.length && m.every(x => x && x[1] === m[0][1])) { pre = m[0][1] + ' — '; itens = m.map(x => x[2]); }
+  let txt = pre, n = 0;
+  for (const it of itens) { if ((txt + it).length > max && n) break; txt += (n ? ', ' : '') + it; n++; }
+  return txt + (itens.length > n ? ' (+' + (itens.length - n) + ')' : '');
+}
+function rexSwModelo(bd, Tall) {
+  const W = ((bd && bd.semanas) || []).filter(w => rexSemanaSeg(w.week))
+    .sort((a, b) => (a.week < b.week ? 1 : -1));
+  const w = W[0];
+  if (!w) return null;
+  const seg = rexSemanaSeg(w.week);
+  const sex = rexIso(new Date(new Date(seg + 'T12:00:00').getTime() + 4 * 86400000));
+  const num = +w.week.split('-W')[1];
+  // carimbo da planilha (UTC) → horário de Brasília (−3 h)
+  let fechado = null;
+  if (w.geradaEm && !isNaN(new Date(w.geradaEm))) {
+    const d = new Date(new Date(w.geradaEm).getTime() - 3 * 3600000);
+    const p = x => String(x).padStart(2, '0');
+    fechado = p(d.getUTCDate()) + '/' + p(d.getUTCMonth() + 1) + ' às ' + p(d.getUTCHours()) + 'h' + p(d.getUTCMinutes());
+  }
+  // responsável da OS (designado no Fracttal) vem da planilha; semanas mais novas prevalecem
+  const respOS = new Map();
+  W.slice().reverse().forEach(x => (x.rows || []).forEach(r => { if (r.resp_os) respOS.set(String(r.os_id), r.resp_os); }));
+  const rows = (w.rows || []).filter(rexEscopoFiltro);
+  const T = Tall.filter(rexEscopoFiltro);
+  const viva = T.filter(rexAbertaViva);
+
+  // por OS (só OS com tarefa aberta viva) — base das seções 3 e 4
+  const porOS = new Map();
+  T.forEach(t => {
+    const k = String(t.os);
+    const o = porOS.get(k) || { os: k, usina: t.usina, cliente: t.cliente, tot: 0, ab: [], dias: 0, etq: new Set(), obs: '', sup: '' };
+    o.tot++;
+    if (rexAbertaViva(t)) { o.ab.push(t); if ((t.dias || 0) >= o.dias) { o.dias = t.dias || 0; o.sup = t.responsavel || o.sup; } }
+    (t.etiquetas || []).forEach(e => o.etq.add(e));
+    if (!o.obs && t.obs) o.obs = t.obs;
+    porOS.set(k, o);
+  });
+  const OS = Array.from(porOS.values()).filter(o => o.ab.length);
+
+  // 1 · ranking por tarefas em aberto
+  const U = new Map();
+  viva.forEach(t => {
+    const x = U.get(t.usina) || { usina: t.usina, abertas: 0, corr: new Set(), velha: 0, tarefas: [] };
+    x.abertas++; if (rexCorretiva(t)) x.corr.add(String(t.os));
+    x.velha = Math.max(x.velha, t.dias || 0); x.tarefas.push(t); U.set(t.usina, x);
+  });
+  const rank = Array.from(U.values()).sort((a, b) => b.abertas - a.abertas || b.velha - a.velha);
+
+  // 3 · atrasadas > 35 d agrupadas por OS (dias = tarefa aberta mais antiga)
+  const atr = OS.filter(o => o.dias > REX_SW_LIM).sort((a, b) => b.dias - a.dias || a.os.localeCompare(b.os));
+  // 4 · religamentos (inclui remoto) com OS viva; os de OS concluída ficam só na nota
+  const relOS = OS.filter(o => o.ab.some(rexRelig)).map(o => {
+    const ab = o.ab.filter(rexRelig);
+    return { ...o, ab, dias: Math.max(0, ...ab.map(t => t.dias || 0)) };
+  }).sort((a, b) => b.dias - a.dias || a.os.localeCompare(b.os));
+  const relMortas = [...new Set(T.filter(t => rexRelig(t) && t.aberta && !rexAbertaViva(t)).map(t => String(t.os)))];
+  // 5 · MPA/MPS atrasadas, uma linha por usina
+  const mp = viva.filter(t => t.atrasado && /\bMP[AS]\b/.test(String(t.tarefa || '')));
+  const MU = new Map();
+  mp.forEach(t => {
+    const x = MU.get(t.usina) || { usina: t.usina, sig: new Set(), os: new Map(), n: 0, dias: 0, osVelha: '', sup: '' };
+    x.n++; x.sig.add(/\bMP[AS]\b/.exec(t.tarefa)[0]);
+    const k = String(t.os); x.os.set(k, Math.max(x.os.get(k) || 0, t.dias || 0));
+    if ((t.dias || 0) >= x.dias) { x.dias = t.dias || 0; x.osVelha = k; x.sup = t.responsavel || ''; }
+    MU.set(t.usina, x);
+  });
+  const mpU = Array.from(MU.values()).sort((a, b) => b.dias - a.dias || b.n - a.n);
+  const corrOS = new Set(viva.filter(rexCorretiva).map(t => String(t.os)));
+  return { w, seg, sex, num, fechado, respOS, rows, T, rank, atr, relOS, relMortas, mp, mpU, OS, corrOS,
+    nAtrTar: atr.reduce((s, o) => s + o.ab.filter(t => (t.dias || 0) > REX_SW_LIM).length, 0),
+    nMpOS: new Set(mp.map(t => String(t.os))).size,
+    nRelTar: relOS.reduce((s, o) => s + o.ab.length, 0) };
+}
+async function rexGerarSemana() {
+  const bd = await rexBdCarregar();
+  const Z = bd ? rexSwModelo(bd, gpScopedTarefas()) : null;
+  if (!Z) { alert('Não encontrei a programação semanal (banco_dados.json).'); return; }
+  // Top 10 rolagens: régua do Interno Grid (situação atual pelo Fracttal), só desta semana
+  REX.de = Z.seg; REX.ate = Z.sex;
+  const SEM = rexSemanas(bd).filter(s => s.week === Z.w.week);
+  const rol = SEM.length ? SEM[0].rolagens : [];
+  const escopo = [REX.cliente || 'Todos os clientes', REX.cluster,
+                  REX.usinas.length ? REX.usinas.length + ' usina(s)' : ''].filter(Boolean).join(' · ');
+  const MES = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+  const dd = iso => iso.slice(8, 10) + ' ' + MES[+iso.slice(5, 7) - 1];
+  const agora = new Date();
+  const foto = agora.toLocaleDateString('pt-BR').slice(0, 5) + ', ' + agora.toTimeString().slice(0, 5).replace(':', 'h');
+  const dtGestao = (GESTAO_DB && GESTAO_DB.geradoEm || '').slice(0, 16).replace('T', ' ');
+  const E = rexEsc, N = rexN;
+  const dcel = d => '<td class="n ' + rexDiasCls(d) + '">' + d + ' d</td>';
+  const card = (tag, h2, corpo, nota) => '<div class="rsw-card"><div class="rsw-tag">' + tag + '</div><h2>' + h2 + '</h2>'
+    + corpo + (nota ? '<div class="rsw-nota">' + nota + '</div>' : '') + '</div>';
+  const kpi = (v, l, c) => '<div class="rsw-kpi"><div class="v ' + c + '">' + v + '</div><div class="l">' + l + '</div></div>';
+  const nRelOS = Z.relOS.length, relAcima = Z.relOS.filter(o => o.dias > REX_SW_LIM).length;
+  const nMpU = Z.mpU.length;
+
+  let h = '<div class="rex-bar"><button class="rex-btn-2" onclick="rexFechar()">&#8592; Voltar ao painel</button>'
+    + '<span>Abertura da Semana — 2 páginas A4</span>'
+    + '<button class="rex-btn" onclick="window.print()">&#128424; Imprimir / PDF</button></div>'
+    + '<div class="rex-a4 rsw">';
+  // ── página 1 ──
+  h += '<div class="rsw-head"><div><div class="rsw-kicker">GRID CO. · OPERAÇÃO DE ATIVOS · PCM</div>'
+    + '<h1>Semana ' + Z.num + ': atenção, rolagens e atrasos</h1>'
+    + '<div class="rsw-sub">' + E(escopo) + ' · foto de ' + foto + '</div></div>'
+    + '<div class="rsw-chips"><span class="rsw-chip dark">Semana ' + Z.num + ' · ' + dd(Z.seg) + ' a ' + dd(Z.sex) + '</span>'
+    + (Z.fechado ? '<span class="rsw-chip line">Plano fechado em ' + Z.fechado + '</span>' : '')
+    + '<span class="rsw-chip soft">Emitido em ' + agora.toLocaleDateString('pt-BR') + '</span></div></div>'
+    + '<div class="rsw-kpis">'
+    + kpi(N(Z.rows.length), 'tarefas na programação da semana (plano + encaixes)', 'navy')
+    + kpi(N(Z.corrOS.size), 'corretivas abertas hoje, emergenciais incluídas', 'red')
+    + kpi(N(Z.nAtrTar), 'tarefas atrasadas há mais de ' + REX_SW_LIM + ' dias, em ' + N(Z.atr.length) + ' OS', 'red')
+    + kpi(N(Z.mp.length), 'tarefas de MPA/MPS atrasadas, em ' + N(nMpU) + ' usinas (' + N(Z.nMpOS) + ' OS)', Z.mp.length ? 'red' : 'green')
+    + kpi(N(Z.nRelTar), 'religamentos em aberto com OS viva (' + N(nRelOS) + ' OS)'
+      + (nRelOS ? (relAcima ? '; ' + relAcima + ' acima de ' + REX_SW_LIM + ' dias' : '; todos com menos de ' + REX_SW_LIM + ' dias') : ''),
+      relAcima ? 'red' : 'green')
+    + '</div>';
+
+  const top = Z.rank.slice(0, 10), resto = Z.rank.slice(10);
+  const s1 = card('1 · USINAS QUE PEDEM ATENÇÃO', 'Ordenado por tarefas em aberto hoje',
+    '<table><tr><th>#</th><th>Usina</th><th class="n">Em aberto</th><th class="n">Corr.+Emerg.</th><th class="n">Mais antiga</th></tr>'
+    + top.map((x, i) => '<tr><td>' + (i + 1) + '</td><td class="navy">' + E(rexUsiNome(x.usina)) + '</td><td class="n">' + N(x.abertas)
+      + '</td><td class="n">' + (x.corr.size || '—') + '</td>' + dcel(x.velha) + '</tr>').join('') + '</table>',
+    'Corr.+Emerg. = OS corretivas abertas, emergenciais incluídas.'
+    + (resto.length ? ' As demais ' + resto.length + ' usinas somam ' + N(resto.reduce((s, x) => s + x.abertas, 0)) + ' tarefas em aberto.' : ''));
+  const nRolAb = rol.filter(x => !x.fin).length;
+  const s2 = card('2 · TOP 10 · TAREFAS QUE MAIS ROLARAM', 'Nº de semanas em que a OS entrou na programação',
+    rol.length ? '<table><tr><th>OS</th><th>Usina</th><th>Tarefa</th><th>Tipo</th><th class="n">Rolag.</th></tr>'
+      + rol.map(x => '<tr><td class="navy">' + E(x.os) + '</td><td>' + E(rexUsiCurta(x.usina)) + '</td><td>'
+        + E(rexLimpaTar(x.tarefa).slice(0, 48)) + (x.fin ? ' <span class="rsw-etq">FEITA</span>' : '') + '</td><td>' + E(x.tipo) + '</td>'
+        + '<td class="n ' + (x.vezes >= 10 ? 'red' : x.vezes >= 6 ? 'amber' : '') + '">' + x.vezes + '×</td></tr>').join('') + '</table>'
+      : '<p class="rsw-nota">Nenhuma OS com 2 ou mais rolagens nesta semana.</p>',
+    rol.length ? (nRolAb === rol.length ? 'As ' + rol.length + ' seguem em aberto.' : nRolAb + ' de ' + rol.length + ' seguem em aberto.')
+      + ' Rolagem = a OS voltou para a programação em outra semana sem ser concluída.' : '');
+  const atr8 = Z.atr.slice(0, 8);
+  const s3 = card('3 · ATRASADAS HÁ MAIS DE ' + REX_SW_LIM + ' DIAS · AGRUPADAS POR OS',
+    Z.atr.length ? 'As ' + atr8.length + ' OS mais antigas (de ' + Z.atr.length + ')' : 'Nenhuma OS acima de ' + REX_SW_LIM + ' dias',
+    atr8.length ? '<table><tr><th class="n">Dias</th><th>OS</th><th>Cliente · usina</th><th>Tarefa(s) em aberto</th><th class="n">Faltam</th><th>Observação da OS</th></tr>'
+      + atr8.map(o => '<tr>' + dcel(o.dias) + '<td class="navy">' + E(o.os) + '</td><td>' + E(o.cliente + ' · ' + rexUsiCurta(o.usina)) + '</td>'
+        + '<td>' + E(rexSwItens(o.ab, 70)) + [...o.etq].slice(0, 2).map(e => ' <span class="rsw-etq">' + E(String(e).toUpperCase()) + '</span>').join('') + '</td>'
+        + '<td class="n ' + (o.ab.length === o.tot ? 'red' : 'navy') + '">' + o.ab.length + '/' + o.tot + '</td>'
+        + '<td class="obs">' + (o.obs ? E(String(o.obs).slice(0, 115)) + (String(o.obs).length > 115 ? '…' : '') : 'Sem observação registrada na OS.') + '</td></tr>').join('') + '</table>' : '',
+    'Faltam = tarefas abertas ÷ total da OS. Carteira toda: ' + N(Z.nAtrTar) + ' tarefas em ' + N(Z.atr.length) + ' OS.');
+  const rel10 = Z.relOS.slice(0, 10);
+  const s4 = card('4 · RELIGAMENTOS EM ABERTO',
+    nRelOS ? (relAcima ? N(nRelOS) + ' OS vivas, ' + relAcima + ' acima de ' + REX_SW_LIM + ' dias' : 'Em dia: ' + N(nRelOS) + ' OS vivas, nenhuma acima de ' + REX_SW_LIM + ' dias')
+      : 'Nenhum religamento em aberto',
+    rel10.length ? '<table><tr><th class="n">Dias</th><th>OS</th><th>Usina</th><th>Tipo</th><th>Responsável</th><th>Supervisor</th></tr>'
+      + rel10.map(o => '<tr><td class="n ' + (o.dias > REX_SW_LIM ? 'red' : o.dias >= 20 ? 'amber' : '') + '">' + o.dias + ' d</td>'
+        + '<td class="navy">' + E(o.os) + '</td><td>' + E(rexUsiNome(o.usina)) + '</td><td>' + E(/remoto/i.test(o.ab[0].tipo) ? 'Relig. Remoto' : 'Religamento') + '</td>'
+        + '<td class="navy">' + E(Z.respOS.get(o.os) || '—') + '</td><td>' + E(o.sup || '—') + '</td></tr>').join('') + '</table>' : '',
+    'Considera só religamentos cuja OS segue viva' + (nRelOS > 10 ? ' (10 mais antigos de ' + nRelOS + ')' : '') + '.'
+    + (Z.relMortas.length ? ' ' + Z.relMortas.length + ' registro(s) têm a OS concluída com a tarefa aberta e são tratados como finalizados'
+      + ' (OS ' + Z.relMortas.slice(0, 15).join(', ') + (Z.relMortas.length > 15 ? '…' : '') + ').' : '')
+    + ' Responsável = designado da OS na programação; Supervisor = responsável da tarefa no Fracttal.');
+  h += '<div class="rsw-row">' + s1 + s2 + '</div>' + s3 + s4
+    + '<div class="rsw-foot"><span>Grid Co. · PCM · Semana ' + Z.num + ' · página 1 de 2</span><span>continua na página 2: MPAS atrasadas por usina e usinas críticas</span></div>';
+
+  // ── página 2 ──
+  h += '<div class="rsw-p2"><div class="rsw-mini"><div><div class="rsw-kicker">GRID CO. · OPERAÇÃO DE ATIVOS · PCM · SEMANA ' + Z.num + ' · CONTINUAÇÃO</div>'
+    + '<div class="t">MPAS atrasadas e usinas críticas</div></div><div class="rsw-meta">Página 2 de 2 · foto de ' + foto + '</div></div>';
+  const mp12 = Z.mpU.slice(0, 12);
+  h += card('5 · MPAS ATRASADAS · UMA LINHA POR USINA',
+    nMpU ? 'Anuais e semestrais atrasadas: ' + mp12.length + ' usinas mais antigas (de ' + nMpU + ')' : 'Nenhuma MPA/MPS atrasada no recorte',
+    mp12.length ? '<table><tr><th>Usina</th><th>Tipo</th><th>OS</th><th class="n">Tarefas abertas</th><th class="n">Mais antiga</th><th>Responsável</th><th>Supervisor</th></tr>'
+      + mp12.map(x => '<tr><td class="navy">' + E(rexUsiNome(x.usina)) + '</td><td>' + [...x.sig].sort().join('/') + '</td>'
+        + '<td>' + E(Array.from(x.os.entries()).sort((a, b) => b[1] - a[1]).map(e => e[0]).slice(0, 4).join(', ')) + '</td>'
+        + '<td class="n">' + N(x.n) + '</td>' + dcel(x.dias)
+        + '<td class="navy">' + E(Z.respOS.get(x.osVelha) || '—') + '</td><td>' + E(x.sup || '—') + '</td></tr>').join('') + '</table>' : '',
+    'Carteira toda: ' + N(Z.mp.length) + ' tarefas de MPA/MPS atrasadas em ' + N(nMpU) + ' usinas (' + N(Z.nMpOS) + ' OS). '
+    + 'Idade = tarefa mais antiga da usina. Responsável = designado da OS mais antiga; Supervisor = responsável da tarefa no Fracttal.');
+  const crit = Z.rank.slice(0, 4);
+  h += card('6 · USINAS CRÍTICAS · O QUE ESTÁ EM ABERTO', 'Top ' + crit.length + ' do ranking, itens mais antigos',
+    '<div class="rsw-crit">' + crit.map(x => {
+      const g = new Map();
+      x.tarefas.forEach(t => { const k = String(t.os); const o = g.get(k) || { os: k, ts: [], dias: 0, tipo: t.tipo };
+        o.ts.push(t); o.dias = Math.max(o.dias, t.dias || 0); g.set(k, o); });
+      const L = Array.from(g.values()).sort((a, b) => b.dias - a.dias || b.ts.length - a.ts.length);
+      const nCorr = L.slice(4).filter(o => o.ts.some(rexCorretiva)).length;
+      return '<div class="rsw-ub"><div class="u">' + E(rexUsiNome(x.usina)) + ' · ' + N(x.abertas) + ' em aberto · <small>mais antiga ' + x.velha + ' d</small></div>'
+        + '<ul class="itens">' + L.slice(0, 4).map(o => '<li><b>OS ' + E(o.os) + '</b> · ' + E(o.tipo) + ' · ' + o.dias + ' d · '
+          + (o.ts.length > 1 ? o.ts.length + ' tarefas: ' : '') + E(rexSwItens(o.ts, 110)) + '</li>').join('')
+        + (L.length > 4 ? '<li class="mais">+ ' + (L.length - 4) + ' OS em aberto nesta usina' + (nCorr ? ' (' + nCorr + ' corretiva(s))' : '') + '</li>' : '')
+        + '</ul></div>';
+    }).join('') + '</div>');
+  h += '<div class="rsw-foot"><span>Grid Co. · PCM · Semana ' + Z.num + ' · página 2 de 2 · Fonte: Fracttal via gestao_pcm.json ('
+    + E(dtGestao) + ') + programação semanal (banco_dados.json)</span><span>tarefas de OS já concluída não contam como abertas · '
+    + 'cadastros de Teste ficam fora</span></div></div></div>';
 
   let v = document.getElementById('rex-view');
   if (!v) { v = document.createElement('div'); v.id = 'rex-view'; document.body.appendChild(v); }
