@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-10T14:44:03Z",
+  "geradoEm": "2026-10-10T15:32:17Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-05 .. 2026-10-11",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5117,
-        "emAberto": 58,
+        "total": 5118,
+        "emAberto": 59,
         "atrasadas": 51,
         "concluidas30d": 835,
         "concluidas7d": 230,
-        "naSemanaCorrente": 196
+        "naSemanaCorrente": 197
       },
       "mttr": {
         "horas": 16.22,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W41",
-          "criadas": 198,
+          "criadas": 199,
           "finalizadas": 174
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5117,
-            "emAberto": 58
+            "total": 5118,
+            "emAberto": 59
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 58,
+      "total": 59,
       "atrasadas": 51,
       "porStatus": {
-        "naoIniciada": 51,
-        "emProgresso": 4,
+        "naoIniciada": 50,
+        "emProgresso": 6,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 58
+        "(sem equipe)": 59
       },
       "oss": [
         {
@@ -729,14 +729,15 @@
           "responsavel": "Frank  Melo",
           "criadoPor": "LucasNascimento",
           "supervisor": "Frank  Melo",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
           "criticidade": "",
           "dataProgramada": "2026-10-09",
           "dataCriacao": "2026-10-09",
-          "dataInicial": "",
+          "dataInicial": "2026-10-10",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -1015,6 +1016,24 @@
           "atrasada": true
         },
         {
+          "osId": "16041",
+          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Adriano  Moraes",
+          "status": "Não Iniciada",
+          "tarefa": "[Usina] - Religamento da Usina",
+          "criticidade": "",
+          "dataProgramada": "2026-10-10",
+          "dataCriacao": "2026-10-10",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "16037",
           "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
           "equipe": "",
@@ -1075,14 +1094,15 @@
           "responsavel": "Cleiton  Farias",
           "criadoPor": "Raphael Vitoriano",
           "supervisor": "Cleiton  Farias",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
           "criticidade": "",
           "dataProgramada": "2026-10-10",
           "dataCriacao": "2026-10-10",
-          "dataInicial": "",
+          "dataInicial": "2026-10-10",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -4147,9 +4167,9 @@
       "historicoTotal": 2096,
       "subClassificacao": {
         "remoto": 759,
-        "local": 4358,
+        "local": 4359,
         "remotoEmAberto": 6,
-        "localEmAberto": 52,
+        "localEmAberto": 53,
         "pctRemoto": 15,
         "alerta": true
       },
@@ -6278,25 +6298,6 @@
           "atrasada": false
         },
         {
-          "osId": "15106",
-          "ativo": "Transformador 1 WEG     { MRO100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Frank  Melo",
-          "status": "Finalizados",
-          "tarefa": "[Athon] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-10-06",
-          "dataCriacao": "2026-10-01",
-          "dataInicial": "2026-10-08",
-          "dataFinal": "2026-10-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "15105",
           "ativo": "Nobreak 1      { MTS200-NBRK1 }",
           "equipe": "",
@@ -6389,6 +6390,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 1296.0,
           "horasAteFechar": 1080.0,
+          "atrasada": false
+        },
+        {
+          "osId": "15106",
+          "ativo": "Transformador 1 WEG     { MRO100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Frank  Melo",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Frank  Melo",
+          "status": "Finalizados",
+          "tarefa": "[Athon] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-10-06",
+          "dataCriacao": "2026-10-01",
+          "dataInicial": "2026-10-08",
+          "dataFinal": "2026-10-08",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -15872,6 +15892,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "16041",
+      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Adriano  Moraes",
+      "status": "Não Iniciada",
+      "tarefa": "[Usina] - Religamento da Usina",
+      "criticidade": "",
+      "dataProgramada": "2026-10-10",
+      "dataCriacao": "2026-10-10",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "16037",
       "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
       "equipe": "",
@@ -15946,14 +15983,15 @@
       "responsavel": "Cleiton  Farias",
       "criadoPor": "Raphael Vitoriano",
       "supervisor": "Cleiton  Farias",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
       "criticidade": "",
       "dataProgramada": "2026-10-10",
       "dataCriacao": "2026-10-10",
-      "dataInicial": "",
+      "dataInicial": "2026-10-10",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16015,14 +16053,15 @@
       "responsavel": "Frank  Melo",
       "criadoPor": "LucasNascimento",
       "supervisor": "Frank  Melo",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
       "criticidade": "",
       "dataProgramada": "2026-10-09",
       "dataCriacao": "2026-10-09",
-      "dataInicial": "",
+      "dataInicial": "2026-10-10",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -19759,25 +19798,6 @@
       "atrasada": false
     },
     {
-      "osId": "15106",
-      "ativo": "Transformador 1 WEG     { MRO100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Frank  Melo",
-      "status": "Finalizados",
-      "tarefa": "[Athon] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-10-06",
-      "dataCriacao": "2026-10-01",
-      "dataInicial": "2026-10-08",
-      "dataFinal": "2026-10-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "15105",
       "ativo": "Nobreak 1      { MTS200-NBRK1 }",
       "equipe": "",
@@ -22525,10 +22545,30 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
+    },
+    {
+      "osId": "15372",
+      "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
+      "criticidade": "",
+      "dataProgramada": "2026-10-04",
+      "dataCriacao": "2026-10-04",
+      "dataInicial": "2026-10-04",
+      "dataFinal": "2026-10-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
     }
   ],
   "historicoTotal": 3290,
-  "totalGeral": 7191,
+  "totalGeral": 7192,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
