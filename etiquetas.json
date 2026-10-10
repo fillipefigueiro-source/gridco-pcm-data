@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-10T11:40:04Z",
+  "geradoEm": "2026-10-10T12:53:53Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-05 .. 2026-10-11",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5111,
-        "emAberto": 54,
-        "atrasadas": 50,
+        "total": 5114,
+        "emAberto": 57,
+        "atrasadas": 51,
         "concluidas30d": 833,
         "concluidas7d": 228,
-        "naSemanaCorrente": 190
+        "naSemanaCorrente": 193
       },
       "mttr": {
         "horas": 16.26,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W41",
-          "criadas": 192,
+          "criadas": 195,
           "finalizadas": 172
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5111,
-            "emAberto": 54
+            "total": 5114,
+            "emAberto": 57
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 54,
-      "atrasadas": 50,
+      "total": 57,
+      "atrasadas": 51,
       "porStatus": {
-        "naoIniciada": 47,
-        "emProgresso": 4,
+        "naoIniciada": 49,
+        "emProgresso": 5,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 54
+        "(sem equipe)": 57
       },
       "oss": [
         {
@@ -705,6 +705,24 @@
           "atrasada": true
         },
         {
+          "osId": "16030",
+          "ativo": "Inversor 3.8 Sungrow SG125HV    { CAZ100-INVR3.8 }",
+          "equipe": "",
+          "responsavel": "Gilson  Milhomem",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Gilson  Milhomem",
+          "status": "Não Iniciada",
+          "tarefa": "[CAZ100-INVR3.8] - Religamento do CAZ100-INVR3.8",
+          "criticidade": "",
+          "dataProgramada": "2026-10-09",
+          "dataCriacao": "2026-10-10",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "16012",
           "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
           "equipe": "",
@@ -997,6 +1015,42 @@
           "atrasada": true
         },
         {
+          "osId": "16032",
+          "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+          "equipe": "",
+          "responsavel": "Ademir Necker ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Ademir Necker ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-10",
+          "dataCriacao": "2026-10-10",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "16027",
+          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H3    { MCB100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Cleiton  Farias",
+          "criadoPor": "Raphael Vitoriano",
+          "supervisor": "Cleiton  Farias",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
+          "criticidade": "",
+          "dataProgramada": "2026-10-10",
+          "dataCriacao": "2026-10-10",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "16026",
           "ativo": "Cabine 2  Santa Maria do Pará  Pará Brasil { SMP100-CABN2 }",
           "equipe": "",
@@ -1040,14 +1094,15 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Carlos  Godoi",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-STA100] - Religamento do THPN-STA100",
           "criticidade": "",
           "dataProgramada": "2026-10-10",
           "dataCriacao": "2026-10-10",
-          "dataInicial": "",
+          "dataInicial": "2026-10-10",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -4075,9 +4130,9 @@
       "historicoTotal": 2094,
       "subClassificacao": {
         "remoto": 759,
-        "local": 4352,
+        "local": 4355,
         "remotoEmAberto": 6,
-        "localEmAberto": 48,
+        "localEmAberto": 51,
         "pctRemoto": 15,
         "alerta": true
       },
@@ -9890,16 +9945,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 836,
-        "emAberto": 38,
-        "atrasadas": 31,
-        "concluidas30d": 170,
-        "concluidas7d": 36,
+        "emAberto": 37,
+        "atrasadas": 30,
+        "concluidas30d": 171,
+        "concluidas7d": 37,
         "naSemanaCorrente": 34
       },
       "mttr": {
-        "horas": 219.67,
+        "horas": 219.65,
         "label": "9d 3h",
-        "amostra": 170
+        "amostra": 171
       },
       "tendencia4Semanas": [
         {
@@ -9920,7 +9975,7 @@
         {
           "semana": "W41",
           "criadas": 29,
-          "finalizadas": 36
+          "finalizadas": 37
         }
       ],
       "topOfensores": {
@@ -9928,7 +9983,7 @@
           {
             "nome": "(sem equipe)",
             "total": 836,
-            "emAberto": 38
+            "emAberto": 37
           }
         ],
         "responsaveis": [
@@ -9959,16 +10014,16 @@
           }
         ]
       },
-      "total": 38,
-      "atrasadas": 31,
+      "total": 37,
+      "atrasadas": 30,
       "porStatus": {
         "naoIniciada": 33,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 38
+        "(sem equipe)": 37
       },
       "oss": [
         {
@@ -10245,24 +10300,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 96.0,
-          "atrasada": true
-        },
-        {
-          "osId": "15150",
-          "ativo": "Inversor 1.3 Huawei SUN-330KTL-H1    { GTA500-INVR1.3 }",
-          "equipe": "",
-          "responsavel": "Henri Almeida ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Henri Almeida ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.3] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-10-01",
-          "dataCriacao": "2026-10-01",
-          "dataInicial": "2026-10-06",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
           "atrasada": true
         },
         {
@@ -10624,6 +10661,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "15150",
+          "ativo": "Inversor 1.3 Huawei SUN-330KTL-H1    { GTA500-INVR1.3 }",
+          "equipe": "",
+          "responsavel": "Henri Almeida ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Henri Almeida ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.3] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-10-01",
+          "dataCriacao": "2026-10-01",
+          "dataInicial": "2026-10-06",
+          "dataFinal": "2026-10-10",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
+          "horasAteFechar": 96.0,
+          "atrasada": false
+        },
         {
           "osId": "15935",
           "ativo": "Tracker 31.100 STI     { PCN100-ETKR31.100 }",
@@ -13454,28 +13510,9 @@
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "11345",
-          "ativo": "Tracker 09.102 Brametal Bi-motor    { SMP100-ETKR9.102 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 09.102] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-17",
-          "dataCriacao": "2026-08-17",
-          "dataInicial": "2026-08-19",
-          "dataFinal": "2026-08-19",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 703
+      "historicoTotal": 704
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15818,6 +15855,57 @@
   },
   "ossPublicas": [
     {
+      "osId": "16032",
+      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+      "equipe": "",
+      "responsavel": "Ademir Necker ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Ademir Necker ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-10",
+      "dataCriacao": "2026-10-10",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16030",
+      "ativo": "Inversor 3.8 Sungrow SG125HV    { CAZ100-INVR3.8 }",
+      "equipe": "",
+      "responsavel": "Gilson  Milhomem",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Gilson  Milhomem",
+      "status": "Não Iniciada",
+      "tarefa": "[CAZ100-INVR3.8] - Religamento do CAZ100-INVR3.8",
+      "criticidade": "",
+      "dataProgramada": "2026-10-09",
+      "dataCriacao": "2026-10-10",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16027",
+      "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H3    { MCB100-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Cleiton  Farias",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Cleiton  Farias",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
+      "criticidade": "",
+      "dataProgramada": "2026-10-10",
+      "dataCriacao": "2026-10-10",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "16026",
       "ativo": "Cabine 2  Santa Maria do Pará  Pará Brasil { SMP100-CABN2 }",
       "equipe": "",
@@ -15859,14 +15947,15 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Carlos  Godoi",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-STA100] - Religamento do THPN-STA100",
       "criticidade": "",
       "dataProgramada": "2026-10-10",
       "dataCriacao": "2026-10-10",
-      "dataInicial": "",
+      "dataInicial": "2026-10-10",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -18071,23 +18160,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 96.0
-    },
-    {
-      "osId": "15150",
-      "ativo": "Inversor 1.3 Huawei SUN-330KTL-H1    { GTA500-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Henri Almeida ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Henri Almeida ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.3] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-10-01",
-      "dataCriacao": "2026-10-01",
-      "dataInicial": "2026-10-06",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0
     },
     {
       "osId": "15140",
@@ -22422,8 +22494,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3287,
-  "totalGeral": 7185,
+  "historicoTotal": 3288,
+  "totalGeral": 7188,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
