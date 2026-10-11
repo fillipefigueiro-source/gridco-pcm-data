@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-11T01:22:33Z",
+  "geradoEm": "2026-10-11T03:37:22Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-05 .. 2026-10-11",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 5128,
-        "emAberto": 60,
-        "atrasadas": 60,
-        "concluidas30d": 809,
-        "concluidas7d": 224,
+        "emAberto": 59,
+        "atrasadas": 59,
+        "concluidas30d": 810,
+        "concluidas7d": 225,
         "naSemanaCorrente": 207
       },
       "mttr": {
-        "horas": 16.79,
-        "label": "16h 47min",
-        "amostra": 809
+        "horas": 16.77,
+        "label": "16h 46min",
+        "amostra": 810
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W41",
           "criadas": 209,
-          "finalizadas": 183
+          "finalizadas": 184
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 5128,
-            "emAberto": 60
+            "emAberto": 59
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 60,
-      "atrasadas": 60,
+      "total": 59,
+      "atrasadas": 59,
       "porStatus": {
-        "naoIniciada": 53,
+        "naoIniciada": 52,
         "emProgresso": 2,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 60
+        "(sem equipe)": 59
       },
       "oss": [
         {
@@ -1158,7 +1158,9 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "16015",
           "ativo": "Thopen - Canarana 1 - MT MT-110, S/N, Zona Rural Canarana  Mato Grosso Brasil { THPN-CNN100 }",
@@ -1166,19 +1168,19 @@
           "responsavel": "Marcelo Lino de Souza ",
           "criadoPor": "GerdesonAraújo",
           "supervisor": "Marcelo Lino de Souza ",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "[Thopen - Canarana 1 - MT] - Religamento do Thopen - Canarana 1 - MT",
           "criticidade": "",
           "dataProgramada": "2026-10-10",
           "dataCriacao": "2026-10-10",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-10-10",
+          "dataFinal": "2026-10-10",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
-          "atrasada": true
-        }
-      ],
-      "ossHistorico": [
+          "atrasada": false
+        },
         {
           "osId": "16041",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
@@ -4158,34 +4160,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "15216",
-          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
-          "criticidade": "",
-          "dataProgramada": "2026-10-02",
-          "dataCriacao": "2026-10-02",
-          "dataInicial": "2026-10-02",
-          "dataFinal": "2026-10-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2090,
+      "historicoTotal": 2091,
       "subClassificacao": {
         "remoto": 759,
         "local": 4369,
         "remotoEmAberto": 6,
-        "localEmAberto": 54,
+        "localEmAberto": 53,
         "pctRemoto": 15,
         "alerta": true
       },
@@ -16097,23 +16079,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "16015",
-      "ativo": "Thopen - Canarana 1 - MT MT-110, S/N, Zona Rural Canarana  Mato Grosso Brasil { THPN-CNN100 }",
-      "equipe": "",
-      "responsavel": "Marcelo Lino de Souza ",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Marcelo Lino de Souza ",
-      "status": "Não Iniciada",
-      "tarefa": "[Thopen - Canarana 1 - MT] - Religamento do Thopen - Canarana 1 - MT",
-      "criticidade": "",
-      "dataProgramada": "2026-10-10",
-      "dataCriacao": "2026-10-10",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "16011",
       "ativo": "2C - União 1 - PI Estrada p/Campo Grande União  Piauí Brasil { 2C-UNI100 }",
       "equipe": "",
@@ -19639,6 +19604,26 @@
   ],
   "ossHistorico": [
     {
+      "osId": "16015",
+      "ativo": "Thopen - Canarana 1 - MT MT-110, S/N, Zona Rural Canarana  Mato Grosso Brasil { THPN-CNN100 }",
+      "equipe": "",
+      "responsavel": "Marcelo Lino de Souza ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Marcelo Lino de Souza ",
+      "status": "Finalizados",
+      "tarefa": "[Thopen - Canarana 1 - MT] - Religamento do Thopen - Canarana 1 - MT",
+      "criticidade": "",
+      "dataProgramada": "2026-10-10",
+      "dataCriacao": "2026-10-10",
+      "dataInicial": "2026-10-10",
+      "dataFinal": "2026-10-10",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "15555",
       "ativo": "Transformador 2      { THPN-CAI100-TRFR2 }",
       "equipe": "",
@@ -22576,29 +22561,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "15391",
-      "ativo": "Thopen - Santo Inácio 1 e 2 - SP  Santo Inácio  São Paulo Brasil { THPN-STI100 }",
-      "equipe": "",
-      "responsavel": "Hélio Silva ",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Hélio Silva ",
-      "status": "Finalizados",
-      "tarefa": "[Thopen - Santo Inácio 1 e 2 - SP] - Religamento do Thopen - Santo Inácio 1 e 2 - SP",
-      "criticidade": "",
-      "dataProgramada": "2026-10-04",
-      "dataCriacao": "2026-10-04",
-      "dataInicial": "2026-10-05",
-      "dataFinal": "2026-10-05",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3284,
+  "historicoTotal": 3285,
   "totalGeral": 7202,
   "verificacao": {
     "total": 0,
