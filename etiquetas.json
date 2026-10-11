@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-11T14:21:13Z",
+  "geradoEm": "2026-10-11T15:17:44Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-05 .. 2026-10-11",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5140,
-        "emAberto": 59,
+        "total": 5143,
+        "emAberto": 60,
         "atrasadas": 54,
-        "concluidas30d": 822,
-        "concluidas7d": 237,
-        "naSemanaCorrente": 219
+        "concluidas30d": 824,
+        "concluidas7d": 239,
+        "naSemanaCorrente": 222
       },
       "mttr": {
-        "horas": 16.67,
-        "label": "16h 40min",
-        "amostra": 822
+        "horas": 16.62,
+        "label": "16h 37min",
+        "amostra": 824
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W41",
-          "criadas": 221,
-          "finalizadas": 196
+          "criadas": 224,
+          "finalizadas": 198
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5140,
-            "emAberto": 59
+            "total": 5143,
+            "emAberto": 60
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 59,
+      "total": 60,
       "atrasadas": 54,
       "porStatus": {
-        "naoIniciada": 52,
+        "naoIniciada": 53,
         "emProgresso": 4,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 59
+        "(sem equipe)": 60
       },
       "oss": [
         {
@@ -1069,14 +1069,50 @@
           "atrasada": true
         },
         {
-          "osId": "16078",
-          "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
+          "osId": "16082",
+          "ativo": "Athon - Jacundá 1 - PA Estrada da Areia Branca, s/n Jacundá  Pará Brasil { ATHN-JCD100 }",
           "equipe": "",
-          "responsavel": "Thiago Morais ",
+          "responsavel": "James Chaves ",
           "criadoPor": "Juliana Rogério ",
-          "supervisor": "Thiago Morais ",
+          "supervisor": "James Chaves ",
           "status": "Não Iniciada",
-          "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
+          "tarefa": "[Athon - Jacundá 1 - PA] - Religamento do Athon - Jacundá 1 - PA",
+          "criticidade": "",
+          "dataProgramada": "2026-10-11",
+          "dataCriacao": "2026-10-11",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "16080",
+          "ativo": "Cabine 3 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN3 }",
+          "equipe": "",
+          "responsavel": "Cleiton  Farias",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Cleiton  Farias",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-RDR200-CABN3] - Religamento do THPN-RDR200-CABN3",
+          "criticidade": "",
+          "dataProgramada": "2026-10-11",
+          "dataCriacao": "2026-10-11",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "16079",
+          "ativo": "Inversor 1.10 Sungrow SG125HV    { THPN-CGH100-INVR1.10 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-CGH100-INVR1.10] - Religamento do THPN-CGH100-INVR1.10",
           "criticidade": "",
           "dataProgramada": "2026-10-11",
           "dataCriacao": "2026-10-11",
@@ -1093,14 +1129,15 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "Cícero  Willian",
           "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 2.2] - Religamento do Inversor 2.2",
           "criticidade": "",
           "dataProgramada": "2026-10-11",
           "dataCriacao": "2026-10-11",
-          "dataInicial": "",
+          "dataInicial": "2026-10-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -1139,28 +1176,29 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
-        },
+        }
+      ],
+      "ossHistorico": [
         {
-          "osId": "16063",
-          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+          "osId": "16078",
+          "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
           "equipe": "",
-          "responsavel": "Matheus Gois ",
-          "criadoPor": "Maria Emanuella de Souza Mota ",
-          "supervisor": "Matheus Gois ",
-          "status": "Em progresso",
-          "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
           "criticidade": "",
           "dataProgramada": "2026-10-11",
           "dataCriacao": "2026-10-11",
           "dataInicial": "2026-10-11",
-          "dataFinal": "",
+          "dataFinal": "2026-10-11",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "16067",
           "ativo": "Inversor 1.3 Huawei SUN2000-330KTL-H1    { ADS200-INVR1.3 }",
@@ -1210,6 +1248,26 @@
           "supervisor": "Adriano Silva ",
           "status": "Finalizados",
           "tarefa": "[Sal Energia - Aquiraz 2 (Carosa) - CE] - Religamento do Sal Energia - Aquiraz 2 (Carosa) - CE",
+          "criticidade": "",
+          "dataProgramada": "2026-10-11",
+          "dataCriacao": "2026-10-11",
+          "dataInicial": "2026-10-11",
+          "dataFinal": "2026-10-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "16063",
+          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+          "equipe": "",
+          "responsavel": "Matheus Gois ",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Matheus Gois ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
           "criticidade": "",
           "dataProgramada": "2026-10-11",
           "dataCriacao": "2026-10-11",
@@ -4082,26 +4140,6 @@
           "atrasada": false
         },
         {
-          "osId": "15322",
-          "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
-          "equipe": "",
-          "responsavel": "Luis  Moura",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Luis  Moura",
-          "status": "Finalizados",
-          "tarefa": "[THPN-MTO100] - Religamento do THPN-MTO100",
-          "criticidade": "",
-          "dataProgramada": "2026-10-03",
-          "dataCriacao": "2026-10-03",
-          "dataInicial": "2026-10-03",
-          "dataFinal": "2026-10-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "15327",
           "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
           "equipe": "",
@@ -4140,34 +4178,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "15323",
-          "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
-          "equipe": "",
-          "responsavel": "Valdir Silva ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Valdir Silva ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-SAP100] - Religamento do THPN-SAP100",
-          "criticidade": "",
-          "dataProgramada": "2026-10-03",
-          "dataCriacao": "2026-10-03",
-          "dataInicial": "2026-10-03",
-          "dataFinal": "2026-10-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2103,
+      "historicoTotal": 2105,
       "subClassificacao": {
         "remoto": 759,
-        "local": 4381,
+        "local": 4384,
         "remotoEmAberto": 6,
-        "localEmAberto": 53,
+        "localEmAberto": 54,
         "pctRemoto": 15,
         "alerta": true
       },
@@ -4390,16 +4408,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 898,
-        "emAberto": 99,
+        "emAberto": 98,
         "atrasadas": 47,
-        "concluidas30d": 104,
-        "concluidas7d": 39,
+        "concluidas30d": 105,
+        "concluidas7d": 40,
         "naSemanaCorrente": 60
       },
       "mttr": {
-        "horas": 394.38,
-        "label": "16d 10h",
-        "amostra": 104
+        "horas": 391.54,
+        "label": "16d 7h",
+        "amostra": 105
       },
       "tendencia4Semanas": [
         {
@@ -4420,7 +4438,7 @@
         {
           "semana": "W41",
           "criadas": 50,
-          "finalizadas": 39
+          "finalizadas": 40
         }
       ],
       "topOfensores": {
@@ -4428,7 +4446,7 @@
           {
             "nome": "(sem equipe)",
             "total": 898,
-            "emAberto": 99
+            "emAberto": 98
           }
         ],
         "responsaveis": [
@@ -4459,16 +4477,16 @@
           }
         ]
       },
-      "total": 99,
+      "total": 98,
       "atrasadas": 47,
       "porStatus": {
         "naoIniciada": 93,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 99
+        "(sem equipe)": 98
       },
       "oss": [
         {
@@ -5888,24 +5906,6 @@
           "atrasada": false
         },
         {
-          "osId": "15714",
-          "ativo": "Transformador 1      { THPN-CLR100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Matheus Gois ",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Matheus Gois ",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-10-19",
-          "dataCriacao": "2026-10-07",
-          "dataInicial": "2026-10-09",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "atrasada": false
-        },
-        {
           "osId": "15571",
           "ativo": "Transformador 5 COMTRAFO     { MAB100-TRFR5 }",
           "equipe": "",
@@ -6162,6 +6162,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "15714",
+          "ativo": "Transformador 1      { THPN-CLR100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Matheus Gois ",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Matheus Gois ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-10-19",
+          "dataCriacao": "2026-10-07",
+          "dataInicial": "2026-10-09",
+          "dataFinal": "2026-10-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 48.0,
+          "atrasada": false
+        },
         {
           "osId": "15448",
           "ativo": "Transformador 1      { MRJ100-TRFR1 }",
@@ -7337,25 +7356,6 @@
           "dataFinal": "2026-09-28",
           "linkFracttal": "",
           "horasAteAbrir": 1488.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "13862",
-          "ativo": "Transformador 4 Gazquez     { IND100-TRFR4 }",
-          "equipe": "",
-          "responsavel": "Igor Silva ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Igor Silva ",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-09-29",
-          "dataCriacao": "2026-09-18",
-          "dataInicial": "2026-09-28",
-          "dataFinal": "2026-09-28",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -9013,7 +9013,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 355
+      "historicoTotal": 356
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -15890,14 +15890,48 @@
   },
   "ossPublicas": [
     {
-      "osId": "16078",
-      "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
+      "osId": "16082",
+      "ativo": "Athon - Jacundá 1 - PA Estrada da Areia Branca, s/n Jacundá  Pará Brasil { ATHN-JCD100 }",
       "equipe": "",
-      "responsavel": "Thiago Morais ",
+      "responsavel": "James Chaves ",
       "criadoPor": "Juliana Rogério ",
-      "supervisor": "Thiago Morais ",
+      "supervisor": "James Chaves ",
       "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
+      "tarefa": "[Athon - Jacundá 1 - PA] - Religamento do Athon - Jacundá 1 - PA",
+      "criticidade": "",
+      "dataProgramada": "2026-10-11",
+      "dataCriacao": "2026-10-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16080",
+      "ativo": "Cabine 3 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN3 }",
+      "equipe": "",
+      "responsavel": "Cleiton  Farias",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Cleiton  Farias",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-RDR200-CABN3] - Religamento do THPN-RDR200-CABN3",
+      "criticidade": "",
+      "dataProgramada": "2026-10-11",
+      "dataCriacao": "2026-10-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16079",
+      "ativo": "Inversor 1.10 Sungrow SG125HV    { THPN-CGH100-INVR1.10 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-CGH100-INVR1.10] - Religamento do THPN-CGH100-INVR1.10",
       "criticidade": "",
       "dataProgramada": "2026-10-11",
       "dataCriacao": "2026-10-11",
@@ -15913,14 +15947,15 @@
       "responsavel": "Janderson Miranda ",
       "criadoPor": "Cícero  Willian",
       "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 2.2] - Religamento do Inversor 2.2",
       "criticidade": "",
       "dataProgramada": "2026-10-11",
       "dataCriacao": "2026-10-11",
-      "dataInicial": "",
+      "dataInicial": "2026-10-11",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15955,24 +15990,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "16063",
-      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
-      "equipe": "",
-      "responsavel": "Matheus Gois ",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Matheus Gois ",
-      "status": "Em progresso",
-      "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-11",
-      "dataCriacao": "2026-10-11",
-      "dataInicial": "2026-10-11",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -17081,23 +17098,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "15714",
-      "ativo": "Transformador 1      { THPN-CLR100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Matheus Gois ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Matheus Gois ",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-10-19",
-      "dataCriacao": "2026-10-07",
-      "dataInicial": "2026-10-09",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
     },
     {
       "osId": "15712",
@@ -20194,6 +20194,26 @@
       "atrasada": false
     },
     {
+      "osId": "16078",
+      "ativo": "Inversor 1.3 Sofar 250KTL-HV-PRO    { IBI200-INVR1.3 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
+      "criticidade": "",
+      "dataProgramada": "2026-10-11",
+      "dataCriacao": "2026-10-11",
+      "dataInicial": "2026-10-11",
+      "dataFinal": "2026-10-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "16067",
       "ativo": "Inversor 1.3 Huawei SUN2000-330KTL-H1    { ADS200-INVR1.3 }",
       "equipe": "",
@@ -20242,6 +20262,26 @@
       "supervisor": "Adriano Silva ",
       "status": "Finalizados",
       "tarefa": "[Sal Energia - Aquiraz 2 (Carosa) - CE] - Religamento do Sal Energia - Aquiraz 2 (Carosa) - CE",
+      "criticidade": "",
+      "dataProgramada": "2026-10-11",
+      "dataCriacao": "2026-10-11",
+      "dataInicial": "2026-10-11",
+      "dataFinal": "2026-10-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "16063",
+      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+      "equipe": "",
+      "responsavel": "Matheus Gois ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Matheus Gois ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
       "criticidade": "",
       "dataProgramada": "2026-10-11",
       "dataCriacao": "2026-10-11",
@@ -21471,6 +21511,25 @@
       "atrasada": false
     },
     {
+      "osId": "15714",
+      "ativo": "Transformador 1      { THPN-CLR100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Matheus Gois ",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Matheus Gois ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-10-19",
+      "dataCriacao": "2026-10-07",
+      "dataInicial": "2026-10-09",
+      "dataFinal": "2026-10-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 48.0,
+      "atrasada": false
+    },
+    {
       "osId": "15702",
       "ativo": "2C - União 1 - PI Estrada p/Campo Grande União  Piauí Brasil { 2C-UNI100 }",
       "equipe": "",
@@ -22505,68 +22564,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "15445",
-      "ativo": "SPDA Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR100-SPDA1 }",
-      "equipe": "",
-      "responsavel": "Leonardo  Dias",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Leonardo  Dias",
-      "status": "Finalizados",
-      "tarefa": "[GreenYellow] - MPS - Quadro Aterramento",
-      "criticidade": "",
-      "dataProgramada": "2026-10-06",
-      "dataCriacao": "2026-10-05",
-      "dataInicial": "2026-10-07",
-      "dataFinal": "2026-10-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "15441",
-      "ativo": "Inversor 5.4  SUN2000-250KTL-H1    { THPN-ACB100-INVR5.4 }",
-      "equipe": "",
-      "responsavel": "Gilson  Milhomem",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Gilson  Milhomem",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 5.4] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-10-06",
-      "dataCriacao": "2026-10-05",
-      "dataInicial": "2026-10-07",
-      "dataFinal": "2026-10-07",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "15437",
-      "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Thiago Morais ",
-      "status": "Finalizados",
-      "tarefa": "[IBI200-INVR1.5] - Religamento do IBI200-INVR1.5",
-      "criticidade": "",
-      "dataProgramada": "2026-10-05",
-      "dataCriacao": "2026-10-05",
-      "dataInicial": "2026-10-06",
-      "dataFinal": "2026-10-06",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3297,
-  "totalGeral": 7214,
+  "historicoTotal": 3300,
+  "totalGeral": 7217,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
