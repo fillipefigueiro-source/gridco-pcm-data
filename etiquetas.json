@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-13T10:12:19Z",
+  "geradoEm": "2026-10-13T11:06:43Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-12 .. 2026-10-18",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5189,
-        "emAberto": 54,
+        "total": 5193,
+        "emAberto": 56,
         "atrasadas": 52,
-        "concluidas30d": 825,
-        "concluidas7d": 217,
-        "naSemanaCorrente": 33
+        "concluidas30d": 827,
+        "concluidas7d": 219,
+        "naSemanaCorrente": 37
       },
       "mttr": {
-        "horas": 15.92,
-        "label": "15h 55min",
-        "amostra": 825
+        "horas": 15.88,
+        "label": "15h 53min",
+        "amostra": 827
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W42",
-          "criadas": 33,
-          "finalizadas": 26
+          "criadas": 37,
+          "finalizadas": 28
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5189,
-            "emAberto": 54
+            "total": 5193,
+            "emAberto": 56
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 54,
+      "total": 56,
       "atrasadas": 52,
       "porStatus": {
-        "naoIniciada": 48,
-        "emProgresso": 0,
-        "pausada": 6,
+        "naoIniciada": 50,
+        "emProgresso": 1,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 54
+        "(sem equipe)": 56
       },
       "oss": [
         {
@@ -910,7 +910,7 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "LuelySantos",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Inversor 2.9] - Religamento do Inversor 2.9",
           "criticidade": "",
           "dataProgramada": "2026-10-12",
@@ -1031,6 +1031,42 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "16147",
+          "ativo": "Cabine 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-CABN4 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ricardo Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Cabine 4] - Religamento da Cabine 4",
+          "criticidade": "",
+          "dataProgramada": "2026-10-13",
+          "dataCriacao": "2026-10-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "16145",
+          "ativo": "Cabine 3 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN3 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Valdério Paz ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-RDR200-CABN3] - Religamento do THPN-RDR200-CABN3",
+          "criticidade": "",
+          "dataProgramada": "2026-10-13",
+          "dataCriacao": "2026-10-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "16144",
@@ -4071,12 +4107,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2107,
+      "historicoTotal": 2109,
       "subClassificacao": {
         "remoto": 759,
-        "local": 4430,
+        "local": 4434,
         "remotoEmAberto": 6,
-        "localEmAberto": 48,
+        "localEmAberto": 50,
         "pctRemoto": 15,
         "alerta": true
       },
@@ -15743,6 +15779,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "16147",
+      "ativo": "Cabine 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-CABN4 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Ricardo Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Cabine 4] - Religamento da Cabine 4",
+      "criticidade": "",
+      "dataProgramada": "2026-10-13",
+      "dataCriacao": "2026-10-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16145",
+      "ativo": "Cabine 3 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN3 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Valdério Paz ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-RDR200-CABN3] - Religamento do THPN-RDR200-CABN3",
+      "criticidade": "",
+      "dataProgramada": "2026-10-13",
+      "dataCriacao": "2026-10-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "16144",
       "ativo": "Thopen - Nova Londrina 1 - PR Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100 }",
       "equipe": "",
@@ -15834,7 +15904,7 @@
       "responsavel": "Carlos Bruno  Pessanha Pereira",
       "criadoPor": "LuelySantos",
       "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Inversor 2.9] - Religamento do Inversor 2.9",
       "criticidade": "",
       "dataProgramada": "2026-10-12",
@@ -22319,8 +22389,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3274,
-  "totalGeral": 7263,
+  "historicoTotal": 3276,
+  "totalGeral": 7267,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
