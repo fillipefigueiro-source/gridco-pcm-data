@@ -1031,7 +1031,9 @@ function rexSwModelo(bd, Tall) {
   });
   const mpU = Array.from(MU.values()).sort((a, b) => b.dias - a.dias || b.n - a.n);
   const corrOS = new Set(viva.filter(rexCorretiva).map(t => String(t.os)));
-  return { w, seg, sex, num, fechado, respOS, rows, T, rank, atr, relOS, relMortas, mp, mpU, OS, corrOS,
+  // OS na programação desta semana (plano + encaixes), por número
+  const osSem = new Set((w.rows || []).map(r => String(r.os_id)));
+  return { w, seg, sex, num, fechado, respOS, rows, osSem, T, rank, atr, relOS, relMortas, mp, mpU, OS, corrOS,
     nAtrTar: atr.reduce((s, o) => s + o.ab.filter(t => (t.dias || 0) > REX_SW_LIM).length, 0),
     nMpOS: new Set(mp.map(t => String(t.os))).size,
     nRelTar: relOS.reduce((s, o) => s + o.ab.length, 0) };
@@ -1055,6 +1057,7 @@ async function rexGerarSemana() {
   const dcel = d => '<td class="n ' + rexDiasCls(d) + '">' + d + ' d</td>';
   const card = (tag, h2, corpo, nota) => '<div class="rsw-card"><div class="rsw-tag">' + tag + '</div><h2>' + h2 + '</h2>'
     + corpo + (nota ? '<div class="rsw-nota">' + nota + '</div>' : '') + '</div>';
+  const selo = os => Z.osSem.has(String(os)) ? ' <span class="rsw-selo">&#128197; S' + Z.num + '</span>' : '';
   const kpi = (v, l, c) => '<div class="rsw-kpi"><div class="v ' + c + '">' + v + '</div><div class="l">' + l + '</div></div>';
   const nRelOS = Z.relOS.length, relAcima = Z.relOS.filter(o => o.dias > REX_SW_LIM).length;
   const nMpU = Z.mpU.length;
@@ -1078,7 +1081,8 @@ async function rexGerarSemana() {
     + kpi(N(Z.nRelTar), 'religamentos em aberto com OS viva (' + N(nRelOS) + ' OS)'
       + (nRelOS ? (relAcima ? '; ' + relAcima + ' acima de ' + REX_SW_LIM + ' dias' : '; todos com menos de ' + REX_SW_LIM + ' dias') : ''),
       relAcima ? 'red' : 'green')
-    + '</div>';
+    + '</div>'
+    + '<div class="rsw-leg"><span class="rsw-selo">&#128197; S' + Z.num + '</span> = OS que está na programação desta semana; sem selo = backlog ainda sem data na semana.</div>';
 
   const top = Z.rank.slice(0, 10), resto = Z.rank.slice(10);
   const s1 = card('1 · USINAS QUE PEDEM ATENÇÃO', 'Ordenado por tarefas em aberto hoje',
@@ -1090,7 +1094,7 @@ async function rexGerarSemana() {
   const nRolAb = rol.filter(x => !x.fin).length;
   const s2 = card('2 · TOP 10 · TAREFAS QUE MAIS ROLARAM', 'Nº de semanas em que a OS entrou na programação',
     rol.length ? '<table><tr><th>OS</th><th>Usina</th><th>Tarefa</th><th>Tipo</th><th class="n">Rolag.</th></tr>'
-      + rol.map(x => '<tr><td class="navy">' + E(x.os) + '</td><td>' + E(rexUsiCurta(x.usina)) + '</td><td>'
+      + rol.map(x => '<tr><td class="navy">' + E(x.os) + selo(x.os) + '</td><td>' + E(rexUsiCurta(x.usina)) + '</td><td>'
         + E(rexLimpaTar(x.tarefa).slice(0, 48)) + (x.fin ? ' <span class="rsw-etq">FEITA</span>' : '') + '</td><td>' + E(x.tipo) + '</td>'
         + '<td class="n ' + (x.vezes >= 10 ? 'red' : x.vezes >= 6 ? 'amber' : '') + '">' + x.vezes + '×</td></tr>').join('') + '</table>'
       : '<p class="rsw-nota">Nenhuma OS com 2 ou mais rolagens nesta semana.</p>',
@@ -1100,7 +1104,7 @@ async function rexGerarSemana() {
   const s3 = card('3 · ATRASADAS HÁ MAIS DE ' + REX_SW_LIM + ' DIAS · AGRUPADAS POR OS',
     Z.atr.length ? 'As ' + atr8.length + ' OS mais antigas (de ' + Z.atr.length + ')' : 'Nenhuma OS acima de ' + REX_SW_LIM + ' dias',
     atr8.length ? '<table><tr><th class="n">Dias</th><th>OS</th><th>Cliente · usina</th><th>Tarefa(s) em aberto</th><th class="n">Faltam</th><th>Observação da OS</th></tr>'
-      + atr8.map(o => '<tr>' + dcel(o.dias) + '<td class="navy">' + E(o.os) + '</td><td>' + E(o.cliente + ' · ' + rexUsiCurta(o.usina)) + '</td>'
+      + atr8.map(o => '<tr>' + dcel(o.dias) + '<td class="navy">' + E(o.os) + selo(o.os) + '</td><td>' + E(o.cliente + ' · ' + rexUsiCurta(o.usina)) + '</td>'
         + '<td>' + E(rexSwItens(o.ab, 70)) + [...o.etq].slice(0, 2).map(e => ' <span class="rsw-etq">' + E(String(e).toUpperCase()) + '</span>').join('') + '</td>'
         + '<td class="n ' + (o.ab.length === o.tot ? 'red' : 'navy') + '">' + o.ab.length + '/' + o.tot + '</td>'
         + '<td class="obs">' + (o.obs ? E(String(o.obs).slice(0, 115)) + (String(o.obs).length > 115 ? '…' : '') : 'Sem observação registrada na OS.') + '</td></tr>').join('') + '</table>' : '',
@@ -1111,7 +1115,7 @@ async function rexGerarSemana() {
       : 'Nenhum religamento em aberto',
     rel10.length ? '<table><tr><th class="n">Dias</th><th>OS</th><th>Usina</th><th>Tipo</th><th>Responsável</th><th>Supervisor</th></tr>'
       + rel10.map(o => '<tr><td class="n ' + (o.dias > REX_SW_LIM ? 'red' : o.dias >= 20 ? 'amber' : '') + '">' + o.dias + ' d</td>'
-        + '<td class="navy">' + E(o.os) + '</td><td>' + E(rexUsiNome(o.usina)) + '</td><td>' + E(/remoto/i.test(o.ab[0].tipo) ? 'Relig. Remoto' : 'Religamento') + '</td>'
+        + '<td class="navy">' + E(o.os) + selo(o.os) + '</td><td>' + E(rexUsiNome(o.usina)) + '</td><td>' + E(/remoto/i.test(o.ab[0].tipo) ? 'Relig. Remoto' : 'Religamento') + '</td>'
         + '<td class="navy">' + E(Z.respOS.get(o.os) || '—') + '</td><td>' + E(o.sup || '—') + '</td></tr>').join('') + '</table>' : '',
     'Considera só religamentos cuja OS segue viva' + (nRelOS > 10 ? ' (10 mais antigos de ' + nRelOS + ')' : '') + '.'
     + (Z.relMortas.length ? ' ' + Z.relMortas.length + ' registro(s) têm a OS concluída com a tarefa aberta e são tratados como finalizados'
@@ -1128,7 +1132,7 @@ async function rexGerarSemana() {
     nMpU ? 'Anuais e semestrais atrasadas: ' + mp12.length + ' usinas mais antigas (de ' + nMpU + ')' : 'Nenhuma MPA/MPS atrasada no recorte',
     mp12.length ? '<table><tr><th>Usina</th><th>Tipo</th><th>OS</th><th class="n">Tarefas abertas</th><th class="n">Mais antiga</th><th>Responsável</th><th>Supervisor</th></tr>'
       + mp12.map(x => '<tr><td class="navy">' + E(rexUsiNome(x.usina)) + '</td><td>' + [...x.sig].sort().join('/') + '</td>'
-        + '<td>' + E(Array.from(x.os.entries()).sort((a, b) => b[1] - a[1]).map(e => e[0]).slice(0, 4).join(', ')) + '</td>'
+        + '<td>' + Array.from(x.os.entries()).sort((a, b) => b[1] - a[1]).map(e => E(e[0]) + selo(e[0])).slice(0, 4).join(', ') + '</td>'
         + '<td class="n">' + N(x.n) + '</td>' + dcel(x.dias)
         + '<td class="navy">' + E(Z.respOS.get(x.osVelha) || '—') + '</td><td>' + E(x.sup || '—') + '</td></tr>').join('') + '</table>' : '',
     'Carteira toda: ' + N(Z.mp.length) + ' tarefas de MPA/MPS atrasadas em ' + N(nMpU) + ' usinas (' + N(Z.nMpOS) + ' OS). '
@@ -1142,7 +1146,7 @@ async function rexGerarSemana() {
       const L = Array.from(g.values()).sort((a, b) => b.dias - a.dias || b.ts.length - a.ts.length);
       const nCorr = L.slice(4).filter(o => o.ts.some(rexCorretiva)).length;
       return '<div class="rsw-ub"><div class="u">' + E(rexUsiNome(x.usina)) + ' · ' + N(x.abertas) + ' em aberto · <small>mais antiga ' + x.velha + ' d</small></div>'
-        + '<ul class="itens">' + L.slice(0, 4).map(o => '<li><b>OS ' + E(o.os) + '</b> · ' + E(o.tipo) + ' · ' + o.dias + ' d · '
+        + '<ul class="itens">' + L.slice(0, 4).map(o => '<li><b>OS ' + E(o.os) + '</b>' + selo(o.os) + ' · ' + E(o.tipo) + ' · ' + o.dias + ' d · '
           + (o.ts.length > 1 ? o.ts.length + ' tarefas: ' : '') + E(rexSwItens(o.ts, 110)) + '</li>').join('')
         + (L.length > 4 ? '<li class="mais">+ ' + (L.length - 4) + ' OS em aberto nesta usina' + (nCorr ? ' (' + nCorr + ' corretiva(s))' : '') + '</li>' : '')
         + '</ul></div>';
@@ -1165,7 +1169,7 @@ async function rexGerarSemana() {
     h += card('7 · HANDOVERS EM ANDAMENTO',
       'Entrada de usinas: ' + N(hoTar) + ' tarefas vivas em ' + hoU + ' usinas (' + hoOS + ' OS)' + (hoCli.length === 1 ? ', todas ' + E(hoCli[0]) : ''),
       '<table><tr><th>Usina</th><th>OS</th><th class="n">Tarefas</th><th class="n">Atrasadas</th><th class="n">Mais antiga</th><th>Responsável</th><th>Supervisor</th></tr>'
-      + hoL.map(o => '<tr><td class="navy">' + E(rexUsiNome(o.usina)) + '</td><td class="navy">OS ' + E(o.os) + '</td><td class="n">' + N(o.n)
+      + hoL.map(o => '<tr><td class="navy">' + E(rexUsiNome(o.usina)) + '</td><td class="navy">OS ' + E(o.os) + selo(o.os) + '</td><td class="n">' + N(o.n)
         + '</td><td class="n">' + N(o.atr) + '</td>' + dcel(o.dias) + '<td class="navy">' + E(Z.respOS.get(o.os) || '—') + '</td><td>' + E(o.sup || '—') + '</td></tr>').join('')
       + '</table>',
       'Só OS vivas (handover de OS finalizada não conta). Maior pacote: ' + E(rexUsiNome(maior.usina)) + ' (' + maior.n + ' tarefas); mais antigo: '
@@ -1204,10 +1208,11 @@ async function rexGerarSemana() {
       }
       US.set(t.usina, e);
     });
+    const emSem = e => Array.from(e.oss.keys()).filter(k => Z.osSem.has(k)).length;
     const CLs = new Map();
     US.forEach(e => { (CLs.get(e.cluster) || CLs.set(e.cluster, []).get(e.cluster)).push(e); });
     const cst = c => { const us = CLs.get(c);
-      return { atr: us.reduce((s, e) => s + e.atr, 0), n: us.reduce((s, e) => s + e.n, 0), dias: Math.max(0, ...us.map(e => e.dias)) }; };
+      return { sem: us.reduce((s, e) => s + emSem(e), 0), atr: us.reduce((s, e) => s + e.atr, 0), n: us.reduce((s, e) => s + e.n, 0), dias: Math.max(0, ...us.map(e => e.dias)) }; };
     const seq = [], feitas = new Set();
     Array.from(US.values()).sort((a, b) => b.atr - a.atr || b.dias - a.dias || b.n - a.n).forEach(e => {
       const r = reg(e.cluster);
@@ -1227,13 +1232,13 @@ async function rexGerarSemana() {
         const s = cst(c);
         if (!s.atr) return;
         out += '<div class="rsw-cl"><div class="rsw-clh"><span>' + E(cluNome.get(c) || c) + '</span><span>' + N(s.atr) + ' atrasadas · ' + N(s.n)
-          + ' abertas · mais antiga ' + s.dias + 'd</span></div>';
+          + ' abertas · mais antiga ' + s.dias + 'd · ' + N(s.sem) + ' na S' + Z.num + '</span></div>';
         CLs.get(c).filter(e => e.atr).sort((a, b) => b.atr - a.atr || b.dias - a.dias).forEach(e => {
           const oss = Array.from(e.oss.values()).sort((a, b) => b.dias - a.dias);
           out += '<div class="rsw-us"><span class="nm">' + E(rexUsiCurta(e.usina)) + ' <span class="cli">(' + E(String(e.usina).split(' - ')[0]) + ')</span></span>'
-            + '<span>' + N(e.atr) + ' atrasadas de ' + N(e.n) + ' abertas · mais antiga <b class="' + rexDiasCls(e.dias) + '">' + e.dias + 'd</b></span></div>'
+            + '<span>' + N(e.atr) + ' atrasadas de ' + N(e.n) + ' abertas · mais antiga <b class="' + rexDiasCls(e.dias) + '">' + e.dias + 'd</b> · ' + N(emSem(e)) + ' na S' + Z.num + '</span></div>'
             + '<table class="rsw-bk">' + oss.slice(0, 6).map(o => '<tr><td class="n ' + rexDiasCls(o.dias) + '">' + o.dias + 'd</td>'
-              + '<td class="osn">OS ' + E(o.os) + '</td><td class="tp">' + E(trunc(o.tipo, 20)) + '</td>'
+              + '<td class="osn">OS ' + E(o.os) + selo(o.os) + '</td><td class="tp">' + E(trunc(o.tipo, 20)) + '</td>'
               + '<td>' + E(trunc(o.tit, 70)) + (o.n > 1 ? ' <span class="xmul">· ' + o.n + ' tarefas</span>' : '') + '</td>'
               + '<td class="resp">' + E(trunc(Z.respOS.get(o.os) || '—', 22)) + '</td></tr>').join('')
             + (oss.length > 6 ? '<tr><td></td><td colspan="4" class="mais">+ ' + (oss.length - 6) + ' OS atrasadas nesta usina</td></tr>' : '')
@@ -1244,13 +1249,15 @@ async function rexGerarSemana() {
     });
     const atr = Array.from(US.values()).reduce((s, e) => s + e.atr, 0);
     const nUs = Array.from(US.values()).filter(e => e.atr).length;
-    return { out, atr, nReg, nUs };
+    const osT = Array.from(US.values()).reduce((s, e) => s + e.oss.size, 0);
+    const osS = Array.from(US.values()).reduce((s, e) => s + emSem(e), 0);
+    return { out, atr, nReg, nUs, osT, osS };
   };
   const sups = Array.from(SUP.entries()).map(([k, ts]) => ({ k, ...blocoSup(ts) })).filter(x => x.atr)
     .sort((a, b) => (a.k === 'Sem supervisor') - (b.k === 'Sem supervisor') || b.atr - a.atr || a.k.localeCompare(b.k));
-  Z.supBacklog = sups.map(x => ({ sup: x.k, atr: x.atr, reg: x.nReg, us: x.nUs }));
+  Z.supBacklog = sups.map(x => ({ sup: x.k, atr: x.atr, reg: x.nReg, us: x.nUs, osT: x.osT, osS: x.osS }));
   const b8 = sups.map(x => '<div class="rsw-sup">' + E(x.k) + ' · ' + N(x.atr) + ' tarefas atrasadas · ' + x.nReg + ' região(ões) · '
-    + x.nUs + ' usina' + (x.nUs === 1 ? '' : 's') + '</div>' + x.out).join('');
+    + x.nUs + ' usina' + (x.nUs === 1 ? '' : 's') + ' · ' + N(x.osS) + ' na S' + Z.num + '</div>' + x.out).join('');
   h += '<div class="rsw-p2"><div class="rsw-mini"><div><div class="rsw-kicker">GRID CO. · OPERAÇÃO DE ATIVOS · PCM · SEMANA ' + Z.num + ' · CONTINUAÇÃO</div>'
     + '<div class="t">8 · Backlog atrasado por supervisor, região, cluster e usina</div></div><div class="rsw-meta">Só tarefas atrasadas, de OS vivas · supervisor = responsável da tarefa (Gestor de Contrato) · '
     + 'dentro de cada supervisor, a usina mais pendente puxa o cluster e a região · OS com várias tarefas viram uma linha · última coluna: responsável da OS · foto de ' + foto + '</div></div>'
