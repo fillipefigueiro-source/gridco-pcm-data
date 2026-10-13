@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-13T14:10:03Z",
+  "geradoEm": "2026-10-13T14:36:13Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-12 .. 2026-10-18",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5205,
+        "total": 5207,
         "emAberto": 56,
         "atrasadas": 47,
-        "concluidas30d": 839,
-        "concluidas7d": 231,
-        "naSemanaCorrente": 49
+        "concluidas30d": 841,
+        "concluidas7d": 233,
+        "naSemanaCorrente": 51
       },
       "mttr": {
-        "horas": 16.2,
-        "label": "16h 12min",
-        "amostra": 839
+        "horas": 16.16,
+        "label": "16h 9min",
+        "amostra": 841
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W42",
-          "criadas": 49,
-          "finalizadas": 40
+          "criadas": 51,
+          "finalizadas": 42
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5205,
+            "total": 5207,
             "emAberto": 56
           }
         ],
@@ -4110,10 +4110,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2121,
+      "historicoTotal": 2123,
       "subClassificacao": {
         "remoto": 759,
-        "local": 4446,
+        "local": 4448,
         "remotoEmAberto": 6,
         "localEmAberto": 50,
         "pctRemoto": 15,
@@ -4338,16 +4338,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 898,
-        "emAberto": 97,
+        "emAberto": 96,
         "atrasadas": 51,
-        "concluidas30d": 102,
-        "concluidas7d": 36,
+        "concluidas30d": 103,
+        "concluidas7d": 37,
         "naSemanaCorrente": 34
       },
       "mttr": {
-        "horas": 387.53,
-        "label": "16d 3h",
-        "amostra": 102
+        "horas": 385.17,
+        "label": "16d 1h",
+        "amostra": 103
       },
       "tendencia4Semanas": [
         {
@@ -4368,7 +4368,7 @@
         {
           "semana": "W42",
           "criadas": 0,
-          "finalizadas": 1
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
@@ -4376,7 +4376,7 @@
           {
             "nome": "(sem equipe)",
             "total": 898,
-            "emAberto": 97
+            "emAberto": 96
           }
         ],
         "responsaveis": [
@@ -4407,16 +4407,16 @@
           }
         ]
       },
-      "total": 97,
+      "total": 96,
       "atrasadas": 51,
       "porStatus": {
         "naoIniciada": 90,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 97
+        "(sem equipe)": 96
       },
       "oss": [
         {
@@ -5650,24 +5650,6 @@
           "atrasada": false
         },
         {
-          "osId": "15680",
-          "ativo": "Transformador 1 WEG     { APR300-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Henri Almeida ",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Henri Almeida ",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPA - Transformador (diurno)",
-          "criticidade": "",
-          "dataProgramada": "2026-10-15",
-          "dataCriacao": "2026-10-07",
-          "dataInicial": "2026-10-13",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "atrasada": false
-        },
-        {
           "osId": "15757",
           "ativo": "Preventiva Grupo de Inversores      { THPN-BLN100-PGINVR1 }",
           "equipe": "",
@@ -6077,6 +6059,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "15680",
+          "ativo": "Transformador 1 WEG     { APR300-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Henri Almeida ",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Henri Almeida ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPA - Transformador (diurno)",
+          "criticidade": "",
+          "dataProgramada": "2026-10-15",
+          "dataCriacao": "2026-10-07",
+          "dataInicial": "2026-10-13",
+          "dataFinal": "2026-10-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "15603",
           "ativo": "Estrutura Fixa      { THPN-PRL100-EFIX1 }",
@@ -8907,28 +8908,9 @@
           "horasAteAbrir": 792.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "8398",
-          "ativo": "Ar Condicionado      { IND100-SOEM1-ARCD }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Felipe  Lima",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPS - Ar Condicionado",
-          "criticidade": "",
-          "dataProgramada": "2026-07-01",
-          "dataCriacao": "2026-06-25",
-          "dataInicial": "2026-07-28",
-          "dataFinal": "2026-07-28",
-          "linkFracttal": "",
-          "horasAteAbrir": 792.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 349
+      "historicoTotal": 350
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -11407,25 +11389,6 @@
           "atrasada": false
         },
         {
-          "osId": "15093",
-          "ativo": "Tracker 09.107 Brametal Bi-motor    { CPP100-ETKR9.107 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 09.107] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-10-01",
-          "dataCriacao": "2026-10-01",
-          "dataInicial": "2026-10-01",
-          "dataFinal": "2026-10-01",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "15090",
           "ativo": "Tracker 02.104 Brametal Bi-motor    { CPP100-ETKR2.104 }",
           "equipe": "",
@@ -13475,6 +13438,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 24.0,
+          "atrasada": false
+        },
+        {
+          "osId": "11400",
+          "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 3.1] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-08-19",
+          "dataCriacao": "2026-08-18",
+          "dataInicial": "2026-08-19",
+          "dataFinal": "2026-08-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
           "atrasada": false
         }
       ],
@@ -17086,23 +17068,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "15680",
-      "ativo": "Transformador 1 WEG     { APR300-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Henri Almeida ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Henri Almeida ",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPA - Transformador (diurno)",
-      "criticidade": "",
-      "dataProgramada": "2026-10-15",
-      "dataCriacao": "2026-10-07",
-      "dataInicial": "2026-10-13",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0
-    },
-    {
       "osId": "15675",
       "ativo": "Inversor 1.4 SOLAREDGE     { CLD100-INVR1.4 }",
       "equipe": "",
@@ -19487,6 +19452,25 @@
       "horasAteAbrir": 72.0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "15680",
+      "ativo": "Transformador 1 WEG     { APR300-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Henri Almeida ",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Henri Almeida ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPA - Transformador (diurno)",
+      "criticidade": "",
+      "dataProgramada": "2026-10-15",
+      "dataCriacao": "2026-10-07",
+      "dataInicial": "2026-10-13",
+      "dataFinal": "2026-10-13",
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -22373,30 +22357,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "15701",
-      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
-      "equipe": "",
-      "responsavel": "Marcos  Camargo",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Marcos  Camargo",
-      "status": "Finalizados",
-      "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-07",
-      "dataCriacao": "2026-10-07",
-      "dataInicial": "2026-10-08",
-      "dataFinal": "2026-10-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3291,
-  "totalGeral": 7282,
+  "historicoTotal": 3294,
+  "totalGeral": 7284,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
