@@ -1174,67 +1174,88 @@ async function rexGerarSemana() {
   h += '<div class="rsw-foot"><span>Grid Co. · PCM · Semana ' + Z.num + ' · página 2 · Fonte: Fracttal via gestao_pcm.json ('
     + E(dtGestao) + ') + programação semanal (banco_dados.json)</span><span>tarefas de OS já concluída não contam como abertas · '
     + 'cadastros de Teste ficam fora</span></div></div>';
-  // 8 · backlog atrasado por região → cluster → usina (só OS vivas). A usina
+  // 8 · backlog atrasado por SUPERVISOR → região → cluster → usina (só OS vivas).
+  // Supervisor = responsavel da PRÓPRIA tarefa (Gestor de Contrato): a mesma
+  // usina pode aparecer sob dois supervisores. Dentro de cada supervisor, a usina
   // com mais atrasadas puxa o cluster dela e depois a região (regra do one-page).
-  const US = new Map();
-  Z.T.filter(rexAbertaViva).forEach(t => {
-    const e = US.get(t.usina) || { usina: t.usina, n: 0, atr: 0, dias: 0, cluster: rexClu(t.cluster), sup: '', oss: new Map() };
-    e.n++; e.dias = Math.max(e.dias, t.dias || 0); e.sup = t.responsavel || e.sup;
-    if (t.atrasado) {
-      e.atr++;
-      const o = e.oss.get(String(t.os)) || { os: String(t.os), n: 0, dias: 0, tipo: '', tit: '' };
-      o.n++;
-      if ((t.dias || 0) >= o.dias) { o.dias = t.dias || 0; o.tipo = t.tipo || ''; o.tit = t.tarefa || ''; }
-      e.oss.set(o.os, o);
-    }
-    US.set(t.usina, e);
-  });
-  const CLs = new Map(), cluNome = new Map();
+  const cluNome = new Map();
   Z.T.forEach(t => { const k = rexClu(t.cluster); if (!cluNome.has(k) && t.cluster) cluNome.set(k, String(t.cluster).trim()); });
-  US.forEach(e => { (CLs.get(e.cluster) || CLs.set(e.cluster, []).get(e.cluster)).push(e); });
-  const cst = c => { const us = CLs.get(c);
-    return { atr: us.reduce((s, e) => s + e.atr, 0), n: us.reduce((s, e) => s + e.n, 0), dias: Math.max(0, ...us.map(e => e.dias)) }; };
   const reg = c => (/^([A-Z]{2})\b/.exec(c) || [0, 'Outros'])[1];
-  const seq = [], feitas = new Set();
-  Array.from(US.values()).sort((a, b) => b.atr - a.atr || b.dias - a.dias || b.n - a.n).forEach(e => {
-    const r = reg(e.cluster);
-    if (feitas.has(r)) return;
-    feitas.add(r);
-    const resto = [...CLs.keys()].filter(c => reg(c) === r && c !== e.cluster)
-      .sort((a, b) => cst(b).atr - cst(a).atr || cst(b).dias - cst(a).dias);
-    seq.push([r, [e.cluster, ...resto]]);
-  });
   const trunc = (s, n) => { s = String(s || '').trim(); if (s.length <= n) return s;
     return s.slice(0, n).replace(/\s+\S*$/, '').replace(/[ ,;·-]+$/, '') + '…'; };
-  let b8 = '';
-  seq.forEach(([r, cls]) => {
-    const totR = cls.reduce((s, c) => s + cst(c).atr, 0);
-    if (!totR) return;
-    b8 += '<div class="rsw-reg">' + E(r) + ' · ' + N(totR) + ' tarefas atrasadas · ' + cls.filter(c => cst(c).atr).length + ' cluster(s)</div>';
-    cls.forEach(c => {
-      const s = cst(c);
-      if (!s.atr) return;
-      b8 += '<div class="rsw-cl"><div class="rsw-clh"><span>' + E(cluNome.get(c) || c) + '</span><span>' + N(s.atr) + ' atrasadas · ' + N(s.n)
-        + ' abertas · mais antiga ' + s.dias + 'd</span></div>';
-      CLs.get(c).filter(e => e.atr).sort((a, b) => b.atr - a.atr || b.dias - a.dias).forEach(e => {
-        const oss = Array.from(e.oss.values()).sort((a, b) => b.dias - a.dias);
-        b8 += '<div class="rsw-us"><span class="nm">' + E(rexUsiCurta(e.usina)) + ' <span class="cli">(' + E(String(e.usina).split(' - ')[0]) + ')</span></span>'
-          + '<span>' + N(e.atr) + ' atrasadas de ' + N(e.n) + ' abertas · mais antiga <b class="' + rexDiasCls(e.dias) + '">' + e.dias + 'd</b></span></div>'
-          + '<table class="rsw-bk">' + oss.slice(0, 6).map(o => '<tr><td class="n ' + rexDiasCls(o.dias) + '">' + o.dias + 'd</td>'
-            + '<td class="osn">OS ' + E(o.os) + '</td><td class="tp">' + E(trunc(o.tipo, 20)) + '</td>'
-            + '<td>' + E(trunc(o.tit, 54)) + (o.n > 1 ? ' <span class="xmul">· ' + o.n + ' tarefas</span>' : '') + '</td>'
-            + '<td class="resp">' + E(trunc(Z.respOS.get(o.os) || '—', 20)) + '</td><td class="supv">' + E(trunc(e.sup, 18)) + '</td></tr>').join('')
-          + (oss.length > 6 ? '<tr><td></td><td colspan="5" class="mais">+ ' + (oss.length - 6) + ' OS atrasadas nesta usina</td></tr>' : '')
-          + '</table>';
-      });
-      b8 += '</div>';
-    });
+  const semSup = s => !s || /^(tbd|-+|—|sem supervisor)$/i.test(s);
+  const SUP = new Map();
+  Z.T.filter(rexAbertaViva).forEach(t => {
+    const s = String(t.responsavel || '').trim().replace(/\s+/g, ' ');
+    const k = semSup(s) ? 'Sem supervisor' : s;
+    (SUP.get(k) || SUP.set(k, []).get(k)).push(t);
   });
+  const blocoSup = tarefas => {
+    const US = new Map();
+    tarefas.forEach(t => {
+      const e = US.get(t.usina) || { usina: t.usina, n: 0, atr: 0, dias: 0, cluster: rexClu(t.cluster), oss: new Map() };
+      e.n++; e.dias = Math.max(e.dias, t.dias || 0);
+      if (t.atrasado) {
+        e.atr++;
+        const o = e.oss.get(String(t.os)) || { os: String(t.os), n: 0, dias: 0, tipo: '', tit: '' };
+        o.n++;
+        if ((t.dias || 0) >= o.dias) { o.dias = t.dias || 0; o.tipo = t.tipo || ''; o.tit = t.tarefa || ''; }
+        e.oss.set(o.os, o);
+      }
+      US.set(t.usina, e);
+    });
+    const CLs = new Map();
+    US.forEach(e => { (CLs.get(e.cluster) || CLs.set(e.cluster, []).get(e.cluster)).push(e); });
+    const cst = c => { const us = CLs.get(c);
+      return { atr: us.reduce((s, e) => s + e.atr, 0), n: us.reduce((s, e) => s + e.n, 0), dias: Math.max(0, ...us.map(e => e.dias)) }; };
+    const seq = [], feitas = new Set();
+    Array.from(US.values()).sort((a, b) => b.atr - a.atr || b.dias - a.dias || b.n - a.n).forEach(e => {
+      const r = reg(e.cluster);
+      if (feitas.has(r)) return;
+      feitas.add(r);
+      const resto = [...CLs.keys()].filter(c => reg(c) === r && c !== e.cluster)
+        .sort((a, b) => cst(b).atr - cst(a).atr || cst(b).dias - cst(a).dias);
+      seq.push([r, [e.cluster, ...resto]]);
+    });
+    let out = '', nReg = 0;
+    seq.forEach(([r, cls]) => {
+      const totR = cls.reduce((s, c) => s + cst(c).atr, 0);
+      if (!totR) return;
+      nReg++;
+      out += '<div class="rsw-reg">' + E(r) + ' · ' + N(totR) + ' tarefas atrasadas · ' + cls.filter(c => cst(c).atr).length + ' cluster(s)</div>';
+      cls.forEach(c => {
+        const s = cst(c);
+        if (!s.atr) return;
+        out += '<div class="rsw-cl"><div class="rsw-clh"><span>' + E(cluNome.get(c) || c) + '</span><span>' + N(s.atr) + ' atrasadas · ' + N(s.n)
+          + ' abertas · mais antiga ' + s.dias + 'd</span></div>';
+        CLs.get(c).filter(e => e.atr).sort((a, b) => b.atr - a.atr || b.dias - a.dias).forEach(e => {
+          const oss = Array.from(e.oss.values()).sort((a, b) => b.dias - a.dias);
+          out += '<div class="rsw-us"><span class="nm">' + E(rexUsiCurta(e.usina)) + ' <span class="cli">(' + E(String(e.usina).split(' - ')[0]) + ')</span></span>'
+            + '<span>' + N(e.atr) + ' atrasadas de ' + N(e.n) + ' abertas · mais antiga <b class="' + rexDiasCls(e.dias) + '">' + e.dias + 'd</b></span></div>'
+            + '<table class="rsw-bk">' + oss.slice(0, 6).map(o => '<tr><td class="n ' + rexDiasCls(o.dias) + '">' + o.dias + 'd</td>'
+              + '<td class="osn">OS ' + E(o.os) + '</td><td class="tp">' + E(trunc(o.tipo, 20)) + '</td>'
+              + '<td>' + E(trunc(o.tit, 70)) + (o.n > 1 ? ' <span class="xmul">· ' + o.n + ' tarefas</span>' : '') + '</td>'
+              + '<td class="resp">' + E(trunc(Z.respOS.get(o.os) || '—', 22)) + '</td></tr>').join('')
+            + (oss.length > 6 ? '<tr><td></td><td colspan="4" class="mais">+ ' + (oss.length - 6) + ' OS atrasadas nesta usina</td></tr>' : '')
+            + '</table>';
+        });
+        out += '</div>';
+      });
+    });
+    const atr = Array.from(US.values()).reduce((s, e) => s + e.atr, 0);
+    const nUs = Array.from(US.values()).filter(e => e.atr).length;
+    return { out, atr, nReg, nUs };
+  };
+  const sups = Array.from(SUP.entries()).map(([k, ts]) => ({ k, ...blocoSup(ts) })).filter(x => x.atr)
+    .sort((a, b) => (a.k === 'Sem supervisor') - (b.k === 'Sem supervisor') || b.atr - a.atr || a.k.localeCompare(b.k));
+  Z.supBacklog = sups.map(x => ({ sup: x.k, atr: x.atr, reg: x.nReg, us: x.nUs }));
+  const b8 = sups.map(x => '<div class="rsw-sup">' + E(x.k) + ' · ' + N(x.atr) + ' tarefas atrasadas · ' + x.nReg + ' região(ões) · '
+    + x.nUs + ' usina' + (x.nUs === 1 ? '' : 's') + '</div>' + x.out).join('');
   h += '<div class="rsw-p2"><div class="rsw-mini"><div><div class="rsw-kicker">GRID CO. · OPERAÇÃO DE ATIVOS · PCM · SEMANA ' + Z.num + ' · CONTINUAÇÃO</div>'
-    + '<div class="t">8 · Backlog atrasado por região, cluster e usina</div></div><div class="rsw-meta">Só tarefas atrasadas, de OS vivas · a usina mais pendente puxa o cluster e a região · '
-    + 'OS com várias tarefas viram uma linha · colunas finais: responsável da OS e supervisor · foto de ' + foto + '</div></div>'
+    + '<div class="t">8 · Backlog atrasado por supervisor, região, cluster e usina</div></div><div class="rsw-meta">Só tarefas atrasadas, de OS vivas · supervisor = responsável da tarefa (Gestor de Contrato) · '
+    + 'dentro de cada supervisor, a usina mais pendente puxa o cluster e a região · OS com várias tarefas viram uma linha · última coluna: responsável da OS · foto de ' + foto + '</div></div>'
     + (b8 || '<p class="rsw-nota">Nenhuma tarefa atrasada no recorte.</p>')
-    + '<div class="rsw-foot"><span>Grid Co. · PCM · Semana ' + Z.num + ' · Backlog atrasado por região</span>'
+    + '<div class="rsw-foot"><span>Grid Co. · PCM · Semana ' + Z.num + ' · Backlog atrasado por supervisor</span>'
     + '<span>Fonte: Gestão PCM · tarefas de OS já finalizada não contam</span></div></div>';
   h += '</div>';
 

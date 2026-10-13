@@ -199,7 +199,7 @@
 }
 @page rsw { size: A4; margin: 9mm }
 /* Abertura da Semana · seção 8: backlog atrasado região → cluster → usina */
-.rsw-reg { background: #191528; color: #fff; font-size: 8.5pt; font-weight: 800; letter-spacing: .5px;
+.rsw-reg { background: #f0f1f4; color: #2e2a40; border-left: 4px solid #2e2a40; font-size: 8pt; font-weight: 800; letter-spacing: .5px;
   border-radius: 6px; padding: 4px 9px; margin: 8px 0 5px; break-after: avoid }
 .rsw-cl { border: 1px solid #E3E3EA; border-radius: 6px; padding: 5px 8px 3px; margin-bottom: 5px }
 .rsw-clh { display: flex; justify-content: space-between; font-size: 8pt; font-weight: 800; color: #191528;
@@ -220,3 +220,8 @@
 .rsw-bk tr { break-inside: avoid }
 .rsw .xmul { color: #B9770E; font-weight: 800 }
 .rsw .mais { color: #9a97a8; font-style: italic }
+/* seção 8: supervisor no topo (13/10) */
+.rsw-sup { background: #191528; color: #fff; font-size: 9pt; font-weight: 800; letter-spacing: .4px;
+  border-radius: 6px; padding: 5px 10px; margin: 12px 0 4px; break-after: avoid; border-bottom: 3px solid #a9db21 }
+.rsw-sup, .rsw-reg { print-color-adjust: exact; -webkit-print-color-adjust: exact }
+.rsw-bk td.resp { width: 18% }
