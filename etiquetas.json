@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-13T19:32:52Z",
+  "geradoEm": "2026-10-13T20:18:43Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-12 .. 2026-10-18",
   "tipologias": {
@@ -82,8 +82,8 @@
       "atrasadas": 25,
       "porStatus": {
         "naoIniciada": 29,
-        "emProgresso": 3,
-        "pausada": 2,
+        "emProgresso": 2,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
@@ -677,7 +677,7 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "CíceroWillian",
           "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
           "criticidade": "",
           "dataProgramada": "2026-10-13",
@@ -8416,16 +8416,16 @@
       "cor": "#ef4444",
       "kpis": {
         "total": 172,
-        "emAberto": 15,
-        "atrasadas": 14,
-        "concluidas30d": 14,
-        "concluidas7d": 0,
+        "emAberto": 14,
+        "atrasadas": 13,
+        "concluidas30d": 15,
+        "concluidas7d": 1,
         "naSemanaCorrente": 1
       },
       "mttr": {
-        "horas": 106.29,
-        "label": "4d 10h",
-        "amostra": 14
+        "horas": 177.6,
+        "label": "7d 9h",
+        "amostra": 15
       },
       "tendencia4Semanas": [
         {
@@ -8446,7 +8446,7 @@
         {
           "semana": "W42",
           "criadas": 1,
-          "finalizadas": 0
+          "finalizadas": 1
         }
       ],
       "topOfensores": {
@@ -8454,7 +8454,7 @@
           {
             "nome": "(sem equipe)",
             "total": 172,
-            "emAberto": 15
+            "emAberto": 14
           }
         ],
         "responsaveis": [
@@ -8485,16 +8485,16 @@
           }
         ]
       },
-      "total": 15,
-      "atrasadas": 14,
+      "total": 14,
+      "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 12,
+        "naoIniciada": 11,
         "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 15
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -8530,24 +8530,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "12152",
-          "ativo": "Inversor 3.1 SOLAREDGE     { NVX200-INVR3.1 }",
-          "equipe": "",
-          "responsavel": "Gabriel Oliveira ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Gabriel Oliveira ",
-          "status": "Em progresso",
-          "tarefa": "Inspeção elétrica - Inversor SolarEdge com erro de comunicação (garantia) - Solicitação 3452",
-          "criticidade": "",
-          "dataProgramada": "2026-08-26",
-          "dataCriacao": "2026-08-25",
-          "dataInicial": "2026-10-13",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 1176.0,
           "atrasada": true
         },
         {
@@ -8745,18 +8727,38 @@
           "responsavel": "Deivity Jhon Cunha Saugo ",
           "criadoPor": "Maria Luiza Oliveira",
           "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Substituição de inversor em garantia",
           "criticidade": "",
           "dataProgramada": "2026-10-13",
           "dataCriacao": "2026-10-13",
-          "dataInicial": "",
+          "dataInicial": "2026-10-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "12152",
+          "ativo": "Inversor 3.1 SOLAREDGE     { NVX200-INVR3.1 }",
+          "equipe": "",
+          "responsavel": "Gabriel Oliveira ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Gabriel Oliveira ",
+          "status": "Finalizados",
+          "tarefa": "Inspeção elétrica - Inversor SolarEdge com erro de comunicação (garantia) - Solicitação 3452",
+          "criticidade": "",
+          "dataProgramada": "2026-08-26",
+          "dataCriacao": "2026-08-25",
+          "dataInicial": "2026-10-13",
+          "dataFinal": "2026-10-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 1176.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "13680",
           "ativo": "Preventiva Grupo de Inversores      { RNGD-ELF100-PGINVR1 }",
@@ -9385,7 +9387,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 33
+      "historicoTotal": 34
     },
     "performance": {
       "label": "Performance",
@@ -9441,14 +9443,14 @@
             "emAberto": 6
           },
           {
+            "nome": "Marcos Duarte",
+            "total": 52,
+            "emAberto": 2
+          },
+          {
             "nome": "James Chaves",
             "total": 51,
             "emAberto": 7
-          },
-          {
-            "nome": "Marcos Duarte",
-            "total": 51,
-            "emAberto": 1
           },
           {
             "nome": "Luiz  Silva",
@@ -10022,23 +10024,6 @@
           "atrasada": false
         },
         {
-          "osId": "16234",
-          "ativo": "Tracker 41.100 STI Norland STi-H250™    { MNG100-ETKR41.100 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[Mandaguaçu 1][Tracker 41.100 STI Norland STi-H250™] - Chamado de tracker",
-          "criticidade": "",
-          "dataProgramada": "2026-10-13",
-          "dataCriacao": "2026-10-13",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
           "osId": "16218",
           "ativo": "Inversor 1.4 Huawei SUN-330KTL-H1    { GTA500-INVR1.4 }",
           "equipe": "",
@@ -10155,6 +10140,23 @@
           "criticidade": "",
           "dataProgramada": "2026-10-13",
           "dataCriacao": "2026-10-09",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "16245",
+          "ativo": "Inversor 1.6 Huawei SUN2000-330KTL-H1    { VRG100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.6] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-10-14",
+          "dataCriacao": "2026-10-13",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -15436,20 +15438,37 @@
   },
   "ossPublicas": [
     {
+      "osId": "16245",
+      "ativo": "Inversor 1.6 Huawei SUN2000-330KTL-H1    { VRG100-INVR1.6 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Marcos Duarte ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.6] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-10-14",
+      "dataCriacao": "2026-10-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "16239",
       "ativo": "Disjuntor do Inversor 2.1      { CLD100-DINV2.1 }",
       "equipe": "",
       "responsavel": "Deivity Jhon Cunha Saugo ",
       "criadoPor": "Maria Luiza Oliveira",
       "supervisor": "Deivity Jhon Cunha Saugo ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Substituição de inversor em garantia",
       "criticidade": "",
       "dataProgramada": "2026-10-13",
       "dataCriacao": "2026-10-13",
-      "dataInicial": "",
+      "dataInicial": "2026-10-13",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "16238",
@@ -15509,22 +15528,6 @@
       "supervisor": "Ronaldo  Silva",
       "status": "Não Iniciada",
       "tarefa": "[Mandaguaçu 1][Estrutura Trackers Estrada Jussara S/N Mandaguaçu Paraná Br] - Chamado de tracker",
-      "criticidade": "",
-      "dataProgramada": "2026-10-13",
-      "dataCriacao": "2026-10-13",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "16234",
-      "ativo": "Tracker 41.100 STI Norland STi-H250™    { MNG100-ETKR41.100 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[Mandaguaçu 1][Tracker 41.100 STI Norland STi-H250™] - Chamado de tracker",
       "criticidade": "",
       "dataProgramada": "2026-10-13",
       "dataCriacao": "2026-10-13",
@@ -15757,7 +15760,7 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "CíceroWillian",
       "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.4] - Religamento do Inversor 1.4",
       "criticidade": "",
       "dataProgramada": "2026-10-13",
@@ -18425,23 +18428,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "12152",
-      "ativo": "Inversor 3.1 SOLAREDGE     { NVX200-INVR3.1 }",
-      "equipe": "",
-      "responsavel": "Gabriel Oliveira ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Gabriel Oliveira ",
-      "status": "Em progresso",
-      "tarefa": "Inspeção elétrica - Inversor SolarEdge com erro de comunicação (garantia) - Solicitação 3452",
-      "criticidade": "",
-      "dataProgramada": "2026-08-26",
-      "dataCriacao": "2026-08-25",
-      "dataInicial": "2026-10-13",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 1176.0
     },
     {
       "osId": "12149",
@@ -21719,7 +21705,7 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3325,
+  "historicoTotal": 3326,
   "totalGeral": 7297,
   "verificacao": {
     "total": 0,
