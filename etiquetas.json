@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-14T12:18:54Z",
+  "geradoEm": "2026-10-14T13:17:40Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-12 .. 2026-10-18",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 5221,
-        "emAberto": 34,
-        "atrasadas": 30,
-        "concluidas30d": 860,
-        "concluidas7d": 233,
+        "emAberto": 31,
+        "atrasadas": 29,
+        "concluidas30d": 863,
+        "concluidas7d": 236,
         "naSemanaCorrente": 72
       },
       "mttr": {
-        "horas": 17.65,
-        "label": "17h 39min",
-        "amostra": 860
+        "horas": 17.73,
+        "label": "17h 44min",
+        "amostra": 863
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W42",
           "criadas": 72,
-          "finalizadas": 79
+          "finalizadas": 82
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 5221,
-            "emAberto": 34
+            "emAberto": 31
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 34,
-      "atrasadas": 30,
+      "total": 31,
+      "atrasadas": 29,
       "porStatus": {
-        "naoIniciada": 30,
-        "emProgresso": 0,
+        "naoIniciada": 26,
+        "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 34
+        "(sem equipe)": 31
       },
       "oss": [
         {
@@ -436,24 +436,6 @@
           "atrasada": true
         },
         {
-          "osId": "15878",
-          "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
-          "criadoPor": "LucasNascimento",
-          "supervisor": "Cláudio  Ferreira",
-          "status": "Não Iniciada",
-          "tarefa": "[ALLM-MRN100] - Religamento do ALLM-MRN100",
-          "criticidade": "",
-          "dataProgramada": "2026-10-09",
-          "dataCriacao": "2026-10-09",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "15951",
           "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
           "equipe": "",
@@ -659,17 +641,20 @@
           "responsavel": "Valdério Paz ",
           "criadoPor": "Raphael Vitoriano",
           "supervisor": "Valdério Paz ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 2.5] - Religamento do Inversor 2.5",
           "criticidade": "",
           "dataProgramada": "2026-10-14",
           "dataCriacao": "2026-10-14",
-          "dataInicial": "",
+          "dataInicial": "2026-10-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "16266",
           "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H3    { MCB100-INVR2.4 }",
@@ -677,14 +662,16 @@
           "responsavel": "Valdério Paz ",
           "criadoPor": "Raphael Vitoriano",
           "supervisor": "Valdério Paz ",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
           "criticidade": "",
           "dataProgramada": "2026-10-14",
           "dataCriacao": "2026-10-14",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-10-14",
+          "dataFinal": "2026-10-14",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -695,19 +682,19 @@
           "responsavel": "Cláudio  Ferreira",
           "criadoPor": "LucasNascimento",
           "supervisor": "Cláudio  Ferreira",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "[SALE-VTS200] - Religamento do SALE-VTS200",
           "criticidade": "",
           "dataProgramada": "2026-10-14",
           "dataCriacao": "2026-10-14",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-10-14",
+          "dataFinal": "2026-10-14",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "16255",
           "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
@@ -804,6 +791,26 @@
           "dataFinal": "2026-10-14",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "15878",
+          "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "LucasNascimento",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Finalizados",
+          "tarefa": "[ALLM-MRN100] - Religamento do ALLM-MRN100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-09",
+          "dataCriacao": "2026-10-09",
+          "dataInicial": "2026-10-14",
+          "dataFinal": "2026-10-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3647,74 +3654,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "15627",
-          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "DavidNascimento",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizados",
-          "tarefa": "[2C-IPX100] - Religamento do 2C-IPX100",
-          "criticidade": "",
-          "dataProgramada": "2026-10-07",
-          "dataCriacao": "2026-10-07",
-          "dataInicial": "2026-10-07",
-          "dataFinal": "2026-10-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "15626",
-          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "DavidNascimento",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizados",
-          "tarefa": "[Thopen - Ipixuna 1 e 2 - PA] - Religamento do Thopen - Ipixuna 1 e 2 - PA",
-          "criticidade": "",
-          "dataProgramada": "2026-10-07",
-          "dataCriacao": "2026-10-07",
-          "dataInicial": "2026-10-07",
-          "dataFinal": "2026-10-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "15623",
-          "ativo": "Thopen - Araçoiaba da Serra 1- SP  Araçoiaba  São Paulo Brasil { THPN-ADS100 }",
-          "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "DavidNascimento",
-          "supervisor": "Eduardo  Mendes",
-          "status": "Finalizados",
-          "tarefa": "[Thopen - Araçoiaba da Serra 1- SP] - Religamento do Thopen - Araçoiaba da Serra 1- SP",
-          "criticidade": "",
-          "dataProgramada": "2026-10-06",
-          "dataCriacao": "2026-10-06",
-          "dataInicial": "2026-10-07",
-          "dataFinal": "2026-10-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2145,
+      "historicoTotal": 2148,
       "subClassificacao": {
         "remoto": 753,
         "local": 4468,
         "remotoEmAberto": 0,
-        "localEmAberto": 34,
+        "localEmAberto": 31,
         "pctRemoto": 14,
         "alerta": true
       },
@@ -3937,16 +3884,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 898,
-        "emAberto": 90,
-        "atrasadas": 60,
-        "concluidas30d": 109,
-        "concluidas7d": 35,
+        "emAberto": 89,
+        "atrasadas": 59,
+        "concluidas30d": 110,
+        "concluidas7d": 36,
         "naSemanaCorrente": 34
       },
       "mttr": {
-        "horas": 373.87,
-        "label": "15d 13h",
-        "amostra": 109
+        "horas": 372.0,
+        "label": "15d 12h",
+        "amostra": 110
       },
       "tendencia4Semanas": [
         {
@@ -3967,7 +3914,7 @@
         {
           "semana": "W42",
           "criadas": 0,
-          "finalizadas": 8
+          "finalizadas": 9
         }
       ],
       "topOfensores": {
@@ -3975,7 +3922,7 @@
           {
             "nome": "(sem equipe)",
             "total": 898,
-            "emAberto": 90
+            "emAberto": 89
           }
         ],
         "responsaveis": [
@@ -4006,16 +3953,16 @@
           }
         ]
       },
-      "total": 90,
-      "atrasadas": 60,
+      "total": 89,
+      "atrasadas": 59,
       "porStatus": {
-        "naoIniciada": 84,
+        "naoIniciada": 83,
         "emProgresso": 0,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 90
+        "(sem equipe)": 89
       },
       "oss": [
         {
@@ -4874,23 +4821,6 @@
           "atrasada": true
         },
         {
-          "osId": "15704",
-          "ativo": "Cabine 1 LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { CAZ100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Gilson  Milhomem",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Gilson  Milhomem",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-10-13",
-          "dataCriacao": "2026-10-07",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "15688",
           "ativo": "Sistema de Segurança Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100-SSEG1 }",
           "equipe": "",
@@ -5556,6 +5486,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "15704",
+          "ativo": "Cabine 1 LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { CAZ100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Gilson  Milhomem",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Gilson  Milhomem",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-10-13",
+          "dataCriacao": "2026-10-07",
+          "dataInicial": "2026-10-14",
+          "dataFinal": "2026-10-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "15760",
           "ativo": "Preventiva Grupo de Inversores      { RNGD-CTS100-PGINVR1 }",
@@ -8331,25 +8280,6 @@
           "atrasada": false
         },
         {
-          "osId": "10159",
-          "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPS - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-06",
-          "dataCriacao": "2026-07-27",
-          "dataInicial": "2026-08-13",
-          "dataFinal": "2026-08-13",
-          "linkFracttal": "",
-          "horasAteAbrir": 408.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "7104",
           "ativo": "Cabine 1  Petrolina  Pernambuco Brasil { PTL300-CABN1 }",
           "equipe": "",
@@ -8407,7 +8337,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 354
+      "historicoTotal": 355
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9467,9 +9397,9 @@
       "total": 48,
       "atrasadas": 39,
       "porStatus": {
-        "naoIniciada": 41,
+        "naoIniciada": 40,
         "emProgresso": 2,
-        "pausada": 5,
+        "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
@@ -9792,14 +9722,15 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Roger Lélis",
           "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 22.103] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-10-07",
           "dataCriacao": "2026-10-06",
-          "dataInicial": "",
+          "dataInicial": "2026-10-14",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "atrasada": true
         },
         {
@@ -9962,7 +9893,7 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-10-12",
@@ -13159,12 +13090,12 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 170,
-        "emAberto": 19,
+        "total": 171,
+        "emAberto": 20,
         "atrasadas": 17,
         "concluidas30d": 29,
         "concluidas7d": 2,
-        "naSemanaCorrente": 2
+        "naSemanaCorrente": 3
       },
       "mttr": {
         "horas": 244.97,
@@ -13189,7 +13120,7 @@
         },
         {
           "semana": "W42",
-          "criadas": 1,
+          "criadas": 2,
           "finalizadas": 0
         }
       ],
@@ -13197,8 +13128,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 170,
-            "emAberto": 19
+            "total": 171,
+            "emAberto": 20
           }
         ],
         "responsaveis": [
@@ -13214,8 +13145,8 @@
           },
           {
             "nome": "Pedro  Henrique",
-            "total": 11,
-            "emAberto": 10
+            "total": 12,
+            "emAberto": 11
           },
           {
             "nome": "Marcos Duarte",
@@ -13229,16 +13160,16 @@
           }
         ]
       },
-      "total": 19,
+      "total": 20,
       "atrasadas": 17,
       "porStatus": {
-        "naoIniciada": 18,
+        "naoIniciada": 19,
         "emProgresso": 0,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 19
+        "(sem equipe)": 20
       },
       "oss": [
         {
@@ -13560,6 +13491,23 @@
           "criticidade": "",
           "dataProgramada": "2026-10-14",
           "dataCriacao": "2026-10-08",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "16289",
+          "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
+          "equipe": "",
+          "responsavel": "Pedro  Henrique",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Pedro  Henrique",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 6.1] - Análise de alarmes dos inversores",
+          "criticidade": "",
+          "dataProgramada": "2026-10-16",
+          "dataCriacao": "2026-10-14",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -15435,6 +15383,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "16289",
+      "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
+      "equipe": "",
+      "responsavel": "Pedro  Henrique",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Pedro  Henrique",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 6.1] - Análise de alarmes dos inversores",
+      "criticidade": "",
+      "dataProgramada": "2026-10-16",
+      "dataCriacao": "2026-10-14",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "16282",
       "ativo": "Thopen - Coração 1 e 2 - SC Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100 }",
       "equipe": "",
@@ -15474,48 +15438,15 @@
       "responsavel": "Valdério Paz ",
       "criadoPor": "Raphael Vitoriano",
       "supervisor": "Valdério Paz ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 2.5] - Religamento do Inversor 2.5",
       "criticidade": "",
       "dataProgramada": "2026-10-14",
       "dataCriacao": "2026-10-14",
-      "dataInicial": "",
+      "dataInicial": "2026-10-14",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "16266",
-      "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H3    { MCB100-INVR2.4 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Valdério Paz ",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
-      "criticidade": "",
-      "dataProgramada": "2026-10-14",
-      "dataCriacao": "2026-10-14",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "16260",
-      "ativo": "Sal Energia - Quixadá 2 (Vitesse) - CE Fazenda Veneza, S/N, Zona rural, Distrito de Boto Quixadá  Ceará Brasil { SALE-VTS200 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "LucasNascimento",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Não Iniciada",
-      "tarefa": "[SALE-VTS200] - Religamento do SALE-VTS200",
-      "criticidade": "",
-      "dataProgramada": "2026-10-14",
-      "dataCriacao": "2026-10-14",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15922,7 +15853,7 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Inversor 1.4] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-10-12",
@@ -16061,23 +15992,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "15878",
-      "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "LucasNascimento",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Não Iniciada",
-      "tarefa": "[ALLM-MRN100] - Religamento do ALLM-MRN100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-09",
-      "dataCriacao": "2026-10-09",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "15858",
@@ -16597,22 +16511,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "15704",
-      "ativo": "Cabine 1 LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { CAZ100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Gilson  Milhomem",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Gilson  Milhomem",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-10-13",
-      "dataCriacao": "2026-10-07",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "15699",
       "ativo": "Transformador 1 WEG     { THPN-PRM100-TRFR1 }",
       "equipe": "",
@@ -16747,14 +16645,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Roger Lélis",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 22.103] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-10-07",
       "dataCriacao": "2026-10-06",
-      "dataInicial": "",
+      "dataInicial": "2026-10-14",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 192.0
     },
     {
       "osId": "15599",
@@ -18872,6 +18771,25 @@
       "atrasada": false
     },
     {
+      "osId": "15704",
+      "ativo": "Cabine 1 LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { CAZ100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Gilson  Milhomem",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Gilson  Milhomem",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-10-13",
+      "dataCriacao": "2026-10-07",
+      "dataInicial": "2026-10-14",
+      "dataFinal": "2026-10-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "15680",
       "ativo": "Transformador 1 WEG     { APR300-TRFR1 }",
       "equipe": "",
@@ -19477,6 +19395,46 @@
       "linkFracttal": "",
       "horasAteAbrir": 480.0,
       "horasAteFechar": 1200.0,
+      "atrasada": false
+    },
+    {
+      "osId": "16266",
+      "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H3    { MCB100-INVR2.4 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "Raphael Vitoriano",
+      "supervisor": "Valdério Paz ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
+      "criticidade": "",
+      "dataProgramada": "2026-10-14",
+      "dataCriacao": "2026-10-14",
+      "dataInicial": "2026-10-14",
+      "dataFinal": "2026-10-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "16260",
+      "ativo": "Sal Energia - Quixadá 2 (Vitesse) - CE Fazenda Veneza, S/N, Zona rural, Distrito de Boto Quixadá  Ceará Brasil { SALE-VTS200 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "LucasNascimento",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Finalizados",
+      "tarefa": "[SALE-VTS200] - Religamento do SALE-VTS200",
+      "criticidade": "",
+      "dataProgramada": "2026-10-14",
+      "dataCriacao": "2026-10-14",
+      "dataInicial": "2026-10-14",
+      "dataFinal": "2026-10-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -21357,6 +21315,26 @@
       "atrasada": false
     },
     {
+      "osId": "15878",
+      "ativo": "Alves Lima - Morada Nova 1 - CE Próximo à CE-265, Zona Rural, Morada Nova - CE Morada Nova  Ceará Brasil { ALLM-MRN100 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Ferreira",
+      "criadoPor": "LucasNascimento",
+      "supervisor": "Cláudio  Ferreira",
+      "status": "Finalizados",
+      "tarefa": "[ALLM-MRN100] - Religamento do ALLM-MRN100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-09",
+      "dataCriacao": "2026-10-09",
+      "dataInicial": "2026-10-14",
+      "dataFinal": "2026-10-14",
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "15876",
       "ativo": "Thopen - Parelhas 1 - RN Rodovia RN 088, nº 01, Zona Rural Parelhas  Rio Grande do Norte Brasil { THPN-PRL100 }",
       "equipe": "",
@@ -21635,90 +21613,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "15838",
-      "ativo": "Thopen - Colorado 1 - PR Zona Rural S/N Colorado  Paraná Brasil { THPN-CLR100 }",
-      "equipe": "",
-      "responsavel": "Matheus Gois ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Matheus Gois ",
-      "status": "Finalizados",
-      "tarefa": "[THPN-CLR100] - Religamento do THPN-CLR100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-08",
-      "dataCriacao": "2026-10-08",
-      "dataInicial": "2026-10-13",
-      "dataFinal": "2026-10-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "15837",
-      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
-      "equipe": "",
-      "responsavel": "Ademir Necker ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Ademir Necker ",
-      "status": "Finalizados",
-      "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-08",
-      "dataCriacao": "2026-10-08",
-      "dataInicial": "2026-10-13",
-      "dataFinal": "2026-10-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "15836",
-      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
-      "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-08",
-      "dataCriacao": "2026-10-08",
-      "dataInicial": "2026-10-13",
-      "dataFinal": "2026-10-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "15835",
-      "ativo": "Thopen - Cidade Gaúcha 1 - PR 2ª Seção Colônia Tapejara, Lote N 152-Re, 153 e 154 Cidade Gaúcha  Paraná Brasil { THPN-CGH100 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
-      "tarefa": "[THPN-CGH100] - Religamento do THPN-CGH100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-08",
-      "dataCriacao": "2026-10-08",
-      "dataInicial": "2026-10-08",
-      "dataFinal": "2026-10-08",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3301,
-  "totalGeral": 7311,
+  "historicoTotal": 3305,
+  "totalGeral": 7312,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
