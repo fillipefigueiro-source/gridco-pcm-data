@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-15T19:03:28Z",
+  "geradoEm": "2026-10-15T19:56:43Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-12 .. 2026-10-18",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5305,
-        "emAberto": 12,
-        "atrasadas": 8,
-        "concluidas30d": 936,
-        "concluidas7d": 300,
-        "naSemanaCorrente": 156
+        "total": 5311,
+        "emAberto": 16,
+        "atrasadas": 9,
+        "concluidas30d": 938,
+        "concluidas7d": 302,
+        "naSemanaCorrente": 160
       },
       "mttr": {
-        "horas": 17.65,
-        "label": "17h 39min",
-        "amostra": 936
+        "horas": 17.63,
+        "label": "17h 38min",
+        "amostra": 938
       },
       "tendencia4Semanas": [
         {
@@ -34,20 +34,20 @@
         {
           "semana": "W41",
           "criadas": 237,
-          "finalizadas": 233
+          "finalizadas": 234
         },
         {
           "semana": "W42",
-          "criadas": 156,
-          "finalizadas": 174
+          "criadas": 162,
+          "finalizadas": 175
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5305,
-            "emAberto": 12
+            "total": 5311,
+            "emAberto": 16
           }
         ],
         "responsaveis": [
@@ -73,23 +73,41 @@
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 222,
-            "emAberto": 0
+            "total": 223,
+            "emAberto": 1
           }
         ]
       },
-      "total": 12,
-      "atrasadas": 8,
+      "total": 16,
+      "atrasadas": 9,
       "porStatus": {
-        "naoIniciada": 9,
-        "emProgresso": 1,
+        "naoIniciada": 12,
+        "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 12
+        "(sem equipe)": 16
       },
       "oss": [
+        {
+          "osId": "16488",
+          "ativo": "Inversor 2.6 Huawei SUN2000-250KTL-H1    { STR100-INVR2.6 }",
+          "equipe": "",
+          "responsavel": "Ana Barros ",
+          "criadoPor": "Ana Barros",
+          "supervisor": "Ana Barros ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 2.6] - Religamento do Inversor 2.6",
+          "criticidade": "",
+          "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-10-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
         {
           "osId": "14933",
           "ativo": "Inversor 3.1 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR3.1 }",
@@ -238,6 +256,60 @@
           "atrasada": true
         },
         {
+          "osId": "16494",
+          "ativo": "Thopen - Assis Chateaubriand - PR HGR5+5M9 Assis Chateaubriand, PR Assis Chateaubriand  Paraná Brasil { THPN-ACB100 }",
+          "equipe": "",
+          "responsavel": "Gilson  Milhomem",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Gilson  Milhomem",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-ACB100] - Religamento do THPN-ACB100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-15",
+          "dataCriacao": "2026-10-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "16489",
+          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Wesllen  Castro",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-15",
+          "dataCriacao": "2026-10-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "16487",
+          "ativo": "Thopen - Santarém 1 e 2 - PA  Santarém  Pará Brasil { THPN-STR100 }",
+          "equipe": "",
+          "responsavel": "Júlio Willers ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Júlio Willers ",
+          "status": "Não Iniciada",
+          "tarefa": "Teste de Religamento Remoto - UFV SANTARÉM",
+          "criticidade": "",
+          "dataProgramada": "2026-10-15",
+          "dataCriacao": "2026-10-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "remoto",
+          "atrasada": false
+        },
+        {
           "osId": "16473",
           "ativo": "Thopen - Rodrigues 2 - RN FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200 }",
           "equipe": "",
@@ -262,14 +334,15 @@
           "responsavel": "Valmir  Júnior",
           "criadoPor": "CíceroWillian",
           "supervisor": "Valmir  Júnior",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[RNGD-NBS100] - Religamento do RNGD-NBS100",
           "criticidade": "",
           "dataProgramada": "2026-10-15",
           "dataCriacao": "2026-10-15",
-          "dataInicial": "",
+          "dataInicial": "2026-10-15",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -312,6 +385,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "16491",
+          "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "[JCD100-INVR3.1] - Religamento do JCD100-INVR3.1",
+          "criticidade": "",
+          "dataProgramada": "2026-10-15",
+          "dataCriacao": "2026-10-15",
+          "dataInicial": "2026-10-15",
+          "dataFinal": "2026-10-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "16480",
           "ativo": "Inversor 8.2 Sungrow     { JCD100-INVR8.2 }",
@@ -3291,34 +3384,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "15802",
-          "ativo": "Thopen - Vargem Grande 1 - ES  Vargem Grande  Espirito Santo Brasil { THPN-VRG100 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Marcos Duarte ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-VRG100] - Religamento do THPN-VRG100",
-          "criticidade": "",
-          "dataProgramada": "2026-10-08",
-          "dataCriacao": "2026-10-08",
-          "dataInicial": "2026-10-08",
-          "dataFinal": "2026-10-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2239,
+      "historicoTotal": 2241,
       "subClassificacao": {
-        "remoto": 753,
-        "local": 4552,
-        "remotoEmAberto": 0,
-        "localEmAberto": 12,
+        "remoto": 754,
+        "local": 4557,
+        "remotoEmAberto": 1,
+        "localEmAberto": 15,
         "pctRemoto": 14,
         "alerta": true
       },
@@ -3506,7 +3579,7 @@
           },
           {
             "nome": "CíceroWillian",
-            "total": 42
+            "total": 43
           },
           {
             "nome": "Juliana Cândido",
@@ -3541,16 +3614,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 895,
-        "emAberto": 81,
+        "emAberto": 80,
         "atrasadas": 57,
-        "concluidas30d": 111,
-        "concluidas7d": 34,
+        "concluidas30d": 112,
+        "concluidas7d": 35,
         "naSemanaCorrente": 34
       },
       "mttr": {
-        "horas": 374.49,
-        "label": "15d 14h",
-        "amostra": 111
+        "horas": 372.86,
+        "label": "15d 12h",
+        "amostra": 112
       },
       "tendencia4Semanas": [
         {
@@ -3571,7 +3644,7 @@
         {
           "semana": "W42",
           "criadas": 0,
-          "finalizadas": 15
+          "finalizadas": 16
         }
       ],
       "topOfensores": {
@@ -3579,7 +3652,7 @@
           {
             "nome": "(sem equipe)",
             "total": 895,
-            "emAberto": 81
+            "emAberto": 80
           }
         ],
         "responsaveis": [
@@ -3610,16 +3683,16 @@
           }
         ]
       },
-      "total": 81,
+      "total": 80,
       "atrasadas": 57,
       "porStatus": {
-        "naoIniciada": 75,
+        "naoIniciada": 74,
         "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 81
+        "(sem equipe)": 80
       },
       "oss": [
         {
@@ -4076,14 +4149,15 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "Milena Araújo",
           "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-10-06",
           "dataCriacao": "2026-10-01",
-          "dataInicial": "",
+          "dataInicial": "2026-10-15",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 336.0,
           "atrasada": true
         },
         {
@@ -4631,24 +4705,6 @@
           "atrasada": false
         },
         {
-          "osId": "15757",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-BLN100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Cláudio  Ferreira",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-10-16",
-          "dataCriacao": "2026-10-07",
-          "dataInicial": "2026-10-15",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 192.0,
-          "atrasada": false
-        },
-        {
           "osId": "15683",
           "ativo": "Transformador 1 WEG     { ADS100-TRFR1 }",
           "equipe": "",
@@ -5061,6 +5117,25 @@
           "dataFinal": "2026-10-15",
           "linkFracttal": "",
           "horasAteAbrir": 336.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "15757",
+          "ativo": "Preventiva Grupo de Inversores      { THPN-BLN100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Ferreira",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Cláudio  Ferreira",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-10-16",
+          "dataCriacao": "2026-10-07",
+          "dataInicial": "2026-10-15",
+          "dataFinal": "2026-10-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -6965,25 +7040,6 @@
           "atrasada": false
         },
         {
-          "osId": "12684",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-PRB100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Felipe  Lima",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-09-11",
-          "dataCriacao": "2026-09-01",
-          "dataInicial": "2026-09-15",
-          "dataFinal": "2026-09-15",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "12532",
           "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
           "equipe": "",
@@ -7858,7 +7914,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 358
+      "historicoTotal": 359
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8922,8 +8978,8 @@
       "total": 40,
       "atrasadas": 35,
       "porStatus": {
-        "naoIniciada": 36,
-        "emProgresso": 1,
+        "naoIniciada": 35,
+        "emProgresso": 2,
         "pausada": 3,
         "verificacao": 0
       },
@@ -9180,14 +9236,15 @@
           "responsavel": "Lucas Alberto Freitas de Faria ",
           "criadoPor": "Gabriela Dias",
           "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "Verificação dos trackers parados em Embu",
           "criticidade": "",
           "dataProgramada": "2026-10-05",
           "dataCriacao": "2026-10-02",
-          "dataInicial": "",
+          "dataInicial": "2026-10-15",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 312.0,
           "atrasada": true
         },
         {
@@ -10644,25 +10701,6 @@
           "atrasada": false
         },
         {
-          "osId": "14648",
-          "ativo": "Inversor 4.3 Sungrow     { ALT100-INVR4.3 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Gabriela Dias",
-          "supervisor": "Anderson  Parente",
-          "status": "Finalizados",
-          "tarefa": "Coleta de Dados de Geração de Setembro",
-          "criticidade": "",
-          "dataProgramada": "2026-09-30",
-          "dataCriacao": "2026-09-25",
-          "dataInicial": "2026-10-01",
-          "dataFinal": "2026-10-01",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "15090",
           "ativo": "Tracker 02.104 Brametal Bi-motor    { CPP100-ETKR2.104 }",
           "equipe": "",
@@ -10754,6 +10792,25 @@
           "dataFinal": "2026-10-01",
           "linkFracttal": "",
           "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "14648",
+          "ativo": "Inversor 4.3 Sungrow     { ALT100-INVR4.3 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "Coleta de Dados de Geração de Setembro",
+          "criticidade": "",
+          "dataProgramada": "2026-09-30",
+          "dataCriacao": "2026-09-25",
+          "dataInicial": "2026-10-01",
+          "dataFinal": "2026-10-01",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -14749,6 +14806,74 @@
   },
   "ossPublicas": [
     {
+      "osId": "16494",
+      "ativo": "Thopen - Assis Chateaubriand - PR HGR5+5M9 Assis Chateaubriand, PR Assis Chateaubriand  Paraná Brasil { THPN-ACB100 }",
+      "equipe": "",
+      "responsavel": "Gilson  Milhomem",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Gilson  Milhomem",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-ACB100] - Religamento do THPN-ACB100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-15",
+      "dataCriacao": "2026-10-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16489",
+      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Wesllen  Castro",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-15",
+      "dataCriacao": "2026-10-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16488",
+      "ativo": "Inversor 2.6 Huawei SUN2000-250KTL-H1    { STR100-INVR2.6 }",
+      "equipe": "",
+      "responsavel": "Ana Barros ",
+      "criadoPor": "Ana Barros",
+      "supervisor": "Ana Barros ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 2.6] - Religamento do Inversor 2.6",
+      "criticidade": "",
+      "dataProgramada": "2026-07-03",
+      "dataCriacao": "2026-10-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16487",
+      "ativo": "Thopen - Santarém 1 e 2 - PA  Santarém  Pará Brasil { THPN-STR100 }",
+      "equipe": "",
+      "responsavel": "Júlio Willers ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Júlio Willers ",
+      "status": "Não Iniciada",
+      "tarefa": "Teste de Religamento Remoto - UFV SANTARÉM",
+      "criticidade": "",
+      "dataProgramada": "2026-10-15",
+      "dataCriacao": "2026-10-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "remoto"
+    },
+    {
       "osId": "16473",
       "ativo": "Thopen - Rodrigues 2 - RN FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200 }",
       "equipe": "",
@@ -14772,14 +14897,15 @@
       "responsavel": "Valmir  Júnior",
       "criadoPor": "CíceroWillian",
       "supervisor": "Valmir  Júnior",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[RNGD-NBS100] - Religamento do RNGD-NBS100",
       "criticidade": "",
       "dataProgramada": "2026-10-15",
       "dataCriacao": "2026-10-15",
-      "dataInicial": "",
+      "dataInicial": "2026-10-15",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15381,23 +15507,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "15757",
-      "ativo": "Preventiva Grupo de Inversores      { THPN-BLN100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-10-16",
-      "dataCriacao": "2026-10-07",
-      "dataInicial": "2026-10-15",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 192.0
     },
     {
       "osId": "15756",
@@ -16127,14 +16236,15 @@
       "responsavel": "Lucas Alberto Freitas de Faria ",
       "criadoPor": "Gabriela Dias",
       "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "Verificação dos trackers parados em Embu",
       "criticidade": "",
       "dataProgramada": "2026-10-05",
       "dataCriacao": "2026-10-02",
-      "dataInicial": "",
+      "dataInicial": "2026-10-15",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 312.0
     },
     {
       "osId": "15305",
@@ -16432,14 +16542,15 @@
       "responsavel": "Janderson Miranda ",
       "criadoPor": "Milena Araújo",
       "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-10-06",
       "dataCriacao": "2026-10-01",
-      "dataInicial": "",
+      "dataInicial": "2026-10-15",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 336.0
     },
     {
       "osId": "15107",
@@ -17939,25 +18050,6 @@
       "atrasada": false
     },
     {
-      "osId": "14648",
-      "ativo": "Inversor 4.3 Sungrow     { ALT100-INVR4.3 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Anderson  Parente",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração de Setembro",
-      "criticidade": "",
-      "dataProgramada": "2026-09-30",
-      "dataCriacao": "2026-09-25",
-      "dataInicial": "2026-10-01",
-      "dataFinal": "2026-10-01",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "14374",
       "ativo": "Preventiva Grupo de Inversores      { AXIS-MRV100-PGINVR1 }",
       "equipe": "",
@@ -18164,6 +18256,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 480.0,
       "horasAteFechar": 1200.0,
+      "atrasada": false
+    },
+    {
+      "osId": "16491",
+      "ativo": "Inversor 3.1 Sungrow     { JCD100-INVR3.1 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "James Chaves ",
+      "status": "Finalizados",
+      "tarefa": "[JCD100-INVR3.1] - Religamento do JCD100-INVR3.1",
+      "criticidade": "",
+      "dataProgramada": "2026-10-15",
+      "dataCriacao": "2026-10-15",
+      "dataInicial": "2026-10-15",
+      "dataFinal": "2026-10-15",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -20360,8 +20472,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3407,
-  "totalGeral": 7401,
+  "historicoTotal": 3410,
+  "totalGeral": 7407,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
