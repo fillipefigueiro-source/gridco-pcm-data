@@ -329,8 +329,38 @@ def _linhas_work_orders(client):
         return list(client.paginar("work_orders", page_size=100))
 
 
+def _duracao_da_tarefa(df):
+    """A duração de CADA tarefa em 'Tarefa -> Duração estimada' (15/10/2026).
+
+    A view work_orders devolve em `duration` a duração da OS PAI, repetida em toda tarefa: o mesmo defeito que o
+    enriquecer_com_duracoes_subtarefas do gerar_bd_via_api corrige pelo RPC (que pede o JWT e não roda aqui). A
+    duração da TAREFA vem no `tasks_duration` da mesma linha, que o transformar_wo_para_bd já põe em 'Total de Horas'.
+    Sem isto, OS de muitas tarefas multiplicavam as horas no programador e no robô: a OS 15596 (MPA de Elias Fausto)
+    tem 25 h e 43 tarefas que somam 25 h, e cada tarefa saía com 25 h (1.075 h); a 14331, 4 x 6 h no lugar de
+    4 x 1,5 h. Nas tarefas abertas do retrato de 14/10: 176.427 h pela duração da OS, 13.126 h pela da tarefa.
+    Só nas OS de MAIS de uma tarefa: na de uma só não há o que multiplicar, e a duração fica como estava (em 113 o
+    Fracttal guarda na tarefa um valor diferente do da OS, para os dois lados). Tarefa sem `tasks_duration` fica com a
+    duração da OS dividida pelas tarefas dela. Roda uma vez só por DataFrame (a marca em `attrs`): a divisão não pode
+    se repetir."""
+    col = "Tarefa -> Duração estimada"
+    if df.empty or col not in df.columns or "Total de Horas" not in df.columns or df.attrs.get("duracao_por_tarefa"):
+        return df
+    tarefa = pd.to_timedelta(df["Total de Horas"], errors="coerce")
+    da_os = pd.to_timedelta(df[col], errors="coerce")
+    n = df.groupby("OSs ID", dropna=False)["OSs ID"].transform("size")
+    varias = n > 1
+    tem = varias & tarefa.notna() & (tarefa > pd.Timedelta(0))
+    falta = varias & ~tem & da_os.notna()
+    out = df.copy()
+    out[col] = da_os.where(~tem, tarefa)
+    out.loc[falta, col] = da_os[falta] / n[falta]
+    out.attrs["duracao_por_tarefa"] = True
+    return out
+
+
 def df_semanal(ttl_min=None):
-    """OS/tarefas da API Fracttal, no formato/colunas do BD 'Semanal'. Cache TTL."""
+    """OS/tarefas da API Fracttal, no formato/colunas do BD 'Semanal'. Cache TTL. A duração estimada sai por
+    TAREFA (_duracao_da_tarefa), também quando vem do cache."""
     bd = _bd()
     ttl = (int(os.environ.get("PROG_API_TTL_MIN", "10")) if ttl_min is None else ttl_min) * 60
     cache = os.path.join(bd.BASE_DIR, ".cache_semanal_api.pkl")
@@ -340,7 +370,7 @@ def df_semanal(ttl_min=None):
                 with open(cache, "rb") as f:
                     d = pickle.load(f)
                 if d.get("v") == 1:
-                    return d["df"].copy()
+                    return _duracao_da_tarefa(d["df"].copy())
         except Exception:
             pass
     client = bd.FracttalClient(bd.CLIENT_ID, bd.CLIENT_SECRET, bd.BASE_URL)
@@ -378,7 +408,7 @@ def df_semanal(ttl_min=None):
         os.replace(tmp, cache)
     except Exception:
         pass
-    return df
+    return _duracao_da_tarefa(df)
 
 
 def df_auxiliar():

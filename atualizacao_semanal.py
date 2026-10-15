@@ -1255,12 +1255,18 @@ def incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana=
         data_fim = row.get("Data final")
         hora_ini = _formatar_hora_bd(data_ini) or _formatar_hora_bd(data_prog)
         hora_fim = _formatar_hora_bd(data_fim)
+        # A duração é a da TAREFA (o fonte_bd_api a dá por tarefa desde 15/10/2026); implausível (vazia ou acima de
+        # MAX_TAREFA_PROMOVIDA_H), a fixa da sigla, como na promoção de pendentes. Antes vinha a da OS inteira em cada
+        # tarefa: na W42 a OS 15596 entrou com 25 h POR TAREFA e empurrou a semana da equipe para as pendentes.
+        dur_nova = _converter_duracao(row.get("Tarefa -> Duração estimada"))
+        if dur_nova <= 0 or dur_nova > MAX_TAREFA_PROMOVIDA_H:
+            _sig = next((s for s in DUR_FIXA_SIGLA_H if re.search(r'\b' + s + r'\b', tarefa_str)), "")
+            dur_nova = DUR_FIXA_SIGLA_H.get(_sig, min(dur_nova, MAX_TAREFA_PROMOVIDA_H) if dur_nova > 0 else 1.0)
         if not hora_fim and hora_ini:
             # Estima fim com base na duração
-            dur = _converter_duracao(row.get("Tarefa -> Duração estimada"))
             ini_min = _hora_str_to_min(hora_ini)
             if ini_min is not None:
-                hora_fim = _hora_min_to_str(ini_min + int(round(dur * 60)))
+                hora_fim = _hora_min_to_str(ini_min + int(round(dur_nova * 60)))
 
         nova = {
             "Equipe": equipe_aba,
@@ -1278,7 +1284,7 @@ def incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana=
             "Termografia": "Não",
             "Hora Início": hora_ini,
             "Hora Fim": hora_fim,
-            "Duração (h)": _converter_duracao(row.get("Tarefa -> Duração estimada")),
+            "Duração (h)": dur_nova,
             "Desloc (h)": 0,
             "Paralelo (terceirizada)": "Não",
             "Status Atual (BD)": row.get("Estado da Tarefa"),
@@ -1427,14 +1433,34 @@ def _achar_slot_livre(ocupados_sorted, dur_min, start_min):
     return None
 
 
+def _chave_os_pend(v):
+    try:
+        return str(int(float(v)))
+    except (TypeError, ValueError):
+        return str(v or "").strip()
+
+
 def _registrar_pendente(wb_prog, equipe, row_vals, header_map, motivo):
-    """Adiciona uma linha à aba '_Pendentes' descrevendo a OS que não coube."""
+    """Adiciona uma linha à aba '_Pendentes' descrevendo a OS que não coube.
+
+    A MESMA tarefa (OS, Tarefa e Código) já pendente só ganha o motivo novo, sem linha nova (15/10/2026): a linha
+    deslocada continua na aba da equipe ("NÃO REALIZADA") e volta a ser deslocada a cada OS nova que cai no horário
+    dela, e cada vez virava mais uma pendente. Na W42 a OS 15596 chegou a 660 pendentes, 480 do mesmo
+    "MPA - Inversor (Diurno)" (25 inversores), somando 15 mil horas."""
     sheet = wb_prog["_Pendentes"] if "_Pendentes" in wb_prog.sheetnames else None
     if sheet is None:
         sheet = wb_prog.create_sheet("_Pendentes", 1)
         for j, h in enumerate(["Equipe", "OSs ID", "Ativo", "Tarefa",
                                 "Código", "Tipo", "Duração (h)", "Motivo"], start=1):
             sheet.cell(row=1, column=j, value=h)
+    chave = (_chave_os_pend(row_vals[header_map["OSs ID"]] if "OSs ID" in header_map else None),
+             str((row_vals[header_map["Tarefa"]] if "Tarefa" in header_map else None) or "").strip(),
+             str((row_vals[header_map["Código Equipamento"]] if "Código Equipamento" in header_map else None) or "").strip())
+    for r in range(2, sheet.max_row + 1):
+        if (_chave_os_pend(sheet.cell(row=r, column=2).value), str(sheet.cell(row=r, column=4).value or "").strip(),
+                str(sheet.cell(row=r, column=5).value or "").strip()) == chave:
+            sheet.cell(row=r, column=8, value=motivo)
+            return
     nova_linha = sheet.max_row + 1
     sheet.cell(row=nova_linha, column=1, value=equipe)
     sheet.cell(row=nova_linha, column=2, value=row_vals[header_map.get("OSs ID", -1)] if "OSs ID" in header_map else None)

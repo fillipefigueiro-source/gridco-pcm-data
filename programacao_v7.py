@@ -655,10 +655,6 @@ HISTORICO      = os.path.join(BASE_DIR, 'Historico_Programacoes.xlsx')  # acumul
 
 PREVENTIVA_ORDER = {'MPA': 0, 'MPS': 1, 'MPT': 2, 'MPM': 3, 'MPQ': 4, 'OUTRA': 5}
 
-KEYWORDS_ZELADORIA = ['roçagem','rocagem','lavagem','limpeza',
-                       'poda','capina','jardim','zelador',
-                       'supress','vegetal','vegetação','roça']
-
 # ====================== Helpers ======================
 def t(m):
     m = int(round(m))
@@ -1261,9 +1257,12 @@ def is_termografia(tarefa):
     return 'termografi' in str(tarefa).lower()
 
 
-def is_zeladoria(tarefa):
-    t_ = norm(tarefa)
-    return any(kw in t_ for kw in (norm(k) for k in KEYWORDS_ZELADORIA))
+def is_zeladoria(tipo_tarefa):
+    """Zeladoria é o TIPO da tarefa no Fracttal, não o nome (15/10/2026). Pelo nome ('limpeza', 'lavagem', 'roça'...),
+    a corretiva 'Limpeza de ventoinha de inversor' ia como terceirizada, e 'roça' (sem acento) casava com 'troca' e
+    'Sorocaba': no retrato de 14/10, das 186 tarefas abertas que o nome marcava, 150 não eram do tipo Zeladoria (113
+    corretivas). Zeladoria vai paralela na segunda, fora da capacidade da equipe."""
+    return norm(tipo_tarefa).startswith('zeladoria')
 
 
 def find_rpn_and_mttr(tarefa_txt, tipo_bd):
@@ -1456,7 +1455,7 @@ def calcular_rpn_dinamico(row):
 
 df_tasks['corretiva']   = df_tasks['Tipo de tarefa'].apply(is_corretiva)
 df_tasks['termografia'] = df_tasks['Tarefa'].apply(is_termografia)
-df_tasks['zeladoria']   = df_tasks['Tarefa'].apply(is_zeladoria)
+df_tasks['zeladoria']   = df_tasks['Tipo de tarefa'].apply(is_zeladoria)
 df_tasks['mp_cat']      = df_tasks['Tarefa'].apply(classify_preventiva)
 
 # ---------- v8: tier, idade e boosts ----------
