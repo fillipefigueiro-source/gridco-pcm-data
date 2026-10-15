@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-15T11:26:49Z",
+  "geradoEm": "2026-10-15T12:18:10Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-12 .. 2026-10-18",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5284,
+        "total": 5286,
         "emAberto": 16,
         "atrasadas": 13,
-        "concluidas30d": 911,
-        "concluidas7d": 276,
-        "naSemanaCorrente": 135
+        "concluidas30d": 913,
+        "concluidas7d": 278,
+        "naSemanaCorrente": 137
       },
       "mttr": {
-        "horas": 17.74,
-        "label": "17h 45min",
-        "amostra": 911
+        "horas": 17.7,
+        "label": "17h 42min",
+        "amostra": 913
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W42",
-          "criadas": 135,
-          "finalizadas": 150
+          "criadas": 137,
+          "finalizadas": 152
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5284,
+            "total": 5286,
             "emAberto": 16
           }
         ],
@@ -81,9 +81,9 @@
       "total": 16,
       "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 14,
-        "emProgresso": 0,
-        "pausada": 2,
+        "naoIniciada": 12,
+        "emProgresso": 1,
+        "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
@@ -328,38 +328,40 @@
           "atrasada": true
         },
         {
+          "osId": "16417",
+          "ativo": "Inversor 3.3 Sungrow     { FRN100-INVR3.3 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Em progresso",
+          "tarefa": "[FRN100-INVR3.3] - Religamento do FRN100-INVR3.3",
+          "criticidade": "",
+          "dataProgramada": "2026-10-15",
+          "dataCriacao": "2026-10-15",
+          "dataInicial": "2026-10-15",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "16407",
           "ativo": "Thopen - Sorocaba 1 - SP Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100 }",
           "equipe": "",
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Maria Emanuella de Souza Mota ",
           "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[THPN-SCB100] - Religamento do THPN-SCB100",
           "criticidade": "",
           "dataProgramada": "2026-10-15",
           "dataCriacao": "2026-10-15",
-          "dataInicial": "",
+          "dataInicial": "2026-10-15",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "16405",
-          "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "DavidNascimento",
-          "supervisor": "Thiago Morais ",
-          "status": "Não Iniciada",
-          "tarefa": "[AXIS-PTB100] - Religamento do AXIS-PTB100",
-          "criticidade": "",
-          "dataProgramada": "2026-10-15",
-          "dataCriacao": "2026-10-15",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -383,6 +385,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "16405",
+          "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
+          "equipe": "",
+          "responsavel": "Thiago Morais ",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Thiago Morais ",
+          "status": "Finalizados",
+          "tarefa": "[AXIS-PTB100] - Religamento do AXIS-PTB100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-15",
+          "dataCriacao": "2026-10-15",
+          "dataInicial": "2026-10-15",
+          "dataFinal": "2026-10-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "16399",
           "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
@@ -3362,32 +3384,12 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "15736",
-          "ativo": "2C - Tupi Paulista 1 e 2 - SP  Tupi Paulista  São Paulo Brasil { 2C-TPP100 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Carlos  Godoi",
-          "status": "Finalizados",
-          "tarefa": "[2C - Tupi Paulista 1 e 2 - SP] - Religamento do 2C - Tupi Paulista 1 e 2 - SP",
-          "criticidade": "",
-          "dataProgramada": "2026-10-07",
-          "dataCriacao": "2026-10-07",
-          "dataInicial": "2026-10-07",
-          "dataFinal": "2026-10-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2214,
+      "historicoTotal": 2216,
       "subClassificacao": {
         "remoto": 753,
-        "local": 4531,
+        "local": 4533,
         "remotoEmAberto": 0,
         "localEmAberto": 16,
         "pctRemoto": 14,
@@ -3684,8 +3686,8 @@
       "total": 85,
       "atrasadas": 60,
       "porStatus": {
-        "naoIniciada": 80,
-        "emProgresso": 0,
+        "naoIniciada": 79,
+        "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
@@ -4436,14 +4438,15 @@
           "responsavel": "Anderson  Parente",
           "criadoPor": "Fabricio Barreto",
           "supervisor": "Anderson  Parente",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-10-09",
           "dataCriacao": "2026-10-01",
-          "dataInicial": "",
+          "dataInicial": "2026-10-15",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 336.0,
           "atrasada": true
         },
         {
@@ -8985,12 +8988,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 853,
-        "emAberto": 41,
+        "total": 854,
+        "emAberto": 42,
         "atrasadas": 38,
         "concluidas30d": 164,
         "concluidas7d": 29,
-        "naSemanaCorrente": 24
+        "naSemanaCorrente": 25
       },
       "mttr": {
         "horas": 237.37,
@@ -9015,7 +9018,7 @@
         },
         {
           "semana": "W42",
-          "criadas": 18,
+          "criadas": 19,
           "finalizadas": 13
         }
       ],
@@ -9023,8 +9026,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 853,
-            "emAberto": 41
+            "total": 854,
+            "emAberto": 42
           }
         ],
         "responsaveis": [
@@ -9055,16 +9058,16 @@
           }
         ]
       },
-      "total": 41,
+      "total": 42,
       "atrasadas": 38,
       "porStatus": {
-        "naoIniciada": 36,
-        "emProgresso": 0,
-        "pausada": 5,
+        "naoIniciada": 37,
+        "emProgresso": 1,
+        "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 41
+        "(sem equipe)": 42
       },
       "oss": [
         {
@@ -9536,7 +9539,7 @@
           "responsavel": "Henri Almeida ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Henri Almeida ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.4] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-10-13",
@@ -9717,6 +9720,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "16420",
+          "ativo": "Tracker 40.100 Brametal     { MRJ100-ETKR40.100 }",
+          "equipe": "",
+          "responsavel": "Hélio Silva ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Hélio Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 40.100] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-10-15",
+          "dataCriacao": "2026-10-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "16364",
@@ -14899,37 +14919,55 @@
   },
   "ossPublicas": [
     {
+      "osId": "16420",
+      "ativo": "Tracker 40.100 Brametal     { MRJ100-ETKR40.100 }",
+      "equipe": "",
+      "responsavel": "Hélio Silva ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Hélio Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 40.100] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-10-15",
+      "dataCriacao": "2026-10-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "16417",
+      "ativo": "Inversor 3.3 Sungrow     { FRN100-INVR3.3 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Em progresso",
+      "tarefa": "[FRN100-INVR3.3] - Religamento do FRN100-INVR3.3",
+      "criticidade": "",
+      "dataProgramada": "2026-10-15",
+      "dataCriacao": "2026-10-15",
+      "dataInicial": "2026-10-15",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
       "osId": "16407",
       "ativo": "Thopen - Sorocaba 1 - SP Avenida Francisco Roldão Sanches, nº 3.333 Sorocaba  São Paulo Brasil { THPN-SCB100 }",
       "equipe": "",
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Maria Emanuella de Souza Mota ",
       "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[THPN-SCB100] - Religamento do THPN-SCB100",
       "criticidade": "",
       "dataProgramada": "2026-10-15",
       "dataCriacao": "2026-10-15",
-      "dataInicial": "",
+      "dataInicial": "2026-10-15",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "16405",
-      "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "DavidNascimento",
-      "supervisor": "Thiago Morais ",
-      "status": "Não Iniciada",
-      "tarefa": "[AXIS-PTB100] - Religamento do AXIS-PTB100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-15",
-      "dataCriacao": "2026-10-15",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15281,7 +15319,7 @@
       "responsavel": "Henri Almeida ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Henri Almeida ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.4] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-10-13",
@@ -16778,14 +16816,15 @@
       "responsavel": "Anderson  Parente",
       "criadoPor": "Fabricio Barreto",
       "supervisor": "Anderson  Parente",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
       "criticidade": "",
       "dataProgramada": "2026-10-09",
       "dataCriacao": "2026-10-01",
-      "dataInicial": "",
+      "dataInicial": "2026-10-15",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 336.0
     },
     {
       "osId": "15082",
@@ -18509,6 +18548,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 480.0,
       "horasAteFechar": 1200.0,
+      "atrasada": false
+    },
+    {
+      "osId": "16405",
+      "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Thiago Morais ",
+      "status": "Finalizados",
+      "tarefa": "[AXIS-PTB100] - Religamento do AXIS-PTB100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-15",
+      "dataCriacao": "2026-10-15",
+      "dataInicial": "2026-10-15",
+      "dataFinal": "2026-10-15",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -20683,30 +20742,10 @@
       "horasAteFechar": 72.0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "15942",
-      "ativo": "Athon - Santa Maria do Pará 1 - PA  Santa Maria do Pará  Pará Brasil { ATHN-SMP100 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizados",
-      "tarefa": "[ATHN-SMP100] - Religamento do ATHN-SMP100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-09",
-      "dataCriacao": "2026-10-09",
-      "dataInicial": "2026-10-09",
-      "dataFinal": "2026-10-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3374,
-  "totalGeral": 7380,
+  "historicoTotal": 3376,
+  "totalGeral": 7383,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
