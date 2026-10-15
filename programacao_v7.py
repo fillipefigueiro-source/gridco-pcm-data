@@ -1503,9 +1503,23 @@ if RPN_DINAMICO_ATIVO:
 
 
 def estimate_h(row):
-    # Durações fixas por tipo de atividade (independente do BD).
-    # Calibradas em 31/07/2026 com o tempo de execução real (real_duration) de
-    # 26.267 tarefas finalizadas do Fracttal — média após remoção de outliers (IQR).
+    # 15/10/2026 (Levi, sobre a OS 15596: "Tem que ser de acordo com nova regra"): a hora é a da TAREFA no Fracttal,
+    # para todo tipo, e a soma das tarefas é a hora da OS que o PCM planejou (15596: 25 h; com as fixas por sigla eram
+    # 43 x 4 h = 172 h). Desde o fd39672 o fonte_bd_api dá a duração por tarefa (antes vinha a da OS em cada uma, e por
+    # isso o motor usava as fixas). Sem o piso de 1 h das preventivas: a MPM de 10 min no Fracttal fica com 10 min.
+    # Acima de MAX_TAREFA_H, capa e lista no log (corrigir na origem).
+    dur = parse_duration_to_hours(row.get('Tarefa -> Duração estimada'))
+    if not dur or dur <= 0:
+        return _estimate_h_sem_fracttal(row)
+    if dur > MAX_TAREFA_H:
+        _DUR_CAPADAS.append((row.get('OSs ID'), str(row.get('Tarefa', ''))[:48], dur))
+        dur = MAX_TAREFA_H
+    return dur
+
+
+def _estimate_h_sem_fracttal(row):
+    # A tarefa SEM duração no Fracttal: durações fixas por tipo de atividade, calibradas em 31/07/2026 com o tempo de
+    # execução real (real_duration) de 26.267 tarefas finalizadas do Fracttal — média após remoção de outliers (IQR).
     # Ver 'Planilha Confiabilidade R01.xlsx', aba "Motor x Real".
     cat = row.get('mp_cat')
     tarefa = str(row.get('Tarefa', '')).lower()
@@ -1516,9 +1530,9 @@ def estimate_h(row):
     if cat == 'MPT':                          return 1.30  # 14/09/2026: provisório = MPS; sem amostra de tempo real ainda
     if 'mpw' in tarefa:                       return 0.75  # sem amostra no histórico
     if 'handover' in tarefa:                  return 0.65  # real 0.65h (n=2217) — era 0.5
-    dur = parse_duration_to_hours(row.get('Tarefa -> Duração estimada'))
-    # Para corretivas, dar prioridade à Média (h) da Planilha Confiabilidade
-    if (not dur or dur <= 0) and row['corretiva']:
+    dur = None
+    # Para corretivas, a Média (h) da Planilha Confiabilidade
+    if row['corretiva']:
         dur = find_corretiva_mttr(row.get('Tarefa', ''))
     if not dur or dur <= 0: dur = row.get('mttr_h_fallback')
     if not dur or dur <= 0: dur = 1.5

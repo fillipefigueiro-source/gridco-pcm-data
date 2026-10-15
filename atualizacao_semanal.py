@@ -1180,6 +1180,13 @@ def incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana=
             if i_cod is None and i_tar is None:
                 presentes.add(_os)          # aba antiga: trava por OS, como antes
 
+    # O que o PCM tirou da semana em curso (Observacoes_Semana_Atual.txt: "OS; não" e "OS; sem: tarefa") não volta
+    # como OS nova. O STEP A3 apaga, mas roda DEPOIS deste passo: a cada rodada a OS tirada voltava, deslocava o que
+    # estivesse no horário dela e só então saía (15/10/2026: a 15596, tirada às 09:42, deslocou 19 tarefas e mandou 9
+    # para as pendentes na rodada das 12:24).
+    excluidas_atual, excluir_tarefas_atual = _exclusoes_semana_atual()
+    puladas = 0
+
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     incorporadas = 0
     via_solicitacao = 0
@@ -1188,6 +1195,10 @@ def incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana=
         if pd.isna(os_id):
             continue
         os_id = int(os_id)
+        if os_id in excluidas_atual or (os_id in excluir_tarefas_atual and any(
+                k in str(row.get("Tarefa") or "").lower() for k in excluir_tarefas_atual[os_id])):
+            puladas += 1
+            continue
         # A CHAVE E' A TAREFA, NAO A OS (01/09/2026). A trava abaixo continua sendo o que
         # impede a duplicacao massiva — ela so passou a contar a coisa certa. Contando OS,
         # uma OS de 24 ativos entrava com UMA tarefa e as outras 23 sumiam: 6 OS e 42
@@ -1331,6 +1342,8 @@ def incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana=
             via_solicitacao += 1
 
     log(f"  → {incorporadas} OS novas incorporadas ({via_solicitacao} vieram de solicitações)")
+    if puladas:
+        log(f"  → {puladas} tarefa(s) que o PCM tirou da semana (Observacoes_Semana_Atual) ficaram de fora")
 
 
 # ====================== Deslocamento em cascata ======================
@@ -1709,6 +1722,18 @@ def _parse_observacoes_atual(linhas):
         _tu_txt = {7 * 60 + 30: 'manhã', 13 * 60: 'tarde', 18 * 60: 'noite'}.get(_turno, 'turno padrão')
         entendidas.append(f"OS {os_id} → {_d_txt} · {_tu_txt}")
     return pins, excluidas, excluir_tarefas, entendidas, problemas
+
+
+def _exclusoes_semana_atual():
+    """(OS inteiras fora, {OS: palavras do 'sem:'}) do Observacoes_Semana_Atual.txt, a mesma leitura do STEP A3.
+    Sem o arquivo (ou sem conseguir ler), nada fica de fora."""
+    path = os.path.join(BASE_DIR, OBS_ATUAL_FILE)
+    try:
+        linhas = open(path, encoding="utf-8").read().splitlines()
+    except Exception:
+        return set(), {}
+    _, excluidas, excluir_tarefas, _, _ = _parse_observacoes_atual(linhas)
+    return excluidas, excluir_tarefas
 
 
 def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
