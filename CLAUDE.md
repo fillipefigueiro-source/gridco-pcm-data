@@ -84,6 +84,7 @@ sucesso.
 | Ordens e tarefas | Fracttal, via `fonte_bd_api.py` |
 | Sigla da preventiva | do texto da tarefa — **MPA tem duas grafias**: a sigla e "Manutenção Preventiva Anual GRID CO." Ler só a sigla captura menos de um terço |
 | Duração aprendida | `duracoes_aprendidas.json` — medida, mas **o motor não consome**. É proposital: ver `ESTADO.md`, "Primeira medição real" |
+| O que fica fora da programação | `Fora_da_programacao.json`, **gravado pelo Nexus** (16/10/2026): a tarefa com motivo que tira da programação (Aguardando Material, Aguardando Cliente...) e os nomes do backoffice. Lido por `fora_da_programacao.py` no `programacao_v7` (não programa) e no `atualizacao_semanal` (A2 não inclui como OS nova, A3b apaga da semana em curso a tarefa com motivo; a OS do backoffice já na semana fica). Não edite à mão: a próxima marca no Nexus regrava. Sem o arquivo, nada fica de fora |
 
 ---
 

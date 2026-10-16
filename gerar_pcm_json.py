@@ -399,6 +399,9 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
                     def _gp(n): return header_p.index(n) if n in header_p else None
                     ie, io_, ia = _gp("Equipe"), _gp("OSs ID"), _gp("Ativo")
                     it, itp, idur, imot = _gp("Tarefa"), _gp("Tipo"), _gp("Duração (h)"), _gp("Motivo")
+                    # o código do ativo (16/10/2026): o Quadro da semana do Nexus marca o motivo da pendente pelo
+                    # ativo, como na agenda (sem ele, a marca valia para a tarefa em todos os ativos da OS)
+                    icod = _gp("Código") if "Código" in header_p else _gp("Código Equipamento")
                     for r in rows_p[1:]:
                         def _v(i): return (r[i] if (i is not None and i < len(r)) else None)
                         eq = _v(ie)
@@ -417,6 +420,7 @@ def ler_planilha(xlsx_path: Path, mon: dt.date, mapa_extras: dict = None) -> dic
                             "tipo":    str(_v(itp) or "").strip(),
                             "duracao": _safe_float(_v(idur)),
                             "motivo":  str(_v(imot) or "").strip(),
+                            "codigo":  str(_v(icod) or "").strip(),
                         })
             # Aba especial: _Qualidade (portão 0.7) → aviso no dashboard
             elif sheet_name == "_Qualidade":

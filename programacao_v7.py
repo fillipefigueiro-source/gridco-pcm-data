@@ -53,6 +53,7 @@ from datetime import date, timedelta
 
 import pandas as pd
 import fonte_bd_api  # fonte de dados via API Fracttal (substitui leitura do BD xlsx)
+import fora_da_programacao  # 16/10/2026: o que o Nexus tira da programação (motivo e backoffice)
 
 # ====================== Configuração ======================
 def _next_monday(ref=None):
@@ -1094,6 +1095,29 @@ if OS_EXCLUIDAS:
     mask_excluir_obs = _os_id_norm.isin({str(k) for k in OS_EXCLUIDAS})
     df_filt = df_filt[~mask_excluir_obs].copy()
     mask_week = mask_week[~mask_excluir_obs]
+# Fora da programação (16/10/2026, Levi): a tarefa com um motivo que tira da programação (marcado no Nexus: Aguardando
+# Material, Aguardando Cliente...) e a OS cujo responsável no Fracttal é do backoffice ("desconsiderar para a programação
+# da semana") não entram, nem pelas observações. O Fora_da_programacao.json vem na pasta base (a rodada do Nexus); sem
+# ele, nada muda. A regra de comparação é a do Nexus (fora_da_programacao.py).
+FORA_PROG = fora_da_programacao.carregar(BASE_DIR)
+if FORA_PROG['erro']:
+    print(f"[FORA DA PROGRAMAÇÃO] AVISO: {FORA_PROG['erro']} — nada fica de fora por motivo nem pelo backoffice")
+if len(df_filt) and (FORA_PROG['marcas'] or FORA_PROG['backoffice']):
+    _mot_fora = df_filt.apply(lambda r: fora_da_programacao.motivo_que_tira(
+        FORA_PROG, r.get('OSs ID'), r.get('Código'), r.get('Tarefa')), axis=1)
+    _bo_fora = (df_filt['Responsável'].apply(lambda v: fora_da_programacao.do_backoffice(FORA_PROG, v))
+                if 'Responsável' in df_filt.columns else pd.Series(False, index=df_filt.index))
+    _m_fora = _mot_fora.notna() | _bo_fora
+    _na_semana = _m_fora & mask_week          # o log conta só o que entraria nesta semana
+    _por_motivo = _mot_fora[_na_semana & _mot_fora.notna()].value_counts().to_dict()
+    _n_bo = int((_na_semana & _bo_fora & _mot_fora.isna()).sum())
+    print(f"[FORA DA PROGRAMAÇÃO] {int(_na_semana.sum())} tarefa(s) que entrariam na semana ficaram fora: "
+          f"por motivo {_por_motivo or 'nenhuma'}; backoffice {_n_bo} tarefa(s) de "
+          f"{df_filt.loc[_na_semana & _bo_fora, 'OSs ID'].nunique()} OS "
+          f"(arquivo de {FORA_PROG['gerado_em'][:16] or '?'}: {FORA_PROG['n_tarefas']} tarefa(s) com motivo que tira, "
+          f"{len(FORA_PROG['backoffice'])} nome(s) do backoffice)")
+    df_filt = df_filt[~_m_fora].copy()
+    mask_week = mask_week[~_m_fora]
 df_tasks = df_filt[mask_week].copy().reset_index(drop=True)
 
 print(f'Tarefas a programar: {len(df_tasks)} (de {df_tasks["OSs ID"].nunique()} OSs)')

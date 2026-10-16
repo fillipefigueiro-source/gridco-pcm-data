@@ -50,6 +50,7 @@ import shutil
 import sys
 import unicodedata
 import fonte_bd_api  # fonte de dados via API Fracttal (substitui leitura do BD xlsx)
+import fora_da_programacao  # 16/10/2026: o que o Nexus tira da programação (motivo e backoffice)
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
@@ -1186,6 +1187,12 @@ def incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana=
     # para as pendentes na rodada das 12:24).
     excluidas_atual, excluir_tarefas_atual = _exclusoes_semana_atual()
     puladas = 0
+    # E o que o Nexus tira da programação (Fora_da_programacao.json, 16/10/2026): a tarefa com motivo que tira
+    # (Aguardando Material...) e a OS cujo responsável é do backoffice não entram como OS nova
+    fora = fora_da_programacao.carregar(BASE_DIR)
+    if fora["erro"]:
+        log(f"  ! {fora['erro']}: nada fica de fora por motivo nem pelo backoffice nesta rodada", "WARN")
+    puladas_motivo, puladas_bo = 0, set()
 
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     incorporadas = 0
@@ -1198,6 +1205,12 @@ def incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana=
         if os_id in excluidas_atual or (os_id in excluir_tarefas_atual and any(
                 k in str(row.get("Tarefa") or "").lower() for k in excluir_tarefas_atual[os_id])):
             puladas += 1
+            continue
+        if fora_da_programacao.motivo_que_tira(fora, os_id, row.get("Código"), row.get("Tarefa")):
+            puladas_motivo += 1
+            continue
+        if fora_da_programacao.do_backoffice(fora, row.get("Responsável")):
+            puladas_bo.add(os_id)
             continue
         # A CHAVE E' A TAREFA, NAO A OS (01/09/2026). A trava abaixo continua sendo o que
         # impede a duplicacao massiva — ela so passou a contar a coisa certa. Contando OS,
@@ -1344,6 +1357,9 @@ def incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana=
     log(f"  → {incorporadas} OS novas incorporadas ({via_solicitacao} vieram de solicitações)")
     if puladas:
         log(f"  → {puladas} tarefa(s) que o PCM tirou da semana (Observacoes_Semana_Atual) ficaram de fora")
+    if puladas_motivo or puladas_bo:
+        log(f"  → fora da programação (Nexus): {puladas_motivo} tarefa(s) com motivo que tira e "
+            f"{len(puladas_bo)} OS do backoffice não entraram como OS nova")
 
 
 # ====================== Deslocamento em cascata ======================
@@ -1734,6 +1750,42 @@ def _exclusoes_semana_atual():
         return set(), {}
     _, excluidas, excluir_tarefas, _, _ = _parse_observacoes_atual(linhas)
     return excluidas, excluir_tarefas
+
+
+def aplicar_fora_da_programacao(wb_prog):
+    """STEP A3b (16/10/2026): a tarefa marcada no Nexus com um motivo que tira da programação (Aguardando Material,
+    Aguardando Cliente...) sai da semana em curso: as linhas dela são apagadas de toda aba com "OSs ID" (as das equipes
+    e a _Pendentes), como o "sem:" do STEP A3, e o STEP A2 não a inclui de novo. A tarefa é OS + código do ativo + nome
+    (código vazio na marca = em todos os ativos da OS). A OS do backoffice NÃO é apagada da semana em curso: ela só não
+    entra como OS nova (decisão do Levi: geração e robô não incluem). Sem o Fora_da_programacao.json, nada muda."""
+    fora = fora_da_programacao.carregar(BASE_DIR)
+    if fora["erro"]:
+        log(f"  ! STEP A3b: {fora['erro']}", "WARN")
+        return
+    if not fora["n_tarefas"]:
+        return
+    n, por = 0, {}
+    for sheet_name in list(wb_prog.sheetnames):
+        ws = wb_prog[sheet_name]
+        if ws.max_row < 2:
+            continue
+        header = [c.value for c in ws[1]]
+        if "OSs ID" not in header or "Tarefa" not in header:
+            continue
+        i_os, i_tar = header.index("OSs ID"), header.index("Tarefa")
+        i_cod = next((header.index(h) for h in ("Código Equipamento", "Código") if h in header), None)
+        for r in range(ws.max_row, 1, -1):   # de baixo p/ cima (delete seguro)
+            v = ws.cell(row=r, column=i_os + 1).value
+            if v in (None, ""):
+                continue
+            motivo = fora_da_programacao.motivo_que_tira(
+                fora, v, ws.cell(row=r, column=i_cod + 1).value if i_cod is not None else "",
+                ws.cell(row=r, column=i_tar + 1).value)
+            if motivo:
+                ws.delete_rows(r, 1)
+                n += 1
+                por[motivo] = por.get(motivo, 0) + 1
+    log(f"STEP A3b: fora da programação (Nexus) — {n} linha(s) removida(s) {por or ''}".rstrip())
 
 
 def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
@@ -2559,6 +2611,8 @@ def main():
         incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana, date.today())
         # STEP A3: aplica as observações da semana ATUAL (override manual do usuário)
         aplicar_observacoes_semana_atual(wb_prog, dias_semana, date.today())
+        # STEP A3b: o que o Nexus tira da programação (motivo de espera marcado na tarefa, 16/10/2026)
+        aplicar_fora_da_programacao(wb_prog)
         # STEP A4: rolagem do dia (Melhoria 1) — depois dos overrides do usuário,
         # para que pin recém-colocado já conte como "não rola"
         aplicar_rolagem(wb_prog, dias_semana, date.today())
