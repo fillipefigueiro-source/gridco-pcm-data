@@ -89,7 +89,7 @@ feito no dia programado.
   Sem lugar no expediente, a tarefa fica no dia, depois da última, marcada `[EXCEDE HH]`. Nunca vai para outro dia nem
   para a `_Pendentes`. O pin do PCM ainda muda o dia da OS citada na observação.
 
-**Carga máxima do dia: 70%** (`CARGA_MAX_DIA` no `programacao_v7.py`, da W44 em diante): 6,15 h por equipe e dia das
+**Carga máxima do dia: 70%** (`CARGA_MAX_DIA` no `programacao_v7.py`, já na W43, regerada pelo Nexus em 16/10 à noite): 6,15 h por equipe e dia das
 8,8 h líquidas (era 80%, 7 h). A folga é do campo: quem acabar antes faz as tarefas dos dias seguintes da usina em que
 estiver, e a OS nova da semana cabe sem empurrar a de sexta. A janela da noite continua em 80% (`NIGHT_CAPACITY_MIN`).
 O Nexus tem a cópia idêntica do motor (`nexus/pcm/motor`) e a conferência dele usa a mesma carga

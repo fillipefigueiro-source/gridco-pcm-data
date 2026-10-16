@@ -151,7 +151,8 @@ DESLOC_CALCULA = (DESLOC_MODO in ('on', 'sombra'))
 # Carga máxima do dia (16/10/2026, Levi: "carga máxima no programador de sexta de 70% HH por dia"; era 80%, 7 h das
 # 8,8 h líquidas): 70% dá 6,15 h por equipe e dia. A folga é do campo: quem acabar antes faz as tarefas dos dias
 # seguintes da usina em que estiver, e a OS nova da semana cabe sem empurrar a de sexta (o robô não muda mais a tarefa
-# de dia). Vale da W44 em diante. A janela da noite continua nos 80% (NIGHT_CAPACITY_MIN).
+# de dia). Vale já na W43, que o PCM regera pelo Nexus em 16/10 à noite (Levi: "quero que funcione para o w43").
+# A janela da noite continua nos 80% (NIGHT_CAPACITY_MIN).
 CARGA_MAX_DIA = 0.70
 USEFUL_DAY_MIN     = int((WORK_END_MIN - WORK_START_MIN - LUNCH_BREAK_MIN) * CARGA_MAX_DIA)
 NIGHT_CAPACITY_MIN = int((NIGHT_END_MIN - NIGHT_START_MIN) * 0.80)
