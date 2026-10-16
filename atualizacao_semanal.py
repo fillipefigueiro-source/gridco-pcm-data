@@ -1504,15 +1504,30 @@ def _registrar_pendente(wb_prog, equipe, row_vals, header_map, motivo):
         sheet.cell(row=nova_linha, column=j).fill = fill
 
 
+def _com_marca_excede(dia_str):
+    """O mesmo dia com a marca [EXCEDE HH] (a do motor), sem duplicar: "Terça-feira (21/10) [NOTURNO]" vira
+    "Terça-feira (21/10) [NOTURNO/EXCEDE HH]"."""
+    s = str(dia_str or "").rstrip()
+    if "EXCEDE HH" in s:
+        return s
+    return s[:-1] + "/EXCEDE HH]" if s.endswith("]") else s + " [EXCEDE HH]"
+
+
 def deslocar_conflitantes(wb_prog, equipe_aba, dia_str_nova, ini_nova_min,
                           fim_nova_min, dias_semana, hoje, os_id_nova,
                           ws_equipe=None):
     """Após inserir uma nova OS no slot fixo (dia_str_nova,
     [ini_nova_min, fim_nova_min)), desloca as OS móveis (não travadas) que
-    conflitam para próximos slots livres. Cascata: se não couber no dia,
-    push pro próximo dia da semana. Overflow → _Pendentes.
+    conflitam para o próximo slot livre DO MESMO DIA. Sem lugar no expediente,
+    a conflitante fica no mesmo dia, depois da última, marcada [EXCEDE HH].
 
-    Retorna: nº de OS deslocadas (incluindo cascata) e nº de pendentes.
+    16/10/2026 (Levi): a tarefa programada na sexta não muda de DIA até o
+    fechamento da semana. Antes a cascata a levava para o dia seguinte ou para a
+    _Pendentes, e o relatório diário perdia a tarefa do dia em que ela foi
+    programada. Vale para a OS nova (STEP A2) e para o pin do PCM (STEP A3: a OS
+    citada na observação ainda muda de dia; as que ela empurra, não).
+
+    Retorna: nº de OS deslocadas e nº de pendentes (sempre 0 desde 16/10/2026).
     """
     if ws_equipe is None:
         ws_equipe = wb_prog[equipe_aba]
@@ -1543,6 +1558,8 @@ def deslocar_conflitantes(wb_prog, equipe_aba, dia_str_nova, ini_nova_min,
             if hoje and d_date < hoje:
                 continue
             dias_a_partir.append((d_date, d_str))
+    # só o dia da nova OS (16/10/2026): a conflitante anda no relógio, nunca para outro dia
+    dias_a_partir = [(d_date, d_str) for d_date, d_str in dias_a_partir if d_str == dia_str_nova]
     if not dias_a_partir:
         return 0, 0
 
@@ -1584,40 +1601,31 @@ def deslocar_conflitantes(wb_prog, equipe_aba, dia_str_nova, ini_nova_min,
             slot = _achar_slot_livre(ocupados, dur, start_min)
             if slot:
                 novo_slot = slot
-                dia_destino = d_str
+                dia_destino = dia_orig      # o mesmo dia, com as marcas que ele já tinha
                 break
 
+        excede = ""
         if novo_slot is None:
-            # Overflow → vira pendente
-            row_vals = [ws_equipe.cell(row=conf["row"], column=j + 1).value for j in range(max(header_map.values()) + 1)]
-            _registrar_pendente(wb_prog, equipe_aba, row_vals, header_map,
-                                f"Deslocada por OS #{os_id_nova} e sem capacidade na semana")
-            # Marca a linha original como "Não Realizada"
-            if idx_desloc_1b:
-                ws_equipe.cell(row=conf["row"], column=idx_desloc_1b).value = (
-                    f"NÃO REALIZADA - deslocada de {original_marker} por OS #{os_id_nova}"
-                )
-            if idx_update_1b:
-                ws_equipe.cell(row=conf["row"], column=idx_update_1b).value = timestamp
-            fill = PatternFill("solid", fgColor="F4B084")  # laranja escuro
-            for j in range(1, max(cols_dict.values()) + 1):
-                ws_equipe.cell(row=conf["row"], column=j).fill = fill
-            pendentes += 1
-        else:
-            ini_novo, fim_novo = novo_slot
-            ws_equipe.cell(row=conf["row"], column=idx_dia_1b).value = dia_destino
-            ws_equipe.cell(row=conf["row"], column=idx_ini_1b).value = _hora_min_to_str(ini_novo)
-            ws_equipe.cell(row=conf["row"], column=idx_fim_1b).value = _hora_min_to_str(fim_novo)
-            if idx_desloc_1b:
-                ws_equipe.cell(row=conf["row"], column=idx_desloc_1b).value = (
-                    f"Deslocada de {original_marker} por OS #{os_id_nova}"
-                )
-            if idx_update_1b:
-                ws_equipe.cell(row=conf["row"], column=idx_update_1b).value = timestamp
-            fill = PatternFill("solid", fgColor="FFD966")  # amarelo
-            for j in range(1, max(cols_dict.values()) + 1):
-                ws_equipe.cell(row=conf["row"], column=j).fill = fill
-            deslocadas += 1
+            # sem lugar no expediente: fica no MESMO dia, depois da última, marcada [EXCEDE HH] (16/10/2026; antes
+            # ia para a _Pendentes como "NÃO REALIZADA" e saía do dia)
+            base = max([f for _, f in _obter_ocupados(dia_str_nova)] + [fim_nova_min])
+            novo_slot = (base + GAP_ENTRE_OS_MIN, base + GAP_ENTRE_OS_MIN + dur)
+            dia_destino = _com_marca_excede(dia_orig)
+            excede = " [EXCEDE HH]"
+        ini_novo, fim_novo = novo_slot
+        ws_equipe.cell(row=conf["row"], column=idx_dia_1b).value = dia_destino
+        ws_equipe.cell(row=conf["row"], column=idx_ini_1b).value = _hora_min_to_str(ini_novo)
+        ws_equipe.cell(row=conf["row"], column=idx_fim_1b).value = _hora_min_to_str(fim_novo)
+        if idx_desloc_1b:
+            ws_equipe.cell(row=conf["row"], column=idx_desloc_1b).value = (
+                f"Deslocada de {original_marker} por OS #{os_id_nova}{excede}"
+            )
+        if idx_update_1b:
+            ws_equipe.cell(row=conf["row"], column=idx_update_1b).value = timestamp
+        fill = PatternFill("solid", fgColor="FFD966")  # amarelo
+        for j in range(1, max(cols_dict.values()) + 1):
+            ws_equipe.cell(row=conf["row"], column=j).fill = fill
+        deslocadas += 1
 
     return deslocadas, pendentes
 
@@ -2067,7 +2075,14 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
 # escrita — registrava o que rolaria e nada se movia, e ninguém percebeu porque
 # a sombra não faz barulho. A rolagem trata o DIA (segunda não feita vai para
 # terça); o que atravessa a SEMANA é a fila de reprogramação do programacao_v7.
-ROLAGEM_MODO_DEFAULT = "ativo"
+#
+# DESLIGADA desde 16/10/2026 (Levi): a tarefa programada na sexta fica no dia
+# dela até o fechamento da semana ("se foi para terça fica na terça"). A rolagem
+# levava para hoje a corretiva e a prioritária não finalizadas, o que "mascara a
+# execução deixando um backlog arrastado": o relatório diário perdia a tarefa do
+# dia em que ela foi programada. O campo continua podendo executá-la depois.
+# PCM_ROLAGEM=ativo (ou sombra) religa.
+ROLAGEM_MODO_DEFAULT = "desligado"
 
 _TIER_ROLAGEM = [
     ("corretiva", 0), ("religamento", 0),
@@ -2111,7 +2126,8 @@ def aplicar_rolagem(wb_prog, dias_semana, hoje):
     """STEP A4: rola para hoje o que ficou para trás nesta semana."""
     modo = os.environ.get("PCM_ROLAGEM", ROLAGEM_MODO_DEFAULT).strip().lower()
     if modo not in ("sombra", "ativo"):
-        modo = "sombra"
+        log("STEP A4 (rolagem): desligada — a tarefa fica no dia programado até o fechamento da semana")
+        return
     # hoje precisa ser um dia útil DESTA semana (sáb/dom/semana errada: nada a fazer)
     alvo = next(((d, ds) for d, ds in dias_semana if d == hoje), None)
     if alvo is None:
@@ -2614,7 +2630,8 @@ def main():
         # STEP A3b: o que o Nexus tira da programação (motivo de espera marcado na tarefa, 16/10/2026)
         aplicar_fora_da_programacao(wb_prog)
         # STEP A4: rolagem do dia (Melhoria 1) — depois dos overrides do usuário,
-        # para que pin recém-colocado já conte como "não rola"
+        # para que pin recém-colocado já conte como "não rola". Desligada desde
+        # 16/10/2026 (ROLAGEM_MODO_DEFAULT): só loga e volta
         aplicar_rolagem(wb_prog, dias_semana, date.today())
         # STEP A5: alertas 13:30/16:00 (Melhoria 3) — por último, para avaliar
         # o dia já com sync, observações e rolagem aplicados

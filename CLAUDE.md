@@ -76,6 +76,27 @@ sucesso.
 
 ---
 
+## Regras da semana
+
+**A tarefa programada na sexta não muda de dia até o fechamento da semana** (Levi, 16/10/2026: "se foi para terça
+fica na terça"). O campo pode executá-la depois, mas ela continua no dia dela, para o relatório diário medir o que foi
+feito no dia programado.
+- O STEP A4 (rolagem, `aplicar_rolagem`) está **desligado** (`ROLAGEM_MODO_DEFAULT = "desligado"`;
+  `PCM_ROLAGEM=ativo` religa). Ele levava para hoje a corretiva e a prioritária não finalizadas: na rodada de 16/10
+  15:00 foram 125 tarefas roladas, 105 forçadas além do HH e 620 levadas para a `_Pendentes`. Era isso que "mascara a
+  execução deixando um backlog arrastado".
+- A cascata da OS nova (STEP A2) e do pin do PCM (STEP A3), `deslocar_conflitantes`, só anda no relógio **do mesmo dia**.
+  Sem lugar no expediente, a tarefa fica no dia, depois da última, marcada `[EXCEDE HH]`. Nunca vai para outro dia nem
+  para a `_Pendentes`. O pin do PCM ainda muda o dia da OS citada na observação.
+
+**Carga máxima do dia: 70%** (`CARGA_MAX_DIA` no `programacao_v7.py`, da W44 em diante): 6,15 h por equipe e dia das
+8,8 h líquidas (era 80%, 7 h). A folga é do campo: quem acabar antes faz as tarefas dos dias seguintes da usina em que
+estiver, e a OS nova da semana cabe sem empurrar a de sexta. A janela da noite continua em 80% (`NIGHT_CAPACITY_MIN`).
+O Nexus tem a cópia idêntica do motor (`nexus/pcm/motor`) e a conferência dele usa a mesma carga
+(`nexus/pcm/comparar.py`).
+
+---
+
 ## Fontes de verdade
 
 | Dado | Vem de |
