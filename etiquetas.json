@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-17T08:36:44Z",
+  "geradoEm": "2026-10-17T09:45:56Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-12 .. 2026-10-18",
   "tipologias": {
@@ -8945,16 +8945,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 869,
-        "emAberto": 44,
-        "atrasadas": 36,
-        "concluidas30d": 157,
-        "concluidas7d": 27,
+        "emAberto": 43,
+        "atrasadas": 35,
+        "concluidas30d": 158,
+        "concluidas7d": 28,
         "naSemanaCorrente": 32
       },
       "mttr": {
-        "horas": 258.5,
-        "label": "10d 18h",
-        "amostra": 157
+        "horas": 257.47,
+        "label": "10d 17h",
+        "amostra": 158
       },
       "tendencia4Semanas": [
         {
@@ -8975,7 +8975,7 @@
         {
           "semana": "W42",
           "criadas": 34,
-          "finalizadas": 26
+          "finalizadas": 27
         }
       ],
       "topOfensores": {
@@ -8983,7 +8983,7 @@
           {
             "nome": "(sem equipe)",
             "total": 869,
-            "emAberto": 44
+            "emAberto": 43
           }
         ],
         "responsaveis": [
@@ -9005,7 +9005,7 @@
           {
             "nome": "Luiz  Silva",
             "total": 48,
-            "emAberto": 6
+            "emAberto": 5
           },
           {
             "nome": "Felipe Xavier",
@@ -9014,16 +9014,16 @@
           }
         ]
       },
-      "total": 44,
-      "atrasadas": 36,
+      "total": 43,
+      "atrasadas": 35,
       "porStatus": {
-        "naoIniciada": 40,
-        "emProgresso": 0,
+        "naoIniciada": 38,
+        "emProgresso": 1,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 44
+        "(sem equipe)": 43
       },
       "oss": [
         {
@@ -9422,23 +9422,6 @@
           "atrasada": true
         },
         {
-          "osId": "16168",
-          "ativo": "Inversor 2.1 Huawei     { TIM200-INVR2.1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 2.1] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-10-13",
-          "dataCriacao": "2026-10-13",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "15955",
           "ativo": "Inversor 2.2 Huawei SUN2000-215KTL-H3    { DML100-INVR2.2 }",
           "equipe": "",
@@ -9479,14 +9462,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 23.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-10-14",
           "dataCriacao": "2026-10-13",
-          "dataInicial": "",
+          "dataInicial": "2026-10-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "atrasada": true
         },
         {
@@ -9780,6 +9764,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "16168",
+          "ativo": "Inversor 2.1 Huawei     { TIM200-INVR2.1 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Luiz  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 2.1] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-10-13",
+          "dataCriacao": "2026-10-13",
+          "dataInicial": "2026-10-17",
+          "dataFinal": "2026-10-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "16589",
           "ativo": "Tracker 21.100      { STI100-ETKR21.100 }",
@@ -12441,25 +12444,6 @@
           "atrasada": false
         },
         {
-          "osId": "11766",
-          "ativo": "Inversor 2.1      { THPN-CAI100-INVR2.1 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Silva",
-          "criadoPor": "Ana Barros ",
-          "supervisor": "Cláudio  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 2.1] - Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-09-01",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "2026-09-02",
-          "dataFinal": "2026-09-02",
-          "linkFracttal": "",
-          "horasAteAbrir": 288.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "12142",
           "ativo": "Estrutura Trackers  Ibaté  São Paulo Brasil { IBT200-ETKR1 }",
           "equipe": "",
@@ -12631,7 +12615,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 656
+      "historicoTotal": 657
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15613,14 +15597,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 23.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-10-14",
       "dataCriacao": "2026-10-13",
-      "dataInicial": "",
+      "dataInicial": "2026-10-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0
     },
     {
       "osId": "16237",
@@ -15729,22 +15714,6 @@
       "tarefa": "[Inversor 1.2] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-10-14",
-      "dataCriacao": "2026-10-13",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "16168",
-      "ativo": "Inversor 2.1 Huawei     { TIM200-INVR2.1 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 2.1] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-10-13",
       "dataCriacao": "2026-10-13",
       "dataInicial": "",
       "dataFinal": "",
@@ -19970,6 +19939,25 @@
       "atrasada": false
     },
     {
+      "osId": "16168",
+      "ativo": "Inversor 2.1 Huawei     { TIM200-INVR2.1 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Luiz  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 2.1] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-10-13",
+      "dataCriacao": "2026-10-13",
+      "dataInicial": "2026-10-17",
+      "dataFinal": "2026-10-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "16164",
       "ativo": "Inversor 1.1      { CGU100-INVR1.1 }",
       "equipe": "",
@@ -20788,29 +20776,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "16062",
-      "ativo": "Inversor 7.1 Sungrow     { JCD100-INVR7.1 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "James Chaves ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 7.1] - Religamento do Inversor 7.1",
-      "criticidade": "",
-      "dataProgramada": "2026-10-11",
-      "dataCriacao": "2026-10-11",
-      "dataInicial": "2026-10-11",
-      "dataFinal": "2026-10-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3397,
+  "historicoTotal": 3398,
   "totalGeral": 7474,
   "verificacao": {
     "total": 0,
