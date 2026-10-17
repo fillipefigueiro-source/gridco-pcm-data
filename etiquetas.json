@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-17T10:36:55Z",
+  "geradoEm": "2026-10-17T11:23:16Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-12 .. 2026-10-18",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5363,
-        "emAberto": 20,
+        "total": 5367,
+        "emAberto": 22,
         "atrasadas": 18,
-        "concluidas30d": 933,
-        "concluidas7d": 282,
-        "naSemanaCorrente": 210
+        "concluidas30d": 935,
+        "concluidas7d": 284,
+        "naSemanaCorrente": 214
       },
       "mttr": {
-        "horas": 17.21,
-        "label": "17h 13min",
-        "amostra": 933
+        "horas": 17.17,
+        "label": "17h 10min",
+        "amostra": 935
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W42",
-          "criadas": 214,
-          "finalizadas": 223
+          "criadas": 218,
+          "finalizadas": 225
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5363,
-            "emAberto": 20
+            "total": 5367,
+            "emAberto": 22
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 20,
+      "total": 22,
       "atrasadas": 18,
       "porStatus": {
-        "naoIniciada": 18,
+        "naoIniciada": 20,
         "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 20
+        "(sem equipe)": 22
       },
       "oss": [
         {
@@ -418,6 +418,60 @@
           "atrasada": true
         },
         {
+          "osId": "16632",
+          "ativo": "Axis - Petrolina 3 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL300 }",
+          "equipe": "",
+          "responsavel": "Rodrigo  Silva",
+          "criadoPor": "Rúben Nunes da Silva ",
+          "supervisor": "Rodrigo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[AXIS-PTL300] - Religamento do AXIS-PTL300",
+          "criticidade": "",
+          "dataProgramada": "2026-10-17",
+          "dataCriacao": "2026-10-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "16631",
+          "ativo": "Inversor 2.5 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR2.5 }",
+          "equipe": "",
+          "responsavel": "Ademir Necker ",
+          "criadoPor": "Luely  Santos",
+          "supervisor": "Ademir Necker ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 2.5] - Religamento do Inversor 2.5",
+          "criticidade": "",
+          "dataProgramada": "2026-10-17",
+          "dataCriacao": "2026-10-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "16630",
+          "ativo": "Inversor 1.1      { CGU100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Felipe  Lima",
+          "status": "Não Iniciada",
+          "tarefa": "[CGU100-INVR1.1] - Religamento do CGU100-INVR1.1",
+          "criticidade": "",
+          "dataProgramada": "2026-10-17",
+          "dataCriacao": "2026-10-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "16627",
           "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
           "equipe": "",
@@ -434,27 +488,29 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "16626",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
-          "responsavel": "Matheus Gois ",
+          "responsavel": "Ronaldo  Silva",
           "criadoPor": "LucasNascimento",
-          "supervisor": "Matheus Gois ",
-          "status": "Não Iniciada",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Finalizados",
           "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
           "criticidade": "",
           "dataProgramada": "2026-10-17",
           "dataCriacao": "2026-10-17",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-10-17",
+          "dataFinal": "2026-10-17",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "16601",
           "ativo": "Cabine 2 Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB200-CABN2 }",
@@ -3276,26 +3332,6 @@
           "atrasada": false
         },
         {
-          "osId": "15874",
-          "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
-          "equipe": "",
-          "responsavel": "Ademir Necker ",
-          "criadoPor": "LucasNascimento",
-          "supervisor": "Ademir Necker ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-GTB100] - Religamento do THPN-GTB100",
-          "criticidade": "",
-          "dataProgramada": "2026-10-09",
-          "dataCriacao": "2026-10-09",
-          "dataInicial": "2026-10-10",
-          "dataFinal": "2026-10-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "15959",
           "ativo": "Thopen - Piracicaba 1 - SP Estrada Mun. Norimar Aparecida Brieda Piracicaba  São Paulo Brasil { THPN-PRB100 }",
           "equipe": "",
@@ -3456,12 +3492,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2253,
+      "historicoTotal": 2255,
       "subClassificacao": {
         "remoto": 754,
-        "local": 4609,
+        "local": 4613,
         "remotoEmAberto": 0,
-        "localEmAberto": 20,
+        "localEmAberto": 22,
         "pctRemoto": 14,
         "alerta": true
       },
@@ -14911,14 +14947,14 @@
   },
   "ossPublicas": [
     {
-      "osId": "16627",
-      "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
+      "osId": "16632",
+      "ativo": "Axis - Petrolina 3 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL300 }",
       "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "LucasNascimento",
-      "supervisor": "Thiago Morais ",
+      "responsavel": "Rodrigo  Silva",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "Rodrigo  Silva",
       "status": "Não Iniciada",
-      "tarefa": "[AXIS-PTB100] - Religamento do AXIS-PTB100",
+      "tarefa": "[AXIS-PTL300] - Religamento do AXIS-PTL300",
       "criticidade": "",
       "dataProgramada": "2026-10-17",
       "dataCriacao": "2026-10-17",
@@ -14928,14 +14964,48 @@
       "modalidade": "local"
     },
     {
-      "osId": "16626",
-      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "osId": "16631",
+      "ativo": "Inversor 2.5 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR2.5 }",
       "equipe": "",
-      "responsavel": "Matheus Gois ",
-      "criadoPor": "LucasNascimento",
-      "supervisor": "Matheus Gois ",
+      "responsavel": "Ademir Necker ",
+      "criadoPor": "Luely  Santos",
+      "supervisor": "Ademir Necker ",
       "status": "Não Iniciada",
-      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
+      "tarefa": "[Inversor 2.5] - Religamento do Inversor 2.5",
+      "criticidade": "",
+      "dataProgramada": "2026-10-17",
+      "dataCriacao": "2026-10-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16630",
+      "ativo": "Inversor 1.1      { CGU100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Felipe  Lima",
+      "status": "Não Iniciada",
+      "tarefa": "[CGU100-INVR1.1] - Religamento do CGU100-INVR1.1",
+      "criticidade": "",
+      "dataProgramada": "2026-10-17",
+      "dataCriacao": "2026-10-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16627",
+      "ativo": "Axis - Ponto Belo 1 - PE  Ponto Belo  Espírito Santo Brasil { AXIS-PTB100 }",
+      "equipe": "",
+      "responsavel": "Thiago Morais ",
+      "criadoPor": "LucasNascimento",
+      "supervisor": "Thiago Morais ",
+      "status": "Não Iniciada",
+      "tarefa": "[AXIS-PTB100] - Religamento do AXIS-PTB100",
       "criticidade": "",
       "dataProgramada": "2026-10-17",
       "dataCriacao": "2026-10-17",
@@ -18387,6 +18457,26 @@
       "atrasada": false
     },
     {
+      "osId": "16626",
+      "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "LucasNascimento",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-17",
+      "dataCriacao": "2026-10-17",
+      "dataInicial": "2026-10-17",
+      "dataFinal": "2026-10-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "16601",
       "ativo": "Cabine 2 Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB200-CABN2 }",
       "equipe": "",
@@ -20650,30 +20740,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "16066",
-      "ativo": "QGBT 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-QGBT4 }",
-      "equipe": "",
-      "responsavel": "Ricardo Silva ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Ricardo Silva ",
-      "status": "Finalizados",
-      "tarefa": "[THPN-ORB100-QGBT4] - Religamento do THPN-ORB100-QGBT4",
-      "criticidade": "",
-      "dataProgramada": "2026-10-11",
-      "dataCriacao": "2026-10-11",
-      "dataInicial": "2026-10-11",
-      "dataFinal": "2026-10-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3403,
-  "totalGeral": 7476,
+  "historicoTotal": 3405,
+  "totalGeral": 7480,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
