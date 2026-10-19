@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-19T22:39:51Z",
+  "geradoEm": "2026-10-19T23:29:10Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-19 .. 2026-10-25",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5445,
-        "emAberto": 34,
+        "total": 5446,
+        "emAberto": 35,
         "atrasadas": 25,
         "concluidas30d": 932,
         "concluidas7d": 290,
-        "naSemanaCorrente": 29
+        "naSemanaCorrente": 30
       },
       "mttr": {
         "horas": 16.31,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W43",
-          "criadas": 30,
+          "criadas": 31,
           "finalizadas": 28
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5445,
-            "emAberto": 34
+            "total": 5446,
+            "emAberto": 35
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 34,
+      "total": 35,
       "atrasadas": 25,
       "porStatus": {
-        "naoIniciada": 27,
-        "emProgresso": 3,
-        "pausada": 4,
+        "naoIniciada": 28,
+        "emProgresso": 2,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 34
+        "(sem equipe)": 35
       },
       "oss": [
         {
@@ -442,7 +442,7 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Rúben Nunes da Silva ",
           "supervisor": "Luiz  Silva",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[TIM100-INVR3.6] - Religamento do TIM100-INVR3.6",
           "criticidade": "",
           "dataProgramada": "2026-10-18",
@@ -544,6 +544,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "16803",
+          "ativo": "Cabine 1  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Não Iniciada",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-10-19",
+          "dataCriacao": "2026-10-19",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "16801",
@@ -3716,9 +3734,9 @@
       "historicoTotal": 2288,
       "subClassificacao": {
         "remoto": 754,
-        "local": 4691,
+        "local": 4692,
         "remotoEmAberto": 0,
-        "localEmAberto": 34,
+        "localEmAberto": 35,
         "pctRemoto": 14,
         "alerta": true
       },
@@ -15098,6 +15116,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "16803",
+      "ativo": "Cabine 1  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Não Iniciada",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-10-19",
+      "dataCriacao": "2026-10-19",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "16801",
       "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
       "equipe": "",
@@ -15435,7 +15470,7 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Rúben Nunes da Silva ",
       "supervisor": "Luiz  Silva",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[TIM100-INVR3.6] - Religamento do TIM100-INVR3.6",
       "criticidade": "",
       "dataProgramada": "2026-10-18",
@@ -21035,7 +21070,7 @@
     }
   ],
   "historicoTotal": 3436,
-  "totalGeral": 7568,
+  "totalGeral": 7569,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
