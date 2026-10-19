@@ -443,13 +443,28 @@ def relatorio_observacoes():
         print('        Corrija em Observacoes_Semana.txt e gere de novo.')
 
 
+def _casa_tarefa(kw, tk, norm=None):
+    """A palavra de uma observação ('sem:', o campo de tarefas ou o 'só:') casa com a tarefa?
+    'nome'            -> o nome da tarefa contém a palavra (sem diferenciar maiúscula), como sempre foi;
+    'nome @ CÓDIGO'   -> a SUBTAREFA (19/10/2026): o nome contém e o código do ativo é esse, e só essa.
+    A mesma regra do `_casa_tarefa` do atualizacao_semanal (o robô da semana em curso). Caso que criou: a OS 16739 tem
+    "[GreenYellow] - MPT - Inversor" em 15 inversores, e tirar ou mover UM levava os 15."""
+    norm = norm or (lambda s: str(s or '').lower())
+    k = str(kw or '').strip()
+    if '@' in k:
+        nome, _, cod = k.rpartition('@')
+        nome, cod = nome.strip(), cod.strip()
+        return (bool(cod) and cod.lower() == str(tk.get('codigo') or '').strip().lower()
+                and (not nome or norm(nome) in norm(tk.get('tarefa_txt'))))
+    return bool(k) and norm(k) in norm(tk.get('tarefa_txt'))
+
+
 def _tarefa_excluida(tk):
     """True se a tarefa deve ser pulada por causa de um filtro 'sem:' da sua OS."""
     kws = OS_TAREFAS_EXCLUIR.get(tk['os_id'])
     if not kws:
         return False
-    txt = _norm_usina(tk['tarefa_txt'])
-    return any(_norm_usina(k) in txt for k in kws)
+    return any(_casa_tarefa(k, tk, _norm_usina) for k in kws)
 
 
 def _carregar_pins():
@@ -2140,8 +2155,7 @@ def schedule_team(equipe, tarefas_all):
         """Verifica se a tarefa bate com o filtro de subtarefas do pin."""
         if not pin.get('tarefas'):
             return True  # sem filtro = todas as tarefas da OS
-        txt = tk['tarefa_txt'].lower()
-        return any(f.lower() in txt for f in pin['tarefas'])
+        return any(_casa_tarefa(f, tk) for f in pin['tarefas'])   # 'nome @ CÓDIGO' = só aquele ativo
 
     for ativo, lista in by_usina.items():
         # Agrupa por OS para decidir MODO A (sigla → distribui bloco pelos dias)
@@ -2183,8 +2197,7 @@ def schedule_team(equipe, tarefas_all):
                     _com = [d for d in _dirs.values() if d['inc']]   # linhas com "só:"
                     _sem_so = [d for d in _dirs.values() if not d['inc']]  # linha que pega o resto
                     for tk in tks:
-                        _txt = (tk['tarefa_txt'] or '').lower()
-                        alvo = next((d for d in _com if any(k.lower() in _txt for k in d['inc'])), None)
+                        alvo = next((d for d in _com if any(_casa_tarefa(k, tk) for k in d['inc'])), None)
                         if alvo is None and _sem_so:
                             alvo = _sem_so[0]
                         if alvo is None:

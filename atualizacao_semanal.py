@@ -1203,7 +1203,7 @@ def incorporar_os_novas_do_bd(wb_prog, df_bd_semana, sugestoes_pcm, dias_semana=
             continue
         os_id = int(os_id)
         if os_id in excluidas_atual or (os_id in excluir_tarefas_atual and any(
-                k in str(row.get("Tarefa") or "").lower() for k in excluir_tarefas_atual[os_id])):
+                _casa_tarefa(k, row.get("Tarefa"), row.get("Código")) for k in excluir_tarefas_atual[os_id])):
             puladas += 1
             continue
         if fora_da_programacao.motivo_que_tira(fora, os_id, row.get("Código"), row.get("Tarefa")):
@@ -1668,6 +1668,22 @@ _TURNO_MAP_OBS = {'MANHA': 7 * 60 + 30, 'MANHÃ': 7 * 60 + 30, 'TARDE': 13 * 60,
 OBS_ATUAL_FILE = "Observacoes_Semana_Atual.txt"
 
 
+def _casa_tarefa(kw, tarefa, codigo=""):
+    """A palavra de uma observação ('sem:', o campo de tarefas ou o 'só:') casa com a linha da programação?
+    'nome'            -> o nome da tarefa contém a palavra (sem diferenciar maiúscula), como sempre foi;
+    'nome @ CÓDIGO'   -> a SUBTAREFA (19/10/2026): o nome contém e o código do ativo é esse, e só essa linha.
+    Caso que criou: a OS 16739 tem "[GreenYellow] - MPT - Inversor" em 15 inversores; tirar ou mover UM tirava ou
+    movia os 15 (o "Mover" pôs os 15 na terça, empilhados até 31:27). O Quadro do Nexus grava a subtarefa assim; o
+    nome e o código são a mesma identidade (OS, Código, Tarefa) do STEP A2 e do fonte_bd_api."""
+    k = str(kw or "").strip().lower()
+    t = str(tarefa or "").lower()
+    if "@" in k:
+        nome, _, cod = k.rpartition("@")
+        nome, cod = nome.strip(), cod.strip()
+        return bool(cod) and cod == str(codigo or "").strip().lower() and (not nome or nome in t)
+    return bool(k) and k in t
+
+
 def _parse_observacoes_atual(linhas):
     """Mesma gramática do programacao_v7 (sexta), para as duas abas serem equivalentes:
         OS; DIA(s); TAREFAS; TURNO   + campos 'só:' e 'sem:' em qualquer posição
@@ -1819,11 +1835,11 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
     log(f"STEP A3: Observações da semana atual — {_n_pins} pin(s), "
         f"{len(excluidas)} exclusão(ões), {len(excluir_tarefas)} filtro(s) 'sem:'...")
 
-    def _match_tarefa(cell_val, alvos):
+    def _match_tarefa(cell_val, alvos, codigo=""):
+        # 'nome @ CÓDIGO' = só a linha daquele ativo (19/10/2026, `_casa_tarefa`)
         if not alvos:
             return True
-        t = str(cell_val or "").lower()
-        return any(a in t for a in alvos)
+        return any(_casa_tarefa(a, cell_val, codigo) for a in alvos)
 
     # 1) EXCLUSÕES: apaga as linhas da OS de qualquer aba que tenha "OSs ID" (inclui _Pendentes).
     #    'não' remove a OS inteira; 'sem: X' remove só as tarefas que batem com X.
@@ -1838,6 +1854,7 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
                 continue
             idx_os0 = header.index("OSs ID")
             idx_tar0 = header.index("Tarefa") if "Tarefa" in header else None
+            idx_cod0 = next((header.index(h) for h in ("Código Equipamento", "Código") if h in header), None)
             for r in range(ws.max_row, 1, -1):   # de baixo p/ cima (delete seguro)
                 try:
                     v = int(ws.cell(row=r, column=idx_os0 + 1).value)
@@ -1846,7 +1863,8 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
                 apagar = v in excluidas
                 if not apagar and v in excluir_tarefas and idx_tar0 is not None:
                     apagar = _match_tarefa(ws.cell(row=r, column=idx_tar0 + 1).value,
-                                           excluir_tarefas[v])
+                                           excluir_tarefas[v],
+                                           ws.cell(row=r, column=idx_cod0 + 1).value if idx_cod0 is not None else "")
                 if apagar:
                     ws.delete_rows(r, 1)
                     n_excl += 1
@@ -1876,6 +1894,7 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
                 continue
             idx_dia, idx_ini, idx_fim = cols.get("Dia"), cols.get("Hora Início"), cols.get("Hora Fim")
             idx_dur, idx_tar = cols.get("Duração (h)"), cols.get("Tarefa")
+            idx_cod = cols.get("Código Equipamento") or cols.get("Código")
             for r in range(2, ws.max_row + 1):
                 try:
                     if int(ws.cell(row=r, column=idx_os).value) != os_id:
@@ -1883,10 +1902,11 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
                 except (ValueError, TypeError):
                     continue
                 _cel_tar = ws.cell(row=r, column=idx_tar).value if idx_tar else None
-                if not _match_tarefa(_cel_tar, pin['tarefas']):
+                _cel_cod = ws.cell(row=r, column=idx_cod).value if idx_cod else ""
+                if not _match_tarefa(_cel_tar, pin['tarefas'], _cel_cod):
                     continue
                 # 'só: X' — esta linha só vale para as tarefas que batem com X
-                if pin.get('incluir') and not _match_tarefa(_cel_tar, pin['incluir']):
+                if pin.get('incluir') and not _match_tarefa(_cel_tar, pin['incluir'], _cel_cod):
                     continue
                 try:
                     # novo dia
@@ -1947,10 +1967,11 @@ def aplicar_observacoes_semana_atual(wb_prog, dias_semana, hoje):
                 if not lista:
                     continue
                 tarefa = ws_p.cell(row=r, column=hp["Tarefa"]).value
+                cod_r = ws_p.cell(row=r, column=hp["Código"]).value if "Código" in hp else ""
                 pin = next((p for p in (lista if isinstance(lista, list) else [lista])
                             if p.get('dia') is not None and p['dia'] in dias_por_idx
-                            and _match_tarefa(tarefa, p.get('tarefas'))
-                            and (not p.get('incluir') or _match_tarefa(tarefa, p['incluir']))),
+                            and _match_tarefa(tarefa, p.get('tarefas'), cod_r)
+                            and (not p.get('incluir') or _match_tarefa(tarefa, p['incluir'], cod_r))),
                            None)
                 if pin is None:
                     continue
