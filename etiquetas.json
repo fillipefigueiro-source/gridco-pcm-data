@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-19T14:39:05Z",
+  "geradoEm": "2026-10-19T15:34:26Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-19 .. 2026-10-25",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5425,
+        "total": 5431,
         "emAberto": 30,
         "atrasadas": 26,
-        "concluidas30d": 916,
-        "concluidas7d": 274,
-        "naSemanaCorrente": 9
+        "concluidas30d": 922,
+        "concluidas7d": 280,
+        "naSemanaCorrente": 15
       },
       "mttr": {
-        "horas": 16.57,
-        "label": "16h 34min",
-        "amostra": 916
+        "horas": 16.46,
+        "label": "16h 28min",
+        "amostra": 922
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W43",
-          "criadas": 10,
-          "finalizadas": 12
+          "criadas": 16,
+          "finalizadas": 18
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5425,
+            "total": 5431,
             "emAberto": 30
           }
         ],
@@ -3640,10 +3640,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2272,
+      "historicoTotal": 2278,
       "subClassificacao": {
         "remoto": 754,
-        "local": 4671,
+        "local": 4677,
         "remotoEmAberto": 0,
         "localEmAberto": 30,
         "pctRemoto": 14,
@@ -3941,8 +3941,8 @@
       "atrasadas": 58,
       "porStatus": {
         "naoIniciada": 66,
-        "emProgresso": 2,
-        "pausada": 6,
+        "emProgresso": 1,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4898,7 +4898,7 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Maria Luiza Oliveira",
           "supervisor": "Eduardo  Mendes",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPA - Transformador (diurno)",
           "criticidade": "",
           "dataProgramada": "2026-10-16",
@@ -9026,16 +9026,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 872,
-        "emAberto": 43,
-        "atrasadas": 32,
-        "concluidas30d": 142,
-        "concluidas7d": 30,
+        "emAberto": 42,
+        "atrasadas": 31,
+        "concluidas30d": 143,
+        "concluidas7d": 31,
         "naSemanaCorrente": 10
       },
       "mttr": {
-        "horas": 263.32,
-        "label": "10d 23h",
-        "amostra": 142
+        "horas": 262.32,
+        "label": "10d 22h",
+        "amostra": 143
       },
       "tendencia4Semanas": [
         {
@@ -9056,7 +9056,7 @@
         {
           "semana": "W43",
           "criadas": 3,
-          "finalizadas": 1
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
@@ -9064,14 +9064,14 @@
           {
             "nome": "(sem equipe)",
             "total": 872,
-            "emAberto": 43
+            "emAberto": 42
           }
         ],
         "responsaveis": [
           {
             "nome": "Gilson Souza",
             "total": 70,
-            "emAberto": 4
+            "emAberto": 3
           },
           {
             "nome": "Marcos Duarte",
@@ -9095,16 +9095,16 @@
           }
         ]
       },
-      "total": 43,
-      "atrasadas": 32,
+      "total": 42,
+      "atrasadas": 31,
       "porStatus": {
         "naoIniciada": 38,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 43
+        "(sem equipe)": 42
       },
       "oss": [
         {
@@ -9570,24 +9570,6 @@
           "atrasada": true
         },
         {
-          "osId": "16364",
-          "ativo": "Tracker 04.101 Brametal Bi-motor    { CPP100-ETKR4.101 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "[Tracker 04.101] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-10-15",
-          "dataCriacao": "2026-10-14",
-          "dataInicial": "2026-10-19",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "atrasada": true
-        },
-        {
           "osId": "16322",
           "ativo": "Inversor 1.7 Huaweii SUN2000-215KTL    { STB100-INVR1.7 }",
           "equipe": "",
@@ -9845,6 +9827,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "16364",
+          "ativo": "Tracker 04.101 Brametal Bi-motor    { CPP100-ETKR4.101 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 04.101] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-10-15",
+          "dataCriacao": "2026-10-14",
+          "dataInicial": "2026-10-19",
+          "dataFinal": "2026-10-19",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "15580",
           "ativo": "Tracker 08.103 Brametal Bi-motor    { CPP100-ETKR8.103 }",
@@ -10508,25 +10509,6 @@
           "linkFracttal": "",
           "horasAteAbrir": 840.0,
           "horasAteFechar": 24.0,
-          "atrasada": false
-        },
-        {
-          "osId": "11775",
-          "ativo": "Tracker 5.100 Axial 1V bilinha (um eixo de rotação horizontal)    { CAZ100-ETKR5.100 }",
-          "equipe": "",
-          "responsavel": "Gilson  Milhomem",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson  Milhomem",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 5.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-24",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "2026-10-09",
-          "dataFinal": "2026-10-09",
-          "linkFracttal": "",
-          "horasAteAbrir": 1176.0,
-          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -12696,7 +12678,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 648
+      "historicoTotal": 649
     },
     "engenharia": {
       "label": "Engenharia",
@@ -15763,23 +15745,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "16364",
-      "ativo": "Tracker 04.101 Brametal Bi-motor    { CPP100-ETKR4.101 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "[Tracker 04.101] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-10-15",
-      "dataCriacao": "2026-10-14",
-      "dataInicial": "2026-10-19",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0
-    },
-    {
       "osId": "16361",
       "ativo": "Estação Meteorológica Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB200-ESTM1 }",
       "equipe": "",
@@ -16414,7 +16379,7 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Maria Luiza Oliveira",
       "supervisor": "Eduardo  Mendes",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - MPA - Transformador (diurno)",
       "criticidade": "",
       "dataProgramada": "2026-10-16",
@@ -20241,6 +20206,25 @@
       "atrasada": false
     },
     {
+      "osId": "16364",
+      "ativo": "Tracker 04.101 Brametal Bi-motor    { CPP100-ETKR4.101 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 04.101] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-10-15",
+      "dataCriacao": "2026-10-14",
+      "dataInicial": "2026-10-19",
+      "dataFinal": "2026-10-19",
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "16332",
       "ativo": "Cabine 2 BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100-CABN2 }",
       "equipe": "",
@@ -20910,30 +20894,10 @@
       "horasAteAbrir": 96.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "16164",
-      "ativo": "Inversor 1.1      { CGU100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Lucas Alberto Freitas de Faria ",
-      "criadoPor": "CíceroWillian",
-      "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.1] - Religamento do Inversor 1.1",
-      "criticidade": "",
-      "dataProgramada": "2026-10-13",
-      "dataCriacao": "2026-10-13",
-      "dataInicial": "2026-10-13",
-      "dataFinal": "2026-10-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3413,
-  "totalGeral": 7542,
+  "historicoTotal": 3420,
+  "totalGeral": 7548,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
