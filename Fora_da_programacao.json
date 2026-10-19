@@ -1,91 +1,103 @@
 {
  "versao": 1,
- "gerado_em": "2026-10-19T11:22:59-03:00",
- "hash": "8c74dd3bdbb25584584936d1209b0cb80b266247727c493c09e630e177966a12",
+ "gerado_em": "2026-10-19T12:42:57-03:00",
+ "hash": "a08e90aef99f77985a62a56c3f43e76728b2d5233f928b55e4e7eea5a85ee171",
  "motivos": [
   {
    "id": 1,
    "nome": "Engenharia",
    "descricao": "Tarefas originadas com cunho que envolve a engenharia, para o time backoffice ou para o time de campo com auxílio da engenharia backoffice.",
    "tira_da_programacao": false,
-   "ativo": true
+   "ativo": true,
+   "etiqueta": ""
   },
   {
    "id": 2,
    "nome": "Chamados (garantia)",
    "descricao": "Tarefas originadas com cunho de garantia, para o time de backoffice (controle) ou para o time de campo.",
    "tira_da_programacao": false,
-   "ativo": true
+   "ativo": true,
+   "etiqueta": ""
   },
   {
    "id": 3,
    "nome": "Performance",
    "descricao": "Tarefas originadas com cunho que envolve a performance, para o time de backoffice ou para o time de campo.",
    "tira_da_programacao": false,
-   "ativo": true
+   "ativo": true,
+   "etiqueta": ""
   },
   {
    "id": 4,
    "nome": "Aguardando cliente",
    "descricao": "",
    "tira_da_programacao": true,
-   "ativo": true
+   "ativo": true,
+   "etiqueta": ""
   },
   {
    "id": 5,
    "nome": "Aguardando concessionária",
    "descricao": "",
    "tira_da_programacao": true,
-   "ativo": true
+   "ativo": true,
+   "etiqueta": ""
   },
   {
    "id": 6,
    "nome": "Aguardando material",
    "descricao": "",
    "tira_da_programacao": true,
-   "ativo": true
+   "ativo": true,
+   "etiqueta": ""
   },
   {
    "id": 7,
    "nome": "Aguardando fabricante/terceiro",
    "descricao": "",
    "tira_da_programacao": true,
-   "ativo": true
+   "ativo": true,
+   "etiqueta": ""
   },
   {
    "id": 8,
    "nome": "Condições climáticas adversas",
    "descricao": "",
    "tira_da_programacao": false,
-   "ativo": true
+   "ativo": true,
+   "etiqueta": ""
   },
   {
    "id": 9,
    "nome": "Prioridade",
    "descricao": "Prioridades a pedido do cliente.",
    "tira_da_programacao": false,
-   "ativo": true
+   "ativo": true,
+   "etiqueta": ""
   },
   {
    "id": 10,
    "nome": "Sinistro",
    "descricao": "Casos de furto, incêndio, raios, vendaval ou outros casos anormais.",
    "tira_da_programacao": false,
-   "ativo": true
+   "ativo": true,
+   "etiqueta": ""
   },
   {
    "id": 11,
    "nome": "Pendente recurso",
    "descricao": "Quando estiver pendente sobressalente, peça ou outro item, detalhes em observação.",
    "tira_da_programacao": true,
-   "ativo": true
+   "ativo": true,
+   "etiqueta": ""
   },
   {
    "id": 12,
    "nome": "Vegetação alta impossibilitando ação",
    "descricao": "",
    "tira_da_programacao": true,
-   "ativo": true
+   "ativo": true,
+   "etiqueta": ""
   }
  ],
  "tarefas": [
@@ -136,6 +148,18 @@
    "origem": "app",
    "tira_da_programacao": false,
    "desde": "2026-10-16"
+  },
+  {
+   "os": "13184",
+   "codigo": "TPP100-ETKR1",
+   "tarefa": "[Grid Co.] - MPA - Tracker",
+   "usina": "2C - Tupi Paulista 1 e 2 - SP",
+   "cluster": "SP Oeste 01",
+   "data_prog": "2026-10-23",
+   "motivo": 9,
+   "origem": "app",
+   "tira_da_programacao": false,
+   "desde": "2026-10-19"
   },
   {
    "os": "15255",
