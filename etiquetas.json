@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-20T10:31:51Z",
+  "geradoEm": "2026-10-20T11:29:46Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-19 .. 2026-10-25",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5451,
-        "emAberto": 38,
-        "atrasadas": 36,
+        "total": 5453,
+        "emAberto": 40,
+        "atrasadas": 35,
         "concluidas30d": 912,
         "concluidas7d": 264,
-        "naSemanaCorrente": 35
+        "naSemanaCorrente": 37
       },
       "mttr": {
         "horas": 16.57,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W43",
-          "criadas": 36,
+          "criadas": 38,
           "finalizadas": 30
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5451,
-            "emAberto": 38
+            "total": 5453,
+            "emAberto": 40
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 38,
-      "atrasadas": 36,
+      "total": 40,
+      "atrasadas": 35,
       "porStatus": {
-        "naoIniciada": 31,
-        "emProgresso": 1,
-        "pausada": 6,
+        "naoIniciada": 32,
+        "emProgresso": 4,
+        "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 38
+        "(sem equipe)": 40
       },
       "oss": [
         {
@@ -442,7 +442,7 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Rúben Nunes da Silva ",
           "supervisor": "Luiz  Silva",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[TIM100-INVR3.6] - Religamento do TIM100-INVR3.6",
           "criticidade": "",
           "dataProgramada": "2026-10-18",
@@ -570,14 +570,15 @@
           "responsavel": "Paulo  Ribeiro",
           "criadoPor": "GerdesonAraújo",
           "supervisor": "Paulo  Ribeiro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Cabine 1] - Religamento da Cabine 1",
           "criticidade": "",
           "dataProgramada": "2026-10-19",
           "dataCriacao": "2026-10-19",
-          "dataInicial": "",
+          "dataInicial": "2026-10-20",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -654,31 +655,13 @@
           "atrasada": true
         },
         {
-          "osId": "16796",
-          "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Rúben Nunes da Silva ",
-          "supervisor": "Ailton Leal ",
-          "status": "Não Iniciada",
-          "tarefa": "[2C-UNI100-INVR2.1] - Religamento do 2C-UNI100-INVR2.1",
-          "criticidade": "",
-          "dataProgramada": "2026-10-19",
-          "dataCriacao": "2026-10-19",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "16789",
           "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
           "equipe": "",
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Maria Emanuella de Souza Mota ",
           "supervisor": "Wesllen  Castro",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
           "criticidade": "",
           "dataProgramada": "2026-10-19",
@@ -745,6 +728,60 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "16814",
+          "ativo": "Inversor 1.1      { CGU100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Henri Almeida ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Henri Almeida ",
+          "status": "Não Iniciada",
+          "tarefa": "[CGU100-INVR1.1] - Religamento do CGU100-INVR1.1",
+          "criticidade": "",
+          "dataProgramada": "2026-10-20",
+          "dataCriacao": "2026-10-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "16813",
+          "ativo": "Thopen - Colorado 1 - PR Zona Rural S/N Colorado  Paraná Brasil { THPN-CLR100 }",
+          "equipe": "",
+          "responsavel": "Matheus Gois ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Matheus Gois ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-CLR100] - Religamento do THPN-CLR100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-20",
+          "dataCriacao": "2026-10-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "16812",
+          "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
+          "equipe": "",
+          "responsavel": "Matheus Gois ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Matheus Gois ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-CLR200] - Religamento do THPN-CLR200",
+          "criticidade": "",
+          "dataProgramada": "2026-10-20",
+          "dataCriacao": "2026-10-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "16808",
@@ -3788,9 +3825,9 @@
       "historicoTotal": 2268,
       "subClassificacao": {
         "remoto": 754,
-        "local": 4697,
+        "local": 4699,
         "remotoEmAberto": 0,
-        "localEmAberto": 38,
+        "localEmAberto": 40,
         "pctRemoto": 14,
         "alerta": true
       },
@@ -15113,6 +15150,57 @@
   },
   "ossPublicas": [
     {
+      "osId": "16814",
+      "ativo": "Inversor 1.1      { CGU100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Henri Almeida ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Henri Almeida ",
+      "status": "Não Iniciada",
+      "tarefa": "[CGU100-INVR1.1] - Religamento do CGU100-INVR1.1",
+      "criticidade": "",
+      "dataProgramada": "2026-10-20",
+      "dataCriacao": "2026-10-20",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16813",
+      "ativo": "Thopen - Colorado 1 - PR Zona Rural S/N Colorado  Paraná Brasil { THPN-CLR100 }",
+      "equipe": "",
+      "responsavel": "Matheus Gois ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Matheus Gois ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-CLR100] - Religamento do THPN-CLR100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-20",
+      "dataCriacao": "2026-10-20",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16812",
+      "ativo": "Thopen - Colorado 2 - PR Sítio São Francisco, s/n, Zona Rural Colorado  Paraná Brasil { THPN-CLR200 }",
+      "equipe": "",
+      "responsavel": "Matheus Gois ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Matheus Gois ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-CLR200] - Religamento do THPN-CLR200",
+      "criticidade": "",
+      "dataProgramada": "2026-10-20",
+      "dataCriacao": "2026-10-20",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "16808",
       "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
       "equipe": "",
@@ -15170,14 +15258,15 @@
       "responsavel": "Paulo  Ribeiro",
       "criadoPor": "GerdesonAraújo",
       "supervisor": "Paulo  Ribeiro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Cabine 1] - Religamento da Cabine 1",
       "criticidade": "",
       "dataProgramada": "2026-10-19",
       "dataCriacao": "2026-10-19",
-      "dataInicial": "",
+      "dataInicial": "2026-10-20",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -15240,23 +15329,6 @@
       "supervisor": "Janderson Miranda ",
       "status": "Não Iniciada",
       "tarefa": "[Inversor 2.5] - Religamento do Inversor 2.5",
-      "criticidade": "",
-      "dataProgramada": "2026-10-19",
-      "dataCriacao": "2026-10-19",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "16796",
-      "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
-      "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Ailton Leal ",
-      "status": "Não Iniciada",
-      "tarefa": "[2C-UNI100-INVR2.1] - Religamento do 2C-UNI100-INVR2.1",
       "criticidade": "",
       "dataProgramada": "2026-10-19",
       "dataCriacao": "2026-10-19",
@@ -15336,7 +15408,7 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Maria Emanuella de Souza Mota ",
       "supervisor": "Wesllen  Castro",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
       "criticidade": "",
       "dataProgramada": "2026-10-19",
@@ -15518,7 +15590,7 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Rúben Nunes da Silva ",
       "supervisor": "Luiz  Silva",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[TIM100-INVR3.6] - Religamento do TIM100-INVR3.6",
       "criticidade": "",
       "dataProgramada": "2026-10-18",
@@ -21118,7 +21190,7 @@
     }
   ],
   "historicoTotal": 3403,
-  "totalGeral": 7574,
+  "totalGeral": 7576,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
