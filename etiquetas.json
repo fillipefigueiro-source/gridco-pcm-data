@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-21T19:32:44Z",
+  "geradoEm": "2026-10-21T20:19:51Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-19 .. 2026-10-25",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5505,
+        "total": 5507,
         "emAberto": 23,
         "atrasadas": 20,
-        "concluidas30d": 965,
-        "concluidas7d": 286,
-        "naSemanaCorrente": 87
+        "concluidas30d": 967,
+        "concluidas7d": 288,
+        "naSemanaCorrente": 89
       },
       "mttr": {
-        "horas": 16.67,
-        "label": "16h 40min",
-        "amostra": 965
+        "horas": 16.63,
+        "label": "16h 38min",
+        "amostra": 967
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W43",
-          "criadas": 91,
-          "finalizadas": 99
+          "criadas": 93,
+          "finalizadas": 101
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5505,
+            "total": 5507,
             "emAberto": 23
           }
         ],
@@ -82,8 +82,8 @@
       "atrasadas": 20,
       "porStatus": {
         "naoIniciada": 16,
-        "emProgresso": 3,
-        "pausada": 4,
+        "emProgresso": 2,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
@@ -334,7 +334,7 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "LuelySantos",
           "supervisor": "Valdir Silva ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Thopen - Pharmas 4 - PR] - Religamento do Thopen - Pharmas 4 - PR",
           "criticidade": "",
           "dataProgramada": "2026-10-16",
@@ -3515,10 +3515,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2309,
+      "historicoTotal": 2311,
       "subClassificacao": {
         "remoto": 754,
-        "local": 4751,
+        "local": 4753,
         "remotoEmAberto": 0,
         "localEmAberto": 23,
         "pctRemoto": 14,
@@ -3743,16 +3743,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 900,
-        "emAberto": 64,
-        "atrasadas": 55,
-        "concluidas30d": 115,
-        "concluidas7d": 29,
+        "emAberto": 63,
+        "atrasadas": 54,
+        "concluidas30d": 116,
+        "concluidas7d": 30,
         "naSemanaCorrente": 22
       },
       "mttr": {
-        "horas": 369.81,
+        "horas": 369.72,
         "label": "15d 9h",
-        "amostra": 115
+        "amostra": 116
       },
       "tendencia4Semanas": [
         {
@@ -3773,7 +3773,7 @@
         {
           "semana": "W43",
           "criadas": 5,
-          "finalizadas": 18
+          "finalizadas": 19
         }
       ],
       "topOfensores": {
@@ -3781,7 +3781,7 @@
           {
             "nome": "(sem equipe)",
             "total": 900,
-            "emAberto": 64
+            "emAberto": 63
           }
         ],
         "responsaveis": [
@@ -3812,16 +3812,16 @@
           }
         ]
       },
-      "total": 64,
-      "atrasadas": 55,
+      "total": 63,
+      "atrasadas": 54,
       "porStatus": {
-        "naoIniciada": 56,
+        "naoIniciada": 55,
         "emProgresso": 0,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 64
+        "(sem equipe)": 63
       },
       "oss": [
         {
@@ -4408,23 +4408,6 @@
           "atrasada": true
         },
         {
-          "osId": "15547",
-          "ativo": "Preventiva Grupo de Inversores      { GY-CDP100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Railson Gomes ",
-          "status": "Não Iniciada",
-          "tarefa": "[GreenYellow] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-10-13",
-          "dataCriacao": "2026-10-06",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "15546",
           "ativo": "Cabine 1  Araçoiaba  São Paulo Brasil { ADS200-CABN1 }",
           "equipe": "",
@@ -4938,6 +4921,25 @@
           "dataFinal": "2026-10-21",
           "linkFracttal": "",
           "horasAteAbrir": 336.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "15547",
+          "ativo": "Preventiva Grupo de Inversores      { GY-CDP100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Railson Gomes ",
+          "status": "Finalizados",
+          "tarefa": "[GreenYellow] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-10-13",
+          "dataCriacao": "2026-10-06",
+          "dataInicial": "2026-10-21",
+          "dataFinal": "2026-10-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 360.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -5645,25 +5647,6 @@
           "atrasada": false
         },
         {
-          "osId": "15121",
-          "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Milena Araújo",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-10-06",
-          "dataCriacao": "2026-10-01",
-          "dataInicial": "2026-10-09",
-          "dataFinal": "2026-10-09",
-          "linkFracttal": "",
-          "horasAteAbrir": 192.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "8796",
           "ativo": "QGBT 1 Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR100-QGBT1 }",
           "equipe": "",
@@ -5698,6 +5681,25 @@
           "dataFinal": "2026-10-09",
           "linkFracttal": "",
           "horasAteAbrir": 96.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "15121",
+          "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-10-06",
+          "dataCriacao": "2026-10-01",
+          "dataInicial": "2026-10-09",
+          "dataFinal": "2026-10-09",
+          "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -5987,25 +5989,6 @@
           "atrasada": false
         },
         {
-          "osId": "15555",
-          "ativo": "Transformador 2      { THPN-CAI100-TRFR2 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Silva",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Cláudio  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-10-13",
-          "dataCriacao": "2026-10-06",
-          "dataInicial": "2026-10-07",
-          "dataFinal": "2026-10-07",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "15250",
           "ativo": "Transformador 1      { SALE-VTS200-TRFR1 }",
           "equipe": "",
@@ -6021,6 +6004,25 @@
           "dataFinal": "2026-10-07",
           "linkFracttal": "",
           "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "15555",
+          "ativo": "Transformador 2      { THPN-CAI100-TRFR2 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Silva",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Cláudio  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-10-13",
+          "dataCriacao": "2026-10-06",
+          "dataInicial": "2026-10-07",
+          "dataFinal": "2026-10-07",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -7146,25 +7148,6 @@
           "atrasada": false
         },
         {
-          "osId": "12954",
-          "ativo": "Nobreak 1      { MTS200-NBRK1 }",
-          "equipe": "",
-          "responsavel": "Francisco  Santos",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Francisco  Santos",
-          "status": "Finalizada",
-          "tarefa": "[Athon] - MPM - Banco de baterias e Nobreaks",
-          "criticidade": "",
-          "dataProgramada": "2026-09-08",
-          "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-09-11",
-          "dataFinal": "2026-09-11",
-          "linkFracttal": "",
-          "horasAteAbrir": 192.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13246",
           "ativo": "Preventiva Grupo de Inversores      { THPN-FZL100-PGINVR1 }",
           "equipe": "",
@@ -7773,7 +7756,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 367
+      "historicoTotal": 368
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8713,12 +8696,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 890,
-        "emAberto": 51,
+        "total": 891,
+        "emAberto": 52,
         "atrasadas": 39,
         "concluidas30d": 152,
         "concluidas7d": 37,
-        "naSemanaCorrente": 28
+        "naSemanaCorrente": 29
       },
       "mttr": {
         "horas": 262.26,
@@ -8743,7 +8726,7 @@
         },
         {
           "semana": "W43",
-          "criadas": 21,
+          "criadas": 22,
           "finalizadas": 11
         }
       ],
@@ -8751,8 +8734,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 890,
-            "emAberto": 51
+            "total": 891,
+            "emAberto": 52
           }
         ],
         "responsaveis": [
@@ -8783,16 +8766,16 @@
           }
         ]
       },
-      "total": 51,
+      "total": 52,
       "atrasadas": 39,
       "porStatus": {
-        "naoIniciada": 42,
-        "emProgresso": 4,
-        "pausada": 5,
+        "naoIniciada": 41,
+        "emProgresso": 5,
+        "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 51
+        "(sem equipe)": 52
       },
       "oss": [
         {
@@ -8802,7 +8785,7 @@
           "responsavel": "Ademir Necker ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Ademir Necker ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Tracker 42.100] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-08-24",
@@ -9129,14 +9112,15 @@
           "responsavel": "Railson Gomes ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Railson Gomes ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 7.100] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-10-13",
           "dataCriacao": "2026-10-09",
-          "dataInicial": "",
+          "dataInicial": "2026-10-21",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 288.0,
           "atrasada": true
         },
         {
@@ -9197,14 +9181,15 @@
           "responsavel": "Ailton Leal ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Ailton Leal ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.2] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-10-14",
           "dataCriacao": "2026-10-13",
-          "dataInicial": "",
+          "dataInicial": "2026-10-21",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "atrasada": true
         },
         {
@@ -9618,6 +9603,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 120.0,
+          "atrasada": false
+        },
+        {
+          "osId": "16980",
+          "ativo": "Tracker 58.200 STI STI-H250 Bi-linha    { SLG200-ETKR58.200 }",
+          "equipe": "",
+          "responsavel": "Daniel de Paula ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Daniel de Paula ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 58.200] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-10-22",
+          "dataCriacao": "2026-10-21",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
           "atrasada": false
         },
         {
@@ -12531,8 +12533,8 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 178,
-        "emAberto": 24,
+        "total": 179,
+        "emAberto": 25,
         "atrasadas": 19,
         "concluidas30d": 21,
         "concluidas7d": 3,
@@ -12561,7 +12563,7 @@
         },
         {
           "semana": "W43",
-          "criadas": 1,
+          "criadas": 2,
           "finalizadas": 1
         }
       ],
@@ -12569,8 +12571,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 178,
-            "emAberto": 24
+            "total": 179,
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -12601,16 +12603,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 25,
       "atrasadas": 19,
       "porStatus": {
-        "naoIniciada": 22,
+        "naoIniciada": 23,
         "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -13018,6 +13020,23 @@
           "criticidade": "",
           "dataProgramada": "2026-10-22",
           "dataCriacao": "2026-10-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "16984",
+          "ativo": "Estação Meteorológica  Sete Lagoas  Minas Gerais Brasil { SLG200-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Hebert Rabelo ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Hebert Rabelo ",
+          "status": "Não Iniciada",
+          "tarefa": "[Estação Meteorológica] - Avaliação do sensor POA",
+          "criticidade": "",
+          "dataProgramada": "2026-10-28",
+          "dataCriacao": "2026-10-21",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -14855,6 +14874,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "16984",
+      "ativo": "Estação Meteorológica  Sete Lagoas  Minas Gerais Brasil { SLG200-ESTM1 }",
+      "equipe": "",
+      "responsavel": "Hebert Rabelo ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Hebert Rabelo ",
+      "status": "Não Iniciada",
+      "tarefa": "[Estação Meteorológica] - Avaliação do sensor POA",
+      "criticidade": "",
+      "dataProgramada": "2026-10-28",
+      "dataCriacao": "2026-10-21",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "16980",
+      "ativo": "Tracker 58.200 STI STI-H250 Bi-linha    { SLG200-ETKR58.200 }",
+      "equipe": "",
+      "responsavel": "Daniel de Paula ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Daniel de Paula ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 58.200] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-10-22",
+      "dataCriacao": "2026-10-21",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "16976",
       "ativo": "Inversor 1.5 Sungrow SG-110CX    { IPX100-INVR1.5 }",
       "equipe": "",
@@ -15653,7 +15704,7 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "LuelySantos",
       "supervisor": "Valdir Silva ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Thopen - Pharmas 4 - PR] - Religamento do Thopen - Pharmas 4 - PR",
       "criticidade": "",
       "dataProgramada": "2026-10-16",
@@ -15947,14 +15998,15 @@
       "responsavel": "Ailton Leal ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Ailton Leal ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.2] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-10-14",
       "dataCriacao": "2026-10-13",
-      "dataInicial": "",
+      "dataInicial": "2026-10-21",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 192.0
     },
     {
       "osId": "15982",
@@ -16013,14 +16065,15 @@
       "responsavel": "Railson Gomes ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Railson Gomes ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 7.100] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-10-13",
       "dataCriacao": "2026-10-09",
-      "dataInicial": "",
+      "dataInicial": "2026-10-21",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 288.0
     },
     {
       "osId": "15849",
@@ -16483,22 +16536,6 @@
       "tarefa": "[Athon] - MPM - Cabine",
       "criticidade": "",
       "dataProgramada": "2026-10-16",
-      "dataCriacao": "2026-10-06",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "15547",
-      "ativo": "Preventiva Grupo de Inversores      { GY-CDP100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Railson Gomes ",
-      "status": "Não Iniciada",
-      "tarefa": "[GreenYellow] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-10-13",
       "dataCriacao": "2026-10-06",
       "dataInicial": "",
       "dataFinal": "",
@@ -17369,7 +17406,7 @@
       "responsavel": "Ademir Necker ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Ademir Necker ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Tracker 42.100] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-08-24",
@@ -17860,21 +17897,21 @@
       "atrasada": false
     },
     {
-      "osId": "15555",
-      "ativo": "Transformador 2      { THPN-CAI100-TRFR2 }",
+      "osId": "15547",
+      "ativo": "Preventiva Grupo de Inversores      { GY-CDP100-PGINVR1 }",
       "equipe": "",
-      "responsavel": "Cláudio  Silva",
+      "responsavel": "Railson Gomes ",
       "criadoPor": "Davi Damasceno",
-      "supervisor": "Cláudio  Silva",
+      "supervisor": "Railson Gomes ",
       "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "tarefa": "[GreenYellow] - MPM - Inversor",
       "criticidade": "",
       "dataProgramada": "2026-10-13",
       "dataCriacao": "2026-10-06",
-      "dataInicial": "2026-10-07",
-      "dataFinal": "2026-10-07",
+      "dataInicial": "2026-10-21",
+      "dataFinal": "2026-10-21",
       "linkFracttal": "",
-      "horasAteAbrir": 24.0,
+      "horasAteAbrir": 360.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -18084,25 +18121,6 @@
       "dataFinal": "2026-10-21",
       "linkFracttal": "",
       "horasAteAbrir": 480.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "15121",
-      "ativo": "Transformador 5 WEG     { THPN-CLN100-TRFR5 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Milena Araújo",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-10-06",
-      "dataCriacao": "2026-10-01",
-      "dataInicial": "2026-10-09",
-      "dataFinal": "2026-10-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 192.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -20582,10 +20600,30 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
+    },
+    {
+      "osId": "16465",
+      "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Matheus Leite ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-BJD100] - Religamento do THPN-BJD100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-15",
+      "dataCriacao": "2026-10-15",
+      "dataInicial": "2026-10-15",
+      "dataFinal": "2026-10-15",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
     }
   ],
-  "historicoTotal": 3445,
-  "totalGeral": 7645,
+  "historicoTotal": 3448,
+  "totalGeral": 7649,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
