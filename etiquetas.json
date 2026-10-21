@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-21T18:36:36Z",
+  "geradoEm": "2026-10-21T19:32:44Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-19 .. 2026-10-25",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5503,
-        "emAberto": 22,
-        "atrasadas": 19,
-        "concluidas30d": 964,
-        "concluidas7d": 285,
-        "naSemanaCorrente": 86
+        "total": 5505,
+        "emAberto": 23,
+        "atrasadas": 20,
+        "concluidas30d": 965,
+        "concluidas7d": 286,
+        "naSemanaCorrente": 87
       },
       "mttr": {
-        "horas": 16.69,
-        "label": "16h 41min",
-        "amostra": 964
+        "horas": 16.67,
+        "label": "16h 40min",
+        "amostra": 965
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W43",
-          "criadas": 89,
-          "finalizadas": 98
+          "criadas": 91,
+          "finalizadas": 99
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5503,
-            "emAberto": 22
+            "total": 5505,
+            "emAberto": 23
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 22,
-      "atrasadas": 19,
+      "total": 23,
+      "atrasadas": 20,
       "porStatus": {
-        "naoIniciada": 14,
-        "emProgresso": 4,
+        "naoIniciada": 16,
+        "emProgresso": 3,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 22
+        "(sem equipe)": 23
       },
       "oss": [
         {
@@ -119,6 +119,24 @@
           "tarefa": "[Inversor 2.7] - Religamento do Inversor 2.7",
           "criticidade": "",
           "dataProgramada": "2026-07-03",
+          "dataCriacao": "2026-10-21",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "16976",
+          "ativo": "Inversor 1.5 Sungrow SG-110CX    { IPX100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Ana Barros ",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Ana Barros ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
+          "criticidade": "",
+          "dataProgramada": "2026-07-18",
           "dataCriacao": "2026-10-21",
           "dataInicial": "",
           "dataFinal": "",
@@ -440,21 +458,20 @@
           "atrasada": true
         },
         {
-          "osId": "16962",
-          "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
+          "osId": "16975",
+          "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
           "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Rúben Nunes da Silva ",
-          "supervisor": "Ailton Leal ",
-          "status": "Em progresso",
-          "tarefa": "[2C-UNI100-INVR2.1] - Religamento do 2C-UNI100-INVR2.1",
+          "responsavel": "Gilson  Milhomem",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Gilson  Milhomem",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-CAZ100] - Religamento do THPN-CAZ100",
           "criticidade": "",
           "dataProgramada": "2026-10-21",
           "dataCriacao": "2026-10-21",
-          "dataInicial": "2026-10-21",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -497,6 +514,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "16962",
+          "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Rúben Nunes da Silva ",
+          "supervisor": "Ailton Leal ",
+          "status": "Finalizados",
+          "tarefa": "[2C-UNI100-INVR2.1] - Religamento do 2C-UNI100-INVR2.1",
+          "criticidade": "",
+          "dataProgramada": "2026-10-21",
+          "dataCriacao": "2026-10-21",
+          "dataInicial": "2026-10-21",
+          "dataFinal": "2026-10-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "16917",
           "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
@@ -3458,26 +3495,6 @@
           "atrasada": false
         },
         {
-          "osId": "16129",
-          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-10-12",
-          "dataCriacao": "2026-10-12",
-          "dataInicial": "2026-10-12",
-          "dataFinal": "2026-10-12",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "16015",
           "ativo": "Thopen - Canarana 1 - MT MT-110, S/N, Zona Rural Canarana  Mato Grosso Brasil { THPN-CNN100 }",
           "equipe": "",
@@ -3498,12 +3515,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2308,
+      "historicoTotal": 2309,
       "subClassificacao": {
         "remoto": 754,
-        "local": 4749,
+        "local": 4751,
         "remotoEmAberto": 0,
-        "localEmAberto": 22,
+        "localEmAberto": 23,
         "pctRemoto": 14,
         "alerta": true
       },
@@ -3726,16 +3743,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 900,
-        "emAberto": 65,
-        "atrasadas": 56,
-        "concluidas30d": 114,
-        "concluidas7d": 28,
+        "emAberto": 64,
+        "atrasadas": 55,
+        "concluidas30d": 115,
+        "concluidas7d": 29,
         "naSemanaCorrente": 22
       },
       "mttr": {
-        "horas": 369.05,
+        "horas": 369.81,
         "label": "15d 9h",
-        "amostra": 114
+        "amostra": 115
       },
       "tendencia4Semanas": [
         {
@@ -3756,7 +3773,7 @@
         {
           "semana": "W43",
           "criadas": 5,
-          "finalizadas": 17
+          "finalizadas": 18
         }
       ],
       "topOfensores": {
@@ -3764,7 +3781,7 @@
           {
             "nome": "(sem equipe)",
             "total": 900,
-            "emAberto": 65
+            "emAberto": 64
           }
         ],
         "responsaveis": [
@@ -3776,7 +3793,7 @@
           {
             "nome": "Felipe  Lima",
             "total": 35,
-            "emAberto": 8
+            "emAberto": 7
           },
           {
             "nome": "James Chaves",
@@ -3795,16 +3812,16 @@
           }
         ]
       },
-      "total": 65,
-      "atrasadas": 56,
+      "total": 64,
+      "atrasadas": 55,
       "porStatus": {
         "naoIniciada": 56,
-        "emProgresso": 1,
+        "emProgresso": 0,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 65
+        "(sem equipe)": 64
       },
       "oss": [
         {
@@ -4286,24 +4303,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "15305",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-CXB100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Felipe  Lima",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-10-08",
-          "dataCriacao": "2026-10-02",
-          "dataInicial": "2026-10-21",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 456.0,
           "atrasada": true
         },
         {
@@ -4939,6 +4938,25 @@
           "dataFinal": "2026-10-21",
           "linkFracttal": "",
           "horasAteAbrir": 336.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "15305",
+          "ativo": "Preventiva Grupo de Inversores      { THPN-CXB100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-10-08",
+          "dataCriacao": "2026-10-02",
+          "dataInicial": "2026-10-21",
+          "dataFinal": "2026-10-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 456.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -6463,25 +6481,6 @@
           "atrasada": false
         },
         {
-          "osId": "12945",
-          "ativo": "Sistema de Segurança LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-SSEG1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Luiz  Silva",
-          "status": "Finalizada",
-          "tarefa": "[Athon] - MPM - Sistemas de segurança",
-          "criticidade": "",
-          "dataProgramada": "2026-09-08",
-          "dataCriacao": "2026-09-03",
-          "dataInicial": "2026-10-01",
-          "dataFinal": "2026-10-01",
-          "linkFracttal": "",
-          "horasAteAbrir": 672.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "12531",
           "ativo": "Transformador 1      { SEMP-TCN100-TRFR1 }",
           "equipe": "",
@@ -7774,7 +7773,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 366
+      "historicoTotal": 367
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -7854,8 +7853,8 @@
       "total": 8,
       "atrasadas": 6,
       "porStatus": {
-        "naoIniciada": 7,
-        "emProgresso": 0,
+        "naoIniciada": 6,
+        "emProgresso": 1,
         "pausada": 1,
         "verificacao": 0
       },
@@ -7922,14 +7921,15 @@
           "responsavel": "Gabriel Oliveira ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Gabriel Oliveira ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Nova Xavantina 2][Inversor 1.8 SOLAREDGE] - Abertura de chamado de garantia",
           "criticidade": "",
           "dataProgramada": "2026-09-28",
           "dataCriacao": "2026-09-28",
-          "dataInicial": "",
+          "dataInicial": "2026-10-21",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 552.0,
           "atrasada": true
         },
         {
@@ -8714,16 +8714,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 890,
-        "emAberto": 52,
+        "emAberto": 51,
         "atrasadas": 39,
-        "concluidas30d": 151,
-        "concluidas7d": 36,
+        "concluidas30d": 152,
+        "concluidas7d": 37,
         "naSemanaCorrente": 28
       },
       "mttr": {
-        "horas": 264.0,
-        "label": "11d 0h",
-        "amostra": 151
+        "horas": 262.26,
+        "label": "10d 22h",
+        "amostra": 152
       },
       "tendencia4Semanas": [
         {
@@ -8744,7 +8744,7 @@
         {
           "semana": "W43",
           "criadas": 21,
-          "finalizadas": 10
+          "finalizadas": 11
         }
       ],
       "topOfensores": {
@@ -8752,14 +8752,14 @@
           {
             "nome": "(sem equipe)",
             "total": 890,
-            "emAberto": 52
+            "emAberto": 51
           }
         ],
         "responsaveis": [
           {
             "nome": "Gilson Souza",
             "total": 74,
-            "emAberto": 4
+            "emAberto": 3
           },
           {
             "nome": "James Chaves",
@@ -8783,16 +8783,16 @@
           }
         ]
       },
-      "total": 52,
+      "total": 51,
       "atrasadas": 39,
       "porStatus": {
         "naoIniciada": 42,
-        "emProgresso": 5,
+        "emProgresso": 4,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 52
+        "(sem equipe)": 51
       },
       "oss": [
         {
@@ -9655,24 +9655,6 @@
           "atrasada": false
         },
         {
-          "osId": "16951",
-          "ativo": "Tracker 17.107 Brametal Bi-motor    { SMP100-ETKR17.107 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson Souza ",
-          "status": "Em progresso",
-          "tarefa": "[Tracker 17.107] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-10-23",
-          "dataCriacao": "2026-10-21",
-          "dataInicial": "2026-10-21",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "atrasada": false
-        },
-        {
           "osId": "16611",
           "ativo": "Estação Meteorológica Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100-ESTM1 }",
           "equipe": "",
@@ -9691,6 +9673,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "16951",
+          "ativo": "Tracker 17.107 Brametal Bi-motor    { SMP100-ETKR17.107 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 17.107] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-10-23",
+          "dataCriacao": "2026-10-21",
+          "dataInicial": "2026-10-21",
+          "dataFinal": "2026-10-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "16932",
           "ativo": "Tracker 21.100      { STI100-ETKR21.100 }",
@@ -10239,25 +10240,6 @@
           "dataFinal": "2026-10-14",
           "linkFracttal": "",
           "horasAteAbrir": 312.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "11772",
-          "ativo": "Tracker 28.100 Axial 1V bilinha (um eixo de rotação horizontal)    { CAZ100-ETKR28.100 }",
-          "equipe": "",
-          "responsavel": "Gilson  Milhomem",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson  Milhomem",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 28.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-08-24",
-          "dataCriacao": "2026-08-21",
-          "dataInicial": "2026-10-14",
-          "dataFinal": "2026-10-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 1296.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -12542,7 +12524,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 635
+      "historicoTotal": 636
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14873,21 +14855,37 @@
   },
   "ossPublicas": [
     {
-      "osId": "16962",
-      "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
+      "osId": "16976",
+      "ativo": "Inversor 1.5 Sungrow SG-110CX    { IPX100-INVR1.5 }",
       "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Ailton Leal ",
-      "status": "Em progresso",
-      "tarefa": "[2C-UNI100-INVR2.1] - Religamento do 2C-UNI100-INVR2.1",
+      "responsavel": "Ana Barros ",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Ana Barros ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
+      "criticidade": "",
+      "dataProgramada": "2026-07-18",
+      "dataCriacao": "2026-10-21",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "16975",
+      "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
+      "equipe": "",
+      "responsavel": "Gilson  Milhomem",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Gilson  Milhomem",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-CAZ100] - Religamento do THPN-CAZ100",
       "criticidade": "",
       "dataProgramada": "2026-10-21",
       "dataCriacao": "2026-10-21",
-      "dataInicial": "2026-10-21",
+      "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -14935,23 +14933,6 @@
       "tarefa": "[Inversor 1.5] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-10-21",
-      "dataCriacao": "2026-10-21",
-      "dataInicial": "2026-10-21",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
-    },
-    {
-      "osId": "16951",
-      "ativo": "Tracker 17.107 Brametal Bi-motor    { SMP100-ETKR17.107 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Gilson Souza ",
-      "status": "Em progresso",
-      "tarefa": "[Tracker 17.107] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-10-23",
       "dataCriacao": "2026-10-21",
       "dataInicial": "2026-10-21",
       "dataFinal": "",
@@ -16685,23 +16666,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "15305",
-      "ativo": "Preventiva Grupo de Inversores      { THPN-CXB100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Felipe  Lima",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-10-08",
-      "dataCriacao": "2026-10-02",
-      "dataInicial": "2026-10-21",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 456.0
-    },
-    {
       "osId": "15262",
       "ativo": "Transformador 3      { Transformador 3 }",
       "equipe": "",
@@ -17015,14 +16979,15 @@
       "responsavel": "Gabriel Oliveira ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Gabriel Oliveira ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Nova Xavantina 2][Inversor 1.8 SOLAREDGE] - Abertura de chamado de garantia",
       "criticidade": "",
       "dataProgramada": "2026-09-28",
       "dataCriacao": "2026-09-28",
-      "dataInicial": "",
+      "dataInicial": "2026-10-21",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 552.0
     },
     {
       "osId": "14672",
@@ -17933,6 +17898,25 @@
       "atrasada": false
     },
     {
+      "osId": "15305",
+      "ativo": "Preventiva Grupo de Inversores      { THPN-CXB100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Fabricio Barreto",
+      "supervisor": "Felipe  Lima",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-10-08",
+      "dataCriacao": "2026-10-02",
+      "dataInicial": "2026-10-21",
+      "dataFinal": "2026-10-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 456.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "15270",
       "ativo": "Cabine 1 Estrada da Lagoa Grande, nº 2039 Embu Guaçu  São Paulo Brasil { THPN-EBG100-CABN1 }",
       "equipe": "",
@@ -18405,6 +18389,45 @@
       "linkFracttal": "",
       "horasAteAbrir": 480.0,
       "horasAteFechar": 1200.0,
+      "atrasada": false
+    },
+    {
+      "osId": "16962",
+      "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "Ailton Leal ",
+      "status": "Finalizados",
+      "tarefa": "[2C-UNI100-INVR2.1] - Religamento do 2C-UNI100-INVR2.1",
+      "criticidade": "",
+      "dataProgramada": "2026-10-21",
+      "dataCriacao": "2026-10-21",
+      "dataInicial": "2026-10-21",
+      "dataFinal": "2026-10-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "16951",
+      "ativo": "Tracker 17.107 Brametal Bi-motor    { SMP100-ETKR17.107 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 17.107] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-10-23",
+      "dataCriacao": "2026-10-21",
+      "dataInicial": "2026-10-21",
+      "dataFinal": "2026-10-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -20559,68 +20582,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "16465",
-      "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
-      "equipe": "",
-      "responsavel": "Matheus Leite ",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Matheus Leite ",
-      "status": "Finalizados",
-      "tarefa": "[THPN-BJD100] - Religamento do THPN-BJD100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-15",
-      "dataCriacao": "2026-10-15",
-      "dataInicial": "2026-10-15",
-      "dataFinal": "2026-10-15",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "16459",
-      "ativo": "Inversor 1.12 CANANDIAN SOLAR     { MTS200-INVR1.12 }",
-      "equipe": "",
-      "responsavel": "Francisco  Santos",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Francisco  Santos",
-      "status": "Finalizados",
-      "tarefa": "Troca de módulo danificado",
-      "criticidade": "",
-      "dataProgramada": "2026-10-15",
-      "dataCriacao": "2026-10-15",
-      "dataInicial": "2026-10-16",
-      "dataFinal": "2026-10-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "16447",
-      "ativo": "Inversor 1.4 Sungrow SG350HX    { SEMP-TCN100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Walter Santos ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Walter Santos ",
-      "status": "Finalizados",
-      "tarefa": "Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-10-16",
-      "dataCriacao": "2026-10-15",
-      "dataInicial": "2026-10-16",
-      "dataFinal": "2026-10-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3442,
-  "totalGeral": 7643,
+  "historicoTotal": 3445,
+  "totalGeral": 7645,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
