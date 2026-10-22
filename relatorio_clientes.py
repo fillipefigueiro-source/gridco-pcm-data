@@ -585,8 +585,7 @@ def tempos_atend(conc):
 #   prevista  = data ORIGINAL — a primeira semana em que a OS entrou na programação semanal
 #              (Historico_Programacoes.xlsx); reprogramar não "zera" o atraso. Sem histórico, Data Programada;
 #   no prazo  = executada até o último dia do MÊS da data prevista (regra do Fabrício, 22/10).
-# Só aparece no relatório quando INTERNO=True (--interno): ainda em validação, fora do relatório do cliente.
-INTERNO=False
+# Validada em 22/10/2026 (6 UFVs GY de setembro) e liberada também no relatório do cliente.
 _PRIMEIRA_SEMANA=None
 def _primeira_semana_os():
     """{OS: sexta-feira da primeira semana em que a OS entrou na programação} do Historico_Programacoes.xlsx."""
@@ -1031,7 +1030,7 @@ def metodologia(doc):
     H(doc,"Avanço das Preventivas",2)
     item("Avanço de preventivas (mês)","quanto do plano preventivo previsto para o mês foi efetivamente concluído.")
     item("Avanço de preventivas (12 meses)","cumprimento acumulado do plano preventivo ao longo do último ano, mostrando a consistência da execução. O cronograma de cada usina passa a valer a partir da sua mobilização.")
-    if INTERNO: item("Aderência ao cronograma","quanto das preventivas finalizadas foi executado dentro do mês em que estava originalmente previsto (primeira entrada na programação semanal).")
+    item("Aderência ao cronograma","quanto das preventivas finalizadas foi executado dentro do mês em que estava originalmente previsto (primeira entrada na programação semanal).")
     H(doc,"Confiabilidade e Disponibilidade",2)
     item("MTTR (tempo médio de reparo)","tempo médio que a equipe leva para restabelecer um ativo após uma falha. Quanto menor, mais ágil a resposta.")
     item("MTBF (tempo médio entre falhas)","intervalo médio de operação entre falhas de um ativo. Quanto maior, mais confiável é o equipamento.")
@@ -1161,7 +1160,7 @@ def gerar(escopo_tipo,escopo_nome,cliente_pai,periodo,ref,idx,rows,aux,saida_bas
         td(row[0],(MP_LABEL.get(code,code) if code!="TOTAL" else "TOTAL"),8.5,bold=(code=="TOTAL"))
         td(row[1],d["plan"]); td(row[2],d["fin"]); td(row[3],d["pend"]); td(row[4],f"{d['pct']:.0f}%",8.5,bold=(code=="TOTAL"))
     bullet(doc,f"Avanço geral no mês: {mpm['TOTAL']['pct']:.0f}% ({mpm['TOTAL']['fin']}/{mpm['TOTAL']['plan']} tarefas finalizadas).")
-    if INTERNO and ader["fin"]:
+    if ader["fin"]:
         bullet(doc,f"Aderência ao cronograma: {ader['pct_prazo']:.0f}% das finalizadas executadas dentro do mês previsto ({ader['no_prazo']}/{ader['fin']}).")
     pend=[(code,x) for code in MP_ORDER for x in mpm[code]["pendentes"][:6]]
     if pend:
@@ -1655,9 +1654,7 @@ def main():
     ap.add_argument("--ref",required=True); ap.add_argument("--cliente"); ap.add_argument("--usina")
     ap.add_argument("--todos",action="store_true"); ap.add_argument("--portfolio",action="store_true"); ap.add_argument("--clientes",help="lista de clientes p/ portfólio (vírgula)"); ap.add_argument("--saida")
     ap.add_argument("--formato",choices=["pdf","docx","ambos"],default="pdf")
-    ap.add_argument("--interno",action="store_true",help="versão interna Grid: inclui a aderência ao cronograma (em validação)")
     a=ap.parse_args(); pasta=achar_pasta(); saida=a.saida or pasta
-    global INTERNO; INTERNO=a.interno
     idx,rows,aux,cu=carregar(pasta)
     if a.portfolio:
         cl=[c.strip() for c in a.clientes.split(",")] if a.clientes else None
