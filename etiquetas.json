@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-22T13:21:59Z",
+  "geradoEm": "2026-10-22T14:22:09Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-19 .. 2026-10-25",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5524,
-        "emAberto": 29,
-        "atrasadas": 21,
-        "concluidas30d": 959,
-        "concluidas7d": 232,
-        "naSemanaCorrente": 106
+        "total": 5527,
+        "emAberto": 28,
+        "atrasadas": 22,
+        "concluidas30d": 963,
+        "concluidas7d": 236,
+        "naSemanaCorrente": 109
       },
       "mttr": {
-        "horas": 16.83,
-        "label": "16h 50min",
-        "amostra": 959
+        "horas": 16.76,
+        "label": "16h 45min",
+        "amostra": 963
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W43",
-          "criadas": 110,
-          "finalizadas": 112
+          "criadas": 113,
+          "finalizadas": 116
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5524,
-            "emAberto": 29
+            "total": 5527,
+            "emAberto": 28
           }
         ],
         "responsaveis": [
@@ -68,26 +68,26 @@
           },
           {
             "nome": "Italo  Lustosa",
-            "total": 272,
+            "total": 274,
             "emAberto": 0
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 228,
-            "emAberto": 1
+            "total": 229,
+            "emAberto": 2
           }
         ]
       },
-      "total": 29,
-      "atrasadas": 21,
+      "total": 28,
+      "atrasadas": 22,
       "porStatus": {
         "naoIniciada": 22,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 29
+        "(sem equipe)": 28
       },
       "oss": [
         {
@@ -421,6 +421,24 @@
           "atrasada": true
         },
         {
+          "osId": "17048",
+          "ativo": "Inversor 1.8  Huawei | SUN2000-250KTL-H1    { APOL-GVT200-INVR1.8 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "[APOL-GVT200-INVR1.8] - Religamento do APOL-GVT200-INVR1.8",
+          "criticidade": "",
+          "dataProgramada": "2026-10-21",
+          "dataCriacao": "2026-10-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "17032",
           "ativo": "Thopen - Santo Anastácio - SP X9J5+542 Santo Anastácio, São Paulo Santo Anastácio  São Paulo Brasil { THPN-STA100 }",
           "equipe": "",
@@ -476,14 +494,14 @@
           "atrasada": true
         },
         {
-          "osId": "17040",
-          "ativo": "Thopen - Salto Pirapora 3 - SP    São Paulo Brasil { THPN-SPP300 }",
+          "osId": "17049",
+          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
           "equipe": "",
-          "responsavel": "Eduardo  Mendes",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Eduardo  Mendes",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Wesllen  Castro",
           "status": "Não Iniciada",
-          "tarefa": "[THPN-SPP300] - Religamento do THPN-SPP300",
+          "tarefa": "[2C - Ipixuna do Pará 1 - PA] - Religamento do 2C - Ipixuna do Pará 1 - PA",
           "criticidade": "",
           "dataProgramada": "2026-10-22",
           "dataCriacao": "2026-10-22",
@@ -566,43 +584,6 @@
           "atrasada": false
         },
         {
-          "osId": "17013",
-          "ativo": "Cabine 2 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN2 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Valdério Paz ",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-RDR200-CABN2] - Religamento do THPN-RDR200-CABN2",
-          "criticidade": "",
-          "dataProgramada": "2026-10-22",
-          "dataCriacao": "2026-10-22",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "17010",
-          "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Ailton Leal ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 2.1] - Religamento do Inversor 2.1",
-          "criticidade": "",
-          "dataProgramada": "2026-10-22",
-          "dataCriacao": "2026-10-22",
-          "dataInicial": "2026-10-22",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "17006",
           "ativo": "Thopen - Diamantino 1 - MT Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100 }",
           "equipe": "",
@@ -623,22 +604,42 @@
       ],
       "ossHistorico": [
         {
-          "osId": "16950",
-          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "osId": "17013",
+          "ativo": "Cabine 2 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN2 }",
           "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Rúben Nunes da Silva ",
-          "supervisor": "Frank  Melo",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Valdério Paz ",
           "status": "Finalizados",
-          "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
+          "tarefa": "[THPN-RDR200-CABN2] - Religamento do THPN-RDR200-CABN2",
           "criticidade": "",
-          "dataProgramada": "2026-10-21",
-          "dataCriacao": "2026-10-21",
-          "dataInicial": "2026-10-21",
+          "dataProgramada": "2026-10-22",
+          "dataCriacao": "2026-10-22",
+          "dataInicial": "2026-10-22",
           "dataFinal": "2026-10-22",
           "linkFracttal": "",
           "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "17010",
+          "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Ailton Leal ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 2.1] - Religamento do Inversor 2.1",
+          "criticidade": "",
+          "dataProgramada": "2026-10-22",
+          "dataCriacao": "2026-10-22",
+          "dataInicial": "2026-10-22",
+          "dataFinal": "2026-10-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -739,6 +740,26 @@
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "16950",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Frank  Melo",
+          "criadoPor": "Rúben Nunes da Silva ",
+          "supervisor": "Frank  Melo",
+          "status": "Finalizados",
+          "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-21",
+          "dataCriacao": "2026-10-21",
+          "dataInicial": "2026-10-21",
+          "dataFinal": "2026-10-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 24.0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -2563,26 +2584,6 @@
           "atrasada": false
         },
         {
-          "osId": "16525",
-          "ativo": "Inversor 2.5 Huawei SUN2000-215KTL-H3    { MCB100-INVR2.5 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Valdério Paz ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 2.5] - Religamento do Inversor 2.5",
-          "criticidade": "",
-          "dataProgramada": "2026-10-16",
-          "dataCriacao": "2026-10-16",
-          "dataInicial": "2026-10-16",
-          "dataFinal": "2026-10-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "16522",
           "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
           "equipe": "",
@@ -3343,46 +3344,6 @@
           "atrasada": false
         },
         {
-          "osId": "16267",
-          "ativo": "Inversor 2.5 Huawei SUN2000-215KTL-H3    { MCB100-INVR2.5 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Valdério Paz ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 2.5] - Religamento do Inversor 2.5",
-          "criticidade": "",
-          "dataProgramada": "2026-10-14",
-          "dataCriacao": "2026-10-14",
-          "dataInicial": "2026-10-14",
-          "dataFinal": "2026-10-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "16266",
-          "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H3    { MCB100-INVR2.4 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Valdério Paz ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 2.4] - Religamento do Inversor 2.4",
-          "criticidade": "",
-          "dataProgramada": "2026-10-14",
-          "dataCriacao": "2026-10-14",
-          "dataInicial": "2026-10-14",
-          "dataFinal": "2026-10-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "16260",
           "ativo": "Sal Energia - Quixadá 2 (Vitesse) - CE Fazenda Veneza, S/N, Zona rural, Distrito de Boto Quixadá  Ceará Brasil { SALE-VTS200 }",
           "equipe": "",
@@ -3563,6 +3524,26 @@
           "atrasada": false
         },
         {
+          "osId": "16176",
+          "ativo": "Thopen - Nova Londrina 2 - PR Estrada Mané Correia S/N Nova Londrina  Paraná Brasil { THPN-NVL200 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "CíceroWillian",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Thopen - Nova Londrina 2 - PR] - Religamento do Thopen - Nova Londrina 2 - PR",
+          "criticidade": "",
+          "dataProgramada": "2026-10-13",
+          "dataCriacao": "2026-10-13",
+          "dataInicial": "2026-10-13",
+          "dataFinal": "2026-10-13",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "16107",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
           "equipe": "",
@@ -3623,12 +3604,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2297,
+      "historicoTotal": 2301,
       "subClassificacao": {
         "remoto": 754,
-        "local": 4770,
+        "local": 4773,
         "remotoEmAberto": 0,
-        "localEmAberto": 29,
+        "localEmAberto": 28,
         "pctRemoto": 14,
         "alerta": true
       },
@@ -3850,17 +3831,17 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 900,
-        "emAberto": 62,
-        "atrasadas": 53,
-        "concluidas30d": 116,
-        "concluidas7d": 27,
+        "total": 901,
+        "emAberto": 61,
+        "atrasadas": 52,
+        "concluidas30d": 118,
+        "concluidas7d": 29,
         "naSemanaCorrente": 22
       },
       "mttr": {
-        "horas": 366.62,
-        "label": "15d 6h",
-        "amostra": 116
+        "horas": 374.64,
+        "label": "15d 14h",
+        "amostra": 118
       },
       "tendencia4Semanas": [
         {
@@ -3880,23 +3861,23 @@
         },
         {
           "semana": "W43",
-          "criadas": 5,
-          "finalizadas": 20
+          "criadas": 6,
+          "finalizadas": 22
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 900,
-            "emAberto": 62
+            "total": 901,
+            "emAberto": 61
           }
         ],
         "responsaveis": [
           {
             "nome": "Marcos Duarte",
             "total": 38,
-            "emAberto": 5
+            "emAberto": 4
           },
           {
             "nome": "Felipe  Lima",
@@ -3920,16 +3901,16 @@
           }
         ]
       },
-      "total": 62,
-      "atrasadas": 53,
+      "total": 61,
+      "atrasadas": 52,
       "porStatus": {
-        "naoIniciada": 55,
-        "emProgresso": 0,
-        "pausada": 7,
+        "naoIniciada": 54,
+        "emProgresso": 1,
+        "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 62
+        "(sem equipe)": 61
       },
       "oss": [
         {
@@ -4102,23 +4083,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 1632.0,
-          "atrasada": true
-        },
-        {
-          "osId": "12429",
-          "ativo": "Transformador 1 WEG     { THPN-SBU100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Matheus Leite ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Matheus Leite ",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPA - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-09-03",
-          "dataCriacao": "2026-08-28",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
           "atrasada": true
         },
         {
@@ -4369,14 +4333,15 @@
           "responsavel": "Valmir  Júnior",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valmir  Júnior",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-10-07",
           "dataCriacao": "2026-10-02",
-          "dataInicial": "",
+          "dataInicial": "2026-10-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 480.0,
           "atrasada": true
         },
         {
@@ -4873,24 +4838,6 @@
           "atrasada": false
         },
         {
-          "osId": "15726",
-          "ativo": "Cabine 1  Vargem Grande  Espirito Santo Brasil { VRG100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Marcos Duarte ",
-          "status": "pausado",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-10-22",
-          "dataCriacao": "2026-10-07",
-          "dataInicial": "2026-10-20",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 312.0,
-          "atrasada": false
-        },
-        {
           "osId": "15717",
           "ativo": "Preventiva Grupo de Inversores      { THPN-MNG100-PGINVR1 }",
           "equipe": "",
@@ -4976,6 +4923,23 @@
           "atrasada": false
         },
         {
+          "osId": "17056",
+          "ativo": "Transformador 5 COMTRAFO     { TIM100-TRFR5 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Luiz  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Athon] - MPA - Transformador (Diurno)",
+          "criticidade": "",
+          "dataProgramada": "2026-10-27",
+          "dataCriacao": "2026-10-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "15661",
           "ativo": "Transformador 1      { PTB100-TRFR1 }",
           "equipe": "",
@@ -4996,6 +4960,25 @@
       ],
       "ossHistorico": [
         {
+          "osId": "15726",
+          "ativo": "Cabine 1  Vargem Grande  Espirito Santo Brasil { VRG100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Marcos Duarte ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-10-22",
+          "dataCriacao": "2026-10-07",
+          "dataInicial": "2026-10-20",
+          "dataFinal": "2026-10-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 312.0,
+          "horasAteFechar": 48.0,
+          "atrasada": false
+        },
+        {
           "osId": "16824",
           "ativo": "Infraestrutura Civil  Sete Lagoas  Minas Gerais Brasil { SLG200-INFC1 }",
           "equipe": "",
@@ -5012,6 +4995,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
           "horasAteFechar": 24.0,
+          "atrasada": false
+        },
+        {
+          "osId": "12429",
+          "ativo": "Transformador 1 WEG     { THPN-SBU100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Matheus Leite ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPA - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-09-03",
+          "dataCriacao": "2026-08-28",
+          "dataInicial": "2026-10-22",
+          "dataFinal": "2026-10-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 1320.0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -7295,25 +7297,6 @@
           "atrasada": false
         },
         {
-          "osId": "12983",
-          "ativo": "Cabine 1  Poconé  Mato Grosso Brasil { PCN100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-09-08",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "2026-09-10",
-          "dataFinal": "2026-09-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13201",
           "ativo": "Estrutura Fixa      { RNGD-CTS100-EFIX1 }",
           "equipe": "",
@@ -7424,25 +7407,6 @@
           "dataFinal": "2026-09-07",
           "linkFracttal": "",
           "horasAteAbrir": 264.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "12971",
-          "ativo": "Cabine 1  Araputanga  Mato Grosso Brasil { APG100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-09-09",
-          "dataCriacao": "2026-09-04",
-          "dataInicial": "2026-09-04",
-          "dataFinal": "2026-09-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -7846,19 +7810,19 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 365
+      "historicoTotal": 367
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
       "icone": "ti-shield-check",
       "cor": "#ef4444",
       "kpis": {
-        "total": 174,
-        "emAberto": 10,
+        "total": 175,
+        "emAberto": 11,
         "atrasadas": 8,
         "concluidas30d": 16,
         "concluidas7d": 4,
-        "naSemanaCorrente": 5
+        "naSemanaCorrente": 6
       },
       "mttr": {
         "horas": 291.0,
@@ -7883,7 +7847,7 @@
         },
         {
           "semana": "W43",
-          "criadas": 5,
+          "criadas": 6,
           "finalizadas": 2
         }
       ],
@@ -7891,8 +7855,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 174,
-            "emAberto": 10
+            "total": 175,
+            "emAberto": 11
           }
         ],
         "responsaveis": [
@@ -7907,14 +7871,14 @@
             "emAberto": 1
           },
           {
+            "nome": "Anderson  Parente",
+            "total": 12,
+            "emAberto": 1
+          },
+          {
             "nome": "Luiz  Silva",
             "total": 11,
             "emAberto": 2
-          },
-          {
-            "nome": "Anderson  Parente",
-            "total": 11,
-            "emAberto": 0
           },
           {
             "nome": "Francisco  Santos",
@@ -7923,16 +7887,16 @@
           }
         ]
       },
-      "total": 10,
+      "total": 11,
       "atrasadas": 8,
       "porStatus": {
-        "naoIniciada": 7,
+        "naoIniciada": 8,
         "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 10
+        "(sem equipe)": 11
       },
       "oss": [
         {
@@ -8073,6 +8037,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "17042",
+          "ativo": "Cabine 1  Barretos  São Paulo Brasil { BRS100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Anderson  Parente",
+          "status": "Não Iniciada",
+          "tarefa": "[Barretos] Abertura de chamado de garantia do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-10-22",
+          "dataCriacao": "2026-10-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "16992",
@@ -8821,17 +8802,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 895,
-        "emAberto": 51,
-        "atrasadas": 43,
-        "concluidas30d": 148,
-        "concluidas7d": 32,
-        "naSemanaCorrente": 30
+        "total": 897,
+        "emAberto": 52,
+        "atrasadas": 42,
+        "concluidas30d": 149,
+        "concluidas7d": 33,
+        "naSemanaCorrente": 32
       },
       "mttr": {
-        "horas": 264.49,
-        "label": "11d 0h",
-        "amostra": 148
+        "horas": 263.03,
+        "label": "10d 23h",
+        "amostra": 149
       },
       "tendencia4Semanas": [
         {
@@ -8851,16 +8832,16 @@
         },
         {
           "semana": "W43",
-          "criadas": 26,
-          "finalizadas": 16
+          "criadas": 28,
+          "finalizadas": 17
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 895,
-            "emAberto": 51
+            "total": 897,
+            "emAberto": 52
           }
         ],
         "responsaveis": [
@@ -8891,16 +8872,16 @@
           }
         ]
       },
-      "total": 51,
-      "atrasadas": 43,
+      "total": 52,
+      "atrasadas": 42,
       "porStatus": {
         "naoIniciada": 44,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 51
+        "(sem equipe)": 52
       },
       "oss": [
         {
@@ -9608,23 +9589,6 @@
           "atrasada": true
         },
         {
-          "osId": "16863",
-          "ativo": "Tracker 19.100 Axial Tracker 1VTwin    { THPN-EBG100-ETKR19.100 }",
-          "equipe": "",
-          "responsavel": "Lucas Alberto Freitas de Faria ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Não Iniciada",
-          "tarefa": "[Tracker 19.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-10-21",
-          "dataCriacao": "2026-10-20",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "16777",
           "ativo": "Inversor 1.4 Huawei SUN2000-330KTL-H1    { ADS100-INVR1.4 }",
           "equipe": "",
@@ -9640,6 +9604,41 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "17053",
+          "ativo": "Tracker 10.102  Array Technologies | STI    { APOL-RDP100-ETKR10.102 }",
+          "equipe": "",
+          "responsavel": "Caio da Silva Cordeiro ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Caio da Silva Cordeiro ",
+          "status": "Não Iniciada",
+          "tarefa": "[Tracker 10.102] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-10-22",
+          "dataCriacao": "2026-10-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "17052",
+          "ativo": "Tracker 7.102  STI H250    { THPN-FZL100-ETKR7.102 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Em progresso",
+          "tarefa": "Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-10-22",
+          "dataCriacao": "2026-10-22",
+          "dataInicial": "2026-10-22",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "atrasada": false
         },
         {
           "osId": "16998",
@@ -9779,6 +9778,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "16863",
+          "ativo": "Tracker 19.100 Axial Tracker 1VTwin    { THPN-EBG100-ETKR19.100 }",
+          "equipe": "",
+          "responsavel": "Lucas Alberto Freitas de Faria ",
+          "criadoPor": "Gabriela Dias ",
+          "supervisor": "Lucas Alberto Freitas de Faria ",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 19.100] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-10-21",
+          "dataCriacao": "2026-10-20",
+          "dataInicial": "2026-10-22",
+          "dataFinal": "2026-10-22",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "16951",
           "ativo": "Tracker 17.107 Brametal Bi-motor    { SMP100-ETKR17.107 }",
@@ -11585,25 +11603,6 @@
           "atrasada": false
         },
         {
-          "osId": "13863",
-          "ativo": "Inversor 1.2 Huawei SUN2000-215KTL-H3    { MCB100-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Valdério Paz ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.2] - Inspeção das Strings",
-          "criticidade": "",
-          "dataProgramada": "2026-09-24",
-          "dataCriacao": "2026-09-18",
-          "dataInicial": "2026-09-24",
-          "dataFinal": "2026-09-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13324",
           "ativo": "Estação Meteorológica  Marialva  Paraná Brasil { MRV100-ESTM1 }",
           "equipe": "",
@@ -12383,25 +12382,6 @@
           "atrasada": false
         },
         {
-          "osId": "12518",
-          "ativo": "Tracker 40.100 STI Norland STI-H250 V05    { MCB100-ETKR40.100 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Valdério Paz ",
-          "status": "Finalizados",
-          "tarefa": "Diagnóstico de Bateria Baixa e Perda de Comunicação da TCU",
-          "criticidade": "",
-          "dataProgramada": "2026-09-03",
-          "dataCriacao": "2026-08-31",
-          "dataInicial": "2026-09-03",
-          "dataFinal": "2026-09-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "12266",
           "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { SPP300-INVR1.1 }",
           "equipe": "",
@@ -12554,6 +12534,25 @@
           "atrasada": false
         },
         {
+          "osId": "11795",
+          "ativo": "Inversor 1.10 Huawei SUN2000-250KTL-H1    { THPN-JNC100-INVR1.10 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Ailton Leal ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.10] - Inspeção Geral do Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-08-25",
+          "dataCriacao": "2026-08-21",
+          "dataInicial": "2026-08-31",
+          "dataFinal": "2026-08-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 240.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "12195",
           "ativo": "Tracker 05.103 Brametal Bi-motor    { SMP100-ETKR5.103 }",
           "equipe": "",
@@ -12630,15 +12629,15 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 635
+      "historicoTotal": 636
     },
     "engenharia": {
       "label": "Engenharia",
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 179,
-        "emAberto": 25,
+        "total": 180,
+        "emAberto": 26,
         "atrasadas": 22,
         "concluidas30d": 20,
         "concluidas7d": 3,
@@ -12667,7 +12666,7 @@
         },
         {
           "semana": "W43",
-          "criadas": 2,
+          "criadas": 3,
           "finalizadas": 1
         }
       ],
@@ -12675,8 +12674,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 179,
-            "emAberto": 25
+            "total": 180,
+            "emAberto": 26
           }
         ],
         "responsaveis": [
@@ -12707,16 +12706,16 @@
           }
         ]
       },
-      "total": 25,
+      "total": 26,
       "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 23,
+        "naoIniciada": 24,
         "emProgresso": 0,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 25
+        "(sem equipe)": 26
       },
       "oss": [
         {
@@ -13141,6 +13140,23 @@
           "criticidade": "",
           "dataProgramada": "2026-10-28",
           "dataCriacao": "2026-10-21",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "17044",
+          "ativo": "Inversor 1.4 Sungrow SG350HX    { SEMP-TCN100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Hebert Rabelo ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Hebert Rabelo ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.4] - Inversores com geração zero",
+          "criticidade": "",
+          "dataProgramada": "2026-10-29",
+          "dataCriacao": "2026-10-22",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -14921,14 +14937,63 @@
   },
   "ossPublicas": [
     {
-      "osId": "17040",
-      "ativo": "Thopen - Salto Pirapora 3 - SP    São Paulo Brasil { THPN-SPP300 }",
+      "osId": "17056",
+      "ativo": "Transformador 5 COMTRAFO     { TIM100-TRFR5 }",
       "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Eduardo  Mendes",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Luiz  Silva",
       "status": "Não Iniciada",
-      "tarefa": "[THPN-SPP300] - Religamento do THPN-SPP300",
+      "tarefa": "[Athon] - MPA - Transformador (Diurno)",
+      "criticidade": "",
+      "dataProgramada": "2026-10-27",
+      "dataCriacao": "2026-10-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "17053",
+      "ativo": "Tracker 10.102  Array Technologies | STI    { APOL-RDP100-ETKR10.102 }",
+      "equipe": "",
+      "responsavel": "Caio da Silva Cordeiro ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Caio da Silva Cordeiro ",
+      "status": "Não Iniciada",
+      "tarefa": "[Tracker 10.102] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-10-22",
+      "dataCriacao": "2026-10-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "17052",
+      "ativo": "Tracker 7.102  STI H250    { THPN-FZL100-ETKR7.102 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Em progresso",
+      "tarefa": "Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-10-22",
+      "dataCriacao": "2026-10-22",
+      "dataInicial": "2026-10-22",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0
+    },
+    {
+      "osId": "17049",
+      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Wesllen  Castro",
+      "status": "Não Iniciada",
+      "tarefa": "[2C - Ipixuna do Pará 1 - PA] - Religamento do 2C - Ipixuna do Pará 1 - PA",
       "criticidade": "",
       "dataProgramada": "2026-10-22",
       "dataCriacao": "2026-10-22",
@@ -14936,6 +15001,55 @@
       "dataFinal": "",
       "linkFracttal": "",
       "modalidade": "local"
+    },
+    {
+      "osId": "17048",
+      "ativo": "Inversor 1.8  Huawei | SUN2000-250KTL-H1    { APOL-GVT200-INVR1.8 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "CíceroWillian",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "[APOL-GVT200-INVR1.8] - Religamento do APOL-GVT200-INVR1.8",
+      "criticidade": "",
+      "dataProgramada": "2026-10-21",
+      "dataCriacao": "2026-10-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "17044",
+      "ativo": "Inversor 1.4 Sungrow SG350HX    { SEMP-TCN100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Hebert Rabelo ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Hebert Rabelo ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.4] - Inversores com geração zero",
+      "criticidade": "",
+      "dataProgramada": "2026-10-29",
+      "dataCriacao": "2026-10-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "17042",
+      "ativo": "Cabine 1  Barretos  São Paulo Brasil { BRS100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Anderson  Parente",
+      "status": "Não Iniciada",
+      "tarefa": "[Barretos] Abertura de chamado de garantia do Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-10-22",
+      "dataCriacao": "2026-10-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
     },
     {
       "osId": "17032",
@@ -15038,41 +15152,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "17013",
-      "ativo": "Cabine 2 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN2 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Valdério Paz ",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-RDR200-CABN2] - Religamento do THPN-RDR200-CABN2",
-      "criticidade": "",
-      "dataProgramada": "2026-10-22",
-      "dataCriacao": "2026-10-22",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "17010",
-      "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
-      "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Ailton Leal ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 2.1] - Religamento do Inversor 2.1",
-      "criticidade": "",
-      "dataProgramada": "2026-10-22",
-      "dataCriacao": "2026-10-22",
-      "dataInicial": "2026-10-22",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15428,22 +15507,6 @@
       "tarefa": "[Tracker 01.103] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-10-22",
-      "dataCriacao": "2026-10-20",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "16863",
-      "ativo": "Tracker 19.100 Axial Tracker 1VTwin    { THPN-EBG100-ETKR19.100 }",
-      "equipe": "",
-      "responsavel": "Lucas Alberto Freitas de Faria ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Não Iniciada",
-      "tarefa": "[Tracker 19.100] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-10-21",
       "dataCriacao": "2026-10-20",
       "dataInicial": "",
       "dataFinal": "",
@@ -16381,23 +16444,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "15726",
-      "ativo": "Cabine 1  Vargem Grande  Espirito Santo Brasil { VRG100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Marcos Duarte ",
-      "status": "pausado",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-10-22",
-      "dataCriacao": "2026-10-07",
-      "dataInicial": "2026-10-20",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 312.0
-    },
-    {
       "osId": "15721",
       "ativo": "Transformador 1 WEG     { THPN-PRM200-TRFR1 }",
       "equipe": "",
@@ -16854,14 +16900,15 @@
       "responsavel": "Valmir  Júnior",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valmir  Júnior",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-10-07",
       "dataCriacao": "2026-10-02",
-      "dataInicial": "",
+      "dataInicial": "2026-10-22",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 480.0
     },
     {
       "osId": "15257",
@@ -17480,22 +17527,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "12429",
-      "ativo": "Transformador 1 WEG     { THPN-SBU100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Matheus Leite ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Matheus Leite ",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPA - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-09-03",
-      "dataCriacao": "2026-08-28",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "12331",
       "ativo": "Inversor 1.8 Sungrow SG250HX    { COR100-INVR1.8 }",
       "equipe": "",
@@ -17811,26 +17842,6 @@
   ],
   "ossHistorico": [
     {
-      "osId": "16950",
-      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Frank  Melo",
-      "status": "Finalizados",
-      "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-21",
-      "dataCriacao": "2026-10-21",
-      "dataInicial": "2026-10-21",
-      "dataFinal": "2026-10-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
       "osId": "16107",
       "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
       "equipe": "",
@@ -17983,6 +17994,25 @@
       "linkFracttal": "",
       "horasAteAbrir": 336.0,
       "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "15726",
+      "ativo": "Cabine 1  Vargem Grande  Espirito Santo Brasil { VRG100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Marcos Duarte ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-10-22",
+      "dataCriacao": "2026-10-07",
+      "dataInicial": "2026-10-20",
+      "dataFinal": "2026-10-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 312.0,
+      "horasAteFechar": 48.0,
       "atrasada": false
     },
     {
@@ -18575,6 +18605,46 @@
       "atrasada": false
     },
     {
+      "osId": "17013",
+      "ativo": "Cabine 2 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN2 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Valdério Paz ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-RDR200-CABN2] - Religamento do THPN-RDR200-CABN2",
+      "criticidade": "",
+      "dataProgramada": "2026-10-22",
+      "dataCriacao": "2026-10-22",
+      "dataInicial": "2026-10-22",
+      "dataFinal": "2026-10-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "17010",
+      "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Ailton Leal ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 2.1] - Religamento do Inversor 2.1",
+      "criticidade": "",
+      "dataProgramada": "2026-10-22",
+      "dataCriacao": "2026-10-22",
+      "dataInicial": "2026-10-22",
+      "dataFinal": "2026-10-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "17009",
       "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
       "equipe": "",
@@ -18711,6 +18781,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "16950",
+      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+      "equipe": "",
+      "responsavel": "Frank  Melo",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "Frank  Melo",
+      "status": "Finalizados",
+      "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-21",
+      "dataCriacao": "2026-10-21",
+      "dataInicial": "2026-10-21",
+      "dataFinal": "2026-10-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 24.0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -19029,6 +19119,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "16863",
+      "ativo": "Tracker 19.100 Axial Tracker 1VTwin    { THPN-EBG100-ETKR19.100 }",
+      "equipe": "",
+      "responsavel": "Lucas Alberto Freitas de Faria ",
+      "criadoPor": "Gabriela Dias ",
+      "supervisor": "Lucas Alberto Freitas de Faria ",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 19.100] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-10-21",
+      "dataCriacao": "2026-10-20",
+      "dataInicial": "2026-10-22",
+      "dataFinal": "2026-10-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -20681,90 +20790,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "16525",
-      "ativo": "Inversor 2.5 Huawei SUN2000-215KTL-H3    { MCB100-INVR2.5 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Valdério Paz ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 2.5] - Religamento do Inversor 2.5",
-      "criticidade": "",
-      "dataProgramada": "2026-10-16",
-      "dataCriacao": "2026-10-16",
-      "dataInicial": "2026-10-16",
-      "dataFinal": "2026-10-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "16522",
-      "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
-      "equipe": "",
-      "responsavel": "Eduardo  Mendes",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Eduardo  Mendes",
-      "status": "Finalizados",
-      "tarefa": "[Thopen - Araçoiaba da Serra 2 - SP] - Religamento do Thopen - Araçoiaba da Serra 2 - SP",
-      "criticidade": "",
-      "dataProgramada": "2026-10-16",
-      "dataCriacao": "2026-10-16",
-      "dataInicial": "2026-10-16",
-      "dataFinal": "2026-10-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "16512",
-      "ativo": "Cabine 2 Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB200-CABN2 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "DavidNascimento",
-      "supervisor": "James Chaves ",
-      "status": "Finalizados",
-      "tarefa": "[MAB200-CABN2] - Religamento do MAB200-CABN2",
-      "criticidade": "",
-      "dataProgramada": "2026-10-15",
-      "dataCriacao": "2026-10-15",
-      "dataInicial": "2026-10-16",
-      "dataFinal": "2026-10-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "16499",
-      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizados",
-      "tarefa": "[Athon - Capitão Poço 1 - PA] - Religamento do Athon - Capitão Poço 1 - PA",
-      "criticidade": "",
-      "dataProgramada": "2026-10-15",
-      "dataCriacao": "2026-10-15",
-      "dataInicial": "2026-10-16",
-      "dataFinal": "2026-10-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3427,
-  "totalGeral": 7672,
+  "historicoTotal": 3434,
+  "totalGeral": 7680,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
