@@ -577,13 +577,49 @@ def tempos_atend(conc):
     return dict(resp_emg=mean_h(emg,"dcri","dini"),resp_corr=mean_h(corr,"dcri","dini"),
         reparo=mean_h(corr,"dini","dfim"),ciclo=mean_h(corr,"dcri","dfinos"),
         n_emg=len(emg),n_corr=len(corr))
+# Aderência ao cronograma (22/10/2026). Antes usava a data de finalização da OS (dfinos): OS que
+# ficam em "Verificação" depois da execução saíam todas fora do prazo (0% nas UFVs GreenYellow) e a
+# base era outra que a do "Avanço" (0/3 ao lado de 30/30). Agora:
+#   base     = as mesmas preventivas finalizadas do Avanço do mês (mp_ref no mês);
+#   executada = data de conclusão da TAREFA (dfim), não da OS;
+#   prevista  = data ORIGINAL — a primeira semana em que a OS entrou na programação semanal
+#              (Historico_Programacoes.xlsx); reprogramar não "zera" o atraso. Sem histórico, Data Programada;
+#   no prazo  = executada até o último dia do MÊS da data prevista (regra do Fabrício, 22/10).
+# Só aparece no relatório quando INTERNO=True (--interno): ainda em validação, fora do relatório do cliente.
+INTERNO=False
+_PRIMEIRA_SEMANA=None
+def _primeira_semana_os():
+    """{OS: sexta-feira da primeira semana em que a OS entrou na programação} do Historico_Programacoes.xlsx."""
+    global _PRIMEIRA_SEMANA
+    if _PRIMEIRA_SEMANA is not None: return _PRIMEIRA_SEMANA
+    _PRIMEIRA_SEMANA={}
+    try:
+        import pandas as _pd
+        h=_pd.read_excel(os.path.join(achar_pasta(),"Historico_Programacoes.xlsx"))
+        for k,w in zip(h["task_key"].astype(str),h["first_week"].astype(str)):
+            m=re.match(r"(\d{4})-W(\d{1,2})$",w.strip()); osid=k.split("|")[0].strip()
+            if not m or not osid: continue
+            sexta=dt.datetime.fromisocalendar(int(m.group(1)),int(m.group(2)),5)
+            if osid not in _PRIMEIRA_SEMANA or sexta<_PRIMEIRA_SEMANA[osid]: _PRIMEIRA_SEMANA[osid]=sexta
+    except Exception as e:
+        print(f"[aderência] histórico de programação indisponível ({e}); usando a Data Programada")
+    return _PRIMEIRA_SEMANA
+def data_prevista_original(x):
+    d=x["dprog"]; sexta=_primeira_semana_os().get(str(x["osid"]).split(".")[0].strip())
+    if sexta and (d is None or sexta<d): return sexta
+    return d
+def _fim_do_mes(d):
+    return (dt.datetime(d.year+(d.month==12),(d.month%12)+1,1))
 def aderencia_prev(regs,ini,fim):
-    planj=[x for x in regs if x["mp"] and x["dprog"] and ini<=x["dprog"]<fim]
-    fin=[x for x in planj if FINALIZADO(x)]
-    no_prazo=[x for x in fin if x["dfinos"] and x["dprog"] and x["dfinos"].date()<=x["dprog"].date()]
-    return dict(plan=len(planj),fin=len(fin),no_prazo=len(no_prazo),
-        pct_prazo=100*len(no_prazo)/len(fin) if fin else 0,
-        pct_avanco=100*len(fin)/len(planj) if planj else 0)
+    base=[x for x in regs if x["mp"] and mp_apos_mob(x) and mp_ref(x) and ini<=mp_ref(x)<fim]
+    fin=[x for x in base if FINALIZADO(x) and x["dfim"]]
+    sem_data=[x for x in fin if not data_prevista_original(x)]
+    aval=[x for x in fin if data_prevista_original(x)]
+    no_prazo=[x for x in aval if x["dfim"]<_fim_do_mes(data_prevista_original(x))]
+    return dict(plan=len(base),fin=len(aval),no_prazo=len(no_prazo),sem_data=len(sem_data),
+        atrasadas=[x for x in aval if x not in no_prazo],
+        pct_prazo=100*len(no_prazo)/len(aval) if aval else 0,
+        pct_avanco=100*len(fin)/len(base) if base else 0)
 def pareto_equip(conc):
     return Counter(x["ativo"] for x in conc if x["categoria"]=="Corretiva")
 def bad_actors(regs,fim,nmeses=12):
@@ -995,7 +1031,7 @@ def metodologia(doc):
     H(doc,"Avanço das Preventivas",2)
     item("Avanço de preventivas (mês)","quanto do plano preventivo previsto para o mês foi efetivamente concluído.")
     item("Avanço de preventivas (12 meses)","cumprimento acumulado do plano preventivo ao longo do último ano, mostrando a consistência da execução. O cronograma de cada usina passa a valer a partir da sua mobilização.")
-    item("Aderência ao cronograma","quanto das preventivas foi concluído dentro do prazo planejado.")
+    if INTERNO: item("Aderência ao cronograma","quanto das preventivas finalizadas foi executado dentro do mês em que estava originalmente previsto (primeira entrada na programação semanal).")
     H(doc,"Confiabilidade e Disponibilidade",2)
     item("MTTR (tempo médio de reparo)","tempo médio que a equipe leva para restabelecer um ativo após uma falha. Quanto menor, mais ágil a resposta.")
     item("MTBF (tempo médio entre falhas)","intervalo médio de operação entre falhas de um ativo. Quanto maior, mais confiável é o equipamento.")
@@ -1125,7 +1161,8 @@ def gerar(escopo_tipo,escopo_nome,cliente_pai,periodo,ref,idx,rows,aux,saida_bas
         td(row[0],(MP_LABEL.get(code,code) if code!="TOTAL" else "TOTAL"),8.5,bold=(code=="TOTAL"))
         td(row[1],d["plan"]); td(row[2],d["fin"]); td(row[3],d["pend"]); td(row[4],f"{d['pct']:.0f}%",8.5,bold=(code=="TOTAL"))
     bullet(doc,f"Avanço geral no mês: {mpm['TOTAL']['pct']:.0f}% ({mpm['TOTAL']['fin']}/{mpm['TOTAL']['plan']} tarefas finalizadas).")
-    bullet(doc,f"Aderência ao cronograma: {ader['pct_prazo']:.0f}% das finalizadas concluídas até a data programada ({ader['no_prazo']}/{ader['fin']}).")
+    if INTERNO and ader["fin"]:
+        bullet(doc,f"Aderência ao cronograma: {ader['pct_prazo']:.0f}% das finalizadas executadas dentro do mês previsto ({ader['no_prazo']}/{ader['fin']}).")
     pend=[(code,x) for code in MP_ORDER for x in mpm[code]["pendentes"][:6]]
     if pend:
         body(doc,"Preventivas programadas no mês ainda pendentes:")
@@ -1618,7 +1655,9 @@ def main():
     ap.add_argument("--ref",required=True); ap.add_argument("--cliente"); ap.add_argument("--usina")
     ap.add_argument("--todos",action="store_true"); ap.add_argument("--portfolio",action="store_true"); ap.add_argument("--clientes",help="lista de clientes p/ portfólio (vírgula)"); ap.add_argument("--saida")
     ap.add_argument("--formato",choices=["pdf","docx","ambos"],default="pdf")
+    ap.add_argument("--interno",action="store_true",help="versão interna Grid: inclui a aderência ao cronograma (em validação)")
     a=ap.parse_args(); pasta=achar_pasta(); saida=a.saida or pasta
+    global INTERNO; INTERNO=a.interno
     idx,rows,aux,cu=carregar(pasta)
     if a.portfolio:
         cl=[c.strip() for c in a.clientes.split(",")] if a.clientes else None
