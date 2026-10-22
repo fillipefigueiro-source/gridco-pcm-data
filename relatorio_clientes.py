@@ -1162,6 +1162,21 @@ def gerar(escopo_tipo,escopo_nome,cliente_pai,periodo,ref,idx,rows,aux,saida_bas
     bullet(doc,f"Avanço geral no mês: {mpm['TOTAL']['pct']:.0f}% ({mpm['TOTAL']['fin']}/{mpm['TOTAL']['plan']} tarefas finalizadas).")
     if ader["fin"]:
         bullet(doc,f"Aderência ao cronograma: {ader['pct_prazo']:.0f}% das finalizadas executadas dentro do mês previsto ({ader['no_prazo']}/{ader['fin']}).")
+        if ader["atrasadas"]:   # motivo explícito: quais OS ficaram fora do mês previsto
+            _g={}
+            for x in ader["atrasadas"]:
+                _os=str(x["osid"]).split(".")[0]; _d=_g.setdefault(_os,dict(mp=x["mp"],n=0,prev=data_prevista_original(x),exe=x["dfim"]))
+                _d["n"]+=1; _d["prev"]=min(_d["prev"],data_prevista_original(x)); _d["exe"]=max(_d["exe"],x["dfim"])
+            _mes=lambda d:f"{MESES[d.month-1].lower()}/{d.year}"
+            _l=sorted(_g.items(),key=lambda kv:kv[1]["prev"])
+            if len(_l)<=3:
+                for _os,_d in _l:
+                    body(doc,f"Fora do mês previsto: OS {_os} · {_d['mp']} ({_d['n']} tarefa{'s' if _d['n']>1 else ''}) · prevista para {_mes(_d['prev'])} · executada em {_mes(_d['exe'])}.",size=9)
+            else:
+                body(doc,"Preventivas executadas fora do mês previsto:",size=9)
+                ta=doc.add_table(rows=1,cols=5); ta.style="Table Grid"; th_row(ta,["OS","Tipo","Tarefas","Prevista","Executada"])
+                for _os,_d in _l:
+                    r=ta.add_row().cells; td(r[0],_os); td(r[1],_d["mp"]); td(r[2],_d["n"]); td(r[3],_mes(_d["prev"])); td(r[4],_mes(_d["exe"]))
     pend=[(code,x) for code in MP_ORDER for x in mpm[code]["pendentes"][:6]]
     if pend:
         body(doc,"Preventivas programadas no mês ainda pendentes:")
