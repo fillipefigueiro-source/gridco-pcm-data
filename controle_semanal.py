@@ -388,7 +388,7 @@ def concluida(t):
     return (not t.get('aberta')) or str(t.get('osStatus', '')).strip().lower() in FECH
 
 
-MPM = defaultdict(lambda: defaultdict(lambda: dict(n=0, ok=0, cli='', clu='', sup='')))
+MPM = defaultdict(lambda: defaultdict(lambda: dict(n=0, ok=0, cli='', clu='', sup='', os=set(), os_ab=set())))
 for t in T:
     txt = str(t.get('tarefa', '')) + ' ' + str(t.get('tipo', ''))
     if not rxM.search(txt) or 'spare' in txt.lower():
@@ -398,8 +398,11 @@ for t in T:
         continue
     e = MPM[m][t['usina']]
     e['n'] += 1
+    e['os'].add(str(t.get('os') or '').strip())
     if concluida(t):
         e['ok'] += 1
+    else:
+        e['os_ab'].add(str(t.get('os') or '').strip())
     e['cli'] = cli(t['usina'])
     e['clu'] = str(t.get('cluster') or '')
     e['sup'] = t.get('responsavel') or ''
@@ -420,14 +423,18 @@ aba('MPM mensal (resumo)',
 usi_rows, usi_keys = [], []
 for m in sorted(MPM):
     for u, e in sorted(MPM[m].items(), key=lambda kv: kv[1]['ok'] / kv[1]['n'] if kv[1]['n'] else 1):
-        usi_rows.append([MESES_N[m - 1], m, curta(u), e['cli'], e['clu'], e['sup'],
+        # OS da MPM no mês; as que ainda têm tarefa pendente vêm primeiro e marcadas com *
+        _os = sorted(o for o in e['os'] if o)
+        _os_txt = ', '.join(sorted(_os, key=lambda o: (o not in e['os_ab'], o)))
+        _os_txt = ', '.join(o + ('*' if o in e['os_ab'] else '') for o in _os_txt.split(', ')) if _os_txt else ''
+        usi_rows.append([MESES_N[m - 1], m, curta(u), _os_txt, e['cli'], e['clu'], e['sup'],
                          e['n'], e['ok'], e['n'] - e['ok'],
                          round(100.0 * e['ok'] / e['n']) if e['n'] else 0])
         usi_keys.append('%02d|%s' % (m, curta(u)))
 aba('MPM mensal (usina)',
-    ['Mês', 'Nº mês', 'Usina', 'Cliente', 'Cluster', 'Supervisor',
+    ['Mês', 'Nº mês', 'Usina', 'OS (* = com pendência)', 'Cliente', 'Cluster', 'Supervisor',
      'Tarefas', 'Concluídas', 'Pendentes', '%'],
-    usi_rows, [7, 7, 26, 13, 13, 18, 9, 11, 10, 7], chaves=usi_keys)
+    usi_rows, [7, 7, 26, 18, 13, 13, 18, 9, 11, 10, 7], chaves=usi_keys)
 
 # ── MPM matriz usina x mes: % (feitas/total) ─────────────────────────
 meses_ativos = sorted(MPM)
