@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-23T15:21:40Z",
+  "geradoEm": "2026-10-23T16:16:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-19 .. 2026-10-25",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 5567,
-        "emAberto": 26,
+        "emAberto": 25,
         "atrasadas": 21,
-        "concluidas30d": 977,
-        "concluidas7d": 236,
+        "concluidas30d": 978,
+        "concluidas7d": 237,
         "naSemanaCorrente": 149
       },
       "mttr": {
-        "horas": 16.92,
-        "label": "16h 55min",
-        "amostra": 977
+        "horas": 16.91,
+        "label": "16h 54min",
+        "amostra": 978
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W43",
           "criadas": 153,
-          "finalizadas": 157
+          "finalizadas": 158
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 5567,
-            "emAberto": 26
+            "emAberto": 25
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 26,
+      "total": 25,
       "atrasadas": 21,
       "porStatus": {
-        "naoIniciada": 20,
-        "emProgresso": 1,
-        "pausada": 5,
+        "naoIniciada": 19,
+        "emProgresso": 0,
+        "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 26
+        "(sem equipe)": 25
       },
       "oss": [
         {
@@ -391,7 +391,7 @@
           "responsavel": "Leonardo  Dias",
           "criadoPor": "LucasNascimento",
           "supervisor": "Leonardo  Dias",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[GY-CDR100] - Religamento do GY-CDR100",
           "criticidade": "",
           "dataProgramada": "2026-10-22",
@@ -474,24 +474,6 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
-        },
-        {
-          "osId": "17358",
-          "ativo": "Cabine 1 BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Maria Emanuella de Souza Mota ",
-          "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-CLN100-CABN1] - Religamento do THPN-CLN100-CABN1",
-          "criticidade": "",
-          "dataProgramada": "2026-10-23",
-          "dataCriacao": "2026-10-23",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
         },
         {
           "osId": "17339",
@@ -583,6 +565,26 @@
           "dataFinal": "2026-10-23",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "17358",
+          "ativo": "Cabine 1 BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-CLN100-CABN1] - Religamento do THPN-CLN100-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-10-23",
+          "dataCriacao": "2026-10-23",
+          "dataInicial": "2026-10-23",
+          "dataFinal": "2026-10-23",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3468,26 +3470,6 @@
           "atrasada": false
         },
         {
-          "osId": "16325",
-          "ativo": "Cabine 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Ricardo Silva ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-INP100-CABN2] - Religamento do THPN-INP100-CABN2",
-          "criticidade": "",
-          "dataProgramada": "2026-10-14",
-          "dataCriacao": "2026-10-14",
-          "dataInicial": "2026-10-14",
-          "dataFinal": "2026-10-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "16107",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
           "equipe": "",
@@ -3568,12 +3550,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2317,
+      "historicoTotal": 2318,
       "subClassificacao": {
         "remoto": 754,
         "local": 4813,
         "remotoEmAberto": 0,
-        "localEmAberto": 26,
+        "localEmAberto": 25,
         "pctRemoto": 14,
         "alerta": true
       },
@@ -14610,23 +14592,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "17358",
-      "ativo": "Cabine 1 BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-CLN100-CABN1] - Religamento do THPN-CLN100-CABN1",
-      "criticidade": "",
-      "dataProgramada": "2026-10-23",
-      "dataCriacao": "2026-10-23",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "17356",
       "ativo": "Estrutura Trackers Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100-ETKR1 }",
       "equipe": "",
@@ -14797,7 +14762,7 @@
       "responsavel": "Leonardo  Dias",
       "criadoPor": "LucasNascimento",
       "supervisor": "Leonardo  Dias",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[GY-CDR100] - Religamento do GY-CDR100",
       "criticidade": "",
       "dataProgramada": "2026-10-22",
@@ -18008,6 +17973,26 @@
       "atrasada": false
     },
     {
+      "osId": "17358",
+      "ativo": "Cabine 1 BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Janderson Miranda ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-CLN100-CABN1] - Religamento do THPN-CLN100-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-10-23",
+      "dataCriacao": "2026-10-23",
+      "dataInicial": "2026-10-23",
+      "dataFinal": "2026-10-23",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "17230",
       "ativo": "Inversor 1.5 Huawei SUN2000-100KTL-H1    { MAB200-INVR1.5 }",
       "equipe": "",
@@ -20146,29 +20131,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "16650",
-      "ativo": "SKID 1  Santarém  Pará Brasil { STR100-SKID1 }",
-      "equipe": "",
-      "responsavel": "Júlio Willers ",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Júlio Willers ",
-      "status": "Finalizados",
-      "tarefa": "[STR100-SKID1] - Religamento do STR100-SKID1",
-      "criticidade": "",
-      "dataProgramada": "2026-10-17",
-      "dataCriacao": "2026-10-17",
-      "dataInicial": "2026-10-19",
-      "dataFinal": "2026-10-19",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3459,
+  "historicoTotal": 3460,
   "totalGeral": 7730,
   "verificacao": {
     "total": 0,
