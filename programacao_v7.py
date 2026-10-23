@@ -113,7 +113,8 @@ DAY_NAMES = ['Segunda-feira', 'Terça-feira', 'Quarta-feira',
 _ISO_YEAR, _ISO_WEEK, _ = WEEK_START.isocalendar()
 
 # Última semana do mês: semana que contém o dia 30 ou 31
-# (MPM também recebe prioridade de corretiva nessa semana)
+# (MPM também recebe prioridade de corretiva nessa semana: entra antes das preventivas e nunca vira pendência; a que
+# não couber em dia nenhum entra forçada no fim do escalonamento, ver schedule_team)
 ULTIMA_SEMANA_MES = any(d.day >= 30 for d in DAYS)
 
 # Carregado dinamicamente da pasta Feriados/ (ver _carregar_feriados_dict abaixo)
@@ -2370,13 +2371,20 @@ def schedule_team(equipe, tarefas_all):
     # Alocar tarefas por usina nos dias atribuídos
     # Estratégia em 2 passes por dia:
     #   Passe 1 — corretivas (sempre entram; se sem capacidade → force + [EXCEDE HH])
-    #             Na última semana do mês: MPM também entra no passe 1
+    #             Na última semana do mês: MPM também entra no passe 1, mas SEM forçar
     #   Passe 2 — preventivas restantes (só entram se houver capacidade)
+    # A MPM do fim do mês que não coube no dia da usina vai para os dias livres (passe de preenchimento) e só a que não
+    # couber em dia nenhum é forçada, no fim (passe 5). Até 23/10/2026 ela era forçada aqui, no dia da usina: a usina
+    # ganha os dias pela soma das horas, e a OS de MPM de 29 subtarefas de 10 min soma 5 h (1 dia) mas ocupa 12 h na
+    # agenda (cada uma leva os 15 min de troca). A W44 saiu com 193 MPM [EXCEDE HH], a segunda até as 23 h e a sexta
+    # vazia (Levi: "o programador da w44 jogou a maioria das tarefas para segunda-feira sem distribuir corretamente").
+    def _mpm_fim_do_mes(tk):
+        """MPM na última semana do mês: prioridade de corretiva, sem virar pendência."""
+        return ULTIMA_SEMANA_MES and tk['mp_cat'] == 'MPM' and not tk['corretiva']
+
     def _deve_forcar(tk):
-        """True se a tarefa deve entrar mesmo sem capacidade disponível."""
-        if tk['corretiva']: return True
-        if ULTIMA_SEMANA_MES and tk['mp_cat'] == 'MPM': return True
-        return False
+        """True se a tarefa deve entrar no passe 1 (antes das preventivas)."""
+        return tk['corretiva'] or _mpm_fim_do_mes(tk)
 
     for di in range(5):
         ativo = day_assignments[di]
@@ -2395,6 +2403,8 @@ def schedule_team(equipe, tarefas_all):
                                coord=tk['coord'],
                                allow_partial=False)
             excede = False
+            if res is None and not tk['corretiva']:
+                continue        # MPM do fim do mês: tenta os dias livres antes de forçar (passe 5)
             if res is None:
                 # Força entrada mesmo sem capacidade
                 dur_min = int(round(tk['dur_h'] * 60))
@@ -2487,6 +2497,30 @@ def schedule_team(equipe, tarefas_all):
             else:
                 tk['dur_h'] = tk['dur_h'] - used_h
                 break
+
+    # 5) MPM do fim do mês que não coube em dia nenhum: entra forçada ([EXCEDE HH]) num dia da própria usina, o que
+    # termina mais cedo, para o estouro se dividir entre os dias dela em vez de empilhar no primeiro. Usina sem dia
+    # na semana segue para pendência, como antes.
+    if ULTIMA_SEMANA_MES:
+        for ativo, tarefas_restantes in by_usina.items():
+            dias_da_usina = [di for di in range(5)
+                             if not day_caps[di].is_holiday and day_caps[di].ativo == ativo]
+            if not dias_da_usina:
+                continue
+            for tk in [x for x in tarefas_restantes if _mpm_fim_do_mes(x)]:
+                dc = min((day_caps[di] for di in dias_da_usina), key=lambda d: d.cursor)
+                res = alloc_diurno(dc, tk['dur_h'], prefer_morning=False, termo=tk['termo'],
+                                   coord=tk['coord'], allow_partial=False, force=True)
+                if res is None:
+                    continue    # termografia fora da janela: nem forçando
+                start, end, desloc_h_val, used_h, _ = res
+                rows.append(_row(equipe, dc.day_idx, tk, start, end,
+                                 desloc_h_val if dc.coord != tk['coord'] else 0.0,
+                                 over_capacity=True))
+                commit_diurno(dc, start, end, int(round(used_h * 60)), tk['coord'], ativo)
+                tarefas_restantes.remove(tk)
+                print(f'[EXCEDE HH] OS {tk["os_id"]} | {tk["tarefa_txt"][:50]} '
+                      f'→ dia {dc.day_idx} (MPM do fim do mês, nenhum dia com folga)')
 
     # 4) Sobras: tentar reaproveitar capacidade em dias com sobra significativa
     # (se uma usina terminou rápido, podemos colocar tarefas de outra usina pendente
