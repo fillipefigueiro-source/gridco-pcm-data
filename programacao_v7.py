@@ -1953,6 +1953,19 @@ def distribute_days(usinas_carga, days_disp):
     return dist
 
 
+def _usina_pode_no_dia(u, di):
+    """A usina pode receber o dia `di` (0-4)? A regra "@usina X = dias" das observações (a 1ª que casa) e o feriado
+    municipal da cidade dela. Vale para a atribuição dos dias e para o passe de preenchimento (23/10/2026: o
+    preenchimento escolhia a usina só pela carga e punha a usina de dia fixo em qualquer dia livre; na W44, a Santa
+    Bárbara 1, fixada na quarta, ganhou 14 tarefas na sexta)."""
+    for regra, dias in USINA_DIAS.items():
+        if _usina_match(u, regra):
+            if di not in dias:
+                return False
+            break
+    return di not in _mun_dias_bloqueados(u)
+
+
 def assign_days_to_usinas(usinas_carga_h, day_caps, mpa_done_idx=None):
     """Atribui cada dia útil disponível a uma usina.
     Retorna lista de tamanho 5: day_assignments[i] = usina (ou None se feriado/dia indisponível).
@@ -1968,16 +1981,8 @@ def assign_days_to_usinas(usinas_carga_h, day_caps, mpa_done_idx=None):
 
     def _dias_permitidos(u):
         # Regra "@usina X = dias": só os dias permitidos (∩ disponíveis). Sem regra: todos.
-        base = None
-        for regra, dias in USINA_DIAS.items():
-            if _usina_match(u, regra):
-                base = [i for i in available_idx if i in dias]
-                break
-        if base is None:
-            base = list(available_idx)
         # v9 (0.5): feriado MUNICIPAL tira o dia da cidade daquela usina
-        bloq = _mun_dias_bloqueados(u)
-        return [i for i in base if i not in bloq] if bloq else base
+        return [i for i in available_idx if _usina_pode_no_dia(u, i)]
 
     days_per_usina = distribute_days(usinas_carga_h, days_disp)
     # Usina com regra não recebe mais dias do que os permitidos disponíveis
@@ -2463,10 +2468,10 @@ def schedule_team(equipe, tarefas_all):
         dc = day_caps[di]
         if dc.is_holiday: continue
         if dc.used > 0: continue  # dia já em uso de fato
-        # Escolher usina com mais carga pendente
+        # Escolher usina com mais carga pendente, entre as que podem receber este dia (dia fixo e feriado municipal)
         pendentes_carga = {u: sum(tk['dur_h'] for tk in tks)
-                            for u, tks in by_usina.items() if tks}
-        if not pendentes_carga: break
+                            for u, tks in by_usina.items() if tks and _usina_pode_no_dia(u, di)}
+        if not pendentes_carga: continue
         ativo = max(pendentes_carga, key=pendentes_carga.get)
         # Sobrescreve ativo do dia
         dc.ativo = ativo
