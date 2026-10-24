@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-24T16:56:09Z",
+  "geradoEm": "2026-10-24T17:44:33Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-19 .. 2026-10-25",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5589,
-        "emAberto": 29,
+        "total": 5590,
+        "emAberto": 30,
         "atrasadas": 25,
         "concluidas30d": 972,
         "concluidas7d": 224,
-        "naSemanaCorrente": 171
+        "naSemanaCorrente": 172
       },
       "mttr": {
         "horas": 16.68,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W43",
-          "criadas": 175,
+          "criadas": 176,
           "finalizadas": 176
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5589,
-            "emAberto": 29
+            "total": 5590,
+            "emAberto": 30
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 29,
+      "total": 30,
       "atrasadas": 25,
       "porStatus": {
-        "naoIniciada": 24,
-        "emProgresso": 1,
-        "pausada": 4,
+        "naoIniciada": 25,
+        "emProgresso": 0,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 29
+        "(sem equipe)": 30
       },
       "oss": [
         {
@@ -546,6 +546,24 @@
           "atrasada": true
         },
         {
+          "osId": "17425",
+          "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Eduardo Souza",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-MTO100] - Religamento do THPN-MTO100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-24",
+          "dataCriacao": "2026-10-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "17418",
           "ativo": "Inversor 3.1 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR3.1 }",
           "equipe": "",
@@ -588,7 +606,7 @@
           "responsavel": "Ricardo Silva ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Ricardo Silva ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[THPN-ORB100-CABN1] - Religamento do THPN-ORB100-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-10-24",
@@ -3624,9 +3642,9 @@
       "historicoTotal": 2308,
       "subClassificacao": {
         "remoto": 754,
-        "local": 4835,
+        "local": 4836,
         "remotoEmAberto": 0,
-        "localEmAberto": 29,
+        "localEmAberto": 30,
         "pctRemoto": 13,
         "alerta": true
       },
@@ -14662,6 +14680,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "17425",
+      "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
+      "equipe": "",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Eduardo Souza",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-MTO100] - Religamento do THPN-MTO100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-24",
+      "dataCriacao": "2026-10-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "17418",
       "ativo": "Inversor 3.1 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR3.1 }",
       "equipe": "",
@@ -14702,7 +14737,7 @@
       "responsavel": "Ricardo Silva ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Ricardo Silva ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[THPN-ORB100-CABN1] - Religamento do THPN-ORB100-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-10-24",
@@ -20265,7 +20300,7 @@
     }
   ],
   "historicoTotal": 3458,
-  "totalGeral": 7759,
+  "totalGeral": 7760,
   "verificacao": {
     "total": 1,
     "atrasadas": 1,
