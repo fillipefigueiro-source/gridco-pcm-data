@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-24T08:36:25Z",
+  "geradoEm": "2026-10-24T09:50:06Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-19 .. 2026-10-25",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5582,
-        "emAberto": 29,
+        "total": 5585,
+        "emAberto": 31,
         "atrasadas": 27,
-        "concluidas30d": 965,
-        "concluidas7d": 217,
-        "naSemanaCorrente": 164
+        "concluidas30d": 966,
+        "concluidas7d": 218,
+        "naSemanaCorrente": 167
       },
       "mttr": {
-        "horas": 16.73,
-        "label": "16h 44min",
-        "amostra": 965
+        "horas": 16.71,
+        "label": "16h 43min",
+        "amostra": 966
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W43",
-          "criadas": 168,
-          "finalizadas": 169
+          "criadas": 171,
+          "finalizadas": 170
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5582,
-            "emAberto": 29
+            "total": 5585,
+            "emAberto": 31
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 29,
+      "total": 31,
       "atrasadas": 27,
       "porStatus": {
-        "naoIniciada": 24,
+        "naoIniciada": 26,
         "emProgresso": 0,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 29
+        "(sem equipe)": 31
       },
       "oss": [
         {
@@ -581,6 +581,42 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "17414",
+          "ativo": "Cabine 1 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Ricardo Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-ORB100-CABN1] - Religamento do THPN-ORB100-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-10-24",
+          "dataCriacao": "2026-10-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "17413",
+          "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H3    { MCB100-INVR2.4 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "LucasNascimento",
+          "supervisor": "Valdério Paz ",
+          "status": "Não Iniciada",
+          "tarefa": "[MCB100-INVR2.4] - Religamento do MCB100-INVR2.4",
+          "criticidade": "",
+          "dataProgramada": "2026-10-24",
+          "dataCriacao": "2026-10-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "17411",
@@ -3621,12 +3657,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2301,
+      "historicoTotal": 2302,
       "subClassificacao": {
         "remoto": 754,
-        "local": 4828,
+        "local": 4831,
         "remotoEmAberto": 0,
-        "localEmAberto": 29,
+        "localEmAberto": 31,
         "pctRemoto": 14,
         "alerta": true
       },
@@ -14643,6 +14679,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "17414",
+      "ativo": "Cabine 1 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Ricardo Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-ORB100-CABN1] - Religamento do THPN-ORB100-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-10-24",
+      "dataCriacao": "2026-10-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "17413",
+      "ativo": "Inversor 2.4 Huawei SUN2000-215KTL-H3    { MCB100-INVR2.4 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "LucasNascimento",
+      "supervisor": "Valdério Paz ",
+      "status": "Não Iniciada",
+      "tarefa": "[MCB100-INVR2.4] - Religamento do MCB100-INVR2.4",
+      "criticidade": "",
+      "dataProgramada": "2026-10-24",
+      "dataCriacao": "2026-10-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "17411",
       "ativo": "Thopen - Araçoiaba da Serra 2 - SP  Araçoiaba  São Paulo Brasil { THPN-ADS200 }",
       "equipe": "",
@@ -20227,8 +20297,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3451,
-  "totalGeral": 7752,
+  "historicoTotal": 3452,
+  "totalGeral": 7755,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
