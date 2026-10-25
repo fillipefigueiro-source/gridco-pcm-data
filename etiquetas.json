@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-25T19:57:48Z",
+  "geradoEm": "2026-10-25T20:56:18Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-19 .. 2026-10-25",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5632,
-        "emAberto": 36,
+        "total": 5635,
+        "emAberto": 37,
         "atrasadas": 27,
-        "concluidas30d": 983,
-        "concluidas7d": 238,
-        "naSemanaCorrente": 214
+        "concluidas30d": 985,
+        "concluidas7d": 240,
+        "naSemanaCorrente": 217
       },
       "mttr": {
-        "horas": 16.57,
-        "label": "16h 34min",
-        "amostra": 983
+        "horas": 16.54,
+        "label": "16h 32min",
+        "amostra": 985
       },
       "tendencia4Semanas": [
         {
@@ -38,22 +38,22 @@
         },
         {
           "semana": "W43",
-          "criadas": 218,
-          "finalizadas": 212
+          "criadas": 221,
+          "finalizadas": 214
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5632,
-            "emAberto": 36
+            "total": 5635,
+            "emAberto": 37
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 719,
+            "total": 720,
             "emAberto": 1
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 36,
+      "total": 37,
       "atrasadas": 27,
       "porStatus": {
         "naoIniciada": 30,
-        "emProgresso": 2,
+        "emProgresso": 3,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 36
+        "(sem equipe)": 37
       },
       "oss": [
         {
@@ -583,20 +583,39 @@
           "atrasada": true
         },
         {
-          "osId": "17478",
-          "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
+          "osId": "17483",
+          "ativo": "Thopen - Fernandópolis 1 - SP Rodovia João Carlos Stuqui S/N Fernandópolis  São Paulo Brasil { THPN-FRN100 }",
           "equipe": "",
-          "responsavel": "Janderson Miranda ",
+          "responsavel": "Paulo  Ribeiro",
           "criadoPor": "Maria Emanuella de Souza Mota ",
-          "supervisor": "Janderson Miranda ",
+          "supervisor": "Paulo  Ribeiro",
           "status": "Não Iniciada",
-          "tarefa": "[THPN-SDN100] - Religamento do THPN-SDN100",
+          "tarefa": "[THPN-FRN100] - Religamento do THPN-FRN100",
           "criticidade": "",
           "dataProgramada": "2026-10-25",
           "dataCriacao": "2026-10-25",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "17478",
+          "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Janderson Miranda ",
+          "status": "Em progresso",
+          "tarefa": "[THPN-SDN100] - Religamento do THPN-SDN100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-25",
+          "dataCriacao": "2026-10-25",
+          "dataInicial": "2026-10-25",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3748,12 +3767,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2334,
+      "historicoTotal": 2336,
       "subClassificacao": {
         "remoto": 754,
-        "local": 4878,
+        "local": 4881,
         "remotoEmAberto": 0,
-        "localEmAberto": 36,
+        "localEmAberto": 37,
         "pctRemoto": 13,
         "alerta": true
       },
@@ -14738,20 +14757,38 @@
   },
   "ossPublicas": [
     {
-      "osId": "17478",
-      "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
+      "osId": "17483",
+      "ativo": "Thopen - Fernandópolis 1 - SP Rodovia João Carlos Stuqui S/N Fernandópolis  São Paulo Brasil { THPN-FRN100 }",
       "equipe": "",
-      "responsavel": "Janderson Miranda ",
+      "responsavel": "Paulo  Ribeiro",
       "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Janderson Miranda ",
+      "supervisor": "Paulo  Ribeiro",
       "status": "Não Iniciada",
-      "tarefa": "[THPN-SDN100] - Religamento do THPN-SDN100",
+      "tarefa": "[THPN-FRN100] - Religamento do THPN-FRN100",
       "criticidade": "",
       "dataProgramada": "2026-10-25",
       "dataCriacao": "2026-10-25",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "17478",
+      "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Janderson Miranda ",
+      "status": "Em progresso",
+      "tarefa": "[THPN-SDN100] - Religamento do THPN-SDN100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-25",
+      "dataCriacao": "2026-10-25",
+      "dataInicial": "2026-10-25",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -20412,8 +20449,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3487,
-  "totalGeral": 7802,
+  "historicoTotal": 3489,
+  "totalGeral": 7805,
   "verificacao": {
     "total": 1,
     "atrasadas": 1,
