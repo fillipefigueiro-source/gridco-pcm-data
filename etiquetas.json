@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-26T11:45:57Z",
+  "geradoEm": "2026-10-26T12:38:24Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-26 .. 2026-11-01",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5639,
-        "emAberto": 34,
-        "atrasadas": 34,
-        "concluidas30d": 974,
-        "concluidas7d": 221,
-        "naSemanaCorrente": 2
+        "total": 5642,
+        "emAberto": 32,
+        "atrasadas": 32,
+        "concluidas30d": 979,
+        "concluidas7d": 226,
+        "naSemanaCorrente": 4
       },
       "mttr": {
-        "horas": 15.04,
-        "label": "15h 2min",
-        "amostra": 974
+        "horas": 15.06,
+        "label": "15h 4min",
+        "amostra": 979
       },
       "tendencia4Semanas": [
         {
@@ -38,22 +38,22 @@
         },
         {
           "semana": "W44",
-          "criadas": 2,
-          "finalizadas": 6
+          "criadas": 5,
+          "finalizadas": 11
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5639,
-            "emAberto": 34
+            "total": 5642,
+            "emAberto": 32
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 721,
+            "total": 723,
             "emAberto": 1
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 34,
-      "atrasadas": 34,
+      "total": 32,
+      "atrasadas": 32,
       "porStatus": {
-        "naoIniciada": 28,
+        "naoIniciada": 25,
         "emProgresso": 2,
-        "pausada": 4,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 34
+        "(sem equipe)": 32
       },
       "oss": [
         {
@@ -511,24 +511,6 @@
           "atrasada": true
         },
         {
-          "osId": "17425",
-          "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
-          "equipe": "",
-          "responsavel": "Eduardo Souza",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Eduardo Souza",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-MTO100] - Religamento do THPN-MTO100",
-          "criticidade": "",
-          "dataProgramada": "2026-10-24",
-          "dataCriacao": "2026-10-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "17418",
           "ativo": "Inversor 3.1 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR3.1 }",
           "equipe": "",
@@ -547,20 +529,21 @@
           "atrasada": true
         },
         {
-          "osId": "17486",
-          "ativo": "Thopen - Cipó Guaçu - SP Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { THOPEN-CGU100 }",
+          "osId": "17500",
+          "ativo": "Inversor 1.5 Sungrow 250HX-20    { THPN-TPZ100-INVR1.5 }",
           "equipe": "",
-          "responsavel": "Lucas Alberto Freitas de Faria ",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Não Iniciada",
-          "tarefa": "[Thopen - Cipó Guaçu - SP] - Religamento do Thopen - Cipó Guaçu - SP",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Eduardo Souza",
+          "status": "pausado",
+          "tarefa": "[THPN-TPZ100-INVR1.5] - Religamento do THPN-TPZ100-INVR1.5",
           "criticidade": "",
           "dataProgramada": "2026-10-25",
-          "dataCriacao": "2026-10-25",
-          "dataInicial": "",
+          "dataCriacao": "2026-10-26",
+          "dataInicial": "2026-10-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -690,27 +673,29 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
-        },
-        {
-          "osId": "17439",
-          "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
-          "equipe": "",
-          "responsavel": "Eduardo Souza",
-          "criadoPor": "DavidNascimento",
-          "supervisor": "Eduardo Souza",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-TPZ100] - Religamento do THPN-TPZ100",
-          "criticidade": "",
-          "dataProgramada": "2026-10-25",
-          "dataCriacao": "2026-10-25",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "17503",
+          "ativo": "Cabine 7  Santa Maria do Pará  Pará Brasil { SMP100-CABN7 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Finalizados",
+          "tarefa": "[Cabine 7] - Religamento da Cabine 7",
+          "criticidade": "",
+          "dataProgramada": "2026-10-26",
+          "dataCriacao": "2026-10-26",
+          "dataInicial": "2026-10-26",
+          "dataFinal": "2026-10-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "17487",
           "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
@@ -720,6 +705,26 @@
           "supervisor": "Thiago Morais ",
           "status": "Finalizados",
           "tarefa": "[Utragaz - Ibirapuã 1 - BA] - Religamento do Utragaz - Ibirapuã 1 - BA",
+          "criticidade": "",
+          "dataProgramada": "2026-10-25",
+          "dataCriacao": "2026-10-25",
+          "dataInicial": "2026-10-26",
+          "dataFinal": "2026-10-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "17486",
+          "ativo": "Thopen - Cipó Guaçu - SP Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { THOPEN-CGU100 }",
+          "equipe": "",
+          "responsavel": "Lucas Alberto Freitas de Faria ",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Lucas Alberto Freitas de Faria ",
+          "status": "Finalizados",
+          "tarefa": "[Thopen - Cipó Guaçu - SP] - Religamento do Thopen - Cipó Guaçu - SP",
           "criticidade": "",
           "dataProgramada": "2026-10-25",
           "dataCriacao": "2026-10-25",
@@ -747,6 +752,46 @@
           "dataFinal": "2026-10-26",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "17439",
+          "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Eduardo Souza",
+          "status": "Finalizados",
+          "tarefa": "[THPN-TPZ100] - Religamento do THPN-TPZ100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-25",
+          "dataCriacao": "2026-10-25",
+          "dataInicial": "2026-10-26",
+          "dataFinal": "2026-10-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "17425",
+          "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
+          "equipe": "",
+          "responsavel": "Eduardo Souza",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Eduardo Souza",
+          "status": "Finalizados",
+          "tarefa": "[THPN-MTO100] - Religamento do THPN-MTO100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-24",
+          "dataCriacao": "2026-10-24",
+          "dataInicial": "2026-10-26",
+          "dataFinal": "2026-10-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -2612,26 +2657,6 @@
           "atrasada": false
         },
         {
-          "osId": "16568",
-          "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
-          "equipe": "",
-          "responsavel": "Matheus Leite ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Matheus Leite ",
-          "status": "Finalizados",
-          "tarefa": "[Thopen - Belo Jardim  1 - PE] - Religamento do Thopen - Belo Jardim  1 - PE",
-          "criticidade": "",
-          "dataProgramada": "2026-10-16",
-          "dataCriacao": "2026-10-16",
-          "dataInicial": "2026-10-20",
-          "dataFinal": "2026-10-20",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "16797",
           "ativo": "Greenyellow - Irecê 1 - BA  Irecê  Bahia Brasil { GY-IRC100 }",
           "equipe": "",
@@ -3572,66 +3597,6 @@
           "atrasada": false
         },
         {
-          "osId": "16581",
-          "ativo": "Cabine 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Ricardo Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Cabine 2] - Religamento da Cabine 2",
-          "criticidade": "",
-          "dataProgramada": "2026-10-16",
-          "dataCriacao": "2026-10-16",
-          "dataInicial": "2026-10-16",
-          "dataFinal": "2026-10-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "16580",
-          "ativo": "Disjuntor do Inversor 1.1      { 2C-UNI100-DINV1.1 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Ailton Leal ",
-          "status": "Finalizados",
-          "tarefa": "[Disjuntor do Inversor 1.1] - Religamento do Disjuntor do Inversor 1.1",
-          "criticidade": "",
-          "dataProgramada": "2026-10-16",
-          "dataCriacao": "2026-10-16",
-          "dataInicial": "2026-10-16",
-          "dataFinal": "2026-10-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "16564",
-          "ativo": "SKID 2 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID2 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Finalizados",
-          "tarefa": "[SKID 2] - Religamento do SKID 2",
-          "criticidade": "",
-          "dataProgramada": "2026-10-16",
-          "dataCriacao": "2026-10-16",
-          "dataInicial": "2026-10-16",
-          "dataFinal": "2026-10-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "16107",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
           "equipe": "",
@@ -3712,12 +3677,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2324,
+      "historicoTotal": 2329,
       "subClassificacao": {
         "remoto": 754,
-        "local": 4885,
+        "local": 4888,
         "remotoEmAberto": 0,
-        "localEmAberto": 34,
+        "localEmAberto": 32,
         "pctRemoto": 13,
         "alerta": true
       },
@@ -4013,8 +3978,8 @@
       "atrasadas": 51,
       "porStatus": {
         "naoIniciada": 49,
-        "emProgresso": 0,
-        "pausada": 6,
+        "emProgresso": 1,
+        "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
@@ -4406,7 +4371,7 @@
           "responsavel": "Valmir  Júnior",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Valmir  Júnior",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-10-07",
@@ -8844,16 +8809,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 910,
-        "emAberto": 37,
-        "atrasadas": 29,
-        "concluidas30d": 152,
-        "concluidas7d": 45,
+        "emAberto": 36,
+        "atrasadas": 28,
+        "concluidas30d": 153,
+        "concluidas7d": 46,
         "naSemanaCorrente": 12
       },
       "mttr": {
-        "horas": 252.0,
-        "label": "10d 12h",
-        "amostra": 152
+        "horas": 251.92,
+        "label": "10d 11h",
+        "amostra": 153
       },
       "tendencia4Semanas": [
         {
@@ -8874,7 +8839,7 @@
         {
           "semana": "W44",
           "criadas": 0,
-          "finalizadas": 0
+          "finalizadas": 1
         }
       ],
       "topOfensores": {
@@ -8882,7 +8847,7 @@
           {
             "nome": "(sem equipe)",
             "total": 910,
-            "emAberto": 37
+            "emAberto": 36
           }
         ],
         "responsaveis": [
@@ -8913,16 +8878,16 @@
           }
         ]
       },
-      "total": 37,
-      "atrasadas": 29,
+      "total": 36,
+      "atrasadas": 28,
       "porStatus": {
-        "naoIniciada": 32,
+        "naoIniciada": 31,
         "emProgresso": 1,
         "pausada": 3,
         "verificacao": 1
       },
       "porEquipe": {
-        "(sem equipe)": 37
+        "(sem equipe)": 36
       },
       "oss": [
         {
@@ -9211,23 +9176,6 @@
           "tarefa": "Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-10-16",
-          "dataCriacao": "2026-10-16",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "16596",
-          "ativo": "Tracker 69.101 STI Norland dual row    { ALT100-ETKR69.101 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Anderson  Parente",
-          "status": "Não Iniciada",
-          "tarefa": "Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-10-19",
           "dataCriacao": "2026-10-16",
           "dataInicial": "",
           "dataFinal": "",
@@ -9562,6 +9510,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "16596",
+          "ativo": "Tracker 69.101 STI Norland dual row    { ALT100-ETKR69.101 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-10-19",
+          "dataCriacao": "2026-10-16",
+          "dataInicial": "2026-10-26",
+          "dataFinal": "2026-10-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 240.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "17122",
           "ativo": "Inversor 5.4 Huawei     { TIM200-INVR5.4 }",
@@ -12375,25 +12342,6 @@
           "atrasada": false
         },
         {
-          "osId": "13234",
-          "ativo": "Tracker 10.101 STI Norland     { JCD100-ETKR10.101 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "James Chaves ",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 10.101] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-09-09",
-          "dataCriacao": "2026-09-08",
-          "dataInicial": "2026-09-10",
-          "dataFinal": "2026-09-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13269",
           "ativo": "Inversor 2.9 Sungrow SG60KTL    { ADT100-INVR2.9 }",
           "equipe": "",
@@ -12413,7 +12361,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 632
+      "historicoTotal": 633
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14682,20 +14630,21 @@
   },
   "ossPublicas": [
     {
-      "osId": "17486",
-      "ativo": "Thopen - Cipó Guaçu - SP Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { THOPEN-CGU100 }",
+      "osId": "17500",
+      "ativo": "Inversor 1.5 Sungrow 250HX-20    { THPN-TPZ100-INVR1.5 }",
       "equipe": "",
-      "responsavel": "Lucas Alberto Freitas de Faria ",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Não Iniciada",
-      "tarefa": "[Thopen - Cipó Guaçu - SP] - Religamento do Thopen - Cipó Guaçu - SP",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Eduardo Souza",
+      "status": "pausado",
+      "tarefa": "[THPN-TPZ100-INVR1.5] - Religamento do THPN-TPZ100-INVR1.5",
       "criticidade": "",
       "dataProgramada": "2026-10-25",
-      "dataCriacao": "2026-10-25",
-      "dataInicial": "",
+      "dataCriacao": "2026-10-26",
+      "dataInicial": "2026-10-26",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -14836,23 +14785,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "17439",
-      "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
-      "equipe": "",
-      "responsavel": "Eduardo Souza",
-      "criadoPor": "DavidNascimento",
-      "supervisor": "Eduardo Souza",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-TPZ100] - Religamento do THPN-TPZ100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-25",
-      "dataCriacao": "2026-10-25",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "17426",
       "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
       "equipe": "",
@@ -14868,23 +14800,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 24.0,
-      "modalidade": "local"
-    },
-    {
-      "osId": "17425",
-      "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
-      "equipe": "",
-      "responsavel": "Eduardo Souza",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Eduardo Souza",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-MTO100] - Religamento do THPN-MTO100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-24",
-      "dataCriacao": "2026-10-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
       "modalidade": "local"
     },
     {
@@ -15553,22 +15468,6 @@
       "tarefa": "Constantes perdas de irradiação (verificar sensor e ETM)",
       "criticidade": "",
       "dataProgramada": "2026-10-26",
-      "dataCriacao": "2026-10-16",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "16596",
-      "ativo": "Tracker 69.101 STI Norland dual row    { ALT100-ETKR69.101 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Anderson  Parente",
-      "status": "Não Iniciada",
-      "tarefa": "Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-10-19",
       "dataCriacao": "2026-10-16",
       "dataInicial": "",
       "dataFinal": "",
@@ -16505,7 +16404,7 @@
       "responsavel": "Valmir  Júnior",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Valmir  Júnior",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-10-07",
@@ -18166,6 +18065,26 @@
       "atrasada": false
     },
     {
+      "osId": "17503",
+      "ativo": "Cabine 7  Santa Maria do Pará  Pará Brasil { SMP100-CABN7 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Finalizados",
+      "tarefa": "[Cabine 7] - Religamento da Cabine 7",
+      "criticidade": "",
+      "dataProgramada": "2026-10-26",
+      "dataCriacao": "2026-10-26",
+      "dataInicial": "2026-10-26",
+      "dataFinal": "2026-10-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "17487",
       "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
       "equipe": "",
@@ -18174,6 +18093,26 @@
       "supervisor": "Thiago Morais ",
       "status": "Finalizados",
       "tarefa": "[Utragaz - Ibirapuã 1 - BA] - Religamento do Utragaz - Ibirapuã 1 - BA",
+      "criticidade": "",
+      "dataProgramada": "2026-10-25",
+      "dataCriacao": "2026-10-25",
+      "dataInicial": "2026-10-26",
+      "dataFinal": "2026-10-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "17486",
+      "ativo": "Thopen - Cipó Guaçu - SP Estr. do Gramado, km 423 Jardim dos Eucaliptos  São Paulo Brasil { THOPEN-CGU100 }",
+      "equipe": "",
+      "responsavel": "Lucas Alberto Freitas de Faria ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Lucas Alberto Freitas de Faria ",
+      "status": "Finalizados",
+      "tarefa": "[Thopen - Cipó Guaçu - SP] - Religamento do Thopen - Cipó Guaçu - SP",
       "criticidade": "",
       "dataProgramada": "2026-10-25",
       "dataCriacao": "2026-10-25",
@@ -18386,6 +18325,26 @@
       "atrasada": false
     },
     {
+      "osId": "17439",
+      "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
+      "equipe": "",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Eduardo Souza",
+      "status": "Finalizados",
+      "tarefa": "[THPN-TPZ100] - Religamento do THPN-TPZ100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-25",
+      "dataCriacao": "2026-10-25",
+      "dataInicial": "2026-10-26",
+      "dataFinal": "2026-10-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "17437",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -18501,6 +18460,26 @@
       "dataFinal": "2026-10-24",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "17425",
+      "ativo": "Thopen - Matão 1 - SP Estrada Pedreira, S/N Matão  São Paulo Brasil { THPN-MTO100 }",
+      "equipe": "",
+      "responsavel": "Eduardo Souza",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Eduardo Souza",
+      "status": "Finalizados",
+      "tarefa": "[THPN-MTO100] - Religamento do THPN-MTO100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-24",
+      "dataCriacao": "2026-10-24",
+      "dataInicial": "2026-10-26",
+      "dataFinal": "2026-10-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -20242,89 +20221,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "16797",
-      "ativo": "Greenyellow - Irecê 1 - BA  Irecê  Bahia Brasil { GY-IRC100 }",
-      "equipe": "",
-      "responsavel": "Olimpio Lima ",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Olimpio Lima ",
-      "status": "Finalizados",
-      "tarefa": "[Greenyellow - Irecê 1 - BA] - Religamento do Greenyellow - Irecê 1 - BA",
-      "criticidade": "",
-      "dataProgramada": "2026-10-19",
-      "dataCriacao": "2026-10-19",
-      "dataInicial": "2026-10-19",
-      "dataFinal": "2026-10-19",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "16793",
-      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizados",
-      "tarefa": "Abertura de chamado de garantia",
-      "criticidade": "",
-      "dataProgramada": "2026-10-21",
-      "dataCriacao": "2026-10-19",
-      "dataInicial": "2026-10-22",
-      "dataFinal": "2026-10-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "16789",
-      "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
-      "equipe": "",
-      "responsavel": "Wesllen  Castro",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Wesllen  Castro",
-      "status": "Finalizados",
-      "tarefa": "[THPN-IPX100] - Religamento do THPN-IPX100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-19",
-      "dataCriacao": "2026-10-19",
-      "dataInicial": "2026-10-19",
-      "dataFinal": "2026-10-21",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 48.0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "16787",
-      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Gilson Souza ",
-      "status": "Finalizados",
-      "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
-      "criticidade": "",
-      "dataProgramada": "2026-10-19",
-      "dataCriacao": "2026-10-19",
-      "dataInicial": "2026-10-19",
-      "dataFinal": "2026-10-19",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3454,
-  "totalGeral": 7809,
+  "historicoTotal": 3460,
+  "totalGeral": 7812,
   "verificacao": {
     "total": 1,
     "atrasadas": 1,
