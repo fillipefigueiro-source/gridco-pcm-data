@@ -580,6 +580,20 @@ endpoint de conexões vai concluir, erradamente, que os segredos estão mascarad
 **Regra que fica:** antes de listar ETL — ou qualquer objeto de integração — assumir que
 pode vir credencial junto. Não colar a saída em canal persistente sem olhar.
 
+### O Fracttal devolve 0 registros e o robô publica assim mesmo (26/10/2026)
+
+Na rodada das 03:36Z de 26/10, a varredura das tarefas (`tasks/wo`, a varredura completa porque a coleta particionada
+não fechou) bateu no limite de 200/min da EMPRESA várias vezes e terminou com **"0 registros no BD"**, sem erro. O
+`atualizacao_semanal.py` seguiu (o `bd_acessivel` só olha se veio `None`), o `gerar_pcm_json.py` leu o mesmo cache vazio
+e o `banco_dados.json` saiu com as 4 semanas sem `status`, `dataProgramada`, `dataFinal`, `resp_os` e as linhas fora do
+plano. Efeito: o App mostrou todas as tarefas como "Não Iniciada", o ranking de pontos zerou, e a programação do Nexus
+trocou as 4 semanas pela versão degradada (a carga das :40). A rodada seguinte, boa, consertou.
+
+**Regra que fica:** 0 registros do Fracttal é leitura que falhou, nunca "não há tarefa". O `carregar_bd_semanal` para a
+rodada com erro (`sys.exit(1)`), e o passo "Publicar" do `semanal.yml` não roda depois de um passo que falhou: o App e o
+Nexus seguem com o último arquivo bom. O Nexus tem a trava dele do lado de lá (não troca uma semana da programação por
+uma versão sem status). Ainda aberto: a varredura que engole o 429 e devolve vazio em vez de falhar.
+
 ## 6b. Latência: quanto demora uma mudança a aparecer no painel
 
 Medido em 22/08. O gargalo **não é processamento** — é fila.

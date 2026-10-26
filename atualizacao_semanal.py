@@ -474,6 +474,14 @@ def carregar_bd_semanal(week_start, week_end):
     df["OSs ID"] = df["OSs ID"].astype(int)
     df["Data Programada"] = pd.to_datetime(df["Data Programada"], errors="coerce")
     log(f"  → {len(df)} registros no BD")
+    if len(df) == 0:
+        # TRAVA (26/10/2026): o Fracttal tem ~25 mil tarefas; 0 é leitura que falhou calada (na rodada das 03:36Z de
+        # 26/10 a varredura bateu no limite de 200/min da empresa, terminou com 0 registros e o banco_dados.json saiu
+        # sem status, datas e responsável nas 4 semanas: o App mostrou tudo "Não Iniciada" e o ranking zerou). Para a
+        # rodada com erro: o passo "Publicar" do semanal.yml não roda depois de um passo que falhou, e o App e o Nexus
+        # seguem com o último arquivo bom.
+        log("! O Fracttal devolveu 0 registros: leitura incompleta. Nada será publicado nesta rodada.", "ERROR")
+        sys.exit(1)
     df_semana = df[(df["Data Programada"] >= pd.Timestamp(week_start)) &
                    (df["Data Programada"] < pd.Timestamp(week_end))].copy()
     log(f"  → {len(df_semana)} OS com Data Programada na semana ({week_start} a {week_end})")
