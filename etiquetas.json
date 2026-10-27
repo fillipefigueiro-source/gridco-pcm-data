@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-27T12:21:14Z",
+  "geradoEm": "2026-10-27T13:22:56Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-26 .. 2026-11-01",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 5691,
-        "emAberto": 32,
-        "atrasadas": 28,
-        "concluidas30d": 1007,
-        "concluidas7d": 246,
+        "emAberto": 30,
+        "atrasadas": 27,
+        "concluidas30d": 1009,
+        "concluidas7d": 248,
         "naSemanaCorrente": 53
       },
       "mttr": {
-        "horas": 15.63,
-        "label": "15h 38min",
-        "amostra": 1007
+        "horas": 15.51,
+        "label": "15h 30min",
+        "amostra": 1009
       },
       "tendencia4Semanas": [
         {
@@ -34,12 +34,12 @@
         {
           "semana": "W43",
           "criadas": 222,
-          "finalizadas": 215
+          "finalizadas": 216
         },
         {
           "semana": "W44",
           "criadas": 55,
-          "finalizadas": 59
+          "finalizadas": 60
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 5691,
-            "emAberto": 32
+            "emAberto": 30
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 32,
-      "atrasadas": 28,
+      "total": 30,
+      "atrasadas": 27,
       "porStatus": {
-        "naoIniciada": 22,
-        "emProgresso": 4,
-        "pausada": 6,
+        "naoIniciada": 21,
+        "emProgresso": 2,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 32
+        "(sem equipe)": 30
       },
       "oss": [
         {
@@ -513,25 +513,6 @@
           "atrasada": true
         },
         {
-          "osId": "17580",
-          "ativo": "SKID 2  Barretos  São Paulo Brasil { BRS100-SKID2 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Anderson  Parente",
-          "status": "Em progresso",
-          "tarefa": "[BRS100-SKID2] - Religamento do BRS100-SKID2",
-          "criticidade": "",
-          "dataProgramada": "2026-10-26",
-          "dataCriacao": "2026-10-26",
-          "dataInicial": "2026-10-27",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "17569",
           "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
           "equipe": "",
@@ -605,24 +586,6 @@
           "atrasada": true
         },
         {
-          "osId": "17621",
-          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Rúben Nunes da Silva ",
-          "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
-          "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
-          "criticidade": "",
-          "dataProgramada": "2026-10-27",
-          "dataCriacao": "2026-10-27",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "17618",
           "ativo": "Inversor 3.3 SOLAREDGE     { ELF100-INVR3.3 }",
           "equipe": "",
@@ -647,7 +610,7 @@
           "responsavel": "Henri Almeida ",
           "criadoPor": "Maria Luiza Oliveira",
           "supervisor": "Henri Almeida ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Guaratinguetá V] - Verificação de problema de religamento sem acionamento na usina",
           "criticidade": "",
           "dataProgramada": "2026-10-27",
@@ -679,6 +642,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "17621",
+          "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Rúben Nunes da Silva ",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-27",
+          "dataCriacao": "2026-10-27",
+          "dataInicial": "2026-10-27",
+          "dataFinal": "2026-10-27",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "17605",
           "ativo": "Thopen - Guaratingueta 5 - SP  Guaratinguetá  São Paulo Brasil { THPN-GTA500 }",
@@ -735,6 +718,26 @@
           "dataFinal": "2026-10-27",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "17580",
+          "ativo": "SKID 2  Barretos  São Paulo Brasil { BRS100-SKID2 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "[BRS100-SKID2] - Religamento do BRS100-SKID2",
+          "criticidade": "",
+          "dataProgramada": "2026-10-26",
+          "dataCriacao": "2026-10-26",
+          "dataInicial": "2026-10-27",
+          "dataFinal": "2026-10-27",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -1235,26 +1238,6 @@
           "dataFinal": "2026-10-26",
           "linkFracttal": "",
           "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "16813",
-          "ativo": "Thopen - Colorado 1 - PR Zona Rural S/N Colorado  Paraná Brasil { THPN-CLR100 }",
-          "equipe": "",
-          "responsavel": "Matheus Gois ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Matheus Gois ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-CLR100] - Religamento do THPN-CLR100",
-          "criticidade": "",
-          "dataProgramada": "2026-10-20",
-          "dataCriacao": "2026-10-20",
-          "dataInicial": "2026-10-26",
-          "dataFinal": "2026-10-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -2560,6 +2543,26 @@
           "atrasada": false
         },
         {
+          "osId": "16813",
+          "ativo": "Thopen - Colorado 1 - PR Zona Rural S/N Colorado  Paraná Brasil { THPN-CLR100 }",
+          "equipe": "",
+          "responsavel": "Matheus Gois ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Matheus Gois ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-CLR100] - Religamento do THPN-CLR100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-20",
+          "dataCriacao": "2026-10-20",
+          "dataInicial": "2026-10-20",
+          "dataFinal": "2026-10-21",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 24.0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "16789",
           "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
           "equipe": "",
@@ -3560,46 +3563,6 @@
           "atrasada": false
         },
         {
-          "osId": "16657",
-          "ativo": "Utragaz - Ibirapuã 1 - BA  Ibirapuã  Bahia Brasil { ULTG-IBI100 }",
-          "equipe": "",
-          "responsavel": "Thiago Morais ",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Thiago Morais ",
-          "status": "Finalizados",
-          "tarefa": "[Utragaz - Ibirapuã 1 - BA] - Religamento do Utragaz - Ibirapuã 1 - BA",
-          "criticidade": "",
-          "dataProgramada": "2026-10-17",
-          "dataCriacao": "2026-10-17",
-          "dataInicial": "2026-10-18",
-          "dataFinal": "2026-10-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "16656",
-          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[2C - Ipixuna do Pará 1 - PA] - Religamento do 2C - Ipixuna do Pará 1 - PA",
-          "criticidade": "",
-          "dataProgramada": "2026-10-17",
-          "dataCriacao": "2026-10-17",
-          "dataInicial": "2026-10-18",
-          "dataFinal": "2026-10-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "16107",
           "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
           "equipe": "",
@@ -3680,12 +3643,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2352,
+      "historicoTotal": 2354,
       "subClassificacao": {
         "remoto": 754,
         "local": 4937,
         "remotoEmAberto": 0,
-        "localEmAberto": 32,
+        "localEmAberto": 30,
         "pctRemoto": 13,
         "alerta": true
       },
@@ -3907,17 +3870,17 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 901,
-        "emAberto": 48,
-        "atrasadas": 46,
-        "concluidas30d": 120,
-        "concluidas7d": 26,
-        "naSemanaCorrente": 3
+        "total": 903,
+        "emAberto": 49,
+        "atrasadas": 45,
+        "concluidas30d": 121,
+        "concluidas7d": 27,
+        "naSemanaCorrente": 5
       },
       "mttr": {
-        "horas": 398.4,
-        "label": "16d 14h",
-        "amostra": 120
+        "horas": 399.07,
+        "label": "16d 15h",
+        "amostra": 121
       },
       "tendencia4Semanas": [
         {
@@ -3937,16 +3900,16 @@
         },
         {
           "semana": "W44",
-          "criadas": 0,
-          "finalizadas": 7
+          "criadas": 2,
+          "finalizadas": 8
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 901,
-            "emAberto": 48
+            "total": 903,
+            "emAberto": 49
           }
         ],
         "responsaveis": [
@@ -3958,7 +3921,7 @@
           {
             "nome": "Felipe  Lima",
             "total": 35,
-            "emAberto": 7
+            "emAberto": 6
           },
           {
             "nome": "James Chaves",
@@ -3977,16 +3940,16 @@
           }
         ]
       },
-      "total": 48,
-      "atrasadas": 46,
+      "total": 49,
+      "atrasadas": 45,
       "porStatus": {
-        "naoIniciada": 41,
+        "naoIniciada": 42,
         "emProgresso": 2,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 48
+        "(sem equipe)": 49
       },
       "oss": [
         {
@@ -4561,14 +4524,15 @@
           "responsavel": "Ygo Leite ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Ygo Leite ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Sistema de Segurança",
           "criticidade": "",
           "dataProgramada": "2026-10-14",
           "dataCriacao": "2026-10-02",
-          "dataInicial": "",
+          "dataInicial": "2026-10-27",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 600.0,
           "atrasada": true
         },
         {
@@ -4655,24 +4619,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "15765",
-          "ativo": "Cabine 1  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Felipe  Lima",
-          "status": "Em progresso",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-10-20",
-          "dataCriacao": "2026-10-07",
-          "dataInicial": "2026-10-27",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 480.0,
           "atrasada": true
         },
         {
@@ -4778,6 +4724,40 @@
           "atrasada": true
         },
         {
+          "osId": "17642",
+          "ativo": "Preventiva Grupo de Inversores      { RNGD-NVX200-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Lara Fortes ",
+          "criadoPor": "SingridVieira",
+          "supervisor": "Lara Fortes ",
+          "status": "Não Iniciada",
+          "tarefa": "[Preventiva Grupo de Inversores RNGD-NVX200-PGINVR1 · Análise da UFV] - Acompanhamento de chamado Renogrid",
+          "criticidade": "",
+          "dataProgramada": "2026-10-27",
+          "dataCriacao": "2026-10-27",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "17640",
+          "ativo": "Preventiva Grupo de Inversores      { RNGD-ELF100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Lara Fortes ",
+          "criadoPor": "SingridVieira",
+          "supervisor": "Lara Fortes ",
+          "status": "Não Iniciada",
+          "tarefa": "[Preventiva Grupo de Inversores RNGD-ELF100-PGINVR1 · INV10 · S/N SJ4922-07E057C57-56] - Acompanhamento de chamado SolarEdge",
+          "criticidade": "",
+          "dataProgramada": "2026-10-27",
+          "dataCriacao": "2026-10-27",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "17056",
           "ativo": "Transformador 5 COMTRAFO     { TIM100-TRFR5 }",
           "equipe": "",
@@ -4814,6 +4794,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "15765",
+          "ativo": "Cabine 1  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-10-20",
+          "dataCriacao": "2026-10-07",
+          "dataInicial": "2026-10-27",
+          "dataFinal": "2026-10-27",
+          "linkFracttal": "",
+          "horasAteAbrir": 480.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "15248",
           "ativo": "Transformador 1      { SALE-SVL100-TRFR1 }",
@@ -5537,25 +5536,6 @@
           "atrasada": false
         },
         {
-          "osId": "15083",
-          "ativo": "Cabine 1 Fazenda Cresciuma S/N Altair  São Paulo Brasil { ALT100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Anderson  Parente",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-          "criticidade": "",
-          "dataProgramada": "2026-10-09",
-          "dataCriacao": "2026-10-01",
-          "dataInicial": "2026-10-15",
-          "dataFinal": "2026-10-15",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "15757",
           "ativo": "Preventiva Grupo de Inversores      { THPN-BLN100-PGINVR1 }",
           "equipe": "",
@@ -5604,6 +5584,25 @@
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-10-06",
+          "dataCriacao": "2026-10-01",
+          "dataInicial": "2026-10-15",
+          "dataFinal": "2026-10-15",
+          "linkFracttal": "",
+          "horasAteAbrir": 336.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "15083",
+          "ativo": "Cabine 1 Fazenda Cresciuma S/N Altair  São Paulo Brasil { ALT100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Fabricio Barreto",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-10-09",
           "dataCriacao": "2026-10-01",
           "dataInicial": "2026-10-15",
           "dataFinal": "2026-10-15",
@@ -7247,25 +7246,6 @@
           "atrasada": false
         },
         {
-          "osId": "13246",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-FZL100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Finalizada",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-09-09",
-          "dataCriacao": "2026-09-08",
-          "dataInicial": "2026-09-10",
-          "dataFinal": "2026-09-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "13201",
           "ativo": "Estrutura Fixa      { RNGD-CTS100-EFIX1 }",
           "equipe": "",
@@ -7665,19 +7645,19 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 375
+      "historicoTotal": 376
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
       "icone": "ti-shield-check",
       "cor": "#ef4444",
       "kpis": {
-        "total": 178,
-        "emAberto": 11,
+        "total": 179,
+        "emAberto": 12,
         "atrasadas": 11,
         "concluidas30d": 17,
         "concluidas7d": 4,
-        "naSemanaCorrente": 0
+        "naSemanaCorrente": 1
       },
       "mttr": {
         "horas": 265.41,
@@ -7702,7 +7682,7 @@
         },
         {
           "semana": "W44",
-          "criadas": 0,
+          "criadas": 1,
           "finalizadas": 1
         }
       ],
@@ -7710,8 +7690,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 178,
-            "emAberto": 11
+            "total": 179,
+            "emAberto": 12
           }
         ],
         "responsaveis": [
@@ -7742,16 +7722,16 @@
           }
         ]
       },
-      "total": 11,
+      "total": 12,
       "atrasadas": 11,
       "porStatus": {
-        "naoIniciada": 8,
+        "naoIniciada": 9,
         "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 11
+        "(sem equipe)": 12
       },
       "oss": [
         {
@@ -7943,6 +7923,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "17636",
+          "ativo": "Estrutura de Trackers      { SPP300-ETKR1 }",
+          "equipe": "",
+          "responsavel": "Lara Fortes ",
+          "criadoPor": "SingridVieira",
+          "supervisor": "Lara Fortes ",
+          "status": "Não Iniciada",
+          "tarefa": "[Estrutura de Trackers SPP300-ETKR1 · RMA R20260922027C] - Acompanhamento de chamado Trina",
+          "criticidade": "",
+          "dataProgramada": "2026-10-27",
+          "dataCriacao": "2026-10-27",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -14620,21 +14617,52 @@
   },
   "ossPublicas": [
     {
-      "osId": "17621",
-      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+      "osId": "17642",
+      "ativo": "Preventiva Grupo de Inversores      { RNGD-NVX200-PGINVR1 }",
       "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Gilson Souza ",
+      "responsavel": "Lara Fortes ",
+      "criadoPor": "SingridVieira",
+      "supervisor": "Lara Fortes ",
       "status": "Não Iniciada",
-      "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
+      "tarefa": "[Preventiva Grupo de Inversores RNGD-NVX200-PGINVR1 · Análise da UFV] - Acompanhamento de chamado Renogrid",
       "criticidade": "",
       "dataProgramada": "2026-10-27",
       "dataCriacao": "2026-10-27",
       "dataInicial": "",
       "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
+      "linkFracttal": ""
+    },
+    {
+      "osId": "17640",
+      "ativo": "Preventiva Grupo de Inversores      { RNGD-ELF100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Lara Fortes ",
+      "criadoPor": "SingridVieira",
+      "supervisor": "Lara Fortes ",
+      "status": "Não Iniciada",
+      "tarefa": "[Preventiva Grupo de Inversores RNGD-ELF100-PGINVR1 · INV10 · S/N SJ4922-07E057C57-56] - Acompanhamento de chamado SolarEdge",
+      "criticidade": "",
+      "dataProgramada": "2026-10-27",
+      "dataCriacao": "2026-10-27",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "17636",
+      "ativo": "Estrutura de Trackers      { SPP300-ETKR1 }",
+      "equipe": "",
+      "responsavel": "Lara Fortes ",
+      "criadoPor": "SingridVieira",
+      "supervisor": "Lara Fortes ",
+      "status": "Não Iniciada",
+      "tarefa": "[Estrutura de Trackers SPP300-ETKR1 · RMA R20260922027C] - Acompanhamento de chamado Trina",
+      "criticidade": "",
+      "dataProgramada": "2026-10-27",
+      "dataCriacao": "2026-10-27",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
     },
     {
       "osId": "17618",
@@ -14660,7 +14688,7 @@
       "responsavel": "Henri Almeida ",
       "criadoPor": "Maria Luiza Oliveira",
       "supervisor": "Henri Almeida ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Guaratinguetá V] - Verificação de problema de religamento sem acionamento na usina",
       "criticidade": "",
       "dataProgramada": "2026-10-27",
@@ -14788,24 +14816,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "17580",
-      "ativo": "SKID 2  Barretos  São Paulo Brasil { BRS100-SKID2 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "LuelySantos",
-      "supervisor": "Anderson  Parente",
-      "status": "Em progresso",
-      "tarefa": "[BRS100-SKID2] - Religamento do BRS100-SKID2",
-      "criticidade": "",
-      "dataProgramada": "2026-10-26",
-      "dataCriacao": "2026-10-26",
-      "dataInicial": "2026-10-27",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -15909,23 +15919,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "15765",
-      "ativo": "Cabine 1  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Felipe  Lima",
-      "status": "Em progresso",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-10-20",
-      "dataCriacao": "2026-10-07",
-      "dataInicial": "2026-10-27",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 480.0
-    },
-    {
       "osId": "15764",
       "ativo": "Preventiva Grupo de Inversores      { RNGD-NVX200-PGINVR1 }",
       "equipe": "",
@@ -16432,14 +16425,15 @@
       "responsavel": "Ygo Leite ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Ygo Leite ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Sistema de Segurança",
       "criticidade": "",
       "dataProgramada": "2026-10-14",
       "dataCriacao": "2026-10-02",
-      "dataInicial": "",
+      "dataInicial": "2026-10-27",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 600.0
     },
     {
       "osId": "15255",
@@ -17382,6 +17376,25 @@
       "atrasada": false
     },
     {
+      "osId": "15765",
+      "ativo": "Cabine 1  Santa Bárbara d'Oeste  São Paulo Brasil { STB100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Felipe  Lima",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-10-20",
+      "dataCriacao": "2026-10-07",
+      "dataInicial": "2026-10-27",
+      "dataFinal": "2026-10-27",
+      "linkFracttal": "",
+      "horasAteAbrir": 480.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "15759",
       "ativo": "Preventiva Grupo de Inversores      { THPN-FRN100-PGINVR1 }",
       "equipe": "",
@@ -17781,25 +17794,6 @@
       "atrasada": false
     },
     {
-      "osId": "15083",
-      "ativo": "Cabine 1 Fazenda Cresciuma S/N Altair  São Paulo Brasil { ALT100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Fabricio Barreto",
-      "supervisor": "Anderson  Parente",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
-      "criticidade": "",
-      "dataProgramada": "2026-10-09",
-      "dataCriacao": "2026-10-01",
-      "dataInicial": "2026-10-15",
-      "dataFinal": "2026-10-15",
-      "linkFracttal": "",
-      "horasAteAbrir": 336.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
       "osId": "15082",
       "ativo": "Cabine 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN2 }",
       "equipe": "",
@@ -18066,6 +18060,26 @@
       "atrasada": false
     },
     {
+      "osId": "17621",
+      "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "[ATHN-CPP100] - Religamento do ATHN-CPP100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-27",
+      "dataCriacao": "2026-10-27",
+      "dataInicial": "2026-10-27",
+      "dataFinal": "2026-10-27",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "17605",
       "ativo": "Thopen - Guaratingueta 5 - SP  Guaratinguetá  São Paulo Brasil { THPN-GTA500 }",
       "equipe": "",
@@ -18121,6 +18135,26 @@
       "dataFinal": "2026-10-27",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "17580",
+      "ativo": "SKID 2  Barretos  São Paulo Brasil { BRS100-SKID2 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Anderson  Parente",
+      "status": "Finalizados",
+      "tarefa": "[BRS100-SKID2] - Religamento do BRS100-SKID2",
+      "criticidade": "",
+      "dataProgramada": "2026-10-26",
+      "dataCriacao": "2026-10-26",
+      "dataInicial": "2026-10-27",
+      "dataFinal": "2026-10-27",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -20143,50 +20177,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "16908",
-      "ativo": "Thopen - Aparecida 3 - SP  Aparecida  São Paulo Brasil { THPN-APR300 }",
-      "equipe": "",
-      "responsavel": "Henri Almeida ",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Henri Almeida ",
-      "status": "Finalizados",
-      "tarefa": "[THPN-APR300] - Religamento do THPN-APR300",
-      "criticidade": "",
-      "dataProgramada": "2026-10-21",
-      "dataCriacao": "2026-10-21",
-      "dataInicial": "2026-10-21",
-      "dataFinal": "2026-10-21",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "16905",
-      "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
-      "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Ailton Leal ",
-      "status": "Finalizados",
-      "tarefa": "[2C-UNI100-INVR2.1] - Religamento do 2C-UNI100-INVR2.1",
-      "criticidade": "",
-      "dataProgramada": "2026-10-21",
-      "dataCriacao": "2026-10-21",
-      "dataInicial": "2026-10-21",
-      "dataFinal": "2026-10-21",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3486,
-  "totalGeral": 7875,
+  "historicoTotal": 3489,
+  "totalGeral": 7878,
   "verificacao": {
     "total": 1,
     "atrasadas": 1,
