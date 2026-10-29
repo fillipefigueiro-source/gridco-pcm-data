@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-29T12:54:09Z",
+  "geradoEm": "2026-10-29T14:00:41Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-26 .. 2026-11-01",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5757,
-        "emAberto": 29,
-        "atrasadas": 24,
-        "concluidas30d": 1023,
-        "concluidas7d": 234,
-        "naSemanaCorrente": 118
+        "total": 5758,
+        "emAberto": 28,
+        "atrasadas": 22,
+        "concluidas30d": 1025,
+        "concluidas7d": 236,
+        "naSemanaCorrente": 119
       },
       "mttr": {
-        "horas": 15.12,
-        "label": "15h 7min",
-        "amostra": 1023
+        "horas": 16.41,
+        "label": "16h 24min",
+        "amostra": 1025
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W44",
-          "criadas": 122,
-          "finalizadas": 121
+          "criadas": 123,
+          "finalizadas": 123
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5757,
-            "emAberto": 29
+            "total": 5758,
+            "emAberto": 28
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 29,
-      "atrasadas": 24,
+      "total": 28,
+      "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 22,
-        "emProgresso": 1,
-        "pausada": 6,
+        "naoIniciada": 17,
+        "emProgresso": 3,
+        "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 29
+        "(sem equipe)": 28
       },
       "oss": [
         {
@@ -157,42 +157,6 @@
           "criticidade": "",
           "dataProgramada": "2026-09-30",
           "dataCriacao": "2026-09-30",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "14931",
-          "ativo": "Inversor 2.5 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR2.5 }",
-          "equipe": "",
-          "responsavel": "Pedro  Henrique",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Pedro  Henrique",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-GTB100-INVR2.5] - Religamento do THPN-GTB100-INVR2.5",
-          "criticidade": "",
-          "dataProgramada": "2026-09-30",
-          "dataCriacao": "2026-09-30",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "15320",
-          "ativo": "Inversor 3.5 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR3.5 }",
-          "equipe": "",
-          "responsavel": "Pedro  Henrique",
-          "criadoPor": "Maria Emanuella de Souza Mota ",
-          "supervisor": "Pedro  Henrique",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-GTB100-INVR3.5] - Religamento do THPN-GTB100-INVR3.5",
-          "criticidade": "",
-          "dataProgramada": "2026-10-03",
-          "dataCriacao": "2026-10-03",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -320,14 +284,15 @@
           "responsavel": "Gilson  Milhomem",
           "criadoPor": "LuelySantos",
           "supervisor": "Gilson  Milhomem",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[SKID 2] - Religamento do SKID 2",
           "criticidade": "",
           "dataProgramada": "2026-10-23",
           "dataCriacao": "2026-10-28",
-          "dataInicial": "",
+          "dataInicial": "2026-10-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -482,14 +447,15 @@
           "responsavel": "Thiago Morais ",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Thiago Morais ",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
           "criticidade": "",
           "dataProgramada": "2026-10-28",
           "dataCriacao": "2026-10-28",
-          "dataInicial": "",
+          "dataInicial": "2026-10-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -528,6 +494,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "17905",
+          "ativo": "Cabine 1 M87V+PCJ Boituva, São Paulo Boituva  São Paulo Brasil { E1EN-BOU180-CABN1 }",
+          "equipe": "",
+          "responsavel": "Eduardo  Mendes",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "[E1-Boituva 18] - Religamento de Boituva 18.1 e 18.2",
+          "criticidade": "",
+          "dataProgramada": "2026-10-29",
+          "dataCriacao": "2026-10-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "17889",
@@ -572,14 +556,15 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-ADS200] - Religamento do THPN-ADS200",
           "criticidade": "",
           "dataProgramada": "2026-10-29",
           "dataCriacao": "2026-10-29",
-          "dataInicial": "",
+          "dataInicial": "2026-10-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -590,14 +575,15 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-ADS100] - Religamento do THPN-ADS100",
           "criticidade": "",
           "dataProgramada": "2026-10-29",
           "dataCriacao": "2026-10-29",
-          "dataInicial": "",
+          "dataInicial": "2026-10-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -622,6 +608,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14931",
+          "ativo": "Inversor 2.5 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR2.5 }",
+          "equipe": "",
+          "responsavel": "Pedro  Henrique",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Pedro  Henrique",
+          "status": "Finalizados",
+          "tarefa": "[THPN-GTB100-INVR2.5] - Religamento do THPN-GTB100-INVR2.5",
+          "criticidade": "",
+          "dataProgramada": "2026-09-30",
+          "dataCriacao": "2026-09-30",
+          "dataInicial": "2026-10-29",
+          "dataFinal": "2026-10-29",
+          "linkFracttal": "",
+          "horasAteAbrir": 696.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "17877",
           "ativo": "SKID 4 São João do Rio do Peixe, PB, 58910-000 São João do Rio do Peixe  Paraíba Brasil { APOL-RDP100-SKID4 }",
@@ -1923,26 +1929,6 @@
           "atrasada": false
         },
         {
-          "osId": "17222",
-          "ativo": "Greenyellow - Cedro 2 - CE Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { GY-CDR200 }",
-          "equipe": "",
-          "responsavel": "Leonardo  Dias",
-          "criadoPor": "LucasNascimento",
-          "supervisor": "Leonardo  Dias",
-          "status": "Finalizados",
-          "tarefa": "[GY-CDR200] - Religamento do GY-CDR200",
-          "criticidade": "",
-          "dataProgramada": "2026-10-22",
-          "dataCriacao": "2026-10-22",
-          "dataInicial": "2026-10-23",
-          "dataFinal": "2026-10-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "17257",
           "ativo": "Inversor 1.1 SOLAREDGE     { NVX200-INVR1.1 }",
           "equipe": "",
@@ -1978,6 +1964,26 @@
           "dataFinal": "2026-10-23",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "17222",
+          "ativo": "Greenyellow - Cedro 2 - CE Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { GY-CDR200 }",
+          "equipe": "",
+          "responsavel": "Leonardo  Dias",
+          "criadoPor": "LucasNascimento",
+          "supervisor": "Leonardo  Dias",
+          "status": "Finalizados",
+          "tarefa": "[GY-CDR200] - Religamento do GY-CDR200",
+          "criticidade": "",
+          "dataProgramada": "2026-10-22",
+          "dataCriacao": "2026-10-22",
+          "dataInicial": "2026-10-23",
+          "dataFinal": "2026-10-23",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -3543,26 +3549,6 @@
           "atrasada": false
         },
         {
-          "osId": "16634",
-          "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR2.1 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Rúben Nunes da Silva ",
-          "supervisor": "Ailton Leal ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 2.1] - Religamento do Inversor 2.1",
-          "criticidade": "",
-          "dataProgramada": "2026-10-17",
-          "dataCriacao": "2026-10-17",
-          "dataInicial": "2026-10-17",
-          "dataFinal": "2026-10-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "15873",
           "ativo": "Thopen - Canarana 1 - MT MT-110, S/N, Zona Rural Canarana  Mato Grosso Brasil { THPN-CNN100 }",
           "equipe": "",
@@ -3623,12 +3609,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2387,
+      "historicoTotal": 2389,
       "subClassificacao": {
         "remoto": 754,
-        "local": 5003,
+        "local": 5004,
         "remotoEmAberto": 0,
-        "localEmAberto": 29,
+        "localEmAberto": 28,
         "pctRemoto": 13,
         "alerta": true
       },
@@ -3850,8 +3836,8 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 908,
-        "emAberto": 46,
+        "total": 910,
+        "emAberto": 48,
         "atrasadas": 42,
         "concluidas30d": 123,
         "concluidas7d": 26,
@@ -3880,7 +3866,7 @@
         },
         {
           "semana": "W44",
-          "criadas": 7,
+          "criadas": 9,
           "finalizadas": 17
         }
       ],
@@ -3888,8 +3874,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 908,
-            "emAberto": 46
+            "total": 910,
+            "emAberto": 48
           }
         ],
         "responsaveis": [
@@ -3920,16 +3906,16 @@
           }
         ]
       },
-      "total": 46,
+      "total": 48,
       "atrasadas": 42,
       "porStatus": {
-        "naoIniciada": 40,
+        "naoIniciada": 42,
         "emProgresso": 0,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 46
+        "(sem equipe)": 48
       },
       "oss": [
         {
@@ -4651,6 +4637,40 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "17902",
+          "ativo": "Transformador 3 WEG     { 2C-IPX100-TRFR3 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Wesllen  Castro",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPA - Transformador (diurno)",
+          "criticidade": "",
+          "dataProgramada": "2026-11-04",
+          "dataCriacao": "2026-10-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "17906",
+          "ativo": "Inversor 3.6 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR3.6 }",
+          "equipe": "",
+          "responsavel": "Davi Damasceno ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Davi Damasceno ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPA - Inversor (Diurno)",
+          "criticidade": "",
+          "dataProgramada": "2026-11-20",
+          "dataCriacao": "2026-10-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "17827",
@@ -7580,12 +7600,12 @@
       "icone": "ti-shield-check",
       "cor": "#ef4444",
       "kpis": {
-        "total": 180,
-        "emAberto": 13,
+        "total": 181,
+        "emAberto": 14,
         "atrasadas": 13,
         "concluidas30d": 17,
         "concluidas7d": 3,
-        "naSemanaCorrente": 2
+        "naSemanaCorrente": 3
       },
       "mttr": {
         "horas": 265.41,
@@ -7610,7 +7630,7 @@
         },
         {
           "semana": "W44",
-          "criadas": 2,
+          "criadas": 3,
           "finalizadas": 1
         }
       ],
@@ -7618,8 +7638,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 180,
-            "emAberto": 13
+            "total": 181,
+            "emAberto": 14
           }
         ],
         "responsaveis": [
@@ -7630,8 +7650,8 @@
           },
           {
             "nome": "James Chaves",
-            "total": 16,
-            "emAberto": 0
+            "total": 17,
+            "emAberto": 1
           },
           {
             "nome": "Anderson  Parente",
@@ -7650,16 +7670,16 @@
           }
         ]
       },
-      "total": 13,
+      "total": 14,
       "atrasadas": 13,
       "porStatus": {
-        "naoIniciada": 10,
+        "naoIniciada": 11,
         "emProgresso": 1,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 13
+        "(sem equipe)": 14
       },
       "oss": [
         {
@@ -7885,6 +7905,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "17899",
+          "ativo": "Inversor 1.1 Huawei SUN2000-100KTL-H1    { MAB100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "James Chaves ",
+          "status": "Não Iniciada",
+          "tarefa": "[Marabá 1][Inversor 1.1 Huawei SUN2000-100KTL-H1] - Abertura de chamado de garantia",
+          "criticidade": "",
+          "dataProgramada": "2026-10-30",
+          "dataCriacao": "2026-10-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -8637,12 +8674,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 947,
-        "emAberto": 47,
+        "total": 948,
+        "emAberto": 48,
         "atrasadas": 37,
         "concluidas30d": 165,
         "concluidas7d": 56,
-        "naSemanaCorrente": 44
+        "naSemanaCorrente": 45
       },
       "mttr": {
         "horas": 206.11,
@@ -8667,7 +8704,7 @@
         },
         {
           "semana": "W44",
-          "criadas": 38,
+          "criadas": 39,
           "finalizadas": 27
         }
       ],
@@ -8675,8 +8712,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 947,
-            "emAberto": 47
+            "total": 948,
+            "emAberto": 48
           }
         ],
         "responsaveis": [
@@ -8707,16 +8744,16 @@
           }
         ]
       },
-      "total": 47,
+      "total": 48,
       "atrasadas": 37,
       "porStatus": {
         "naoIniciada": 40,
-        "emProgresso": 1,
-        "pausada": 5,
+        "emProgresso": 3,
+        "pausada": 4,
         "verificacao": 1
       },
       "porEquipe": {
-        "(sem equipe)": 47
+        "(sem equipe)": 48
       },
       "oss": [
         {
@@ -9344,14 +9381,15 @@
           "responsavel": "Walter Santos ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Walter Santos ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 2.4] - Realização de testes do Fabricante",
           "criticidade": "",
           "dataProgramada": "2026-10-28",
           "dataCriacao": "2026-10-27",
-          "dataInicial": "",
+          "dataInicial": "2026-10-29",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -9361,7 +9399,7 @@
           "responsavel": "Lucas Alberto Freitas de Faria ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Inversor 3.1] - Inspeção das PV 1 e 5 antes de 15h",
           "criticidade": "",
           "dataProgramada": "2026-10-29",
@@ -9439,6 +9477,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 120.0,
+          "atrasada": false
+        },
+        {
+          "osId": "17900",
+          "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Ana Barros",
+          "supervisor": "Ailton Leal ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.2] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-10-30",
+          "dataCriacao": "2026-10-29",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
           "atrasada": false
         },
         {
@@ -12386,8 +12441,8 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 182,
-        "emAberto": 28,
+        "total": 183,
+        "emAberto": 29,
         "atrasadas": 25,
         "concluidas30d": 8,
         "concluidas7d": 0,
@@ -12416,7 +12471,7 @@
         },
         {
           "semana": "W44",
-          "criadas": 2,
+          "criadas": 3,
           "finalizadas": 0
         }
       ],
@@ -12424,15 +12479,15 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 182,
-            "emAberto": 28
+            "total": 183,
+            "emAberto": 29
           }
         ],
         "responsaveis": [
           {
             "nome": "João Vieira",
-            "total": 44,
-            "emAberto": 7
+            "total": 45,
+            "emAberto": 8
           },
           {
             "nome": "Carlos Bruno  Pessanha Pereira",
@@ -12456,16 +12511,16 @@
           }
         ]
       },
-      "total": 28,
+      "total": 29,
       "atrasadas": 25,
       "porStatus": {
-        "naoIniciada": 25,
-        "emProgresso": 0,
-        "pausada": 3,
+        "naoIniciada": 26,
+        "emProgresso": 1,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 28
+        "(sem equipe)": 29
       },
       "oss": [
         {
@@ -12697,7 +12752,7 @@
           "responsavel": "Thiago Morais ",
           "criadoPor": "Maria Luiza Oliveira",
           "supervisor": "Thiago Morais ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "Inversor 04 - Readequação de Strings",
           "criticidade": "",
           "dataProgramada": "2026-10-14",
@@ -12942,6 +12997,23 @@
           "criticidade": "",
           "dataProgramada": "2026-11-03",
           "dataCriacao": "2026-10-27",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "17903",
+          "ativo": "Estação Meteorológica  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "João Vieira ",
+          "status": "Não Iniciada",
+          "tarefa": "[ETM] - Coleta e análise de dados",
+          "criticidade": "",
+          "dataProgramada": "2026-11-05",
+          "dataCriacao": "2026-10-29",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -14627,6 +14699,103 @@
   },
   "ossPublicas": [
     {
+      "osId": "17906",
+      "ativo": "Inversor 3.6 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR3.6 }",
+      "equipe": "",
+      "responsavel": "Davi Damasceno ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Davi Damasceno ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPA - Inversor (Diurno)",
+      "criticidade": "",
+      "dataProgramada": "2026-11-20",
+      "dataCriacao": "2026-10-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "17905",
+      "ativo": "Cabine 1 M87V+PCJ Boituva, São Paulo Boituva  São Paulo Brasil { E1EN-BOU180-CABN1 }",
+      "equipe": "",
+      "responsavel": "Eduardo  Mendes",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "[E1-Boituva 18] - Religamento de Boituva 18.1 e 18.2",
+      "criticidade": "",
+      "dataProgramada": "2026-10-29",
+      "dataCriacao": "2026-10-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "17903",
+      "ativo": "Estação Meteorológica  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "João Vieira ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "João Vieira ",
+      "status": "Não Iniciada",
+      "tarefa": "[ETM] - Coleta e análise de dados",
+      "criticidade": "",
+      "dataProgramada": "2026-11-05",
+      "dataCriacao": "2026-10-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "17902",
+      "ativo": "Transformador 3 WEG     { 2C-IPX100-TRFR3 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Wesllen  Castro",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPA - Transformador (diurno)",
+      "criticidade": "",
+      "dataProgramada": "2026-11-04",
+      "dataCriacao": "2026-10-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "17900",
+      "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.2 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "Ana Barros",
+      "supervisor": "Ailton Leal ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.2] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-10-30",
+      "dataCriacao": "2026-10-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "17899",
+      "ativo": "Inversor 1.1 Huawei SUN2000-100KTL-H1    { MAB100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "James Chaves ",
+      "status": "Não Iniciada",
+      "tarefa": "[Marabá 1][Inversor 1.1 Huawei SUN2000-100KTL-H1] - Abertura de chamado de garantia",
+      "criticidade": "",
+      "dataProgramada": "2026-10-30",
+      "dataCriacao": "2026-10-29",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "17889",
       "ativo": "Inversor 1.5 Sungrow 250HX-20    { THPN-TPZ100-INVR1.5 }",
       "equipe": "",
@@ -14667,14 +14836,15 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-ADS200] - Religamento do THPN-ADS200",
       "criticidade": "",
       "dataProgramada": "2026-10-29",
       "dataCriacao": "2026-10-29",
-      "dataInicial": "",
+      "dataInicial": "2026-10-29",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -14684,14 +14854,15 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-ADS100] - Religamento do THPN-ADS100",
       "criticidade": "",
       "dataProgramada": "2026-10-29",
       "dataCriacao": "2026-10-29",
-      "dataInicial": "",
+      "dataInicial": "2026-10-29",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -14736,14 +14907,15 @@
       "responsavel": "Thiago Morais ",
       "criadoPor": "Raphael Vitoriano ",
       "supervisor": "Thiago Morais ",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
       "criticidade": "",
       "dataProgramada": "2026-10-28",
       "dataCriacao": "2026-10-28",
-      "dataInicial": "",
+      "dataInicial": "2026-10-29",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -14769,7 +14941,7 @@
       "responsavel": "Lucas Alberto Freitas de Faria ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Inversor 3.1] - Inspeção das PV 1 e 5 antes de 15h",
       "criticidade": "",
       "dataProgramada": "2026-10-29",
@@ -14963,14 +15135,15 @@
       "responsavel": "Gilson  Milhomem",
       "criadoPor": "LuelySantos",
       "supervisor": "Gilson  Milhomem",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[SKID 2] - Religamento do SKID 2",
       "criticidade": "",
       "dataProgramada": "2026-10-23",
       "dataCriacao": "2026-10-28",
-      "dataInicial": "",
+      "dataInicial": "2026-10-29",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -15111,14 +15284,15 @@
       "responsavel": "Walter Santos ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Walter Santos ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 2.4] - Realização de testes do Fabricante",
       "criticidade": "",
       "dataProgramada": "2026-10-28",
       "dataCriacao": "2026-10-27",
-      "dataInicial": "",
+      "dataInicial": "2026-10-29",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "17704",
@@ -16060,7 +16234,7 @@
       "responsavel": "Thiago Morais ",
       "criadoPor": "Maria Luiza Oliveira",
       "supervisor": "Thiago Morais ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "Inversor 04 - Readequação de Strings",
       "criticidade": "",
       "dataProgramada": "2026-10-14",
@@ -16521,23 +16695,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "15320",
-      "ativo": "Inversor 3.5 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR3.5 }",
-      "equipe": "",
-      "responsavel": "Pedro  Henrique",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Pedro  Henrique",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-GTB100-INVR3.5] - Religamento do THPN-GTB100-INVR3.5",
-      "criticidade": "",
-      "dataProgramada": "2026-10-03",
-      "dataCriacao": "2026-10-03",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "15255",
       "ativo": "Preventiva Grupo de Inversores      { 2C-TPP100-PGINVR1 }",
       "equipe": "",
@@ -16642,23 +16799,6 @@
       "supervisor": "Pedro  Henrique",
       "status": "Não Iniciada",
       "tarefa": "[THPN-GTB100-INVR3.1] - Religamento do THPN-GTB100-INVR3.1",
-      "criticidade": "",
-      "dataProgramada": "2026-09-30",
-      "dataCriacao": "2026-09-30",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "14931",
-      "ativo": "Inversor 2.5 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR2.5 }",
-      "equipe": "",
-      "responsavel": "Pedro  Henrique",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Pedro  Henrique",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-GTB100-INVR2.5] - Religamento do THPN-GTB100-INVR2.5",
       "criticidade": "",
       "dataProgramada": "2026-09-30",
       "dataCriacao": "2026-09-30",
@@ -17294,66 +17434,6 @@
   ],
   "ossHistorico": [
     {
-      "osId": "17877",
-      "ativo": "SKID 4 São João do Rio do Peixe, PB, 58910-000 São João do Rio do Peixe  Paraíba Brasil { APOL-RDP100-SKID4 }",
-      "equipe": "",
-      "responsavel": "Caio da Silva Cordeiro ",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Caio da Silva Cordeiro ",
-      "status": "Finalizados",
-      "tarefa": "[APOL-RDP100-SKID4] - Religamento do APOL-RDP100-SKID4",
-      "criticidade": "",
-      "dataProgramada": "2026-10-29",
-      "dataCriacao": "2026-10-29",
-      "dataInicial": "2026-10-29",
-      "dataFinal": "2026-10-29",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "17876",
-      "ativo": "SKID 2 São João do Rio do Peixe, PB, 58910-000 São João do Rio do Peixe  Paraíba Brasil { APOL-RDP100-SKID2 }",
-      "equipe": "",
-      "responsavel": "Caio da Silva Cordeiro ",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Caio da Silva Cordeiro ",
-      "status": "Finalizados",
-      "tarefa": "[APOL-RDP100-SKID2] - Religamento do APOL-RDP100-SKID2",
-      "criticidade": "",
-      "dataProgramada": "2026-10-29",
-      "dataCriacao": "2026-10-29",
-      "dataInicial": "2026-10-29",
-      "dataFinal": "2026-10-29",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "17874",
-      "ativo": "SKID 1 São João do Rio do Peixe, PB, 58910-000 São João do Rio do Peixe  Paraíba Brasil { APOL-RDP100-SKID1 }",
-      "equipe": "",
-      "responsavel": "Caio da Silva Cordeiro ",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Caio da Silva Cordeiro ",
-      "status": "Finalizados",
-      "tarefa": "[APOL-RDP100-SKID1] - Religamento do APOL-RDP100-SKID1",
-      "criticidade": "",
-      "dataProgramada": "2026-10-29",
-      "dataCriacao": "2026-10-29",
-      "dataInicial": "2026-10-29",
-      "dataFinal": "2026-10-29",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
       "osId": "17583",
       "ativo": "Thopen - Brodowski 1 - SP Rodovia SP 334 S/N Batatais  São Paulo Brasil { THPN-BWK100 }",
       "equipe": "",
@@ -17371,45 +17451,6 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "17222",
-      "ativo": "Greenyellow - Cedro 2 - CE Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { GY-CDR200 }",
-      "equipe": "",
-      "responsavel": "Leonardo  Dias",
-      "criadoPor": "LucasNascimento",
-      "supervisor": "Leonardo  Dias",
-      "status": "Finalizados",
-      "tarefa": "[GY-CDR200] - Religamento do GY-CDR200",
-      "criticidade": "",
-      "dataProgramada": "2026-10-22",
-      "dataCriacao": "2026-10-22",
-      "dataInicial": "2026-10-23",
-      "dataFinal": "2026-10-23",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "17053",
-      "ativo": "Tracker 10.102  Array Technologies | STI    { APOL-RDP100-ETKR10.102 }",
-      "equipe": "",
-      "responsavel": "Caio da Silva Cordeiro ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Caio da Silva Cordeiro ",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 10.102] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-10-22",
-      "dataCriacao": "2026-10-22",
-      "dataInicial": "2026-10-22",
-      "dataFinal": "2026-10-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -17814,6 +17855,26 @@
       "atrasada": false
     },
     {
+      "osId": "14931",
+      "ativo": "Inversor 2.5 Huawei SUN2000-215KTL-H0    { THPN-GTB100-INVR2.5 }",
+      "equipe": "",
+      "responsavel": "Pedro  Henrique",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Pedro  Henrique",
+      "status": "Finalizados",
+      "tarefa": "[THPN-GTB100-INVR2.5] - Religamento do THPN-GTB100-INVR2.5",
+      "criticidade": "",
+      "dataProgramada": "2026-09-30",
+      "dataCriacao": "2026-09-30",
+      "dataInicial": "2026-10-29",
+      "dataFinal": "2026-10-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 696.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "14661",
       "ativo": "Inversor 2.9 Sungrow SG125-HV    { THPN-SAP100-INVR2.9 }",
       "equipe": "",
@@ -18020,6 +18081,66 @@
       "linkFracttal": "",
       "horasAteAbrir": 3672.0,
       "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "17877",
+      "ativo": "SKID 4 São João do Rio do Peixe, PB, 58910-000 São João do Rio do Peixe  Paraíba Brasil { APOL-RDP100-SKID4 }",
+      "equipe": "",
+      "responsavel": "Caio da Silva Cordeiro ",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "Caio da Silva Cordeiro ",
+      "status": "Finalizados",
+      "tarefa": "[APOL-RDP100-SKID4] - Religamento do APOL-RDP100-SKID4",
+      "criticidade": "",
+      "dataProgramada": "2026-10-29",
+      "dataCriacao": "2026-10-29",
+      "dataInicial": "2026-10-29",
+      "dataFinal": "2026-10-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "17876",
+      "ativo": "SKID 2 São João do Rio do Peixe, PB, 58910-000 São João do Rio do Peixe  Paraíba Brasil { APOL-RDP100-SKID2 }",
+      "equipe": "",
+      "responsavel": "Caio da Silva Cordeiro ",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "Caio da Silva Cordeiro ",
+      "status": "Finalizados",
+      "tarefa": "[APOL-RDP100-SKID2] - Religamento do APOL-RDP100-SKID2",
+      "criticidade": "",
+      "dataProgramada": "2026-10-29",
+      "dataCriacao": "2026-10-29",
+      "dataInicial": "2026-10-29",
+      "dataFinal": "2026-10-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "17874",
+      "ativo": "SKID 1 São João do Rio do Peixe, PB, 58910-000 São João do Rio do Peixe  Paraíba Brasil { APOL-RDP100-SKID1 }",
+      "equipe": "",
+      "responsavel": "Caio da Silva Cordeiro ",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "Caio da Silva Cordeiro ",
+      "status": "Finalizados",
+      "tarefa": "[APOL-RDP100-SKID1] - Religamento do APOL-RDP100-SKID1",
+      "criticidade": "",
+      "dataProgramada": "2026-10-29",
+      "dataCriacao": "2026-10-29",
+      "dataInicial": "2026-10-29",
+      "dataFinal": "2026-10-29",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -19679,6 +19800,26 @@
       "atrasada": false
     },
     {
+      "osId": "17222",
+      "ativo": "Greenyellow - Cedro 2 - CE Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { GY-CDR200 }",
+      "equipe": "",
+      "responsavel": "Leonardo  Dias",
+      "criadoPor": "LucasNascimento",
+      "supervisor": "Leonardo  Dias",
+      "status": "Finalizados",
+      "tarefa": "[GY-CDR200] - Religamento do GY-CDR200",
+      "criticidade": "",
+      "dataProgramada": "2026-10-22",
+      "dataCriacao": "2026-10-22",
+      "dataInicial": "2026-10-23",
+      "dataFinal": "2026-10-23",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "17220",
       "ativo": "Greenyellow - Cedro 1 - CE Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { GY-CDR100 }",
       "equipe": "",
@@ -19892,6 +20033,25 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "17053",
+      "ativo": "Tracker 10.102  Array Technologies | STI    { APOL-RDP100-ETKR10.102 }",
+      "equipe": "",
+      "responsavel": "Caio da Silva Cordeiro ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Caio da Silva Cordeiro ",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 10.102] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-10-22",
+      "dataCriacao": "2026-10-22",
+      "dataInicial": "2026-10-22",
+      "dataFinal": "2026-10-22",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -20209,29 +20369,10 @@
       "horasAteAbrir": 120.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "16980",
-      "ativo": "Tracker 58.200 STI STI-H250 Bi-linha    { SLG200-ETKR58.200 }",
-      "equipe": "",
-      "responsavel": "Daniel de Paula ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Daniel de Paula ",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 58.200] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-10-22",
-      "dataCriacao": "2026-10-21",
-      "dataInicial": "2026-10-23",
-      "dataFinal": "2026-10-23",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3513,
-  "totalGeral": 7974,
+  "historicoTotal": 3515,
+  "totalGeral": 7980,
   "verificacao": {
     "total": 1,
     "atrasadas": 1,
