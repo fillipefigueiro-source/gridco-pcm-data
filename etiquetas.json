@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-30T05:53:40Z",
+  "geradoEm": "2026-10-30T09:29:17Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-26 .. 2026-11-01",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5771,
-        "emAberto": 28,
+        "total": 5772,
+        "emAberto": 29,
         "atrasadas": 28,
         "concluidas30d": 992,
         "concluidas7d": 203,
-        "naSemanaCorrente": 132
+        "naSemanaCorrente": 133
       },
       "mttr": {
         "horas": 12.19,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W44",
-          "criadas": 136,
+          "criadas": 137,
           "finalizadas": 128
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5771,
-            "emAberto": 28
+            "total": 5772,
+            "emAberto": 29
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 28,
+      "total": 29,
       "atrasadas": 28,
       "porStatus": {
         "naoIniciada": 17,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 28
+        "(sem equipe)": 29
       },
       "oss": [
         {
@@ -449,14 +449,15 @@
           "responsavel": "Ailton Leal ",
           "criadoPor": "GerdesonAraújo",
           "supervisor": "Ailton Leal ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Thopen - Junco 1 - PI] - Religamento do Thopen - Junco 1 - PI",
           "criticidade": "",
           "dataProgramada": "2026-10-29",
           "dataCriacao": "2026-10-29",
-          "dataInicial": "",
+          "dataInicial": "2026-10-30",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -605,6 +606,24 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "18004",
+          "ativo": "Thopen - Caxambu 1 - SP  Caxambu  São Paulo Brasil { THPN-CXB100 }",
+          "equipe": "",
+          "responsavel": "Hélio Silva ",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Hélio Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Thopen - Caxambu 1 - SP] - Religamento do Thopen - Caxambu 1 - SP",
+          "criticidade": "",
+          "dataProgramada": "2026-10-30",
+          "dataCriacao": "2026-10-30",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -3612,9 +3631,9 @@
       "historicoTotal": 2382,
       "subClassificacao": {
         "remoto": 754,
-        "local": 5017,
+        "local": 5018,
         "remotoEmAberto": 0,
-        "localEmAberto": 28,
+        "localEmAberto": 29,
         "pctRemoto": 13,
         "alerta": true
       },
@@ -15136,20 +15155,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "18004",
+      "ativo": "Thopen - Caxambu 1 - SP  Caxambu  São Paulo Brasil { THPN-CXB100 }",
+      "equipe": "",
+      "responsavel": "Hélio Silva ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Hélio Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Thopen - Caxambu 1 - SP] - Religamento do Thopen - Caxambu 1 - SP",
+      "criticidade": "",
+      "dataProgramada": "2026-10-30",
+      "dataCriacao": "2026-10-30",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "18002",
       "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
       "equipe": "",
       "responsavel": "Ailton Leal ",
       "criadoPor": "GerdesonAraújo",
       "supervisor": "Ailton Leal ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Thopen - Junco 1 - PI] - Religamento do Thopen - Junco 1 - PI",
       "criticidade": "",
       "dataProgramada": "2026-10-29",
       "dataCriacao": "2026-10-29",
-      "dataInicial": "",
+      "dataInicial": "2026-10-30",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -21223,7 +21260,7 @@
     }
   ],
   "historicoTotal": 3481,
-  "totalGeral": 8032,
+  "totalGeral": 8033,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
