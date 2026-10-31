@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-31T12:33:20Z",
+  "geradoEm": "2026-10-31T13:25:55Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-26 .. 2026-11-01",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5806,
-        "emAberto": 24,
+        "total": 5809,
+        "emAberto": 26,
         "atrasadas": 22,
-        "concluidas30d": 1001,
-        "concluidas7d": 220,
-        "naSemanaCorrente": 167
+        "concluidas30d": 1002,
+        "concluidas7d": 221,
+        "naSemanaCorrente": 170
       },
       "mttr": {
-        "horas": 12.75,
-        "label": "12h 45min",
-        "amostra": 1001
+        "horas": 12.74,
+        "label": "12h 44min",
+        "amostra": 1002
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W44",
-          "criadas": 171,
-          "finalizadas": 167
+          "criadas": 174,
+          "finalizadas": 168
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5806,
-            "emAberto": 24
+            "total": 5809,
+            "emAberto": 26
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 26,
       "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 14,
+        "naoIniciada": 16,
         "emProgresso": 2,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 26
       },
       "oss": [
         {
@@ -496,14 +496,50 @@
           "atrasada": true
         },
         {
-          "osId": "18208",
-          "ativo": "Inversor 1.12 Sungrow SG125HV    { BRS100-INVR1.12 }",
+          "osId": "18213",
+          "ativo": "Inversor 1.4      { CGU100-INVR1.4 }",
           "equipe": "",
-          "responsavel": "Anderson  Parente",
+          "responsavel": "Eduardo  Mendes",
           "criadoPor": "Juliana Rogério ",
-          "supervisor": "Anderson  Parente",
+          "supervisor": "Eduardo  Mendes",
+          "status": "Não Iniciada",
+          "tarefa": "[CGU100-INVR1.4] - Religamento do CGU100-INVR1.4",
+          "criticidade": "",
+          "dataProgramada": "2026-10-31",
+          "dataCriacao": "2026-10-31",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "18212",
+          "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Janderson Miranda ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-SDN100] - Religamento do THPN-SDN100",
+          "criticidade": "",
+          "dataProgramada": "2026-10-31",
+          "dataCriacao": "2026-10-31",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "18210",
+          "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+          "equipe": "",
+          "responsavel": "Pedro  Henrique",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Pedro  Henrique",
           "status": "Em progresso",
-          "tarefa": "[Inversor 1.12] - Religamento do Inversor 1.12",
+          "tarefa": "[Thopen - Guatambú 1 - SC] - Religamento do Thopen - Guatambú 1 - SC",
           "criticidade": "",
           "dataProgramada": "2026-10-31",
           "dataCriacao": "2026-10-31",
@@ -535,6 +571,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "18208",
+          "ativo": "Inversor 1.12 Sungrow SG125HV    { BRS100-INVR1.12 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.12] - Religamento do Inversor 1.12",
+          "criticidade": "",
+          "dataProgramada": "2026-10-31",
+          "dataCriacao": "2026-10-31",
+          "dataInicial": "2026-10-31",
+          "dataFinal": "2026-10-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "18133",
           "ativo": "Athon - Mãe do Rio 1 - PA  Mãe do Rio  Pará Brasil { ATHN-MRO100 }",
@@ -3514,34 +3570,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14692",
-          "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-SDN100] - Religamento do THPN-SDN100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-26",
-          "dataCriacao": "2026-09-26",
-          "dataInicial": "2026-09-26",
-          "dataFinal": "2026-09-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2402,
+      "historicoTotal": 2403,
       "subClassificacao": {
         "remoto": 754,
-        "local": 5052,
+        "local": 5055,
         "remotoEmAberto": 0,
-        "localEmAberto": 24,
+        "localEmAberto": 26,
         "pctRemoto": 13,
         "alerta": true
       },
@@ -15442,14 +15478,48 @@
   },
   "ossPublicas": [
     {
-      "osId": "18208",
-      "ativo": "Inversor 1.12 Sungrow SG125HV    { BRS100-INVR1.12 }",
+      "osId": "18213",
+      "ativo": "Inversor 1.4      { CGU100-INVR1.4 }",
       "equipe": "",
-      "responsavel": "Anderson  Parente",
+      "responsavel": "Eduardo  Mendes",
       "criadoPor": "Juliana Rogério ",
-      "supervisor": "Anderson  Parente",
+      "supervisor": "Eduardo  Mendes",
+      "status": "Não Iniciada",
+      "tarefa": "[CGU100-INVR1.4] - Religamento do CGU100-INVR1.4",
+      "criticidade": "",
+      "dataProgramada": "2026-10-31",
+      "dataCriacao": "2026-10-31",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "18212",
+      "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Janderson Miranda ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-SDN100] - Religamento do THPN-SDN100",
+      "criticidade": "",
+      "dataProgramada": "2026-10-31",
+      "dataCriacao": "2026-10-31",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "18210",
+      "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
+      "equipe": "",
+      "responsavel": "Pedro  Henrique",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Pedro  Henrique",
       "status": "Em progresso",
-      "tarefa": "[Inversor 1.12] - Religamento do Inversor 1.12",
+      "tarefa": "[Thopen - Guatambú 1 - SC] - Religamento do Thopen - Guatambú 1 - SC",
       "criticidade": "",
       "dataProgramada": "2026-10-31",
       "dataCriacao": "2026-10-31",
@@ -19486,6 +19556,26 @@
       "atrasada": false
     },
     {
+      "osId": "18208",
+      "ativo": "Inversor 1.12 Sungrow SG125HV    { BRS100-INVR1.12 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Anderson  Parente",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.12] - Religamento do Inversor 1.12",
+      "criticidade": "",
+      "dataProgramada": "2026-10-31",
+      "dataCriacao": "2026-10-31",
+      "dataInicial": "2026-10-31",
+      "dataFinal": "2026-10-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "18138",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -21749,30 +21839,10 @@
       "horasAteAbrir": 96.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "16129",
-      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-      "equipe": "",
-      "responsavel": "Adriano  Moraes",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Adriano  Moraes",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-10-12",
-      "dataCriacao": "2026-10-12",
-      "dataInicial": "2026-10-12",
-      "dataFinal": "2026-10-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3514,
-  "totalGeral": 8101,
+  "historicoTotal": 3515,
+  "totalGeral": 8104,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
