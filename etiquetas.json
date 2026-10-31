@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-31T10:47:23Z",
+  "geradoEm": "2026-10-31T11:43:10Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-10-26 .. 2026-11-01",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 5806,
-        "emAberto": 26,
-        "atrasadas": 24,
-        "concluidas30d": 999,
-        "concluidas7d": 218,
+        "emAberto": 24,
+        "atrasadas": 22,
+        "concluidas30d": 1001,
+        "concluidas7d": 220,
         "naSemanaCorrente": 167
       },
       "mttr": {
-        "horas": 12.7,
-        "label": "12h 42min",
-        "amostra": 999
+        "horas": 12.75,
+        "label": "12h 45min",
+        "amostra": 1001
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W44",
           "criadas": 171,
-          "finalizadas": 165
+          "finalizadas": 167
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 5806,
-            "emAberto": 26
+            "emAberto": 24
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 26,
-      "atrasadas": 24,
+      "total": 24,
+      "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 17,
-        "emProgresso": 0,
-        "pausada": 9,
+        "naoIniciada": 15,
+        "emProgresso": 1,
+        "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 26
+        "(sem equipe)": 24
       },
       "oss": [
         {
@@ -370,24 +370,6 @@
           "atrasada": true
         },
         {
-          "osId": "17999",
-          "ativo": "Thopen - Saturnino 1 - RJ Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { THPN-STN100 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Não Iniciada",
-          "tarefa": "[Thopen - Saturnino 1 - RJ] - Religamento do Thopen - Saturnino 1 - RJ",
-          "criticidade": "",
-          "dataProgramada": "2026-10-29",
-          "dataCriacao": "2026-10-29",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "17953",
           "ativo": "Inversor 5.5 Sungrow SG125HV    { THPN-CLN100-INVR5.5 }",
           "equipe": "",
@@ -420,25 +402,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "18133",
-          "ativo": "Athon - Mãe do Rio 1 - PA  Mãe do Rio  Pará Brasil { ATHN-MRO100 }",
-          "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Frank  Melo",
-          "status": "pausado",
-          "tarefa": "[Athon - Mãe do Rio 1 - PA] - Religamento do Athon - Mãe do Rio 1 - PA",
-          "criticidade": "",
-          "dataProgramada": "2026-10-30",
-          "dataCriacao": "2026-10-30",
-          "dataInicial": "2026-10-30",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -533,14 +496,14 @@
           "atrasada": true
         },
         {
-          "osId": "18206",
-          "ativo": "Inversor 2.2  Huawei | SUN2000-250KTL-H1    { APOL-RDP100-INVR2.2 }",
+          "osId": "18208",
+          "ativo": "Inversor 1.12 Sungrow SG125HV    { BRS100-INVR1.12 }",
           "equipe": "",
-          "responsavel": "Caio da Silva Cordeiro ",
-          "criadoPor": "Rúben Nunes da Silva ",
-          "supervisor": "Caio da Silva Cordeiro ",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Anderson  Parente",
           "status": "Não Iniciada",
-          "tarefa": "[APOL-RDP100-INVR2.2] - Religamento do APOL-RDP100-INVR2.2",
+          "tarefa": "[Inversor 1.12] - Religamento do Inversor 1.12",
           "criticidade": "",
           "dataProgramada": "2026-10-31",
           "dataCriacao": "2026-10-31",
@@ -557,19 +520,60 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "DavidNascimento",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
           "criticidade": "",
           "dataProgramada": "2026-10-31",
           "dataCriacao": "2026-10-31",
-          "dataInicial": "",
+          "dataInicial": "2026-10-31",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "18133",
+          "ativo": "Athon - Mãe do Rio 1 - PA  Mãe do Rio  Pará Brasil { ATHN-MRO100 }",
+          "equipe": "",
+          "responsavel": "Frank  Melo",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Frank  Melo",
+          "status": "Finalizados",
+          "tarefa": "[Athon - Mãe do Rio 1 - PA] - Religamento do Athon - Mãe do Rio 1 - PA",
+          "criticidade": "",
+          "dataProgramada": "2026-10-30",
+          "dataCriacao": "2026-10-30",
+          "dataInicial": "2026-10-30",
+          "dataFinal": "2026-10-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 24.0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "17999",
+          "ativo": "Thopen - Saturnino 1 - RJ Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { THPN-STN100 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "[Thopen - Saturnino 1 - RJ] - Religamento do Thopen - Saturnino 1 - RJ",
+          "criticidade": "",
+          "dataProgramada": "2026-10-29",
+          "dataCriacao": "2026-10-29",
+          "dataInicial": "2026-10-31",
+          "dataFinal": "2026-10-31",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "18138",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
@@ -3051,26 +3055,6 @@
           "atrasada": false
         },
         {
-          "osId": "14691",
-          "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
-          "equipe": "",
-          "responsavel": "Valdir Silva ",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Valdir Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Thopen - Santo Antônio da Platina 1 - PR] - Religamento do Thopen - Santo Antônio da Platina 1 - PR",
-          "criticidade": "",
-          "dataProgramada": "2026-09-26",
-          "dataCriacao": "2026-09-26",
-          "dataInicial": "2026-09-28",
-          "dataFinal": "2026-09-28",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "14740",
           "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
           "equipe": "",
@@ -3549,34 +3533,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14689",
-          "ativo": "Inversor 1.2 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Felipe Xavier ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Felipe Xavier ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
-          "criticidade": "",
-          "dataProgramada": "2026-09-26",
-          "dataCriacao": "2026-09-26",
-          "dataInicial": "2026-09-26",
-          "dataFinal": "2026-09-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2400,
+      "historicoTotal": 2402,
       "subClassificacao": {
         "remoto": 754,
         "local": 5052,
         "remotoEmAberto": 0,
-        "localEmAberto": 26,
+        "localEmAberto": 24,
         "pctRemoto": 13,
         "alerta": true
       },
@@ -15477,14 +15441,14 @@
   },
   "ossPublicas": [
     {
-      "osId": "18206",
-      "ativo": "Inversor 2.2  Huawei | SUN2000-250KTL-H1    { APOL-RDP100-INVR2.2 }",
+      "osId": "18208",
+      "ativo": "Inversor 1.12 Sungrow SG125HV    { BRS100-INVR1.12 }",
       "equipe": "",
-      "responsavel": "Caio da Silva Cordeiro ",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Caio da Silva Cordeiro ",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Anderson  Parente",
       "status": "Não Iniciada",
-      "tarefa": "[APOL-RDP100-INVR2.2] - Religamento do APOL-RDP100-INVR2.2",
+      "tarefa": "[Inversor 1.12] - Religamento do Inversor 1.12",
       "criticidade": "",
       "dataProgramada": "2026-10-31",
       "dataCriacao": "2026-10-31",
@@ -15500,14 +15464,15 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "DavidNascimento",
       "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
       "criticidade": "",
       "dataProgramada": "2026-10-31",
       "dataCriacao": "2026-10-31",
-      "dataInicial": "",
+      "dataInicial": "2026-10-31",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -15589,24 +15554,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "18133",
-      "ativo": "Athon - Mãe do Rio 1 - PA  Mãe do Rio  Pará Brasil { ATHN-MRO100 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Frank  Melo",
-      "status": "pausado",
-      "tarefa": "[Athon - Mãe do Rio 1 - PA] - Religamento do Athon - Mãe do Rio 1 - PA",
-      "criticidade": "",
-      "dataProgramada": "2026-10-30",
-      "dataCriacao": "2026-10-30",
-      "dataInicial": "2026-10-30",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
     },
     {
       "osId": "18123",
@@ -16091,23 +16038,6 @@
       "criticidade": "",
       "dataProgramada": "2026-10-30",
       "dataCriacao": "2026-10-30",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "17999",
-      "ativo": "Thopen - Saturnino 1 - RJ Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { THPN-STN100 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Não Iniciada",
-      "tarefa": "[Thopen - Saturnino 1 - RJ] - Religamento do Thopen - Saturnino 1 - RJ",
-      "criticidade": "",
-      "dataProgramada": "2026-10-29",
-      "dataCriacao": "2026-10-29",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
@@ -19593,6 +19523,26 @@
       "atrasada": false
     },
     {
+      "osId": "18133",
+      "ativo": "Athon - Mãe do Rio 1 - PA  Mãe do Rio  Pará Brasil { ATHN-MRO100 }",
+      "equipe": "",
+      "responsavel": "Frank  Melo",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Frank  Melo",
+      "status": "Finalizados",
+      "tarefa": "[Athon - Mãe do Rio 1 - PA] - Religamento do Athon - Mãe do Rio 1 - PA",
+      "criticidade": "",
+      "dataProgramada": "2026-10-30",
+      "dataCriacao": "2026-10-30",
+      "dataInicial": "2026-10-30",
+      "dataFinal": "2026-10-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 24.0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "18128",
       "ativo": "Cabine 3 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN3 }",
       "equipe": "",
@@ -19746,6 +19696,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "17999",
+      "ativo": "Thopen - Saturnino 1 - RJ Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { THPN-STN100 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Finalizados",
+      "tarefa": "[Thopen - Saturnino 1 - RJ] - Religamento do Thopen - Saturnino 1 - RJ",
+      "criticidade": "",
+      "dataProgramada": "2026-10-29",
+      "dataCriacao": "2026-10-29",
+      "dataInicial": "2026-10-31",
+      "dataFinal": "2026-10-31",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -21797,49 +21767,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "16122",
-      "ativo": "Inversor 1.5 Sofar 250KTL-HV-PRO    { IBI200-INVR1.5 }",
-      "equipe": "",
-      "responsavel": "Thiago Morais ",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Thiago Morais ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
-      "criticidade": "",
-      "dataProgramada": "2026-10-12",
-      "dataCriacao": "2026-10-12",
-      "dataInicial": "2026-10-12",
-      "dataFinal": "2026-10-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "16118",
-      "ativo": "Athon -  Timon 1 - MA LOT Sucessão O, ROD. MA 040, S/N, Jóia  Timon  Maranhão Brasil { ATHN-TIM100 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Raphael Vitoriano",
-      "supervisor": "Luiz  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - Religamento da Usina",
-      "criticidade": "",
-      "dataProgramada": "2026-10-12",
-      "dataCriacao": "2026-10-12",
-      "dataInicial": "2026-10-12",
-      "dataFinal": "2026-10-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 24.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3512,
+  "historicoTotal": 3514,
   "totalGeral": 8101,
   "verificacao": {
     "total": 0,
