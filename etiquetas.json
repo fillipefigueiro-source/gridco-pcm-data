@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-02T16:01:09Z",
+  "geradoEm": "2026-11-02T17:45:32Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-02 .. 2026-11-08",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5859,
+        "total": 5861,
         "emAberto": 39,
         "atrasadas": 30,
-        "concluidas30d": 985,
-        "concluidas7d": 205,
-        "naSemanaCorrente": 18
+        "concluidas30d": 987,
+        "concluidas7d": 207,
+        "naSemanaCorrente": 20
       },
       "mttr": {
-        "horas": 12.15,
-        "label": "12h 9min",
-        "amostra": 985
+        "horas": 12.12,
+        "label": "12h 7min",
+        "amostra": 987
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W45",
-          "criadas": 19,
-          "finalizadas": 11
+          "criadas": 21,
+          "finalizadas": 13
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5859,
+            "total": 5861,
             "emAberto": 39
           }
         ],
@@ -82,8 +82,8 @@
       "atrasadas": 30,
       "porStatus": {
         "naoIniciada": 26,
-        "emProgresso": 3,
-        "pausada": 10,
+        "emProgresso": 1,
+        "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
@@ -521,7 +521,7 @@
           "responsavel": "Ailton Leal ",
           "criadoPor": "DavidNascimento",
           "supervisor": "Ailton Leal ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[THPN-JNC100] - Religamento do THPN-JNC100",
           "criticidade": "",
           "dataProgramada": "2026-11-01",
@@ -540,7 +540,7 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "DavidNascimento",
           "supervisor": "Ronaldo  Silva",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[THPN-NVL100-CABN1] - Religamento do THPN-NVL100-CABN1",
           "criticidade": "",
           "dataProgramada": "2026-11-01",
@@ -808,6 +808,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "18294",
+          "ativo": "Thopen - Altair 1 - SP Fazenda Cresciuma S/N Altair  São Paulo Brasil { THPN-ALT100 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "[THPN-ALT100] - Religamento do THPN-ALT100",
+          "criticidade": "",
+          "dataProgramada": "2026-11-02",
+          "dataCriacao": "2026-11-02",
+          "dataInicial": "2026-11-02",
+          "dataFinal": "2026-11-02",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "18275",
           "ativo": "Cabine 2 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN2 }",
@@ -3787,32 +3807,12 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14736",
-          "ativo": "Thopen - Alto Paraná 1 - PR Sítio Olho D'água s/n Alto Paraná  Paraná Brasil { THPN-APR100 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Maria Emanuella de Souza Mota ",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
-          "tarefa": "[THPN-APR100] - Religamento do THPN-APR100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-27",
-          "dataCriacao": "2026-09-27",
-          "dataInicial": "2026-09-27",
-          "dataFinal": "2026-09-27",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2410,
+      "historicoTotal": 2412,
       "subClassificacao": {
         "remoto": 754,
-        "local": 5105,
+        "local": 5107,
         "remotoEmAberto": 0,
         "localEmAberto": 39,
         "pctRemoto": 13,
@@ -6945,13 +6945,13 @@
         },
         {
           "osId": "15455",
-          "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
+          "ativo": "Estrutura Trackers Fazenda Esperança, Zona Rural, S/N Tucano  Bahia Brasil { SEMP-TCN200-ETKR1 }",
           "equipe": "",
           "responsavel": "Walter Santos ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Walter Santos ",
           "status": "Finalizados",
-          "tarefa": "[SEMP] - MPQ - Transformador",
+          "tarefa": "[SEMP] - MPQ - Tracker",
           "criticidade": "",
           "dataProgramada": "2026-10-12",
           "dataCriacao": "2026-10-05",
@@ -15821,7 +15821,7 @@
       "responsavel": "Ailton Leal ",
       "criadoPor": "DavidNascimento",
       "supervisor": "Ailton Leal ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[THPN-JNC100] - Religamento do THPN-JNC100",
       "criticidade": "",
       "dataProgramada": "2026-11-01",
@@ -15839,7 +15839,7 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "DavidNascimento",
       "supervisor": "Ronaldo  Silva",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[THPN-NVL100-CABN1] - Religamento do THPN-NVL100-CABN1",
       "criticidade": "",
       "dataProgramada": "2026-11-01",
@@ -19908,6 +19908,26 @@
       "atrasada": false
     },
     {
+      "osId": "18294",
+      "ativo": "Thopen - Altair 1 - SP Fazenda Cresciuma S/N Altair  São Paulo Brasil { THPN-ALT100 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Anderson  Parente",
+      "status": "Finalizados",
+      "tarefa": "[THPN-ALT100] - Religamento do THPN-ALT100",
+      "criticidade": "",
+      "dataProgramada": "2026-11-02",
+      "dataCriacao": "2026-11-02",
+      "dataInicial": "2026-11-02",
+      "dataFinal": "2026-11-02",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "18275",
       "ativo": "Cabine 2 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN2 }",
       "equipe": "",
@@ -22210,29 +22230,10 @@
       "horasAteAbrir": 144.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "16558",
-      "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Felipe Xavier ",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Felipe Xavier ",
-      "status": "Finalizados",
-      "tarefa": "[GDEN][Guajiru] - Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-10-16",
-      "dataCriacao": "2026-10-16",
-      "dataInicial": "2026-10-22",
-      "dataFinal": "2026-10-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3508,
-  "totalGeral": 8154,
+  "historicoTotal": 3510,
+  "totalGeral": 8156,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
