@@ -1,31 +1,26 @@
 {
-  "geradoEm": "2026-11-01T23:57:51Z",
+  "geradoEm": "2026-11-02T02:23:31Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
-  "semana": "2026-10-26 .. 2026-11-01",
+  "semana": "2026-11-02 .. 2026-11-08",
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5837,
-        "emAberto": 30,
-        "atrasadas": 24,
-        "concluidas30d": 998,
-        "concluidas7d": 227,
-        "naSemanaCorrente": 198
+        "total": 5840,
+        "emAberto": 31,
+        "atrasadas": 31,
+        "concluidas30d": 974,
+        "concluidas7d": 194,
+        "naSemanaCorrente": 0
       },
       "mttr": {
-        "horas": 12.57,
-        "label": "12h 34min",
-        "amostra": 998
+        "horas": 12.21,
+        "label": "12h 13min",
+        "amostra": 974
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W41",
-          "criadas": 237,
-          "finalizadas": 241
-        },
         {
           "semana": "W42",
           "criadas": 265,
@@ -38,16 +33,21 @@
         },
         {
           "semana": "W44",
-          "criadas": 202,
-          "finalizadas": 192
+          "criadas": 205,
+          "finalizadas": 194
+        },
+        {
+          "semana": "W45",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5837,
-            "emAberto": 30
+            "total": 5840,
+            "emAberto": 31
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 30,
-      "atrasadas": 24,
+      "total": 31,
+      "atrasadas": 31,
       "porStatus": {
-        "naoIniciada": 21,
+        "naoIniciada": 22,
         "emProgresso": 1,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 30
+        "(sem equipe)": 31
       },
       "oss": [
         {
@@ -533,6 +533,24 @@
           "atrasada": true
         },
         {
+          "osId": "18263",
+          "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Ailton Leal ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-JNC100] - Religamento do THPN-JNC100",
+          "criticidade": "",
+          "dataProgramada": "2026-11-01",
+          "dataCriacao": "2026-11-01",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "18258",
           "ativo": "Cabine 1 Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100-CABN1 }",
           "equipe": "",
@@ -548,7 +566,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "18255",
@@ -566,7 +584,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "18252",
@@ -584,7 +602,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "18245",
@@ -602,7 +620,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "18239",
@@ -620,7 +638,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "18232",
@@ -638,7 +656,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         }
       ],
       "ossHistorico": [
@@ -3643,12 +3661,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2418,
+      "historicoTotal": 2399,
       "subClassificacao": {
         "remoto": 754,
-        "local": 5083,
+        "local": 5086,
         "remotoEmAberto": 0,
-        "localEmAberto": 30,
+        "localEmAberto": 31,
         "pctRemoto": 13,
         "alerta": true
       },
@@ -3873,21 +3891,16 @@
         "total": 960,
         "emAberto": 93,
         "atrasadas": 38,
-        "concluidas30d": 114,
+        "concluidas30d": 109,
         "concluidas7d": 22,
-        "naSemanaCorrente": 6
+        "naSemanaCorrente": 12
       },
       "mttr": {
-        "horas": 375.58,
-        "label": "15d 15h",
-        "amostra": 114
+        "horas": 386.64,
+        "label": "16d 2h",
+        "amostra": 109
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W41",
-          "criadas": 48,
-          "finalizadas": 39
-        },
         {
           "semana": "W42",
           "criadas": 0,
@@ -3902,6 +3915,11 @@
           "semana": "W44",
           "criadas": 60,
           "finalizadas": 22
+        },
+        {
+          "semana": "W45",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -8393,7 +8411,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 374
+      "historicoTotal": 368
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8403,21 +8421,16 @@
         "total": 185,
         "emAberto": 17,
         "atrasadas": 16,
-        "concluidas30d": 12,
+        "concluidas30d": 11,
         "concluidas7d": 2,
-        "naSemanaCorrente": 6
+        "naSemanaCorrente": 1
       },
       "mttr": {
-        "horas": 382.0,
-        "label": "15d 22h",
-        "amostra": 12
+        "horas": 381.82,
+        "label": "15d 21h",
+        "amostra": 11
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W41",
-          "criadas": 3,
-          "finalizadas": 0
-        },
         {
           "semana": "W42",
           "criadas": 1,
@@ -8432,6 +8445,11 @@
           "semana": "W44",
           "criadas": 7,
           "finalizadas": 2
+        },
+        {
+          "semana": "W45",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -9528,21 +9546,16 @@
         "total": 963,
         "emAberto": 47,
         "atrasadas": 45,
-        "concluidas30d": 160,
-        "concluidas7d": 45,
-        "naSemanaCorrente": 59
+        "concluidas30d": 154,
+        "concluidas7d": 43,
+        "naSemanaCorrente": 5
       },
       "mttr": {
-        "horas": 176.55,
-        "label": "7d 8h",
-        "amostra": 160
+        "horas": 182.03,
+        "label": "7d 14h",
+        "amostra": 154
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W41",
-          "criadas": 29,
-          "finalizadas": 37
-        },
         {
           "semana": "W42",
           "criadas": 34,
@@ -9557,6 +9570,11 @@
           "semana": "W44",
           "criadas": 54,
           "finalizadas": 43
+        },
+        {
+          "semana": "W45",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -13268,7 +13286,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 612
+      "historicoTotal": 604
     },
     "engenharia": {
       "label": "Engenharia",
@@ -13278,21 +13296,16 @@
         "total": 187,
         "emAberto": 30,
         "atrasadas": 24,
-        "concluidas30d": 10,
+        "concluidas30d": 8,
         "concluidas7d": 3,
-        "naSemanaCorrente": 3
+        "naSemanaCorrente": 6
       },
       "mttr": {
-        "horas": 364.8,
-        "label": "15d 4h",
-        "amostra": 10
+        "horas": 294.0,
+        "label": "12d 6h",
+        "amostra": 8
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W41",
-          "criadas": 10,
-          "finalizadas": 2
-        },
         {
           "semana": "W42",
           "criadas": 9,
@@ -13307,6 +13320,11 @@
           "semana": "W44",
           "criadas": 7,
           "finalizadas": 3
+        },
+        {
+          "semana": "W45",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -15505,31 +15523,29 @@
           "horasAteAbrir": 192.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "9148",
-          "ativo": "Relé da Cabine 1      { GDEN-GJR100-RELE1 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Cláudio  Ferreira",
-          "status": "Finalizados",
-          "tarefa": "Ativação funções 50/51 relés de proteção",
-          "criticidade": "",
-          "dataProgramada": "2026-07-08",
-          "dataCriacao": "2026-07-08",
-          "dataInicial": "2026-07-09",
-          "dataFinal": "2026-08-03",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 600.0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 87
+      "historicoTotal": 86
     }
   },
   "ossPublicas": [
+    {
+      "osId": "18263",
+      "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Ailton Leal ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-JNC100] - Religamento do THPN-JNC100",
+      "criticidade": "",
+      "dataProgramada": "2026-11-01",
+      "dataCriacao": "2026-11-01",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
     {
       "osId": "18258",
       "ativo": "Cabine 1 Rua Marginal Superior S/N Nova Londrina  Paraná Brasil { THPN-NVL100-CABN1 }",
@@ -21958,8 +21974,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3530,
-  "totalGeral": 8132,
+  "historicoTotal": 3496,
+  "totalGeral": 8135,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
