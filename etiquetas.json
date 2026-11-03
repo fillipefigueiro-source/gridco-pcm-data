@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-03T05:52:39Z",
+  "geradoEm": "2026-11-03T07:54:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-02 .. 2026-11-08",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 5876,
-        "emAberto": 41,
+        "emAberto": 40,
         "atrasadas": 40,
-        "concluidas30d": 983,
-        "concluidas7d": 185,
+        "concluidas30d": 984,
+        "concluidas7d": 186,
         "naSemanaCorrente": 35
       },
       "mttr": {
-        "horas": 11.22,
+        "horas": 11.21,
         "label": "11h 13min",
-        "amostra": 983
+        "amostra": 984
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W45",
           "criadas": 36,
-          "finalizadas": 26
+          "finalizadas": 27
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 5876,
-            "emAberto": 41
+            "emAberto": 40
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 41,
+      "total": 40,
       "atrasadas": 40,
       "porStatus": {
-        "naoIniciada": 29,
+        "naoIniciada": 28,
         "emProgresso": 1,
         "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 41
+        "(sem equipe)": 40
       },
       "oss": [
         {
@@ -822,7 +822,9 @@
           "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": true
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "18317",
           "ativo": "2C - Sete Lagoas 2 - MG  Sete Lagoas  Minas Gerais Brasil { 2C-SLG200 }",
@@ -830,19 +832,19 @@
           "responsavel": "Daniel de Paula ",
           "criadoPor": "GerdesonAraújo",
           "supervisor": "Daniel de Paula ",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "[2C - Sete Lagoas 2 - MG] - Religamento do 2C - Sete Lagoas 2 - MG",
           "criticidade": "",
           "dataProgramada": "2026-11-03",
           "dataCriacao": "2026-11-03",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-11-03",
+          "dataFinal": "2026-11-03",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "18310",
           "ativo": "Cabine 3 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN3 }",
@@ -3822,34 +3824,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14743",
-          "ativo": "Cabine 1 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN1 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Valdério Paz ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-RDR200-CABN1] - Religamento do THPN-RDR200-CABN1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-28",
-          "dataCriacao": "2026-09-28",
-          "dataInicial": "2026-09-28",
-          "dataFinal": "2026-09-28",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2401,
+      "historicoTotal": 2402,
       "subClassificacao": {
         "remoto": 754,
         "local": 5122,
         "remotoEmAberto": 0,
-        "localEmAberto": 41,
+        "localEmAberto": 40,
         "pctRemoto": 13,
         "alerta": true
       },
@@ -15615,23 +15597,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "18317",
-      "ativo": "2C - Sete Lagoas 2 - MG  Sete Lagoas  Minas Gerais Brasil { 2C-SLG200 }",
-      "equipe": "",
-      "responsavel": "Daniel de Paula ",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Daniel de Paula ",
-      "status": "Não Iniciada",
-      "tarefa": "[2C - Sete Lagoas 2 - MG] - Religamento do 2C - Sete Lagoas 2 - MG",
-      "criticidade": "",
-      "dataProgramada": "2026-11-03",
-      "dataCriacao": "2026-11-03",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "18316",
       "ativo": "Athon - Capitão Poço 1 - PA  Capitão Poço  Pará Brasil { ATHN-CPP100 }",
       "equipe": "",
@@ -19909,6 +19874,26 @@
       "atrasada": false
     },
     {
+      "osId": "18317",
+      "ativo": "2C - Sete Lagoas 2 - MG  Sete Lagoas  Minas Gerais Brasil { 2C-SLG200 }",
+      "equipe": "",
+      "responsavel": "Daniel de Paula ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Daniel de Paula ",
+      "status": "Finalizados",
+      "tarefa": "[2C - Sete Lagoas 2 - MG] - Religamento do 2C - Sete Lagoas 2 - MG",
+      "criticidade": "",
+      "dataProgramada": "2026-11-03",
+      "dataCriacao": "2026-11-03",
+      "dataInicial": "2026-11-03",
+      "dataFinal": "2026-11-03",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "18310",
       "ativo": "Cabine 3 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN3 }",
       "equipe": "",
@@ -22236,28 +22221,9 @@
       "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "16596",
-      "ativo": "Tracker 69.101 STI Norland dual row    { ALT100-ETKR69.101 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Anderson  Parente",
-      "status": "Finalizados",
-      "tarefa": "Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-10-19",
-      "dataCriacao": "2026-10-16",
-      "dataInicial": "2026-10-26",
-      "dataFinal": "2026-10-26",
-      "linkFracttal": "",
-      "horasAteAbrir": 240.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3467,
+  "historicoTotal": 3468,
   "totalGeral": 8173,
   "verificacao": {
     "total": 0,
