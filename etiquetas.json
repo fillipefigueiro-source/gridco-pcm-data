@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-04T15:43:06Z",
+  "geradoEm": "2026-11-04T16:44:14Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-02 .. 2026-11-08",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5907,
-        "emAberto": 30,
+        "total": 5910,
+        "emAberto": 31,
         "atrasadas": 26,
-        "concluidas30d": 984,
-        "concluidas7d": 187,
-        "naSemanaCorrente": 66
+        "concluidas30d": 986,
+        "concluidas7d": 189,
+        "naSemanaCorrente": 69
       },
       "mttr": {
-        "horas": 11.71,
-        "label": "11h 43min",
-        "amostra": 984
+        "horas": 11.69,
+        "label": "11h 41min",
+        "amostra": 986
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W45",
-          "criadas": 67,
-          "finalizadas": 59
+          "criadas": 70,
+          "finalizadas": 61
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5907,
-            "emAberto": 30
+            "total": 5910,
+            "emAberto": 31
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 30,
+      "total": 31,
       "atrasadas": 26,
       "porStatus": {
         "naoIniciada": 22,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 30
+        "(sem equipe)": 31
       },
       "oss": [
         {
@@ -567,20 +567,39 @@
           "atrasada": true
         },
         {
-          "osId": "18510",
-          "ativo": "Cabine 3 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN3 }",
+          "osId": "18517",
+          "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
           "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Rúben Nunes da Silva ",
-          "supervisor": "Luiz  Silva",
+          "responsavel": "Valdir Silva ",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Valdir Silva ",
           "status": "Não Iniciada",
-          "tarefa": "[TIM100-CABN3] - Religamento do TIM100-CABN3",
+          "tarefa": "[THPN-SAP100] - Religamento do THPN-SAP100",
           "criticidade": "",
           "dataProgramada": "2026-11-04",
           "dataCriacao": "2026-11-04",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "18512",
+          "ativo": "SKID 4 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID4 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Felipe  Lima",
+          "status": "Em progresso",
+          "tarefa": "[IND100-SKID4] - Religamento do IND100-SKID4",
+          "criticidade": "",
+          "dataProgramada": "2026-11-04",
+          "dataCriacao": "2026-11-04",
+          "dataInicial": "2026-11-04",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -640,6 +659,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "18510",
+          "ativo": "Cabine 3 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN3 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Rúben Nunes da Silva ",
+          "supervisor": "Luiz  Silva",
+          "status": "Finalizados",
+          "tarefa": "[TIM100-CABN3] - Religamento do TIM100-CABN3",
+          "criticidade": "",
+          "dataProgramada": "2026-11-04",
+          "dataCriacao": "2026-11-04",
+          "dataInicial": "2026-11-04",
+          "dataFinal": "2026-11-04",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "18464",
           "ativo": "Thopen - Ibaté 1 - SP  Ibaté  São Paulo Brasil { THPN-IBT100 }",
@@ -3619,34 +3658,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14701",
-          "ativo": "RenoGrid - Colíder 2 - MT Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { RNGD-CLD200 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Finalizados",
-          "tarefa": "[RNGD-CLD200] - Religamento do RNGD-CLD200",
-          "criticidade": "",
-          "dataProgramada": "2026-09-26",
-          "dataCriacao": "2026-09-26",
-          "dataInicial": "2026-09-26",
-          "dataFinal": "2026-09-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2419,
+      "historicoTotal": 2421,
       "subClassificacao": {
         "remoto": 754,
-        "local": 5153,
+        "local": 5156,
         "remotoEmAberto": 0,
-        "localEmAberto": 30,
+        "localEmAberto": 31,
         "pctRemoto": 13,
         "alerta": true
       },
@@ -9251,8 +9270,8 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 993,
-        "emAberto": 60,
+        "total": 996,
+        "emAberto": 63,
         "atrasadas": 45,
         "concluidas30d": 171,
         "concluidas7d": 47,
@@ -9281,7 +9300,7 @@
         },
         {
           "semana": "W45",
-          "criadas": 30,
+          "criadas": 33,
           "finalizadas": 18
         }
       ],
@@ -9289,8 +9308,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 993,
-            "emAberto": 60
+            "total": 996,
+            "emAberto": 63
           }
         ],
         "responsaveis": [
@@ -9298,6 +9317,11 @@
             "nome": "Gilson Souza",
             "total": 77,
             "emAberto": 1
+          },
+          {
+            "nome": "Felipe Xavier",
+            "total": 57,
+            "emAberto": 6
           },
           {
             "nome": "James Chaves",
@@ -9310,27 +9334,22 @@
             "emAberto": 3
           },
           {
-            "nome": "Felipe Xavier",
-            "total": 54,
-            "emAberto": 3
-          },
-          {
             "nome": "Luiz  Silva",
             "total": 53,
             "emAberto": 2
           }
         ]
       },
-      "total": 60,
+      "total": 63,
       "atrasadas": 45,
       "porStatus": {
-        "naoIniciada": 52,
+        "naoIniciada": 55,
         "emProgresso": 2,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 60
+        "(sem equipe)": 63
       },
       "oss": [
         {
@@ -10345,6 +10364,23 @@
           "atrasada": false
         },
         {
+          "osId": "18513",
+          "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-11-10",
+          "dataCriacao": "2026-11-04",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "18451",
           "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-SON200-INVR1.4 }",
           "equipe": "",
@@ -10356,6 +10392,40 @@
           "criticidade": "",
           "dataProgramada": "2026-11-10",
           "dataCriacao": "2026-11-03",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "18515",
+          "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-SON200-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-11-11",
+          "dataCriacao": "2026-11-04",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "18514",
+          "ativo": "Inversor 1.5 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Felipe Xavier ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Felipe Xavier ",
+          "status": "Não Iniciada",
+          "tarefa": "Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-11-11",
+          "dataCriacao": "2026-11-04",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -13221,12 +13291,12 @@
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 192,
-        "emAberto": 32,
+        "total": 193,
+        "emAberto": 33,
         "atrasadas": 27,
         "concluidas30d": 11,
         "concluidas7d": 6,
-        "naSemanaCorrente": 10
+        "naSemanaCorrente": 11
       },
       "mttr": {
         "horas": 246.55,
@@ -13251,7 +13321,7 @@
         },
         {
           "semana": "W45",
-          "criadas": 3,
+          "criadas": 4,
           "finalizadas": 3
         }
       ],
@@ -13259,8 +13329,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 192,
-            "emAberto": 32
+            "total": 193,
+            "emAberto": 33
           }
         ],
         "responsaveis": [
@@ -13275,14 +13345,14 @@
             "emAberto": 0
           },
           {
+            "nome": "Marcos Duarte",
+            "total": 10,
+            "emAberto": 1
+          },
+          {
             "nome": "Pedro  Henrique",
             "total": 9,
             "emAberto": 8
-          },
-          {
-            "nome": "Marcos Duarte",
-            "total": 9,
-            "emAberto": 0
           },
           {
             "nome": "Hebert Rabelo",
@@ -13291,16 +13361,16 @@
           }
         ]
       },
-      "total": 32,
+      "total": 33,
       "atrasadas": 27,
       "porStatus": {
-        "naoIniciada": 28,
+        "naoIniciada": 29,
         "emProgresso": 0,
         "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 32
+        "(sem equipe)": 33
       },
       "oss": [
         {
@@ -13778,6 +13848,23 @@
           "criticidade": "",
           "dataProgramada": "2026-11-04",
           "dataCriacao": "2026-11-03",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "18518",
+          "ativo": "Estação Meteorológica BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Marcos Duarte ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-PRM100] [ETM] - Inspecionar operação da ETM de Primavera",
+          "criticidade": "",
+          "dataProgramada": "2026-11-05",
+          "dataCriacao": "2026-11-04",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -15417,20 +15504,102 @@
   },
   "ossPublicas": [
     {
-      "osId": "18510",
-      "ativo": "Cabine 3 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN3 }",
+      "osId": "18518",
+      "ativo": "Estação Meteorológica BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200-ESTM1 }",
       "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Luiz  Silva",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Marcos Duarte ",
       "status": "Não Iniciada",
-      "tarefa": "[TIM100-CABN3] - Religamento do TIM100-CABN3",
+      "tarefa": "[THPN-PRM100] [ETM] - Inspecionar operação da ETM de Primavera",
+      "criticidade": "",
+      "dataProgramada": "2026-11-05",
+      "dataCriacao": "2026-11-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "18517",
+      "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
+      "equipe": "",
+      "responsavel": "Valdir Silva ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Valdir Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-SAP100] - Religamento do THPN-SAP100",
       "criticidade": "",
       "dataProgramada": "2026-11-04",
       "dataCriacao": "2026-11-04",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "18515",
+      "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-SON200-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-11-11",
+      "dataCriacao": "2026-11-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "18514",
+      "ativo": "Inversor 1.5 Huawei SUN2000-60KTL-HV-D1-001    { GDEN-SON100-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-11-11",
+      "dataCriacao": "2026-11-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "18513",
+      "ativo": "Inversor 1.4 Sungrow SG250HX    { GDEN-GJR100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Felipe Xavier ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Felipe Xavier ",
+      "status": "Não Iniciada",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-11-10",
+      "dataCriacao": "2026-11-04",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "18512",
+      "ativo": "SKID 4 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID4 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Felipe  Lima",
+      "status": "Em progresso",
+      "tarefa": "[IND100-SKID4] - Religamento do IND100-SKID4",
+      "criticidade": "",
+      "dataProgramada": "2026-11-04",
+      "dataCriacao": "2026-11-04",
+      "dataInicial": "2026-11-04",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -19679,6 +19848,26 @@
       "atrasada": false
     },
     {
+      "osId": "18510",
+      "ativo": "Cabine 3 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN3 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "Luiz  Silva",
+      "status": "Finalizados",
+      "tarefa": "[TIM100-CABN3] - Religamento do TIM100-CABN3",
+      "criticidade": "",
+      "dataProgramada": "2026-11-04",
+      "dataCriacao": "2026-11-04",
+      "dataInicial": "2026-11-04",
+      "dataFinal": "2026-11-04",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "18464",
       "ativo": "Thopen - Ibaté 1 - SP  Ibaté  São Paulo Brasil { THPN-IBT100 }",
       "equipe": "",
@@ -21808,29 +21997,10 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "16597",
-      "ativo": "Tracker 59.101 STI Norland dual row    { ALT100-ETKR59.101 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Anderson  Parente",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 59.101] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-10-19",
-      "dataCriacao": "2026-10-16",
-      "dataInicial": "2026-10-23",
-      "dataFinal": "2026-10-23",
-      "linkFracttal": "",
-      "horasAteAbrir": 168.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3504,
-  "totalGeral": 8236,
+  "historicoTotal": 3506,
+  "totalGeral": 8243,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
