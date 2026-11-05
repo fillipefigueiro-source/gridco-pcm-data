@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-05T09:44:45Z",
+  "geradoEm": "2026-11-05T10:35:57Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-02 .. 2026-11-08",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5924,
+        "total": 5925,
         "emAberto": 35,
         "atrasadas": 31,
-        "concluidas30d": 965,
-        "concluidas7d": 168,
-        "naSemanaCorrente": 83
+        "concluidas30d": 966,
+        "concluidas7d": 169,
+        "naSemanaCorrente": 84
       },
       "mttr": {
-        "horas": 10.93,
-        "label": "10h 56min",
-        "amostra": 965
+        "horas": 10.92,
+        "label": "10h 55min",
+        "amostra": 966
       },
       "tendencia4Semanas": [
         {
@@ -38,22 +38,22 @@
         },
         {
           "semana": "W45",
-          "criadas": 84,
-          "finalizadas": 70
+          "criadas": 85,
+          "finalizadas": 71
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5924,
+            "total": 5925,
             "emAberto": 35
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 743,
+            "total": 744,
             "emAberto": 0
           },
           {
@@ -3731,10 +3731,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2407,
+      "historicoTotal": 2408,
       "subClassificacao": {
         "remoto": 756,
-        "local": 5168,
+        "local": 5169,
         "remotoEmAberto": 2,
         "localEmAberto": 33,
         "pctRemoto": 13,
@@ -3959,16 +3959,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 960,
-        "emAberto": 77,
+        "emAberto": 76,
         "atrasadas": 37,
-        "concluidas30d": 119,
-        "concluidas7d": 21,
+        "concluidas30d": 120,
+        "concluidas7d": 22,
         "naSemanaCorrente": 13
       },
       "mttr": {
-        "horas": 368.27,
-        "label": "15d 8h",
-        "amostra": 119
+        "horas": 366.4,
+        "label": "15d 6h",
+        "amostra": 120
       },
       "tendencia4Semanas": [
         {
@@ -3989,7 +3989,7 @@
         {
           "semana": "W45",
           "criadas": 2,
-          "finalizadas": 16
+          "finalizadas": 17
         }
       ],
       "topOfensores": {
@@ -3997,7 +3997,7 @@
           {
             "nome": "(sem equipe)",
             "total": 960,
-            "emAberto": 77
+            "emAberto": 76
           }
         ],
         "responsaveis": [
@@ -4028,16 +4028,16 @@
           }
         ]
       },
-      "total": 77,
+      "total": 76,
       "atrasadas": 37,
       "porStatus": {
         "naoIniciada": 69,
         "emProgresso": 0,
-        "pausada": 8,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 77
+        "(sem equipe)": 76
       },
       "oss": [
         {
@@ -4674,24 +4674,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
-        },
-        {
-          "osId": "18123",
-          "ativo": "Inversor 1.1 SOLAREDGE     { ELF100-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Bruno Vinícius Pupo",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Bruno Vinícius Pupo",
-          "status": "pausado",
-          "tarefa": "[Grid Co.] - MPA - Inversor (Noturno)",
-          "criticidade": "",
-          "dataProgramada": "2026-11-05",
-          "dataCriacao": "2026-10-30",
-          "dataInicial": "2026-10-30",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "atrasada": false
         },
         {
           "osId": "17980",
@@ -5359,6 +5341,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "18123",
+          "ativo": "Inversor 1.1 SOLAREDGE     { ELF100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Bruno Vinícius Pupo",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Bruno Vinícius Pupo",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPA - Inversor (Noturno)",
+          "criticidade": "",
+          "dataProgramada": "2026-11-05",
+          "dataCriacao": "2026-10-30",
+          "dataInicial": "2026-10-30",
+          "dataFinal": "2026-11-05",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 144.0,
+          "atrasada": false
+        },
         {
           "osId": "17976",
           "ativo": "Transformador 3 WEG     { THPN-INP100-TRFR3 }",
@@ -8096,25 +8097,6 @@
           "atrasada": false
         },
         {
-          "osId": "11319",
-          "ativo": "Transformador 1      { SEMP-TCN200-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Walter Santos ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Walter Santos ",
-          "status": "Finalizados",
-          "tarefa": "[SEMP] - MPQ - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-08-31",
-          "dataCriacao": "2026-08-17",
-          "dataInicial": "2026-08-28",
-          "dataFinal": "2026-08-28",
-          "linkFracttal": "",
-          "horasAteAbrir": 264.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "11523",
           "ativo": "Inversor 1.1 Sungrow     { JCD100-INVR1.1 }",
           "equipe": "",
@@ -8210,7 +8192,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 368
+      "historicoTotal": 369
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -9413,8 +9395,8 @@
       "total": 66,
       "atrasadas": 47,
       "porStatus": {
-        "naoIniciada": 58,
-        "emProgresso": 1,
+        "naoIniciada": 57,
+        "emProgresso": 2,
         "pausada": 7,
         "verificacao": 0
       },
@@ -9894,14 +9876,15 @@
           "responsavel": "Jeferson Jean dos Santos ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Jeferson Jean dos Santos ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 7.100] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-10-28",
           "dataCriacao": "2026-10-28",
-          "dataInicial": "",
+          "dataInicial": "2026-11-05",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 192.0,
           "atrasada": true
         },
         {
@@ -16678,23 +16661,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "18123",
-      "ativo": "Inversor 1.1 SOLAREDGE     { ELF100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Bruno Vinícius Pupo",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Bruno Vinícius Pupo",
-      "status": "pausado",
-      "tarefa": "[Grid Co.] - MPA - Inversor (Noturno)",
-      "criticidade": "",
-      "dataProgramada": "2026-11-05",
-      "dataCriacao": "2026-10-30",
-      "dataInicial": "2026-10-30",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
-    },
-    {
       "osId": "18093",
       "ativo": "Transformador 1 WEG     { SLG200-TRFR1 }",
       "equipe": "",
@@ -17553,14 +17519,15 @@
       "responsavel": "Jeferson Jean dos Santos ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Jeferson Jean dos Santos ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 7.100] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-10-28",
       "dataCriacao": "2026-10-28",
-      "dataInicial": "",
+      "dataInicial": "2026-11-05",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 192.0
     },
     {
       "osId": "17819",
@@ -19373,6 +19340,25 @@
     }
   ],
   "ossHistorico": [
+    {
+      "osId": "18123",
+      "ativo": "Inversor 1.1 SOLAREDGE     { ELF100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Bruno Vinícius Pupo",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Bruno Vinícius Pupo",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPA - Inversor (Noturno)",
+      "criticidade": "",
+      "dataProgramada": "2026-11-05",
+      "dataCriacao": "2026-10-30",
+      "dataInicial": "2026-10-30",
+      "dataFinal": "2026-11-05",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 144.0,
+      "atrasada": false
+    },
     {
       "osId": "18057",
       "ativo": "Transformador 3      { THPN-RDR200-TRFR3 }",
@@ -22219,29 +22205,10 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "16447",
-      "ativo": "Inversor 1.4 Sungrow SG350HX    { SEMP-TCN100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Walter Santos ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Walter Santos ",
-      "status": "Finalizados",
-      "tarefa": "Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-10-16",
-      "dataCriacao": "2026-10-15",
-      "dataInicial": "2026-10-16",
-      "dataFinal": "2026-10-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3492,
-  "totalGeral": 8266,
+  "historicoTotal": 3494,
+  "totalGeral": 8267,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
