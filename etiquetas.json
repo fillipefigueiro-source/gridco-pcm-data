@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-07T10:25:10Z",
+  "geradoEm": "2026-11-07T11:19:20Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-02 .. 2026-11-08",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 5989,
-        "emAberto": 35,
-        "atrasadas": 32,
+        "total": 5991,
+        "emAberto": 37,
+        "atrasadas": 33,
         "concluidas30d": 953,
         "concluidas7d": 170,
-        "naSemanaCorrente": 148
+        "naSemanaCorrente": 150
       },
       "mttr": {
         "horas": 9.25,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W45",
-          "criadas": 149,
+          "criadas": 151,
           "finalizadas": 132
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 5989,
-            "emAberto": 35
+            "total": 5991,
+            "emAberto": 37
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 35,
-      "atrasadas": 32,
+      "total": 37,
+      "atrasadas": 33,
       "porStatus": {
         "naoIniciada": 28,
-        "emProgresso": 2,
+        "emProgresso": 4,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 35
+        "(sem equipe)": 37
       },
       "oss": [
         {
@@ -526,6 +526,24 @@
           "atrasada": true
         },
         {
+          "osId": "18817",
+          "ativo": "Cabine 1  Demerval Lobão  Piauí Brasil { DML100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Luiz  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+          "criticidade": "",
+          "dataProgramada": "2026-11-06",
+          "dataCriacao": "2026-11-07",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "18808",
           "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
           "equipe": "",
@@ -550,14 +568,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "GerdesonAraújo",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[2C - Ipixuna do Pará 1 - PA] - Religamento do 2C - Ipixuna do Pará 1 - PA",
           "criticidade": "",
           "dataProgramada": "2026-11-06",
           "dataCriacao": "2026-11-06",
-          "dataInicial": "",
+          "dataInicial": "2026-11-07",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -587,7 +606,7 @@
           "responsavel": "Daniel de Paula ",
           "criadoPor": "Rúben Nunes da Silva ",
           "supervisor": "Daniel de Paula ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[2C - Sete Lagoas 2 - MG] - Religamento do 2C - Sete Lagoas 2 - MG",
           "criticidade": "",
           "dataProgramada": "2026-11-06",
@@ -674,6 +693,24 @@
           "atrasada": true
         },
         {
+          "osId": "18818",
+          "ativo": "Inversor 1.2 Sungrow SG125HV    { CAZ100-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Gilson  Milhomem",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Gilson  Milhomem",
+          "status": "Não Iniciada",
+          "tarefa": "[CAZ100-INVR1.2] - Religamento do CAZ100-INVR1.2",
+          "criticidade": "",
+          "dataProgramada": "2026-11-07",
+          "dataCriacao": "2026-11-07",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "18813",
           "ativo": "Inversor 7.1 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.1 }",
           "equipe": "",
@@ -698,14 +735,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "LucasNascimento",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[THPN-JNC100] - Religamento do THPN-JNC100",
           "criticidade": "",
           "dataProgramada": "2026-11-07",
           "dataCriacao": "2026-11-07",
-          "dataInicial": "",
+          "dataInicial": "2026-11-07",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -3733,9 +3771,9 @@
       "historicoTotal": 2426,
       "subClassificacao": {
         "remoto": 756,
-        "local": 5233,
+        "local": 5235,
         "remotoEmAberto": 1,
-        "localEmAberto": 34,
+        "localEmAberto": 36,
         "pctRemoto": 13,
         "alerta": true
       },
@@ -16115,6 +16153,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "18818",
+      "ativo": "Inversor 1.2 Sungrow SG125HV    { CAZ100-INVR1.2 }",
+      "equipe": "",
+      "responsavel": "Gilson  Milhomem",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Gilson  Milhomem",
+      "status": "Não Iniciada",
+      "tarefa": "[CAZ100-INVR1.2] - Religamento do CAZ100-INVR1.2",
+      "criticidade": "",
+      "dataProgramada": "2026-11-07",
+      "dataCriacao": "2026-11-07",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "18817",
+      "ativo": "Cabine 1  Demerval Lobão  Piauí Brasil { DML100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Luiz  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Cabine 1] - Religamento da Cabine 1",
+      "criticidade": "",
+      "dataProgramada": "2026-11-06",
+      "dataCriacao": "2026-11-07",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "18813",
       "ativo": "Inversor 7.1 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.1 }",
       "equipe": "",
@@ -16138,14 +16210,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "LucasNascimento",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[THPN-JNC100] - Religamento do THPN-JNC100",
       "criticidade": "",
       "dataProgramada": "2026-11-07",
       "dataCriacao": "2026-11-07",
-      "dataInicial": "",
+      "dataInicial": "2026-11-07",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16189,14 +16262,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "GerdesonAraújo",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[2C - Ipixuna do Pará 1 - PA] - Religamento do 2C - Ipixuna do Pará 1 - PA",
       "criticidade": "",
       "dataProgramada": "2026-11-06",
       "dataCriacao": "2026-11-06",
-      "dataInicial": "",
+      "dataInicial": "2026-11-07",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -16448,7 +16522,7 @@
       "responsavel": "Daniel de Paula ",
       "criadoPor": "Rúben Nunes da Silva ",
       "supervisor": "Daniel de Paula ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[2C - Sete Lagoas 2 - MG] - Religamento do 2C - Sete Lagoas 2 - MG",
       "criticidade": "",
       "dataProgramada": "2026-11-06",
@@ -23067,7 +23141,7 @@
     }
   ],
   "historicoTotal": 3531,
-  "totalGeral": 8383,
+  "totalGeral": 8385,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
