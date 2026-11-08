@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-08T17:22:20Z",
+  "geradoEm": "2026-11-08T19:05:44Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-02 .. 2026-11-08",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 6053,
-        "emAberto": 49,
+        "emAberto": 48,
         "atrasadas": 40,
-        "concluidas30d": 959,
-        "concluidas7d": 201,
+        "concluidas30d": 960,
+        "concluidas7d": 202,
         "naSemanaCorrente": 212
       },
       "mttr": {
-        "horas": 8.99,
+        "horas": 8.98,
         "label": "8h 59min",
-        "amostra": 959
+        "amostra": 960
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W45",
           "criadas": 213,
-          "finalizadas": 182
+          "finalizadas": 183
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 6053,
-            "emAberto": 49
+            "emAberto": 48
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 49,
+      "total": 48,
       "atrasadas": 40,
       "porStatus": {
-        "naoIniciada": 40,
+        "naoIniciada": 38,
         "emProgresso": 3,
-        "pausada": 6,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 49
+        "(sem equipe)": 48
       },
       "oss": [
         {
@@ -818,24 +818,6 @@
           "atrasada": true
         },
         {
-          "osId": "18893",
-          "ativo": "Cabine 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "Maria Emanuella de Souza Mota ",
-          "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-INP100-CABN2] - Religamento do THPN-INP100-CABN2",
-          "criticidade": "",
-          "dataProgramada": "2026-11-08",
-          "dataCriacao": "2026-11-08",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "18892",
           "ativo": "Greenyellow - Irecê 1 - BA  Irecê  Bahia Brasil { GY-IRC100 }",
           "equipe": "",
@@ -915,14 +897,15 @@
           "responsavel": "Cleiton  Farias",
           "criadoPor": "Maria Emanuella de Souza Mota ",
           "supervisor": "Cleiton  Farias",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-PRL100] - Religamento do THPN-PRL100",
           "criticidade": "",
           "dataProgramada": "2026-11-08",
           "dataCriacao": "2026-11-08",
-          "dataInicial": "",
+          "dataInicial": "2026-11-08",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -951,7 +934,7 @@
           "responsavel": "Cláudio  Ferreira",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Cláudio  Ferreira",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[THPN-BLN100] - Religamento do THPN-BLN100",
           "criticidade": "",
           "dataProgramada": "2026-11-08",
@@ -992,6 +975,26 @@
           "supervisor": "Joseildo Amorim ",
           "status": "Finalizados",
           "tarefa": "[AXIS-PTL300] - Religamento do AXIS-PTL300",
+          "criticidade": "",
+          "dataProgramada": "2026-11-08",
+          "dataCriacao": "2026-11-08",
+          "dataInicial": "2026-11-08",
+          "dataFinal": "2026-11-08",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "18893",
+          "ativo": "Cabine 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Ricardo Silva ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-INP100-CABN2] - Religamento do THPN-INP100-CABN2",
           "criticidade": "",
           "dataProgramada": "2026-11-08",
           "dataCriacao": "2026-11-08",
@@ -3962,34 +3965,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14697",
-          "ativo": "QGBT 1  Tupi Paulista  São Paulo Brasil { TPP100-QGBT1 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Carlos  Godoi",
-          "status": "Finalizados",
-          "tarefa": "[QGBT 1] - Religamento do QGBT 1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-26",
-          "dataCriacao": "2026-09-26",
-          "dataInicial": "2026-09-26",
-          "dataFinal": "2026-09-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2461,
+      "historicoTotal": 2462,
       "subClassificacao": {
         "remoto": 756,
         "local": 5297,
         "remotoEmAberto": 1,
-        "localEmAberto": 48,
+        "localEmAberto": 47,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -16369,23 +16352,6 @@
   },
   "ossPublicas": [
     {
-      "osId": "18893",
-      "ativo": "Cabine 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Ricardo Silva ",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-INP100-CABN2] - Religamento do THPN-INP100-CABN2",
-      "criticidade": "",
-      "dataProgramada": "2026-11-08",
-      "dataCriacao": "2026-11-08",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "18892",
       "ativo": "Greenyellow - Irecê 1 - BA  Irecê  Bahia Brasil { GY-IRC100 }",
       "equipe": "",
@@ -16461,14 +16427,15 @@
       "responsavel": "Cleiton  Farias",
       "criadoPor": "Maria Emanuella de Souza Mota ",
       "supervisor": "Cleiton  Farias",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-PRL100] - Religamento do THPN-PRL100",
       "criticidade": "",
       "dataProgramada": "2026-11-08",
       "dataCriacao": "2026-11-08",
-      "dataInicial": "",
+      "dataInicial": "2026-11-08",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16495,7 +16462,7 @@
       "responsavel": "Cláudio  Ferreira",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Cláudio  Ferreira",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[THPN-BLN100] - Religamento do THPN-BLN100",
       "criticidade": "",
       "dataProgramada": "2026-11-08",
@@ -21305,6 +21272,26 @@
       "atrasada": false
     },
     {
+      "osId": "18893",
+      "ativo": "Cabine 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Ricardo Silva ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-INP100-CABN2] - Religamento do THPN-INP100-CABN2",
+      "criticidade": "",
+      "dataProgramada": "2026-11-08",
+      "dataCriacao": "2026-11-08",
+      "dataInicial": "2026-11-08",
+      "dataFinal": "2026-11-08",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "18888",
       "ativo": "Thopen - Topázio (Matão 2) - SP Via Carl Fisher, 5350 Matão  São Paulo Brasil { THPN-TPZ100 }",
       "equipe": "",
@@ -23562,29 +23549,9 @@
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
-    },
-    {
-      "osId": "17595",
-      "ativo": "SKID 2 Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso  { NVX100-SKID2 }",
-      "equipe": "",
-      "responsavel": "Gabriel Oliveira ",
-      "criadoPor": "DavidNascimento",
-      "supervisor": "Gabriel Oliveira ",
-      "status": "Finalizados",
-      "tarefa": "[NVX100-SKID2] - Religamento do NVX100-SKID2",
-      "criticidade": "",
-      "dataProgramada": "2026-10-22",
-      "dataCriacao": "2026-10-26",
-      "dataInicial": "2026-10-22",
-      "dataFinal": "2026-10-27",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 120.0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3565,
+  "historicoTotal": 3566,
   "totalGeral": 8447,
   "verificacao": {
     "total": 0,
