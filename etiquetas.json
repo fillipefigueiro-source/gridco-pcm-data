@@ -1,31 +1,26 @@
 {
-  "geradoEm": "2026-11-08T23:02:34Z",
+  "geradoEm": "2026-11-09T01:12:41Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
-  "semana": "2026-11-02 .. 2026-11-08",
+  "semana": "2026-11-09 .. 2026-11-15",
   "tipologias": {
     "religamentos": {
       "label": "Religamentos",
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6057,
-        "emAberto": 41,
-        "atrasadas": 39,
-        "concluidas30d": 971,
-        "concluidas7d": 213,
-        "naSemanaCorrente": 216
+        "total": 6060,
+        "emAberto": 44,
+        "atrasadas": 44,
+        "concluidas30d": 940,
+        "concluidas7d": 194,
+        "naSemanaCorrente": 0
       },
       "mttr": {
-        "horas": 8.9,
-        "label": "8h 54min",
-        "amostra": 971
+        "horas": 9.02,
+        "label": "9h 1min",
+        "amostra": 940
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W42",
-          "criadas": 265,
-          "finalizadas": 264
-        },
         {
           "semana": "W43",
           "criadas": 221,
@@ -38,16 +33,21 @@
         },
         {
           "semana": "W45",
-          "criadas": 217,
+          "criadas": 220,
           "finalizadas": 194
+        },
+        {
+          "semana": "W46",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6057,
-            "emAberto": 41
+            "total": 6060,
+            "emAberto": 44
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 41,
-      "atrasadas": 39,
+      "total": 44,
+      "atrasadas": 44,
       "porStatus": {
-        "naoIniciada": 33,
+        "naoIniciada": 35,
         "emProgresso": 1,
-        "pausada": 7,
+        "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 41
+        "(sem equipe)": 44
       },
       "oss": [
         {
@@ -734,14 +734,15 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "LuelySantos",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[THPN-APR100] - Religamento do THPN-APR100",
           "criticidade": "",
           "dataProgramada": "2026-11-07",
           "dataCriacao": "2026-11-07",
-          "dataInicial": "",
+          "dataInicial": "2026-11-08",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -800,6 +801,60 @@
           "atrasada": true
         },
         {
+          "osId": "18902",
+          "ativo": "Thopen - Ibaté 1 - SP  Ibaté  São Paulo Brasil { THPN-IBT100 }",
+          "equipe": "",
+          "responsavel": "Andrick Gouveia ",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Andrick Gouveia ",
+          "status": "Não Iniciada",
+          "tarefa": "[Thopen - Ibaté 1 - SP] - Religamento do Thopen - Ibaté 1 - SP",
+          "criticidade": "",
+          "dataProgramada": "2026-11-08",
+          "dataCriacao": "2026-11-08",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "18901",
+          "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Janderson Miranda ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-SDN100] - Religamento do THPN-SDN100",
+          "criticidade": "",
+          "dataProgramada": "2026-11-08",
+          "dataCriacao": "2026-11-08",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
+          "osId": "18900",
+          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Adriano  Moraes",
+          "status": "Não Iniciada",
+          "tarefa": "[2C - Araputanga 1 - MT] - Religamento do 2C - Araputanga 1 - MT",
+          "criticidade": "",
+          "dataProgramada": "2026-11-08",
+          "dataCriacao": "2026-11-08",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "18889",
           "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
           "equipe": "",
@@ -816,7 +871,7 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "18864",
@@ -834,7 +889,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         }
       ],
       "ossHistorico": [
@@ -3839,12 +3894,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2473,
+      "historicoTotal": 2449,
       "subClassificacao": {
         "remoto": 756,
-        "local": 5301,
+        "local": 5304,
         "remotoEmAberto": 1,
-        "localEmAberto": 40,
+        "localEmAberto": 43,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -4069,21 +4124,16 @@
         "total": 962,
         "emAberto": 72,
         "atrasadas": 38,
-        "concluidas30d": 97,
+        "concluidas30d": 93,
         "concluidas7d": 23,
-        "naSemanaCorrente": 14
+        "naSemanaCorrente": 29
       },
       "mttr": {
-        "horas": 416.41,
-        "label": "17d 8h",
-        "amostra": 97
+        "horas": 403.35,
+        "label": "16d 19h",
+        "amostra": 93
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W42",
-          "criadas": 0,
-          "finalizadas": 19
-        },
         {
           "semana": "W43",
           "criadas": 6,
@@ -4098,6 +4148,11 @@
           "semana": "W45",
           "criadas": 3,
           "finalizadas": 23
+        },
+        {
+          "semana": "W46",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -8232,7 +8287,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 370
+      "historicoTotal": 367
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8244,7 +8299,7 @@
         "atrasadas": 17,
         "concluidas30d": 11,
         "concluidas7d": 0,
-        "naSemanaCorrente": 1
+        "naSemanaCorrente": 6
       },
       "mttr": {
         "horas": 381.82,
@@ -8252,11 +8307,6 @@
         "amostra": 11
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W42",
-          "criadas": 1,
-          "finalizadas": 5
-        },
         {
           "semana": "W43",
           "criadas": 9,
@@ -8270,6 +8320,11 @@
         {
           "semana": "W45",
           "criadas": 7,
+          "finalizadas": 0
+        },
+        {
+          "semana": "W46",
+          "criadas": 0,
           "finalizadas": 0
         }
       ],
@@ -9419,28 +9474,9 @@
           "horasAteAbrir": 0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "10763",
-          "ativo": "Inversor 1.2 GROWATT 33000TL3-S    { SALE-SNP100-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Adriano Silva ",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Adriano Silva ",
-          "status": "Finalizados",
-          "tarefa": "Testes técnicos em inversor substituído para garantia",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-08-06",
-          "dataInicial": "2026-08-10",
-          "dataFinal": "2026-08-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 38
+      "historicoTotal": 37
     },
     "performance": {
       "label": "Performance",
@@ -9450,21 +9486,16 @@
         "total": 1045,
         "emAberto": 93,
         "atrasadas": 63,
-        "concluidas30d": 163,
+        "concluidas30d": 154,
         "concluidas7d": 37,
-        "naSemanaCorrente": 53
+        "naSemanaCorrente": 35
       },
       "mttr": {
-        "horas": 176.39,
-        "label": "7d 8h",
-        "amostra": 163
+        "horas": 158.49,
+        "label": "6d 14h",
+        "amostra": 154
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W42",
-          "criadas": 33,
-          "finalizadas": 29
-        },
         {
           "semana": "W43",
           "criadas": 40,
@@ -9479,6 +9510,11 @@
           "semana": "W45",
           "criadas": 83,
           "finalizadas": 37
+        },
+        {
+          "semana": "W46",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -13973,7 +14009,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 607
+      "historicoTotal": 594
     },
     "engenharia": {
       "label": "Engenharia",
@@ -13983,21 +14019,16 @@
         "total": 196,
         "emAberto": 27,
         "atrasadas": 24,
-        "concluidas30d": 18,
+        "concluidas30d": 17,
         "concluidas7d": 11,
-        "naSemanaCorrente": 11
+        "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 337.33,
-        "label": "14d 1h",
-        "amostra": 18
+        "horas": 345.88,
+        "label": "14d 9h",
+        "amostra": 17
       },
       "tendencia4Semanas": [
-        {
-          "semana": "W42",
-          "criadas": 9,
-          "finalizadas": 2
-        },
         {
           "semana": "W43",
           "criadas": 3,
@@ -14012,6 +14043,11 @@
           "semana": "W45",
           "criadas": 7,
           "finalizadas": 11
+        },
+        {
+          "semana": "W46",
+          "criadas": 0,
+          "finalizadas": 0
         }
       ],
       "topOfensores": {
@@ -16160,69 +16196,63 @@
           "horasAteAbrir": 312.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "10891",
-          "ativo": "Estação Meteorológica Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Janderson Miranda ",
-          "status": "Finalizados",
-          "tarefa": "[ETM] - Análise de sensores",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-10",
-          "dataFinal": "2026-08-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "9910",
-          "ativo": "Cabine 1  São José do Egito  Pernambuco Brasil { SJE100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Rodrigo  Silva",
-          "criadoPor": "Juliana Cândido",
-          "supervisor": "Rodrigo  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Axis] - MPA - Cabine de Média Tensão",
-          "criticidade": "",
-          "dataProgramada": "2026-07-24",
-          "dataCriacao": "2026-07-23",
-          "dataInicial": "2026-08-10",
-          "dataFinal": "2026-08-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 432.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "10904",
-          "ativo": "Estação Meteorológica  São Bento  Rio de Janeiro Brasil { SBT500-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Adão Neto ",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Adão Neto ",
-          "status": "Finalizada",
-          "tarefa": "[ETM] - Análise de sensores",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-10",
-          "dataFinal": "2026-08-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 89
+      "historicoTotal": 86
     }
   },
   "ossPublicas": [
+    {
+      "osId": "18902",
+      "ativo": "Thopen - Ibaté 1 - SP  Ibaté  São Paulo Brasil { THPN-IBT100 }",
+      "equipe": "",
+      "responsavel": "Andrick Gouveia ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Andrick Gouveia ",
+      "status": "Não Iniciada",
+      "tarefa": "[Thopen - Ibaté 1 - SP] - Religamento do Thopen - Ibaté 1 - SP",
+      "criticidade": "",
+      "dataProgramada": "2026-11-08",
+      "dataCriacao": "2026-11-08",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "18901",
+      "ativo": "Thopen - Sítio dos Nogueiras 1 - GO Rodovia BR 040, KM 24 a KM 13 Cidade Ocidental  Goiás Brasil { THPN-SDN100 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Janderson Miranda ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-SDN100] - Religamento do THPN-SDN100",
+      "criticidade": "",
+      "dataProgramada": "2026-11-08",
+      "dataCriacao": "2026-11-08",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "18900",
+      "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Adriano  Moraes",
+      "status": "Não Iniciada",
+      "tarefa": "[2C - Araputanga 1 - MT] - Religamento do 2C - Araputanga 1 - MT",
+      "criticidade": "",
+      "dataProgramada": "2026-11-08",
+      "dataCriacao": "2026-11-08",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
     {
       "osId": "18889",
       "ativo": "Thopen - Junco 1 - PI Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100 }",
@@ -16351,14 +16381,15 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "LuelySantos",
       "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[THPN-APR100] - Religamento do THPN-APR100",
       "criticidade": "",
       "dataProgramada": "2026-11-07",
       "dataCriacao": "2026-11-07",
-      "dataInicial": "",
+      "dataInicial": "2026-11-08",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -23308,8 +23339,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3577,
-  "totalGeral": 8451,
+  "historicoTotal": 3533,
+  "totalGeral": 8454,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
