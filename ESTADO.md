@@ -594,6 +594,18 @@ rodada com erro (`sys.exit(1)`), e o passo "Publicar" do `semanal.yml` não roda
 Nexus seguem com o último arquivo bom. O Nexus tem a trava dele do lado de lá (não troca uma semana da programação por
 uma versão sem status). Ainda aberto: a varredura que engole o 429 e devolve vazio em vez de falhar.
 
+### O 429 na descoberta do endpoint troca a view (04/11/2026)
+
+O `Gerar_Relatorios` (painel de relatórios) abriu às 08:48 com **"Pronto. 8433 OS · 0 clientes"**. O
+`FracttalClient._resolver_path` testa as variantes de `work_orders` e tratava qualquer resposta que não fosse 200 como
+"endereço errado": com a empresa no limite (HTTP 429, 200 requisições), ele pulou para uma base alternativa que respondeu
+200 com **outra view** — linhas só com `description`, `duration`, `note`, sem `wo_folio` nem `groups_1_description`. O
+relatório gravou esse lixo no `.cache_bd_api.pkl` (TTL 15 min) e listou zero clientes. Sem erro em lugar nenhum.
+
+**Correção:** 406/429 na descoberta conta como "o recurso existe aqui" — fica nessa base, e o `get()` faz a espera.
+`relatorio_clientes.carregar` recusa a coleta (e não grava cache) se menos da metade das linhas tem nº de OS e usina.
+**Regra que fica:** limite de requisição nunca é sinal de endpoint errado. Os robôs usam o mesmo `_resolver_path`.
+
 ## 6b. Latência: quanto demora uma mudança a aparecer no painel
 
 Medido em 22/08. O gargalo **não é processamento** — é fila.

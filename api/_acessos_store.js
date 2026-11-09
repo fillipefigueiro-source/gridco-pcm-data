@@ -15,11 +15,12 @@
 const https = require('https');
 const { URL } = require('url');
 
-// Os 11 papéis que o painel conhece (AUTH_CLI em js/auth.js). Cadastro fora
+// Os 12 papéis que o painel conhece (AUTH_CLI em js/auth.js). Cadastro fora
 // desta lista é erro, não papel novo.
 const CLIENTES = {
   'cli-2c': '2C',
   'cli-alves-lima': 'Alves Lima',
+  'cli-apolo': 'Apolo',
   'cli-athon': 'Athon',
   'cli-axis': 'Axis',
   'cli-gd-energy': 'GD Energy',

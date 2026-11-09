@@ -153,6 +153,13 @@ def carregar(pasta):
         except Exception: idx=rows=None
     if rows is None:
         idx,rows=_carregar_os_api()
+        # Sanidade: sem nº de OS e usina a coleta veio de outra view (04/11/2026: 8433 linhas vazias,
+        # "0 clientes"). Não grava cache ruim e avisa em vez de gerar relatório vazio.
+        _io,_ia=idx.get('OSs ID'),idx.get('Ativo Classificação 1')
+        _ok=sum(1 for r in rows if r[_io] and r[_ia])
+        if not rows or _ok<0.5*len(rows):
+            raise RuntimeError(f"A API do Fracttal devolveu {len(rows)} linhas, só {_ok} com OS e usina. "
+                               "Provável limite de requisições; tente de novo em alguns minutos.")
         try: pickle.dump({"v":4,"idx":idx,"rows":rows},open(cache,"wb"))
         except Exception: pass
     # 2) AUXILIAR (cadastro das usinas) — de AUXILIAR - FABRICIO.xlsx
@@ -330,11 +337,22 @@ def janela(periodo,ref):
     return ini,fim,rot,tipo
 
 # ----------------------------------------------------------------- COLETA
+# OS com responsável do backoffice não entram no relatório do cliente (decisão do Fabrício, 09/11/2026):
+# não são trabalho do time de campo e derrubavam a aderência dele (ex.: Marabá). Casa por primeiro nome
+# + sobrenome, sem acento, porque o Fracttal grava "Singrid  Vieira", "Ana Barros" etc.
+RESP_BACKOFFICE=["Singrid Vieira","Lara Fortes","Aury Albuquerque","Tionardo Santos","Ana Patrícia Barros",
+                 "Levi Maia","Roger Lélis","Hebert Rabelo","João Vieira","Luis Otávio Lima de Sousa"]
+_BO=[sa(n).lower().split() for n in RESP_BACKOFFICE]
+def eh_backoffice(resp):
+    t=sa(str(resp or "")).lower().split()
+    return bool(t) and any(t[0]==b[0] and (t[-1] in b[1:] or b[-1] in t[1:]) for b in _BO)
+
 def coletar(escopo_tipo,escopo_nome,idx,rows,aux):
     g=lambda r,k:r[idx[k]]
     regs=[]
     for r in rows:
         if str(g(r,'Status')).strip()=="Cancelado": continue          # ignora cancelados
+        if eh_backoffice(g(r,'Responsável')): continue                 # backoffice fora do relatório
         ac1=g(r,'Ativo Classificação 1')
         cli,ufv,cluster,ufv_mob,ufv_cap=resolve_usina(ac1,aux)
         _muf=re.search(r"-\s*([A-Z]{2})\s*$",str(ac1 or ""))

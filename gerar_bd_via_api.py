@@ -214,8 +214,12 @@ class FracttalClient:
                     time.sleep(0.2)
                     r = self.session.get(url, headers=self._headers(),
                                          params={"limit": 1, "page": 1}, timeout=15)
-                    if r.status_code == 200:
-                        log(f"  → Resolvido: {url}")
+                    # 406/429 = limite de requisições da EMPRESA: o recurso existe aqui, só
+                    # pede espera (o get() já espera). Pular para outra base nesse caso fez o
+                    # painel de relatórios de 04/11 08:48 ler outra view (8433 linhas sem OS
+                    # nem usina → "0 clientes").
+                    if r.status_code in (200, 406, 429):
+                        log(f"  → Resolvido: {url}" + ("" if r.status_code == 200 else f" (HTTP {r.status_code}: limite, segue com espera)"))
                         self.base_url = base
                         self._path_cache[path] = v
                         return v

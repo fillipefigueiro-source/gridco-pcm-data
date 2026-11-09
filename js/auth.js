@@ -15,7 +15,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 const AUTH_CLI = {
-  'cli-2c': '2C', 'cli-alves-lima': 'Alves Lima', 'cli-athon': 'Athon',
+  'cli-2c': '2C', 'cli-alves-lima': 'Alves Lima', 'cli-apolo': 'Apolo', 'cli-athon': 'Athon',
   'cli-axis': 'Axis', 'cli-gd-energy': 'GD Energy', 'cli-greenyellow': 'Greenyellow',
   'cli-renogrid': 'RenoGrid', 'cli-sal-energia': 'Sal Energia', 'cli-semp': 'Semp',
   'cli-thopen': 'Thopen', 'cli-utragaz': 'Utragaz',
