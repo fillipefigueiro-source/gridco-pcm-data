@@ -115,8 +115,26 @@ const rexFin = t => String(t.estado || '') === 'Finalizada';
 const rexAbertaViva = t => t.aberta && String(t.osStatus || '') !== 'Finalizados';
 const rexRange = (v, a, b) => { const d = String(v || '').slice(0, 10); return d >= a && d <= b; };
 
+// OS do backoffice (Responsável da OS no Fracttal = alguém de backoffice.py):
+// o robô marca a tarefa com "bo": true no gestao_pcm.json. Não é trabalho de
+// campo, então sai de TODAS as contas dos relatórios — planejadas, fora do plano,
+// backlog, listas (09/11/2026, caso das 40 Administrativas da Athon na S44).
+// O conjunto de OS vale também para as linhas do banco_dados (os_id) e para os
+// pendentes, que não têm a marca. Refeito quando o GESTAO_DB é recarregado.
+let REX_BO = { db: null, os: new Set() };
+function rexBoOS() {
+  const db = (typeof GESTAO_DB !== 'undefined') ? GESTAO_DB : null;
+  if (REX_BO.db !== db) {
+    const s = new Set();
+    ((db && db.tarefas) || []).forEach(t => { if (t.bo) s.add(String(t.os)); });
+    REX_BO = { db: db, os: s };
+  }
+  return REX_BO.os;
+}
+
 function rexEscopoFiltro(t) {
   if (/^\s*teste\s*$/i.test(String(t.tipo || ''))) return false;   // cadastro de teste: nunca conta
+  if (t.bo || rexBoOS().has(String(t.os != null ? t.os : t.os_id))) return false;   // backoffice
   // opção do modal: preventivas CRIADAS dentro do período (ex.: MPMs do mês
   // seguinte lançadas antes da semana delas) saem de todas as contas — 02/10
   if (REX.semPrevNovas && rexGrupoBd(t.tipo) === 'Preventivas'

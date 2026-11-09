@@ -340,12 +340,10 @@ def janela(periodo,ref):
 # OS com responsável do backoffice não entram no relatório do cliente (decisão do Fabrício, 09/11/2026):
 # não são trabalho do time de campo e derrubavam a aderência dele (ex.: Marabá). Casa por primeiro nome
 # + sobrenome, sem acento, porque o Fracttal grava "Singrid  Vieira", "Ana Barros" etc.
-RESP_BACKOFFICE=["Singrid Vieira","Lara Fortes","Aury Albuquerque","Tionardo Santos","Ana Patrícia Barros",
-                 "Levi Maia","Roger Lélis","Hebert Rabelo","João Vieira","Luis Otávio Lima de Sousa"]
-_BO=[sa(n).lower().split() for n in RESP_BACKOFFICE]
-def eh_backoffice(resp):
-    t=sa(str(resp or "")).lower().split()
-    return bool(t) and any(t[0]==b[0] and (t[-1] in b[1:] or b[-1] in t[1:]) for b in _BO)
+# A lista mora em backoffice.py (a mesma que marca as tarefas do painel). O shim desta pasta carrega o
+# módulo pelo caminho do repositório, sem pôr o repositório no sys.path — por isso o insert abaixo.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from backoffice import RESP_BACKOFFICE, eh_backoffice  # noqa: E402
 
 def coletar(escopo_tipo,escopo_nome,idx,rows,aux):
     g=lambda r,k:r[idx[k]]

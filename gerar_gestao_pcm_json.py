@@ -42,6 +42,7 @@ from datetime import datetime, date
 # Reaproveita o cliente e os mapeamentos JÁ PROVADOS do gerador do BD.
 # (importar NÃO roda main() — está sob if __name__ == "__main__")
 import gerar_bd_via_api as bd
+from backoffice import eh_backoffice   # lista única do backoffice (09/11/2026)
 
 try:
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -388,6 +389,11 @@ def coletar(client, usina_idx, cluster_major, ativos, max_items=None):
             "hh": (round((row.get("real_duration") or 0) / 3600, 2)
                    if (not aberta and row.get("real_duration")) else None),
         })
+        # OS do backoffice (Responsável da OS = alguém de backoffice.py): o
+        # Relatório Executivo / Semana tira essas OS das contas (09/11/2026).
+        # Só grava quando é true, para não inflar o JSON público.
+        if eh_backoffice(row.get("user_assigned")):
+            tarefas[-1]["bo"] = True
     log(f"  -> {total_bruto} linhas brutas | {len(tarefas)} tarefas no escopo")
     return tarefas
 

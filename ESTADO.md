@@ -606,6 +606,19 @@ relatório gravou esse lixo no `.cache_bd_api.pkl` (TTL 15 min) e listou zero cl
 `relatorio_clientes.carregar` recusa a coleta (e não grava cache) se menos da metade das linhas tem nº de OS e usina.
 **Regra que fica:** limite de requisição nunca é sinal de endpoint errado. Os robôs usam o mesmo `_resolver_path`.
 
+### OS do backoffice fora dos relatórios (09/11/2026)
+
+O relatório da Athon (Marabá) mostrava OS da Singrid e da Lara, e o Relatório Executivo da S44 da Athon contava **40
+"Administrativas" fora do plano, 0 executadas** — todas com a Lara Fortes como Responsável da OS (acompanhamento dos
+trackers de Timon). Não é trabalho de campo e derrubava a "resposta ao imprevisto" (35/85 → 35/45).
+
+**Como ficou:** a lista mora em **`backoffice.py`** (10 nomes; casa por primeiro nome + sobrenome, sem acento). O
+`relatorio_clientes.py` pula a OS na coleta. O `gerar_gestao_pcm_json.py` marca a tarefa com `"bo": true` (pelo
+`user_assigned` da OS) e o `js/relatorio_exec.js` tira essas OS de todas as contas do Relatório Executivo e da Semana —
+inclusive das linhas do `banco_dados.json`, pelo nº da OS. **Só os relatórios**: as telas do painel (backlog, árvore,
+Gerencial) continuam mostrando as OS do backoffice, por decisão do PCM. O campo `responsavel` do `gestao_pcm.json` é o
+Gestor de Contrato da AUXILIAR, **não** o Responsável da OS — por isso a marca nova.
+
 ## 6b. Latência: quanto demora uma mudança a aparecer no painel
 
 Medido em 22/08. O gargalo **não é processamento** — é fila.
