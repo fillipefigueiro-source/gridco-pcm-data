@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-11T20:23:29Z",
+  "geradoEm": "2026-11-11T21:17:04Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-09 .. 2026-11-15",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6173,
-        "emAberto": 30,
+        "total": 6174,
+        "emAberto": 28,
         "atrasadas": 22,
-        "concluidas30d": 1003,
-        "concluidas7d": 263,
-        "naSemanaCorrente": 107
+        "concluidas30d": 1006,
+        "concluidas7d": 266,
+        "naSemanaCorrente": 108
       },
       "mttr": {
-        "horas": 8.38,
-        "label": "8h 23min",
-        "amostra": 1003
+        "horas": 8.36,
+        "label": "8h 21min",
+        "amostra": 1006
       },
       "tendencia4Semanas": [
         {
@@ -38,22 +38,22 @@
         },
         {
           "semana": "W46",
-          "criadas": 113,
-          "finalizadas": 111
+          "criadas": 114,
+          "finalizadas": 114
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6173,
-            "emAberto": 30
+            "total": 6174,
+            "emAberto": 28
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 767,
+            "total": 768,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 30,
+      "total": 28,
       "atrasadas": 22,
       "porStatus": {
-        "naoIniciada": 26,
-        "emProgresso": 1,
-        "pausada": 3,
+        "naoIniciada": 24,
+        "emProgresso": 0,
+        "pausada": 4,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 30
+        "(sem equipe)": 28
       },
       "oss": [
         {
@@ -550,14 +550,15 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "Maria Luiza Oliveira",
           "supervisor": "Carlos  Godoi",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "Analise dos sistema scada e testes de religamento remoto UFV -Aparecida do Taboado 1 e 2",
           "criticidade": "",
           "dataProgramada": "2026-11-11",
           "dataCriacao": "2026-11-11",
-          "dataInicial": "",
+          "dataInicial": "2026-11-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "remoto",
           "atrasada": false
         },
@@ -596,43 +597,6 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "19184",
-          "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Anderson  Parente",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-BRS100] - Religamento do THPN-BRS100",
-          "criticidade": "",
-          "dataProgramada": "2026-11-11",
-          "dataCriacao": "2026-11-11",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "19178",
-          "ativo": "Cabine 2 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Anderson  Parente",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Anderson  Parente",
-          "status": "Em progresso",
-          "tarefa": "[THPN-TNB100-CABN2] - Religamento do THPN-TNB100-CABN2",
-          "criticidade": "",
-          "dataProgramada": "2026-11-11",
-          "dataCriacao": "2026-11-11",
-          "dataInicial": "2026-11-11",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
       "ossHistorico": [
@@ -647,6 +611,46 @@
           "tarefa": "[Inversor 1.3] - Religamento do Inversor 1.3",
           "criticidade": "",
           "dataProgramada": "2026-10-04",
+          "dataCriacao": "2026-11-11",
+          "dataInicial": "2026-11-11",
+          "dataFinal": "2026-11-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "19184",
+          "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "[THPN-BRS100] - Religamento do THPN-BRS100",
+          "criticidade": "",
+          "dataProgramada": "2026-11-11",
+          "dataCriacao": "2026-11-11",
+          "dataInicial": "2026-11-11",
+          "dataFinal": "2026-11-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "19178",
+          "ativo": "Cabine 2 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Anderson  Parente",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Anderson  Parente",
+          "status": "Finalizados",
+          "tarefa": "[THPN-TNB100-CABN2] - Religamento do THPN-TNB100-CABN2",
+          "criticidade": "",
+          "dataProgramada": "2026-11-11",
           "dataCriacao": "2026-11-11",
           "dataInicial": "2026-11-11",
           "dataFinal": "2026-11-11",
@@ -3595,54 +3599,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13669",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "13666",
-          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2530,
+      "historicoTotal": 2533,
       "subClassificacao": {
         "remoto": 757,
-        "local": 5416,
+        "local": 5417,
         "remotoEmAberto": 1,
-        "localEmAberto": 29,
+        "localEmAberto": 27,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -3813,7 +3777,7 @@
         ],
         "medHorasAbrir": 13.2,
         "medHorasFechar": 2.6,
-        "amostraAbrir": 749,
+        "amostraAbrir": 750,
         "amostraFechar": 749,
         "topAbridores": [
           {
@@ -9009,16 +8973,16 @@
       "cor": "#ef4444",
       "kpis": {
         "total": 192,
-        "emAberto": 21,
+        "emAberto": 20,
         "atrasadas": 17,
-        "concluidas30d": 14,
-        "concluidas7d": 3,
+        "concluidas30d": 15,
+        "concluidas7d": 4,
         "naSemanaCorrente": 7
       },
       "mttr": {
-        "horas": 382.29,
-        "label": "15d 22h",
-        "amostra": 14
+        "horas": 358.4,
+        "label": "14d 22h",
+        "amostra": 15
       },
       "tendencia4Semanas": [
         {
@@ -9039,7 +9003,7 @@
         {
           "semana": "W46",
           "criadas": 4,
-          "finalizadas": 3
+          "finalizadas": 4
         }
       ],
       "topOfensores": {
@@ -9047,7 +9011,7 @@
           {
             "nome": "(sem equipe)",
             "total": 192,
-            "emAberto": 21
+            "emAberto": 20
           }
         ],
         "responsaveis": [
@@ -9078,16 +9042,16 @@
           }
         ]
       },
-      "total": 21,
+      "total": 20,
       "atrasadas": 17,
       "porStatus": {
         "naoIniciada": 16,
         "emProgresso": 2,
-        "pausada": 3,
+        "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 21
+        "(sem equipe)": 20
       },
       "oss": [
         {
@@ -9400,24 +9364,6 @@
           "atrasada": false
         },
         {
-          "osId": "19072",
-          "ativo": "Inversor 2.2 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR2.2 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Railson Gomes ",
-          "status": "pausado",
-          "tarefa": "[Castelo do Piaui] - Garantia de inversor 2.2",
-          "criticidade": "",
-          "dataProgramada": "2026-11-11",
-          "dataCriacao": "2026-11-10",
-          "dataInicial": "2026-11-11",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "atrasada": false
-        },
-        {
           "osId": "18802",
           "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { THPN-CLR200-INVR1.3 }",
           "equipe": "",
@@ -9454,6 +9400,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "19072",
+          "ativo": "Inversor 2.2 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR2.2 }",
+          "equipe": "",
+          "responsavel": "Railson Gomes ",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Railson Gomes ",
+          "status": "Finalizados",
+          "tarefa": "[Castelo do Piaui] - Garantia de inversor 2.2",
+          "criticidade": "",
+          "dataProgramada": "2026-11-11",
+          "dataCriacao": "2026-11-10",
+          "dataInicial": "2026-11-11",
+          "dataFinal": "2026-11-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "19116",
           "ativo": "Inversor 1.4 Huawei SUN2000-250KTL-H1    { THPN-BJD100-INVR1.4 }",
@@ -10196,24 +10161,24 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 39
+      "historicoTotal": 40
     },
     "performance": {
       "label": "Performance",
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 1085,
-        "emAberto": 89,
-        "atrasadas": 70,
-        "concluidas30d": 199,
-        "concluidas7d": 71,
-        "naSemanaCorrente": 73
+        "total": 1084,
+        "emAberto": 87,
+        "atrasadas": 69,
+        "concluidas30d": 200,
+        "concluidas7d": 72,
+        "naSemanaCorrente": 72
       },
       "mttr": {
-        "horas": 163.42,
-        "label": "6d 19h",
-        "amostra": 199
+        "horas": 162.6,
+        "label": "6d 18h",
+        "amostra": 200
       },
       "tendencia4Semanas": [
         {
@@ -10233,16 +10198,16 @@
         },
         {
           "semana": "W46",
-          "criadas": 41,
-          "finalizadas": 46
+          "criadas": 40,
+          "finalizadas": 47
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 1085,
-            "emAberto": 89
+            "total": 1084,
+            "emAberto": 87
           }
         ],
         "responsaveis": [
@@ -10252,14 +10217,14 @@
             "emAberto": 0
           },
           {
-            "nome": "Luiz  Silva",
-            "total": 60,
-            "emAberto": 4
-          },
-          {
             "nome": "James Chaves",
             "total": 59,
             "emAberto": 8
+          },
+          {
+            "nome": "Luiz  Silva",
+            "total": 59,
+            "emAberto": 3
           },
           {
             "nome": "Marcos Duarte",
@@ -10273,16 +10238,16 @@
           }
         ]
       },
-      "total": 89,
-      "atrasadas": 70,
+      "total": 87,
+      "atrasadas": 69,
       "porStatus": {
-        "naoIniciada": 75,
+        "naoIniciada": 73,
         "emProgresso": 0,
         "pausada": 14,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 89
+        "(sem equipe)": 87
       },
       "oss": [
         {
@@ -11419,23 +11384,6 @@
           "atrasada": true
         },
         {
-          "osId": "19137",
-          "ativo": "Inversor 4.3 Huawei     { TIM100-INVR4.3 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[Inversor 4.3] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-11-10",
-          "dataCriacao": "2026-11-10",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "19016",
           "ativo": "Estação Meteorológica  Sete Lagoas  Minas Gerais Brasil { SLG200-ESTM1 }",
           "equipe": "",
@@ -11486,23 +11434,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
-        },
-        {
-          "osId": "19263",
-          "ativo": "Tracker 26.100 Axial AXIAL 4X28    { THPN-CGH100-ETKR26.100 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
-          "tarefa": "[Tracker 26.100] - Substituição de TCU — Tracker 26 — Axial 18 — Cidade Gaúcha",
-          "criticidade": "",
-          "dataProgramada": "2026-11-11",
-          "dataCriacao": "2026-11-11",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
         },
         {
           "osId": "18719",
@@ -11814,6 +11745,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "19263",
+          "ativo": "Tracker 26.100 Axial AXIAL 4X28    { THPN-CGH100-ETKR26.100 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 26.100] - Substituição de TCU — Tracker 26 — Axial 18 — Cidade Gaúcha",
+          "criticidade": "",
+          "dataProgramada": "2026-11-11",
+          "dataCriacao": "2026-11-11",
+          "dataInicial": "2026-11-11",
+          "dataFinal": "2026-11-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "19254",
           "ativo": "Tracker 18.100 Axial AXIAL 4X28    { THPN-CGH100-ETKR18.100 }",
@@ -12952,25 +12902,6 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "horasAteFechar": 120.0,
-          "atrasada": false
-        },
-        {
-          "osId": "15955",
-          "ativo": "Inversor 2.2 Huawei SUN2000-215KTL-H3    { DML100-INVR2.2 }",
-          "equipe": "",
-          "responsavel": "Ailton Leal ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Ailton Leal ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 2.2] - Inspeção da PV 6 entre 10h e 15h",
-          "criticidade": "",
-          "dataProgramada": "2026-10-13",
-          "dataCriacao": "2026-10-09",
-          "dataInicial": "2026-11-04",
-          "dataFinal": "2026-11-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 624.0,
-          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -14665,7 +14596,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 603
+      "historicoTotal": 604
     },
     "engenharia": {
       "label": "Engenharia",
@@ -17196,22 +17127,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "19263",
-      "ativo": "Tracker 26.100 Axial AXIAL 4X28    { THPN-CGH100-ETKR26.100 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[Tracker 26.100] - Substituição de TCU — Tracker 26 — Axial 18 — Cidade Gaúcha",
-      "criticidade": "",
-      "dataProgramada": "2026-11-11",
-      "dataCriacao": "2026-11-11",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "19262",
       "ativo": "Infraestrutura Civil  Demerval Lobão  Piauí Brasil { DML100-INFC1 }",
       "equipe": "",
@@ -17363,14 +17278,15 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "Maria Luiza Oliveira",
       "supervisor": "Carlos  Godoi",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "Analise dos sistema scada e testes de religamento remoto UFV -Aparecida do Taboado 1 e 2",
       "criticidade": "",
       "dataProgramada": "2026-11-11",
       "dataCriacao": "2026-11-11",
-      "dataInicial": "",
+      "dataInicial": "2026-11-11",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "remoto"
     },
     {
@@ -17681,41 +17597,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "19184",
-      "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Anderson  Parente",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-BRS100] - Religamento do THPN-BRS100",
-      "criticidade": "",
-      "dataProgramada": "2026-11-11",
-      "dataCriacao": "2026-11-11",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "19178",
-      "ativo": "Cabine 2 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Anderson  Parente",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Anderson  Parente",
-      "status": "Em progresso",
-      "tarefa": "[THPN-TNB100-CABN2] - Religamento do THPN-TNB100-CABN2",
-      "criticidade": "",
-      "dataProgramada": "2026-11-11",
-      "dataCriacao": "2026-11-11",
-      "dataInicial": "2026-11-11",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "19175",
       "ativo": "Transformador 4 GAZQUEZ     { THPN-SDN100-TRFR4 }",
       "equipe": "",
@@ -18021,22 +17902,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "19137",
-      "ativo": "Inversor 4.3 Huawei     { TIM100-INVR4.3 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 4.3] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-11-10",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "19097",
       "ativo": "Thopen - Coração 1 e 2 - SC Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100 }",
       "equipe": "",
@@ -18117,23 +17982,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "19072",
-      "ativo": "Inversor 2.2 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR2.2 }",
-      "equipe": "",
-      "responsavel": "Railson Gomes ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Railson Gomes ",
-      "status": "pausado",
-      "tarefa": "[Castelo do Piaui] - Garantia de inversor 2.2",
-      "criticidade": "",
-      "dataProgramada": "2026-11-11",
-      "dataCriacao": "2026-11-10",
-      "dataInicial": "2026-11-11",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0
     },
     {
       "osId": "19064",
@@ -22189,6 +22037,25 @@
       "atrasada": false
     },
     {
+      "osId": "19263",
+      "ativo": "Tracker 26.100 Axial AXIAL 4X28    { THPN-CGH100-ETKR26.100 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 26.100] - Substituição de TCU — Tracker 26 — Axial 18 — Cidade Gaúcha",
+      "criticidade": "",
+      "dataProgramada": "2026-11-11",
+      "dataCriacao": "2026-11-11",
+      "dataInicial": "2026-11-11",
+      "dataFinal": "2026-11-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "19254",
       "ativo": "Tracker 18.100 Axial AXIAL 4X28    { THPN-CGH100-ETKR18.100 }",
       "equipe": "",
@@ -22205,6 +22072,46 @@
       "linkFracttal": "",
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "19184",
+      "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Anderson  Parente",
+      "status": "Finalizados",
+      "tarefa": "[THPN-BRS100] - Religamento do THPN-BRS100",
+      "criticidade": "",
+      "dataProgramada": "2026-11-11",
+      "dataCriacao": "2026-11-11",
+      "dataInicial": "2026-11-11",
+      "dataFinal": "2026-11-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "19178",
+      "ativo": "Cabine 2 Estrada Municipal Tanabi, Mangui Tanabi  São Paulo Brasil { THPN-TNB100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Anderson  Parente",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Anderson  Parente",
+      "status": "Finalizados",
+      "tarefa": "[THPN-TNB100-CABN2] - Religamento do THPN-TNB100-CABN2",
+      "criticidade": "",
+      "dataProgramada": "2026-11-11",
+      "dataCriacao": "2026-11-11",
+      "dataInicial": "2026-11-11",
+      "dataFinal": "2026-11-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -22389,6 +22296,25 @@
       "tarefa": "[Caxambu] - Regularização de Termografia da Cabine (Pendências MPS)",
       "criticidade": "",
       "dataProgramada": "2026-11-10",
+      "dataCriacao": "2026-11-10",
+      "dataInicial": "2026-11-11",
+      "dataFinal": "2026-11-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "19072",
+      "ativo": "Inversor 2.2 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR2.2 }",
+      "equipe": "",
+      "responsavel": "Railson Gomes ",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Railson Gomes ",
+      "status": "Finalizados",
+      "tarefa": "[Castelo do Piaui] - Garantia de inversor 2.2",
+      "criticidade": "",
+      "dataProgramada": "2026-11-11",
       "dataCriacao": "2026-11-10",
       "dataInicial": "2026-11-11",
       "dataFinal": "2026-11-11",
@@ -24400,85 +24326,9 @@
       "horasAteAbrir": 0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "17804",
-      "ativo": "Inversor 5.2 Huawei     { TIM200-INVR5.2 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Luiz  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 5.2] - Inspeção das Strings com Menor Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-11-04",
-      "dataCriacao": "2026-10-28",
-      "dataInicial": "2026-11-05",
-      "dataFinal": "2026-11-05",
-      "linkFracttal": "",
-      "horasAteAbrir": 192.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "17785",
-      "ativo": "Tracker 16.100 Axial Tracker 1VTwin    { THPN-CNN100-ETKR16.100 }",
-      "equipe": "",
-      "responsavel": "Marcelo Lino de Souza ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Marcelo Lino de Souza ",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 16.100 Axial Tracker 1VTwin] - Inspeção para chamado Axial",
-      "criticidade": "",
-      "dataProgramada": "2026-10-29",
-      "dataCriacao": "2026-10-28",
-      "dataInicial": "2026-10-28",
-      "dataFinal": "2026-10-28",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "17761",
-      "ativo": "Estrutura Trackers  Vargem Grande  Espirito Santo Brasil { VRG100-ETKR1 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Marcos Duarte ",
-      "status": "Finalizados",
-      "tarefa": "[Vargem Grande] - Mapeamento de trackers com problema",
-      "criticidade": "",
-      "dataProgramada": "2026-10-28",
-      "dataCriacao": "2026-10-28",
-      "dataInicial": "2026-10-28",
-      "dataFinal": "2026-10-28",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "17738",
-      "ativo": "Inversor 1.4 Sungrow SG350HX    { SEMP-TCN100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Walter Santos ",
-      "criadoPor": "Ana Barros",
-      "supervisor": "Walter Santos ",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-10-28",
-      "dataCriacao": "2026-10-27",
-      "dataInicial": "2026-10-28",
-      "dataFinal": "2026-10-28",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3635,
+  "historicoTotal": 3640,
   "totalGeral": 8692,
   "verificacao": {
     "total": 0,
