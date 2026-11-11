@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-11T14:41:52Z",
+  "geradoEm": "2026-11-11T15:41:55Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-09 .. 2026-11-15",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6160,
-        "emAberto": 30,
-        "atrasadas": 24,
-        "concluidas30d": 990,
-        "concluidas7d": 255,
-        "naSemanaCorrente": 95
+        "total": 6162,
+        "emAberto": 28,
+        "atrasadas": 23,
+        "concluidas30d": 994,
+        "concluidas7d": 259,
+        "naSemanaCorrente": 97
       },
       "mttr": {
-        "horas": 10.12,
-        "label": "10h 7min",
-        "amostra": 990
+        "horas": 10.11,
+        "label": "10h 6min",
+        "amostra": 994
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W46",
-          "criadas": 100,
-          "finalizadas": 107
+          "criadas": 102,
+          "finalizadas": 111
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6160,
-            "emAberto": 30
+            "total": 6162,
+            "emAberto": 28
           }
         ],
         "responsaveis": [
@@ -68,7 +68,7 @@
           },
           {
             "nome": "Italo  Lustosa",
-            "total": 307,
+            "total": 309,
             "emAberto": 0
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 30,
-      "atrasadas": 24,
+      "total": 28,
+      "atrasadas": 23,
       "porStatus": {
-        "naoIniciada": 27,
+        "naoIniciada": 25,
         "emProgresso": 0,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 30
+        "(sem equipe)": 28
       },
       "oss": [
         {
@@ -418,24 +418,6 @@
           "atrasada": true
         },
         {
-          "osId": "19174",
-          "ativo": "Cabine 1  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Carlos  Godoi",
-          "status": "Não Iniciada",
-          "tarefa": "[ADT100-CABN1] - Religamento do ADT100-CABN1",
-          "criticidade": "",
-          "dataProgramada": "2026-11-10",
-          "dataCriacao": "2026-11-10",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "19158",
           "ativo": "SKID 2 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD200-SKID2 }",
           "equipe": "",
@@ -580,24 +562,6 @@
           "atrasada": false
         },
         {
-          "osId": "19186",
-          "ativo": "Cabine 2  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN2 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "GerdesonAraújo",
-          "supervisor": "Carlos  Godoi",
-          "status": "Não Iniciada",
-          "tarefa": "[ADT100-CABN2] - Religamento do ADT100-CABN2",
-          "criticidade": "",
-          "dataProgramada": "2026-11-11",
-          "dataCriacao": "2026-11-11",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "19184",
           "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
           "equipe": "",
@@ -635,6 +599,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "19186",
+          "ativo": "Cabine 2  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "GerdesonAraújo",
+          "supervisor": "Carlos  Godoi",
+          "status": "Finalizados",
+          "tarefa": "[ADT100-CABN2] - Religamento do ADT100-CABN2",
+          "criticidade": "",
+          "dataProgramada": "2026-11-11",
+          "dataCriacao": "2026-11-11",
+          "dataInicial": "2026-11-11",
+          "dataFinal": "2026-11-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "19181",
           "ativo": "Thopen - Córrego do Sapucaia 1 - ES Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100 }",
@@ -3614,34 +3598,14 @@
           "horasAteFechar": 24.0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "14558",
-          "ativo": "Thopen - Ipixuna 1 e 2 - PA  Ipixuna  Pará Brasil { THPN-IPX100 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "LuelySantos",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizados",
-          "tarefa": "[Thopen - Ipixuna 1 e 2 - PA] - Religamento do Thopen - Ipixuna 1 e 2 - PA",
-          "criticidade": "",
-          "dataProgramada": "2026-09-24",
-          "dataCriacao": "2026-09-24",
-          "dataInicial": "2026-09-24",
-          "dataFinal": "2026-09-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2517,
+      "historicoTotal": 2521,
       "subClassificacao": {
         "remoto": 757,
-        "local": 5403,
+        "local": 5405,
         "remotoEmAberto": 1,
-        "localEmAberto": 29,
+        "localEmAberto": 27,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -3936,8 +3900,8 @@
       "total": 114,
       "atrasadas": 42,
       "porStatus": {
-        "naoIniciada": 103,
-        "emProgresso": 3,
+        "naoIniciada": 102,
+        "emProgresso": 4,
         "pausada": 8,
         "verificacao": 0
       },
@@ -4604,14 +4568,15 @@
           "responsavel": "Felipe Xavier ",
           "criadoPor": "Maria Luiza Oliveira",
           "supervisor": "Felipe Xavier ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-11-09",
           "dataCriacao": "2026-10-29",
-          "dataInicial": "",
+          "dataInicial": "2026-11-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 312.0,
           "atrasada": true
         },
         {
@@ -9948,17 +9913,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 1078,
-        "emAberto": 91,
-        "atrasadas": 76,
-        "concluidas30d": 190,
-        "concluidas7d": 62,
-        "naSemanaCorrente": 66
+        "total": 1079,
+        "emAberto": 90,
+        "atrasadas": 75,
+        "concluidas30d": 192,
+        "concluidas7d": 64,
+        "naSemanaCorrente": 67
       },
       "mttr": {
-        "horas": 166.99,
+        "horas": 166.0,
         "label": "6d 22h",
-        "amostra": 190
+        "amostra": 192
       },
       "tendencia4Semanas": [
         {
@@ -9978,16 +9943,16 @@
         },
         {
           "semana": "W46",
-          "criadas": 34,
-          "finalizadas": 37
+          "criadas": 35,
+          "finalizadas": 39
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 1078,
-            "emAberto": 91
+            "total": 1079,
+            "emAberto": 90
           }
         ],
         "responsaveis": [
@@ -10018,16 +9983,16 @@
           }
         ]
       },
-      "total": 91,
-      "atrasadas": 76,
+      "total": 90,
+      "atrasadas": 75,
       "porStatus": {
-        "naoIniciada": 75,
-        "emProgresso": 3,
-        "pausada": 13,
+        "naoIniciada": 72,
+        "emProgresso": 4,
+        "pausada": 14,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 91
+        "(sem equipe)": 90
       },
       "oss": [
         {
@@ -10983,14 +10948,15 @@
           "responsavel": "Ailton Leal ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Ailton Leal ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 14.101] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-11-09",
           "dataCriacao": "2026-11-09",
-          "dataInicial": "",
+          "dataInicial": "2026-11-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -11216,24 +11182,6 @@
           "atrasada": true
         },
         {
-          "osId": "19141",
-          "ativo": "Inversor 3.1  SUNGROW / SG250HX    { THPN-RDR200-INVR3.1 }",
-          "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Valdério Paz ",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 3.1] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-11-10",
-          "dataCriacao": "2026-11-10",
-          "dataInicial": "2026-11-11",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "atrasada": true
-        },
-        {
           "osId": "19139",
           "ativo": "Inversor 1.10 Huawei     { TIM100-INVR1.10 }",
           "equipe": "",
@@ -11337,13 +11285,31 @@
           "atrasada": true
         },
         {
+          "osId": "19254",
+          "ativo": "Tracker 18.100 Axial AXIAL 4X28    { THPN-CGH100-ETKR18.100 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Ana Barros ",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Em progresso",
+          "tarefa": "[Tracker 18.100] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-11-11",
+          "dataCriacao": "2026-11-11",
+          "dataInicial": "2026-11-11",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "atrasada": false
+        },
+        {
           "osId": "19136",
           "ativo": "Tracker 27.200 Brametal     { TIM200-ETKR27.200 }",
           "equipe": "",
           "responsavel": "José Neto ",
           "criadoPor": "Gabriela Dias ",
           "supervisor": "José Neto ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Tracker 27.200] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-11-11",
@@ -11352,23 +11318,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
-          "atrasada": false
-        },
-        {
-          "osId": "18729",
-          "ativo": "Estação Meteorológica Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Valmir  Júnior",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Valmir  Júnior",
-          "status": "Não Iniciada",
-          "tarefa": "[Estação Meteorológica] - [Diamantino] - Limpeza e inspeção dos sensores da ETM",
-          "criticidade": "",
-          "dataProgramada": "2026-11-11",
-          "dataCriacao": "2026-11-06",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
           "atrasada": false
         },
         {
@@ -11395,14 +11344,15 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "Maria Luiza Oliveira",
           "supervisor": "Carlos  Godoi",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Estação Meteorológica] - [Aparecida do Taboado] - Inspeção na Estação Meteorológica",
           "criticidade": "",
           "dataProgramada": "2026-11-12",
           "dataCriacao": "2026-11-11",
-          "dataInicial": "",
+          "dataInicial": "2026-11-11",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -11596,6 +11546,25 @@
       ],
       "ossHistorico": [
         {
+          "osId": "19141",
+          "ativo": "Inversor 3.1  SUNGROW / SG250HX    { THPN-RDR200-INVR3.1 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Valdério Paz ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 3.1] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-11-10",
+          "dataCriacao": "2026-11-10",
+          "dataInicial": "2026-11-11",
+          "dataFinal": "2026-11-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "19133",
           "ativo": "Tracker 104.100 STI Norland     { TIM100-ETKR104.100 }",
           "equipe": "",
@@ -11669,6 +11638,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
           "horasAteFechar": 24.0,
+          "atrasada": false
+        },
+        {
+          "osId": "18729",
+          "ativo": "Estação Meteorológica Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Valmir  Júnior",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Valmir  Júnior",
+          "status": "Finalizados",
+          "tarefa": "[Estação Meteorológica] - [Diamantino] - Limpeza e inspeção dos sensores da ETM",
+          "criticidade": "",
+          "dataProgramada": "2026-11-11",
+          "dataCriacao": "2026-11-06",
+          "dataInicial": "2026-11-11",
+          "dataFinal": "2026-11-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -14009,25 +13997,6 @@
           "atrasada": false
         },
         {
-          "osId": "15651",
-          "ativo": "Tracker 05.101 Brametal Bi-motor    { SMP100-ETKR5.101 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 05.101] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-10-09",
-          "dataCriacao": "2026-10-07",
-          "dataInicial": "2026-10-21",
-          "dataFinal": "2026-10-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "16778",
           "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
           "equipe": "",
@@ -14389,25 +14358,6 @@
           "atrasada": false
         },
         {
-          "osId": "15695",
-          "ativo": "Inversor 7.2 Sungrow     { JCD100-INVR7.2 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "James Chaves ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 7.2] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-10-08",
-          "dataCriacao": "2026-10-07",
-          "dataInicial": "2026-10-08",
-          "dataFinal": "2026-10-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "14661",
           "ativo": "Inversor 2.9 Sungrow SG125-HV    { THPN-SAP100-INVR2.9 }",
           "equipe": "",
@@ -14446,24 +14396,24 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 594
+      "historicoTotal": 596
     },
     "engenharia": {
       "label": "Engenharia",
       "icone": "ti-settings-cog",
       "cor": "#3b82f6",
       "kpis": {
-        "total": 199,
-        "emAberto": 29,
-        "atrasadas": 28,
-        "concluidas30d": 18,
-        "concluidas7d": 9,
-        "naSemanaCorrente": 6
+        "total": 201,
+        "emAberto": 30,
+        "atrasadas": 27,
+        "concluidas30d": 19,
+        "concluidas7d": 10,
+        "naSemanaCorrente": 8
       },
       "mttr": {
-        "horas": 342.67,
-        "label": "14d 6h",
-        "amostra": 18
+        "horas": 387.79,
+        "label": "16d 3h",
+        "amostra": 19
       },
       "tendencia4Semanas": [
         {
@@ -14483,23 +14433,23 @@
         },
         {
           "semana": "W46",
-          "criadas": 3,
-          "finalizadas": 1
+          "criadas": 5,
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 199,
-            "emAberto": 29
+            "total": 201,
+            "emAberto": 30
           }
         ],
         "responsaveis": [
           {
             "nome": "João Vieira",
-            "total": 42,
-            "emAberto": 0
+            "total": 43,
+            "emAberto": 1
           },
           {
             "nome": "Hebert Rabelo",
@@ -14523,16 +14473,16 @@
           }
         ]
       },
-      "total": 29,
-      "atrasadas": 28,
+      "total": 30,
+      "atrasadas": 27,
       "porStatus": {
-        "naoIniciada": 20,
-        "emProgresso": 1,
+        "naoIniciada": 22,
+        "emProgresso": 0,
         "pausada": 8,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 29
+        "(sem equipe)": 30
       },
       "oss": [
         {
@@ -14551,24 +14501,6 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 648.0,
-          "atrasada": true
-        },
-        {
-          "osId": "14359",
-          "ativo": "Estação Meteorológica LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Luiz  Silva",
-          "status": "Em progresso",
-          "tarefa": "Instalação sensor de temperatura módulos e sensor de temperatura do ar",
-          "criticidade": "",
-          "dataProgramada": "2026-09-22",
-          "dataCriacao": "2026-09-22",
-          "dataInicial": "2026-10-16",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 576.0,
           "atrasada": true
         },
         {
@@ -15021,6 +14953,40 @@
           "atrasada": true
         },
         {
+          "osId": "19260",
+          "ativo": "Fieldlogger 1      { ADT100-ESTM1-FDL1 }",
+          "equipe": "",
+          "responsavel": "João Vieira ",
+          "criadoPor": "Samuel Lucena",
+          "supervisor": "João Vieira ",
+          "status": "Não Iniciada",
+          "tarefa": "[Fieldlogger 1] - Verificação do funcionamento da ETM",
+          "criticidade": "",
+          "dataProgramada": "2026-11-13",
+          "dataCriacao": "2026-11-11",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "19258",
+          "ativo": "Relé da Cabine 2      { ADT100-RELE2 }",
+          "equipe": "",
+          "responsavel": "Aury  Albuquerque",
+          "criadoPor": "Samuel Lucena",
+          "supervisor": "Aury  Albuquerque",
+          "status": "Não Iniciada",
+          "tarefa": "[Relé da Cabine 2] - Acompanhamento e supervisão para testes de religamento na cabine de Aparecida do Taboado",
+          "criticidade": "",
+          "dataProgramada": "2026-11-13",
+          "dataCriacao": "2026-11-11",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "18796",
           "ativo": "Inversor 2.6 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.6 }",
           "equipe": "",
@@ -15039,6 +15005,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "14359",
+          "ativo": "Estação Meteorológica LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Luiz  Silva",
+          "status": "Finalizados",
+          "tarefa": "Instalação sensor de temperatura módulos e sensor de temperatura do ar",
+          "criticidade": "",
+          "dataProgramada": "2026-09-22",
+          "dataCriacao": "2026-09-22",
+          "dataInicial": "2026-10-16",
+          "dataFinal": "2026-11-11",
+          "linkFracttal": "",
+          "horasAteAbrir": 576.0,
+          "horasAteFechar": 624.0,
+          "atrasada": false
+        },
         {
           "osId": "17903",
           "ativo": "Estação Meteorológica  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-ESTM1 }",
@@ -16484,10 +16469,59 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 76
+      "historicoTotal": 77
     }
   },
   "ossPublicas": [
+    {
+      "osId": "19260",
+      "ativo": "Fieldlogger 1      { ADT100-ESTM1-FDL1 }",
+      "equipe": "",
+      "responsavel": "João Vieira ",
+      "criadoPor": "Samuel Lucena",
+      "supervisor": "João Vieira ",
+      "status": "Não Iniciada",
+      "tarefa": "[Fieldlogger 1] - Verificação do funcionamento da ETM",
+      "criticidade": "",
+      "dataProgramada": "2026-11-13",
+      "dataCriacao": "2026-11-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "19258",
+      "ativo": "Relé da Cabine 2      { ADT100-RELE2 }",
+      "equipe": "",
+      "responsavel": "Aury  Albuquerque",
+      "criadoPor": "Samuel Lucena",
+      "supervisor": "Aury  Albuquerque",
+      "status": "Não Iniciada",
+      "tarefa": "[Relé da Cabine 2] - Acompanhamento e supervisão para testes de religamento na cabine de Aparecida do Taboado",
+      "criticidade": "",
+      "dataProgramada": "2026-11-13",
+      "dataCriacao": "2026-11-11",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "19254",
+      "ativo": "Tracker 18.100 Axial AXIAL 4X28    { THPN-CGH100-ETKR18.100 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "Ana Barros ",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Em progresso",
+      "tarefa": "[Tracker 18.100] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-11-11",
+      "dataCriacao": "2026-11-11",
+      "dataInicial": "2026-11-11",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0
+    },
     {
       "osId": "19242",
       "ativo": "Tracker 5.102      { MAB200-ETKR5.102 }",
@@ -16816,14 +16850,15 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "Maria Luiza Oliveira",
       "supervisor": "Carlos  Godoi",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Estação Meteorológica] - [Aparecida do Taboado] - Inspeção na Estação Meteorológica",
       "criticidade": "",
       "dataProgramada": "2026-11-12",
       "dataCriacao": "2026-11-11",
-      "dataInicial": "",
+      "dataInicial": "2026-11-11",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "19203",
@@ -16892,23 +16927,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "19186",
-      "ativo": "Cabine 2  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN2 }",
-      "equipe": "",
-      "responsavel": "Carlos  Godoi",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Carlos  Godoi",
-      "status": "Não Iniciada",
-      "tarefa": "[ADT100-CABN2] - Religamento do ADT100-CABN2",
-      "criticidade": "",
-      "dataProgramada": "2026-11-11",
-      "dataCriacao": "2026-11-11",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "19184",
       "ativo": "Thopen - Barretos 1 - SP  Barretos  São Paulo Brasil { THPN-BRS100 }",
       "equipe": "",
@@ -16957,23 +16975,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "19174",
-      "ativo": "Cabine 1  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Carlos  Godoi",
-      "criadoPor": "GerdesonAraújo",
-      "supervisor": "Carlos  Godoi",
-      "status": "Não Iniciada",
-      "tarefa": "[ADT100-CABN1] - Religamento do ADT100-CABN1",
-      "criticidade": "",
-      "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-11-10",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "19173",
@@ -17249,23 +17250,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "19141",
-      "ativo": "Inversor 3.1  SUNGROW / SG250HX    { THPN-RDR200-INVR3.1 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Valdério Paz ",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 3.1] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-11-10",
-      "dataInicial": "2026-11-11",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0
-    },
-    {
       "osId": "19139",
       "ativo": "Inversor 1.10 Huawei     { TIM100-INVR1.10 }",
       "equipe": "",
@@ -17320,7 +17304,7 @@
       "responsavel": "José Neto ",
       "criadoPor": "Gabriela Dias ",
       "supervisor": "José Neto ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Tracker 27.200] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-11-11",
@@ -17762,14 +17746,15 @@
       "responsavel": "Ailton Leal ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Ailton Leal ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 14.101] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-11-09",
       "dataCriacao": "2026-11-09",
-      "dataInicial": "",
+      "dataInicial": "2026-11-11",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "18977",
@@ -18201,22 +18186,6 @@
       "tarefa": "[Inversor 1.10] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-11-06",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "18729",
-      "ativo": "Estação Meteorológica Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Valmir  Júnior",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Valmir  Júnior",
-      "status": "Não Iniciada",
-      "tarefa": "[Estação Meteorológica] - [Diamantino] - Limpeza e inspeção dos sensores da ETM",
-      "criticidade": "",
-      "dataProgramada": "2026-11-11",
       "dataCriacao": "2026-11-06",
       "dataInicial": "",
       "dataFinal": "",
@@ -19367,14 +19336,15 @@
       "responsavel": "Felipe Xavier ",
       "criadoPor": "Maria Luiza Oliveira",
       "supervisor": "Felipe Xavier ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-11-09",
       "dataCriacao": "2026-10-29",
-      "dataInicial": "",
+      "dataInicial": "2026-11-11",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 312.0
     },
     {
       "osId": "17977",
@@ -20644,23 +20614,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "14359",
-      "ativo": "Estação Meteorológica LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Luiz  Silva",
-      "status": "Em progresso",
-      "tarefa": "Instalação sensor de temperatura módulos e sensor de temperatura do ar",
-      "criticidade": "",
-      "dataProgramada": "2026-09-22",
-      "dataCriacao": "2026-09-22",
-      "dataInicial": "2026-10-16",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 576.0
-    },
-    {
       "osId": "13766",
       "ativo": "Inversor 2.2  SUN2000-250KTL-H1    { THPN-TGI100-INVR2.2 }",
       "equipe": "",
@@ -21830,6 +21783,26 @@
       "atrasada": false
     },
     {
+      "osId": "19186",
+      "ativo": "Cabine 2  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Carlos  Godoi",
+      "criadoPor": "GerdesonAraújo",
+      "supervisor": "Carlos  Godoi",
+      "status": "Finalizados",
+      "tarefa": "[ADT100-CABN2] - Religamento do ADT100-CABN2",
+      "criticidade": "",
+      "dataProgramada": "2026-11-11",
+      "dataCriacao": "2026-11-11",
+      "dataInicial": "2026-11-11",
+      "dataFinal": "2026-11-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "19181",
       "ativo": "Thopen - Córrego do Sapucaia 1 - ES Rodovia Governador Mário Covas, Barra Nova São Mateus  Espírito Santo Brasil { THPN-CDS100 }",
       "equipe": "",
@@ -21925,6 +21898,25 @@
       "dataFinal": "2026-11-10",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "19141",
+      "ativo": "Inversor 3.1  SUNGROW / SG250HX    { THPN-RDR200-INVR3.1 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Valdério Paz ",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 3.1] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-11-10",
+      "dataCriacao": "2026-11-10",
+      "dataInicial": "2026-11-11",
+      "dataFinal": "2026-11-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -22902,6 +22894,25 @@
       "dataFinal": "2026-11-09",
       "linkFracttal": "",
       "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "18729",
+      "ativo": "Estação Meteorológica Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100-ESTM1 }",
+      "equipe": "",
+      "responsavel": "Valmir  Júnior",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Valmir  Júnior",
+      "status": "Finalizados",
+      "tarefa": "[Estação Meteorológica] - [Diamantino] - Limpeza e inspeção dos sensores da ETM",
+      "criticidade": "",
+      "dataProgramada": "2026-11-11",
+      "dataCriacao": "2026-11-06",
+      "dataInicial": "2026-11-11",
+      "dataFinal": "2026-11-11",
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -23956,67 +23967,10 @@
       "horasAteAbrir": 144.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "17978",
-      "ativo": "Transformador 1 WEG     { MRO100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Frank  Melo",
-      "status": "Finalizados",
-      "tarefa": "[Athon] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-11-03",
-      "dataCriacao": "2026-10-29",
-      "dataInicial": "2026-11-03",
-      "dataFinal": "2026-11-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "17973",
-      "ativo": "Módulo Fotovoltaico Seraphim SRP-S40-BMA-BG    { THPN-EBG100-MDFV }",
-      "equipe": "",
-      "responsavel": "Lucas Alberto Freitas de Faria ",
-      "criadoPor": "Milena Araújo",
-      "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - String e Conjunto de Módulos",
-      "criticidade": "",
-      "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-10-29",
-      "dataInicial": "2026-11-04",
-      "dataFinal": "2026-11-04",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "17972",
-      "ativo": "Transformador 1 WEG     { 2C-UNI100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Ailton Leal ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Ailton Leal ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-11-05",
-      "dataCriacao": "2026-10-29",
-      "dataInicial": "2026-11-03",
-      "dataFinal": "2026-11-03",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3607,
-  "totalGeral": 8650,
+  "historicoTotal": 3614,
+  "totalGeral": 8655,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
