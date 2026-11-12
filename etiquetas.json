@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-12T21:30:16Z",
+  "geradoEm": "2026-11-12T22:38:30Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-09 .. 2026-11-15",
   "tipologias": {
@@ -3956,16 +3956,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 1042,
-        "emAberto": 123,
-        "atrasadas": 41,
-        "concluidas30d": 121,
-        "concluidas7d": 35,
+        "emAberto": 122,
+        "atrasadas": 40,
+        "concluidas30d": 122,
+        "concluidas7d": 36,
         "naSemanaCorrente": 48
       },
       "mttr": {
-        "horas": 393.72,
-        "label": "16d 9h",
-        "amostra": 121
+        "horas": 391.08,
+        "label": "16d 7h",
+        "amostra": 122
       },
       "tendencia4Semanas": [
         {
@@ -3986,7 +3986,7 @@
         {
           "semana": "W46",
           "criadas": 81,
-          "finalizadas": 29
+          "finalizadas": 30
         }
       ],
       "topOfensores": {
@@ -3994,7 +3994,7 @@
           {
             "nome": "(sem equipe)",
             "total": 1042,
-            "emAberto": 123
+            "emAberto": 122
           }
         ],
         "responsaveis": [
@@ -4025,16 +4025,16 @@
           }
         ]
       },
-      "total": 123,
-      "atrasadas": 41,
+      "total": 122,
+      "atrasadas": 40,
       "porStatus": {
-        "naoIniciada": 116,
-        "emProgresso": 1,
+        "naoIniciada": 114,
+        "emProgresso": 2,
         "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 123
+        "(sem equipe)": 122
       },
       "oss": [
         {
@@ -4554,23 +4554,6 @@
           "atrasada": true
         },
         {
-          "osId": "18990",
-          "ativo": "Cabine 1 CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { ELF100-CABN1 }",
-          "equipe": "",
-          "responsavel": "Bruno Vinícius Pupo",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Bruno Vinícius Pupo",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPA - Cabine de Medição (Noturno)",
-          "criticidade": "",
-          "dataProgramada": "2026-11-09",
-          "dataCriacao": "2026-11-09",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "18073",
           "ativo": "Transformador 1 WEG     { THPN-VRT200-TRFR1 }",
           "equipe": "",
@@ -4748,14 +4731,15 @@
           "responsavel": "Adão Neto ",
           "criadoPor": "Breno Andrade",
           "supervisor": "Adão Neto ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPA - Transformador (Noturno e ensaios)",
           "criticidade": "",
           "dataProgramada": "2026-11-12",
           "dataCriacao": "2026-11-12",
-          "dataInicial": "",
+          "dataInicial": "2026-11-12",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "atrasada": false
         },
         {
@@ -6290,6 +6274,25 @@
           "atrasada": false
         },
         {
+          "osId": "18990",
+          "ativo": "Cabine 1 CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { ELF100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Bruno Vinícius Pupo",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Bruno Vinícius Pupo",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPA - Cabine de Medição (Noturno)",
+          "criticidade": "",
+          "dataProgramada": "2026-11-09",
+          "dataCriacao": "2026-11-09",
+          "dataInicial": "2026-11-12",
+          "dataFinal": "2026-11-12",
+          "linkFracttal": "",
+          "horasAteAbrir": 72.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "18981",
           "ativo": "Preventiva Grupo de Inversores 1      { THOPEN-CGU100-PGINVR1 }",
           "equipe": "",
@@ -6386,15 +6389,15 @@
         },
         {
           "osId": "18930",
-          "ativo": "SPDA  Guaratinguetá  São Paulo Brasil { GTA500-SPDA1 }",
+          "ativo": "Transformador 1      { GTA500-TRFR1 }",
           "equipe": "",
           "responsavel": "Henri Almeida ",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Henri Almeida ",
           "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPA - SPDA",
+          "tarefa": "[Grid Co.] - MPA - Transformador (diurno)",
           "criticidade": "",
-          "dataProgramada": "2026-11-10",
+          "dataProgramada": "2026-11-12",
           "dataCriacao": "2026-11-09",
           "dataInicial": "2026-11-11",
           "dataFinal": "2026-11-11",
@@ -8608,25 +8611,6 @@
           "atrasada": false
         },
         {
-          "osId": "15060",
-          "ativo": "Transformador 1      { THPN-APR200-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Matheus Gois ",
-          "criadoPor": "Breno Andrade",
-          "supervisor": "Matheus Gois ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-10-09",
-          "dataCriacao": "2026-10-01",
-          "dataInicial": "2026-10-08",
-          "dataFinal": "2026-10-08",
-          "linkFracttal": "",
-          "horasAteAbrir": 168.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "15555",
           "ativo": "Transformador 2      { THPN-CAI100-TRFR2 }",
           "equipe": "",
@@ -8988,7 +8972,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 386
+      "historicoTotal": 387
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -10214,16 +10198,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 1092,
-        "emAberto": 84,
-        "atrasadas": 61,
-        "concluidas30d": 211,
-        "concluidas7d": 75,
+        "emAberto": 83,
+        "atrasadas": 60,
+        "concluidas30d": 212,
+        "concluidas7d": 76,
         "naSemanaCorrente": 78
       },
       "mttr": {
-        "horas": 161.86,
+        "horas": 161.32,
         "label": "6d 17h",
-        "amostra": 211
+        "amostra": 212
       },
       "tendencia4Semanas": [
         {
@@ -10244,7 +10228,7 @@
         {
           "semana": "W46",
           "criadas": 50,
-          "finalizadas": 58
+          "finalizadas": 59
         }
       ],
       "topOfensores": {
@@ -10252,7 +10236,7 @@
           {
             "nome": "(sem equipe)",
             "total": 1092,
-            "emAberto": 84
+            "emAberto": 83
           }
         ],
         "responsaveis": [
@@ -10264,7 +10248,7 @@
           {
             "nome": "Luiz  Silva",
             "total": 63,
-            "emAberto": 7
+            "emAberto": 6
           },
           {
             "nome": "James Chaves",
@@ -10283,16 +10267,16 @@
           }
         ]
       },
-      "total": 84,
-      "atrasadas": 61,
+      "total": 83,
+      "atrasadas": 60,
       "porStatus": {
         "naoIniciada": 69,
-        "emProgresso": 4,
+        "emProgresso": 3,
         "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 84
+        "(sem equipe)": 83
       },
       "oss": [
         {
@@ -11273,24 +11257,6 @@
           "atrasada": true
         },
         {
-          "osId": "19138",
-          "ativo": "Inversor 4.3 Huawei     { TIM100-INVR4.3 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Luiz  Silva",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 4.3] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-11-10",
-          "dataCriacao": "2026-11-10",
-          "dataInicial": "2026-11-12",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "atrasada": true
-        },
-        {
           "osId": "19016",
           "ativo": "Estação Meteorológica  Sete Lagoas  Minas Gerais Brasil { SLG200-ESTM1 }",
           "equipe": "",
@@ -11813,6 +11779,25 @@
           "dataFinal": "2026-11-12",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "19138",
+          "ativo": "Inversor 4.3 Huawei     { TIM100-INVR4.3 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Luiz  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 4.3] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-11-10",
+          "dataCriacao": "2026-11-10",
+          "dataInicial": "2026-11-12",
+          "dataFinal": "2026-11-12",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -14154,25 +14139,6 @@
           "atrasada": false
         },
         {
-          "osId": "16237",
-          "ativo": "Estrutura Trackers Estrada Rural Sarandi, S/N Sarandi  Paraná Brasil { THPN-SRD100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Sarandi 1][Estrutura Trackers Estrada Rural Sarandi, S/N Sarandi Paran] - Chamado de tracker",
-          "criticidade": "",
-          "dataProgramada": "2026-10-13",
-          "dataCriacao": "2026-10-13",
-          "dataInicial": "2026-10-23",
-          "dataFinal": "2026-10-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 240.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "17053",
           "ativo": "Tracker 10.102  Array Technologies | STI    { APOL-RDP100-ETKR10.102 }",
           "equipe": "",
@@ -14591,7 +14557,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 603
+      "historicoTotal": 604
     },
     "engenharia": {
       "label": "Engenharia",
@@ -16671,14 +16637,15 @@
       "responsavel": "Adão Neto ",
       "criadoPor": "Breno Andrade",
       "supervisor": "Adão Neto ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPA - Transformador (Noturno e ensaios)",
       "criticidade": "",
       "dataProgramada": "2026-11-12",
       "dataCriacao": "2026-11-12",
-      "dataInicial": "",
+      "dataInicial": "2026-11-12",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 0
     },
     {
       "osId": "19434",
@@ -18112,23 +18079,6 @@
       "horasAteAbrir": 48.0
     },
     {
-      "osId": "19138",
-      "ativo": "Inversor 4.3 Huawei     { TIM100-INVR4.3 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Luiz  Silva",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 4.3] - Recomposição de String",
-      "criticidade": "",
-      "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-11-10",
-      "dataInicial": "2026-11-12",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
-    },
-    {
       "osId": "19097",
       "ativo": "Thopen - Coração 1 e 2 - SC Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100 }",
       "equipe": "",
@@ -18383,22 +18333,6 @@
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-11-18",
-      "dataCriacao": "2026-11-09",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "18990",
-      "ativo": "Cabine 1 CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { ELF100-CABN1 }",
-      "equipe": "",
-      "responsavel": "Bruno Vinícius Pupo",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "Bruno Vinícius Pupo",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPA - Cabine de Medição (Noturno)",
-      "criticidade": "",
-      "dataProgramada": "2026-11-09",
       "dataCriacao": "2026-11-09",
       "dataInicial": "",
       "dataFinal": "",
@@ -20936,38 +20870,6 @@
       "horasAteAbrir": 0
     },
     {
-      "osId": "14475",
-      "ativo": "Inversor 1.1 Sungrow SG250HX    { THPN-JUC100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Luis Otavio Lima de Sousa ",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Luis Otavio Lima de Sousa ",
-      "status": "Não Iniciada",
-      "tarefa": "[Thopen][Jucurutu] -  Análise de Falha nos Inversores de Caicó",
-      "criticidade": "",
-      "dataProgramada": "2026-09-28",
-      "dataCriacao": "2026-09-23",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "14473",
-      "ativo": "Inversor 1.1      { THPN-CAI100-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Luis Otavio Lima de Sousa ",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Luis Otavio Lima de Sousa ",
-      "status": "Não Iniciada",
-      "tarefa": "[Thopen][Caicó] - Análise de Falha nos Inversores de Caicó",
-      "criticidade": "",
-      "dataProgramada": "2026-09-28",
-      "dataCriacao": "2026-09-23",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "13766",
       "ativo": "Inversor 2.2  SUN2000-250KTL-H1    { THPN-TGI100-INVR2.2 }",
       "equipe": "",
@@ -21358,6 +21260,38 @@
       "criticidade": "",
       "dataProgramada": "2026-10-13",
       "dataCriacao": "2026-10-01",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "14475",
+      "ativo": "Inversor 1.1 Sungrow SG250HX    { THPN-JUC100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Luis Otavio Lima de Sousa ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Luis Otavio Lima de Sousa ",
+      "status": "Não Iniciada",
+      "tarefa": "[Thopen][Jucurutu] -  Análise de Falha nos Inversores de Caicó",
+      "criticidade": "",
+      "dataProgramada": "2026-09-28",
+      "dataCriacao": "2026-09-23",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "14473",
+      "ativo": "Inversor 1.1      { THPN-CAI100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Luis Otavio Lima de Sousa ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Luis Otavio Lima de Sousa ",
+      "status": "Não Iniciada",
+      "tarefa": "[Thopen][Caicó] - Análise de Falha nos Inversores de Caicó",
+      "criticidade": "",
+      "dataProgramada": "2026-09-28",
+      "dataCriacao": "2026-09-23",
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
@@ -22368,6 +22302,25 @@
       "atrasada": false
     },
     {
+      "osId": "19138",
+      "ativo": "Inversor 4.3 Huawei     { TIM100-INVR4.3 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "Luiz  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 4.3] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-11-10",
+      "dataCriacao": "2026-11-10",
+      "dataInicial": "2026-11-12",
+      "dataFinal": "2026-11-12",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "19136",
       "ativo": "Tracker 27.200 Brametal     { TIM200-ETKR27.200 }",
       "equipe": "",
@@ -22696,6 +22649,25 @@
       "atrasada": false
     },
     {
+      "osId": "18990",
+      "ativo": "Cabine 1 CRT 300B1, S/N1, ELIAS FAUSTO Elias Fausto  São Paulo Brasil { ELF100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Bruno Vinícius Pupo",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Bruno Vinícius Pupo",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPA - Cabine de Medição (Noturno)",
+      "criticidade": "",
+      "dataProgramada": "2026-11-09",
+      "dataCriacao": "2026-11-09",
+      "dataInicial": "2026-11-12",
+      "dataFinal": "2026-11-12",
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "18986",
       "ativo": "Inversor 1.4 Huawei SUN2000-215KTL-H3    { DML100-INVR1.4 }",
       "equipe": "",
@@ -22830,15 +22802,15 @@
     },
     {
       "osId": "18930",
-      "ativo": "SPDA  Guaratinguetá  São Paulo Brasil { GTA500-SPDA1 }",
+      "ativo": "Transformador 1      { GTA500-TRFR1 }",
       "equipe": "",
       "responsavel": "Henri Almeida ",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Henri Almeida ",
       "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPA - SPDA",
+      "tarefa": "[Grid Co.] - MPA - Transformador (diurno)",
       "criticidade": "",
-      "dataProgramada": "2026-11-10",
+      "dataProgramada": "2026-11-12",
       "dataCriacao": "2026-11-09",
       "dataInicial": "2026-11-11",
       "dataFinal": "2026-11-11",
@@ -24253,47 +24225,9 @@
       "horasAteAbrir": 120.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "17975",
-      "ativo": "Transformador 1      { ALLM-MRN100-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Cláudio  Ferreira",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Cláudio  Ferreira",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-11-05",
-      "dataCriacao": "2026-10-29",
-      "dataInicial": "2026-11-09",
-      "dataFinal": "2026-11-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 264.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "17973",
-      "ativo": "Módulo Fotovoltaico Seraphim SRP-S40-BMA-BG    { THPN-EBG100-MDFV }",
-      "equipe": "",
-      "responsavel": "Lucas Alberto Freitas de Faria ",
-      "criadoPor": "Milena Araújo",
-      "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - String e Conjunto de Módulos",
-      "criticidade": "",
-      "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-10-29",
-      "dataInicial": "2026-11-04",
-      "dataFinal": "2026-11-04",
-      "linkFracttal": "",
-      "horasAteAbrir": 144.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3650,
+  "historicoTotal": 3652,
   "totalGeral": 8739,
   "verificacao": {
     "total": 0,
