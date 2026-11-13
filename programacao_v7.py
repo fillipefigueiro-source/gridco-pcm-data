@@ -1745,7 +1745,8 @@ class DayCapacity:
 
 
 def alloc_diurno(dc, dur_h, prefer_morning, termo, coord, allow_partial=False, force=False):
-    """Aloca uma tarefa no dia. Se force=True, ignora capacidade (corretivas emergenciais)."""
+    """Aloca uma tarefa no dia. Se force=True, ignora capacidade (a MPM do fim do mês sem dia livre e a OS que a
+    observação manda pôr no dia; a corretiva deixou de ser forçada em 13/11/2026)."""
     MIN_PIECE_MIN = 30
     if dc.is_holiday: return None
     dur_min = int(round(dur_h * 60))
@@ -1803,7 +1804,10 @@ def alloc_diurno(dc, dur_h, prefer_morning, termo, coord, allow_partial=False, f
             end = start + effective_min
         end = min(end, dc.work_end_min)
         return (start, end, desloc_h, effective_min/60.0, False)
-    return (start, end, desloc_h, effective_min/60.0, True)
+    # completa só se coube inteira (13/11/2026): a tarefa cortada pela capacidade do dia (`remaining`, acima) voltava
+    # "completa", saía da lista e o resto sumia (nem na agenda, nem nas pendências), com a linha dizendo a duração
+    # inteira e sem [PARCIAL]. Com a corretiva respeitando os 70%, ela passou a cair aqui também
+    return (start, end, desloc_h, effective_min/60.0, effective_min >= dur_min)
 
 
 def commit_diurno(dc, start, end, dur_min_used, coord, ativo):
@@ -2375,7 +2379,8 @@ def schedule_team(equipe, tarefas_all):
 
     # Alocar tarefas por usina nos dias atribuídos
     # Estratégia em 2 passes por dia:
-    #   Passe 1 — corretivas (sempre entram; se sem capacidade → force + [EXCEDE HH])
+    #   Passe 1 — corretivas (entram antes de tudo, até a capacidade do dia; sem folga no dia, tentam os outros dias da
+    #             usina e os dias livres, e a que não couber em dia nenhum vira pendência — 13/11/2026)
     #             Na última semana do mês: MPM também entra no passe 1, mas SEM forçar
     #   Passe 2 — preventivas restantes (só entram se houver capacidade)
     # A MPM do fim do mês que não coube no dia da usina vai para os dias livres (passe de preenchimento) e só a que não
@@ -2407,32 +2412,22 @@ def schedule_team(equipe, tarefas_all):
                                termo=tk['termo'],
                                coord=tk['coord'],
                                allow_partial=False)
-            excede = False
-            if res is None and not tk['corretiva']:
-                continue        # MPM do fim do mês: tenta os dias livres antes de forçar (passe 5)
             if res is None:
-                # Força entrada mesmo sem capacidade
-                dur_min = int(round(tk['dur_h'] * 60))
-                if dc.coord is None or tk['coord'] is None or not DESLOC_CALCULA:
-                    desloc_h_val = 0.0; chegada = dc.cursor
-                else:
-                    desloc_h_val = (haversine_km(dc.coord, tk['coord']) / TRAVEL_KMH) * TRAVEL_FACTOR
-                    chegada = dc.cursor + (desloc_h_val * 60 if DESLOC_CONSOME else 0.0)
-                start = chegada
-                end = start + dur_min
-                res = (start, end, desloc_h_val, tk['dur_h'], True)
-                excede = True
+                # 13/11/2026, Levi: "até 70% das horas semanais [...] essas 44 horas têm que ser divididas de segunda a
+                # sexta. E aí o resto é resolvido"; "regra que tem em um tem que ter em outro". A corretiva sem folga no
+                # dia não é mais forçada ([EXCEDE HH]): tenta os outros dias da usina, os dias livres (passe 4) e, sem
+                # folga em nenhum, vira pendência ("Não couberam na semana"). A MPM do fim do mês segue tentando os dias
+                # livres antes de ser forçada (passe 5). Até aqui a corretiva era forçada no dia da usina, e o dia da
+                # usina é o primeiro dela: na W47 simulada com as OS da FAMA (13/11) uma equipe ficou com 28,5 h na
+                # segunda e a sexta vazia, e o Fracttal já tinha 48 linhas forçadas na mesma semana.
+                continue
             start, end, desloc_h_val, used_h, completed = res
             used_min = int(round(used_h * 60))
             is_first = (dc.coord != tk['coord'])
             rows.append(_row(equipe, di, tk, start, end,
-                             desloc_h_val if is_first else 0.0,
-                             over_capacity=excede))
+                             desloc_h_val if is_first else 0.0))
             commit_diurno(dc, start, end, used_min, tk['coord'], ativo)
             tarefas_da_usina.remove(tk)
-            if excede:
-                print(f'[EXCEDE HH] OS {tk["os_id"]} | {tk["tarefa_txt"][:50]} '
-                      f'→ dia {di} (corretiva/MPM forçada)')
 
         # --- Passe 2: preventivas (só entram se houver capacidade restante) ---
         i = 0
