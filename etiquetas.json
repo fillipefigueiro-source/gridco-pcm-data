@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-13T09:41:21Z",
+  "geradoEm": "2026-11-13T10:40:42Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-09 .. 2026-11-15",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6211,
-        "emAberto": 37,
+        "total": 6216,
+        "emAberto": 40,
         "atrasadas": 34,
-        "concluidas30d": 969,
-        "concluidas7d": 243,
-        "naSemanaCorrente": 145
+        "concluidas30d": 971,
+        "concluidas7d": 245,
+        "naSemanaCorrente": 150
       },
       "mttr": {
-        "horas": 7.91,
-        "label": "7h 54min",
-        "amostra": 969
+        "horas": 7.89,
+        "label": "7h 53min",
+        "amostra": 971
       },
       "tendencia4Semanas": [
         {
@@ -38,23 +38,23 @@
         },
         {
           "semana": "W46",
-          "criadas": 151,
-          "finalizadas": 141
+          "criadas": 156,
+          "finalizadas": 143
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6211,
-            "emAberto": 37
+            "total": 6216,
+            "emAberto": 40
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 768,
-            "emAberto": 0
+            "total": 770,
+            "emAberto": 1
           },
           {
             "nome": "Marcos  Camargo",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 37,
+      "total": 40,
       "atrasadas": 34,
       "porStatus": {
-        "naoIniciada": 32,
-        "emProgresso": 0,
+        "naoIniciada": 33,
+        "emProgresso": 2,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 37
+        "(sem equipe)": 40
       },
       "oss": [
         {
@@ -587,14 +587,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Rúben Nunes da Silva ",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[2C-IPX100] - Religamento do 2C-IPX100",
           "criticidade": "",
           "dataProgramada": "2026-11-12",
           "dataCriacao": "2026-11-12",
-          "dataInicial": "",
+          "dataInicial": "2026-11-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -605,14 +606,15 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Rúben Nunes da Silva ",
           "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[MAB100-INVR1.1] - Religamento do MAB100-INVR1.1",
           "criticidade": "",
           "dataProgramada": "2026-11-12",
           "dataCriacao": "2026-11-12",
-          "dataInicial": "",
+          "dataInicial": "2026-11-13",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -706,6 +708,60 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "19450",
+          "ativo": "Inversor 1.5 Huawei SUN2000-100KTL-H1    { MAB200-INVR1.5 }",
+          "equipe": "",
+          "responsavel": "Raphael Vitoriano ",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Raphael Vitoriano ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
+          "criticidade": "",
+          "dataProgramada": "2026-11-13",
+          "dataCriacao": "2026-11-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "19449",
+          "ativo": "QGBT 1  Araputanga  Mato Grosso Brasil { APG100-QGBT1 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Raphael Vitoriano ",
+          "supervisor": "Adriano  Moraes",
+          "status": "Não Iniciada",
+          "tarefa": "[QGBT 1] - Religamento do QGBT 1",
+          "criticidade": "",
+          "dataProgramada": "2026-11-13",
+          "dataCriacao": "2026-11-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "19446",
+          "ativo": "Thopen - Ceilândia 1 - DF BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Janderson Miranda ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-CLN100] - Religamento do THPN-CLN100",
+          "criticidade": "",
+          "dataProgramada": "2026-11-13",
+          "dataCriacao": "2026-11-13",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "19444",
@@ -3764,12 +3820,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2528,
+      "historicoTotal": 2530,
       "subClassificacao": {
         "remoto": 758,
-        "local": 5453,
+        "local": 5458,
         "remotoEmAberto": 2,
-        "localEmAberto": 35,
+        "localEmAberto": 38,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -16591,6 +16647,57 @@
   },
   "ossPublicas": [
     {
+      "osId": "19450",
+      "ativo": "Inversor 1.5 Huawei SUN2000-100KTL-H1    { MAB200-INVR1.5 }",
+      "equipe": "",
+      "responsavel": "Raphael Vitoriano ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Raphael Vitoriano ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.5] - Religamento do Inversor 1.5",
+      "criticidade": "",
+      "dataProgramada": "2026-11-13",
+      "dataCriacao": "2026-11-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "19449",
+      "ativo": "QGBT 1  Araputanga  Mato Grosso Brasil { APG100-QGBT1 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Adriano  Moraes",
+      "status": "Não Iniciada",
+      "tarefa": "[QGBT 1] - Religamento do QGBT 1",
+      "criticidade": "",
+      "dataProgramada": "2026-11-13",
+      "dataCriacao": "2026-11-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "19446",
+      "ativo": "Thopen - Ceilândia 1 - DF BR 070 km 8,5 CH454 Ceilândia  Distrito Federal Brasil { THPN-CLN100 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Janderson Miranda ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-CLN100] - Religamento do THPN-CLN100",
+      "criticidade": "",
+      "dataProgramada": "2026-11-13",
+      "dataCriacao": "2026-11-13",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "19444",
       "ativo": "Thopen - Canarana 1 - MT MT-110, S/N, Zona Rural Canarana  Mato Grosso Brasil { THPN-CNN100 }",
       "equipe": "",
@@ -16681,14 +16788,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Rúben Nunes da Silva ",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[2C-IPX100] - Religamento do 2C-IPX100",
       "criticidade": "",
       "dataProgramada": "2026-11-12",
       "dataCriacao": "2026-11-12",
-      "dataInicial": "",
+      "dataInicial": "2026-11-13",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -16893,14 +17001,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Rúben Nunes da Silva ",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[MAB100-INVR1.1] - Religamento do MAB100-INVR1.1",
       "criticidade": "",
       "dataProgramada": "2026-11-12",
       "dataCriacao": "2026-11-12",
-      "dataInicial": "",
+      "dataInicial": "2026-11-13",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "modalidade": "local"
     },
     {
@@ -24221,8 +24330,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3620,
-  "totalGeral": 8743,
+  "historicoTotal": 3622,
+  "totalGeral": 8748,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
