@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-15T15:40:05Z",
+  "geradoEm": "2026-11-15T16:49:48Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-09 .. 2026-11-15",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6273,
-        "emAberto": 51,
+        "total": 6275,
+        "emAberto": 53,
         "atrasadas": 50,
         "concluidas30d": 908,
         "concluidas7d": 221,
-        "naSemanaCorrente": 207
+        "naSemanaCorrente": 209
       },
       "mttr": {
         "horas": 7.15,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W46",
-          "criadas": 213,
+          "criadas": 215,
           "finalizadas": 189
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6273,
-            "emAberto": 51
+            "total": 6275,
+            "emAberto": 53
           }
         ],
         "responsaveis": [
@@ -73,21 +73,21 @@
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 250,
-            "emAberto": 0
+            "total": 251,
+            "emAberto": 1
           }
         ]
       },
-      "total": 51,
+      "total": 53,
       "atrasadas": 50,
       "porStatus": {
-        "naoIniciada": 46,
-        "emProgresso": 0,
+        "naoIniciada": 47,
+        "emProgresso": 1,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 51
+        "(sem equipe)": 53
       },
       "oss": [
         {
@@ -994,6 +994,43 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": true
+        },
+        {
+          "osId": "19607",
+          "ativo": "Inversor 1.1      { THPN-SGD100-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Pedro  Henrique",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Pedro  Henrique",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-SGD100-INVR1.1] - Religamento do THPN-SGD100-INVR1.1",
+          "criticidade": "",
+          "dataProgramada": "2026-11-15",
+          "dataCriacao": "2026-11-15",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "19606",
+          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Wesllen  Castro",
+          "status": "Em progresso",
+          "tarefa": "[2C - Ipixuna do Pará 1 - PA] - Religamento do 2C - Ipixuna do Pará 1 - PA",
+          "criticidade": "",
+          "dataProgramada": "2026-11-15",
+          "dataCriacao": "2026-11-15",
+          "dataInicial": "2026-11-15",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
         },
         {
           "osId": "19593",
@@ -4019,9 +4056,9 @@
       "historicoTotal": 2544,
       "subClassificacao": {
         "remoto": 758,
-        "local": 5515,
+        "local": 5517,
         "remotoEmAberto": 2,
-        "localEmAberto": 49,
+        "localEmAberto": 51,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -16570,6 +16607,41 @@
   },
   "ossPublicas": [
     {
+      "osId": "19607",
+      "ativo": "Inversor 1.1      { THPN-SGD100-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Pedro  Henrique",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Pedro  Henrique",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-SGD100-INVR1.1] - Religamento do THPN-SGD100-INVR1.1",
+      "criticidade": "",
+      "dataProgramada": "2026-11-15",
+      "dataCriacao": "2026-11-15",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "19606",
+      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Wesllen  Castro",
+      "status": "Em progresso",
+      "tarefa": "[2C - Ipixuna do Pará 1 - PA] - Religamento do 2C - Ipixuna do Pará 1 - PA",
+      "criticidade": "",
+      "dataProgramada": "2026-11-15",
+      "dataCriacao": "2026-11-15",
+      "dataInicial": "2026-11-15",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
       "osId": "19593",
       "ativo": "Thopen - Paranavaí 1 - PR Recanto do Ratinho, s/n Paranavaí  Paraná Brasil { THPN-PRV100 }",
       "equipe": "",
@@ -24190,7 +24262,7 @@
     }
   ],
   "historicoTotal": 3654,
-  "totalGeral": 8815,
+  "totalGeral": 8817,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
