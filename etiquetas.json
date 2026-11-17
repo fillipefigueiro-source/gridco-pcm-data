@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-17T11:42:00Z",
+  "geradoEm": "2026-11-17T12:36:30Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-16 .. 2026-11-22",
   "tipologias": {
@@ -81,9 +81,9 @@
       "total": 53,
       "atrasadas": 48,
       "porStatus": {
-        "naoIniciada": 46,
-        "emProgresso": 0,
-        "pausada": 7,
+        "naoIniciada": 45,
+        "emProgresso": 2,
+        "pausada": 6,
         "verificacao": 0
       },
       "porEquipe": {
@@ -875,7 +875,7 @@
           "responsavel": "Cláudio  Silva",
           "criadoPor": "Maria Emanuella de Souza Mota ",
           "supervisor": "Cláudio  Silva",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[THPN-CAI100] - Religamento do THPN-CAI100",
           "criticidade": "",
           "dataProgramada": "2026-11-16",
@@ -986,14 +986,15 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Felipe  Lima",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[IND100-INVR1.4] - Religamento do IND100-INVR1.4",
           "criticidade": "",
           "dataProgramada": "2026-11-17",
           "dataCriacao": "2026-11-17",
-          "dataInicial": "",
+          "dataInicial": "2026-11-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -10283,12 +10284,12 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 1105,
-        "emAberto": 71,
+        "total": 1107,
+        "emAberto": 73,
         "atrasadas": 67,
         "concluidas30d": 207,
         "concluidas7d": 68,
-        "naSemanaCorrente": 13
+        "naSemanaCorrente": 15
       },
       "mttr": {
         "horas": 146.78,
@@ -10313,7 +10314,7 @@
         },
         {
           "semana": "W47",
-          "criadas": 5,
+          "criadas": 7,
           "finalizadas": 7
         }
       ],
@@ -10321,15 +10322,15 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 1105,
-            "emAberto": 71
+            "total": 1107,
+            "emAberto": 73
           }
         ],
         "responsaveis": [
           {
             "nome": "Gilson Souza",
-            "total": 76,
-            "emAberto": 0
+            "total": 77,
+            "emAberto": 1
           },
           {
             "nome": "Luiz  Silva",
@@ -10353,16 +10354,16 @@
           }
         ]
       },
-      "total": 71,
+      "total": 73,
       "atrasadas": 67,
       "porStatus": {
-        "naoIniciada": 60,
-        "emProgresso": 0,
+        "naoIniciada": 61,
+        "emProgresso": 1,
         "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 71
+        "(sem equipe)": 73
       },
       "oss": [
         {
@@ -11419,14 +11420,15 @@
           "responsavel": "Lucas Alberto Freitas de Faria ",
           "criadoPor": "Levi Maia ",
           "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.3] - Recomposição de String",
           "criticidade": "",
           "dataProgramada": "2026-11-16",
           "dataCriacao": "2026-11-16",
-          "dataInicial": "",
+          "dataInicial": "2026-11-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": true
         },
         {
@@ -11514,6 +11516,40 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "19743",
+          "ativo": "Inversor 5.1 Huawei     { TIM100-INVR5.1 }",
+          "equipe": "",
+          "responsavel": "José Neto ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "José Neto ",
+          "status": "Não Iniciada",
+          "tarefa": "[Inversor 5.1] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-11-17",
+          "dataCriacao": "2026-11-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "19742",
+          "ativo": "Inversor 2.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR2.2 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Gilson Souza ",
+          "status": "Não Iniciada",
+          "tarefa": "Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-11-17",
+          "dataCriacao": "2026-11-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "19730",
@@ -16465,6 +16501,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "19743",
+      "ativo": "Inversor 5.1 Huawei     { TIM100-INVR5.1 }",
+      "equipe": "",
+      "responsavel": "José Neto ",
+      "criadoPor": "Levi Maia ",
+      "supervisor": "José Neto ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 5.1] - Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-11-17",
+      "dataCriacao": "2026-11-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "19742",
+      "ativo": "Inversor 2.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR2.2 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Gilson Souza ",
+      "status": "Não Iniciada",
+      "tarefa": "Recomposição de String",
+      "criticidade": "",
+      "dataProgramada": "2026-11-17",
+      "dataCriacao": "2026-11-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "19736",
       "ativo": "Transformador 1 WEG     { APG100-TRFR1 }",
       "equipe": "",
@@ -16537,14 +16605,15 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Felipe  Lima",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[IND100-INVR1.4] - Religamento do IND100-INVR1.4",
       "criticidade": "",
       "dataProgramada": "2026-11-17",
       "dataCriacao": "2026-11-17",
-      "dataInicial": "",
+      "dataInicial": "2026-11-17",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16670,7 +16739,7 @@
       "responsavel": "Cláudio  Silva",
       "criadoPor": "Maria Emanuella de Souza Mota ",
       "supervisor": "Cláudio  Silva",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[THPN-CAI100] - Religamento do THPN-CAI100",
       "criticidade": "",
       "dataProgramada": "2026-11-16",
@@ -16752,14 +16821,15 @@
       "responsavel": "Lucas Alberto Freitas de Faria ",
       "criadoPor": "Levi Maia ",
       "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.3] - Recomposição de String",
       "criticidade": "",
       "dataProgramada": "2026-11-16",
       "dataCriacao": "2026-11-16",
-      "dataInicial": "",
+      "dataInicial": "2026-11-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "19701",
@@ -24031,7 +24101,7 @@
     }
   ],
   "historicoTotal": 3637,
-  "totalGeral": 8881,
+  "totalGeral": 8883,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
