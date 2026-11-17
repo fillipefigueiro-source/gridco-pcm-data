@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-17T13:35:39Z",
+  "geradoEm": "2026-11-17T14:35:15Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-16 .. 2026-11-22",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6325,
-        "emAberto": 50,
+        "total": 6326,
+        "emAberto": 51,
         "atrasadas": 46,
         "concluidas30d": 902,
         "concluidas7d": 184,
-        "naSemanaCorrente": 38
+        "naSemanaCorrente": 39
       },
       "mttr": {
         "horas": 7.24,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W47",
-          "criadas": 38,
+          "criadas": 39,
           "finalizadas": 34
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6325,
-            "emAberto": 50
+            "total": 6326,
+            "emAberto": 51
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 50,
+      "total": 51,
       "atrasadas": 46,
       "porStatus": {
         "naoIniciada": 44,
-        "emProgresso": 1,
+        "emProgresso": 2,
         "pausada": 5,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 50
+        "(sem equipe)": 51
       },
       "oss": [
         {
@@ -924,20 +924,39 @@
           "atrasada": true
         },
         {
-          "osId": "19734",
-          "ativo": "Cabine 2 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN2 }",
+          "osId": "19754",
+          "ativo": "Inversor 1.7 SOLAREDGE     { NVX200-INVR1.7 }",
           "equipe": "",
-          "responsavel": "Valdério Paz ",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Valdério Paz ",
+          "responsavel": "Gabriel Oliveira ",
+          "criadoPor": "LuelySantos",
+          "supervisor": "Gabriel Oliveira ",
           "status": "Não Iniciada",
-          "tarefa": "[THPN-RDR200-CABN2] - Religamento do THPN-RDR200-CABN2",
+          "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
           "criticidade": "",
           "dataProgramada": "2026-11-17",
           "dataCriacao": "2026-11-17",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "19734",
+          "ativo": "Cabine 2 FAZENDA SÃO SEBASTIÃO, ZONA RURAL, S/N, SÃO BENTO\nDO NORTE / RN São Bento do Norte  Rio Grande do Norte Brasil { THPN-RDR200-CABN2 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Valdério Paz ",
+          "status": "Em progresso",
+          "tarefa": "[THPN-RDR200-CABN2] - Religamento do THPN-RDR200-CABN2",
+          "criticidade": "",
+          "dataProgramada": "2026-11-17",
+          "dataCriacao": "2026-11-17",
+          "dataInicial": "2026-11-17",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -4002,9 +4021,9 @@
       "historicoTotal": 2551,
       "subClassificacao": {
         "remoto": 758,
-        "local": 5567,
+        "local": 5568,
         "remotoEmAberto": 2,
-        "localEmAberto": 48,
+        "localEmAberto": 49,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -6239,25 +6258,6 @@
           "atrasada": false
         },
         {
-          "osId": "17974",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-FZL100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Carlos Bruno  Pessanha Pereira",
-          "criadoPor": "Milena Araújo",
-          "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-11-11",
-          "dataCriacao": "2026-10-29",
-          "dataInicial": "2026-11-09",
-          "dataFinal": "2026-11-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 264.0,
-          "horasAteFechar": 168.0,
-          "atrasada": false
-        },
-        {
           "osId": "19271",
           "ativo": "SPDA Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR200-SPDA1 }",
           "equipe": "",
@@ -6312,6 +6312,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 120.0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "17974",
+          "ativo": "Preventiva Grupo de Inversores      { THPN-FZL100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-11-11",
+          "dataCriacao": "2026-10-29",
+          "dataInicial": "2026-11-09",
+          "dataFinal": "2026-11-16",
+          "linkFracttal": "",
+          "horasAteAbrir": 264.0,
+          "horasAteFechar": 168.0,
           "atrasada": false
         },
         {
@@ -10194,16 +10213,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 1107,
-        "emAberto": 72,
-        "atrasadas": 66,
-        "concluidas30d": 208,
-        "concluidas7d": 69,
+        "emAberto": 71,
+        "atrasadas": 65,
+        "concluidas30d": 209,
+        "concluidas7d": 70,
         "naSemanaCorrente": 15
       },
       "mttr": {
-        "horas": 146.19,
+        "horas": 146.3,
         "label": "6d 2h",
-        "amostra": 208
+        "amostra": 209
       },
       "tendencia4Semanas": [
         {
@@ -10224,7 +10243,7 @@
         {
           "semana": "W47",
           "criadas": 7,
-          "finalizadas": 8
+          "finalizadas": 9
         }
       ],
       "topOfensores": {
@@ -10232,7 +10251,7 @@
           {
             "nome": "(sem equipe)",
             "total": 1107,
-            "emAberto": 72
+            "emAberto": 71
           }
         ],
         "responsaveis": [
@@ -10263,16 +10282,16 @@
           }
         ]
       },
-      "total": 72,
-      "atrasadas": 66,
+      "total": 71,
+      "atrasadas": 65,
       "porStatus": {
-        "naoIniciada": 61,
-        "emProgresso": 0,
-        "pausada": 11,
+        "naoIniciada": 56,
+        "emProgresso": 3,
+        "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 72
+        "(sem equipe)": 71
       },
       "oss": [
         {
@@ -11123,14 +11142,15 @@
           "responsavel": "Frank  Melo",
           "criadoPor": "Roger Lélis",
           "supervisor": "Frank  Melo",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 08.103] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-11-12",
           "dataCriacao": "2026-11-10",
-          "dataInicial": "",
+          "dataInicial": "2026-11-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 168.0,
           "atrasada": true
         },
         {
@@ -11140,14 +11160,15 @@
           "responsavel": "Frank  Melo",
           "criadoPor": "Roger Lélis",
           "supervisor": "Frank  Melo",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 09.103] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-11-12",
           "dataCriacao": "2026-11-10",
-          "dataInicial": "",
+          "dataInicial": "2026-11-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 168.0,
           "atrasada": true
         },
         {
@@ -11159,23 +11180,6 @@
           "supervisor": "Frank  Melo",
           "status": "Não Iniciada",
           "tarefa": "[Tracker 01.107] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-11-12",
-          "dataCriacao": "2026-11-10",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "19154",
-          "ativo": "Tracker 04.102 Brametal Bi-motor    { CPP100-ETKR4.102 }",
-          "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Frank  Melo",
-          "status": "Não Iniciada",
-          "tarefa": "[Tracker 04.102] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-11-12",
           "dataCriacao": "2026-11-10",
@@ -11364,14 +11368,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Gabriela Dias",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "pausado",
           "tarefa": "[ATHN-TIM100][Inversor 3.6] - Verificar inversor com alarmes na PV 4",
           "criticidade": "",
           "dataProgramada": "2026-11-16",
           "dataCriacao": "2026-11-12",
-          "dataInicial": "",
+          "dataInicial": "2026-11-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 120.0,
           "atrasada": true
         },
         {
@@ -11398,14 +11403,15 @@
           "responsavel": "Ailton Leal ",
           "criadoPor": "Maria Luiza Oliveira",
           "supervisor": "Ailton Leal ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Estação Meteorológica] - [União/2C] - Verificação da possível inversão do sensor POA x GHI",
           "criticidade": "",
           "dataProgramada": "2026-11-16",
           "dataCriacao": "2026-11-11",
-          "dataInicial": "",
+          "dataInicial": "2026-11-17",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "atrasada": true
         },
         {
@@ -11528,6 +11534,25 @@
           "dataFinal": "2026-11-17",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "19154",
+          "ativo": "Tracker 04.102 Brametal Bi-motor    { CPP100-ETKR4.102 }",
+          "equipe": "",
+          "responsavel": "Frank  Melo",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Frank  Melo",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 04.102] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-11-12",
+          "dataCriacao": "2026-11-10",
+          "dataInicial": "2026-11-17",
+          "dataFinal": "2026-11-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 168.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -14306,25 +14331,6 @@
           "atrasada": false
         },
         {
-          "osId": "16729",
-          "ativo": "Inversor 6.1 Huawei SUN2000-250KTL-H1    { SMP100-INVR6.1 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 6.1] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-10-20",
-          "dataCriacao": "2026-10-19",
-          "dataInicial": "2026-10-21",
-          "dataFinal": "2026-10-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "16778",
           "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
           "equipe": "",
@@ -14363,7 +14369,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 588
+      "historicoTotal": 589
     },
     "engenharia": {
       "label": "Engenharia",
@@ -16392,6 +16398,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "19754",
+      "ativo": "Inversor 1.7 SOLAREDGE     { NVX200-INVR1.7 }",
+      "equipe": "",
+      "responsavel": "Gabriel Oliveira ",
+      "criadoPor": "LuelySantos",
+      "supervisor": "Gabriel Oliveira ",
+      "status": "Não Iniciada",
+      "tarefa": "[Inversor 1.7] - Religamento do Inversor 1.7",
+      "criticidade": "",
+      "dataProgramada": "2026-11-17",
+      "dataCriacao": "2026-11-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "19743",
       "ativo": "Inversor 5.1 Huawei     { TIM100-INVR5.1 }",
       "equipe": "",
@@ -16430,14 +16453,15 @@
       "responsavel": "Valdério Paz ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Valdério Paz ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-RDR200-CABN2] - Religamento do THPN-RDR200-CABN2",
       "criticidade": "",
       "dataProgramada": "2026-11-17",
       "dataCriacao": "2026-11-17",
-      "dataInicial": "",
+      "dataInicial": "2026-11-17",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -17161,14 +17185,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Gabriela Dias",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "pausado",
       "tarefa": "[ATHN-TIM100][Inversor 3.6] - Verificar inversor com alarmes na PV 4",
       "criticidade": "",
       "dataProgramada": "2026-11-16",
       "dataCriacao": "2026-11-12",
-      "dataInicial": "",
+      "dataInicial": "2026-11-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0
     },
     {
       "osId": "19426",
@@ -17762,14 +17787,15 @@
       "responsavel": "Ailton Leal ",
       "criadoPor": "Maria Luiza Oliveira",
       "supervisor": "Ailton Leal ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Estação Meteorológica] - [União/2C] - Verificação da possível inversão do sensor POA x GHI",
       "criticidade": "",
       "dataProgramada": "2026-11-16",
       "dataCriacao": "2026-11-11",
-      "dataInicial": "",
+      "dataInicial": "2026-11-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0
     },
     {
       "osId": "19233",
@@ -18104,14 +18130,15 @@
       "responsavel": "Frank  Melo",
       "criadoPor": "Roger Lélis",
       "supervisor": "Frank  Melo",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 08.103] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-11-12",
       "dataCriacao": "2026-11-10",
-      "dataInicial": "",
+      "dataInicial": "2026-11-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0
     },
     {
       "osId": "19156",
@@ -18120,14 +18147,15 @@
       "responsavel": "Frank  Melo",
       "criadoPor": "Roger Lélis",
       "supervisor": "Frank  Melo",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 09.103] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-11-12",
       "dataCriacao": "2026-11-10",
-      "dataInicial": "",
+      "dataInicial": "2026-11-17",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0
     },
     {
       "osId": "19155",
@@ -18138,22 +18166,6 @@
       "supervisor": "Frank  Melo",
       "status": "Não Iniciada",
       "tarefa": "[Tracker 01.107] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-12",
-      "dataCriacao": "2026-11-10",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "19154",
-      "ativo": "Tracker 04.102 Brametal Bi-motor    { CPP100-ETKR4.102 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Frank  Melo",
-      "status": "Não Iniciada",
-      "tarefa": "[Tracker 04.102] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-11-12",
       "dataCriacao": "2026-11-10",
@@ -21368,25 +21380,6 @@
       "atrasada": false
     },
     {
-      "osId": "17974",
-      "ativo": "Preventiva Grupo de Inversores      { THPN-FZL100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Milena Araújo",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-11-11",
-      "dataCriacao": "2026-10-29",
-      "dataInicial": "2026-11-09",
-      "dataFinal": "2026-11-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 264.0,
-      "horasAteFechar": 168.0,
-      "atrasada": false
-    },
-    {
       "osId": "17902",
       "ativo": "Transformador 3 WEG     { 2C-IPX100-TRFR3 }",
       "equipe": "",
@@ -22189,6 +22182,25 @@
       "dataFinal": "2026-11-13",
       "linkFracttal": "",
       "horasAteAbrir": 72.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "19154",
+      "ativo": "Tracker 04.102 Brametal Bi-motor    { CPP100-ETKR4.102 }",
+      "equipe": "",
+      "responsavel": "Frank  Melo",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Frank  Melo",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 04.102] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-11-12",
+      "dataCriacao": "2026-11-10",
+      "dataInicial": "2026-11-17",
+      "dataFinal": "2026-11-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 168.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -23890,8 +23902,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3644,
-  "totalGeral": 8884,
+  "historicoTotal": 3645,
+  "totalGeral": 8885,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
