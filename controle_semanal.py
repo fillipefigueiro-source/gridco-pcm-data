@@ -34,6 +34,8 @@ def baixar(nome):
 
 g = baixar('gestao_pcm.json')
 b = baixar('banco_dados.json')
+import filtro_campo
+filtro_campo.aplicar(g, b)
 AGORA = dt.datetime.now()
 base_sem = AGORA + dt.timedelta(days=2)
 seg = base_sem - dt.timedelta(days=base_sem.weekday())
@@ -44,8 +46,10 @@ T = [t for t in g['tarefas'] if 'teste' not in str(t.get('usina', '')).lower()]
 AB = [t for t in T if t.get('aberta')
       and str(t.get('osStatus', '')).strip().lower() not in FECH]
 sem = next((s for s in b.get('semanas', []) if s.get('week') == WTAG), None)
+# só o PLANO: linhas "fora do plano" (corretivas, religamentos etc. executados sem estar
+# na planilha) não são planejadas. Preventivas já chegam como plano (16/11/2026).
 rows = [r for r in (sem or {}).get('rows', [])
-        if 'teste' not in str(r.get('usina', '')).lower()]
+        if 'teste' not in str(r.get('usina', '')).lower() and not r.get('foraDoPlano')]
 
 # ── responsavel da OS: programacao (todas as semanas) + BD da API ────
 RESP = {}

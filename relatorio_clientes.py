@@ -235,12 +235,17 @@ def _carregar_auxiliar(pasta):
         if mr:
             _rn={"i":"1","ii":"2","iii":"3","iv":"4","v":"5"}[mr.group(2)]
             aux.setdefault(f"{mr.group(1)} {_rn}".strip(),entry)
+        # numeral romano em qualquer posição: "Rio do Peixe I e II" -> "Rio do Peixe 1 e 2" (10/11/2026,
+        # caso Apolo: sem isso a usina não achava a mobilização e o MTBF partia de 20/10/2025)
+        _rom=re.sub(r"\b(iii|ii|iv|v|i)\b",lambda m:{"i":"1","ii":"2","iii":"3","iv":"4","v":"5"}[m.group(1)],key)
+        if _rom!=key: aux.setdefault(_rom,entry)
         # alias typo cliente: AUXILIAR "Ultragaz" vs Fracttal "Utragaz"
         if key.startswith("ultragaz"): aux.setdefault("utragaz"+key[len("ultragaz"):],entry)
     # De->para de nomes arbitrários (Fracttal -> AUXILIAR). Chaves já normalizadas
     # (sem acento, minúsculas). Adicione aqui novos casos de nome divergente.
     _OV={"thopen - campos dos goytacazes 1":"thopen - goytacazes 1",
-         "thopen - santo inacio 12":"thopen - santo inacio 1 e 2"}
+         "thopen - santo inacio 12":"thopen - santo inacio 1 e 2",
+         "apolo - gravata 2":"apolo - gravatai 2"}      # AUXILIAR grafa "Gravataí II"; a cidade é Gravatá-PE
     for _frac,_ax in _OV.items():
         if _ax in aux: aux.setdefault(_frac,aux[_ax])
     return aux
@@ -266,7 +271,12 @@ def resolve_usina(ac1,aux):
             if k==ku or k.startswith(ku+" ") or ku.startswith(k+" "): match=a; break
     if match:
         cli=norm_cli(match["cliente"]); cluster=match.get("cluster") or "—"
-        mob=parse_dt(match.get("mob")) if match.get("mob") else None
+        _m=match.get("mob")
+        # data gravada como número no AUXILIAR (ex.: 46302 = 07/10/2026): serial do Excel
+        if isinstance(_m,(int,float)) and not isinstance(_m,bool) and 20000<_m<80000:
+            mob=dt.datetime(1899,12,30)+dt.timedelta(days=float(_m))
+        else:
+            mob=parse_dt(_m) if _m else None
         cap=match.get("cap") if isinstance(match.get("cap"),(int,float)) else 0.0
     res=(cli,usina,cluster,mob,cap); _UCACHE[ac1]=res; return res
 
@@ -420,6 +430,47 @@ def kpis_mes(regs,ini,fim):
         prog_os=prog_os,nprog_os=nprog_os,pct_prog_os=pct_prog_os,por_categoria_os=pco,abert_os=abert_os,
         usinas=Counter(x["ufv"] for x in conc),corr_equip=Counter(x["tarefa"] for x in conc if x["categoria"]=="Corretiva"),
         corr_ativo=Counter(x["ativo"] for x in conc if x["categoria"]=="Corretiva"))
+
+# ----------------------------------------------------------------- HANDOVER (entrada em operação)
+# Pedido do Fabrício (10/11/2026): usina nova que passou pelo handover no mês ganha uma seção própria
+# (o caso Apolo de outubro, em que as 106 verificações só apareciam soltas no anexo) e o Resumo
+# Executivo deixa de cobrar o índice preventivo de 70% no mês de entrada. Gatilho = ter tarefa do tipo
+# Handover no mês — usina antiga não tem, então "só usina nova" sai sozinho. Handover que atravessa dois
+# meses aparece nos dois, cada um com o que foi feito nele (decisão de 10/11).
+def _sistema_handover(tarefa):
+    t=re.sub(r"^\s*\[[^\]]*\]\s*","",str(tarefa or ""))                 # tira prefixo "[Ativo]"
+    t=re.sub(r"(?i)^\s*handover\s*[–—-]?\s*","",t).strip(" –—-")
+    t=re.sub(r"\s+"," ",t)
+    if not t: return "Geral"
+    if t.isupper() and len(t)>5: t=t.lower()                       # "CABINE DE MEDIÇÃO" -> "cabine de medição"
+    return t[:1].upper()+t[1:]                                     # siglas curtas (QGBT, NCU, PPCI) ficam
+def handover_mes(regs,ini,fim):
+    """{usina: dict(tarefas, ini, fim, n, conc, pend, hh, sistemas, pendentes, achados)} — só usinas com
+    tarefa de Handover no mês. Achados = corretivas criadas entre o início do handover e o fim do mês."""
+    por=defaultdict(list)
+    for x in regs:
+        if x["categoria"]=="Handover" and no_mes(x,ini,fim): por[x["ufv"]].append(x)
+    out={}
+    for ufv,lst in por.items():
+        datas_i=[d for x in lst for d in (x["dini"],x["dprog"]) if d]
+        datas_f=[x["dfim"] for x in lst if x["dfim"]]
+        h_ini=min(datas_i) if datas_i else ini; h_fim=max(datas_f) if datas_f else None
+        conc=[x for x in lst if FINALIZADO(x) or x["dfim"]]; pend=[x for x in lst if x not in conc]
+        sis=defaultdict(lambda: dict(n=0,conc=0,hh=0.0))
+        for x in lst:
+            s=sis[_sistema_handover(x["tarefa"])]; s["n"]+=1; s["hh"]+=x["dur"] or 0
+            if x in conc: s["conc"]+=1
+        achados=[x for x in regs if x["ufv"]==ufv and x["categoria"]=="Corretiva"
+                 and x["dcri"] and h_ini<=x["dcri"]<fim]
+        # período: com pendência, o handover não acabou — "iniciado em X, em andamento"
+        periodo=(f"de {h_ini.strftime('%d/%m')} a {h_fim.strftime('%d/%m')}" if (h_fim and not pend)
+                 else f"iniciado em {h_ini.strftime('%d/%m')}, em andamento")
+        out[ufv]=dict(tarefas=lst,ini=h_ini,fim=h_fim,periodo=periodo,n=len(lst),conc=len(conc),pend=len(pend),
+                      hh=sum(x["dur"] or 0 for x in lst),
+                      sistemas=sorted(sis.items(),key=lambda kv:(-kv[1]["n"],kv[0])),
+                      pendentes=sorted(pend,key=lambda x:x["dprog"] or dt.datetime.max),
+                      achados=dedupe_os(sorted(achados,key=lambda x:x["dcri"])))
+    return out
 
 def historico_mensal(regs,fim):
     cy,cm=(fim - dt.timedelta(days=1)).year,(fim - dt.timedelta(days=1)).month
@@ -1064,6 +1115,7 @@ def gerar(escopo_tipo,escopo_nome,cliente_pai,periodo,ref,idx,rows,aux,saida_bas
     regs=coletar(escopo_tipo,escopo_nome,idx,rows,aux)
     regs_os=regs                                  # ANÁLISE POR TAREFA (sem dedup por OS)
     k=kpis_mes(regs_os,ini,fim); conc=k["conc"]; abert=k["abert"]
+    ho=handover_mes(regs,ini,fim)                  # usinas em handover no mês (seção própria)
     hist=historico_mensal(regs_os,fim); clusters=por_cluster(conc); utab=por_usina_tab(conc)
     mpm=mp_mes(regs,ini,fim); m12=mp_12(regs,fim); mp12c,(_a12,_b12)=mp_12_por_code(regs,fim)   # preventivas (tarefa)
     tipos=confiab_tipologia(regs,fim); crit_list=crit_corretivas(conc)   # MTTR/MTBF: nível tarefa (fórmula de linha)
@@ -1107,10 +1159,28 @@ def gerar(escopo_tipo,escopo_nome,cliente_pai,periodo,ref,idx,rows,aux,saida_bas
                 f"registrou {k['n_os']} ordens de trabalho no mês ({k['n_os']-k['abert_os']} concluídas, {k['abert_os']} em aberto) — {k['nprev_os']} preventivas e {k['ncorr_os']} corretivas "
                 f"({k['pct_prev_os']:.0f}% de preventiva) — com {k['abert_os']} tarefa(s) ainda em aberto no período.")
     cap_txt=f" ({fnum(cap,1)} MWp)" if cap and cap>0 else ""
+    # Mês de entrada (handover): na usina, o índice de 70% ainda não se aplica — o plano preventivo
+    # começa no mês seguinte. No cliente, avisa quais usinas estão nessa situação.
+    entrada=escopo_tipo=="usina" and bool(ho)
+    if entrada:
+        h=next(iter(ho.values()))
+        _per=h["periodo"]
+        _abre=(f"{rot} foi mês de entrada da usina em operação: handover {_per}" if h["ini"]>=ini
+               else f"Em {rot}, a usina seguiu em handover ({_per})")
+        txt_prev=(f"{_abre}, com {h['n']} verificações no mês "
+                  f"({h['conc']} concluídas{', '+str(h['pend'])+' pendentes' if h['pend'] else ''}). "
+                  f"A relação preventiva×corretiva ({k['pct_prev_os']:.0f}%) ainda não é representativa: "
+                  "o plano preventivo da usina passa a ser acompanhado a partir do mês seguinte. ")
+    else:
+        txt_prev=(f"A relação preventiva×corretiva alcançou {k['pct_prev_os']:.0f}% de preventiva, "
+                  f"{('superior' if k['pct_prev_os']>=70 else 'aquém')} do patamar de referência de 70% para um regime confiável. ")
+        if ho:
+            _nomes=", ".join(str(u).split(" - ")[-1] for u in sorted(ho))
+            txt_prev+=(f"No mês, {len(ho)} usina(s) entraram em operação via handover ({_nomes}) — "
+                       "detalhes na seção Handover. ")
     body(doc,f"O programa de manutenção {('da usina' if escopo_tipo=='usina' else 'do portfólio de '+str(n_usinas)+' usina(s)')}"
             f"{cap_txt} registrou {k['n_os']} ordens de trabalho no mês. "
-            f"A relação preventiva×corretiva alcançou {k['pct_prev_os']:.0f}% de preventiva, "
-            f"{('superior' if k['pct_prev_os']>=70 else 'aquém')} do patamar de referência de 70% para um regime confiável. "
+            + txt_prev
             + (f"Em volume, houve {('alta' if k['n_os']-os_pico>0 else ('queda' if k['n_os']-os_pico<0 else 'estabilidade'))} frente ao mês anterior ({os_pico}). " if os_pico else "")
             + (f"As corretivas concentraram {crit_alta} ocorrência(s) de criticidade alta/muito alta. " if crit_alta else "")
             + (f"O ativo com maior incidência corretiva foi '{str(top_ativo[0])[:48]}'. " if top_ativo else ""))
@@ -1125,6 +1195,41 @@ def gerar(escopo_tipo,escopo_nome,cliente_pai,periodo,ref,idx,rows,aux,saida_bas
     r2=c2.paragraphs[0].add_run()
     if os.path.exists(gca): r2.add_picture(gca,width=Inches(3.2))
     p=doc.add_paragraph(); rr=p.add_run("Relação preventiva × corretiva (esq.) e distribuição relativa por categoria (dir.)."); rr.font.size=Pt(8); rr.font.italic=True; rr.font.color.rgb=hx(MID); p.alignment=WD_ALIGN_PARAGRAPH.CENTER
+
+    # ----- HANDOVER — ENTRADA EM OPERAÇÃO (só se houve handover no mês)
+    if ho:
+        doc.add_page_break(); H(doc,"Handover — Entrada em Operação")
+        body(doc,"O handover é a verificação de entrada da usina na operação Grid Co.: cada sistema é inspecionado e "
+                "documentado antes de o plano de manutenção começar a rodar. Abaixo, o que foi verificado no mês, "
+                "o que ficou pendente e as corretivas abertas a partir do handover.")
+        for ufv,h in sorted(ho.items()):
+            if escopo_tipo!="usina": H(doc,str(ufv).split(" - ",1)[-1],2)
+            pct=100*h["conc"]/h["n"] if h["n"] else 0
+            _cont=" (continuação do mês anterior)" if h["ini"]<ini else ""
+            callout(doc,f"Handover {h['periodo']}{_cont} · {h['n']} verificações no mês · {h['conc']} concluídas ({pct:.0f}%)"
+                        f"{' · '+str(h['pend'])+' pendente(s)' if h['pend'] else ''} · {fnum(h['hh'],1)} h de execução.")
+            cols=["Sistema verificado","Tarefas","Concluídas","Pendentes","Exec (h)"]
+            ht=doc.add_table(rows=1,cols=len(cols)); ht.style="Table Grid"; th_row(ht,cols)
+            for nome,s in h["sistemas"]:
+                row=ht.add_row().cells
+                td(row[0],nome[:44]); td(row[1],s["n"]); td(row[2],s["conc"]); td(row[3],s["n"]-s["conc"]); td(row[4],f"{s['hh']:.1f}")
+            row=ht.add_row().cells
+            td(row[0],"TOTAL",8.5,bold=True); td(row[1],h["n"],8.5,bold=True); td(row[2],h["conc"],8.5,bold=True)
+            td(row[3],h["pend"],8.5,bold=True); td(row[4],f"{h['hh']:.1f}",8.5,bold=True)
+            if h["pendentes"]:
+                body(doc,"Verificações pendentes:",9.5)
+                pt=doc.add_table(rows=1,cols=4); pt.style="Table Grid"; th_row(pt,["Nº OS","Verificação","Equipamento","Status"])
+                for x in h["pendentes"][:12]:
+                    r=pt.add_row().cells; td(r[0],x["osid"],7.5); td(r[1],str(x["tarefa"])[:44],7.5)
+                    td(r[2],str(x["ativo"])[:30],7.5); td(r[3],(x["estado"] or x["status"])[:16],7.5)
+            if h["achados"]:
+                body(doc,f"Corretivas abertas a partir do handover ({len(h['achados'])}):",9.5)
+                at=doc.add_table(rows=1,cols=5); at.style="Table Grid"; th_row(at,["Nº OS","Abertura","Corretiva","Equipamento","Status"])
+                for x in h["achados"][:10]:
+                    r=at.add_row().cells; td(r[0],x["osid"],7.5); td(r[1],fdate(x["dcri"]),7.5); td(r[2],str(x["tarefa"])[:40],7.5)
+                    td(r[3],str(x["ativo"])[:28],7.5); td(r[4],(x["estado"] or x["status"])[:16],7.5)
+            else:
+                bullet(doc,"Nenhuma corretiva aberta a partir do handover no mês.")
 
     # ----- ANALISE CONSOLIDADA (ano vigente)
     doc.add_page_break(); H(doc,"Análise Consolidada")
@@ -1225,7 +1330,15 @@ def gerar(escopo_tipo,escopo_nome,cliente_pai,periodo,ref,idx,rows,aux,saida_bas
     add_img(doc,gano,6.5)
     if tipos:
         H(doc,"MTTR, MTBF e Disponibilidade por Tipologia de Ativo",2)
-        body(doc,"MTBF e MTTR desde a mobilização (base 20/10/2025), considerando tempo de operação de ~12 h/dia de geração da UFV. "
+        # base real: mobilização da usina (AUXILIAR), nunca antes do início do sistema (20/10/2025)
+        _mobs=sorted({max(x["mob"],DATA_INICIO_SISTEMA) for x in regs if x.get("mob")})
+        _antes=any(x.get("mob") and x["mob"]<DATA_INICIO_SISTEMA for x in regs)
+        if escopo_tipo=="usina" and _mobs: _base=f"desde a mobilização da usina em {fdate(_mobs[0])}"
+        elif _mobs and len(_mobs)>1: _base=(f"desde a mobilização de cada usina (de {fdate(_mobs[0])} a {fdate(_mobs[-1])}"
+                                             + (f"; usinas anteriores ao sistema contam a partir de {fdate(DATA_INICIO_SISTEMA)})" if _antes else ")"))
+        elif _mobs: _base=f"desde a mobilização ({fdate(_mobs[0])})"
+        else: _base=f"desde o início do sistema ({fdate(DATA_INICIO_SISTEMA)}), sem data de mobilização no cadastro"
+        body(doc,f"MTBF e MTTR {_base}, considerando tempo de operação de ~12 h/dia de geração da UFV. "
                 "MTTR pondera reparos longos; MTBF = tempo de operação ÷ nº de corretivas; Disponibilidade Inerente = MTBF ÷ (MTBF + MTTR).",9.5)
         cols=["Tipologia de Ativo","Corretivas","MTTR (h)","MTBF (h)","Disponib. (%)"]
         tt=doc.add_table(rows=1,cols=len(cols)); tt.style="Table Grid"; th_row(tt,cols)
@@ -1275,7 +1388,7 @@ def gerar(escopo_tipo,escopo_nome,cliente_pai,periodo,ref,idx,rows,aux,saida_bas
         for a,n in bad.most_common(8):
             row=bt.add_row().cells; td(row[0],str(a)[:42]); td(row[1],tipologia_ativo(a)); td(row[2],n)
     # Log de outliers
-    outs,media_o,lim_o=outliers(conc)
+    outs,media_o,lim_o=outliers([x for x in conc if x["categoria"]!="Handover"])   # handover é verificação longa por natureza
     if outs:
         H(doc,"Log de Outliers — Tarefas Muito Acima da Média",2)
         body(doc,f"Tarefas cujo tempo de execução excede a média ({media_o:.1f} h) em mais de 2 desvios-padrão (> {lim_o:.1f} h) — "
@@ -1312,14 +1425,16 @@ def gerar(escopo_tipo,escopo_nome,cliente_pai,periodo,ref,idx,rows,aux,saida_bas
         if c=="Religamento": return "Religamento"
         if c=="Religamento Remoto": return "Religamento Remoto"
         if c=="Administrativa": return "Administrativa"
+        if c=="Handover": return "Handover"
         return "Outras"
     grupos=defaultdict(list)
     for x in universo: grupos[_grp(x)].append(x)
+    GRUPOS_ANEXO=["Preventivas","Corretivas","Religamento","Religamento Remoto","Administrativa","Handover","Outras"]
     # tabela resumo
     H(doc,"Resumo",2)
     cols=["Categoria","Concluídas","Em aberto","Total"]
     rs=doc.add_table(rows=1,cols=len(cols)); rs.style="Table Grid"; th_row(rs,cols)
-    for gnome in ["Preventivas","Corretivas","Religamento","Religamento Remoto","Administrativa","Outras"]:
+    for gnome in GRUPOS_ANEXO:
         lst=grupos.get(gnome,[])
         if not lst: continue
         cc=sum(1 for x in lst if x in conc); ab=len(lst)-cc
@@ -1327,7 +1442,7 @@ def gerar(escopo_tipo,escopo_nome,cliente_pai,periodo,ref,idx,rows,aux,saida_bas
     row=rs.add_row().cells; td(row[0],"TOTAL",8.5,bold=True); td(row[1],len(conc),8.5,bold=True); td(row[2],len(abert),8.5,bold=True); td(row[3],len(universo),8.5,bold=True)
     # tabelas detalhadas por categoria
     acols=["Nº OS","Data Prog.","Usina","Descrição da Tarefa","Equipamento","Início OS","Fim OS","Status","Exec (h)","Observação"]
-    for gnome in ["Preventivas","Corretivas","Religamento","Religamento Remoto","Administrativa","Outras"]:
+    for gnome in GRUPOS_ANEXO:
         lst=grupos.get(gnome,[])
         if not lst: continue
         H(doc,f"{gnome}  ({len(lst)} OS)",2)
@@ -1382,7 +1497,7 @@ def gerar_portfolio(periodo,ref,idx,rows,aux,saida_base,clientes=None):
     # OS de solicitações
     sol=os_de_solicitacao(universo)
     # outliers / top3 / horas
-    outs,media_o,lim_o=outliers(conc); top3=top_corretivas_detalhe(conc,3,6); prog_h,exe_h=horas_prog_exec(conc)
+    outs,media_o,lim_o=outliers([x for x in conc if x["categoria"]!="Handover"])   # handover é verificação longa por natureza; top3=top_corretivas_detalhe(conc,3,6); prog_h,exe_h=horas_prog_exec(conc)
 
     capa=g_capa("Portfólio Grid Co.","VISÃO GERENCIAL — TODOS OS CLIENTES",rot,"Relatório Gerencial de Portfólio","capa.png")
     don=g_donut(k,"donut.png"); gca=g_categorias(k["por_categoria"],"categorias.png")

@@ -606,6 +606,18 @@ relatório gravou esse lixo no `.cache_bd_api.pkl` (TTL 15 min) e listou zero cl
 `relatorio_clientes.carregar` recusa a coleta (e não grava cache) se menos da metade das linhas tem nº de OS e usina.
 **Regra que fica:** limite de requisição nunca é sinal de endpoint errado. Os robôs usam o mesmo `_resolver_path`.
 
+### Preventiva nunca é "fora do plano" (16/11/2026)
+
+Decisão do Fabrício: preventiva vem do calendário do PCM 52 Semanas, então conta sempre no PLANO, mesmo quando
+entra na semana depois do fechamento da planilha ou é executada sem estar nela (caso Athon S45: MPA de Matões 1
+antecipada, 34 tarefas; aderência 48% → 62%). Onde está a regra:
+- `gerar_pcm_json.linhas_fora_do_plano`: preventiva executada fora da planilha sai com `foraDoPlano: false` e
+  `prevForaPlanilha: true`. Painel, relatórios diário/semanal e `relatorios_semana.py` seguem pela marca.
+- `js/relatorio_exec.js` (`rexSemanas`): preventiva criada após o corte ou fora da planilha entra em "Do plano".
+- `semana_doc.py` (Abertura/Fechamento) e `controle_semanal.py`: o "planejado" passa a ignorar linhas com
+  `foraDoPlano` (antes contavam tudo, inclusive corretiva executada fora do plano).
+O `banco_dados.json` antigo só muda quando o robô regerar a semana.
+
 ### OS do backoffice fora dos relatórios (09/11/2026)
 
 O relatório da Athon (Marabá) mostrava OS da Singrid e da Lara, e o Relatório Executivo da S44 da Athon contava **40

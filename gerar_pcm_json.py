@@ -643,6 +643,11 @@ def linhas_fora_do_plano(df, mon: dt.date, plan_keys: set) -> list:
         if dur > 24:
             dur = 0.0
         estado = str(r.get('Estado da Tarefa') or '').strip()
+        # Preventiva NUNCA é "fora do plano" (decisão do Fabrício, 16/11/2026): vem do
+        # calendário do PCM 52 Semanas, então entra como linha do plano. A marca
+        # prevForaPlanilha guarda que ela não estava na planilha da semana.
+        _tp = str(r.get('Tipo de tarefa') or '').strip().lower()
+        _prev = _tp.startswith('preventiva') or _tp.startswith('mp')
         out.append({
             "cliente": _extrair_cliente(usina), "usina": usina,
             "cluster": _cluster_norm(r.get('Ativo Classificação 2')),
@@ -665,7 +670,8 @@ def linhas_fora_do_plano(df, mon: dt.date, plan_keys: set) -> list:
             "dataFinal": _iso_dt(r.get('Data final')),
             "dataProgramada": _iso_dt(r.get('Data Programada')),
             "statusPai": str(r.get('Status') or '').strip(),
-            "foraDoPlano": True,
+            "foraDoPlano": not _prev,
+            **({"prevForaPlanilha": True} if _prev else {}),
         })
     return out
 

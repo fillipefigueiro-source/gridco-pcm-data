@@ -235,7 +235,9 @@ function rexSemanas(bd) {
     rows.forEach(r => {
       const feito = rexFinBd(r.status);
       const gk = rexGrupoBd(r.tipo);
-      if (String(r.dataCriacao || '').slice(0, 19) >= corte) {   // nasceu depois do plano
+      // Preventiva NUNCA é "fora do plano" (decisão do Fabrício, 16/11/2026): ela vem do
+      // calendário do PCM 52 Semanas; criada depois do corte continua contando no plano.
+      if (gk !== 'Preventivas' && String(r.dataCriacao || '').slice(0, 19) >= corte) {   // nasceu depois do plano
         const o = NP[gk] || (NP[gk] = { p: 0, f: 0 });
         o.p++; npT++;
         if (feito) { o.f++; npF++; }
@@ -277,6 +279,13 @@ function rexSemanas(bd) {
       const criSem = rexRange(t.criacao, corte.slice(0, 10), dom) && !fimAntes
         && rexRange(t.dataProg, seg, dom);
       if (!criSem && !fimSem) return;
+      if (g === 'Preventivas') {   // preventiva fora da planilha conta no PLANO (16/11/2026)
+        const gp = G[g] || (G[g] = { p: 0, f: 0 });
+        gp.p++; plan++;
+        if (fimSem) { gp.f++; fin++; }
+        dim(GC, t.cliente, true, fimSem); dim(GR, rexClu(t.cluster), true, fimSem);
+        return;
+      }
       const o = NP[g] || (NP[g] = { p: 0, f: 0 });
       o.p++; npT++;
       if (fimSem) { o.f++; npF++; }
@@ -666,6 +675,7 @@ async function rexGerar() {
     h += '<div class="rex-nota">Plano = a planilha da Programação da semana; tarefa criada DEPOIS do fechamento do plano '
       + '(momento em que a planilha foi gerada) conta como não planejada, mesmo quando encaixada nela · executado = tarefa Finalizada · '
       + 'não planejada = criada após o fechamento E programada para a própria semana, ou executada sem estar na planilha (até domingo) · '
+      + 'preventivas contam sempre no plano (vêm do PCM 52 Semanas), mesmo quando entram depois do fechamento ou fora da planilha · '
       + 'preventiva mede cumprimento do plano; corretiva mede resposta à demanda.</div></section>';
   }
 
