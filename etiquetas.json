@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-17T23:27:49Z",
+  "geradoEm": "2026-11-18T01:32:19Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-16 .. 2026-11-22",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6336,
-        "emAberto": 53,
-        "atrasadas": 45,
-        "concluidas30d": 910,
-        "concluidas7d": 192,
-        "naSemanaCorrente": 49
+        "total": 6337,
+        "emAberto": 54,
+        "atrasadas": 52,
+        "concluidas30d": 879,
+        "concluidas7d": 163,
+        "naSemanaCorrente": 50
       },
       "mttr": {
-        "horas": 7.15,
-        "label": "7h 9min",
-        "amostra": 910
+        "horas": 7.29,
+        "label": "7h 18min",
+        "amostra": 879
       },
       "tendencia4Semanas": [
         {
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W47",
-          "criadas": 49,
+          "criadas": 50,
           "finalizadas": 41
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6336,
-            "emAberto": 53
+            "total": 6337,
+            "emAberto": 54
           }
         ],
         "responsaveis": [
@@ -58,8 +58,8 @@
           },
           {
             "nome": "Marcos  Camargo",
-            "total": 541,
-            "emAberto": 6
+            "total": 542,
+            "emAberto": 7
           },
           {
             "nome": "Felipe Silva",
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 53,
-      "atrasadas": 45,
+      "total": 54,
+      "atrasadas": 52,
       "porStatus": {
-        "naoIniciada": 46,
-        "emProgresso": 1,
-        "pausada": 6,
+        "naoIniciada": 47,
+        "emProgresso": 0,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 53
+        "(sem equipe)": 54
       },
       "oss": [
         {
@@ -906,6 +906,24 @@
           "atrasada": true
         },
         {
+          "osId": "19808",
+          "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+          "equipe": "",
+          "responsavel": "Marcos  Camargo",
+          "criadoPor": "DavidNascimento",
+          "supervisor": "Marcos  Camargo",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
+          "criticidade": "",
+          "dataProgramada": "2026-11-17",
+          "dataCriacao": "2026-11-17",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "19778",
           "ativo": "Thopen - Guatambú 1 - SC Rod. Balseiros do Rio Uruguai Guatambú  Santa Catarina Brasil { THPN-GTB100 }",
           "equipe": "",
@@ -921,7 +939,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19773",
@@ -930,7 +948,7 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "CíceroWillian",
           "supervisor": "Eduardo  Mendes",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[THPN-SCB100] - Religamento do THPN-SCB100",
           "criticidade": "",
           "dataProgramada": "2026-11-17",
@@ -940,7 +958,7 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19754",
@@ -958,7 +976,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19726",
@@ -977,7 +995,7 @@
           "linkFracttal": "",
           "horasAteAbrir": 0,
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19722",
@@ -995,7 +1013,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19719",
@@ -1013,7 +1031,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "modalidade": "local",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19795",
@@ -4054,12 +4072,12 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2559,
+      "historicoTotal": 2534,
       "subClassificacao": {
         "remoto": 760,
-        "local": 5576,
+        "local": 5577,
         "remotoEmAberto": 4,
-        "localEmAberto": 49,
+        "localEmAberto": 50,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -4282,16 +4300,16 @@
       "cor": "#10b981",
       "kpis": {
         "total": 1044,
-        "emAberto": 102,
-        "atrasadas": 51,
-        "concluidas30d": 124,
-        "concluidas7d": 46,
+        "emAberto": 101,
+        "atrasadas": 59,
+        "concluidas30d": 125,
+        "concluidas7d": 42,
         "naSemanaCorrente": 50
       },
       "mttr": {
-        "horas": 370.45,
-        "label": "15d 10h",
-        "amostra": 124
+        "horas": 371.14,
+        "label": "15d 11h",
+        "amostra": 125
       },
       "tendencia4Semanas": [
         {
@@ -4312,7 +4330,7 @@
         {
           "semana": "W47",
           "criadas": 4,
-          "finalizadas": 13
+          "finalizadas": 14
         }
       ],
       "topOfensores": {
@@ -4320,7 +4338,7 @@
           {
             "nome": "(sem equipe)",
             "total": 1044,
-            "emAberto": 102
+            "emAberto": 101
           }
         ],
         "responsaveis": [
@@ -4351,16 +4369,16 @@
           }
         ]
       },
-      "total": 102,
-      "atrasadas": 51,
+      "total": 101,
+      "atrasadas": 59,
       "porStatus": {
         "naoIniciada": 90,
-        "emProgresso": 2,
+        "emProgresso": 1,
         "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 102
+        "(sem equipe)": 101
       },
       "oss": [
         {
@@ -4915,24 +4933,6 @@
           "atrasada": true
         },
         {
-          "osId": "17977",
-          "ativo": "Transformador 6 COMTRAFO     { CPP100-TRFR6 }",
-          "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Frank  Melo",
-          "status": "pausado",
-          "tarefa": "[Athon] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-11-09",
-          "dataCriacao": "2026-10-29",
-          "dataInicial": "2026-11-17",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 456.0,
-          "atrasada": true
-        },
-        {
           "osId": "19018",
           "ativo": "Estrutura Fixa  São Bento  Rio de Janeiro Brasil { THPN-SBT500-EFIX }",
           "equipe": "",
@@ -5256,7 +5256,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19226",
@@ -5273,7 +5273,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19012",
@@ -5290,7 +5290,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "18959",
@@ -5307,7 +5307,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "18954",
@@ -5324,7 +5324,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "18941",
@@ -5341,7 +5341,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "18092",
@@ -5358,7 +5358,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "17913",
@@ -5375,7 +5375,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "17907",
@@ -5392,7 +5392,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19222",
@@ -5503,7 +5503,7 @@
           "responsavel": "Felipe Xavier ",
           "criadoPor": "Maria Luiza Oliveira",
           "supervisor": "Felipe Xavier ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Grid Co.] - MPM - Transformador",
           "criticidade": "",
           "dataProgramada": "2026-11-18",
@@ -6165,6 +6165,25 @@
           "dataFinal": "2026-11-17",
           "linkFracttal": "",
           "horasAteAbrir": 192.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "17977",
+          "ativo": "Transformador 6 COMTRAFO     { CPP100-TRFR6 }",
+          "equipe": "",
+          "responsavel": "Frank  Melo",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Frank  Melo",
+          "status": "Finalizados",
+          "tarefa": "[Athon] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-11-09",
+          "dataCriacao": "2026-10-29",
+          "dataInicial": "2026-11-17",
+          "dataFinal": "2026-11-17",
+          "linkFracttal": "",
+          "horasAteAbrir": 456.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -8848,25 +8867,6 @@
           "atrasada": false
         },
         {
-          "osId": "15097",
-          "ativo": "Transformador 1 WEG     { THPN-RDR100-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Silva",
-          "criadoPor": "Fabricio Barreto",
-          "supervisor": "Cláudio  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-10-06",
-          "dataCriacao": "2026-10-01",
-          "dataInicial": "2026-10-06",
-          "dataFinal": "2026-10-06",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "15136",
           "ativo": "Cabine 1 2ª Seção Colônia Tapejara, Lote N 152-Re, 153 e 154 Cidade Gaúcha  Paraná Brasil { THPN-CGH100-CABN1 }",
           "equipe": "",
@@ -8962,7 +8962,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 397
+      "historicoTotal": 395
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -8971,9 +8971,9 @@
       "kpis": {
         "total": 200,
         "emAberto": 24,
-        "atrasadas": 16,
+        "atrasadas": 17,
         "concluidas30d": 14,
-        "concluidas7d": 7,
+        "concluidas7d": 5,
         "naSemanaCorrente": 5
       },
       "mttr": {
@@ -9040,7 +9040,7 @@
         ]
       },
       "total": 24,
-      "atrasadas": 16,
+      "atrasadas": 17,
       "porStatus": {
         "naoIniciada": 21,
         "emProgresso": 1,
@@ -9341,7 +9341,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19774",
@@ -10253,9 +10253,9 @@
       "kpis": {
         "total": 1115,
         "emAberto": 70,
-        "atrasadas": 57,
+        "atrasadas": 65,
         "concluidas30d": 218,
-        "concluidas7d": 79,
+        "concluidas7d": 64,
         "naSemanaCorrente": 22
       },
       "mttr": {
@@ -10322,11 +10322,11 @@
         ]
       },
       "total": 70,
-      "atrasadas": 57,
+      "atrasadas": 65,
       "porStatus": {
         "naoIniciada": 58,
-        "emProgresso": 1,
-        "pausada": 11,
+        "emProgresso": 0,
+        "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
@@ -11327,7 +11327,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19784",
@@ -11344,7 +11344,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19760",
@@ -11362,7 +11362,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 0,
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19743",
@@ -11379,7 +11379,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19742",
@@ -11396,7 +11396,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19730",
@@ -11413,7 +11413,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19707",
@@ -11422,7 +11422,7 @@
           "responsavel": "Caio da Silva Cordeiro ",
           "criadoPor": "Gabriela Dias",
           "supervisor": "Caio da Silva Cordeiro ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "Inspeção Geral do Inversor entre 6h e 8h",
           "criticidade": "",
           "dataProgramada": "2026-11-17",
@@ -11431,7 +11431,7 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19496",
@@ -11448,7 +11448,7 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
+          "atrasada": true
         },
         {
           "osId": "19793",
@@ -12732,25 +12732,6 @@
           "linkFracttal": "",
           "horasAteAbrir": 96.0,
           "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "18765",
-          "ativo": "Inversor 1.2 GROWATT 33000TL3-S    { SALE-SNP100-INVR1.2 }",
-          "equipe": "",
-          "responsavel": "Adriano Silva ",
-          "criadoPor": "Gabriela Dias ",
-          "supervisor": "Adriano Silva ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-11-10",
-          "dataCriacao": "2026-11-06",
-          "dataInicial": "2026-11-09",
-          "dataFinal": "2026-11-10",
-          "linkFracttal": "",
-          "horasAteAbrir": 72.0,
-          "horasAteFechar": 24.0,
           "atrasada": false
         },
         {
@@ -14369,6 +14350,25 @@
           "atrasada": false
         },
         {
+          "osId": "16245",
+          "ativo": "Inversor 1.6 Huawei SUN2000-330KTL-H1    { VRG100-INVR1.6 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Levi Maia ",
+          "supervisor": "Marcos Duarte ",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.6] - Recomposição de String",
+          "criticidade": "",
+          "dataProgramada": "2026-10-14",
+          "dataCriacao": "2026-10-13",
+          "dataInicial": "2026-10-14",
+          "dataFinal": "2026-10-14",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "14661",
           "ativo": "Inversor 2.9 Sungrow SG125-HV    { THPN-SAP100-INVR2.9 }",
           "equipe": "",
@@ -14388,7 +14388,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 598
+      "historicoTotal": 580
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14399,7 +14399,7 @@
         "emAberto": 33,
         "atrasadas": 28,
         "concluidas30d": 22,
-        "concluidas7d": 7,
+        "concluidas7d": 6,
         "naSemanaCorrente": 3
       },
       "mttr": {
@@ -16355,50 +16355,29 @@
           "horasAteAbrir": 168.0,
           "horasAteFechar": 0,
           "atrasada": false
-        },
-        {
-          "osId": "10902",
-          "ativo": "Estação Meteorológica Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "João Vieira ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "João Vieira ",
-          "status": "Finalizada",
-          "tarefa": "[ETM] - Coleta e análise de dados",
-          "criticidade": "",
-          "dataProgramada": "2026-08-10",
-          "dataCriacao": "2026-08-07",
-          "dataInicial": "2026-08-11",
-          "dataFinal": "2026-08-19",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 192.0,
-          "atrasada": false
-        },
-        {
-          "osId": "10630",
-          "ativo": "Estação Meteorológica Estrada Vargem Bonita a Celulose Irani, Km 8, Glebas 1 e 2, s/nº Vargem Bonita  Santa Catarina Brasil { THPN-COR100-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Ademir Necker ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "Ademir Necker ",
-          "status": "Finalizada",
-          "tarefa": "[Coração 1] - Inspeção e Limpeza dos Sensores",
-          "criticidade": "",
-          "dataProgramada": "2026-08-04",
-          "dataCriacao": "2026-08-04",
-          "dataInicial": "2026-08-13",
-          "dataFinal": "2026-08-19",
-          "linkFracttal": "",
-          "horasAteAbrir": 216.0,
-          "horasAteFechar": 144.0,
-          "atrasada": false
         }
       ],
-      "historicoTotal": 71
+      "historicoTotal": 69
     }
   },
   "ossPublicas": [
+    {
+      "osId": "19808",
+      "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
+      "equipe": "",
+      "responsavel": "Marcos  Camargo",
+      "criadoPor": "DavidNascimento",
+      "supervisor": "Marcos  Camargo",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-MNG100] - Religamento do THPN-MNG100",
+      "criticidade": "",
+      "dataProgramada": "2026-11-17",
+      "dataCriacao": "2026-11-17",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
     {
       "osId": "19799",
       "ativo": "Tracker 18.100 Axial AXIAL 4X28    { THPN-CGH100-ETKR18.100 }",
@@ -16601,7 +16580,7 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "CíceroWillian",
       "supervisor": "Eduardo  Mendes",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[THPN-SCB100] - Religamento do THPN-SCB100",
       "criticidade": "",
       "dataProgramada": "2026-11-17",
@@ -16834,7 +16813,7 @@
       "responsavel": "Caio da Silva Cordeiro ",
       "criadoPor": "Gabriela Dias",
       "supervisor": "Caio da Silva Cordeiro ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "Inspeção Geral do Inversor entre 6h e 8h",
       "criticidade": "",
       "dataProgramada": "2026-11-17",
@@ -18567,7 +18546,7 @@
       "responsavel": "Felipe Xavier ",
       "criadoPor": "Maria Luiza Oliveira",
       "supervisor": "Felipe Xavier ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Grid Co.] - MPM - Transformador",
       "criticidade": "",
       "dataProgramada": "2026-11-18",
@@ -19567,23 +19546,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 432.0
-    },
-    {
-      "osId": "17977",
-      "ativo": "Transformador 6 COMTRAFO     { CPP100-TRFR6 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Frank  Melo",
-      "status": "pausado",
-      "tarefa": "[Athon] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-11-09",
-      "dataCriacao": "2026-10-29",
-      "dataInicial": "2026-11-17",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 456.0
     },
     {
       "osId": "17971",
@@ -21348,6 +21310,25 @@
       "atrasada": false
     },
     {
+      "osId": "17977",
+      "ativo": "Transformador 6 COMTRAFO     { CPP100-TRFR6 }",
+      "equipe": "",
+      "responsavel": "Frank  Melo",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Frank  Melo",
+      "status": "Finalizados",
+      "tarefa": "[Athon] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-11-09",
+      "dataCriacao": "2026-10-29",
+      "dataInicial": "2026-11-17",
+      "dataFinal": "2026-11-17",
+      "linkFracttal": "",
+      "horasAteAbrir": 456.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "17902",
       "ativo": "Transformador 3 WEG     { 2C-IPX100-TRFR3 }",
       "equipe": "",
@@ -23108,25 +23089,6 @@
       "atrasada": false
     },
     {
-      "osId": "18765",
-      "ativo": "Inversor 1.2 GROWATT 33000TL3-S    { SALE-SNP100-INVR1.2 }",
-      "equipe": "",
-      "responsavel": "Adriano Silva ",
-      "criadoPor": "Gabriela Dias ",
-      "supervisor": "Adriano Silva ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.2] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-11-06",
-      "dataInicial": "2026-11-09",
-      "dataFinal": "2026-11-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 24.0,
-      "atrasada": false
-    },
-    {
       "osId": "18753",
       "ativo": "Inversor 1.7  Huawei | SUN2000-250KTL-H1    { APOL-GVT200-INVR1.7 }",
       "equipe": "",
@@ -23869,8 +23831,8 @@
       "atrasada": false
     }
   ],
-  "historicoTotal": 3666,
-  "totalGeral": 8905,
+  "historicoTotal": 3619,
+  "totalGeral": 8906,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
