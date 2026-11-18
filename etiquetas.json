@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-18T11:37:49Z",
+  "geradoEm": "2026-11-18T12:30:29Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-16 .. 2026-11-22",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6347,
+        "total": 6350,
         "emAberto": 54,
-        "atrasadas": 49,
-        "concluidas30d": 889,
-        "concluidas7d": 173,
-        "naSemanaCorrente": 60
+        "atrasadas": 48,
+        "concluidas30d": 892,
+        "concluidas7d": 176,
+        "naSemanaCorrente": 63
       },
       "mttr": {
         "horas": 7.32,
         "label": "7h 19min",
-        "amostra": 889
+        "amostra": 892
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W47",
-          "criadas": 60,
-          "finalizadas": 51
+          "criadas": 63,
+          "finalizadas": 54
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6347,
+            "total": 6350,
             "emAberto": 54
           }
         ],
@@ -73,16 +73,16 @@
           },
           {
             "nome": "Wesllen  Castro",
-            "total": 252,
-            "emAberto": 0
+            "total": 253,
+            "emAberto": 1
           }
         ]
       },
       "total": 54,
-      "atrasadas": 49,
+      "atrasadas": 48,
       "porStatus": {
-        "naoIniciada": 47,
-        "emProgresso": 2,
+        "naoIniciada": 46,
+        "emProgresso": 3,
         "pausada": 5,
         "verificacao": 0
       },
@@ -475,9 +475,9 @@
           "osId": "19233",
           "ativo": "Thopen - Aparecida do Taboado 1 e 2 - MS  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100 }",
           "equipe": "",
-          "responsavel": "Carlos  Godoi",
+          "responsavel": "Paulo  Ribeiro",
           "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Carlos  Godoi",
+          "supervisor": "Paulo  Ribeiro",
           "status": "pausado",
           "tarefa": "Analise dos sistema scada e testes de religamento remoto UFV -Aparecida do Taboado 1 e 2",
           "criticidade": "",
@@ -941,25 +941,6 @@
           "atrasada": true
         },
         {
-          "osId": "19726",
-          "ativo": "Inversor 1.4 Sungrow     { IND100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "ItaloLustosa",
-          "supervisor": "Felipe  Lima",
-          "status": "pausado",
-          "tarefa": "[IND100-INVR1.4] - Religamento do IND100-INVR1.4",
-          "criticidade": "",
-          "dataProgramada": "2026-11-17",
-          "dataCriacao": "2026-11-17",
-          "dataInicial": "2026-11-17",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "19722",
           "ativo": "Thopen - Canarana 1 - MT MT-110, S/N, Zona Rural Canarana  Mato Grosso Brasil { THPN-CNN100 }",
           "equipe": "",
@@ -979,14 +960,14 @@
           "atrasada": true
         },
         {
-          "osId": "19822",
-          "ativo": "Inversor 1.4 Sungrow     { IND100-INVR1.4 }",
+          "osId": "19846",
+          "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
           "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Maria Emanuella de Souza Mota ",
-          "supervisor": "Felipe  Lima",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Rúben Nunes da Silva ",
+          "supervisor": "Wesllen  Castro",
           "status": "Não Iniciada",
-          "tarefa": "[IND100-INVR1.4] - Religamento do IND100-INVR1.4",
+          "tarefa": "[2C-IPX100] - Religamento do 2C-IPX100",
           "criticidade": "",
           "dataProgramada": "2026-11-18",
           "dataCriacao": "2026-11-18",
@@ -997,13 +978,32 @@
           "atrasada": false
         },
         {
+          "osId": "19822",
+          "ativo": "Inversor 1.4 Sungrow     { IND100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Felipe  Lima",
+          "status": "Em progresso",
+          "tarefa": "[IND100-INVR1.4] - Religamento do IND100-INVR1.4",
+          "criticidade": "",
+          "dataProgramada": "2026-11-18",
+          "dataCriacao": "2026-11-18",
+          "dataInicial": "2026-11-18",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "19818",
           "ativo": "Inversor 2.1 Huawei SUN2000-100KTL-H1    { MAB200-INVR2.1 }",
           "equipe": "",
           "responsavel": "James Chaves ",
           "criadoPor": "Rúben Nunes da Silva ",
           "supervisor": "James Chaves ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[MAB200-INVR2.1] - Religamento do MAB200-INVR2.1",
           "criticidade": "",
           "dataProgramada": "2026-11-18",
@@ -1022,14 +1022,15 @@
           "responsavel": "Valdir Silva ",
           "criadoPor": "DavidNascimento",
           "supervisor": "Valdir Silva ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-PHS100] - Religamento do THPN-PHS100",
           "criticidade": "",
           "dataProgramada": "2026-11-18",
           "dataCriacao": "2026-11-18",
-          "dataInicial": "",
+          "dataInicial": "2026-11-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -1100,6 +1101,26 @@
           "supervisor": "Eduardo  Mendes",
           "status": "Finalizados",
           "tarefa": "[THPN-SCB100] - Religamento do THPN-SCB100",
+          "criticidade": "",
+          "dataProgramada": "2026-11-17",
+          "dataCriacao": "2026-11-17",
+          "dataInicial": "2026-11-17",
+          "dataFinal": "2026-11-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 24.0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "19726",
+          "ativo": "Inversor 1.4 Sungrow     { IND100-INVR1.4 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[IND100-INVR1.4] - Religamento do IND100-INVR1.4",
           "criticidade": "",
           "dataProgramada": "2026-11-17",
           "dataCriacao": "2026-11-17",
@@ -4050,32 +4071,12 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13687",
-          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizados",
-          "tarefa": "[Cabine 6] - Religamento da Cabine 6",
-          "criticidade": "",
-          "dataProgramada": "2026-09-16",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-15",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2544,
+      "historicoTotal": 2547,
       "subClassificacao": {
         "remoto": 760,
-        "local": 5587,
+        "local": 5590,
         "remotoEmAberto": 4,
         "localEmAberto": 50,
         "pctRemoto": 12,
@@ -8971,16 +8972,16 @@
       "cor": "#ef4444",
       "kpis": {
         "total": 200,
-        "emAberto": 24,
+        "emAberto": 23,
         "atrasadas": 17,
-        "concluidas30d": 14,
-        "concluidas7d": 5,
+        "concluidas30d": 15,
+        "concluidas7d": 6,
         "naSemanaCorrente": 5
       },
       "mttr": {
-        "horas": 209.14,
-        "label": "8d 17h",
-        "amostra": 14
+        "horas": 198.4,
+        "label": "8d 6h",
+        "amostra": 15
       },
       "tendencia4Semanas": [
         {
@@ -9001,7 +9002,7 @@
         {
           "semana": "W47",
           "criadas": 8,
-          "finalizadas": 1
+          "finalizadas": 2
         }
       ],
       "topOfensores": {
@@ -9009,7 +9010,7 @@
           {
             "nome": "(sem equipe)",
             "total": 200,
-            "emAberto": 24
+            "emAberto": 23
           }
         ],
         "responsaveis": [
@@ -9040,16 +9041,16 @@
           }
         ]
       },
-      "total": 24,
+      "total": 23,
       "atrasadas": 17,
       "porStatus": {
-        "naoIniciada": 20,
+        "naoIniciada": 19,
         "emProgresso": 2,
         "pausada": 2,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 24
+        "(sem equipe)": 23
       },
       "oss": [
         {
@@ -9334,14 +9335,15 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "Maria Luiza Oliveira",
           "supervisor": "Janderson Miranda ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Ceilândia 1][Inversor 2.7 Sungrow SG125HV] - Abertura de chamado de garantia",
           "criticidade": "",
           "dataProgramada": "2026-11-17",
           "dataCriacao": "2026-11-17",
-          "dataInicial": "",
+          "dataInicial": "2026-11-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": true
         },
         {
@@ -9359,24 +9361,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "19704",
-          "ativo": "Inversor 3.2 Sungrow SG250HX    { THPN-SDN100-INVR3.2 }",
-          "equipe": "",
-          "responsavel": "Janderson Miranda ",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Janderson Miranda ",
-          "status": "Em progresso",
-          "tarefa": "[Sítio dos Nogueiras 1][Inversor 3.2 Sungrow SG250HX] - Abertura de chamado de garantia",
-          "criticidade": "",
-          "dataProgramada": "2026-11-18",
-          "dataCriacao": "2026-11-16",
-          "dataInicial": "2026-11-18",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
           "atrasada": false
         },
         {
@@ -9466,6 +9450,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "19704",
+          "ativo": "Inversor 3.2 Sungrow SG250HX    { THPN-SDN100-INVR3.2 }",
+          "equipe": "",
+          "responsavel": "Janderson Miranda ",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Janderson Miranda ",
+          "status": "Finalizados",
+          "tarefa": "[Sítio dos Nogueiras 1][Inversor 3.2 Sungrow SG250HX] - Abertura de chamado de garantia",
+          "criticidade": "",
+          "dataProgramada": "2026-11-18",
+          "dataCriacao": "2026-11-16",
+          "dataInicial": "2026-11-18",
+          "dataFinal": "2026-11-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "19403",
           "ativo": "Inversor 5.1 Huawei     { TIM200-INVR5.1 }",
@@ -10246,7 +10249,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 41
+      "historicoTotal": 42
     },
     "performance": {
       "label": "Performance",
@@ -10254,16 +10257,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 1115,
-        "emAberto": 70,
-        "atrasadas": 65,
-        "concluidas30d": 218,
-        "concluidas7d": 64,
+        "emAberto": 68,
+        "atrasadas": 63,
+        "concluidas30d": 220,
+        "concluidas7d": 66,
         "naSemanaCorrente": 22
       },
       "mttr": {
-        "horas": 149.17,
-        "label": "6d 5h",
-        "amostra": 218
+        "horas": 150.44,
+        "label": "6d 6h",
+        "amostra": 220
       },
       "tendencia4Semanas": [
         {
@@ -10284,7 +10287,7 @@
         {
           "semana": "W47",
           "criadas": 15,
-          "finalizadas": 18
+          "finalizadas": 20
         }
       ],
       "topOfensores": {
@@ -10292,7 +10295,7 @@
           {
             "nome": "(sem equipe)",
             "total": 1115,
-            "emAberto": 70
+            "emAberto": 68
           }
         ],
         "responsaveis": [
@@ -10319,20 +10322,20 @@
           {
             "nome": "Marcos Duarte",
             "total": 58,
-            "emAberto": 1
+            "emAberto": 0
           }
         ]
       },
-      "total": 70,
-      "atrasadas": 65,
+      "total": 68,
+      "atrasadas": 63,
       "porStatus": {
-        "naoIniciada": 56,
+        "naoIniciada": 54,
         "emProgresso": 3,
         "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 70
+        "(sem equipe)": 68
       },
       "oss": [
         {
@@ -10515,14 +10518,15 @@
           "responsavel": "Ailton Leal ",
           "criadoPor": "Maria Luiza Oliveira",
           "supervisor": "Ailton Leal ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Junco] Testes e medições na ETM",
           "criticidade": "",
           "dataProgramada": "2026-10-21",
           "dataCriacao": "2026-10-21",
-          "dataInicial": "",
+          "dataInicial": "2026-11-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 672.0,
           "atrasada": true
         },
         {
@@ -10665,9 +10669,9 @@
           "osId": "18533",
           "ativo": "Inversor 2.9 Sungrow SG60KTL    { ADT100-INVR2.9 }",
           "equipe": "",
-          "responsavel": "Carlos  Godoi",
+          "responsavel": "Paulo  Ribeiro",
           "criadoPor": "Levi Maia",
-          "supervisor": "Carlos  Godoi",
+          "supervisor": "Paulo  Ribeiro",
           "status": "Não Iniciada",
           "tarefa": "Coleta de Dados de Geração",
           "criticidade": "",
@@ -10727,24 +10731,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "18406",
-          "ativo": "Tracker 35.100 STI STI-H250    { THPN-PRM100-ETKR35.100 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Marcos Duarte ",
-          "status": "pausado",
-          "tarefa": "[Primavera 1][Tracker 35.100 STI STI-H250] - Chamado de tracker",
-          "criticidade": "",
-          "dataProgramada": "2026-11-05",
-          "dataCriacao": "2026-11-03",
-          "dataInicial": "2026-11-05",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -11092,9 +11078,9 @@
           "osId": "19204",
           "ativo": "Estação Meteorológica  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-ESTM1 }",
           "equipe": "",
-          "responsavel": "Carlos  Godoi",
+          "responsavel": "Paulo  Ribeiro",
           "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Carlos  Godoi",
+          "supervisor": "Paulo  Ribeiro",
           "status": "pausado",
           "tarefa": "[Estação Meteorológica] - [Aparecida do Taboado] - Inspeção na Estação Meteorológica",
           "criticidade": "",
@@ -11121,24 +11107,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "19027",
-          "ativo": "Inversor 3.1 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.1 }",
-          "equipe": "",
-          "responsavel": "Lucas Alberto Freitas de Faria ",
-          "criadoPor": "Gabriela Dias",
-          "supervisor": "Lucas Alberto Freitas de Faria ",
-          "status": "Em progresso",
-          "tarefa": "Inspeção Geral do Inversor entre 6h e 8h",
-          "criticidade": "",
-          "dataProgramada": "2026-11-12",
-          "dataCriacao": "2026-11-09",
-          "dataInicial": "2026-11-18",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 216.0,
           "atrasada": true
         },
         {
@@ -11252,7 +11220,7 @@
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Ronaldo  Silva",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Tracker 18.100] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-11-14",
@@ -11495,14 +11463,15 @@
           "responsavel": "Cláudio  Silva",
           "criadoPor": "Roger Lélis",
           "supervisor": "Cláudio  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 2.1] - Inspeção Geral do Inversor",
           "criticidade": "",
           "dataProgramada": "2026-11-18",
           "dataCriacao": "2026-11-17",
-          "dataInicial": "",
+          "dataInicial": "2026-11-18",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 24.0,
           "atrasada": false
         },
         {
@@ -11541,6 +11510,44 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "19027",
+          "ativo": "Inversor 3.1 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.1 }",
+          "equipe": "",
+          "responsavel": "Lucas Alberto Freitas de Faria ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Lucas Alberto Freitas de Faria ",
+          "status": "Finalizados",
+          "tarefa": "Inspeção Geral do Inversor entre 6h e 8h",
+          "criticidade": "",
+          "dataProgramada": "2026-11-12",
+          "dataCriacao": "2026-11-09",
+          "dataInicial": "2026-11-18",
+          "dataFinal": "2026-11-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 216.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "18406",
+          "ativo": "Tracker 35.100 STI STI-H250    { THPN-PRM100-ETKR35.100 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Marcos Duarte ",
+          "status": "Finalizados",
+          "tarefa": "[Primavera 1][Tracker 35.100 STI STI-H250] - Chamado de tracker",
+          "criticidade": "",
+          "dataProgramada": "2026-11-05",
+          "dataCriacao": "2026-11-03",
+          "dataInicial": "2026-11-05",
+          "dataFinal": "2026-11-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 312.0,
+          "atrasada": false
+        },
         {
           "osId": "19702",
           "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR1.3 }",
@@ -14259,25 +14266,6 @@
           "atrasada": false
         },
         {
-          "osId": "16364",
-          "ativo": "Tracker 04.101 Brametal Bi-motor    { CPP100-ETKR4.101 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 04.101] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-10-15",
-          "dataCriacao": "2026-10-14",
-          "dataInicial": "2026-10-19",
-          "dataFinal": "2026-10-19",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "16589",
           "ativo": "Tracker 21.100      { STI100-ETKR21.100 }",
           "equipe": "",
@@ -14354,25 +14342,6 @@
           "atrasada": false
         },
         {
-          "osId": "16245",
-          "ativo": "Inversor 1.6 Huawei SUN2000-330KTL-H1    { VRG100-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Marcos Duarte ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.6] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-10-14",
-          "dataCriacao": "2026-10-13",
-          "dataInicial": "2026-10-14",
-          "dataFinal": "2026-10-14",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "14661",
           "ativo": "Inversor 2.9 Sungrow SG125-HV    { THPN-SAP100-INVR2.9 }",
           "equipe": "",
@@ -14392,7 +14361,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 580
+      "historicoTotal": 582
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14400,16 +14369,16 @@
       "cor": "#3b82f6",
       "kpis": {
         "total": 210,
-        "emAberto": 33,
-        "atrasadas": 28,
-        "concluidas30d": 22,
-        "concluidas7d": 6,
+        "emAberto": 32,
+        "atrasadas": 27,
+        "concluidas30d": 23,
+        "concluidas7d": 7,
         "naSemanaCorrente": 3
       },
       "mttr": {
-        "horas": 403.64,
-        "label": "16d 19h",
-        "amostra": 22
+        "horas": 400.7,
+        "label": "16d 16h",
+        "amostra": 23
       },
       "tendencia4Semanas": [
         {
@@ -14430,7 +14399,7 @@
         {
           "semana": "W47",
           "criadas": 4,
-          "finalizadas": 3
+          "finalizadas": 4
         }
       ],
       "topOfensores": {
@@ -14438,7 +14407,7 @@
           {
             "nome": "(sem equipe)",
             "total": 210,
-            "emAberto": 33
+            "emAberto": 32
           }
         ],
         "responsaveis": [
@@ -14469,16 +14438,16 @@
           }
         ]
       },
-      "total": 33,
-      "atrasadas": 28,
+      "total": 32,
+      "atrasadas": 27,
       "porStatus": {
-        "naoIniciada": 28,
+        "naoIniciada": 27,
         "emProgresso": 2,
         "pausada": 3,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 33
+        "(sem equipe)": 32
       },
       "oss": [
         {
@@ -14775,23 +14744,6 @@
           "atrasada": true
         },
         {
-          "osId": "18518",
-          "ativo": "Estação Meteorológica BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200-ESTM1 }",
-          "equipe": "",
-          "responsavel": "Marcos Duarte ",
-          "criadoPor": "Gabriela Dias",
-          "supervisor": "Marcos Duarte ",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-PRM100] [ETM] - Inspecionar operação da ETM de Primavera",
-          "criticidade": "",
-          "dataProgramada": "2026-11-05",
-          "dataCriacao": "2026-11-04",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
           "osId": "18134",
           "ativo": "Inversor 1.4  SUN2000-250KTL-H1    { THPN-STA100-INVR1.4 }",
           "equipe": "",
@@ -15049,6 +15001,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "18518",
+          "ativo": "Estação Meteorológica BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Marcos Duarte ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Marcos Duarte ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-PRM100] [ETM] - Inspecionar operação da ETM de Primavera",
+          "criticidade": "",
+          "dataProgramada": "2026-11-05",
+          "dataCriacao": "2026-11-04",
+          "dataInicial": "2026-11-18",
+          "dataFinal": "2026-11-18",
+          "linkFracttal": "",
+          "horasAteAbrir": 336.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "16358",
           "ativo": "Estação Meteorológica Estrada p/Campo Grande União  Piauí Brasil { 2C-UNI100-ESTM1 }",
@@ -16361,19 +16332,19 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 69
+      "historicoTotal": 70
     }
   },
   "ossPublicas": [
     {
-      "osId": "19822",
-      "ativo": "Inversor 1.4 Sungrow     { IND100-INVR1.4 }",
+      "osId": "19846",
+      "ativo": "2C - Ipixuna do Pará 1 - PA Fazenda Santa Cecília S/N Ipixuna do Pará  Pará Brasil { 2C-IPX100 }",
       "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Felipe  Lima",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "Wesllen  Castro",
       "status": "Não Iniciada",
-      "tarefa": "[IND100-INVR1.4] - Religamento do IND100-INVR1.4",
+      "tarefa": "[2C-IPX100] - Religamento do 2C-IPX100",
       "criticidade": "",
       "dataProgramada": "2026-11-18",
       "dataCriacao": "2026-11-18",
@@ -16383,13 +16354,31 @@
       "modalidade": "local"
     },
     {
+      "osId": "19822",
+      "ativo": "Inversor 1.4 Sungrow     { IND100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Felipe  Lima",
+      "status": "Em progresso",
+      "tarefa": "[IND100-INVR1.4] - Religamento do IND100-INVR1.4",
+      "criticidade": "",
+      "dataProgramada": "2026-11-18",
+      "dataCriacao": "2026-11-18",
+      "dataInicial": "2026-11-18",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "modalidade": "local"
+    },
+    {
       "osId": "19818",
       "ativo": "Inversor 2.1 Huawei SUN2000-100KTL-H1    { MAB200-INVR2.1 }",
       "equipe": "",
       "responsavel": "James Chaves ",
       "criadoPor": "Rúben Nunes da Silva ",
       "supervisor": "James Chaves ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[MAB200-INVR2.1] - Religamento do MAB200-INVR2.1",
       "criticidade": "",
       "dataProgramada": "2026-11-18",
@@ -16407,14 +16396,15 @@
       "responsavel": "Valdir Silva ",
       "criadoPor": "DavidNascimento",
       "supervisor": "Valdir Silva ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-PHS100] - Religamento do THPN-PHS100",
       "criticidade": "",
       "dataProgramada": "2026-11-18",
       "dataCriacao": "2026-11-18",
-      "dataInicial": "",
+      "dataInicial": "2026-11-18",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -16441,7 +16431,7 @@
       "responsavel": "Ronaldo  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Ronaldo  Silva",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Tracker 18.100] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-11-14",
@@ -16524,14 +16514,15 @@
       "responsavel": "Cláudio  Silva",
       "criadoPor": "Roger Lélis",
       "supervisor": "Cláudio  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 2.1] - Inspeção Geral do Inversor",
       "criticidade": "",
       "dataProgramada": "2026-11-18",
       "dataCriacao": "2026-11-17",
-      "dataInicial": "",
+      "dataInicial": "2026-11-18",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "19786",
@@ -16572,14 +16563,15 @@
       "responsavel": "Janderson Miranda ",
       "criadoPor": "Maria Luiza Oliveira",
       "supervisor": "Janderson Miranda ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Ceilândia 1][Inversor 2.7 Sungrow SG125HV] - Abertura de chamado de garantia",
       "criticidade": "",
       "dataProgramada": "2026-11-17",
       "dataCriacao": "2026-11-17",
-      "dataInicial": "",
+      "dataInicial": "2026-11-18",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0
     },
     {
       "osId": "19779",
@@ -16729,24 +16721,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "19726",
-      "ativo": "Inversor 1.4 Sungrow     { IND100-INVR1.4 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "ItaloLustosa",
-      "supervisor": "Felipe  Lima",
-      "status": "pausado",
-      "tarefa": "[IND100-INVR1.4] - Religamento do IND100-INVR1.4",
-      "criticidade": "",
-      "dataProgramada": "2026-11-17",
-      "dataCriacao": "2026-11-17",
-      "dataInicial": "2026-11-17",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "19722",
       "ativo": "Thopen - Canarana 1 - MT MT-110, S/N, Zona Rural Canarana  Mato Grosso Brasil { THPN-CNN100 }",
       "equipe": "",
@@ -16861,23 +16835,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "19704",
-      "ativo": "Inversor 3.2 Sungrow SG250HX    { THPN-SDN100-INVR3.2 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Janderson Miranda ",
-      "status": "Em progresso",
-      "tarefa": "[Sítio dos Nogueiras 1][Inversor 3.2 Sungrow SG250HX] - Abertura de chamado de garantia",
-      "criticidade": "",
-      "dataProgramada": "2026-11-18",
-      "dataCriacao": "2026-11-16",
-      "dataInicial": "2026-11-18",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
     },
     {
       "osId": "19703",
@@ -17901,9 +17858,9 @@
       "osId": "19233",
       "ativo": "Thopen - Aparecida do Taboado 1 e 2 - MS  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100 }",
       "equipe": "",
-      "responsavel": "Carlos  Godoi",
+      "responsavel": "Paulo  Ribeiro",
       "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Carlos  Godoi",
+      "supervisor": "Paulo  Ribeiro",
       "status": "pausado",
       "tarefa": "Analise dos sistema scada e testes de religamento remoto UFV -Aparecida do Taboado 1 e 2",
       "criticidade": "",
@@ -18064,9 +18021,9 @@
       "osId": "19204",
       "ativo": "Estação Meteorológica  Aparecida do Taboado  Mato Grosso do Sul Brasil { ADT100-ESTM1 }",
       "equipe": "",
-      "responsavel": "Carlos  Godoi",
+      "responsavel": "Paulo  Ribeiro",
       "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Carlos  Godoi",
+      "supervisor": "Paulo  Ribeiro",
       "status": "pausado",
       "tarefa": "[Estação Meteorológica] - [Aparecida do Taboado] - Inspeção na Estação Meteorológica",
       "criticidade": "",
@@ -18303,23 +18260,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "19027",
-      "ativo": "Inversor 3.1 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.1 }",
-      "equipe": "",
-      "responsavel": "Lucas Alberto Freitas de Faria ",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Lucas Alberto Freitas de Faria ",
-      "status": "Em progresso",
-      "tarefa": "Inspeção Geral do Inversor entre 6h e 8h",
-      "criticidade": "",
-      "dataProgramada": "2026-11-12",
-      "dataCriacao": "2026-11-09",
-      "dataInicial": "2026-11-18",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 216.0
     },
     {
       "osId": "19018",
@@ -19102,9 +19042,9 @@
       "osId": "18533",
       "ativo": "Inversor 2.9 Sungrow SG60KTL    { ADT100-INVR2.9 }",
       "equipe": "",
-      "responsavel": "Carlos  Godoi",
+      "responsavel": "Paulo  Ribeiro",
       "criadoPor": "Levi Maia",
-      "supervisor": "Carlos  Godoi",
+      "supervisor": "Paulo  Ribeiro",
       "status": "Não Iniciada",
       "tarefa": "Coleta de Dados de Geração",
       "criticidade": "",
@@ -19125,22 +19065,6 @@
       "tarefa": "[Marabá 1][Estrutura Trackers Rua Bom Jesus, S/N Marabá Pará Brasil] - Chamado de tracker",
       "criticidade": "",
       "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-11-04",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "18518",
-      "ativo": "Estação Meteorológica BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Gabriela Dias",
-      "supervisor": "Marcos Duarte ",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-PRM100] [ETM] - Inspecionar operação da ETM de Primavera",
-      "criticidade": "",
-      "dataProgramada": "2026-11-05",
       "dataCriacao": "2026-11-04",
       "dataInicial": "",
       "dataFinal": "",
@@ -19261,23 +19185,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 312.0
-    },
-    {
-      "osId": "18406",
-      "ativo": "Tracker 35.100 STI STI-H250    { THPN-PRM100-ETKR35.100 }",
-      "equipe": "",
-      "responsavel": "Marcos Duarte ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Marcos Duarte ",
-      "status": "pausado",
-      "tarefa": "[Primavera 1][Tracker 35.100 STI STI-H250] - Chamado de tracker",
-      "criticidade": "",
-      "dataProgramada": "2026-11-05",
-      "dataCriacao": "2026-11-03",
-      "dataInicial": "2026-11-05",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
     },
     {
       "osId": "18374",
@@ -20162,14 +20069,15 @@
       "responsavel": "Ailton Leal ",
       "criadoPor": "Maria Luiza Oliveira",
       "supervisor": "Ailton Leal ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Junco] Testes e medições na ETM",
       "criticidade": "",
       "dataProgramada": "2026-10-21",
       "dataCriacao": "2026-10-21",
-      "dataInicial": "",
+      "dataInicial": "2026-11-18",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 672.0
     },
     {
       "osId": "16792",
@@ -21185,6 +21093,25 @@
       "atrasada": false
     },
     {
+      "osId": "19027",
+      "ativo": "Inversor 3.1 Huawei SUN2000-250KTL-H1    { THPN-EBG100-INVR3.1 }",
+      "equipe": "",
+      "responsavel": "Lucas Alberto Freitas de Faria ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Lucas Alberto Freitas de Faria ",
+      "status": "Finalizados",
+      "tarefa": "Inspeção Geral do Inversor entre 6h e 8h",
+      "criticidade": "",
+      "dataProgramada": "2026-11-12",
+      "dataCriacao": "2026-11-09",
+      "dataInicial": "2026-11-18",
+      "dataFinal": "2026-11-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 216.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "18967",
       "ativo": "Cabine 2 Chapadinha Sul, Zona Rural S/N Demerval Lobão  Piauí Brasil { THPN-JNC100-CABN2 }",
       "equipe": "",
@@ -21372,25 +21299,6 @@
       "linkFracttal": "",
       "horasAteAbrir": 264.0,
       "horasAteFechar": 168.0,
-      "atrasada": false
-    },
-    {
-      "osId": "17053",
-      "ativo": "Tracker 10.102  Array Technologies | STI    { APOL-RDP100-ETKR10.102 }",
-      "equipe": "",
-      "responsavel": "Caio da Silva Cordeiro ",
-      "criadoPor": "Levi Maia ",
-      "supervisor": "Caio da Silva Cordeiro ",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 10.102] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-10-22",
-      "dataCriacao": "2026-10-22",
-      "dataInicial": "2026-10-22",
-      "dataFinal": "2026-10-22",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -21665,6 +21573,26 @@
       "atrasada": false
     },
     {
+      "osId": "19726",
+      "ativo": "Inversor 1.4 Sungrow     { IND100-INVR1.4 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Felipe  Lima",
+      "status": "Finalizados",
+      "tarefa": "[IND100-INVR1.4] - Religamento do IND100-INVR1.4",
+      "criticidade": "",
+      "dataProgramada": "2026-11-17",
+      "dataCriacao": "2026-11-17",
+      "dataInicial": "2026-11-17",
+      "dataFinal": "2026-11-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 24.0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "19719",
       "ativo": "Thopen - Ribeirão Cascalheiras - MT Estrada Municipal, S/N (UFV), Rural, Ribeirão Cascalheira/MT Ribeirão Cascalheira  Mato Grosso Brasil { THPN-RCS100 }",
       "equipe": "",
@@ -21682,6 +21610,25 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "19704",
+      "ativo": "Inversor 3.2 Sungrow SG250HX    { THPN-SDN100-INVR3.2 }",
+      "equipe": "",
+      "responsavel": "Janderson Miranda ",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Janderson Miranda ",
+      "status": "Finalizados",
+      "tarefa": "[Sítio dos Nogueiras 1][Inversor 3.2 Sungrow SG250HX] - Abertura de chamado de garantia",
+      "criticidade": "",
+      "dataProgramada": "2026-11-18",
+      "dataCriacao": "2026-11-16",
+      "dataInicial": "2026-11-18",
+      "dataFinal": "2026-11-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
       "atrasada": false
     },
     {
@@ -23596,6 +23543,25 @@
       "atrasada": false
     },
     {
+      "osId": "18518",
+      "ativo": "Estação Meteorológica BR 101 KM 80 São Mateus  Espírito Santo Brasil { THPN-PRM200-ESTM1 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Marcos Duarte ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-PRM100] [ETM] - Inspecionar operação da ETM de Primavera",
+      "criticidade": "",
+      "dataProgramada": "2026-11-05",
+      "dataCriacao": "2026-11-04",
+      "dataInicial": "2026-11-18",
+      "dataFinal": "2026-11-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 336.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "18482",
       "ativo": "Tracker 03.104 Brametal Bi-motor    { CPP100-ETKR3.104 }",
       "equipe": "",
@@ -23748,6 +23714,25 @@
       "atrasada": false
     },
     {
+      "osId": "18406",
+      "ativo": "Tracker 35.100 STI STI-H250    { THPN-PRM100-ETKR35.100 }",
+      "equipe": "",
+      "responsavel": "Marcos Duarte ",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Marcos Duarte ",
+      "status": "Finalizados",
+      "tarefa": "[Primavera 1][Tracker 35.100 STI STI-H250] - Chamado de tracker",
+      "criticidade": "",
+      "dataProgramada": "2026-11-05",
+      "dataCriacao": "2026-11-03",
+      "dataInicial": "2026-11-05",
+      "dataFinal": "2026-11-18",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 312.0,
+      "atrasada": false
+    },
+    {
       "osId": "18401",
       "ativo": "Inversor 1.3 Huawei SUN2000-250KTL-H1    { THPN-CLR200-INVR1.3 }",
       "equipe": "",
@@ -23765,86 +23750,10 @@
       "horasAteAbrir": 48.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "18400",
-      "ativo": "Inversor 1.2 Huawei SUN2000-100KTL-H1    { PTL200-INVR1.2 }",
-      "equipe": "",
-      "responsavel": "Hebert Rabelo ",
-      "criadoPor": "Danuth  Fernandes",
-      "supervisor": "Hebert Rabelo ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.2] - Validação do modelo correto da presilha do QGBT a ser utilizado - inversor 2 está parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-05",
-      "dataCriacao": "2026-11-03",
-      "dataInicial": "2026-11-06",
-      "dataFinal": "2026-11-06",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "18387",
-      "ativo": "Tracker 32.101 AXIAL Axial 1V56    { THPN-DMT100-ETKR32.101 }",
-      "equipe": "",
-      "responsavel": "Valmir  Júnior",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Valmir  Júnior",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 32.101] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-03",
-      "dataCriacao": "2026-11-03",
-      "dataInicial": "2026-11-12",
-      "dataFinal": "2026-11-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 216.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "18385",
-      "ativo": "Tracker 44.101 AXIAL Axial 1V56    { THPN-DMT100-ETKR44.101 }",
-      "equipe": "",
-      "responsavel": "Valmir  Júnior",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Valmir  Júnior",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 44.101] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-03",
-      "dataCriacao": "2026-11-03",
-      "dataInicial": "2026-11-12",
-      "dataFinal": "2026-11-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 216.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "18384",
-      "ativo": "Tracker 17.101 AXIAL Axial 1V56    { THPN-DMT100-ETKR17.101 }",
-      "equipe": "",
-      "responsavel": "Valmir  Júnior",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Valmir  Júnior",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 17.101] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-03",
-      "dataCriacao": "2026-11-03",
-      "dataInicial": "2026-11-12",
-      "dataFinal": "2026-11-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 216.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3629,
-  "totalGeral": 8916,
+  "historicoTotal": 3636,
+  "totalGeral": 8919,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
