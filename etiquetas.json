@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-20T12:52:31Z",
+  "geradoEm": "2026-11-20T13:46:04Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-16 .. 2026-11-22",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6414,
+        "total": 6415,
         "emAberto": 61,
         "atrasadas": 56,
-        "concluidas30d": 885,
-        "concluidas7d": 175,
-        "naSemanaCorrente": 127
+        "concluidas30d": 886,
+        "concluidas7d": 176,
+        "naSemanaCorrente": 128
       },
       "mttr": {
-        "horas": 7.43,
-        "label": "7h 26min",
-        "amostra": 885
+        "horas": 7.42,
+        "label": "7h 25min",
+        "amostra": 886
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W47",
-          "criadas": 127,
-          "finalizadas": 112
+          "criadas": 128,
+          "finalizadas": 113
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6414,
+            "total": 6415,
             "emAberto": 61
           }
         ],
@@ -82,8 +82,8 @@
       "atrasadas": 56,
       "porStatus": {
         "naoIniciada": 53,
-        "emProgresso": 0,
-        "pausada": 8,
+        "emProgresso": 1,
+        "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
@@ -1038,7 +1038,7 @@
           "responsavel": "Olimpio Lima ",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Olimpio Lima ",
-          "status": "pausado",
+          "status": "Em progresso",
           "tarefa": "[Greenyellow - Irecê 1 - BA] - Religamento do Greenyellow - Irecê 1 - BA",
           "criticidade": "",
           "dataProgramada": "2026-11-19",
@@ -1106,12 +1106,30 @@
           "atrasada": true
         },
         {
+          "osId": "20040",
+          "ativo": "SKID 4 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID4 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Felipe  Lima",
+          "status": "Não Iniciada",
+          "tarefa": "[IND100-SKID4] - Religamento do IND100-SKID4",
+          "criticidade": "",
+          "dataProgramada": "2026-11-20",
+          "dataCriacao": "2026-11-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "20038",
           "ativo": "Inversor 2.13 Sungrow SG60KTL    { ADT100-INVR2.13 }",
           "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
+          "responsavel": "Carlos  Godoi",
           "criadoPor": "Juliana Rogério ",
-          "supervisor": "Paulo  Ribeiro",
+          "supervisor": "Carlos  Godoi",
           "status": "Não Iniciada",
           "tarefa": "[Inversor 2.13] - Religamento do Inversor 2.13",
           "criticidade": "",
@@ -1161,24 +1179,6 @@
           "atrasada": false
         },
         {
-          "osId": "20034",
-          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { PTL300-INVR1.1 }",
-          "equipe": "",
-          "responsavel": "Joseildo Amorim ",
-          "criadoPor": "Rúben Nunes da Silva ",
-          "supervisor": "Joseildo Amorim ",
-          "status": "Não Iniciada",
-          "tarefa": "[PTL300-INVR1.1] - Religamento do PTL300-INVR1.1",
-          "criticidade": "",
-          "dataProgramada": "2026-11-20",
-          "dataCriacao": "2026-11-20",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "20028",
           "ativo": "Thopen - Vertentes 2 - PE Estrada Vertentes à Toritama, s/n Zona Rural Vertentes  Pernambuco Brasil { THPN-VRT200 }",
           "equipe": "",
@@ -1198,6 +1198,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "20034",
+          "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { PTL300-INVR1.1 }",
+          "equipe": "",
+          "responsavel": "Joseildo Amorim ",
+          "criadoPor": "Rúben Nunes da Silva ",
+          "supervisor": "Joseildo Amorim ",
+          "status": "Finalizados",
+          "tarefa": "[PTL300-INVR1.1] - Religamento do PTL300-INVR1.1",
+          "criticidade": "",
+          "dataProgramada": "2026-11-20",
+          "dataCriacao": "2026-11-20",
+          "dataInicial": "2026-11-20",
+          "dataFinal": "2026-11-20",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "20033",
           "ativo": "Cabine 4 FZ. Pau da Imbira, S/N, Zona Rural Ouro Branco  Alagoas Brasil { THPN-ORB100-CABN4 }",
@@ -4177,32 +4197,12 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13726",
-          "ativo": "Cabine 3  Capitão Poço  Pará Brasil { CPP100-CABN3 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Gilson Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Cabine 3] - Religamento da Cabine 3",
-          "criticidade": "",
-          "dataProgramada": "2026-09-16",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2560,
+      "historicoTotal": 2561,
       "subClassificacao": {
         "remoto": 760,
-        "local": 5654,
+        "local": 5655,
         "remotoEmAberto": 2,
         "localEmAberto": 59,
         "pctRemoto": 12,
@@ -16486,12 +16486,29 @@
   },
   "ossPublicas": [
     {
+      "osId": "20040",
+      "ativo": "SKID 4 Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-SKID4 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Felipe  Lima",
+      "status": "Não Iniciada",
+      "tarefa": "[IND100-SKID4] - Religamento do IND100-SKID4",
+      "criticidade": "",
+      "dataProgramada": "2026-11-20",
+      "dataCriacao": "2026-11-20",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "20038",
       "ativo": "Inversor 2.13 Sungrow SG60KTL    { ADT100-INVR2.13 }",
       "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
+      "responsavel": "Carlos  Godoi",
       "criadoPor": "Juliana Rogério ",
-      "supervisor": "Paulo  Ribeiro",
+      "supervisor": "Carlos  Godoi",
       "status": "Não Iniciada",
       "tarefa": "[Inversor 2.13] - Religamento do Inversor 2.13",
       "criticidade": "",
@@ -16535,23 +16552,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
-      "osId": "20034",
-      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { PTL300-INVR1.1 }",
-      "equipe": "",
-      "responsavel": "Joseildo Amorim ",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "Joseildo Amorim ",
-      "status": "Não Iniciada",
-      "tarefa": "[PTL300-INVR1.1] - Religamento do PTL300-INVR1.1",
-      "criticidade": "",
-      "dataProgramada": "2026-11-20",
-      "dataCriacao": "2026-11-20",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
       "modalidade": "local"
     },
     {
@@ -16710,7 +16710,7 @@
       "responsavel": "Olimpio Lima ",
       "criadoPor": "Raphael Vitoriano ",
       "supervisor": "Olimpio Lima ",
-      "status": "pausado",
+      "status": "Em progresso",
       "tarefa": "[Greenyellow - Irecê 1 - BA] - Religamento do Greenyellow - Irecê 1 - BA",
       "criticidade": "",
       "dataProgramada": "2026-11-19",
@@ -21120,6 +21120,26 @@
   ],
   "ossHistorico": [
     {
+      "osId": "20034",
+      "ativo": "Inversor 1.1 Huawei SUN2000-250KTL-H1    { PTL300-INVR1.1 }",
+      "equipe": "",
+      "responsavel": "Joseildo Amorim ",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "Joseildo Amorim ",
+      "status": "Finalizados",
+      "tarefa": "[PTL300-INVR1.1] - Religamento do PTL300-INVR1.1",
+      "criticidade": "",
+      "dataProgramada": "2026-11-20",
+      "dataCriacao": "2026-11-20",
+      "dataInicial": "2026-11-20",
+      "dataFinal": "2026-11-20",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "19281",
       "ativo": "Transformador 1  À seco    { IBT100-TRFR1 }",
       "equipe": "",
@@ -23969,29 +23989,10 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "18552",
-      "ativo": "Inversor 3.3 Huawei SUN2000-100KTL-H1    { MAB100-INVR3.3 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "James Chaves ",
-      "status": "Finalizados",
-      "tarefa": "[Marabá 1][Inversor 3.3 Huawei SUN2000-100KTL-H1] - Abertura de chamado de garantia",
-      "criticidade": "",
-      "dataProgramada": "2026-11-11",
-      "dataCriacao": "2026-11-04",
-      "dataInicial": "2026-11-09",
-      "dataFinal": "2026-11-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3654,
-  "totalGeral": 9003,
+  "historicoTotal": 3655,
+  "totalGeral": 9004,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
