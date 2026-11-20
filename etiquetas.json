@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-20T20:46:31Z",
+  "geradoEm": "2026-11-20T21:42:00Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-16 .. 2026-11-22",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6434,
-        "emAberto": 66,
-        "atrasadas": 57,
-        "concluidas30d": 900,
-        "concluidas7d": 190,
-        "naSemanaCorrente": 147
+        "total": 6435,
+        "emAberto": 65,
+        "atrasadas": 56,
+        "concluidas30d": 902,
+        "concluidas7d": 192,
+        "naSemanaCorrente": 148
       },
       "mttr": {
-        "horas": 7.33,
-        "label": "7h 20min",
-        "amostra": 900
+        "horas": 7.31,
+        "label": "7h 19min",
+        "amostra": 902
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W47",
-          "criadas": 147,
-          "finalizadas": 127
+          "criadas": 148,
+          "finalizadas": 129
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6434,
-            "emAberto": 66
+            "total": 6435,
+            "emAberto": 65
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 66,
-      "atrasadas": 57,
+      "total": 65,
+      "atrasadas": 56,
       "porStatus": {
         "naoIniciada": 56,
-        "emProgresso": 3,
-        "pausada": 7,
+        "emProgresso": 0,
+        "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 66
+        "(sem equipe)": 65
       },
       "oss": [
         {
@@ -924,25 +924,6 @@
           "atrasada": true
         },
         {
-          "osId": "20052",
-          "ativo": "Inversor 1.16 Sungrow SG125HV    { THPN-TNB100-INVR1.16 }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 1.16] - Religamento do Inversor 1.16",
-          "criticidade": "",
-          "dataProgramada": "2026-11-18",
-          "dataCriacao": "2026-11-20",
-          "dataInicial": "2026-11-20",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "19862",
           "ativo": "Inversor 1.17 Sungrow SG125HV    { THPN-SPM100-INVR1.17 }",
           "equipe": "",
@@ -985,7 +966,7 @@
           "responsavel": "Heitor Vidal ",
           "criadoPor": "Rúben Nunes da Silva ",
           "supervisor": "Heitor Vidal ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[MAB200-INVR2.9] - Religamento do MAB200-INVR2.9",
           "criticidade": "",
           "dataProgramada": "2026-11-19",
@@ -1203,7 +1184,7 @@
           "responsavel": "Felipe  Lima",
           "criadoPor": "Maria Emanuella de Souza Mota ",
           "supervisor": "Felipe  Lima",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[IND100-SKID4] - Religamento do IND100-SKID4",
           "criticidade": "",
           "dataProgramada": "2026-11-20",
@@ -1341,6 +1322,26 @@
           "tarefa": "[THPN-INP100-CABN2] - Religamento do THPN-INP100-CABN2",
           "criticidade": "",
           "dataProgramada": "2026-11-20",
+          "dataCriacao": "2026-11-20",
+          "dataInicial": "2026-11-20",
+          "dataFinal": "2026-11-20",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "20052",
+          "ativo": "Inversor 1.16 Sungrow SG125HV    { THPN-TNB100-INVR1.16 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 1.16] - Religamento do Inversor 1.16",
+          "criticidade": "",
+          "dataProgramada": "2026-11-18",
           "dataCriacao": "2026-11-20",
           "dataInicial": "2026-11-20",
           "dataFinal": "2026-11-20",
@@ -4269,34 +4270,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13744",
-          "ativo": "Inversor 2.1 Huawei SUN2000-250KTL-H1    { 2C-IPX100-INVR2.1 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 2.1] - Religamento do Inversor 2.1",
-          "criticidade": "",
-          "dataProgramada": "2026-09-17",
-          "dataCriacao": "2026-09-17",
-          "dataInicial": "2026-09-17",
-          "dataFinal": "2026-09-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2575,
+      "historicoTotal": 2577,
       "subClassificacao": {
         "remoto": 760,
-        "local": 5674,
+        "local": 5675,
         "remotoEmAberto": 2,
-        "localEmAberto": 64,
+        "localEmAberto": 63,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -4518,12 +4499,12 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 1050,
-        "emAberto": 101,
+        "total": 1051,
+        "emAberto": 102,
         "atrasadas": 66,
         "concluidas30d": 114,
         "concluidas7d": 26,
-        "naSemanaCorrente": 52
+        "naSemanaCorrente": 53
       },
       "mttr": {
         "horas": 372.21,
@@ -4548,7 +4529,7 @@
         },
         {
           "semana": "W47",
-          "criadas": 10,
+          "criadas": 11,
           "finalizadas": 18
         }
       ],
@@ -4556,8 +4537,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 1050,
-            "emAberto": 101
+            "total": 1051,
+            "emAberto": 102
           }
         ],
         "responsaveis": [
@@ -4588,16 +4569,16 @@
           }
         ]
       },
-      "total": 101,
+      "total": 102,
       "atrasadas": 66,
       "porStatus": {
-        "naoIniciada": 90,
+        "naoIniciada": 91,
         "emProgresso": 1,
         "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 101
+        "(sem equipe)": 102
       },
       "oss": [
         {
@@ -5731,6 +5712,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "atrasada": true
+        },
+        {
+          "osId": "20067",
+          "ativo": "Transformador 1  Seco    { IBT200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Bruno Vinícius Pupo",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "Bruno Vinícius Pupo",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPA - Transformador (Noturno e ensaios)",
+          "criticidade": "",
+          "dataProgramada": "2026-11-20",
+          "dataCriacao": "2026-11-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
         },
         {
           "osId": "18977",
@@ -16543,6 +16541,22 @@
   },
   "ossPublicas": [
     {
+      "osId": "20067",
+      "ativo": "Transformador 1  Seco    { IBT200-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Bruno Vinícius Pupo",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "Bruno Vinícius Pupo",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPA - Transformador (Noturno e ensaios)",
+      "criticidade": "",
+      "dataProgramada": "2026-11-20",
+      "dataCriacao": "2026-11-20",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "20064",
       "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
       "equipe": "",
@@ -16583,28 +16597,10 @@
       "responsavel": "Heitor Vidal ",
       "criadoPor": "Rúben Nunes da Silva ",
       "supervisor": "Heitor Vidal ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[MAB200-INVR2.9] - Religamento do MAB200-INVR2.9",
       "criticidade": "",
       "dataProgramada": "2026-11-19",
-      "dataCriacao": "2026-11-20",
-      "dataInicial": "2026-11-20",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
-      "osId": "20052",
-      "ativo": "Inversor 1.16 Sungrow SG125HV    { THPN-TNB100-INVR1.16 }",
-      "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Paulo  Ribeiro",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 1.16] - Religamento do Inversor 1.16",
-      "criticidade": "",
-      "dataProgramada": "2026-11-18",
       "dataCriacao": "2026-11-20",
       "dataInicial": "2026-11-20",
       "dataFinal": "",
@@ -16653,7 +16649,7 @@
       "responsavel": "Felipe  Lima",
       "criadoPor": "Maria Emanuella de Souza Mota ",
       "supervisor": "Felipe  Lima",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[IND100-SKID4] - Religamento do IND100-SKID4",
       "criticidade": "",
       "dataProgramada": "2026-11-20",
@@ -21785,6 +21781,26 @@
       "atrasada": false
     },
     {
+      "osId": "20052",
+      "ativo": "Inversor 1.16 Sungrow SG125HV    { THPN-TNB100-INVR1.16 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.16] - Religamento do Inversor 1.16",
+      "criticidade": "",
+      "dataProgramada": "2026-11-18",
+      "dataCriacao": "2026-11-20",
+      "dataInicial": "2026-11-20",
+      "dataFinal": "2026-11-20",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "20046",
       "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
       "equipe": "",
@@ -24083,29 +24099,10 @@
       "horasAteAbrir": 192.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "18608",
-      "ativo": "Inversor 5.8 Sungrow SG125HV    { THPN-CLN100-INVR5.8 }",
-      "equipe": "",
-      "responsavel": "Janderson Miranda ",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Janderson Miranda ",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-11-05",
-      "dataCriacao": "2026-11-05",
-      "dataInicial": "2026-11-10",
-      "dataFinal": "2026-11-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3669,
-  "totalGeral": 9023,
+  "historicoTotal": 3671,
+  "totalGeral": 9025,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
