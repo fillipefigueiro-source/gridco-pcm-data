@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-20T16:54:22Z",
+  "geradoEm": "2026-11-20T17:56:27Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-16 .. 2026-11-22",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6426,
-        "emAberto": 64,
-        "atrasadas": 56,
+        "total": 6428,
+        "emAberto": 66,
+        "atrasadas": 57,
         "concluidas30d": 894,
         "concluidas7d": 184,
-        "naSemanaCorrente": 139
+        "naSemanaCorrente": 141
       },
       "mttr": {
         "horas": 7.38,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W47",
-          "criadas": 139,
+          "criadas": 141,
           "finalizadas": 121
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6426,
-            "emAberto": 64
+            "total": 6428,
+            "emAberto": 66
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 64,
-      "atrasadas": 56,
+      "total": 66,
+      "atrasadas": 57,
       "porStatus": {
-        "naoIniciada": 56,
-        "emProgresso": 1,
+        "naoIniciada": 57,
+        "emProgresso": 2,
         "pausada": 7,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 64
+        "(sem equipe)": 66
       },
       "oss": [
         {
@@ -978,6 +978,24 @@
           "atrasada": true
         },
         {
+          "osId": "20055",
+          "ativo": "Inversor 2.10 Huawei     { TIM100-INVR2.10 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Rúben Nunes da Silva ",
+          "supervisor": "Luiz  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[TIM100-INVR2.10] - Religamento do TIM100-INVR2.10",
+          "criticidade": "",
+          "dataProgramada": "2026-11-19",
+          "dataCriacao": "2026-11-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": true
+        },
+        {
           "osId": "20023",
           "ativo": "RenoGrid - Colíder 1 - MT Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { RNGD-CLD100 }",
           "equipe": "",
@@ -1105,6 +1123,24 @@
           "atrasada": true
         },
         {
+          "osId": "20053",
+          "ativo": "Cabine 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Ricardo Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-INP100-CABN2] - Religamento do THPN-INP100-CABN2",
+          "criticidade": "",
+          "dataProgramada": "2026-11-20",
+          "dataCriacao": "2026-11-20",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "20051",
           "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
           "equipe": "",
@@ -1147,14 +1183,15 @@
           "responsavel": "Matheus Gois ",
           "criadoPor": "Rúben Nunes da Silva ",
           "supervisor": "Matheus Gois ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
           "criticidade": "",
           "dataProgramada": "2026-11-20",
           "dataCriacao": "2026-11-20",
-          "dataInicial": "",
+          "dataInicial": "2026-11-20",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -4256,9 +4293,9 @@
       "historicoTotal": 2569,
       "subClassificacao": {
         "remoto": 760,
-        "local": 5666,
+        "local": 5668,
         "remotoEmAberto": 2,
-        "localEmAberto": 62,
+        "localEmAberto": 64,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -16505,6 +16542,40 @@
   },
   "ossPublicas": [
     {
+      "osId": "20055",
+      "ativo": "Inversor 2.10 Huawei     { TIM100-INVR2.10 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "Luiz  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[TIM100-INVR2.10] - Religamento do TIM100-INVR2.10",
+      "criticidade": "",
+      "dataProgramada": "2026-11-19",
+      "dataCriacao": "2026-11-20",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
+      "osId": "20053",
+      "ativo": "Cabine 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Ricardo Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-INP100-CABN2] - Religamento do THPN-INP100-CABN2",
+      "criticidade": "",
+      "dataProgramada": "2026-11-20",
+      "dataCriacao": "2026-11-20",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "20052",
       "ativo": "Inversor 1.16 Sungrow SG125HV    { THPN-TNB100-INVR1.16 }",
       "equipe": "",
@@ -16562,14 +16633,15 @@
       "responsavel": "Matheus Gois ",
       "criadoPor": "Rúben Nunes da Silva ",
       "supervisor": "Matheus Gois ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[AXIS-MRV100] - Religamento do AXIS-MRV100",
       "criticidade": "",
       "dataProgramada": "2026-11-20",
       "dataCriacao": "2026-11-20",
-      "dataInicial": "",
+      "dataInicial": "2026-11-20",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -24028,7 +24100,7 @@
     }
   ],
   "historicoTotal": 3663,
-  "totalGeral": 9015,
+  "totalGeral": 9017,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
