@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-21T14:23:35Z",
+  "geradoEm": "2026-11-21T15:12:10Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-16 .. 2026-11-22",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6451,
-        "emAberto": 73,
+        "total": 6452,
+        "emAberto": 72,
         "atrasadas": 70,
-        "concluidas30d": 879,
-        "concluidas7d": 176,
-        "naSemanaCorrente": 164
+        "concluidas30d": 881,
+        "concluidas7d": 178,
+        "naSemanaCorrente": 165
       },
       "mttr": {
-        "horas": 7.42,
-        "label": "7h 25min",
-        "amostra": 879
+        "horas": 7.41,
+        "label": "7h 24min",
+        "amostra": 881
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W47",
-          "criadas": 164,
-          "finalizadas": 137
+          "criadas": 165,
+          "finalizadas": 139
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6451,
-            "emAberto": 73
+            "total": 6452,
+            "emAberto": 72
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 73,
+      "total": 72,
       "atrasadas": 70,
       "porStatus": {
-        "naoIniciada": 63,
+        "naoIniciada": 62,
         "emProgresso": 1,
         "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 73
+        "(sem equipe)": 72
       },
       "oss": [
         {
@@ -858,14 +858,15 @@
           "responsavel": "Joseildo Amorim ",
           "criadoPor": "Rúben Nunes da Silva ",
           "supervisor": "Joseildo Amorim ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[AXIS-PTL200] - Religamento do AXIS-PTL200",
           "criticidade": "",
           "dataProgramada": "2026-11-16",
           "dataCriacao": "2026-11-16",
-          "dataInicial": "",
+          "dataInicial": "2026-11-21",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 120.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -1394,7 +1395,9 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "20085",
           "ativo": "Axis - Petrolina 3 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL300 }",
@@ -1402,20 +1405,19 @@
           "responsavel": "Joseildo Amorim ",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Joseildo Amorim ",
-          "status": "Em progresso",
+          "status": "Finalizados",
           "tarefa": "[Axis - Petrolina 3 - PE] - Religamento do Axis - Petrolina 3 - PE",
           "criticidade": "",
           "dataProgramada": "2026-11-21",
           "dataCriacao": "2026-11-21",
           "dataInicial": "2026-11-21",
-          "dataFinal": "",
+          "dataFinal": "2026-11-21",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "20084",
           "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
@@ -4395,34 +4397,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13786",
-          "ativo": "RenoGrid - Colíder 1 - MT Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { RNGD-CLD100 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Finalizados",
-          "tarefa": "[RNGD-CLD100] - Religamento do RNGD-CLD100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-17",
-          "dataCriacao": "2026-09-17",
-          "dataInicial": "2026-09-17",
-          "dataFinal": "2026-09-17",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2566,
+      "historicoTotal": 2568,
       "subClassificacao": {
         "remoto": 760,
-        "local": 5691,
+        "local": 5692,
         "remotoEmAberto": 2,
-        "localEmAberto": 71,
+        "localEmAberto": 70,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -16702,24 +16684,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "20085",
-      "ativo": "Axis - Petrolina 3 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL300 }",
-      "equipe": "",
-      "responsavel": "Joseildo Amorim ",
-      "criadoPor": "Raphael Vitoriano ",
-      "supervisor": "Joseildo Amorim ",
-      "status": "Em progresso",
-      "tarefa": "[Axis - Petrolina 3 - PE] - Religamento do Axis - Petrolina 3 - PE",
-      "criticidade": "",
-      "dataProgramada": "2026-11-21",
-      "dataCriacao": "2026-11-21",
-      "dataInicial": "2026-11-21",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
-    },
-    {
       "osId": "20081",
       "ativo": "Thopen - Linhares 1 - ES Sítio São Francisco, Barro Novo Linhares  Espírito Santo  { THPN-LNH100 }",
       "equipe": "",
@@ -17806,14 +17770,15 @@
       "responsavel": "Joseildo Amorim ",
       "criadoPor": "Rúben Nunes da Silva ",
       "supervisor": "Joseildo Amorim ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[AXIS-PTL200] - Religamento do AXIS-PTL200",
       "criticidade": "",
       "dataProgramada": "2026-11-16",
       "dataCriacao": "2026-11-16",
-      "dataInicial": "",
+      "dataInicial": "2026-11-21",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 120.0,
       "modalidade": "local"
     },
     {
@@ -21988,6 +21953,26 @@
       "atrasada": false
     },
     {
+      "osId": "20085",
+      "ativo": "Axis - Petrolina 3 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL300 }",
+      "equipe": "",
+      "responsavel": "Joseildo Amorim ",
+      "criadoPor": "Raphael Vitoriano ",
+      "supervisor": "Joseildo Amorim ",
+      "status": "Finalizados",
+      "tarefa": "[Axis - Petrolina 3 - PE] - Religamento do Axis - Petrolina 3 - PE",
+      "criticidade": "",
+      "dataProgramada": "2026-11-21",
+      "dataCriacao": "2026-11-21",
+      "dataInicial": "2026-11-21",
+      "dataFinal": "2026-11-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "20084",
       "ativo": "Thopen - Mandaguaçu 1 - PR Estrada Jussara S/N Mandaguaçu  Paraná Brasil { THPN-MNG100 }",
       "equipe": "",
@@ -24333,29 +24318,10 @@
       "horasAteAbrir": 192.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "18657",
-      "ativo": "Tracker 17.101      { COR101-ETKR17.101 }",
-      "equipe": "",
-      "responsavel": "Pedro  Henrique",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Pedro  Henrique",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 17.101] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-06",
-      "dataCriacao": "2026-11-05",
-      "dataInicial": "2026-11-13",
-      "dataFinal": "2026-11-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 192.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3661,
-  "totalGeral": 9041,
+  "historicoTotal": 3663,
+  "totalGeral": 9042,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
