@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-21T15:12:10Z",
+  "geradoEm": "2026-11-21T16:27:46Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-16 .. 2026-11-22",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6452,
+        "total": 6455,
         "emAberto": 72,
         "atrasadas": 70,
-        "concluidas30d": 881,
-        "concluidas7d": 178,
-        "naSemanaCorrente": 165
+        "concluidas30d": 884,
+        "concluidas7d": 181,
+        "naSemanaCorrente": 168
       },
       "mttr": {
-        "horas": 7.41,
-        "label": "7h 24min",
-        "amostra": 881
+        "horas": 7.38,
+        "label": "7h 23min",
+        "amostra": 884
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W47",
-          "criadas": 165,
-          "finalizadas": 139
+          "criadas": 168,
+          "finalizadas": 142
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6452,
+            "total": 6455,
             "emAberto": 72
           }
         ],
@@ -81,8 +81,8 @@
       "total": 72,
       "atrasadas": 70,
       "porStatus": {
-        "naoIniciada": 62,
-        "emProgresso": 1,
+        "naoIniciada": 61,
+        "emProgresso": 2,
         "pausada": 9,
         "verificacao": 0
       },
@@ -1361,14 +1361,14 @@
           "atrasada": true
         },
         {
-          "osId": "20088",
-          "ativo": "Inversor 1.2 Sungrow SG75CX    { THPN-ORB100-INVR1.2 }",
+          "osId": "20094",
+          "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
           "equipe": "",
-          "responsavel": "Ricardo Silva ",
+          "responsavel": "Matheus Leite ",
           "criadoPor": "ItaloLustosa",
-          "supervisor": "Ricardo Silva ",
+          "supervisor": "Matheus Leite ",
           "status": "Não Iniciada",
-          "tarefa": "[THPN-ORB100-INVR1.2] - Religamento do THPN-ORB100-INVR1.2",
+          "tarefa": "[THPN-BJD100] - Religamento do THPN-BJD100",
           "criticidade": "",
           "dataProgramada": "2026-11-21",
           "dataCriacao": "2026-11-21",
@@ -1379,25 +1379,46 @@
           "atrasada": false
         },
         {
+          "osId": "20088",
+          "ativo": "Inversor 1.2 Sungrow SG75CX    { THPN-ORB100-INVR1.2 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "ItaloLustosa",
+          "supervisor": "Ricardo Silva ",
+          "status": "Em progresso",
+          "tarefa": "[THPN-ORB100-INVR1.2] - Religamento do THPN-ORB100-INVR1.2",
+          "criticidade": "",
+          "dataProgramada": "2026-11-21",
+          "dataCriacao": "2026-11-21",
+          "dataInicial": "2026-11-21",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "modalidade": "local",
+          "atrasada": false
+        }
+      ],
+      "ossHistorico": [
+        {
           "osId": "20086",
           "ativo": "Inversor 1.18 Sungrow SG125HV    { THPN-CGH100-INVR1.18 }",
           "equipe": "",
           "responsavel": "Ronaldo  Silva",
           "criadoPor": "Luely  Santos",
           "supervisor": "Ronaldo  Silva",
-          "status": "Não Iniciada",
+          "status": "Finalizados",
           "tarefa": "[Inversor 1.18] - Religamento do Inversor 1.18",
           "criticidade": "",
           "dataProgramada": "2026-11-21",
           "dataCriacao": "2026-11-21",
-          "dataInicial": "",
-          "dataFinal": "",
+          "dataInicial": "2026-11-21",
+          "dataFinal": "2026-11-21",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "20085",
           "ativo": "Axis - Petrolina 3 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL300 }",
@@ -4359,26 +4380,6 @@
           "atrasada": false
         },
         {
-          "osId": "13787",
-          "ativo": "RenoGrid - Colíder 2 - MT Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { RNGD-CLD200 }",
-          "equipe": "",
-          "responsavel": "Deivity Jhon Cunha Saugo ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Deivity Jhon Cunha Saugo ",
-          "status": "Finalizados",
-          "tarefa": "[RNGD-CLD200] - Religamento do RNGD-CLD200",
-          "criticidade": "",
-          "dataProgramada": "2026-09-17",
-          "dataCriacao": "2026-09-17",
-          "dataInicial": "2026-09-18",
-          "dataFinal": "2026-09-18",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
           "osId": "13793",
           "ativo": "Cabine 4  Capitão Poço  Pará Brasil { CPP100-CABN4 }",
           "equipe": "",
@@ -4399,10 +4400,10 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 2568,
+      "historicoTotal": 2571,
       "subClassificacao": {
         "remoto": 760,
-        "local": 5692,
+        "local": 5695,
         "remotoEmAberto": 2,
         "localEmAberto": 70,
         "pctRemoto": 12,
@@ -16650,14 +16651,14 @@
   },
   "ossPublicas": [
     {
-      "osId": "20088",
-      "ativo": "Inversor 1.2 Sungrow SG75CX    { THPN-ORB100-INVR1.2 }",
+      "osId": "20094",
+      "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
       "equipe": "",
-      "responsavel": "Ricardo Silva ",
+      "responsavel": "Matheus Leite ",
       "criadoPor": "ItaloLustosa",
-      "supervisor": "Ricardo Silva ",
+      "supervisor": "Matheus Leite ",
       "status": "Não Iniciada",
-      "tarefa": "[THPN-ORB100-INVR1.2] - Religamento do THPN-ORB100-INVR1.2",
+      "tarefa": "[THPN-BJD100] - Religamento do THPN-BJD100",
       "criticidade": "",
       "dataProgramada": "2026-11-21",
       "dataCriacao": "2026-11-21",
@@ -16667,20 +16668,21 @@
       "modalidade": "local"
     },
     {
-      "osId": "20086",
-      "ativo": "Inversor 1.18 Sungrow SG125HV    { THPN-CGH100-INVR1.18 }",
+      "osId": "20088",
+      "ativo": "Inversor 1.2 Sungrow SG75CX    { THPN-ORB100-INVR1.2 }",
       "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Luely  Santos",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Não Iniciada",
-      "tarefa": "[Inversor 1.18] - Religamento do Inversor 1.18",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "ItaloLustosa",
+      "supervisor": "Ricardo Silva ",
+      "status": "Em progresso",
+      "tarefa": "[THPN-ORB100-INVR1.2] - Religamento do THPN-ORB100-INVR1.2",
       "criticidade": "",
       "dataProgramada": "2026-11-21",
       "dataCriacao": "2026-11-21",
-      "dataInicial": "",
+      "dataInicial": "2026-11-21",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -21953,6 +21955,26 @@
       "atrasada": false
     },
     {
+      "osId": "20086",
+      "ativo": "Inversor 1.18 Sungrow SG125HV    { THPN-CGH100-INVR1.18 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "Luely  Santos",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 1.18] - Religamento do Inversor 1.18",
+      "criticidade": "",
+      "dataProgramada": "2026-11-21",
+      "dataCriacao": "2026-11-21",
+      "dataInicial": "2026-11-21",
+      "dataFinal": "2026-11-21",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "20085",
       "ativo": "Axis - Petrolina 3 - PE  Petrolina  Pernambuco Brasil { AXIS-PTL300 }",
       "equipe": "",
@@ -24299,29 +24321,10 @@
       "horasAteAbrir": 120.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "18658",
-      "ativo": "Tracker 3.101      { COR101-ETKR3.101 }",
-      "equipe": "",
-      "responsavel": "Pedro  Henrique",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Pedro  Henrique",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 3.101] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-06",
-      "dataCriacao": "2026-11-05",
-      "dataInicial": "2026-11-13",
-      "dataFinal": "2026-11-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 192.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3663,
-  "totalGeral": 9042,
+  "historicoTotal": 3666,
+  "totalGeral": 9045,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
