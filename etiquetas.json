@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-22T10:54:56Z",
+  "geradoEm": "2026-11-22T11:51:23Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-16 .. 2026-11-22",
   "tipologias": {
@@ -8,12 +8,12 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6477,
-        "emAberto": 75,
+        "total": 6478,
+        "emAberto": 76,
         "atrasadas": 68,
         "concluidas30d": 860,
         "concluidas7d": 183,
-        "naSemanaCorrente": 190
+        "naSemanaCorrente": 191
       },
       "mttr": {
         "horas": 7.5,
@@ -38,7 +38,7 @@
         },
         {
           "semana": "W47",
-          "criadas": 190,
+          "criadas": 191,
           "finalizadas": 161
         }
       ],
@@ -46,8 +46,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6477,
-            "emAberto": 75
+            "total": 6478,
+            "emAberto": 76
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 75,
+      "total": 76,
       "atrasadas": 68,
       "porStatus": {
         "naoIniciada": 65,
-        "emProgresso": 0,
+        "emProgresso": 1,
         "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 75
+        "(sem equipe)": 76
       },
       "oss": [
         {
@@ -1325,6 +1325,24 @@
           "atrasada": true
         },
         {
+          "osId": "20127",
+          "ativo": "Cabine 2 Reserva do Iguaçu, rua principal S/N - PR. Reserva do Iguaçu  Paraná Brasil { THPN-SGD100-CABN2 }",
+          "equipe": "",
+          "responsavel": "Pedro Silvério ",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Pedro Silvério ",
+          "status": "Não Iniciada",
+          "tarefa": "[Cabine 2] - Religamento da Cabine 2",
+          "criticidade": "",
+          "dataProgramada": "2026-11-22",
+          "dataCriacao": "2026-11-22",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
           "osId": "20125",
           "ativo": "Thopen - Jucurutu 1 - RN RN-118, Zona Rural Jucurutu  Rio Grande do Norte Brasil { THPN-JUC100 }",
           "equipe": "",
@@ -1367,14 +1385,15 @@
           "responsavel": "Júlio Willers ",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Júlio Willers ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Cabine 1] - Religamento da Cabine 1",
           "criticidade": "",
           "dataProgramada": "2026-11-22",
           "dataCriacao": "2026-11-22",
-          "dataInicial": "",
+          "dataInicial": "2026-11-22",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -4456,9 +4475,9 @@
       "historicoTotal": 2573,
       "subClassificacao": {
         "remoto": 760,
-        "local": 5717,
+        "local": 5718,
         "remotoEmAberto": 2,
-        "localEmAberto": 73,
+        "localEmAberto": 74,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -16704,6 +16723,23 @@
   },
   "ossPublicas": [
     {
+      "osId": "20127",
+      "ativo": "Cabine 2 Reserva do Iguaçu, rua principal S/N - PR. Reserva do Iguaçu  Paraná Brasil { THPN-SGD100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Pedro Silvério ",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Pedro Silvério ",
+      "status": "Não Iniciada",
+      "tarefa": "[Cabine 2] - Religamento da Cabine 2",
+      "criticidade": "",
+      "dataProgramada": "2026-11-22",
+      "dataCriacao": "2026-11-22",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": "",
+      "modalidade": "local"
+    },
+    {
       "osId": "20125",
       "ativo": "Thopen - Jucurutu 1 - RN RN-118, Zona Rural Jucurutu  Rio Grande do Norte Brasil { THPN-JUC100 }",
       "equipe": "",
@@ -16744,14 +16780,15 @@
       "responsavel": "Júlio Willers ",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Júlio Willers ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Cabine 1] - Religamento da Cabine 1",
       "criticidade": "",
       "dataProgramada": "2026-11-22",
       "dataCriacao": "2026-11-22",
-      "dataInicial": "",
+      "dataInicial": "2026-11-22",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -24435,7 +24472,7 @@
     }
   ],
   "historicoTotal": 3668,
-  "totalGeral": 9067,
+  "totalGeral": 9068,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
