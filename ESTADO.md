@@ -19,6 +19,7 @@ regra do `novo.html` como fonte (§1, "Onde o código realmente mora").
 | Workflow | O que faz | Cadência REAL |
 |---|---|---|
 | `semanal.yml` | `atualizacao_semanal.py` + `gerar_pcm_json.py` + `gerar_etiquetas_json.py` → `banco_dados.json`, `etiquetas.json` | cron diz `*/15`; **medido: ~38 min** |
+| `semanal.yml` | `gerar_confiabilidade_json.py` → `confiabilidade.json` (reusa o cache da API do motor; zero pedido extra) | **1x por dia**, na 1ª rodada do dia — ⚠ ainda NÃO publicado (token sem escopo `workflow`, 23/11/2026) |
 | `gestao-pcm.yml` | `gerar_gestao_pcm_json.py` → `gestao_pcm.json` | idem |
 | `gestao-pcm.yml` | `gerar_engenharia_json.py` → `engenharia.json` + `gerencial.json` (mesma paginação) + e-mails | idem (passo incluído 04/09) |
 | `azure-swa.yml` | deploy do painel no Azure SWA | ao fim de cada robô (ver §3) |
@@ -605,6 +606,17 @@ relatório gravou esse lixo no `.cache_bd_api.pkl` (TTL 15 min) e listou zero cl
 **Correção:** 406/429 na descoberta conta como "o recurso existe aqui" — fica nessa base, e o `get()` faz a espera.
 `relatorio_clientes.carregar` recusa a coleta (e não grava cache) se menos da metade das linhas tem nº de OS e usina.
 **Regra que fica:** limite de requisição nunca é sinal de endpoint errado. Os robôs usam o mesmo `_resolver_path`.
+
+### `confiabilidade.json` congelado de 08/10 a 23/11/2026 — agora no robô
+O publicador não identificado (ver HANDOVER) parou: último `chore: refresh confiabilidade.json` em 08/10 06:20
+(e o `mpas.json` em 09/10). A aba Confiabilidade mostrava "atualizado 08/10" e a seção 8 do relatório interno
+dizia "Nenhuma falha nesta usina dentro do período" para qualquer semana depois de 07/10 — o recorte do período
+filtra as falhas pelo `inicio`, e o arquivo não tinha nenhuma.
+**Correção:** regenerado à mão em 23/11. O passo diário no `semanal.yml` (1x por dia, reusando o cache da API do
+motor) está pronto no checkout, mas **não subiu**: o token do `.env` não tem o escopo `workflow`, e o GitHub recusa
+qualquer push que mexa em `.github/workflows/`. Precisa de um token com esse escopo ou da edição pelo site do GitHub.
+Até lá o arquivo envelhece de novo — regenere com `python gerar_confiabilidade_json.py` e publique.
+O `mpas.json` continua sem publicador — segue a regra do `--so-gerar`.
 
 ### Preventiva nunca é "fora do plano" (16/11/2026)
 
