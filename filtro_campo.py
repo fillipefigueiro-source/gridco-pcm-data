@@ -13,7 +13,7 @@ import unicodedata
 
 NAO_CAMPO = ['singrid vieira', 'lara fortes', 'aury albuquerque', 'tionardo santos',
              'ana patricia barros', 'levi maia', 'roger lelis', 'hebert rabelo',
-             'joao vieira', 'luis otavio lima de sousa']
+             'joao vieira', 'luis otavio lima de sousa', 'luana pereira']
 
 _CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '_os_nao_campo.json')
 

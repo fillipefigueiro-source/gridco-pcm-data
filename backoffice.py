@@ -21,6 +21,7 @@ RESP_BACKOFFICE = [
     "Singrid Vieira", "Lara Fortes", "Aury Albuquerque", "Tionardo Santos",
     "Ana Patrícia Barros", "Levi Maia", "Roger Lélis", "Hebert Rabelo",
     "João Vieira", "Luis Otávio Lima de Sousa",
+    "Luana Pereira",   # incluída em 23/11/2026: só OS Administrativas
 ]
 
 
