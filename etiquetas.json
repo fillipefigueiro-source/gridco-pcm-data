@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-24T16:53:46Z",
+  "geradoEm": "2026-11-24T17:55:07Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-23 .. 2026-11-29",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6556,
+        "total": 6558,
         "emAberto": 62,
         "atrasadas": 57,
-        "concluidas30d": 911,
-        "concluidas7d": 230,
-        "naSemanaCorrente": 59
+        "concluidas30d": 913,
+        "concluidas7d": 232,
+        "naSemanaCorrente": 61
       },
       "mttr": {
-        "horas": 7.71,
-        "label": "7h 43min",
-        "amostra": 911
+        "horas": 7.69,
+        "label": "7h 41min",
+        "amostra": 913
       },
       "tendencia4Semanas": [
         {
@@ -38,15 +38,15 @@
         },
         {
           "semana": "W48",
-          "criadas": 59,
-          "finalizadas": 57
+          "criadas": 61,
+          "finalizadas": 59
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6556,
+            "total": 6558,
             "emAberto": 62
           }
         ],
@@ -82,8 +82,8 @@
       "atrasadas": 57,
       "porStatus": {
         "naoIniciada": 50,
-        "emProgresso": 5,
-        "pausada": 7,
+        "emProgresso": 3,
+        "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
@@ -133,7 +133,7 @@
           "responsavel": "Marcelo Lino de Souza ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Marcelo Lino de Souza ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[THPN-RCS100] - Religamento do THPN-RCS100",
           "criticidade": "",
           "dataProgramada": "2026-09-09",
@@ -170,7 +170,7 @@
           "responsavel": "Marcelo Lino de Souza ",
           "criadoPor": "CíceroWillian",
           "supervisor": "Marcelo Lino de Souza ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[THPN-CNN100-INVR1.8] - Religamento do THPN-CNN100-INVR1.8",
           "criticidade": "",
           "dataProgramada": "2026-10-07",
@@ -1022,14 +1022,15 @@
           "responsavel": "Carlos  Godoi",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Carlos  Godoi",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 2.13] - Religamento do Inversor 2.13",
           "criticidade": "",
           "dataProgramada": "2026-11-20",
           "dataCriacao": "2026-11-20",
-          "dataInicial": "",
+          "dataInicial": "2026-11-24",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -1126,21 +1127,20 @@
           "atrasada": true
         },
         {
-          "osId": "20323",
-          "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
+          "osId": "20327",
+          "ativo": "Cabine 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-CABN2 }",
           "equipe": "",
-          "responsavel": "Matheus Leite ",
+          "responsavel": "Ricardo Silva ",
           "criadoPor": "Maria Emanuella de Souza Mota ",
-          "supervisor": "Matheus Leite ",
-          "status": "Em progresso",
-          "tarefa": "[THPN-BJD100] - Religamento do THPN-BJD100",
+          "supervisor": "Ricardo Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[THPN-INP100-CABN2] - Religamento do THPN-INP100-CABN2",
           "criticidade": "",
           "dataProgramada": "2026-11-24",
           "dataCriacao": "2026-11-24",
-          "dataInicial": "2026-11-24",
+          "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -1220,6 +1220,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "20323",
+          "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Matheus Leite ",
+          "status": "Finalizados",
+          "tarefa": "[THPN-BJD100] - Religamento do THPN-BJD100",
+          "criticidade": "",
+          "dataProgramada": "2026-11-24",
+          "dataCriacao": "2026-11-24",
+          "dataInicial": "2026-11-24",
+          "dataFinal": "2026-11-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "20319",
           "ativo": "Cabine 3 LOT SUCESSAO, ROD. MA 040, S/N, JOIA Timon  Maranhão Brasil { TIM100-CABN3 }",
@@ -4199,32 +4219,12 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13614",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-09-14",
-          "dataCriacao": "2026-09-15",
-          "dataInicial": "2026-09-15",
-          "dataFinal": "2026-09-15",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2623,
+      "historicoTotal": 2625,
       "subClassificacao": {
         "remoto": 760,
-        "local": 5796,
+        "local": 5798,
         "remotoEmAberto": 2,
         "localEmAberto": 60,
         "pctRemoto": 12,
@@ -6041,25 +6041,6 @@
           "atrasada": false
         },
         {
-          "osId": "19169",
-          "ativo": "Transformador 9 COMTRAFO     { JCD100-TRFR9 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Davi Damasceno",
-          "supervisor": "James Chaves ",
-          "status": "Finalizados",
-          "tarefa": "[Athon] - MPM - Transformador",
-          "criticidade": "",
-          "dataProgramada": "2026-11-24",
-          "dataCriacao": "2026-11-10",
-          "dataInicial": "2026-11-24",
-          "dataFinal": "2026-11-24",
-          "linkFracttal": "",
-          "horasAteAbrir": 336.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "18941",
           "ativo": "Cabine 1  Santa Maria do Pará  Pará Brasil { SMP100-CABN1 }",
           "equipe": "",
@@ -6132,6 +6113,25 @@
           "dataFinal": "2026-11-24",
           "linkFracttal": "",
           "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "19169",
+          "ativo": "Transformador 9 COMTRAFO     { JCD100-TRFR9 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Davi Damasceno",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "[Athon] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-11-24",
+          "dataCriacao": "2026-11-10",
+          "dataInicial": "2026-11-24",
+          "dataFinal": "2026-11-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 336.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -6554,25 +6554,6 @@
           "atrasada": false
         },
         {
-          "osId": "19217",
-          "ativo": "Preventiva Grupo de Inversores      { THPN-ADS100-PGINVR1 }",
-          "equipe": "",
-          "responsavel": "Milton Ramos ",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Milton Ramos ",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-11-18",
-          "dataCriacao": "2026-11-11",
-          "dataInicial": "2026-11-16",
-          "dataFinal": "2026-11-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 120.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "19271",
           "ativo": "SPDA Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR200-SPDA1 }",
           "equipe": "",
@@ -6621,6 +6602,25 @@
           "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
           "criticidade": "",
           "dataProgramada": "2026-11-23",
+          "dataCriacao": "2026-11-11",
+          "dataInicial": "2026-11-16",
+          "dataFinal": "2026-11-16",
+          "linkFracttal": "",
+          "horasAteAbrir": 120.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "19217",
+          "ativo": "Preventiva Grupo de Inversores      { THPN-ADS100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Milton Ramos ",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Milton Ramos ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-11-18",
           "dataCriacao": "2026-11-11",
           "dataInicial": "2026-11-16",
           "dataFinal": "2026-11-16",
@@ -10226,17 +10226,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 1149,
+        "total": 1150,
         "emAberto": 82,
-        "atrasadas": 77,
-        "concluidas30d": 198,
-        "concluidas7d": 33,
-        "naSemanaCorrente": 30
+        "atrasadas": 76,
+        "concluidas30d": 199,
+        "concluidas7d": 34,
+        "naSemanaCorrente": 31
       },
       "mttr": {
-        "horas": 150.91,
-        "label": "6d 6h",
-        "amostra": 198
+        "horas": 151.6,
+        "label": "6d 7h",
+        "amostra": 199
       },
       "tendencia4Semanas": [
         {
@@ -10256,15 +10256,15 @@
         },
         {
           "semana": "W48",
-          "criadas": 25,
-          "finalizadas": 5
+          "criadas": 26,
+          "finalizadas": 6
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 1149,
+            "total": 1150,
             "emAberto": 82
           }
         ],
@@ -10297,7 +10297,7 @@
         ]
       },
       "total": 82,
-      "atrasadas": 77,
+      "atrasadas": 76,
       "porStatus": {
         "naoIniciada": 69,
         "emProgresso": 2,
@@ -10977,24 +10977,6 @@
           "atrasada": true
         },
         {
-          "osId": "19418",
-          "ativo": "Estrutura Trackers Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-ETKR1 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Felipe  Lima",
-          "status": "Em progresso",
-          "tarefa": "[Estrutura Trackers] - [Indaiatuba] - Mapeamento de Trackers Danificados",
-          "criticidade": "",
-          "dataProgramada": "2026-11-13",
-          "dataCriacao": "2026-11-12",
-          "dataInicial": "2026-11-12",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "atrasada": true
-        },
-        {
           "osId": "19242",
           "ativo": "Tracker 5.102      { MAB200-ETKR5.102 }",
           "equipe": "",
@@ -11631,6 +11613,23 @@
           "atrasada": true
         },
         {
+          "osId": "20330",
+          "ativo": "Estação Meteorológica Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100-ESTM1 }",
+          "equipe": "",
+          "responsavel": "Valmir  Júnior",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Valmir  Júnior",
+          "status": "Não Iniciada",
+          "tarefa": "[Estação Meteorológica] - Piranômetros ID 3 e 4 com falha de comunicação e conector deformado — UFV Diamantino",
+          "criticidade": "",
+          "dataProgramada": "2026-11-24",
+          "dataCriacao": "2026-11-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "20241",
           "ativo": "Inversor 3.6 Huawei     { TIM100-INVR3.6 }",
           "equipe": "",
@@ -11671,14 +11670,15 @@
           "responsavel": "James Chaves ",
           "criadoPor": "Roger Lélis",
           "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 3.2] - Avaliação da Ventilação e Temperatura do inversor",
           "criticidade": "",
           "dataProgramada": "2026-11-24",
           "dataCriacao": "2026-11-19",
-          "dataInicial": "",
+          "dataInicial": "2026-11-24",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 120.0,
           "atrasada": false
         },
         {
@@ -11734,6 +11734,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "19418",
+          "ativo": "Estrutura Trackers Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-ETKR1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Felipe  Lima",
+          "status": "Finalizados",
+          "tarefa": "[Estrutura Trackers] - [Indaiatuba] - Mapeamento de Trackers Danificados",
+          "criticidade": "",
+          "dataProgramada": "2026-11-13",
+          "dataCriacao": "2026-11-12",
+          "dataInicial": "2026-11-12",
+          "dataFinal": "2026-11-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 288.0,
           "atrasada": false
         },
         {
@@ -14511,25 +14530,6 @@
           "atrasada": false
         },
         {
-          "osId": "16751",
-          "ativo": "Inversor 1.4  6x SUN2000-250KTL-H1 / 3x SUN2000-330KTL-H1    { THPN-RCS100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Marcelo Lino de Souza ",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Marcelo Lino de Souza ",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.4] - Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-10-20",
-          "dataCriacao": "2026-10-19",
-          "dataInicial": "2026-10-21",
-          "dataFinal": "2026-10-21",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "16778",
           "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
           "equipe": "",
@@ -14568,7 +14568,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 574
+      "historicoTotal": 575
     },
     "engenharia": {
       "label": "Engenharia",
@@ -14625,8 +14625,8 @@
           },
           {
             "nome": "Aury  Albuquerque",
-            "total": 17,
-            "emAberto": 10
+            "total": 18,
+            "emAberto": 11
           },
           {
             "nome": "Carlos Bruno  Pessanha Pereira",
@@ -14635,8 +14635,8 @@
           },
           {
             "nome": "Luis Otavio Lima de Sousa",
-            "total": 13,
-            "emAberto": 8
+            "total": 12,
+            "emAberto": 7
           },
           {
             "nome": "Hebert Rabelo",
@@ -14764,9 +14764,9 @@
           "osId": "15541",
           "ativo": "Inversor 1.3 Sungrow SG125HV    { THPN-PHS200-INVR1.3 }",
           "equipe": "",
-          "responsavel": "Luis Otavio Lima de Sousa ",
+          "responsavel": "Aury  Albuquerque",
           "criadoPor": "Ana Barros",
-          "supervisor": "Luis Otavio Lima de Sousa ",
+          "supervisor": "Aury  Albuquerque",
           "status": "Não Iniciada",
           "tarefa": "Analisar comportamento dos inversores de Pharma II - equipamentos apresentam comportamento anômalo no início da manhã, demorando a partir e entrar em operação. Usina próximas não possuem esta mesma ca",
           "criticidade": "",
@@ -16564,21 +16564,36 @@
   },
   "ossPublicas": [
     {
-      "osId": "20323",
-      "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
+      "osId": "20330",
+      "ativo": "Estação Meteorológica Sitio Santa Tereza, Marzagao KM 02 Diamantino  Mato Grosso Brasil { THPN-DMT100-ESTM1 }",
       "equipe": "",
-      "responsavel": "Matheus Leite ",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Matheus Leite ",
-      "status": "Em progresso",
-      "tarefa": "[THPN-BJD100] - Religamento do THPN-BJD100",
+      "responsavel": "Valmir  Júnior",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Valmir  Júnior",
+      "status": "Não Iniciada",
+      "tarefa": "[Estação Meteorológica] - Piranômetros ID 3 e 4 com falha de comunicação e conector deformado — UFV Diamantino",
       "criticidade": "",
       "dataProgramada": "2026-11-24",
       "dataCriacao": "2026-11-24",
-      "dataInicial": "2026-11-24",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20327",
+      "ativo": "Cabine 2 Fazenda Navio, s/n, Zona Rural Inhapi  Alagoas Brasil { THPN-INP100-CABN2 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Ricardo Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[THPN-INP100-CABN2] - Religamento do THPN-INP100-CABN2",
+      "criticidade": "",
+      "dataProgramada": "2026-11-24",
+      "dataCriacao": "2026-11-24",
+      "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -17229,14 +17244,15 @@
       "responsavel": "Carlos  Godoi",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Carlos  Godoi",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 2.13] - Religamento do Inversor 2.13",
       "criticidade": "",
       "dataProgramada": "2026-11-20",
       "dataCriacao": "2026-11-20",
-      "dataInicial": "",
+      "dataInicial": "2026-11-24",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 96.0,
       "modalidade": "local"
     },
     {
@@ -17414,14 +17430,15 @@
       "responsavel": "James Chaves ",
       "criadoPor": "Roger Lélis",
       "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 3.2] - Avaliação da Ventilação e Temperatura do inversor",
       "criticidade": "",
       "dataProgramada": "2026-11-24",
       "dataCriacao": "2026-11-19",
-      "dataInicial": "",
+      "dataInicial": "2026-11-24",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0
     },
     {
       "osId": "19951",
@@ -18234,23 +18251,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "modalidade": "remoto"
-    },
-    {
-      "osId": "19418",
-      "ativo": "Estrutura Trackers Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-ETKR1 }",
-      "equipe": "",
-      "responsavel": "Felipe  Lima",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Felipe  Lima",
-      "status": "Em progresso",
-      "tarefa": "[Estrutura Trackers] - [Indaiatuba] - Mapeamento de Trackers Danificados",
-      "criticidade": "",
-      "dataProgramada": "2026-11-13",
-      "dataCriacao": "2026-11-12",
-      "dataInicial": "2026-11-12",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
     },
     {
       "osId": "19400",
@@ -20469,7 +20469,7 @@
       "responsavel": "Marcelo Lino de Souza ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Marcelo Lino de Souza ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[THPN-RCS100] - Religamento do THPN-RCS100",
       "criticidade": "",
       "dataProgramada": "2026-09-09",
@@ -20728,9 +20728,9 @@
       "osId": "15541",
       "ativo": "Inversor 1.3 Sungrow SG125HV    { THPN-PHS200-INVR1.3 }",
       "equipe": "",
-      "responsavel": "Luis Otavio Lima de Sousa ",
+      "responsavel": "Aury  Albuquerque",
       "criadoPor": "Ana Barros",
-      "supervisor": "Luis Otavio Lima de Sousa ",
+      "supervisor": "Aury  Albuquerque",
       "status": "Não Iniciada",
       "tarefa": "Analisar comportamento dos inversores de Pharma II - equipamentos apresentam comportamento anômalo no início da manhã, demorando a partir e entrar em operação. Usina próximas não possuem esta mesma ca",
       "criticidade": "",
@@ -21142,7 +21142,7 @@
       "responsavel": "Marcelo Lino de Souza ",
       "criadoPor": "CíceroWillian",
       "supervisor": "Marcelo Lino de Souza ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[THPN-CNN100-INVR1.8] - Religamento do THPN-CNN100-INVR1.8",
       "criticidade": "",
       "dataProgramada": "2026-10-07",
@@ -21384,44 +21384,6 @@
       "dataFinal": "2026-11-13",
       "linkFracttal": "",
       "horasAteAbrir": 48.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "19217",
-      "ativo": "Preventiva Grupo de Inversores      { THPN-ADS100-PGINVR1 }",
-      "equipe": "",
-      "responsavel": "Milton Ramos ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Milton Ramos ",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-11-18",
-      "dataCriacao": "2026-11-11",
-      "dataInicial": "2026-11-16",
-      "dataFinal": "2026-11-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "19169",
-      "ativo": "Transformador 9 COMTRAFO     { JCD100-TRFR9 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Davi Damasceno",
-      "supervisor": "James Chaves ",
-      "status": "Finalizados",
-      "tarefa": "[Athon] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-11-24",
-      "dataCriacao": "2026-11-10",
-      "dataInicial": "2026-11-24",
-      "dataFinal": "2026-11-24",
-      "linkFracttal": "",
-      "horasAteAbrir": 336.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -21879,6 +21841,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 3144.0,
       "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "20323",
+      "ativo": "Thopen - Belo Jardim  1 - PE Sítio Batinga – Distrito de Água Fria Belo Jardim  Pernambuco Brasil { THPN-BJD100 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Matheus Leite ",
+      "status": "Finalizados",
+      "tarefa": "[THPN-BJD100] - Religamento do THPN-BJD100",
+      "criticidade": "",
+      "dataProgramada": "2026-11-24",
+      "dataCriacao": "2026-11-24",
+      "dataInicial": "2026-11-24",
+      "dataFinal": "2026-11-24",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -22516,6 +22498,25 @@
       "atrasada": false
     },
     {
+      "osId": "19418",
+      "ativo": "Estrutura Trackers Estrada IDT 150, S/N Indaiatuba  São Paulo Brasil { IND100-ETKR1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Felipe  Lima",
+      "status": "Finalizados",
+      "tarefa": "[Estrutura Trackers] - [Indaiatuba] - Mapeamento de Trackers Danificados",
+      "criticidade": "",
+      "dataProgramada": "2026-11-13",
+      "dataCriacao": "2026-11-12",
+      "dataInicial": "2026-11-12",
+      "dataFinal": "2026-11-24",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 288.0,
+      "atrasada": false
+    },
+    {
       "osId": "19405",
       "ativo": "Tracker 17.100 STI     { IND100-ETKR17.100 }",
       "equipe": "",
@@ -22934,6 +22935,25 @@
       "atrasada": false
     },
     {
+      "osId": "19217",
+      "ativo": "Preventiva Grupo de Inversores      { THPN-ADS100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Milton Ramos ",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Milton Ramos ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-11-18",
+      "dataCriacao": "2026-11-11",
+      "dataInicial": "2026-11-16",
+      "dataFinal": "2026-11-16",
+      "linkFracttal": "",
+      "horasAteAbrir": 120.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "19215",
       "ativo": "Transformador 1 WEG     { APR300-TRFR1 }",
       "equipe": "",
@@ -23006,6 +23026,25 @@
       "dataFinal": "2026-11-12",
       "linkFracttal": "",
       "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "19169",
+      "ativo": "Transformador 9 COMTRAFO     { JCD100-TRFR9 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Davi Damasceno",
+      "supervisor": "James Chaves ",
+      "status": "Finalizados",
+      "tarefa": "[Athon] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-11-24",
+      "dataCriacao": "2026-11-10",
+      "dataInicial": "2026-11-24",
+      "dataFinal": "2026-11-24",
+      "linkFracttal": "",
+      "horasAteAbrir": 336.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -24056,48 +24095,10 @@
       "horasAteAbrir": 72.0,
       "horasAteFechar": 72.0,
       "atrasada": false
-    },
-    {
-      "osId": "18668",
-      "ativo": "Inversor 3.7 Sungrow SG125HV    { CAZ100-INVR3.7 }",
-      "equipe": "",
-      "responsavel": "Gilson  Milhomem",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Gilson  Milhomem",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-11-06",
-      "dataCriacao": "2026-11-05",
-      "dataInicial": "2026-11-10",
-      "dataFinal": "2026-11-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 120.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "18658",
-      "ativo": "Tracker 3.101      { COR101-ETKR3.101 }",
-      "equipe": "",
-      "responsavel": "Pedro  Henrique",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Pedro  Henrique",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 3.101] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-06",
-      "dataCriacao": "2026-11-05",
-      "dataInicial": "2026-11-13",
-      "dataFinal": "2026-11-13",
-      "linkFracttal": "",
-      "horasAteAbrir": 192.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3705,
-  "totalGeral": 9176,
+  "historicoTotal": 3708,
+  "totalGeral": 9179,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
