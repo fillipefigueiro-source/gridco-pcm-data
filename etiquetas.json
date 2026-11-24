@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-24T21:43:15Z",
+  "geradoEm": "2026-11-24T22:45:27Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-23 .. 2026-11-29",
   "tipologias": {
@@ -9,16 +9,16 @@
       "cor": "#f59e0b",
       "kpis": {
         "total": 6570,
-        "emAberto": 63,
-        "atrasadas": 57,
-        "concluidas30d": 924,
-        "concluidas7d": 242,
+        "emAberto": 62,
+        "atrasadas": 56,
+        "concluidas30d": 925,
+        "concluidas7d": 243,
         "naSemanaCorrente": 73
       },
       "mttr": {
-        "horas": 7.31,
-        "label": "7h 19min",
-        "amostra": 924
+        "horas": 7.41,
+        "label": "7h 25min",
+        "amostra": 925
       },
       "tendencia4Semanas": [
         {
@@ -39,7 +39,7 @@
         {
           "semana": "W48",
           "criadas": 73,
-          "finalizadas": 69
+          "finalizadas": 70
         }
       ],
       "topOfensores": {
@@ -47,7 +47,7 @@
           {
             "nome": "(sem equipe)",
             "total": 6570,
-            "emAberto": 63
+            "emAberto": 62
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 63,
-      "atrasadas": 57,
+      "total": 62,
+      "atrasadas": 56,
       "porStatus": {
         "naoIniciada": 52,
-        "emProgresso": 2,
-        "pausada": 9,
+        "emProgresso": 0,
+        "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 63
+        "(sem equipe)": 62
       },
       "oss": [
         {
@@ -1016,25 +1016,6 @@
           "atrasada": true
         },
         {
-          "osId": "20038",
-          "ativo": "Inversor 2.13 Sungrow SG60KTL    { ADT100-INVR2.13 }",
-          "equipe": "",
-          "responsavel": "Carlos  Godoi",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Carlos  Godoi",
-          "status": "Em progresso",
-          "tarefa": "[Inversor 2.13] - Religamento do Inversor 2.13",
-          "criticidade": "",
-          "dataProgramada": "2026-11-20",
-          "dataCriacao": "2026-11-20",
-          "dataInicial": "2026-11-24",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "20035",
           "ativo": "Inversor 1.2 Huawei SUN2000-330KTL-H1    { APR300-INVR1.2 }",
           "equipe": "",
@@ -1205,7 +1186,7 @@
           "responsavel": "Marcelo Lino de Souza ",
           "criadoPor": "Juliana Rogério ",
           "supervisor": "Marcelo Lino de Souza ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[Thopen - Canarana 1 - MT] - Religamento do Thopen - Canarana 1 - MT",
           "criticidade": "",
           "dataProgramada": "2026-11-24",
@@ -1333,6 +1314,26 @@
           "dataFinal": "2026-11-24",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "20038",
+          "ativo": "Inversor 2.13 Sungrow SG60KTL    { ADT100-INVR2.13 }",
+          "equipe": "",
+          "responsavel": "Carlos  Godoi",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Carlos  Godoi",
+          "status": "Finalizados",
+          "tarefa": "[Inversor 2.13] - Religamento do Inversor 2.13",
+          "criticidade": "",
+          "dataProgramada": "2026-11-20",
+          "dataCriacao": "2026-11-20",
+          "dataInicial": "2026-11-24",
+          "dataFinal": "2026-11-24",
+          "linkFracttal": "",
+          "horasAteAbrir": 96.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -4216,34 +4217,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13669",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2636,
+      "historicoTotal": 2637,
       "subClassificacao": {
         "remoto": 760,
         "local": 5810,
         "remotoEmAberto": 2,
-        "localEmAberto": 61,
+        "localEmAberto": 60,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -17812,7 +17793,7 @@
       "responsavel": "Marcelo Lino de Souza ",
       "criadoPor": "Juliana Rogério ",
       "supervisor": "Marcelo Lino de Souza ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[Thopen - Canarana 1 - MT] - Religamento do Thopen - Canarana 1 - MT",
       "criticidade": "",
       "dataProgramada": "2026-11-24",
@@ -18379,24 +18360,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
-      "osId": "20038",
-      "ativo": "Inversor 2.13 Sungrow SG60KTL    { ADT100-INVR2.13 }",
-      "equipe": "",
-      "responsavel": "Carlos  Godoi",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Carlos  Godoi",
-      "status": "Em progresso",
-      "tarefa": "[Inversor 2.13] - Religamento do Inversor 2.13",
-      "criticidade": "",
-      "dataProgramada": "2026-11-20",
-      "dataCriacao": "2026-11-20",
-      "dataInicial": "2026-11-24",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 96.0,
       "modalidade": "local"
     },
     {
@@ -23060,6 +23023,26 @@
       "atrasada": false
     },
     {
+      "osId": "20038",
+      "ativo": "Inversor 2.13 Sungrow SG60KTL    { ADT100-INVR2.13 }",
+      "equipe": "",
+      "responsavel": "Carlos  Godoi",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Carlos  Godoi",
+      "status": "Finalizados",
+      "tarefa": "[Inversor 2.13] - Religamento do Inversor 2.13",
+      "criticidade": "",
+      "dataProgramada": "2026-11-20",
+      "dataCriacao": "2026-11-20",
+      "dataInicial": "2026-11-24",
+      "dataFinal": "2026-11-24",
+      "linkFracttal": "",
+      "horasAteAbrir": 96.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "19991",
       "ativo": "Inversor 1.2 Sungrow     { BWK100-INVR1.2 }",
       "equipe": "",
@@ -25156,28 +25139,9 @@
       "horasAteAbrir": 72.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "18781",
-      "ativo": "Tracker 71.100 STI Norland STI-H250 V05    { MCB100-ETKR71.100 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Valdério Paz ",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 71.100] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-09",
-      "dataCriacao": "2026-11-06",
-      "dataInicial": "2026-11-09",
-      "dataFinal": "2026-11-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3723,
+  "historicoTotal": 3724,
   "totalGeral": 9226,
   "verificacao": {
     "total": 0,
