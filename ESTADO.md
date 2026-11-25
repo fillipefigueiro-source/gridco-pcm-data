@@ -607,6 +607,14 @@ relatório gravou esse lixo no `.cache_bd_api.pkl` (TTL 15 min) e listou zero cl
 `relatorio_clientes.carregar` recusa a coleta (e não grava cache) se menos da metade das linhas tem nº de OS e usina.
 **Regra que fica:** limite de requisição nunca é sinal de endpoint errado. Os robôs usam o mesmo `_resolver_path`.
 
+### Coleta de geração no dia da data programada e o `--semana` do motor (24/11/2026)
+Reunião do PCM: o motor adiantava a coleta de dados de geração (o dia era escolhido sem olhar a data, e a semana que
+vira o mês coletava antes de ele fechar). `programacao_v7.py`: a tarefa com "coleta" e "geração" no texto e a Data
+Programada de segunda a sexta da semana cai nesse dia, nunca antes (dia cheio = [EXCEDE HH]; feriado = o próximo dia
+útil; sem ele, pendência e a próxima semana como atrasada); o pin das observações vence. E o `--semana` passou a valer:
+o laço lia o próprio "--semana" e o motor gerava sempre a semana da próxima segunda. Prova (no Nexus, pela foto de
+02/10, W41): as 48 coletas da semana no dia programado, nenhuma antes. O motor do Nexus é cópia idêntica deste.
+
 ### `confiabilidade.json` congelado de 08/10 a 23/11/2026 — agora no robô
 O publicador não identificado (ver HANDOVER) parou: último `chore: refresh confiabilidade.json` em 08/10 06:20
 (e o `mpas.json` em 09/10). A aba Confiabilidade mostrava "atualizado 08/10" e a seção 8 do relatório interno

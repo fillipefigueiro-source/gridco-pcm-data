@@ -78,9 +78,12 @@ def _resolver_week_start():
     if not forced:
         # Também aceita --semana XX via CLI
         import sys as _sys
+        # o valor é o argumento SEGUINTE (24/11/2026): até aqui o laço lia o próprio "--semana", a leitura falhava e o
+        # motor gerava sempre a semana da próxima segunda, qualquer que fosse a pedida (a prova da coleta de geração
+        # numa semana passada, pela foto, saía a semana de 30/11)
         for _i, _a in enumerate(_sys.argv[1:], 1):
-            if _a in ('--semana', '-s') and _i < len(_sys.argv):
-                forced = _sys.argv[_i]
+            if _a in ('--semana', '-s') and _i + 1 < len(_sys.argv):
+                forced = _sys.argv[_i + 1]
                 break
     if not forced:
         return _next_monday()
@@ -2023,6 +2026,38 @@ def assign_days_to_usinas(usinas_carga_h, day_caps, mpa_done_idx=None):
 
 
 # ====================== Estrutura de tarefa atômica ======================
+# ── Coleta de dados de geração no dia programado (24/11/2026) ────────────────────────────────────────────────────
+# Reunião do PCM: quem programa escolhe o dia da coleta pela presença do time na usina, em geral no começo do mês, para
+# coletar o mês anterior; o motor escolhia o dia sem olhar a data e adiantava a coleta (a W49 começa na segunda 30/11,
+# antes de o mês fechar). A tarefa com "coleta" e "geração" no texto (fora a coleta de óleo; na foto da W47, 1.000
+# tarefas, metade com data entre o dia 1º e o 5) cai no dia da Data Programada, nunca antes: dia cheio, entra forçada
+# com [EXCEDE HH]; feriado, o próximo dia útil da semana; sem dia útil depois da data, fica para a próxima semana, onde
+# entra como atrasada (carry-over). Data antes da semana (atrasada) não prende dia: vai pela fila. O pin das
+# observações da OS vence (a coleta de OS pinada segue o pin).
+def _sem_acento(s):
+    return unicodedata.normalize('NFKD', str(s or '')).encode('ascii', 'ignore').decode().lower()
+
+
+def eh_coleta_de_geracao(tarefa_txt):
+    t = _sem_acento(tarefa_txt)
+    return 'coleta' in t and 'geracao' in t and 'oleo' not in t
+
+
+def _dia_da_coleta(r):
+    """O dia (0 = segunda) da Data Programada da coleta de geração nesta semana; None se a tarefa não é coleta ou se
+    a data não cai de segunda a sexta desta semana."""
+    if not eh_coleta_de_geracao(r.get('Tarefa', '')):
+        return None
+    dp = r.get('Data Programada')
+    if dp is None or pd.isna(dp):
+        return None
+    dp = pd.Timestamp(dp).normalize()
+    ini = pd.Timestamp(WEEK_START).normalize()
+    if not (ini <= dp < ini + pd.Timedelta(days=5)):
+        return None
+    return int((dp - ini).days)
+
+
 def build_tarefas_atomicas(sub):
     """Cada linha do BD vira uma tarefa atômica."""
     tarefas = []
@@ -2063,6 +2098,7 @@ def build_tarefas_atomicas(sub):
             'dur_h': float(r['dur_h']),
             'etiquetas': str(r.get('Etiquetas','') or '').strip(),
             'pin': OS_PINS.get(_oid),  # None ou lista de pins {'dia','tarefas','start_min'}
+            'coleta_dia': _dia_da_coleta(r),   # 24/11/2026: a coleta de geração no dia da data programada
         })
     return tarefas
 
@@ -2177,12 +2213,15 @@ def schedule_team(equipe, tarefas_all):
         pinned_A = []        # [(tk, allowed_days, turno_map)] — distribui pelos dias
         pinned_com_dia = []  # MODO B — tarefa fixada num dia exato
         pinned_sem_dia = []  # pin sem dia → alta prioridade na fila normal
+        coletas_com_dia = [] # coleta de geração no dia da data programada (24/11/2026)
         normais = []
 
         for os_id, tks in tarefas_por_os.items():
             pins_os = OS_PINS.get(os_id)
             if not pins_os:
-                normais.extend(tks); continue
+                coletas_com_dia.extend(tk for tk in tks if tk.get('coleta_dia') is not None)
+                normais.extend(tk for tk in tks if tk.get('coleta_dia') is None)
+                continue
             if isinstance(pins_os, dict):
                 pins_os = [pins_os]   # compat: pin único antigo
 
@@ -2281,6 +2320,35 @@ def schedule_team(equipe, tarefas_all):
                 dc.ativo = ativo
             print(f'[PIN] OS {tk["os_id"]} | {tk["tarefa_txt"][:50]} '
                   f'→ dia {di} {t(start)}-{t(end)}')
+
+        # Coleta de geração no dia da data programada (24/11/2026, `_dia_da_coleta`): nunca antes; feriado = o próximo
+        # dia útil da semana; dia cheio = forçada, com [EXCEDE HH]; sem dia útil depois da data, fica para a próxima.
+        for tk in coletas_com_dia:
+            dias = [d for d in range(tk['coleta_dia'], 5) if not day_caps[d].is_holiday]
+            if not dias:
+                pendentes.append(_pend(equipe, tk, 'Coleta de geração: a data programada e o resto da semana são '
+                                                   'feriado; entra na próxima semana'))
+                continue
+            di = dias[0]
+            dc = day_caps[di]
+            res = alloc_diurno(dc, tk['dur_h'], prefer_morning=True, termo=tk['termo'], coord=tk['coord'],
+                               allow_partial=False)
+            forcada = res is None
+            if forcada:
+                res = alloc_diurno(dc, tk['dur_h'], prefer_morning=True, termo=tk['termo'], coord=tk['coord'],
+                                   allow_partial=False, force=True)
+            if res is None:
+                pendentes.append(_pend(equipe, tk, f'Coleta de geração: não coube no dia {di} nem forçando'))
+                continue
+            start, end, desloc_h, used_h, completed = res
+            is_first = (dc.coord != tk['coord'])
+            rows.append(_row(equipe, di, tk, start, end, desloc_h if is_first else 0.0, over_capacity=forcada))
+            commit_diurno(dc, start, end, int(round(used_h * 60)), tk['coord'], ativo)
+            if day_assignments[di] is None:
+                day_assignments[di] = ativo
+                dc.ativo = ativo
+            print(f'[COLETA] OS {tk["os_id"]} | {tk["tarefa_txt"][:44]} → dia {di}'
+                  + (' [EXCEDE HH]' if forcada else ''))
 
         # MODO A: distribui as tarefas da OS pelos dias permitidos.
         # Preenche o 1º dia até esgotar a capacidade; overflow vai pro próximo dia.
