@@ -632,6 +632,12 @@ O `banco_dados.json` antigo só muda quando o robô regerar a semana.
 
 ### OS do backoffice fora dos relatórios (09/11/2026)
 
+**Desde 24/11/2026 a lista que vale é a do Nexus** (PCM → Gerar a semana → Backoffice, a mesma que tira essas OS
+da geração), lida do `Fora_da_programacao.json` pelo `backoffice.lista()`; o `filtro_campo.py` usa a mesma regra
+(`backoffice.eh_backoffice`). Até ali eram duas listas no código, e a do `filtro_campo.py` tinha um nome a menos que
+a do Nexus: os relatórios mostravam OS de quem o programador já tirava. `RESP_BACKOFFICE` ficou só como reserva para
+quando o arquivo faltar (com aviso). Mudou o time? Muda na tela do Nexus.
+
 O relatório da Athon (Marabá) mostrava OS da Singrid e da Lara, e o Relatório Executivo da S44 da Athon contava **40
 "Administrativas" fora do plano, 0 executadas** — todas com a Lara Fortes como Responsável da OS (acompanhamento dos
 trackers de Timon). Não é trabalho de campo e derrubava a "resposta ao imprevisto" (35/85 → 35/45).

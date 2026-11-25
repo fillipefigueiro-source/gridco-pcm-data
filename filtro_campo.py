@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 """Recorte "só time de campo" dos relatórios do PCM (decisão do Fabricio, 09/11/2026).
 
-OS cujo responsável no Fracttal é uma das pessoas de NAO_CAMPO não aparece em
-nada: some de gestao_pcm (tarefas) e do banco_dados (linhas e pendentes da
-programação). OS com responsáveis mistos (campo + fora) continua.
+OS cujo responsável no Fracttal é do backoffice não aparece em nada: some de
+gestao_pcm (tarefas) e do banco_dados (linhas e pendentes da programação). OS
+com responsáveis mistos (campo + fora) continua.
+
+Quem é do backoffice: a lista ÚNICA do backoffice.py (desde 24/11/2026 a do
+Nexus, a mesma que tira essas OS da geração). Até 24/11 havia aqui uma segunda
+lista, que ficou com um nome a menos que a do Nexus.
 """
 import io
 import json
@@ -11,9 +15,7 @@ import os
 import re
 import unicodedata
 
-NAO_CAMPO = ['singrid vieira', 'lara fortes', 'aury albuquerque', 'tionardo santos',
-             'ana patricia barros', 'levi maia', 'roger lelis', 'hebert rabelo',
-             'joao vieira', 'luis otavio lima de sousa', 'luana pereira']
+import backoffice
 
 _CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '_os_nao_campo.json')
 
@@ -24,16 +26,8 @@ def _norm(s):
 
 
 def fora_do_campo(resp):
-    n = _norm(resp)
-    if not n:
-        return False
-    pal = n.split()
-    for x in NAO_CAMPO:
-        p = x.split()
-        # nome completo, ou primeiro + último nome ("Ana Barros" = Ana Patrícia Barros)
-        if x in n or (p[0] in pal and p[-1] in pal):
-            return True
-    return False
+    """O responsável é do backoffice (a regra e a lista do backoffice.py)."""
+    return backoffice.eh_backoffice(resp)
 
 
 def _os(x):
@@ -66,7 +60,7 @@ def os_fora(banco=None):
     fora = {k for k, rs in resp.items() if rs and all(fora_do_campo(r) for r in rs)}
     if resp:
         io.open(_CACHE, 'w', encoding='utf-8').write(
-            json.dumps({'nomes': NAO_CAMPO, 'os': sorted(fora)}, ensure_ascii=False))
+            json.dumps({'nomes': backoffice.lista(), 'os': sorted(fora)}, ensure_ascii=False))
     return fora
 
 
