@@ -181,6 +181,29 @@ jobs:
           python gerar_pcm_json.py
           python gerar_etiquetas_json.py --bd "AUXILIAR - FABRICIO.xlsx"
 
+      # CONFIABILIDADE 1x POR DIA (24/11/2026). O confiabilidade.json (MTBF/MTTR por ativo, que o Relatório
+      # Executivo lê, no painel e no Nexus) era publicado por um script num PC; quando esse PC parou, o
+      # arquivo congelou de 08/10 a 23/11 e a seção 8 dizia "nenhuma falha" para qualquer semana nova.
+      # Aqui ele sai do mesmo cache que o motor acabou de ler (TTL de 10 min): nenhum pedido a mais ao
+      # Fracttal. Só gera se o publicado não é de hoje (UTC), e falhar não impede a publicação da semana.
+      - name: Gerar a confiabilidade (1x por dia, pelo cache do motor)
+        continue-on-error: true
+        env:
+          FRACTTAL_CLIENT_ID: ${{ secrets.FRACTTAL_CLIENT_ID }}
+          FRACTTAL_CLIENT_SECRET: ${{ secrets.FRACTTAL_CLIENT_SECRET }}
+          FRACTTAL_BASE_URL: https://app.fracttal.com/api/
+          PCM_PROG_DIR: ${{ github.workspace }}
+        run: |
+          HOJE=$(date -u +%Y-%m-%d)
+          FEITO=$(python3 -c "import json;print(str(json.load(open('confiabilidade.json',encoding='utf-8')).get('geradoEm',''))[:10])" 2>/dev/null || echo "")
+          if [ "$FEITO" = "$HOJE" ]; then
+            echo "A confiabilidade de hoje ja esta publicada ($FEITO)."; exit 0
+          fi
+          python gerar_confiabilidade_json.py
+          mkdir -p "$RUNNER_TEMP/confiabilidade"
+          cp confiabilidade.json "$RUNNER_TEMP/confiabilidade/"
+          echo "CONFIAB_NOVA=1" >> "$GITHUB_ENV"
+
       - name: Publicar banco_dados.json + etiquetas.json
         run: |
           rm -f "Lista_Prioridades_GridCo.xlsx" "Planilha Confiabilidade R00.xlsx"
@@ -188,6 +211,7 @@ jobs:
 
           GUARDA="$(mktemp -d)"
           cp banco_dados.json etiquetas.json "$GUARDA/"
+          if [ "${CONFIAB_NOVA:-0}" = "1" ]; then cp "$RUNNER_TEMP/confiabilidade/confiabilidade.json" "$GUARDA/"; fi
 
           # Impressão digital do conteúdo REAL: os dois arquivos, sem o carimbo de hora.
           NOVO=$(python3 - <<'PY'
@@ -247,6 +271,12 @@ jobs:
               echo "$NOVO" > _semanal_hash.txt
               git add banco_dados.json etiquetas.json _semanal_hash.txt _robo_pulso.json
               ACAO="dados novos (hash ${NOVO:0:8})"
+            fi
+            # a confiabilidade do dia vai no mesmo commit, com o dado da semana mudado ou não
+            if [ -f "$GUARDA/confiabilidade.json" ]; then
+              cp "$GUARDA/confiabilidade.json" .
+              git add confiabilidade.json
+              ACAO="$ACAO + confiabilidade do dia"
             fi
 
             if git diff --cached --quiet; then

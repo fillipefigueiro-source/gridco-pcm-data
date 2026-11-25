@@ -612,10 +612,10 @@ O publicador não identificado (ver HANDOVER) parou: último `chore: refresh con
 (e o `mpas.json` em 09/10). A aba Confiabilidade mostrava "atualizado 08/10" e a seção 8 do relatório interno
 dizia "Nenhuma falha nesta usina dentro do período" para qualquer semana depois de 07/10 — o recorte do período
 filtra as falhas pelo `inicio`, e o arquivo não tinha nenhuma.
-**Correção:** regenerado à mão em 23/11. O passo diário no `semanal.yml` (1x por dia, reusando o cache da API do
-motor) está pronto no checkout, mas **não subiu**: o token do `.env` não tem o escopo `workflow`, e o GitHub recusa
-qualquer push que mexa em `.github/workflows/`. Precisa de um token com esse escopo ou da edição pelo site do GitHub.
-Até lá o arquivo envelhece de novo — regenere com `python gerar_confiabilidade_json.py` e publique.
+**Correção:** regenerado à mão em 23/11; desde 24/11 o passo "Gerar a confiabilidade" do `semanal.yml` gera 1x por
+dia (UTC, quando o publicado não é de hoje), pelo cache que o motor acabou de ler (nenhum pedido a mais ao Fracttal),
+e o publica no mesmo commit do banco. `continue-on-error`: se falhar, a semana publica do mesmo jeito e o arquivo
+fica com a data de ontem (o `geradoEm` diz). Subiu pelo token do `gh` com o escopo `workflow`.
 O `mpas.json` continua sem publicador — segue a regra do `--so-gerar`.
 
 ### Preventiva nunca é "fora do plano" (16/11/2026)
