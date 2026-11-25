@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-25T11:04:33Z",
+  "geradoEm": "2026-11-25T11:55:33Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-23 .. 2026-11-29",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6580,
-        "emAberto": 65,
-        "atrasadas": 61,
-        "concluidas30d": 897,
-        "concluidas7d": 227,
-        "naSemanaCorrente": 83
+        "total": 6582,
+        "emAberto": 63,
+        "atrasadas": 59,
+        "concluidas30d": 901,
+        "concluidas7d": 231,
+        "naSemanaCorrente": 85
       },
       "mttr": {
-        "horas": 7.43,
-        "label": "7h 26min",
-        "amostra": 897
+        "horas": 7.45,
+        "label": "7h 27min",
+        "amostra": 901
       },
       "tendencia4Semanas": [
         {
@@ -38,22 +38,22 @@
         },
         {
           "semana": "W48",
-          "criadas": 83,
-          "finalizadas": 77
+          "criadas": 85,
+          "finalizadas": 81
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6580,
-            "emAberto": 65
+            "total": 6582,
+            "emAberto": 63
           }
         ],
         "responsaveis": [
           {
             "nome": "Raphael Vitoriano",
-            "total": 797,
+            "total": 798,
             "emAberto": 2
           },
           {
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 65,
-      "atrasadas": 61,
+      "total": 63,
+      "atrasadas": 59,
       "porStatus": {
-        "naoIniciada": 55,
-        "emProgresso": 0,
+        "naoIniciada": 52,
+        "emProgresso": 1,
         "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 65
+        "(sem equipe)": 63
       },
       "oss": [
         {
@@ -1108,42 +1108,6 @@
           "atrasada": true
         },
         {
-          "osId": "20374",
-          "ativo": "Cabine 4 Reserva do Iguaçu, rua principal S/N - PR. Reserva do Iguaçu  Paraná Brasil { THPN-SGD100-CABN4 }",
-          "equipe": "",
-          "responsavel": "Pedro Silvério ",
-          "criadoPor": "Juliana Rogério ",
-          "supervisor": "Pedro Silvério ",
-          "status": "Não Iniciada",
-          "tarefa": "[Cabine 4] - Religamento da Cabine 4",
-          "criticidade": "",
-          "dataProgramada": "2026-11-24",
-          "dataCriacao": "2026-11-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
-          "osId": "20370",
-          "ativo": "Inversor 5.7 Huawei SUN2000-100KTL-H1    { MAB200-INVR5.7 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Rúben Nunes da Silva ",
-          "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
-          "tarefa": "[MAB200-INVR5.7] - Religamento do MAB200-INVR5.7",
-          "criticidade": "",
-          "dataProgramada": "2026-11-24",
-          "dataCriacao": "2026-11-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "20348",
           "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
           "equipe": "",
@@ -1205,14 +1169,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Raphael Vitoriano ",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
           "criticidade": "",
           "dataProgramada": "2026-11-25",
           "dataCriacao": "2026-11-25",
-          "dataInicial": "",
+          "dataInicial": "2026-11-25",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -1272,6 +1237,46 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "20374",
+          "ativo": "Cabine 4 Reserva do Iguaçu, rua principal S/N - PR. Reserva do Iguaçu  Paraná Brasil { THPN-SGD100-CABN4 }",
+          "equipe": "",
+          "responsavel": "Pedro Silvério ",
+          "criadoPor": "Juliana Rogério ",
+          "supervisor": "Pedro Silvério ",
+          "status": "Finalizados",
+          "tarefa": "[Cabine 4] - Religamento da Cabine 4",
+          "criticidade": "",
+          "dataProgramada": "2026-11-24",
+          "dataCriacao": "2026-11-24",
+          "dataInicial": "2026-11-25",
+          "dataFinal": "2026-11-25",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "20370",
+          "ativo": "Inversor 5.7 Huawei SUN2000-100KTL-H1    { MAB200-INVR5.7 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Rúben Nunes da Silva ",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "[MAB200-INVR5.7] - Religamento do MAB200-INVR5.7",
+          "criticidade": "",
+          "dataProgramada": "2026-11-24",
+          "dataCriacao": "2026-11-24",
+          "dataInicial": "2026-11-25",
+          "dataFinal": "2026-11-25",
+          "linkFracttal": "",
+          "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "20321",
           "ativo": "Inversor 1.4 Huawei     { THPN-NVL100-INVR1.4 }",
@@ -4231,54 +4236,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13687",
-          "ativo": "Cabine 6  Capitão Poço  Pará Brasil { CPP100-CABN6 }",
-          "equipe": "",
-          "responsavel": "Raphael Vitoriano ",
-          "criadoPor": "Raphael Vitoriano ",
-          "supervisor": "Raphael Vitoriano ",
-          "status": "Finalizados",
-          "tarefa": "[Cabine 6] - Religamento da Cabine 6",
-          "criticidade": "",
-          "dataProgramada": "2026-09-16",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-15",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 24.0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "13676",
-          "ativo": "Inversor 1.6 Huawei SUN2000-215KTL-H0    { MRO100-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Frank  Melo",
-          "criadoPor": "Raphael Vitoriano",
-          "supervisor": "Frank  Melo",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.6] - Religamento do Inversor 1.6",
-          "criticidade": "",
-          "dataProgramada": "2026-09-16",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2628,
+      "historicoTotal": 2632,
       "subClassificacao": {
         "remoto": 760,
-        "local": 5820,
+        "local": 5822,
         "remotoEmAberto": 2,
-        "localEmAberto": 63,
+        "localEmAberto": 61,
         "pctRemoto": 12,
         "alerta": true
       },
@@ -4500,8 +4465,8 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 1066,
-        "emAberto": 98,
+        "total": 1075,
+        "emAberto": 107,
         "atrasadas": 75,
         "concluidas30d": 119,
         "concluidas7d": 22,
@@ -4530,7 +4495,7 @@
         },
         {
           "semana": "W48",
-          "criadas": 15,
+          "criadas": 24,
           "finalizadas": 17
         }
       ],
@@ -4538,8 +4503,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 1066,
-            "emAberto": 98
+            "total": 1075,
+            "emAberto": 107
           }
         ],
         "responsaveis": [
@@ -4570,16 +4535,16 @@
           }
         ]
       },
-      "total": 98,
+      "total": 107,
       "atrasadas": 75,
       "porStatus": {
-        "naoIniciada": 87,
+        "naoIniciada": 96,
         "emProgresso": 1,
         "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 98
+        "(sem equipe)": 107
       },
       "oss": [
         {
@@ -6022,6 +5987,23 @@
           "atrasada": false
         },
         {
+          "osId": "20429",
+          "ativo": "Cabine 1  Guaratinguetá  São Paulo Brasil { GTA500-CABN1 }",
+          "equipe": "",
+          "responsavel": "Henri Almeida ",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Henri Almeida ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-12-02",
+          "dataCriacao": "2026-11-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "20375",
           "ativo": "Preventiva Grupo de Inversores      { THPN-GYT100-PGINVR1 }",
           "equipe": "",
@@ -6039,6 +6021,74 @@
           "atrasada": false
         },
         {
+          "osId": "20436",
+          "ativo": "Cabine 1  Poconé  Mato Grosso Brasil { PCN100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Adriano  Moraes",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Adriano  Moraes",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-12-07",
+          "dataCriacao": "2026-11-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "20435",
+          "ativo": "QGBT 1 Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR100-QGBT1 }",
+          "equipe": "",
+          "responsavel": "Leonardo  Dias",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Leonardo  Dias",
+          "status": "Não Iniciada",
+          "tarefa": "[GreenYellow] - MPT - QGBT",
+          "criticidade": "",
+          "dataProgramada": "2026-12-07",
+          "dataCriacao": "2026-11-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "20443",
+          "ativo": "QGBT 1 Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { STN100-QGBT1 }",
+          "equipe": "",
+          "responsavel": "Carlos Bruno  Pessanha Pereira",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Carlos Bruno  Pessanha Pereira",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - QGBT",
+          "criticidade": "",
+          "dataProgramada": "2026-12-08",
+          "dataCriacao": "2026-11-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "20439",
+          "ativo": "Transformador 3      { THPN-RDR200-TRFR3 }",
+          "equipe": "",
+          "responsavel": "Valdério Paz ",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Valdério Paz ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-12-08",
+          "dataCriacao": "2026-11-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "20390",
           "ativo": "Preventiva Grupo de Inversores 1      { THOPEN-ITA100-PGINVR1 }",
           "equipe": "",
@@ -6047,23 +6097,6 @@
           "supervisor": "Cleiton  Farias",
           "status": "Não Iniciada",
           "tarefa": "[Grid Co.] - MPM - Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-12-08",
-          "dataCriacao": "2026-11-24",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "20383",
-          "ativo": "Transformador 1      { GTA500-TRFR1 }",
-          "equipe": "",
-          "responsavel": "Henri Almeida ",
-          "criadoPor": "Milena Araújo",
-          "supervisor": "Henri Almeida ",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPA - Transformador (diurno)",
           "criticidade": "",
           "dataProgramada": "2026-12-08",
           "dataCriacao": "2026-11-24",
@@ -6101,6 +6134,40 @@
           "criticidade": "",
           "dataProgramada": "2026-12-08",
           "dataCriacao": "2026-11-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "20438",
+          "ativo": "QGBT 1 Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR200-QGBT1 }",
+          "equipe": "",
+          "responsavel": "Leonardo  Dias",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Leonardo  Dias",
+          "status": "Não Iniciada",
+          "tarefa": "[GreenYellow] - MPT - QGBT",
+          "criticidade": "",
+          "dataProgramada": "2026-12-09",
+          "dataCriacao": "2026-11-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "20431",
+          "ativo": "Transformador 1      { THPN-PRV100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Matheus Gois ",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Matheus Gois ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-12-09",
+          "dataCriacao": "2026-11-25",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -6158,6 +6225,40 @@
           "atrasada": false
         },
         {
+          "osId": "20441",
+          "ativo": "Preventiva Grupo de Inversores      { THPN-STR100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Júlio Willers ",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Júlio Willers ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-12-14",
+          "dataCriacao": "2026-11-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "20434",
+          "ativo": "Cabine 1 Rodovia, 01 – Zona Rural Parelhas  Rio Grande do Norte Brasil { PRL100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Cláudio  Silva",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Cláudio  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+          "criticidade": "",
+          "dataProgramada": "2026-12-14",
+          "dataCriacao": "2026-11-25",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "20397",
           "ativo": "Cabine 1  Caçapava  São Paulo Brasil { MRJ100-CABN1 }",
           "equipe": "",
@@ -6169,6 +6270,23 @@
           "criticidade": "",
           "dataProgramada": "2026-12-14",
           "dataCriacao": "2026-11-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "20430",
+          "ativo": "Nobreak 1      { THPN-NVL100-NBRK1 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Nobreak e Banco de Baterias",
+          "criticidade": "",
+          "dataProgramada": "2026-12-15",
+          "dataCriacao": "2026-11-25",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -10518,16 +10636,16 @@
       "cor": "#8b5cf6",
       "kpis": {
         "total": 1170,
-        "emAberto": 98,
-        "atrasadas": 79,
-        "concluidas30d": 201,
-        "concluidas7d": 27,
+        "emAberto": 97,
+        "atrasadas": 78,
+        "concluidas30d": 202,
+        "concluidas7d": 28,
         "naSemanaCorrente": 50
       },
       "mttr": {
-        "horas": 155.1,
-        "label": "6d 11h",
-        "amostra": 201
+        "horas": 156.83,
+        "label": "6d 12h",
+        "amostra": 202
       },
       "tendencia4Semanas": [
         {
@@ -10548,7 +10666,7 @@
         {
           "semana": "W48",
           "criadas": 46,
-          "finalizadas": 10
+          "finalizadas": 11
         }
       ],
       "topOfensores": {
@@ -10556,7 +10674,7 @@
           {
             "nome": "(sem equipe)",
             "total": 1170,
-            "emAberto": 98
+            "emAberto": 97
           }
         ],
         "responsaveis": [
@@ -10573,7 +10691,7 @@
           {
             "nome": "James Chaves",
             "total": 63,
-            "emAberto": 8
+            "emAberto": 7
           },
           {
             "nome": "Felipe Xavier",
@@ -10587,16 +10705,16 @@
           }
         ]
       },
-      "total": 98,
-      "atrasadas": 79,
+      "total": 97,
+      "atrasadas": 78,
       "porStatus": {
-        "naoIniciada": 84,
+        "naoIniciada": 83,
         "emProgresso": 1,
         "pausada": 13,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 98
+        "(sem equipe)": 97
       },
       "oss": [
         {
@@ -10986,23 +11104,6 @@
           "supervisor": "Gilson  Milhomem",
           "status": "Não Iniciada",
           "tarefa": "[Tracker 50.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-11-06",
-          "dataCriacao": "2026-11-04",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "18504",
-          "ativo": "Tracker 15.105      { MAB200-ETKR15.105 }",
-          "equipe": "",
-          "responsavel": "James Chaves ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "James Chaves ",
-          "status": "Não Iniciada",
-          "tarefa": "[Tracker 15.105] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-11-06",
           "dataCriacao": "2026-11-04",
@@ -12317,6 +12418,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 168.0,
           "horasAteFechar": 24.0,
+          "atrasada": false
+        },
+        {
+          "osId": "18504",
+          "ativo": "Tracker 15.105      { MAB200-ETKR15.105 }",
+          "equipe": "",
+          "responsavel": "James Chaves ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "James Chaves ",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 15.105] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-11-06",
+          "dataCriacao": "2026-11-04",
+          "dataInicial": "2026-11-25",
+          "dataFinal": "2026-11-25",
+          "linkFracttal": "",
+          "horasAteAbrir": 504.0,
+          "horasAteFechar": 0,
           "atrasada": false
         },
         {
@@ -15037,25 +15157,6 @@
           "atrasada": false
         },
         {
-          "osId": "16832",
-          "ativo": "Inversor 1.6 Huawei     { ALLM-MRN100-INVR1.6 }",
-          "equipe": "",
-          "responsavel": "Cláudio  Ferreira",
-          "criadoPor": "Levi Maia ",
-          "supervisor": "Cláudio  Ferreira",
-          "status": "Finalizados",
-          "tarefa": "[Inversor 1.6] - Inspeção Geral do Inversor",
-          "criticidade": "",
-          "dataProgramada": "2026-10-20",
-          "dataCriacao": "2026-10-20",
-          "dataInicial": "2026-10-22",
-          "dataFinal": "2026-10-22",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "16932",
           "ativo": "Tracker 21.100      { STI100-ETKR21.100 }",
           "equipe": "",
@@ -15132,7 +15233,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 564
+      "historicoTotal": 565
     },
     "engenharia": {
       "label": "Engenharia",
@@ -17110,6 +17211,166 @@
   },
   "ossPublicas": [
     {
+      "osId": "20443",
+      "ativo": "QGBT 1 Avenida Alair Ferreira, S\\\\N Saturnino Braga  Rio de Janeiro Brasil { STN100-QGBT1 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - QGBT",
+      "criticidade": "",
+      "dataProgramada": "2026-12-08",
+      "dataCriacao": "2026-11-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20441",
+      "ativo": "Preventiva Grupo de Inversores      { THPN-STR100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Júlio Willers ",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Júlio Willers ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-12-14",
+      "dataCriacao": "2026-11-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20439",
+      "ativo": "Transformador 3      { THPN-RDR200-TRFR3 }",
+      "equipe": "",
+      "responsavel": "Valdério Paz ",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Valdério Paz ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-12-08",
+      "dataCriacao": "2026-11-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20438",
+      "ativo": "QGBT 1 Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR200-QGBT1 }",
+      "equipe": "",
+      "responsavel": "Leonardo  Dias",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Leonardo  Dias",
+      "status": "Não Iniciada",
+      "tarefa": "[GreenYellow] - MPT - QGBT",
+      "criticidade": "",
+      "dataProgramada": "2026-12-09",
+      "dataCriacao": "2026-11-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20436",
+      "ativo": "Cabine 1  Poconé  Mato Grosso Brasil { PCN100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Adriano  Moraes",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Adriano  Moraes",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-12-07",
+      "dataCriacao": "2026-11-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20435",
+      "ativo": "QGBT 1 Estrada Sitio Beliza, km 6, Distrito de Assunção Cedro  Ceará Brasil { CDR100-QGBT1 }",
+      "equipe": "",
+      "responsavel": "Leonardo  Dias",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Leonardo  Dias",
+      "status": "Não Iniciada",
+      "tarefa": "[GreenYellow] - MPT - QGBT",
+      "criticidade": "",
+      "dataProgramada": "2026-12-07",
+      "dataCriacao": "2026-11-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20434",
+      "ativo": "Cabine 1 Rodovia, 01 – Zona Rural Parelhas  Rio Grande do Norte Brasil { PRL100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Cláudio  Silva",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Cláudio  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-12-14",
+      "dataCriacao": "2026-11-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20431",
+      "ativo": "Transformador 1      { THPN-PRV100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Matheus Gois ",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Matheus Gois ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-12-09",
+      "dataCriacao": "2026-11-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20430",
+      "ativo": "Nobreak 1      { THPN-NVL100-NBRK1 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Nobreak e Banco de Baterias",
+      "criticidade": "",
+      "dataProgramada": "2026-12-15",
+      "dataCriacao": "2026-11-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20429",
+      "ativo": "Cabine 1  Guaratinguetá  São Paulo Brasil { GTA500-CABN1 }",
+      "equipe": "",
+      "responsavel": "Henri Almeida ",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Henri Almeida ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Cabine de Medição",
+      "criticidade": "",
+      "dataProgramada": "2026-12-02",
+      "dataCriacao": "2026-11-25",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "20426",
       "ativo": "Estação Meteorológica  Marialva  Paraná Brasil { MRV100-ESTM1 }",
       "equipe": "",
@@ -17132,14 +17393,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Raphael Vitoriano ",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Inversor 1.2] - Religamento do Inversor 1.2",
       "criticidade": "",
       "dataProgramada": "2026-11-25",
       "dataCriacao": "2026-11-25",
-      "dataInicial": "",
+      "dataInicial": "2026-11-25",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -17482,22 +17744,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "20383",
-      "ativo": "Transformador 1      { GTA500-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Henri Almeida ",
-      "criadoPor": "Milena Araújo",
-      "supervisor": "Henri Almeida ",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPA - Transformador (diurno)",
-      "criticidade": "",
-      "dataProgramada": "2026-12-08",
-      "dataCriacao": "2026-11-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "20382",
       "ativo": "Preventiva Grupo de Inversores      { THPN-FZL100-PGINVR1 }",
       "equipe": "",
@@ -17610,23 +17856,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "20374",
-      "ativo": "Cabine 4 Reserva do Iguaçu, rua principal S/N - PR. Reserva do Iguaçu  Paraná Brasil { THPN-SGD100-CABN4 }",
-      "equipe": "",
-      "responsavel": "Pedro Silvério ",
-      "criadoPor": "Juliana Rogério ",
-      "supervisor": "Pedro Silvério ",
-      "status": "Não Iniciada",
-      "tarefa": "[Cabine 4] - Religamento da Cabine 4",
-      "criticidade": "",
-      "dataProgramada": "2026-11-24",
-      "dataCriacao": "2026-11-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
-    },
-    {
       "osId": "20373",
       "ativo": "Inversor 2.9 Huawei SUN2000-100KTL-H1    { MAB200-INVR2.9 }",
       "equipe": "",
@@ -17674,23 +17903,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "20370",
-      "ativo": "Inversor 5.7 Huawei SUN2000-100KTL-H1    { MAB200-INVR5.7 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Rúben Nunes da Silva ",
-      "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
-      "tarefa": "[MAB200-INVR5.7] - Religamento do MAB200-INVR5.7",
-      "criticidade": "",
-      "dataProgramada": "2026-11-24",
-      "dataCriacao": "2026-11-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "20369",
@@ -20726,22 +20938,6 @@
       "modalidade": "local"
     },
     {
-      "osId": "18504",
-      "ativo": "Tracker 15.105      { MAB200-ETKR15.105 }",
-      "equipe": "",
-      "responsavel": "James Chaves ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "James Chaves ",
-      "status": "Não Iniciada",
-      "tarefa": "[Tracker 15.105] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-06",
-      "dataCriacao": "2026-11-04",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "18503",
       "ativo": "Tracker 2.105      { MAB200-ETKR2.105 }",
       "equipe": "",
@@ -22900,6 +23096,46 @@
       "dataFinal": "2026-11-24",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "20374",
+      "ativo": "Cabine 4 Reserva do Iguaçu, rua principal S/N - PR. Reserva do Iguaçu  Paraná Brasil { THPN-SGD100-CABN4 }",
+      "equipe": "",
+      "responsavel": "Pedro Silvério ",
+      "criadoPor": "Juliana Rogério ",
+      "supervisor": "Pedro Silvério ",
+      "status": "Finalizados",
+      "tarefa": "[Cabine 4] - Religamento da Cabine 4",
+      "criticidade": "",
+      "dataProgramada": "2026-11-24",
+      "dataCriacao": "2026-11-24",
+      "dataInicial": "2026-11-25",
+      "dataFinal": "2026-11-25",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "20370",
+      "ativo": "Inversor 5.7 Huawei SUN2000-100KTL-H1    { MAB200-INVR5.7 }",
+      "equipe": "",
+      "responsavel": "James Chaves ",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "James Chaves ",
+      "status": "Finalizados",
+      "tarefa": "[MAB200-INVR5.7] - Religamento do MAB200-INVR5.7",
+      "criticidade": "",
+      "dataProgramada": "2026-11-24",
+      "dataCriacao": "2026-11-24",
+      "dataInicial": "2026-11-25",
+      "dataFinal": "2026-11-25",
+      "linkFracttal": "",
+      "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -25122,48 +25358,10 @@
       "horasAteAbrir": 96.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "18787",
-      "ativo": "Tracker 90.100 STI Norland STI-H250 V05    { MCB100-ETKR90.100 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Valdério Paz ",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 90.100] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-09",
-      "dataCriacao": "2026-11-06",
-      "dataInicial": "2026-11-09",
-      "dataFinal": "2026-11-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "18786",
-      "ativo": "Tracker 89.100 STI Norland STI-H250 V05    { MCB100-ETKR89.100 }",
-      "equipe": "",
-      "responsavel": "Valdério Paz ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Valdério Paz ",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 89.100] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-09",
-      "dataCriacao": "2026-11-06",
-      "dataInicial": "2026-11-09",
-      "dataFinal": "2026-11-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3692,
-  "totalGeral": 9237,
+  "historicoTotal": 3697,
+  "totalGeral": 9248,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
