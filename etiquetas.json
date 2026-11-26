@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-26T17:05:03Z",
+  "geradoEm": "2026-11-26T18:15:58Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-23 .. 2026-11-29",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6620,
-        "emAberto": 62,
-        "atrasadas": 59,
-        "concluidas30d": 905,
-        "concluidas7d": 235,
-        "naSemanaCorrente": 123
+        "total": 6623,
+        "emAberto": 61,
+        "atrasadas": 58,
+        "concluidas30d": 909,
+        "concluidas7d": 239,
+        "naSemanaCorrente": 126
       },
       "mttr": {
-        "horas": 7.47,
-        "label": "7h 28min",
-        "amostra": 905
+        "horas": 7.59,
+        "label": "7h 36min",
+        "amostra": 909
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W48",
-          "criadas": 123,
-          "finalizadas": 116
+          "criadas": 126,
+          "finalizadas": 120
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6620,
-            "emAberto": 62
+            "total": 6623,
+            "emAberto": 61
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 62,
-      "atrasadas": 59,
+      "total": 61,
+      "atrasadas": 58,
       "porStatus": {
-        "naoIniciada": 50,
-        "emProgresso": 2,
-        "pausada": 10,
+        "naoIniciada": 48,
+        "emProgresso": 1,
+        "pausada": 12,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 62
+        "(sem equipe)": 61
       },
       "oss": [
         {
@@ -907,24 +907,6 @@
           "atrasada": true
         },
         {
-          "osId": "20064",
-          "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
-          "equipe": "",
-          "responsavel": "Gilson  Milhomem",
-          "criadoPor": "Maria Emanuella de Souza Mota ",
-          "supervisor": "Gilson  Milhomem",
-          "status": "Não Iniciada",
-          "tarefa": "[THPN-CAZ100] - Religamento do THPN-CAZ100",
-          "criticidade": "",
-          "dataProgramada": "2026-11-20",
-          "dataCriacao": "2026-11-20",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "20035",
           "ativo": "Inversor 1.2 Huawei SUN2000-330KTL-H1    { APR300-INVR1.2 }",
           "equipe": "",
@@ -1005,14 +987,15 @@
           "responsavel": "Gilson  Milhomem",
           "criadoPor": "Maria Emanuella de Souza Mota ",
           "supervisor": "Gilson  Milhomem",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[THPN-CAZ100] - Religamento do THPN-CAZ100",
           "criticidade": "",
           "dataProgramada": "2026-11-24",
           "dataCriacao": "2026-11-24",
-          "dataInicial": "",
+          "dataInicial": "2026-11-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "modalidade": "local",
           "atrasada": true
         },
@@ -1077,7 +1060,7 @@
           "responsavel": "Janderson Miranda ",
           "criadoPor": "ItaloLustosa",
           "supervisor": "Janderson Miranda ",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[THPN-CLN100-INVR3.7] - Religamento do THPN-CLN100-INVR3.7",
           "criticidade": "",
           "dataProgramada": "2026-11-25",
@@ -1206,7 +1189,7 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Rúben Nunes da Silva ",
           "supervisor": "Wesllen  Castro",
-          "status": "Em progresso",
+          "status": "pausado",
           "tarefa": "[2C-IPX100] - Religamento do 2C-IPX100",
           "criticidade": "",
           "dataProgramada": "2026-11-26",
@@ -1220,6 +1203,26 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "20620",
+          "ativo": "Cabine 1  Demerval Lobão  Piauí Brasil { DML100-CABN1 }",
+          "equipe": "",
+          "responsavel": "Ailton Leal ",
+          "criadoPor": "Rúben Nunes da Silva ",
+          "supervisor": "Ailton Leal ",
+          "status": "Finalizados",
+          "tarefa": "[DML100-CABN1] - Religamento do DML100-CABN1",
+          "criticidade": "",
+          "dataProgramada": "2026-11-26",
+          "dataCriacao": "2026-11-26",
+          "dataInicial": "2026-11-26",
+          "dataFinal": "2026-11-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
         {
           "osId": "20575",
           "ativo": "Cabine 1  Campos dos Goytacazes  Rio de Janeiro Brasil { FZL100-CABN1 }",
@@ -1256,6 +1259,26 @@
           "dataFinal": "2026-11-26",
           "linkFracttal": "",
           "horasAteAbrir": 24.0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "20064",
+          "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
+          "equipe": "",
+          "responsavel": "Gilson  Milhomem",
+          "criadoPor": "Maria Emanuella de Souza Mota ",
+          "supervisor": "Gilson  Milhomem",
+          "status": "Finalizados",
+          "tarefa": "[THPN-CAZ100] - Religamento do THPN-CAZ100",
+          "criticidade": "",
+          "dataProgramada": "2026-11-20",
+          "dataCriacao": "2026-11-20",
+          "dataInicial": "2026-11-26",
+          "dataFinal": "2026-11-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 144.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -4179,54 +4202,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13666",
-          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "13630",
-          "ativo": "Thopen - Santo Antônio da Platina 1 - PR Estrada Rural S/N, Zona Rural, (próximo à PR-439) Santo Antônio da Platina  Paraná Brasil { THPN-SAP100 }",
-          "equipe": "",
-          "responsavel": "Valdir Silva ",
-          "criadoPor": "CíceroWillian",
-          "supervisor": "Valdir Silva ",
-          "status": "Finalizados",
-          "tarefa": "[THPN-SAP100] - Religamento do THPN-SAP100",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-15",
-          "dataInicial": "2026-09-15",
-          "dataFinal": "2026-09-15",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2633,
+      "historicoTotal": 2637,
       "subClassificacao": {
         "remoto": 760,
-        "local": 5860,
+        "local": 5863,
         "remotoEmAberto": 2,
-        "localEmAberto": 60,
+        "localEmAberto": 59,
         "pctRemoto": 11,
         "alerta": true
       },
@@ -4448,17 +4431,17 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 1093,
-        "emAberto": 117,
-        "atrasadas": 74,
-        "concluidas30d": 121,
-        "concluidas7d": 28,
+        "total": 1098,
+        "emAberto": 121,
+        "atrasadas": 76,
+        "concluidas30d": 122,
+        "concluidas7d": 29,
         "naSemanaCorrente": 33
       },
       "mttr": {
-        "horas": 333.82,
-        "label": "13d 21h",
-        "amostra": 121
+        "horas": 331.48,
+        "label": "13d 19h",
+        "amostra": 122
       },
       "tendencia4Semanas": [
         {
@@ -4478,16 +4461,16 @@
         },
         {
           "semana": "W48",
-          "criadas": 42,
-          "finalizadas": 25
+          "criadas": 47,
+          "finalizadas": 26
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 1093,
-            "emAberto": 117
+            "total": 1098,
+            "emAberto": 121
           }
         ],
         "responsaveis": [
@@ -4497,12 +4480,12 @@
             "emAberto": 3
           },
           {
-            "nome": "Eduardo  Mendes",
-            "total": 37,
-            "emAberto": 6
+            "nome": "Felipe  Lima",
+            "total": 38,
+            "emAberto": 7
           },
           {
-            "nome": "Felipe  Lima",
+            "nome": "Eduardo  Mendes",
             "total": 37,
             "emAberto": 6
           },
@@ -4518,16 +4501,16 @@
           }
         ]
       },
-      "total": 117,
-      "atrasadas": 74,
+      "total": 121,
+      "atrasadas": 76,
       "porStatus": {
-        "naoIniciada": 107,
+        "naoIniciada": 111,
         "emProgresso": 1,
         "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 117
+        "(sem equipe)": 121
       },
       "oss": [
         {
@@ -4926,6 +4909,23 @@
           "atrasada": true
         },
         {
+          "osId": "20624",
+          "ativo": "Transformador 1 WEG     { THPN-BJD100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-11-09",
+          "dataCriacao": "2026-11-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": true
+        },
+        {
           "osId": "18073",
           "ativo": "Transformador 1 WEG     { THPN-VRT200-TRFR1 }",
           "equipe": "",
@@ -5027,6 +5027,23 @@
           "dataFinal": "",
           "linkFracttal": "",
           "horasAteAbrir": 48.0,
+          "atrasada": true
+        },
+        {
+          "osId": "20626",
+          "ativo": "Infraestrutura Civil  Ipixuna  Pará Brasil { IPX100-INFC1 }",
+          "equipe": "",
+          "responsavel": "Wesllen  Castro",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Wesllen  Castro",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Infraestrutura",
+          "criticidade": "",
+          "dataProgramada": "2026-11-12",
+          "dataCriacao": "2026-11-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
           "atrasada": true
         },
         {
@@ -6224,6 +6241,23 @@
           "atrasada": false
         },
         {
+          "osId": "20623",
+          "ativo": "Sistema de Segurança UFV Solier Cascavel, Jacarecoara, Cascavel-CE Cascavel  Ceará Brasil { CSC100-SSEG1 }",
+          "equipe": "",
+          "responsavel": "Adriano Silva ",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Adriano Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Qair] - MPM - Sistema CFTV",
+          "criticidade": "",
+          "dataProgramada": "2026-12-09",
+          "dataCriacao": "2026-11-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
           "osId": "20445",
           "ativo": "Transformador 1 WEG     { THPN-TPZ100-TRFR1 }",
           "equipe": "",
@@ -6269,23 +6303,6 @@
           "criticidade": "",
           "dataProgramada": "2026-12-09",
           "dataCriacao": "2026-11-25",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": false
-        },
-        {
-          "osId": "20386",
-          "ativo": "Transformador 3 WEG     { THPN-INP100-TRFR3 }",
-          "equipe": "",
-          "responsavel": "Ricardo Silva ",
-          "criadoPor": "Milena Araújo",
-          "supervisor": "Ricardo Silva ",
-          "status": "Não Iniciada",
-          "tarefa": "[Grid Co.] - MPM - Transformador Aéreo",
-          "criticidade": "",
-          "dataProgramada": "2026-12-09",
-          "dataCriacao": "2026-11-24",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -6354,6 +6371,23 @@
           "criticidade": "",
           "dataProgramada": "2026-12-11",
           "dataCriacao": "2026-11-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "20625",
+          "ativo": "Preventiva Grupo de Inversores      { THPN-IND100-PGINVR1 }",
+          "equipe": "",
+          "responsavel": "Felipe  Lima",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Felipe  Lima",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Inversor",
+          "criticidade": "",
+          "dataProgramada": "2026-12-14",
+          "dataCriacao": "2026-11-26",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -6439,6 +6473,23 @@
           "criticidade": "",
           "dataProgramada": "2026-12-15",
           "dataCriacao": "2026-11-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "20627",
+          "ativo": "Transformador 1 GAZQUEZ     { THPN-NVL200-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Ronaldo  Silva",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Ronaldo  Silva",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-12-22",
+          "dataCriacao": "2026-11-26",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -6531,6 +6582,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "20386",
+          "ativo": "Transformador 3 WEG     { THPN-INP100-TRFR3 }",
+          "equipe": "",
+          "responsavel": "Ricardo Silva ",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Ricardo Silva ",
+          "status": "Finalizados",
+          "tarefa": "[Grid Co.] - MPM - Transformador Aéreo",
+          "criticidade": "",
+          "dataProgramada": "2026-12-09",
+          "dataCriacao": "2026-11-24",
+          "dataInicial": "2026-11-26",
+          "dataFinal": "2026-11-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "20362",
           "ativo": "Transformador 1      { MRJ100-TRFR1 }",
@@ -8052,25 +8122,6 @@
           "atrasada": false
         },
         {
-          "osId": "15138",
-          "ativo": "Nobreak 1      { THPN-NVL100-NBRK1 }",
-          "equipe": "",
-          "responsavel": "Ronaldo  Silva",
-          "criadoPor": "Milena Araújo",
-          "supervisor": "Ronaldo  Silva",
-          "status": "Finalizados",
-          "tarefa": "[Grid Co.] - MPM - Nobreak e Banco de Baterias",
-          "criticidade": "",
-          "dataProgramada": "2026-10-07",
-          "dataCriacao": "2026-10-01",
-          "dataInicial": "2026-11-04",
-          "dataFinal": "2026-11-04",
-          "linkFracttal": "",
-          "horasAteAbrir": 816.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "18022",
           "ativo": "Transformador 1 WEG     { APG100-TRFR1 }",
           "equipe": "",
@@ -9382,7 +9433,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 375
+      "historicoTotal": 376
     },
     "chamadosGarantia": {
       "label": "Chamados em Garantia",
@@ -10751,17 +10802,17 @@
       "icone": "ti-chart-line",
       "cor": "#8b5cf6",
       "kpis": {
-        "total": 1185,
-        "emAberto": 88,
-        "atrasadas": 80,
-        "concluidas30d": 218,
-        "concluidas7d": 45,
-        "naSemanaCorrente": 63
+        "total": 1186,
+        "emAberto": 86,
+        "atrasadas": 77,
+        "concluidas30d": 221,
+        "concluidas7d": 48,
+        "naSemanaCorrente": 64
       },
       "mttr": {
-        "horas": 155.12,
+        "horas": 155.95,
         "label": "6d 11h",
-        "amostra": 218
+        "amostra": 221
       },
       "tendencia4Semanas": [
         {
@@ -10781,28 +10832,28 @@
         },
         {
           "semana": "W48",
-          "criadas": 62,
-          "finalizadas": 35
+          "criadas": 63,
+          "finalizadas": 38
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 1185,
-            "emAberto": 88
+            "total": 1186,
+            "emAberto": 86
           }
         ],
         "responsaveis": [
           {
             "nome": "Gilson Souza",
             "total": 86,
-            "emAberto": 6
+            "emAberto": 5
           },
           {
             "nome": "Luiz  Silva",
             "total": 81,
-            "emAberto": 18
+            "emAberto": 17
           },
           {
             "nome": "James Chaves",
@@ -10821,16 +10872,16 @@
           }
         ]
       },
-      "total": 88,
-      "atrasadas": 80,
+      "total": 86,
+      "atrasadas": 77,
       "porStatus": {
-        "naoIniciada": 74,
-        "emProgresso": 1,
-        "pausada": 13,
+        "naoIniciada": 71,
+        "emProgresso": 4,
+        "pausada": 11,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 88
+        "(sem equipe)": 86
       },
       "oss": [
         {
@@ -11103,23 +11154,6 @@
           "criticidade": "",
           "dataProgramada": "2026-11-01",
           "dataCriacao": "2026-11-09",
-          "dataInicial": "",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "18533",
-          "ativo": "Inversor 2.9 Sungrow SG60KTL    { ADT100-INVR2.9 }",
-          "equipe": "",
-          "responsavel": "Paulo  Ribeiro",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Paulo  Ribeiro",
-          "status": "Não Iniciada",
-          "tarefa": "Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-11-04",
-          "dataCriacao": "2026-11-04",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -11785,14 +11819,15 @@
           "responsavel": "Luiz  Silva",
           "criadoPor": "Maria Luiza Oliveira",
           "supervisor": "Luiz  Silva",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 26.100] - Tracker 2.6.1 Anexar evidências do inject e de acesso à TCU",
           "criticidade": "",
           "dataProgramada": "2026-11-23",
           "dataCriacao": "2026-11-23",
-          "dataInicial": "",
+          "dataInicial": "2026-11-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 72.0,
           "atrasada": true
         },
         {
@@ -11844,24 +11879,6 @@
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
-          "atrasada": true
-        },
-        {
-          "osId": "20209",
-          "ativo": "Tracker 38.100 STI Norland     { TIM100-ETKR38.100 }",
-          "equipe": "",
-          "responsavel": "Luiz  Silva",
-          "criadoPor": "Maria Luiza Oliveira",
-          "supervisor": "Luiz  Silva",
-          "status": "pausado",
-          "tarefa": "[Tracker 38.100] - Tracker 3.8.3 Anexar evidências do inject e de acesso à TCU; informar se a TCU foi colocada em modo automático",
-          "criticidade": "",
-          "dataProgramada": "2026-11-23",
-          "dataCriacao": "2026-11-23",
-          "dataInicial": "2026-11-23",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
           "atrasada": true
         },
         {
@@ -12121,24 +12138,6 @@
           "atrasada": true
         },
         {
-          "osId": "20401",
-          "ativo": "Tracker 02.106 Brametal Bi-motor    { SMP100-ETKR2.106 }",
-          "equipe": "",
-          "responsavel": "Gilson Souza ",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Gilson Souza ",
-          "status": "pausado",
-          "tarefa": "[Tracker 02.106] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-11-25",
-          "dataCriacao": "2026-11-24",
-          "dataInicial": "2026-11-26",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "atrasada": true
-        },
-        {
           "osId": "20400",
           "ativo": "Tracker 07.105 Brametal Bi-motor    { SMP100-ETKR7.105 }",
           "equipe": "",
@@ -12179,14 +12178,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 01.102] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-11-25",
           "dataCriacao": "2026-11-24",
-          "dataInicial": "",
+          "dataInicial": "2026-11-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -12196,14 +12196,15 @@
           "responsavel": "Gilson Souza ",
           "criadoPor": "Roger Lélis",
           "supervisor": "Gilson Souza ",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Tracker 16.103] - Verificação de Tracker Parado",
           "criticidade": "",
           "dataProgramada": "2026-11-25",
           "dataCriacao": "2026-11-24",
-          "dataInicial": "",
+          "dataInicial": "2026-11-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": true
         },
         {
@@ -12270,6 +12271,23 @@
           "criticidade": "",
           "dataProgramada": "2026-11-26",
           "dataCriacao": "2026-11-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "20629",
+          "ativo": "Estrutura Trackers R9RQ+GQ - Gravatá, PE Gravatá  Pernambuco Brasil { APOL-GVT200-ETKR1 }",
+          "equipe": "",
+          "responsavel": "Matheus Leite ",
+          "criadoPor": "Gabriela Dias",
+          "supervisor": "Matheus Leite ",
+          "status": "Não Iniciada",
+          "tarefa": "[Estrutura Trackers] - [APOL-GVT200][Trackers] - Verificar comunicação dos trackers",
+          "criticidade": "",
+          "dataProgramada": "2026-11-27",
+          "dataCriacao": "2026-11-26",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -12345,6 +12363,25 @@
         }
       ],
       "ossHistorico": [
+        {
+          "osId": "18533",
+          "ativo": "Inversor 2.9 Sungrow SG60KTL    { ADT100-INVR2.9 }",
+          "equipe": "",
+          "responsavel": "Paulo  Ribeiro",
+          "criadoPor": "Levi Maia",
+          "supervisor": "Paulo  Ribeiro",
+          "status": "Finalizados",
+          "tarefa": "Coleta de Dados de Geração",
+          "criticidade": "",
+          "dataProgramada": "2026-11-04",
+          "dataCriacao": "2026-11-04",
+          "dataInicial": "2026-11-26",
+          "dataFinal": "2026-11-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 528.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
         {
           "osId": "20594",
           "ativo": "Tracker 15.107 Brametal Bi-motor    { SMP100-ETKR15.107 }",
@@ -12422,6 +12459,25 @@
           "atrasada": false
         },
         {
+          "osId": "20401",
+          "ativo": "Tracker 02.106 Brametal Bi-motor    { SMP100-ETKR2.106 }",
+          "equipe": "",
+          "responsavel": "Gilson Souza ",
+          "criadoPor": "Roger Lélis",
+          "supervisor": "Gilson Souza ",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 02.106] - Verificação de Tracker Parado",
+          "criticidade": "",
+          "dataProgramada": "2026-11-25",
+          "dataCriacao": "2026-11-24",
+          "dataInicial": "2026-11-26",
+          "dataFinal": "2026-11-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
+          "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
           "osId": "20392",
           "ativo": "Tracker 05.101 Brametal Bi-motor    { SMP100-ETKR5.101 }",
           "equipe": "",
@@ -12457,6 +12513,25 @@
           "linkFracttal": "",
           "horasAteAbrir": 72.0,
           "horasAteFechar": 0,
+          "atrasada": false
+        },
+        {
+          "osId": "20209",
+          "ativo": "Tracker 38.100 STI Norland     { TIM100-ETKR38.100 }",
+          "equipe": "",
+          "responsavel": "Luiz  Silva",
+          "criadoPor": "Maria Luiza Oliveira",
+          "supervisor": "Luiz  Silva",
+          "status": "Finalizados",
+          "tarefa": "[Tracker 38.100] - Tracker 3.8.3 Anexar evidências do inject e de acesso à TCU; informar se a TCU foi colocada em modo automático",
+          "criticidade": "",
+          "dataProgramada": "2026-11-23",
+          "dataCriacao": "2026-11-23",
+          "dataInicial": "2026-11-23",
+          "dataFinal": "2026-11-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 0,
+          "horasAteFechar": 72.0,
           "atrasada": false
         },
         {
@@ -14854,25 +14929,6 @@
           "atrasada": false
         },
         {
-          "osId": "17353",
-          "ativo": "Inversor 1.4 Sungrow     { IND100-INVR1.4 }",
-          "equipe": "",
-          "responsavel": "Felipe  Lima",
-          "criadoPor": "Levi Maia",
-          "supervisor": "Felipe  Lima",
-          "status": "Finalizados",
-          "tarefa": "Recomposição de String",
-          "criticidade": "",
-          "dataProgramada": "2026-10-23",
-          "dataCriacao": "2026-10-23",
-          "dataInicial": "2026-10-29",
-          "dataFinal": "2026-10-30",
-          "linkFracttal": "",
-          "horasAteAbrir": 144.0,
-          "horasAteFechar": 24.0,
-          "atrasada": false
-        },
-        {
           "osId": "17900",
           "ativo": "Inversor 1.2 Huawei SUN2000-250KTL-H1    { 2C-UNI100-INVR1.2 }",
           "equipe": "",
@@ -15120,25 +15176,6 @@
           "atrasada": false
         },
         {
-          "osId": "17212",
-          "ativo": "Inversor 2.8 Huawei SUN2000-330KTL-H1    { GY-CDP100-INVR2.8 }",
-          "equipe": "",
-          "responsavel": "Railson Gomes ",
-          "criadoPor": "Ana Barros",
-          "supervisor": "Railson Gomes ",
-          "status": "Finalizados",
-          "tarefa": "Coleta de Dados de Geração",
-          "criticidade": "",
-          "dataProgramada": "2026-10-23",
-          "dataCriacao": "2026-10-22",
-          "dataInicial": "2026-10-26",
-          "dataFinal": "2026-10-26",
-          "linkFracttal": "",
-          "horasAteAbrir": 96.0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
           "osId": "17371",
           "ativo": "Inversor 1.8  Huawei | SUN2000-250KTL-H1    { APOL-GVT200-INVR1.8 }",
           "equipe": "",
@@ -15154,25 +15191,6 @@
           "dataFinal": "2026-10-23",
           "linkFracttal": "",
           "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "atrasada": false
-        },
-        {
-          "osId": "17203",
-          "ativo": "Tracker 122.100 STI Norland STI Norland Array    { 2C-IPX100-ETKR122.100 }",
-          "equipe": "",
-          "responsavel": "Wesllen  Castro",
-          "criadoPor": "Roger Lélis",
-          "supervisor": "Wesllen  Castro",
-          "status": "Finalizados",
-          "tarefa": "[Tracker 122.100] - Verificação de Tracker Parado",
-          "criticidade": "",
-          "dataProgramada": "2026-10-23",
-          "dataCriacao": "2026-10-22",
-          "dataInicial": "2026-10-23",
-          "dataFinal": "2026-10-23",
-          "linkFracttal": "",
-          "horasAteAbrir": 24.0,
           "horasAteFechar": 0,
           "atrasada": false
         },
@@ -15196,7 +15214,7 @@
           "atrasada": false
         }
       ],
-      "historicoTotal": 583
+      "historicoTotal": 586
     },
     "engenharia": {
       "label": "Engenharia",
@@ -17195,6 +17213,102 @@
   },
   "ossPublicas": [
     {
+      "osId": "20629",
+      "ativo": "Estrutura Trackers R9RQ+GQ - Gravatá, PE Gravatá  Pernambuco Brasil { APOL-GVT200-ETKR1 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Gabriela Dias",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Estrutura Trackers] - [APOL-GVT200][Trackers] - Verificar comunicação dos trackers",
+      "criticidade": "",
+      "dataProgramada": "2026-11-27",
+      "dataCriacao": "2026-11-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20627",
+      "ativo": "Transformador 1 GAZQUEZ     { THPN-NVL200-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Ronaldo  Silva",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Ronaldo  Silva",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-12-22",
+      "dataCriacao": "2026-11-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20626",
+      "ativo": "Infraestrutura Civil  Ipixuna  Pará Brasil { IPX100-INFC1 }",
+      "equipe": "",
+      "responsavel": "Wesllen  Castro",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Wesllen  Castro",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Infraestrutura",
+      "criticidade": "",
+      "dataProgramada": "2026-11-12",
+      "dataCriacao": "2026-11-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20625",
+      "ativo": "Preventiva Grupo de Inversores      { THPN-IND100-PGINVR1 }",
+      "equipe": "",
+      "responsavel": "Felipe  Lima",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Felipe  Lima",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Inversor",
+      "criticidade": "",
+      "dataProgramada": "2026-12-14",
+      "dataCriacao": "2026-11-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20624",
+      "ativo": "Transformador 1 WEG     { THPN-BJD100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Matheus Leite ",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Matheus Leite ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-11-09",
+      "dataCriacao": "2026-11-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20623",
+      "ativo": "Sistema de Segurança UFV Solier Cascavel, Jacarecoara, Cascavel-CE Cascavel  Ceará Brasil { CSC100-SSEG1 }",
+      "equipe": "",
+      "responsavel": "Adriano Silva ",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Adriano Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Qair] - MPM - Sistema CFTV",
+      "criticidade": "",
+      "dataProgramada": "2026-12-09",
+      "dataCriacao": "2026-11-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "20616",
       "ativo": "Thopen - Canarana 1 - MT MT-110, S/N, Zona Rural Canarana  Mato Grosso Brasil { THPN-CNN100 }",
       "equipe": "",
@@ -17236,7 +17350,7 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Rúben Nunes da Silva ",
       "supervisor": "Wesllen  Castro",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[2C-IPX100] - Religamento do 2C-IPX100",
       "criticidade": "",
       "dataProgramada": "2026-11-26",
@@ -17641,7 +17755,7 @@
       "responsavel": "Janderson Miranda ",
       "criadoPor": "ItaloLustosa",
       "supervisor": "Janderson Miranda ",
-      "status": "Em progresso",
+      "status": "pausado",
       "tarefa": "[THPN-CLN100-INVR3.7] - Religamento do THPN-CLN100-INVR3.7",
       "criticidade": "",
       "dataProgramada": "2026-11-25",
@@ -18043,23 +18157,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "20401",
-      "ativo": "Tracker 02.106 Brametal Bi-motor    { SMP100-ETKR2.106 }",
-      "equipe": "",
-      "responsavel": "Gilson Souza ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Gilson Souza ",
-      "status": "pausado",
-      "tarefa": "[Tracker 02.106] - Verificação de Tracker Parado",
-      "criticidade": "",
-      "dataProgramada": "2026-11-25",
-      "dataCriacao": "2026-11-24",
-      "dataInicial": "2026-11-26",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0
-    },
-    {
       "osId": "20400",
       "ativo": "Tracker 07.105 Brametal Bi-motor    { SMP100-ETKR7.105 }",
       "equipe": "",
@@ -18114,14 +18211,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 01.102] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-11-25",
       "dataCriacao": "2026-11-24",
-      "dataInicial": "",
+      "dataInicial": "2026-11-26",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "20395",
@@ -18130,14 +18228,15 @@
       "responsavel": "Gilson Souza ",
       "criadoPor": "Roger Lélis",
       "supervisor": "Gilson Souza ",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 16.103] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-11-25",
       "dataCriacao": "2026-11-24",
-      "dataInicial": "",
+      "dataInicial": "2026-11-26",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "20393",
@@ -18182,22 +18281,6 @@
       "tarefa": "[Grid Co.] - MPM - Inversor",
       "criticidade": "",
       "dataProgramada": "2026-12-08",
-      "dataCriacao": "2026-11-24",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
-      "osId": "20386",
-      "ativo": "Transformador 3 WEG     { THPN-INP100-TRFR3 }",
-      "equipe": "",
-      "responsavel": "Ricardo Silva ",
-      "criadoPor": "Milena Araújo",
-      "supervisor": "Ricardo Silva ",
-      "status": "Não Iniciada",
-      "tarefa": "[Grid Co.] - MPM - Transformador Aéreo",
-      "criticidade": "",
-      "dataProgramada": "2026-12-09",
       "dataCriacao": "2026-11-24",
       "dataInicial": "",
       "dataFinal": "",
@@ -18370,14 +18453,15 @@
       "responsavel": "Gilson  Milhomem",
       "criadoPor": "Maria Emanuella de Souza Mota ",
       "supervisor": "Gilson  Milhomem",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[THPN-CAZ100] - Religamento do THPN-CAZ100",
       "criticidade": "",
       "dataProgramada": "2026-11-24",
       "dataCriacao": "2026-11-24",
-      "dataInicial": "",
+      "dataInicial": "2026-11-26",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 48.0,
       "modalidade": "local"
     },
     {
@@ -18646,14 +18730,15 @@
       "responsavel": "Luiz  Silva",
       "criadoPor": "Maria Luiza Oliveira",
       "supervisor": "Luiz  Silva",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Tracker 26.100] - Tracker 2.6.1 Anexar evidências do inject e de acesso à TCU",
       "criticidade": "",
       "dataProgramada": "2026-11-23",
       "dataCriacao": "2026-11-23",
-      "dataInicial": "",
+      "dataInicial": "2026-11-26",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 72.0
     },
     {
       "osId": "20214",
@@ -18702,23 +18787,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "20209",
-      "ativo": "Tracker 38.100 STI Norland     { TIM100-ETKR38.100 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Luiz  Silva",
-      "status": "pausado",
-      "tarefa": "[Tracker 38.100] - Tracker 3.8.3 Anexar evidências do inject e de acesso à TCU; informar se a TCU foi colocada em modo automático",
-      "criticidade": "",
-      "dataProgramada": "2026-11-23",
-      "dataCriacao": "2026-11-23",
-      "dataInicial": "2026-11-23",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0
     },
     {
       "osId": "20197",
@@ -18834,23 +18902,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "20064",
-      "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
-      "equipe": "",
-      "responsavel": "Gilson  Milhomem",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Gilson  Milhomem",
-      "status": "Não Iniciada",
-      "tarefa": "[THPN-CAZ100] - Religamento do THPN-CAZ100",
-      "criticidade": "",
-      "dataProgramada": "2026-11-20",
-      "dataCriacao": "2026-11-20",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "modalidade": "local"
     },
     {
       "osId": "20056",
@@ -20838,22 +20889,6 @@
       "linkFracttal": ""
     },
     {
-      "osId": "18533",
-      "ativo": "Inversor 2.9 Sungrow SG60KTL    { ADT100-INVR2.9 }",
-      "equipe": "",
-      "responsavel": "Paulo  Ribeiro",
-      "criadoPor": "Levi Maia",
-      "supervisor": "Paulo  Ribeiro",
-      "status": "Não Iniciada",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-11-04",
-      "dataCriacao": "2026-11-04",
-      "dataInicial": "",
-      "dataFinal": "",
-      "linkFracttal": ""
-    },
-    {
       "osId": "18527",
       "ativo": "Estrutura Trackers Rua Bom Jesus, S/N Marabá  Pará Brasil { MAB100-ETKR1 }",
       "equipe": "",
@@ -22407,6 +22442,25 @@
   ],
   "ossHistorico": [
     {
+      "osId": "20386",
+      "ativo": "Transformador 3 WEG     { THPN-INP100-TRFR3 }",
+      "equipe": "",
+      "responsavel": "Ricardo Silva ",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Ricardo Silva ",
+      "status": "Finalizados",
+      "tarefa": "[Grid Co.] - MPM - Transformador Aéreo",
+      "criticidade": "",
+      "dataProgramada": "2026-12-09",
+      "dataCriacao": "2026-11-24",
+      "dataInicial": "2026-11-26",
+      "dataFinal": "2026-11-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
       "osId": "20362",
       "ativo": "Transformador 1      { MRJ100-TRFR1 }",
       "equipe": "",
@@ -22688,6 +22742,25 @@
       "dataFinal": "2026-11-26",
       "linkFracttal": "",
       "horasAteAbrir": 408.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "18533",
+      "ativo": "Inversor 2.9 Sungrow SG60KTL    { ADT100-INVR2.9 }",
+      "equipe": "",
+      "responsavel": "Paulo  Ribeiro",
+      "criadoPor": "Levi Maia",
+      "supervisor": "Paulo  Ribeiro",
+      "status": "Finalizados",
+      "tarefa": "Coleta de Dados de Geração",
+      "criticidade": "",
+      "dataProgramada": "2026-11-04",
+      "dataCriacao": "2026-11-04",
+      "dataInicial": "2026-11-26",
+      "dataFinal": "2026-11-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 528.0,
       "horasAteFechar": 0,
       "atrasada": false
     },
@@ -22996,6 +23069,26 @@
       "atrasada": false
     },
     {
+      "osId": "20620",
+      "ativo": "Cabine 1  Demerval Lobão  Piauí Brasil { DML100-CABN1 }",
+      "equipe": "",
+      "responsavel": "Ailton Leal ",
+      "criadoPor": "Rúben Nunes da Silva ",
+      "supervisor": "Ailton Leal ",
+      "status": "Finalizados",
+      "tarefa": "[DML100-CABN1] - Religamento do DML100-CABN1",
+      "criticidade": "",
+      "dataProgramada": "2026-11-26",
+      "dataCriacao": "2026-11-26",
+      "dataInicial": "2026-11-26",
+      "dataFinal": "2026-11-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "20594",
       "ativo": "Tracker 15.107 Brametal Bi-motor    { SMP100-ETKR15.107 }",
       "equipe": "",
@@ -23159,6 +23252,25 @@
       "supervisor": "Gilson Souza ",
       "status": "Finalizados",
       "tarefa": "[Tracker 08.106] - Verificação de Tracker Parado",
+      "criticidade": "",
+      "dataProgramada": "2026-11-25",
+      "dataCriacao": "2026-11-24",
+      "dataInicial": "2026-11-26",
+      "dataFinal": "2026-11-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "atrasada": false
+    },
+    {
+      "osId": "20401",
+      "ativo": "Tracker 02.106 Brametal Bi-motor    { SMP100-ETKR2.106 }",
+      "equipe": "",
+      "responsavel": "Gilson Souza ",
+      "criadoPor": "Roger Lélis",
+      "supervisor": "Gilson Souza ",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 02.106] - Verificação de Tracker Parado",
       "criticidade": "",
       "dataProgramada": "2026-11-25",
       "dataCriacao": "2026-11-24",
@@ -23455,6 +23567,25 @@
       "atrasada": false
     },
     {
+      "osId": "20209",
+      "ativo": "Tracker 38.100 STI Norland     { TIM100-ETKR38.100 }",
+      "equipe": "",
+      "responsavel": "Luiz  Silva",
+      "criadoPor": "Maria Luiza Oliveira",
+      "supervisor": "Luiz  Silva",
+      "status": "Finalizados",
+      "tarefa": "[Tracker 38.100] - Tracker 3.8.3 Anexar evidências do inject e de acesso à TCU; informar se a TCU foi colocada em modo automático",
+      "criticidade": "",
+      "dataProgramada": "2026-11-23",
+      "dataCriacao": "2026-11-23",
+      "dataInicial": "2026-11-23",
+      "dataFinal": "2026-11-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 72.0,
+      "atrasada": false
+    },
+    {
       "osId": "20204",
       "ativo": "Estação Meteorológica  Ponto Belo  Espírito Santo Brasil { PTB100-ESTM1 }",
       "equipe": "",
@@ -23508,6 +23639,26 @@
       "dataFinal": "2026-11-23",
       "linkFracttal": "",
       "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
+      "osId": "20064",
+      "ativo": "Thopen - Céu Azul 1 - PR LTS 74-1 74-2 Gleba 4, Imóvel Colônia São Francisco Santa Tereza do Oeste  Paraná Brasil { THPN-CAZ100 }",
+      "equipe": "",
+      "responsavel": "Gilson  Milhomem",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Gilson  Milhomem",
+      "status": "Finalizados",
+      "tarefa": "[THPN-CAZ100] - Religamento do THPN-CAZ100",
+      "criticidade": "",
+      "dataProgramada": "2026-11-20",
+      "dataCriacao": "2026-11-20",
+      "dataInicial": "2026-11-26",
+      "dataFinal": "2026-11-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 144.0,
       "horasAteFechar": 0,
       "modalidade": "local",
       "atrasada": false
@@ -25150,126 +25301,10 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "19023",
-      "ativo": "Inversor 1.3 Huawei SUN2000-215KTL-INHO    { THPN-CNN100-INVR1.3 }",
-      "equipe": "",
-      "responsavel": "Marcelo Lino de Souza ",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Marcelo Lino de Souza ",
-      "status": "Finalizados",
-      "tarefa": "[Inversor 1.3] - Inspeção Geral do Inversor",
-      "criticidade": "",
-      "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-11-09",
-      "dataInicial": "2026-11-10",
-      "dataFinal": "2026-11-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 24.0,
-      "atrasada": false
-    },
-    {
-      "osId": "19016",
-      "ativo": "Estação Meteorológica  Sete Lagoas  Minas Gerais Brasil { SLG200-ESTM1 }",
-      "equipe": "",
-      "responsavel": "Daniel de Paula ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Daniel de Paula ",
-      "status": "Finalizados",
-      "tarefa": "[Estação Meteorológica] - [UFV Sete Lagoas] - Coleta em campo dos dados da estação meteorológica",
-      "criticidade": "",
-      "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-11-09",
-      "dataInicial": "2026-11-10",
-      "dataFinal": "2026-11-16",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 144.0,
-      "atrasada": false
-    },
-    {
-      "osId": "19010",
-      "ativo": "Transformador 1 GAZQUEZ     { THPN-NVL200-TRFR1 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Transformador",
-      "criticidade": "",
-      "dataProgramada": "2026-11-24",
-      "dataCriacao": "2026-11-09",
-      "dataInicial": "2026-11-19",
-      "dataFinal": "2026-11-23",
-      "linkFracttal": "",
-      "horasAteAbrir": 240.0,
-      "horasAteFechar": 96.0,
-      "atrasada": false
-    },
-    {
-      "osId": "19009",
-      "ativo": "Nobreak 1      { THPN-NVL100-NBRK1 }",
-      "equipe": "",
-      "responsavel": "Ronaldo  Silva",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Ronaldo  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Grid Co.] - MPM - Nobreak e Banco de Baterias",
-      "criticidade": "",
-      "dataProgramada": "2026-11-17",
-      "dataCriacao": "2026-11-09",
-      "dataInicial": "2026-11-12",
-      "dataFinal": "2026-11-12",
-      "linkFracttal": "",
-      "horasAteAbrir": 72.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "18999",
-      "ativo": "Apolo - Rio do Peixe I e II - PB São João do Rio do Peixe, PB, 58910-000 São João do Rio do Peixe  Paraíba Brasil { APOL-RDP100 }",
-      "equipe": "",
-      "responsavel": "Caio da Silva Cordeiro ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Caio da Silva Cordeiro ",
-      "status": "Finalizados",
-      "tarefa": "[Usina] - [Rio do Peixe 1 e 2] - Religamento das usinas - Atuação da proteção 27 (ausência de grid da concessionária)",
-      "criticidade": "",
-      "dataProgramada": "2026-10-22",
-      "dataCriacao": "2026-11-09",
-      "dataInicial": "2026-11-09",
-      "dataFinal": "2026-11-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
-    },
-    {
-      "osId": "18997",
-      "ativo": "SKID 2 São João do Rio do Peixe, PB, 58910-000 São João do Rio do Peixe  Paraíba Brasil { APOL-RDP100-SKID2 }",
-      "equipe": "",
-      "responsavel": "Caio da Silva Cordeiro ",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Caio da Silva Cordeiro ",
-      "status": "Finalizados",
-      "tarefa": "[SKID 2] - [Rio do Peixe 1.2] - Religamento do disjuntor geral BT do SKID 1.2 - Atuação do circuito de alimentação do comando",
-      "criticidade": "",
-      "dataProgramada": "2026-10-20",
-      "dataCriacao": "2026-11-09",
-      "dataInicial": "2026-11-09",
-      "dataFinal": "2026-11-09",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "modalidade": "local",
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3711,
-  "totalGeral": 9320,
+  "historicoTotal": 3719,
+  "totalGeral": 9329,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
