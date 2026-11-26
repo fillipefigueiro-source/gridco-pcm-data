@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-26T20:10:42Z",
+  "geradoEm": "2026-11-26T21:10:36Z",
   "fonte": "BD_Relatorio Semanal.xlsx",
   "semana": "2026-11-23 .. 2026-11-29",
   "tipologias": {
@@ -8,17 +8,17 @@
       "icone": "ti-bolt",
       "cor": "#f59e0b",
       "kpis": {
-        "total": 6631,
-        "emAberto": 60,
-        "atrasadas": 55,
-        "concluidas30d": 918,
-        "concluidas7d": 248,
-        "naSemanaCorrente": 134
+        "total": 6634,
+        "emAberto": 58,
+        "atrasadas": 54,
+        "concluidas30d": 923,
+        "concluidas7d": 253,
+        "naSemanaCorrente": 137
       },
       "mttr": {
-        "horas": 7.39,
-        "label": "7h 23min",
-        "amostra": 918
+        "horas": 7.4,
+        "label": "7h 24min",
+        "amostra": 923
       },
       "tendencia4Semanas": [
         {
@@ -38,16 +38,16 @@
         },
         {
           "semana": "W48",
-          "criadas": 134,
-          "finalizadas": 128
+          "criadas": 137,
+          "finalizadas": 133
         }
       ],
       "topOfensores": {
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 6631,
-            "emAberto": 60
+            "total": 6634,
+            "emAberto": 58
           }
         ],
         "responsaveis": [
@@ -78,16 +78,16 @@
           }
         ]
       },
-      "total": 60,
-      "atrasadas": 55,
+      "total": 58,
+      "atrasadas": 54,
       "porStatus": {
-        "naoIniciada": 48,
+        "naoIniciada": 47,
         "emProgresso": 1,
-        "pausada": 11,
+        "pausada": 10,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 60
+        "(sem equipe)": 58
       },
       "oss": [
         {
@@ -981,25 +981,6 @@
           "atrasada": true
         },
         {
-          "osId": "20278",
-          "ativo": "RenoGrid - Nova Xavantina 1 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso  { RNGD-NVX100 }",
-          "equipe": "",
-          "responsavel": "Gabriel Oliveira ",
-          "criadoPor": "LucasNascimento",
-          "supervisor": "Gabriel Oliveira ",
-          "status": "Em progresso",
-          "tarefa": "[RNGD-NVX100] - Religamento do RNGD-NVX100",
-          "criticidade": "",
-          "dataProgramada": "2026-11-24",
-          "dataCriacao": "2026-11-24",
-          "dataInicial": "2026-11-26",
-          "dataFinal": "",
-          "linkFracttal": "",
-          "horasAteAbrir": 48.0,
-          "modalidade": "local",
-          "atrasada": true
-        },
-        {
           "osId": "20561",
           "ativo": "SKID 1 Sítio Nossa Senhora Salete, Estrada Vicinal Rural, S/N. Colíder  Mato Grosso Brasil { CLD100-SKID1 }",
           "equipe": "",
@@ -1098,14 +1079,15 @@
           "responsavel": "Wesllen  Castro",
           "criadoPor": "Rúben Nunes da Silva ",
           "supervisor": "Wesllen  Castro",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[2C-IPX100] - Religamento do 2C-IPX100",
           "criticidade": "",
           "dataProgramada": "2026-11-26",
           "dataCriacao": "2026-11-26",
-          "dataInicial": "",
+          "dataInicial": "2026-11-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 0,
           "modalidade": "local",
           "atrasada": false
         },
@@ -1162,7 +1144,9 @@
           "linkFracttal": "",
           "modalidade": "local",
           "atrasada": false
-        },
+        }
+      ],
+      "ossHistorico": [
         {
           "osId": "20581",
           "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
@@ -1170,20 +1154,19 @@
           "responsavel": "Carlos Bruno  Pessanha Pereira",
           "criadoPor": "Maria Emanuella de Souza Mota ",
           "supervisor": "Carlos Bruno  Pessanha Pereira",
-          "status": "pausado",
+          "status": "Finalizados",
           "tarefa": "[THPN-FZL100] - Religamento do THPN-FZL100",
           "criticidade": "",
           "dataProgramada": "2026-11-26",
           "dataCriacao": "2026-11-26",
           "dataInicial": "2026-11-26",
-          "dataFinal": "",
+          "dataFinal": "2026-11-26",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        }
-      ],
-      "ossHistorico": [
+        },
         {
           "osId": "20575",
           "ativo": "Cabine 1  Campos dos Goytacazes  Rio de Janeiro Brasil { FZL100-CABN1 }",
@@ -1220,6 +1203,26 @@
           "dataFinal": "2026-11-26",
           "linkFracttal": "",
           "horasAteAbrir": 0,
+          "horasAteFechar": 0,
+          "modalidade": "local",
+          "atrasada": false
+        },
+        {
+          "osId": "20278",
+          "ativo": "RenoGrid - Nova Xavantina 1 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso  { RNGD-NVX100 }",
+          "equipe": "",
+          "responsavel": "Gabriel Oliveira ",
+          "criadoPor": "LucasNascimento",
+          "supervisor": "Gabriel Oliveira ",
+          "status": "Finalizados",
+          "tarefa": "[RNGD-NVX100] - Religamento do RNGD-NVX100",
+          "criticidade": "",
+          "dataProgramada": "2026-11-24",
+          "dataCriacao": "2026-11-24",
+          "dataInicial": "2026-11-26",
+          "dataFinal": "2026-11-26",
+          "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
@@ -4143,54 +4146,14 @@
           "horasAteFechar": 0,
           "modalidade": "local",
           "atrasada": false
-        },
-        {
-          "osId": "13669",
-          "ativo": "Axis - Marialva 1 - PR  Marialva  Paraná Brasil { AXIS-MRV100 }",
-          "equipe": "",
-          "responsavel": "Marcos  Camargo",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Marcos  Camargo",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
-        },
-        {
-          "osId": "13666",
-          "ativo": "2C - Araputanga 1 - MT  Araputanga  Mato Grosso Brasil { 2C-APG100 }",
-          "equipe": "",
-          "responsavel": "Adriano  Moraes",
-          "criadoPor": "Lucas  Nascimento",
-          "supervisor": "Adriano  Moraes",
-          "status": "Finalizados",
-          "tarefa": "[Usina] - Religamento da Usina",
-          "criticidade": "",
-          "dataProgramada": "2026-09-15",
-          "dataCriacao": "2026-09-16",
-          "dataInicial": "2026-09-16",
-          "dataFinal": "2026-09-16",
-          "linkFracttal": "",
-          "horasAteAbrir": 0,
-          "horasAteFechar": 0,
-          "modalidade": "local",
-          "atrasada": false
         }
       ],
-      "historicoTotal": 2646,
+      "historicoTotal": 2651,
       "subClassificacao": {
         "remoto": 760,
-        "local": 5871,
+        "local": 5874,
         "remotoEmAberto": 2,
-        "localEmAberto": 58,
+        "localEmAberto": 56,
         "pctRemoto": 11,
         "alerta": true
       },
@@ -4412,8 +4375,8 @@
       "icone": "ti-tool",
       "cor": "#10b981",
       "kpis": {
-        "total": 1106,
-        "emAberto": 128,
+        "total": 1108,
+        "emAberto": 130,
         "atrasadas": 75,
         "concluidas30d": 123,
         "concluidas7d": 30,
@@ -4442,7 +4405,7 @@
         },
         {
           "semana": "W48",
-          "criadas": 55,
+          "criadas": 57,
           "finalizadas": 27
         }
       ],
@@ -4450,8 +4413,8 @@
         "clusters": [
           {
             "nome": "(sem equipe)",
-            "total": 1106,
-            "emAberto": 128
+            "total": 1108,
+            "emAberto": 130
           }
         ],
         "responsaveis": [
@@ -4482,16 +4445,16 @@
           }
         ]
       },
-      "total": 128,
+      "total": 130,
       "atrasadas": 75,
       "porStatus": {
-        "naoIniciada": 117,
-        "emProgresso": 2,
+        "naoIniciada": 118,
+        "emProgresso": 3,
         "pausada": 9,
         "verificacao": 0
       },
       "porEquipe": {
-        "(sem equipe)": 128
+        "(sem equipe)": 130
       },
       "oss": [
         {
@@ -5804,14 +5767,15 @@
           "responsavel": "Eduardo  Mendes",
           "criadoPor": "Davi Damasceno",
           "supervisor": "Eduardo  Mendes",
-          "status": "Não Iniciada",
+          "status": "Em progresso",
           "tarefa": "[Grid Co.] - MPA - Transformador (Noturno e ensaios)",
           "criticidade": "",
           "dataProgramada": "2026-11-28",
           "dataCriacao": "2026-11-24",
-          "dataInicial": "",
+          "dataInicial": "2026-11-26",
           "dataFinal": "",
           "linkFracttal": "",
+          "horasAteAbrir": 48.0,
           "atrasada": false
         },
         {
@@ -6404,6 +6368,40 @@
           "criticidade": "",
           "dataProgramada": "2026-12-11",
           "dataCriacao": "2026-11-24",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "20676",
+          "ativo": "Transformador de Potencial 2      { THPN-TGI100-TRTP2 }",
+          "equipe": "",
+          "responsavel": "Valdir Silva ",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Valdir Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-12-14",
+          "dataCriacao": "2026-11-26",
+          "dataInicial": "",
+          "dataFinal": "",
+          "linkFracttal": "",
+          "atrasada": false
+        },
+        {
+          "osId": "20675",
+          "ativo": "Transformador 1      { THPN-BDC100-TRFR1 }",
+          "equipe": "",
+          "responsavel": "Valdir Silva ",
+          "criadoPor": "Milena Araújo",
+          "supervisor": "Valdir Silva ",
+          "status": "Não Iniciada",
+          "tarefa": "[Grid Co.] - MPM - Transformador",
+          "criticidade": "",
+          "dataProgramada": "2026-12-14",
+          "dataCriacao": "2026-11-26",
           "dataInicial": "",
           "dataFinal": "",
           "linkFracttal": "",
@@ -17244,6 +17242,38 @@
   },
   "ossPublicas": [
     {
+      "osId": "20676",
+      "ativo": "Transformador de Potencial 2      { THPN-TGI100-TRTP2 }",
+      "equipe": "",
+      "responsavel": "Valdir Silva ",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Valdir Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-12-14",
+      "dataCriacao": "2026-11-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
+      "osId": "20675",
+      "ativo": "Transformador 1      { THPN-BDC100-TRFR1 }",
+      "equipe": "",
+      "responsavel": "Valdir Silva ",
+      "criadoPor": "Milena Araújo",
+      "supervisor": "Valdir Silva ",
+      "status": "Não Iniciada",
+      "tarefa": "[Grid Co.] - MPM - Transformador",
+      "criticidade": "",
+      "dataProgramada": "2026-12-14",
+      "dataCriacao": "2026-11-26",
+      "dataInicial": "",
+      "dataFinal": "",
+      "linkFracttal": ""
+    },
+    {
       "osId": "20668",
       "ativo": "Inversor 1.4 Huawei SUN2000-250KTL-H1    { THPN-BJD100-INVR1.4 }",
       "equipe": "",
@@ -17282,14 +17312,15 @@
       "responsavel": "Wesllen  Castro",
       "criadoPor": "Rúben Nunes da Silva ",
       "supervisor": "Wesllen  Castro",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[2C-IPX100] - Religamento do 2C-IPX100",
       "criticidade": "",
       "dataProgramada": "2026-11-26",
       "dataCriacao": "2026-11-26",
-      "dataInicial": "",
+      "dataInicial": "2026-11-26",
       "dataFinal": "",
       "linkFracttal": "",
+      "horasAteAbrir": 0,
       "modalidade": "local"
     },
     {
@@ -17582,24 +17613,6 @@
       "dataInicial": "",
       "dataFinal": "",
       "linkFracttal": ""
-    },
-    {
-      "osId": "20581",
-      "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
-      "equipe": "",
-      "responsavel": "Carlos Bruno  Pessanha Pereira",
-      "criadoPor": "Maria Emanuella de Souza Mota ",
-      "supervisor": "Carlos Bruno  Pessanha Pereira",
-      "status": "pausado",
-      "tarefa": "[THPN-FZL100] - Religamento do THPN-FZL100",
-      "criticidade": "",
-      "dataProgramada": "2026-11-26",
-      "dataCriacao": "2026-11-26",
-      "dataInicial": "2026-11-26",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "modalidade": "local"
     },
     {
       "osId": "20561",
@@ -18576,14 +18589,15 @@
       "responsavel": "Eduardo  Mendes",
       "criadoPor": "Davi Damasceno",
       "supervisor": "Eduardo  Mendes",
-      "status": "Não Iniciada",
+      "status": "Em progresso",
       "tarefa": "[Grid Co.] - MPA - Transformador (Noturno e ensaios)",
       "criticidade": "",
       "dataProgramada": "2026-11-28",
       "dataCriacao": "2026-11-24",
-      "dataInicial": "",
+      "dataInicial": "2026-11-26",
       "dataFinal": "",
-      "linkFracttal": ""
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0
     },
     {
       "osId": "20356",
@@ -18649,24 +18663,6 @@
       "dataFinal": "",
       "linkFracttal": "",
       "horasAteAbrir": 0
-    },
-    {
-      "osId": "20278",
-      "ativo": "RenoGrid - Nova Xavantina 1 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso  { RNGD-NVX100 }",
-      "equipe": "",
-      "responsavel": "Gabriel Oliveira ",
-      "criadoPor": "LucasNascimento",
-      "supervisor": "Gabriel Oliveira ",
-      "status": "Em progresso",
-      "tarefa": "[RNGD-NVX100] - Religamento do RNGD-NVX100",
-      "criticidade": "",
-      "dataProgramada": "2026-11-24",
-      "dataCriacao": "2026-11-24",
-      "dataInicial": "2026-11-26",
-      "dataFinal": "",
-      "linkFracttal": "",
-      "horasAteAbrir": 48.0,
-      "modalidade": "local"
     },
     {
       "osId": "20241",
@@ -23129,6 +23125,26 @@
       "atrasada": false
     },
     {
+      "osId": "20581",
+      "ativo": "Thopen - Fazenda Limão 1 - RJ  Campos dos Goytacazes  Rio de Janeiro Brasil { THPN-FZL100 }",
+      "equipe": "",
+      "responsavel": "Carlos Bruno  Pessanha Pereira",
+      "criadoPor": "Maria Emanuella de Souza Mota ",
+      "supervisor": "Carlos Bruno  Pessanha Pereira",
+      "status": "Finalizados",
+      "tarefa": "[THPN-FZL100] - Religamento do THPN-FZL100",
+      "criticidade": "",
+      "dataProgramada": "2026-11-26",
+      "dataCriacao": "2026-11-26",
+      "dataInicial": "2026-11-26",
+      "dataFinal": "2026-11-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
+      "atrasada": false
+    },
+    {
       "osId": "20575",
       "ativo": "Cabine 1  Campos dos Goytacazes  Rio de Janeiro Brasil { FZL100-CABN1 }",
       "equipe": "",
@@ -23547,6 +23563,26 @@
       "linkFracttal": "",
       "horasAteAbrir": 0,
       "horasAteFechar": 24.0,
+      "atrasada": false
+    },
+    {
+      "osId": "20278",
+      "ativo": "RenoGrid - Nova Xavantina 1 - MT Estrada Vicinal Rural, 0 - Rural Nova Xavantina  Mato Grosso  { RNGD-NVX100 }",
+      "equipe": "",
+      "responsavel": "Gabriel Oliveira ",
+      "criadoPor": "LucasNascimento",
+      "supervisor": "Gabriel Oliveira ",
+      "status": "Finalizados",
+      "tarefa": "[RNGD-NVX100] - Religamento do RNGD-NVX100",
+      "criticidade": "",
+      "dataProgramada": "2026-11-24",
+      "dataCriacao": "2026-11-24",
+      "dataInicial": "2026-11-26",
+      "dataFinal": "2026-11-26",
+      "linkFracttal": "",
+      "horasAteAbrir": 48.0,
+      "horasAteFechar": 0,
+      "modalidade": "local",
       "atrasada": false
     },
     {
@@ -25322,48 +25358,10 @@
       "horasAteAbrir": 24.0,
       "horasAteFechar": 0,
       "atrasada": false
-    },
-    {
-      "osId": "19131",
-      "ativo": "Tracker 97.100 STI Norland     { TIM100-ETKR97.100 }",
-      "equipe": "",
-      "responsavel": "Luiz  Silva",
-      "criadoPor": "Maria Luiza Oliveira",
-      "supervisor": "Luiz  Silva",
-      "status": "Finalizados",
-      "tarefa": "[Tracker 97.100] - [TIM100] - Instalação de módulo da TCU",
-      "criticidade": "",
-      "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-11-10",
-      "dataInicial": "2026-11-11",
-      "dataFinal": "2026-11-11",
-      "linkFracttal": "",
-      "horasAteAbrir": 24.0,
-      "horasAteFechar": 0,
-      "atrasada": false
-    },
-    {
-      "osId": "19112",
-      "ativo": "Inversor 7.2 Huawei SUN2000-250KTL-H1    { CPP100-INVR7.2 }",
-      "equipe": "",
-      "responsavel": "Frank  Melo",
-      "criadoPor": "Roger Lélis",
-      "supervisor": "Frank  Melo",
-      "status": "Finalizados",
-      "tarefa": "Coleta de Dados de Geração",
-      "criticidade": "",
-      "dataProgramada": "2026-11-10",
-      "dataCriacao": "2026-11-10",
-      "dataInicial": "2026-11-10",
-      "dataFinal": "2026-11-10",
-      "linkFracttal": "",
-      "horasAteAbrir": 0,
-      "horasAteFechar": 0,
-      "atrasada": false
     }
   ],
-  "historicoTotal": 3736,
-  "totalGeral": 9348,
+  "historicoTotal": 3741,
+  "totalGeral": 9353,
   "verificacao": {
     "total": 0,
     "atrasadas": 0,
