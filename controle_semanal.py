@@ -172,6 +172,11 @@ ws['A2'] = ('Atualizado em %s · fontes da nuvem (gestão de %s) · as observaç
             'time são preservadas a cada atualização'
             % (AGORA.strftime('%d/%m/%Y %H:%M'), str(g.get('geradoEm', ''))[:16].replace('T', ' ')))
 ws['A2'].font = Font(size=10, color='6B6880')
+# destaque: data e hora da última atualização (pedido do PCM em 27/11/2026)
+ws['A3'] = 'Última atualização: %s às %s' % (AGORA.strftime('%d/%m/%Y'), AGORA.strftime('%H:%M'))
+ws['A3'].font = Font(bold=True, size=13, color=NAVY)
+ws['A3'].fill = PatternFill('solid', fgColor='EAF5C9')
+ws.row_dimensions[3].height = 22
 kpis = [
     ('Tarefas na programação da semana', len(rows)),
     ('Corretivas abertas (OS pendentes)', len({t['os'] for t in AB if is_corr(t)})),
